@@ -94,7 +94,7 @@ public class MixLayoutParams extends AbstractModel{
     private Long BackgroundImageRenderMode;
 
     /**
-    * 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+    * 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
     */
     @SerializedName("DefaultSubBackgroundImage")
     @Expose
@@ -106,6 +106,20 @@ public class MixLayoutParams extends AbstractModel{
     @SerializedName("WaterMarkList")
     @Expose
     private WaterMark [] WaterMarkList;
+
+    /**
+    * 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+    */
+    @SerializedName("RenderMode")
+    @Expose
+    private Long RenderMode;
+
+    /**
+    * 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+    */
+    @SerializedName("MaxResolutionUserAlign")
+    @Expose
+    private Long MaxResolutionUserAlign;
 
     /**
      * Get 布局模式:
@@ -296,16 +310,16 @@ public class MixLayoutParams extends AbstractModel{
     }
 
     /**
-     * Get 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。 
-     * @return DefaultSubBackgroundImage 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * Get 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。 
+     * @return DefaultSubBackgroundImage 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      */
     public String getDefaultSubBackgroundImage() {
         return this.DefaultSubBackgroundImage;
     }
 
     /**
-     * Set 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
-     * @param DefaultSubBackgroundImage 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * Set 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @param DefaultSubBackgroundImage 子画面占位图url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      */
     public void setDefaultSubBackgroundImage(String DefaultSubBackgroundImage) {
         this.DefaultSubBackgroundImage = DefaultSubBackgroundImage;
@@ -325,6 +339,38 @@ public class MixLayoutParams extends AbstractModel{
      */
     public void setWaterMarkList(WaterMark [] WaterMarkList) {
         this.WaterMarkList = WaterMarkList;
+    }
+
+    /**
+     * Get 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。 
+     * @return RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     */
+    public Long getRenderMode() {
+        return this.RenderMode;
+    }
+
+    /**
+     * Set 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * @param RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     */
+    public void setRenderMode(Long RenderMode) {
+        this.RenderMode = RenderMode;
+    }
+
+    /**
+     * Get 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。 
+     * @return MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public Long getMaxResolutionUserAlign() {
+        return this.MaxResolutionUserAlign;
+    }
+
+    /**
+     * Set 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     * @param MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
+     */
+    public void setMaxResolutionUserAlign(Long MaxResolutionUserAlign) {
+        this.MaxResolutionUserAlign = MaxResolutionUserAlign;
     }
 
     public MixLayoutParams() {
@@ -371,6 +417,12 @@ public class MixLayoutParams extends AbstractModel{
                 this.WaterMarkList[i] = new WaterMark(source.WaterMarkList[i]);
             }
         }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
+        if (source.MaxResolutionUserAlign != null) {
+            this.MaxResolutionUserAlign = new Long(source.MaxResolutionUserAlign);
+        }
     }
 
 
@@ -388,6 +440,8 @@ public class MixLayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "BackgroundImageRenderMode", this.BackgroundImageRenderMode);
         this.setParamSimple(map, prefix + "DefaultSubBackgroundImage", this.DefaultSubBackgroundImage);
         this.setParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+        this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
+        this.setParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
 
     }
 }

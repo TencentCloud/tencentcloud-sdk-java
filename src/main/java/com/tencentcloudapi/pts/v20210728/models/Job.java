@@ -47,7 +47,7 @@ public class Job extends AbstractModel{
     private Load Load;
 
     /**
-    * deprecated
+    * 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Configs")
@@ -63,7 +63,7 @@ public class Job extends AbstractModel{
     private TestData [] Datasets;
 
     /**
-    * deprecated
+    * 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extensions")
@@ -129,7 +129,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private String JobOwner;
 
     /**
-    * deprecated
+    * 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadSources")
@@ -201,7 +201,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private Float ResponseTimeP90;
 
     /**
-    * deprecated
+    * 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scripts")
@@ -345,6 +345,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private Float NetworkSendRate;
 
     /**
+    * 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
      * Get 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务的JobID
@@ -405,9 +413,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Get deprecated
+     * Get 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Configs deprecated
+     * @return Configs 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getConfigs() {
@@ -415,9 +423,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Set deprecated
+     * Set 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Configs deprecated
+     * @param Configs 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigs(String [] Configs) {
@@ -445,9 +453,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Get deprecated
+     * Get 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extensions deprecated
+     * @return Extensions 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExtensions() {
@@ -455,9 +463,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Set deprecated
+     * Set 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extensions deprecated
+     * @param Extensions 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtensions(String [] Extensions) {
@@ -613,9 +621,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Get deprecated
+     * Get 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadSources deprecated
+     * @return LoadSources 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoadSource getLoadSources() {
@@ -623,9 +631,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Set deprecated
+     * Set 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadSources deprecated
+     * @param LoadSources 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadSources(LoadSource LoadSources) {
@@ -793,9 +801,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Get deprecated
+     * Get 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scripts deprecated
+     * @return Scripts 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScripts() {
@@ -803,9 +811,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     }
 
     /**
-     * Set deprecated
+     * Set 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scripts deprecated
+     * @param Scripts 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScripts(String [] Scripts) {
@@ -1152,6 +1160,26 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.NetworkSendRate = NetworkSendRate;
     }
 
+    /**
+     * Get 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 任务状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public Job() {
     }
 
@@ -1310,6 +1338,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         if (source.NetworkSendRate != null) {
             this.NetworkSendRate = new Float(source.NetworkSendRate);
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -1357,6 +1388,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
         this.setParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
         this.setParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

@@ -145,7 +145,7 @@ public class File extends AbstractModel{
     private String ProjectId;
 
     /**
-    * 用户账号的 App ID
+    * 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
@@ -473,9 +473,9 @@ public class File extends AbstractModel{
     }
 
     /**
-     * Get 用户账号的 App ID
+     * Get 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppID 用户账号的 App ID
+     * @return AppID 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppID() {
@@ -483,9 +483,9 @@ public class File extends AbstractModel{
     }
 
     /**
-     * Set 用户账号的 App ID
+     * Set 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppID 用户账号的 App ID
+     * @param AppID 此字段不再使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(Long AppID) {

@@ -164,6 +164,14 @@ FAILED:已失败
     private String AdditionalTaxItem;
 
     /**
+    * 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailReason")
+    @Expose
+    private String FailReason;
+
+    /**
      * Get 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得 
@@ -511,6 +519,26 @@ FAILED:已失败
         this.AdditionalTaxItem = AdditionalTaxItem;
     }
 
+    /**
+     * Get 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailReason() {
+        return this.FailReason;
+    }
+
+    /**
+     * Set 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailReason(String FailReason) {
+        this.FailReason = FailReason;
+    }
+
     public PaymentOrderResult() {
     }
 
@@ -573,6 +601,9 @@ FAILED:已失败
         if (source.AdditionalTaxItem != null) {
             this.AdditionalTaxItem = new String(source.AdditionalTaxItem);
         }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
     }
 
 
@@ -598,6 +629,7 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "IndividualIncomeTax", this.IndividualIncomeTax);
         this.setParamSimple(map, prefix + "AdditionalTaxSum", this.AdditionalTaxSum);
         this.setParamSimple(map, prefix + "AdditionalTaxItem", this.AdditionalTaxItem);
+        this.setParamSimple(map, prefix + "FailReason", this.FailReason);
 
     }
 }

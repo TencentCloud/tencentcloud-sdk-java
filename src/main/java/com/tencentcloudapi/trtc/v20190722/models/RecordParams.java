@@ -56,7 +56,7 @@ public class RecordParams extends AbstractModel{
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+    * 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。
     */
     @SerializedName("OutputFormat")
     @Expose
@@ -68,6 +68,14 @@ public class RecordParams extends AbstractModel{
     @SerializedName("AvMerge")
     @Expose
     private Long AvMerge;
+
+    /**
+    * 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+    */
+    @SerializedName("MaxMediaFileDuration")
+    @Expose
+    private Long MaxMediaFileDuration;
 
     /**
      * Get 录制模式：
@@ -154,16 +162,16 @@ public class RecordParams extends AbstractModel{
     }
 
     /**
-     * Get 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。 
-     * @return OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+     * Get 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。 
+     * @return OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
-     * @param OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4（hls录制完成后转mp4文件）。
+     * Set 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。
+     * @param OutputFormat 输出文件的格式，上传到云点播时此参数无效，存储到云点播时请关注TencentVod内的MediaType参数。0：(默认)输出文件为hls格式。1：输出文件格式为hls+mp4。2：输出文件格式为hls+aac 。
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
@@ -183,6 +191,26 @@ public class RecordParams extends AbstractModel{
      */
     public void setAvMerge(Long AvMerge) {
         this.AvMerge = AvMerge;
+    }
+
+    /**
+     * Get 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。 
+     * @return MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+     */
+    public Long getMaxMediaFileDuration() {
+        return this.MaxMediaFileDuration;
+    }
+
+    /**
+     * Set 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+     * @param MaxMediaFileDuration 如果是aac或者mp4文件格式，超过长度限制后，系统会自动拆分视频文件。单位：分钟。默认为1440min（24h），取值范围为1-1440。【单文件限制最大为2G，满足文件大小 >2G 或录制时长度 > 24h任意一个条件，文件都会自动切分】
+Hls 格式录制此参数不生效。
+     */
+    public void setMaxMediaFileDuration(Long MaxMediaFileDuration) {
+        this.MaxMediaFileDuration = MaxMediaFileDuration;
     }
 
     public RecordParams() {
@@ -211,6 +239,9 @@ public class RecordParams extends AbstractModel{
         if (source.AvMerge != null) {
             this.AvMerge = new Long(source.AvMerge);
         }
+        if (source.MaxMediaFileDuration != null) {
+            this.MaxMediaFileDuration = new Long(source.MaxMediaFileDuration);
+        }
     }
 
 
@@ -224,6 +255,7 @@ public class RecordParams extends AbstractModel{
         this.setParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
+        this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
 
     }
 }

@@ -44,6 +44,13 @@ public class ImageToClassRequest extends AbstractModel{
     private Long Type;
 
     /**
+    * 用户类型，新客户传1，老客户可不传
+    */
+    @SerializedName("UserType")
+    @Expose
+    private Long UserType;
+
+    /**
      * Get 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url 
      * @return ImageInfoList 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
      */
@@ -91,6 +98,22 @@ public class ImageToClassRequest extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 用户类型，新客户传1，老客户可不传 
+     * @return UserType 用户类型，新客户传1，老客户可不传
+     */
+    public Long getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型，新客户传1，老客户可不传
+     * @param UserType 用户类型，新客户传1，老客户可不传
+     */
+    public void setUserType(Long UserType) {
+        this.UserType = UserType;
+    }
+
     public ImageToClassRequest() {
     }
 
@@ -111,6 +134,9 @@ public class ImageToClassRequest extends AbstractModel{
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.UserType != null) {
+            this.UserType = new Long(source.UserType);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class ImageToClassRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ImageInfoList.", this.ImageInfoList);
         this.setParamObj(map, prefix + "HandleParam.", this.HandleParam);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

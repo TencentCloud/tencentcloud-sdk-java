@@ -171,6 +171,9 @@ public enum TiiaErrorCode {
     // 必选参数为空。
      MISSINGPARAMETER_ERRORPARAMETEREMPTY("MissingParameter.ErrorParameterEmpty"),
      
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // 账号已欠费。
      RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
      

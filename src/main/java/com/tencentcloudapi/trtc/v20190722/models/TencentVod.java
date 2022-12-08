@@ -80,6 +80,13 @@ public class TencentVod extends AbstractModel{
     private Long MediaType;
 
     /**
+    * 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+    */
+    @SerializedName("UserDefineRecordId")
+    @Expose
+    private String UserDefineRecordId;
+
+    /**
      * Get 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。 
      * @return Procedure 媒体后续任务处理操作，即完成媒体上传后，可自动发起任务流操作。参数值为任务流模板名，云点播支持 创建任务流模板 并为模板命名。
      */
@@ -211,6 +218,22 @@ public class TencentVod extends AbstractModel{
         this.MediaType = MediaType;
     }
 
+    /**
+     * Get 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。 
+     * @return UserDefineRecordId 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+     */
+    public String getUserDefineRecordId() {
+        return this.UserDefineRecordId;
+    }
+
+    /**
+     * Set 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+     * @param UserDefineRecordId 仅支持API录制上传vod，该参数表示用户可以自定义录制文件名前缀，【限制长度为64字节，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）及下划线和连词符】。前缀与自动生成的录制文件名之间用__UserId_u_分开。
+     */
+    public void setUserDefineRecordId(String UserDefineRecordId) {
+        this.UserDefineRecordId = UserDefineRecordId;
+    }
+
     public TencentVod() {
     }
 
@@ -243,6 +266,9 @@ public class TencentVod extends AbstractModel{
         if (source.MediaType != null) {
             this.MediaType = new Long(source.MediaType);
         }
+        if (source.UserDefineRecordId != null) {
+            this.UserDefineRecordId = new String(source.UserDefineRecordId);
+        }
     }
 
 
@@ -258,6 +284,7 @@ public class TencentVod extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "MediaType", this.MediaType);
+        this.setParamSimple(map, prefix + "UserDefineRecordId", this.UserDefineRecordId);
 
     }
 }

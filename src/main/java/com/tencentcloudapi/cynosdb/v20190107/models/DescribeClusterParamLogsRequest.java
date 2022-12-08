@@ -30,6 +30,27 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 实例ID列表，用来记录具体操作哪些实例
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+    * 排序字段，定义在回返结果的基于哪个字段进行排序
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
     * 返回数量，默认为 20，取值范围为(0,100]
     */
     @SerializedName("Limit")
@@ -57,6 +78,54 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 实例ID列表，用来记录具体操作哪些实例 
+     * @return InstanceIds 实例ID列表，用来记录具体操作哪些实例
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set 实例ID列表，用来记录具体操作哪些实例
+     * @param InstanceIds 实例ID列表，用来记录具体操作哪些实例
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 排序字段，定义在回返结果的基于哪个字段进行排序 
+     * @return OrderBy 排序字段，定义在回返结果的基于哪个字段进行排序
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 排序字段，定义在回返结果的基于哪个字段进行排序
+     * @param OrderBy 排序字段，定义在回返结果的基于哪个字段进行排序
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一 
+     * @return OrderByType 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+     * @param OrderByType 定义具体的排序规则，限定为desc,asc,DESC,ASC其中之一
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
     }
 
     /**
@@ -102,6 +171,18 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -116,6 +197,9 @@ public class DescribeClusterParamLogsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
 

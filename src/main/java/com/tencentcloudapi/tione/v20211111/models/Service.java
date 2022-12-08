@@ -238,6 +238,30 @@ Waiting 就绪中
     private ScheduledAction ScheduledAction;
 
     /**
+    * 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateFailedReason")
+    @Expose
+    private String CreateFailedReason;
+
+    /**
+    * 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
+    * 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -785,6 +809,66 @@ Waiting 就绪中
         this.ScheduledAction = ScheduledAction;
     }
 
+    /**
+     * Get 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateFailedReason() {
+        return this.CreateFailedReason;
+    }
+
+    /**
+     * Set 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateFailedReason(String CreateFailedReason) {
+        this.CreateFailedReason = CreateFailedReason;
+    }
+
+    /**
+     * Get 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 预付费服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
+    /**
+     * Get 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Service() {
     }
 
@@ -871,6 +955,18 @@ Waiting 就绪中
         if (source.ScheduledAction != null) {
             this.ScheduledAction = new ScheduledAction(source.ScheduledAction);
         }
+        if (source.CreateFailedReason != null) {
+            this.CreateFailedReason = new String(source.CreateFailedReason);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -904,6 +1000,9 @@ Waiting 就绪中
         this.setParamSimple(map, prefix + "IngressName", this.IngressName);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
+        this.setParamSimple(map, prefix + "CreateFailedReason", this.CreateFailedReason);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

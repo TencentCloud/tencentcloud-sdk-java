@@ -139,6 +139,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *在应用市场中取消安装失败的应用
+     * @param req CancelClusterReleaseRequest
+     * @return CancelClusterReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelClusterReleaseResponse CancelClusterRelease(CancelClusterReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelClusterReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelClusterReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelClusterRelease");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查边缘计算集群的CIDR是否冲突
      * @param req CheckEdgeClusterCIDRRequest
      * @return CheckEdgeClusterCIDRResponse
@@ -1471,6 +1491,86 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNodePoolsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterNodePools");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在应用市场中查询正在安装中的应用列表
+     * @param req DescribeClusterPendingReleasesRequest
+     * @return DescribeClusterPendingReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterPendingReleasesResponse DescribeClusterPendingReleases(DescribeClusterPendingReleasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterPendingReleasesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterPendingReleasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterPendingReleases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询通过应用市场安装的某个应用详情
+     * @param req DescribeClusterReleaseDetailsRequest
+     * @return DescribeClusterReleaseDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterReleaseDetailsResponse DescribeClusterReleaseDetails(DescribeClusterReleaseDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterReleaseDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterReleaseDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterReleaseDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群在应用市场中某个已安装应用的版本历史
+     * @param req DescribeClusterReleaseHistoryRequest
+     * @return DescribeClusterReleaseHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterReleaseHistoryResponse DescribeClusterReleaseHistory(DescribeClusterReleaseHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterReleaseHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterReleaseHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterReleaseHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集群在应用市场中已安装应用列表
+     * @param req DescribeClusterReleasesRequest
+     * @return DescribeClusterReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterReleasesResponse DescribeClusterReleases(DescribeClusterReleasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterReleasesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterReleasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterReleases");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3199,6 +3299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *在应用市场中集群回滚应用至某个历史版本
+     * @param req RollbackClusterReleaseRequest
+     * @return RollbackClusterReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollbackClusterReleaseResponse RollbackClusterRelease(RollbackClusterReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollbackClusterReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollbackClusterReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RollbackClusterRelease");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *初始化TMP实例，开启集成中心时调用
      * @param req RunPrometheusInstanceRequest
      * @return RunPrometheusInstanceResponse
@@ -3311,6 +3431,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncPrometheusTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在应用市场中集群删除某个应用
+     * @param req UninstallClusterReleaseRequest
+     * @return UninstallClusterReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallClusterReleaseResponse UninstallClusterRelease(UninstallClusterReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UninstallClusterReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UninstallClusterReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UninstallClusterRelease");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3491,6 +3631,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeClusterInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeClusterInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *升级集群中已安装的应用
+     * @param req UpgradeClusterReleaseRequest
+     * @return UpgradeClusterReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeClusterReleaseResponse UpgradeClusterRelease(UpgradeClusterReleaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeClusterReleaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeClusterReleaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeClusterRelease");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

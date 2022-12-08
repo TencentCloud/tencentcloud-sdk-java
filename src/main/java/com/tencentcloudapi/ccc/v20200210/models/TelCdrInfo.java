@@ -296,6 +296,14 @@ notInService       不在服务区
     private String CustomRecordURL;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1027,6 +1035,26 @@ notInService       不在服务区
         this.CustomRecordURL = CustomRecordURL;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1137,6 +1165,9 @@ notInService       不在服务区
         if (source.CustomRecordURL != null) {
             this.CustomRecordURL = new String(source.CustomRecordURL);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -1174,6 +1205,7 @@ notInService       不在服务区
         this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

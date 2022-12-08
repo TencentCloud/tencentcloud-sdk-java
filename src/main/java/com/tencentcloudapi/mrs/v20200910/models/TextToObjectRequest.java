@@ -45,6 +45,13 @@ public class TextToObjectRequest extends AbstractModel{
     private Boolean IsUsedClassify;
 
     /**
+    * 用户类型，新客户传1，老客户可不传
+    */
+    @SerializedName("UserType")
+    @Expose
+    private Long UserType;
+
+    /**
      * Get 报告文本 
      * @return Text 报告文本
      */
@@ -96,6 +103,22 @@ public class TextToObjectRequest extends AbstractModel{
         this.IsUsedClassify = IsUsedClassify;
     }
 
+    /**
+     * Get 用户类型，新客户传1，老客户可不传 
+     * @return UserType 用户类型，新客户传1，老客户可不传
+     */
+    public Long getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型，新客户传1，老客户可不传
+     * @param UserType 用户类型，新客户传1，老客户可不传
+     */
+    public void setUserType(Long UserType) {
+        this.UserType = UserType;
+    }
+
     public TextToObjectRequest() {
     }
 
@@ -113,6 +136,9 @@ public class TextToObjectRequest extends AbstractModel{
         if (source.IsUsedClassify != null) {
             this.IsUsedClassify = new Boolean(source.IsUsedClassify);
         }
+        if (source.UserType != null) {
+            this.UserType = new Long(source.UserType);
+        }
     }
 
 
@@ -123,6 +149,7 @@ public class TextToObjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

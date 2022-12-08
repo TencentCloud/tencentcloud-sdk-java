@@ -30,6 +30,13 @@ public class TextToClassRequest extends AbstractModel{
     private String Text;
 
     /**
+    * 用户类型，新客户传1，老客户可不传
+    */
+    @SerializedName("UserType")
+    @Expose
+    private Long UserType;
+
+    /**
      * Get 报告文本 
      * @return Text 报告文本
      */
@@ -45,6 +52,22 @@ public class TextToClassRequest extends AbstractModel{
         this.Text = Text;
     }
 
+    /**
+     * Get 用户类型，新客户传1，老客户可不传 
+     * @return UserType 用户类型，新客户传1，老客户可不传
+     */
+    public Long getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型，新客户传1，老客户可不传
+     * @param UserType 用户类型，新客户传1，老客户可不传
+     */
+    public void setUserType(Long UserType) {
+        this.UserType = UserType;
+    }
+
     public TextToClassRequest() {
     }
 
@@ -56,6 +79,9 @@ public class TextToClassRequest extends AbstractModel{
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.UserType != null) {
+            this.UserType = new Long(source.UserType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class TextToClassRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

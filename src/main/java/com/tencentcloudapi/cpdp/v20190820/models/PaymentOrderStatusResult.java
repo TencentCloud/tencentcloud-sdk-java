@@ -43,6 +43,14 @@ FAILED:已失败
     private String StatusDesc;
 
     /**
+    * 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailReason")
+    @Expose
+    private String FailReason;
+
+    /**
      * Get 状态
 ACCEPTED:已受理
 ACCOUNTED:已记账
@@ -98,6 +106,26 @@ FAILED:已失败
         this.StatusDesc = StatusDesc;
     }
 
+    /**
+     * Get 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailReason() {
+        return this.FailReason;
+    }
+
+    /**
+     * Set 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailReason 失败原因。当Status为FAILED时，改字段为失败的原因。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailReason(String FailReason) {
+        this.FailReason = FailReason;
+    }
+
     public PaymentOrderStatusResult() {
     }
 
@@ -112,6 +140,9 @@ FAILED:已失败
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
         }
+        if (source.FailReason != null) {
+            this.FailReason = new String(source.FailReason);
+        }
     }
 
 
@@ -121,6 +152,7 @@ FAILED:已失败
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "FailReason", this.FailReason);
 
     }
 }
