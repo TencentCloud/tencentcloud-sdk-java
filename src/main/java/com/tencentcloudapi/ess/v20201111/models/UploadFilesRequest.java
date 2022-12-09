@@ -33,7 +33,7 @@ public class UploadFilesRequest extends AbstractModel{
     private String BusinessType;
 
     /**
-    * 调用方信息
+    * 调用方信息，其中OperatorId为必填字段，即用户的UserId
     */
     @SerializedName("Caller")
     @Expose
@@ -47,22 +47,6 @@ public class UploadFilesRequest extends AbstractModel{
     private UploadFile [] FileInfos;
 
     /**
-    * 不再使用，上传文件链接数组，最多支持20个URL
-    */
-    @SerializedName("FileUrls")
-    @Expose
-    private String FileUrls;
-
-    /**
-    * 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-false--否，不处理
-    */
-    @SerializedName("CoverRect")
-    @Expose
-    private Boolean CoverRect;
-
-    /**
     * 文件类型， 默认通过文件内容解析得到文件类型，客户可以显示的说明上传文件的类型。
 如：PDF 表示上传的文件 xxx.pdf的文件类型是 PDF
     */
@@ -71,11 +55,27 @@ false--否，不处理
     private String FileType;
 
     /**
+    * 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+true--是，处理置白
+默认为false--否，不处理
+    */
+    @SerializedName("CoverRect")
+    @Expose
+    private Boolean CoverRect;
+
+    /**
     * 用户自定义ID数组，与上传文件一一对应
     */
     @SerializedName("CustomIds")
     @Expose
     private String [] CustomIds;
+
+    /**
+    * 不再使用，上传文件链接数组，最多支持20个URL
+    */
+    @SerializedName("FileUrls")
+    @Expose
+    private String FileUrls;
 
     /**
      * Get 文件对应业务类型
@@ -106,16 +106,16 @@ false--否，不处理
     }
 
     /**
-     * Get 调用方信息 
-     * @return Caller 调用方信息
+     * Get 调用方信息，其中OperatorId为必填字段，即用户的UserId 
+     * @return Caller 调用方信息，其中OperatorId为必填字段，即用户的UserId
      */
     public Caller getCaller() {
         return this.Caller;
     }
 
     /**
-     * Set 调用方信息
-     * @param Caller 调用方信息
+     * Set 调用方信息，其中OperatorId为必填字段，即用户的UserId
+     * @param Caller 调用方信息，其中OperatorId为必填字段，即用户的UserId
      */
     public void setCaller(Caller Caller) {
         this.Caller = Caller;
@@ -135,46 +135,6 @@ false--否，不处理
      */
     public void setFileInfos(UploadFile [] FileInfos) {
         this.FileInfos = FileInfos;
-    }
-
-    /**
-     * Get 不再使用，上传文件链接数组，最多支持20个URL 
-     * @return FileUrls 不再使用，上传文件链接数组，最多支持20个URL
-     */
-    public String getFileUrls() {
-        return this.FileUrls;
-    }
-
-    /**
-     * Set 不再使用，上传文件链接数组，最多支持20个URL
-     * @param FileUrls 不再使用，上传文件链接数组，最多支持20个URL
-     */
-    public void setFileUrls(String FileUrls) {
-        this.FileUrls = FileUrls;
-    }
-
-    /**
-     * Get 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-false--否，不处理 
-     * @return CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-false--否，不处理
-     */
-    public Boolean getCoverRect() {
-        return this.CoverRect;
-    }
-
-    /**
-     * Set 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-false--否，不处理
-     * @param CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
-true--是，处理置白
-false--否，不处理
-     */
-    public void setCoverRect(Boolean CoverRect) {
-        this.CoverRect = CoverRect;
     }
 
     /**
@@ -198,6 +158,30 @@ false--否，不处理
     }
 
     /**
+     * Get 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+true--是，处理置白
+默认为false--否，不处理 
+     * @return CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+true--是，处理置白
+默认为false--否，不处理
+     */
+    public Boolean getCoverRect() {
+        return this.CoverRect;
+    }
+
+    /**
+     * Set 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+true--是，处理置白
+默认为false--否，不处理
+     * @param CoverRect 此参数只对 PDF 文件有效。是否将pdf灰色矩阵置白
+true--是，处理置白
+默认为false--否，不处理
+     */
+    public void setCoverRect(Boolean CoverRect) {
+        this.CoverRect = CoverRect;
+    }
+
+    /**
      * Get 用户自定义ID数组，与上传文件一一对应 
      * @return CustomIds 用户自定义ID数组，与上传文件一一对应
      */
@@ -211,6 +195,22 @@ false--否，不处理
      */
     public void setCustomIds(String [] CustomIds) {
         this.CustomIds = CustomIds;
+    }
+
+    /**
+     * Get 不再使用，上传文件链接数组，最多支持20个URL 
+     * @return FileUrls 不再使用，上传文件链接数组，最多支持20个URL
+     */
+    public String getFileUrls() {
+        return this.FileUrls;
+    }
+
+    /**
+     * Set 不再使用，上传文件链接数组，最多支持20个URL
+     * @param FileUrls 不再使用，上传文件链接数组，最多支持20个URL
+     */
+    public void setFileUrls(String FileUrls) {
+        this.FileUrls = FileUrls;
     }
 
     public UploadFilesRequest() {
@@ -233,20 +233,20 @@ false--否，不处理
                 this.FileInfos[i] = new UploadFile(source.FileInfos[i]);
             }
         }
-        if (source.FileUrls != null) {
-            this.FileUrls = new String(source.FileUrls);
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
         }
         if (source.CoverRect != null) {
             this.CoverRect = new Boolean(source.CoverRect);
-        }
-        if (source.FileType != null) {
-            this.FileType = new String(source.FileType);
         }
         if (source.CustomIds != null) {
             this.CustomIds = new String[source.CustomIds.length];
             for (int i = 0; i < source.CustomIds.length; i++) {
                 this.CustomIds[i] = new String(source.CustomIds[i]);
             }
+        }
+        if (source.FileUrls != null) {
+            this.FileUrls = new String(source.FileUrls);
         }
     }
 
@@ -258,10 +258,10 @@ false--否，不处理
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
         this.setParamObj(map, prefix + "Caller.", this.Caller);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
-        this.setParamSimple(map, prefix + "FileUrls", this.FileUrls);
-        this.setParamSimple(map, prefix + "CoverRect", this.CoverRect);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "CoverRect", this.CoverRect);
         this.setParamArraySimple(map, prefix + "CustomIds.", this.CustomIds);
+        this.setParamSimple(map, prefix + "FileUrls", this.FileUrls);
 
     }
 }

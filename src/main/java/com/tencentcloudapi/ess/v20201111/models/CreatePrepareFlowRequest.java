@@ -30,7 +30,7 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 资源Id,通过上传uploadfile接口获得
+    * 资源Id，通过多文件上传（UploadFiles）接口获得
     */
     @SerializedName("ResourceId")
     @Expose
@@ -96,16 +96,16 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源Id,通过上传uploadfile接口获得 
-     * @return ResourceId 资源Id,通过上传uploadfile接口获得
+     * Get 资源Id，通过多文件上传（UploadFiles）接口获得 
+     * @return ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id,通过上传uploadfile接口获得
-     * @param ResourceId 资源Id,通过上传uploadfile接口获得
+     * Set 资源Id，通过多文件上传（UploadFiles）接口获得
+     * @param ResourceId 资源Id，通过多文件上传（UploadFiles）接口获得
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

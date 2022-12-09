@@ -1323,6 +1323,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *用于异步获取文件属性。
+- 当前仅支持获取源文件的 Md5。
+- 对输入文件为 HLS 或 DASH 的情况，仅获取索引文件的属性。
+     * @param req DescribeFileAttributesRequest
+     * @return DescribeFileAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileAttributesResponse DescribeFileAttributes(DescribeFileAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取片头片尾模板列表。
      * @param req DescribeHeadTailTemplatesRequest
      * @return DescribeHeadTailTemplatesResponse
