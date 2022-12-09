@@ -219,6 +219,20 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private Long CipherTemplate;
 
     /**
+    * 300s
+    */
+    @SerializedName("ProxyReadTimeout")
+    @Expose
+    private Long ProxyReadTimeout;
+
+    /**
+    * 300s
+    */
+    @SerializedName("ProxySendTimeout")
+    @Expose
+    private Long ProxySendTimeout;
+
+    /**
      * Get 需要防御的域名 
      * @return Domain 需要防御的域名
      */
@@ -666,6 +680,38 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.CipherTemplate = CipherTemplate;
     }
 
+    /**
+     * Get 300s 
+     * @return ProxyReadTimeout 300s
+     */
+    public Long getProxyReadTimeout() {
+        return this.ProxyReadTimeout;
+    }
+
+    /**
+     * Set 300s
+     * @param ProxyReadTimeout 300s
+     */
+    public void setProxyReadTimeout(Long ProxyReadTimeout) {
+        this.ProxyReadTimeout = ProxyReadTimeout;
+    }
+
+    /**
+     * Get 300s 
+     * @return ProxySendTimeout 300s
+     */
+    public Long getProxySendTimeout() {
+        return this.ProxySendTimeout;
+    }
+
+    /**
+     * Set 300s
+     * @param ProxySendTimeout 300s
+     */
+    public void setProxySendTimeout(Long ProxySendTimeout) {
+        this.ProxySendTimeout = ProxySendTimeout;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -773,6 +819,12 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         if (source.CipherTemplate != null) {
             this.CipherTemplate = new Long(source.CipherTemplate);
         }
+        if (source.ProxyReadTimeout != null) {
+            this.ProxyReadTimeout = new Long(source.ProxyReadTimeout);
+        }
+        if (source.ProxySendTimeout != null) {
+            this.ProxySendTimeout = new Long(source.ProxySendTimeout);
+        }
     }
 
 
@@ -808,6 +860,8 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
         this.setParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
         this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
+        this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
+        this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
 
     }
 }

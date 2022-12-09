@@ -295,6 +295,30 @@ Public：公网属性， Private：内网属性。
     private String Domains;
 
     /**
+    * 多可用区负载均衡实例所选备区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String [] SlaveZone;
+
+    /**
+    * 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SniSwitch")
+    @Expose
+    private Long SniSwitch;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -974,6 +998,66 @@ Public：公网属性， Private：内网属性。
         this.Domains = Domains;
     }
 
+    /**
+     * Get 多可用区负载均衡实例所选备区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZone 多可用区负载均衡实例所选备区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set 多可用区负载均衡实例所选备区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZone 多可用区负载均衡实例所选备区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZone(String [] SlaveZone) {
+        this.SlaveZone = SlaveZone;
+    }
+
+    /**
+     * Get 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zones 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zones 内网负载均衡实例所在可用区，由白名单CLB_Internal_Zone控制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSniSwitch() {
+        return this.SniSwitch;
+    }
+
+    /**
+     * Set 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SniSwitch 是否开启SNI特性（本参数仅对于HTTPS监听器有意义）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSniSwitch(Long SniSwitch) {
+        this.SniSwitch = SniSwitch;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1090,6 +1174,21 @@ Public：公网属性， Private：内网属性。
         if (source.Domains != null) {
             this.Domains = new String(source.Domains);
         }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String[source.SlaveZone.length];
+            for (int i = 0; i < source.SlaveZone.length; i++) {
+                this.SlaveZone[i] = new String(source.SlaveZone[i]);
+            }
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.SniSwitch != null) {
+            this.SniSwitch = new Long(source.SniSwitch);
+        }
     }
 
 
@@ -1131,6 +1230,9 @@ Public：公网属性， Private：内网属性。
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
         this.setParamSimple(map, prefix + "Domains", this.Domains);
+        this.setParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
 
     }
 }

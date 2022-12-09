@@ -41,6 +41,13 @@ public class RateLimitIntelligence extends AbstractModel{
     private String Action;
 
     /**
+    * 规则id，仅出参使用。
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
      * Get 功能开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
@@ -88,6 +95,22 @@ public class RateLimitIntelligence extends AbstractModel{
         this.Action = Action;
     }
 
+    /**
+     * Get 规则id，仅出参使用。 
+     * @return RuleId 规则id，仅出参使用。
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则id，仅出参使用。
+     * @param RuleId 规则id，仅出参使用。
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public RateLimitIntelligence() {
     }
 
@@ -102,6 +125,9 @@ public class RateLimitIntelligence extends AbstractModel{
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
     }
 
 
@@ -111,6 +137,7 @@ public class RateLimitIntelligence extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

@@ -51,14 +51,6 @@ public class BotLog extends AbstractModel{
     private String RequestUri;
 
     /**
-    * 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AttackType")
-    @Expose
-    private String AttackType;
-
-    /**
     * 请求方法。
     */
     @SerializedName("RequestMethod")
@@ -73,12 +65,25 @@ public class BotLog extends AbstractModel{
     private String AttackContent;
 
     /**
-    * 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+    * IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
     */
-    @SerializedName("RiskLevel")
+    @SerializedName("SipCountryCode")
     @Expose
-    private String RiskLevel;
+    private String SipCountryCode;
+
+    /**
+    * user agent。
+    */
+    @SerializedName("Ua")
+    @Expose
+    private String Ua;
+
+    /**
+    * 攻击事件ID。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
 
     /**
     * 规则ID。
@@ -89,18 +94,12 @@ public class BotLog extends AbstractModel{
     private Long RuleId;
 
     /**
-    * IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+    * 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("SipCountryCode")
+    @SerializedName("AttackType")
     @Expose
-    private String SipCountryCode;
-
-    /**
-    * 请求（事件）ID。
-    */
-    @SerializedName("EventId")
-    @Expose
-    private String EventId;
+    private String AttackType;
 
     /**
     * 处置方式。
@@ -119,11 +118,12 @@ public class BotLog extends AbstractModel{
     private String HttpLog;
 
     /**
-    * user agent。
+    * 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Ua")
+    @SerializedName("RiskLevel")
     @Expose
-    private String Ua;
+    private String RiskLevel;
 
     /**
     * 检出方法。
@@ -164,6 +164,14 @@ public class BotLog extends AbstractModel{
     @SerializedName("Label")
     @Expose
     private String Label;
+
+    /**
+    * 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get 攻击时间，采用unix秒级时间戳。 
@@ -230,26 +238,6 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackType 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getAttackType() {
-        return this.AttackType;
-    }
-
-    /**
-     * Set 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackType 攻击类型。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAttackType(String AttackType) {
-        this.AttackType = AttackType;
-    }
-
-    /**
      * Get 请求方法。 
      * @return RequestMethod 请求方法。
      */
@@ -282,23 +270,51 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskLevel 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。 
+     * @return SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
      */
-    public String getRiskLevel() {
-        return this.RiskLevel;
+    public String getSipCountryCode() {
+        return this.SipCountryCode;
     }
 
     /**
-     * Set 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskLevel 攻击等级。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * @param SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
      */
-    public void setRiskLevel(String RiskLevel) {
-        this.RiskLevel = RiskLevel;
+    public void setSipCountryCode(String SipCountryCode) {
+        this.SipCountryCode = SipCountryCode;
+    }
+
+    /**
+     * Get user agent。 
+     * @return Ua user agent。
+     */
+    public String getUa() {
+        return this.Ua;
+    }
+
+    /**
+     * Set user agent。
+     * @param Ua user agent。
+     */
+    public void setUa(String Ua) {
+        this.Ua = Ua;
+    }
+
+    /**
+     * Get 攻击事件ID。 
+     * @return EventId 攻击事件ID。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 攻击事件ID。
+     * @param EventId 攻击事件ID。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
     }
 
     /**
@@ -322,35 +338,23 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。 
-     * @return SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * Get 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackType 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getSipCountryCode() {
-        return this.SipCountryCode;
+    public String getAttackType() {
+        return this.AttackType;
     }
 
     /**
-     * Set IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
-     * @param SipCountryCode IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
+     * Set 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackType 攻击类型。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setSipCountryCode(String SipCountryCode) {
-        this.SipCountryCode = SipCountryCode;
-    }
-
-    /**
-     * Get 请求（事件）ID。 
-     * @return EventId 请求（事件）ID。
-     */
-    public String getEventId() {
-        return this.EventId;
-    }
-
-    /**
-     * Set 请求（事件）ID。
-     * @param EventId 请求（事件）ID。
-     */
-    public void setEventId(String EventId) {
-        this.EventId = EventId;
+    public void setAttackType(String AttackType) {
+        this.AttackType = AttackType;
     }
 
     /**
@@ -394,19 +398,23 @@ public class BotLog extends AbstractModel{
     }
 
     /**
-     * Get user agent。 
-     * @return Ua user agent。
+     * Get 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevel 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUa() {
-        return this.Ua;
+    public String getRiskLevel() {
+        return this.RiskLevel;
     }
 
     /**
-     * Set user agent。
-     * @param Ua user agent。
+     * Set 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevel 攻击等级。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUa(String Ua) {
-        this.Ua = Ua;
+    public void setRiskLevel(String RiskLevel) {
+        this.RiskLevel = RiskLevel;
     }
 
     /**
@@ -509,6 +517,26 @@ public class BotLog extends AbstractModel{
         this.Label = Label;
     }
 
+    /**
+     * Get 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area 日志所属的区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public BotLog() {
     }
 
@@ -529,26 +557,26 @@ public class BotLog extends AbstractModel{
         if (source.RequestUri != null) {
             this.RequestUri = new String(source.RequestUri);
         }
-        if (source.AttackType != null) {
-            this.AttackType = new String(source.AttackType);
-        }
         if (source.RequestMethod != null) {
             this.RequestMethod = new String(source.RequestMethod);
         }
         if (source.AttackContent != null) {
             this.AttackContent = new String(source.AttackContent);
         }
-        if (source.RiskLevel != null) {
-            this.RiskLevel = new String(source.RiskLevel);
+        if (source.SipCountryCode != null) {
+            this.SipCountryCode = new String(source.SipCountryCode);
+        }
+        if (source.Ua != null) {
+            this.Ua = new String(source.Ua);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
         }
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
-        if (source.SipCountryCode != null) {
-            this.SipCountryCode = new String(source.SipCountryCode);
-        }
-        if (source.EventId != null) {
-            this.EventId = new String(source.EventId);
+        if (source.AttackType != null) {
+            this.AttackType = new String(source.AttackType);
         }
         if (source.DisposalMethod != null) {
             this.DisposalMethod = new String(source.DisposalMethod);
@@ -556,8 +584,8 @@ public class BotLog extends AbstractModel{
         if (source.HttpLog != null) {
             this.HttpLog = new String(source.HttpLog);
         }
-        if (source.Ua != null) {
-            this.Ua = new String(source.Ua);
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new String(source.RiskLevel);
         }
         if (source.DetectionMethod != null) {
             this.DetectionMethod = new String(source.DetectionMethod);
@@ -577,6 +605,9 @@ public class BotLog extends AbstractModel{
         if (source.Label != null) {
             this.Label = new String(source.Label);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -588,21 +619,22 @@ public class BotLog extends AbstractModel{
         this.setParamSimple(map, prefix + "AttackIp", this.AttackIp);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "RequestUri", this.RequestUri);
-        this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "RequestMethod", this.RequestMethod);
         this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
-        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
-        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+        this.setParamSimple(map, prefix + "Ua", this.Ua);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "AttackType", this.AttackType);
         this.setParamSimple(map, prefix + "DisposalMethod", this.DisposalMethod);
         this.setParamSimple(map, prefix + "HttpLog", this.HttpLog);
-        this.setParamSimple(map, prefix + "Ua", this.Ua);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamSimple(map, prefix + "DetectionMethod", this.DetectionMethod);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Maliciousness", this.Maliciousness);
         this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

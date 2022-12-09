@@ -188,6 +188,22 @@ public class DomainsPartInfo extends AbstractModel{
     private Long CipherTemplate;
 
     /**
+    * 300s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyReadTimeout")
+    @Expose
+    private Long ProxyReadTimeout;
+
+    /**
+    * 300s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxySendTimeout")
+    @Expose
+    private Long ProxySendTimeout;
+
+    /**
      * Get 是否开启httpRewrite 
      * @return HttpsRewrite 是否开启httpRewrite
      */
@@ -571,6 +587,46 @@ public class DomainsPartInfo extends AbstractModel{
         this.CipherTemplate = CipherTemplate;
     }
 
+    /**
+     * Get 300s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyReadTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxyReadTimeout() {
+        return this.ProxyReadTimeout;
+    }
+
+    /**
+     * Set 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyReadTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyReadTimeout(Long ProxyReadTimeout) {
+        this.ProxyReadTimeout = ProxyReadTimeout;
+    }
+
+    /**
+     * Get 300s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxySendTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxySendTimeout() {
+        return this.ProxySendTimeout;
+    }
+
+    /**
+     * Set 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxySendTimeout 300s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxySendTimeout(Long ProxySendTimeout) {
+        this.ProxySendTimeout = ProxySendTimeout;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -657,6 +713,12 @@ public class DomainsPartInfo extends AbstractModel{
         if (source.CipherTemplate != null) {
             this.CipherTemplate = new Long(source.CipherTemplate);
         }
+        if (source.ProxyReadTimeout != null) {
+            this.ProxyReadTimeout = new Long(source.ProxyReadTimeout);
+        }
+        if (source.ProxySendTimeout != null) {
+            this.ProxySendTimeout = new Long(source.ProxySendTimeout);
+        }
     }
 
 
@@ -687,6 +749,8 @@ public class DomainsPartInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
         this.setParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
         this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
+        this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
+        this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
 
     }
 }

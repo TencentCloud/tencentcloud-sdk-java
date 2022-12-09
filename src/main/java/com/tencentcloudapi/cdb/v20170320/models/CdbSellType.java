@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CdbSellType extends AbstractModel{
 
     /**
-    * 售卖实例名称
+    * 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
     */
     @SerializedName("TypeName")
     @Expose
@@ -44,16 +44,16 @@ public class CdbSellType extends AbstractModel{
     private Long [] ConfigIds;
 
     /**
-     * Get 售卖实例名称 
-     * @return TypeName 售卖实例名称
+     * Get 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。 
+     * @return TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 售卖实例名称
-     * @param TypeName 售卖实例名称
+     * Set 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
+     * @param TypeName 售卖实例名称。Z3是高可用类型对应规格中的DeviceType包含UNIVERSAL,EXCLUSIVE；CVM是基础版类型对应规格中的DeviceType是BASIC；TKE是基础型v2类型对应规格中的DeviceType是BASIC_V2。
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

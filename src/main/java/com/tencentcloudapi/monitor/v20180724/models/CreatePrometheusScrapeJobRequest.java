@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreatePrometheusScrapeJobRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Prometheus 实例 ID，例如：prom-abcd1234
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID
+    * Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 任务内容
+    * 抓取任务配置，格式：job_name:xx
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Prometheus 实例 ID，例如：prom-abcd1234 
+     * @return InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Prometheus 实例 ID，例如：prom-abcd1234
+     * @param InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取 
+     * @return AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * @param AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 任务内容 
-     * @return Config 任务内容
+     * Get 抓取任务配置，格式：job_name:xx 
+     * @return Config 抓取任务配置，格式：job_name:xx
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 任务内容
-     * @param Config 任务内容
+     * Set 抓取任务配置，格式：job_name:xx
+     * @param Config 抓取任务配置，格式：job_name:xx
      */
     public void setConfig(String Config) {
         this.Config = Config;

@@ -30,7 +30,7 @@ public class CertificateOutput extends AbstractModel{
     private String SSLMode;
 
     /**
-    * 服务端证书的 ID。
+    * 服务端证书的ID。
     */
     @SerializedName("CertId")
     @Expose
@@ -43,6 +43,14 @@ public class CertificateOutput extends AbstractModel{
     @SerializedName("CertCaId")
     @Expose
     private String CertCaId;
+
+    /**
+    * 多本服务器证书场景扩展的服务器证书ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtCertIds")
+    @Expose
+    private String [] ExtCertIds;
 
     /**
      * Get 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证 
@@ -61,16 +69,16 @@ public class CertificateOutput extends AbstractModel{
     }
 
     /**
-     * Get 服务端证书的 ID。 
-     * @return CertId 服务端证书的 ID。
+     * Get 服务端证书的ID。 
+     * @return CertId 服务端证书的ID。
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 服务端证书的 ID。
-     * @param CertId 服务端证书的 ID。
+     * Set 服务端证书的ID。
+     * @param CertId 服务端证书的ID。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -96,6 +104,26 @@ public class CertificateOutput extends AbstractModel{
         this.CertCaId = CertCaId;
     }
 
+    /**
+     * Get 多本服务器证书场景扩展的服务器证书ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtCertIds 多本服务器证书场景扩展的服务器证书ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExtCertIds() {
+        return this.ExtCertIds;
+    }
+
+    /**
+     * Set 多本服务器证书场景扩展的服务器证书ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtCertIds 多本服务器证书场景扩展的服务器证书ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtCertIds(String [] ExtCertIds) {
+        this.ExtCertIds = ExtCertIds;
+    }
+
     public CertificateOutput() {
     }
 
@@ -113,6 +141,12 @@ public class CertificateOutput extends AbstractModel{
         if (source.CertCaId != null) {
             this.CertCaId = new String(source.CertCaId);
         }
+        if (source.ExtCertIds != null) {
+            this.ExtCertIds = new String[source.ExtCertIds.length];
+            for (int i = 0; i < source.ExtCertIds.length; i++) {
+                this.ExtCertIds[i] = new String(source.ExtCertIds[i]);
+            }
+        }
     }
 
 
@@ -123,6 +157,7 @@ public class CertificateOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
+        this.setParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteServiceDiscoveryRequest extends AbstractModel{
 
     /**
-    * Prometheus 实例 ID
+    * Prometheus 实例 ID，例如：prom-sdfk2342a
     */
     @SerializedName("InstanceId")
     @Expose
@@ -62,16 +62,16 @@ public class DeleteServiceDiscoveryRequest extends AbstractModel{
     private String Yaml;
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+     * Get Prometheus 实例 ID，例如：prom-sdfk2342a 
+     * @return InstanceId Prometheus 实例 ID，例如：prom-sdfk2342a
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set Prometheus 实例 ID，例如：prom-sdfk2342a
+     * @param InstanceId Prometheus 实例 ID，例如：prom-sdfk2342a
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

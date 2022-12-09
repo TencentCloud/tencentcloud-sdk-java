@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGrafanaConfigRequest extends AbstractModel{
+public class DescribeFileAttributesTaskOutput extends AbstractModel{
 
     /**
-    * Grafana 实例 ID，例如：grafana-12345678
+    * 媒体文件的 Md5 值。
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Md5")
     @Expose
-    private String InstanceId;
+    private String Md5;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-12345678 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * Get 媒体文件的 Md5 值。 
+     * @return Md5 媒体文件的 Md5 值。
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getMd5() {
+        return this.Md5;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-12345678
-     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * Set 媒体文件的 Md5 值。
+     * @param Md5 媒体文件的 Md5 值。
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
     }
 
-    public DescribeGrafanaConfigRequest() {
+    public DescribeFileAttributesTaskOutput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGrafanaConfigRequest(DescribeGrafanaConfigRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeFileAttributesTaskOutput(DescribeFileAttributesTaskOutput source) {
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeGrafanaConfigRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

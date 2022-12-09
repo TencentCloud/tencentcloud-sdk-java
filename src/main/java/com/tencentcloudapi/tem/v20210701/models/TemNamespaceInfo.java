@@ -191,6 +191,22 @@ public class TemNamespaceInfo extends AbstractModel{
     private Boolean HasAuthority;
 
     /**
+    * 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
+    * 地域码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get 环境id 
      * @return EnvironmentId 环境id
      */
@@ -586,6 +602,46 @@ public class TemNamespaceInfo extends AbstractModel{
         this.HasAuthority = HasAuthority;
     }
 
+    /**
+     * Get 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvType 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvType 环境类型: test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
+    /**
+     * Get 地域码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionId 地域码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionId 地域码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -666,6 +722,12 @@ public class TemNamespaceInfo extends AbstractModel{
         if (source.HasAuthority != null) {
             this.HasAuthority = new Boolean(source.HasAuthority);
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -696,6 +758,8 @@ public class TemNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HasAuthority", this.HasAuthority);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

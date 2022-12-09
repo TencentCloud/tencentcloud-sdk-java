@@ -104,6 +104,14 @@ public class NamespaceInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 环境类型：test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
      * Get ID 信息 
      * @return EnvironmentId ID 信息
      */
@@ -295,6 +303,26 @@ public class NamespaceInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 环境类型：test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvType 环境类型：test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set 环境类型：test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvType 环境类型：test、pre、prod
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
     public NamespaceInfo() {
     }
 
@@ -342,6 +370,9 @@ public class NamespaceInfo extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
     }
 
 
@@ -360,6 +391,7 @@ public class NamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
 
     }
 }

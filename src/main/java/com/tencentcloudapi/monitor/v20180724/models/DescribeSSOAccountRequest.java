@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeSSOAccountRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 按账号 UIN 进行过滤
+    * 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 按账号 UIN 进行过滤 
-     * @return UserId 按账号 UIN 进行过滤
+     * Get 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000 
+     * @return UserId 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 按账号 UIN 进行过滤
-     * @param UserId 按账号 UIN 进行过滤
+     * Set 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
+     * @param UserId 填写对应的账号 ID，将会按账号 ID 进行过滤，例如：10000
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

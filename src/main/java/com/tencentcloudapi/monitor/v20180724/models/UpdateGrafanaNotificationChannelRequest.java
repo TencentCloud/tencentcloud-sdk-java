@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * 通道 ID
+    * 通道 ID，例如：nchannel-abcd1234
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-12345678
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 渠道名
+    * 告警通道名称，例如：test
     */
     @SerializedName("ChannelName")
     @Expose
@@ -65,48 +65,48 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] OrganizationIds;
 
     /**
-     * Get 通道 ID 
-     * @return ChannelId 通道 ID
+     * Get 通道 ID，例如：nchannel-abcd1234 
+     * @return ChannelId 通道 ID，例如：nchannel-abcd1234
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道 ID
-     * @param ChannelId 通道 ID
+     * Set 通道 ID，例如：nchannel-abcd1234
+     * @param ChannelId 通道 ID，例如：nchannel-abcd1234
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-12345678 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-12345678
+     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 渠道名 
-     * @return ChannelName 渠道名
+     * Get 告警通道名称，例如：test 
+     * @return ChannelName 告警通道名称，例如：test
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 渠道名
-     * @param ChannelName 渠道名
+     * Set 告警通道名称，例如：test
+     * @param ChannelName 告警通道名称，例如：test
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

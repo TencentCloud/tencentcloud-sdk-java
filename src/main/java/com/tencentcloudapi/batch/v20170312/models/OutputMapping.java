@@ -37,6 +37,14 @@ public class OutputMapping extends AbstractModel{
     private String DestinationPath;
 
     /**
+    * 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutputMappingOption")
+    @Expose
+    private OutputMappingOption OutputMappingOption;
+
+    /**
      * Get 源端路径 
      * @return SourcePath 源端路径
      */
@@ -68,6 +76,26 @@ public class OutputMapping extends AbstractModel{
         this.DestinationPath = DestinationPath;
     }
 
+    /**
+     * Get 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutputMappingOption 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OutputMappingOption getOutputMappingOption() {
+        return this.OutputMappingOption;
+    }
+
+    /**
+     * Set 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutputMappingOption 输出映射选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutputMappingOption(OutputMappingOption OutputMappingOption) {
+        this.OutputMappingOption = OutputMappingOption;
+    }
+
     public OutputMapping() {
     }
 
@@ -82,6 +110,9 @@ public class OutputMapping extends AbstractModel{
         if (source.DestinationPath != null) {
             this.DestinationPath = new String(source.DestinationPath);
         }
+        if (source.OutputMappingOption != null) {
+            this.OutputMappingOption = new OutputMappingOption(source.OutputMappingOption);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class OutputMapping extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourcePath", this.SourcePath);
         this.setParamSimple(map, prefix + "DestinationPath", this.DestinationPath);
+        this.setParamObj(map, prefix + "OutputMappingOption.", this.OutputMappingOption);
 
     }
 }

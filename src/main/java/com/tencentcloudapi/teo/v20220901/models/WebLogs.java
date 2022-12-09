@@ -96,6 +96,14 @@ public class WebLogs extends AbstractModel{
     private String ReqMethod;
 
     /**
+    * 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 请求（事件）ID。 
      * @return EventId 请求（事件）ID。
      */
@@ -267,6 +275,26 @@ public class WebLogs extends AbstractModel{
         this.ReqMethod = ReqMethod;
     }
 
+    /**
+     * Get 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Area 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Area 日志所属区域。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public WebLogs() {
     }
 
@@ -308,6 +336,9 @@ public class WebLogs extends AbstractModel{
         if (source.ReqMethod != null) {
             this.ReqMethod = new String(source.ReqMethod);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class WebLogs extends AbstractModel{
         this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
         this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         this.setParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

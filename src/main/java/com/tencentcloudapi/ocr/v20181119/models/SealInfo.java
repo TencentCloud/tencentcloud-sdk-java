@@ -44,6 +44,18 @@ public class SealInfo extends AbstractModel{
     private String [] OtherTexts;
 
     /**
+    * 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+    */
+    @SerializedName("SealShape")
+    @Expose
+    private String SealShape;
+
+    /**
      * Get 印章主体内容 
      * @return SealBody 印章主体内容
      */
@@ -91,6 +103,42 @@ public class SealInfo extends AbstractModel{
         this.OtherTexts = OtherTexts;
     }
 
+    /**
+     * Get 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4 
+     * @return SealShape 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     */
+    public String getSealShape() {
+        return this.SealShape;
+    }
+
+    /**
+     * Set 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     * @param SealShape 印章类型，表示为:
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     */
+    public void setSealShape(String SealShape) {
+        this.SealShape = SealShape;
+    }
+
     public SealInfo() {
     }
 
@@ -111,6 +159,9 @@ public class SealInfo extends AbstractModel{
                 this.OtherTexts[i] = new String(source.OtherTexts[i]);
             }
         }
+        if (source.SealShape != null) {
+            this.SealShape = new String(source.SealShape);
+        }
     }
 
 
@@ -121,6 +172,7 @@ public class SealInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SealBody", this.SealBody);
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamArraySimple(map, prefix + "OtherTexts.", this.OtherTexts);
+        this.setParamSimple(map, prefix + "SealShape", this.SealShape);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdatePrometheusAgentStatusRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Prometheus 实例 ID，例如：prom-abcd1234
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID 列表
+    * Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
     */
     @SerializedName("AgentIds")
     @Expose
@@ -46,32 +46,32 @@ public class UpdatePrometheusAgentStatusRequest extends AbstractModel{
     private Long Status;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Prometheus 实例 ID，例如：prom-abcd1234 
+     * @return InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Prometheus 实例 ID，例如：prom-abcd1234
+     * @param InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID 列表 
-     * @return AgentIds Agent ID 列表
+     * Get Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取 
+     * @return AgentIds Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public String [] getAgentIds() {
         return this.AgentIds;
     }
 
     /**
-     * Set Agent ID 列表
-     * @param AgentIds Agent ID 列表
+     * Set Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * @param AgentIds Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public void setAgentIds(String [] AgentIds) {
         this.AgentIds = AgentIds;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpdateGrafanaWhiteListRequest extends AbstractModel{
 
     /**
-    * 实例名
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 白名单数组
+    * 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
     */
     @SerializedName("Whitelist")
     @Expose
     private String [] Whitelist;
 
     /**
-     * Get 实例名 
-     * @return InstanceId 实例名
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceId 实例名
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 白名单数组 
-     * @return Whitelist 白名单数组
+     * Get 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看 
+     * @return Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set 白名单数组
-     * @param Whitelist 白名单数组
+     * Set 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
+     * @param Whitelist 白名单数组，输入公网域名 IP ，例如：127.0.0.1，可通过接口 DescribeGrafanaWhiteList 查看
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

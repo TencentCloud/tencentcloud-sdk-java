@@ -85,6 +85,40 @@ public class SecRuleRelatedInfo extends AbstractModel{
     private String AttackContent;
 
     /**
+    * 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * 规则是否开启。
+    */
+    @SerializedName("RuleEnabled")
+    @Expose
+    private Boolean RuleEnabled;
+
+    /**
+    * 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+    */
+    @SerializedName("RuleDeleted")
+    @Expose
+    private Boolean RuleDeleted;
+
+    /**
+    * 规则是否启用监控告警。
+    */
+    @SerializedName("AlarmEnabled")
+    @Expose
+    private Boolean AlarmEnabled;
+
+    /**
      * Get 规则ID。 
      * @return RuleId 规则ID。
      */
@@ -248,6 +282,94 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.AttackContent = AttackContent;
     }
 
+    /**
+     * Get 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li> 
+     * @return RuleType 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+     * @param RuleType 规则类型，取值有：
+<li>waf: 托管规则；</li>
+<li>acl：自定义规则；</li>
+<li>rate：速率限制规则；</li>
+<li>bot：bot防护规则。</li>
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get 规则是否开启。 
+     * @return RuleEnabled 规则是否开启。
+     */
+    public Boolean getRuleEnabled() {
+        return this.RuleEnabled;
+    }
+
+    /**
+     * Set 规则是否开启。
+     * @param RuleEnabled 规则是否开启。
+     */
+    public void setRuleEnabled(Boolean RuleEnabled) {
+        this.RuleEnabled = RuleEnabled;
+    }
+
+    /**
+     * Get 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li> 
+     * @return RuleDeleted 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     */
+    public Boolean getRuleDeleted() {
+        return this.RuleDeleted;
+    }
+
+    /**
+     * Set 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     * @param RuleDeleted 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     */
+    public void setRuleDeleted(Boolean RuleDeleted) {
+        this.RuleDeleted = RuleDeleted;
+    }
+
+    /**
+     * Get 规则是否启用监控告警。 
+     * @return AlarmEnabled 规则是否启用监控告警。
+     */
+    public Boolean getAlarmEnabled() {
+        return this.AlarmEnabled;
+    }
+
+    /**
+     * Set 规则是否启用监控告警。
+     * @param AlarmEnabled 规则是否启用监控告警。
+     */
+    public void setAlarmEnabled(Boolean AlarmEnabled) {
+        this.AlarmEnabled = AlarmEnabled;
+    }
+
     public SecRuleRelatedInfo() {
     }
 
@@ -277,6 +399,18 @@ public class SecRuleRelatedInfo extends AbstractModel{
         if (source.AttackContent != null) {
             this.AttackContent = new String(source.AttackContent);
         }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RuleEnabled != null) {
+            this.RuleEnabled = new Boolean(source.RuleEnabled);
+        }
+        if (source.RuleDeleted != null) {
+            this.RuleDeleted = new Boolean(source.RuleDeleted);
+        }
+        if (source.AlarmEnabled != null) {
+            this.AlarmEnabled = new Boolean(source.AlarmEnabled);
+        }
     }
 
 
@@ -291,6 +425,10 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
         this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+        this.setParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
+        this.setParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
 
     }
 }

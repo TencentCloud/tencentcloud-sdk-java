@@ -100,6 +100,14 @@ public class MediaMetaData extends AbstractModel{
     private Float AudioDuration;
 
     /**
+    * 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。 
      * @return Size 上传的媒体文件大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
      */
@@ -275,6 +283,26 @@ public class MediaMetaData extends AbstractModel{
         this.AudioDuration = AudioDuration;
     }
 
+    /**
+     * Get 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li> 
+     * @return Md5 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+     * @param Md5 媒体文件的 Md5 值。
+<li><font color=red>注意</font>：如需要获取媒体文件的 Md5，调用 DescribeFileAttributes 接口，待任务执行完成后获取。</li>
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public MediaMetaData() {
     }
 
@@ -322,6 +350,9 @@ public class MediaMetaData extends AbstractModel{
         if (source.AudioDuration != null) {
             this.AudioDuration = new Float(source.AudioDuration);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -340,6 +371,7 @@ public class MediaMetaData extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
         this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAlertRuleRequest extends AbstractModel{
 
     /**
-    * Prometheus 实例 ID
+    * Prometheus 实例 ID，例如：prom-abcd1234
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateAlertRuleRequest extends AbstractModel{
     private String RuleName;
 
     /**
-    * 规则表达式
+    * 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
     */
     @SerializedName("Expr")
     @Expose
@@ -90,16 +90,16 @@ public class CreateAlertRuleRequest extends AbstractModel{
     private String Type;
 
     /**
-     * Get Prometheus 实例 ID 
-     * @return InstanceId Prometheus 实例 ID
+     * Get Prometheus 实例 ID，例如：prom-abcd1234 
+     * @return InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus 实例 ID
-     * @param InstanceId Prometheus 实例 ID
+     * Set Prometheus 实例 ID，例如：prom-abcd1234
+     * @param InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -122,16 +122,16 @@ public class CreateAlertRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 规则表达式 
-     * @return Expr 规则表达式
+     * Get 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a> 
+     * @return Expr 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
      */
     public String getExpr() {
         return this.Expr;
     }
 
     /**
-     * Set 规则表达式
-     * @param Expr 规则表达式
+     * Set 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
+     * @param Expr 规则表达式，可参考<a href="https://cloud.tencent.com/document/product/1416/56008">告警规则说明</a>
      */
     public void setExpr(String Expr) {
         this.Expr = Expr;

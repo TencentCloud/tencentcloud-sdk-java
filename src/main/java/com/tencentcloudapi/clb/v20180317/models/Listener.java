@@ -172,6 +172,14 @@ public class Listener extends AbstractModel{
     private String [] AttrFlags;
 
     /**
+    * 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroupList")
+    @Expose
+    private BasicTargetGroupInfo [] TargetGroupList;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -539,6 +547,26 @@ public class Listener extends AbstractModel{
         this.AttrFlags = AttrFlags;
     }
 
+    /**
+     * Get 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BasicTargetGroupInfo [] getTargetGroupList() {
+        return this.TargetGroupList;
+    }
+
+    /**
+     * Set 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
+        this.TargetGroupList = TargetGroupList;
+    }
+
     public Listener() {
     }
 
@@ -610,6 +638,12 @@ public class Listener extends AbstractModel{
                 this.AttrFlags[i] = new String(source.AttrFlags[i]);
             }
         }
+        if (source.TargetGroupList != null) {
+            this.TargetGroupList = new BasicTargetGroupInfo[source.TargetGroupList.length];
+            for (int i = 0; i < source.TargetGroupList.length; i++) {
+                this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
+            }
+        }
     }
 
 
@@ -636,6 +670,7 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "Toa", this.Toa);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
+        this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
 
     }
 }

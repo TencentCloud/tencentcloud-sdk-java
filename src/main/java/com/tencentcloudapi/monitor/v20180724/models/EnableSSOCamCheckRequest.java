@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableSSOCamCheckRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否开启cam鉴权
+    * 是否开启 cam 鉴权，true为开启，false 为不开启
     */
     @SerializedName("EnableSSOCamCheck")
     @Expose
     private Boolean EnableSSOCamCheck;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否开启cam鉴权 
-     * @return EnableSSOCamCheck 是否开启cam鉴权
+     * Get 是否开启 cam 鉴权，true为开启，false 为不开启 
+     * @return EnableSSOCamCheck 是否开启 cam 鉴权，true为开启，false 为不开启
      */
     public Boolean getEnableSSOCamCheck() {
         return this.EnableSSOCamCheck;
     }
 
     /**
-     * Set 是否开启cam鉴权
-     * @param EnableSSOCamCheck 是否开启cam鉴权
+     * Set 是否开启 cam 鉴权，true为开启，false 为不开启
+     * @param EnableSSOCamCheck 是否开启 cam 鉴权，true为开启，false 为不开启
      */
     public void setEnableSSOCamCheck(Boolean EnableSSOCamCheck) {
         this.EnableSSOCamCheck = EnableSSOCamCheck;

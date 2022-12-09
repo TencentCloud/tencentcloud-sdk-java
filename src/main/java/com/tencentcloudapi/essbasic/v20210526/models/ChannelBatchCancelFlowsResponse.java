@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelBatchCancelFlowsResponse extends AbstractModel{
 
     /**
-    * 签署流程批量撤销失败原因，错误信息与流程Id一一对应，如果部分流程不可撤销，不会返回错误信息，只会撤销可撤销流程
+    * 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为“”,失败则对应失败消息
     */
     @SerializedName("FailMessages")
     @Expose
@@ -37,16 +37,16 @@ public class ChannelBatchCancelFlowsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 签署流程批量撤销失败原因，错误信息与流程Id一一对应，如果部分流程不可撤销，不会返回错误信息，只会撤销可撤销流程 
-     * @return FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，如果部分流程不可撤销，不会返回错误信息，只会撤销可撤销流程
+     * Get 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为“”,失败则对应失败消息 
+     * @return FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为“”,失败则对应失败消息
      */
     public String [] getFailMessages() {
         return this.FailMessages;
     }
 
     /**
-     * Set 签署流程批量撤销失败原因，错误信息与流程Id一一对应，如果部分流程不可撤销，不会返回错误信息，只会撤销可撤销流程
-     * @param FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，如果部分流程不可撤销，不会返回错误信息，只会撤销可撤销流程
+     * Set 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为“”,失败则对应失败消息
+     * @param FailMessages 签署流程批量撤销失败原因，错误信息与流程Id一一对应，成功为“”,失败则对应失败消息
      */
     public void setFailMessages(String [] FailMessages) {
         this.FailMessages = FailMessages;

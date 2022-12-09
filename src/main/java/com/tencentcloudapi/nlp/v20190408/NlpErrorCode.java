@@ -57,6 +57,9 @@ public enum NlpErrorCode {
     // 资源用量达到上限。
      LIMITEXCEEDED_RESOURCEREACHEDLIMIT("LimitExceeded.ResourceReachedLimit"),
      
+    // 请求的次数超过了频率限制。
+     REQUESTLIMITEXCEEDED_UINLIMITEXCEEDED("RequestLimitExceeded.UinLimitExceeded"),
+     
     // 名称已存在
      RESOURCEINUSE_NAMEEXISTS("ResourceInUse.NameExists"),
      

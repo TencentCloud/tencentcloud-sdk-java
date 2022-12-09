@@ -98,6 +98,14 @@ public class Staff extends AbstractModel{
     private Long VerifiedOn;
 
     /**
+    * 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuiteJob")
+    @Expose
+    private Long QuiteJob;
+
+    /**
      * Get 用户在电子签平台的id 
      * @return UserId 用户在电子签平台的id
      */
@@ -277,6 +285,26 @@ public class Staff extends AbstractModel{
         this.VerifiedOn = VerifiedOn;
     }
 
+    /**
+     * Get 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuiteJob 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getQuiteJob() {
+        return this.QuiteJob;
+    }
+
+    /**
+     * Set 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuiteJob 员工是否离职：0-未离职，1-离职
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuiteJob(Long QuiteJob) {
+        this.QuiteJob = QuiteJob;
+    }
+
     public Staff() {
     }
 
@@ -318,6 +346,9 @@ public class Staff extends AbstractModel{
         if (source.VerifiedOn != null) {
             this.VerifiedOn = new Long(source.VerifiedOn);
         }
+        if (source.QuiteJob != null) {
+            this.QuiteJob = new Long(source.QuiteJob);
+        }
     }
 
 
@@ -335,6 +366,7 @@ public class Staff extends AbstractModel{
         this.setParamSimple(map, prefix + "Verified", this.Verified);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "VerifiedOn", this.VerifiedOn);
+        this.setParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
 
     }
 }

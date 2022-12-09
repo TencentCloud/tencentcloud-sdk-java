@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UninstallGrafanaPluginsRequest extends AbstractModel{
 
     /**
-    * 插件 ID 数组
+    * 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
     */
     @SerializedName("PluginIds")
     @Expose
     private String [] PluginIds;
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-abcdefg
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 插件 ID 数组 
-     * @return PluginIds 插件 ID 数组
+     * Get 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId 
+     * @return PluginIds 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
      */
     public String [] getPluginIds() {
         return this.PluginIds;
     }
 
     /**
-     * Set 插件 ID 数组
-     * @param PluginIds 插件 ID 数组
+     * Set 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
+     * @param PluginIds 插件 ID 数组，例如"PluginIds": [ "grafana-clock-panel" ]，可通过 DescribePluginOverviews 获取 PluginId
      */
     public void setPluginIds(String [] PluginIds) {
         this.PluginIds = PluginIds;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefg 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefg
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefg
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefg
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableGrafanaSSORequest extends AbstractModel{
 
     /**
-    * 是否开启 SSO
+    * 是否开启 SSO，true为开启，false 为不开启
     */
     @SerializedName("EnableSSO")
     @Expose
     private Boolean EnableSSO;
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 是否开启 SSO 
-     * @return EnableSSO 是否开启 SSO
+     * Get 是否开启 SSO，true为开启，false 为不开启 
+     * @return EnableSSO 是否开启 SSO，true为开启，false 为不开启
      */
     public Boolean getEnableSSO() {
         return this.EnableSSO;
     }
 
     /**
-     * Set 是否开启 SSO
-     * @param EnableSSO 是否开启 SSO
+     * Set 是否开启 SSO，true为开启，false 为不开启
+     * @param EnableSSO 是否开启 SSO，true为开启，false 为不开启
      */
     public void setEnableSSO(Boolean EnableSSO) {
         this.EnableSSO = EnableSSO;
     }
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

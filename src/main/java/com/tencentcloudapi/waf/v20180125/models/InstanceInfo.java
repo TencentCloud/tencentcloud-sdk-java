@@ -188,6 +188,22 @@ public class InstanceInfo extends AbstractModel{
     private Long ElasticBilling;
 
     /**
+    * 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackLogPost")
+    @Expose
+    private Long AttackLogPost;
+
+    /**
+    * 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxBandwidth")
+    @Expose
+    private Long MaxBandwidth;
+
+    /**
      * Get id 
      * @return InstanceId id
      */
@@ -571,6 +587,46 @@ public class InstanceInfo extends AbstractModel{
         this.ElasticBilling = ElasticBilling;
     }
 
+    /**
+     * Get 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackLogPost 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttackLogPost() {
+        return this.AttackLogPost;
+    }
+
+    /**
+     * Set 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackLogPost 攻击日志投递开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackLogPost(Long AttackLogPost) {
+        this.AttackLogPost = AttackLogPost;
+    }
+
+    /**
+     * Get 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxBandwidth 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxBandwidth() {
+        return this.MaxBandwidth;
+    }
+
+    /**
+     * Set 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxBandwidth 带宽峰值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxBandwidth(Long MaxBandwidth) {
+        this.MaxBandwidth = MaxBandwidth;
+    }
+
     public InstanceInfo() {
     }
 
@@ -648,6 +704,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.ElasticBilling != null) {
             this.ElasticBilling = new Long(source.ElasticBilling);
         }
+        if (source.AttackLogPost != null) {
+            this.AttackLogPost = new Long(source.AttackLogPost);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
     }
 
 
@@ -678,6 +740,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamObj(map, prefix + "BotPkg.", this.BotPkg);
         this.setParamObj(map, prefix + "BotQPS.", this.BotQPS);
         this.setParamSimple(map, prefix + "ElasticBilling", this.ElasticBilling);
+        this.setParamSimple(map, prefix + "AttackLogPost", this.AttackLogPost);
+        this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
 
     }
 }

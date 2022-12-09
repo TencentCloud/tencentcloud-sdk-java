@@ -23,11 +23,20 @@ import java.util.HashMap;
 public class DescribeSecurityRuleIdResponse extends AbstractModel{
 
     /**
-    * 规则列表。
+    * 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafGroupRules")
     @Expose
     private WafGroupRule [] WafGroupRules;
+
+    /**
+    * 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityRules")
+    @Expose
+    private SecurityRule [] SecurityRules;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +46,43 @@ public class DescribeSecurityRuleIdResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 规则列表。 
-     * @return WafGroupRules 规则列表。
+     * Get 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WafGroupRules 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafGroupRule [] getWafGroupRules() {
         return this.WafGroupRules;
     }
 
     /**
-     * Set 规则列表。
-     * @param WafGroupRules 规则列表。
+     * Set 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WafGroupRules 托管规则类型的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafGroupRules(WafGroupRule [] WafGroupRules) {
         this.WafGroupRules = WafGroupRules;
+    }
+
+    /**
+     * Get 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityRules 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityRule [] getSecurityRules() {
+        return this.SecurityRules;
+    }
+
+    /**
+     * Set 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityRules 自定义规则、速率限制、Bot规则的规则列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityRules(SecurityRule [] SecurityRules) {
+        this.SecurityRules = SecurityRules;
     }
 
     /**
@@ -82,6 +115,12 @@ public class DescribeSecurityRuleIdResponse extends AbstractModel{
                 this.WafGroupRules[i] = new WafGroupRule(source.WafGroupRules[i]);
             }
         }
+        if (source.SecurityRules != null) {
+            this.SecurityRules = new SecurityRule[source.SecurityRules.length];
+            for (int i = 0; i < source.SecurityRules.length; i++) {
+                this.SecurityRules[i] = new SecurityRule(source.SecurityRules[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +132,7 @@ public class DescribeSecurityRuleIdResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "WafGroupRules.", this.WafGroupRules);
+        this.setParamArrayObj(map, prefix + "SecurityRules.", this.SecurityRules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

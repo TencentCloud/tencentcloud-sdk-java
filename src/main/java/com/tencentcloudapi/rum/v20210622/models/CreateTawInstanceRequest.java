@@ -86,6 +86,20 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private String BuyingChannel;
 
     /**
+    * 预付费资源包类型(仅预付费需要)
+    */
+    @SerializedName("ResourcePackageType")
+    @Expose
+    private Long ResourcePackageType;
+
+    /**
+    * 预付费资源包数量(仅预付费需要)
+    */
+    @SerializedName("ResourcePackageNum")
+    @Expose
+    private Long ResourcePackageNum;
+
+    /**
      * Get 片区Id，(至少大于0) 
      * @return AreaId 片区Id，(至少大于0)
      */
@@ -229,6 +243,38 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.BuyingChannel = BuyingChannel;
     }
 
+    /**
+     * Get 预付费资源包类型(仅预付费需要) 
+     * @return ResourcePackageType 预付费资源包类型(仅预付费需要)
+     */
+    public Long getResourcePackageType() {
+        return this.ResourcePackageType;
+    }
+
+    /**
+     * Set 预付费资源包类型(仅预付费需要)
+     * @param ResourcePackageType 预付费资源包类型(仅预付费需要)
+     */
+    public void setResourcePackageType(Long ResourcePackageType) {
+        this.ResourcePackageType = ResourcePackageType;
+    }
+
+    /**
+     * Get 预付费资源包数量(仅预付费需要) 
+     * @return ResourcePackageNum 预付费资源包数量(仅预付费需要)
+     */
+    public Long getResourcePackageNum() {
+        return this.ResourcePackageNum;
+    }
+
+    /**
+     * Set 预付费资源包数量(仅预付费需要)
+     * @param ResourcePackageNum 预付费资源包数量(仅预付费需要)
+     */
+    public void setResourcePackageNum(Long ResourcePackageNum) {
+        this.ResourcePackageNum = ResourcePackageNum;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -267,6 +313,12 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.BuyingChannel != null) {
             this.BuyingChannel = new String(source.BuyingChannel);
         }
+        if (source.ResourcePackageType != null) {
+            this.ResourcePackageType = new Long(source.ResourcePackageType);
+        }
+        if (source.ResourcePackageNum != null) {
+            this.ResourcePackageNum = new Long(source.ResourcePackageNum);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CountNum", this.CountNum);
         this.setParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
         this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
+        this.setParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
+        this.setParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
 
     }
 }

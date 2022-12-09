@@ -42,11 +42,19 @@ public class IpTableRule extends AbstractModel{
     private String MatchFrom;
 
     /**
-    * 匹配内容。
+    * 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MatchContent")
+    @SerializedName("Operator")
     @Expose
-    private String MatchContent;
+    private String Operator;
 
     /**
     * 规则id。仅出参使用。
@@ -71,6 +79,21 @@ public class IpTableRule extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+    * 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+    */
+    @SerializedName("MatchContent")
+    @Expose
+    private String MatchContent;
 
     /**
      * Get 动作，取值有：
@@ -125,19 +148,51 @@ public class IpTableRule extends AbstractModel{
     }
 
     /**
-     * Get 匹配内容。 
-     * @return MatchContent 匹配内容。
+     * Get 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Operator 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMatchContent() {
-        return this.MatchContent;
+    public String getOperator() {
+        return this.Operator;
     }
 
     /**
-     * Set 匹配内容。
-     * @param MatchContent 匹配内容。
+     * Set 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Operator 规则的匹配方式，默认为空代表等于。
+取值有：
+<li> is_emty：配置为空；</li>
+<li> not_exists：配置为不存在；</li>
+<li> include：包含；</li>
+<li> not_include：不包含；</li>
+<li> equal：等于；</li>
+<li> not_equal：不等于。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMatchContent(String MatchContent) {
-        this.MatchContent = MatchContent;
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
     }
 
     /**
@@ -200,6 +255,42 @@ public class IpTableRule extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 规则名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleName 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleName 规则名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
+    /**
+     * Get 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。 
+     * @return MatchContent 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     */
+    public String getMatchContent() {
+        return this.MatchContent;
+    }
+
+    /**
+     * Set 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     * @param MatchContent 匹配内容。当 Operator为is_emty 或not_exists时，此值允许为空。
+     */
+    public void setMatchContent(String MatchContent) {
+        this.MatchContent = MatchContent;
+    }
+
     public IpTableRule() {
     }
 
@@ -214,8 +305,8 @@ public class IpTableRule extends AbstractModel{
         if (source.MatchFrom != null) {
             this.MatchFrom = new String(source.MatchFrom);
         }
-        if (source.MatchContent != null) {
-            this.MatchContent = new String(source.MatchContent);
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
         }
         if (source.RuleID != null) {
             this.RuleID = new Long(source.RuleID);
@@ -226,6 +317,12 @@ public class IpTableRule extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.MatchContent != null) {
+            this.MatchContent = new String(source.MatchContent);
+        }
     }
 
 
@@ -235,10 +332,12 @@ public class IpTableRule extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
-        this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
 
     }
 }

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class UpdatePrometheusScrapeJobRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Prometheus 实例 ID，例如：prom-abcd1234
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID
+    * Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * 抓取任务 ID
+    * 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 抓取任务配置
+    * 抓取任务配置，格式：job_name:xx
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Prometheus 实例 ID，例如：prom-abcd1234 
+     * @return InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Prometheus 实例 ID，例如：prom-abcd1234
+     * @param InstanceId Prometheus 实例 ID，例如：prom-abcd1234
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取 
+     * @return AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+     * @param AgentId Agent ID，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get 抓取任务 ID 
-     * @return JobId 抓取任务 ID
+     * Get 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取 
+     * @return JobId 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 抓取任务 ID
-     * @param JobId 抓取任务 ID
+     * Set 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
+     * @param JobId 抓取任务 ID，例如：job-abcd1234，可在控制台 Agent 管理-抓取任务配置中获取
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 抓取任务配置 
-     * @return Config 抓取任务配置
+     * Get 抓取任务配置，格式：job_name:xx 
+     * @return Config 抓取任务配置，格式：job_name:xx
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 抓取任务配置
-     * @param Config 抓取任务配置
+     * Set 抓取任务配置，格式：job_name:xx
+     * @param Config 抓取任务配置，格式：job_name:xx
      */
     public void setConfig(String Config) {
         this.Config = Config;

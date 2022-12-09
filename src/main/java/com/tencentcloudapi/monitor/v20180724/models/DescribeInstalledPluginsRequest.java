@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeInstalledPluginsRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-kleu3gt0
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 按插件 ID 过滤
+    * 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-kleu3gt0 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-kleu3gt0
+     * @param InstanceId Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 按插件 ID 过滤 
-     * @return PluginId 按插件 ID 过滤
+     * Get 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID 
+     * @return PluginId 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set 按插件 ID 过滤
-     * @param PluginId 按插件 ID 过滤
+     * Set 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
+     * @param PluginId 按插件 ID 过滤，例如：grafana-piechart-panel，可通过接口 DescribeInstalledPlugins 查看已安装的插件 ID
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;

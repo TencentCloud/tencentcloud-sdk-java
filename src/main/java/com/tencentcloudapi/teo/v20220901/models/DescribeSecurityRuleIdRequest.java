@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeSecurityRuleIdRequest extends AbstractModel{
 
     /**
-    * 规则Id数组。
-    */
-    @SerializedName("RuleIdList")
-    @Expose
-    private Long [] RuleIdList;
-
-    /**
     * 规则类型，取值有：
 <li>waf：web托管规则；</li>
 <li>acl：自定义规则；</li>
@@ -48,20 +41,18 @@ public class DescribeSecurityRuleIdRequest extends AbstractModel{
     private String Entity;
 
     /**
-     * Get 规则Id数组。 
-     * @return RuleIdList 规则Id数组。
-     */
-    public Long [] getRuleIdList() {
-        return this.RuleIdList;
-    }
+    * 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+    */
+    @SerializedName("RuleIdList")
+    @Expose
+    private Long [] RuleIdList;
 
     /**
-     * Set 规则Id数组。
-     * @param RuleIdList 规则Id数组。
-     */
-    public void setRuleIdList(Long [] RuleIdList) {
-        this.RuleIdList = RuleIdList;
-    }
+    * 子域名数组。
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
 
     /**
      * Get 规则类型，取值有：
@@ -111,6 +102,38 @@ public class DescribeSecurityRuleIdRequest extends AbstractModel{
         this.Entity = Entity;
     }
 
+    /**
+     * Get 规则Id数组。 当为空时查询 子域名或者应用名下所有规则 
+     * @return RuleIdList 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+     */
+    public Long [] getRuleIdList() {
+        return this.RuleIdList;
+    }
+
+    /**
+     * Set 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+     * @param RuleIdList 规则Id数组。 当为空时查询 子域名或者应用名下所有规则
+     */
+    public void setRuleIdList(Long [] RuleIdList) {
+        this.RuleIdList = RuleIdList;
+    }
+
+    /**
+     * Get 子域名数组。 
+     * @return Domains 子域名数组。
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set 子域名数组。
+     * @param Domains 子域名数组。
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public DescribeSecurityRuleIdRequest() {
     }
 
@@ -119,17 +142,23 @@ public class DescribeSecurityRuleIdRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSecurityRuleIdRequest(DescribeSecurityRuleIdRequest source) {
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.Entity != null) {
+            this.Entity = new String(source.Entity);
+        }
         if (source.RuleIdList != null) {
             this.RuleIdList = new Long[source.RuleIdList.length];
             for (int i = 0; i < source.RuleIdList.length; i++) {
                 this.RuleIdList[i] = new Long(source.RuleIdList[i]);
             }
         }
-        if (source.RuleType != null) {
-            this.RuleType = new String(source.RuleType);
-        }
-        if (source.Entity != null) {
-            this.Entity = new String(source.Entity);
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
         }
     }
 
@@ -138,9 +167,10 @@ public class DescribeSecurityRuleIdRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

@@ -188,6 +188,14 @@ public class RuleOutput extends AbstractModel{
     private String [] Domains;
 
     /**
+    * 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroupList")
+    @Expose
+    private BasicTargetGroupInfo [] TargetGroupList;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -583,6 +591,26 @@ public class RuleOutput extends AbstractModel{
         this.Domains = Domains;
     }
 
+    /**
+     * Get 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BasicTargetGroupInfo [] getTargetGroupList() {
+        return this.TargetGroupList;
+    }
+
+    /**
+     * Set 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroupList 绑定的目标组列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
+        this.TargetGroupList = TargetGroupList;
+    }
+
     public RuleOutput() {
     }
 
@@ -660,6 +688,12 @@ public class RuleOutput extends AbstractModel{
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
+        if (source.TargetGroupList != null) {
+            this.TargetGroupList = new BasicTargetGroupInfo[source.TargetGroupList.length];
+            for (int i = 0; i < source.TargetGroupList.length; i++) {
+                this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
+            }
+        }
     }
 
 
@@ -689,6 +723,7 @@ public class RuleOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
 
     }
 }

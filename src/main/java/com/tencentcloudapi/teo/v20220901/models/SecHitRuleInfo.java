@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class SecHitRuleInfo extends AbstractModel{
 
     /**
+    * 站点ID。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
     * 规则ID。
     */
     @SerializedName("RuleId")
@@ -35,20 +42,6 @@ public class SecHitRuleInfo extends AbstractModel{
     @SerializedName("RuleTypeName")
     @Expose
     private String RuleTypeName;
-
-    /**
-    * 执行动作（处置方式），取值有：
-<li>trans ：通过 ；</li>
-<li>alg ：算法挑战 ；</li>
-<li>drop ：丢弃 ；</li>
-<li>ban ：封禁源ip ；</li>
-<li>redirect ：重定向 ；</li>
-<li>page ：返回指定页面 ；</li>
-<li>monitor ：观察 。</li>
-    */
-    @SerializedName("Action")
-    @Expose
-    private String Action;
 
     /**
     * 命中时间，采用unix秒级时间戳。
@@ -79,6 +72,20 @@ public class SecHitRuleInfo extends AbstractModel{
     private String Domain;
 
     /**
+    * 执行动作（处置方式），取值有：
+<li>trans ：通过 ；</li>
+<li>alg ：算法挑战 ；</li>
+<li>drop ：丢弃 ；</li>
+<li>ban ：封禁源ip ；</li>
+<li>redirect ：重定向 ；</li>
+<li>page ：返回指定页面 ；</li>
+<li>monitor ：观察 。</li>
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
     * Bot标签，取值有:
 <li>evil_bot：恶意Bot；</li>
 <li>suspect_bot：疑似Bot；</li>
@@ -89,6 +96,45 @@ public class SecHitRuleInfo extends AbstractModel{
     @SerializedName("BotLabel")
     @Expose
     private String BotLabel;
+
+    /**
+    * 规则是否启用。
+    */
+    @SerializedName("RuleEnabled")
+    @Expose
+    private Boolean RuleEnabled;
+
+    /**
+    * 规则是否启用监控告警。
+    */
+    @SerializedName("AlarmEnabled")
+    @Expose
+    private Boolean AlarmEnabled;
+
+    /**
+    * 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+    */
+    @SerializedName("RuleDeleted")
+    @Expose
+    private Boolean RuleDeleted;
+
+    /**
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
 
     /**
      * Get 规则ID。 
@@ -120,50 +166,6 @@ public class SecHitRuleInfo extends AbstractModel{
      */
     public void setRuleTypeName(String RuleTypeName) {
         this.RuleTypeName = RuleTypeName;
-    }
-
-    /**
-     * Get 执行动作（处置方式），取值有：
-<li>trans ：通过 ；</li>
-<li>alg ：算法挑战 ；</li>
-<li>drop ：丢弃 ；</li>
-<li>ban ：封禁源ip ；</li>
-<li>redirect ：重定向 ；</li>
-<li>page ：返回指定页面 ；</li>
-<li>monitor ：观察 。</li> 
-     * @return Action 执行动作（处置方式），取值有：
-<li>trans ：通过 ；</li>
-<li>alg ：算法挑战 ；</li>
-<li>drop ：丢弃 ；</li>
-<li>ban ：封禁源ip ；</li>
-<li>redirect ：重定向 ；</li>
-<li>page ：返回指定页面 ；</li>
-<li>monitor ：观察 。</li>
-     */
-    public String getAction() {
-        return this.Action;
-    }
-
-    /**
-     * Set 执行动作（处置方式），取值有：
-<li>trans ：通过 ；</li>
-<li>alg ：算法挑战 ；</li>
-<li>drop ：丢弃 ；</li>
-<li>ban ：封禁源ip ；</li>
-<li>redirect ：重定向 ；</li>
-<li>page ：返回指定页面 ；</li>
-<li>monitor ：观察 。</li>
-     * @param Action 执行动作（处置方式），取值有：
-<li>trans ：通过 ；</li>
-<li>alg ：算法挑战 ；</li>
-<li>drop ：丢弃 ；</li>
-<li>ban ：封禁源ip ；</li>
-<li>redirect ：重定向 ；</li>
-<li>page ：返回指定页面 ；</li>
-<li>monitor ：观察 。</li>
-     */
-    public void setAction(String Action) {
-        this.Action = Action;
     }
 
     /**
@@ -231,6 +233,50 @@ public class SecHitRuleInfo extends AbstractModel{
     }
 
     /**
+     * Get 执行动作（处置方式），取值有：
+<li>trans ：通过 ；</li>
+<li>alg ：算法挑战 ；</li>
+<li>drop ：丢弃 ；</li>
+<li>ban ：封禁源ip ；</li>
+<li>redirect ：重定向 ；</li>
+<li>page ：返回指定页面 ；</li>
+<li>monitor ：观察 。</li> 
+     * @return Action 执行动作（处置方式），取值有：
+<li>trans ：通过 ；</li>
+<li>alg ：算法挑战 ；</li>
+<li>drop ：丢弃 ；</li>
+<li>ban ：封禁源ip ；</li>
+<li>redirect ：重定向 ；</li>
+<li>page ：返回指定页面 ；</li>
+<li>monitor ：观察 。</li>
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set 执行动作（处置方式），取值有：
+<li>trans ：通过 ；</li>
+<li>alg ：算法挑战 ；</li>
+<li>drop ：丢弃 ；</li>
+<li>ban ：封禁源ip ；</li>
+<li>redirect ：重定向 ；</li>
+<li>page ：返回指定页面 ；</li>
+<li>monitor ：观察 。</li>
+     * @param Action 执行动作（处置方式），取值有：
+<li>trans ：通过 ；</li>
+<li>alg ：算法挑战 ；</li>
+<li>drop ：丢弃 ；</li>
+<li>ban ：封禁源ip ；</li>
+<li>redirect ：重定向 ；</li>
+<li>page ：返回指定页面 ；</li>
+<li>monitor ：观察 。</li>
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
      * Get Bot标签，取值有:
 <li>evil_bot：恶意Bot；</li>
 <li>suspect_bot：疑似Bot；</li>
@@ -266,6 +312,62 @@ public class SecHitRuleInfo extends AbstractModel{
         this.BotLabel = BotLabel;
     }
 
+    /**
+     * Get 规则是否启用。 
+     * @return RuleEnabled 规则是否启用。
+     */
+    public Boolean getRuleEnabled() {
+        return this.RuleEnabled;
+    }
+
+    /**
+     * Set 规则是否启用。
+     * @param RuleEnabled 规则是否启用。
+     */
+    public void setRuleEnabled(Boolean RuleEnabled) {
+        this.RuleEnabled = RuleEnabled;
+    }
+
+    /**
+     * Get 规则是否启用监控告警。 
+     * @return AlarmEnabled 规则是否启用监控告警。
+     */
+    public Boolean getAlarmEnabled() {
+        return this.AlarmEnabled;
+    }
+
+    /**
+     * Set 规则是否启用监控告警。
+     * @param AlarmEnabled 规则是否启用监控告警。
+     */
+    public void setAlarmEnabled(Boolean AlarmEnabled) {
+        this.AlarmEnabled = AlarmEnabled;
+    }
+
+    /**
+     * Get 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li> 
+     * @return RuleDeleted 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     */
+    public Boolean getRuleDeleted() {
+        return this.RuleDeleted;
+    }
+
+    /**
+     * Set 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     * @param RuleDeleted 规则是否存在，取值有：
+<li>true: 规则不存在；</li>
+<li>false: 规则存在。</li>
+     */
+    public void setRuleDeleted(Boolean RuleDeleted) {
+        this.RuleDeleted = RuleDeleted;
+    }
+
     public SecHitRuleInfo() {
     }
 
@@ -274,14 +376,14 @@ public class SecHitRuleInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SecHitRuleInfo(SecHitRuleInfo source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
         if (source.RuleTypeName != null) {
             this.RuleTypeName = new String(source.RuleTypeName);
-        }
-        if (source.Action != null) {
-            this.Action = new String(source.Action);
         }
         if (source.HitTime != null) {
             this.HitTime = new Long(source.HitTime);
@@ -295,8 +397,20 @@ public class SecHitRuleInfo extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
         if (source.BotLabel != null) {
             this.BotLabel = new String(source.BotLabel);
+        }
+        if (source.RuleEnabled != null) {
+            this.RuleEnabled = new Boolean(source.RuleEnabled);
+        }
+        if (source.AlarmEnabled != null) {
+            this.AlarmEnabled = new Boolean(source.AlarmEnabled);
+        }
+        if (source.RuleDeleted != null) {
+            this.RuleDeleted = new Boolean(source.RuleDeleted);
         }
     }
 
@@ -305,14 +419,18 @@ public class SecHitRuleInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
-        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "HitTime", this.HitTime);
         this.setParamSimple(map, prefix + "RequestNum", this.RequestNum);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "BotLabel", this.BotLabel);
+        this.setParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+        this.setParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
+        this.setParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
 
     }
 }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableGrafanaInternetRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-kleu3gt0
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * 开启或关闭
+    * 开启或关闭公网访问，true为开启，false 为不开启
     */
     @SerializedName("EnableInternet")
     @Expose
     private Boolean EnableInternet;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceID 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-kleu3gt0 
+     * @return InstanceID Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceID 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-kleu3gt0
+     * @param InstanceID Grafana 实例 ID，例如：grafana-kleu3gt0
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 开启或关闭 
-     * @return EnableInternet 开启或关闭
+     * Get 开启或关闭公网访问，true为开启，false 为不开启 
+     * @return EnableInternet 开启或关闭公网访问，true为开启，false 为不开启
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
     }
 
     /**
-     * Set 开启或关闭
-     * @param EnableInternet 开启或关闭
+     * Set 开启或关闭公网访问，true为开启，false 为不开启
+     * @param EnableInternet 开启或关闭公网访问，true为开启，false 为不开启
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;

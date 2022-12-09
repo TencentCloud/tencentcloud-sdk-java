@@ -107,6 +107,21 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
     private String [] KeywordSet;
 
     /**
+    * 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("PicUrlExpireTime")
+    @Expose
+    private String PicUrlExpireTime;
+
+    /**
      * Get 嫌疑片段起始的偏移时间，单位：秒。 
      * @return StartTimeOffset 嫌疑片段起始的偏移时间，单位：秒。
      */
@@ -322,6 +337,42 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
         this.KeywordSet = KeywordSet;
     }
 
+    /**
+     * Get 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。 
+     * @return Url 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+     * @param Url 嫌疑图片 URL （图片不会永久存储，到达
+ PicUrlExpireTime 时间点后图片将被删除）。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getPicUrlExpireTime() {
+        return this.PicUrlExpireTime;
+    }
+
+    /**
+     * Set 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param PicUrlExpireTime 嫌疑图片 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setPicUrlExpireTime(String PicUrlExpireTime) {
+        this.PicUrlExpireTime = PicUrlExpireTime;
+    }
+
     public ReviewAudioVideoSegmentItem() {
     }
 
@@ -366,6 +417,12 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
                 this.KeywordSet[i] = new String(source.KeywordSet[i]);
             }
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.PicUrlExpireTime != null) {
+            this.PicUrlExpireTime = new String(source.PicUrlExpireTime);
+        }
     }
 
 
@@ -383,6 +440,8 @@ public class ReviewAudioVideoSegmentItem extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamArraySimple(map, prefix + "KeywordSet.", this.KeywordSet);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
 
     }
 }

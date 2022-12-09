@@ -58,7 +58,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+    * 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
     */
     @SerializedName("OrderByKey")
     @Expose
@@ -93,7 +93,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] ZoneList;
 
     /**
-    * 健康状态筛列表
+    * 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -187,16 +187,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序 
-     * @return OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * Get 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序 
+     * @return OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
      */
     public Long getOrderByKey() {
         return this.OrderByKey;
     }
 
     /**
-     * Set 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
-     * @param OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderKey未传递则按创建时间降序排序
+     * Set 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
+     * @param OrderByKey 排序字段<li>1：实例ID</li><li>2：实例名称</li><li>3：可用区</li><li>4：创建时间</li>若orderByKey未传递则按创建时间降序排序
      */
     public void setOrderByKey(Long OrderByKey) {
         this.OrderByKey = OrderByKey;
@@ -267,16 +267,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 健康状态筛列表 
-     * @return HealthStatus 健康状态筛列表
+     * Get 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知 
+     * @return HealthStatus 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
      */
     public Long [] getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set 健康状态筛列表
-     * @param HealthStatus 健康状态筛列表
+     * Set 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
+     * @param HealthStatus 健康状态筛列表:0表示绿色，1表示黄色，2表示红色,-1表示未知
      */
     public void setHealthStatus(Long [] HealthStatus) {
         this.HealthStatus = HealthStatus;

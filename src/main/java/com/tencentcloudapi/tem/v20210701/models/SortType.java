@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.tem.v20210701.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGrafanaConfigRequest extends AbstractModel{
+public class SortType extends AbstractModel{
 
     /**
-    * Grafana 实例 ID，例如：grafana-12345678
+    * 排序字段名称
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Key")
     @Expose
-    private String InstanceId;
+    private String Key;
 
     /**
-     * Get Grafana 实例 ID，例如：grafana-12345678 
-     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
+    * 0：升序，1：倒序
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+     * Get 排序字段名称 
+     * @return Key 排序字段名称
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set Grafana 实例 ID，例如：grafana-12345678
-     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
+     * Set 排序字段名称
+     * @param Key 排序字段名称
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
-    public DescribeGrafanaConfigRequest() {
+    /**
+     * Get 0：升序，1：倒序 
+     * @return Type 0：升序，1：倒序
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 0：升序，1：倒序
+     * @param Type 0：升序，1：倒序
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    public SortType() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGrafanaConfigRequest(DescribeGrafanaConfigRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public SortType(SortType source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
         }
     }
 
@@ -63,7 +89,8 @@ public class DescribeGrafanaConfigRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

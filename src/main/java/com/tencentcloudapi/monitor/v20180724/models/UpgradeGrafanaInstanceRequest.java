@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpgradeGrafanaInstanceRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-12345678
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 版本别名
+    * 版本别名，例如：v7.4.2
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-12345678 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-12345678
+     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 版本别名 
-     * @return Alias 版本别名
+     * Get 版本别名，例如：v7.4.2 
+     * @return Alias 版本别名，例如：v7.4.2
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 版本别名
-     * @param Alias 版本别名
+     * Set 版本别名，例如：v7.4.2
+     * @param Alias 版本别名，例如：v7.4.2
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

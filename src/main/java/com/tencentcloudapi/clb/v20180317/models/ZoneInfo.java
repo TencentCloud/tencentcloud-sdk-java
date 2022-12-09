@@ -63,6 +63,14 @@ public class ZoneInfo extends AbstractModel{
     private Boolean LocalZone;
 
     /**
+    * 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EdgeZone")
+    @Expose
+    private Boolean EdgeZone;
+
+    /**
      * Get 可用区数值形式的唯一ID，如：100001
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ZoneId 可用区数值形式的唯一ID，如：100001
@@ -162,6 +170,26 @@ public class ZoneInfo extends AbstractModel{
         this.LocalZone = LocalZone;
     }
 
+    /**
+     * Get 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EdgeZone 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEdgeZone() {
+        return this.EdgeZone;
+    }
+
+    /**
+     * Set 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EdgeZone 可用区是否是EdgeZone可用区，如：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEdgeZone(Boolean EdgeZone) {
+        this.EdgeZone = EdgeZone;
+    }
+
     public ZoneInfo() {
     }
 
@@ -185,6 +213,9 @@ public class ZoneInfo extends AbstractModel{
         if (source.LocalZone != null) {
             this.LocalZone = new Boolean(source.LocalZone);
         }
+        if (source.EdgeZone != null) {
+            this.EdgeZone = new Boolean(source.EdgeZone);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
 
     }
 }
