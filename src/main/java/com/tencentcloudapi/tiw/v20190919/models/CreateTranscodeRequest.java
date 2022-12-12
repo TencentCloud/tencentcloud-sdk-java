@@ -101,6 +101,18 @@ tar.gz： 生成`.tar.gz`压缩包
     private String MinScaleResolution;
 
     /**
+    * 是否对不支持元素开启自动处理的功能。默认不开启。
+
+在开启自动处理的情况下，会自动进行如下处理：
+1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+2. 自动翻页：移除PPT上所有的自动翻页设置
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
+    */
+    @SerializedName("AutoHandleUnsupportedElement")
+    @Expose
+    private Boolean AutoHandleUnsupportedElement;
+
+    /**
      * Get 客户的SdkAppId 
      * @return SdkAppId 客户的SdkAppId
      */
@@ -304,6 +316,42 @@ tar.gz： 生成`.tar.gz`压缩包
         this.MinScaleResolution = MinScaleResolution;
     }
 
+    /**
+     * Get 是否对不支持元素开启自动处理的功能。默认不开启。
+
+在开启自动处理的情况下，会自动进行如下处理：
+1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+2. 自动翻页：移除PPT上所有的自动翻页设置
+3. 已损坏音视频：移除PPT上对损坏音视频的引用 
+     * @return AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认不开启。
+
+在开启自动处理的情况下，会自动进行如下处理：
+1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+2. 自动翻页：移除PPT上所有的自动翻页设置
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
+     */
+    public Boolean getAutoHandleUnsupportedElement() {
+        return this.AutoHandleUnsupportedElement;
+    }
+
+    /**
+     * Set 是否对不支持元素开启自动处理的功能。默认不开启。
+
+在开启自动处理的情况下，会自动进行如下处理：
+1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+2. 自动翻页：移除PPT上所有的自动翻页设置
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
+     * @param AutoHandleUnsupportedElement 是否对不支持元素开启自动处理的功能。默认不开启。
+
+在开启自动处理的情况下，会自动进行如下处理：
+1. 墨迹：移除不支持的墨迹（比如使用WPS画的）
+2. 自动翻页：移除PPT上所有的自动翻页设置
+3. 已损坏音视频：移除PPT上对损坏音视频的引用
+     */
+    public void setAutoHandleUnsupportedElement(Boolean AutoHandleUnsupportedElement) {
+        this.AutoHandleUnsupportedElement = AutoHandleUnsupportedElement;
+    }
+
     public CreateTranscodeRequest() {
     }
 
@@ -339,6 +387,9 @@ tar.gz： 生成`.tar.gz`压缩包
         if (source.MinScaleResolution != null) {
             this.MinScaleResolution = new String(source.MinScaleResolution);
         }
+        if (source.AutoHandleUnsupportedElement != null) {
+            this.AutoHandleUnsupportedElement = new Boolean(source.AutoHandleUnsupportedElement);
+        }
     }
 
 
@@ -355,6 +406,7 @@ tar.gz： 生成`.tar.gz`压缩包
         this.setParamSimple(map, prefix + "ExtraData", this.ExtraData);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
+        this.setParamSimple(map, prefix + "AutoHandleUnsupportedElement", this.AutoHandleUnsupportedElement);
 
     }
 }

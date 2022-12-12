@@ -51,6 +51,18 @@ public class SealOCRResponse extends AbstractModel{
     private SealInfo [] SealInfos;
 
     /**
+    * 印章类型，表示为：
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+    */
+    @SerializedName("SealShape")
+    @Expose
+    private String SealShape;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +134,42 @@ public class SealOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 印章类型，表示为：
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4 
+     * @return SealShape 印章类型，表示为：
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     */
+    public String getSealShape() {
+        return this.SealShape;
+    }
+
+    /**
+     * Set 印章类型，表示为：
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     * @param SealShape 印章类型，表示为：
+圆形印章：0
+椭圆形印章：1
+方形印章：2
+菱形印章：3
+三角形印章：4
+     */
+    public void setSealShape(String SealShape) {
+        this.SealShape = SealShape;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -163,6 +211,9 @@ public class SealOCRResponse extends AbstractModel{
                 this.SealInfos[i] = new SealInfo(source.SealInfos[i]);
             }
         }
+        if (source.SealShape != null) {
+            this.SealShape = new String(source.SealShape);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -177,6 +228,7 @@ public class SealOCRResponse extends AbstractModel{
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamArraySimple(map, prefix + "OtherTexts.", this.OtherTexts);
         this.setParamArrayObj(map, prefix + "SealInfos.", this.SealInfos);
+        this.setParamSimple(map, prefix + "SealShape", this.SealShape);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

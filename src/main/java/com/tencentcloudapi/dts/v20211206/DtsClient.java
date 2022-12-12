@@ -647,6 +647,46 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+     * @param req SkipCheckItemRequest
+     * @return SkipCheckItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public SkipCheckItemResponse SkipCheckItem(SkipCheckItemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SkipCheckItemResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SkipCheckItemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SkipCheckItem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于校验检查项不通过后，可进行跳过此校验项操作，后端将不再校验该项。任何校验步骤都是不应该跳过的，通过校验是能正确执行的前置条件。支持跳过的产品及链路的校验项可 [参考文档](https://cloud.tencent.com/document/product/571/61639)。
+     * @param req SkipSyncCheckItemRequest
+     * @return SkipSyncCheckItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public SkipSyncCheckItemResponse SkipSyncCheckItem(SkipSyncCheckItemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SkipSyncCheckItemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SkipSyncCheckItem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启动一致性校验任务，启动之前需要先通过接口`CreateCompareTask` 创建一致性校验任务，启动后可通过接口`DescribeCompareTasks` 查询一致性校验任务列表来获得启动后的状态
      * @param req StartCompareRequest
      * @return StartCompareResponse

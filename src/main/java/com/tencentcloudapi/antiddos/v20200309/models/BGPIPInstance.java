@@ -209,6 +209,14 @@ public class BGPIPInstance extends AbstractModel{
     private Long InstanceVersion;
 
     /**
+    * 重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConvoyId")
+    @Expose
+    private String ConvoyId;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -676,6 +684,26 @@ public class BGPIPInstance extends AbstractModel{
         this.InstanceVersion = InstanceVersion;
     }
 
+    /**
+     * Get 重保实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConvoyId 重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConvoyId() {
+        return this.ConvoyId;
+    }
+
+    /**
+     * Set 重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConvoyId 重保实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConvoyId(String ConvoyId) {
+        this.ConvoyId = ConvoyId;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -756,6 +784,9 @@ public class BGPIPInstance extends AbstractModel{
         if (source.InstanceVersion != null) {
             this.InstanceVersion = new Long(source.InstanceVersion);
         }
+        if (source.ConvoyId != null) {
+            this.ConvoyId = new String(source.ConvoyId);
+        }
     }
 
 
@@ -786,6 +817,7 @@ public class BGPIPInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "ConvoyId", this.ConvoyId);
 
     }
 }

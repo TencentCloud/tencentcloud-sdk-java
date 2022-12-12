@@ -99,7 +99,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private Long FilterDamDDoSStatus;
 
     /**
-    * 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+    * 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
     */
     @SerializedName("FilterStatus")
     @Expose
@@ -132,6 +132,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     @SerializedName("FilterPackType")
     @Expose
     private String [] FilterPackType;
+
+    /**
+    * 重保护航搜索
+    */
+    @SerializedName("FilterConvoy")
+    @Expose
+    private Long FilterConvoy;
 
     /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
@@ -318,16 +325,16 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking 
-     * @return FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * Get 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial 
+     * @return FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
      */
     public String getFilterStatus() {
         return this.FilterStatus;
     }
 
     /**
-     * Set 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
-     * @param FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+     * Set 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
+     * @param FilterStatus 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking，试用资源填trial
      */
     public void setFilterStatus(String FilterStatus) {
         this.FilterStatus = FilterStatus;
@@ -397,6 +404,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterPackType = FilterPackType;
     }
 
+    /**
+     * Get 重保护航搜索 
+     * @return FilterConvoy 重保护航搜索
+     */
+    public Long getFilterConvoy() {
+        return this.FilterConvoy;
+    }
+
+    /**
+     * Set 重保护航搜索
+     * @param FilterConvoy 重保护航搜索
+     */
+    public void setFilterConvoy(Long FilterConvoy) {
+        this.FilterConvoy = FilterConvoy;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -459,6 +482,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
                 this.FilterPackType[i] = new String(source.FilterPackType[i]);
             }
         }
+        if (source.FilterConvoy != null) {
+            this.FilterConvoy = new Long(source.FilterConvoy);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
         this.setParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
+        this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
 
     }
 }

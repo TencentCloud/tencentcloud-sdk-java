@@ -121,6 +121,20 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private TagFilter FilterTag;
 
     /**
+    * 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+    */
+    @SerializedName("FilterTrialFlag")
+    @Expose
+    private Long FilterTrialFlag;
+
+    /**
+    * 重保护航搜索
+    */
+    @SerializedName("FilterConvoy")
+    @Expose
+    private Long FilterConvoy;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -344,6 +358,38 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterTag = FilterTag;
     }
 
+    /**
+     * Get 试用资源搜索，1: 应急防护资源；2：PLG试用资源 
+     * @return FilterTrialFlag 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+     */
+    public Long getFilterTrialFlag() {
+        return this.FilterTrialFlag;
+    }
+
+    /**
+     * Set 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+     * @param FilterTrialFlag 试用资源搜索，1: 应急防护资源；2：PLG试用资源
+     */
+    public void setFilterTrialFlag(Long FilterTrialFlag) {
+        this.FilterTrialFlag = FilterTrialFlag;
+    }
+
+    /**
+     * Get 重保护航搜索 
+     * @return FilterConvoy 重保护航搜索
+     */
+    public Long getFilterConvoy() {
+        return this.FilterConvoy;
+    }
+
+    /**
+     * Set 重保护航搜索
+     * @param FilterConvoy 重保护航搜索
+     */
+    public void setFilterConvoy(Long FilterConvoy) {
+        this.FilterConvoy = FilterConvoy;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -397,6 +443,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterTag != null) {
             this.FilterTag = new TagFilter(source.FilterTag);
         }
+        if (source.FilterTrialFlag != null) {
+            this.FilterTrialFlag = new Long(source.FilterTrialFlag);
+        }
+        if (source.FilterConvoy != null) {
+            this.FilterConvoy = new Long(source.FilterConvoy);
+        }
     }
 
 
@@ -418,6 +470,8 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
         this.setParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
+        this.setParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
+        this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
 
     }
 }

@@ -127,6 +127,14 @@ public class IndexMetaField extends AbstractModel{
     private Long AppId;
 
     /**
+    * 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexDocs")
+    @Expose
+    private Long IndexDocs;
+
+    /**
      * Get 索引类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IndexType 索引类型
@@ -386,6 +394,26 @@ public class IndexMetaField extends AbstractModel{
         this.AppId = AppId;
     }
 
+    /**
+     * Get 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexDocs 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIndexDocs() {
+        return this.IndexDocs;
+    }
+
+    /**
+     * Set 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexDocs 索引文档数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexDocs(Long IndexDocs) {
+        this.IndexDocs = IndexDocs;
+    }
+
     public IndexMetaField() {
     }
 
@@ -436,6 +464,9 @@ public class IndexMetaField extends AbstractModel{
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.IndexDocs != null) {
+            this.IndexDocs = new Long(source.IndexDocs);
+        }
     }
 
 
@@ -456,6 +487,7 @@ public class IndexMetaField extends AbstractModel{
         this.setParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
         this.setParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
 
     }
 }
