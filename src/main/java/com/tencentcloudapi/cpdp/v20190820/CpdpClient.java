@@ -2649,6 +2649,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *灵云V2-平台账户余额查询
+     * @param req QueryFlexPlatformAccountBalanceRequest
+     * @return QueryFlexPlatformAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalance(QueryFlexPlatformAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFlexPlatformAccountBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFlexPlatformAccountBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *灵云V2-查询结算订单列表
      * @param req QueryFlexSettlementOrderListRequest
      * @return QueryFlexSettlementOrderListResponse
