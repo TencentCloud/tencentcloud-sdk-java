@@ -68,6 +68,14 @@ public class ClusterResource extends AbstractModel{
     private String Isp;
 
     /**
+    * 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClustersZone")
+    @Expose
+    private ClustersZone ClustersZone;
+
+    /**
      * Get 集群唯一ID，如tgw-12345678。 
      * @return ClusterId 集群唯一ID，如tgw-12345678。
      */
@@ -175,6 +183,26 @@ public class ClusterResource extends AbstractModel{
         this.Isp = Isp;
     }
 
+    /**
+     * Get 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClustersZone 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClustersZone getClustersZone() {
+        return this.ClustersZone;
+    }
+
+    /**
+     * Set 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClustersZone 集群所在的可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClustersZone(ClustersZone ClustersZone) {
+        this.ClustersZone = ClustersZone;
+    }
+
     public ClusterResource() {
     }
 
@@ -201,6 +229,9 @@ public class ClusterResource extends AbstractModel{
         if (source.Isp != null) {
             this.Isp = new String(source.Isp);
         }
+        if (source.ClustersZone != null) {
+            this.ClustersZone = new ClustersZone(source.ClustersZone);
+        }
     }
 
 
@@ -214,6 +245,7 @@ public class ClusterResource extends AbstractModel{
         this.setParamSimple(map, prefix + "Idle", this.Idle);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
+        this.setParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
 
     }
 }

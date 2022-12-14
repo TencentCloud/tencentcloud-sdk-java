@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * 通道 ID 数组
+    * 通道 ID 数组。例如：nchannel-abcd1234
     */
     @SerializedName("ChannelIDs")
     @Expose
     private String [] ChannelIDs;
 
     /**
-    * 实例名
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 通道 ID 数组 
-     * @return ChannelIDs 通道 ID 数组
+     * Get 通道 ID 数组。例如：nchannel-abcd1234 
+     * @return ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234
      */
     public String [] getChannelIDs() {
         return this.ChannelIDs;
     }
 
     /**
-     * Set 通道 ID 数组
-     * @param ChannelIDs 通道 ID 数组
+     * Set 通道 ID 数组。例如：nchannel-abcd1234
+     * @param ChannelIDs 通道 ID 数组。例如：nchannel-abcd1234
      */
     public void setChannelIDs(String [] ChannelIDs) {
         this.ChannelIDs = ChannelIDs;
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceId 实例名
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceId 实例名
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -46,8 +46,7 @@ public class CreateAliasDomainRequest extends AbstractModel{
     /**
     * 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
     */
     @SerializedName("CertType")
     @Expose
@@ -111,12 +110,10 @@ public class CreateAliasDomainRequest extends AbstractModel{
     /**
      * Get 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。 
+<li> hosting：SSL托管证书。</li>默认取值为 none。 
      * @return CertType 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
      */
     public String getCertType() {
         return this.CertType;
@@ -125,12 +122,10 @@ public class CreateAliasDomainRequest extends AbstractModel{
     /**
      * Set 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
      * @param CertType 证书配置，取值有：
 <li> none：不配置；</li>
-<li> hosting：SSL托管证书；</li>
-<li> apply：申请免费证书。</li>默认取值为 none。
+<li> hosting：SSL托管证书。</li>默认取值为 none。
      */
     public void setCertType(String CertType) {
         this.CertType = CertType;

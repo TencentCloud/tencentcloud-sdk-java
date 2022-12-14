@@ -101,19 +101,43 @@ public class TemplateInfo extends AbstractModel{
     private String PreviewUrl;
 
     /**
-    * 渠道模板ID
-    */
-    @SerializedName("ChannelTemplateId")
-    @Expose
-    private String ChannelTemplateId;
-
-    /**
     * 渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PdfUrl")
     @Expose
     private String PdfUrl;
+
+    /**
+    * 关联的渠道模板ID
+    */
+    @SerializedName("ChannelTemplateId")
+    @Expose
+    private String ChannelTemplateId;
+
+    /**
+    * 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelTemplateName")
+    @Expose
+    private String ChannelTemplateName;
+
+    /**
+    * 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChannelAutoSave")
+    @Expose
+    private Long ChannelAutoSave;
+
+    /**
+    * 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateVersion")
+    @Expose
+    private String TemplateVersion;
 
     /**
      * Get 模板ID 
@@ -296,22 +320,6 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 渠道模板ID 
-     * @return ChannelTemplateId 渠道模板ID
-     */
-    public String getChannelTemplateId() {
-        return this.ChannelTemplateId;
-    }
-
-    /**
-     * Set 渠道模板ID
-     * @param ChannelTemplateId 渠道模板ID
-     */
-    public void setChannelTemplateId(String ChannelTemplateId) {
-        this.ChannelTemplateId = ChannelTemplateId;
-    }
-
-    /**
      * Get 渠道版-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PdfUrl 渠道版-模板PDF文件链接
@@ -329,6 +337,82 @@ public class TemplateInfo extends AbstractModel{
      */
     public void setPdfUrl(String PdfUrl) {
         this.PdfUrl = PdfUrl;
+    }
+
+    /**
+     * Get 关联的渠道模板ID 
+     * @return ChannelTemplateId 关联的渠道模板ID
+     */
+    public String getChannelTemplateId() {
+        return this.ChannelTemplateId;
+    }
+
+    /**
+     * Set 关联的渠道模板ID
+     * @param ChannelTemplateId 关联的渠道模板ID
+     */
+    public void setChannelTemplateId(String ChannelTemplateId) {
+        this.ChannelTemplateId = ChannelTemplateId;
+    }
+
+    /**
+     * Get 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelTemplateName 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannelTemplateName() {
+        return this.ChannelTemplateName;
+    }
+
+    /**
+     * Set 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelTemplateName 关联的渠道模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelTemplateName(String ChannelTemplateName) {
+        this.ChannelTemplateName = ChannelTemplateName;
+    }
+
+    /**
+     * Get 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChannelAutoSave() {
+        return this.ChannelAutoSave;
+    }
+
+    /**
+     * Set 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannelAutoSave(Long ChannelAutoSave) {
+        this.ChannelAutoSave = ChannelAutoSave;
+    }
+
+    /**
+     * Get 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateVersion 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTemplateVersion() {
+        return this.TemplateVersion;
+    }
+
+    /**
+     * Set 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateVersion 模板版本，全数字字符。默认为空，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateVersion(String TemplateVersion) {
+        this.TemplateVersion = TemplateVersion;
     }
 
     public TemplateInfo() {
@@ -381,11 +465,20 @@ public class TemplateInfo extends AbstractModel{
         if (source.PreviewUrl != null) {
             this.PreviewUrl = new String(source.PreviewUrl);
         }
+        if (source.PdfUrl != null) {
+            this.PdfUrl = new String(source.PdfUrl);
+        }
         if (source.ChannelTemplateId != null) {
             this.ChannelTemplateId = new String(source.ChannelTemplateId);
         }
-        if (source.PdfUrl != null) {
-            this.PdfUrl = new String(source.PdfUrl);
+        if (source.ChannelTemplateName != null) {
+            this.ChannelTemplateName = new String(source.ChannelTemplateName);
+        }
+        if (source.ChannelAutoSave != null) {
+            this.ChannelAutoSave = new Long(source.ChannelAutoSave);
+        }
+        if (source.TemplateVersion != null) {
+            this.TemplateVersion = new String(source.TemplateVersion);
         }
     }
 
@@ -405,8 +498,11 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
-        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
         this.setParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
+        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+        this.setParamSimple(map, prefix + "ChannelTemplateName", this.ChannelTemplateName);
+        this.setParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
+        this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
 
     }
 }

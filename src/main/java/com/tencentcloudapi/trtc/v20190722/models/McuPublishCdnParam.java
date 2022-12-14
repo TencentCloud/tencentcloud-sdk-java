@@ -30,7 +30,7 @@ public class McuPublishCdnParam extends AbstractModel{
     private String PublishCdnUrl;
 
     /**
-    * 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+    * 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
     */
     @SerializedName("IsTencentCdn")
     @Expose
@@ -53,16 +53,16 @@ public class McuPublishCdnParam extends AbstractModel{
     }
 
     /**
-     * Get 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。 
-     * @return IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+     * Get 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。 
+     * @return IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
      */
     public Long getIsTencentCdn() {
         return this.IsTencentCdn;
     }
 
     /**
-     * Set 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
-     * @param IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：为避免误产生转推费用，该参数建议明确填写。转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明。
+     * Set 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
+     * @param IsTencentCdn 是否是腾讯云CDN，0为转推非腾讯云CDN，1为转推腾讯CDN，不携带该参数默认为1。注意：1，为避免误产生转推费用，该参数建议明确填写，转推非腾讯云CDN时会产生转推费用，详情参见接口文档说明；2，国内站默认只支持转推腾讯云CDN，如您有转推第三方CDN需求，请联系腾讯云技术支持。
      */
     public void setIsTencentCdn(Long IsTencentCdn) {
         this.IsTencentCdn = IsTencentCdn;

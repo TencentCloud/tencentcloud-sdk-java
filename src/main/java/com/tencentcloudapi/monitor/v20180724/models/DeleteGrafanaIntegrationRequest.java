@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteGrafanaIntegrationRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-12345678
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 集成 ID
+    * 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
     */
     @SerializedName("IntegrationId")
     @Expose
     private String IntegrationId;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-12345678 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-12345678
+     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 集成 ID 
-     * @return IntegrationId 集成 ID
+     * Get 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234 
+     * @return IntegrationId 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
      */
     public String getIntegrationId() {
         return this.IntegrationId;
     }
 
     /**
-     * Set 集成 ID
-     * @param IntegrationId 集成 ID
+     * Set 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
+     * @param IntegrationId 集成 ID，可在实例详情-云产品集成-集成列表查看。例如：integration-abcd1234
      */
     public void setIntegrationId(String IntegrationId) {
         this.IntegrationId = IntegrationId;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 渠道名
+    * 告警通道名称，例如：test
     */
     @SerializedName("ChannelName")
     @Expose
@@ -65,32 +65,32 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] OrganizationIds;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 渠道名 
-     * @return ChannelName 渠道名
+     * Get 告警通道名称，例如：test 
+     * @return ChannelName 告警通道名称，例如：test
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set 渠道名
-     * @param ChannelName 渠道名
+     * Set 告警通道名称，例如：test
+     * @param ChannelName 告警通道名称，例如：test
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

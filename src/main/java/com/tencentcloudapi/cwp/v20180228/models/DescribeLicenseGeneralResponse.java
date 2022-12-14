@@ -128,6 +128,20 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     private Long AvailableLHLicenseCnt;
 
     /**
+    * 自动加购开关, true 开启, false 关闭
+    */
+    @SerializedName("AutoRepurchaseSwitch")
+    @Expose
+    private Boolean AutoRepurchaseSwitch;
+
+    /**
+    * 自动加购订单是否自动续费 ,true 开启, false 关闭
+    */
+    @SerializedName("AutoRepurchaseRenewSwitch")
+    @Expose
+    private Boolean AutoRepurchaseRenewSwitch;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -375,6 +389,38 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     }
 
     /**
+     * Get 自动加购开关, true 开启, false 关闭 
+     * @return AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
+     */
+    public Boolean getAutoRepurchaseSwitch() {
+        return this.AutoRepurchaseSwitch;
+    }
+
+    /**
+     * Set 自动加购开关, true 开启, false 关闭
+     * @param AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
+     */
+    public void setAutoRepurchaseSwitch(Boolean AutoRepurchaseSwitch) {
+        this.AutoRepurchaseSwitch = AutoRepurchaseSwitch;
+    }
+
+    /**
+     * Get 自动加购订单是否自动续费 ,true 开启, false 关闭 
+     * @return AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
+     */
+    public Boolean getAutoRepurchaseRenewSwitch() {
+        return this.AutoRepurchaseRenewSwitch;
+    }
+
+    /**
+     * Set 自动加购订单是否自动续费 ,true 开启, false 关闭
+     * @param AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
+     */
+    public void setAutoRepurchaseRenewSwitch(Boolean AutoRepurchaseRenewSwitch) {
+        this.AutoRepurchaseRenewSwitch = AutoRepurchaseRenewSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -443,6 +489,12 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
         if (source.AvailableLHLicenseCnt != null) {
             this.AvailableLHLicenseCnt = new Long(source.AvailableLHLicenseCnt);
         }
+        if (source.AutoRepurchaseSwitch != null) {
+            this.AutoRepurchaseSwitch = new Boolean(source.AutoRepurchaseSwitch);
+        }
+        if (source.AutoRepurchaseRenewSwitch != null) {
+            this.AutoRepurchaseRenewSwitch = new Boolean(source.AutoRepurchaseRenewSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +520,8 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ProVersionLicenseCnt", this.ProVersionLicenseCnt);
         this.setParamSimple(map, prefix + "CwpVersionLicenseCnt", this.CwpVersionLicenseCnt);
         this.setParamSimple(map, prefix + "AvailableLHLicenseCnt", this.AvailableLHLicenseCnt);
+        this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
+        this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

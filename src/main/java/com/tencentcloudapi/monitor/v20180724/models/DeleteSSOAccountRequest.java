@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteSSOAccountRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户账号ID
+    * 用户账号 ID ，例如：10000000
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户账号ID 
-     * @return UserId 用户账号ID
+     * Get 用户账号 ID ，例如：10000000 
+     * @return UserId 用户账号 ID ，例如：10000000
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户账号ID
-     * @param UserId 用户账号ID
+     * Set 用户账号 ID ，例如：10000000
+     * @param UserId 用户账号 ID ，例如：10000000
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

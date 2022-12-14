@@ -193,6 +193,14 @@ public class Cluster extends AbstractModel{
     private String ClustersVersion;
 
     /**
+    * 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisasterRecoveryType")
+    @Expose
+    private String DisasterRecoveryType;
+
+    /**
      * Get 集群唯一ID 
      * @return ClusterId 集群唯一ID
      */
@@ -608,6 +616,26 @@ public class Cluster extends AbstractModel{
         this.ClustersVersion = ClustersVersion;
     }
 
+    /**
+     * Get 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDisasterRecoveryType() {
+        return this.DisasterRecoveryType;
+    }
+
+    /**
+     * Set 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisasterRecoveryType(String DisasterRecoveryType) {
+        this.DisasterRecoveryType = DisasterRecoveryType;
+    }
+
     public Cluster() {
     }
 
@@ -682,6 +710,9 @@ public class Cluster extends AbstractModel{
         if (source.ClustersVersion != null) {
             this.ClustersVersion = new String(source.ClustersVersion);
         }
+        if (source.DisasterRecoveryType != null) {
+            this.DisasterRecoveryType = new String(source.DisasterRecoveryType);
+        }
     }
 
 
@@ -711,6 +742,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
         this.setParamSimple(map, prefix + "ClustersVersion", this.ClustersVersion);
+        this.setParamSimple(map, prefix + "DisasterRecoveryType", this.DisasterRecoveryType);
 
     }
 }

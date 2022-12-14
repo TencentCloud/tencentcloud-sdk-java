@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class RedisNodeInfo extends AbstractModel{
 
     /**
-    * 节点类型，0 为主节点，1 为副本节点
+    * 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
     */
     @SerializedName("NodeType")
     @Expose
     private Long NodeType;
 
     /**
-    * 主节点或者副本节点的ID，创建时不需要传递此参数。
+    * 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * 主节点或者副本节点的可用区ID
+    * 主节点或者副本节点的可用区 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 主节点或者副本节点的可用区名称
+    * 主节点或者副本节点的可用区名称。
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get 节点类型，0 为主节点，1 为副本节点 
-     * @return NodeType 节点类型，0 为主节点，1 为副本节点
+     * Get 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul> 
+     * @return NodeType 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
      */
     public Long getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 节点类型，0 为主节点，1 为副本节点
-     * @param NodeType 节点类型，0 为主节点，1 为副本节点
+     * Set 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
+     * @param NodeType 节点类型。<ul><li>0：为主节点。</li><li>1：为副本节点。</li></ul>
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get 主节点或者副本节点的ID，创建时不需要传递此参数。 
-     * @return NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     * Get 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul> 
+     * @return NodeId 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 主节点或者副本节点的ID，创建时不需要传递此参数。
-     * @param NodeId 主节点或者副本节点的ID，创建时不需要传递此参数。
+     * Set 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
+     * @param NodeId 主节点或者副本节点的 ID。<ul><li>该参数用于创建 Redis 实例接口[CreateInstances](https://cloud.tencent.com/document/product/239/20026) 并不需要设置，而用于变更实例配置的接口 [UpgradeInstance](https://cloud.tencent.com/document/product/239/20013) 则需要设置。</li><li>该参数可使用接口 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 获取Integer类型的节点 ID。</li></ul>
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 主节点或者副本节点的可用区ID 
-     * @return ZoneId 主节点或者副本节点的可用区ID
+     * Get 主节点或者副本节点的可用区 ID。 
+     * @return ZoneId 主节点或者副本节点的可用区 ID。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 主节点或者副本节点的可用区ID
-     * @param ZoneId 主节点或者副本节点的可用区ID
+     * Set 主节点或者副本节点的可用区 ID。
+     * @param ZoneId 主节点或者副本节点的可用区 ID。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 主节点或者副本节点的可用区名称 
-     * @return ZoneName 主节点或者副本节点的可用区名称
+     * Get 主节点或者副本节点的可用区名称。 
+     * @return ZoneName 主节点或者副本节点的可用区名称。
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 主节点或者副本节点的可用区名称
-     * @param ZoneName 主节点或者副本节点的可用区名称
+     * Set 主节点或者副本节点的可用区名称。
+     * @param ZoneName 主节点或者副本节点的可用区名称。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

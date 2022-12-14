@@ -30,7 +30,7 @@ public class ModifyAppRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 回调地址。
+    * 回调地址。端口目前仅支持80、443
     */
     @SerializedName("Callback")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调地址。 
-     * @return Callback 回调地址。
+     * Get 回调地址。端口目前仅支持80、443 
+     * @return Callback 回调地址。端口目前仅支持80、443
      */
     public String getCallback() {
         return this.Callback;
     }
 
     /**
-     * Set 回调地址。
-     * @param Callback 回调地址。
+     * Set 回调地址。端口目前仅支持80、443
+     * @param Callback 回调地址。端口目前仅支持80、443
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;

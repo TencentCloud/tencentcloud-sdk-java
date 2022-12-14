@@ -136,6 +136,22 @@ public class TemplateInfo extends AbstractModel{
     private String PreviewUrl;
 
     /**
+    * 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateVersion")
+    @Expose
+    private String TemplateVersion;
+
+    /**
+    * 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Published")
+    @Expose
+    private Boolean Published;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -395,6 +411,46 @@ public class TemplateInfo extends AbstractModel{
         this.PreviewUrl = PreviewUrl;
     }
 
+    /**
+     * Get 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTemplateVersion() {
+        return this.TemplateVersion;
+    }
+
+    /**
+     * Set 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateVersion 模板版本。默认为空时，全数字字符，初始版本为yyyyMMdd001。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateVersion(String TemplateVersion) {
+        this.TemplateVersion = TemplateVersion;
+    }
+
+    /**
+     * Get 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Published 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPublished() {
+        return this.Published;
+    }
+
+    /**
+     * Set 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Published 模板是否已发布。true-已发布；false-未发布
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublished(Boolean Published) {
+        this.Published = Published;
+    }
+
     public TemplateInfo() {
     }
 
@@ -472,6 +528,12 @@ public class TemplateInfo extends AbstractModel{
         if (source.PreviewUrl != null) {
             this.PreviewUrl = new String(source.PreviewUrl);
         }
+        if (source.TemplateVersion != null) {
+            this.TemplateVersion = new String(source.TemplateVersion);
+        }
+        if (source.Published != null) {
+            this.Published = new Boolean(source.Published);
+        }
     }
 
 
@@ -495,6 +557,8 @@ public class TemplateInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Promoter.", this.Promoter);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+        this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
+        this.setParamSimple(map, prefix + "Published", this.Published);
 
     }
 }

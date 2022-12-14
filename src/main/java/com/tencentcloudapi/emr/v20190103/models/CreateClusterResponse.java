@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
+public class CreateClusterResponse extends AbstractModel{
 
     /**
-    * 节点池ID
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("NodePoolId")
+    @SerializedName("InstanceId")
     @Expose
-    private String NodePoolId;
+    private String InstanceId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 节点池ID 
-     * @return NodePoolId 节点池ID
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getNodePoolId() {
-        return this.NodePoolId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 节点池ID
-     * @param NodePoolId 节点池ID
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setNodePoolId(String NodePoolId) {
-        this.NodePoolId = NodePoolId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -68,16 +73,16 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateClusterNodePoolFromExistingAsgResponse() {
+    public CreateClusterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterNodePoolFromExistingAsgResponse(CreateClusterNodePoolFromExistingAsgResponse source) {
-        if (source.NodePoolId != null) {
-            this.NodePoolId = new String(source.NodePoolId);
+    public CreateClusterResponse(CreateClusterResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

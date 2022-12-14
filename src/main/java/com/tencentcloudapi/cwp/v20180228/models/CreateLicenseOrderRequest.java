@@ -78,11 +78,18 @@ public class CreateLicenseOrderRequest extends AbstractModel{
     private Boolean AutoRenewFlag;
 
     /**
-    * 自动防护授权配置值, 不空则表示开启
+    * 该字段作废
     */
     @SerializedName("AutoProtectOpenConfig")
     @Expose
     private String AutoProtectOpenConfig;
+
+    /**
+    * 变配参数
+    */
+    @SerializedName("ModifyConfig")
+    @Expose
+    private OrderModifyObject ModifyConfig;
 
     /**
      * Get 标签数组, 空则表示不需要绑定标签 
@@ -221,19 +228,35 @@ public class CreateLicenseOrderRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动防护授权配置值, 不空则表示开启 
-     * @return AutoProtectOpenConfig 自动防护授权配置值, 不空则表示开启
+     * Get 该字段作废 
+     * @return AutoProtectOpenConfig 该字段作废
      */
     public String getAutoProtectOpenConfig() {
         return this.AutoProtectOpenConfig;
     }
 
     /**
-     * Set 自动防护授权配置值, 不空则表示开启
-     * @param AutoProtectOpenConfig 自动防护授权配置值, 不空则表示开启
+     * Set 该字段作废
+     * @param AutoProtectOpenConfig 该字段作废
      */
     public void setAutoProtectOpenConfig(String AutoProtectOpenConfig) {
         this.AutoProtectOpenConfig = AutoProtectOpenConfig;
+    }
+
+    /**
+     * Get 变配参数 
+     * @return ModifyConfig 变配参数
+     */
+    public OrderModifyObject getModifyConfig() {
+        return this.ModifyConfig;
+    }
+
+    /**
+     * Set 变配参数
+     * @param ModifyConfig 变配参数
+     */
+    public void setModifyConfig(OrderModifyObject ModifyConfig) {
+        this.ModifyConfig = ModifyConfig;
     }
 
     public CreateLicenseOrderRequest() {
@@ -271,6 +294,9 @@ public class CreateLicenseOrderRequest extends AbstractModel{
         if (source.AutoProtectOpenConfig != null) {
             this.AutoProtectOpenConfig = new String(source.AutoProtectOpenConfig);
         }
+        if (source.ModifyConfig != null) {
+            this.ModifyConfig = new OrderModifyObject(source.ModifyConfig);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class CreateLicenseOrderRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "AutoProtectOpenConfig", this.AutoProtectOpenConfig);
+        this.setParamObj(map, prefix + "ModifyConfig.", this.ModifyConfig);
 
     }
 }

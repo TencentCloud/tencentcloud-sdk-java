@@ -90,6 +90,9 @@ public enum EmrErrorCode {
     // Master节点数量无效。
      INVALIDPARAMETER_INCORRECTMASTERCOUNT("InvalidParameter.IncorrectMasterCount"),
      
+    // 不合法的AllNodeResourceSpec参数。
+     INVALIDPARAMETER_INVALIDALLNODERESOURCESPEC("InvalidParameter.InvalidAllNodeResourceSpec"),
+     
     // 无效参数，AppId。
      INVALIDPARAMETER_INVALIDAPPID("InvalidParameter.InvalidAppId"),
      
@@ -129,6 +132,9 @@ public enum EmrErrorCode {
     // 错误信息：Invalid PodParameter。
      INVALIDPARAMETER_INVALIDCUSTOMIZEDPODPARAM("InvalidParameter.InvalidCustomizedPodParam"),
      
+    // DependService和EnableKerberos参数冲突。
+     INVALIDPARAMETER_INVALIDDEPENDSERVICEANDENABLEKERBEROSCONFLICT("InvalidParameter.InvalidDependServiceAndEnableKerberosConflict"),
+     
     // 无效的磁盘大小。
      INVALIDPARAMETER_INVALIDDISKSIZE("InvalidParameter.InvalidDiskSize"),
      
@@ -143,6 +149,9 @@ public enum EmrErrorCode {
      
     // 无效参数，EMR实例不符合要求。
      INVALIDPARAMETER_INVALIDINSTANCE("InvalidParameter.InvalidInstance"),
+     
+    // 不合法的实例计费模式。
+     INVALIDPARAMETER_INVALIDINSTANCECHARGETYPE("InvalidParameter.InvalidInstanceChargeType"),
      
     // 无效的集群名称。
      INVALIDPARAMETER_INVALIDINSTANCENAME("InvalidParameter.InvalidInstanceName"),
@@ -192,14 +201,23 @@ public enum EmrErrorCode {
     // 无效的产品ID。
      INVALIDPARAMETER_INVALIDPRODUCTID("InvalidParameter.InvalidProductId"),
      
+    // 不合法的产品版本。
+     INVALIDPARAMETER_INVALIDPRODUCTVERSION("InvalidParameter.InvalidProductVersion"),
+     
     // 无效的项目ID。
      INVALIDPARAMETER_INVALIDPROJECTID("InvalidParameter.InvalidProjectId"),
+     
+    // 不合法自动续费标识。
+     INVALIDPARAMETER_INVALIDRENEWFLAG("InvalidParameter.InvalidRenewFlag"),
      
     // 资源ID无效。
      INVALIDPARAMETER_INVALIDRESOURCEIDS("InvalidParameter.InvalidResourceIds"),
      
     // 无效的资源规格。
      INVALIDPARAMETER_INVALIDRESOURCESPEC("InvalidParameter.InvalidResourceSpec"),
+     
+    // 不合法的引导脚步执行参数。
+     INVALIDPARAMETER_INVALIDSCRIPTBOOTSTRAPACTIONCONFIG("InvalidParameter.InvalidScriptBootstrapActionConfig"),
      
     // 该EMR版本不支持开启安全模式。
      INVALIDPARAMETER_INVALIDSECURITYSUPPORT("InvalidParameter.InvalidSecuritySupport"),
@@ -257,6 +275,9 @@ public enum EmrErrorCode {
      
     // 无效的可用区。
      INVALIDPARAMETER_INVALIDZONE("InvalidParameter.InvalidZone"),
+     
+    // 不合法的支持Kerberos标识。
+     INVALIDPARAMETER_KERBEROSSUPPORT("InvalidParameter.KerberosSupport"),
      
     // 无效参数，不满足必须组件。
      INVALIDPARAMETER_NOTCONTAINMUSTSELECTSOFTWARE("InvalidParameter.NotContainMustSelectSoftware"),

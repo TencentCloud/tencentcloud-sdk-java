@@ -299,26 +299,6 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *从伸缩组创建节点池
-     * @param req CreateClusterNodePoolFromExistingAsgRequest
-     * @return CreateClusterNodePoolFromExistingAsgResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsg(CreateClusterNodePoolFromExistingAsgRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateClusterNodePoolFromExistingAsg");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *在应用市场中给集群创建应用
      * @param req CreateClusterReleaseRequest
      * @return CreateClusterReleaseResponse

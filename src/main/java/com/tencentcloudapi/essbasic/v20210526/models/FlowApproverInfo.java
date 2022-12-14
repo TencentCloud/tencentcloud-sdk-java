@@ -87,7 +87,7 @@ public class FlowApproverInfo extends AbstractModel{
     * 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     */
     @SerializedName("ApproverType")
@@ -309,12 +309,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * Get 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。 
      * @return ApproverType 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      */
     public String getApproverType() {
@@ -325,12 +325,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * Set 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      * @param ApproverType 签署人类型
 PERSON-个人/自然人；
 PERSON_AUTO_SIGN-个人自动签（定制化场景下使用）；
-ORGANIZATION-企业（企业签署方或模版发起时的企业静默签）；
+ORGANIZATION-企业（企业签署方或模板发起时的企业静默签）；
 ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
      */
     public void setApproverType(String ApproverType) {

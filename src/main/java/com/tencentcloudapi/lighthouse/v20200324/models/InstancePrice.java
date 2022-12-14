@@ -51,6 +51,14 @@ public class InstancePrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
+    * 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
      * Get 套餐单价原价。 
      * @return OriginalBundlePrice 套餐单价原价。
      */
@@ -114,6 +122,26 @@ public class InstancePrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    /**
+     * Get 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public InstancePrice() {
     }
 
@@ -134,6 +162,9 @@ public class InstancePrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class InstancePrice extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

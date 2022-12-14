@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-abcdefgh
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 类型
+    * 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * 配置
+    * 集成配置
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-abcdefgh 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-abcdefgh
+     * @param InstanceId Grafana 实例 ID，例如：grafana-abcdefgh
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 类型 
-     * @return Kind 类型
+     * Get 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus 
+     * @return Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型
-     * @param Kind 类型
+     * Set 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
+     * @param Kind 集成类型，可在实例详情-云产品集成-集成列表查看。例如：tencent-cloud-prometheus
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get 配置 
-     * @return Content 配置
+     * Get 集成配置 
+     * @return Content 集成配置
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 配置
-     * @param Content 配置
+     * Set 集成配置
+     * @param Content 集成配置
      */
     public void setContent(String Content) {
         this.Content = Content;

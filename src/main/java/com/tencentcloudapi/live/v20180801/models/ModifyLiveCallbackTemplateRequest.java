@@ -87,6 +87,13 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
+    * 推流异常回调 URL。
+    */
+    @SerializedName("PushExceptionNotifyUrl")
+    @Expose
+    private String PushExceptionNotifyUrl;
+
+    /**
      * Get DescribeLiveCallbackTemplates接口返回的模板 ID。 
      * @return TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      */
@@ -234,6 +241,22 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    /**
+     * Get 推流异常回调 URL。 
+     * @return PushExceptionNotifyUrl 推流异常回调 URL。
+     */
+    public String getPushExceptionNotifyUrl() {
+        return this.PushExceptionNotifyUrl;
+    }
+
+    /**
+     * Set 推流异常回调 URL。
+     * @param PushExceptionNotifyUrl 推流异常回调 URL。
+     */
+    public void setPushExceptionNotifyUrl(String PushExceptionNotifyUrl) {
+        this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
+    }
+
     public ModifyLiveCallbackTemplateRequest() {
     }
 
@@ -269,6 +292,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         if (source.CallbackKey != null) {
             this.CallbackKey = new String(source.CallbackKey);
         }
+        if (source.PushExceptionNotifyUrl != null) {
+            this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
+        }
     }
 
 
@@ -285,6 +311,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
 
     }
 }

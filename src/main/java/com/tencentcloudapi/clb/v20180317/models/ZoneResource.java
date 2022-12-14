@@ -67,6 +67,20 @@ public class ZoneResource extends AbstractModel{
     private Boolean LocalZone;
 
     /**
+    * 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+    */
+    @SerializedName("ZoneResourceType")
+    @Expose
+    private String ZoneResourceType;
+
+    /**
+    * 可用区是否是EdgeZone可用区，如：false
+    */
+    @SerializedName("EdgeZone")
+    @Expose
+    private Boolean EdgeZone;
+
+    /**
      * Get 主可用区，如"ap-guangzhou-1"。 
      * @return MasterZone 主可用区，如"ap-guangzhou-1"。
      */
@@ -170,6 +184,38 @@ public class ZoneResource extends AbstractModel{
         this.LocalZone = LocalZone;
     }
 
+    /**
+     * Get 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。 
+     * @return ZoneResourceType 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+     */
+    public String getZoneResourceType() {
+        return this.ZoneResourceType;
+    }
+
+    /**
+     * Set 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+     * @param ZoneResourceType 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
+     */
+    public void setZoneResourceType(String ZoneResourceType) {
+        this.ZoneResourceType = ZoneResourceType;
+    }
+
+    /**
+     * Get 可用区是否是EdgeZone可用区，如：false 
+     * @return EdgeZone 可用区是否是EdgeZone可用区，如：false
+     */
+    public Boolean getEdgeZone() {
+        return this.EdgeZone;
+    }
+
+    /**
+     * Set 可用区是否是EdgeZone可用区，如：false
+     * @param EdgeZone 可用区是否是EdgeZone可用区，如：false
+     */
+    public void setEdgeZone(Boolean EdgeZone) {
+        this.EdgeZone = EdgeZone;
+    }
+
     public ZoneResource() {
     }
 
@@ -199,6 +245,12 @@ public class ZoneResource extends AbstractModel{
         if (source.LocalZone != null) {
             this.LocalZone = new Boolean(source.LocalZone);
         }
+        if (source.ZoneResourceType != null) {
+            this.ZoneResourceType = new String(source.ZoneResourceType);
+        }
+        if (source.EdgeZone != null) {
+            this.EdgeZone = new Boolean(source.EdgeZone);
+        }
     }
 
 
@@ -212,6 +264,8 @@ public class ZoneResource extends AbstractModel{
         this.setParamSimple(map, prefix + "IPVersion", this.IPVersion);
         this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "ZoneResourceType", this.ZoneResourceType);
+        this.setParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
 
     }
 }

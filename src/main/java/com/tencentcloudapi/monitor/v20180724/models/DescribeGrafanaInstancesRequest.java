@@ -37,14 +37,14 @@ public class DescribeGrafanaInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 实例 ID 数组
+    * Grafana 实例 ID 数组
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 实例名，支持前缀模糊搜索
+    * Grafana 实例名，支持前缀模糊搜索
     */
     @SerializedName("InstanceName")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeGrafanaInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例 ID 数组 
-     * @return InstanceIds 实例 ID 数组
+     * Get Grafana 实例 ID 数组 
+     * @return InstanceIds Grafana 实例 ID 数组
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID 数组
-     * @param InstanceIds 实例 ID 数组
+     * Set Grafana 实例 ID 数组
+     * @param InstanceIds Grafana 实例 ID 数组
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 实例名，支持前缀模糊搜索 
-     * @return InstanceName 实例名，支持前缀模糊搜索
+     * Get Grafana 实例名，支持前缀模糊搜索 
+     * @return InstanceName Grafana 实例名，支持前缀模糊搜索
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名，支持前缀模糊搜索
-     * @param InstanceName 实例名，支持前缀模糊搜索
+     * Set Grafana 实例名，支持前缀模糊搜索
+     * @param InstanceName Grafana 实例名，支持前缀模糊搜索
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

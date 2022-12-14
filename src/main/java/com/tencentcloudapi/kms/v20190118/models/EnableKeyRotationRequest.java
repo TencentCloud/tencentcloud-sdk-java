@@ -30,6 +30,13 @@ public class EnableKeyRotationRequest extends AbstractModel{
     private String KeyId;
 
     /**
+    * 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+    */
+    @SerializedName("RotateDays")
+    @Expose
+    private Long RotateDays;
+
+    /**
      * Get CMK唯一标识符 
      * @return KeyId CMK唯一标识符
      */
@@ -45,6 +52,22 @@ public class EnableKeyRotationRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    /**
+     * Get 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。 
+     * @return RotateDays 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+     */
+    public Long getRotateDays() {
+        return this.RotateDays;
+    }
+
+    /**
+     * Set 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+     * @param RotateDays 密钥轮转周期，单位天，允许范围 7 ~ 365，默认值 365。
+     */
+    public void setRotateDays(Long RotateDays) {
+        this.RotateDays = RotateDays;
+    }
+
     public EnableKeyRotationRequest() {
     }
 
@@ -56,6 +79,9 @@ public class EnableKeyRotationRequest extends AbstractModel{
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.RotateDays != null) {
+            this.RotateDays = new Long(source.RotateDays);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class EnableKeyRotationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
 
     }
 }

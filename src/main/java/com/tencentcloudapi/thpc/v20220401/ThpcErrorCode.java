@@ -12,6 +12,9 @@ public enum ThpcErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // 参数值数量超过限制。
+     INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
+     
     // 不支持该参数值。
      INVALIDPARAMETERVALUE_NOTSUPPORTED("InvalidParameterValue.NotSupported"),
      

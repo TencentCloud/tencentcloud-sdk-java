@@ -96,6 +96,13 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
     private String StreamMixNotifyUrl;
 
     /**
+    * 推流异常回调 URL。
+    */
+    @SerializedName("PushExceptionNotifyUrl")
+    @Expose
+    private String PushExceptionNotifyUrl;
+
+    /**
      * Get 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。 
@@ -279,6 +286,22 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
         this.StreamMixNotifyUrl = StreamMixNotifyUrl;
     }
 
+    /**
+     * Get 推流异常回调 URL。 
+     * @return PushExceptionNotifyUrl 推流异常回调 URL。
+     */
+    public String getPushExceptionNotifyUrl() {
+        return this.PushExceptionNotifyUrl;
+    }
+
+    /**
+     * Set 推流异常回调 URL。
+     * @param PushExceptionNotifyUrl 推流异常回调 URL。
+     */
+    public void setPushExceptionNotifyUrl(String PushExceptionNotifyUrl) {
+        this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
+    }
+
     public CreateLiveCallbackTemplateRequest() {
     }
 
@@ -314,6 +337,9 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
         if (source.StreamMixNotifyUrl != null) {
             this.StreamMixNotifyUrl = new String(source.StreamMixNotifyUrl);
         }
+        if (source.PushExceptionNotifyUrl != null) {
+            this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
+        }
     }
 
 
@@ -330,6 +356,7 @@ public class CreateLiveCallbackTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
+        this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
 
     }
 }

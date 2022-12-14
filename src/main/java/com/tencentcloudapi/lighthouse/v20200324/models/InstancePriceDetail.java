@@ -39,6 +39,14 @@ public class InstancePriceDetail extends AbstractModel{
     private InstancePrice InstancePrice;
 
     /**
+    * 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountDetail")
+    @Expose
+    private DiscountDetail [] DiscountDetail;
+
+    /**
      * Get 实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID。
@@ -78,6 +86,26 @@ public class InstancePriceDetail extends AbstractModel{
         this.InstancePrice = InstancePrice;
     }
 
+    /**
+     * Get 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiscountDetail [] getDiscountDetail() {
+        return this.DiscountDetail;
+    }
+
+    /**
+     * Set 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountDetail 折扣梯度详情，每个梯度包含的信息有：时长，折扣数，总价，折扣价，折扣详情（用户折扣、官网折扣、最终折扣）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountDetail(DiscountDetail [] DiscountDetail) {
+        this.DiscountDetail = DiscountDetail;
+    }
+
     public InstancePriceDetail() {
     }
 
@@ -92,6 +120,12 @@ public class InstancePriceDetail extends AbstractModel{
         if (source.InstancePrice != null) {
             this.InstancePrice = new InstancePrice(source.InstancePrice);
         }
+        if (source.DiscountDetail != null) {
+            this.DiscountDetail = new DiscountDetail[source.DiscountDetail.length];
+            for (int i = 0; i < source.DiscountDetail.length; i++) {
+                this.DiscountDetail[i] = new DiscountDetail(source.DiscountDetail[i]);
+            }
+        }
     }
 
 
@@ -101,6 +135,7 @@ public class InstancePriceDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+        this.setParamArrayObj(map, prefix + "DiscountDetail.", this.DiscountDetail);
 
     }
 }

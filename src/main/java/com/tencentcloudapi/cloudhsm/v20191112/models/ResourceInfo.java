@@ -39,7 +39,7 @@ public class ResourceInfo extends AbstractModel{
     private String ResourceName;
 
     /**
-    * 资源状态
+    * 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -79,7 +79,7 @@ public class ResourceInfo extends AbstractModel{
     private String Model;
 
     /**
-    * 资源类型
+    * 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VsmType")
@@ -239,9 +239,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 资源状态
+     * Get 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 资源状态
+     * @return Status 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -249,9 +249,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Set 资源状态
+     * Set 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 资源状态
+     * @param Status 资源状态，1-正常，2-隔离，3-销毁
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -339,9 +339,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 资源类型
+     * Get 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VsmType 资源类型
+     * @return VsmType 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVsmType() {
@@ -349,9 +349,9 @@ public class ResourceInfo extends AbstractModel{
     }
 
     /**
-     * Set 资源类型
+     * Set 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VsmType 资源类型
+     * @param VsmType 云加密机类型id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVsmType(Long VsmType) {

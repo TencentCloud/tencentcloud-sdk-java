@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ResumeGrafanaInstanceRequest extends AbstractModel{
 
     /**
-    * 实例 ID
+    * Grafana 实例 ID，例如：grafana-12345678
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get Grafana 实例 ID，例如：grafana-12345678 
+     * @return InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set Grafana 实例 ID，例如：grafana-12345678
+     * @param InstanceId Grafana 实例 ID，例如：grafana-12345678
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

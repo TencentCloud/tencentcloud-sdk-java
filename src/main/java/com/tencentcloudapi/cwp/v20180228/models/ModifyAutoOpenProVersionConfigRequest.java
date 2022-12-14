@@ -32,6 +32,20 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
+    */
+    @SerializedName("AutoRepurchaseSwitch")
+    @Expose
+    private Long AutoRepurchaseSwitch;
+
+    /**
+    * 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+    */
+    @SerializedName("AutoRepurchaseRenewSwitch")
+    @Expose
+    private Long AutoRepurchaseRenewSwitch;
+
+    /**
      * Get 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li> 
@@ -55,6 +69,38 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 自动加购/扩容授权开关,默认 1, 0关闭, 1开启 
+     * @return AutoRepurchaseSwitch 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
+     */
+    public Long getAutoRepurchaseSwitch() {
+        return this.AutoRepurchaseSwitch;
+    }
+
+    /**
+     * Set 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
+     * @param AutoRepurchaseSwitch 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
+     */
+    public void setAutoRepurchaseSwitch(Long AutoRepurchaseSwitch) {
+        this.AutoRepurchaseSwitch = AutoRepurchaseSwitch;
+    }
+
+    /**
+     * Get 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启 
+     * @return AutoRepurchaseRenewSwitch 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+     */
+    public Long getAutoRepurchaseRenewSwitch() {
+        return this.AutoRepurchaseRenewSwitch;
+    }
+
+    /**
+     * Set 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+     * @param AutoRepurchaseRenewSwitch 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
+     */
+    public void setAutoRepurchaseRenewSwitch(Long AutoRepurchaseRenewSwitch) {
+        this.AutoRepurchaseRenewSwitch = AutoRepurchaseRenewSwitch;
+    }
+
     public ModifyAutoOpenProVersionConfigRequest() {
     }
 
@@ -66,6 +112,12 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.AutoRepurchaseSwitch != null) {
+            this.AutoRepurchaseSwitch = new Long(source.AutoRepurchaseSwitch);
+        }
+        if (source.AutoRepurchaseRenewSwitch != null) {
+            this.AutoRepurchaseRenewSwitch = new Long(source.AutoRepurchaseRenewSwitch);
+        }
     }
 
 
@@ -74,6 +126,8 @@ public class ModifyAutoOpenProVersionConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
+        this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
 
     }
 }

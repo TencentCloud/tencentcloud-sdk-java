@@ -61,6 +61,26 @@ public class EmrClient extends AbstractClient{
 
     /**
      *创建EMR集群实例
+     * @param req CreateClusterRequest
+     * @return CreateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建EMR集群实例
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
      * @throws TencentCloudSDKException
@@ -454,6 +474,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunJobFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunJobFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *扩容集群节点
+     * @param req ScaleOutClusterRequest
+     * @return ScaleOutClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutClusterResponse ScaleOutCluster(ScaleOutClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

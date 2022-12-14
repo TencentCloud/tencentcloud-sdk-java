@@ -101,6 +101,28 @@ public class CreateImageCacheRequest extends AbstractModel{
     private Long RetentionDays;
 
     /**
+    * 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+    */
+    @SerializedName("RegistrySkipVerifyList")
+    @Expose
+    private String [] RegistrySkipVerifyList;
+
+    /**
+    * 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+    */
+    @SerializedName("RegistryHttpEndPointList")
+    @Expose
+    private String [] RegistryHttpEndPointList;
+
+    /**
+    * 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+    */
+    @SerializedName("ResolveConfig")
+    @Expose
+    private String ResolveConfig;
+
+    /**
      * Get 用于制作镜像缓存的容器镜像列表 
      * @return Images 用于制作镜像缓存的容器镜像列表
      */
@@ -280,6 +302,58 @@ public class CreateImageCacheRequest extends AbstractModel{
         this.RetentionDays = RetentionDays;
     }
 
+    /**
+     * Get 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。 
+     * @return RegistrySkipVerifyList 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+     */
+    public String [] getRegistrySkipVerifyList() {
+        return this.RegistrySkipVerifyList;
+    }
+
+    /**
+     * Set 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+     * @param RegistrySkipVerifyList 指定拉取镜像仓库的镜像时不校验证书。如["harbor.example.com"]。
+     */
+    public void setRegistrySkipVerifyList(String [] RegistrySkipVerifyList) {
+        this.RegistrySkipVerifyList = RegistrySkipVerifyList;
+    }
+
+    /**
+     * Get 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。 
+     * @return RegistryHttpEndPointList 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+     */
+    public String [] getRegistryHttpEndPointList() {
+        return this.RegistryHttpEndPointList;
+    }
+
+    /**
+     * Set 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+     * @param RegistryHttpEndPointList 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
+     */
+    public void setRegistryHttpEndPointList(String [] RegistryHttpEndPointList) {
+        this.RegistryHttpEndPointList = RegistryHttpEndPointList;
+    }
+
+    /**
+     * Get 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8" 
+     * @return ResolveConfig 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+     */
+    public String getResolveConfig() {
+        return this.ResolveConfig;
+    }
+
+    /**
+     * Set 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+     * @param ResolveConfig 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
+"nameserver 4.4.4.4\nnameserver 8.8.8.8"
+     */
+    public void setResolveConfig(String ResolveConfig) {
+        this.ResolveConfig = ResolveConfig;
+    }
+
     public CreateImageCacheRequest() {
     }
 
@@ -330,6 +404,21 @@ public class CreateImageCacheRequest extends AbstractModel{
         if (source.RetentionDays != null) {
             this.RetentionDays = new Long(source.RetentionDays);
         }
+        if (source.RegistrySkipVerifyList != null) {
+            this.RegistrySkipVerifyList = new String[source.RegistrySkipVerifyList.length];
+            for (int i = 0; i < source.RegistrySkipVerifyList.length; i++) {
+                this.RegistrySkipVerifyList[i] = new String(source.RegistrySkipVerifyList[i]);
+            }
+        }
+        if (source.RegistryHttpEndPointList != null) {
+            this.RegistryHttpEndPointList = new String[source.RegistryHttpEndPointList.length];
+            for (int i = 0; i < source.RegistryHttpEndPointList.length; i++) {
+                this.RegistryHttpEndPointList[i] = new String(source.RegistryHttpEndPointList[i]);
+            }
+        }
+        if (source.ResolveConfig != null) {
+            this.ResolveConfig = new String(source.ResolveConfig);
+        }
     }
 
 
@@ -348,6 +437,9 @@ public class CreateImageCacheRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AutoCreateEipAttribute.", this.AutoCreateEipAttribute);
         this.setParamSimple(map, prefix + "ImageCacheSize", this.ImageCacheSize);
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+        this.setParamArraySimple(map, prefix + "RegistrySkipVerifyList.", this.RegistrySkipVerifyList);
+        this.setParamArraySimple(map, prefix + "RegistryHttpEndPointList.", this.RegistryHttpEndPointList);
+        this.setParamSimple(map, prefix + "ResolveConfig", this.ResolveConfig);
 
     }
 }

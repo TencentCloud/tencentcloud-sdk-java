@@ -30,14 +30,14 @@ public class ModifyDisksChargeTypeRequest extends AbstractModel{
     private String [] DiskIds;
 
     /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+    * 设置为预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
     private DiskChargePrepaid DiskChargePrepaid;
 
     /**
-    * 后付费模式
+    * 设置为后付费模式
     */
     @SerializedName("DiskChargePostpaid")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyDisksChargeTypeRequest extends AbstractModel{
     }
 
     /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。 
-     * @return DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * Get 设置为预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。 
+     * @return DiskChargePrepaid 设置为预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-     * @param DiskChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * Set 设置为预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * @param DiskChargePrepaid 设置为预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;
     }
 
     /**
-     * Get 后付费模式 
-     * @return DiskChargePostpaid 后付费模式
+     * Get 设置为后付费模式 
+     * @return DiskChargePostpaid 设置为后付费模式
      */
     public Boolean getDiskChargePostpaid() {
         return this.DiskChargePostpaid;
     }
 
     /**
-     * Set 后付费模式
-     * @param DiskChargePostpaid 后付费模式
+     * Set 设置为后付费模式
+     * @param DiskChargePostpaid 设置为后付费模式
      */
     public void setDiskChargePostpaid(Boolean DiskChargePostpaid) {
         this.DiskChargePostpaid = DiskChargePostpaid;

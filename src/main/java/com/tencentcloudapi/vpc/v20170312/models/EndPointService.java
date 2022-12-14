@@ -95,6 +95,13 @@ public class EndPointService extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 挂载的PAAS服务类型，CLB,CDB,CRS
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
      * Get 终端节点服务ID 
      * @return EndPointServiceId 终端节点服务ID
      */
@@ -262,6 +269,22 @@ public class EndPointService extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 挂载的PAAS服务类型，CLB,CDB,CRS 
+     * @return ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 挂载的PAAS服务类型，CLB,CDB,CRS
+     * @param ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
     public EndPointService() {
     }
 
@@ -303,6 +326,9 @@ public class EndPointService extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
     }
 
 
@@ -320,6 +346,7 @@ public class EndPointService extends AbstractModel{
         this.setParamSimple(map, prefix + "EndPointCount", this.EndPointCount);
         this.setParamArrayObj(map, prefix + "EndPointSet.", this.EndPointSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }
