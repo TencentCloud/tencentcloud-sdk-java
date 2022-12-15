@@ -30,49 +30,49 @@ public class InstanceSet extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 实例Id。
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户的Appid。
+    * 用户的 AppID。
     */
     @SerializedName("Appid")
     @Expose
     private Long Appid;
 
     /**
-    * 项目Id。
+    * 项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+    * 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域id。
+    * 区域 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * vpc网络id，例如75101。
+    * vpc网络 ID，例如75101。
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * vpc网络下子网id 如：46315。
+    * vpc网络下子网ID，如：46315。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -86,7 +86,7 @@ public class InstanceSet extends AbstractModel{
     private Long Status;
 
     /**
-    * 实例vip。
+    * 实例 VIP。
     */
     @SerializedName("WanIp")
     @Expose
@@ -233,7 +233,7 @@ public class InstanceSet extends AbstractModel{
     private Long RedisReplicasNum;
 
     /**
-    * 计费Id。
+    * 计费 ID。
     */
     @SerializedName("PriceId")
     @Expose
@@ -446,112 +446,112 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例Id。 
-     * @return InstanceId 实例Id。
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id。
-     * @param InstanceId 实例Id。
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户的Appid。 
-     * @return Appid 用户的Appid。
+     * Get 用户的 AppID。 
+     * @return Appid 用户的 AppID。
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set 用户的Appid。
-     * @param Appid 用户的Appid。
+     * Set 用户的 AppID。
+     * @param Appid 用户的 AppID。
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
     }
 
     /**
-     * Get 项目Id。 
-     * @return ProjectId 项目Id。
+     * Get 项目 ID。 
+     * @return ProjectId 项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id。
-     * @param ProjectId 项目Id。
+     * Set 项目 ID。
+     * @param ProjectId 项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
-     * @return RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Get 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul> 
+     * @return RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param RegionId 地域id 。1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Set 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
+     * @param RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>24：莫斯科。</li><li>25：东京。</li></ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域id。 
-     * @return ZoneId 区域id。
+     * Get 区域 ID。 
+     * @return ZoneId 区域 ID。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域id。
-     * @param ZoneId 区域id。
+     * Set 区域 ID。
+     * @param ZoneId 区域 ID。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get vpc网络id，例如75101。 
-     * @return VpcId vpc网络id，例如75101。
+     * Get vpc网络 ID，例如75101。 
+     * @return VpcId vpc网络 ID，例如75101。
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc网络id，例如75101。
-     * @param VpcId vpc网络id，例如75101。
+     * Set vpc网络 ID，例如75101。
+     * @param VpcId vpc网络 ID，例如75101。
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc网络下子网id 如：46315。 
-     * @return SubnetId vpc网络下子网id 如：46315。
+     * Get vpc网络下子网ID，如：46315。 
+     * @return SubnetId vpc网络下子网ID，如：46315。
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set vpc网络下子网id 如：46315。
-     * @param SubnetId vpc网络下子网id 如：46315。
+     * Set vpc网络下子网ID，如：46315。
+     * @param SubnetId vpc网络下子网ID，如：46315。
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
@@ -574,16 +574,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例vip。 
-     * @return WanIp 实例vip。
+     * Get 实例 VIP。 
+     * @return WanIp 实例 VIP。
      */
     public String getWanIp() {
         return this.WanIp;
     }
 
     /**
-     * Set 实例vip。
-     * @param WanIp 实例vip。
+     * Set 实例 VIP。
+     * @param WanIp 实例 VIP。
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
@@ -910,16 +910,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 计费Id。 
-     * @return PriceId 计费Id。
+     * Get 计费 ID。 
+     * @return PriceId 计费 ID。
      */
     public Long getPriceId() {
         return this.PriceId;
     }
 
     /**
-     * Set 计费Id。
-     * @param PriceId 计费Id。
+     * Set 计费 ID。
+     * @param PriceId 计费 ID。
      */
     public void setPriceId(Long PriceId) {
         this.PriceId = PriceId;

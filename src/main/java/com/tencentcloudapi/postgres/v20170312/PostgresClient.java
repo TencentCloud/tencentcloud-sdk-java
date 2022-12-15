@@ -179,6 +179,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口 (CreateParameterTemplate) 用于创建参数模板。
+     * @param req CreateParameterTemplateRequest
+     * @return CreateParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateParameterTemplateResponse CreateParameterTemplate(CreateParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateParameterTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateReadOnlyDBInstance)用于创建只读实例
      * @param req CreateReadOnlyDBInstanceRequest
      * @return CreateReadOnlyDBInstanceResponse
@@ -271,6 +291,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteParameterTemplate）主要用于删除某个参数模板。
+     * @param req DeleteParameterTemplateRequest
+     * @return DeleteParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteParameterTemplateResponse DeleteParameterTemplate(DeleteParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteParameterTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,6 +539,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstanceSecurityGroups）用于查询实例安全组信息。
+     * @param req DescribeDBInstanceSecurityGroupsRequest
+     * @return DescribeDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(DescribeDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -579,6 +639,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDefaultParameters）主要用于查询某个数据库版本和引擎支持的所有参数。
+     * @param req DescribeDefaultParametersRequest
+     * @return DescribeDefaultParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultParametersResponse DescribeDefaultParameters(DescribeDefaultParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefaultParametersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDefaultParameters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取实例的密钥信息列表。
      * @param req DescribeEncryptionKeysRequest
      * @return DescribeEncryptionKeysResponse
@@ -611,6 +691,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrders");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeParameterTemplateAttributes）用于查询某个参数模板的具体内容，包括基本信息和参数信息。
+     * @param req DescribeParameterTemplateAttributesRequest
+     * @return DescribeParameterTemplateAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributes(DescribeParameterTemplateAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParameterTemplateAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeParameterTemplates) 用于查询参数模板列表。
+     * @param req DescribeParameterTemplatesRequest
+     * @return DescribeParameterTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParameterTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParameterTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1039,6 +1159,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBInstanceSecurityGroups）用于修改实例安全组。
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
@@ -1071,6 +1211,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstancesProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyParameterTemplate）主要用于修改参数模板名称，描述，修改，添加和删除参数模板参数。
+     * @param req ModifyParameterTemplateRequest
+     * @return ModifyParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyParameterTemplateResponse ModifyParameterTemplate(ModifyParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyParameterTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

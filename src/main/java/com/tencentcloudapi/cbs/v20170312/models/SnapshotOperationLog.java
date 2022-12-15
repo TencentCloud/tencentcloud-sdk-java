@@ -23,35 +23,6 @@ import java.util.HashMap;
 public class SnapshotOperationLog extends AbstractModel{
 
     /**
-    * 操作者的UIN。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Operator")
-    @Expose
-    private String Operator;
-
-    /**
-    * 操作类型。取值范围：
-SNAP_OPERATION_DELETE：删除快照
-SNAP_OPERATION_ROLLBACK：回滚快照
-SNAP_OPERATION_MODIFY：修改快照属性
-SNAP_OPERATION_CREATE：创建快照
-SNAP_OPERATION_COPY：跨地域复制快照
-ASP_OPERATION_CREATE_SNAP：由定期快照策略创建快照
-ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
-    */
-    @SerializedName("Operation")
-    @Expose
-    private String Operation;
-
-    /**
-    * 操作的快照ID。
-    */
-    @SerializedName("SnapshotId")
-    @Expose
-    private String SnapshotId;
-
-    /**
     * 操作的状态。取值范围：
 SUCCESS :表示操作成功 
 FAILED :表示操作失败 
@@ -69,11 +40,84 @@ PROCESSING :表示操作中。
     private String StartTime;
 
     /**
+    * 操作者的UIN。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+    * 操作的快照ID。
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
+    * 操作类型。取值范围：
+SNAP_OPERATION_DELETE：删除快照
+SNAP_OPERATION_ROLLBACK：回滚快照
+SNAP_OPERATION_MODIFY：修改快照属性
+SNAP_OPERATION_CREATE：创建快照
+SNAP_OPERATION_COPY：跨地域复制快照
+ASP_OPERATION_CREATE_SNAP：由定期快照策略创建快照
+ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
+    */
+    @SerializedName("Operation")
+    @Expose
+    private String Operation;
+
+    /**
     * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+     * Get 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。 
+     * @return OperationState 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     */
+    public String getOperationState() {
+        return this.OperationState;
+    }
+
+    /**
+     * Set 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     * @param OperationState 操作的状态。取值范围：
+SUCCESS :表示操作成功 
+FAILED :表示操作失败 
+PROCESSING :表示操作中。
+     */
+    public void setOperationState(String OperationState) {
+        this.OperationState = OperationState;
+    }
+
+    /**
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间。
+     * @param StartTime 开始时间。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
 
     /**
      * Get 操作者的UIN。
@@ -93,6 +137,22 @@ PROCESSING :表示操作中。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 操作的快照ID。 
+     * @return SnapshotId 操作的快照ID。
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set 操作的快照ID。
+     * @param SnapshotId 操作的快照ID。
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
     }
 
     /**
@@ -140,66 +200,6 @@ ASP_OPERATION_DELETE_SNAP：由定期快照策略删除快照
     }
 
     /**
-     * Get 操作的快照ID。 
-     * @return SnapshotId 操作的快照ID。
-     */
-    public String getSnapshotId() {
-        return this.SnapshotId;
-    }
-
-    /**
-     * Set 操作的快照ID。
-     * @param SnapshotId 操作的快照ID。
-     */
-    public void setSnapshotId(String SnapshotId) {
-        this.SnapshotId = SnapshotId;
-    }
-
-    /**
-     * Get 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。 
-     * @return OperationState 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     */
-    public String getOperationState() {
-        return this.OperationState;
-    }
-
-    /**
-     * Set 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     * @param OperationState 操作的状态。取值范围：
-SUCCESS :表示操作成功 
-FAILED :表示操作失败 
-PROCESSING :表示操作中。
-     */
-    public void setOperationState(String OperationState) {
-        this.OperationState = OperationState;
-    }
-
-    /**
-     * Get 开始时间。 
-     * @return StartTime 开始时间。
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 开始时间。
-     * @param StartTime 开始时间。
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
      * Get 结束时间。 
      * @return EndTime 结束时间。
      */
@@ -223,20 +223,20 @@ PROCESSING :表示操作中。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SnapshotOperationLog(SnapshotOperationLog source) {
-        if (source.Operator != null) {
-            this.Operator = new String(source.Operator);
-        }
-        if (source.Operation != null) {
-            this.Operation = new String(source.Operation);
-        }
-        if (source.SnapshotId != null) {
-            this.SnapshotId = new String(source.SnapshotId);
-        }
         if (source.OperationState != null) {
             this.OperationState = new String(source.OperationState);
         }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
@@ -248,11 +248,11 @@ PROCESSING :表示操作中。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Operator", this.Operator);
-        this.setParamSimple(map, prefix + "Operation", this.Operation);
-        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "OperationState", this.OperationState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }

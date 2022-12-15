@@ -30,7 +30,7 @@ public class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel{
     private String RuleID;
 
     /**
-    * 状态(ture:开 false:关)
+    * 状态(true:开 false:关)
     */
     @SerializedName("Status")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态(ture:开 false:关) 
-     * @return Status 状态(ture:开 false:关)
+     * Get 状态(true:开 false:关) 
+     * @return Status 状态(true:开 false:关)
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态(ture:开 false:关)
-     * @param Status 状态(ture:开 false:关)
+     * Set 状态(true:开 false:关)
+     * @param Status 状态(true:开 false:关)
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

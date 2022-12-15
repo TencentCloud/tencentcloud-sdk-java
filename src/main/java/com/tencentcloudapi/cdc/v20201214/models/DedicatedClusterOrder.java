@@ -164,6 +164,14 @@ public class DedicatedClusterOrder extends AbstractModel{
     private Long TimeSpan;
 
     /**
+    * 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
      * Get 专用集群id 
      * @return DedicatedClusterId 专用集群id
      */
@@ -499,6 +507,26 @@ public class DedicatedClusterOrder extends AbstractModel{
         this.TimeSpan = TimeSpan;
     }
 
+    /**
+     * Get 订单类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderType 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderType 订单类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
+    }
+
     public DedicatedClusterOrder() {
     }
 
@@ -576,6 +604,9 @@ public class DedicatedClusterOrder extends AbstractModel{
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
     }
 
 
@@ -602,6 +633,7 @@ public class DedicatedClusterOrder extends AbstractModel{
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
 
     }
 }

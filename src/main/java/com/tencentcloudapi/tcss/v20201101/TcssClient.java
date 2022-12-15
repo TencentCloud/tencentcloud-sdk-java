@@ -3682,7 +3682,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询k8s api 异常规则中范围列表
+     *查询k8sapi 异常规则中范围列表
      * @param req DescribeK8sApiAbnormalRuleScopeListRequest
      * @return DescribeK8sApiAbnormalRuleScopeListResponse
      * @throws TencentCloudSDKException

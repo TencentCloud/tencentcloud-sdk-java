@@ -31,6 +31,7 @@ public class DescribeClusterParamsResponse extends AbstractModel{
 
     /**
     * 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -60,8 +61,10 @@ public class DescribeClusterParamsResponse extends AbstractModel{
     }
 
     /**
-     * Get 实例参数列表 
+     * Get 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParamInfo [] getItems() {
         return this.Items;
@@ -69,7 +72,9 @@ public class DescribeClusterParamsResponse extends AbstractModel{
 
     /**
      * Set 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 实例参数列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ParamInfo [] Items) {
         this.Items = Items;

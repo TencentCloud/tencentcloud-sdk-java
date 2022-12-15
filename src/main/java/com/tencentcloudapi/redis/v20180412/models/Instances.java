@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class Instances extends AbstractModel{
 
     /**
-    * 用户AppID
+    * 用户AppID。
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+    * 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 区域ID
+    * 区域 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 副本数量
+    * 副本数量。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * 分片数量
+    * 分片数量。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 分片大小
+    * 分片内存大小。
     */
     @SerializedName("RedisShardSize")
     @Expose
@@ -87,28 +87,28 @@ public class Instances extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * 引擎：社区版Redis、腾讯云CKV
+    * 引擎：社区版Redis、腾讯云CKV。
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * 实例角色，rw可读写，r只读
+    * 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 实例VIP
+    * 实例 VIP 地址。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 内部参数，用户可忽略
+    * 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip6")
@@ -116,177 +116,177 @@ public class Instances extends AbstractModel{
     private String Vip6;
 
     /**
-    * vpc网络ID 如：75101
+    * VPC 网络ID，如：75101。
     */
     @SerializedName("VpcID")
     @Expose
     private Long VpcID;
 
     /**
-    * 实例端口
+    * 实例端口。
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+    * 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 仓库ID
+    * 仓库ID。
     */
     @SerializedName("GrocerySysId")
     @Expose
     private Long GrocerySysId;
 
     /**
-    * 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+    * 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 创建时间
+    * 实例加入复制组的时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 更新实例
+    * 复制组中实例更新的时间。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 用户AppID 
-     * @return AppId 用户AppID
+     * Get 用户AppID。 
+     * @return AppId 用户AppID。
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppID
-     * @param AppId 用户AppID
+     * Set 用户AppID。
+     * @param AppId 用户AppID。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷） 
-     * @return RegionId 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * Get 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul> 
+     * @return RegionId 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
-     * @param RegionId 地域ID 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）
+     * Set 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
+     * @param RegionId 地域ID。<ul><li>1：广州。</li><li>4：上海。</li><li> 5：香港。</li> <li> 6：多伦多。</li> <li> 7：上海金融。</li> <li> 8：北京。</li> <li> 9：新加坡。</li> <li> 11：深圳金融。</li> <li> 15：美西（硅谷）。</li> </ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域ID 
-     * @return ZoneId 区域ID
+     * Get 区域 ID。 
+     * @return ZoneId 区域 ID。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 区域ID
-     * @param ZoneId 区域ID
+     * Set 区域 ID。
+     * @param ZoneId 区域 ID。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 副本数量 
-     * @return RedisReplicasNum 副本数量
+     * Get 副本数量。 
+     * @return RedisReplicasNum 副本数量。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 副本数量
-     * @param RedisReplicasNum 副本数量
+     * Set 副本数量。
+     * @param RedisReplicasNum 副本数量。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get 分片数量 
-     * @return RedisShardNum 分片数量
+     * Get 分片数量。 
+     * @return RedisShardNum 分片数量。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 分片数量
-     * @param RedisShardNum 分片数量
+     * Set 分片数量。
+     * @param RedisShardNum 分片数量。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 分片大小 
-     * @return RedisShardSize 分片大小
+     * Get 分片内存大小。 
+     * @return RedisShardSize 分片内存大小。
      */
     public Long getRedisShardSize() {
         return this.RedisShardSize;
     }
 
     /**
-     * Set 分片大小
-     * @param RedisShardSize 分片大小
+     * Set 分片内存大小。
+     * @param RedisShardSize 分片内存大小。
      */
     public void setRedisShardSize(Long RedisShardSize) {
         this.RedisShardSize = RedisShardSize;
@@ -313,57 +313,57 @@ public class Instances extends AbstractModel{
     }
 
     /**
-     * Get 引擎：社区版Redis、腾讯云CKV 
-     * @return Engine 引擎：社区版Redis、腾讯云CKV
+     * Get 引擎：社区版Redis、腾讯云CKV。 
+     * @return Engine 引擎：社区版Redis、腾讯云CKV。
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 引擎：社区版Redis、腾讯云CKV
-     * @param Engine 引擎：社区版Redis、腾讯云CKV
+     * Set 引擎：社区版Redis、腾讯云CKV。
+     * @param Engine 引擎：社区版Redis、腾讯云CKV。
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get 实例角色，rw可读写，r只读 
-     * @return Role 实例角色，rw可读写，r只读
+     * Get 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul> 
+     * @return Role 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 实例角色，rw可读写，r只读
-     * @param Role 实例角色，rw可读写，r只读
+     * Set 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
+     * @param Role 实例读写权限。<ul><li>rw：可读写。</li><li>r：只读。</li></ul>
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 实例VIP 
-     * @return Vip 实例VIP
+     * Get 实例 VIP 地址。 
+     * @return Vip 实例 VIP 地址。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例VIP
-     * @param Vip 实例VIP
+     * Set 实例 VIP 地址。
+     * @param Vip 实例 VIP 地址。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 内部参数，用户可忽略
+     * Get 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip6 内部参数，用户可忽略
+     * @return Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip6() {
@@ -371,9 +371,9 @@ public class Instances extends AbstractModel{
     }
 
     /**
-     * Set 内部参数，用户可忽略
+     * Set 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip6 内部参数，用户可忽略
+     * @param Vip6 内部参数，用户可忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip6(String Vip6) {
@@ -381,112 +381,112 @@ public class Instances extends AbstractModel{
     }
 
     /**
-     * Get vpc网络ID 如：75101 
-     * @return VpcID vpc网络ID 如：75101
+     * Get VPC 网络ID，如：75101。 
+     * @return VpcID VPC 网络ID，如：75101。
      */
     public Long getVpcID() {
         return this.VpcID;
     }
 
     /**
-     * Set vpc网络ID 如：75101
-     * @param VpcID vpc网络ID 如：75101
+     * Set VPC 网络ID，如：75101。
+     * @param VpcID VPC 网络ID，如：75101。
      */
     public void setVpcID(Long VpcID) {
         this.VpcID = VpcID;
     }
 
     /**
-     * Get 实例端口 
-     * @return VPort 实例端口
+     * Get 实例端口。 
+     * @return VPort 实例端口。
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 实例端口
-     * @param VPort 实例端口
+     * Set 实例端口。
+     * @param VPort 实例端口。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除 
-     * @return Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Get 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul> 
+     * @return Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
-     * @param Status 实例状态：0-待初始化，1-流程中，2-运行中，-2-已隔离，-3-待删除
+     * Set 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
+     * @param Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 仓库ID 
-     * @return GrocerySysId 仓库ID
+     * Get 仓库ID。 
+     * @return GrocerySysId 仓库ID。
      */
     public Long getGrocerySysId() {
         return this.GrocerySysId;
     }
 
     /**
-     * Set 仓库ID
-     * @param GrocerySysId 仓库ID
+     * Set 仓库ID。
+     * @param GrocerySysId 仓库ID。
      */
     public void setGrocerySysId(Long GrocerySysId) {
         this.GrocerySysId = GrocerySysId;
     }
 
     /**
-     * Get 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构） 
-     * @return ProductType 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Get 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul> 
+     * @return ProductType 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
-     * @param ProductType 实例类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Set 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
+     * @param ProductType 实例类型。<ul><li>1：Redis 2.8 内存版（集群架构）。</li><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>5：Redis 2.8 单机版。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li></ul>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 实例加入复制组的时间。 
+     * @return CreateTime 实例加入复制组的时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 实例加入复制组的时间。
+     * @param CreateTime 实例加入复制组的时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新实例 
-     * @return UpdateTime 更新实例
+     * Get 复制组中实例更新的时间。 
+     * @return UpdateTime 复制组中实例更新的时间。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新实例
-     * @param UpdateTime 更新实例
+     * Set 复制组中实例更新的时间。
+     * @param UpdateTime 复制组中实例更新的时间。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

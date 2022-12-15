@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SegmentPortraitPicResponse extends AbstractModel{
 
     /**
-    * 处理后的图片 base64 数据，透明背景图
+    * 处理后的图片 base64 数据，透明背景图。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultImage")
@@ -31,7 +31,7 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     private String ResultImage;
 
     /**
-    * 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+    * 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultMask")
@@ -47,7 +47,7 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     private Boolean HasForeground;
 
     /**
-    * 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+    * 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultImageUrl")
@@ -55,7 +55,7 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     private String ResultImageUrl;
 
     /**
-    * 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+    * 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultMaskUrl")
@@ -70,9 +70,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 处理后的图片 base64 数据，透明背景图
+     * Get 处理后的图片 base64 数据，透明背景图。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultImage 处理后的图片 base64 数据，透明背景图
+     * @return ResultImage 处理后的图片 base64 数据，透明背景图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultImage() {
@@ -80,9 +80,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Set 处理后的图片 base64 数据，透明背景图
+     * Set 处理后的图片 base64 数据，透明背景图。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultImage 处理后的图片 base64 数据，透明背景图
+     * @param ResultImage 处理后的图片 base64 数据，透明背景图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultImage(String ResultImage) {
@@ -90,9 +90,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Get 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+     * Get 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultMask 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+     * @return ResultMask 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultMask() {
@@ -100,9 +100,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Set 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+     * Set 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultMask 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）
+     * @param ResultMask 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。这些浮点数代表原图从左上角开始的每一行的每一个像素点，每一个浮点数的值是原图相应像素点位于人体轮廓内的置信度（0-1）转化的灰度值（0-255）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultMask(String ResultMask) {
@@ -130,9 +130,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Get 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+     * Get 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+     * @return ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultImageUrl() {
@@ -140,9 +140,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Set 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+     * Set 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以URL的形式返回值，URL有效期为30分钟。
+     * @param ResultImageUrl 支持将处理过的图片 base64 数据，透明背景图以Url的形式返回值，Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultImageUrl(String ResultImageUrl) {
@@ -150,9 +150,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Get 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+     * Get 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultMaskUrl 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+     * @return ResultMaskUrl 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultMaskUrl() {
@@ -160,9 +160,9 @@ public class SegmentPortraitPicResponse extends AbstractModel{
     }
 
     /**
-     * Set 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+     * Set 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultMaskUrl 一个通过 Base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以URL形式的返回值；URL有效期为30分钟。
+     * @param ResultMaskUrl 一个通过 base64 编码的文件，解码后文件由 Float 型浮点数组成。支持以Url形式的返回值；Url有效期为30分钟。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultMaskUrl(String ResultMaskUrl) {

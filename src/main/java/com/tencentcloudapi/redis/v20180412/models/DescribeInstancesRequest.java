@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * 实例数量，参数默认值20，最大值为1000。
+    * 每页输出实例的数量，参数默认值20，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍。
+    * 分页偏移量，取Limit整数倍。
     */
     @SerializedName("Offset")
     @Expose
@@ -212,32 +212,32 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String AzMode;
 
     /**
-     * Get 实例数量，参数默认值20，最大值为1000。 
-     * @return Limit 实例数量，参数默认值20，最大值为1000。
+     * Get 每页输出实例的数量，参数默认值20，最大值为1000。 
+     * @return Limit 每页输出实例的数量，参数默认值20，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 实例数量，参数默认值20，最大值为1000。
-     * @param Limit 实例数量，参数默认值20，最大值为1000。
+     * Set 每页输出实例的数量，参数默认值20，最大值为1000。
+     * @param Limit 每页输出实例的数量，参数默认值20，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍。 
-     * @return Offset 偏移量，取Limit整数倍。
+     * Get 分页偏移量，取Limit整数倍。 
+     * @return Offset 分页偏移量，取Limit整数倍。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍。
-     * @param Offset 偏移量，取Limit整数倍。
+     * Set 分页偏移量，取Limit整数倍。
+     * @param Offset 分页偏移量，取Limit整数倍。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

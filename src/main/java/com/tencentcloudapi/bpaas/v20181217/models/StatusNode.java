@@ -67,7 +67,7 @@ public class StatusNode extends AbstractModel{
     private String ScfName;
 
     /**
-    * 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+    * 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubStatus")
@@ -145,6 +145,38 @@ public class StatusNode extends AbstractModel{
     @SerializedName("CallMethod")
     @Expose
     private Long CallMethod;
+
+    /**
+    * CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataHubId")
+    @Expose
+    private String DataHubId;
+
+    /**
+    * CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskName")
+    @Expose
+    private String TaskName;
+
+    /**
+    * CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CKafkaRegion")
+    @Expose
+    private String CKafkaRegion;
+
+    /**
+    * 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalUrl")
+    @Expose
+    private String ExternalUrl;
 
     /**
      * Get 节点id 
@@ -251,9 +283,9 @@ public class StatusNode extends AbstractModel{
     }
 
     /**
-     * Get 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * Get 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * @return SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubStatus() {
@@ -261,9 +293,9 @@ public class StatusNode extends AbstractModel{
     }
 
     /**
-     * Set 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * Set 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）
+     * @param SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubStatus(Long SubStatus) {
@@ -450,6 +482,86 @@ public class StatusNode extends AbstractModel{
         this.CallMethod = CallMethod;
     }
 
+    /**
+     * Get CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataHubId CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataHubId() {
+        return this.DataHubId;
+    }
+
+    /**
+     * Set CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataHubId CKafka - 接入资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataHubId(String DataHubId) {
+        this.DataHubId = DataHubId;
+    }
+
+    /**
+     * Get CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskName CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskName() {
+        return this.TaskName;
+    }
+
+    /**
+     * Set CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskName CKafka - 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskName(String TaskName) {
+        this.TaskName = TaskName;
+    }
+
+    /**
+     * Get CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CKafkaRegion CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCKafkaRegion() {
+        return this.CKafkaRegion;
+    }
+
+    /**
+     * Set CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CKafkaRegion CKafka - 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCKafkaRegion(String CKafkaRegion) {
+        this.CKafkaRegion = CKafkaRegion;
+    }
+
+    /**
+     * Get 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalUrl 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalUrl() {
+        return this.ExternalUrl;
+    }
+
+    /**
+     * Set 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalUrl 外部审批Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalUrl(String ExternalUrl) {
+        this.ExternalUrl = ExternalUrl;
+    }
+
     public StatusNode() {
     }
 
@@ -509,6 +621,18 @@ public class StatusNode extends AbstractModel{
         if (source.CallMethod != null) {
             this.CallMethod = new Long(source.CallMethod);
         }
+        if (source.DataHubId != null) {
+            this.DataHubId = new String(source.DataHubId);
+        }
+        if (source.TaskName != null) {
+            this.TaskName = new String(source.TaskName);
+        }
+        if (source.CKafkaRegion != null) {
+            this.CKafkaRegion = new String(source.CKafkaRegion);
+        }
+        if (source.ExternalUrl != null) {
+            this.ExternalUrl = new String(source.ExternalUrl);
+        }
     }
 
 
@@ -532,6 +656,10 @@ public class StatusNode extends AbstractModel{
         this.setParamSimple(map, prefix + "ApproveMethod", this.ApproveMethod);
         this.setParamSimple(map, prefix + "ApproveType", this.ApproveType);
         this.setParamSimple(map, prefix + "CallMethod", this.CallMethod);
+        this.setParamSimple(map, prefix + "DataHubId", this.DataHubId);
+        this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "CKafkaRegion", this.CKafkaRegion);
+        this.setParamSimple(map, prefix + "ExternalUrl", this.ExternalUrl);
 
     }
 }

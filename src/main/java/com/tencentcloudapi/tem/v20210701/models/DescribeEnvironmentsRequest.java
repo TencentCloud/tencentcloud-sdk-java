@@ -58,6 +58,13 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private SortType SortInfo;
 
     /**
+    * 环境id
+    */
+    @SerializedName("EnvironmentId")
+    @Expose
+    private String EnvironmentId;
+
+    /**
      * Get 分页limit 
      * @return Limit 分页limit
      */
@@ -137,6 +144,22 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.SortInfo = SortInfo;
     }
 
+    /**
+     * Get 环境id 
+     * @return EnvironmentId 环境id
+     */
+    public String getEnvironmentId() {
+        return this.EnvironmentId;
+    }
+
+    /**
+     * Set 环境id
+     * @param EnvironmentId 环境id
+     */
+    public void setEnvironmentId(String EnvironmentId) {
+        this.EnvironmentId = EnvironmentId;
+    }
+
     public DescribeEnvironmentsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         if (source.SortInfo != null) {
             this.SortInfo = new SortType(source.SortInfo);
         }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamObj(map, prefix + "SortInfo.", this.SortInfo);
+        this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
 
     }
 }

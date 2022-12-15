@@ -108,6 +108,13 @@ public class DescribeBackupListRequest extends AbstractModel{
     private String [] BackupNames;
 
     /**
+    * 快照备份Id列表
+    */
+    @SerializedName("SnapshotIdList")
+    @Expose
+    private Long [] SnapshotIdList;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -303,6 +310,22 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.BackupNames = BackupNames;
     }
 
+    /**
+     * Get 快照备份Id列表 
+     * @return SnapshotIdList 快照备份Id列表
+     */
+    public Long [] getSnapshotIdList() {
+        return this.SnapshotIdList;
+    }
+
+    /**
+     * Set 快照备份Id列表
+     * @param SnapshotIdList 快照备份Id列表
+     */
+    public void setSnapshotIdList(Long [] SnapshotIdList) {
+        this.SnapshotIdList = SnapshotIdList;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -356,6 +379,12 @@ public class DescribeBackupListRequest extends AbstractModel{
                 this.BackupNames[i] = new String(source.BackupNames[i]);
             }
         }
+        if (source.SnapshotIdList != null) {
+            this.SnapshotIdList = new Long[source.SnapshotIdList.length];
+            for (int i = 0; i < source.SnapshotIdList.length; i++) {
+                this.SnapshotIdList[i] = new Long(source.SnapshotIdList[i]);
+            }
+        }
     }
 
 
@@ -375,6 +404,7 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
         this.setParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
+        this.setParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
 
     }
 }

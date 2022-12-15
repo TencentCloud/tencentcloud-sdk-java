@@ -30,6 +30,13 @@ public class DescribeClusterParamsRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 参数名字
+    */
+    @SerializedName("ParamName")
+    @Expose
+    private String ParamName;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -45,6 +52,22 @@ public class DescribeClusterParamsRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 参数名字 
+     * @return ParamName 参数名字
+     */
+    public String getParamName() {
+        return this.ParamName;
+    }
+
+    /**
+     * Set 参数名字
+     * @param ParamName 参数名字
+     */
+    public void setParamName(String ParamName) {
+        this.ParamName = ParamName;
+    }
+
     public DescribeClusterParamsRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeClusterParamsRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.ParamName != null) {
+            this.ParamName = new String(source.ParamName);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeClusterParamsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ParamName", this.ParamName);
 
     }
 }

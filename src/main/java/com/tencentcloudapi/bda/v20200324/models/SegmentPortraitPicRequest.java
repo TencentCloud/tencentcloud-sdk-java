@@ -44,11 +44,21 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String Url;
 
     /**
-    * 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+    * 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
     */
     @SerializedName("RspImgType")
     @Expose
     private String RspImgType;
+
+    /**
+    * 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+    */
+    @SerializedName("Scene")
+    @Expose
+    private String Scene;
 
     /**
      * Get 图片 base64 数据，base64 编码后大小不可超过5M。
@@ -111,19 +121,47 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * Get 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。 
-     * @return RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     * Get 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。 
+     * @return RspImgType 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
      */
     public String getRspImgType() {
         return this.RspImgType;
     }
 
     /**
-     * Set 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
-     * @param RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为30分钟。
+     * Set 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
+     * @param RspImgType 返回图像方式（base64 或 Url ) ，二选一。url有效期为30分钟。
      */
     public void setRspImgType(String RspImgType) {
         this.RspImgType = RspImgType;
+    }
+
+    /**
+     * Get 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。 
+     * @return Scene 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+     */
+    public String getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+     * @param Scene 适用场景类型。
+
+取值：GEN/GS。GEN为通用场景模式；GS为绿幕场景模式，针对绿幕场景下的人像分割效果更好。
+两种模式选择一种传入，默认为GEN。
+     */
+    public void setScene(String Scene) {
+        this.Scene = Scene;
     }
 
     public SegmentPortraitPicRequest() {
@@ -143,6 +181,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         if (source.RspImgType != null) {
             this.RspImgType = new String(source.RspImgType);
         }
+        if (source.Scene != null) {
+            this.Scene = new String(source.Scene);
+        }
     }
 
 
@@ -153,6 +194,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

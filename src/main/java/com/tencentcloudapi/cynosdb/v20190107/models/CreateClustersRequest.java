@@ -296,7 +296,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private String [] AlarmPolicyIds;
 
     /**
-    * 参数数组
+    * 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
     */
     @SerializedName("ClusterParams")
     @Expose
@@ -984,16 +984,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 参数数组 
-     * @return ClusterParams 参数数组
+     * Get 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感 
+     * @return ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set 参数数组
-     * @param ClusterParams 参数数组
+     * Set 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
+     * @param ClusterParams 参数数组，暂时支持character_set_server （utf8｜latin1｜gbk｜utf8mb4） ，lower_case_table_names，1-大小写不敏感，0-大小写敏感
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;

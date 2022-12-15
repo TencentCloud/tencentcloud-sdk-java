@@ -30,6 +30,13 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * 总数量
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      */
     public void setGroups(SecurityGroup [] Groups) {
         this.Groups = Groups;
+    }
+
+    /**
+     * Get 总数量 
+     * @return Total 总数量
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数量
+     * @param Total 总数量
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
@@ -82,6 +105,9 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
                 this.Groups[i] = new SecurityGroup(source.Groups[i]);
             }
         }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +119,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

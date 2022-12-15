@@ -30,6 +30,27 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 限制量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 偏移量
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 搜索关键字
+    */
+    @SerializedName("SearchKey")
+    @Expose
+    private String SearchKey;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -45,6 +66,54 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 限制量 
+     * @return Limit 限制量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 限制量
+     * @param Limit 限制量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 偏移量 
+     * @return Offset 偏移量
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量
+     * @param Offset 偏移量
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 搜索关键字 
+     * @return SearchKey 搜索关键字
+     */
+    public String getSearchKey() {
+        return this.SearchKey;
+    }
+
+    /**
+     * Set 搜索关键字
+     * @param SearchKey 搜索关键字
+     */
+    public void setSearchKey(String SearchKey) {
+        this.SearchKey = SearchKey;
+    }
+
     public DescribeProjectSecurityGroupsRequest() {
     }
 
@@ -56,6 +125,15 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
     }
 
 
@@ -64,6 +142,9 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
 
     }
 }
