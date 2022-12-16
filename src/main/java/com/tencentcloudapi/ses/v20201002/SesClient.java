@@ -521,6 +521,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *设置邮箱的smtp密码。若要通过smtp发送邮件，必须为邮箱设置smtp密码。初始时，邮箱没有设置smtp密码，不能使用smtp的方式发送邮件。设置smtp密码后，可以修改密码。
+     * @param req UpdateEmailSmtpPassWordRequest
+     * @return UpdateEmailSmtpPassWordResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEmailSmtpPassWord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新邮件模板，更新后需再次审核
      * @param req UpdateEmailTemplateRequest
      * @return UpdateEmailTemplateResponse

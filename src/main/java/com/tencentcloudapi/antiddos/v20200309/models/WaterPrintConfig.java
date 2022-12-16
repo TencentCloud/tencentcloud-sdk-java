@@ -64,6 +64,14 @@ shortfpcheckall（精简模式）
     private String Verify;
 
     /**
+    * 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudSdkProxy")
+    @Expose
+    private Long CloudSdkProxy;
+
+    /**
      * Get 水印偏移量，取值范围[0, 100) 
      * @return Offset 水印偏移量，取值范围[0, 100)
      */
@@ -167,6 +175,26 @@ shortfpcheckall（精简模式）
         this.Verify = Verify;
     }
 
+    /**
+     * Get 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCloudSdkProxy() {
+        return this.CloudSdkProxy;
+    }
+
+    /**
+     * Set 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudSdkProxy(Long CloudSdkProxy) {
+        this.CloudSdkProxy = CloudSdkProxy;
+    }
+
     public WaterPrintConfig() {
     }
 
@@ -196,6 +224,9 @@ shortfpcheckall（精简模式）
         if (source.Verify != null) {
             this.Verify = new String(source.Verify);
         }
+        if (source.CloudSdkProxy != null) {
+            this.CloudSdkProxy = new Long(source.CloudSdkProxy);
+        }
     }
 
 
@@ -208,6 +239,7 @@ shortfpcheckall（精简模式）
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
         this.setParamSimple(map, prefix + "Verify", this.Verify);
+        this.setParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
 
     }
 }

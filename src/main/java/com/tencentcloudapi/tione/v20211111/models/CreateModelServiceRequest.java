@@ -228,6 +228,13 @@ HYBRID_PAID:
     private ServiceLimit ServiceLimit;
 
     /**
+    * 回调地址，用于回调创建服务状态信息
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
      * Get 镜像信息，配置服务运行所需的镜像地址等信息 
      * @return ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
      */
@@ -735,6 +742,22 @@ HYBRID_PAID:
         this.ServiceLimit = ServiceLimit;
     }
 
+    /**
+     * Get 回调地址，用于回调创建服务状态信息 
+     * @return CallbackUrl 回调地址，用于回调创建服务状态信息
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址，用于回调创建服务状态信息
+     * @param CallbackUrl 回调地址，用于回调创建服务状态信息
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -830,6 +853,9 @@ HYBRID_PAID:
         if (source.ServiceLimit != null) {
             this.ServiceLimit = new ServiceLimit(source.ServiceLimit);
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -863,6 +889,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

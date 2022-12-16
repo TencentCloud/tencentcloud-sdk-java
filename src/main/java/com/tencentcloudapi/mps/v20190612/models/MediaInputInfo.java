@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * 输入来源对象的类型，支持 COS 和 URL 两种。
+    * 输入来源对象的类型，支持 COS、URL 两种。
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +45,16 @@ public class MediaInputInfo extends AbstractModel{
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get 输入来源对象的类型，支持 COS 和 URL 两种。 
-     * @return Type 输入来源对象的类型，支持 COS 和 URL 两种。
+     * Get 输入来源对象的类型，支持 COS、URL 两种。 
+     * @return Type 输入来源对象的类型，支持 COS、URL 两种。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 输入来源对象的类型，支持 COS 和 URL 两种。
-     * @param Type 输入来源对象的类型，支持 COS 和 URL 两种。
+     * Set 输入来源对象的类型，支持 COS、URL 两种。
+     * @param Type 输入来源对象的类型，支持 COS、URL 两种。
      */
     public void setType(String Type) {
         this.Type = Type;

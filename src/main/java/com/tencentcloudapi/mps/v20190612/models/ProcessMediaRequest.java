@@ -113,6 +113,15 @@ public class ProcessMediaRequest extends AbstractModel{
     private Long ScheduleId;
 
     /**
+    * 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get 媒体处理的文件输入信息。 
      * @return InputInfo 媒体处理的文件输入信息。
      */
@@ -328,6 +337,30 @@ public class ProcessMediaRequest extends AbstractModel{
         this.ScheduleId = ScheduleId;
     }
 
+    /**
+     * Get 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li> 
+     * @return TaskType 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+     * @param TaskType 任务类型，默认Online
+<li> Online：实时任务</li>
+<li> Offline：闲时任务，不保证实效性，默认3天内处理完</li>
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -372,6 +405,9 @@ public class ProcessMediaRequest extends AbstractModel{
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -391,6 +427,7 @@ public class ProcessMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

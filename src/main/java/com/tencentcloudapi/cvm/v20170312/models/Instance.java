@@ -295,6 +295,28 @@ public class Instance extends AbstractModel{
     private Boolean DisableApiTermination;
 
     /**
+    * 默认登录用户。
+    */
+    @SerializedName("DefaultLoginUser")
+    @Expose
+    private String DefaultLoginUser;
+
+    /**
+    * 默认登录端口。
+    */
+    @SerializedName("DefaultLoginPort")
+    @Expose
+    private Long DefaultLoginPort;
+
+    /**
+    * 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestOperationErrorMsg")
+    @Expose
+    private String LatestOperationErrorMsg;
+
+    /**
      * Get 实例所在的位置。 
      * @return Placement 实例所在的位置。
      */
@@ -938,6 +960,58 @@ public class Instance extends AbstractModel{
         this.DisableApiTermination = DisableApiTermination;
     }
 
+    /**
+     * Get 默认登录用户。 
+     * @return DefaultLoginUser 默认登录用户。
+     */
+    public String getDefaultLoginUser() {
+        return this.DefaultLoginUser;
+    }
+
+    /**
+     * Set 默认登录用户。
+     * @param DefaultLoginUser 默认登录用户。
+     */
+    public void setDefaultLoginUser(String DefaultLoginUser) {
+        this.DefaultLoginUser = DefaultLoginUser;
+    }
+
+    /**
+     * Get 默认登录端口。 
+     * @return DefaultLoginPort 默认登录端口。
+     */
+    public Long getDefaultLoginPort() {
+        return this.DefaultLoginPort;
+    }
+
+    /**
+     * Set 默认登录端口。
+     * @param DefaultLoginPort 默认登录端口。
+     */
+    public void setDefaultLoginPort(Long DefaultLoginPort) {
+        this.DefaultLoginPort = DefaultLoginPort;
+    }
+
+    /**
+     * Get 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestOperationErrorMsg 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestOperationErrorMsg() {
+        return this.LatestOperationErrorMsg;
+    }
+
+    /**
+     * Set 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestOperationErrorMsg 实例的最新操作错误信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestOperationErrorMsg(String LatestOperationErrorMsg) {
+        this.LatestOperationErrorMsg = LatestOperationErrorMsg;
+    }
+
     public Instance() {
     }
 
@@ -1078,6 +1152,15 @@ public class Instance extends AbstractModel{
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.DefaultLoginUser != null) {
+            this.DefaultLoginUser = new String(source.DefaultLoginUser);
+        }
+        if (source.DefaultLoginPort != null) {
+            this.DefaultLoginPort = new Long(source.DefaultLoginPort);
+        }
+        if (source.LatestOperationErrorMsg != null) {
+            this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
+        }
     }
 
 
@@ -1122,6 +1205,9 @@ public class Instance extends AbstractModel{
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
+        this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
+        this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
 
     }
 }

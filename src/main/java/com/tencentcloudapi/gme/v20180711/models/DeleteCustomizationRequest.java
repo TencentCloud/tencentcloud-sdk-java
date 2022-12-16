@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteCustomizationRequest extends AbstractModel{
 
     /**
-    * 要删除的模型ID
+    * 删除的模型ID
     */
     @SerializedName("ModelId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteCustomizationRequest extends AbstractModel{
     private Long BizId;
 
     /**
-     * Get 要删除的模型ID 
-     * @return ModelId 要删除的模型ID
+     * Get 删除的模型ID 
+     * @return ModelId 删除的模型ID
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 要删除的模型ID
-     * @param ModelId 要删除的模型ID
+     * Set 删除的模型ID
+     * @param ModelId 删除的模型ID
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;

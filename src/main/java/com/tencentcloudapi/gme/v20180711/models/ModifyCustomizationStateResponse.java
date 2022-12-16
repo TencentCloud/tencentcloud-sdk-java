@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCustomizationStateResponse extends AbstractModel{
 
     /**
-    * 自学习模型ID
+    * 模型ID
     */
     @SerializedName("ModelId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyCustomizationStateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 自学习模型ID 
-     * @return ModelId 自学习模型ID
+     * Get 模型ID 
+     * @return ModelId 模型ID
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 自学习模型ID
-     * @param ModelId 自学习模型ID
+     * Set 模型ID
+     * @param ModelId 模型ID
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;

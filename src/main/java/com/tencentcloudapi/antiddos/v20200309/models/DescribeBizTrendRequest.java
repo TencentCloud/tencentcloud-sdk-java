@@ -37,7 +37,7 @@ public class DescribeBizTrendRequest extends AbstractModel{
     private String Business;
 
     /**
-    * 统计周期，可取值300，1800，3600，21600，86400，单位秒
+    * 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
     */
     @SerializedName("Period")
     @Expose
@@ -118,16 +118,16 @@ public class DescribeBizTrendRequest extends AbstractModel{
     }
 
     /**
-     * Get 统计周期，可取值300，1800，3600，21600，86400，单位秒 
-     * @return Period 统计周期，可取值300，1800，3600，21600，86400，单位秒
+     * Get 统计周期，可取值60，300，1800，3600，21600，86400，单位秒 
+     * @return Period 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 统计周期，可取值300，1800，3600，21600，86400，单位秒
-     * @param Period 统计周期，可取值300，1800，3600，21600，86400，单位秒
+     * Set 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
+     * @param Period 统计周期，可取值60，300，1800，3600，21600，86400，单位秒
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

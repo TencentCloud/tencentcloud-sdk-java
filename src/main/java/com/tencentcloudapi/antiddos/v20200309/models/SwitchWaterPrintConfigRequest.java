@@ -37,6 +37,13 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
     private Long OpenStatus;
 
     /**
+    * 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+    */
+    @SerializedName("CloudSdkProxy")
+    @Expose
+    private Long CloudSdkProxy;
+
+    /**
      * Get 资源实例ID 
      * @return InstanceId 资源实例ID
      */
@@ -68,6 +75,22 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
         this.OpenStatus = OpenStatus;
     }
 
+    /**
+     * Get 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验 
+     * @return CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+     */
+    public Long getCloudSdkProxy() {
+        return this.CloudSdkProxy;
+    }
+
+    /**
+     * Set 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+     * @param CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
+     */
+    public void setCloudSdkProxy(Long CloudSdkProxy) {
+        this.CloudSdkProxy = CloudSdkProxy;
+    }
+
     public SwitchWaterPrintConfigRequest() {
     }
 
@@ -82,6 +105,9 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
         if (source.OpenStatus != null) {
             this.OpenStatus = new Long(source.OpenStatus);
         }
+        if (source.CloudSdkProxy != null) {
+            this.CloudSdkProxy = new Long(source.CloudSdkProxy);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
+        this.setParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
 
     }
 }

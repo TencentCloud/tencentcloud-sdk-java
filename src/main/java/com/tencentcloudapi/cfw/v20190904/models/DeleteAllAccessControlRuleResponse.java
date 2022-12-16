@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteAllAccessControlRuleResponse extends AbstractModel{
 
     /**
-    * 状态值 0: 修改成功, !0: 修改失败
+    * 状态值 0: 修改成功, 非0: 修改失败
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +45,16 @@ public class DeleteAllAccessControlRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 状态值 0: 修改成功, !0: 修改失败 
-     * @return Status 状态值 0: 修改成功, !0: 修改失败
+     * Get 状态值 0: 修改成功, 非0: 修改失败 
+     * @return Status 状态值 0: 修改成功, 非0: 修改失败
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态值 0: 修改成功, !0: 修改失败
-     * @param Status 状态值 0: 修改成功, !0: 修改失败
+     * Set 状态值 0: 修改成功, 非0: 修改失败
+     * @param Status 状态值 0: 修改成功, 非0: 修改失败
      */
     public void setStatus(Long Status) {
         this.Status = Status;

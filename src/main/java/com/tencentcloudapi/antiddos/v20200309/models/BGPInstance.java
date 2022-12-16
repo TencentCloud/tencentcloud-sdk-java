@@ -147,6 +147,21 @@ public class BGPInstance extends AbstractModel{
     private Long VitalityVersion;
 
     /**
+    * 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Line")
+    @Expose
+    private Long Line;
+
+    /**
+    * 弹性业务带宽开关
+    */
+    @SerializedName("ElasticServiceBandwidth")
+    @Expose
+    private Long ElasticServiceBandwidth;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -450,6 +465,42 @@ public class BGPInstance extends AbstractModel{
         this.VitalityVersion = VitalityVersion;
     }
 
+    /**
+     * Get 网络线路
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Line 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLine() {
+        return this.Line;
+    }
+
+    /**
+     * Set 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Line 网络线路
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLine(Long Line) {
+        this.Line = Line;
+    }
+
+    /**
+     * Get 弹性业务带宽开关 
+     * @return ElasticServiceBandwidth 弹性业务带宽开关
+     */
+    public Long getElasticServiceBandwidth() {
+        return this.ElasticServiceBandwidth;
+    }
+
+    /**
+     * Set 弹性业务带宽开关
+     * @param ElasticServiceBandwidth 弹性业务带宽开关
+     */
+    public void setElasticServiceBandwidth(Long ElasticServiceBandwidth) {
+        this.ElasticServiceBandwidth = ElasticServiceBandwidth;
+    }
+
     public BGPInstance() {
     }
 
@@ -512,6 +563,12 @@ public class BGPInstance extends AbstractModel{
         if (source.VitalityVersion != null) {
             this.VitalityVersion = new Long(source.VitalityVersion);
         }
+        if (source.Line != null) {
+            this.Line = new Long(source.Line);
+        }
+        if (source.ElasticServiceBandwidth != null) {
+            this.ElasticServiceBandwidth = new Long(source.ElasticServiceBandwidth);
+        }
     }
 
 
@@ -535,6 +592,8 @@ public class BGPInstance extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
         this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
+        this.setParamSimple(map, prefix + "Line", this.Line);
+        this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
 
     }
 }

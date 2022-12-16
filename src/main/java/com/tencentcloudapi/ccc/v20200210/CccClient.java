@@ -639,6 +639,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *挂断电话
+     * @param req HangUpCallRequest
+     * @return HangUpCallResponse
+     * @throws TencentCloudSDKException
+     */
+    public HangUpCallResponse HangUpCall(HangUpCallRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<HangUpCallResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<HangUpCallResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "HangUpCall");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改话机账号(绑定技能组、绑定坐席账号)
      * @param req ModifyExtensionRequest
      * @return ModifyExtensionResponse

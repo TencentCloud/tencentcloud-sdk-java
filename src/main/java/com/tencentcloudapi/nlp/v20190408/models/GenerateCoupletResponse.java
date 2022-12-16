@@ -13,28 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCustomizationResponse extends AbstractModel{
+public class GenerateCoupletResponse extends AbstractModel{
 
     /**
-    * 返回值。0为成功，非0为失败。
+    * 横批。
     */
-    @SerializedName("ErrorCode")
+    @SerializedName("TopScroll")
     @Expose
-    private Long ErrorCode;
+    private String TopScroll;
 
     /**
-    * 模型ID
+    * 上联与下联。
     */
-    @SerializedName("ModelId")
+    @SerializedName("Content")
     @Expose
-    private String ModelId;
+    private String [] Content;
+
+    /**
+    * 当对联随机生成时，展示随机生成原因。
+    */
+    @SerializedName("RandomCause")
+    @Expose
+    private String RandomCause;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class ModifyCustomizationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回值。0为成功，非0为失败。 
-     * @return ErrorCode 返回值。0为成功，非0为失败。
+     * Get 横批。 
+     * @return TopScroll 横批。
      */
-    public Long getErrorCode() {
-        return this.ErrorCode;
+    public String getTopScroll() {
+        return this.TopScroll;
     }
 
     /**
-     * Set 返回值。0为成功，非0为失败。
-     * @param ErrorCode 返回值。0为成功，非0为失败。
+     * Set 横批。
+     * @param TopScroll 横批。
      */
-    public void setErrorCode(Long ErrorCode) {
-        this.ErrorCode = ErrorCode;
+    public void setTopScroll(String TopScroll) {
+        this.TopScroll = TopScroll;
     }
 
     /**
-     * Get 模型ID 
-     * @return ModelId 模型ID
+     * Get 上联与下联。 
+     * @return Content 上联与下联。
      */
-    public String getModelId() {
-        return this.ModelId;
+    public String [] getContent() {
+        return this.Content;
     }
 
     /**
-     * Set 模型ID
-     * @param ModelId 模型ID
+     * Set 上联与下联。
+     * @param Content 上联与下联。
      */
-    public void setModelId(String ModelId) {
-        this.ModelId = ModelId;
+    public void setContent(String [] Content) {
+        this.Content = Content;
+    }
+
+    /**
+     * Get 当对联随机生成时，展示随机生成原因。 
+     * @return RandomCause 当对联随机生成时，展示随机生成原因。
+     */
+    public String getRandomCause() {
+        return this.RandomCause;
+    }
+
+    /**
+     * Set 当对联随机生成时，展示随机生成原因。
+     * @param RandomCause 当对联随机生成时，展示随机生成原因。
+     */
+    public void setRandomCause(String RandomCause) {
+        this.RandomCause = RandomCause;
     }
 
     /**
@@ -91,19 +114,25 @@ public class ModifyCustomizationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyCustomizationResponse() {
+    public GenerateCoupletResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyCustomizationResponse(ModifyCustomizationResponse source) {
-        if (source.ErrorCode != null) {
-            this.ErrorCode = new Long(source.ErrorCode);
+    public GenerateCoupletResponse(GenerateCoupletResponse source) {
+        if (source.TopScroll != null) {
+            this.TopScroll = new String(source.TopScroll);
         }
-        if (source.ModelId != null) {
-            this.ModelId = new String(source.ModelId);
+        if (source.Content != null) {
+            this.Content = new String[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new String(source.Content[i]);
+            }
+        }
+        if (source.RandomCause != null) {
+            this.RandomCause = new String(source.RandomCause);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +144,9 @@ public class ModifyCustomizationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
-        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamSimple(map, prefix + "TopScroll", this.TopScroll);
+        this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "RandomCause", this.RandomCause);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

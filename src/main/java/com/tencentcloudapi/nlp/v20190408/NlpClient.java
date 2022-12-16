@@ -241,6 +241,46 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
+     * @param req GenerateCoupletRequest
+     * @return GenerateCoupletResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateCoupletResponse GenerateCouplet(GenerateCoupletRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateCoupletResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateCoupletResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateCouplet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据用户输入的命题关键词自动生成一首七言律诗或五言律诗。（如需开通请联系商务）
+     * @param req GeneratePoetryRequest
+     * @return GeneratePoetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public GeneratePoetryResponse GeneratePoetry(GeneratePoetryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GeneratePoetryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GeneratePoetryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GeneratePoetry");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *基于关键词提取平台，通过对文本内容进行深度分析，提取出文本内容中的关键信息，为用户实现诸如新闻内容关键词自动提取、评论关键词提取等提供基础服务。
      * @param req KeywordsExtractionRequest
      * @return KeywordsExtractionResponse

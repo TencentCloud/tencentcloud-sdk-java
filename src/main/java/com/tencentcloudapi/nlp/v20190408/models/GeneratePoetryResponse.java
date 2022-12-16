@@ -13,22 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCustomizationListResponse extends AbstractModel{
+public class GeneratePoetryResponse extends AbstractModel{
 
     /**
-    * 语音消息转文本热句模型配置
-注意：此字段可能返回 null，表示取不到有效值。
+    * 诗题，即输入的生成诗词的关键词。
     */
-    @SerializedName("CustomizationConfigs")
+    @SerializedName("Title")
     @Expose
-    private CustomizationConfigs [] CustomizationConfigs;
+    private String Title;
+
+    /**
+    * 诗的内容。
+    */
+    @SerializedName("Content")
+    @Expose
+    private String [] Content;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +44,35 @@ public class GetCustomizationListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 语音消息转文本热句模型配置
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomizationConfigs 语音消息转文本热句模型配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 诗题，即输入的生成诗词的关键词。 
+     * @return Title 诗题，即输入的生成诗词的关键词。
      */
-    public CustomizationConfigs [] getCustomizationConfigs() {
-        return this.CustomizationConfigs;
+    public String getTitle() {
+        return this.Title;
     }
 
     /**
-     * Set 语音消息转文本热句模型配置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomizationConfigs 语音消息转文本热句模型配置
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 诗题，即输入的生成诗词的关键词。
+     * @param Title 诗题，即输入的生成诗词的关键词。
      */
-    public void setCustomizationConfigs(CustomizationConfigs [] CustomizationConfigs) {
-        this.CustomizationConfigs = CustomizationConfigs;
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 诗的内容。 
+     * @return Content 诗的内容。
+     */
+    public String [] getContent() {
+        return this.Content;
+    }
+
+    /**
+     * Set 诗的内容。
+     * @param Content 诗的内容。
+     */
+    public void setContent(String [] Content) {
+        this.Content = Content;
     }
 
     /**
@@ -73,18 +91,21 @@ public class GetCustomizationListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetCustomizationListResponse() {
+    public GeneratePoetryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetCustomizationListResponse(GetCustomizationListResponse source) {
-        if (source.CustomizationConfigs != null) {
-            this.CustomizationConfigs = new CustomizationConfigs[source.CustomizationConfigs.length];
-            for (int i = 0; i < source.CustomizationConfigs.length; i++) {
-                this.CustomizationConfigs[i] = new CustomizationConfigs(source.CustomizationConfigs[i]);
+    public GeneratePoetryResponse(GeneratePoetryResponse source) {
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Content != null) {
+            this.Content = new String[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new String(source.Content[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +118,8 @@ public class GetCustomizationListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "CustomizationConfigs.", this.CustomizationConfigs);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

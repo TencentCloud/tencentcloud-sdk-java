@@ -37,7 +37,7 @@ public class ModifyCustomizationRequest extends AbstractModel{
     private String TextUrl;
 
     /**
-    * 要修改的模型ID
+    * 修改的模型ID
     */
     @SerializedName("ModelId")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyCustomizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 要修改的模型ID 
-     * @return ModelId 要修改的模型ID
+     * Get 修改的模型ID 
+     * @return ModelId 修改的模型ID
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 要修改的模型ID
-     * @param ModelId 要修改的模型ID
+     * Set 修改的模型ID
+     * @param ModelId 修改的模型ID
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
