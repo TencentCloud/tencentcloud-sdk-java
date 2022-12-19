@@ -312,6 +312,14 @@ public class TrainingTaskDetail extends AbstractModel{
     private String Status;
 
     /**
+    * 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -1011,6 +1019,26 @@ public class TrainingTaskDetail extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 回调地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public TrainingTaskDetail() {
     }
 
@@ -1142,6 +1170,9 @@ public class TrainingTaskDetail extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -1187,6 +1218,7 @@ public class TrainingTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

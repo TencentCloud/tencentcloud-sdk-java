@@ -422,7 +422,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *渠道通过图片为子客代创建印章，图片最大5m；此接口不可直接使用，请联系运营/客服咨询相关流程
+     *渠道通过图片为子客代创建印章，图片最大5MB
      * @param req CreateSealByImageRequest
      * @return CreateSealByImageResponse
      * @throws TencentCloudSDKException

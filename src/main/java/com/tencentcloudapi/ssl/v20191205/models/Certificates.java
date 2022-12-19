@@ -287,6 +287,38 @@ public class Certificates extends AbstractModel{
     private String EncryptAlgorithm;
 
     /**
+    * 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CAEncryptAlgorithms")
+    @Expose
+    private String [] CAEncryptAlgorithms;
+
+    /**
+    * 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CAEndTimes")
+    @Expose
+    private String [] CAEndTimes;
+
+    /**
+    * 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CACommonNames")
+    @Expose
+    private String [] CACommonNames;
+
+    /**
+    * 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreAuditInfo")
+    @Expose
+    private PreAuditInfo PreAuditInfo;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -946,6 +978,86 @@ public class Certificates extends AbstractModel{
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
+    /**
+     * Get 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CAEncryptAlgorithms 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCAEncryptAlgorithms() {
+        return this.CAEncryptAlgorithms;
+    }
+
+    /**
+     * Set 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CAEncryptAlgorithms 上传CA证书的加密算法
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCAEncryptAlgorithms(String [] CAEncryptAlgorithms) {
+        this.CAEncryptAlgorithms = CAEncryptAlgorithms;
+    }
+
+    /**
+     * Get 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CAEndTimes 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCAEndTimes() {
+        return this.CAEndTimes;
+    }
+
+    /**
+     * Set 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CAEndTimes 上传CA证书的过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCAEndTimes(String [] CAEndTimes) {
+        this.CAEndTimes = CAEndTimes;
+    }
+
+    /**
+     * Get 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CACommonNames 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCACommonNames() {
+        return this.CACommonNames;
+    }
+
+    /**
+     * Set 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CACommonNames 上传CA证书的通用名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCACommonNames(String [] CACommonNames) {
+        this.CACommonNames = CACommonNames;
+    }
+
+    /**
+     * Get 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreAuditInfo 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PreAuditInfo getPreAuditInfo() {
+        return this.PreAuditInfo;
+    }
+
+    /**
+     * Set 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreAuditInfo 证书预审核信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreAuditInfo(PreAuditInfo PreAuditInfo) {
+        this.PreAuditInfo = PreAuditInfo;
+    }
+
     public Certificates() {
     }
 
@@ -1062,6 +1174,27 @@ public class Certificates extends AbstractModel{
         if (source.EncryptAlgorithm != null) {
             this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
         }
+        if (source.CAEncryptAlgorithms != null) {
+            this.CAEncryptAlgorithms = new String[source.CAEncryptAlgorithms.length];
+            for (int i = 0; i < source.CAEncryptAlgorithms.length; i++) {
+                this.CAEncryptAlgorithms[i] = new String(source.CAEncryptAlgorithms[i]);
+            }
+        }
+        if (source.CAEndTimes != null) {
+            this.CAEndTimes = new String[source.CAEndTimes.length];
+            for (int i = 0; i < source.CAEndTimes.length; i++) {
+                this.CAEndTimes[i] = new String(source.CAEndTimes[i]);
+            }
+        }
+        if (source.CACommonNames != null) {
+            this.CACommonNames = new String[source.CACommonNames.length];
+            for (int i = 0; i < source.CACommonNames.length; i++) {
+                this.CACommonNames[i] = new String(source.CACommonNames[i]);
+            }
+        }
+        if (source.PreAuditInfo != null) {
+            this.PreAuditInfo = new PreAuditInfo(source.PreAuditInfo);
+        }
     }
 
 
@@ -1102,6 +1235,10 @@ public class Certificates extends AbstractModel{
         this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
         this.setParamSimple(map, prefix + "IsSM", this.IsSM);
         this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+        this.setParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+        this.setParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
+        this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+        this.setParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
 
     }
 }

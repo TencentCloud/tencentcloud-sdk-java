@@ -37,18 +37,12 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-    * 带宽包计费模式
+    * 带宽包计费模式，示例 ：
+'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
-
-    /**
-    * 退款时迁移为后付费带宽包。默认值：否
-    */
-    @SerializedName("MigrateOnRefund")
-    @Expose
-    private Boolean MigrateOnRefund;
 
     /**
      * Get 带宽包唯一标识ID 
@@ -83,35 +77,23 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 带宽包计费模式 
-     * @return ChargeType 带宽包计费模式
+     * Get 带宽包计费模式，示例 ：
+'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费） 
+     * @return ChargeType 带宽包计费模式，示例 ：
+'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 带宽包计费模式
-     * @param ChargeType 带宽包计费模式
+     * Set 带宽包计费模式，示例 ：
+'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
+     * @param ChargeType 带宽包计费模式，示例 ：
+'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
-    }
-
-    /**
-     * Get 退款时迁移为后付费带宽包。默认值：否 
-     * @return MigrateOnRefund 退款时迁移为后付费带宽包。默认值：否
-     */
-    public Boolean getMigrateOnRefund() {
-        return this.MigrateOnRefund;
-    }
-
-    /**
-     * Set 退款时迁移为后付费带宽包。默认值：否
-     * @param MigrateOnRefund 退款时迁移为后付费带宽包。默认值：否
-     */
-    public void setMigrateOnRefund(Boolean MigrateOnRefund) {
-        this.MigrateOnRefund = MigrateOnRefund;
     }
 
     public ModifyBandwidthPackageAttributeRequest() {
@@ -131,9 +113,6 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
-        if (source.MigrateOnRefund != null) {
-            this.MigrateOnRefund = new Boolean(source.MigrateOnRefund);
-        }
     }
 
 
@@ -144,7 +123,6 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
-        this.setParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
 
     }
 }

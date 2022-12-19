@@ -51,11 +51,18 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
     private String ServiceInstanceId;
 
     /**
-    * 是否是PassService类型。
+    * ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
     */
     @SerializedName("IsPassService")
     @Expose
     private Boolean IsPassService;
+
+    /**
+    * 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
 
     /**
      * Get VPC实例ID。 
@@ -122,19 +129,35 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否是PassService类型。 
-     * @return IsPassService 是否是PassService类型。
+     * Get ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~ 
+     * @return IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      */
     public Boolean getIsPassService() {
         return this.IsPassService;
     }
 
     /**
-     * Set 是否是PassService类型。
-     * @param IsPassService 是否是PassService类型。
+     * Set ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
+     * @param IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
      */
     public void setIsPassService(Boolean IsPassService) {
         this.IsPassService = IsPassService;
+    }
+
+    /**
+     * Get 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。 
+     * @return ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * @param ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
     }
 
     public CreateVpcEndPointServiceRequest() {
@@ -160,6 +183,9 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
         if (source.IsPassService != null) {
             this.IsPassService = new Boolean(source.IsPassService);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoAcceptFlag", this.AutoAcceptFlag);
         this.setParamSimple(map, prefix + "ServiceInstanceId", this.ServiceInstanceId);
         this.setParamSimple(map, prefix + "IsPassService", this.IsPassService);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

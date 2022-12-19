@@ -228,7 +228,7 @@ HYBRID_PAID:
     private ServiceLimit ServiceLimit;
 
     /**
-    * 回调地址，用于回调创建服务状态信息
+    * 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -743,16 +743,16 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 回调地址，用于回调创建服务状态信息 
-     * @return CallbackUrl 回调地址，用于回调创建服务状态信息
+     * Get 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292) 
+     * @return CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调地址，用于回调创建服务状态信息
-     * @param CallbackUrl 回调地址，用于回调创建服务状态信息
+     * Set 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
+     * @param CallbackUrl 回调地址，用于回调创建服务状态信息，回调格式&内容详情见：[TI-ONE 接口回调说明](https://cloud.tencent.com/document/product/851/84292)
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

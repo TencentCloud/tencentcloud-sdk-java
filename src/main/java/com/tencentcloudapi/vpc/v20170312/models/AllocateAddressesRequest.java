@@ -119,6 +119,13 @@ AnycastEIP是否用于绑定负载均衡。
     private String AddressName;
 
     /**
+    * 网络出口，默认是：center_egress1
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get EIP数量。默认值：1。 
      * @return AddressCount EIP数量。默认值：1。
      */
@@ -370,6 +377,22 @@ AnycastEIP是否用于绑定负载均衡。
         this.AddressName = AddressName;
     }
 
+    /**
+     * Get 网络出口，默认是：center_egress1 
+     * @return Egress 网络出口，默认是：center_egress1
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set 网络出口，默认是：center_egress1
+     * @param Egress 网络出口，默认是：center_egress1
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public AllocateAddressesRequest() {
     }
 
@@ -414,6 +437,9 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.AddressName != null) {
             this.AddressName = new String(source.AddressName);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -432,6 +458,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

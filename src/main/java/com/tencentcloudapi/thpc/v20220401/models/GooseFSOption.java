@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class GooseFSOption extends AbstractModel{
 
     /**
-    * 文件系统本地挂载路径
+    * 文件系统本地挂载路径。
     */
     @SerializedName("LocalPath")
     @Expose
     private String LocalPath;
 
     /**
-    * 文件系统远程挂载路径
+    * 文件系统远程挂载路径。
     */
     @SerializedName("RemotePath")
     @Expose
     private String RemotePath;
 
     /**
-    * 文件系统master的ip和端口
+    * 文件系统master的ip和端口。
     */
     @SerializedName("Masters")
     @Expose
     private String [] Masters;
 
     /**
-     * Get 文件系统本地挂载路径 
-     * @return LocalPath 文件系统本地挂载路径
+     * Get 文件系统本地挂载路径。 
+     * @return LocalPath 文件系统本地挂载路径。
      */
     public String getLocalPath() {
         return this.LocalPath;
     }
 
     /**
-     * Set 文件系统本地挂载路径
-     * @param LocalPath 文件系统本地挂载路径
+     * Set 文件系统本地挂载路径。
+     * @param LocalPath 文件系统本地挂载路径。
      */
     public void setLocalPath(String LocalPath) {
         this.LocalPath = LocalPath;
     }
 
     /**
-     * Get 文件系统远程挂载路径 
-     * @return RemotePath 文件系统远程挂载路径
+     * Get 文件系统远程挂载路径。 
+     * @return RemotePath 文件系统远程挂载路径。
      */
     public String getRemotePath() {
         return this.RemotePath;
     }
 
     /**
-     * Set 文件系统远程挂载路径
-     * @param RemotePath 文件系统远程挂载路径
+     * Set 文件系统远程挂载路径。
+     * @param RemotePath 文件系统远程挂载路径。
      */
     public void setRemotePath(String RemotePath) {
         this.RemotePath = RemotePath;
     }
 
     /**
-     * Get 文件系统master的ip和端口 
-     * @return Masters 文件系统master的ip和端口
+     * Get 文件系统master的ip和端口。 
+     * @return Masters 文件系统master的ip和端口。
      */
     public String [] getMasters() {
         return this.Masters;
     }
 
     /**
-     * Set 文件系统master的ip和端口
-     * @param Masters 文件系统master的ip和端口
+     * Set 文件系统master的ip和端口。
+     * @param Masters 文件系统master的ip和端口。
      */
     public void setMasters(String [] Masters) {
         this.Masters = Masters;

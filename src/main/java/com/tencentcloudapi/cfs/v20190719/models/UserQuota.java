@@ -58,6 +58,22 @@ public class UserQuota extends AbstractModel{
     private String FileSystemId;
 
     /**
+    * 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CapacityUsed")
+    @Expose
+    private Long CapacityUsed;
+
+    /**
+    * 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileUsed")
+    @Expose
+    private Long FileUsed;
+
+    /**
      * Get 指定配额类型，包括Uid、Gid 
      * @return UserType 指定配额类型，包括Uid、Gid
      */
@@ -137,6 +153,46 @@ public class UserQuota extends AbstractModel{
         this.FileSystemId = FileSystemId;
     }
 
+    /**
+     * Get 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CapacityUsed 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCapacityUsed() {
+        return this.CapacityUsed;
+    }
+
+    /**
+     * Set 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CapacityUsed 容量使用，单位GiB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCapacityUsed(Long CapacityUsed) {
+        this.CapacityUsed = CapacityUsed;
+    }
+
+    /**
+     * Get 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileUsed 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFileUsed() {
+        return this.FileUsed;
+    }
+
+    /**
+     * Set 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileUsed 文件使用个数，单位个
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileUsed(Long FileUsed) {
+        this.FileUsed = FileUsed;
+    }
+
     public UserQuota() {
     }
 
@@ -160,6 +216,12 @@ public class UserQuota extends AbstractModel{
         if (source.FileSystemId != null) {
             this.FileSystemId = new String(source.FileSystemId);
         }
+        if (source.CapacityUsed != null) {
+            this.CapacityUsed = new Long(source.CapacityUsed);
+        }
+        if (source.FileUsed != null) {
+            this.FileUsed = new Long(source.FileUsed);
+        }
     }
 
 
@@ -172,6 +234,8 @@ public class UserQuota extends AbstractModel{
         this.setParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
         this.setParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
+        this.setParamSimple(map, prefix + "FileUsed", this.FileUsed);
 
     }
 }

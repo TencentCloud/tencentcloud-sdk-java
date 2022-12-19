@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CFSOption extends AbstractModel{
 
     /**
-    * 文件系统本地挂载路径
+    * 文件系统本地挂载路径。
     */
     @SerializedName("LocalPath")
     @Expose
     private String LocalPath;
 
     /**
-    * 文件系统远程挂载ip及路径
+    * 文件系统远程挂载ip及路径。
     */
     @SerializedName("RemotePath")
     @Expose
@@ -54,32 +54,32 @@ public class CFSOption extends AbstractModel{
     private String StorageType;
 
     /**
-     * Get 文件系统本地挂载路径 
-     * @return LocalPath 文件系统本地挂载路径
+     * Get 文件系统本地挂载路径。 
+     * @return LocalPath 文件系统本地挂载路径。
      */
     public String getLocalPath() {
         return this.LocalPath;
     }
 
     /**
-     * Set 文件系统本地挂载路径
-     * @param LocalPath 文件系统本地挂载路径
+     * Set 文件系统本地挂载路径。
+     * @param LocalPath 文件系统本地挂载路径。
      */
     public void setLocalPath(String LocalPath) {
         this.LocalPath = LocalPath;
     }
 
     /**
-     * Get 文件系统远程挂载ip及路径 
-     * @return RemotePath 文件系统远程挂载ip及路径
+     * Get 文件系统远程挂载ip及路径。 
+     * @return RemotePath 文件系统远程挂载ip及路径。
      */
     public String getRemotePath() {
         return this.RemotePath;
     }
 
     /**
-     * Set 文件系统远程挂载ip及路径
-     * @param RemotePath 文件系统远程挂载ip及路径
+     * Set 文件系统远程挂载ip及路径。
+     * @param RemotePath 文件系统远程挂载ip及路径。
      */
     public void setRemotePath(String RemotePath) {
         this.RemotePath = RemotePath;

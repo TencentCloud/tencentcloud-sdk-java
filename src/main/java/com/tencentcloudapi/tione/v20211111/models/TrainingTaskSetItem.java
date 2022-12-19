@@ -196,6 +196,14 @@ public class TrainingTaskSetItem extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
      * Get 训练任务ID 
      * @return Id 训练任务ID
      */
@@ -611,6 +619,26 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 回调地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public TrainingTaskSetItem() {
     }
 
@@ -694,6 +722,9 @@ public class TrainingTaskSetItem extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -724,6 +755,7 @@ public class TrainingTaskSetItem extends AbstractModel{
         this.setParamObj(map, prefix + "ImageInfo.", this.ImageInfo);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }
