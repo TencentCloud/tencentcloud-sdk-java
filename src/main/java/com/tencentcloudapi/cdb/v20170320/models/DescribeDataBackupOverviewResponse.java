@@ -93,6 +93,20 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     private Long DataBackupArchiveCount;
 
     /**
+    * 当前地域标准存储备份总容量。
+    */
+    @SerializedName("DataBackupStandbyVolume")
+    @Expose
+    private Long DataBackupStandbyVolume;
+
+    /**
+    * 当前地域标准存储备份总个数。
+    */
+    @SerializedName("DataBackupStandbyCount")
+    @Expose
+    private Long DataBackupStandbyCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +274,38 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前地域标准存储备份总容量。 
+     * @return DataBackupStandbyVolume 当前地域标准存储备份总容量。
+     */
+    public Long getDataBackupStandbyVolume() {
+        return this.DataBackupStandbyVolume;
+    }
+
+    /**
+     * Set 当前地域标准存储备份总容量。
+     * @param DataBackupStandbyVolume 当前地域标准存储备份总容量。
+     */
+    public void setDataBackupStandbyVolume(Long DataBackupStandbyVolume) {
+        this.DataBackupStandbyVolume = DataBackupStandbyVolume;
+    }
+
+    /**
+     * Get 当前地域标准存储备份总个数。 
+     * @return DataBackupStandbyCount 当前地域标准存储备份总个数。
+     */
+    public Long getDataBackupStandbyCount() {
+        return this.DataBackupStandbyCount;
+    }
+
+    /**
+     * Set 当前地域标准存储备份总个数。
+     * @param DataBackupStandbyCount 当前地域标准存储备份总个数。
+     */
+    public void setDataBackupStandbyCount(Long DataBackupStandbyCount) {
+        this.DataBackupStandbyCount = DataBackupStandbyCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +359,12 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         if (source.DataBackupArchiveCount != null) {
             this.DataBackupArchiveCount = new Long(source.DataBackupArchiveCount);
         }
+        if (source.DataBackupStandbyVolume != null) {
+            this.DataBackupStandbyVolume = new Long(source.DataBackupStandbyVolume);
+        }
+        if (source.DataBackupStandbyCount != null) {
+            this.DataBackupStandbyCount = new Long(source.DataBackupStandbyCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +385,8 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
         this.setParamSimple(map, prefix + "DataBackupArchiveVolume", this.DataBackupArchiveVolume);
         this.setParamSimple(map, prefix + "DataBackupArchiveCount", this.DataBackupArchiveCount);
+        this.setParamSimple(map, prefix + "DataBackupStandbyVolume", this.DataBackupStandbyVolume);
+        this.setParamSimple(map, prefix + "DataBackupStandbyCount", this.DataBackupStandbyCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

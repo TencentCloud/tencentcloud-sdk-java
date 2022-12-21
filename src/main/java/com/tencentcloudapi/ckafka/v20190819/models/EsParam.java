@@ -135,6 +135,13 @@ public class EsParam extends AbstractModel{
     private String DatabasePrimaryKey;
 
     /**
+    * 死信队列
+    */
+    @SerializedName("DropDlq")
+    @Expose
+    private FailureParam DropDlq;
+
+    /**
      * Get 实例资源 
      * @return Resource 实例资源
      */
@@ -390,6 +397,22 @@ public class EsParam extends AbstractModel{
         this.DatabasePrimaryKey = DatabasePrimaryKey;
     }
 
+    /**
+     * Get 死信队列 
+     * @return DropDlq 死信队列
+     */
+    public FailureParam getDropDlq() {
+        return this.DropDlq;
+    }
+
+    /**
+     * Set 死信队列
+     * @param DropDlq 死信队列
+     */
+    public void setDropDlq(FailureParam DropDlq) {
+        this.DropDlq = DropDlq;
+    }
+
     public EsParam() {
     }
 
@@ -446,6 +469,9 @@ public class EsParam extends AbstractModel{
         if (source.DatabasePrimaryKey != null) {
             this.DatabasePrimaryKey = new String(source.DatabasePrimaryKey);
         }
+        if (source.DropDlq != null) {
+            this.DropDlq = new FailureParam(source.DropDlq);
+        }
     }
 
 
@@ -469,6 +495,7 @@ public class EsParam extends AbstractModel{
         this.setParamSimple(map, prefix + "IndexType", this.IndexType);
         this.setParamObj(map, prefix + "DropCls.", this.DropCls);
         this.setParamSimple(map, prefix + "DatabasePrimaryKey", this.DatabasePrimaryKey);
+        this.setParamObj(map, prefix + "DropDlq.", this.DropDlq);
 
     }
 }

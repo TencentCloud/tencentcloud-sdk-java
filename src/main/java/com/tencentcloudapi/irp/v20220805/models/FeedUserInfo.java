@@ -149,7 +149,7 @@ public class FeedUserInfo extends AbstractModel{
     private Long LastModifyTimestamp;
 
     /**
-    * json字符串，用于画像数据的扩展
+    * json字符串，用于画像数据的扩展，需要base64加密
     */
     @SerializedName("Extension")
     @Expose
@@ -444,16 +444,16 @@ public class FeedUserInfo extends AbstractModel{
     }
 
     /**
-     * Get json字符串，用于画像数据的扩展 
-     * @return Extension json字符串，用于画像数据的扩展
+     * Get json字符串，用于画像数据的扩展，需要base64加密 
+     * @return Extension json字符串，用于画像数据的扩展，需要base64加密
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set json字符串，用于画像数据的扩展
-     * @param Extension json字符串，用于画像数据的扩展
+     * Set json字符串，用于画像数据的扩展，需要base64加密
+     * @param Extension json字符串，用于画像数据的扩展，需要base64加密
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

@@ -2259,26 +2259,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *修改负载均衡状态
-     * @param req ModifyLoadBalancingStatusRequest
-     * @return ModifyLoadBalancingStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancingStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（ModifyLogTopicTask）用于修改日志推送任务信息。
      * @param req ModifyLogTopicTaskRequest
      * @return ModifyLogTopicTaskResponse

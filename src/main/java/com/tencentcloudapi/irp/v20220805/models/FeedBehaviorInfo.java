@@ -164,7 +164,7 @@ public class FeedBehaviorInfo extends AbstractModel{
     private String DeviceModel;
 
     /**
-    * json字符串，<b>用于行为数据的扩展</b>
+    * json字符串，<b>用于行为数据的扩展</b>，需要base64加密
     */
     @SerializedName("Extension")
     @Expose
@@ -495,16 +495,16 @@ public class FeedBehaviorInfo extends AbstractModel{
     }
 
     /**
-     * Get json字符串，<b>用于行为数据的扩展</b> 
-     * @return Extension json字符串，<b>用于行为数据的扩展</b>
+     * Get json字符串，<b>用于行为数据的扩展</b>，需要base64加密 
+     * @return Extension json字符串，<b>用于行为数据的扩展</b>，需要base64加密
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set json字符串，<b>用于行为数据的扩展</b>
-     * @param Extension json字符串，<b>用于行为数据的扩展</b>
+     * Set json字符串，<b>用于行为数据的扩展</b>，需要base64加密
+     * @param Extension json字符串，<b>用于行为数据的扩展</b>，需要base64加密
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

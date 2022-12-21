@@ -70,6 +70,14 @@ public class TopicParam extends AbstractModel{
     private Boolean UseAutoCreateTopic;
 
     /**
+    * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MsgMultiple")
+    @Expose
+    private Long MsgMultiple;
+
+    /**
      * Get 单独售卖Topic的Topic名称 
      * @return Resource 单独售卖Topic的Topic名称
      */
@@ -185,6 +193,26 @@ public class TopicParam extends AbstractModel{
         this.UseAutoCreateTopic = UseAutoCreateTopic;
     }
 
+    /**
+     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMsgMultiple() {
+        return this.MsgMultiple;
+    }
+
+    /**
+     * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsgMultiple(Long MsgMultiple) {
+        this.MsgMultiple = MsgMultiple;
+    }
+
     public TopicParam() {
     }
 
@@ -211,6 +239,9 @@ public class TopicParam extends AbstractModel{
         if (source.UseAutoCreateTopic != null) {
             this.UseAutoCreateTopic = new Boolean(source.UseAutoCreateTopic);
         }
+        if (source.MsgMultiple != null) {
+            this.MsgMultiple = new Long(source.MsgMultiple);
+        }
     }
 
 
@@ -224,6 +255,7 @@ public class TopicParam extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "CompressionType", this.CompressionType);
         this.setParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
+        this.setParamSimple(map, prefix + "MsgMultiple", this.MsgMultiple);
 
     }
 }

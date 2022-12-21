@@ -30,6 +30,13 @@ public class DescribeMediaInfosRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
 <li>basicInfo（视频基础信息）。</li>
 <li>metaData（视频元信息）。</li>
@@ -41,17 +48,12 @@ public class DescribeMediaInfosRequest extends AbstractModel{
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+<li>subtitleInfo（字幕信息）。</li>
+<li>reviewInfo（审核信息）。</li>
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
-
-    /**
-    * 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
 
     /**
      * Get 媒体文件 ID 列表，N 从 0 开始取值，最大 19。 
@@ -70,6 +72,22 @@ public class DescribeMediaInfosRequest extends AbstractModel{
     }
 
     /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
+    /**
      * Get 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
 <li>basicInfo（视频基础信息）。</li>
 <li>metaData（视频元信息）。</li>
@@ -80,7 +98,9 @@ public class DescribeMediaInfosRequest extends AbstractModel{
 <li>sampleSnapshotInfo（采样截图信息）。</li>
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
-<li>miniProgramReviewInfo（小程序审核信息）。</li> 
+<li>miniProgramReviewInfo（小程序审核信息）。</li>
+<li>subtitleInfo（字幕信息）。</li>
+<li>reviewInfo（审核信息）。</li> 
      * @return Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
 <li>basicInfo（视频基础信息）。</li>
 <li>metaData（视频元信息）。</li>
@@ -92,6 +112,8 @@ public class DescribeMediaInfosRequest extends AbstractModel{
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+<li>subtitleInfo（字幕信息）。</li>
+<li>reviewInfo（审核信息）。</li>
      */
     public String [] getFilters() {
         return this.Filters;
@@ -109,6 +131,8 @@ public class DescribeMediaInfosRequest extends AbstractModel{
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+<li>subtitleInfo（字幕信息）。</li>
+<li>reviewInfo（审核信息）。</li>
      * @param Filters 指定所有媒体文件需要返回的信息，可同时指定多个信息，N 从 0 开始递增。如果未填写该字段，默认返回所有信息。选项有：
 <li>basicInfo（视频基础信息）。</li>
 <li>metaData（视频元信息）。</li>
@@ -120,25 +144,11 @@ public class DescribeMediaInfosRequest extends AbstractModel{
 <li>keyFrameDescInfo（打点信息）。</li>
 <li>adaptiveDynamicStreamingInfo（转自适应码流信息）。</li>
 <li>miniProgramReviewInfo（小程序审核信息）。</li>
+<li>subtitleInfo（字幕信息）。</li>
+<li>reviewInfo（审核信息）。</li>
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
-    }
-
-    /**
-     * Get 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
     }
 
     public DescribeMediaInfosRequest() {
@@ -155,14 +165,14 @@ public class DescribeMediaInfosRequest extends AbstractModel{
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.Filters != null) {
             this.Filters = new String[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new String(source.Filters[i]);
             }
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -172,8 +182,8 @@ public class DescribeMediaInfosRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-        this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
 
     }
 }

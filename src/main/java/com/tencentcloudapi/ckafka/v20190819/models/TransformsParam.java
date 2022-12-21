@@ -93,6 +93,14 @@ public class TransformsParam extends AbstractModel{
     private Boolean KeepMetadata;
 
     /**
+    * 数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BatchAnalyse")
+    @Expose
+    private BatchAnalyseParam BatchAnalyse;
+
+    /**
      * Get 原始数据 
      * @return Content 原始数据
      */
@@ -264,6 +272,26 @@ public class TransformsParam extends AbstractModel{
         this.KeepMetadata = KeepMetadata;
     }
 
+    /**
+     * Get 数组解析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BatchAnalyse 数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BatchAnalyseParam getBatchAnalyse() {
+        return this.BatchAnalyse;
+    }
+
+    /**
+     * Set 数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BatchAnalyse 数组解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBatchAnalyse(BatchAnalyseParam BatchAnalyse) {
+        this.BatchAnalyse = BatchAnalyse;
+    }
+
     public TransformsParam() {
     }
 
@@ -305,6 +333,9 @@ public class TransformsParam extends AbstractModel{
         if (source.KeepMetadata != null) {
             this.KeepMetadata = new Boolean(source.KeepMetadata);
         }
+        if (source.BatchAnalyse != null) {
+            this.BatchAnalyse = new BatchAnalyseParam(source.BatchAnalyse);
+        }
     }
 
 
@@ -321,6 +352,7 @@ public class TransformsParam extends AbstractModel{
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamObj(map, prefix + "RowParam.", this.RowParam);
         this.setParamSimple(map, prefix + "KeepMetadata", this.KeepMetadata);
+        this.setParamObj(map, prefix + "BatchAnalyse.", this.BatchAnalyse);
 
     }
 }

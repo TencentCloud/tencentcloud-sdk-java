@@ -39,6 +39,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AddClusterStorageOption）用于添加集群存储选项信息。
+     * @param req AddClusterStorageOptionRequest
+     * @return AddClusterStorageOptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddClusterStorageOptionResponse AddClusterStorageOption(AddClusterStorageOptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddClusterStorageOptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddClusterStorageOptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddClusterStorageOption");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(AddNodes)用于添加一个或者多个计算节点或者登录节点到指定集群。
      * @param req AddNodesRequest
      * @return AddNodesResponse
@@ -119,6 +139,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
+     * @param req DeleteClusterStorageOptionRequest
+     * @return DeleteClusterStorageOptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterStorageOptionResponse DeleteClusterStorageOption(DeleteClusterStorageOptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterStorageOptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterStorageOptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteClusterStorageOption");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
      * @param req DeleteNodesRequest
      * @return DeleteNodesResponse
@@ -151,6 +191,26 @@ public class ThpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterActivitiesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterActivities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
+     * @param req DescribeClusterStorageOptionRequest
+     * @return DescribeClusterStorageOptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterStorageOptionResponse DescribeClusterStorageOption(DescribeClusterStorageOptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterStorageOptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterStorageOptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterStorageOption");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

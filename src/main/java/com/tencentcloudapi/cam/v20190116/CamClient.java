@@ -39,7 +39,7 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *添加子用户
+     *创建子用户
      * @param req AddUserRequest
      * @return AddUserResponse
      * @throws TencentCloudSDKException

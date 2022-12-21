@@ -39,6 +39,33 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口（ApplyDiskBackup）用于回滚指定云硬盘的备份点。
+* 仅支持回滚到原云硬盘。
+* 用于回滚的云硬盘备份点必须处于 NORMAL 状态。
+  云硬盘备份点状态可以通过 DescribeDiskBackups 接口查询。
+* 回滚云硬盘备份点时，云硬盘的状态必须为 UNATTACHED或ATTACHED。
+  云硬盘状态可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口查询。
+* 如果云硬盘处于 ATTACHED状态，相关RUNNING 状态的实例会强制关机，然后回滚云硬盘备份点。
+
+     * @param req ApplyDiskBackupRequest
+     * @return ApplyDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyDiskBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
 <li>仅支持回滚到原系统盘。</li>
 <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
@@ -140,6 +167,26 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBlueprintResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBlueprint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 ( CreateDiskBackup  ) 用于创建指定云硬盘（当前只支持数据盘）的备份点。
+     * @param req CreateDiskBackupRequest
+     * @return CreateDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDiskBackup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -250,6 +297,27 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteBlueprintsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteBlueprints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteDiskBackups）用于删除云硬盘备份点。
+云硬盘备份点必须处于 NORMAL 状态，云硬盘备份点状态可以通过 DescribeDiskBackups接口查询，见输出参数中 DiskBackupState 字段解释。
+     * @param req DeleteDiskBackupsRequest
+     * @return DeleteDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDiskBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -440,6 +508,46 @@ public class LighthouseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCcnAttachedInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDiskBackups）用于查询云硬盘备份点的详细信息。
+     * @param req DescribeDiskBackupsRequest
+     * @return DescribeDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeDiskBackupsDeniedActions）用于查询一个或多个云硬盘备份点的操作限制列表信息。
+     * @param req DescribeDiskBackupsDeniedActionsRequest
+     * @return DescribeDiskBackupsDeniedActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskBackupsDeniedActionsResponse DescribeDiskBackupsDeniedActions(DescribeDiskBackupsDeniedActionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsDeniedActionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskBackupsDeniedActions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1148,6 +1256,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyBlueprintAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBlueprintAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (ModifyDiskBackupsAttribute) 用于修改云硬盘备份点属性。
+     * @param req ModifyDiskBackupsAttributeRequest
+     * @return ModifyDiskBackupsAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiskBackupsAttributeResponse ModifyDiskBackupsAttribute(ModifyDiskBackupsAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiskBackupsAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiskBackupsAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiskBackupsAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

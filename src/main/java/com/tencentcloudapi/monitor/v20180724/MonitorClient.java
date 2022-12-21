@@ -1307,6 +1307,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     * 查询Prometheus按量实例用量
+     * @param req DescribePrometheusInstanceUsageRequest
+     * @return DescribePrometheusInstanceUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsage(DescribePrometheusInstanceUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstanceUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribePrometheusInstances) 用于查询一个或多个实例的详细信息。
 <ul>
 <li>可以根据实例ID、实例名称或者实例状态等信息来查询实例的详细信息</li>

@@ -140,6 +140,14 @@ public class KafkaParam extends AbstractModel{
     private String CompressionType;
 
     /**
+    * 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MsgMultiple")
+    @Expose
+    private Long MsgMultiple;
+
+    /**
      * Get 是否为自建集群 
      * @return SelfBuilt 是否为自建集群
      */
@@ -427,6 +435,26 @@ public class KafkaParam extends AbstractModel{
         this.CompressionType = CompressionType;
     }
 
+    /**
+     * Get 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMsgMultiple() {
+        return this.MsgMultiple;
+    }
+
+    /**
+     * Set 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsgMultiple(Long MsgMultiple) {
+        this.MsgMultiple = MsgMultiple;
+    }
+
     public KafkaParam() {
     }
 
@@ -483,6 +511,9 @@ public class KafkaParam extends AbstractModel{
         if (source.CompressionType != null) {
             this.CompressionType = new String(source.CompressionType);
         }
+        if (source.MsgMultiple != null) {
+            this.MsgMultiple = new Long(source.MsgMultiple);
+        }
     }
 
 
@@ -505,6 +536,7 @@ public class KafkaParam extends AbstractModel{
         this.setParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
         this.setParamSimple(map, prefix + "UseAutoCreateTopic", this.UseAutoCreateTopic);
         this.setParamSimple(map, prefix + "CompressionType", this.CompressionType);
+        this.setParamSimple(map, prefix + "MsgMultiple", this.MsgMultiple);
 
     }
 }

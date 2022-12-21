@@ -150,6 +150,14 @@ public class DatahubResource extends AbstractModel{
     private CtsdbParam CtsdbParam;
 
     /**
+    * Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScfParam")
+    @Expose
+    private ScfParam ScfParam;
+
+    /**
      * Get 资源类型 
      * @return Type 资源类型
      */
@@ -465,6 +473,26 @@ public class DatahubResource extends AbstractModel{
         this.CtsdbParam = CtsdbParam;
     }
 
+    /**
+     * Get Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScfParam Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScfParam getScfParam() {
+        return this.ScfParam;
+    }
+
+    /**
+     * Set Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScfParam Scf配置，Type为SCF时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScfParam(ScfParam ScfParam) {
+        this.ScfParam = ScfParam;
+    }
+
     public DatahubResource() {
     }
 
@@ -521,6 +549,9 @@ public class DatahubResource extends AbstractModel{
         if (source.CtsdbParam != null) {
             this.CtsdbParam = new CtsdbParam(source.CtsdbParam);
         }
+        if (source.ScfParam != null) {
+            this.ScfParam = new ScfParam(source.ScfParam);
+        }
     }
 
 
@@ -544,6 +575,7 @@ public class DatahubResource extends AbstractModel{
         this.setParamObj(map, prefix + "MariaDBParam.", this.MariaDBParam);
         this.setParamObj(map, prefix + "SQLServerParam.", this.SQLServerParam);
         this.setParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
+        this.setParamObj(map, prefix + "ScfParam.", this.ScfParam);
 
     }
 }

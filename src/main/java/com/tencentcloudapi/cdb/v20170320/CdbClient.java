@@ -1425,6 +1425,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeRemoteBackupConfig)用于查询数据库异地备份配置信息。
+     * @param req DescribeRemoteBackupConfigRequest
+     * @return DescribeRemoteBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfig(DescribeRemoteBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRemoteBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRemoteBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
      * @param req DescribeRoGroupsRequest
      * @return DescribeRoGroupsResponse
@@ -2201,6 +2221,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+     * @param req ModifyRemoteBackupConfigRequest
+     * @return ModifyRemoteBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfig(ModifyRemoteBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRemoteBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRemoteBackupConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -114,6 +114,13 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String PackageId;
 
     /**
+    * 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+    */
+    @SerializedName("DeleteDnsAutoRecord")
+    @Expose
+    private Boolean DeleteDnsAutoRecord;
+
+    /**
      * Get 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。 
      * @return DvAuthMethod 验证方式：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证。
      */
@@ -321,6 +328,22 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.PackageId = PackageId;
     }
 
+    /**
+     * Get 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参 
+     * @return DeleteDnsAutoRecord 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+     */
+    public Boolean getDeleteDnsAutoRecord() {
+        return this.DeleteDnsAutoRecord;
+    }
+
+    /**
+     * Set 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+     * @param DeleteDnsAutoRecord 签发后是否删除自动域名验证记录， 默认为否；仅域名为DNS_AUTO验证类型支持传参
+     */
+    public void setDeleteDnsAutoRecord(Boolean DeleteDnsAutoRecord) {
+        this.DeleteDnsAutoRecord = DeleteDnsAutoRecord;
+    }
+
     public ApplyCertificateRequest() {
     }
 
@@ -368,6 +391,9 @@ public class ApplyCertificateRequest extends AbstractModel{
         if (source.PackageId != null) {
             this.PackageId = new String(source.PackageId);
         }
+        if (source.DeleteDnsAutoRecord != null) {
+            this.DeleteDnsAutoRecord = new Boolean(source.DeleteDnsAutoRecord);
+        }
     }
 
 
@@ -388,6 +414,7 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamSimple(map, prefix + "PackageId", this.PackageId);
+        this.setParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
 
     }
 }

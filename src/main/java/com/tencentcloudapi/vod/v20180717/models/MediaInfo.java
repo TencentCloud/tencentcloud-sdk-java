@@ -118,6 +118,14 @@ public class MediaInfo extends AbstractModel{
     private String FileId;
 
     /**
+    * 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReviewInfo")
+    @Expose
+    private FileReviewInfo ReviewInfo;
+
+    /**
      * Get 基础信息。包括视频名称、分类、播放地址、封面图片等。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BasicInfo 基础信息。包括视频名称、分类、播放地址、封面图片等。
@@ -353,6 +361,26 @@ public class MediaInfo extends AbstractModel{
         this.FileId = FileId;
     }
 
+    /**
+     * Get 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReviewInfo 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileReviewInfo getReviewInfo() {
+        return this.ReviewInfo;
+    }
+
+    /**
+     * Set 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReviewInfo 审核信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReviewInfo(FileReviewInfo ReviewInfo) {
+        this.ReviewInfo = ReviewInfo;
+    }
+
     public MediaInfo() {
     }
 
@@ -397,6 +425,9 @@ public class MediaInfo extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.ReviewInfo != null) {
+            this.ReviewInfo = new FileReviewInfo(source.ReviewInfo);
+        }
     }
 
 
@@ -416,6 +447,7 @@ public class MediaInfo extends AbstractModel{
         this.setParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
         this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
 
     }
 }

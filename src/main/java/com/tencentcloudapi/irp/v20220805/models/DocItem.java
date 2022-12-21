@@ -30,7 +30,7 @@ public class DocItem extends AbstractModel{
     private String ItemId;
 
     /**
-    * 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）
+    * 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加）
     */
     @SerializedName("ItemType")
     @Expose
@@ -202,7 +202,7 @@ Status=2的内容不会在推荐结果中出现
     private Float Score;
 
     /**
-    * json字符串，<b>用于物料池管理的自定义扩展</b>
+    * json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密
     */
     @SerializedName("Extension")
     @Expose
@@ -225,16 +225,16 @@ Status=2的内容不会在推荐结果中出现
     }
 
     /**
-     * Get 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案） 
-     * @return ItemType 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）
+     * Get 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加） 
+     * @return ItemType 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加）
      */
     public String getItemType() {
         return this.ItemType;
     }
 
     /**
-     * Set 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）
-     * @param ItemType 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决方案）
+     * Set 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加）
+     * @param ItemType 内容类型：<br/>● article -图文<br>● text -纯文本<br/>● video -视频<br/>● short_video -时长15秒以内的视频<br/>● mini_video -竖屏视频<br/>● image -纯图片<br/>（如当前类型不满足，请登录控制台进入对应项目，在<b>物料管理->物料类型管理</b>中添加）
      */
     public void setItemType(String ItemType) {
         this.ItemType = ItemType;
@@ -625,16 +625,16 @@ Status=2的内容不会在推荐结果中出现
     }
 
     /**
-     * Get json字符串，<b>用于物料池管理的自定义扩展</b> 
-     * @return Extension json字符串，<b>用于物料池管理的自定义扩展</b>
+     * Get json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密 
+     * @return Extension json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set json字符串，<b>用于物料池管理的自定义扩展</b>
-     * @param Extension json字符串，<b>用于物料池管理的自定义扩展</b>
+     * Set json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密
+     * @param Extension json字符串，<b>用于物料池管理的自定义扩展</b>，需要base64加密
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

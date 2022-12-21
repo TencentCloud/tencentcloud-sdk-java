@@ -46,7 +46,7 @@ public class RecItemData extends AbstractModel{
     private String ItemTraceId;
 
     /**
-    * 推荐结果分，取值范围[0,1000000]
+    * 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
@@ -110,9 +110,9 @@ public class RecItemData extends AbstractModel{
     }
 
     /**
-     * Get 推荐结果分，取值范围[0,1000000]
+     * Get 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Score 推荐结果分，取值范围[0,1000000]
+     * @return Score 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getScore() {
@@ -120,9 +120,9 @@ public class RecItemData extends AbstractModel{
     }
 
     /**
-     * Set 推荐结果分，取值范围[0,1000000]
+     * Set 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Score 推荐结果分，取值范围[0,1000000]
+     * @param Score 推荐预测分，分值越高被推荐的理由越充分，取值范围[0,1000000]，用于做二次排序的参考
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Float Score) {

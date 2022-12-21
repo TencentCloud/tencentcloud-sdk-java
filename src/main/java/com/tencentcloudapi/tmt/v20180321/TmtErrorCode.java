@@ -24,6 +24,9 @@ public enum TmtErrorCode {
     // 后台服务超时，请稍后重试。
      INTERNALERROR_BACKENDTIMEOUT("InternalError.BackendTimeout"),
      
+    // 路由获取错误。
+     INTERNALERROR_ERRORGETROUTE("InternalError.ErrorGetRoute"),
+     
     // 未知错误。
      INTERNALERROR_ERRORUNKNOWN("InternalError.ErrorUnknown"),
      

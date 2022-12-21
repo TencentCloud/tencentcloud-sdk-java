@@ -30,6 +30,13 @@ public class DescribeDrmDataKeyRequest extends AbstractModel{
     private String [] EdkList;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
      * Get 加密后的数据密钥列表，最大支持10个。 
      * @return EdkList 加密后的数据密钥列表，最大支持10个。
      */
@@ -43,6 +50,22 @@ public class DescribeDrmDataKeyRequest extends AbstractModel{
      */
     public void setEdkList(String [] EdkList) {
         this.EdkList = EdkList;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     public DescribeDrmDataKeyRequest() {
@@ -59,6 +82,9 @@ public class DescribeDrmDataKeyRequest extends AbstractModel{
                 this.EdkList[i] = new String(source.EdkList[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class DescribeDrmDataKeyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EdkList.", this.EdkList);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

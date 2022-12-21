@@ -67,6 +67,14 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     private Long BackupArchiveVolume;
 
     /**
+    * 标准存储备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupStandbyVolume")
+    @Expose
+    private Long BackupStandbyVolume;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -178,6 +186,26 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get 标准存储备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupStandbyVolume 标准存储备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBackupStandbyVolume() {
+        return this.BackupStandbyVolume;
+    }
+
+    /**
+     * Set 标准存储备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupStandbyVolume 标准存储备份容量，包含数据备份以及日志备份。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupStandbyVolume(Long BackupStandbyVolume) {
+        this.BackupStandbyVolume = BackupStandbyVolume;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -219,6 +247,9 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         if (source.BackupArchiveVolume != null) {
             this.BackupArchiveVolume = new Long(source.BackupArchiveVolume);
         }
+        if (source.BackupStandbyVolume != null) {
+            this.BackupStandbyVolume = new Long(source.BackupStandbyVolume);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -235,6 +266,7 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
         this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
         this.setParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
+        this.setParamSimple(map, prefix + "BackupStandbyVolume", this.BackupStandbyVolume);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

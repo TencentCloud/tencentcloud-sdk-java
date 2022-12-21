@@ -135,6 +135,34 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private String EnableBinlogArchive;
 
     /**
+    * 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+    */
+    @SerializedName("EnableBackupStandby")
+    @Expose
+    private String EnableBackupStandby;
+
+    /**
+    * 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+    */
+    @SerializedName("BackupStandbyDays")
+    @Expose
+    private Long BackupStandbyDays;
+
+    /**
+    * 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+    */
+    @SerializedName("EnableBinlogStandby")
+    @Expose
+    private String EnableBinlogStandby;
+
+    /**
+    * 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+    */
+    @SerializedName("BinlogStandbyDays")
+    @Expose
+    private Long BinlogStandbyDays;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
      */
@@ -390,6 +418,70 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.EnableBinlogArchive = EnableBinlogArchive;
     }
 
+    /**
+     * Get 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off 
+     * @return EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public String getEnableBackupStandby() {
+        return this.EnableBackupStandby;
+    }
+
+    /**
+     * Set 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     * @param EnableBackupStandby 是否开启数据备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public void setEnableBackupStandby(String EnableBackupStandby) {
+        this.EnableBackupStandby = EnableBackupStandby;
+    }
+
+    /**
+     * Get 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数 
+     * @return BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public Long getBackupStandbyDays() {
+        return this.BackupStandbyDays;
+    }
+
+    /**
+     * Set 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @param BackupStandbyDays 数据备份标准存储起始天数，数据备份达到标准存储起始天数时进行转换，最小为30天，不得大于数据备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public void setBackupStandbyDays(Long BackupStandbyDays) {
+        this.BackupStandbyDays = BackupStandbyDays;
+    }
+
+    /**
+     * Get 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off 
+     * @return EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public String getEnableBinlogStandby() {
+        return this.EnableBinlogStandby;
+    }
+
+    /**
+     * Set 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     * @param EnableBinlogStandby 是否开启日志备份标准存储策略，off-关闭，on-打开，默认为off
+     */
+    public void setEnableBinlogStandby(String EnableBinlogStandby) {
+        this.EnableBinlogStandby = EnableBinlogStandby;
+    }
+
+    /**
+     * Get 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数 
+     * @return BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public Long getBinlogStandbyDays() {
+        return this.BinlogStandbyDays;
+    }
+
+    /**
+     * Set 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     * @param BinlogStandbyDays 日志备份标准存储起始天数，日志备份达到标准存储起始天数时进行转换，最小为30天，不得大于日志备份保留天数。如果开启备份归档，不得大于等于备份归档天数
+     */
+    public void setBinlogStandbyDays(Long BinlogStandbyDays) {
+        this.BinlogStandbyDays = BinlogStandbyDays;
+    }
+
     public ModifyBackupConfigRequest() {
     }
 
@@ -446,6 +538,18 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         if (source.EnableBinlogArchive != null) {
             this.EnableBinlogArchive = new String(source.EnableBinlogArchive);
         }
+        if (source.EnableBackupStandby != null) {
+            this.EnableBackupStandby = new String(source.EnableBackupStandby);
+        }
+        if (source.BackupStandbyDays != null) {
+            this.BackupStandbyDays = new Long(source.BackupStandbyDays);
+        }
+        if (source.EnableBinlogStandby != null) {
+            this.EnableBinlogStandby = new String(source.EnableBinlogStandby);
+        }
+        if (source.BinlogStandbyDays != null) {
+            this.BinlogStandbyDays = new Long(source.BinlogStandbyDays);
+        }
     }
 
 
@@ -469,6 +573,10 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
         this.setParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
         this.setParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
+        this.setParamSimple(map, prefix + "EnableBackupStandby", this.EnableBackupStandby);
+        this.setParamSimple(map, prefix + "BackupStandbyDays", this.BackupStandbyDays);
+        this.setParamSimple(map, prefix + "EnableBinlogStandby", this.EnableBinlogStandby);
+        this.setParamSimple(map, prefix + "BinlogStandbyDays", this.BinlogStandbyDays);
 
     }
 }

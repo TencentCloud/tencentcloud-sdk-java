@@ -377,6 +377,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建用户自定义审核模板，数量上限：50。
+     * @param req CreateReviewTemplateRequest
+     * @return CreateReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReviewTemplateResponse CreateReviewTemplate(CreateReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义采样截图模板，数量上限：16。
      * @param req CreateSampleSnapshotTemplateRequest
      * @return CreateSampleSnapshotTemplateResponse
@@ -798,6 +818,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除用户自定义审核模板。
+     * @param req DeleteReviewTemplateRequest
+     * @return DeleteReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReviewTemplateResponse DeleteReviewTemplate(DeleteReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReviewTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1237,8 +1277,9 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
-如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+     *本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中 [DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643) 的升级版本。
+
+如果您是新接入点播加密的用户，不要使用该 API，请参考 [视频加密综述](https://cloud.tencent.com/document/product/266/45552) 使用推荐的加密方式。
      * @param req DescribeDrmDataKeyRequest
      * @return DescribeDrmDataKeyResponse
      * @throws TencentCloudSDKException
@@ -1463,6 +1504,7 @@ public class VodClient extends AbstractClient{
     7. 指定时间点截图信息（snapshotByTimeOffsetInfo）：对视频依照指定时间点截图后，的截图信息。
     8. 视频打点信息（keyFrameDescInfo）：对视频设置的打点信息。
     9. 转自适应码流信息（adaptiveDynamicStreamingInfo）：包括规格、加密类型、打包格式等相关信息。
+    10. 审核信息（reviewInfo）：包括媒体审核及媒体封面审核信息。
 2. 可以指定回包只返回部分信息。
      * @param req DescribeMediaInfosRequest
      * @return DescribeMediaInfosResponse
@@ -1607,6 +1649,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeReviewDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取审核模板列表
+     * @param req DescribeReviewTemplatesRequest
+     * @return DescribeReviewTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReviewTemplatesResponse DescribeReviewTemplates(DescribeReviewTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReviewTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReviewTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2314,6 +2376,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyPersonSample");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改用户自定义审核模板。
+     * @param req ModifyReviewTemplateRequest
+     * @return ModifyReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReviewTemplateResponse ModifyReviewTemplate(ModifyReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyReviewTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
