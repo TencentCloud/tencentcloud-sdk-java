@@ -48,6 +48,14 @@ public class FollowOrigin extends AbstractModel{
     private String DefaultCache;
 
     /**
+    * 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultCacheStrategy")
+    @Expose
+    private String DefaultCacheStrategy;
+
+    /**
      * Get 遵循源站配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
@@ -111,6 +119,26 @@ public class FollowOrigin extends AbstractModel{
         this.DefaultCache = DefaultCache;
     }
 
+    /**
+     * Get 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultCacheStrategy 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultCacheStrategy() {
+        return this.DefaultCacheStrategy;
+    }
+
+    /**
+     * Set 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultCacheStrategy 源站未返回 Cache-Control 头时, 使用/不使用默认缓存策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultCacheStrategy(String DefaultCacheStrategy) {
+        this.DefaultCacheStrategy = DefaultCacheStrategy;
+    }
+
     public FollowOrigin() {
     }
 
@@ -128,6 +156,9 @@ public class FollowOrigin extends AbstractModel{
         if (source.DefaultCache != null) {
             this.DefaultCache = new String(source.DefaultCache);
         }
+        if (source.DefaultCacheStrategy != null) {
+            this.DefaultCacheStrategy = new String(source.DefaultCacheStrategy);
+        }
     }
 
 
@@ -138,6 +169,7 @@ public class FollowOrigin extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
         this.setParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
+        this.setParamSimple(map, prefix + "DefaultCacheStrategy", this.DefaultCacheStrategy);
 
     }
 }

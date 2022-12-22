@@ -44,6 +44,15 @@ public class DescribeInstancesCountRequest extends AbstractModel{
     private String GameRegion;
 
     /**
+    * 游戏类型。
+MOBILE：手游
+PC：默认值，端游
+    */
+    @SerializedName("GameType")
+    @Expose
+    private String GameType;
+
+    /**
      * Get 游戏ID 
      * @return GameId 游戏ID
      */
@@ -91,6 +100,30 @@ public class DescribeInstancesCountRequest extends AbstractModel{
         this.GameRegion = GameRegion;
     }
 
+    /**
+     * Get 游戏类型。
+MOBILE：手游
+PC：默认值，端游 
+     * @return GameType 游戏类型。
+MOBILE：手游
+PC：默认值，端游
+     */
+    public String getGameType() {
+        return this.GameType;
+    }
+
+    /**
+     * Set 游戏类型。
+MOBILE：手游
+PC：默认值，端游
+     * @param GameType 游戏类型。
+MOBILE：手游
+PC：默认值，端游
+     */
+    public void setGameType(String GameType) {
+        this.GameType = GameType;
+    }
+
     public DescribeInstancesCountRequest() {
     }
 
@@ -108,6 +141,9 @@ public class DescribeInstancesCountRequest extends AbstractModel{
         if (source.GameRegion != null) {
             this.GameRegion = new String(source.GameRegion);
         }
+        if (source.GameType != null) {
+            this.GameType = new String(source.GameType);
+        }
     }
 
 
@@ -118,6 +154,7 @@ public class DescribeInstancesCountRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GameId", this.GameId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GameRegion", this.GameRegion);
+        this.setParamSimple(map, prefix + "GameType", this.GameType);
 
     }
 }

@@ -1131,4 +1131,24 @@ public class RumClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *停止项目使用与上报数据
+     * @param req StopProjectRequest
+     * @return StopProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopProjectResponse StopProject(StopProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

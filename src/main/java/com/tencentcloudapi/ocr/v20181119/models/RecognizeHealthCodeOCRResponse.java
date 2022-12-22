@@ -86,6 +86,13 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     private String SpotName;
 
     /**
+    * 疫苗接种时间
+    */
+    @SerializedName("VaccinationTime")
+    @Expose
+    private String VaccinationTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +244,22 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 疫苗接种时间 
+     * @return VaccinationTime 疫苗接种时间
+     */
+    public String getVaccinationTime() {
+        return this.VaccinationTime;
+    }
+
+    /**
+     * Set 疫苗接种时间
+     * @param VaccinationTime 疫苗接种时间
+     */
+    public void setVaccinationTime(String VaccinationTime) {
+        this.VaccinationTime = VaccinationTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -287,6 +310,9 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
         if (source.SpotName != null) {
             this.SpotName = new String(source.SpotName);
         }
+        if (source.VaccinationTime != null) {
+            this.VaccinationTime = new String(source.VaccinationTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -306,6 +332,7 @@ public class RecognizeHealthCodeOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TestingTime", this.TestingTime);
         this.setParamSimple(map, prefix + "Vaccination", this.Vaccination);
         this.setParamSimple(map, prefix + "SpotName", this.SpotName);
+        this.setParamSimple(map, prefix + "VaccinationTime", this.VaccinationTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

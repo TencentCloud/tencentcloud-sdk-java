@@ -39,7 +39,7 @@ public class QueryStringKey extends AbstractModel{
     private String Reorder;
 
     /**
-    * includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+    * includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -95,9 +95,9 @@ public class QueryStringKey extends AbstractModel{
     }
 
     /**
-     * Get includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+     * Get includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+     * @return Action includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -105,9 +105,9 @@ public class QueryStringKey extends AbstractModel{
     }
 
     /**
-     * Set includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+     * Set includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action includeAll | excludeAll | includeCustom | excludeAll 使用/排除部分url参数
+     * @param Action includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {

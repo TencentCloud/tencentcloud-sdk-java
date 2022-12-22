@@ -30,7 +30,8 @@ public class ReviewImageRequest extends AbstractModel{
     private String FileId;
 
     /**
-    * 图片审核模板 ID，当前固定填 10。
+    * 图片审核模板 ID，取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
     */
     @SerializedName("Definition")
     @Expose
@@ -60,16 +61,20 @@ public class ReviewImageRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片审核模板 ID，当前固定填 10。 
-     * @return Definition 图片审核模板 ID，当前固定填 10。
+     * Get 图片审核模板 ID，取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li> 
+     * @return Definition 图片审核模板 ID，取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 图片审核模板 ID，当前固定填 10。
-     * @param Definition 图片审核模板 ID，当前固定填 10。
+     * Set 图片审核模板 ID，取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
+     * @param Definition 图片审核模板 ID，取值范围：
+<li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

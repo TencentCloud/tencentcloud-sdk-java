@@ -13,30 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.anicloud.v20220923.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewImageResponse extends AbstractModel{
+public class QueryResourceInfoResponse extends AbstractModel{
 
     /**
-    * 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-    */
-    @SerializedName("ReviewResultSet")
-    @Expose
-    private ContentReviewResult [] ReviewResultSet;
-
-    /**
-    * 图片审核任务结果。
+    * 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MediaReviewResult")
+    @SerializedName("Resource")
     @Expose
-    private ReviewImageResult MediaReviewResult;
+    private Resource Resource;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +38,23 @@ public class ReviewImageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font>  
-     * @return ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-     */
-    public ContentReviewResult [] getReviewResultSet() {
-        return this.ReviewResultSet;
-    }
-
-    /**
-     * Set 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-     * @param ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
-     */
-    public void setReviewResultSet(ContentReviewResult [] ReviewResultSet) {
-        this.ReviewResultSet = ReviewResultSet;
-    }
-
-    /**
-     * Get 图片审核任务结果。
+     * Get 资源信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaReviewResult 图片审核任务结果。
+     * @return Resource 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ReviewImageResult getMediaReviewResult() {
-        return this.MediaReviewResult;
+    public Resource getResource() {
+        return this.Resource;
     }
 
     /**
-     * Set 图片审核任务结果。
+     * Set 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaReviewResult 图片审核任务结果。
+     * @param Resource 资源信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMediaReviewResult(ReviewImageResult MediaReviewResult) {
-        this.MediaReviewResult = MediaReviewResult;
+    public void setResource(Resource Resource) {
+        this.Resource = Resource;
     }
 
     /**
@@ -101,22 +73,16 @@ public class ReviewImageResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ReviewImageResponse() {
+    public QueryResourceInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReviewImageResponse(ReviewImageResponse source) {
-        if (source.ReviewResultSet != null) {
-            this.ReviewResultSet = new ContentReviewResult[source.ReviewResultSet.length];
-            for (int i = 0; i < source.ReviewResultSet.length; i++) {
-                this.ReviewResultSet[i] = new ContentReviewResult(source.ReviewResultSet[i]);
-            }
-        }
-        if (source.MediaReviewResult != null) {
-            this.MediaReviewResult = new ReviewImageResult(source.MediaReviewResult);
+    public QueryResourceInfoResponse(QueryResourceInfoResponse source) {
+        if (source.Resource != null) {
+            this.Resource = new Resource(source.Resource);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +94,7 @@ public class ReviewImageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ReviewResultSet.", this.ReviewResultSet);
-        this.setParamObj(map, prefix + "MediaReviewResult.", this.MediaReviewResult);
+        this.setParamObj(map, prefix + "Resource.", this.Resource);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

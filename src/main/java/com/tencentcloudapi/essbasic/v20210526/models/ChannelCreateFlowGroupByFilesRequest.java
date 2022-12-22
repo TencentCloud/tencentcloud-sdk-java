@@ -44,6 +44,16 @@ public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
+    * 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+    */
+    @SerializedName("ApproverVerifyType")
+    @Expose
+    private String ApproverVerifyType;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
@@ -99,6 +109,34 @@ public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
     }
 
     /**
+     * Get 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。 
+     * @return ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     */
+    public String getApproverVerifyType() {
+        return this.ApproverVerifyType;
+    }
+
+    /**
+     * Set 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     * @param ApproverVerifyType 签署人校验方式
+VerifyCheck: 人脸识别（默认）
+MobileCheck：手机号验证
+参数说明：若选择后者，未实名的个人签署方查看合同时，无需进行人脸识别实名认证（但签署合同时仍然需要人脸实名），该能力仅适用于个人签署方。
+     */
+    public void setApproverVerifyType(String ApproverVerifyType) {
+        this.ApproverVerifyType = ApproverVerifyType;
+    }
+
+    /**
      * Get 操作者的信息 
      * @return Operator 操作者的信息
      */
@@ -134,6 +172,9 @@ public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.ApproverVerifyType != null) {
+            this.ApproverVerifyType = new String(source.ApproverVerifyType);
+        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
@@ -147,6 +188,7 @@ public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FlowFileInfos.", this.FlowFileInfos);
         this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

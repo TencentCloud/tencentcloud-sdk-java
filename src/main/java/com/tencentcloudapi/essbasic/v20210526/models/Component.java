@@ -231,6 +231,14 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private String ChannelComponentId;
 
     /**
+    * 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
+    */
+    @SerializedName("KeywordOrder")
+    @Expose
+    private String KeywordOrder;
+
+    /**
     * 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
     */
     @SerializedName("KeywordPage")
@@ -844,6 +852,26 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
+     * Get 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。 
+     * @return KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
+     */
+    public String getKeywordOrder() {
+        return this.KeywordOrder;
+    }
+
+    /**
+     * Set 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
+     * @param KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
+     */
+    public void setKeywordOrder(String KeywordOrder) {
+        this.KeywordOrder = KeywordOrder;
+    }
+
+    /**
      * Get 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来 
      * @return KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
@@ -959,6 +987,9 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         if (source.ChannelComponentId != null) {
             this.ChannelComponentId = new String(source.ChannelComponentId);
         }
+        if (source.KeywordOrder != null) {
+            this.KeywordOrder = new String(source.KeywordOrder);
+        }
         if (source.KeywordPage != null) {
             this.KeywordPage = new Long(source.KeywordPage);
         }
@@ -998,6 +1029,7 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         this.setParamSimple(map, prefix + "OffsetX", this.OffsetX);
         this.setParamSimple(map, prefix + "OffsetY", this.OffsetY);
         this.setParamSimple(map, prefix + "ChannelComponentId", this.ChannelComponentId);
+        this.setParamSimple(map, prefix + "KeywordOrder", this.KeywordOrder);
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
