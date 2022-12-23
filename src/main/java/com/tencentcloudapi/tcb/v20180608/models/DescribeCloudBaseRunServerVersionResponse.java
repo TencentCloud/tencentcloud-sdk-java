@@ -310,6 +310,22 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     private HpaPolicy [] PolicyDetail;
 
     /**
+    * Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TkeClusterInfo")
+    @Expose
+    private TkeClusterInfo TkeClusterInfo;
+
+    /**
+    * 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TkeWorkloadType")
+    @Expose
+    private String TkeWorkloadType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1021,6 +1037,46 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     }
 
     /**
+     * Get Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TkeClusterInfo Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TkeClusterInfo getTkeClusterInfo() {
+        return this.TkeClusterInfo;
+    }
+
+    /**
+     * Set Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TkeClusterInfo Tke集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTkeClusterInfo(TkeClusterInfo TkeClusterInfo) {
+        this.TkeClusterInfo = TkeClusterInfo;
+    }
+
+    /**
+     * Get 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TkeWorkloadType 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTkeWorkloadType() {
+        return this.TkeWorkloadType;
+    }
+
+    /**
+     * Set 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TkeWorkloadType 版本工作负载类型；deployment/deamonset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTkeWorkloadType(String TkeWorkloadType) {
+        this.TkeWorkloadType = TkeWorkloadType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1161,6 +1217,12 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
                 this.PolicyDetail[i] = new HpaPolicy(source.PolicyDetail[i]);
             }
         }
+        if (source.TkeClusterInfo != null) {
+            this.TkeClusterInfo = new TkeClusterInfo(source.TkeClusterInfo);
+        }
+        if (source.TkeWorkloadType != null) {
+            this.TkeWorkloadType = new String(source.TkeWorkloadType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1208,6 +1270,8 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
         this.setParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
         this.setParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
+        this.setParamObj(map, prefix + "TkeClusterInfo.", this.TkeClusterInfo);
+        this.setParamSimple(map, prefix + "TkeWorkloadType", this.TkeWorkloadType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -79,6 +79,13 @@ public class ModifyMigrationJobRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * 自动重试的时间段、可设置5至720分钟、0表示不重试
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
+
+    /**
      * Get 任务id 
      * @return JobId 任务id
      */
@@ -206,6 +213,22 @@ public class ModifyMigrationJobRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 自动重试的时间段、可设置5至720分钟、0表示不重试 
+     * @return AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set 自动重试的时间段、可设置5至720分钟、0表示不重试
+     * @param AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public ModifyMigrationJobRequest() {
     }
 
@@ -241,6 +264,9 @@ public class ModifyMigrationJobRequest extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class ModifyMigrationJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

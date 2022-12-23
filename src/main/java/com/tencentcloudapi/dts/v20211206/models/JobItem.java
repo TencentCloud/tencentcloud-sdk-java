@@ -159,6 +159,14 @@ public class JobItem extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
+
+    /**
      * Get 数据迁移任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 数据迁移任务ID
@@ -498,6 +506,26 @@ public class JobItem extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRetryTimeRangeMinutes 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRetryTimeRangeMinutes 自动重试时间段信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public JobItem() {
     }
 
@@ -560,6 +588,9 @@ public class JobItem extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -584,6 +615,7 @@ public class JobItem extends AbstractModel{
         this.setParamObj(map, prefix + "CompareTask.", this.CompareTask);
         this.setParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

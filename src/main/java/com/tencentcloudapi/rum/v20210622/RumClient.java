@@ -932,6 +932,46 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *获取项目下的日志列表（实例创建的项目下的日志列表）
+     * @param req DescribeRumLogListRequest
+     * @return DescribeRumLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogListResponse DescribeRumLogList(DescribeRumLogListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumLogListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumLogListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取项目下的日志列表，分钟级
+     * @param req DescribeRumStatsLogListRequest
+     * @return DescribeRumStatsLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumStatsLogListResponse DescribeRumStatsLogList(DescribeRumStatsLogListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumStatsLogListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumStatsLogListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumStatsLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取首页分数列表
      * @param req DescribeScoresRequest
      * @return DescribeScoresResponse

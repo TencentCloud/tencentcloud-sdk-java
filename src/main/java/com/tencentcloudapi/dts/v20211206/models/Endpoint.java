@@ -31,6 +31,14 @@ public class Endpoint extends AbstractModel{
     private String Region;
 
     /**
+    * tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
     * 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -151,14 +159,6 @@ public class Endpoint extends AbstractModel{
     private String EngineVersion;
 
     /**
-    * 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AccountMode")
-    @Expose
-    private String AccountMode;
-
-    /**
     * 实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -167,12 +167,28 @@ public class Endpoint extends AbstractModel{
     private String Account;
 
     /**
+    * 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccountMode")
+    @Expose
+    private String AccountMode;
+
+    /**
     * 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountRole")
     @Expose
     private String AccountRole;
+
+    /**
+    * 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RoleExternalId")
+    @Expose
+    private String RoleExternalId;
 
     /**
     * 临时密钥Id，如果为跨账号实例此项必填
@@ -199,12 +215,12 @@ public class Endpoint extends AbstractModel{
     private String TmpToken;
 
     /**
-    * 外部角色id
+    * 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RoleExternalId")
+    @SerializedName("EncryptConn")
     @Expose
-    private String RoleExternalId;
+    private String EncryptConn;
 
     /**
      * Get 地域英文名，如：ap-guangzhou
@@ -224,6 +240,26 @@ public class Endpoint extends AbstractModel{
      */
     public void setRegion(String Region) {
         this.Region = Region;
+    }
+
+    /**
+     * Get tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Role tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Role tdsql mysql版的节点类型，枚举值为proxy、set
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     /**
@@ -527,26 +563,6 @@ public class Endpoint extends AbstractModel{
     }
 
     /**
-     * Get 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getAccountMode() {
-        return this.AccountMode;
-    }
-
-    /**
-     * Set 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAccountMode(String AccountMode) {
-        this.AccountMode = AccountMode;
-    }
-
-    /**
      * Get 实例所属账号，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Account 实例所属账号，如果为跨账号实例此项必填
@@ -567,6 +583,26 @@ public class Endpoint extends AbstractModel{
     }
 
     /**
+     * Get 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccountMode() {
+        return this.AccountMode;
+    }
+
+    /**
+     * Set 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccountMode 资源所属账号 为空或self(表示本账号内资源)、other(表示跨账号资源)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccountMode(String AccountMode) {
+        this.AccountMode = AccountMode;
+    }
+
+    /**
      * Get 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccountRole 跨账号同步时的角色，只允许[a-zA-Z0-9\-\_]+，如果为跨账号实例此项必填
@@ -584,6 +620,26 @@ public class Endpoint extends AbstractModel{
      */
     public void setAccountRole(String AccountRole) {
         this.AccountRole = AccountRole;
+    }
+
+    /**
+     * Get 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RoleExternalId 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRoleExternalId() {
+        return this.RoleExternalId;
+    }
+
+    /**
+     * Set 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RoleExternalId 外部角色id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRoleExternalId(String RoleExternalId) {
+        this.RoleExternalId = RoleExternalId;
     }
 
     /**
@@ -647,23 +703,23 @@ public class Endpoint extends AbstractModel{
     }
 
     /**
-     * Get 外部角色id
+     * Get 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleExternalId 外部角色id
+     * @return EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRoleExternalId() {
-        return this.RoleExternalId;
+    public String getEncryptConn() {
+        return this.EncryptConn;
     }
 
     /**
-     * Set 外部角色id
+     * Set 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleExternalId 外部角色id
+     * @param EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRoleExternalId(String RoleExternalId) {
-        this.RoleExternalId = RoleExternalId;
+    public void setEncryptConn(String EncryptConn) {
+        this.EncryptConn = EncryptConn;
     }
 
     public Endpoint() {
@@ -676,6 +732,9 @@ public class Endpoint extends AbstractModel{
     public Endpoint(Endpoint source) {
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
         }
         if (source.DbKernel != null) {
             this.DbKernel = new String(source.DbKernel);
@@ -722,14 +781,17 @@ public class Endpoint extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
-        if (source.AccountMode != null) {
-            this.AccountMode = new String(source.AccountMode);
-        }
         if (source.Account != null) {
             this.Account = new String(source.Account);
         }
+        if (source.AccountMode != null) {
+            this.AccountMode = new String(source.AccountMode);
+        }
         if (source.AccountRole != null) {
             this.AccountRole = new String(source.AccountRole);
+        }
+        if (source.RoleExternalId != null) {
+            this.RoleExternalId = new String(source.RoleExternalId);
         }
         if (source.TmpSecretId != null) {
             this.TmpSecretId = new String(source.TmpSecretId);
@@ -740,8 +802,8 @@ public class Endpoint extends AbstractModel{
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
-        if (source.RoleExternalId != null) {
-            this.RoleExternalId = new String(source.RoleExternalId);
+        if (source.EncryptConn != null) {
+            this.EncryptConn = new String(source.EncryptConn);
         }
     }
 
@@ -751,6 +813,7 @@ public class Endpoint extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "DbKernel", this.DbKernel);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
@@ -766,13 +829,14 @@ public class Endpoint extends AbstractModel{
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-        this.setParamSimple(map, prefix + "AccountMode", this.AccountMode);
         this.setParamSimple(map, prefix + "Account", this.Account);
+        this.setParamSimple(map, prefix + "AccountMode", this.AccountMode);
         this.setParamSimple(map, prefix + "AccountRole", this.AccountRole);
+        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
-        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
+        this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
 
     }
 }

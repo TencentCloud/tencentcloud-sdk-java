@@ -135,7 +135,7 @@ public class SyncJobInfo extends AbstractModel{
     private String SrcAccessType;
 
     /**
-    * 源端信息
+    * 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInfo")
@@ -167,7 +167,7 @@ public class SyncJobInfo extends AbstractModel{
     private String DstAccessType;
 
     /**
-    * 目标端信息
+    * 目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInfo")
@@ -253,6 +253,14 @@ public class SyncJobInfo extends AbstractModel{
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
+
+    /**
+    * 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
 
     /**
      * Get 同步任务id，如：sync-btso140
@@ -535,9 +543,9 @@ public class SyncJobInfo extends AbstractModel{
     }
 
     /**
-     * Get 源端信息
+     * Get 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SrcInfo 源端信息
+     * @return SrcInfo 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endpoint getSrcInfo() {
@@ -545,9 +553,9 @@ public class SyncJobInfo extends AbstractModel{
     }
 
     /**
-     * Set 源端信息
+     * Set 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SrcInfo 源端信息
+     * @param SrcInfo 源端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInfo(Endpoint SrcInfo) {
@@ -615,9 +623,9 @@ public class SyncJobInfo extends AbstractModel{
     }
 
     /**
-     * Get 目标端信息
+     * Get 目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DstInfo 目标端信息
+     * @return DstInfo 目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endpoint getDstInfo() {
@@ -625,9 +633,9 @@ public class SyncJobInfo extends AbstractModel{
     }
 
     /**
-     * Set 目标端信息
+     * Set 目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DstInfo 目标端信息
+     * @param DstInfo 目标端信息，单节点数据库使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInfo(Endpoint DstInfo) {
@@ -834,6 +842,26 @@ public class SyncJobInfo extends AbstractModel{
         this.OfflineTime = OfflineTime;
     }
 
+    /**
+     * Get 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRetryTimeRangeMinutes 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRetryTimeRangeMinutes 自动重试时间段设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public SyncJobInfo() {
     }
 
@@ -938,6 +966,9 @@ public class SyncJobInfo extends AbstractModel{
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -974,6 +1005,7 @@ public class SyncJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

@@ -47,6 +47,14 @@ public class Objects extends AbstractModel{
     private String [] AdvancedObjects;
 
     /**
+    * OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OnlineDDL")
+    @Expose
+    private OnlineDDL OnlineDDL;
+
+    /**
      * Get 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mode 迁移对象类型 Partial(部分对象)
@@ -106,6 +114,26 @@ public class Objects extends AbstractModel{
         this.AdvancedObjects = AdvancedObjects;
     }
 
+    /**
+     * Get OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnlineDDL OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OnlineDDL getOnlineDDL() {
+        return this.OnlineDDL;
+    }
+
+    /**
+     * Set OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnlineDDL OnlineDDL类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOnlineDDL(OnlineDDL OnlineDDL) {
+        this.OnlineDDL = OnlineDDL;
+    }
+
     public Objects() {
     }
 
@@ -129,6 +157,9 @@ public class Objects extends AbstractModel{
                 this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
             }
         }
+        if (source.OnlineDDL != null) {
+            this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
+        }
     }
 
 
@@ -139,6 +170,7 @@ public class Objects extends AbstractModel{
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
+        this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
 
     }
 }

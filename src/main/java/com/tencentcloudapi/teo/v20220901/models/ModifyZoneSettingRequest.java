@@ -166,6 +166,14 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ClientIpCountry ClientIpCountry;
 
     /**
+    * Grpc协议支持配置。
+不填写表示保持原有配置。
+    */
+    @SerializedName("Grpc")
+    @Expose
+    private Grpc Grpc;
+
+    /**
      * Get 待变更的站点ID。 
      * @return ZoneId 待变更的站点ID。
      */
@@ -521,6 +529,26 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.ClientIpCountry = ClientIpCountry;
     }
 
+    /**
+     * Get Grpc协议支持配置。
+不填写表示保持原有配置。 
+     * @return Grpc Grpc协议支持配置。
+不填写表示保持原有配置。
+     */
+    public Grpc getGrpc() {
+        return this.Grpc;
+    }
+
+    /**
+     * Set Grpc协议支持配置。
+不填写表示保持原有配置。
+     * @param Grpc Grpc协议支持配置。
+不填写表示保持原有配置。
+     */
+    public void setGrpc(Grpc Grpc) {
+        this.Grpc = Grpc;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -583,6 +611,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.ClientIpCountry != null) {
             this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
         }
+        if (source.Grpc != null) {
+            this.Grpc = new Grpc(source.Grpc);
+        }
     }
 
 
@@ -608,6 +639,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
+        this.setParamObj(map, prefix + "Grpc.", this.Grpc);
 
     }
 }

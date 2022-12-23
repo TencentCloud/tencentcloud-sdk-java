@@ -175,6 +175,14 @@ public class ZoneSetting extends AbstractModel{
     private ClientIpCountry ClientIpCountry;
 
     /**
+    * Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Grpc")
+    @Expose
+    private Grpc Grpc;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -554,6 +562,26 @@ public class ZoneSetting extends AbstractModel{
         this.ClientIpCountry = ClientIpCountry;
     }
 
+    /**
+     * Get Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Grpc Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Grpc getGrpc() {
+        return this.Grpc;
+    }
+
+    /**
+     * Set Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Grpc Grpc协议支持配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGrpc(Grpc Grpc) {
+        this.Grpc = Grpc;
+    }
+
     public ZoneSetting() {
     }
 
@@ -619,6 +647,9 @@ public class ZoneSetting extends AbstractModel{
         if (source.ClientIpCountry != null) {
             this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
         }
+        if (source.Grpc != null) {
+            this.Grpc = new Grpc(source.Grpc);
+        }
     }
 
 
@@ -645,6 +676,7 @@ public class ZoneSetting extends AbstractModel{
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
+        this.setParamObj(map, prefix + "Grpc.", this.Grpc);
 
     }
 }

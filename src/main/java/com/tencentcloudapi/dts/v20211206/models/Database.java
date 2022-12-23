@@ -127,6 +127,38 @@ public class Database extends AbstractModel{
     private String [] Procedures;
 
     /**
+    * 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TriggerMode")
+    @Expose
+    private String TriggerMode;
+
+    /**
+    * 当TriggerMode为partial，指定要迁移的触发器名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Triggers")
+    @Expose
+    private String [] Triggers;
+
+    /**
+    * 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventMode")
+    @Expose
+    private String EventMode;
+
+    /**
+    * 当EventMode为partial，指定要迁移的事件名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Events")
+    @Expose
+    private String [] Events;
+
+    /**
      * Get 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DbName 需要迁移或同步的库名，当ObjectMode为Partial时，此项必填
@@ -386,6 +418,86 @@ public class Database extends AbstractModel{
         this.Procedures = Procedures;
     }
 
+    /**
+     * Get 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TriggerMode 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTriggerMode() {
+        return this.TriggerMode;
+    }
+
+    /**
+     * Set 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TriggerMode 触发器迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggerMode(String TriggerMode) {
+        this.TriggerMode = TriggerMode;
+    }
+
+    /**
+     * Get 当TriggerMode为partial，指定要迁移的触发器名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Triggers 当TriggerMode为partial，指定要迁移的触发器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTriggers() {
+        return this.Triggers;
+    }
+
+    /**
+     * Set 当TriggerMode为partial，指定要迁移的触发器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Triggers 当TriggerMode为partial，指定要迁移的触发器名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTriggers(String [] Triggers) {
+        this.Triggers = Triggers;
+    }
+
+    /**
+     * Get 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventMode 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventMode() {
+        return this.EventMode;
+    }
+
+    /**
+     * Set 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventMode 事件迁移模式，all(为当前对象下的所有对象)，partial(部分对象)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventMode(String EventMode) {
+        this.EventMode = EventMode;
+    }
+
+    /**
+     * Get 当EventMode为partial，指定要迁移的事件名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Events 当EventMode为partial，指定要迁移的事件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEvents() {
+        return this.Events;
+    }
+
+    /**
+     * Set 当EventMode为partial，指定要迁移的事件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Events 当EventMode为partial，指定要迁移的事件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEvents(String [] Events) {
+        this.Events = Events;
+    }
+
     public Database() {
     }
 
@@ -445,6 +557,24 @@ public class Database extends AbstractModel{
                 this.Procedures[i] = new String(source.Procedures[i]);
             }
         }
+        if (source.TriggerMode != null) {
+            this.TriggerMode = new String(source.TriggerMode);
+        }
+        if (source.Triggers != null) {
+            this.Triggers = new String[source.Triggers.length];
+            for (int i = 0; i < source.Triggers.length; i++) {
+                this.Triggers[i] = new String(source.Triggers[i]);
+            }
+        }
+        if (source.EventMode != null) {
+            this.EventMode = new String(source.EventMode);
+        }
+        if (source.Events != null) {
+            this.Events = new String[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new String(source.Events[i]);
+            }
+        }
     }
 
 
@@ -465,6 +595,10 @@ public class Database extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Functions.", this.Functions);
         this.setParamSimple(map, prefix + "ProcedureMode", this.ProcedureMode);
         this.setParamArraySimple(map, prefix + "Procedures.", this.Procedures);
+        this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+        this.setParamArraySimple(map, prefix + "Triggers.", this.Triggers);
+        this.setParamSimple(map, prefix + "EventMode", this.EventMode);
+        this.setParamArraySimple(map, prefix + "Events.", this.Events);
 
     }
 }

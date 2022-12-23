@@ -324,6 +324,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private String SlaveZone;
 
     /**
+    * 实例初始化配置信息，主要用于购买集群时选不同规格实例
+    */
+    @SerializedName("InstanceInitInfos")
+    @Expose
+    private InstanceInitInfo [] InstanceInitInfos;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -1047,6 +1054,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.SlaveZone = SlaveZone;
     }
 
+    /**
+     * Get 实例初始化配置信息，主要用于购买集群时选不同规格实例 
+     * @return InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     */
+    public InstanceInitInfo [] getInstanceInitInfos() {
+        return this.InstanceInitInfos;
+    }
+
+    /**
+     * Set 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * @param InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     */
+    public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
+        this.InstanceInitInfos = InstanceInitInfos;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1187,6 +1210,12 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.SlaveZone != null) {
             this.SlaveZone = new String(source.SlaveZone);
         }
+        if (source.InstanceInitInfos != null) {
+            this.InstanceInitInfos = new InstanceInitInfo[source.InstanceInitInfos.length];
+            for (int i = 0; i < source.InstanceInitInfos.length; i++) {
+                this.InstanceInitInfos[i] = new InstanceInitInfo(source.InstanceInitInfos[i]);
+            }
+        }
     }
 
 
@@ -1234,6 +1263,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+        this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
 
     }
 }

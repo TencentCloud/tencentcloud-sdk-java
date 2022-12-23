@@ -63,6 +63,14 @@ public class CloudRunServiceVolume extends AbstractModel{
     private CloudBaseRunEmptyDirVolumeSource EmptyDir;
 
     /**
+    * 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostPath")
+    @Expose
+    private CloudBaseRunServiceVolumeHostPath HostPath;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -162,6 +170,26 @@ public class CloudRunServiceVolume extends AbstractModel{
         this.EmptyDir = EmptyDir;
     }
 
+    /**
+     * Get 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostPath 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CloudBaseRunServiceVolumeHostPath getHostPath() {
+        return this.HostPath;
+    }
+
+    /**
+     * Set 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostPath 主机路径挂载信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostPath(CloudBaseRunServiceVolumeHostPath HostPath) {
+        this.HostPath = HostPath;
+    }
+
     public CloudRunServiceVolume() {
     }
 
@@ -185,6 +213,9 @@ public class CloudRunServiceVolume extends AbstractModel{
         if (source.EmptyDir != null) {
             this.EmptyDir = new CloudBaseRunEmptyDirVolumeSource(source.EmptyDir);
         }
+        if (source.HostPath != null) {
+            this.HostPath = new CloudBaseRunServiceVolumeHostPath(source.HostPath);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class CloudRunServiceVolume extends AbstractModel{
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
         this.setParamObj(map, prefix + "EmptyDir.", this.EmptyDir);
+        this.setParamObj(map, prefix + "HostPath.", this.HostPath);
 
     }
 }

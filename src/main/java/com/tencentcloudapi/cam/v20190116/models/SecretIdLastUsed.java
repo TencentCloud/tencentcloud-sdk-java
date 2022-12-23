@@ -38,6 +38,14 @@ public class SecretIdLastUsed extends AbstractModel{
     private String LastUsedDate;
 
     /**
+    * 最后密钥访问日期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastSecretUsedDate")
+    @Expose
+    private Long LastSecretUsedDate;
+
+    /**
      * Get 密钥ID 
      * @return SecretId 密钥ID
      */
@@ -73,6 +81,26 @@ public class SecretIdLastUsed extends AbstractModel{
         this.LastUsedDate = LastUsedDate;
     }
 
+    /**
+     * Get 最后密钥访问日期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastSecretUsedDate 最后密钥访问日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastSecretUsedDate() {
+        return this.LastSecretUsedDate;
+    }
+
+    /**
+     * Set 最后密钥访问日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastSecretUsedDate 最后密钥访问日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastSecretUsedDate(Long LastSecretUsedDate) {
+        this.LastSecretUsedDate = LastSecretUsedDate;
+    }
+
     public SecretIdLastUsed() {
     }
 
@@ -87,6 +115,9 @@ public class SecretIdLastUsed extends AbstractModel{
         if (source.LastUsedDate != null) {
             this.LastUsedDate = new String(source.LastUsedDate);
         }
+        if (source.LastSecretUsedDate != null) {
+            this.LastSecretUsedDate = new Long(source.LastSecretUsedDate);
+        }
     }
 
 
@@ -96,6 +127,7 @@ public class SecretIdLastUsed extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "LastUsedDate", this.LastUsedDate);
+        this.setParamSimple(map, prefix + "LastSecretUsedDate", this.LastSecretUsedDate);
 
     }
 }
