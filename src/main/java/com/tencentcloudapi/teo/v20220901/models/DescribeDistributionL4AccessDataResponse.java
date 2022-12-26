@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimingL7CacheDataResponse extends AbstractModel{
+public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
 
     /**
     * 查询结果的总条数。
@@ -30,12 +30,12 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 七层缓存分析时序类流量数据列表。
+    * 连接时长分布图。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("TopDataRecords")
     @Expose
-    private TimingDataRecord [] Data;
+    private TopDataRecord [] TopDataRecords;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,23 +61,23 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 七层缓存分析时序类流量数据列表。
+     * Get 连接时长分布图。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 七层缓存分析时序类流量数据列表。
+     * @return TopDataRecords 连接时长分布图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TimingDataRecord [] getData() {
-        return this.Data;
+    public TopDataRecord [] getTopDataRecords() {
+        return this.TopDataRecords;
     }
 
     /**
-     * Set 七层缓存分析时序类流量数据列表。
+     * Set 连接时长分布图。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 七层缓存分析时序类流量数据列表。
+     * @param TopDataRecords 连接时长分布图。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(TimingDataRecord [] Data) {
-        this.Data = Data;
+    public void setTopDataRecords(TopDataRecord [] TopDataRecords) {
+        this.TopDataRecords = TopDataRecords;
     }
 
     /**
@@ -96,21 +96,21 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTimingL7CacheDataResponse() {
+    public DescribeDistributionL4AccessDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTimingL7CacheDataResponse(DescribeTimingL7CacheDataResponse source) {
+    public DescribeDistributionL4AccessDataResponse(DescribeDistributionL4AccessDataResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Data != null) {
-            this.Data = new TimingDataRecord[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TimingDataRecord(source.Data[i]);
+        if (source.TopDataRecords != null) {
+            this.TopDataRecords = new TopDataRecord[source.TopDataRecords.length];
+            for (int i = 0; i < source.TopDataRecords.length; i++) {
+                this.TopDataRecords[i] = new TopDataRecord(source.TopDataRecords[i]);
             }
         }
         if (source.RequestId != null) {
@@ -124,7 +124,7 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "TopDataRecords.", this.TopDataRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

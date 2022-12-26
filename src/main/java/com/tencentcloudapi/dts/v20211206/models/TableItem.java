@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TableItem extends AbstractModel{
 
     /**
-    * 迁移的表名
+    * 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
@@ -55,9 +55,9 @@ public class TableItem extends AbstractModel{
     private String TableEditMode;
 
     /**
-     * Get 迁移的表名
+     * Get 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TableName 迁移的表名
+     * @return TableName 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
@@ -65,9 +65,9 @@ public class TableItem extends AbstractModel{
     }
 
     /**
-     * Set 迁移的表名
+     * Set 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TableName 迁移的表名
+     * @param TableName 迁移的表名，大小写敏感
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimingL4DataRequest extends AbstractModel{
+public class DescribeTimingL4AccessDataRequest extends AbstractModel{
 
     /**
     * 开始时间。
@@ -38,36 +38,25 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
     * 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li> l4Flow_connections：连接数。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 站点集合，不填默认选择全部站点。
+    * 站点ID集合，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * 四层实例列表, 不填表示选择全部实例。
-    */
-    @SerializedName("ProxyIds")
-    @Expose
-    private String [] ProxyIds;
-
-    /**
     * 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>min：1分钟；</li>
+<li>5min：5分钟；</li>
+<li>hour：1小时；</li>
+<li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
     */
     @SerializedName("Interval")
     @Expose
@@ -78,9 +67,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
     */
-    @SerializedName("Filters")
+    @SerializedName("QueryConditions")
     @Expose
-    private QueryCondition [] Filters;
+    private QueryCondition [] QueryConditions;
 
     /**
     * 数据归属地区，取值有：
@@ -126,17 +115,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
      * Get 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li> 
+<li> l4Flow_connections：连接数。</li> 
      * @return MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li> l4Flow_connections：连接数。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -144,65 +125,41 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
      * Set 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li> l4Flow_connections：连接数。</li>
      * @param MetricNames 查询指标，取值有：
-<li>l4Flow_connections: 访问连接数；</li>
-<li>l4Flow_flux: 访问总流量；</li>
-<li>l4Flow_inFlux: 访问入流量；</li>
-<li>l4Flow_outFlux: 访问出流量；</li>
-<li> l4Flow_outPkt: 访问出包量。</li>
+<li> l4Flow_connections：连接数。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 站点集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点集合，不填默认选择全部站点。
+     * Get 站点ID集合，不填默认选择全部站点。 
+     * @return ZoneIds 站点ID集合，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，不填默认选择全部站点。
-     * @param ZoneIds 站点集合，不填默认选择全部站点。
+     * Set 站点ID集合，不填默认选择全部站点。
+     * @param ZoneIds 站点ID集合，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 四层实例列表, 不填表示选择全部实例。 
-     * @return ProxyIds 四层实例列表, 不填表示选择全部实例。
-     */
-    public String [] getProxyIds() {
-        return this.ProxyIds;
-    }
-
-    /**
-     * Set 四层实例列表, 不填表示选择全部实例。
-     * @param ProxyIds 四层实例列表, 不填表示选择全部实例。
-     */
-    public void setProxyIds(String [] ProxyIds) {
-        this.ProxyIds = ProxyIds;
-    }
-
-    /**
      * Get 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。 
+<li>min：1分钟；</li>
+<li>5min：5分钟；</li>
+<li>hour：1小时；</li>
+<li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。 
      * @return Interval 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>min：1分钟；</li>
+<li>5min：5分钟；</li>
+<li>hour：1小时；</li>
+<li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
      */
     public String getInterval() {
         return this.Interval;
@@ -210,15 +167,15 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
      * Set 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>min：1分钟；</li>
+<li>5min：5分钟；</li>
+<li>hour：1小时；</li>
+<li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
      * @param Interval 查询时间粒度，取值有：
-<li>min: 1分钟 ；</li>
-<li>5min: 5分钟 ；</li>
-<li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>min：1分钟；</li>
+<li>5min：5分钟；</li>
+<li>hour：1小时；</li>
+<li>day：1天。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -228,24 +185,24 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
      * Get 过滤条件，详细的过滤条件如下：
 <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
-     * @return Filters 过滤条件，详细的过滤条件如下：
+     * @return QueryConditions 过滤条件，详细的过滤条件如下：
 <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
-    public QueryCondition [] getFilters() {
-        return this.Filters;
+    public QueryCondition [] getQueryConditions() {
+        return this.QueryConditions;
     }
 
     /**
      * Set 过滤条件，详细的过滤条件如下：
 <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     * @param Filters 过滤条件，详细的过滤条件如下：
+     * @param QueryConditions 过滤条件，详细的过滤条件如下：
 <li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
-    public void setFilters(QueryCondition [] Filters) {
-        this.Filters = Filters;
+    public void setQueryConditions(QueryCondition [] QueryConditions) {
+        this.QueryConditions = QueryConditions;
     }
 
     /**
@@ -276,14 +233,14 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         this.Area = Area;
     }
 
-    public DescribeTimingL4DataRequest() {
+    public DescribeTimingL4AccessDataRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTimingL4DataRequest(DescribeTimingL4DataRequest source) {
+    public DescribeTimingL4AccessDataRequest(DescribeTimingL4AccessDataRequest source) {
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -302,19 +259,13 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
                 this.ZoneIds[i] = new String(source.ZoneIds[i]);
             }
         }
-        if (source.ProxyIds != null) {
-            this.ProxyIds = new String[source.ProxyIds.length];
-            for (int i = 0; i < source.ProxyIds.length; i++) {
-                this.ProxyIds[i] = new String(source.ProxyIds[i]);
-            }
-        }
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
-        if (source.Filters != null) {
-            this.Filters = new QueryCondition[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new QueryCondition(source.Filters[i]);
+        if (source.QueryConditions != null) {
+            this.QueryConditions = new QueryCondition[source.QueryConditions.length];
+            for (int i = 0; i < source.QueryConditions.length; i++) {
+                this.QueryConditions[i] = new QueryCondition(source.QueryConditions[i]);
             }
         }
         if (source.Area != null) {
@@ -331,9 +282,8 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-        this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "QueryConditions.", this.QueryConditions);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }

@@ -63,7 +63,7 @@ public class Quota extends AbstractModel{
     private String [] Services;
 
     /**
-    * 工厂配额
+    * 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FactoryQuota")
@@ -71,7 +71,7 @@ public class Quota extends AbstractModel{
     private Long FactoryQuota;
 
     /**
-    * 产品配额
+    * 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemQuota")
@@ -119,7 +119,7 @@ public class Quota extends AbstractModel{
     private Long TrackType;
 
     /**
-    * 开通版本 basic standard enterprise
+    * 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -227,9 +227,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Get 工厂配额
+     * Get 商户配额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FactoryQuota 工厂配额
+     * @return FactoryQuota 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFactoryQuota() {
@@ -237,9 +237,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Set 工厂配额
+     * Set 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FactoryQuota 工厂配额
+     * @param FactoryQuota 商户配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFactoryQuota(Long FactoryQuota) {
@@ -247,9 +247,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Get 产品配额
+     * Get 商品配额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ItemQuota 产品配额
+     * @return ItemQuota 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemQuota() {
@@ -257,9 +257,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Set 产品配额
+     * Set 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ItemQuota 产品配额
+     * @param ItemQuota 商品配额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemQuota(Long ItemQuota) {
@@ -367,9 +367,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Get 开通版本 basic standard enterprise
+     * Get 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 开通版本 basic standard enterprise
+     * @return Version 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -377,9 +377,9 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Set 开通版本 basic standard enterprise
+     * Set 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 开通版本 basic standard enterprise
+     * @param Version 开通版本 lite:轻量版, basic:基础版, standard:标准版
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {

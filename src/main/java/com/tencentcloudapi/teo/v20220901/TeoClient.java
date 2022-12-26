@@ -1059,6 +1059,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDistributionL4AccessData）用于查询四层连接时长的时序数据。
+     * @param req DescribeDistributionL4AccessDataRequest
+     * @return DescribeDistributionL4AccessDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessData(DescribeDistributionL4AccessDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDistributionL4AccessData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取DNS请求数统计曲线
      * @param req DescribeDnsDataRequest
      * @return DescribeDnsDataResponse
@@ -1571,6 +1591,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSpeedTestingQuotaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSpeedTestingQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeTimingL4AccessData）用于查询四层连接数的时序数据列表。
+     * @param req DescribeTimingL4AccessDataRequest
+     * @return DescribeTimingL4AccessDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL4AccessDataResponse DescribeTimingL4AccessData(DescribeTimingL4AccessDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL4AccessDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL4AccessData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

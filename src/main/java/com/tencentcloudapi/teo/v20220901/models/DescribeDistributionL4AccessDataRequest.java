@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
+public class DescribeDistributionL4AccessDataRequest extends AbstractModel{
 
     /**
     * 开始时间。
@@ -37,31 +37,19 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 查询的指标，取值有:
-<li> l7Flow_singleIpRequest：独立IP请求数。</li>
+    * 查询指标, 取值有：
+<li>l4Flow_connection_distribution：连接时长分布情况。</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * 查询的站点集合，不填默认查询所有站点。
+    * 站点ID集合，不填默认选择全部站点。
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
-
-    /**
-    * 过滤条件，详细的过滤条件如下：
-<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
-<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
-<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-    */
-    @SerializedName("Filters")
-    @Expose
-    private QueryCondition [] Filters;
 
     /**
     * 查询时间粒度，取值有：
@@ -73,6 +61,15 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
     @SerializedName("Interval")
     @Expose
     private String Interval;
+
+    /**
+    * 过滤条件，详细的过滤条件如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+    */
+    @SerializedName("QueryConditions")
+    @Expose
+    private QueryCondition [] QueryConditions;
 
     /**
     * 数据归属地区，取值有：
@@ -117,75 +114,39 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询的指标，取值有:
-<li> l7Flow_singleIpRequest：独立IP请求数。</li> 
-     * @return MetricNames 查询的指标，取值有:
-<li> l7Flow_singleIpRequest：独立IP请求数。</li>
+     * Get 查询指标, 取值有：
+<li>l4Flow_connection_distribution：连接时长分布情况。</li> 
+     * @return MetricNames 查询指标, 取值有：
+<li>l4Flow_connection_distribution：连接时长分布情况。</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 查询的指标，取值有:
-<li> l7Flow_singleIpRequest：独立IP请求数。</li>
-     * @param MetricNames 查询的指标，取值有:
-<li> l7Flow_singleIpRequest：独立IP请求数。</li>
+     * Set 查询指标, 取值有：
+<li>l4Flow_connection_distribution：连接时长分布情况。</li>
+     * @param MetricNames 查询指标, 取值有：
+<li>l4Flow_connection_distribution：连接时长分布情况。</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get 查询的站点集合，不填默认查询所有站点。 
-     * @return ZoneIds 查询的站点集合，不填默认查询所有站点。
+     * Get 站点ID集合，不填默认选择全部站点。 
+     * @return ZoneIds 站点ID集合，不填默认选择全部站点。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 查询的站点集合，不填默认查询所有站点。
-     * @param ZoneIds 查询的站点集合，不填默认查询所有站点。
+     * Set 站点ID集合，不填默认选择全部站点。
+     * @param ZoneIds 站点ID集合，不填默认选择全部站点。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
-    }
-
-    /**
-     * Get 过滤条件，详细的过滤条件如下：
-<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
-<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
-<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
-     * @return Filters 过滤条件，详细的过滤条件如下：
-<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
-<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
-<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     */
-    public QueryCondition [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 过滤条件，详细的过滤条件如下：
-<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
-<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
-<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     * @param Filters 过滤条件，详细的过滤条件如下：
-<li>country<br>   按照【<strong>国家/地区</strong>】进行过滤，国家/地区遵循<a href="https://zh.wikipedia.org/wiki/ISO_3166-1">ISO 3166</a>规范。<br>   类型：String<br>   必选：否</li>
-<li>domain<br>   按照【<strong>子域名</strong>】进行过滤，子域名形如： test.example.com。<br>   类型：String<br>   必选：否</li>
-<li>protocol<br>   按照【<strong>HTTP协议</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   HTTP/1.0：HTTP 1.0；<br>   HTTP/1.1：HTTP 1.1；<br>   HTTP/2.0：HTTP 2.0；<br>   HTTP/3.0：HTTP 3.0；<br>   WebSocket：WebSocket。</li>
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     */
-    public void setFilters(QueryCondition [] Filters) {
-        this.Filters = Filters;
     }
 
     /**
@@ -221,6 +182,30 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
     }
 
     /**
+     * Get 过滤条件，详细的过滤条件如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
+     * @return QueryConditions 过滤条件，详细的过滤条件如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     */
+    public QueryCondition [] getQueryConditions() {
+        return this.QueryConditions;
+    }
+
+    /**
+     * Set 过滤条件，详细的过滤条件如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     * @param QueryConditions 过滤条件，详细的过滤条件如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     */
+    public void setQueryConditions(QueryCondition [] QueryConditions) {
+        this.QueryConditions = QueryConditions;
+    }
+
+    /**
      * Get 数据归属地区，取值有：
 <li>overseas：全球（除中国大陆地区）数据；</li>
 <li>mainland：中国大陆地区数据；</li>
@@ -248,14 +233,14 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
         this.Area = Area;
     }
 
-    public DescribeSingleL7AnalysisDataRequest() {
+    public DescribeDistributionL4AccessDataRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSingleL7AnalysisDataRequest(DescribeSingleL7AnalysisDataRequest source) {
+    public DescribeDistributionL4AccessDataRequest(DescribeDistributionL4AccessDataRequest source) {
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -274,14 +259,14 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
                 this.ZoneIds[i] = new String(source.ZoneIds[i]);
             }
         }
-        if (source.Filters != null) {
-            this.Filters = new QueryCondition[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new QueryCondition(source.Filters[i]);
-            }
-        }
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
+        }
+        if (source.QueryConditions != null) {
+            this.QueryConditions = new QueryCondition[source.QueryConditions.length];
+            for (int i = 0; i < source.QueryConditions.length; i++) {
+                this.QueryConditions[i] = new QueryCondition(source.QueryConditions[i]);
+            }
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -297,8 +282,8 @@ public class DescribeSingleL7AnalysisDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "QueryConditions.", this.QueryConditions);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }

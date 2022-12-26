@@ -84,22 +84,23 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     private String Interval;
 
     /**
-    * 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。
-    */
-    @SerializedName("Area")
-    @Expose
-    private String Area;
-
-    /**
-    * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+    * 过滤条件，详细的过滤条件如下：
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
+
+    /**
+    * 数据归属地区，取值有：
+<li>overseas：全球（除中国大陆地区）数据；</li>
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get 开始时间。 
@@ -262,34 +263,10 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。 
-     * @return Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。
-     */
-    public String getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。
-     * @param Area 数据归属地区，取值有：
-<li>overseas：全球（除中国大陆地区）数据；</li>
-<li>mainland：中国大陆地区数据。</li>不填将根据用户的地域智能选择地区。
-     */
-    public void setArea(String Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * Get 过滤条件，详细的过滤条件如下：
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
-     * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * @return Filters 过滤条件，详细的过滤条件如下：
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
@@ -298,15 +275,43 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * Set 过滤条件，详细的过滤条件如下：
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
+     * @param Filters 过滤条件，详细的过滤条件如下：
 <li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
 <li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 数据归属地区，取值有：
+<li>overseas：全球（除中国大陆地区）数据；</li>
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。 
+     * @return Area 数据归属地区，取值有：
+<li>overseas：全球（除中国大陆地区）数据；</li>
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 数据归属地区，取值有：
+<li>overseas：全球（除中国大陆地区）数据；</li>
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
+     * @param Area 数据归属地区，取值有：
+<li>overseas：全球（除中国大陆地区）数据；</li>
+<li>mainland：中国大陆地区数据；</li>
+<li>global：全球数据。</li>不填默认取值为global。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public DescribeOverviewL7DataRequest() {
@@ -347,14 +352,14 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
-        }
         if (source.Filters != null) {
             this.Filters = new QueryCondition[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new QueryCondition(source.Filters[i]);
             }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
     }
 
@@ -370,8 +375,8 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

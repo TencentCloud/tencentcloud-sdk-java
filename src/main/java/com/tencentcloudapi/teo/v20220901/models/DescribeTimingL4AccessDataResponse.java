@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimingL7CacheDataResponse extends AbstractModel{
+public class DescribeTimingL4AccessDataResponse extends AbstractModel{
 
     /**
     * 查询结果的总条数。
@@ -30,12 +30,12 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 七层缓存分析时序类流量数据列表。
+    * 四层连接数列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("TimingDataRecords")
     @Expose
-    private TimingDataRecord [] Data;
+    private TimingDataRecord [] TimingDataRecords;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,23 +61,23 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
     }
 
     /**
-     * Get 七层缓存分析时序类流量数据列表。
+     * Get 四层连接数列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 七层缓存分析时序类流量数据列表。
+     * @return TimingDataRecords 四层连接数列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TimingDataRecord [] getData() {
-        return this.Data;
+    public TimingDataRecord [] getTimingDataRecords() {
+        return this.TimingDataRecords;
     }
 
     /**
-     * Set 七层缓存分析时序类流量数据列表。
+     * Set 四层连接数列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 七层缓存分析时序类流量数据列表。
+     * @param TimingDataRecords 四层连接数列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(TimingDataRecord [] Data) {
-        this.Data = Data;
+    public void setTimingDataRecords(TimingDataRecord [] TimingDataRecords) {
+        this.TimingDataRecords = TimingDataRecords;
     }
 
     /**
@@ -96,21 +96,21 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTimingL7CacheDataResponse() {
+    public DescribeTimingL4AccessDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTimingL7CacheDataResponse(DescribeTimingL7CacheDataResponse source) {
+    public DescribeTimingL4AccessDataResponse(DescribeTimingL4AccessDataResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Data != null) {
-            this.Data = new TimingDataRecord[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new TimingDataRecord(source.Data[i]);
+        if (source.TimingDataRecords != null) {
+            this.TimingDataRecords = new TimingDataRecord[source.TimingDataRecords.length];
+            for (int i = 0; i < source.TimingDataRecords.length; i++) {
+                this.TimingDataRecords[i] = new TimingDataRecord(source.TimingDataRecords[i]);
             }
         }
         if (source.RequestId != null) {
@@ -124,7 +124,7 @@ public class DescribeTimingL7CacheDataResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "TimingDataRecords.", this.TimingDataRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

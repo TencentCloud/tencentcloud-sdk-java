@@ -30,6 +30,14 @@ public class DescribeTaskResponse extends AbstractModel{
     private Task Task;
 
     /**
+    * 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportInfo")
+    @Expose
+    private TaskReportInfo ReportInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeTaskResponse extends AbstractModel{
      */
     public void setTask(Task Task) {
         this.Task = Task;
+    }
+
+    /**
+     * Get 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportInfo 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskReportInfo getReportInfo() {
+        return this.ReportInfo;
+    }
+
+    /**
+     * Set 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportInfo 任务对应的演练报告信息，null表示未导出报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportInfo(TaskReportInfo ReportInfo) {
+        this.ReportInfo = ReportInfo;
     }
 
     /**
@@ -79,6 +107,9 @@ public class DescribeTaskResponse extends AbstractModel{
         if (source.Task != null) {
             this.Task = new Task(source.Task);
         }
+        if (source.ReportInfo != null) {
+            this.ReportInfo = new TaskReportInfo(source.ReportInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class DescribeTaskResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Task.", this.Task);
+        this.setParamObj(map, prefix + "ReportInfo.", this.ReportInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
