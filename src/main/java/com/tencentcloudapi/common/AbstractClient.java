@@ -43,8 +43,13 @@ import java.nio.charset.StandardCharsets;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-import okhttp3.*;
+import okhttp3.Authenticator;
+import okhttp3.Credentials;
+import okhttp3.Headers;
 import okhttp3.Headers.Builder;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.Route;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
 import com.tencentcloudapi.common.profile.ClientProfile;
