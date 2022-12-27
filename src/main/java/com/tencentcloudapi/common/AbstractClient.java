@@ -43,12 +43,8 @@ import java.nio.charset.StandardCharsets;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-import com.squareup.okhttp.Authenticator;
-import com.squareup.okhttp.Credentials;
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.Headers.Builder;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import okhttp3.*;
+import okhttp3.Headers.Builder;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.http.HttpConnection;
 import com.tencentcloudapi.common.profile.ClientProfile;
@@ -309,18 +305,13 @@ public abstract class AbstractClient {
     conn.setAuthenticator(
         new Authenticator() {
           @Override
-          public Request authenticate(Proxy proxy, Response response) throws IOException {
+          public Request authenticate(Route route, Response response) throws IOException {
             String credential = Credentials.basic(username, password);
             return response
-                .request()
-                .newBuilder()
-                .header("Proxy-Authorization", credential)
-                .build();
-          }
-
-          @Override
-          public Request authenticateProxy(Proxy proxy, Response response) throws IOException {
-            return authenticate(proxy, response);
+                    .request()
+                    .newBuilder()
+                    .header("Proxy-Authorization", credential)
+                    .build();
           }
         });
   }

@@ -329,37 +329,6 @@ logger.info("hello world");
 
 请注意，从 3.0.x 版本升级到 3.1.x 版本有兼容性问题，对于 Integer 字段的使用修改为了 Long 类型，需要重新编译项目。
 
-## 依赖冲突
-
-目前，SDK 依赖 okhttp 2.5.0，如果和其他依赖 okhttp3 的包混用时，有可能会报错，例如:`Exception in thread "main" java.lang.NoSuchMethodError: okio.BufferedSource.rangeEquals(JLokio/ByteString;)Z`。原因是 okhttp3 依赖 okio 1.12.0，而 okhttp 依赖 okio 1.6.0，maven 在解析依赖时的规则是路径最短优先和顺序优先，所以如果 SDK 在 pom.xml 依赖中先被声明，则 okio 1.6.0 会被使用，从而报错。
-
-在 SDK 没有升级到 okhttp3 前的解决办法：
-
-1）在 pom.xml 中明确指定依赖 okio 1.12.0 版本（**注意：可能有其他包需要用到更高的版本，需要变通下取最高的可兼容版本**，例如当其他包使用 okhttp4 时对应的可能是 okio 2.2.2）；
-
-```
-    <dependency>
-      <groupId>com.squareup.okio</groupId>
-      <artifactId>okio</artifactId>
-      <version>1.12.0</version>
-    </dependency>
-```
-
-2）将 SDK 放在依赖的最后（注意如果此前已经编译过，需要先删除掉 maven 缓存的 okhttp 包），以同时使用依赖 okhttp3 的 CMQ SDK 为例，形如（注意变通版本号）：
-
-```
-    <dependency>
-      <groupId>com.qcloud</groupId>
-      <artifactId>cmq-http-client</artifactId>
-      <version>1.0.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.tencentcloudapi</groupId>
-      <artifactId>tencentcloud-sdk-java</artifactId>
-      <version>3.1.59</version>
-    </dependency>
-```
-
 ## 证书问题
 
 证书问题通常是客户端环境配置错误导致的。SDK 没有对证书进行操作，依赖的是 Java 运行环境本身的处理。出现证书问题后，可以使用`-Djavax.net.debug=ssl`开启详细日志辅助判断。

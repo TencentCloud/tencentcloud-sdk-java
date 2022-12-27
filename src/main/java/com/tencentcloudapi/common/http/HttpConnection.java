@@ -17,15 +17,15 @@
 
 package com.tencentcloudapi.common.http;
 
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
-import com.squareup.okhttp.Authenticator;
-import com.squareup.okhttp.Headers;
-import com.squareup.okhttp.Interceptor;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.RequestBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.Authenticator;
+import okhttp3.Headers;
+import okhttp3.Interceptor;
+import okhttp3.MediaType;
+import okhttp3.RequestBody;
 
 import java.util.concurrent.TimeUnit;
 import java.io.IOException;
@@ -36,22 +36,23 @@ public class HttpConnection {
   private OkHttpClient client;
 
   public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
-    this.client = new OkHttpClient();
-    this.client.setConnectTimeout(connTimeout, TimeUnit.SECONDS);
-    this.client.setReadTimeout(readTimeout, TimeUnit.SECONDS);
-    this.client.setWriteTimeout(writeTimeout, TimeUnit.SECONDS);
+    this.client = new OkHttpClient.Builder()
+            .connectTimeout(connTimeout, TimeUnit.SECONDS)
+            .readTimeout(readTimeout, TimeUnit.SECONDS)
+            .writeTimeout(readTimeout, TimeUnit.SECONDS)
+            .build();
   }
 
   public void addInterceptors(Interceptor interceptor) {
-    this.client.interceptors().add(interceptor);
+    this.client = this.client.newBuilder().addInterceptor(interceptor).build();
   }
   
   public void setProxy(Proxy proxy) {
-    this.client.setProxy(proxy);
+    this.client = this.client.newBuilder().proxy(proxy).build();
   }
 
   public void setAuthenticator(Authenticator authenticator) {
-    this.client.setAuthenticator(authenticator);
+    this.client = this.client.newBuilder().authenticator(authenticator).build();
   }
 
   public Response doRequest(Request request) throws TencentCloudSDKException {

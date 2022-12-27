@@ -5,9 +5,9 @@ import java.io.IOException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.squareup.okhttp.Interceptor;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import okhttp3.Interceptor;
+import okhttp3.Request;
+import okhttp3.Response;
 
 class TCLog implements Interceptor {
   private boolean debug;
@@ -50,11 +50,11 @@ class TCLog implements Interceptor {
   @Override
   public Response intercept(Interceptor.Chain chain) throws IOException {
     Request request = chain.request();
-    String req = ("send request, request url: " + request.urlString() + ". request headers information: " + request.headers().toString());
+    String req = ("send request, request url: " + request.url() + ". request headers information: " + request.headers().toString());
     req = req.replaceAll("\n", ";");
     this.info(req);
     Response response = chain.proceed(request);
-    String resp = ("recieve response, response url: " + response.request().urlString() + ", response headers: " + response.headers().toString() + ",response body information: " + response.body().toString());
+    String resp = ("recieve response, response url: " + response.request().url() + ", response headers: " + response.headers().toString() + ",response body information: " + response.body().toString());
     resp = resp.replaceAll("\n", ";");
     this.info(resp);
     return response;
