@@ -38,6 +38,13 @@ public class KTVMatchRule extends AbstractModel{
     private KTVMatchRuleMusicInfo MusicInfo;
 
     /**
+    * 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+    */
+    @SerializedName("MusicIdToMatchAME")
+    @Expose
+    private String MusicIdToMatchAME;
+
+    /**
      * Get AME 曲库 Id。 
      * @return AMEMusicId AME 曲库 Id。
      */
@@ -73,6 +80,22 @@ public class KTVMatchRule extends AbstractModel{
         this.MusicInfo = MusicInfo;
     }
 
+    /**
+     * Get 音速达歌曲 Id，用于匹配 AME 曲库歌曲。 
+     * @return MusicIdToMatchAME 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+     */
+    public String getMusicIdToMatchAME() {
+        return this.MusicIdToMatchAME;
+    }
+
+    /**
+     * Set 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+     * @param MusicIdToMatchAME 音速达歌曲 Id，用于匹配 AME 曲库歌曲。
+     */
+    public void setMusicIdToMatchAME(String MusicIdToMatchAME) {
+        this.MusicIdToMatchAME = MusicIdToMatchAME;
+    }
+
     public KTVMatchRule() {
     }
 
@@ -87,6 +110,9 @@ public class KTVMatchRule extends AbstractModel{
         if (source.MusicInfo != null) {
             this.MusicInfo = new KTVMatchRuleMusicInfo(source.MusicInfo);
         }
+        if (source.MusicIdToMatchAME != null) {
+            this.MusicIdToMatchAME = new String(source.MusicIdToMatchAME);
+        }
     }
 
 
@@ -96,6 +122,7 @@ public class KTVMatchRule extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AMEMusicId", this.AMEMusicId);
         this.setParamObj(map, prefix + "MusicInfo.", this.MusicInfo);
+        this.setParamSimple(map, prefix + "MusicIdToMatchAME", this.MusicIdToMatchAME);
 
     }
 }

@@ -65,6 +65,13 @@ public class ModifyRocketMQGroupRequest extends AbstractModel{
     private Boolean BroadcastEnable;
 
     /**
+    * 最大重试次数
+    */
+    @SerializedName("RetryMaxTimes")
+    @Expose
+    private Long RetryMaxTimes;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -160,6 +167,22 @@ public class ModifyRocketMQGroupRequest extends AbstractModel{
         this.BroadcastEnable = BroadcastEnable;
     }
 
+    /**
+     * Get 最大重试次数 
+     * @return RetryMaxTimes 最大重试次数
+     */
+    public Long getRetryMaxTimes() {
+        return this.RetryMaxTimes;
+    }
+
+    /**
+     * Set 最大重试次数
+     * @param RetryMaxTimes 最大重试次数
+     */
+    public void setRetryMaxTimes(Long RetryMaxTimes) {
+        this.RetryMaxTimes = RetryMaxTimes;
+    }
+
     public ModifyRocketMQGroupRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ModifyRocketMQGroupRequest extends AbstractModel{
         if (source.BroadcastEnable != null) {
             this.BroadcastEnable = new Boolean(source.BroadcastEnable);
         }
+        if (source.RetryMaxTimes != null) {
+            this.RetryMaxTimes = new Long(source.RetryMaxTimes);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ModifyRocketMQGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ReadEnable", this.ReadEnable);
         this.setParamSimple(map, prefix + "BroadcastEnable", this.BroadcastEnable);
+        this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
 
     }
 }

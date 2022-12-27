@@ -95,7 +95,7 @@ public class CodePack extends AbstractModel{
     private Long Amount;
 
     /**
-    * 码长度
+    * 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeLength")
@@ -363,9 +363,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Get 码长度
+     * Get 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CodeLength 码长度
+     * @return CodeLength 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCodeLength() {
@@ -373,9 +373,9 @@ public class CodePack extends AbstractModel{
     }
 
     /**
-     * Set 码长度
+     * Set 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CodeLength 码长度
+     * @param CodeLength 防伪码长度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeLength(Long CodeLength) {

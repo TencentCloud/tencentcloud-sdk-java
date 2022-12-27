@@ -37,6 +37,14 @@ public class KTVMatchMusic extends AbstractModel{
     private KTVMatchRule MatchRule;
 
     /**
+    * AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AMEMusicBaseInfo")
+    @Expose
+    private AMEMusicBaseInfo AMEMusicBaseInfo;
+
+    /**
      * Get 匹配到的歌曲基础信息。 
      * @return KTVMusicBaseInfo 匹配到的歌曲基础信息。
      */
@@ -68,6 +76,26 @@ public class KTVMatchMusic extends AbstractModel{
         this.MatchRule = MatchRule;
     }
 
+    /**
+     * Get AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AMEMusicBaseInfo AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AMEMusicBaseInfo getAMEMusicBaseInfo() {
+        return this.AMEMusicBaseInfo;
+    }
+
+    /**
+     * Set AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AMEMusicBaseInfo AME 歌曲基础信息，仅在使用音速达歌曲 Id 匹配 AME 曲库时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAMEMusicBaseInfo(AMEMusicBaseInfo AMEMusicBaseInfo) {
+        this.AMEMusicBaseInfo = AMEMusicBaseInfo;
+    }
+
     public KTVMatchMusic() {
     }
 
@@ -82,6 +110,9 @@ public class KTVMatchMusic extends AbstractModel{
         if (source.MatchRule != null) {
             this.MatchRule = new KTVMatchRule(source.MatchRule);
         }
+        if (source.AMEMusicBaseInfo != null) {
+            this.AMEMusicBaseInfo = new AMEMusicBaseInfo(source.AMEMusicBaseInfo);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class KTVMatchMusic extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
         this.setParamObj(map, prefix + "MatchRule.", this.MatchRule);
+        this.setParamObj(map, prefix + "AMEMusicBaseInfo.", this.AMEMusicBaseInfo);
 
     }
 }

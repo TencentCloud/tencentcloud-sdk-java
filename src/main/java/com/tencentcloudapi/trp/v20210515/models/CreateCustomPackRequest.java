@@ -86,6 +86,13 @@ public class CreateCustomPackRequest extends AbstractModel{
     private String BatchId;
 
     /**
+    * 是否有流水码 0:无 1:有
+    */
+    @SerializedName("SerialType")
+    @Expose
+    private Long SerialType;
+
+    /**
      * Get 商户ID 
      * @return MerchantId 商户ID
      */
@@ -229,6 +236,22 @@ public class CreateCustomPackRequest extends AbstractModel{
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 是否有流水码 0:无 1:有 
+     * @return SerialType 是否有流水码 0:无 1:有
+     */
+    public Long getSerialType() {
+        return this.SerialType;
+    }
+
+    /**
+     * Set 是否有流水码 0:无 1:有
+     * @param SerialType 是否有流水码 0:无 1:有
+     */
+    public void setSerialType(Long SerialType) {
+        this.SerialType = SerialType;
+    }
+
     public CreateCustomPackRequest() {
     }
 
@@ -270,6 +293,9 @@ public class CreateCustomPackRequest extends AbstractModel{
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.SerialType != null) {
+            this.SerialType = new Long(source.SerialType);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class CreateCustomPackRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomId", this.CustomId);
         this.setParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "SerialType", this.SerialType);
 
     }
 }

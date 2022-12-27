@@ -96,6 +96,9 @@ public enum RedisErrorCode {
     // 业务参数错误。
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
+    // 不是vpc网络下实例。
+     INVALIDPARAMETER_ISNOTVPCINSTANCE("InvalidParameter.IsNotVpcInstance"),
+     
     // 参数错误，不支持操作。
      INVALIDPARAMETER_NOTSUPPORTED("InvalidParameter.NotSupported"),
      

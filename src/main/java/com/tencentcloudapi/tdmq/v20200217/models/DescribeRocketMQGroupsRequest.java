@@ -86,6 +86,13 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
     private String FilterOneGroup;
 
     /**
+    * group类型
+    */
+    @SerializedName("Types")
+    @Expose
+    private String [] Types;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -229,6 +236,22 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         this.FilterOneGroup = FilterOneGroup;
     }
 
+    /**
+     * Get group类型 
+     * @return Types group类型
+     */
+    public String [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * Set group类型
+     * @param Types group类型
+     */
+    public void setTypes(String [] Types) {
+        this.Types = Types;
+    }
+
     public DescribeRocketMQGroupsRequest() {
     }
 
@@ -264,6 +287,12 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         if (source.FilterOneGroup != null) {
             this.FilterOneGroup = new String(source.FilterOneGroup);
         }
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SortedBy", this.SortedBy);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
         this.setParamSimple(map, prefix + "FilterOneGroup", this.FilterOneGroup);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
 
     }
 }

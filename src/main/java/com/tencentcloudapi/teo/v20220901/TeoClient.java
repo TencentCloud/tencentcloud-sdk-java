@@ -179,26 +179,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *创建 DNS 记录
-     * @param req CreateDnsRecordRequest
-     * @return CreateDnsRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDnsRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDnsRecord");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建IP黑白名单列表
      * @param req CreateIpTableListRequest
      * @return CreateIpTableListResponse
@@ -211,26 +191,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateIpTableListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateIpTableList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *创建负载均衡
-     * @param req CreateLoadBalancingRequest
-     * @return CreateLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLoadBalancingResponse CreateLoadBalancing(CreateLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -511,46 +471,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *批量删除 DNS 记录
-     * @param req DeleteDnsRecordsRequest
-     * @return DeleteDnsRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDnsRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDnsRecords");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *删除负载均衡
-     * @param req DeleteLoadBalancingRequest
-     * @return DeleteLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLoadBalancingResponse DeleteLoadBalancing(DeleteLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1099,26 +1019,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *查询 DNS 记录列表，支持搜索、分页、排序、过滤。
-     * @param req DescribeDnsRecordsRequest
-     * @return DescribeDnsRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDnsRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDnsRecords");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *用于查询 DNSSEC 相关信息
      * @param req DescribeDnssecRequest
      * @return DescribeDnssecResponse
@@ -1171,26 +1071,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIdentificationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIdentifications");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *获取负载均衡列表
-     * @param req DescribeLoadBalancingRequest
-     * @return DescribeLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLoadBalancingResponse DescribeLoadBalancing(DescribeLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2219,26 +2099,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *修改 DNS 记录
-     * @param req ModifyDnsRecordRequest
-     * @return ModifyDnsRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDnsRecordResponse ModifyDnsRecord(ModifyDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDnsRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDnsRecord");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *设置站点DNSSEC状态
      * @param req ModifyDnssecRequest
      * @return ModifyDnssecResponse
@@ -2271,26 +2131,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyHostsCertificate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *修改负载均衡
-     * @param req ModifyLoadBalancingRequest
-     * @return ModifyLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLoadBalancingResponse ModifyLoadBalancing(ModifyLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -65,7 +65,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private Long RebalanceTime;
 
     /**
-    * 时间戳
+    * 公网带宽
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -182,16 +182,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间戳 
-     * @return PublicNetwork 时间戳
+     * Get 公网带宽 
+     * @return PublicNetwork 公网带宽
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 时间戳
-     * @param PublicNetwork 时间戳
+     * Set 公网带宽
+     * @param PublicNetwork 公网带宽
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;

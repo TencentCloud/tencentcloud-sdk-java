@@ -51,7 +51,7 @@ public class CreateCodeBatchRequest extends AbstractModel{
     private Long BatchType;
 
     /**
-    * 批次ID，系统自动生成
+    * 批次ID，留空时系统自动生成
     */
     @SerializedName("BatchId")
     @Expose
@@ -77,6 +77,13 @@ public class CreateCodeBatchRequest extends AbstractModel{
     @SerializedName("CloneId")
     @Expose
     private String CloneId;
+
+    /**
+    * 批次编号，业务字段不判断唯一性
+    */
+    @SerializedName("BatchCode")
+    @Expose
+    private String BatchCode;
 
     /**
      * Get 企业ID 
@@ -143,16 +150,16 @@ public class CreateCodeBatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 批次ID，系统自动生成 
-     * @return BatchId 批次ID，系统自动生成
+     * Get 批次ID，留空时系统自动生成 
+     * @return BatchId 批次ID，留空时系统自动生成
      */
     public String getBatchId() {
         return this.BatchId;
     }
 
     /**
-     * Set 批次ID，系统自动生成
-     * @param BatchId 批次ID，系统自动生成
+     * Set 批次ID，留空时系统自动生成
+     * @param BatchId 批次ID，留空时系统自动生成
      */
     public void setBatchId(String BatchId) {
         this.BatchId = BatchId;
@@ -206,6 +213,22 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.CloneId = CloneId;
     }
 
+    /**
+     * Get 批次编号，业务字段不判断唯一性 
+     * @return BatchCode 批次编号，业务字段不判断唯一性
+     */
+    public String getBatchCode() {
+        return this.BatchCode;
+    }
+
+    /**
+     * Set 批次编号，业务字段不判断唯一性
+     * @param BatchCode 批次编号，业务字段不判断唯一性
+     */
+    public void setBatchCode(String BatchCode) {
+        this.BatchCode = BatchCode;
+    }
+
     public CreateCodeBatchRequest() {
     }
 
@@ -238,6 +261,9 @@ public class CreateCodeBatchRequest extends AbstractModel{
         if (source.CloneId != null) {
             this.CloneId = new String(source.CloneId);
         }
+        if (source.BatchCode != null) {
+            this.BatchCode = new String(source.BatchCode);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "MpTpl", this.MpTpl);
         this.setParamSimple(map, prefix + "CloneId", this.CloneId);
+        this.setParamSimple(map, prefix + "BatchCode", this.BatchCode);
 
     }
 }

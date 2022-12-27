@@ -117,6 +117,22 @@ public class RocketMQGroup extends AbstractModel{
     private Boolean BroadcastEnabled;
 
     /**
+    * Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetryMaxTimes")
+    @Expose
+    private Long RetryMaxTimes;
+
+    /**
      * Get 消费组名称 
      * @return Name 消费组名称
      */
@@ -336,6 +352,46 @@ public class RocketMQGroup extends AbstractModel{
         this.BroadcastEnabled = BroadcastEnabled;
     }
 
+    /**
+     * Get Group类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupType Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupType Group类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get 重试次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetryMaxTimes 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetryMaxTimes() {
+        return this.RetryMaxTimes;
+    }
+
+    /**
+     * Set 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetryMaxTimes 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetryMaxTimes(Long RetryMaxTimes) {
+        this.RetryMaxTimes = RetryMaxTimes;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -383,6 +439,12 @@ public class RocketMQGroup extends AbstractModel{
         if (source.BroadcastEnabled != null) {
             this.BroadcastEnabled = new Boolean(source.BroadcastEnabled);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.RetryMaxTimes != null) {
+            this.RetryMaxTimes = new Long(source.RetryMaxTimes);
+        }
     }
 
 
@@ -403,6 +465,8 @@ public class RocketMQGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ConsumerType", this.ConsumerType);
         this.setParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
 
     }
 }

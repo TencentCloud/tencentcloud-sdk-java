@@ -65,6 +65,20 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * Group类型（TCP/HTTP）
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * Group最大重试次数
+    */
+    @SerializedName("RetryMaxTimes")
+    @Expose
+    private Long RetryMaxTimes;
+
+    /**
      * Get Group名称，8~64个字符 
      * @return GroupId Group名称，8~64个字符
      */
@@ -160,6 +174,38 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get Group类型（TCP/HTTP） 
+     * @return GroupType Group类型（TCP/HTTP）
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set Group类型（TCP/HTTP）
+     * @param GroupType Group类型（TCP/HTTP）
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get Group最大重试次数 
+     * @return RetryMaxTimes Group最大重试次数
+     */
+    public Long getRetryMaxTimes() {
+        return this.RetryMaxTimes;
+    }
+
+    /**
+     * Set Group最大重试次数
+     * @param RetryMaxTimes Group最大重试次数
+     */
+    public void setRetryMaxTimes(Long RetryMaxTimes) {
+        this.RetryMaxTimes = RetryMaxTimes;
+    }
+
     public CreateRocketMQGroupRequest() {
     }
 
@@ -189,6 +235,12 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.RetryMaxTimes != null) {
+            this.RetryMaxTimes = new Long(source.RetryMaxTimes);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BroadcastEnable", this.BroadcastEnable);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
 
     }
 }

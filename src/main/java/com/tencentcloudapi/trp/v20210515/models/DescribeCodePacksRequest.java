@@ -51,6 +51,13 @@ public class DescribeCodePacksRequest extends AbstractModel{
     private Long CorpId;
 
     /**
+    * 是否有流水码 0:无 1:有
+    */
+    @SerializedName("SerialType")
+    @Expose
+    private Long SerialType;
+
+    /**
      * Get 每页数量 
      * @return PageSize 每页数量
      */
@@ -114,6 +121,22 @@ public class DescribeCodePacksRequest extends AbstractModel{
         this.CorpId = CorpId;
     }
 
+    /**
+     * Get 是否有流水码 0:无 1:有 
+     * @return SerialType 是否有流水码 0:无 1:有
+     */
+    public Long getSerialType() {
+        return this.SerialType;
+    }
+
+    /**
+     * Set 是否有流水码 0:无 1:有
+     * @param SerialType 是否有流水码 0:无 1:有
+     */
+    public void setSerialType(Long SerialType) {
+        this.SerialType = SerialType;
+    }
+
     public DescribeCodePacksRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeCodePacksRequest extends AbstractModel{
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
+        if (source.SerialType != null) {
+            this.SerialType = new Long(source.SerialType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeCodePacksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
+        this.setParamSimple(map, prefix + "SerialType", this.SerialType);
 
     }
 }

@@ -105,6 +105,38 @@ public class RocketMQClusterInfo extends AbstractModel{
     private Boolean RocketMQFlag;
 
     /**
+    * 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private Long IsolateTime;
+
+    /**
+    * HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpPublicEndpoint")
+    @Expose
+    private String HttpPublicEndpoint;
+
+    /**
+    * HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpVpcEndpoint")
+    @Expose
+    private String HttpVpcEndpoint;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -300,6 +332,86 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.RocketMQFlag = RocketMQFlag;
     }
 
+    /**
+     * Get 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 计费状态，1表示正常，2表示已停服，3表示已销毁
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateTime 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateTime 欠费停服时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateTime(Long IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
+    /**
+     * Get HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpPublicEndpoint HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHttpPublicEndpoint() {
+        return this.HttpPublicEndpoint;
+    }
+
+    /**
+     * Set HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpPublicEndpoint HTTP协议公网接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpPublicEndpoint(String HttpPublicEndpoint) {
+        this.HttpPublicEndpoint = HttpPublicEndpoint;
+    }
+
+    /**
+     * Get HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpVpcEndpoint HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHttpVpcEndpoint() {
+        return this.HttpVpcEndpoint;
+    }
+
+    /**
+     * Set HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpVpcEndpoint HTTP协议VPC接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpVpcEndpoint(String HttpVpcEndpoint) {
+        this.HttpVpcEndpoint = HttpVpcEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -344,6 +456,18 @@ public class RocketMQClusterInfo extends AbstractModel{
         if (source.RocketMQFlag != null) {
             this.RocketMQFlag = new Boolean(source.RocketMQFlag);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new Long(source.IsolateTime);
+        }
+        if (source.HttpPublicEndpoint != null) {
+            this.HttpPublicEndpoint = new String(source.HttpPublicEndpoint);
+        }
+        if (source.HttpVpcEndpoint != null) {
+            this.HttpVpcEndpoint = new String(source.HttpVpcEndpoint);
+        }
     }
 
 
@@ -362,6 +486,10 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamSimple(map, prefix + "IsVip", this.IsVip);
         this.setParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
+        this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
 
     }
 }

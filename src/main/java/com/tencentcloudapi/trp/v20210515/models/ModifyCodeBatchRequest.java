@@ -72,6 +72,13 @@ public class ModifyCodeBatchRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 批次编码，业务字段不判断唯一性
+    */
+    @SerializedName("BatchCode")
+    @Expose
+    private String BatchCode;
+
+    /**
      * Get 批次ID 
      * @return BatchId 批次ID
      */
@@ -183,6 +190,22 @@ public class ModifyCodeBatchRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 批次编码，业务字段不判断唯一性 
+     * @return BatchCode 批次编码，业务字段不判断唯一性
+     */
+    public String getBatchCode() {
+        return this.BatchCode;
+    }
+
+    /**
+     * Set 批次编码，业务字段不判断唯一性
+     * @param BatchCode 批次编码，业务字段不判断唯一性
+     */
+    public void setBatchCode(String BatchCode) {
+        this.BatchCode = BatchCode;
+    }
+
     public ModifyCodeBatchRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ModifyCodeBatchRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.BatchCode != null) {
+            this.BatchCode = new String(source.BatchCode);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class ModifyCodeBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "BatchCode", this.BatchCode);
 
     }
 }

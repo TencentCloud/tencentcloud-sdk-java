@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDnsRecordsResponse extends AbstractModel{
+public class DescribeProxyProcessStatisticsResponse extends AbstractModel{
+
+    /**
+    * 实时会话统计详情。
+    */
+    @SerializedName("ProcessStatistics")
+    @Expose
+    private ProcessStatistic ProcessStatistics;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class DeleteDnsRecordsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 实时会话统计详情。 
+     * @return ProcessStatistics 实时会话统计详情。
+     */
+    public ProcessStatistic getProcessStatistics() {
+        return this.ProcessStatistics;
+    }
+
+    /**
+     * Set 实时会话统计详情。
+     * @param ProcessStatistics 实时会话统计详情。
+     */
+    public void setProcessStatistics(ProcessStatistic ProcessStatistics) {
+        this.ProcessStatistics = ProcessStatistics;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,17 @@ public class DeleteDnsRecordsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteDnsRecordsResponse() {
+    public DescribeProxyProcessStatisticsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteDnsRecordsResponse(DeleteDnsRecordsResponse source) {
+    public DescribeProxyProcessStatisticsResponse(DescribeProxyProcessStatisticsResponse source) {
+        if (source.ProcessStatistics != null) {
+            this.ProcessStatistics = new ProcessStatistic(source.ProcessStatistics);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class DeleteDnsRecordsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "ProcessStatistics.", this.ProcessStatistics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

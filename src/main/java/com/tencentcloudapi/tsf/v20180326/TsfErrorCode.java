@@ -828,6 +828,9 @@ public enum TsfErrorCode {
     // 未填写服务Id。
      MISSINGPARAMETER_SERVICEIDREQUIRED("MissingParameter.ServiceIdRequired"),
      
+    // 未指定%s。。
+     MISSINGPARAMETER_SYSTEMPARAMETERREQUIRED("MissingParameter.SystemParameterRequired"),
+     
     // 缺少必填参数。
      MISSINGPARAMETER_TASKPARAMETERMISSED("MissingParameter.TaskParameterMissed"),
      
