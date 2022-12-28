@@ -142,6 +142,13 @@ public class CreateScenarioRequest extends AbstractModel{
     private DomainNameConfig DomainNameConfig;
 
     /**
+    * 创建人名
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get 场景名 
      * @return Name 场景名
      */
@@ -413,6 +420,22 @@ public class CreateScenarioRequest extends AbstractModel{
         this.DomainNameConfig = DomainNameConfig;
     }
 
+    /**
+     * Get 创建人名 
+     * @return Owner 创建人名
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 创建人名
+     * @param Owner 创建人名
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public CreateScenarioRequest() {
     }
 
@@ -496,6 +519,9 @@ public class CreateScenarioRequest extends AbstractModel{
         if (source.DomainNameConfig != null) {
             this.DomainNameConfig = new DomainNameConfig(source.DomainNameConfig);
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -520,6 +546,7 @@ public class CreateScenarioRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SLAPolicy.", this.SLAPolicy);
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

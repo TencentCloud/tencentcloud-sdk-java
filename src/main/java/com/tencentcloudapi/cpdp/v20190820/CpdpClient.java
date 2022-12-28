@@ -59,6 +59,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *灵云V2-绑定收款用户资金账号信息
+     * @param req AddFlexFundingAccountRequest
+     * @return AddFlexFundingAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddFlexFundingAccountResponse AddFlexFundingAccount(AddFlexFundingAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddFlexFundingAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddFlexFundingAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddFlexFundingAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *灵云V2-补充证件信息
      * @param req AddFlexIdInfoRequest
      * @return AddFlexIdInfoResponse
@@ -1809,6 +1829,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *灵云V2-修改收款用户资金账号信息
+     * @param req ModifyFlexFundingAccountRequest
+     * @return ModifyFlexFundingAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFlexFundingAccountResponse ModifyFlexFundingAccount(ModifyFlexFundingAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFlexFundingAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFlexFundingAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFlexFundingAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *灵云V2-收款用户账户权益状态修改
      * @param req ModifyFlexPayeeAccountRightStatusRequest
      * @return ModifyFlexPayeeAccountRightStatusResponse
@@ -2661,6 +2701,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryFlexPlatformAccountBalance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *灵云V2-查询服务商账户余额
+     * @param req QueryFlexServiceProviderAccountBalanceRequest
+     * @return QueryFlexServiceProviderAccountBalanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFlexServiceProviderAccountBalanceResponse QueryFlexServiceProviderAccountBalance(QueryFlexServiceProviderAccountBalanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFlexServiceProviderAccountBalance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -47,7 +47,7 @@ long及double类型字段需为空；
     private Boolean SqlFlag;
 
     /**
-    * 是否包含中文
+    * 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainZH")
@@ -115,9 +115,9 @@ long及double类型字段需为空；
     }
 
     /**
-     * Get 是否包含中文
+     * Get 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContainZH 是否包含中文
+     * @return ContainZH 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getContainZH() {
@@ -125,9 +125,9 @@ long及double类型字段需为空；
     }
 
     /**
-     * Set 是否包含中文
+     * Set 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContainZH 是否包含中文
+     * @param ContainZH 是否包含中文，long及double类型字段需为false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainZH(Boolean ContainZH) {

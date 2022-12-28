@@ -387,6 +387,9 @@ public enum EssbasicErrorCode {
     // 签署人信息不存在，请检查后重试。
      RESOURCENOTFOUND_FLOWAPPROVERS("ResourceNotFound.FlowApprovers"),
      
+    // 合同组不存在。
+     RESOURCENOTFOUND_FLOWGROUP("ResourceNotFound.FlowGroup"),
+     
     // 机构不存在。
      RESOURCENOTFOUND_ORGANIZATION("ResourceNotFound.Organization"),
      

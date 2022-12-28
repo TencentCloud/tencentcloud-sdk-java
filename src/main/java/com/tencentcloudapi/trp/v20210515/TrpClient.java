@@ -819,6 +819,27 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *解绑溯源码和批次的关系，让溯源码重置为未关联的状态，以便关联其他批次
+注意：溯源码必须属于指定的批次才会解绑
+     * @param req ModifyTraceCodeUnlinkRequest
+     * @return ModifyTraceCodeUnlinkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTraceCodeUnlinkResponse ModifyTraceCodeUnlink(ModifyTraceCodeUnlinkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTraceCodeUnlinkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTraceCodeUnlinkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTraceCodeUnlink");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改溯源信息
      * @param req ModifyTraceDataRequest
      * @return ModifyTraceDataResponse

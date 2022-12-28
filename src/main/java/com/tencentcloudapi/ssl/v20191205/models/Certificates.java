@@ -319,6 +319,14 @@ public class Certificates extends AbstractModel{
     private PreAuditInfo PreAuditInfo;
 
     /**
+    * 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -1058,6 +1066,26 @@ public class Certificates extends AbstractModel{
         this.PreAuditInfo = PreAuditInfo;
     }
 
+    /**
+     * Get 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenewFlag 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenewFlag 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
     public Certificates() {
     }
 
@@ -1195,6 +1223,9 @@ public class Certificates extends AbstractModel{
         if (source.PreAuditInfo != null) {
             this.PreAuditInfo = new PreAuditInfo(source.PreAuditInfo);
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
     }
 
 
@@ -1239,6 +1270,7 @@ public class Certificates extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
         this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
         this.setParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

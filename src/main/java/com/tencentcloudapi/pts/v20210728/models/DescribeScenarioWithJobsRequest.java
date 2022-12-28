@@ -100,6 +100,20 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
     private Boolean IgnoreDataset;
 
     /**
+    * 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+    */
+    @SerializedName("ScenarioType")
+    @Expose
+    private String ScenarioType;
+
+    /**
+    * 创建人员
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get 偏移量，默认为0 
      * @return Offset 偏移量，默认为0
      */
@@ -275,6 +289,38 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         this.IgnoreDataset = IgnoreDataset;
     }
 
+    /**
+     * Get 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	 
+     * @return ScenarioType 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+     */
+    public String getScenarioType() {
+        return this.ScenarioType;
+    }
+
+    /**
+     * Set 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+     * @param ScenarioType 场景类型，如pts-http, pts-js, pts-trpc, pts-jmeter	
+     */
+    public void setScenarioType(String ScenarioType) {
+        this.ScenarioType = ScenarioType;
+    }
+
+    /**
+     * Get 创建人员 
+     * @return Owner 创建人员
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 创建人员
+     * @param Owner 创建人员
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public DescribeScenarioWithJobsRequest() {
     }
 
@@ -322,6 +368,12 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         if (source.IgnoreDataset != null) {
             this.IgnoreDataset = new Boolean(source.IgnoreDataset);
         }
+        if (source.ScenarioType != null) {
+            this.ScenarioType = new String(source.ScenarioType);
+        }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -340,6 +392,8 @@ public class DescribeScenarioWithJobsRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ScenarioRelatedJobsParams.", this.ScenarioRelatedJobsParams);
         this.setParamSimple(map, prefix + "IgnoreScript", this.IgnoreScript);
         this.setParamSimple(map, prefix + "IgnoreDataset", this.IgnoreDataset);
+        this.setParamSimple(map, prefix + "ScenarioType", this.ScenarioType);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

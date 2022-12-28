@@ -44,6 +44,38 @@ public class RegionInfo extends AbstractModel{
     private String RegionState;
 
     /**
+    * 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionTypeMC")
+    @Expose
+    private Long RegionTypeMC;
+
+    /**
+    * 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocationMC")
+    @Expose
+    private String LocationMC;
+
+    /**
+    * 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionNameMC")
+    @Expose
+    private String RegionNameMC;
+
+    /**
+    * 1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionIdMC")
+    @Expose
+    private String RegionIdMC;
+
+    /**
      * Get 地域名称，例如，ap-guangzhou 
      * @return Region 地域名称，例如，ap-guangzhou
      */
@@ -91,6 +123,86 @@ public class RegionInfo extends AbstractModel{
         this.RegionState = RegionState;
     }
 
+    /**
+     * Get 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionTypeMC 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRegionTypeMC() {
+        return this.RegionTypeMC;
+    }
+
+    /**
+     * Set 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionTypeMC 控制台类型，api调用时默认null
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionTypeMC(Long RegionTypeMC) {
+        this.RegionTypeMC = RegionTypeMC;
+    }
+
+    /**
+     * Get 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocationMC 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocationMC() {
+        return this.LocationMC;
+    }
+
+    /**
+     * Set 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocationMC 不同语言的地区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocationMC(String LocationMC) {
+        this.LocationMC = LocationMC;
+    }
+
+    /**
+     * Get 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionNameMC 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionNameMC() {
+        return this.RegionNameMC;
+    }
+
+    /**
+     * Set 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionNameMC 控制台展示的地域描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionNameMC(String RegionNameMC) {
+        this.RegionNameMC = RegionNameMC;
+    }
+
+    /**
+     * Get 1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionIdMC 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionIdMC() {
+        return this.RegionIdMC;
+    }
+
+    /**
+     * Set 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionIdMC 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionIdMC(String RegionIdMC) {
+        this.RegionIdMC = RegionIdMC;
+    }
+
     public RegionInfo() {
     }
 
@@ -108,6 +220,18 @@ public class RegionInfo extends AbstractModel{
         if (source.RegionState != null) {
             this.RegionState = new String(source.RegionState);
         }
+        if (source.RegionTypeMC != null) {
+            this.RegionTypeMC = new Long(source.RegionTypeMC);
+        }
+        if (source.LocationMC != null) {
+            this.LocationMC = new String(source.LocationMC);
+        }
+        if (source.RegionNameMC != null) {
+            this.RegionNameMC = new String(source.RegionNameMC);
+        }
+        if (source.RegionIdMC != null) {
+            this.RegionIdMC = new String(source.RegionIdMC);
+        }
     }
 
 
@@ -118,6 +242,10 @@ public class RegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionState", this.RegionState);
+        this.setParamSimple(map, prefix + "RegionTypeMC", this.RegionTypeMC);
+        this.setParamSimple(map, prefix + "LocationMC", this.LocationMC);
+        this.setParamSimple(map, prefix + "RegionNameMC", this.RegionNameMC);
+        this.setParamSimple(map, prefix + "RegionIdMC", this.RegionIdMC);
 
     }
 }

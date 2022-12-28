@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeChannelFlowEvidenceReportRequest extends AbstractModel{
 
     /**
-    * 出证报告编号
-    */
-    @SerializedName("ReportId")
-    @Expose
-    private String ReportId;
-
-    /**
     * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
     */
     @SerializedName("Agent")
@@ -37,27 +30,18 @@ public class DescribeChannelFlowEvidenceReportRequest extends AbstractModel{
     private Agent Agent;
 
     /**
+    * 出证报告编号
+    */
+    @SerializedName("ReportId")
+    @Expose
+    private String ReportId;
+
+    /**
     * 操作者的信息
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
-
-    /**
-     * Get 出证报告编号 
-     * @return ReportId 出证报告编号
-     */
-    public String getReportId() {
-        return this.ReportId;
-    }
-
-    /**
-     * Set 出证报告编号
-     * @param ReportId 出证报告编号
-     */
-    public void setReportId(String ReportId) {
-        this.ReportId = ReportId;
-    }
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填 
@@ -73,6 +57,22 @@ public class DescribeChannelFlowEvidenceReportRequest extends AbstractModel{
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
+    }
+
+    /**
+     * Get 出证报告编号 
+     * @return ReportId 出证报告编号
+     */
+    public String getReportId() {
+        return this.ReportId;
+    }
+
+    /**
+     * Set 出证报告编号
+     * @param ReportId 出证报告编号
+     */
+    public void setReportId(String ReportId) {
+        this.ReportId = ReportId;
     }
 
     /**
@@ -99,11 +99,11 @@ public class DescribeChannelFlowEvidenceReportRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeChannelFlowEvidenceReportRequest(DescribeChannelFlowEvidenceReportRequest source) {
-        if (source.ReportId != null) {
-            this.ReportId = new String(source.ReportId);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.ReportId != null) {
+            this.ReportId = new String(source.ReportId);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
@@ -115,8 +115,8 @@ public class DescribeChannelFlowEvidenceReportRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReportId", this.ReportId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ReportId", this.ReportId);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

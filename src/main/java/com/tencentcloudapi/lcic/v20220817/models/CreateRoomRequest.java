@@ -61,7 +61,7 @@ public class CreateRoomRequest extends AbstractModel{
     private Long Resolution;
 
     /**
-    * 最大连麦人数（不包括老师）。取值范围[0, 17)
+    * 最大连麦人数（不包括老师）。取值范围[0, 16]
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -78,7 +78,7 @@ coteaching 双师
     private String SubType;
 
     /**
-    * 老师ID。
+    * 老师ID。通过[注册用户]接口获取的UserId。
     */
     @SerializedName("TeacherId")
     @Expose
@@ -112,7 +112,7 @@ coteaching 双师
     private Long DisableRecord;
 
     /**
-    * 助教Id列表。
+    * 助教Id列表。通过[注册用户]接口获取的UserId。
     */
     @SerializedName("Assistants")
     @Expose
@@ -218,16 +218,16 @@ coteaching 双师
     }
 
     /**
-     * Get 最大连麦人数（不包括老师）。取值范围[0, 17) 
-     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * Get 最大连麦人数（不包括老师）。取值范围[0, 16] 
+     * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set 最大连麦人数（不包括老师）。取值范围[0, 17)
-     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 17)
+     * Set 最大连麦人数（不包括老师）。取值范围[0, 16]
+     * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
@@ -262,16 +262,16 @@ coteaching 双师
     }
 
     /**
-     * Get 老师ID。 
-     * @return TeacherId 老师ID。
+     * Get 老师ID。通过[注册用户]接口获取的UserId。 
+     * @return TeacherId 老师ID。通过[注册用户]接口获取的UserId。
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set 老师ID。
-     * @param TeacherId 老师ID。
+     * Set 老师ID。通过[注册用户]接口获取的UserId。
+     * @param TeacherId 老师ID。通过[注册用户]接口获取的UserId。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -350,16 +350,16 @@ coteaching 双师
     }
 
     /**
-     * Get 助教Id列表。 
-     * @return Assistants 助教Id列表。
+     * Get 助教Id列表。通过[注册用户]接口获取的UserId。 
+     * @return Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
      */
     public String [] getAssistants() {
         return this.Assistants;
     }
 
     /**
-     * Set 助教Id列表。
-     * @param Assistants 助教Id列表。
+     * Set 助教Id列表。通过[注册用户]接口获取的UserId。
+     * @param Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;

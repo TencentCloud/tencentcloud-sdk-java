@@ -219,6 +219,14 @@ public class Scenario extends AbstractModel{
     private NotificationHook [] NotificationHooks;
 
     /**
+    * 创建人员
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -702,6 +710,26 @@ public class Scenario extends AbstractModel{
         this.NotificationHooks = NotificationHooks;
     }
 
+    /**
+     * Get 创建人员
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Owner 创建人员
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 创建人员
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Owner 创建人员
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public Scenario() {
     }
 
@@ -809,6 +837,9 @@ public class Scenario extends AbstractModel{
                 this.NotificationHooks[i] = new NotificationHook(source.NotificationHooks[i]);
             }
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -841,6 +872,7 @@ public class Scenario extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

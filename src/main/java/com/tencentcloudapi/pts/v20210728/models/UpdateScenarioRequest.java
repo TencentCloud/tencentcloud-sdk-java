@@ -163,6 +163,13 @@ public class UpdateScenarioRequest extends AbstractModel{
     private Notification [] NotificationHooks;
 
     /**
+    * 创建人名
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -482,6 +489,22 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.NotificationHooks = NotificationHooks;
     }
 
+    /**
+     * Get 创建人名 
+     * @return Owner 创建人名
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set 创建人名
+     * @param Owner 创建人名
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public UpdateScenarioRequest() {
     }
 
@@ -574,6 +597,9 @@ public class UpdateScenarioRequest extends AbstractModel{
                 this.NotificationHooks[i] = new Notification(source.NotificationHooks[i]);
             }
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -601,6 +627,7 @@ public class UpdateScenarioRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Plugins.", this.Plugins);
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

@@ -179,6 +179,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *为云硬盘创建一个备份点。
+     * @param req CreateDiskBackupRequest
+     * @return CreateDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDiskBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDisks）用于创建云硬盘。
 
 * 预付费云盘的购买会预先扣除本次云盘购买所需金额，在调用本接口前请确保账户余额充足。

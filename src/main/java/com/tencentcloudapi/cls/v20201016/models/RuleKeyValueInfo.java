@@ -30,7 +30,7 @@ public class RuleKeyValueInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * 需要建立索引的键值对信息；最大只能配置100个键值对
+    * 需要建立索引的键值对信息
     */
     @SerializedName("KeyValues")
     @Expose
@@ -53,16 +53,16 @@ public class RuleKeyValueInfo extends AbstractModel{
     }
 
     /**
-     * Get 需要建立索引的键值对信息；最大只能配置100个键值对 
-     * @return KeyValues 需要建立索引的键值对信息；最大只能配置100个键值对
+     * Get 需要建立索引的键值对信息 
+     * @return KeyValues 需要建立索引的键值对信息
      */
     public KeyValueInfo [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set 需要建立索引的键值对信息；最大只能配置100个键值对
-     * @param KeyValues 需要建立索引的键值对信息；最大只能配置100个键值对
+     * Set 需要建立索引的键值对信息
+     * @param KeyValues 需要建立索引的键值对信息
      */
     public void setKeyValues(KeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

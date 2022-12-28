@@ -1173,6 +1173,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (InquiryPriceRenewHosts) 用于续费包年包月`CDH`实例询价。
+* 只支持查询包年包月`CDH`实例的续费价格。
+     * @param req InquiryPriceRenewHostsRequest
+     * @return InquiryPriceRenewHostsResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewHostsResponse InquiryPriceRenewHosts(InquiryPriceRenewHostsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewHostsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewHostsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceRenewHosts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (InquiryPriceRenewInstances) 用于续费包年包月实例询价。
 
 * 只支持查询包年包月实例的续费价格。

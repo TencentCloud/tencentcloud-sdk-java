@@ -95,6 +95,54 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneState;
 
     /**
+    * 父级zone
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentZone")
+    @Expose
+    private String ParentZone;
+
+    /**
+    * 父级可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentZoneId")
+    @Expose
+    private String ParentZoneId;
+
+    /**
+    * 父级可用区描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentZoneName")
+    @Expose
+    private String ParentZoneName;
+
+    /**
+    * zone类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneType")
+    @Expose
+    private String ZoneType;
+
+    /**
+    * 控制台类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineRoomTypeMC")
+    @Expose
+    private String MachineRoomTypeMC;
+
+    /**
+    * 和ZoneId一样，适用于控制台调用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneIdMC")
+    @Expose
+    private String ZoneIdMC;
+
+    /**
      * Get 可用区名称，例如，ap-guangzhou-3
 全网可用区名称如下：
 <li> ap-chongqing-1 </li>
@@ -334,6 +382,126 @@ public class ZoneInfo extends AbstractModel{
         this.ZoneState = ZoneState;
     }
 
+    /**
+     * Get 父级zone
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentZone 父级zone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentZone() {
+        return this.ParentZone;
+    }
+
+    /**
+     * Set 父级zone
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentZone 父级zone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentZone(String ParentZone) {
+        this.ParentZone = ParentZone;
+    }
+
+    /**
+     * Get 父级可用区ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentZoneId 父级可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentZoneId() {
+        return this.ParentZoneId;
+    }
+
+    /**
+     * Set 父级可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentZoneId 父级可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentZoneId(String ParentZoneId) {
+        this.ParentZoneId = ParentZoneId;
+    }
+
+    /**
+     * Get 父级可用区描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentZoneName 父级可用区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParentZoneName() {
+        return this.ParentZoneName;
+    }
+
+    /**
+     * Set 父级可用区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentZoneName 父级可用区描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentZoneName(String ParentZoneName) {
+        this.ParentZoneName = ParentZoneName;
+    }
+
+    /**
+     * Get zone类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneType zone类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneType() {
+        return this.ZoneType;
+    }
+
+    /**
+     * Set zone类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneType zone类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneType(String ZoneType) {
+        this.ZoneType = ZoneType;
+    }
+
+    /**
+     * Get 控制台类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineRoomTypeMC 控制台类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMachineRoomTypeMC() {
+        return this.MachineRoomTypeMC;
+    }
+
+    /**
+     * Set 控制台类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineRoomTypeMC 控制台类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineRoomTypeMC(String MachineRoomTypeMC) {
+        this.MachineRoomTypeMC = MachineRoomTypeMC;
+    }
+
+    /**
+     * Get 和ZoneId一样，适用于控制台调用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneIdMC 和ZoneId一样，适用于控制台调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneIdMC() {
+        return this.ZoneIdMC;
+    }
+
+    /**
+     * Set 和ZoneId一样，适用于控制台调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneIdMC 和ZoneId一样，适用于控制台调用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneIdMC(String ZoneIdMC) {
+        this.ZoneIdMC = ZoneIdMC;
+    }
+
     public ZoneInfo() {
     }
 
@@ -354,6 +522,24 @@ public class ZoneInfo extends AbstractModel{
         if (source.ZoneState != null) {
             this.ZoneState = new String(source.ZoneState);
         }
+        if (source.ParentZone != null) {
+            this.ParentZone = new String(source.ParentZone);
+        }
+        if (source.ParentZoneId != null) {
+            this.ParentZoneId = new String(source.ParentZoneId);
+        }
+        if (source.ParentZoneName != null) {
+            this.ParentZoneName = new String(source.ParentZoneName);
+        }
+        if (source.ZoneType != null) {
+            this.ZoneType = new String(source.ZoneType);
+        }
+        if (source.MachineRoomTypeMC != null) {
+            this.MachineRoomTypeMC = new String(source.MachineRoomTypeMC);
+        }
+        if (source.ZoneIdMC != null) {
+            this.ZoneIdMC = new String(source.ZoneIdMC);
+        }
     }
 
 
@@ -365,6 +551,12 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
+        this.setParamSimple(map, prefix + "ParentZone", this.ParentZone);
+        this.setParamSimple(map, prefix + "ParentZoneId", this.ParentZoneId);
+        this.setParamSimple(map, prefix + "ParentZoneName", this.ParentZoneName);
+        this.setParamSimple(map, prefix + "ZoneType", this.ZoneType);
+        this.setParamSimple(map, prefix + "MachineRoomTypeMC", this.MachineRoomTypeMC);
+        this.setParamSimple(map, prefix + "ZoneIdMC", this.ZoneIdMC);
 
     }
 }
