@@ -39,7 +39,7 @@ public class HttpConnection {
     this.client = new OkHttpClient.Builder()
             .connectTimeout(connTimeout, TimeUnit.SECONDS)
             .readTimeout(readTimeout, TimeUnit.SECONDS)
-            .writeTimeout(readTimeout, TimeUnit.SECONDS)
+            .writeTimeout(writeTimeout, TimeUnit.SECONDS)
             .build();
   }
 
