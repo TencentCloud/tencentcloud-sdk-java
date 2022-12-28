@@ -51,8 +51,8 @@ public class HttpConnection {
     this.client = this.client.newBuilder().proxy(proxy).build();
   }
 
-  public void setAuthenticator(Authenticator authenticator) {
-    this.client = this.client.newBuilder().authenticator(authenticator).build();
+  public void setProxyAuthenticator(Authenticator authenticator) {
+    this.client = this.client.newBuilder().proxyAuthenticator(authenticator).build();
   }
 
   public Response doRequest(Request request) throws TencentCloudSDKException {

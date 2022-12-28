@@ -307,7 +307,7 @@ public abstract class AbstractClient {
     if (username == null || username.isEmpty()) {
       return;
     }
-    conn.setAuthenticator(
+    conn.setProxyAuthenticator(
         new Authenticator() {
           @Override
           public Request authenticate(Route route, Response response) throws IOException {
