@@ -38,14 +38,14 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     private Long Score;
 
     /**
-    * 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+    * 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+    * 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
     */
     @SerializedName("EndTime")
     @Expose
@@ -110,32 +110,32 @@ public class AudioResultDetailMoanResult extends AbstractModel{
     }
 
     /**
-     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。 
-     * @return StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。 
+     * @return StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
-     * @param StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
+     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
+     * @param StartTime 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为秒。
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。 
-     * @return EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * Get 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。 
+     * @return EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
-     * @param EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
+     * Set 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
+     * @param EndTime 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为秒。
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

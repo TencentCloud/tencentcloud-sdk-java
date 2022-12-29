@@ -100,7 +100,6 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *添加域名
-
      * @param req CreateDomainRequest
      * @return CreateDomainResponse
      * @throws TencentCloudSDKException
@@ -181,7 +180,6 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *添加记录
-
      * @param req CreateRecordRequest
      * @return CreateRecordResponse
      * @throws TencentCloudSDKException
@@ -262,7 +260,6 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *删除域名
-
      * @param req DeleteDomainRequest
      * @return DeleteDomainResponse
      * @throws TencentCloudSDKException
@@ -923,7 +920,6 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *更新动态 DNS 记录
-
      * @param req ModifyDynamicDNSRequest
      * @return ModifyDynamicDNSResponse
      * @throws TencentCloudSDKException
@@ -943,7 +939,7 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
-     * DNS 解析套餐自动续费设置
+     *DNS 解析套餐自动续费设置
      * @param req ModifyPackageAutoRenewRequest
      * @return ModifyPackageAutoRenewResponse
      * @throws TencentCloudSDKException

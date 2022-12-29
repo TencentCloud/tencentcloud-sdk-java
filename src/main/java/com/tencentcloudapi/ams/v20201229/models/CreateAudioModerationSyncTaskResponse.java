@@ -122,6 +122,14 @@ Block 建议屏蔽；
     private RecognitionResult [] RecognitionResults;
 
     /**
+    * 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private String Duration;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -381,6 +389,26 @@ Block 建议屏蔽；
     }
 
     /**
+     * Get 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Duration 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Duration 识别音频时长，单位为毫秒；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDuration(String Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -455,6 +483,9 @@ Block 建议屏蔽；
                 this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
             }
         }
+        if (source.Duration != null) {
+            this.Duration = new String(source.Duration);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -477,6 +508,7 @@ Block 建议屏蔽；
         this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
         this.setParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

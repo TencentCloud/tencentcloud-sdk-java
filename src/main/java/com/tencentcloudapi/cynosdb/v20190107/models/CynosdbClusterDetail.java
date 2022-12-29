@@ -195,6 +195,182 @@ pausing
     private String ServerlessStatus;
 
     /**
+    * binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogBin")
+    @Expose
+    private String LogBin;
+
+    /**
+    * pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PitrType")
+    @Expose
+    private String PitrType;
+
+    /**
+    * 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
+    * 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
+
+    /**
+    * 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxStorageSize")
+    @Expose
+    private Long MaxStorageSize;
+
+    /**
+    * 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinStorageSize")
+    @Expose
+    private Long MinStorageSize;
+
+    /**
+    * 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
+
+    /**
+    * 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageLimit")
+    @Expose
+    private Long StorageLimit;
+
+    /**
+    * 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ability")
+    @Expose
+    private Ability Ability;
+
+    /**
+    * cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CynosVersion")
+    @Expose
+    private String CynosVersion;
+
+    /**
+    * 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
+    * 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasSlaveZone")
+    @Expose
+    private String HasSlaveZone;
+
+    /**
+    * 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsFreeze")
+    @Expose
+    private String IsFreeze;
+
+    /**
+    * 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProxyStatus")
+    @Expose
+    private String ProxyStatus;
+
+    /**
+    * 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSkipTrade")
+    @Expose
+    private String IsSkipTrade;
+
+    /**
+    * 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOpenPasswordComplexity")
+    @Expose
+    private String IsOpenPasswordComplexity;
+
+    /**
+    * 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkStatus")
+    @Expose
+    private String NetworkStatus;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -594,6 +770,446 @@ pausing
         this.ServerlessStatus = ServerlessStatus;
     }
 
+    /**
+     * Get binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogBin binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogBin() {
+        return this.LogBin;
+    }
+
+    /**
+     * Set binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogBin binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogBin(String LogBin) {
+        this.LogBin = LogBin;
+    }
+
+    /**
+     * Get pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PitrType pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPitrType() {
+        return this.PitrType;
+    }
+
+    /**
+     * Set pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PitrType pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPitrType(String PitrType) {
+        this.PitrType = PitrType;
+    }
+
+    /**
+     * Get 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhysicalZone 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhysicalZone 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get 存储Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageId 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageId 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    /**
+     * Get 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Storage 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Storage 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxStorageSize 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxStorageSize() {
+        return this.MaxStorageSize;
+    }
+
+    /**
+     * Set 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxStorageSize 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxStorageSize(Long MaxStorageSize) {
+        this.MaxStorageSize = MaxStorageSize;
+    }
+
+    /**
+     * Get 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinStorageSize 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinStorageSize() {
+        return this.MinStorageSize;
+    }
+
+    /**
+     * Set 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinStorageSize 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinStorageSize(Long MinStorageSize) {
+        this.MinStorageSize = MinStorageSize;
+    }
+
+    /**
+     * Get 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbMode 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbMode 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageLimit 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorageLimit() {
+        return this.StorageLimit;
+    }
+
+    /**
+     * Set 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageLimit 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageLimit(Long StorageLimit) {
+        this.StorageLimit = StorageLimit;
+    }
+
+    /**
+     * Get 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ability 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Ability getAbility() {
+        return this.Ability;
+    }
+
+    /**
+     * Set 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ability 集群支持的功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbility(Ability Ability) {
+        this.Ability = Ability;
+    }
+
+    /**
+     * Get cynos版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CynosVersion cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCynosVersion() {
+        return this.CynosVersion;
+    }
+
+    /**
+     * Set cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CynosVersion cynos版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCynosVersion(String CynosVersion) {
+        this.CynosVersion = CynosVersion;
+    }
+
+    /**
+     * Get 商业类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessType 商业类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
+    /**
+     * Get 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasSlaveZone 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHasSlaveZone() {
+        return this.HasSlaveZone;
+    }
+
+    /**
+     * Set 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasSlaveZone 是否有从可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasSlaveZone(String HasSlaveZone) {
+        this.HasSlaveZone = HasSlaveZone;
+    }
+
+    /**
+     * Get 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsFreeze() {
+        return this.IsFreeze;
+    }
+
+    /**
+     * Set 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsFreeze 是否冻结
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsFreeze(String IsFreeze) {
+        this.IsFreeze = IsFreeze;
+    }
+
+    /**
+     * Get 任务列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tasks 任务列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get 主可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZones 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZones 从可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProxyStatus Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProxyStatus() {
+        return this.ProxyStatus;
+    }
+
+    /**
+     * Set Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProxyStatus Proxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxyStatus(String ProxyStatus) {
+        this.ProxyStatus = ProxyStatus;
+    }
+
+    /**
+     * Get 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSkipTrade 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsSkipTrade() {
+        return this.IsSkipTrade;
+    }
+
+    /**
+     * Set 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSkipTrade 是否跳过交易
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSkipTrade(String IsSkipTrade) {
+        this.IsSkipTrade = IsSkipTrade;
+    }
+
+    /**
+     * Get 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOpenPasswordComplexity 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsOpenPasswordComplexity() {
+        return this.IsOpenPasswordComplexity;
+    }
+
+    /**
+     * Set 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOpenPasswordComplexity 是否打开密码复杂度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
+        this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
+    }
+
+    /**
+     * Get 网络类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkStatus 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkStatus() {
+        return this.NetworkStatus;
+    }
+
+    /**
+     * Set 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkStatus 网络类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkStatus(String NetworkStatus) {
+        this.NetworkStatus = NetworkStatus;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -683,6 +1299,78 @@ pausing
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.LogBin != null) {
+            this.LogBin = new String(source.LogBin);
+        }
+        if (source.PitrType != null) {
+            this.PitrType = new String(source.PitrType);
+        }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.MaxStorageSize != null) {
+            this.MaxStorageSize = new Long(source.MaxStorageSize);
+        }
+        if (source.MinStorageSize != null) {
+            this.MinStorageSize = new Long(source.MinStorageSize);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.StorageLimit != null) {
+            this.StorageLimit = new Long(source.StorageLimit);
+        }
+        if (source.Ability != null) {
+            this.Ability = new Ability(source.Ability);
+        }
+        if (source.CynosVersion != null) {
+            this.CynosVersion = new String(source.CynosVersion);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.HasSlaveZone != null) {
+            this.HasSlaveZone = new String(source.HasSlaveZone);
+        }
+        if (source.IsFreeze != null) {
+            this.IsFreeze = new String(source.IsFreeze);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.ProxyStatus != null) {
+            this.ProxyStatus = new String(source.ProxyStatus);
+        }
+        if (source.IsSkipTrade != null) {
+            this.IsSkipTrade = new String(source.IsSkipTrade);
+        }
+        if (source.IsOpenPasswordComplexity != null) {
+            this.IsOpenPasswordComplexity = new String(source.IsOpenPasswordComplexity);
+        }
+        if (source.NetworkStatus != null) {
+            this.NetworkStatus = new String(source.NetworkStatus);
+        }
     }
 
 
@@ -714,6 +1402,28 @@ pausing
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "LogBin", this.LogBin);
+        this.setParamSimple(map, prefix + "PitrType", this.PitrType);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+        this.setParamObj(map, prefix + "Ability.", this.Ability);
+        this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+        this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+        this.setParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+        this.setParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
+        this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
 
     }
 }

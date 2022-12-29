@@ -39,7 +39,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private Long Score;
 
     /**
-    * 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
+    * 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -47,7 +47,7 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     private Float StartTime;
 
     /**
-    * 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
+    * 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -103,9 +103,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
+     * @return StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getStartTime() {
@@ -113,9 +113,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
+     * Set 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
+     * @param StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Float StartTime) {
@@ -123,9 +123,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Get 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
+     * Get 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @return EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getEndTime() {
@@ -133,9 +133,9 @@ public class AudioResultDetailLanguageResult extends AbstractModel{
     }
 
     /**
-     * Set 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
+     * Set 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
+     * @param EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Float EndTime) {

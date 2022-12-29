@@ -79,6 +79,13 @@ public class ClusterInstanceDetail extends AbstractModel{
     private Long InstanceStorage;
 
     /**
+    * 实例角色
+    */
+    @SerializedName("InstanceRole")
+    @Expose
+    private String InstanceRole;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -206,6 +213,22 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.InstanceStorage = InstanceStorage;
     }
 
+    /**
+     * Get 实例角色 
+     * @return InstanceRole 实例角色
+     */
+    public String getInstanceRole() {
+        return this.InstanceRole;
+    }
+
+    /**
+     * Set 实例角色
+     * @param InstanceRole 实例角色
+     */
+    public void setInstanceRole(String InstanceRole) {
+        this.InstanceRole = InstanceRole;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -238,6 +261,9 @@ public class ClusterInstanceDetail extends AbstractModel{
         if (source.InstanceStorage != null) {
             this.InstanceStorage = new Long(source.InstanceStorage);
         }
+        if (source.InstanceRole != null) {
+            this.InstanceRole = new String(source.InstanceRole);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class ClusterInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceCpu", this.InstanceCpu);
         this.setParamSimple(map, prefix + "InstanceMemory", this.InstanceMemory);
         this.setParamSimple(map, prefix + "InstanceStorage", this.InstanceStorage);
+        this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
 
     }
 }

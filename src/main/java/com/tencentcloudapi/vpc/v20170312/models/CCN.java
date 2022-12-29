@@ -118,6 +118,14 @@ public class CCN extends AbstractModel{
     private Boolean RouteTableFlag;
 
     /**
+    * 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteBroadcastPolicyFlag")
+    @Expose
+    private Boolean RouteBroadcastPolicyFlag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -341,6 +349,26 @@ public class CCN extends AbstractModel{
         this.RouteTableFlag = RouteTableFlag;
     }
 
+    /**
+     * Get 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRouteBroadcastPolicyFlag() {
+        return this.RouteBroadcastPolicyFlag;
+    }
+
+    /**
+     * Set 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteBroadcastPolicyFlag 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteBroadcastPolicyFlag(Boolean RouteBroadcastPolicyFlag) {
+        this.RouteBroadcastPolicyFlag = RouteBroadcastPolicyFlag;
+    }
+
     public CCN() {
     }
 
@@ -391,6 +419,9 @@ public class CCN extends AbstractModel{
         if (source.RouteTableFlag != null) {
             this.RouteTableFlag = new Boolean(source.RouteTableFlag);
         }
+        if (source.RouteBroadcastPolicyFlag != null) {
+            this.RouteBroadcastPolicyFlag = new Boolean(source.RouteBroadcastPolicyFlag);
+        }
     }
 
 
@@ -411,6 +442,7 @@ public class CCN extends AbstractModel{
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
         this.setParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
         this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+        this.setParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
 
     }
 }

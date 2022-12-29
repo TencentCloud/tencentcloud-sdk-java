@@ -87,6 +87,22 @@ public class NetAddr extends AbstractModel{
     private String Description;
 
     /**
+    * 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanIP")
+    @Expose
+    private String WanIP;
+
+    /**
+    * 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WanStatus")
+    @Expose
+    private String WanStatus;
+
+    /**
      * Get 内网ip
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vip 内网ip
@@ -246,6 +262,46 @@ public class NetAddr extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 外网IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanIP 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanIP() {
+        return this.WanIP;
+    }
+
+    /**
+     * Set 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanIP 外网IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanIP(String WanIP) {
+        this.WanIP = WanIP;
+    }
+
+    /**
+     * Get 外网状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WanStatus 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWanStatus() {
+        return this.WanStatus;
+    }
+
+    /**
+     * Set 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WanStatus 外网状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWanStatus(String WanStatus) {
+        this.WanStatus = WanStatus;
+    }
+
     public NetAddr() {
     }
 
@@ -278,6 +334,12 @@ public class NetAddr extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.WanIP != null) {
+            this.WanIP = new String(source.WanIP);
+        }
+        if (source.WanStatus != null) {
+            this.WanStatus = new String(source.WanStatus);
+        }
     }
 
 
@@ -293,6 +355,8 @@ public class NetAddr extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "WanIP", this.WanIP);
+        this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
 
     }
 }

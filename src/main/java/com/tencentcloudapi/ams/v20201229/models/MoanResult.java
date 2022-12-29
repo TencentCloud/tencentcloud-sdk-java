@@ -47,14 +47,14 @@ public class MoanResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * 违规事件开始时间，单位为毫秒（ms）；
+    * 违规事件开始时间，单位为秒（s）；
     */
     @SerializedName("StartTime")
     @Expose
     private Float StartTime;
 
     /**
-    * 违规事件结束时间，单位为毫秒（ms）；
+    * 违规事件结束时间，单位为秒（s）；
     */
     @SerializedName("EndTime")
     @Expose
@@ -130,32 +130,32 @@ public class MoanResult extends AbstractModel{
     }
 
     /**
-     * Get 违规事件开始时间，单位为毫秒（ms）； 
-     * @return StartTime 违规事件开始时间，单位为毫秒（ms）；
+     * Get 违规事件开始时间，单位为秒（s）； 
+     * @return StartTime 违规事件开始时间，单位为秒（s）；
      */
     public Float getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 违规事件开始时间，单位为毫秒（ms）；
-     * @param StartTime 违规事件开始时间，单位为毫秒（ms）；
+     * Set 违规事件开始时间，单位为秒（s）；
+     * @param StartTime 违规事件开始时间，单位为秒（s）；
      */
     public void setStartTime(Float StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 违规事件结束时间，单位为毫秒（ms）； 
-     * @return EndTime 违规事件结束时间，单位为毫秒（ms）；
+     * Get 违规事件结束时间，单位为秒（s）； 
+     * @return EndTime 违规事件结束时间，单位为秒（s）；
      */
     public Float getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 违规事件结束时间，单位为毫秒（ms）；
-     * @param EndTime 违规事件结束时间，单位为毫秒（ms）；
+     * Set 违规事件结束时间，单位为秒（s）；
+     * @param EndTime 违规事件结束时间，单位为秒（s）；
      */
     public void setEndTime(Float EndTime) {
         this.EndTime = EndTime;

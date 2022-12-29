@@ -93,6 +93,13 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Boolean WithPdfUrl;
 
     /**
+    * 渠道模板ID
+    */
+    @SerializedName("ChannelTemplateId")
+    @Expose
+    private String ChannelTemplateId;
+
+    /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -252,6 +259,22 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.WithPdfUrl = WithPdfUrl;
     }
 
+    /**
+     * Get 渠道模板ID 
+     * @return ChannelTemplateId 渠道模板ID
+     */
+    public String getChannelTemplateId() {
+        return this.ChannelTemplateId;
+    }
+
+    /**
+     * Set 渠道模板ID
+     * @param ChannelTemplateId 渠道模板ID
+     */
+    public void setChannelTemplateId(String ChannelTemplateId) {
+        this.ChannelTemplateId = ChannelTemplateId;
+    }
+
     public DescribeTemplatesRequest() {
     }
 
@@ -290,6 +313,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.WithPdfUrl != null) {
             this.WithPdfUrl = new Boolean(source.WithPdfUrl);
         }
+        if (source.ChannelTemplateId != null) {
+            this.ChannelTemplateId = new String(source.ChannelTemplateId);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         this.setParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
+        this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
 
     }
 }
