@@ -44,7 +44,7 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
     private String AgentName;
 
     /**
-    * 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+    * 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
     */
     @SerializedName("AgentType")
     @Expose
@@ -84,6 +84,13 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
     @SerializedName("Like")
     @Expose
     private Long Like;
+
+    /**
+    * agent类型【多个用逗号分隔】
+    */
+    @SerializedName("AgentTypes")
+    @Expose
+    private String AgentTypes;
 
     /**
      * Get WeData项目ID 
@@ -134,16 +141,16 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群类型，1：TKE Agent，2：BOSS SDK，默认：1 
-     * @return AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+     * Get 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】 
+     * @return AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
      */
     public Long getAgentType() {
         return this.AgentType;
     }
 
     /**
-     * Set 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
-     * @param AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1
+     * Set 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
+     * @param AgentType 集群类型，1：TKE Agent，2：BOSS SDK，默认：1，3：CVM，4：自建服务器 【传多个用逗号分割】
      */
     public void setAgentType(Long AgentType) {
         this.AgentType = AgentType;
@@ -229,6 +236,22 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
         this.Like = Like;
     }
 
+    /**
+     * Get agent类型【多个用逗号分隔】 
+     * @return AgentTypes agent类型【多个用逗号分隔】
+     */
+    public String getAgentTypes() {
+        return this.AgentTypes;
+    }
+
+    /**
+     * Set agent类型【多个用逗号分隔】
+     * @param AgentTypes agent类型【多个用逗号分隔】
+     */
+    public void setAgentTypes(String AgentTypes) {
+        this.AgentTypes = AgentTypes;
+    }
+
     public DescribeInLongAgentListRequest() {
     }
 
@@ -264,6 +287,9 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
         if (source.Like != null) {
             this.Like = new Long(source.Like);
         }
+        if (source.AgentTypes != null) {
+            this.AgentTypes = new String(source.AgentTypes);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class DescribeInLongAgentListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Like", this.Like);
+        this.setParamSimple(map, prefix + "AgentTypes", this.AgentTypes);
 
     }
 }

@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSecurityPoliciesResponse extends AbstractModel{
-
-    /**
-    * 实例Id
-    */
-    @SerializedName("RegistryId")
-    @Expose
-    private String RegistryId;
+public class UpdateOriginProtectionIPWhitelistResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 实例Id 
-     * @return RegistryId 实例Id
-     */
-    public String getRegistryId() {
-        return this.RegistryId;
-    }
-
-    /**
-     * Set 实例Id
-     * @param RegistryId 实例Id
-     */
-    public void setRegistryId(String RegistryId) {
-        this.RegistryId = RegistryId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateSecurityPoliciesResponse() {
+    public UpdateOriginProtectionIPWhitelistResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSecurityPoliciesResponse(CreateSecurityPoliciesResponse source) {
-        if (source.RegistryId != null) {
-            this.RegistryId = new String(source.RegistryId);
-        }
+    public UpdateOriginProtectionIPWhitelistResponse(UpdateOriginProtectionIPWhitelistResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

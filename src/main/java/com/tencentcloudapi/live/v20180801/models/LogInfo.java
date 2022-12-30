@@ -38,6 +38,7 @@ public class LogInfo extends AbstractModel{
 
     /**
     * 日志生成时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("LogTime")
     @Expose
@@ -83,8 +84,10 @@ public class LogInfo extends AbstractModel{
     }
 
     /**
-     * Get 日志生成时间。 
+     * Get 日志生成时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return LogTime 日志生成时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getLogTime() {
         return this.LogTime;
@@ -92,7 +95,9 @@ public class LogInfo extends AbstractModel{
 
     /**
      * Set 日志生成时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param LogTime 日志生成时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setLogTime(String LogTime) {
         this.LogTime = LogTime;

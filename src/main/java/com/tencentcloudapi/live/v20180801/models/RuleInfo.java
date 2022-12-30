@@ -24,6 +24,7 @@ public class RuleInfo extends AbstractModel{
 
     /**
     * 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -31,6 +32,7 @@ public class RuleInfo extends AbstractModel{
 
     /**
     * 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -65,8 +67,10 @@ public class RuleInfo extends AbstractModel{
     private String StreamName;
 
     /**
-     * Get 规则创建时间。 
+     * Get 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CreateTime 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -74,15 +78,19 @@ public class RuleInfo extends AbstractModel{
 
     /**
      * Set 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param CreateTime 规则创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 规则更新时间。 
+     * Get 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return UpdateTime 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -90,7 +98,9 @@ public class RuleInfo extends AbstractModel{
 
     /**
      * Set 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param UpdateTime 规则更新时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

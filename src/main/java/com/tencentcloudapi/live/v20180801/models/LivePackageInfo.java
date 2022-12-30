@@ -60,6 +60,7 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
     * 购买时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("BuyTime")
     @Expose
@@ -67,6 +68,7 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
     * 过期时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -193,8 +195,10 @@ public class LivePackageInfo extends AbstractModel{
     }
 
     /**
-     * Get 购买时间。 
+     * Get 购买时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return BuyTime 购买时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getBuyTime() {
         return this.BuyTime;
@@ -202,15 +206,19 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Set 购买时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param BuyTime 购买时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setBuyTime(String BuyTime) {
         this.BuyTime = BuyTime;
     }
 
     /**
-     * Get 过期时间。 
+     * Get 过期时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return ExpireTime 过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -218,7 +226,9 @@ public class LivePackageInfo extends AbstractModel{
 
     /**
      * Set 过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param ExpireTime 过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

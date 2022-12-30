@@ -30,11 +30,18 @@ public class DeleteBackupRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 备份文件ID
+    * 备份文件ID，旧版本使用的字段，不推荐使用
     */
     @SerializedName("SnapshotIdList")
     @Expose
     private Long [] SnapshotIdList;
+
+    /**
+    * 备份文件ID，推荐使用
+    */
+    @SerializedName("BackupIds")
+    @Expose
+    private Long [] BackupIds;
 
     /**
      * Get 集群ID 
@@ -53,19 +60,35 @@ public class DeleteBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份文件ID 
-     * @return SnapshotIdList 备份文件ID
+     * Get 备份文件ID，旧版本使用的字段，不推荐使用 
+     * @return SnapshotIdList 备份文件ID，旧版本使用的字段，不推荐使用
      */
     public Long [] getSnapshotIdList() {
         return this.SnapshotIdList;
     }
 
     /**
-     * Set 备份文件ID
-     * @param SnapshotIdList 备份文件ID
+     * Set 备份文件ID，旧版本使用的字段，不推荐使用
+     * @param SnapshotIdList 备份文件ID，旧版本使用的字段，不推荐使用
      */
     public void setSnapshotIdList(Long [] SnapshotIdList) {
         this.SnapshotIdList = SnapshotIdList;
+    }
+
+    /**
+     * Get 备份文件ID，推荐使用 
+     * @return BackupIds 备份文件ID，推荐使用
+     */
+    public Long [] getBackupIds() {
+        return this.BackupIds;
+    }
+
+    /**
+     * Set 备份文件ID，推荐使用
+     * @param BackupIds 备份文件ID，推荐使用
+     */
+    public void setBackupIds(Long [] BackupIds) {
+        this.BackupIds = BackupIds;
     }
 
     public DeleteBackupRequest() {
@@ -85,6 +108,12 @@ public class DeleteBackupRequest extends AbstractModel{
                 this.SnapshotIdList[i] = new Long(source.SnapshotIdList[i]);
             }
         }
+        if (source.BackupIds != null) {
+            this.BackupIds = new Long[source.BackupIds.length];
+            for (int i = 0; i < source.BackupIds.length; i++) {
+                this.BackupIds[i] = new Long(source.BackupIds[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class DeleteBackupRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+        this.setParamArraySimple(map, prefix + "BackupIds.", this.BackupIds);
 
     }
 }

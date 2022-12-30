@@ -45,6 +45,7 @@ public class CertInfo extends AbstractModel{
 
     /**
     * 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -68,6 +69,7 @@ public class CertInfo extends AbstractModel{
 
     /**
     * 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CertExpireTime")
     @Expose
@@ -129,8 +131,10 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建时间，UTC 格式。 
+     * Get 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CreateTime 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -138,7 +142,9 @@ public class CertInfo extends AbstractModel{
 
     /**
      * Set 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      * @param CreateTime 创建时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -185,8 +191,10 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get 证书过期时间，UTC 格式。 
+     * Get 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CertExpireTime 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
@@ -194,7 +202,9 @@ public class CertInfo extends AbstractModel{
 
     /**
      * Set 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      * @param CertExpireTime 证书过期时间，UTC 格式。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;

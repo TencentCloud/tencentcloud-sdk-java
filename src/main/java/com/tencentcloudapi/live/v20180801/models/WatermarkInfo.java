@@ -66,6 +66,7 @@ public class WatermarkInfo extends AbstractModel{
 
     /**
     * 添加时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -182,8 +183,10 @@ public class WatermarkInfo extends AbstractModel{
     }
 
     /**
-     * Get 添加时间。 
+     * Get 添加时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -191,7 +194,9 @@ public class WatermarkInfo extends AbstractModel{
 
     /**
      * Set 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -30,6 +30,13 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 模板描述信息，长度限制：256 个字符。
     */
     @SerializedName("Comment")
@@ -44,7 +51,8 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 智能内容审核类型任务参数。
+    * AI 智能内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -65,11 +73,11 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+    * 音视频审核类型任务参数。
     */
-    @SerializedName("SubAppId")
+    @SerializedName("ReviewAudioVideoTask")
     @Expose
-    private Long SubAppId;
+    private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
      * Get 任务流名字 
@@ -85,6 +93,22 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -120,16 +144,20 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get AI 智能内容审核类型任务参数。 
-     * @return AiContentReviewTask AI 智能内容审核类型任务参数。
+     * Get AI 智能内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font>  
+     * @return AiContentReviewTask AI 智能内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set AI 智能内容审核类型任务参数。
-     * @param AiContentReviewTask AI 智能内容审核类型任务参数。
+     * Set AI 智能内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * @param AiContentReviewTask AI 智能内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -168,19 +196,19 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get 音视频审核类型任务参数。 
+     * @return ReviewAudioVideoTask 音视频审核类型任务参数。
      */
-    public Long getSubAppId() {
-        return this.SubAppId;
+    public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set 音视频审核类型任务参数。
+     * @param ReviewAudioVideoTask 音视频审核类型任务参数。
      */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
+    public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     public ResetProcedureTemplateRequest() {
@@ -193,6 +221,9 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     public ResetProcedureTemplateRequest(ResetProcedureTemplateRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
@@ -209,8 +240,8 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
         }
     }
 
@@ -220,12 +251,13 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
 
     }
 }

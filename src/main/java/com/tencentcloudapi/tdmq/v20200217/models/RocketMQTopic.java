@@ -30,6 +30,20 @@ public class RocketMQTopic extends AbstractModel{
     private String Name;
 
     /**
+    * 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 订阅组数量
+    */
+    @SerializedName("GroupNum")
+    @Expose
+    private Long GroupNum;
+
+    /**
     * 说明
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -72,6 +86,38 @@ public class RocketMQTopic extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter 
+     * @return Type 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+     * @param Type 主题的类别，为枚举类型，Normal，GlobalOrder，PartitionedOrder，Transaction，Retry及DeadLetter
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 订阅组数量 
+     * @return GroupNum 订阅组数量
+     */
+    public Long getGroupNum() {
+        return this.GroupNum;
+    }
+
+    /**
+     * Set 订阅组数量
+     * @param GroupNum 订阅组数量
+     */
+    public void setGroupNum(Long GroupNum) {
+        this.GroupNum = GroupNum;
     }
 
     /**
@@ -153,6 +199,12 @@ public class RocketMQTopic extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.GroupNum != null) {
+            this.GroupNum = new Long(source.GroupNum);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
@@ -173,6 +225,8 @@ public class RocketMQTopic extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "GroupNum", this.GroupNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

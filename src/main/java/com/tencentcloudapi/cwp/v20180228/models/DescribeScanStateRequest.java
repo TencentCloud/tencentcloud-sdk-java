@@ -31,7 +31,7 @@ public class DescribeScanStateRequest extends AbstractModel{
 
     /**
     * 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -55,9 +55,9 @@ public class DescribeScanStateRequest extends AbstractModel{
 
     /**
      * Get 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/> 
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li> 
      * @return Filters 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
      */
     public Filters [] getFilters() {
         return this.Filters;
@@ -65,9 +65,9 @@ public class DescribeScanStateRequest extends AbstractModel{
 
     /**
      * Set 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
      * @param Filters 过滤参数;
-<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要<li/>
+<li>StrategyId 基线策略ID ,仅ModuleType 为 Baseline 时需要</li>
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

@@ -94,6 +94,30 @@ public class InLongAgentDetail extends AbstractModel{
     private Long TaskCount;
 
     /**
+    * 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentGroupId")
+    @Expose
+    private String AgentGroupId;
+
+    /**
+    * agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CvmAgentStatusList")
+    @Expose
+    private CvmAgentStatus [] CvmAgentStatusList;
+
+    /**
+    * agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentTotal")
+    @Expose
+    private Long AgentTotal;
+
+    /**
      * Get Agent ID 
      * @return AgentId Agent ID
      */
@@ -257,6 +281,66 @@ public class InLongAgentDetail extends AbstractModel{
         this.TaskCount = TaskCount;
     }
 
+    /**
+     * Get 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentGroupId 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentGroupId() {
+        return this.AgentGroupId;
+    }
+
+    /**
+     * Set 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentGroupId 采集器组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentGroupId(String AgentGroupId) {
+        this.AgentGroupId = AgentGroupId;
+    }
+
+    /**
+     * Get agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CvmAgentStatusList agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CvmAgentStatus [] getCvmAgentStatusList() {
+        return this.CvmAgentStatusList;
+    }
+
+    /**
+     * Set agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CvmAgentStatusList agent状态统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCvmAgentStatusList(CvmAgentStatus [] CvmAgentStatusList) {
+        this.CvmAgentStatusList = CvmAgentStatusList;
+    }
+
+    /**
+     * Get agent数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentTotal agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAgentTotal() {
+        return this.AgentTotal;
+    }
+
+    /**
+     * Set agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentTotal agent数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentTotal(Long AgentTotal) {
+        this.AgentTotal = AgentTotal;
+    }
+
     public InLongAgentDetail() {
     }
 
@@ -295,6 +379,18 @@ public class InLongAgentDetail extends AbstractModel{
         if (source.TaskCount != null) {
             this.TaskCount = new Long(source.TaskCount);
         }
+        if (source.AgentGroupId != null) {
+            this.AgentGroupId = new String(source.AgentGroupId);
+        }
+        if (source.CvmAgentStatusList != null) {
+            this.CvmAgentStatusList = new CvmAgentStatus[source.CvmAgentStatusList.length];
+            for (int i = 0; i < source.CvmAgentStatusList.length; i++) {
+                this.CvmAgentStatusList[i] = new CvmAgentStatus(source.CvmAgentStatusList[i]);
+            }
+        }
+        if (source.AgentTotal != null) {
+            this.AgentTotal = new Long(source.AgentTotal);
+        }
     }
 
 
@@ -312,6 +408,9 @@ public class InLongAgentDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
+        this.setParamSimple(map, prefix + "AgentGroupId", this.AgentGroupId);
+        this.setParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
+        this.setParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
 
     }
 }

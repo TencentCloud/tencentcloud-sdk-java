@@ -49,6 +49,7 @@ public class DomainInfo extends AbstractModel{
 
     /**
     * 添加时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -105,6 +106,7 @@ public class DomainInfo extends AbstractModel{
 
     /**
     * 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("RentExpireTime")
     @Expose
@@ -184,8 +186,10 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 添加时间。 
+     * Get 添加时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -193,7 +197,9 @@ public class DomainInfo extends AbstractModel{
 
     /**
      * Set 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param CreateTime 添加时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -324,8 +330,10 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 失效参数，可忽略。 
+     * Get 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。 
      * @return RentExpireTime 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getRentExpireTime() {
         return this.RentExpireTime;
@@ -333,7 +341,9 @@ public class DomainInfo extends AbstractModel{
 
     /**
      * Set 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
      * @param RentExpireTime 失效参数，可忽略。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setRentExpireTime(String RentExpireTime) {
         this.RentExpireTime = RentExpireTime;

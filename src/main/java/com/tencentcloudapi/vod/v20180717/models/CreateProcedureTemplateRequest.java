@@ -51,7 +51,8 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * AI 内容审核类型任务参数。
+    * AI 内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -70,6 +71,13 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
+
+    /**
+    * 音视频审核类型任务参数。
+    */
+    @SerializedName("ReviewAudioVideoTask")
+    @Expose
+    private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
      * Get 任务流名字（支持中文，不超过20个字）。 
@@ -136,16 +144,20 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get AI 内容审核类型任务参数。 
-     * @return AiContentReviewTask AI 内容审核类型任务参数。
+     * Get AI 内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font>  
+     * @return AiContentReviewTask AI 内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set AI 内容审核类型任务参数。
-     * @param AiContentReviewTask AI 内容审核类型任务参数。
+     * Set AI 内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
+     * @param AiContentReviewTask AI 内容审核类型任务参数 \*。
+<font color=red>\*：该参数用于发起旧版审核，不建议使用。推荐使用 ReviewAudioVideoTask 参数发起审核。</font> 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -183,6 +195,22 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
+    /**
+     * Get 音视频审核类型任务参数。 
+     * @return ReviewAudioVideoTask 音视频审核类型任务参数。
+     */
+    public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
+    }
+
+    /**
+     * Set 音视频审核类型任务参数。
+     * @param ReviewAudioVideoTask 音视频审核类型任务参数。
+     */
+    public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
     public CreateProcedureTemplateRequest() {
     }
 
@@ -212,6 +240,9 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
 
     }
 }

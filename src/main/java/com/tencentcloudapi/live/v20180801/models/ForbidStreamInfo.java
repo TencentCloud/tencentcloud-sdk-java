@@ -31,6 +31,7 @@ public class ForbidStreamInfo extends AbstractModel{
 
     /**
     * 创建时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -38,6 +39,7 @@ public class ForbidStreamInfo extends AbstractModel{
 
     /**
     * 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -76,8 +78,10 @@ public class ForbidStreamInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建时间。 
+     * Get 创建时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CreateTime 创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -85,15 +89,19 @@ public class ForbidStreamInfo extends AbstractModel{
 
     /**
      * Set 创建时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param CreateTime 创建时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 禁推过期时间。 
+     * Get 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return ExpireTime 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -101,7 +109,9 @@ public class ForbidStreamInfo extends AbstractModel{
 
     /**
      * Set 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param ExpireTime 禁推过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

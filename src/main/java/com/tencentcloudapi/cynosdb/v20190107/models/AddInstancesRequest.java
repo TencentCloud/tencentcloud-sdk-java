@@ -115,6 +115,20 @@ public class AddInstancesRequest extends AbstractModel{
     private Long DealMode;
 
     /**
+    * 参数模版ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
+    * 参数列表，ParamTemplateId 传入时InstanceParams才有效
+    */
+    @SerializedName("InstanceParams")
+    @Expose
+    private ModifyParamItem [] InstanceParams;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -326,6 +340,38 @@ public class AddInstancesRequest extends AbstractModel{
         this.DealMode = DealMode;
     }
 
+    /**
+     * Get 参数模版ID 
+     * @return ParamTemplateId 参数模版ID
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 参数模版ID
+     * @param ParamTemplateId 参数模版ID
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get 参数列表，ParamTemplateId 传入时InstanceParams才有效 
+     * @return InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     */
+    public ModifyParamItem [] getInstanceParams() {
+        return this.InstanceParams;
+    }
+
+    /**
+     * Set 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     * @param InstanceParams 参数列表，ParamTemplateId 传入时InstanceParams才有效
+     */
+    public void setInstanceParams(ModifyParamItem [] InstanceParams) {
+        this.InstanceParams = InstanceParams;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -373,6 +419,15 @@ public class AddInstancesRequest extends AbstractModel{
         if (source.DealMode != null) {
             this.DealMode = new Long(source.DealMode);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new Long(source.ParamTemplateId);
+        }
+        if (source.InstanceParams != null) {
+            this.InstanceParams = new ModifyParamItem[source.InstanceParams.length];
+            for (int i = 0; i < source.InstanceParams.length; i++) {
+                this.InstanceParams[i] = new ModifyParamItem(source.InstanceParams[i]);
+            }
+        }
     }
 
 
@@ -393,6 +448,8 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
 
     }
 }

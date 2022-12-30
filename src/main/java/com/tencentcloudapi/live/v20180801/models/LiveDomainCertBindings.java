@@ -56,6 +56,7 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
     * 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("CertExpireTime")
     @Expose
@@ -77,6 +78,7 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
     * 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -164,8 +166,10 @@ public class LiveDomainCertBindings extends AbstractModel{
     }
 
     /**
-     * Get 证书过期时间。 
+     * Get 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。 
      * @return CertExpireTime 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
@@ -173,7 +177,9 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
      * Set 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
      * @param CertExpireTime 证书过期时间。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
@@ -213,8 +219,10 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
      * Get 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdateTime 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -223,8 +231,10 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
      * Set 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 规则最后更新时间。
+注：此字段为北京时间（UTC+8时区）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {

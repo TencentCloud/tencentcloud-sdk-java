@@ -1159,6 +1159,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *查询源站防护信息
+     * @param req DescribeOriginProtectionRequest
+     * @return DescribeOriginProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginProtectionResponse DescribeOriginProtection(DescribeOriginProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOriginProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOriginProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
      * @param req DescribeOverviewL7DataRequest
      * @return DescribeOverviewL7DataResponse
@@ -2391,6 +2411,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SwitchLogTopicTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchLogTopicTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新源站防护IP白名单
+     * @param req UpdateOriginProtectionIPWhitelistRequest
+     * @return UpdateOriginProtectionIPWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOriginProtectionIPWhitelistResponse UpdateOriginProtectionIPWhitelist(UpdateOriginProtectionIPWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOriginProtectionIPWhitelist");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

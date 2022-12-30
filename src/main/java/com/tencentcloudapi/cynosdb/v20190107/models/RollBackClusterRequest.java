@@ -72,6 +72,13 @@ public class RollBackClusterRequest extends AbstractModel{
     private RollbackTable [] RollbackTables;
 
     /**
+    * 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+    */
+    @SerializedName("RollbackMode")
+    @Expose
+    private String RollbackMode;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -183,6 +190,22 @@ public class RollBackClusterRequest extends AbstractModel{
         this.RollbackTables = RollbackTables;
     }
 
+    /**
+     * Get 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通） 
+     * @return RollbackMode 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+     */
+    public String getRollbackMode() {
+        return this.RollbackMode;
+    }
+
+    /**
+     * Set 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+     * @param RollbackMode 按时间点回档模式，full: 普通; db: 快速; table: 极速  （默认是普通）
+     */
+    public void setRollbackMode(String RollbackMode) {
+        this.RollbackMode = RollbackMode;
+    }
+
     public RollBackClusterRequest() {
     }
 
@@ -218,6 +241,9 @@ public class RollBackClusterRequest extends AbstractModel{
                 this.RollbackTables[i] = new RollbackTable(source.RollbackTables[i]);
             }
         }
+        if (source.RollbackMode != null) {
+            this.RollbackMode = new String(source.RollbackMode);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class RollBackClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpectTimeThresh", this.ExpectTimeThresh);
         this.setParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
         this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
+        this.setParamSimple(map, prefix + "RollbackMode", this.RollbackMode);
 
     }
 }

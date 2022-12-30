@@ -2844,7 +2844,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *重新设置用户自定义任务流模板的内容。  
+     *重新设置用户自定义任务流模板的内容。
      * @param req ResetProcedureTemplateRequest
      * @return ResetProcedureTemplateResponse
      * @throws TencentCloudSDKException
