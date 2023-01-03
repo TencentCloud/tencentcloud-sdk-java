@@ -60,6 +60,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *创建实例账号。
+     * @param req CreateAccountUserRequest
+     * @return CreateAccountUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountUserResponse CreateAccountUser(CreateAccountUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccountUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *备份实例接口
      * @param req CreateBackupDBInstanceRequest
      * @return CreateBackupDBInstanceResponse

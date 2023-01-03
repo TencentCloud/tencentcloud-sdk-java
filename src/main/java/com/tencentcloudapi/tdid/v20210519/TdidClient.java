@@ -320,7 +320,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *本机构DID详情
+     *该接口已废弃
+
+本机构DID详情
      * @param req GetAgencyTDidRequest
      * @return GetAgencyTDidResponse
      * @throws TencentCloudSDKException
@@ -1003,7 +1005,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *验证购买
+     *该接口已废弃
+
+验证购买
      * @param req VerifyPurchaseRequest
      * @return VerifyPurchaseResponse
      * @throws TencentCloudSDKException

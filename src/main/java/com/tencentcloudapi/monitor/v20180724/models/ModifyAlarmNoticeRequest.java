@@ -79,6 +79,13 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
     private CLSNotice [] CLSNotices;
 
     /**
+    * 告警通知模板绑定的告警策略ID列表
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -206,6 +213,22 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.CLSNotices = CLSNotices;
     }
 
+    /**
+     * Get 告警通知模板绑定的告警策略ID列表 
+     * @return PolicyIds 告警通知模板绑定的告警策略ID列表
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set 告警通知模板绑定的告警策略ID列表
+     * @param PolicyIds 告警通知模板绑定的告警策略ID列表
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
+    }
+
     public ModifyAlarmNoticeRequest() {
     }
 
@@ -247,6 +270,12 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
                 this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
             }
         }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
     }
 
 
@@ -262,6 +291,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
 
     }
 }

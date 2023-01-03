@@ -119,6 +119,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *TDSQL-C for MySQL实例关闭审计服务
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建账号
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
@@ -151,6 +171,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAuditLogFileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAuditLogFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建审计规则模版
+     * @param req CreateAuditRuleTemplateRequest
+     * @return CreateAuditRuleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditRuleTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAuditRuleTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -211,6 +251,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAuditLogFileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAuditLogFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除审计规则模版
+     * @param req DeleteAuditRuleTemplatesRequest
+     * @return DeleteAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAuditRuleTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -311,6 +371,46 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditLogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAuditLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询审计规则模版信息
+     * @param req DescribeAuditRuleTemplatesRequest
+     * @return DescribeAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditRuleTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例的审计规则
+     * @param req DescribeAuditRuleWithInstanceIdsRequest
+     * @return DescribeAuditRuleWithInstanceIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(DescribeAuditRuleWithInstanceIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditRuleWithInstanceIds");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,7 +559,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeClusterInstanceGrps）用于查询实例组
+     *本接口（DescribeClusterInstanceGrps）用于查询实例组信息。
      * @param req DescribeClusterInstanceGrpsRequest
      * @return DescribeClusterInstanceGrpsResponse
      * @throws TencentCloudSDKException
@@ -919,6 +1019,46 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改审计规则模版
+     * @param req ModifyAuditRuleTemplatesRequest
+     * @return ModifyAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAuditRuleTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置。
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改指定集群的备份配置
      * @param req ModifyBackupConfigRequest
      * @return ModifyBackupConfigResponse
@@ -1131,6 +1271,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OfflineInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *TDSQL-C for MySQL实例开通审计服务
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenAuditService");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

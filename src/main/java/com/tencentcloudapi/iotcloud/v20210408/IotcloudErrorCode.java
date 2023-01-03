@@ -177,6 +177,9 @@ public enum IotcloudErrorCode {
     // CA证书已经绑定了产品，无法操作。
      LIMITEXCEEDED_CAALREADYBINDPRODUCT("LimitExceeded.CAAlreadyBindProduct"),
      
+    // CA证书达到上限。
+     LIMITEXCEEDED_CACERTLIMIT("LimitExceeded.CACertLimit"),
+     
     // CA证书名称重复。
      LIMITEXCEEDED_CACERTNAMEREPEAT("LimitExceeded.CACertNameRepeat"),
      

@@ -397,7 +397,10 @@ public enum MariadbErrorCode {
      UNSUPPORTEDOPERATION_INVALIDOPERATION("UnsupportedOperation.InvalidOperation"),
      
     // Proxy软件版本太旧，请联系客服升级到新版本后再试。
-     UNSUPPORTEDOPERATION_OLDPROXYVERSION("UnsupportedOperation.OldProxyVersion");
+     UNSUPPORTEDOPERATION_OLDPROXYVERSION("UnsupportedOperation.OldProxyVersion"),
+     
+    // 不适用的操作。
+     UNSUPPORTEDOPERATION_OPERATIONNOTAPPLICABLE("UnsupportedOperation.OperationNotApplicable");
      
     private String value;
     private MariadbErrorCode (String value){

@@ -239,6 +239,14 @@ public class ModelAccelerateTask extends AbstractModel{
     private String ModelSignature;
 
     /**
+    * 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QATModel")
+    @Expose
+    private Boolean QATModel;
+
+    /**
      * Get 模型加速任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelAccTaskId 模型加速任务ID
@@ -778,6 +786,26 @@ public class ModelAccelerateTask extends AbstractModel{
         this.ModelSignature = ModelSignature;
     }
 
+    /**
+     * Get 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QATModel 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getQATModel() {
+        return this.QATModel;
+    }
+
+    /**
+     * Set 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QATModel 是否是QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQATModel(Boolean QATModel) {
+        this.QATModel = QATModel;
+    }
+
     public ModelAccelerateTask() {
     }
 
@@ -876,6 +904,9 @@ public class ModelAccelerateTask extends AbstractModel{
         if (source.ModelSignature != null) {
             this.ModelSignature = new String(source.ModelSignature);
         }
+        if (source.QATModel != null) {
+            this.QATModel = new Boolean(source.QATModel);
+        }
     }
 
 
@@ -910,6 +941,7 @@ public class ModelAccelerateTask extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "IsSaved", this.IsSaved);
         this.setParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
+        this.setParamSimple(map, prefix + "QATModel", this.QATModel);
 
     }
 }

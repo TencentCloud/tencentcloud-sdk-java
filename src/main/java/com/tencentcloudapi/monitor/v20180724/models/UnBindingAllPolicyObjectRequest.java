@@ -44,6 +44,20 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * 事件配置的告警
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
+    * 是否配置了事件告警
+    */
+    @SerializedName("EbEventFlag")
+    @Expose
+    private Long EbEventFlag;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -91,6 +105,38 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    /**
+     * Get 事件配置的告警 
+     * @return EbSubject 事件配置的告警
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set 事件配置的告警
+     * @param EbSubject 事件配置的告警
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
+    /**
+     * Get 是否配置了事件告警 
+     * @return EbEventFlag 是否配置了事件告警
+     */
+    public Long getEbEventFlag() {
+        return this.EbEventFlag;
+    }
+
+    /**
+     * Set 是否配置了事件告警
+     * @param EbEventFlag 是否配置了事件告警
+     */
+    public void setEbEventFlag(Long EbEventFlag) {
+        this.EbEventFlag = EbEventFlag;
+    }
+
     public UnBindingAllPolicyObjectRequest() {
     }
 
@@ -108,6 +154,12 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
         if (source.PolicyId != null) {
             this.PolicyId = new String(source.PolicyId);
         }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
+        if (source.EbEventFlag != null) {
+            this.EbEventFlag = new Long(source.EbEventFlag);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
+        this.setParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
 
     }
 }

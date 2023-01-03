@@ -79,7 +79,7 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
     private CosPathInfo ModelInputPath;
 
     /**
-    * 优化级别（NO_LOSS/FP16），默认FP16
+    * 优化级别（NO_LOSS/FP16/INT8），默认FP16
     */
     @SerializedName("OptimizationLevel")
     @Expose
@@ -121,7 +121,7 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
     private String [] TensorInfos;
 
     /**
-    * GPU类型（T4/V100），默认T4
+    * GPU类型（T4/V100/A10），默认T4
     */
     @SerializedName("GPUType")
     @Expose
@@ -284,16 +284,16 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 优化级别（NO_LOSS/FP16），默认FP16 
-     * @return OptimizationLevel 优化级别（NO_LOSS/FP16），默认FP16
+     * Get 优化级别（NO_LOSS/FP16/INT8），默认FP16 
+     * @return OptimizationLevel 优化级别（NO_LOSS/FP16/INT8），默认FP16
      */
     public String getOptimizationLevel() {
         return this.OptimizationLevel;
     }
 
     /**
-     * Set 优化级别（NO_LOSS/FP16），默认FP16
-     * @param OptimizationLevel 优化级别（NO_LOSS/FP16），默认FP16
+     * Set 优化级别（NO_LOSS/FP16/INT8），默认FP16
+     * @param OptimizationLevel 优化级别（NO_LOSS/FP16/INT8），默认FP16
      */
     public void setOptimizationLevel(String OptimizationLevel) {
         this.OptimizationLevel = OptimizationLevel;
@@ -380,16 +380,16 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get GPU类型（T4/V100），默认T4 
-     * @return GPUType GPU类型（T4/V100），默认T4
+     * Get GPU类型（T4/V100/A10），默认T4 
+     * @return GPUType GPU类型（T4/V100/A10），默认T4
      */
     public String getGPUType() {
         return this.GPUType;
     }
 
     /**
-     * Set GPU类型（T4/V100），默认T4
-     * @param GPUType GPU类型（T4/V100），默认T4
+     * Set GPU类型（T4/V100/A10），默认T4
+     * @param GPUType GPU类型（T4/V100/A10），默认T4
      */
     public void setGPUType(String GPUType) {
         this.GPUType = GPUType;

@@ -37,6 +37,15 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
+    * 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+    */
+    @SerializedName("ReviewContents")
+    @Expose
+    private String [] ReviewContents;
+
+    /**
      * Get 媒体文件 ID。 
      * @return FileId 媒体文件 ID。
      */
@@ -68,6 +77,30 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         this.Definition = Definition;
     }
 
+    /**
+     * Get 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li> 
+     * @return ReviewContents 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+     */
+    public String [] getReviewContents() {
+        return this.ReviewContents;
+    }
+
+    /**
+     * Set 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+     * @param ReviewContents 审核的内容，可选值：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+     */
+    public void setReviewContents(String [] ReviewContents) {
+        this.ReviewContents = ReviewContents;
+    }
+
     public ReviewAudioVideoTaskInput() {
     }
 
@@ -82,6 +115,12 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ReviewContents != null) {
+            this.ReviewContents = new String[source.ReviewContents.length];
+            for (int i = 0; i < source.ReviewContents.length; i++) {
+                this.ReviewContents[i] = new String(source.ReviewContents[i]);
+            }
+        }
     }
 
 
@@ -91,6 +130,7 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
 
     }
 }

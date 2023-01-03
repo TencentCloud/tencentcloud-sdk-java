@@ -51,14 +51,14 @@ public class CreateBatchModelAccTasksRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 优化级别(NO_LOSS/FP16)，默认FP16
+    * 优化级别(NO_LOSS/FP16/INT8)，默认FP16
     */
     @SerializedName("OptimizationLevel")
     @Expose
     private String OptimizationLevel;
 
     /**
-    * GPU卡类型(T4/V100)，默认T4
+    * GPU卡类型(T4/V100/A10)，默认T4
     */
     @SerializedName("GPUType")
     @Expose
@@ -136,32 +136,32 @@ public class CreateBatchModelAccTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 优化级别(NO_LOSS/FP16)，默认FP16 
-     * @return OptimizationLevel 优化级别(NO_LOSS/FP16)，默认FP16
+     * Get 优化级别(NO_LOSS/FP16/INT8)，默认FP16 
+     * @return OptimizationLevel 优化级别(NO_LOSS/FP16/INT8)，默认FP16
      */
     public String getOptimizationLevel() {
         return this.OptimizationLevel;
     }
 
     /**
-     * Set 优化级别(NO_LOSS/FP16)，默认FP16
-     * @param OptimizationLevel 优化级别(NO_LOSS/FP16)，默认FP16
+     * Set 优化级别(NO_LOSS/FP16/INT8)，默认FP16
+     * @param OptimizationLevel 优化级别(NO_LOSS/FP16/INT8)，默认FP16
      */
     public void setOptimizationLevel(String OptimizationLevel) {
         this.OptimizationLevel = OptimizationLevel;
     }
 
     /**
-     * Get GPU卡类型(T4/V100)，默认T4 
-     * @return GPUType GPU卡类型(T4/V100)，默认T4
+     * Get GPU卡类型(T4/V100/A10)，默认T4 
+     * @return GPUType GPU卡类型(T4/V100/A10)，默认T4
      */
     public String getGPUType() {
         return this.GPUType;
     }
 
     /**
-     * Set GPU卡类型(T4/V100)，默认T4
-     * @param GPUType GPU卡类型(T4/V100)，默认T4
+     * Set GPU卡类型(T4/V100/A10)，默认T4
+     * @param GPUType GPU卡类型(T4/V100/A10)，默认T4
      */
     public void setGPUType(String GPUType) {
         this.GPUType = GPUType;

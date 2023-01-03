@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PullUploadTask extends AbstractModel{
 
     /**
-    * 转拉上传任务 ID。
+    * 拉取上传任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -56,14 +56,14 @@ public class PullUploadTask extends AbstractModel{
     private String Message;
 
     /**
-    * 转拉上传完成后生成的视频 ID。
+    * 拉取上传完成后生成的视频 ID。
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * 转拉完成后生成的媒体文件基础信息。
+    * 拉取上传完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaBasicInfo")
@@ -78,21 +78,28 @@ public class PullUploadTask extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
-    * 转拉上传完成后生成的播放地址。
+    * 拉取上传完成后生成的播放地址。
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+    * 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
 
     /**
-    * 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+    * 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+    */
+    @SerializedName("ReviewAudioVideoTaskId")
+    @Expose
+    private String ReviewAudioVideoTaskId;
+
+    /**
+    * 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。
     */
     @SerializedName("SessionContext")
     @Expose
@@ -106,23 +113,23 @@ public class PullUploadTask extends AbstractModel{
     private String SessionId;
 
     /**
-    * 转拉任务进度，取值范围 [0-100] 。
+    * 拉取上传进度，取值范围 [0-100] 。
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get 转拉上传任务 ID。 
-     * @return TaskId 转拉上传任务 ID。
+     * Get 拉取上传任务 ID。 
+     * @return TaskId 拉取上传任务 ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 转拉上传任务 ID。
-     * @param TaskId 转拉上传任务 ID。
+     * Set 拉取上传任务 ID。
+     * @param TaskId 拉取上传任务 ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -197,25 +204,25 @@ public class PullUploadTask extends AbstractModel{
     }
 
     /**
-     * Get 转拉上传完成后生成的视频 ID。 
-     * @return FileId 转拉上传完成后生成的视频 ID。
+     * Get 拉取上传完成后生成的视频 ID。 
+     * @return FileId 拉取上传完成后生成的视频 ID。
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 转拉上传完成后生成的视频 ID。
-     * @param FileId 转拉上传完成后生成的视频 ID。
+     * Set 拉取上传完成后生成的视频 ID。
+     * @param FileId 拉取上传完成后生成的视频 ID。
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 转拉完成后生成的媒体文件基础信息。
+     * Get 拉取上传完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
+     * @return MediaBasicInfo 拉取上传完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MediaBasicInfo getMediaBasicInfo() {
@@ -223,9 +230,9 @@ public class PullUploadTask extends AbstractModel{
     }
 
     /**
-     * Set 转拉完成后生成的媒体文件基础信息。
+     * Set 拉取上传完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MediaBasicInfo 转拉完成后生成的媒体文件基础信息。
+     * @param MediaBasicInfo 拉取上传完成后生成的媒体文件基础信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
@@ -249,48 +256,64 @@ public class PullUploadTask extends AbstractModel{
     }
 
     /**
-     * Get 转拉上传完成后生成的播放地址。 
-     * @return FileUrl 转拉上传完成后生成的播放地址。
+     * Get 拉取上传完成后生成的播放地址。 
+     * @return FileUrl 拉取上传完成后生成的播放地址。
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 转拉上传完成后生成的播放地址。
-     * @param FileUrl 转拉上传完成后生成的播放地址。
+     * Set 拉取上传完成后生成的播放地址。
+     * @param FileUrl 拉取上传完成后生成的播放地址。
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。 
-     * @return ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+     * Get 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。 
+     * @return ProcedureTaskId 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
     }
 
     /**
-     * Set 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
-     * @param ProcedureTaskId 若转拉上传时指定了视频处理流程，则该参数为流程任务 ID。
+     * Set 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
+     * @param ProcedureTaskId 任务类型为 Procedure 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
     }
 
     /**
-     * Get 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。 
-     * @return SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Get 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。 
+     * @return ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+     */
+    public String getReviewAudioVideoTaskId() {
+        return this.ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Set 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+     * @param ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若[拉取上传](https://cloud.tencent.com/document/api/266/35575)时指定了媒体后续任务操作(Procedure)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。
+     */
+    public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
+        this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Get 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。 
+     * @return SessionContext 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-     * @param SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+     * Set 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。
+     * @param SessionContext 来源上下文，用于透传用户请求信息，[URL 拉取视频上传完成](https://cloud.tencent.com/document/product/266/7831)将返回该字段值，最长 1000 个字符。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -313,16 +336,16 @@ public class PullUploadTask extends AbstractModel{
     }
 
     /**
-     * Get 转拉任务进度，取值范围 [0-100] 。 
-     * @return Progress 转拉任务进度，取值范围 [0-100] 。
+     * Get 拉取上传进度，取值范围 [0-100] 。 
+     * @return Progress 拉取上传进度，取值范围 [0-100] 。
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 转拉任务进度，取值范围 [0-100] 。
-     * @param Progress 转拉任务进度，取值范围 [0-100] 。
+     * Set 拉取上传进度，取值范围 [0-100] 。
+     * @param Progress 拉取上传进度，取值范围 [0-100] 。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -363,6 +386,9 @@ public class PullUploadTask extends AbstractModel{
         if (source.ProcedureTaskId != null) {
             this.ProcedureTaskId = new String(source.ProcedureTaskId);
         }
+        if (source.ReviewAudioVideoTaskId != null) {
+            this.ReviewAudioVideoTaskId = new String(source.ReviewAudioVideoTaskId);
+        }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
@@ -388,6 +414,7 @@ public class PullUploadTask extends AbstractModel{
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "Progress", this.Progress);

@@ -37,6 +37,13 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     private String [] NoticeIds;
 
     /**
+    * 通知模版与策略绑定关系
+    */
+    @SerializedName("NoticeBindPolicys")
+    @Expose
+    private NoticeBindPolicys [] NoticeBindPolicys;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -68,6 +75,22 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
         this.NoticeIds = NoticeIds;
     }
 
+    /**
+     * Get 通知模版与策略绑定关系 
+     * @return NoticeBindPolicys 通知模版与策略绑定关系
+     */
+    public NoticeBindPolicys [] getNoticeBindPolicys() {
+        return this.NoticeBindPolicys;
+    }
+
+    /**
+     * Set 通知模版与策略绑定关系
+     * @param NoticeBindPolicys 通知模版与策略绑定关系
+     */
+    public void setNoticeBindPolicys(NoticeBindPolicys [] NoticeBindPolicys) {
+        this.NoticeBindPolicys = NoticeBindPolicys;
+    }
+
     public DeleteAlarmNoticesRequest() {
     }
 
@@ -85,6 +108,12 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
                 this.NoticeIds[i] = new String(source.NoticeIds[i]);
             }
         }
+        if (source.NoticeBindPolicys != null) {
+            this.NoticeBindPolicys = new NoticeBindPolicys[source.NoticeBindPolicys.length];
+            for (int i = 0; i < source.NoticeBindPolicys.length; i++) {
+                this.NoticeBindPolicys[i] = new NoticeBindPolicys(source.NoticeBindPolicys[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamArrayObj(map, prefix + "NoticeBindPolicys.", this.NoticeBindPolicys);
 
     }
 }

@@ -87,6 +87,14 @@ public class InstanceSpec extends AbstractModel{
     private ZoneStockInfo [] ZoneStockInfos;
 
     /**
+    * 库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StockCount")
+    @Expose
+    private Long StockCount;
+
+    /**
      * Get 实例CPU，单位：核 
      * @return Cpu 实例CPU，单位：核
      */
@@ -234,6 +242,26 @@ public class InstanceSpec extends AbstractModel{
         this.ZoneStockInfos = ZoneStockInfos;
     }
 
+    /**
+     * Get 库存数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StockCount 库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStockCount() {
+        return this.StockCount;
+    }
+
+    /**
+     * Set 库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StockCount 库存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStockCount(Long StockCount) {
+        this.StockCount = StockCount;
+    }
+
     public InstanceSpec() {
     }
 
@@ -272,6 +300,9 @@ public class InstanceSpec extends AbstractModel{
                 this.ZoneStockInfos[i] = new ZoneStockInfo(source.ZoneStockInfos[i]);
             }
         }
+        if (source.StockCount != null) {
+            this.StockCount = new Long(source.StockCount);
+        }
     }
 
 
@@ -288,6 +319,7 @@ public class InstanceSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxIops", this.MaxIops);
         this.setParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
         this.setParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
+        this.setParamSimple(map, prefix + "StockCount", this.StockCount);
 
     }
 }

@@ -203,6 +203,13 @@ EXIST：导入现有版本
     private Long ModelCleanPeriod;
 
     /**
+    * 是否QAT模型
+    */
+    @SerializedName("IsQAT")
+    @Expose
+    private Boolean IsQAT;
+
+    /**
      * Get 导入方式
 MODEL：导入新模型
 VERSION：导入新版本
@@ -622,6 +629,22 @@ EXIST：导入现有版本
         this.ModelCleanPeriod = ModelCleanPeriod;
     }
 
+    /**
+     * Get 是否QAT模型 
+     * @return IsQAT 是否QAT模型
+     */
+    public Boolean getIsQAT() {
+        return this.IsQAT;
+    }
+
+    /**
+     * Set 是否QAT模型
+     * @param IsQAT 是否QAT模型
+     */
+    public void setIsQAT(Boolean IsQAT) {
+        this.IsQAT = IsQAT;
+    }
+
     public CreateTrainingModelRequest() {
     }
 
@@ -708,6 +731,9 @@ EXIST：导入现有版本
         if (source.ModelCleanPeriod != null) {
             this.ModelCleanPeriod = new Long(source.ModelCleanPeriod);
         }
+        if (source.IsQAT != null) {
+            this.IsQAT = new Boolean(source.IsQAT);
+        }
     }
 
 
@@ -740,6 +766,7 @@ EXIST：导入现有版本
         this.setParamSimple(map, prefix + "AutoClean", this.AutoClean);
         this.setParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
         this.setParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
+        this.setParamSimple(map, prefix + "IsQAT", this.IsQAT);
 
     }
 }

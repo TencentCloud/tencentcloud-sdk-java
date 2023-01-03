@@ -257,7 +257,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建用户自定义音视频内容审核模板，数量上限：50。
+     *该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [创建审核模板](https://cloud.tencent.com/document/api/266/84391)。
+创建用户自定义音视频内容审核模板，数量上限：50。
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -378,6 +379,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *创建用户自定义审核模板，数量上限：50。
+>模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
      * @param req CreateReviewTemplateRequest
      * @return CreateReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -684,7 +686,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除用户自定义音视频内容审核模板。
+     *该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [删除审核模板](https://cloud.tencent.com/document/api/266/84390)。
+删除用户自定义音视频内容审核模板。
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -827,6 +830,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *删除用户自定义审核模板。
+>模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
      * @param req DeleteReviewTemplateRequest
      * @return DeleteReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -1183,7 +1187,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
+     *该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [获取审核模板列表](https://cloud.tencent.com/document/api/266/84389)。
+根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1657,7 +1662,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取审核模板列表
+     *获取审核模板列表。
+>模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
      * @param req DescribeReviewTemplatesRequest
      * @return DescribeReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -2207,7 +2213,8 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改用户自定义音视频内容审核模板。
+     *该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [修改审核模板](https://cloud.tencent.com/document/api/266/84388)。
+修改用户自定义音视频内容审核模板。
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -2385,6 +2392,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *修改用户自定义审核模板。
+>模板仅适用于 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 和 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217) 接口。
      * @param req ModifyReviewTemplateRequest
      * @return ModifyReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -2664,7 +2672,7 @@ public class VodClient extends AbstractClient{
 5. 对视频截图雪碧图；
 6. 对视频截取一张图做封面；
 7. 对视频转自适应码流（并加密）；
-8. 内容审核（令人反感的信息、不安全的信息、不适宜的信息）；
+8. 内容审核（令人反感的信息、不安全的信息、不适宜的信息），<font color=red>不建议</font> 使用该接口发起，推荐使用 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 或 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217)；
 9. 内容分析（标签、分类、封面、按帧标签）；
 10. 内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
 
@@ -2693,7 +2701,7 @@ public class VodClient extends AbstractClient{
 1. 在控制台上创建和修改任务流模板；
 2. 通过任务流模板接口创建任务流模板。
 
-如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
+如使用事件通知，除音视频审核任务外的事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)；音视频审核任务事件通知的类型为 [音视频审核完成](https://cloud.tencent.com/document/product/266/81258)。
      * @param req ProcessMediaByProcedureRequest
      * @return ProcessMediaByProcedureResponse
      * @throws TencentCloudSDKException

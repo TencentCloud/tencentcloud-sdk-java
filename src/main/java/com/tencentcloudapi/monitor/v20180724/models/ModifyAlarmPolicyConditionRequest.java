@@ -79,6 +79,34 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
+    * 模版id，专供prom使用
+    */
+    @SerializedName("NoticeIds")
+    @Expose
+    private String [] NoticeIds;
+
+    /**
+    * 启停状态，0=停用，1=启用
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Long Enable;
+
+    /**
+    * 专供prom策略名称
+    */
+    @SerializedName("PolicyName")
+    @Expose
+    private String PolicyName;
+
+    /**
+    * 事件配置的告警
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
      * Get 模块名，固定值 monitor 
      * @return Module 模块名，固定值 monitor
      */
@@ -206,6 +234,70 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
+    /**
+     * Get 模版id，专供prom使用 
+     * @return NoticeIds 模版id，专供prom使用
+     */
+    public String [] getNoticeIds() {
+        return this.NoticeIds;
+    }
+
+    /**
+     * Set 模版id，专供prom使用
+     * @param NoticeIds 模版id，专供prom使用
+     */
+    public void setNoticeIds(String [] NoticeIds) {
+        this.NoticeIds = NoticeIds;
+    }
+
+    /**
+     * Get 启停状态，0=停用，1=启用 
+     * @return Enable 启停状态，0=停用，1=启用
+     */
+    public Long getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 启停状态，0=停用，1=启用
+     * @param Enable 启停状态，0=停用，1=启用
+     */
+    public void setEnable(Long Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get 专供prom策略名称 
+     * @return PolicyName 专供prom策略名称
+     */
+    public String getPolicyName() {
+        return this.PolicyName;
+    }
+
+    /**
+     * Set 专供prom策略名称
+     * @param PolicyName 专供prom策略名称
+     */
+    public void setPolicyName(String PolicyName) {
+        this.PolicyName = PolicyName;
+    }
+
+    /**
+     * Get 事件配置的告警 
+     * @return EbSubject 事件配置的告警
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set 事件配置的告警
+     * @param EbSubject 事件配置的告警
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
     public ModifyAlarmPolicyConditionRequest() {
     }
 
@@ -241,6 +333,21 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         if (source.LogAlarmReqInfo != null) {
             this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
         }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
     }
 
 
@@ -256,6 +363,10 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+        this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
 
     }
 }

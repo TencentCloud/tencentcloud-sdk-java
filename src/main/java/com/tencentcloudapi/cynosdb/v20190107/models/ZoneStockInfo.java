@@ -37,6 +37,13 @@ public class ZoneStockInfo extends AbstractModel{
     private Boolean HasStock;
 
     /**
+    * 库存数量
+    */
+    @SerializedName("StockCount")
+    @Expose
+    private Long StockCount;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -68,6 +75,22 @@ public class ZoneStockInfo extends AbstractModel{
         this.HasStock = HasStock;
     }
 
+    /**
+     * Get 库存数量 
+     * @return StockCount 库存数量
+     */
+    public Long getStockCount() {
+        return this.StockCount;
+    }
+
+    /**
+     * Set 库存数量
+     * @param StockCount 库存数量
+     */
+    public void setStockCount(Long StockCount) {
+        this.StockCount = StockCount;
+    }
+
     public ZoneStockInfo() {
     }
 
@@ -82,6 +105,9 @@ public class ZoneStockInfo extends AbstractModel{
         if (source.HasStock != null) {
             this.HasStock = new Boolean(source.HasStock);
         }
+        if (source.StockCount != null) {
+            this.StockCount = new Long(source.StockCount);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ZoneStockInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "HasStock", this.HasStock);
+        this.setParamSimple(map, prefix + "StockCount", this.StockCount);
 
     }
 }

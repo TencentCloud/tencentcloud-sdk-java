@@ -9,6 +9,9 @@ public enum TsfErrorCode {
     // 应用查询失败。
      FAILEDOPERATION_APPLICATIONQUERYFAILED("FailedOperation.ApplicationQueryFailed"),
      
+    // TSF云API请求调用失败。
+     FAILEDOPERATION_CLOUDAPIPROXYERROR("FailedOperation.CloudApiProxyError"),
+     
     // 创建集群，开通VPC网络权限失败。
      FAILEDOPERATION_CLUSTERCREATEVPCFAIL("FailedOperation.ClusterCreateVpcFail"),
      
@@ -39,6 +42,12 @@ public enum TsfErrorCode {
     // 部署组处于停止状态，无法执行此操作。
      FAILEDOPERATION_CONTAINERGROUPGROUPHASSTOP("FailedOperation.ContainergroupGroupHasstop"),
      
+    // 调用 kube-api-server 失败。
+     FAILEDOPERATION_CONTAINERGROUPKUBERNETEAPIINVOKEERROR("FailedOperation.ContainergroupKuberneteApiInvokeError"),
+     
+    // 连接 kube-api-sever 失败。
+     FAILEDOPERATION_CONTAINERGROUPKUBERNETECONNECTERROR("FailedOperation.ContainergroupKuberneteConnectError"),
+     
     // 健康检查配置失败。
      FAILEDOPERATION_CVMCAEMASTERHEALTHCHECKCONFIGERROR("FailedOperation.CvmCaeMasterHealthCheckConfigError"),
      
@@ -50,6 +59,9 @@ public enum TsfErrorCode {
      
     // 部署组查询失败。
      FAILEDOPERATION_GROUPQUERYFAILD("FailedOperation.GroupQueryFaild"),
+     
+    // tcr仓库绑定失败。
+     FAILEDOPERATION_IMAGEREPOTCRBINDERROR("FailedOperation.ImagerepoTcrBindError"),
      
     // 机器实例删除失败。
      FAILEDOPERATION_INSTANCEDELETEFAILED("FailedOperation.InstanceDeleteFailed"),
@@ -137,6 +149,9 @@ public enum TsfErrorCode {
      
     // TSF应用性能管理CTSDB客户端调用失败。
      FAILEDOPERATION_TSFAPMCTSDBCLIENTREQUESTERROR("FailedOperation.TsfApmCtsdbClientRequestError"),
+     
+    // TSF应用性能管理内部异常, 请稍后重试。
+     FAILEDOPERATION_TSFAPMINTERNALERROR("FailedOperation.TsfApmInternalError"),
      
     // ctsdb数据库请求失败。
      FAILEDOPERATION_TSFCMONITORCTSDBCLIENTREQUESTFAIL("FailedOperation.TsfCmonitorCtsdbClientRequestFail"),

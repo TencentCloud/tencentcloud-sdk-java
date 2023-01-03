@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CynosdbInstanceGrp extends AbstractModel{
 
     /**
-    * appId
+    * 用户appId
     */
     @SerializedName("AppId")
     @Expose
@@ -128,16 +128,61 @@ public class CynosdbInstanceGrp extends AbstractModel{
     private CynosdbInstance [] InstanceSet;
 
     /**
-     * Get appId 
-     * @return AppId appId
+    * VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldAddrInfo")
+    @Expose
+    private OldAddrInfo OldAddrInfo;
+
+    /**
+    * 正在进行的任务
+    */
+    @SerializedName("ProcessingTasks")
+    @Expose
+    private String [] ProcessingTasks;
+
+    /**
+    * 任务列表
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * biz_net_service表id
+    */
+    @SerializedName("NetServiceId")
+    @Expose
+    private Long NetServiceId;
+
+    /**
+     * Get 用户appId 
+     * @return AppId 用户appId
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set appId
-     * @param AppId appId
+     * Set 用户appId
+     * @param AppId 用户appId
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -367,6 +412,114 @@ public class CynosdbInstanceGrp extends AbstractModel{
         this.InstanceSet = InstanceSet;
     }
 
+    /**
+     * Get VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqVpcId VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqVpcId VPC的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get 子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UniqSubnetId 子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldAddrInfo 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OldAddrInfo getOldAddrInfo() {
+        return this.OldAddrInfo;
+    }
+
+    /**
+     * Set 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldAddrInfo 正在回收IP信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldAddrInfo(OldAddrInfo OldAddrInfo) {
+        this.OldAddrInfo = OldAddrInfo;
+    }
+
+    /**
+     * Get 正在进行的任务 
+     * @return ProcessingTasks 正在进行的任务
+     */
+    public String [] getProcessingTasks() {
+        return this.ProcessingTasks;
+    }
+
+    /**
+     * Set 正在进行的任务
+     * @param ProcessingTasks 正在进行的任务
+     */
+    public void setProcessingTasks(String [] ProcessingTasks) {
+        this.ProcessingTasks = ProcessingTasks;
+    }
+
+    /**
+     * Get 任务列表 
+     * @return Tasks 任务列表
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set 任务列表
+     * @param Tasks 任务列表
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get biz_net_service表id 
+     * @return NetServiceId biz_net_service表id
+     */
+    public Long getNetServiceId() {
+        return this.NetServiceId;
+    }
+
+    /**
+     * Set biz_net_service表id
+     * @param NetServiceId biz_net_service表id
+     */
+    public void setNetServiceId(Long NetServiceId) {
+        this.NetServiceId = NetServiceId;
+    }
+
     public CynosdbInstanceGrp() {
     }
 
@@ -423,6 +576,30 @@ public class CynosdbInstanceGrp extends AbstractModel{
                 this.InstanceSet[i] = new CynosdbInstance(source.InstanceSet[i]);
             }
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.OldAddrInfo != null) {
+            this.OldAddrInfo = new OldAddrInfo(source.OldAddrInfo);
+        }
+        if (source.ProcessingTasks != null) {
+            this.ProcessingTasks = new String[source.ProcessingTasks.length];
+            for (int i = 0; i < source.ProcessingTasks.length; i++) {
+                this.ProcessingTasks[i] = new String(source.ProcessingTasks[i]);
+            }
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.NetServiceId != null) {
+            this.NetServiceId = new Long(source.NetServiceId);
+        }
     }
 
 
@@ -445,6 +622,12 @@ public class CynosdbInstanceGrp extends AbstractModel{
         this.setParamSimple(map, prefix + "WanPort", this.WanPort);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamObj(map, prefix + "OldAddrInfo.", this.OldAddrInfo);
+        this.setParamArraySimple(map, prefix + "ProcessingTasks.", this.ProcessingTasks);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "NetServiceId", this.NetServiceId);
 
     }
 }
