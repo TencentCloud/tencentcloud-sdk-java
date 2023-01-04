@@ -979,7 +979,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询复制组
+     *本接口（DescribeReplicationGroup）查询复制组。
      * @param req DescribeReplicationGroupRequest
      * @return DescribeReplicationGroupResponse
      * @throws TencentCloudSDKException

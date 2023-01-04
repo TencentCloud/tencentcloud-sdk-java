@@ -121,7 +121,7 @@ public class AssetMachineDetail extends AbstractModel{
     private String CpuLoad;
 
     /**
-    * 防护级别：0基础版，1专业版
+    * 防护级别：0基础版，1专业版，2旗舰版，3普惠版
     */
     @SerializedName("ProtectLevel")
     @Expose
@@ -269,6 +269,14 @@ public class AssetMachineDetail extends AbstractModel{
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
 
     /**
      * Get 服务器Quuid 
@@ -495,16 +503,16 @@ public class AssetMachineDetail extends AbstractModel{
     }
 
     /**
-     * Get 防护级别：0基础版，1专业版 
-     * @return ProtectLevel 防护级别：0基础版，1专业版
+     * Get 防护级别：0基础版，1专业版，2旗舰版，3普惠版 
+     * @return ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
      */
     public Long getProtectLevel() {
         return this.ProtectLevel;
     }
 
     /**
-     * Set 防护级别：0基础版，1专业版
-     * @param ProtectLevel 防护级别：0基础版，1专业版
+     * Set 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * @param ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
      */
     public void setProtectLevel(Long ProtectLevel) {
         this.ProtectLevel = ProtectLevel;
@@ -842,6 +850,26 @@ public class AssetMachineDetail extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机二外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public AssetMachineDetail() {
     }
 
@@ -961,6 +989,9 @@ public class AssetMachineDetail extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -1003,6 +1034,7 @@ public class AssetMachineDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

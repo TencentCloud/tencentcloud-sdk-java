@@ -93,6 +93,13 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
     private String Domain;
 
     /**
+    * 指定防火墙使用网段信息
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get 防火墙实例名称 
      * @return Name 防火墙实例名称
      */
@@ -252,6 +259,22 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get 指定防火墙使用网段信息 
+     * @return FwCidrInfo 指定防火墙使用网段信息
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set 指定防火墙使用网段信息
+     * @param FwCidrInfo 指定防火墙使用网段信息
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public CreateNatFwInstanceWithDomainRequest() {
     }
 
@@ -293,6 +316,9 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateNatFwInstanceWithDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
         this.setParamSimple(map, prefix + "IsCreateDomain", this.IsCreateDomain);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

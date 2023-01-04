@@ -552,6 +552,14 @@ off：不支持
     private QnPrivateAccess QnPrivateAccess;
 
     /**
+    * https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpsBilling")
+    @Expose
+    private HttpsBilling HttpsBilling;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1899,6 +1907,26 @@ off：不支持
         this.QnPrivateAccess = QnPrivateAccess;
     }
 
+    /**
+     * Get https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpsBilling https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HttpsBilling getHttpsBilling() {
+        return this.HttpsBilling;
+    }
+
+    /**
+     * Set https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpsBilling https 请求计费开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpsBilling(HttpsBilling HttpsBilling) {
+        this.HttpsBilling = HttpsBilling;
+    }
+
     public DetailDomain() {
     }
 
@@ -2108,6 +2136,9 @@ off：不支持
         if (source.QnPrivateAccess != null) {
             this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
         }
+        if (source.HttpsBilling != null) {
+            this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
+        }
     }
 
 
@@ -2179,6 +2210,7 @@ off：不支持
         this.setParamSimple(map, prefix + "ParentHost", this.ParentHost);
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+        this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
 
     }
 }

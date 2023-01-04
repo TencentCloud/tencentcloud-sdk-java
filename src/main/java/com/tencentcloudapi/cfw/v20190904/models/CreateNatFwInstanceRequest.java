@@ -79,6 +79,13 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
     private Long CrossAZone;
 
     /**
+    * 指定防火墙使用网段信息
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get 防火墙实例名称 
      * @return Name 防火墙实例名称
      */
@@ -206,6 +213,22 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         this.CrossAZone = CrossAZone;
     }
 
+    /**
+     * Get 指定防火墙使用网段信息 
+     * @return FwCidrInfo 指定防火墙使用网段信息
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set 指定防火墙使用网段信息
+     * @param FwCidrInfo 指定防火墙使用网段信息
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public CreateNatFwInstanceRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         if (source.CrossAZone != null) {
             this.CrossAZone = new Long(source.CrossAZone);
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class CreateNatFwInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneBak", this.ZoneBak);
         this.setParamSimple(map, prefix + "CrossAZone", this.CrossAZone);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

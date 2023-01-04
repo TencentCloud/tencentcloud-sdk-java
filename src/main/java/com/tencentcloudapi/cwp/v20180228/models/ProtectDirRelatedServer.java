@@ -114,6 +114,14 @@ public class ProtectDirRelatedServer extends AbstractModel{
     private String ExceptionMessage;
 
     /**
+    * 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 唯一ID 
      * @return Id 唯一ID
      */
@@ -321,6 +329,26 @@ public class ProtectDirRelatedServer extends AbstractModel{
         this.ExceptionMessage = ExceptionMessage;
     }
 
+    /**
+     * Get 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public ProtectDirRelatedServer() {
     }
 
@@ -368,6 +396,9 @@ public class ProtectDirRelatedServer extends AbstractModel{
         if (source.ExceptionMessage != null) {
             this.ExceptionMessage = new String(source.ExceptionMessage);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class ProtectDirRelatedServer extends AbstractModel{
         this.setParamSimple(map, prefix + "Exception", this.Exception);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamSimple(map, prefix + "ExceptionMessage", this.ExceptionMessage);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

@@ -185,6 +185,14 @@ XTI - 威胁情报
     private String Desc;
 
     /**
+    * 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 记录Id 
      * @return Id 记录Id
      */
@@ -592,6 +600,26 @@ XTI - 威胁情报
         this.Desc = Desc;
     }
 
+    /**
+     * Get 附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public HostLoginList() {
     }
 
@@ -660,6 +688,9 @@ XTI - 威胁情报
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -687,6 +718,7 @@ XTI - 威胁情报
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

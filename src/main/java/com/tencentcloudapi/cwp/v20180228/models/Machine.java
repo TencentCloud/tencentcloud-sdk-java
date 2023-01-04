@@ -226,6 +226,29 @@ public class Machine extends AbstractModel{
     private String IpList;
 
     /**
+    * 所属网络
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
+    * 实例ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 主机名称。 
      * @return MachineName 主机名称。
      */
@@ -713,6 +736,62 @@ public class Machine extends AbstractModel{
         this.IpList = IpList;
     }
 
+    /**
+     * Get 所属网络
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId 所属网络
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set 所属网络
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId 所属网络
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get 实例ID 
+     * @return InstanceId 实例ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+     * @param InstanceId 实例ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public Machine() {
     }
 
@@ -808,6 +887,15 @@ public class Machine extends AbstractModel{
         if (source.IpList != null) {
             this.IpList = new String(source.IpList);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -842,6 +930,9 @@ public class Machine extends AbstractModel{
         this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         this.setParamSimple(map, prefix + "IsAddedOnTheFifteen", this.IsAddedOnTheFifteen);
         this.setParamSimple(map, prefix + "IpList", this.IpList);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

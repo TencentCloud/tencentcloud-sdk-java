@@ -24,7 +24,7 @@ public class ReviewImageResponse extends AbstractModel{
 
     /**
     * 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
+<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
     */
     @SerializedName("ReviewResultSet")
     @Expose
@@ -47,9 +47,9 @@ public class ReviewImageResponse extends AbstractModel{
 
     /**
      * Get 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font>  
+<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font>  
      * @return ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
+<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
      */
     public ContentReviewResult [] getReviewResultSet() {
         return this.ReviewResultSet;
@@ -57,9 +57,9 @@ public class ReviewImageResponse extends AbstractModel{
 
     /**
      * Set 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
+<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
      * @param ReviewResultSet 图片审核任务结果。
-<font color=red>注意：该字段已废弃，建议使用 ReviewResult。</font> 
+<font color=red>注意：该字段已废弃，建议使用 MediaReviewResult。</font> 
      */
     public void setReviewResultSet(ContentReviewResult [] ReviewResultSet) {
         this.ReviewResultSet = ReviewResultSet;

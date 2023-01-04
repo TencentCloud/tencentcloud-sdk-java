@@ -237,6 +237,14 @@ public class EmrListInstance extends AbstractModel{
     private Boolean IsHandsCluster;
 
     /**
+    * 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutSideSoftInfo")
+    @Expose
+    private SoftDependInfo [] OutSideSoftInfo;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -756,6 +764,26 @@ public class EmrListInstance extends AbstractModel{
         this.IsHandsCluster = IsHandsCluster;
     }
 
+    /**
+     * Get 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutSideSoftInfo 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SoftDependInfo [] getOutSideSoftInfo() {
+        return this.OutSideSoftInfo;
+    }
+
+    /**
+     * Set 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutSideSoftInfo 体外客户端组件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutSideSoftInfo(SoftDependInfo [] OutSideSoftInfo) {
+        this.OutSideSoftInfo = OutSideSoftInfo;
+    }
+
     public EmrListInstance() {
     }
 
@@ -851,6 +879,12 @@ public class EmrListInstance extends AbstractModel{
         if (source.IsHandsCluster != null) {
             this.IsHandsCluster = new Boolean(source.IsHandsCluster);
         }
+        if (source.OutSideSoftInfo != null) {
+            this.OutSideSoftInfo = new SoftDependInfo[source.OutSideSoftInfo.length];
+            for (int i = 0; i < source.OutSideSoftInfo.length; i++) {
+                this.OutSideSoftInfo[i] = new SoftDependInfo(source.OutSideSoftInfo[i]);
+            }
+        }
     }
 
 
@@ -886,6 +920,7 @@ public class EmrListInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterClass", this.ClusterClass);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
+        this.setParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
 
     }
 }

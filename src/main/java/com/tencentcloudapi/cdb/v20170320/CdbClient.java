@@ -2229,7 +2229,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyRemoteBackupConfig)用于查询数据库异地备份配置信息。
+     *本接口(ModifyRemoteBackupConfig)用于修改数据库异地备份配置信息。
      * @param req ModifyRemoteBackupConfigRequest
      * @return ModifyRemoteBackupConfigResponse
      * @throws TencentCloudSDKException

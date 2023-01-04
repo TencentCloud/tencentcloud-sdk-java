@@ -190,6 +190,14 @@ public class BruteAttackInfo extends AbstractModel{
     private Long DataStatus;
 
     /**
+    * 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 唯一Id 
      * @return Id 唯一Id
      */
@@ -605,6 +613,26 @@ public class BruteAttackInfo extends AbstractModel{
         this.DataStatus = DataStatus;
     }
 
+    /**
+     * Get 附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -676,6 +704,9 @@ public class BruteAttackInfo extends AbstractModel{
         if (source.DataStatus != null) {
             this.DataStatus = new Long(source.DataStatus);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -704,6 +735,7 @@ public class BruteAttackInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DataStatus", this.DataStatus);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

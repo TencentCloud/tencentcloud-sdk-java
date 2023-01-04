@@ -88,6 +88,14 @@ public class JavaMemShellInfo extends AbstractModel{
     private String Quuid;
 
     /**
+    * 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 事件ID 
      * @return Id 事件ID
      */
@@ -239,6 +247,26 @@ public class JavaMemShellInfo extends AbstractModel{
         this.Quuid = Quuid;
     }
 
+    /**
+     * Get 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public JavaMemShellInfo() {
     }
 
@@ -274,6 +302,9 @@ public class JavaMemShellInfo extends AbstractModel{
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -290,6 +321,7 @@ public class JavaMemShellInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RecentFoundTime", this.RecentFoundTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

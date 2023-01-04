@@ -103,6 +103,22 @@ public class EffectiveMachineInfo extends AbstractModel{
     private Long VulNum;
 
     /**
+    * 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudTags")
+    @Expose
+    private Tags [] CloudTags;
+
+    /**
+    * 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
      * Get 机器名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MachineName 机器名称
@@ -302,6 +318,46 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.VulNum = VulNum;
     }
 
+    /**
+     * Get 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getCloudTags() {
+        return this.CloudTags;
+    }
+
+    /**
+     * Set 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudTags(Tags [] CloudTags) {
+        this.CloudTags = CloudTags;
+    }
+
+    /**
+     * Get 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceID 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceID 机器instance ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
     public EffectiveMachineInfo() {
     }
 
@@ -343,6 +399,15 @@ public class EffectiveMachineInfo extends AbstractModel{
         if (source.VulNum != null) {
             this.VulNum = new Long(source.VulNum);
         }
+        if (source.CloudTags != null) {
+            this.CloudTags = new Tags[source.CloudTags.length];
+            for (int i = 0; i < source.CloudTags.length; i++) {
+                this.CloudTags[i] = new Tags(source.CloudTags[i]);
+            }
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
     }
 
 
@@ -360,6 +425,8 @@ public class EffectiveMachineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamObj(map, prefix + "LicenseOrder.", this.LicenseOrder);
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);
+        this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
 
     }
 }

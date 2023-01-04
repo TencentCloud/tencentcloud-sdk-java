@@ -153,6 +153,14 @@ public class BaselineItem extends AbstractModel{
     private String Uuid;
 
     /**
+    * 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 项Id 
      * @return ItemId 项Id
      */
@@ -468,6 +476,26 @@ public class BaselineItem extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public BaselineItem() {
     }
 
@@ -527,6 +555,9 @@ public class BaselineItem extends AbstractModel{
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -551,6 +582,7 @@ public class BaselineItem extends AbstractModel{
         this.setParamSimple(map, prefix + "LastTime", this.LastTime);
         this.setParamSimple(map, prefix + "CanBeFixed", this.CanBeFixed);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

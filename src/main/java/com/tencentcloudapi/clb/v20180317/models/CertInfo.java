@@ -37,14 +37,14 @@ public class CertInfo extends AbstractModel{
     private String CertName;
 
     /**
-    * 上传证书的公钥，如果没有 CertId，则此项必传。
+    * 上传证书的公钥；如果没有 CertId，则此项必传。
     */
     @SerializedName("CertContent")
     @Expose
     private String CertContent;
 
     /**
-    * 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+    * 上传服务端证书的私钥；如果没有 CertId，则此项必传。
     */
     @SerializedName("CertKey")
     @Expose
@@ -83,32 +83,32 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get 上传证书的公钥，如果没有 CertId，则此项必传。 
-     * @return CertContent 上传证书的公钥，如果没有 CertId，则此项必传。
+     * Get 上传证书的公钥；如果没有 CertId，则此项必传。 
+     * @return CertContent 上传证书的公钥；如果没有 CertId，则此项必传。
      */
     public String getCertContent() {
         return this.CertContent;
     }
 
     /**
-     * Set 上传证书的公钥，如果没有 CertId，则此项必传。
-     * @param CertContent 上传证书的公钥，如果没有 CertId，则此项必传。
+     * Set 上传证书的公钥；如果没有 CertId，则此项必传。
+     * @param CertContent 上传证书的公钥；如果没有 CertId，则此项必传。
      */
     public void setCertContent(String CertContent) {
         this.CertContent = CertContent;
     }
 
     /**
-     * Get 上传服务端证书的私钥，如果没有 CertId，则此项必传。 
-     * @return CertKey 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+     * Get 上传服务端证书的私钥；如果没有 CertId，则此项必传。 
+     * @return CertKey 上传服务端证书的私钥；如果没有 CertId，则此项必传。
      */
     public String getCertKey() {
         return this.CertKey;
     }
 
     /**
-     * Set 上传服务端证书的私钥，如果没有 CertId，则此项必传。
-     * @param CertKey 上传服务端证书的私钥，如果没有 CertId，则此项必传。
+     * Set 上传服务端证书的私钥；如果没有 CertId，则此项必传。
+     * @param CertKey 上传服务端证书的私钥；如果没有 CertId，则此项必传。
      */
     public void setCertKey(String CertKey) {
         this.CertKey = CertKey;

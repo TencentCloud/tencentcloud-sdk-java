@@ -151,6 +151,22 @@ public class VulEffectHostList extends AbstractModel{
     private String PublicIpAddresses;
 
     /**
+    * 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudTags")
+    @Expose
+    private Tags [] CloudTags;
+
+    /**
+    * 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 事件id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EventId 事件id
@@ -470,6 +486,46 @@ public class VulEffectHostList extends AbstractModel{
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
+    /**
+     * Get 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getCloudTags() {
+        return this.CloudTags;
+    }
+
+    /**
+     * Set 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudTags 云标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudTags(Tags [] CloudTags) {
+        this.CloudTags = CloudTags;
+    }
+
+    /**
+     * Get 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public VulEffectHostList() {
     }
 
@@ -529,6 +585,15 @@ public class VulEffectHostList extends AbstractModel{
         if (source.PublicIpAddresses != null) {
             this.PublicIpAddresses = new String(source.PublicIpAddresses);
         }
+        if (source.CloudTags != null) {
+            this.CloudTags = new Tags[source.CloudTags.length];
+            for (int i = 0; i < source.CloudTags.length; i++) {
+                this.CloudTags[i] = new Tags(source.CloudTags[i]);
+            }
+        }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -552,6 +617,8 @@ public class VulEffectHostList extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstDiscoveryTime", this.FirstDiscoveryTime);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
         this.setParamSimple(map, prefix + "PublicIpAddresses", this.PublicIpAddresses);
+        this.setParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

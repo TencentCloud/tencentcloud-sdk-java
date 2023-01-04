@@ -191,6 +191,14 @@ public class DomainInfo extends AbstractModel{
     private Long PostCKafkaStatus;
 
     /**
+    * 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlbType")
+    @Expose
+    private String AlbType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -574,6 +582,26 @@ public class DomainInfo extends AbstractModel{
         this.PostCKafkaStatus = PostCKafkaStatus;
     }
 
+    /**
+     * Get 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlbType() {
+        return this.AlbType;
+    }
+
+    /**
+     * Set 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlbType(String AlbType) {
+        this.AlbType = AlbType;
+    }
+
     public DomainInfo() {
     }
 
@@ -666,6 +694,9 @@ public class DomainInfo extends AbstractModel{
         if (source.PostCKafkaStatus != null) {
             this.PostCKafkaStatus = new Long(source.PostCKafkaStatus);
         }
+        if (source.AlbType != null) {
+            this.AlbType = new String(source.AlbType);
+        }
     }
 
 
@@ -697,6 +728,7 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
         this.setParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+        this.setParamSimple(map, prefix + "AlbType", this.AlbType);
 
     }
 }

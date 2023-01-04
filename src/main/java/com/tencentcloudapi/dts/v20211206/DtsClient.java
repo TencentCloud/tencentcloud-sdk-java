@@ -547,6 +547,26 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *暂停处于同步中的数据同步任务。
+     * @param req PauseSyncJobRequest
+     * @return PauseSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseSyncJobResponse PauseSyncJob(PauseSyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseSyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseSyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseSyncJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解除隔离数据迁移任务，用户手动发起隔离后的手动解隔离，只有任务状态为已隔离(手动操作)状态下才能触发此操作。调用此接口后可通过查询迁移服务列表接口`DescribeMigrationJobs`来查询当前任务状态。
      * @param req RecoverMigrateJobRequest
      * @return RecoverMigrateJobResponse

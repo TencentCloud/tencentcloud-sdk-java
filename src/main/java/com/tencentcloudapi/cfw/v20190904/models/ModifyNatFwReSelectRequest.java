@@ -51,6 +51,13 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
     private String [] VpcList;
 
     /**
+    * 指定防火墙使用网段信息
+    */
+    @SerializedName("FwCidrInfo")
+    @Expose
+    private FwCidrInfo FwCidrInfo;
+
+    /**
      * Get 模式 1：接入模式；0：新增模式 
      * @return Mode 模式 1：接入模式；0：新增模式
      */
@@ -114,6 +121,22 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
         this.VpcList = VpcList;
     }
 
+    /**
+     * Get 指定防火墙使用网段信息 
+     * @return FwCidrInfo 指定防火墙使用网段信息
+     */
+    public FwCidrInfo getFwCidrInfo() {
+        return this.FwCidrInfo;
+    }
+
+    /**
+     * Set 指定防火墙使用网段信息
+     * @param FwCidrInfo 指定防火墙使用网段信息
+     */
+    public void setFwCidrInfo(FwCidrInfo FwCidrInfo) {
+        this.FwCidrInfo = FwCidrInfo;
+    }
+
     public ModifyNatFwReSelectRequest() {
     }
 
@@ -140,6 +163,9 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
                 this.VpcList[i] = new String(source.VpcList[i]);
             }
         }
+        if (source.FwCidrInfo != null) {
+            this.FwCidrInfo = new FwCidrInfo(source.FwCidrInfo);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class ModifyNatFwReSelectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CfwInstance", this.CfwInstance);
         this.setParamArraySimple(map, prefix + "NatGwList.", this.NatGwList);
         this.setParamArraySimple(map, prefix + "VpcList.", this.VpcList);
+        this.setParamObj(map, prefix + "FwCidrInfo.", this.FwCidrInfo);
 
     }
 }

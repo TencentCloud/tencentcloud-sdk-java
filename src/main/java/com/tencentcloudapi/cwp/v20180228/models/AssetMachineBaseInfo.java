@@ -158,6 +158,14 @@ public class AssetMachineBaseInfo extends AbstractModel{
     private String FirstTime;
 
     /**
+    * 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 服务器Quuid 
      * @return Quuid 服务器Quuid
      */
@@ -469,6 +477,26 @@ public class AssetMachineBaseInfo extends AbstractModel{
         this.FirstTime = FirstTime;
     }
 
+    /**
+     * Get 附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public AssetMachineBaseInfo() {
     }
 
@@ -537,6 +565,9 @@ public class AssetMachineBaseInfo extends AbstractModel{
         if (source.FirstTime != null) {
             this.FirstTime = new String(source.FirstTime);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -563,6 +594,7 @@ public class AssetMachineBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

@@ -160,6 +160,14 @@ public class AssetAppBaseInfo extends AbstractModel{
     private Long IsNew;
 
     /**
+    * 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 主机内网IP 
      * @return MachineIp 主机内网IP
      */
@@ -491,6 +499,26 @@ public class AssetAppBaseInfo extends AbstractModel{
         this.IsNew = IsNew;
     }
 
+    /**
+     * Get 附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public AssetAppBaseInfo() {
     }
 
@@ -556,6 +584,9 @@ public class AssetAppBaseInfo extends AbstractModel{
         if (source.IsNew != null) {
             this.IsNew = new Long(source.IsNew);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class AssetAppBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

@@ -121,6 +121,14 @@ public class DefendAttackLog extends AbstractModel{
     private String HttpContent;
 
     /**
+    * 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 日志ID 
      * @return Id 日志ID
      */
@@ -344,6 +352,26 @@ public class DefendAttackLog extends AbstractModel{
         this.HttpContent = HttpContent;
     }
 
+    /**
+     * Get 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 主机额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public DefendAttackLog() {
     }
 
@@ -394,6 +422,9 @@ public class DefendAttackLog extends AbstractModel{
         if (source.HttpContent != null) {
             this.HttpContent = new String(source.HttpContent);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -415,6 +446,7 @@ public class DefendAttackLog extends AbstractModel{
         this.setParamSimple(map, prefix + "DstIp", this.DstIp);
         this.setParamSimple(map, prefix + "DstPort", this.DstPort);
         this.setParamSimple(map, prefix + "HttpContent", this.HttpContent);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

@@ -60,8 +60,7 @@ blacklist：黑名单
     private IpFilterPathRule [] FilterRules;
 
     /**
-    * IP 黑白名单验证失败时返回的 HTTP Code
-合法值: 400~499
+    * IP 黑白名单验证失败时返回的 code（即将下线）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
@@ -169,11 +168,9 @@ blacklist：黑名单
     }
 
     /**
-     * Get IP 黑白名单验证失败时返回的 HTTP Code
-合法值: 400~499
+     * Get IP 黑白名单验证失败时返回的 code（即将下线）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReturnCode IP 黑白名单验证失败时返回的 HTTP Code
-合法值: 400~499
+     * @return ReturnCode IP 黑白名单验证失败时返回的 code（即将下线）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnCode() {
@@ -181,11 +178,9 @@ blacklist：黑名单
     }
 
     /**
-     * Set IP 黑白名单验证失败时返回的 HTTP Code
-合法值: 400~499
+     * Set IP 黑白名单验证失败时返回的 code（即将下线）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReturnCode IP 黑白名单验证失败时返回的 HTTP Code
-合法值: 400~499
+     * @param ReturnCode IP 黑白名单验证失败时返回的 code（即将下线）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(Long ReturnCode) {

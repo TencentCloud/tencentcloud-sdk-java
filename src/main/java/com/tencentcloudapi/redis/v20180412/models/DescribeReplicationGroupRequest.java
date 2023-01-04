@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeReplicationGroupRequest extends AbstractModel{
 
     /**
-    * 实例列表的大小，参数默认值20
+    * 每页输出实例列表的大小，参数默认值20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 复制组ID
+    * 复制组ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 实例ID和实例名称，支持模糊查询
+    * 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get 实例列表的大小，参数默认值20 
-     * @return Limit 实例列表的大小，参数默认值20
+     * Get 每页输出实例列表的大小，参数默认值20。 
+     * @return Limit 每页输出实例列表的大小，参数默认值20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 实例列表的大小，参数默认值20
-     * @param Limit 实例列表的大小，参数默认值20
+     * Set 每页输出实例列表的大小，参数默认值20。
+     * @param Limit 每页输出实例列表的大小，参数默认值20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 复制组ID 
-     * @return GroupId 复制组ID
+     * Get 复制组ID。 
+     * @return GroupId 复制组ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组ID
-     * @param GroupId 复制组ID
+     * Set 复制组ID。
+     * @param GroupId 复制组ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 实例ID和实例名称，支持模糊查询 
-     * @return SearchKey 实例ID和实例名称，支持模糊查询
+     * Get 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。 
+     * @return SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 实例ID和实例名称，支持模糊查询
-     * @param SearchKey 实例ID和实例名称，支持模糊查询
+     * Set 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+     * @param SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

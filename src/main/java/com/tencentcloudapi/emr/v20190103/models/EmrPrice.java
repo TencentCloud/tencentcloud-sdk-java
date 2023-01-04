@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
+public class EmrPrice extends AbstractModel{
 
     /**
-    * 原价，单位为元。
+    * 刊例价格
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
@@ -31,7 +31,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String OriginalCost;
 
     /**
-    * 折扣价，单位为元。
+    * 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscountCost")
@@ -39,9 +39,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String DiscountCost;
 
     /**
-    * 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+    * 单位
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -49,7 +47,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private String Unit;
 
     /**
-    * 询价的节点规格。
+    * 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PriceSpec")
@@ -57,24 +55,17 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     private PriceResource PriceSpec;
 
     /**
-    * 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+    * 是否支持竞价实例
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MultipleEmrPrice")
+    @SerializedName("SupportSpotPaid")
     @Expose
-    private EmrPrice [] MultipleEmrPrice;
+    private Boolean SupportSpotPaid;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get 原价，单位为元。
+     * Get 刊例价格
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCost 原价，单位为元。
+     * @return OriginalCost 刊例价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCost() {
@@ -82,9 +73,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 原价，单位为元。
+     * Set 刊例价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCost 原价，单位为元。
+     * @param OriginalCost 刊例价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(String OriginalCost) {
@@ -92,9 +83,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 折扣价，单位为元。
+     * Get 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiscountCost 折扣价，单位为元。
+     * @return DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiscountCost() {
@@ -102,9 +93,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 折扣价，单位为元。
+     * Set 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiscountCost 折扣价，单位为元。
+     * @param DiscountCost 折扣价格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscountCost(String DiscountCost) {
@@ -112,13 +103,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Get 单位
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Unit 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * @return Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -126,13 +113,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * Set 单位
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Unit 扩容的时间单位。取值范围：
-<li>s：表示秒。</li>
-<li>m：表示月份。</li>
+     * @param Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
@@ -140,9 +123,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 询价的节点规格。
+     * Get 询价配置
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PriceSpec 询价的节点规格。
+     * @return PriceSpec 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public PriceResource getPriceSpec() {
@@ -150,9 +133,9 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Set 询价的节点规格。
+     * Set 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PriceSpec 询价的节点规格。
+     * @param PriceSpec 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriceSpec(PriceResource PriceSpec) {
@@ -160,49 +143,33 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * Get 是否支持竞价实例
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @return SupportSpotPaid 是否支持竞价实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public EmrPrice [] getMultipleEmrPrice() {
-        return this.MultipleEmrPrice;
+    public Boolean getSupportSpotPaid() {
+        return this.SupportSpotPaid;
     }
 
     /**
-     * Set 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * Set 是否支持竞价实例
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MultipleEmrPrice 对应入参MultipleResources中多个规格的询价结果，其它出参返回的是第一个规格的询价结果
+     * @param SupportSpotPaid 是否支持竞价实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMultipleEmrPrice(EmrPrice [] MultipleEmrPrice) {
-        this.MultipleEmrPrice = MultipleEmrPrice;
+    public void setSupportSpotPaid(Boolean SupportSpotPaid) {
+        this.SupportSpotPaid = SupportSpotPaid;
     }
 
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public InquiryPriceScaleOutInstanceResponse() {
+    public EmrPrice() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceScaleOutInstanceResponse(InquiryPriceScaleOutInstanceResponse source) {
+    public EmrPrice(EmrPrice source) {
         if (source.OriginalCost != null) {
             this.OriginalCost = new String(source.OriginalCost);
         }
@@ -215,14 +182,8 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
         if (source.PriceSpec != null) {
             this.PriceSpec = new PriceResource(source.PriceSpec);
         }
-        if (source.MultipleEmrPrice != null) {
-            this.MultipleEmrPrice = new EmrPrice[source.MultipleEmrPrice.length];
-            for (int i = 0; i < source.MultipleEmrPrice.length; i++) {
-                this.MultipleEmrPrice[i] = new EmrPrice(source.MultipleEmrPrice[i]);
-            }
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.SupportSpotPaid != null) {
+            this.SupportSpotPaid = new Boolean(source.SupportSpotPaid);
         }
     }
 
@@ -235,8 +196,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
-        this.setParamArrayObj(map, prefix + "MultipleEmrPrice.", this.MultipleEmrPrice);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "SupportSpotPaid", this.SupportSpotPaid);
 
     }
 }

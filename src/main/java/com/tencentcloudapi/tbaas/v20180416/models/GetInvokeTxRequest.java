@@ -51,14 +51,14 @@ public class GetInvokeTxRequest extends AbstractModel{
     private String ChannelName;
 
     /**
-    * 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+    * 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
     */
     @SerializedName("PeerName")
     @Expose
     private String PeerName;
 
     /**
-    * 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+    * 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
     */
     @SerializedName("PeerGroup")
     @Expose
@@ -143,32 +143,32 @@ public class GetInvokeTxRequest extends AbstractModel{
     }
 
     /**
-     * Get 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称 
-     * @return PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Get 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称 
+     * @return PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public String getPeerName() {
         return this.PeerName;
     }
 
     /**
-     * Set 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
-     * @param PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Set 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+     * @param PeerName 执行该查询交易的节点名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public void setPeerName(String PeerName) {
         this.PeerName = PeerName;
     }
 
     /**
-     * Get 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称 
-     * @return PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Get 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称 
+     * @return PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public String getPeerGroup() {
         return this.PeerGroup;
     }
 
     /**
-     * Set 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
-     * @param PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称极其所属组织名称
+     * Set 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
+     * @param PeerGroup 执行该查询交易的节点所属组织名称，可以在通道详情中获取该通道上的节点名称及其所属组织名称
      */
     public void setPeerGroup(String PeerGroup) {
         this.PeerGroup = PeerGroup;

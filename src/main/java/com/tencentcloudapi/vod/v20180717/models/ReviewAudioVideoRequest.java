@@ -37,7 +37,17 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 音视频审核模板 ID，默认值为 10。取值范围：
+    * 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+    */
+    @SerializedName("ReviewContents")
+    @Expose
+    private String [] ReviewContents;
+
+    /**
+    * 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
     */
     @SerializedName("Definition")
@@ -105,9 +115,37 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     }
 
     /**
-     * Get 音视频审核模板 ID，默认值为 10。取值范围：
+     * Get 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。 
+     * @return ReviewContents 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+     */
+    public String [] getReviewContents() {
+        return this.ReviewContents;
+    }
+
+    /**
+     * Set 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+     * @param ReviewContents 审核的内容，可选值有：
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
+不填或填空数组时，默认为审核 Media。
+     */
+    public void setReviewContents(String [] ReviewContents) {
+        this.ReviewContents = ReviewContents;
+    }
+
+    /**
+     * Get 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li> 
-     * @return Definition 音视频审核模板 ID，默认值为 10。取值范围：
+     * @return Definition 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      */
     public Long getDefinition() {
@@ -115,9 +153,9 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     }
 
     /**
-     * Set 音视频审核模板 ID，默认值为 10。取值范围：
+     * Set 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
-     * @param Definition 音视频审核模板 ID，默认值为 10。取值范围：
+     * @param Definition 审核模板 ID，默认值为 10。取值范围：
 <li>10：预置模板，支持检测的违规标签包括色情（Porn）、暴恐（Terror）和不适宜的信息（Polity）。</li>
      */
     public void setDefinition(Long Definition) {
@@ -202,6 +240,12 @@ public class ReviewAudioVideoRequest extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.ReviewContents != null) {
+            this.ReviewContents = new String[source.ReviewContents.length];
+            for (int i = 0; i < source.ReviewContents.length; i++) {
+                this.ReviewContents[i] = new String(source.ReviewContents[i]);
+            }
+        }
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
@@ -226,6 +270,7 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

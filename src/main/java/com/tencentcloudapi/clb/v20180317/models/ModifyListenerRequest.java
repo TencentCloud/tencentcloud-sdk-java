@@ -115,6 +115,20 @@ public class ModifyListenerRequest extends AbstractModel{
     private MultiCertInfo MultiCertInfo;
 
     /**
+    * 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+    */
+    @SerializedName("MaxConn")
+    @Expose
+    private Long MaxConn;
+
+    /**
+    * 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+    */
+    @SerializedName("MaxCps")
+    @Expose
+    private Long MaxCps;
+
+    /**
      * Get 负载均衡实例ID。 
      * @return LoadBalancerId 负载均衡实例ID。
      */
@@ -326,6 +340,38 @@ public class ModifyListenerRequest extends AbstractModel{
         this.MultiCertInfo = MultiCertInfo;
     }
 
+    /**
+     * Get 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。 
+     * @return MaxConn 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     */
+    public Long getMaxConn() {
+        return this.MaxConn;
+    }
+
+    /**
+     * Set 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     * @param MaxConn 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     */
+    public void setMaxConn(Long MaxConn) {
+        this.MaxConn = MaxConn;
+    }
+
+    /**
+     * Get 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。 
+     * @return MaxCps 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     */
+    public Long getMaxCps() {
+        return this.MaxCps;
+    }
+
+    /**
+     * Set 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     * @param MaxCps 监听器最大连接数，只有TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。
+     */
+    public void setMaxCps(Long MaxCps) {
+        this.MaxCps = MaxCps;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -373,6 +419,12 @@ public class ModifyListenerRequest extends AbstractModel{
         if (source.MultiCertInfo != null) {
             this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
         }
+        if (source.MaxConn != null) {
+            this.MaxConn = new Long(source.MaxConn);
+        }
+        if (source.MaxCps != null) {
+            this.MaxCps = new Long(source.MaxCps);
+        }
     }
 
 
@@ -393,6 +445,8 @@ public class ModifyListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+        this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
+        this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
 
     }
 }

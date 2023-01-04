@@ -81,6 +81,14 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     private String SegmentSetFileUrlExpireTime;
 
     /**
+    * 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CoverReviewResult")
+    @Expose
+    private ReviewImageResult CoverReviewResult;
+
+    /**
      * Get 音视频内容审核的结果建议，取值范围：
 <li>pass：建议通过；</li>
 <li>review：建议复审；</li>
@@ -240,6 +248,26 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
+    /**
+     * Get 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CoverReviewResult 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ReviewImageResult getCoverReviewResult() {
+        return this.CoverReviewResult;
+    }
+
+    /**
+     * Set 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CoverReviewResult 封面审核结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoverReviewResult(ReviewImageResult CoverReviewResult) {
+        this.CoverReviewResult = CoverReviewResult;
+    }
+
     public ReviewAudioVideoTaskOutput() {
     }
 
@@ -269,6 +297,9 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
         if (source.SegmentSetFileUrlExpireTime != null) {
             this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
         }
+        if (source.CoverReviewResult != null) {
+            this.CoverReviewResult = new ReviewImageResult(source.CoverReviewResult);
+        }
     }
 
 
@@ -282,6 +313,7 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
         this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+        this.setParamObj(map, prefix + "CoverReviewResult.", this.CoverReviewResult);
 
     }
 }

@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.dts.v20211206.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReplicationGroupResponse extends AbstractModel{
-
-    /**
-    * 复制组数量。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 复制组信息。
-    */
-    @SerializedName("Groups")
-    @Expose
-    private Groups [] Groups;
+public class PauseSyncJobResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeReplicationGroupResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 复制组数量。 
-     * @return TotalCount 复制组数量。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 复制组数量。
-     * @param TotalCount 复制组数量。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 复制组信息。 
-     * @return Groups 复制组信息。
-     */
-    public Groups [] getGroups() {
-        return this.Groups;
-    }
-
-    /**
-     * Set 复制组信息。
-     * @param Groups 复制组信息。
-     */
-    public void setGroups(Groups [] Groups) {
-        this.Groups = Groups;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeReplicationGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeReplicationGroupResponse() {
+    public PauseSyncJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeReplicationGroupResponse(DescribeReplicationGroupResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Groups != null) {
-            this.Groups = new Groups[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new Groups(source.Groups[i]);
-            }
-        }
+    public PauseSyncJobResponse(PauseSyncJobResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeReplicationGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -207,6 +207,14 @@ public class AssetDatabaseBaseInfo extends AbstractModel{
     private String MachineName;
 
     /**
+    *  附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 主机内网IP 
      * @return MachineIp 主机内网IP
      */
@@ -630,6 +638,26 @@ public class AssetDatabaseBaseInfo extends AbstractModel{
         this.MachineName = MachineName;
     }
 
+    /**
+     * Get  附加信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo  附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set  附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo  附加信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public AssetDatabaseBaseInfo() {
     }
 
@@ -719,6 +747,9 @@ public class AssetDatabaseBaseInfo extends AbstractModel{
         if (source.MachineName != null) {
             this.MachineName = new String(source.MachineName);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -752,6 +783,7 @@ public class AssetDatabaseBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

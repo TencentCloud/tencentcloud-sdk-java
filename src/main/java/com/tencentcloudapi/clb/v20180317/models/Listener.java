@@ -180,6 +180,22 @@ public class Listener extends AbstractModel{
     private BasicTargetGroupInfo [] TargetGroupList;
 
     /**
+    * 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxConn")
+    @Expose
+    private Long MaxConn;
+
+    /**
+    * 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxCps")
+    @Expose
+    private Long MaxCps;
+
+    /**
      * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
      */
@@ -567,6 +583,46 @@ public class Listener extends AbstractModel{
         this.TargetGroupList = TargetGroupList;
     }
 
+    /**
+     * Get 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxConn 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxConn() {
+        return this.MaxConn;
+    }
+
+    /**
+     * Set 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxConn 监听器最大连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxConn(Long MaxConn) {
+        this.MaxConn = MaxConn;
+    }
+
+    /**
+     * Get 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxCps 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxCps() {
+        return this.MaxCps;
+    }
+
+    /**
+     * Set 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxCps 监听器最大新增连接数，-1表示监听器维度不限速。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxCps(Long MaxCps) {
+        this.MaxCps = MaxCps;
+    }
+
     public Listener() {
     }
 
@@ -644,6 +700,12 @@ public class Listener extends AbstractModel{
                 this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
             }
         }
+        if (source.MaxConn != null) {
+            this.MaxConn = new Long(source.MaxConn);
+        }
+        if (source.MaxCps != null) {
+            this.MaxCps = new Long(source.MaxCps);
+        }
     }
 
 
@@ -671,6 +733,8 @@ public class Listener extends AbstractModel{
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+        this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
+        this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
 
     }
 }
