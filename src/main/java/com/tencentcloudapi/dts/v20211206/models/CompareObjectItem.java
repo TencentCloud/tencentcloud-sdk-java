@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareObjectItem extends AbstractModel{
 
     /**
-    * 迁移的库
+    * 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
@@ -39,7 +39,7 @@ public class CompareObjectItem extends AbstractModel{
     private String DbMode;
 
     /**
-    * 迁移的 schema
+    * schema名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SchemaName")
@@ -79,9 +79,9 @@ public class CompareObjectItem extends AbstractModel{
     private CompareViewItem [] Views;
 
     /**
-     * Get 迁移的库
+     * Get 数据库名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DbName 迁移的库
+     * @return DbName 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
@@ -89,9 +89,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Set 迁移的库
+     * Set 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DbName 迁移的库
+     * @param DbName 数据库名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
@@ -119,9 +119,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Get 迁移的 schema
+     * Get schema名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SchemaName 迁移的 schema
+     * @return SchemaName schema名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSchemaName() {
@@ -129,9 +129,9 @@ public class CompareObjectItem extends AbstractModel{
     }
 
     /**
-     * Set 迁移的 schema
+     * Set schema名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SchemaName 迁移的 schema
+     * @param SchemaName schema名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchemaName(String SchemaName) {

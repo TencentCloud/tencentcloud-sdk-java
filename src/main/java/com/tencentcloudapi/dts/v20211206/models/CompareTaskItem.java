@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareTaskItem extends AbstractModel{
 
     /**
-    * 迁移任务id
+    * 任务id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
@@ -111,9 +111,33 @@ public class CompareTaskItem extends AbstractModel{
     private String FinishedAt;
 
     /**
-     * Get 迁移任务id
+    * 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
+    * 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+    * 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+     * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JobId 迁移任务id
+     * @return JobId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
@@ -121,9 +145,9 @@ public class CompareTaskItem extends AbstractModel{
     }
 
     /**
-     * Set 迁移任务id
+     * Set 任务id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JobId 迁移任务id
+     * @param JobId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
@@ -330,6 +354,66 @@ public class CompareTaskItem extends AbstractModel{
         this.FinishedAt = FinishedAt;
     }
 
+    /**
+     * Get 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Method 对比类型，dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Options 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Options 对比配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
+    /**
+     * Get 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 一致性校验提示信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public CompareTaskItem() {
     }
 
@@ -371,6 +455,15 @@ public class CompareTaskItem extends AbstractModel{
         if (source.FinishedAt != null) {
             this.FinishedAt = new String(source.FinishedAt);
         }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -389,6 +482,9 @@ public class CompareTaskItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "StartedAt", this.StartedAt);
         this.setParamSimple(map, prefix + "FinishedAt", this.FinishedAt);
+        this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamObj(map, prefix + "Options.", this.Options);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

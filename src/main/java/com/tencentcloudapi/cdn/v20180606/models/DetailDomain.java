@@ -552,7 +552,7 @@ off：不支持
     private QnPrivateAccess QnPrivateAccess;
 
     /**
-    * https 请求计费开关
+    * HTTPS服务
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsBilling")
@@ -1908,9 +1908,9 @@ off：不支持
     }
 
     /**
-     * Get https 请求计费开关
+     * Get HTTPS服务
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpsBilling https 请求计费开关
+     * @return HttpsBilling HTTPS服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpsBilling getHttpsBilling() {
@@ -1918,9 +1918,9 @@ off：不支持
     }
 
     /**
-     * Set https 请求计费开关
+     * Set HTTPS服务
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsBilling https 请求计费开关
+     * @param HttpsBilling HTTPS服务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsBilling(HttpsBilling HttpsBilling) {

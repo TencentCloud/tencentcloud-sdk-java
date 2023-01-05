@@ -44,6 +44,20 @@ public class DescribeCompareTasksRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 校验任务 ID
+    */
+    @SerializedName("CompareTaskId")
+    @Expose
+    private String CompareTaskId;
+
+    /**
+    * 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+    */
+    @SerializedName("Status")
+    @Expose
+    private String [] Status;
+
+    /**
      * Get 迁移任务 Id 
      * @return JobId 迁移任务 Id
      */
@@ -91,6 +105,38 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 校验任务 ID 
+     * @return CompareTaskId 校验任务 ID
+     */
+    public String getCompareTaskId() {
+        return this.CompareTaskId;
+    }
+
+    /**
+     * Set 校验任务 ID
+     * @param CompareTaskId 校验任务 ID
+     */
+    public void setCompareTaskId(String CompareTaskId) {
+        this.CompareTaskId = CompareTaskId;
+    }
+
+    /**
+     * Get 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止 
+     * @return Status 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     */
+    public String [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     * @param Status 任务状态过滤，可能的值：created - 创建完成；readyRun - 等待运行；running - 运行中；success - 成功；stopping - 结束中；failed - 失败；canceled - 已终止
+     */
+    public void setStatus(String [] Status) {
+        this.Status = Status;
+    }
+
     public DescribeCompareTasksRequest() {
     }
 
@@ -108,6 +154,15 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.CompareTaskId != null) {
+            this.CompareTaskId = new String(source.CompareTaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
 
     }
 }

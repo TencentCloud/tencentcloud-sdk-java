@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCompareTaskRequest extends AbstractModel{
 
     /**
-    * 迁移任务 Id
+    * 任务 Id
     */
     @SerializedName("JobId")
     @Expose
@@ -51,16 +51,23 @@ public class CreateCompareTaskRequest extends AbstractModel{
     private CompareObject Objects;
 
     /**
-     * Get 迁移任务 Id 
-     * @return JobId 迁移任务 Id
+    * 一致性校验选项
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+     * Get 任务 Id 
+     * @return JobId 任务 Id
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id
-     * @param JobId 迁移任务 Id
+     * Set 任务 Id
+     * @param JobId 任务 Id
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -114,6 +121,22 @@ public class CreateCompareTaskRequest extends AbstractModel{
         this.Objects = Objects;
     }
 
+    /**
+     * Get 一致性校验选项 
+     * @return Options 一致性校验选项
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 一致性校验选项
+     * @param Options 一致性校验选项
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
     public CreateCompareTaskRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateCompareTaskRequest extends AbstractModel{
         if (source.Objects != null) {
             this.Objects = new CompareObject(source.Objects);
         }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateCompareTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
+        this.setParamObj(map, prefix + "Options.", this.Options);
 
     }
 }

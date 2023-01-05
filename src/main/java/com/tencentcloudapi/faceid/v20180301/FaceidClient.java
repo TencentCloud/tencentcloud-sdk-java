@@ -420,27 +420,6 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
-     *该接口仅限微信公众号中使用，传入姓名和身份证号获取回调URL，在微信公众号中打开验证姓名和身份证号与微信实名的信息是否一致。
-
-     * @param req GetRealNameAuthTokenRequest
-     * @return GetRealNameAuthTokenResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetRealNameAuthTokenResponse GetRealNameAuthToken(GetRealNameAuthTokenRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetRealNameAuthTokenResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetRealNameAuthTokenResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetRealNameAuthToken");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
      * @param req GetWeChatBillDetailsRequest
      * @return GetWeChatBillDetailsResponse

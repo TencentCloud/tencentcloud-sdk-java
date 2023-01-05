@@ -82,6 +82,46 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *恢复一个暂停中的迁移任务。
+     * @param req ContinueMigrateJobRequest
+     * @return ContinueMigrateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ContinueMigrateJobResponse ContinueMigrateJob(ContinueMigrateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ContinueMigrateJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ContinueMigrateJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *恢复处于暂停中中的数据同步任务。
+     * @param req ContinueSyncJobRequest
+     * @return ContinueSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ContinueSyncJobResponse ContinueSyncJob(ContinueSyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ContinueSyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ContinueSyncJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *校验同步任务，检查必要参数和周边配置。
      * @param req CreateCheckSyncJobRequest
      * @return CreateCheckSyncJobResponse
@@ -539,6 +579,26 @@ public class DtsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMigrationJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *暂停一个迁移任务。
+     * @param req PauseMigrateJobRequest
+     * @return PauseMigrateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseMigrateJobResponse PauseMigrateJob(PauseMigrateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseMigrateJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseMigrateJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

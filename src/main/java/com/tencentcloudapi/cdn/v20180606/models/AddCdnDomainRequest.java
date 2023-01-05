@@ -299,6 +299,13 @@ global：全球加速
     private QnPrivateAccess QnPrivateAccess;
 
     /**
+    * HTTPS服务
+    */
+    @SerializedName("HttpsBilling")
+    @Expose
+    private HttpsBilling HttpsBilling;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -946,6 +953,22 @@ global：全球加速
         this.QnPrivateAccess = QnPrivateAccess;
     }
 
+    /**
+     * Get HTTPS服务 
+     * @return HttpsBilling HTTPS服务
+     */
+    public HttpsBilling getHttpsBilling() {
+        return this.HttpsBilling;
+    }
+
+    /**
+     * Set HTTPS服务
+     * @param HttpsBilling HTTPS服务
+     */
+    public void setHttpsBilling(HttpsBilling HttpsBilling) {
+        this.HttpsBilling = HttpsBilling;
+    }
+
     public AddCdnDomainRequest() {
     }
 
@@ -1071,6 +1094,9 @@ global：全球加速
         if (source.QnPrivateAccess != null) {
             this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
         }
+        if (source.HttpsBilling != null) {
+            this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
+        }
     }
 
 
@@ -1116,6 +1142,7 @@ global：全球加速
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+        this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
 
     }
 }

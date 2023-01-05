@@ -480,6 +480,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AttachSnapshotInstances）用于快照策略关联实例。
+     * @param req AttachSnapshotInstancesRequest
+     * @return AttachSnapshotInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachSnapshotInstancesResponse AttachSnapshotInstances(AttachSnapshotInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachSnapshotInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachSnapshotInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachSnapshotInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AuditCrossBorderCompliance）用于服务商操作合规化资质审批。
 * 服务商只能操作提交到本服务商的审批单，后台会校验身份。即只授权给服务商的`APPID` 调用本接口。
 * `APPROVED` 状态的审批单，可以再次操作为 `DENY`；`DENY` 状态的审批单，也可以再次操作为 `APPROVED`。
@@ -1240,6 +1260,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateServiceTemplateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateServiceTemplateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateSnapshotPolicies）用于创建快照策略。
+     * @param req CreateSnapshotPoliciesRequest
+     * @return CreateSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSnapshotPoliciesResponse CreateSnapshotPolicies(CreateSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2016,6 +2056,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceTemplateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteServiceTemplateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteSnapshotPolicies）用于删除快照策略。
+     * @param req DeleteSnapshotPoliciesRequest
+     * @return DeleteSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSnapshotPoliciesResponse DeleteSnapshotPolicies(DeleteSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3339,6 +3399,86 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSgSnapshotFileContent）用于查询安全组快照文件内容。
+     * @param req DescribeSgSnapshotFileContentRequest
+     * @return DescribeSgSnapshotFileContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSgSnapshotFileContentResponse DescribeSgSnapshotFileContent(DescribeSgSnapshotFileContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSgSnapshotFileContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSgSnapshotFileContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSgSnapshotFileContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSnapshotAttachedInstances）用于查询快照策略关联实例列表。
+     * @param req DescribeSnapshotAttachedInstancesRequest
+     * @return DescribeSnapshotAttachedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotAttachedInstancesResponse DescribeSnapshotAttachedInstances(DescribeSnapshotAttachedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotAttachedInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotAttachedInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotAttachedInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSnapshotFiles）用于查询快照文件。
+     * @param req DescribeSnapshotFilesRequest
+     * @return DescribeSnapshotFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotFilesResponse DescribeSnapshotFiles(DescribeSnapshotFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSnapshotPolicies）用于查询快照策略。
+     * @param req DescribeSnapshotPoliciesRequest
+     * @return DescribeSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotPoliciesResponse DescribeSnapshotPolicies(DescribeSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSubnets）用于查询子网列表。
      * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
@@ -3856,6 +3996,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DetachSnapshotInstances）用于快照策略解关联实例。
+     * @param req DetachSnapshotInstancesRequest
+     * @return DetachSnapshotInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachSnapshotInstancesResponse DetachSnapshotInstances(DetachSnapshotInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachSnapshotInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachSnapshotInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachSnapshotInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
      * @param req DisableCcnRoutesRequest
      * @return DisableCcnRoutesResponse
@@ -3928,6 +4088,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<DisableRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisableRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DisableSnapshotPolicies）用于停用快照策略。
+     * @param req DisableSnapshotPoliciesRequest
+     * @return DisableSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableSnapshotPoliciesResponse DisableSnapshotPolicies(DisableSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4216,6 +4396,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<EnableRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（EnableSnapshotPolicies）用于启用快照策略。
+     * @param req EnableSnapshotPoliciesRequest
+     * @return EnableSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableSnapshotPoliciesResponse EnableSnapshotPolicies(EnableSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -5239,6 +5439,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ModifySnapshotPolicies）用于修改快照策略。
+     * @param req ModifySnapshotPoliciesRequest
+     * @return ModifySnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapshotPoliciesResponse ModifySnapshotPolicies(ModifySnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifySubnetAttribute）用于修改子网属性。
      * @param req ModifySubnetAttributeRequest
      * @return ModifySubnetAttributeResponse
@@ -5800,6 +6020,26 @@ LimitTypes取值范围：
                 Type type = new TypeToken<JsonResponseModel<ResetVpnGatewayInternetMaxBandwidthResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetVpnGatewayInternetMaxBandwidth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ResumeSnapshotInstance）用于根据备份内容恢复安全组策略。
+     * @param req ResumeSnapshotInstanceRequest
+     * @return ResumeSnapshotInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeSnapshotInstanceResponse ResumeSnapshotInstance(ResumeSnapshotInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeSnapshotInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeSnapshotInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeSnapshotInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

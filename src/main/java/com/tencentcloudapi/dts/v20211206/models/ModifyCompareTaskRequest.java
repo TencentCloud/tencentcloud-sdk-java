@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCompareTaskRequest extends AbstractModel{
 
     /**
-    * 迁移任务 Id
+    * 任务 Id
     */
     @SerializedName("JobId")
     @Expose
@@ -44,7 +44,7 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     private String TaskName;
 
     /**
-    * 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+    * 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
     */
     @SerializedName("ObjectMode")
     @Expose
@@ -58,16 +58,23 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     private CompareObject Objects;
 
     /**
-     * Get 迁移任务 Id 
-     * @return JobId 迁移任务 Id
+    * 一致性校验选项
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+     * Get 任务 Id 
+     * @return JobId 任务 Id
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 迁移任务 Id
-     * @param JobId 迁移任务 Id
+     * Set 任务 Id
+     * @param JobId 任务 Id
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -106,16 +113,16 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式) 
-     * @return ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+     * Get 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集 
+     * @return ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
      */
     public String getObjectMode() {
         return this.ObjectMode;
     }
 
     /**
-     * Set 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
-     * @param ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， **默认为此项配置**)，custom(自定义模式)
+     * Set 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
+     * @param ObjectMode 数据对比对象模式，sameAsMigrate(全部迁移对象， 默认为此项配置)、custom(自定义)，注意自定义对比对象必须是迁移对象的子集
      */
     public void setObjectMode(String ObjectMode) {
         this.ObjectMode = ObjectMode;
@@ -135,6 +142,22 @@ public class ModifyCompareTaskRequest extends AbstractModel{
      */
     public void setObjects(CompareObject Objects) {
         this.Objects = Objects;
+    }
+
+    /**
+     * Get 一致性校验选项 
+     * @return Options 一致性校验选项
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 一致性校验选项
+     * @param Options 一致性校验选项
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
     }
 
     public ModifyCompareTaskRequest() {
@@ -160,6 +183,9 @@ public class ModifyCompareTaskRequest extends AbstractModel{
         if (source.Objects != null) {
             this.Objects = new CompareObject(source.Objects);
         }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyCompareTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
+        this.setParamObj(map, prefix + "Options.", this.Options);
 
     }
 }

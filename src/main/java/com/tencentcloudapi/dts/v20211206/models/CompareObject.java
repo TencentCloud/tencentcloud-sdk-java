@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareObject extends AbstractModel{
 
     /**
-    * 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+    * 对象模式 整实例-all,部分对象-partial
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectMode")
@@ -31,7 +31,7 @@ public class CompareObject extends AbstractModel{
     private String ObjectMode;
 
     /**
-    * 迁移对象库表配置
+    * 对象列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectItems")
@@ -39,9 +39,17 @@ public class CompareObject extends AbstractModel{
     private CompareObjectItem [] ObjectItems;
 
     /**
-     * Get 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+    * 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedObjects")
+    @Expose
+    private String [] AdvancedObjects;
+
+    /**
+     * Get 对象模式 整实例-all,部分对象-partial
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectMode 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+     * @return ObjectMode 对象模式 整实例-all,部分对象-partial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObjectMode() {
@@ -49,9 +57,9 @@ public class CompareObject extends AbstractModel{
     }
 
     /**
-     * Set 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+     * Set 对象模式 整实例-all,部分对象-partial
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectMode 迁移对象模式 all(所有迁移对象)，partial(部分对象迁移)
+     * @param ObjectMode 对象模式 整实例-all,部分对象-partial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectMode(String ObjectMode) {
@@ -59,9 +67,9 @@ public class CompareObject extends AbstractModel{
     }
 
     /**
-     * Get 迁移对象库表配置
+     * Get 对象列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ObjectItems 迁移对象库表配置
+     * @return ObjectItems 对象列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CompareObjectItem [] getObjectItems() {
@@ -69,13 +77,33 @@ public class CompareObject extends AbstractModel{
     }
 
     /**
-     * Set 迁移对象库表配置
+     * Set 对象列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ObjectItems 迁移对象库表配置
+     * @param ObjectItems 对象列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectItems(CompareObjectItem [] ObjectItems) {
         this.ObjectItems = ObjectItems;
+    }
+
+    /**
+     * Get 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedObjects 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAdvancedObjects() {
+        return this.AdvancedObjects;
+    }
+
+    /**
+     * Set 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedObjects 高级对象类型，如account(账号),index(索引),shardkey(片建，后面可能会调整),schema(库表结构)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedObjects(String [] AdvancedObjects) {
+        this.AdvancedObjects = AdvancedObjects;
     }
 
     public CompareObject() {
@@ -95,6 +123,12 @@ public class CompareObject extends AbstractModel{
                 this.ObjectItems[i] = new CompareObjectItem(source.ObjectItems[i]);
             }
         }
+        if (source.AdvancedObjects != null) {
+            this.AdvancedObjects = new String[source.AdvancedObjects.length];
+            for (int i = 0; i < source.AdvancedObjects.length; i++) {
+                this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
+            }
+        }
     }
 
 
@@ -104,6 +138,7 @@ public class CompareObject extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamArrayObj(map, prefix + "ObjectItems.", this.ObjectItems);
+        this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
 
     }
 }
