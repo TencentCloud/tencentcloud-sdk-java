@@ -37,21 +37,21 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 服务记录ID
+    * 服务记录ID（废弃）
     */
     @SerializedName("CdrId")
     @Expose
     private String CdrId;
 
     /**
-    * 返回记录条数 最大为100默认20
+    * 返回记录条数，最大为100 默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 返回记录偏移 默认为0
+    * 返回记录偏移，默认为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     private Long Order;
 
     /**
-    * 服务记录SessionID
+    * 服务记录 SessionID（必填）
     */
     @SerializedName("SessionId")
     @Expose
@@ -104,48 +104,48 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务记录ID 
-     * @return CdrId 服务记录ID
+     * Get 服务记录ID（废弃） 
+     * @return CdrId 服务记录ID（废弃）
      */
     public String getCdrId() {
         return this.CdrId;
     }
 
     /**
-     * Set 服务记录ID
-     * @param CdrId 服务记录ID
+     * Set 服务记录ID（废弃）
+     * @param CdrId 服务记录ID（废弃）
      */
     public void setCdrId(String CdrId) {
         this.CdrId = CdrId;
     }
 
     /**
-     * Get 返回记录条数 最大为100默认20 
-     * @return Limit 返回记录条数 最大为100默认20
+     * Get 返回记录条数，最大为100 默认20 
+     * @return Limit 返回记录条数，最大为100 默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数 最大为100默认20
-     * @param Limit 返回记录条数 最大为100默认20
+     * Set 返回记录条数，最大为100 默认20
+     * @param Limit 返回记录条数，最大为100 默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 返回记录偏移 默认为0 
-     * @return Offset 返回记录偏移 默认为0
+     * Get 返回记录偏移，默认为 0 
+     * @return Offset 返回记录偏移，默认为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回记录偏移 默认为0
-     * @param Offset 返回记录偏移 默认为0
+     * Set 返回记录偏移，默认为 0
+     * @param Offset 返回记录偏移，默认为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -168,16 +168,16 @@ public class DescribeChatMessagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 服务记录SessionID 
-     * @return SessionId 服务记录SessionID
+     * Get 服务记录 SessionID（必填） 
+     * @return SessionId 服务记录 SessionID（必填）
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 服务记录SessionID
-     * @param SessionId 服务记录SessionID
+     * Set 服务记录 SessionID（必填）
+     * @param SessionId 服务记录 SessionID（必填）
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

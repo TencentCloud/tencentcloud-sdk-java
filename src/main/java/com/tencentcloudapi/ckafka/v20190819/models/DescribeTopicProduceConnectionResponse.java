@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSAttackEventDetailResponse extends AbstractModel{
+public class DescribeTopicProduceConnectionResponse extends AbstractModel{
 
     /**
-    * DDoS攻击事件详情。
+    * 链接信息返回结果集
     */
-    @SerializedName("Data")
+    @SerializedName("Result")
     @Expose
-    private DDoSAttackEventDetailData Data;
+    private DescribeConnectInfoResultDTO [] Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeDDoSAttackEventDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get DDoS攻击事件详情。 
-     * @return Data DDoS攻击事件详情。
+     * Get 链接信息返回结果集 
+     * @return Result 链接信息返回结果集
      */
-    public DDoSAttackEventDetailData getData() {
-        return this.Data;
+    public DescribeConnectInfoResultDTO [] getResult() {
+        return this.Result;
     }
 
     /**
-     * Set DDoS攻击事件详情。
-     * @param Data DDoS攻击事件详情。
+     * Set 链接信息返回结果集
+     * @param Result 链接信息返回结果集
      */
-    public void setData(DDoSAttackEventDetailData Data) {
-        this.Data = Data;
+    public void setResult(DescribeConnectInfoResultDTO [] Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,19 @@ public class DescribeDDoSAttackEventDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDDoSAttackEventDetailResponse() {
+    public DescribeTopicProduceConnectionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDDoSAttackEventDetailResponse(DescribeDDoSAttackEventDetailResponse source) {
-        if (source.Data != null) {
-            this.Data = new DDoSAttackEventDetailData(source.Data);
+    public DescribeTopicProduceConnectionResponse(DescribeTopicProduceConnectionResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribeConnectInfoResultDTO[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new DescribeConnectInfoResultDTO(source.Result[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class DescribeDDoSAttackEventDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -27,13 +27,13 @@ public class BandwidthPackageBillBandwidth extends AbstractModel{
     */
     @SerializedName("BandwidthUsage")
     @Expose
-    private Long BandwidthUsage;
+    private Float BandwidthUsage;
 
     /**
      * Get 当前计费用量，单位为 Mbps 
      * @return BandwidthUsage 当前计费用量，单位为 Mbps
      */
-    public Long getBandwidthUsage() {
+    public Float getBandwidthUsage() {
         return this.BandwidthUsage;
     }
 
@@ -41,7 +41,7 @@ public class BandwidthPackageBillBandwidth extends AbstractModel{
      * Set 当前计费用量，单位为 Mbps
      * @param BandwidthUsage 当前计费用量，单位为 Mbps
      */
-    public void setBandwidthUsage(Long BandwidthUsage) {
+    public void setBandwidthUsage(Float BandwidthUsage) {
         this.BandwidthUsage = BandwidthUsage;
     }
 
@@ -54,7 +54,7 @@ public class BandwidthPackageBillBandwidth extends AbstractModel{
      */
     public BandwidthPackageBillBandwidth(BandwidthPackageBillBandwidth source) {
         if (source.BandwidthUsage != null) {
-            this.BandwidthUsage = new Long(source.BandwidthUsage);
+            this.BandwidthUsage = new Float(source.BandwidthUsage);
         }
     }
 

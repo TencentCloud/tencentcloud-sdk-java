@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
+public class CreateTrafficPackagesResponse extends AbstractModel{
 
     /**
-    * 查询结果的总条数。
+    * 创建的流量包ID列表。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TrafficPackageSet")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 连接时长分布图。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TopDataRecords")
-    @Expose
-    private TopDataRecord [] TopDataRecords;
+    private String [] TrafficPackageSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询结果的总条数。 
-     * @return TotalCount 查询结果的总条数。
+     * Get 创建的流量包ID列表。 
+     * @return TrafficPackageSet 创建的流量包ID列表。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String [] getTrafficPackageSet() {
+        return this.TrafficPackageSet;
     }
 
     /**
-     * Set 查询结果的总条数。
-     * @param TotalCount 查询结果的总条数。
+     * Set 创建的流量包ID列表。
+     * @param TrafficPackageSet 创建的流量包ID列表。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 连接时长分布图。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopDataRecords 连接时长分布图。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TopDataRecord [] getTopDataRecords() {
-        return this.TopDataRecords;
-    }
-
-    /**
-     * Set 连接时长分布图。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopDataRecords 连接时长分布图。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTopDataRecords(TopDataRecord [] TopDataRecords) {
-        this.TopDataRecords = TopDataRecords;
+    public void setTrafficPackageSet(String [] TrafficPackageSet) {
+        this.TrafficPackageSet = TrafficPackageSet;
     }
 
     /**
@@ -96,21 +68,18 @@ public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDistributionL4AccessDataResponse() {
+    public CreateTrafficPackagesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDistributionL4AccessDataResponse(DescribeDistributionL4AccessDataResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.TopDataRecords != null) {
-            this.TopDataRecords = new TopDataRecord[source.TopDataRecords.length];
-            for (int i = 0; i < source.TopDataRecords.length; i++) {
-                this.TopDataRecords[i] = new TopDataRecord(source.TopDataRecords[i]);
+    public CreateTrafficPackagesResponse(CreateTrafficPackagesResponse source) {
+        if (source.TrafficPackageSet != null) {
+            this.TrafficPackageSet = new String[source.TrafficPackageSet.length];
+            for (int i = 0; i < source.TrafficPackageSet.length; i++) {
+                this.TrafficPackageSet[i] = new String(source.TrafficPackageSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -123,8 +92,7 @@ public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "TopDataRecords.", this.TopDataRecords);
+        this.setParamArraySimple(map, prefix + "TrafficPackageSet.", this.TrafficPackageSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

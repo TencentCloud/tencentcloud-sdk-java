@@ -49,7 +49,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     private String [] MetricNames;
 
     /**
-    * 站点集合，不填默认选择全部站点。
+    * 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -67,16 +69,16 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+    * 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -161,16 +163,24 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     }
 
     /**
-     * Get 站点集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点集合，不填默认选择全部站点。
+     * Get 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。 
+     * @return ZoneIds 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，不填默认选择全部站点。
-     * @param ZoneIds 站点集合，不填默认选择全部站点。
+     * Set 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
+     * @param ZoneIds 站点集合。
+若不填写，默认选择全部站点，且最多只能查询近30天的数据；
+若填写，则可查询站点绑定套餐支持的<a href="https://cloud.tencent.com/document/product/1552/77380#edgeone-.E5.A5.97.E9.A4.90">数据分析最大查询范围</a>。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -197,12 +207,12 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。 
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。 
      * @return Interval 查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      */
     public String getInterval() {
         return this.Interval;
@@ -213,36 +223,36 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      * @param Interval 查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>
 <li>5min: 5分钟 ；</li>
 <li>hour: 1小时 ；</li>
-<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：一小时范围内以min粒度查询，两天范围内以5min粒度查询，七天范围内以hour粒度查询，超过七天以day粒度查询。
+<li>day: 1天 。</li>不填将根据开始时间跟结束时间的间距自动推算粒度，具体为：1小时范围内以min粒度查询，2天范围内以5min粒度查询，7天范围内以hour粒度查询，超过7天以day粒度查询。
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
-     * @return Filters 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     * Get 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li> 
+     * @return Filters 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-     * @param Filters 过滤条件，详细的过滤条件如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+     * Set 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+     * @param Filters 过滤条件，详细的过滤条件Key值如下：
+<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
+<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

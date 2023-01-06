@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class TransformAddressResponse extends AbstractModel{
 
     /**
+    * 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
+    * 转为弹性公网IP后的唯一ID
+    */
+    @SerializedName("AddressId")
+    @Expose
+    private String AddressId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。 
+     * @return TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     * @param TaskId 异步任务TaskId。可以使用[DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271)接口查询任务状态。
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 转为弹性公网IP后的唯一ID 
+     * @return AddressId 转为弹性公网IP后的唯一ID
+     */
+    public String getAddressId() {
+        return this.AddressId;
+    }
+
+    /**
+     * Set 转为弹性公网IP后的唯一ID
+     * @param AddressId 转为弹性公网IP后的唯一ID
+     */
+    public void setAddressId(String AddressId) {
+        this.AddressId = AddressId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,12 @@ public class TransformAddressResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TransformAddressResponse(TransformAddressResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +115,8 @@ public class TransformAddressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

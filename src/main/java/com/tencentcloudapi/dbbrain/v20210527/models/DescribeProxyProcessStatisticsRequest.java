@@ -30,7 +30,7 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 当前实例下的 ProxyID。
+    * 该实例下需要查询的某一个 ProxyID 。
     */
     @SerializedName("InstanceProxyId")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get 当前实例下的 ProxyID。 
-     * @return InstanceProxyId 当前实例下的 ProxyID。
+     * Get 该实例下需要查询的某一个 ProxyID 。 
+     * @return InstanceProxyId 该实例下需要查询的某一个 ProxyID 。
      */
     public String getInstanceProxyId() {
         return this.InstanceProxyId;
     }
 
     /**
-     * Set 当前实例下的 ProxyID。
-     * @param InstanceProxyId 当前实例下的 ProxyID。
+     * Set 该实例下需要查询的某一个 ProxyID 。
+     * @param InstanceProxyId 该实例下需要查询的某一个 ProxyID 。
      */
     public void setInstanceProxyId(String InstanceProxyId) {
         this.InstanceProxyId = InstanceProxyId;

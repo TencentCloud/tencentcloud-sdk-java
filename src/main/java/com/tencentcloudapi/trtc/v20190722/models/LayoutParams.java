@@ -93,6 +93,13 @@ public class LayoutParams extends AbstractModel{
     private WaterMarkParams WaterMarkParams;
 
     /**
+    * 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+    */
+    @SerializedName("RenderMode")
+    @Expose
+    private Long RenderMode;
+
+    /**
      * Get 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。 
      * @return Template 混流布局模板ID，0为悬浮模板(默认);1为九宫格模板;2为屏幕分享模板;3为画中画模板;4为自定义模板。
      */
@@ -252,6 +259,22 @@ public class LayoutParams extends AbstractModel{
         this.WaterMarkParams = WaterMarkParams;
     }
 
+    /**
+     * Get 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。 
+     * @return RenderMode 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+     */
+    public Long getRenderMode() {
+        return this.RenderMode;
+    }
+
+    /**
+     * Set 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+     * @param RenderMode 屏幕分享模板、悬浮模板、九宫格模板、画中画模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底，不填采用后台的默认渲染方式（屏幕分享大画面为缩放，其他为裁剪）。
+     */
+    public void setRenderMode(Long RenderMode) {
+        this.RenderMode = RenderMode;
+    }
+
     public LayoutParams() {
     }
 
@@ -296,6 +319,9 @@ public class LayoutParams extends AbstractModel{
         if (source.WaterMarkParams != null) {
             this.WaterMarkParams = new WaterMarkParams(source.WaterMarkParams);
         }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
         this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
         this.setParamObj(map, prefix + "WaterMarkParams.", this.WaterMarkParams);
+        this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
 
     }
 }

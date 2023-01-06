@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDDoSPolicyRequest extends AbstractModel{
+public class DescribeTopicProduceConnectionRequest extends AbstractModel{
 
     /**
-    * 站点Id。
+    * 实例id
     */
-    @SerializedName("ZoneId")
+    @SerializedName("InstanceId")
     @Expose
-    private String ZoneId;
+    private String InstanceId;
 
     /**
-    * 策略Id。
+    * topic名称
     */
-    @SerializedName("PolicyId")
+    @SerializedName("TopicName")
     @Expose
-    private Long PolicyId;
+    private String TopicName;
 
     /**
-     * Get 站点Id。 
-     * @return ZoneId 站点Id。
+     * Get 实例id 
+     * @return InstanceId 实例id
      */
-    public String getZoneId() {
-        return this.ZoneId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 站点Id。
-     * @param ZoneId 站点Id。
+     * Set 实例id
+     * @param InstanceId 实例id
      */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 策略Id。 
-     * @return PolicyId 策略Id。
+     * Get topic名称 
+     * @return TopicName topic名称
      */
-    public Long getPolicyId() {
-        return this.PolicyId;
+    public String getTopicName() {
+        return this.TopicName;
     }
 
     /**
-     * Set 策略Id。
-     * @param PolicyId 策略Id。
+     * Set topic名称
+     * @param TopicName topic名称
      */
-    public void setPolicyId(Long PolicyId) {
-        this.PolicyId = PolicyId;
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
     }
 
-    public DescribeDDoSPolicyRequest() {
+    public DescribeTopicProduceConnectionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDDoSPolicyRequest(DescribeDDoSPolicyRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
+    public DescribeTopicProduceConnectionRequest(DescribeTopicProduceConnectionRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
-        if (source.PolicyId != null) {
-            this.PolicyId = new Long(source.PolicyId);
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeDDoSPolicyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

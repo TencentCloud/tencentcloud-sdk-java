@@ -30,6 +30,14 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
     private String Url;
 
     /**
+    * 媒体文件 ID。Url 对应的原始媒体文件 ID。
+<li><font color=red>注意</font>：此字段必填。</li>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
     */
     @SerializedName("SubAppId")
@@ -78,6 +86,26 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get 媒体文件 ID。Url 对应的原始媒体文件 ID。
+<li><font color=red>注意</font>：此字段必填。</li> 
+     * @return FileId 媒体文件 ID。Url 对应的原始媒体文件 ID。
+<li><font color=red>注意</font>：此字段必填。</li>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 媒体文件 ID。Url 对应的原始媒体文件 ID。
+<li><font color=red>注意</font>：此字段必填。</li>
+     * @param FileId 媒体文件 ID。Url 对应的原始媒体文件 ID。
+<li><font color=red>注意</font>：此字段必填。</li>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
@@ -171,6 +199,9 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -194,6 +225,7 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

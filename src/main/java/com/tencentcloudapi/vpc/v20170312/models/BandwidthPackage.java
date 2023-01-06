@@ -30,7 +30,7 @@ public class BandwidthPackage extends AbstractModel{
     private String BandwidthPackageId;
 
     /**
-    * 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+    * 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
     */
     @SerializedName("NetworkType")
     @Expose
@@ -95,16 +95,16 @@ public class BandwidthPackage extends AbstractModel{
     }
 
     /**
-     * Get 带宽包类型，包括'BGP','SINGLEISP','ANYCAST' 
-     * @return NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * Get 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC' 
+     * @return NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
-     * @param NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST'
+     * Set 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
+     * @param NetworkType 带宽包类型，包括'BGP','SINGLEISP','ANYCAST','SINGLEISP_CMCC','SINGLEISP_CTCC','SINGLEISP_CUCC'
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;

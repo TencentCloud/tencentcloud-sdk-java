@@ -44,6 +44,20 @@ public class Spec extends AbstractModel{
     private String SpecAlias;
 
     /**
+    * 是否售罄
+    */
+    @SerializedName("Available")
+    @Expose
+    private Boolean Available;
+
+    /**
+    * 当前资源售罄时，可用的区域有哪些
+    */
+    @SerializedName("AvailableRegion")
+    @Expose
+    private String [] AvailableRegion;
+
+    /**
      * Get 计费项标签 
      * @return SpecId 计费项标签
      */
@@ -91,6 +105,38 @@ public class Spec extends AbstractModel{
         this.SpecAlias = SpecAlias;
     }
 
+    /**
+     * Get 是否售罄 
+     * @return Available 是否售罄
+     */
+    public Boolean getAvailable() {
+        return this.Available;
+    }
+
+    /**
+     * Set 是否售罄
+     * @param Available 是否售罄
+     */
+    public void setAvailable(Boolean Available) {
+        this.Available = Available;
+    }
+
+    /**
+     * Get 当前资源售罄时，可用的区域有哪些 
+     * @return AvailableRegion 当前资源售罄时，可用的区域有哪些
+     */
+    public String [] getAvailableRegion() {
+        return this.AvailableRegion;
+    }
+
+    /**
+     * Set 当前资源售罄时，可用的区域有哪些
+     * @param AvailableRegion 当前资源售罄时，可用的区域有哪些
+     */
+    public void setAvailableRegion(String [] AvailableRegion) {
+        this.AvailableRegion = AvailableRegion;
+    }
+
     public Spec() {
     }
 
@@ -108,6 +154,15 @@ public class Spec extends AbstractModel{
         if (source.SpecAlias != null) {
             this.SpecAlias = new String(source.SpecAlias);
         }
+        if (source.Available != null) {
+            this.Available = new Boolean(source.Available);
+        }
+        if (source.AvailableRegion != null) {
+            this.AvailableRegion = new String[source.AvailableRegion.length];
+            for (int i = 0; i < source.AvailableRegion.length; i++) {
+                this.AvailableRegion[i] = new String(source.AvailableRegion[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class Spec extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecId", this.SpecId);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "SpecAlias", this.SpecAlias);
+        this.setParamSimple(map, prefix + "Available", this.Available);
+        this.setParamArraySimple(map, prefix + "AvailableRegion.", this.AvailableRegion);
 
     }
 }

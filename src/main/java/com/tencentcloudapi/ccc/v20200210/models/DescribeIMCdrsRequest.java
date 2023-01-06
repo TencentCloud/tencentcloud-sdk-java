@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeIMCdrsRequest extends AbstractModel{
 
     /**
-    * 起始时间
+    * 起始时间（必填），Unix 秒级时间戳
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * 结束时间
+    * 结束时间（必填），Unix 秒级时间戳
     */
     @SerializedName("EndTimestamp")
     @Expose
@@ -51,14 +51,14 @@ public class DescribeIMCdrsRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 返回记录条数 最大为100默认20
+    * 返回记录条数，最大为100默认20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 返回记录偏移 默认为0
+    * 返回记录偏移，默认为 0
     */
     @SerializedName("Offset")
     @Expose
@@ -72,32 +72,32 @@ public class DescribeIMCdrsRequest extends AbstractModel{
     private Long Type;
 
     /**
-     * Get 起始时间 
-     * @return StartTimestamp 起始时间
+     * Get 起始时间（必填），Unix 秒级时间戳 
+     * @return StartTimestamp 起始时间（必填），Unix 秒级时间戳
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set 起始时间
-     * @param StartTimestamp 起始时间
+     * Set 起始时间（必填），Unix 秒级时间戳
+     * @param StartTimestamp 起始时间（必填），Unix 秒级时间戳
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTimestamp 结束时间
+     * Get 结束时间（必填），Unix 秒级时间戳 
+     * @return EndTimestamp 结束时间（必填），Unix 秒级时间戳
      */
     public Long getEndTimestamp() {
         return this.EndTimestamp;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTimestamp 结束时间
+     * Set 结束时间（必填），Unix 秒级时间戳
+     * @param EndTimestamp 结束时间（必填），Unix 秒级时间戳
      */
     public void setEndTimestamp(Long EndTimestamp) {
         this.EndTimestamp = EndTimestamp;
@@ -136,32 +136,32 @@ public class DescribeIMCdrsRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回记录条数 最大为100默认20 
-     * @return Limit 返回记录条数 最大为100默认20
+     * Get 返回记录条数，最大为100默认20 
+     * @return Limit 返回记录条数，最大为100默认20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回记录条数 最大为100默认20
-     * @param Limit 返回记录条数 最大为100默认20
+     * Set 返回记录条数，最大为100默认20
+     * @param Limit 返回记录条数，最大为100默认20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 返回记录偏移 默认为0 
-     * @return Offset 返回记录偏移 默认为0
+     * Get 返回记录偏移，默认为 0 
+     * @return Offset 返回记录偏移，默认为 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 返回记录偏移 默认为0
-     * @param Offset 返回记录偏移 默认为0
+     * Set 返回记录偏移，默认为 0
+     * @param Offset 返回记录偏移，默认为 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

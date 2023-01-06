@@ -47,14 +47,14 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 查询带宽包偏移量
+    * 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询带宽包数量限制
+    * 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
     */
     @SerializedName("Limit")
     @Expose
@@ -133,32 +133,32 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询带宽包偏移量 
-     * @return Offset 查询带宽包偏移量
+     * Get 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。 
+     * @return Offset 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询带宽包偏移量
-     * @param Offset 查询带宽包偏移量
+     * Set 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+     * @param Offset 查询带宽包偏移量，默认为0。关于Offset的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询带宽包数量限制 
-     * @return Limit 查询带宽包数量限制
+     * Get 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。 
+     * @return Limit 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询带宽包数量限制
-     * @param Limit 查询带宽包数量限制
+     * Set 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
+     * @param Limit 查询带宽包返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小结。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -12,12 +12,6 @@ public enum TeoErrorCode {
     // 证书不存在。
      FAILEDOPERATION_CERTIFICATENOTFOUND("FailedOperation.CertificateNotFound"),
      
-    // 创建日志集失败，请检查日志集名是否已存在。
-     FAILEDOPERATION_CREATECLSLOGSETFAILED("FailedOperation.CreateClsLogSetFailed"),
-     
-    // 创建日志主题任务失败，请检查日志主题名或任务名是否已存在。
-     FAILEDOPERATION_CREATECLSLOGTOPICTASKFAILED("FailedOperation.CreateClsLogTopicTaskFailed"),
-     
     // 站点状态不正确。
      FAILEDOPERATION_INVALIDZONESTATUS("FailedOperation.InvalidZoneStatus"),
      
@@ -384,9 +378,6 @@ public enum TeoErrorCode {
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
-    // 无剩余可创建新任务的域名。
-     RESOURCEUNAVAILABLE_AVAILABLEDOMAINNOTFOUND("ResourceUnavailable.AvailableDomainNotFound"),
-     
     // 证书不存在或未授权。
      RESOURCEUNAVAILABLE_CERTNOTFOUND("ResourceUnavailable.CertNotFound"),
      
@@ -413,9 +404,6 @@ public enum TeoErrorCode {
      
     // 后端服务器发生未知错误。
      UNAUTHORIZEDOPERATION_UNKNOWN("UnauthorizedOperation.Unknown"),
-     
-    // 未知参数错误。
-     UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation");

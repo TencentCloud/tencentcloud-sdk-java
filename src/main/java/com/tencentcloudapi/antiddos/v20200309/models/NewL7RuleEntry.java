@@ -206,6 +206,14 @@ public class NewL7RuleEntry extends AbstractModel{
     private Long ErrCode;
 
     /**
+    * 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private Long Version;
+
+    /**
      * Get 转发协议，取值[http, https] 
      * @return Protocol 转发协议，取值[http, https]
      */
@@ -625,6 +633,26 @@ public class NewL7RuleEntry extends AbstractModel{
         this.ErrCode = ErrCode;
     }
 
+    /**
+     * Get 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(Long Version) {
+        this.Version = Version;
+    }
+
     public NewL7RuleEntry() {
     }
 
@@ -714,6 +742,9 @@ public class NewL7RuleEntry extends AbstractModel{
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
         }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
     }
 
 
@@ -747,6 +778,7 @@ public class NewL7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
         this.setParamSimple(map, prefix + "RewriteHttps", this.RewriteHttps);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }
