@@ -59,7 +59,10 @@ import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesResponse;
 public class DescribeInstances {
     public static void main(String[] args) {
         try {
-            Credential cred = new Credential("secretId", "secretKey");
+            // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中，请参考本文凭证管理章节。
+            // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+            // Credential cred = new Credential("SecretId", "SecretKey");
+            Credential cred = new Credential(System.getenv("TENCENTCLOUD_SECRET_ID"), System.getenv("TENCENTCLOUD_SECRET_KEY"));
             CvmClient client = new CvmClient(cred, "ap-shanghai");
 
             DescribeInstancesRequest req = new DescribeInstancesRequest();
@@ -92,8 +95,11 @@ import com.tencentcloudapi.common.profile.Language;
 public class DescribeInstances {
     public static void main(String[] args) {
         try {
-            // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey,此处还需注意密钥对的保密
-            Credential cred = new Credential("secretId", "secretKey");
+            // 实例化一个认证对象，入参需要传入腾讯云账户 SecretId，SecretKey。
+            // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中，请参考本文凭证管理章节。
+            // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+            // Credential cred = new Credential("SecretId", "SecretKey");
+            Credential cred = new Credential(System.getenv("TENCENTCLOUD_SECRET_ID"), System.getenv("TENCENTCLOUD_SECRET_KEY"));
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();
@@ -165,7 +171,9 @@ import com.tencentcloudapi.common.profile.Language;
 2. 实例化一个认证对象cred，入参需要传入腾讯云账户密钥 secretId，secretKey, 前往 [API 密钥管理](https://console.cloud.tencent.com/cam/capi) 页面，即可进行获取密钥。此处还需注意密钥对的保密。
 
 ```java
-Credential cred = new Credential("secretId", "secretKey");
+// 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中，请参考本文凭证管理章节。
+// 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+Credential cred = new Credential(System.getenv("TENCENTCLOUD_SECRET_ID"), System.getenv("TENCENTCLOUD_SECRET_KEY"));
 ```
 
 3. 实例化一个http选项，若没有特殊需求可参照简化版示例代码跳过设置。若有需求可以参照下方示例代码设置http选项中的参数。
