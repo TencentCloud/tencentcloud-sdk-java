@@ -39,6 +39,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *申请合唱相关信息，用于标记用户的演唱是在合唱场景下。
+     * @param req ApplyChorusRequest
+     * @return ApplyChorusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyChorusResponse ApplyChorus(ApplyChorusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyChorusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyChorusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyChorus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量获取歌曲详细信息，包括：歌词下载链接、播放凭证、音高数据下载链接信息等。
      * @param req BatchDescribeKTVMusicDetailsRequest
      * @return BatchDescribeKTVMusicDetailsResponse

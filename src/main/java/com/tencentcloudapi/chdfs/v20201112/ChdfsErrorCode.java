@@ -57,9 +57,6 @@ public enum ChdfsErrorCode {
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),
      
-    // 操作被拒绝。
-     OPERATIONDENIED("OperationDenied"),
-     
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      

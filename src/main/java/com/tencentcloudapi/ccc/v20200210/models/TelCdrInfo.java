@@ -304,6 +304,14 @@ notInService       不在服务区
     private String Remark;
 
     /**
+    * 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QueuedSkillGroupName")
+    @Expose
+    private String QueuedSkillGroupName;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1055,6 +1063,26 @@ notInService       不在服务区
         this.Remark = Remark;
     }
 
+    /**
+     * Get 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueuedSkillGroupName 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQueuedSkillGroupName() {
+        return this.QueuedSkillGroupName;
+    }
+
+    /**
+     * Set 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueuedSkillGroupName 排队技能组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQueuedSkillGroupName(String QueuedSkillGroupName) {
+        this.QueuedSkillGroupName = QueuedSkillGroupName;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1168,6 +1196,9 @@ notInService       不在服务区
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.QueuedSkillGroupName != null) {
+            this.QueuedSkillGroupName = new String(source.QueuedSkillGroupName);
+        }
     }
 
 
@@ -1206,6 +1237,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
 
     }
 }

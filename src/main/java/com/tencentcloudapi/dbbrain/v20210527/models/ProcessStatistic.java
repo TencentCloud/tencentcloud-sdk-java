@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class ProcessStatistic extends AbstractModel{
 
+    /**
+    * 会话详情数组。
+    */
+    @SerializedName("Items")
+    @Expose
+    private SessionItem [] Items;
+
+    /**
+    * 总连接数。
+    */
+    @SerializedName("AllConnSum")
+    @Expose
+    private Long AllConnSum;
+
+    /**
+    * 总活跃连接数。
+    */
+    @SerializedName("ActiveConnSum")
+    @Expose
+    private Long ActiveConnSum;
+
+    /**
+     * Get 会话详情数组。 
+     * @return Items 会话详情数组。
+     */
+    public SessionItem [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 会话详情数组。
+     * @param Items 会话详情数组。
+     */
+    public void setItems(SessionItem [] Items) {
+        this.Items = Items;
+    }
+
+    /**
+     * Get 总连接数。 
+     * @return AllConnSum 总连接数。
+     */
+    public Long getAllConnSum() {
+        return this.AllConnSum;
+    }
+
+    /**
+     * Set 总连接数。
+     * @param AllConnSum 总连接数。
+     */
+    public void setAllConnSum(Long AllConnSum) {
+        this.AllConnSum = AllConnSum;
+    }
+
+    /**
+     * Get 总活跃连接数。 
+     * @return ActiveConnSum 总活跃连接数。
+     */
+    public Long getActiveConnSum() {
+        return this.ActiveConnSum;
+    }
+
+    /**
+     * Set 总活跃连接数。
+     * @param ActiveConnSum 总活跃连接数。
+     */
+    public void setActiveConnSum(Long ActiveConnSum) {
+        this.ActiveConnSum = ActiveConnSum;
+    }
+
     public ProcessStatistic() {
     }
 
@@ -30,6 +99,18 @@ public class ProcessStatistic extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ProcessStatistic(ProcessStatistic source) {
+        if (source.Items != null) {
+            this.Items = new SessionItem[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new SessionItem(source.Items[i]);
+            }
+        }
+        if (source.AllConnSum != null) {
+            this.AllConnSum = new Long(source.AllConnSum);
+        }
+        if (source.ActiveConnSum != null) {
+            this.ActiveConnSum = new Long(source.ActiveConnSum);
+        }
     }
 
 
@@ -37,6 +118,9 @@ public class ProcessStatistic extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "AllConnSum", this.AllConnSum);
+        this.setParamSimple(map, prefix + "ActiveConnSum", this.ActiveConnSum);
 
     }
 }

@@ -359,6 +359,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建虚拟节点
+     * @param req CreateClusterVirtualNodeRequest
+     * @return CreateClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterVirtualNodeResponse CreateClusterVirtualNode(CreateClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建虚拟节点池
+     * @param req CreateClusterVirtualNodePoolRequest
+     * @return CreateClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterVirtualNodePoolResponse CreateClusterVirtualNodePool(CreateClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusterVirtualNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建边缘计算ECM机器
      * @param req CreateECMInstancesRequest
      * @return CreateECMInstancesResponse
@@ -831,6 +871,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteClusterRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除虚拟节点
+     * @param req DeleteClusterVirtualNodeRequest
+     * @return DeleteClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterVirtualNodeResponse DeleteClusterVirtualNode(DeleteClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除虚拟节点池
+     * @param req DeleteClusterVirtualNodePoolRequest
+     * @return DeleteClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterVirtualNodePoolResponse DeleteClusterVirtualNodePool(DeleteClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteClusterVirtualNodePool");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1631,6 +1711,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看虚拟节点列表
+     * @param req DescribeClusterVirtualNodeRequest
+     * @return DescribeClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(DescribeClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看虚拟节点池列表
+     * @param req DescribeClusterVirtualNodePoolsRequest
+     * @return DescribeClusterVirtualNodePoolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(DescribeClusterVirtualNodePoolsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterVirtualNodePoolsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodePoolsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterVirtualNodePools");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2679,6 +2799,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *驱逐虚拟节点
+     * @param req DrainClusterVirtualNodeRequest
+     * @return DrainClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DrainClusterVirtualNodeResponse DrainClusterVirtualNode(DrainClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DrainClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DrainClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DrainClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开启集群审计
      * @param req EnableClusterAuditRequest
      * @return EnableClusterAuditResponse
@@ -3031,6 +3171,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterNodePoolResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyClusterNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改虚拟节点池
+     * @param req ModifyClusterVirtualNodePoolRequest
+     * @return ModifyClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterVirtualNodePool");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

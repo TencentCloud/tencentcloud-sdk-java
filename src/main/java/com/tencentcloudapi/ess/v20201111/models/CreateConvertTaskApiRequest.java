@@ -44,7 +44,7 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 操作者信息
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
@@ -113,16 +113,16 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者信息 
-     * @return Operator 操作者信息
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者信息
-     * @param Operator 操作者信息
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

@@ -51,6 +51,13 @@ public class ApplyConcurrentRequest extends AbstractModel{
     private String ApplicationVersionId;
 
     /**
+    * 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变） 
      * @return UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
@@ -114,6 +121,22 @@ public class ApplyConcurrentRequest extends AbstractModel{
         this.ApplicationVersionId = ApplicationVersionId;
     }
 
+    /**
+     * Get 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。 
+     * @return ApplicationId 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
+     * @param ApplicationId 应用ID。如果是独享项目，将忽略该参数，使用项目绑定的应用。如果是共享项目，使用该参数来指定应用。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public ApplyConcurrentRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ApplyConcurrentRequest extends AbstractModel{
         if (source.ApplicationVersionId != null) {
             this.ApplicationVersionId = new String(source.ApplicationVersionId);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ApplyConcurrentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

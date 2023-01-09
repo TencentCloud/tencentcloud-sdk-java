@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpsBilling extends AbstractModel{
+public class DescribeClusterVirtualNodePoolsRequest extends AbstractModel{
 
     /**
-    * HTTPS服务，缺省时默认开启【会产生计费】
+    * 集群ID
     */
-    @SerializedName("Switch")
+    @SerializedName("ClusterId")
     @Expose
-    private String Switch;
+    private String ClusterId;
 
     /**
-     * Get HTTPS服务，缺省时默认开启【会产生计费】 
-     * @return Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * Get 集群ID 
+     * @return ClusterId 集群ID
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set HTTPS服务，缺省时默认开启【会产生计费】
-     * @param Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * Set 集群ID
+     * @param ClusterId 集群ID
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    public HttpsBilling() {
+    public DescribeClusterVirtualNodePoolsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HttpsBilling(HttpsBilling source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public DescribeClusterVirtualNodePoolsRequest(DescribeClusterVirtualNodePoolsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -63,7 +63,7 @@ public class HttpsBilling extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeContainerGroupsRequest extends AbstractModel{
     private String SearchWord;
 
     /**
-    * 分组所属应用ID
+    * 分组所属应用ID。必填
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeContainerGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分组所属应用ID 
-     * @return ApplicationId 分组所属应用ID
+     * Get 分组所属应用ID。必填 
+     * @return ApplicationId 分组所属应用ID。必填
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 分组所属应用ID
-     * @param ApplicationId 分组所属应用ID
+     * Set 分组所属应用ID。必填
+     * @param ApplicationId 分组所属应用ID。必填
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

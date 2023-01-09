@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.chdfs.v20201112.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccessRulesResponse extends AbstractModel{
+public class CreateClusterVirtualNodeResponse extends AbstractModel{
 
     /**
-    * 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 虚拟节点名称
     */
-    @SerializedName("AccessRules")
+    @SerializedName("NodeName")
     @Expose
-    private AccessRule [] AccessRules;
+    private String NodeName;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class CreateAccessRulesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccessRules 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 虚拟节点名称 
+     * @return NodeName 虚拟节点名称
      */
-    public AccessRule [] getAccessRules() {
-        return this.AccessRules;
+    public String getNodeName() {
+        return this.NodeName;
     }
 
     /**
-     * Set 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccessRules 权限规则列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 虚拟节点名称
+     * @param NodeName 虚拟节点名称
      */
-    public void setAccessRules(AccessRule [] AccessRules) {
-        this.AccessRules = AccessRules;
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
     }
 
     /**
@@ -73,19 +68,16 @@ public class CreateAccessRulesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateAccessRulesResponse() {
+    public CreateClusterVirtualNodeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAccessRulesResponse(CreateAccessRulesResponse source) {
-        if (source.AccessRules != null) {
-            this.AccessRules = new AccessRule[source.AccessRules.length];
-            for (int i = 0; i < source.AccessRules.length; i++) {
-                this.AccessRules[i] = new AccessRule(source.AccessRules[i]);
-            }
+    public CreateClusterVirtualNodeResponse(CreateClusterVirtualNodeResponse source) {
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +89,7 @@ public class CreateAccessRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AccessRules.", this.AccessRules);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

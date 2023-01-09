@@ -62,6 +62,22 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private Long DegradeCapacityUsed;
 
     /**
+    * 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeepArchiveCapacityUsed")
+    @Expose
+    private Long DeepArchiveCapacityUsed;
+
+    /**
+    * 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntelligentCapacityUsed")
+    @Expose
+    private Long IntelligentCapacityUsed;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -165,6 +181,46 @@ public class DescribeFileSystemResponse extends AbstractModel{
     }
 
     /**
+     * Get 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeepArchiveCapacityUsed() {
+        return this.DeepArchiveCapacityUsed;
+    }
+
+    /**
+     * Set 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeepArchiveCapacityUsed(Long DeepArchiveCapacityUsed) {
+        this.DeepArchiveCapacityUsed = DeepArchiveCapacityUsed;
+    }
+
+    /**
+     * Get 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIntelligentCapacityUsed() {
+        return this.IntelligentCapacityUsed;
+    }
+
+    /**
+     * Set 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntelligentCapacityUsed(Long IntelligentCapacityUsed) {
+        this.IntelligentCapacityUsed = IntelligentCapacityUsed;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -203,6 +259,12 @@ public class DescribeFileSystemResponse extends AbstractModel{
         if (source.DegradeCapacityUsed != null) {
             this.DegradeCapacityUsed = new Long(source.DegradeCapacityUsed);
         }
+        if (source.DeepArchiveCapacityUsed != null) {
+            this.DeepArchiveCapacityUsed = new Long(source.DeepArchiveCapacityUsed);
+        }
+        if (source.IntelligentCapacityUsed != null) {
+            this.IntelligentCapacityUsed = new Long(source.IntelligentCapacityUsed);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -218,6 +280,8 @@ public class DescribeFileSystemResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
         this.setParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
         this.setParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
+        this.setParamSimple(map, prefix + "DeepArchiveCapacityUsed", this.DeepArchiveCapacityUsed);
+        this.setParamSimple(map, prefix + "IntelligentCapacityUsed", this.IntelligentCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

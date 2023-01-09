@@ -144,6 +144,14 @@ public class LoadBalancer extends AbstractModel{
     private Boolean LoadBalancerPassToTarget;
 
     /**
+    * 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddressIPv6")
+    @Expose
+    private String AddressIPv6;
+
+    /**
      * Get 区域。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 区域。
@@ -447,6 +455,26 @@ public class LoadBalancer extends AbstractModel{
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    /**
+     * Get 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddressIPv6 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddressIPv6() {
+        return this.AddressIPv6;
+    }
+
+    /**
+     * Set 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddressIPv6 负载均衡实例的IPv6地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddressIPv6(String AddressIPv6) {
+        this.AddressIPv6 = AddressIPv6;
+    }
+
     public LoadBalancer() {
     }
 
@@ -509,6 +537,9 @@ public class LoadBalancer extends AbstractModel{
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
         }
+        if (source.AddressIPv6 != null) {
+            this.AddressIPv6 = new String(source.AddressIPv6);
+        }
     }
 
 
@@ -531,6 +562,7 @@ public class LoadBalancer extends AbstractModel{
         this.setParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
         this.setParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
 
     }
 }

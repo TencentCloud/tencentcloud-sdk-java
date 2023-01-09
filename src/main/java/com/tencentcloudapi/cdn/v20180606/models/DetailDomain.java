@@ -552,7 +552,7 @@ off：不支持
     private QnPrivateAccess QnPrivateAccess;
 
     /**
-    * HTTPS服务
+    * HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpsBilling")
@@ -1908,9 +1908,9 @@ off：不支持
     }
 
     /**
-     * Get HTTPS服务
+     * Get HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HttpsBilling HTTPS服务
+     * @return HttpsBilling HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HttpsBilling getHttpsBilling() {
@@ -1918,9 +1918,9 @@ off：不支持
     }
 
     /**
-     * Set HTTPS服务
+     * Set HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpsBilling HTTPS服务
+     * @param HttpsBilling HTTPS服务，缺省时默认开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpsBilling(HttpsBilling HttpsBilling) {

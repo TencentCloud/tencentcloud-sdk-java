@@ -87,6 +87,20 @@ public class CreateLoadBalancerRequest extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
+    * 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+    */
+    @SerializedName("AddressIPVersion")
+    @Expose
+    private String AddressIPVersion;
+
+    /**
+    * 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get ECM区域，形如ap-xian-ecm。 
      * @return EcmRegion ECM区域，形如ap-xian-ecm。
      */
@@ -234,6 +248,38 @@ public class CreateLoadBalancerRequest extends AbstractModel{
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。 
+     * @return AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+     */
+    public String getAddressIPVersion() {
+        return this.AddressIPVersion;
+    }
+
+    /**
+     * Set 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+     * @param AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
+     */
+    public void setAddressIPVersion(String AddressIPVersion) {
+        this.AddressIPVersion = AddressIPVersion;
+    }
+
+    /**
+     * Get 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。 
+     * @return SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     * @param SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -275,6 +321,12 @@ public class CreateLoadBalancerRequest extends AbstractModel{
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -291,6 +343,8 @@ public class CreateLoadBalancerRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

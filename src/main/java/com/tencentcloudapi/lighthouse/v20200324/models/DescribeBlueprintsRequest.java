@@ -49,7 +49,7 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
-取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
+取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
 必选：否
 <li>platform-type</li>按照【镜像平台类型】进行过滤。
@@ -126,7 +126,7 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
-取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
+取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
 必选：否
 <li>platform-type</li>按照【镜像平台类型】进行过滤。
@@ -149,7 +149,7 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
-取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
+取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
 必选：否
 <li>platform-type</li>按照【镜像平台类型】进行过滤。
@@ -178,7 +178,7 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
-取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
+取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
 必选：否
 <li>platform-type</li>按照【镜像平台类型】进行过滤。
@@ -201,7 +201,7 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 类型：String
 必选：否
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
-取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
+取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
 必选：否
 <li>platform-type</li>按照【镜像平台类型】进行过滤。

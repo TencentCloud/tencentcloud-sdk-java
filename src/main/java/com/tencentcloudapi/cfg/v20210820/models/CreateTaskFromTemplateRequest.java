@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateTaskFromTemplateRequest extends AbstractModel{
 
     /**
-    * 从经验库中查询到的经验模版ID
+    * 从经验库中查询到的经验模板ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateTaskFromTemplateRequest extends AbstractModel{
     private TaskConfig TaskConfig;
 
     /**
-     * Get 从经验库中查询到的经验模版ID 
-     * @return TemplateId 从经验库中查询到的经验模版ID
+     * Get 从经验库中查询到的经验模板ID 
+     * @return TemplateId 从经验库中查询到的经验模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 从经验库中查询到的经验模版ID
-     * @param TemplateId 从经验库中查询到的经验模版ID
+     * Set 从经验库中查询到的经验模板ID
+     * @param TemplateId 从经验库中查询到的经验模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

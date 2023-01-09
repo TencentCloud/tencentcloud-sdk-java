@@ -38,6 +38,13 @@ public class VerifyPdfResponse extends AbstractModel{
     private PdfVerifyResult [] PdfVerifyResults;
 
     /**
+    * 验签序列号
+    */
+    @SerializedName("VerifySerialNo")
+    @Expose
+    private String VerifySerialNo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +88,22 @@ public class VerifyPdfResponse extends AbstractModel{
     }
 
     /**
+     * Get 验签序列号 
+     * @return VerifySerialNo 验签序列号
+     */
+    public String getVerifySerialNo() {
+        return this.VerifySerialNo;
+    }
+
+    /**
+     * Set 验签序列号
+     * @param VerifySerialNo 验签序列号
+     */
+    public void setVerifySerialNo(String VerifySerialNo) {
+        this.VerifySerialNo = VerifySerialNo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +136,9 @@ public class VerifyPdfResponse extends AbstractModel{
                 this.PdfVerifyResults[i] = new PdfVerifyResult(source.PdfVerifyResults[i]);
             }
         }
+        if (source.VerifySerialNo != null) {
+            this.VerifySerialNo = new String(source.VerifySerialNo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +151,7 @@ public class VerifyPdfResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VerifyResult", this.VerifyResult);
         this.setParamArrayObj(map, prefix + "PdfVerifyResults.", this.PdfVerifyResults);
+        this.setParamSimple(map, prefix + "VerifySerialNo", this.VerifySerialNo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
