@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.thpc.v20220401.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterStorageOptionResponse extends AbstractModel{
+public class SuspendResumeDataEngineResponse extends AbstractModel{
 
     /**
-    * 集群存储选项信息概览。
+    * 虚拟集群详细信息
     */
-    @SerializedName("StorageOption")
+    @SerializedName("DataEngineName")
     @Expose
-    private StorageOptionOverview StorageOption;
+    private String DataEngineName;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeClusterStorageOptionResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 集群存储选项信息概览。 
-     * @return StorageOption 集群存储选项信息概览。
+     * Get 虚拟集群详细信息 
+     * @return DataEngineName 虚拟集群详细信息
      */
-    public StorageOptionOverview getStorageOption() {
-        return this.StorageOption;
+    public String getDataEngineName() {
+        return this.DataEngineName;
     }
 
     /**
-     * Set 集群存储选项信息概览。
-     * @param StorageOption 集群存储选项信息概览。
+     * Set 虚拟集群详细信息
+     * @param DataEngineName 虚拟集群详细信息
      */
-    public void setStorageOption(StorageOptionOverview StorageOption) {
-        this.StorageOption = StorageOption;
+    public void setDataEngineName(String DataEngineName) {
+        this.DataEngineName = DataEngineName;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DescribeClusterStorageOptionResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeClusterStorageOptionResponse() {
+    public SuspendResumeDataEngineResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterStorageOptionResponse(DescribeClusterStorageOptionResponse source) {
-        if (source.StorageOption != null) {
-            this.StorageOption = new StorageOptionOverview(source.StorageOption);
+    public SuspendResumeDataEngineResponse(SuspendResumeDataEngineResponse source) {
+        if (source.DataEngineName != null) {
+            this.DataEngineName = new String(source.DataEngineName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class DescribeClusterStorageOptionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "StorageOption.", this.StorageOption);
+        this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

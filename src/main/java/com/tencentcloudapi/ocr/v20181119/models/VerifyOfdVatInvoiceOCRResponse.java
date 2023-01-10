@@ -26,6 +26,8 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel{
     * 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
     */
     @SerializedName("Type")
     @Expose
@@ -153,10 +155,14 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel{
     /**
      * Get 发票类型
 026:增值税电子普通发票
-028:增值税电子专用发票 
+028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票） 
      * @return Type 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
      */
     public String getType() {
         return this.Type;
@@ -166,9 +172,13 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel{
      * Set 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
      * @param Type 发票类型
 026:增值税电子普通发票
 028:增值税电子专用发票
+010:电子发票（普通发票）
+020:电子发票（增值税专用发票）
      */
     public void setType(String Type) {
         this.Type = Type;

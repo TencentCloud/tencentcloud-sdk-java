@@ -1239,6 +1239,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口用于控制暂停或恢复数据引擎
+     * @param req SuspendResumeDataEngineRequest
+     * @return SuspendResumeDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public SuspendResumeDataEngineResponse SuspendResumeDataEngine(SuspendResumeDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SuspendResumeDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SuspendResumeDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑用户上的用户组
      * @param req UnbindWorkGroupsFromUserRequest
      * @return UnbindWorkGroupsFromUserResponse

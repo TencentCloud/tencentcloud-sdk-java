@@ -1,5 +1,8 @@
 package com.tencentcloudapi.tem.v20210701;
 public enum TemErrorCode {
+    // 创建服务失败。
+     FAILEDOPERATION_CREATESERVICEERROR("FailedOperation.CreateServiceError"),
+     
     // 服务器繁忙,请稍后再试。
      FAILEDOPERATION_DEFAULTINTERNALERROR("FailedOperation.DefaultInternalError"),
      

@@ -79,6 +79,54 @@ public class KafkaDeliveryConfig extends AbstractModel{
     private String LineRule;
 
     /**
+    * 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableAuth")
+    @Expose
+    private Boolean EnableAuth;
+
+    /**
+    * 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
+    * 密码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaInfos")
+    @Expose
+    private DeliveryKafkaInfo [] KafkaInfos;
+
+    /**
+    * 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableGlobalLineRule")
+    @Expose
+    private Boolean EnableGlobalLineRule;
+
+    /**
+    * 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomRule")
+    @Expose
+    private String CustomRule;
+
+    /**
      * Get 配置项id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置项id
@@ -218,6 +266,126 @@ public class KafkaDeliveryConfig extends AbstractModel{
         this.LineRule = LineRule;
     }
 
+    /**
+     * Get 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableAuth 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableAuth() {
+        return this.EnableAuth;
+    }
+
+    /**
+     * Set 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableAuth 是否需要认证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableAuth(Boolean EnableAuth) {
+        this.EnableAuth = EnableAuth;
+    }
+
+    /**
+     * Get 用户名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Username 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Username 用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    /**
+     * Get 密码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Password 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Password 密码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaInfos 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeliveryKafkaInfo [] getKafkaInfos() {
+        return this.KafkaInfos;
+    }
+
+    /**
+     * Set 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaInfos 投递的topic和path
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaInfos(DeliveryKafkaInfo [] KafkaInfos) {
+        this.KafkaInfos = KafkaInfos;
+    }
+
+    /**
+     * Get 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableGlobalLineRule 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableGlobalLineRule() {
+        return this.EnableGlobalLineRule;
+    }
+
+    /**
+     * Set 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableGlobalLineRule 是否应用单行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableGlobalLineRule(Boolean EnableGlobalLineRule) {
+        this.EnableGlobalLineRule = EnableGlobalLineRule;
+    }
+
+    /**
+     * Get 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomRule 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomRule() {
+        return this.CustomRule;
+    }
+
+    /**
+     * Set 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomRule 自定义分行规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomRule(String CustomRule) {
+        this.CustomRule = CustomRule;
+    }
+
     public KafkaDeliveryConfig() {
     }
 
@@ -250,6 +418,27 @@ public class KafkaDeliveryConfig extends AbstractModel{
         if (source.LineRule != null) {
             this.LineRule = new String(source.LineRule);
         }
+        if (source.EnableAuth != null) {
+            this.EnableAuth = new Boolean(source.EnableAuth);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.KafkaInfos != null) {
+            this.KafkaInfos = new DeliveryKafkaInfo[source.KafkaInfos.length];
+            for (int i = 0; i < source.KafkaInfos.length; i++) {
+                this.KafkaInfos[i] = new DeliveryKafkaInfo(source.KafkaInfos[i]);
+            }
+        }
+        if (source.EnableGlobalLineRule != null) {
+            this.EnableGlobalLineRule = new Boolean(source.EnableGlobalLineRule);
+        }
+        if (source.CustomRule != null) {
+            this.CustomRule = new String(source.CustomRule);
+        }
     }
 
 
@@ -264,6 +453,12 @@ public class KafkaDeliveryConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "KafkaVPort", this.KafkaVPort);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "LineRule", this.LineRule);
+        this.setParamSimple(map, prefix + "EnableAuth", this.EnableAuth);
+        this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
+        this.setParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
+        this.setParamSimple(map, prefix + "CustomRule", this.CustomRule);
 
     }
 }

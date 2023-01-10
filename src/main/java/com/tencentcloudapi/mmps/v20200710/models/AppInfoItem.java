@@ -93,6 +93,30 @@ public class AppInfoItem extends AbstractModel{
     private Long HighRiskCount;
 
     /**
+    * 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrivacyTextName")
+    @Expose
+    private String PrivacyTextName;
+
+    /**
+    * 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SoftwareMD5")
+    @Expose
+    private String SoftwareMD5;
+
+    /**
+    * 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrivacyTextMD5")
+    @Expose
+    private String PrivacyTextMD5;
+
+    /**
      * Get 小程序apiiid 
      * @return AppPackage 小程序apiiid
      */
@@ -264,6 +288,66 @@ public class AppInfoItem extends AbstractModel{
         this.HighRiskCount = HighRiskCount;
     }
 
+    /**
+     * Get 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrivacyTextName 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivacyTextName() {
+        return this.PrivacyTextName;
+    }
+
+    /**
+     * Set 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivacyTextName 隐私申明文件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivacyTextName(String PrivacyTextName) {
+        this.PrivacyTextName = PrivacyTextName;
+    }
+
+    /**
+     * Get 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SoftwareMD5 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSoftwareMD5() {
+        return this.SoftwareMD5;
+    }
+
+    /**
+     * Set 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SoftwareMD5 软件MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSoftwareMD5(String SoftwareMD5) {
+        this.SoftwareMD5 = SoftwareMD5;
+    }
+
+    /**
+     * Get 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrivacyTextMD5 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrivacyTextMD5() {
+        return this.PrivacyTextMD5;
+    }
+
+    /**
+     * Set 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrivacyTextMD5 隐私文本MD5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrivacyTextMD5(String PrivacyTextMD5) {
+        this.PrivacyTextMD5 = PrivacyTextMD5;
+    }
+
     public AppInfoItem() {
     }
 
@@ -299,6 +383,15 @@ public class AppInfoItem extends AbstractModel{
         if (source.HighRiskCount != null) {
             this.HighRiskCount = new Long(source.HighRiskCount);
         }
+        if (source.PrivacyTextName != null) {
+            this.PrivacyTextName = new String(source.PrivacyTextName);
+        }
+        if (source.SoftwareMD5 != null) {
+            this.SoftwareMD5 = new String(source.SoftwareMD5);
+        }
+        if (source.PrivacyTextMD5 != null) {
+            this.PrivacyTextMD5 = new String(source.PrivacyTextMD5);
+        }
     }
 
 
@@ -315,6 +408,9 @@ public class AppInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "BehaviorUrl", this.BehaviorUrl);
         this.setParamSimple(map, prefix + "BehaviorTitle", this.BehaviorTitle);
         this.setParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
+        this.setParamSimple(map, prefix + "PrivacyTextName", this.PrivacyTextName);
+        this.setParamSimple(map, prefix + "SoftwareMD5", this.SoftwareMD5);
+        this.setParamSimple(map, prefix + "PrivacyTextMD5", this.PrivacyTextMD5);
 
     }
 }

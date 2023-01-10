@@ -31,7 +31,8 @@ public class ProcedureReviewAudioVideoTaskInput extends AbstractModel{
 
     /**
     * 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
     */
     @SerializedName("ReviewContents")
@@ -56,10 +57,12 @@ public class ProcedureReviewAudioVideoTaskInput extends AbstractModel{
 
     /**
      * Get 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。 
      * @return ReviewContents 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
      */
     public String [] getReviewContents() {
@@ -68,10 +71,12 @@ public class ProcedureReviewAudioVideoTaskInput extends AbstractModel{
 
     /**
      * Set 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
      * @param ReviewContents 审核的内容，可选值：
-<li>Media：原始音视频。</li>
+<li>Media：原始音视频；</li>
+<li>Cover：封面。</li>
 不填或填空数组时，默认为审核 Media。
      */
     public void setReviewContents(String [] ReviewContents) {

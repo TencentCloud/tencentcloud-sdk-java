@@ -80,6 +80,14 @@ public class AppTaskData extends AbstractModel{
     private String EndTime;
 
     /**
+    * 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContactName")
+    @Expose
+    private String ContactName;
+
+    /**
      * Get 任务id 
      * @return TaskID 任务id
      */
@@ -211,6 +219,26 @@ public class AppTaskData extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContactName 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContactName() {
+        return this.ContactName;
+    }
+
+    /**
+     * Set 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContactName 联系人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContactName(String ContactName) {
+        this.ContactName = ContactName;
+    }
+
     public AppTaskData() {
     }
 
@@ -243,6 +271,9 @@ public class AppTaskData extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.ContactName != null) {
+            this.ContactName = new String(source.ContactName);
+        }
     }
 
 
@@ -258,6 +289,7 @@ public class AppTaskData extends AbstractModel{
         this.setParamObj(map, prefix + "AppInfo.", this.AppInfo);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "ContactName", this.ContactName);
 
     }
 }

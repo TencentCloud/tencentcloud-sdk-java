@@ -191,6 +191,14 @@ public class ApiDetailInfo extends AbstractModel{
     private String Description;
 
     /**
+    * API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiMatchType")
+    @Expose
+    private String ApiMatchType;
+
+    /**
      * Get API ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiId API ID
@@ -610,6 +618,26 @@ public class ApiDetailInfo extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiMatchType API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApiMatchType() {
+        return this.ApiMatchType;
+    }
+
+    /**
+     * Set API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiMatchType API路径匹配类型。normal：普通API；wildcard：通配API。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiMatchType(String ApiMatchType) {
+        this.ApiMatchType = ApiMatchType;
+    }
+
     public ApiDetailInfo() {
     }
 
@@ -681,6 +709,9 @@ public class ApiDetailInfo extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ApiMatchType != null) {
+            this.ApiMatchType = new String(source.ApiMatchType);
+        }
     }
 
 
@@ -709,6 +740,7 @@ public class ApiDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "ApiType", this.ApiType);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ApiMatchType", this.ApiMatchType);
 
     }
 }

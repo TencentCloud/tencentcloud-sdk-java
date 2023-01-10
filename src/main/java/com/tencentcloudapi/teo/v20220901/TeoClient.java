@@ -559,6 +559,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDDoSAttackData）用于查询DDoS攻击时序数据。
+     * @param req DescribeDDoSAttackDataRequest
+     * @return DescribeDDoSAttackDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAttackDataResponse DescribeDDoSAttackData(DescribeDDoSAttackDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAttackDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSAttackData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDDoSAttackTopData）用于查询DDoS攻击Top数据。
      * @param req DescribeDDoSAttackTopDataRequest
      * @return DescribeDDoSAttackTopDataResponse

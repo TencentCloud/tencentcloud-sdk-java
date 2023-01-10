@@ -65,6 +65,14 @@ public class MediaVideoStreamItem extends AbstractModel{
     private String CodecTag;
 
     /**
+    * 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+    */
+    @SerializedName("DynamicRangeInfo")
+    @Expose
+    private DynamicRangeInfo DynamicRangeInfo;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -160,6 +168,26 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.CodecTag = CodecTag;
     }
 
+    /**
+     * Get 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li> 
+     * @return DynamicRangeInfo 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+     */
+    public DynamicRangeInfo getDynamicRangeInfo() {
+        return this.DynamicRangeInfo;
+    }
+
+    /**
+     * Set 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+     * @param DynamicRangeInfo 画面动态范围信息。
+<li><font color=red>注意</font>：在 2023-01-10T00:00:00Z 后处理的转码文件，此字段有效。</li>
+     */
+    public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {
+        this.DynamicRangeInfo = DynamicRangeInfo;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -186,6 +214,9 @@ public class MediaVideoStreamItem extends AbstractModel{
         if (source.CodecTag != null) {
             this.CodecTag = new String(source.CodecTag);
         }
+        if (source.DynamicRangeInfo != null) {
+            this.DynamicRangeInfo = new DynamicRangeInfo(source.DynamicRangeInfo);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
+        this.setParamObj(map, prefix + "DynamicRangeInfo.", this.DynamicRangeInfo);
 
     }
 }

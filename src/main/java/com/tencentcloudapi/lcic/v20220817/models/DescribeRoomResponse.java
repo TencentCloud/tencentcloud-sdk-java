@@ -75,8 +75,8 @@ public class DescribeRoomResponse extends AbstractModel{
     private Long MaxMicNumber;
 
     /**
-    * 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+    * 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
     */
     @SerializedName("AutoMic")
@@ -103,9 +103,10 @@ coteaching 双师
     private String SubType;
 
     /**
-    * 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+    * 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
     */
     @SerializedName("DisableRecord")
     @Expose
@@ -259,11 +260,11 @@ coteaching 双师
     }
 
     /**
-     * Get 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * Get 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦 
-     * @return AutoMic 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @return AutoMic 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      */
     public Long getAutoMic() {
@@ -271,11 +272,11 @@ coteaching 双师
     }
 
     /**
-     * Set 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * Set 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
-     * @param AutoMic 进入房间时是否自动连麦。可以有以下取值：
-0 不自动连麦（默认值）
+     * @param AutoMic 进入课堂时是否自动连麦。可以有以下取值：
+0 不自动连麦（需要手动申请上麦，默认值）
 1 自动连麦
      */
     public void setAutoMic(Long AutoMic) {
@@ -335,24 +336,28 @@ coteaching 双师
     }
 
     /**
-     * Get 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
-1 禁止录制 
-     * @return DisableRecord 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * Get 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 
+     * @return DisableRecord 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
+1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
     }
 
     /**
-     * Set 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+     * Set 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
-     * @param DisableRecord 禁止录制。可以有以下取值：
-0 不禁止录制（默认值）
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
+     * @param DisableRecord 上课后是否禁止自动录制。可以有以下取值：
+0 不禁止录制（自动开启录制，默认值）
 1 禁止录制
+注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;
