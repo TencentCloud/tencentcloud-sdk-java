@@ -74,6 +74,7 @@ public abstract class AbstractClient {
   private String apiVersion;
   public Gson gson;
   private TCLog log;
+  private HttpConnection httpConnection;
   public AbstractClient(String endpoint, String version, Credential credential, String region) {
     this(endpoint, version, credential, region, new ClientProfile());
   }
@@ -94,6 +95,13 @@ public abstract class AbstractClient {
     this.apiVersion = version;
     this.gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
     this.log = new TCLog(getClass().getName(), profile.isDebug());
+    this.httpConnection = new HttpConnection(
+            this.profile.getHttpProfile().getConnTimeout(),
+            this.profile.getHttpProfile().getReadTimeout(),
+            this.profile.getHttpProfile().getWriteTimeout()
+    );
+    this.httpConnection.addInterceptors(this.log);
+    this.trySetProxy(this.httpConnection);
     warmup();
   }
 
@@ -250,18 +258,11 @@ public abstract class AbstractClient {
 
   private String getResponseBody(String url, HashMap<String, String> headers, byte[] body)
       throws TencentCloudSDKException {
-    HttpConnection conn =
-        new HttpConnection(
-            this.profile.getHttpProfile().getConnTimeout(),
-            this.profile.getHttpProfile().getReadTimeout(),
-            this.profile.getHttpProfile().getWriteTimeout());
-    conn.addInterceptors(log);
-    this.trySetProxy(conn);
     Builder hb = new Headers.Builder();
     for (String key : headers.keySet()) {
       hb.add(key, headers.get(key));
     }
-    Response resp = conn.postRequest(url, body, hb.build());
+    Response resp = this.httpConnection.postRequest(url, body, hb.build());
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
       String msg = "response code is " + resp.code() + ", not 200";
       log.info(msg);
@@ -393,19 +394,12 @@ public abstract class AbstractClient {
     HashMap<String, String> param = new HashMap<String, String>();
     request.toMap(param, "");
     String strParam = this.formatRequestData(action, param);
-    HttpConnection conn =
-        new HttpConnection(
-            this.profile.getHttpProfile().getConnTimeout(),
-            this.profile.getHttpProfile().getReadTimeout(),
-            this.profile.getHttpProfile().getWriteTimeout());
-    conn.addInterceptors(log);
-    this.trySetProxy(conn);
     String reqMethod = this.profile.getHttpProfile().getReqMethod();
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     if (reqMethod.equals(HttpProfile.REQ_GET)) {
-      return conn.getRequest(url + "?" + strParam);
+      return this.httpConnection.getRequest(url + "?" + strParam);
     } else if (reqMethod.equals(HttpProfile.REQ_POST)) {
-      return conn.postRequest(url, strParam);
+      return this.httpConnection.postRequest(url, strParam);
     } else {
       throw new TencentCloudSDKException("Method only support (GET, POST)");
     }
@@ -495,13 +489,6 @@ public abstract class AbstractClient {
             + "Signature="
             + signature;
 
-    HttpConnection conn =
-        new HttpConnection(
-            this.profile.getHttpProfile().getConnTimeout(),
-            this.profile.getHttpProfile().getReadTimeout(),
-            this.profile.getHttpProfile().getWriteTimeout());
-    conn.addInterceptors(log);
-    this.trySetProxy(conn);
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
     hb.add("Content-Type", contentType)
@@ -527,9 +514,9 @@ public abstract class AbstractClient {
 
     Headers headers = hb.build();
     if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
-      return conn.getRequest(url + "?" + canonicalQueryString, headers);
+      return this.httpConnection.getRequest(url + "?" + canonicalQueryString, headers);
     } else if (httpRequestMethod.equals(HttpProfile.REQ_POST)) {
-      return conn.postRequest(url, requestPayload, headers);
+      return this.httpConnection.postRequest(url, requestPayload, headers);
     } else {
       throw new TencentCloudSDKException("Method only support GET, POST");
     }
