@@ -40,7 +40,7 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
     * 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
     */
     @SerializedName("Names")
@@ -49,7 +49,7 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
     * 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
     */
     @SerializedName("NamePrefixes")
@@ -75,8 +75,8 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
     * 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
     */
     @SerializedName("Tags")
     @Expose
@@ -305,10 +305,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Get 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li> 
      * @return Names 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public String [] getNames() {
@@ -317,10 +317,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Set 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      * @param Names 文件名集合，模糊匹配媒体文件的文件名，匹配度越高，排序越优先。
-<li>单个文件名长度限制：40个字符。</li>
+<li>单个文件名长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public void setNames(String [] Names) {
@@ -329,10 +329,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Get 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li> 
      * @return NamePrefixes 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public String [] getNamePrefixes() {
@@ -341,10 +341,10 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Set 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      * @param NamePrefixes 文件名前缀，前缀匹配媒体文件的文件名。
-<li>单个文件名前缀长度限制：20个字符。</li>
+<li>单个文件名前缀长度限制：100个字符。</li>
 <li>数组长度限制：10。</li>
      */
     public void setNamePrefixes(String [] NamePrefixes) {
@@ -397,11 +397,11 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Get 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li> 
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li> 
      * @return Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
      */
     public String [] getTags() {
         return this.Tags;
@@ -409,11 +409,11 @@ public class SearchMediaRequest extends AbstractModel{
 
     /**
      * Set 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
      * @param Tags 标签集合，匹配集合中任意元素。
-<li>单个标签长度限制：16个字符。</li>
-<li>数组长度限制：10。</li>
+<li>单个标签长度限制：32个字符。</li>
+<li>数组长度限制：16。</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

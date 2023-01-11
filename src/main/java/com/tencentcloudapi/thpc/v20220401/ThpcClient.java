@@ -179,6 +179,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
+     * @param req DescribeAutoScalingConfigurationRequest
+     * @return DescribeAutoScalingConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalingConfigurationResponse DescribeAutoScalingConfiguration(DescribeAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoScalingConfigurationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingConfigurationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoScalingConfiguration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeClusterActivities）用于查询集群活动历史记录列表。
      * @param req DescribeClusterActivitiesRequest
      * @return DescribeClusterActivitiesResponse

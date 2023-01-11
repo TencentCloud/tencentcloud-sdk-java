@@ -3,6 +3,9 @@ public enum AcpErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 参数错误。
+     INVALIDPARAMETER("InvalidParameter"),
+     
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation");
      

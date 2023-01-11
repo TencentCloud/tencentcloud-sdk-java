@@ -128,6 +128,14 @@ false：有序签
     private Agent Agent;
 
     /**
+    * 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -379,6 +387,26 @@ false：有序签
         this.Agent = Agent;
     }
 
+    /**
+     * Get 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。 
+     * @return CcInfos 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+     * @param CcInfos 被抄送人的信息列表。
+注: 此功能为白名单功能，若有需要，请联系电子签客服开白使用。
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
     public CreateFlowRequest() {
     }
 
@@ -432,6 +460,12 @@ false：有序签
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.CcInfos != null) {
+            this.CcInfos = new CcInfo[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
+            }
+        }
     }
 
 
@@ -453,6 +487,7 @@ false：有序签
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
 
     }
 }

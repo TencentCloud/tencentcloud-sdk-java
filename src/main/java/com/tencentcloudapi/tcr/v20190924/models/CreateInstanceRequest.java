@@ -51,6 +51,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long RegistryChargeType;
 
     /**
+    * 预付费自动续费标识和购买时长
+    */
+    @SerializedName("RegistryChargePrepaid")
+    @Expose
+    private RegistryChargePrepaid RegistryChargePrepaid;
+
+    /**
     * 是否同步TCR云标签至生成的COS Bucket
     */
     @SerializedName("SyncTag")
@@ -122,6 +129,22 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 预付费自动续费标识和购买时长 
+     * @return RegistryChargePrepaid 预付费自动续费标识和购买时长
+     */
+    public RegistryChargePrepaid getRegistryChargePrepaid() {
+        return this.RegistryChargePrepaid;
+    }
+
+    /**
+     * Set 预付费自动续费标识和购买时长
+     * @param RegistryChargePrepaid 预付费自动续费标识和购买时长
+     */
+    public void setRegistryChargePrepaid(RegistryChargePrepaid RegistryChargePrepaid) {
+        this.RegistryChargePrepaid = RegistryChargePrepaid;
+    }
+
+    /**
      * Get 是否同步TCR云标签至生成的COS Bucket 
      * @return SyncTag 是否同步TCR云标签至生成的COS Bucket
      */
@@ -157,6 +180,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.RegistryChargeType != null) {
             this.RegistryChargeType = new Long(source.RegistryChargeType);
         }
+        if (source.RegistryChargePrepaid != null) {
+            this.RegistryChargePrepaid = new RegistryChargePrepaid(source.RegistryChargePrepaid);
+        }
         if (source.SyncTag != null) {
             this.SyncTag = new Boolean(source.SyncTag);
         }
@@ -171,6 +197,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
+        this.setParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
 
     }

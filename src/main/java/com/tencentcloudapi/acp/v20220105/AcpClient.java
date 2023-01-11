@@ -79,6 +79,26 @@ public class AcpClient extends AbstractClient{
     }
 
     /**
+     *获取子渠道的App合规诊断任务报告url
+     * @param req DescribeChannelTaskReportUrlRequest
+     * @return DescribeChannelTaskReportUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChannelTaskReportUrlResponse DescribeChannelTaskReportUrl(DescribeChannelTaskReportUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChannelTaskReportUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChannelTaskReportUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChannelTaskReportUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取应用合规文件上传凭证，用于上传诊断文件
      * @param req DescribeFileTicketRequest
      * @return DescribeFileTicketResponse

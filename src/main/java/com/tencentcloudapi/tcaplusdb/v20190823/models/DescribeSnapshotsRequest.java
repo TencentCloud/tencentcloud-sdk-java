@@ -51,6 +51,13 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
+    * 批量拉取快照的表格列表
+    */
+    @SerializedName("SelectedTables")
+    @Expose
+    private SelectedTableInfoNew [] SelectedTables;
+
+    /**
      * Get 表格所属集群id 
      * @return ClusterId 表格所属集群id
      */
@@ -114,6 +121,22 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         this.SnapshotName = SnapshotName;
     }
 
+    /**
+     * Get 批量拉取快照的表格列表 
+     * @return SelectedTables 批量拉取快照的表格列表
+     */
+    public SelectedTableInfoNew [] getSelectedTables() {
+        return this.SelectedTables;
+    }
+
+    /**
+     * Set 批量拉取快照的表格列表
+     * @param SelectedTables 批量拉取快照的表格列表
+     */
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
+        this.SelectedTables = SelectedTables;
+    }
+
     public DescribeSnapshotsRequest() {
     }
 
@@ -134,6 +157,12 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         if (source.SnapshotName != null) {
             this.SnapshotName = new String(source.SnapshotName);
         }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SelectedTableInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SelectedTableInfoNew(source.SelectedTables[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+        this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
 
     }
 }
