@@ -13,29 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ims.v20200713.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImsListResponse extends AbstractModel{
+public class DescribeExtendedServiceAuthInfoResponse extends AbstractModel{
 
     /**
-    * 返回列表数据----非必选，该参数暂未对外开放
+    * 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ImsDetailSet")
+    @SerializedName("AuthInfo")
     @Expose
-    private ImsDetail [] ImsDetailSet;
-
-    /**
-    * 总条数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private ExtentServiceAuthInfo [] AuthInfo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +38,23 @@ public class DescribeImsListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回列表数据----非必选，该参数暂未对外开放
+     * Get 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
+     * @return AuthInfo 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ImsDetail [] getImsDetailSet() {
-        return this.ImsDetailSet;
+    public ExtentServiceAuthInfo [] getAuthInfo() {
+        return this.AuthInfo;
     }
 
     /**
-     * Set 返回列表数据----非必选，该参数暂未对外开放
+     * Set 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImsDetailSet 返回列表数据----非必选，该参数暂未对外开放
+     * @param AuthInfo 企业扩展服务授权信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setImsDetailSet(ImsDetail [] ImsDetailSet) {
-        this.ImsDetailSet = ImsDetailSet;
-    }
-
-    /**
-     * Get 总条数 
-     * @return TotalCount 总条数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 总条数
-     * @param TotalCount 总条数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setAuthInfo(ExtentServiceAuthInfo [] AuthInfo) {
+        this.AuthInfo = AuthInfo;
     }
 
     /**
@@ -96,22 +73,19 @@ public class DescribeImsListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeImsListResponse() {
+    public DescribeExtendedServiceAuthInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeImsListResponse(DescribeImsListResponse source) {
-        if (source.ImsDetailSet != null) {
-            this.ImsDetailSet = new ImsDetail[source.ImsDetailSet.length];
-            for (int i = 0; i < source.ImsDetailSet.length; i++) {
-                this.ImsDetailSet[i] = new ImsDetail(source.ImsDetailSet[i]);
+    public DescribeExtendedServiceAuthInfoResponse(DescribeExtendedServiceAuthInfoResponse source) {
+        if (source.AuthInfo != null) {
+            this.AuthInfo = new ExtentServiceAuthInfo[source.AuthInfo.length];
+            for (int i = 0; i < source.AuthInfo.length; i++) {
+                this.AuthInfo[i] = new ExtentServiceAuthInfo(source.AuthInfo[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +97,7 @@ public class DescribeImsListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ImsDetailSet.", this.ImsDetailSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "AuthInfo.", this.AuthInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

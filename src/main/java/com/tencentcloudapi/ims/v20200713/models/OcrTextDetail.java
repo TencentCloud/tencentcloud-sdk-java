@@ -80,6 +80,13 @@ public class OcrTextDetail extends AbstractModel{
     private Long Rate;
 
     /**
+    * OCR文本命中的二级标签
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get OCR文本内容 
      * @return Text OCR文本内容
      */
@@ -211,6 +218,22 @@ public class OcrTextDetail extends AbstractModel{
         this.Rate = Rate;
     }
 
+    /**
+     * Get OCR文本命中的二级标签 
+     * @return SubLabel OCR文本命中的二级标签
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set OCR文本命中的二级标签
+     * @param SubLabel OCR文本命中的二级标签
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public OcrTextDetail() {
     }
 
@@ -246,6 +269,9 @@ public class OcrTextDetail extends AbstractModel{
         if (source.Rate != null) {
             this.Rate = new Long(source.Rate);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -261,6 +287,7 @@ public class OcrTextDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamSimple(map, prefix + "Rate", this.Rate);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

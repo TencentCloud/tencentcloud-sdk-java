@@ -115,6 +115,14 @@ RESULT_PASSED: 通过。
     private String CheckResult;
 
     /**
+    * 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 客户资产的ID。 
      * @return CustomerAssetId 客户资产的ID。
      */
@@ -350,6 +358,26 @@ RESULT_PASSED: 通过。
         this.CheckResult = CheckResult;
     }
 
+    /**
+     * Get 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 主机节点的实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ComplianceAssetInfo() {
     }
 
@@ -391,6 +419,9 @@ RESULT_PASSED: 通过。
         if (source.CheckResult != null) {
             this.CheckResult = new String(source.CheckResult);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -409,6 +440,7 @@ RESULT_PASSED: 通过。
         this.setParamSimple(map, prefix + "FailedPolicyItemCount", this.FailedPolicyItemCount);
         this.setParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
         this.setParamSimple(map, prefix + "CheckResult", this.CheckResult);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

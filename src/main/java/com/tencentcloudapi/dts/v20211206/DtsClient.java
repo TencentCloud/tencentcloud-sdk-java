@@ -102,7 +102,7 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *恢复处于暂停中的数据同步任务。
+     *恢复处于已暂停状态的数据同步任务。
      * @param req ContinueSyncJobRequest
      * @return ContinueSyncJobResponse
      * @throws TencentCloudSDKException

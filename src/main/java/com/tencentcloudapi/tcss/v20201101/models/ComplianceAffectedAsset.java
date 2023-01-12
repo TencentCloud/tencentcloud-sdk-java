@@ -110,6 +110,14 @@ RESULT_PASSED: 通过
     private String VerifyInfo;
 
     /**
+    * 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 为客户分配的唯一的资产项的ID。 
      * @return CustomerAssetId 为客户分配的唯一的资产项的ID。
      */
@@ -337,6 +345,26 @@ RESULT_PASSED: 通过
         this.VerifyInfo = VerifyInfo;
     }
 
+    /**
+     * Get 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 主机实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ComplianceAffectedAsset() {
     }
 
@@ -375,6 +403,9 @@ RESULT_PASSED: 通过
         if (source.VerifyInfo != null) {
             this.VerifyInfo = new String(source.VerifyInfo);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -392,6 +423,7 @@ RESULT_PASSED: 通过
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
         this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

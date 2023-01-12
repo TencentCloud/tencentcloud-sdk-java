@@ -30,7 +30,7 @@ public class QueryChainMakerDemoTransactionRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * 业务链编号，可在业务链列表中获取
+    * 业务链ID，可在网络概览页获取
     */
     @SerializedName("ChainId")
     @Expose
@@ -60,16 +60,16 @@ public class QueryChainMakerDemoTransactionRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务链编号，可在业务链列表中获取 
-     * @return ChainId 业务链编号，可在业务链列表中获取
+     * Get 业务链ID，可在网络概览页获取 
+     * @return ChainId 业务链ID，可在网络概览页获取
      */
     public String getChainId() {
         return this.ChainId;
     }
 
     /**
-     * Set 业务链编号，可在业务链列表中获取
-     * @param ChainId 业务链编号，可在业务链列表中获取
+     * Set 业务链ID，可在网络概览页获取
+     * @param ChainId 业务链ID，可在网络概览页获取
      */
     public void setChainId(String ChainId) {
         this.ChainId = ChainId;

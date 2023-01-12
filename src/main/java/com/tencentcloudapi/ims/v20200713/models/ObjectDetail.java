@@ -59,6 +59,13 @@ public class ObjectDetail extends AbstractModel{
     private Location Location;
 
     /**
+    * 二级标签名称
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 序号 
      * @return Id 序号
      */
@@ -142,6 +149,22 @@ public class ObjectDetail extends AbstractModel{
         this.Location = Location;
     }
 
+    /**
+     * Get 二级标签名称 
+     * @return SubLabel 二级标签名称
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 二级标签名称
+     * @param SubLabel 二级标签名称
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public ObjectDetail() {
     }
 
@@ -165,6 +188,9 @@ public class ObjectDetail extends AbstractModel{
         if (source.Location != null) {
             this.Location = new Location(source.Location);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -177,6 +203,7 @@ public class ObjectDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

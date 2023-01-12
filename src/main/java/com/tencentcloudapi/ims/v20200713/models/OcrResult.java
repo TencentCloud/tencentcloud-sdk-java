@@ -74,6 +74,13 @@ public class OcrResult extends AbstractModel{
     private String Text;
 
     /**
+    * 是否命中结果，0 未命中 1命中
+    */
+    @SerializedName("HitFlag")
+    @Expose
+    private Long HitFlag;
+
+    /**
      * Get 场景识别结果 
      * @return Scene 场景识别结果
      */
@@ -193,6 +200,22 @@ public class OcrResult extends AbstractModel{
         this.Text = Text;
     }
 
+    /**
+     * Get 是否命中结果，0 未命中 1命中 
+     * @return HitFlag 是否命中结果，0 未命中 1命中
+     */
+    public Long getHitFlag() {
+        return this.HitFlag;
+    }
+
+    /**
+     * Set 是否命中结果，0 未命中 1命中
+     * @param HitFlag 是否命中结果，0 未命中 1命中
+     */
+    public void setHitFlag(Long HitFlag) {
+        this.HitFlag = HitFlag;
+    }
+
     public OcrResult() {
     }
 
@@ -225,6 +248,9 @@ public class OcrResult extends AbstractModel{
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
     }
 
 
@@ -239,6 +265,7 @@ public class OcrResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamArrayObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
 
     }
 }

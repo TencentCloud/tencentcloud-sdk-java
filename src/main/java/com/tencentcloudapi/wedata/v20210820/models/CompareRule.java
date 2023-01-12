@@ -31,6 +31,14 @@ public class CompareRule extends AbstractModel{
     private CompareRuleItem [] Items;
 
     /**
+    * 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CycleStep")
+    @Expose
+    private Long CycleStep;
+
+    /**
      * Get 比较条件列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 比较条件列表
@@ -50,6 +58,26 @@ public class CompareRule extends AbstractModel{
         this.Items = Items;
     }
 
+    /**
+     * Get 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CycleStep 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCycleStep() {
+        return this.CycleStep;
+    }
+
+    /**
+     * Set 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CycleStep 周期性模板默认周期，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCycleStep(Long CycleStep) {
+        this.CycleStep = CycleStep;
+    }
+
     public CompareRule() {
     }
 
@@ -64,6 +92,9 @@ public class CompareRule extends AbstractModel{
                 this.Items[i] = new CompareRuleItem(source.Items[i]);
             }
         }
+        if (source.CycleStep != null) {
+            this.CycleStep = new Long(source.CycleStep);
+        }
     }
 
 
@@ -72,6 +103,7 @@ public class CompareRule extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "CycleStep", this.CycleStep);
 
     }
 }

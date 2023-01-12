@@ -114,6 +114,14 @@ public class ScoreInfo extends AbstractModel{
     private String PageDuration;
 
     /**
+    * 时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get duration 
      * @return StaticDuration duration
      */
@@ -321,6 +329,26 @@ public class ScoreInfo extends AbstractModel{
         this.PageDuration = PageDuration;
     }
 
+    /**
+     * Get 时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public ScoreInfo() {
     }
 
@@ -368,6 +396,9 @@ public class ScoreInfo extends AbstractModel{
         if (source.PageDuration != null) {
             this.PageDuration = new String(source.PageDuration);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class ScoreInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StaticNum", this.StaticNum);
         this.setParamSimple(map, prefix + "RecordNum", this.RecordNum);
         this.setParamSimple(map, prefix + "PageDuration", this.PageDuration);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

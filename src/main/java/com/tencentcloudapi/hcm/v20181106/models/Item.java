@@ -23,7 +23,11 @@ import java.util.HashMap;
 public class Item extends AbstractModel{
 
     /**
-    * 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+    * 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
     */
     @SerializedName("Item")
     @Expose
@@ -45,6 +49,7 @@ public class Item extends AbstractModel{
 
     /**
     * 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
     */
     @SerializedName("Answer")
     @Expose
@@ -75,16 +80,32 @@ public class Item extends AbstractModel{
     private String QuestionId;
 
     /**
-     * Get 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数 
-     * @return Item 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+     * Get 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答 
+     * @return Item 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
      */
     public String getItem() {
         return this.Item;
     }
 
     /**
-     * Set 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
-     * @param Item 识别的算式是否正确，算式运算结果: ‘YES’:正确 ‘NO’: 错误 ‘NA’: 非法参数
+     * Set 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
+     * @param Item 识别的算式是否正确，算式运算结果:
+‘YES’:正确 
+‘NO’: 错误 
+‘NA’: 非法参数
+‘EMPTY’: 未作答
      */
     public void setItem(String Item) {
         this.Item = Item;
@@ -123,8 +144,10 @@ public class Item extends AbstractModel{
     }
 
     /**
-     * Get 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回) 
+     * Get 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域) 
      * @return Answer 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
      */
     public String getAnswer() {
         return this.Answer;
@@ -132,7 +155,9 @@ public class Item extends AbstractModel{
 
     /**
      * Set 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
      * @param Answer 错题推荐答案，算式运算结果正确返回为 ""，算式运算结果错误返回推荐答案 (注:暂不支持多个关系运算符(如 1<10<7)、 无关系运算符(如 frac(1,2)+frac(2,3))、单 位换算(如 1 元=100 角)错题的推荐答案 返回)
+(注:使用@@标记答案填写区域)
      */
     public void setAnswer(String Answer) {
         this.Answer = Answer;

@@ -499,6 +499,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *查询企业扩展服务授权信息，企业经办人需要时企业超管或者法人
+     * @param req DescribeExtendedServiceAuthInfoRequest
+     * @return DescribeExtendedServiceAuthInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(DescribeExtendedServiceAuthInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtendedServiceAuthInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtendedServiceAuthInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExtendedServiceAuthInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（DescribeFlowDetailInfo）用于查询合同(签署流程)的详细信息。
      * @param req DescribeFlowDetailInfoRequest
      * @return DescribeFlowDetailInfoResponse
@@ -595,6 +615,26 @@ public class EssbasicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetDownloadFlowUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetDownloadFlowUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改（操作）企业扩展服务 ，企业经办人需要时企业超管或者法人
+     * @param req ModifyExtendedServiceRequest
+     * @return ModifyExtendedServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyExtendedServiceResponse ModifyExtendedService(ModifyExtendedServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyExtendedServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyExtendedServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyExtendedService");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

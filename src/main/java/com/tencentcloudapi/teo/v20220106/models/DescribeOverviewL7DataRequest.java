@@ -94,8 +94,8 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 
     /**
     * 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -287,11 +287,11 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 
     /**
      * Get 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否 
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li> 
      * @return Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
@@ -299,11 +299,11 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 
     /**
      * Set 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      * @param Filters 过滤条件，Filters.Values的上限为20。详细的过滤条件如下：
-<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否
-<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否
+<li>tagKey<br>   按照【<strong>标签Key</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
+<li>tagValue<br>   按照【<strong>标签Value</strong>】进行过滤。<br>   类型：String<br>   必选：否</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

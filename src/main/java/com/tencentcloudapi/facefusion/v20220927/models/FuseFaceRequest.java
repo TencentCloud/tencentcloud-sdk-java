@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class FuseFaceRequest extends AbstractModel{
 
     /**
-    * 活动 ID，请在人脸融合控制台查看。
+    * 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 素材 ID，请在人脸融合控制台查看。
+    * 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
     */
     @SerializedName("ModelId")
     @Expose
@@ -86,32 +86,32 @@ public class FuseFaceRequest extends AbstractModel{
     private LogoParam LogoParam;
 
     /**
-     * Get 活动 ID，请在人脸融合控制台查看。 
-     * @return ProjectId 活动 ID，请在人脸融合控制台查看。
+     * Get 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。 
+     * @return ProjectId 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 活动 ID，请在人脸融合控制台查看。
-     * @param ProjectId 活动 ID，请在人脸融合控制台查看。
+     * Set 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+     * @param ProjectId 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 素材 ID，请在人脸融合控制台查看。 
-     * @return ModelId 素材 ID，请在人脸融合控制台查看。
+     * Get 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。 
+     * @return ModelId 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 素材 ID，请在人脸融合控制台查看。
-     * @param ModelId 素材 ID，请在人脸融合控制台查看。
+     * Set 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
+     * @param ModelId 素材 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;

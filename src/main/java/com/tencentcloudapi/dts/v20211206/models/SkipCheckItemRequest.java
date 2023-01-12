@@ -37,6 +37,13 @@ public class SkipCheckItemRequest extends AbstractModel{
     private String [] StepIds;
 
     /**
+    * 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
+    */
+    @SerializedName("ForeignKeyFlag")
+    @Expose
+    private String ForeignKeyFlag;
+
+    /**
      * Get 数据迁移任务ID 
      * @return JobId 数据迁移任务ID
      */
@@ -68,6 +75,22 @@ public class SkipCheckItemRequest extends AbstractModel{
         this.StepIds = StepIds;
     }
 
+    /**
+     * Get 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖 
+     * @return ForeignKeyFlag 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
+     */
+    public String getForeignKeyFlag() {
+        return this.ForeignKeyFlag;
+    }
+
+    /**
+     * Set 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
+     * @param ForeignKeyFlag 当出现外键依赖检查导致校验不通过时、可以通过该字段选择是否迁移外键依赖，当StepIds包含ConstraintCheck且该字段值为shield时表示不迁移外键依赖、当StepIds包含ConstraintCheck且值为migrate时表示迁移外键依赖
+     */
+    public void setForeignKeyFlag(String ForeignKeyFlag) {
+        this.ForeignKeyFlag = ForeignKeyFlag;
+    }
+
     public SkipCheckItemRequest() {
     }
 
@@ -85,6 +108,9 @@ public class SkipCheckItemRequest extends AbstractModel{
                 this.StepIds[i] = new String(source.StepIds[i]);
             }
         }
+        if (source.ForeignKeyFlag != null) {
+            this.ForeignKeyFlag = new String(source.ForeignKeyFlag);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class SkipCheckItemRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamArraySimple(map, prefix + "StepIds.", this.StepIds);
+        this.setParamSimple(map, prefix + "ForeignKeyFlag", this.ForeignKeyFlag);
 
     }
 }
