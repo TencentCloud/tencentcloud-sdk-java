@@ -58,6 +58,13 @@ public class IpBlockData extends AbstractModel{
     private String ActionType;
 
     /**
+    * 高防标记，0：非高防，1：高防
+    */
+    @SerializedName("ProtectFlag")
+    @Expose
+    private Long ProtectFlag;
+
+    /**
      * Get IP 
      * @return Ip IP
      */
@@ -137,6 +144,22 @@ public class IpBlockData extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    /**
+     * Get 高防标记，0：非高防，1：高防 
+     * @return ProtectFlag 高防标记，0：非高防，1：高防
+     */
+    public Long getProtectFlag() {
+        return this.ProtectFlag;
+    }
+
+    /**
+     * Set 高防标记，0：非高防，1：高防
+     * @param ProtectFlag 高防标记，0：非高防，1：高防
+     */
+    public void setProtectFlag(Long ProtectFlag) {
+        this.ProtectFlag = ProtectFlag;
+    }
+
     public IpBlockData() {
     }
 
@@ -160,6 +183,9 @@ public class IpBlockData extends AbstractModel{
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
+        if (source.ProtectFlag != null) {
+            this.ProtectFlag = new Long(source.ProtectFlag);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class IpBlockData extends AbstractModel{
         this.setParamSimple(map, prefix + "BlockTime", this.BlockTime);
         this.setParamSimple(map, prefix + "UnBlockTime", this.UnBlockTime);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ProtectFlag", this.ProtectFlag);
 
     }
 }

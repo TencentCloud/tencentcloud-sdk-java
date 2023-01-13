@@ -128,6 +128,13 @@ public class L7RuleHealth extends AbstractModel{
     private Long PassiveStatusCode;
 
     /**
+    * 被动探测配置状态，0： 正常，1：配置中，2：配置失败
+    */
+    @SerializedName("PassiveStatus")
+    @Expose
+    private Long PassiveStatus;
+
+    /**
      * Get 配置状态，0： 正常，1：配置中，2：配置失败 
      * @return Status 配置状态，0： 正常，1：配置中，2：配置失败
      */
@@ -367,6 +374,22 @@ public class L7RuleHealth extends AbstractModel{
         this.PassiveStatusCode = PassiveStatusCode;
     }
 
+    /**
+     * Get 被动探测配置状态，0： 正常，1：配置中，2：配置失败 
+     * @return PassiveStatus 被动探测配置状态，0： 正常，1：配置中，2：配置失败
+     */
+    public Long getPassiveStatus() {
+        return this.PassiveStatus;
+    }
+
+    /**
+     * Set 被动探测配置状态，0： 正常，1：配置中，2：配置失败
+     * @param PassiveStatus 被动探测配置状态，0： 正常，1：配置中，2：配置失败
+     */
+    public void setPassiveStatus(Long PassiveStatus) {
+        this.PassiveStatus = PassiveStatus;
+    }
+
     public L7RuleHealth() {
     }
 
@@ -420,6 +443,9 @@ public class L7RuleHealth extends AbstractModel{
         if (source.PassiveStatusCode != null) {
             this.PassiveStatusCode = new Long(source.PassiveStatusCode);
         }
+        if (source.PassiveStatus != null) {
+            this.PassiveStatus = new Long(source.PassiveStatus);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class L7RuleHealth extends AbstractModel{
         this.setParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
         this.setParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
         this.setParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
+        this.setParamSimple(map, prefix + "PassiveStatus", this.PassiveStatus);
 
     }
 }

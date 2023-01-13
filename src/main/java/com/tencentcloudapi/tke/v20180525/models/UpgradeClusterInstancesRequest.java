@@ -78,6 +78,13 @@ major 大版本原地升级
     private Float MaxNotReadyPercent;
 
     /**
+    * 是否升级节点运行时，默认false不升级
+    */
+    @SerializedName("UpgradeRunTime")
+    @Expose
+    private Boolean UpgradeRunTime;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -213,6 +220,22 @@ major 大版本原地升级
         this.MaxNotReadyPercent = MaxNotReadyPercent;
     }
 
+    /**
+     * Get 是否升级节点运行时，默认false不升级 
+     * @return UpgradeRunTime 是否升级节点运行时，默认false不升级
+     */
+    public Boolean getUpgradeRunTime() {
+        return this.UpgradeRunTime;
+    }
+
+    /**
+     * Set 是否升级节点运行时，默认false不升级
+     * @param UpgradeRunTime 是否升级节点运行时，默认false不升级
+     */
+    public void setUpgradeRunTime(Boolean UpgradeRunTime) {
+        this.UpgradeRunTime = UpgradeRunTime;
+    }
+
     public UpgradeClusterInstancesRequest() {
     }
 
@@ -245,6 +268,9 @@ major 大版本原地升级
         if (source.MaxNotReadyPercent != null) {
             this.MaxNotReadyPercent = new Float(source.MaxNotReadyPercent);
         }
+        if (source.UpgradeRunTime != null) {
+            this.UpgradeRunTime = new Boolean(source.UpgradeRunTime);
+        }
     }
 
 
@@ -259,6 +285,7 @@ major 大版本原地升级
         this.setParamObj(map, prefix + "ResetParam.", this.ResetParam);
         this.setParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         this.setParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
+        this.setParamSimple(map, prefix + "UpgradeRunTime", this.UpgradeRunTime);
 
     }
 }

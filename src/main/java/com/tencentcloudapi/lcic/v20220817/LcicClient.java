@@ -139,6 +139,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取应用详情
+     * @param req DescribeAppDetailRequest
+     * @return DescribeAppDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppDetailResponse DescribeAppDetail(DescribeAppDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAppDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取房间信息
      * @param req DescribeRoomRequest
      * @return DescribeRoomResponse

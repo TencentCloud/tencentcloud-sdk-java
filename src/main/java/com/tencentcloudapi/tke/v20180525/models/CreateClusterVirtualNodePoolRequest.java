@@ -44,6 +44,13 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel{
     private String [] SubnetIds;
 
     /**
+    * 安全组ID列表
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
     * 虚拟节点label
     */
     @SerializedName("Labels")
@@ -126,6 +133,22 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel{
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
+    }
+
+    /**
+     * Get 安全组ID列表 
+     * @return SecurityGroupIds 安全组ID列表
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ID列表
+     * @param SecurityGroupIds 安全组ID列表
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
@@ -236,6 +259,12 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel{
                 this.SubnetIds[i] = new String(source.SubnetIds[i]);
             }
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
         if (source.Labels != null) {
             this.Labels = new Label[source.Labels.length];
             for (int i = 0; i < source.Labels.length; i++) {
@@ -270,6 +299,7 @@ public class CreateClusterVirtualNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamArrayObj(map, prefix + "VirtualNodes.", this.VirtualNodes);

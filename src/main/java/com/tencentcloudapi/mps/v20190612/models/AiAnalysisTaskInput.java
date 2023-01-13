@@ -30,6 +30,15 @@ public class AiAnalysisTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
+    * 扩展参数，其值为序列化的 json字符串。
+注意：此参数为定制需求参数，需要线下对接。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
      * Get 视频内容分析模板 ID。 
      * @return Definition 视频内容分析模板 ID。
      */
@@ -45,6 +54,30 @@ public class AiAnalysisTaskInput extends AbstractModel{
         this.Definition = Definition;
     }
 
+    /**
+     * Get 扩展参数，其值为序列化的 json字符串。
+注意：此参数为定制需求参数，需要线下对接。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendedParameter 扩展参数，其值为序列化的 json字符串。
+注意：此参数为定制需求参数，需要线下对接。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set 扩展参数，其值为序列化的 json字符串。
+注意：此参数为定制需求参数，需要线下对接。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendedParameter 扩展参数，其值为序列化的 json字符串。
+注意：此参数为定制需求参数，需要线下对接。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
+    }
+
     public AiAnalysisTaskInput() {
     }
 
@@ -56,6 +89,9 @@ public class AiAnalysisTaskInput extends AbstractModel{
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -64,6 +100,7 @@ public class AiAnalysisTaskInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

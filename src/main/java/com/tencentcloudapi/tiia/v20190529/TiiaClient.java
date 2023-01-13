@@ -600,6 +600,7 @@ public class TiiaClient extends AbstractClient{
 >   
 - 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
 
+
      * @param req SearchImageRequest
      * @return SearchImageResponse
      * @throws TencentCloudSDKException
@@ -611,6 +612,31 @@ public class TiiaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchImageResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口支持根据图库ID、物品ID、图片名称来修改图片信息（暂仅支持修改Tags）
+
+>   
+- 可前往 [图像搜索](https://cloud.tencent.com/document/product/1589) 产品文档中查看更多产品信息。
+
+
+     * @param req UpdateImageRequest
+     * @return UpdateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateImageResponse UpdateImage(UpdateImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

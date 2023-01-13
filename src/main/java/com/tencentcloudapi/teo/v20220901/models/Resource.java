@@ -96,6 +96,7 @@ public class Resource extends AbstractModel{
     * 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
     */
     @SerializedName("Area")
     @Expose
@@ -276,10 +277,12 @@ public class Resource extends AbstractModel{
     /**
      * Get 地域，取值有：
 <li>mainland：国内；</li>
-<li>overseas：海外。</li> 
+<li>overseas：海外。</li>
+<li>global：全球。</li> 
      * @return Area 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
      */
     public String getArea() {
         return this.Area;
@@ -289,9 +292,11 @@ public class Resource extends AbstractModel{
      * Set 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
      * @param Area 地域，取值有：
 <li>mainland：国内；</li>
 <li>overseas：海外。</li>
+<li>global：全球。</li>
      */
     public void setArea(String Area) {
         this.Area = Area;

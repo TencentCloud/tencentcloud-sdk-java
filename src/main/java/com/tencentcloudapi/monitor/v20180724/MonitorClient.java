@@ -99,6 +99,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
+     * @param req CheckIsPrometheusNewUserRequest
+     * @return CheckIsPrometheusNewUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUser(CheckIsPrometheusNewUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckIsPrometheusNewUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckIsPrometheusNewUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckIsPrometheusNewUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *强制销毁 Grafana 实例
      * @param req CleanGrafanaInstanceRequest
      * @return CleanGrafanaInstanceResponse
@@ -321,6 +341,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *以Yaml的方式创建聚合规则
+     * @param req CreatePrometheusRecordRuleYamlRequest
+     * @return CreatePrometheusRecordRuleYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusRecordRuleYamlResponse CreatePrometheusRecordRuleYaml(CreatePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusRecordRuleYamlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusRecordRuleYamlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusRecordRuleYaml");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建 Prometheus 抓取任务
      * @param req CreatePrometheusScrapeJobRequest
      * @return CreatePrometheusScrapeJobResponse
@@ -333,6 +373,26 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusScrapeJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePrometheusScrapeJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建一个云原生Prometheus模板
+     * @param req CreatePrometheusTempRequest
+     * @return CreatePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusTempResponse CreatePrometheusTemp(CreatePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusTemp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -563,6 +623,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *删除聚合实例
+     * @param req DeletePrometheusRecordRuleYamlRequest
+     * @return DeletePrometheusRecordRuleYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusRecordRuleYamlResponse DeletePrometheusRecordRuleYaml(DeletePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusRecordRuleYamlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusRecordRuleYamlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusRecordRuleYaml");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除 Prometheus 抓取任务
      * @param req DeletePrometheusScrapeJobsRequest
      * @return DeletePrometheusScrapeJobsResponse
@@ -575,6 +655,46 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePrometheusScrapeJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除一个云原生Prometheus配置模板
+     * @param req DeletePrometheusTempRequest
+     * @return DeletePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusTempResponse DeletePrometheusTemp(DeletePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解除模板同步，这将会删除目标中该模板所生产的配置，针对V2版本实例
+     * @param req DeletePrometheusTempSyncRequest
+     * @return DeletePrometheusTempSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusTempSyncResponse DeletePrometheusTempSync(DeletePrometheusTempSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusTempSyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusTempSync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1287,6 +1407,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取关联目标集群的实例列表
+     * @param req DescribePrometheusAgentInstancesRequest
+     * @return DescribePrometheusAgentInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(DescribePrometheusAgentInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusAgentInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出 Prometheus CVM Agent
      * @param req DescribePrometheusAgentsRequest
      * @return DescribePrometheusAgentsResponse
@@ -1299,6 +1439,86 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusAgents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取2.0实例告警策略列表
+     * @param req DescribePrometheusAlertPolicyRequest
+     * @return DescribePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(DescribePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取Prometheus配置
+     * @param req DescribePrometheusConfigRequest
+     * @return DescribePrometheusConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusConfigResponse DescribePrometheusConfig(DescribePrometheusConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取TMP实例详情
+     * @param req DescribePrometheusInstanceDetailRequest
+     * @return DescribePrometheusInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstanceDetailResponse DescribePrometheusInstanceDetail(DescribePrometheusInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取2.0实例初始化任务状态
+     * @param req DescribePrometheusInstanceInitStatusRequest
+     * @return DescribePrometheusInstanceInitStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstanceInitStatusResponse DescribePrometheusInstanceInitStatus(DescribePrometheusInstanceInitStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstanceInitStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceInitStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstanceInitStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1351,6 +1571,66 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取与云监控融合实例列表
+     * @param req DescribePrometheusInstancesOverviewRequest
+     * @return DescribePrometheusInstancesOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(DescribePrometheusInstancesOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstancesOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstancesOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取Prometheus聚合规则yaml列表
+     * @param req DescribePrometheusRecordRuleYamlRequest
+     * @return DescribePrometheusRecordRuleYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(DescribePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusRecordRuleYamlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRuleYamlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusRecordRuleYaml");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取聚合规则列表，包含关联集群内crd资源创建的record rule
+     * @param req DescribePrometheusRecordRulesRequest
+     * @return DescribePrometheusRecordRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(DescribePrometheusRecordRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusRecordRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusRecordRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *列出 Prometheus 抓取任务
      * @param req DescribePrometheusScrapeJobsRequest
      * @return DescribePrometheusScrapeJobsResponse
@@ -1363,6 +1643,46 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusScrapeJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取模板列表，默认模板将总是在最前面
+     * @param req DescribePrometheusTempRequest
+     * @return DescribePrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusTempResponse DescribePrometheusTemp(DescribePrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取模板关联实例信息，针对V2版本实例
+     * @param req DescribePrometheusTempSyncRequest
+     * @return DescribePrometheusTempSyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusTempSyncResponse DescribePrometheusTempSync(DescribePrometheusTempSyncRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusTempSyncResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempSyncResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusTempSync");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1819,6 +2139,46 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *通过yaml的方式修改Prometheus聚合实例
+     * @param req ModifyPrometheusRecordRuleYamlRequest
+     * @return ModifyPrometheusRecordRuleYamlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(ModifyPrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusRecordRuleYaml");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改模板内容
+     * @param req ModifyPrometheusTempRequest
+     * @return ModifyPrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusTempResponse ModifyPrometheusTemp(ModifyPrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusTemp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *默认接口请求频率限制：50次/秒。
 默认单租户指标上限：100个。
 单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
@@ -1865,6 +2225,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *初始化TMP实例，开启集成中心时调用
+     * @param req RunPrometheusInstanceRequest
+     * @return RunPrometheusInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunPrometheusInstanceResponse RunPrometheusInstance(RunPrometheusInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunPrometheusInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunPrometheusInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RunPrometheusInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *发送自定义消息告警
      * @param req SendCustomAlarmMsgRequest
      * @return SendCustomAlarmMsgResponse
@@ -1898,6 +2278,26 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetDefaultAlarmPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetDefaultAlarmPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *同步模板到实例或者集群，针对V2版本实例
+     * @param req SyncPrometheusTempRequest
+     * @return SyncPrometheusTempResponse
+     * @throws TencentCloudSDKException
+     */
+    public SyncPrometheusTempResponse SyncPrometheusTemp(SyncPrometheusTempRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SyncPrometheusTempResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SyncPrometheusTempResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SyncPrometheusTemp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

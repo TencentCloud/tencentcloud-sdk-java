@@ -30,11 +30,18 @@ public class ModifyAppRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 回调地址。端口目前仅支持80、443
+    * 回调地址。
     */
     @SerializedName("Callback")
     @Expose
     private String Callback;
+
+    /**
+    * 回调key。
+    */
+    @SerializedName("CallbackKey")
+    @Expose
+    private String CallbackKey;
 
     /**
      * Get 低代码互动课堂的SdkAppId。 
@@ -53,19 +60,35 @@ public class ModifyAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 回调地址。端口目前仅支持80、443 
-     * @return Callback 回调地址。端口目前仅支持80、443
+     * Get 回调地址。 
+     * @return Callback 回调地址。
      */
     public String getCallback() {
         return this.Callback;
     }
 
     /**
-     * Set 回调地址。端口目前仅支持80、443
-     * @param Callback 回调地址。端口目前仅支持80、443
+     * Set 回调地址。
+     * @param Callback 回调地址。
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;
+    }
+
+    /**
+     * Get 回调key。 
+     * @return CallbackKey 回调key。
+     */
+    public String getCallbackKey() {
+        return this.CallbackKey;
+    }
+
+    /**
+     * Set 回调key。
+     * @param CallbackKey 回调key。
+     */
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
     }
 
     public ModifyAppRequest() {
@@ -82,6 +105,9 @@ public class ModifyAppRequest extends AbstractModel{
         if (source.Callback != null) {
             this.Callback = new String(source.Callback);
         }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ModifyAppRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
 
     }
 }

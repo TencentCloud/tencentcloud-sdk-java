@@ -24,6 +24,9 @@ public enum TiiaErrorCode {
     // 超出Entity数量限制。
      FAILEDOPERATION_IMAGEENTITYCOUNTEXCEED("FailedOperation.ImageEntityCountExceed"),
      
+    // 停止服务，控制台开关关闭。
+     FAILEDOPERATION_IMAGEGROUPCHARGESTATUSCLOSE("FailedOperation.ImageGroupChargeStatusClose"),
+     
     // 图库为空。
      FAILEDOPERATION_IMAGEGROUPEMPTY("FailedOperation.ImageGroupEmpty"),
      

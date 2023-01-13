@@ -3759,7 +3759,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *给集群的一批work节点进行升级 
+     *给集群的一批work节点进行升级
      * @param req UpgradeClusterInstancesRequest
      * @return UpgradeClusterInstancesResponse
      * @throws TencentCloudSDKException

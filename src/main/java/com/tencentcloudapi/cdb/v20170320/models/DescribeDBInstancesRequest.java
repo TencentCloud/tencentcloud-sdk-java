@@ -247,6 +247,20 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 数据库代理 IP 。
+    */
+    @SerializedName("ProxyVips")
+    @Expose
+    private String [] ProxyVips;
+
+    /**
+    * 数据库代理 ID 。
+    */
+    @SerializedName("ProxyIds")
+    @Expose
+    private String [] ProxyIds;
+
+    /**
      * Get 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。 
      * @return ProjectId 项目 ID，可使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口查询项目 ID。
      */
@@ -758,6 +772,38 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 数据库代理 IP 。 
+     * @return ProxyVips 数据库代理 IP 。
+     */
+    public String [] getProxyVips() {
+        return this.ProxyVips;
+    }
+
+    /**
+     * Set 数据库代理 IP 。
+     * @param ProxyVips 数据库代理 IP 。
+     */
+    public void setProxyVips(String [] ProxyVips) {
+        this.ProxyVips = ProxyVips;
+    }
+
+    /**
+     * Get 数据库代理 ID 。 
+     * @return ProxyIds 数据库代理 ID 。
+     */
+    public String [] getProxyIds() {
+        return this.ProxyIds;
+    }
+
+    /**
+     * Set 数据库代理 ID 。
+     * @param ProxyIds 数据库代理 ID 。
+     */
+    public void setProxyIds(String [] ProxyIds) {
+        this.ProxyIds = ProxyIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -919,6 +965,18 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.ProxyVips != null) {
+            this.ProxyVips = new String[source.ProxyVips.length];
+            for (int i = 0; i < source.ProxyVips.length; i++) {
+                this.ProxyVips[i] = new String(source.ProxyVips[i]);
+            }
+        }
+        if (source.ProxyIds != null) {
+            this.ProxyIds = new String[source.ProxyIds.length];
+            for (int i = 0; i < source.ProxyIds.length; i++) {
+                this.ProxyIds[i] = new String(source.ProxyIds[i]);
+            }
+        }
     }
 
 
@@ -958,6 +1016,8 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
+        this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
 
     }
 }

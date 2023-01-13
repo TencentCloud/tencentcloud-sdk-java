@@ -119,6 +119,22 @@ public class Savepoint extends AbstractModel{
     private String SerialId;
 
     /**
+    * 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeConsuming")
+    @Expose
+    private Long TimeConsuming;
+
+    /**
+    * 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathStatus")
+    @Expose
+    private Long PathStatus;
+
+    /**
      * Get 主键
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 主键
@@ -358,6 +374,46 @@ public class Savepoint extends AbstractModel{
         this.SerialId = SerialId;
     }
 
+    /**
+     * Get 耗时
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeConsuming 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTimeConsuming() {
+        return this.TimeConsuming;
+    }
+
+    /**
+     * Set 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeConsuming 耗时
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeConsuming(Long TimeConsuming) {
+        this.TimeConsuming = TimeConsuming;
+    }
+
+    /**
+     * Get 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathStatus 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPathStatus() {
+        return this.PathStatus;
+    }
+
+    /**
+     * Set 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathStatus 快照路径状态 1：可用；2：不可用；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathStatus(Long PathStatus) {
+        this.PathStatus = PathStatus;
+    }
+
     public Savepoint() {
     }
 
@@ -402,6 +458,12 @@ public class Savepoint extends AbstractModel{
         if (source.SerialId != null) {
             this.SerialId = new String(source.SerialId);
         }
+        if (source.TimeConsuming != null) {
+            this.TimeConsuming = new Long(source.TimeConsuming);
+        }
+        if (source.PathStatus != null) {
+            this.PathStatus = new Long(source.PathStatus);
+        }
     }
 
 
@@ -421,6 +483,8 @@ public class Savepoint extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "SerialId", this.SerialId);
+        this.setParamSimple(map, prefix + "TimeConsuming", this.TimeConsuming);
+        this.setParamSimple(map, prefix + "PathStatus", this.PathStatus);
 
     }
 }

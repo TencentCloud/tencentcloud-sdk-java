@@ -93,7 +93,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String [] FilterInstanceIdList;
 
     /**
-    * 企业版搜索
+    * 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
     */
     @SerializedName("FilterEnterpriseFlag")
     @Expose
@@ -133,6 +133,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     @SerializedName("FilterConvoy")
     @Expose
     private Long FilterConvoy;
+
+    /**
+    * 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+    */
+    @SerializedName("ExcludeAdvancedInfo")
+    @Expose
+    private Boolean ExcludeAdvancedInfo;
 
     /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
@@ -295,16 +302,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 企业版搜索 
-     * @return FilterEnterpriseFlag 企业版搜索
+     * Get 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表 
+     * @return FilterEnterpriseFlag 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
      */
     public Long getFilterEnterpriseFlag() {
         return this.FilterEnterpriseFlag;
     }
 
     /**
-     * Set 企业版搜索
-     * @param FilterEnterpriseFlag 企业版搜索
+     * Set 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
+     * @param FilterEnterpriseFlag 企业版搜索,  1：包含重保护航套餐下的企业版列表, 2: 不包含重保护航套餐的企业版列表
      */
     public void setFilterEnterpriseFlag(Long FilterEnterpriseFlag) {
         this.FilterEnterpriseFlag = FilterEnterpriseFlag;
@@ -390,6 +397,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterConvoy = FilterConvoy;
     }
 
+    /**
+     * Get 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。 
+     * @return ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+     */
+    public Boolean getExcludeAdvancedInfo() {
+        return this.ExcludeAdvancedInfo;
+    }
+
+    /**
+     * Set 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+     * @param ExcludeAdvancedInfo 默认false；接口传true，返回数据中不包含高级信息，高级信息包含：InstanceList[0].Usage。
+     */
+    public void setExcludeAdvancedInfo(Boolean ExcludeAdvancedInfo) {
+        this.ExcludeAdvancedInfo = ExcludeAdvancedInfo;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -449,6 +472,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterConvoy != null) {
             this.FilterConvoy = new Long(source.FilterConvoy);
         }
+        if (source.ExcludeAdvancedInfo != null) {
+            this.ExcludeAdvancedInfo = new Boolean(source.ExcludeAdvancedInfo);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
         this.setParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
         this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
+        this.setParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
 
     }
 }
