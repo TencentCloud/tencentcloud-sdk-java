@@ -30,7 +30,7 @@ public class DescribeAgeDetectTaskRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * 创建年龄语音识别任务时返回的taskid
+    * [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeAgeDetectTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 创建年龄语音识别任务时返回的taskid 
-     * @return TaskId 创建年龄语音识别任务时返回的taskid
+     * Get [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid 
+     * @return TaskId [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 创建年龄语音识别任务时返回的taskid
-     * @param TaskId 创建年龄语音识别任务时返回的taskid
+     * Set [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
+     * @param TaskId [创建年龄语音识别任务](https://cloud.tencent.com/document/product/607/60620)时返回的taskid
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

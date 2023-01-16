@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class DescribeAppDetailRequest extends AbstractModel{
 
+    /**
+    * 应用ID
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * 开发商ID
+    */
+    @SerializedName("DeveloperId")
+    @Expose
+    private String DeveloperId;
+
+    /**
+     * Get 应用ID 
+     * @return ApplicationId 应用ID
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 应用ID
+     * @param ApplicationId 应用ID
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get 开发商ID 
+     * @return DeveloperId 开发商ID
+     */
+    public String getDeveloperId() {
+        return this.DeveloperId;
+    }
+
+    /**
+     * Set 开发商ID
+     * @param DeveloperId 开发商ID
+     */
+    public void setDeveloperId(String DeveloperId) {
+        this.DeveloperId = DeveloperId;
+    }
+
     public DescribeAppDetailRequest() {
     }
 
@@ -30,6 +76,12 @@ public class DescribeAppDetailRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAppDetailRequest(DescribeAppDetailRequest source) {
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.DeveloperId != null) {
+            this.DeveloperId = new String(source.DeveloperId);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class DescribeAppDetailRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
 
     }
 }

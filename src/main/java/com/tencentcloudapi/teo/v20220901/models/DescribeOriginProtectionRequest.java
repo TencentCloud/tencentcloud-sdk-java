@@ -36,7 +36,7 @@ public class DescribeOriginProtectionRequest extends AbstractModel{
     */
     @SerializedName("Filters")
     @Expose
-    private Filter Filters;
+    private Filter [] Filters;
 
     /**
     * 分页查询偏移量，默认为0。
@@ -76,7 +76,7 @@ public class DescribeOriginProtectionRequest extends AbstractModel{
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
      */
-    public Filter getFilters() {
+    public Filter [] getFilters() {
         return this.Filters;
     }
 
@@ -88,7 +88,7 @@ public class DescribeOriginProtectionRequest extends AbstractModel{
 <li>need-update<br>   按照【<strong>站点是否需要更新源站防护IP白名单</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：需要更新<br>   false：无需更新<br></li>
 <li>plan-support<br>   按照【<strong>站点套餐是否支持源站防护</strong>】进行过滤。<br>   类型：String<br>   必选：否<br>   可选项：<br>   true：支持<br>   false：不支持<br></li>
      */
-    public void setFilters(Filter Filters) {
+    public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
@@ -139,7 +139,10 @@ public class DescribeOriginProtectionRequest extends AbstractModel{
             }
         }
         if (source.Filters != null) {
-            this.Filters = new Filter(source.Filters);
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
@@ -155,7 +158,7 @@ public class DescribeOriginProtectionRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-        this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

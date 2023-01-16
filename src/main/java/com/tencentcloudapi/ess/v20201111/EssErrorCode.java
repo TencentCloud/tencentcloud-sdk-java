@@ -57,6 +57,9 @@ public enum EssErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // 第三方接口失败。
+     INTERNALERROR_API("InternalError.Api"),
+     
     // 缓存错误。
      INTERNALERROR_CACHE("InternalError.Cache"),
      

@@ -258,6 +258,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建签署链接，需要联系运营人员开白后才可使用
+     * @param req CreateFlowSignUrlRequest
+     * @return CreateFlowSignUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowSignUrlResponse CreateFlowSignUrl(CreateFlowSignUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowSignUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowSignUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlowSignUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建员工
      * @param req CreateIntegrationEmployeesRequest
      * @return CreateIntegrationEmployeesResponse

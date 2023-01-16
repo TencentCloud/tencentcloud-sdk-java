@@ -100,6 +100,20 @@ public class TraceCode extends AbstractModel{
     private String ProductName;
 
     /**
+    * 渠道商ID
+    */
+    @SerializedName("AgentId")
+    @Expose
+    private Long AgentId;
+
+    /**
+    * 码层级 0: 最小级, 1: 一级, 2: 二级
+    */
+    @SerializedName("Level")
+    @Expose
+    private Long Level;
+
+    /**
      * Get 二维码 
      * @return Code 二维码
      */
@@ -275,6 +289,38 @@ public class TraceCode extends AbstractModel{
         this.ProductName = ProductName;
     }
 
+    /**
+     * Get 渠道商ID 
+     * @return AgentId 渠道商ID
+     */
+    public Long getAgentId() {
+        return this.AgentId;
+    }
+
+    /**
+     * Set 渠道商ID
+     * @param AgentId 渠道商ID
+     */
+    public void setAgentId(Long AgentId) {
+        this.AgentId = AgentId;
+    }
+
+    /**
+     * Get 码层级 0: 最小级, 1: 一级, 2: 二级 
+     * @return Level 码层级 0: 最小级, 1: 一级, 2: 二级
+     */
+    public Long getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 码层级 0: 最小级, 1: 一级, 2: 二级
+     * @param Level 码层级 0: 最小级, 1: 一级, 2: 二级
+     */
+    public void setLevel(Long Level) {
+        this.Level = Level;
+    }
+
     public TraceCode() {
     }
 
@@ -316,6 +362,12 @@ public class TraceCode extends AbstractModel{
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.AgentId != null) {
+            this.AgentId = new Long(source.AgentId);
+        }
+        if (source.Level != null) {
+            this.Level = new Long(source.Level);
+        }
     }
 
 
@@ -334,6 +386,8 @@ public class TraceCode extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "AgentId", this.AgentId);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

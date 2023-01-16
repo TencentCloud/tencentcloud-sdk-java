@@ -30,7 +30,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * （过滤条件）按照实例名称过滤，支持模糊查询
+    * （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
     */
     @SerializedName("SearchWord")
     @Expose
@@ -102,16 +102,16 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get （过滤条件）按照实例名称过滤，支持模糊查询 
-     * @return SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
+     * Get （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询 
+     * @return SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set （过滤条件）按照实例名称过滤，支持模糊查询
-     * @param SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
+     * Set （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
+     * @param SearchWord （过滤条件）按照实例名,实例Id,可用区,私有网络id,子网id 过滤，支持模糊查询
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

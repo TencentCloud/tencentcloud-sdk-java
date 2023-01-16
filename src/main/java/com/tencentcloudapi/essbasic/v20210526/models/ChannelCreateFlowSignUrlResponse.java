@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lcic.v20220817.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppDetailResponse extends AbstractModel{
+public class ChannelCreateFlowSignUrlResponse extends AbstractModel{
 
     /**
-    * SdkAppId 
+    * 签署人签署链接信息
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("FlowApproverUrlInfos")
     @Expose
-    private String SdkAppId;
-
-    /**
-    * 应用配置
-    */
-    @SerializedName("AppConfig")
-    @Expose
-    private AppConfig AppConfig;
-
-    /**
-    * 场景配置
-    */
-    @SerializedName("SceneConfig")
-    @Expose
-    private SceneItem [] SceneConfig;
+    private FlowApproverUrlInfo [] FlowApproverUrlInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeAppDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SdkAppId  
-     * @return SdkAppId SdkAppId 
+     * Get 签署人签署链接信息 
+     * @return FlowApproverUrlInfos 签署人签署链接信息
      */
-    public String getSdkAppId() {
-        return this.SdkAppId;
+    public FlowApproverUrlInfo [] getFlowApproverUrlInfos() {
+        return this.FlowApproverUrlInfos;
     }
 
     /**
-     * Set SdkAppId 
-     * @param SdkAppId SdkAppId 
+     * Set 签署人签署链接信息
+     * @param FlowApproverUrlInfos 签署人签署链接信息
      */
-    public void setSdkAppId(String SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get 应用配置 
-     * @return AppConfig 应用配置
-     */
-    public AppConfig getAppConfig() {
-        return this.AppConfig;
-    }
-
-    /**
-     * Set 应用配置
-     * @param AppConfig 应用配置
-     */
-    public void setAppConfig(AppConfig AppConfig) {
-        this.AppConfig = AppConfig;
-    }
-
-    /**
-     * Get 场景配置 
-     * @return SceneConfig 场景配置
-     */
-    public SceneItem [] getSceneConfig() {
-        return this.SceneConfig;
-    }
-
-    /**
-     * Set 场景配置
-     * @param SceneConfig 场景配置
-     */
-    public void setSceneConfig(SceneItem [] SceneConfig) {
-        this.SceneConfig = SceneConfig;
+    public void setFlowApproverUrlInfos(FlowApproverUrlInfo [] FlowApproverUrlInfos) {
+        this.FlowApproverUrlInfos = FlowApproverUrlInfos;
     }
 
     /**
@@ -114,24 +68,18 @@ public class DescribeAppDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAppDetailResponse() {
+    public ChannelCreateFlowSignUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAppDetailResponse(DescribeAppDetailResponse source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new String(source.SdkAppId);
-        }
-        if (source.AppConfig != null) {
-            this.AppConfig = new AppConfig(source.AppConfig);
-        }
-        if (source.SceneConfig != null) {
-            this.SceneConfig = new SceneItem[source.SceneConfig.length];
-            for (int i = 0; i < source.SceneConfig.length; i++) {
-                this.SceneConfig[i] = new SceneItem(source.SceneConfig[i]);
+    public ChannelCreateFlowSignUrlResponse(ChannelCreateFlowSignUrlResponse source) {
+        if (source.FlowApproverUrlInfos != null) {
+            this.FlowApproverUrlInfos = new FlowApproverUrlInfo[source.FlowApproverUrlInfos.length];
+            for (int i = 0; i < source.FlowApproverUrlInfos.length; i++) {
+                this.FlowApproverUrlInfos[i] = new FlowApproverUrlInfo(source.FlowApproverUrlInfos[i]);
             }
         }
         if (source.RequestId != null) {
@@ -144,9 +92,7 @@ public class DescribeAppDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamObj(map, prefix + "AppConfig.", this.AppConfig);
-        this.setParamArrayObj(map, prefix + "SceneConfig.", this.SceneConfig);
+        this.setParamArrayObj(map, prefix + "FlowApproverUrlInfos.", this.FlowApproverUrlInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

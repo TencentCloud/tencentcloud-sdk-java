@@ -72,6 +72,27 @@ public class CommonTimeWindow extends AbstractModel{
     private String Sunday;
 
     /**
+    * 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+    */
+    @SerializedName("BackupPeriodStrategy")
+    @Expose
+    private String BackupPeriodStrategy;
+
+    /**
+    * 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+    */
+    @SerializedName("Days")
+    @Expose
+    private Long [] Days;
+
+    /**
+    * 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+    */
+    @SerializedName("BackupPeriodTime")
+    @Expose
+    private String BackupPeriodTime;
+
+    /**
      * Get 周一的时间窗，格式如： 02:00-06:00 
      * @return Monday 周一的时间窗，格式如： 02:00-06:00
      */
@@ -183,6 +204,54 @@ public class CommonTimeWindow extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    /**
+     * Get 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly 
+     * @return BackupPeriodStrategy 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+     */
+    public String getBackupPeriodStrategy() {
+        return this.BackupPeriodStrategy;
+    }
+
+    /**
+     * Set 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+     * @param BackupPeriodStrategy 常规备份保留策略，weekly-按周备份，monthly-按月备份，默认为weekly
+     */
+    public void setBackupPeriodStrategy(String BackupPeriodStrategy) {
+        this.BackupPeriodStrategy = BackupPeriodStrategy;
+    }
+
+    /**
+     * Get 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31] 
+     * @return Days 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+     */
+    public Long [] getDays() {
+        return this.Days;
+    }
+
+    /**
+     * Set 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+     * @param Days 如果设置为按月备份，需填入每月具体备份日期，相邻备份天数不得超过两天。例[1,4,7,9,11,14,17,19,22,25,28,30,31]
+     */
+    public void setDays(Long [] Days) {
+        this.Days = Days;
+    }
+
+    /**
+     * Get 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00 
+     * @return BackupPeriodTime 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+     */
+    public String getBackupPeriodTime() {
+        return this.BackupPeriodTime;
+    }
+
+    /**
+     * Set 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+     * @param BackupPeriodTime 月度备份时间窗，BackupPeriodStrategy为monthly时必填。格式如： 02:00-06:00
+     */
+    public void setBackupPeriodTime(String BackupPeriodTime) {
+        this.BackupPeriodTime = BackupPeriodTime;
+    }
+
     public CommonTimeWindow() {
     }
 
@@ -212,6 +281,18 @@ public class CommonTimeWindow extends AbstractModel{
         if (source.Sunday != null) {
             this.Sunday = new String(source.Sunday);
         }
+        if (source.BackupPeriodStrategy != null) {
+            this.BackupPeriodStrategy = new String(source.BackupPeriodStrategy);
+        }
+        if (source.Days != null) {
+            this.Days = new Long[source.Days.length];
+            for (int i = 0; i < source.Days.length; i++) {
+                this.Days[i] = new Long(source.Days[i]);
+            }
+        }
+        if (source.BackupPeriodTime != null) {
+            this.BackupPeriodTime = new String(source.BackupPeriodTime);
+        }
     }
 
 
@@ -226,6 +307,9 @@ public class CommonTimeWindow extends AbstractModel{
         this.setParamSimple(map, prefix + "Friday", this.Friday);
         this.setParamSimple(map, prefix + "Saturday", this.Saturday);
         this.setParamSimple(map, prefix + "Sunday", this.Sunday);
+        this.setParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
+        this.setParamArraySimple(map, prefix + "Days.", this.Days);
+        this.setParamSimple(map, prefix + "BackupPeriodTime", this.BackupPeriodTime);
 
     }
 }
