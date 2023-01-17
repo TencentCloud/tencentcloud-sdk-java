@@ -240,6 +240,13 @@ public class CreateCRWorkRequest extends AbstractModel{
     private String ApplierName;
 
     /**
+    * 是否自动续期
+    */
+    @SerializedName("IsAutoRenew")
+    @Expose
+    private String IsAutoRenew;
+
+    /**
      * Get 作品名称 
      * @return WorkName 作品名称
      */
@@ -735,6 +742,22 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.ApplierName = ApplierName;
     }
 
+    /**
+     * Get 是否自动续期 
+     * @return IsAutoRenew 是否自动续期
+     */
+    public String getIsAutoRenew() {
+        return this.IsAutoRenew;
+    }
+
+    /**
+     * Set 是否自动续期
+     * @param IsAutoRenew 是否自动续期
+     */
+    public void setIsAutoRenew(String IsAutoRenew) {
+        this.IsAutoRenew = IsAutoRenew;
+    }
+
     public CreateCRWorkRequest() {
     }
 
@@ -839,6 +862,9 @@ public class CreateCRWorkRequest extends AbstractModel{
         if (source.ApplierName != null) {
             this.ApplierName = new String(source.ApplierName);
         }
+        if (source.IsAutoRenew != null) {
+            this.IsAutoRenew = new String(source.IsAutoRenew);
+        }
     }
 
 
@@ -877,6 +903,7 @@ public class CreateCRWorkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
         this.setParamSimple(map, prefix + "ApplierId", this.ApplierId);
         this.setParamSimple(map, prefix + "ApplierName", this.ApplierName);
+        this.setParamSimple(map, prefix + "IsAutoRenew", this.IsAutoRenew);
 
     }
 }

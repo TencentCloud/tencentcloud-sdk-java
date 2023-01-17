@@ -12,6 +12,9 @@ public enum EmrErrorCode {
     // 操作失败，不支持pod。
      FAILEDOPERATION_NOTSUPPORTPOD("FailedOperation.NotSupportPod"),
      
+    // 操作失败。
+     FAILEDOPERATION_REFUNDCVMFAILED("FailedOperation.RefundCvmFailed"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

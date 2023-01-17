@@ -55,6 +55,14 @@ public class RateLimitConfig extends AbstractModel{
     private RateLimitIntelligence RateLimitIntelligence;
 
     /**
+    * 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RateLimitCustomizes")
+    @Expose
+    private RateLimitUserRule [] RateLimitCustomizes;
+
+    /**
      * Get 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
@@ -134,6 +142,26 @@ public class RateLimitConfig extends AbstractModel{
         this.RateLimitIntelligence = RateLimitIntelligence;
     }
 
+    /**
+     * Get 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RateLimitUserRule [] getRateLimitCustomizes() {
+        return this.RateLimitCustomizes;
+    }
+
+    /**
+     * Set 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRateLimitCustomizes(RateLimitUserRule [] RateLimitCustomizes) {
+        this.RateLimitCustomizes = RateLimitCustomizes;
+    }
+
     public RateLimitConfig() {
     }
 
@@ -157,6 +185,12 @@ public class RateLimitConfig extends AbstractModel{
         if (source.RateLimitIntelligence != null) {
             this.RateLimitIntelligence = new RateLimitIntelligence(source.RateLimitIntelligence);
         }
+        if (source.RateLimitCustomizes != null) {
+            this.RateLimitCustomizes = new RateLimitUserRule[source.RateLimitCustomizes.length];
+            for (int i = 0; i < source.RateLimitCustomizes.length; i++) {
+                this.RateLimitCustomizes[i] = new RateLimitUserRule(source.RateLimitCustomizes[i]);
+            }
+        }
     }
 
 
@@ -168,6 +202,7 @@ public class RateLimitConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RateLimitUserRules.", this.RateLimitUserRules);
         this.setParamObj(map, prefix + "RateLimitTemplate.", this.RateLimitTemplate);
         this.setParamObj(map, prefix + "RateLimitIntelligence.", this.RateLimitIntelligence);
+        this.setParamArrayObj(map, prefix + "RateLimitCustomizes.", this.RateLimitCustomizes);
 
     }
 }

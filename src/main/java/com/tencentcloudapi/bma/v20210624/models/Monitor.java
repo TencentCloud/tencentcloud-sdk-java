@@ -121,6 +121,20 @@ public class Monitor extends AbstractModel{
     private Long TortSiteNum;
 
     /**
+    * 监测截止时间
+    */
+    @SerializedName("MonitorEndTime")
+    @Expose
+    private String MonitorEndTime;
+
+    /**
+    * 是否自动续费
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
      * Get 作品ID 
      * @return WorkId 作品ID
      */
@@ -344,6 +358,38 @@ public class Monitor extends AbstractModel{
         this.TortSiteNum = TortSiteNum;
     }
 
+    /**
+     * Get 监测截止时间 
+     * @return MonitorEndTime 监测截止时间
+     */
+    public String getMonitorEndTime() {
+        return this.MonitorEndTime;
+    }
+
+    /**
+     * Set 监测截止时间
+     * @param MonitorEndTime 监测截止时间
+     */
+    public void setMonitorEndTime(String MonitorEndTime) {
+        this.MonitorEndTime = MonitorEndTime;
+    }
+
+    /**
+     * Get 是否自动续费 
+     * @return AutoRenew 是否自动续费
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set 是否自动续费
+     * @param AutoRenew 是否自动续费
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
     public Monitor() {
     }
 
@@ -394,6 +440,12 @@ public class Monitor extends AbstractModel{
         if (source.TortSiteNum != null) {
             this.TortSiteNum = new Long(source.TortSiteNum);
         }
+        if (source.MonitorEndTime != null) {
+            this.MonitorEndTime = new String(source.MonitorEndTime);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -415,6 +467,8 @@ public class Monitor extends AbstractModel{
         this.setParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
         this.setParamSimple(map, prefix + "EvidenceNote", this.EvidenceNote);
         this.setParamSimple(map, prefix + "TortSiteNum", this.TortSiteNum);
+        this.setParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

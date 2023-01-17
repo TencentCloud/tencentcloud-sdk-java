@@ -95,6 +95,14 @@ public class SecurityConfig extends AbstractModel{
     private TemplateConfig TemplateConfig;
 
     /**
+    * 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlowPostConfig")
+    @Expose
+    private SlowPostConfig SlowPostConfig;
+
+    /**
      * Get 托管规则。如果为null，默认使用历史配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WafConfig 托管规则。如果为null，默认使用历史配置。
@@ -274,6 +282,26 @@ public class SecurityConfig extends AbstractModel{
         this.TemplateConfig = TemplateConfig;
     }
 
+    /**
+     * Get 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SlowPostConfig getSlowPostConfig() {
+        return this.SlowPostConfig;
+    }
+
+    /**
+     * Set 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlowPostConfig 慢速攻击配置。如果为null，默认使用历史配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {
+        this.SlowPostConfig = SlowPostConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -309,6 +337,9 @@ public class SecurityConfig extends AbstractModel{
         if (source.TemplateConfig != null) {
             this.TemplateConfig = new TemplateConfig(source.TemplateConfig);
         }
+        if (source.SlowPostConfig != null) {
+            this.SlowPostConfig = new SlowPostConfig(source.SlowPostConfig);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class SecurityConfig extends AbstractModel{
         this.setParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
         this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
+        this.setParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
 
     }
 }

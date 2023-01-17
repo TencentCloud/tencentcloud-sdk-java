@@ -20,39 +20,35 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AclConfig extends AbstractModel{
+public class FirstPartConfig extends AbstractModel{
 
     /**
     * 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 用户自定义规则。
-    */
-    @SerializedName("AclUserRules")
-    @Expose
-    private AclUserRule [] AclUserRules;
-
-    /**
-    * 托管定制规则
+    * 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Customizes")
+    @SerializedName("StatTime")
     @Expose
-    private AclUserRule [] Customizes;
+    private Long StatTime;
 
     /**
      * Get 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li> 
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Switch 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
         return this.Switch;
@@ -60,74 +56,51 @@ public class AclConfig extends AbstractModel{
 
     /**
      * Set 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Switch 开关，取值有：
-<li> on：开启；</li>
-<li> off：关闭。</li>
+<li>on：开启；</li>
+<li>off：关闭。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get 用户自定义规则。 
-     * @return AclUserRules 用户自定义规则。
-     */
-    public AclUserRule [] getAclUserRules() {
-        return this.AclUserRules;
-    }
-
-    /**
-     * Set 用户自定义规则。
-     * @param AclUserRules 用户自定义规则。
-     */
-    public void setAclUserRules(AclUserRule [] AclUserRules) {
-        this.AclUserRules = AclUserRules;
-    }
-
-    /**
-     * Get 托管定制规则
+     * Get 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Customizes 托管定制规则
+     * @return StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AclUserRule [] getCustomizes() {
-        return this.Customizes;
+    public Long getStatTime() {
+        return this.StatTime;
     }
 
     /**
-     * Set 托管定制规则
+     * Set 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Customizes 托管定制规则
+     * @param StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCustomizes(AclUserRule [] Customizes) {
-        this.Customizes = Customizes;
+    public void setStatTime(Long StatTime) {
+        this.StatTime = StatTime;
     }
 
-    public AclConfig() {
+    public FirstPartConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AclConfig(AclConfig source) {
+    public FirstPartConfig(FirstPartConfig source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.AclUserRules != null) {
-            this.AclUserRules = new AclUserRule[source.AclUserRules.length];
-            for (int i = 0; i < source.AclUserRules.length; i++) {
-                this.AclUserRules[i] = new AclUserRule(source.AclUserRules[i]);
-            }
-        }
-        if (source.Customizes != null) {
-            this.Customizes = new AclUserRule[source.Customizes.length];
-            for (int i = 0; i < source.Customizes.length; i++) {
-                this.Customizes[i] = new AclUserRule(source.Customizes[i]);
-            }
+        if (source.StatTime != null) {
+            this.StatTime = new Long(source.StatTime);
         }
     }
 
@@ -137,8 +110,7 @@ public class AclConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamArrayObj(map, prefix + "AclUserRules.", this.AclUserRules);
-        this.setParamArrayObj(map, prefix + "Customizes.", this.Customizes);
+        this.setParamSimple(map, prefix + "StatTime", this.StatTime);
 
     }
 }

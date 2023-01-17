@@ -3,6 +3,9 @@ public enum CfsErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 获取CFS服务角色错误
+     AUTHFAILURE_GETROLEFAILED("AuthFailure.GetRoleFailed"),
+     
     // 请求未CAM授权。
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      

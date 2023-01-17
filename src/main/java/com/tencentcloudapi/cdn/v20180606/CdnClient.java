@@ -533,6 +533,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表
+     * @param req DescribeEdgePackTaskStatusRequest
+     * @return DescribeEdgePackTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatus(DescribeEdgePackTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgePackTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgePackTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgePackTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeEventLogData 用于查询事件日志统计曲线
      * @param req DescribeEventLogDataRequest
      * @return DescribeEventLogDataResponse

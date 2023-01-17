@@ -159,7 +159,7 @@ Public：公网属性， Private：内网属性。
     private ExtraInfo ExtraInfo;
 
     /**
-    * 负载均衡维度的个性化配置ID。
+    * 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigId")
@@ -659,9 +659,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Get 负载均衡维度的个性化配置ID。
+     * Get 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConfigId 负载均衡维度的个性化配置ID。
+     * @return ConfigId 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigId() {
@@ -669,9 +669,9 @@ Public：公网属性， Private：内网属性。
     }
 
     /**
-     * Set 负载均衡维度的个性化配置ID。
+     * Set 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConfigId 负载均衡维度的个性化配置ID。
+     * @param ConfigId 负载均衡维度的个性化配置ID，多个配置用逗号隔开。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigId(String ConfigId) {

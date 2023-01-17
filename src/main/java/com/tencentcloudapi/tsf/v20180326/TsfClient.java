@@ -319,6 +319,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建参数模板
+     * @param req CreateConfigTemplateRequest
+     * @return CreateConfigTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigTemplateResponse CreateConfigTemplate(CreateConfigTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConfigTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConfigTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConfigTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建容器部署组
      * @param req CreateContainGroupRequest
      * @return CreateContainGroupResponse
@@ -451,6 +471,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMicroserviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMicroservice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增微服务返回id
+     * @param req CreateMicroserviceWithDetailRespRequest
+     * @return CreateMicroserviceWithDetailRespResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(CreateMicroserviceWithDetailRespRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMicroserviceWithDetailRespResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMicroserviceWithDetailRespResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMicroserviceWithDetailResp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -639,6 +679,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *删除集群
+     * @param req DeleteClusterRequest
+     * @return DeleteClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除配置项
      * @param req DeleteConfigRequest
      * @return DeleteConfigResponse
@@ -651,6 +711,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除模板
+     * @param req DeleteConfigTemplateRequest
+     * @return DeleteConfigTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConfigTemplateResponse DeleteConfigTemplate(DeleteConfigTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConfigTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConfigTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteConfigTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1280,6 +1360,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *获取集群列表
+     * @param req DescribeClustersRequest
+     * @return DescribeClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询配置
      * @param req DescribeConfigRequest
      * @return DescribeConfigResponse
@@ -1352,6 +1452,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigSummaryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeConfigSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *导入配置
+     * @param req DescribeConfigTemplateRequest
+     * @return DescribeConfigTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConfigTemplateResponse DescribeConfigTemplate(DescribeConfigTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConfigTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConfigTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConfigTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1573,6 +1693,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<DescribeEnabledUnitRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEnabledUnitRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询文件配置项发布信息
+     * @param req DescribeFileConfigReleasesRequest
+     * @return DescribeFileConfigReleasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileConfigReleasesResponse DescribeFileConfigReleases(DescribeFileConfigReleasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileConfigReleasesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileConfigReleasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileConfigReleases");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3022,6 +3162,46 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *修改应用
+     * @param req ModifyApplicationRequest
+     * @return ModifyApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改集群信息
+     * @param req ModifyClusterRequest
+     * @return ModifyClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterResponse ModifyCluster(ModifyClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改容器部署组
      * @param req ModifyContainerGroupRequest
      * @return ModifyContainerGroupResponse
@@ -3054,6 +3234,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ModifyContainerReplicasResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyContainerReplicas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新部署组信息
+     * @param req ModifyGroupRequest
+     * @return ModifyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3114,6 +3314,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<ModifyMicroserviceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMicroservice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改命名空间
+     * @param req ModifyNamespaceRequest
+     * @return ModifyNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNamespaceResponse ModifyNamespace(ModifyNamespaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNamespaceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNamespaceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNamespace");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3435,6 +3655,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<RevocationPublicConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RevocationPublicConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *撤回已发布的文件配置
+     * @param req RevokeFileConfigRequest
+     * @return RevokeFileConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeFileConfigResponse RevokeFileConfig(RevokeFileConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RevokeFileConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RevokeFileConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RevokeFileConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3775,6 +4015,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
                 Type type = new TypeToken<JsonResponseModel<UpdateApiTimeoutsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateApiTimeouts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新参数模板
+     * @param req UpdateConfigTemplateRequest
+     * @return UpdateConfigTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateConfigTemplateResponse UpdateConfigTemplate(UpdateConfigTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateConfigTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateConfigTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateConfigTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
