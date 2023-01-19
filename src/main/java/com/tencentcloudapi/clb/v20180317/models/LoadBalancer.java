@@ -348,7 +348,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private SnatIp [] SnatIps;
 
     /**
-    * 性能保障规格
+    * 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaType")
@@ -428,7 +428,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String HealthLogTopicId;
 
     /**
-    * 集群ID.
+    * 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterIds")
@@ -1252,9 +1252,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 性能保障规格
+     * Get 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaType 性能保障规格
+     * @return SlaType 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaType() {
@@ -1262,9 +1262,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 性能保障规格
+     * Set 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaType 性能保障规格
+     * @param SlaType 性能容量型规格
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaType(String SlaType) {
@@ -1452,9 +1452,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 集群ID.
+     * Get 集群ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterIds 集群ID.
+     * @return ClusterIds 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getClusterIds() {
@@ -1462,9 +1462,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 集群ID.
+     * Set 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterIds 集群ID.
+     * @param ClusterIds 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterIds(String [] ClusterIds) {

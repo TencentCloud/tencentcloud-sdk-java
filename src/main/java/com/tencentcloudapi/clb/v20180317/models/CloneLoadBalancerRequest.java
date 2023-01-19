@@ -131,7 +131,7 @@ public class CloneLoadBalancerRequest extends AbstractModel{
     private String [] ClusterIds;
 
     /**
-    * 性能保障规格。
+    * 性能容量型规格。
     */
     @SerializedName("SlaType")
     @Expose
@@ -411,16 +411,16 @@ public class CloneLoadBalancerRequest extends AbstractModel{
     }
 
     /**
-     * Get 性能保障规格。 
-     * @return SlaType 性能保障规格。
+     * Get 性能容量型规格。 
+     * @return SlaType 性能容量型规格。
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 性能保障规格。
-     * @param SlaType 性能保障规格。
+     * Set 性能容量型规格。
+     * @param SlaType 性能容量型规格。
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

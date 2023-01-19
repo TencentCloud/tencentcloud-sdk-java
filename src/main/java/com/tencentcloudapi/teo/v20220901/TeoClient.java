@@ -999,6 +999,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeTimingL7SourceData）查询七层回源分析时序数据。
+     * @param req DescribeTimingL7SourceDataRequest
+     * @return DescribeTimingL7SourceDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7SourceDataResponse DescribeTimingL7SourceData(DescribeTimingL7SourceDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7SourceDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL7SourceData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeTopL7AnalysisData）用于查询七层流量前topN的数据。
      * @param req DescribeTopL7AnalysisDataRequest
      * @return DescribeTopL7AnalysisDataResponse

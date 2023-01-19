@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ModifyLoadBalancerSlaRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例信息
+    * 负载均衡实例信息。
     */
     @SerializedName("LoadBalancerSla")
     @Expose
     private SlaUpdateParam [] LoadBalancerSla;
 
     /**
-     * Get 负载均衡实例信息 
-     * @return LoadBalancerSla 负载均衡实例信息
+     * Get 负载均衡实例信息。 
+     * @return LoadBalancerSla 负载均衡实例信息。
      */
     public SlaUpdateParam [] getLoadBalancerSla() {
         return this.LoadBalancerSla;
     }
 
     /**
-     * Set 负载均衡实例信息
-     * @param LoadBalancerSla 负载均衡实例信息
+     * Set 负载均衡实例信息。
+     * @param LoadBalancerSla 负载均衡实例信息。
      */
     public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
         this.LoadBalancerSla = LoadBalancerSla;

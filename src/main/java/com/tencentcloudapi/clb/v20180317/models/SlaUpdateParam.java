@@ -30,7 +30,9 @@ public class SlaUpdateParam extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 变更为性能容量型，固定为SLA
+    * 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
     */
     @SerializedName("SlaType")
     @Expose
@@ -53,16 +55,24 @@ public class SlaUpdateParam extends AbstractModel{
     }
 
     /**
-     * Get 变更为性能容量型，固定为SLA 
-     * @return SlaType 变更为性能容量型，固定为SLA
+     * Get 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul> 
+     * @return SlaType 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 变更为性能容量型，固定为SLA
-     * @param SlaType 变更为性能容量型，固定为SLA
+     * Set 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
+     * @param SlaType 升级为性能容量型，固定取值为SLA。SLA表示升级为默认规格的性能容量型实例。
+<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul>
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

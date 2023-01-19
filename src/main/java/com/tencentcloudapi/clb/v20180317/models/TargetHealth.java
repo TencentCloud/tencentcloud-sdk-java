@@ -53,6 +53,13 @@ public class TargetHealth extends AbstractModel{
     /**
     * 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
     */
+    @SerializedName("HealthStatusDetail")
+    @Expose
+    private String HealthStatusDetail;
+
+    /**
+    * 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。(该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情)
+    */
     @SerializedName("HealthStatusDetial")
     @Expose
     private String HealthStatusDetial;
@@ -123,15 +130,31 @@ public class TargetHealth extends AbstractModel{
 
     /**
      * Get 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。 
-     * @return HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * @return HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     */
+    public String getHealthStatusDetail() {
+        return this.HealthStatusDetail;
+    }
+
+    /**
+     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * @param HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     */
+    public void setHealthStatusDetail(String HealthStatusDetail) {
+        this.HealthStatusDetail = HealthStatusDetail;
+    }
+
+    /**
+     * Get 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。(该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情) 
+     * @return HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。(该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情)
      */
     public String getHealthStatusDetial() {
         return this.HealthStatusDetial;
     }
 
     /**
-     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
-     * @param HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。(该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情)
+     * @param HealthStatusDetial 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。(该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情)
      */
     public void setHealthStatusDetial(String HealthStatusDetial) {
         this.HealthStatusDetial = HealthStatusDetial;
@@ -157,6 +180,9 @@ public class TargetHealth extends AbstractModel{
         if (source.TargetId != null) {
             this.TargetId = new String(source.TargetId);
         }
+        if (source.HealthStatusDetail != null) {
+            this.HealthStatusDetail = new String(source.HealthStatusDetail);
+        }
         if (source.HealthStatusDetial != null) {
             this.HealthStatusDetial = new String(source.HealthStatusDetial);
         }
@@ -171,6 +197,7 @@ public class TargetHealth extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "TargetId", this.TargetId);
+        this.setParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
         this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
 
     }
