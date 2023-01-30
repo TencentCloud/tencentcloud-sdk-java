@@ -1294,4 +1294,24 @@ public class DcdbClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+     * @param req UpgradeHourDCDBInstanceRequest
+     * @return UpgradeHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstance(UpgradeHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

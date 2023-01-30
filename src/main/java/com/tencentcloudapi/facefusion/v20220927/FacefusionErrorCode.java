@@ -117,6 +117,9 @@ public enum FacefusionErrorCode {
     // 余额不足。
      RESOURCEUNAVAILABLE_LOWBALANCE("ResourceUnavailable.LowBalance"),
      
+    // 计费状态未知，请确认是否已在控制台开通服务。
+     RESOURCEUNAVAILABLE_NOTEXIST("ResourceUnavailable.NotExist"),
+     
     // 服务未开通。
      RESOURCEUNAVAILABLE_NOTREADY("ResourceUnavailable.NotReady"),
      

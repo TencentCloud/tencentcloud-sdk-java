@@ -942,6 +942,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+     * @param req DescribeDBFeaturesRequest
+     * @return DescribeDBFeaturesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBFeaturesResponse DescribeDBFeatures(DescribeDBFeaturesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBFeaturesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBFeaturesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBFeatures");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
      * @param req DescribeDBImportRecordsRequest
      * @return DescribeDBImportRecordsResponse
