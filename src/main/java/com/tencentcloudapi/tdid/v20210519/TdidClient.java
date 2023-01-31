@@ -1004,26 +1004,4 @@ public class TdidClient extends AbstractClient{
         return rsp.response;
     }
 
-    /**
-     *该接口已废弃
-
-验证购买
-     * @param req VerifyPurchaseRequest
-     * @return VerifyPurchaseResponse
-     * @throws TencentCloudSDKException
-     */
-    public VerifyPurchaseResponse VerifyPurchase(VerifyPurchaseRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyPurchaseResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyPurchaseResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyPurchase");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
 }

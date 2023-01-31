@@ -39,7 +39,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *增加自定义策略
+     *增加访问控制（自定义策略）
      * @param req AddCustomRuleRequest
      * @return AddCustomRuleResponse
      * @throws TencentCloudSDKException
@@ -603,7 +603,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *开启或禁用自定义策略
+     *开启或禁用访问控制（自定义策略）
      * @param req ModifyCustomRuleStatusRequest
      * @return ModifyCustomRuleStatusResponse
      * @throws TencentCloudSDKException

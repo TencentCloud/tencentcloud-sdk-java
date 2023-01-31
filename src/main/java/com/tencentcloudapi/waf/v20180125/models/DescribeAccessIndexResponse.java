@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccessIndexResponse extends AbstractModel{
 
     /**
-    * 是否生效
+    * 是否生效，true表示生效，false表示未生效
     */
     @SerializedName("Status")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeAccessIndexResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否生效 
-     * @return Status 是否生效
+     * Get 是否生效，true表示生效，false表示未生效 
+     * @return Status 是否生效，true表示生效，false表示未生效
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 是否生效
-     * @param Status 是否生效
+     * Set 是否生效，true表示生效，false表示未生效
+     * @param Status 是否生效，true表示生效，false表示未生效
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

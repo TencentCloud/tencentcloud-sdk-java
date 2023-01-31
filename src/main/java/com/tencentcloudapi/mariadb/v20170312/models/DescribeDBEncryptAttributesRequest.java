@@ -13,23 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyPurchaseRequest extends AbstractModel{
+public class DescribeDBEncryptAttributesRequest extends AbstractModel{
 
-    public VerifyPurchaseRequest() {
+    /**
+    * 实例Id，形如：tdsql-ow728lmc。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get 实例Id，形如：tdsql-ow728lmc。 
+     * @return InstanceId 实例Id，形如：tdsql-ow728lmc。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例Id，形如：tdsql-ow728lmc。
+     * @param InstanceId 实例Id，形如：tdsql-ow728lmc。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    public DescribeDBEncryptAttributesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyPurchaseRequest(VerifyPurchaseRequest source) {
+    public DescribeDBEncryptAttributesRequest(DescribeDBEncryptAttributesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class VerifyPurchaseRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

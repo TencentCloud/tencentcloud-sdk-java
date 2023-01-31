@@ -619,6 +619,46 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询扫码日志明细
+     * @param req DescribeScanLogsRequest
+     * @return DescribeScanLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanLogsResponse DescribeScanLogs(DescribeScanLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某个批次被扫码的统计列表，没有被扫过的不会返回
+     * @param req DescribeScanStatsRequest
+     * @return DescribeScanStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanStatsResponse DescribeScanStats(DescribeScanStatsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScanStatsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScanStatsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScanStats");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询临时Token，主要用于上传接口
      * @param req DescribeTmpTokenRequest
      * @return DescribeTmpTokenResponse

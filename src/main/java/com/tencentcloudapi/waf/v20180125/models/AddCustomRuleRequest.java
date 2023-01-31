@@ -72,7 +72,7 @@ public class AddCustomRuleRequest extends AbstractModel{
     private String Redirect;
 
     /**
-    * "clb-waf"或者"sparta-waf"
+    * WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
     */
     @SerializedName("Edition")
     @Expose
@@ -84,6 +84,13 @@ public class AddCustomRuleRequest extends AbstractModel{
     @SerializedName("Bypass")
     @Expose
     private String Bypass;
+
+    /**
+    * 添加规则的来源，默认为空
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
 
     /**
      * Get 规则名称 
@@ -198,16 +205,16 @@ public class AddCustomRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get "clb-waf"或者"sparta-waf" 
-     * @return Edition "clb-waf"或者"sparta-waf"
+     * Get WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF 
+     * @return Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set "clb-waf"或者"sparta-waf"
-     * @param Edition "clb-waf"或者"sparta-waf"
+     * Set WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
+     * @param Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
@@ -227,6 +234,22 @@ public class AddCustomRuleRequest extends AbstractModel{
      */
     public void setBypass(String Bypass) {
         this.Bypass = Bypass;
+    }
+
+    /**
+     * Get 添加规则的来源，默认为空 
+     * @return EventId 添加规则的来源，默认为空
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 添加规则的来源，默认为空
+     * @param EventId 添加规则的来源，默认为空
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
     }
 
     public AddCustomRuleRequest() {
@@ -267,6 +290,9 @@ public class AddCustomRuleRequest extends AbstractModel{
         if (source.Bypass != null) {
             this.Bypass = new String(source.Bypass);
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class AddCustomRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Redirect", this.Redirect);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "Bypass", this.Bypass);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

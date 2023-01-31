@@ -37,7 +37,7 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     private String [] Items;
 
     /**
-    * clb-waf或者sparta-waf
+    * WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
     */
     @SerializedName("Edition")
     @Expose
@@ -83,16 +83,16 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     }
 
     /**
-     * Get clb-waf或者sparta-waf 
-     * @return Edition clb-waf或者sparta-waf
+     * Get WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF 
+     * @return Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set clb-waf或者sparta-waf
-     * @param Edition clb-waf或者sparta-waf
+     * Set WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
+     * @param Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

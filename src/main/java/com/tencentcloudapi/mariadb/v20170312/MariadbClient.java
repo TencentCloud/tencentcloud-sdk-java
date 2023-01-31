@@ -341,6 +341,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+     * @param req DescribeDBEncryptAttributesRequest
+     * @return DescribeDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBEncryptAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
      * @param req DescribeDBInstanceSpecsRequest
      * @return DescribeDBInstanceSpecsResponse
