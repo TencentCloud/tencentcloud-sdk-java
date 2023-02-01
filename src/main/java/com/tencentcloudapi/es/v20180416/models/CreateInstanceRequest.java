@@ -262,6 +262,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long DiskEnhance;
 
     /**
+    * 是否开启智能巡检
+    */
+    @SerializedName("EnableDiagnose")
+    @Expose
+    private Boolean EnableDiagnose;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -821,6 +828,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.DiskEnhance = DiskEnhance;
     }
 
+    /**
+     * Get 是否开启智能巡检 
+     * @return EnableDiagnose 是否开启智能巡检
+     */
+    public Boolean getEnableDiagnose() {
+        return this.EnableDiagnose;
+    }
+
+    /**
+     * Set 是否开启智能巡检
+     * @param EnableDiagnose 是否开启智能巡检
+     */
+    public void setEnableDiagnose(Boolean EnableDiagnose) {
+        this.EnableDiagnose = EnableDiagnose;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -940,6 +963,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.DiskEnhance != null) {
             this.DiskEnhance = new Long(source.DiskEnhance);
         }
+        if (source.EnableDiagnose != null) {
+            this.EnableDiagnose = new Boolean(source.EnableDiagnose);
+        }
     }
 
 
@@ -980,6 +1006,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+        this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
 
     }
 }

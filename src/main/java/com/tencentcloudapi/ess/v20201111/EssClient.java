@@ -234,6 +234,30 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *指定需要批量撤销的签署流程Id，批量催办合同
+客户指定需要撤销的签署流程Id，最多100个；接口失败后返回错误信息
+注意:
+能撤回合同的只能是合同的发起人或者签署人
+该接口需要开白后使用
+     * @param req CreateFlowRemindsRequest
+     * @return CreateFlowRemindsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowRemindsResponse CreateFlowReminds(CreateFlowRemindsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowRemindsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowRemindsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlowReminds");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *提交企业签署流程审批结果
 适用场景: 
 在通过接口(CreateFlow 或者CreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true，且发起方企业作为签署方参与了流程签署，则可以调用此接口提交企业内部签署审批结果。

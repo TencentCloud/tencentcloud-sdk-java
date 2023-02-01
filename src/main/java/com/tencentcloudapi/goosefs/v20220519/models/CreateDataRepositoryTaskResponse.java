@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lcic.v20220817.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAppDetailResponse extends AbstractModel{
+public class CreateDataRepositoryTaskResponse extends AbstractModel{
 
     /**
-    * SDK 对应的AppId 
+    * 任务ID
     */
-    @SerializedName("SdkAppId")
+    @SerializedName("TaskId")
     @Expose
-    private String SdkAppId;
-
-    /**
-    * 应用配置
-    */
-    @SerializedName("AppConfig")
-    @Expose
-    private AppConfig AppConfig;
-
-    /**
-    * 场景配置
-    */
-    @SerializedName("SceneConfig")
-    @Expose
-    private SceneItem [] SceneConfig;
+    private String TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class DescribeAppDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SDK 对应的AppId  
-     * @return SdkAppId SDK 对应的AppId 
+     * Get 任务ID 
+     * @return TaskId 任务ID
      */
-    public String getSdkAppId() {
-        return this.SdkAppId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set SDK 对应的AppId 
-     * @param SdkAppId SDK 对应的AppId 
+     * Set 任务ID
+     * @param TaskId 任务ID
      */
-    public void setSdkAppId(String SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
-
-    /**
-     * Get 应用配置 
-     * @return AppConfig 应用配置
-     */
-    public AppConfig getAppConfig() {
-        return this.AppConfig;
-    }
-
-    /**
-     * Set 应用配置
-     * @param AppConfig 应用配置
-     */
-    public void setAppConfig(AppConfig AppConfig) {
-        this.AppConfig = AppConfig;
-    }
-
-    /**
-     * Get 场景配置 
-     * @return SceneConfig 场景配置
-     */
-    public SceneItem [] getSceneConfig() {
-        return this.SceneConfig;
-    }
-
-    /**
-     * Set 场景配置
-     * @param SceneConfig 场景配置
-     */
-    public void setSceneConfig(SceneItem [] SceneConfig) {
-        this.SceneConfig = SceneConfig;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -114,25 +68,16 @@ public class DescribeAppDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAppDetailResponse() {
+    public CreateDataRepositoryTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAppDetailResponse(DescribeAppDetailResponse source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new String(source.SdkAppId);
-        }
-        if (source.AppConfig != null) {
-            this.AppConfig = new AppConfig(source.AppConfig);
-        }
-        if (source.SceneConfig != null) {
-            this.SceneConfig = new SceneItem[source.SceneConfig.length];
-            for (int i = 0; i < source.SceneConfig.length; i++) {
-                this.SceneConfig[i] = new SceneItem(source.SceneConfig[i]);
-            }
+    public CreateDataRepositoryTaskResponse(CreateDataRepositoryTaskResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +89,7 @@ public class DescribeAppDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamObj(map, prefix + "AppConfig.", this.AppConfig);
-        this.setParamArrayObj(map, prefix + "SceneConfig.", this.SceneConfig);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

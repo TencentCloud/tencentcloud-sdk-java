@@ -37,49 +37,49 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
     private Long Count;
 
     /**
-    * 动作
+    * 动作，40表示查询白名单，42表示查询黑名单
     */
     @SerializedName("ActionType")
     @Expose
     private Long ActionType;
 
     /**
-    * 有效时间最小时间戳
+    * 最小有效时间的时间戳
     */
     @SerializedName("VtsMin")
     @Expose
     private Long VtsMin;
 
     /**
-    * 有效时间最大时间戳
+    * 最大有效时间的时间戳
     */
     @SerializedName("VtsMax")
     @Expose
     private Long VtsMax;
 
     /**
-    * 创建时间最小时间戳
+    * 最小创建时间的时间戳
     */
     @SerializedName("CtsMin")
     @Expose
     private Long CtsMin;
 
     /**
-    * 创建时间最大时间戳
+    * 最大创建时间的时间戳
     */
     @SerializedName("CtsMax")
     @Expose
     private Long CtsMax;
 
     /**
-    * 偏移
+    * 分页开始条数
     */
     @SerializedName("OffSet")
     @Expose
     private Long OffSet;
 
     /**
-    * 限制
+    * 每页的条数
     */
     @SerializedName("Limit")
     @Expose
@@ -139,112 +139,112 @@ public class DescribeIpAccessControlRequest extends AbstractModel{
     }
 
     /**
-     * Get 动作 
-     * @return ActionType 动作
+     * Get 动作，40表示查询白名单，42表示查询黑名单 
+     * @return ActionType 动作，40表示查询白名单，42表示查询黑名单
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作
-     * @param ActionType 动作
+     * Set 动作，40表示查询白名单，42表示查询黑名单
+     * @param ActionType 动作，40表示查询白名单，42表示查询黑名单
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 有效时间最小时间戳 
-     * @return VtsMin 有效时间最小时间戳
+     * Get 最小有效时间的时间戳 
+     * @return VtsMin 最小有效时间的时间戳
      */
     public Long getVtsMin() {
         return this.VtsMin;
     }
 
     /**
-     * Set 有效时间最小时间戳
-     * @param VtsMin 有效时间最小时间戳
+     * Set 最小有效时间的时间戳
+     * @param VtsMin 最小有效时间的时间戳
      */
     public void setVtsMin(Long VtsMin) {
         this.VtsMin = VtsMin;
     }
 
     /**
-     * Get 有效时间最大时间戳 
-     * @return VtsMax 有效时间最大时间戳
+     * Get 最大有效时间的时间戳 
+     * @return VtsMax 最大有效时间的时间戳
      */
     public Long getVtsMax() {
         return this.VtsMax;
     }
 
     /**
-     * Set 有效时间最大时间戳
-     * @param VtsMax 有效时间最大时间戳
+     * Set 最大有效时间的时间戳
+     * @param VtsMax 最大有效时间的时间戳
      */
     public void setVtsMax(Long VtsMax) {
         this.VtsMax = VtsMax;
     }
 
     /**
-     * Get 创建时间最小时间戳 
-     * @return CtsMin 创建时间最小时间戳
+     * Get 最小创建时间的时间戳 
+     * @return CtsMin 最小创建时间的时间戳
      */
     public Long getCtsMin() {
         return this.CtsMin;
     }
 
     /**
-     * Set 创建时间最小时间戳
-     * @param CtsMin 创建时间最小时间戳
+     * Set 最小创建时间的时间戳
+     * @param CtsMin 最小创建时间的时间戳
      */
     public void setCtsMin(Long CtsMin) {
         this.CtsMin = CtsMin;
     }
 
     /**
-     * Get 创建时间最大时间戳 
-     * @return CtsMax 创建时间最大时间戳
+     * Get 最大创建时间的时间戳 
+     * @return CtsMax 最大创建时间的时间戳
      */
     public Long getCtsMax() {
         return this.CtsMax;
     }
 
     /**
-     * Set 创建时间最大时间戳
-     * @param CtsMax 创建时间最大时间戳
+     * Set 最大创建时间的时间戳
+     * @param CtsMax 最大创建时间的时间戳
      */
     public void setCtsMax(Long CtsMax) {
         this.CtsMax = CtsMax;
     }
 
     /**
-     * Get 偏移 
-     * @return OffSet 偏移
+     * Get 分页开始条数 
+     * @return OffSet 分页开始条数
      */
     public Long getOffSet() {
         return this.OffSet;
     }
 
     /**
-     * Set 偏移
-     * @param OffSet 偏移
+     * Set 分页开始条数
+     * @param OffSet 分页开始条数
      */
     public void setOffSet(Long OffSet) {
         this.OffSet = OffSet;
     }
 
     /**
-     * Get 限制 
-     * @return Limit 限制
+     * Get 每页的条数 
+     * @return Limit 每页的条数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制
-     * @param Limit 限制
+     * Set 每页的条数
+     * @param Limit 每页的条数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

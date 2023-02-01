@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class LockCcnBandwidthsRequest extends AbstractModel{
 
+    /**
+    * 带宽实例的唯一ID数组。
+    */
+    @SerializedName("Instances")
+    @Expose
+    private CcnFlowLock [] Instances;
+
+    /**
+     * Get 带宽实例的唯一ID数组。 
+     * @return Instances 带宽实例的唯一ID数组。
+     */
+    public CcnFlowLock [] getInstances() {
+        return this.Instances;
+    }
+
+    /**
+     * Set 带宽实例的唯一ID数组。
+     * @param Instances 带宽实例的唯一ID数组。
+     */
+    public void setInstances(CcnFlowLock [] Instances) {
+        this.Instances = Instances;
+    }
+
     public LockCcnBandwidthsRequest() {
     }
 
@@ -30,6 +53,12 @@ public class LockCcnBandwidthsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LockCcnBandwidthsRequest(LockCcnBandwidthsRequest source) {
+        if (source.Instances != null) {
+            this.Instances = new CcnFlowLock[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new CcnFlowLock(source.Instances[i]);
+            }
+        }
     }
 
 
@@ -37,6 +66,7 @@ public class LockCcnBandwidthsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
 
     }
 }

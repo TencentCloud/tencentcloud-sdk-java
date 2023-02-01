@@ -65,7 +65,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+    * 项目 ID，不填为默认项目。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -378,16 +378,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。 
-     * @return ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * Get 项目 ID，不填为默认项目。 
+     * @return ProjectId 项目 ID，不填为默认项目。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
-     * @param ProjectId 项目 ID，不填为默认项目。请使用 [查询项目列表](https://cloud.tencent.com/document/product/378/4400) 接口获取项目 ID。
+     * Set 项目 ID，不填为默认项目。
+     * @param ProjectId 项目 ID，不填为默认项目。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

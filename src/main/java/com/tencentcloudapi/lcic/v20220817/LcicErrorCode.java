@@ -27,6 +27,12 @@ public enum LcicErrorCode {
     // 开始时间不能早于当前时间。
      INVALIDPARAMETER_STARTTIME("InvalidParameter.StartTime"),
      
+    // 参数取值错误。
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // 缺少参数错误。
+     MISSINGPARAMETER("MissingParameter"),
+     
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
@@ -35,6 +41,9 @@ public enum LcicErrorCode {
      
     // 打开课堂失败，请前往控制台查看用量情况。
      RESOURCEINSUFFICIENT_ROOM("ResourceInsufficient.Room"),
+     
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound"),
      
     // 文档不存在。
      RESOURCENOTFOUND_DOCUMENT("ResourceNotFound.Document"),
@@ -46,7 +55,13 @@ public enum LcicErrorCode {
      RESOURCENOTFOUND_USER("ResourceNotFound.User"),
      
     // 房间统计结果计算中，请稍候。
-     RESOURCEUNAVAILABLE_ROOMSTATISTICS("ResourceUnavailable.RoomStatistics");
+     RESOURCEUNAVAILABLE_ROOMSTATISTICS("ResourceUnavailable.RoomStatistics"),
+     
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private LcicErrorCode (String value){

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ModifyExtendedServiceRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
     */
     @SerializedName("Agent")
     @Expose
@@ -51,16 +53,24 @@ CLOSE:关闭
     private String Operate;
 
     /**
-     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填 
-     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId 
+     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
-     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
+     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+
+注: 此接口 参数Agent. ProxyOperator.OpenId 需要传递超管或者法人的OpenId
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

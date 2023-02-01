@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class UnlockCcnBandwidthsRequest extends AbstractModel{
 
+    /**
+    * 带宽实例对象数组。
+    */
+    @SerializedName("Instances")
+    @Expose
+    private CcnFlowLock [] Instances;
+
+    /**
+     * Get 带宽实例对象数组。 
+     * @return Instances 带宽实例对象数组。
+     */
+    public CcnFlowLock [] getInstances() {
+        return this.Instances;
+    }
+
+    /**
+     * Set 带宽实例对象数组。
+     * @param Instances 带宽实例对象数组。
+     */
+    public void setInstances(CcnFlowLock [] Instances) {
+        this.Instances = Instances;
+    }
+
     public UnlockCcnBandwidthsRequest() {
     }
 
@@ -30,6 +53,12 @@ public class UnlockCcnBandwidthsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UnlockCcnBandwidthsRequest(UnlockCcnBandwidthsRequest source) {
+        if (source.Instances != null) {
+            this.Instances = new CcnFlowLock[source.Instances.length];
+            for (int i = 0; i < source.Instances.length; i++) {
+                this.Instances[i] = new CcnFlowLock(source.Instances[i]);
+            }
+        }
     }
 
 
@@ -37,6 +66,7 @@ public class UnlockCcnBandwidthsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
 
     }
 }

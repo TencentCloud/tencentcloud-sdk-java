@@ -37,7 +37,7 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
     private String [] Items;
 
     /**
-    * 删除对应的域名下的所有黑/白IP名额单
+    * 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
     */
     @SerializedName("DeleteAll")
     @Expose
@@ -83,16 +83,16 @@ public class DeleteIpAccessControlRequest extends AbstractModel{
     }
 
     /**
-     * Get 删除对应的域名下的所有黑/白IP名额单 
-     * @return DeleteAll 删除对应的域名下的所有黑/白IP名额单
+     * Get 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单 
+     * @return DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      */
     public Boolean getDeleteAll() {
         return this.DeleteAll;
     }
 
     /**
-     * Set 删除对应的域名下的所有黑/白IP名额单
-     * @param DeleteAll 删除对应的域名下的所有黑/白IP名额单
+     * Set 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+     * @param DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
      */
     public void setDeleteAll(Boolean DeleteAll) {
         this.DeleteAll = DeleteAll;

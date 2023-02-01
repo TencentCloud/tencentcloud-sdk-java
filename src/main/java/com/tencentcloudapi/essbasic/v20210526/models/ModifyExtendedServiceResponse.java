@@ -24,9 +24,10 @@ public class ModifyExtendedServiceResponse extends AbstractModel{
 
     /**
     * 操作跳转链接，有效期24小时
-仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务
+当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
+返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作。
     */
     @SerializedName("OperateUrl")
     @Expose
@@ -41,13 +42,15 @@ public class ModifyExtendedServiceResponse extends AbstractModel{
 
     /**
      * Get 操作跳转链接，有效期24小时
-仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务 
+当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
+返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作。 
      * @return OperateUrl 操作跳转链接，有效期24小时
-仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务
+当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
+返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作。
      */
     public String getOperateUrl() {
         return this.OperateUrl;
@@ -55,13 +58,15 @@ public class ModifyExtendedServiceResponse extends AbstractModel{
 
     /**
      * Set 操作跳转链接，有效期24小时
-仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务
+当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
+返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作。
      * @param OperateUrl 操作跳转链接，有效期24小时
-仅当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回 ，此时需要经办人(操作人)点击链接完成服务开通操作。若开通操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通服务
+若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-操作类型是CLOSE时，不会返回此链接，会直接关闭企业该扩展服务
+当操作类型是 OPEN 且 扩展服务类型是  AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
+返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作。
      */
     public void setOperateUrl(String OperateUrl) {
         this.OperateUrl = OperateUrl;

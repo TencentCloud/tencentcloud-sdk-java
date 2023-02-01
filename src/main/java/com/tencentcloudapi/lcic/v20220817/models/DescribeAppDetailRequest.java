@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeAppDetailRequest extends AbstractModel{
 
     /**
-    * 应用ID
+    * 应用ID。低代码互动课堂的SdkAppId。
+
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -37,16 +38,20 @@ public class DescribeAppDetailRequest extends AbstractModel{
     private String DeveloperId;
 
     /**
-     * Get 应用ID 
-     * @return ApplicationId 应用ID
+     * Get 应用ID。低代码互动课堂的SdkAppId。
+ 
+     * @return ApplicationId 应用ID。低代码互动课堂的SdkAppId。
+
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 应用ID
-     * @param ApplicationId 应用ID
+     * Set 应用ID。低代码互动课堂的SdkAppId。
+
+     * @param ApplicationId 应用ID。低代码互动课堂的SdkAppId。
+
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
