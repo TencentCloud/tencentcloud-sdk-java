@@ -13,8 +13,10 @@ import com.tencentcloudapi.common.profile.HttpProfile;
 public class DescribeInstances {
     public static void main(String[] args) {
         try {
-            // 实例化一个认证对象，入参需要传入腾讯云账户secretId，secretKey
-            Credential cred = new Credential("secretId", "secretKey");
+            // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
+            // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+            // Credential cred = new Credential("SecretId", "SecretKey");
+            Credential cred = new Credential(System.getenv("TENCENTCLOUD_SECRET_ID"), System.getenv("TENCENTCLOUD_SECRET_KEY"));
 
             // 实例化一个http选项，可选的，没有特殊需求可以跳过
             HttpProfile httpProfile = new HttpProfile();

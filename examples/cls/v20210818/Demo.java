@@ -20,10 +20,12 @@ import java.util.HashMap;
  */
 public class Demo {
 
-    //腾讯云账户密钥 secretId. TODO 修改为自己账户的secretId
-    public static final String SECRET_ID = "";
-    //腾讯云账户密钥 secretKey. TODO 修改为自己账户的secretKey
-    public static final String SECRET_KEY = "";
+    // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
+    // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+    // 需要设置环境变量 TENCENTCLOUD_SECRET_ID，值为自己账户的secretId
+    public static final String SECRET_ID = System.getenv("TENCENTCLOUD_SECRET_ID");
+    // 需要设置环境变量 TENCENTCLOUD_SECRET_KEY，值为自己账户的secretKey
+    public static final String SECRET_KEY = System.getenv("TENCENTCLOUD_SECRET_KEY");
 
     public static final String ENDPOINT = "cls.tencentcloudapi.com";
     public static final String ROOT_DOMAIN = "tencentcloudapi.com";

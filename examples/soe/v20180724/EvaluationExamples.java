@@ -28,8 +28,10 @@ import com.tencentcloudapi.common.profile.ClientProfile;
 public class EvaluationExamples {
     public static final String REGION = "ap-beijing";
     public static final String END_POINT = "soe.ap-beijing.tencentcloudapi.com";
-    public static final String SECRET_ID = "";
-    public static final String SECRET_KEY = "";
+    // 为了保护密钥安全，建议将密钥设置在环境变量中或者配置文件中。
+    // 硬编码密钥到代码中有可能随代码泄露而暴露，有安全隐患，并不推荐。
+    public static final String SECRET_ID = System.getenv("TENCENTCLOUD_SECRET_ID");
+    public static final String SECRET_KEY = System.getenv("TENCENTCLOUD_SECRET_KEY");
 
     public static final int EVAL_MODE_WORD = 0;
     public static final int EVAL_MODE_SENTENCE = 1;
