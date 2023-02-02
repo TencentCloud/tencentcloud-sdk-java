@@ -276,6 +276,9 @@ public enum MonitorErrorCode {
     // 资源被占用。
      RESOURCEINUSE("ResourceInUse"),
      
+    // ResourceInUse.ResourceExistAlready
+     RESOURCEINUSE_RESOURCEEXISTALREADY("ResourceInUse.ResourceExistAlready"),
+     
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

@@ -256,6 +256,30 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel{
     private Float MemSize;
 
     /**
+    * 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyDetail")
+    @Expose
+    private HpaPolicy [] PolicyDetail;
+
+    /**
+    * Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Float Cpu;
+
+    /**
+    * Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Mem")
+    @Expose
+    private Float Mem;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -835,6 +859,66 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel{
     }
 
     /**
+     * Get 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyDetail 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HpaPolicy [] getPolicyDetail() {
+        return this.PolicyDetail;
+    }
+
+    /**
+     * Set 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyDetail 扩缩容策略详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyDetail(HpaPolicy [] PolicyDetail) {
+        this.PolicyDetail = PolicyDetail;
+    }
+
+    /**
+     * Get Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cpu Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cpu Cpu的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpu(Float Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Mem Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getMem() {
+        return this.Mem;
+    }
+
+    /**
+     * Set Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Mem Mem的Request值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMem(Float Mem) {
+        this.Mem = Mem;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -951,6 +1035,18 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel{
         if (source.MemSize != null) {
             this.MemSize = new Float(source.MemSize);
         }
+        if (source.PolicyDetail != null) {
+            this.PolicyDetail = new HpaPolicy[source.PolicyDetail.length];
+            for (int i = 0; i < source.PolicyDetail.length; i++) {
+                this.PolicyDetail[i] = new HpaPolicy(source.PolicyDetail[i]);
+            }
+        }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Float(source.Mem);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -991,6 +1087,9 @@ public class DescribeCloudBaseRunVersionResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "CpuSize", this.CpuSize);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Mem", this.Mem);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

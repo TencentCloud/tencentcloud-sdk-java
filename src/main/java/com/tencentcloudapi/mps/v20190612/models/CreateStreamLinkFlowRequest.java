@@ -44,6 +44,13 @@ public class CreateStreamLinkFlowRequest extends AbstractModel{
     private CreateInput [] InputGroup;
 
     /**
+    * 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get 流名称。 
      * @return FlowName 流名称。
      */
@@ -91,6 +98,22 @@ public class CreateStreamLinkFlowRequest extends AbstractModel{
         this.InputGroup = InputGroup;
     }
 
+    /**
+     * Get 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。 
+     * @return EventId 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+     * @param EventId 该Flow关联的媒体传输事件ID，每个flow只能关联一个Event。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
     public CreateStreamLinkFlowRequest() {
     }
 
@@ -111,6 +134,9 @@ public class CreateStreamLinkFlowRequest extends AbstractModel{
                 this.InputGroup[i] = new CreateInput(source.InputGroup[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class CreateStreamLinkFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

@@ -1359,6 +1359,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *重启实例
+     * @param req RestartInstanceRequest
+     * @return RestartInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *恢复serverless集群
      * @param req ResumeServerlessRequest
      * @return ResumeServerlessResponse

@@ -44,7 +44,7 @@ public class DescribeRoomResponse extends AbstractModel{
     private Long EndTime;
 
     /**
-    * 老师ID。
+    * 老师的UserId。
     */
     @SerializedName("TeacherId")
     @Expose
@@ -113,7 +113,7 @@ coteaching 双师
     private Long DisableRecord;
 
     /**
-    * 助教Id列表。
+    * 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Assistants")
@@ -184,16 +184,16 @@ coteaching 双师
     }
 
     /**
-     * Get 老师ID。 
-     * @return TeacherId 老师ID。
+     * Get 老师的UserId。 
+     * @return TeacherId 老师的UserId。
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set 老师ID。
-     * @param TeacherId 老师ID。
+     * Set 老师的UserId。
+     * @param TeacherId 老师的UserId。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -364,9 +364,9 @@ coteaching 双师
     }
 
     /**
-     * Get 助教Id列表。
+     * Get 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Assistants 助教Id列表。
+     * @return Assistants 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAssistants() {
@@ -374,9 +374,9 @@ coteaching 双师
     }
 
     /**
-     * Set 助教Id列表。
+     * Set 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Assistants 助教Id列表。
+     * @param Assistants 助教UserId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistants(String [] Assistants) {

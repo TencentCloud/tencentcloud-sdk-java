@@ -78,7 +78,7 @@ coteaching 双师
     private String SubType;
 
     /**
-    * 老师ID。通过[注册用户]接口获取的UserId。
+    * 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
     */
     @SerializedName("TeacherId")
     @Expose
@@ -113,7 +113,7 @@ coteaching 双师
     private Long DisableRecord;
 
     /**
-    * 助教Id列表。通过[注册用户]接口获取的UserId。
+    * 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
     */
     @SerializedName("Assistants")
     @Expose
@@ -263,16 +263,16 @@ coteaching 双师
     }
 
     /**
-     * Get 老师ID。通过[注册用户]接口获取的UserId。 
-     * @return TeacherId 老师ID。通过[注册用户]接口获取的UserId。
+     * Get 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。 
+     * @return TeacherId 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set 老师ID。通过[注册用户]接口获取的UserId。
-     * @param TeacherId 老师ID。通过[注册用户]接口获取的UserId。
+     * Set 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
+     * @param TeacherId 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -355,16 +355,16 @@ coteaching 双师
     }
 
     /**
-     * Get 助教Id列表。通过[注册用户]接口获取的UserId。 
-     * @return Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
+     * Get 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。 
+     * @return Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
      */
     public String [] getAssistants() {
         return this.Assistants;
     }
 
     /**
-     * Set 助教Id列表。通过[注册用户]接口获取的UserId。
-     * @param Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
+     * Set 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
+     * @param Assistants 助教Id列表。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有助教权限。
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;

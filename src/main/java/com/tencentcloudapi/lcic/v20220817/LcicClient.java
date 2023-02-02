@@ -39,6 +39,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
+     * @param req BatchRegisterRequest
+     * @return BatchRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchRegisterResponse BatchRegister(BatchRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchRegister");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *绑定文档到房间
      * @param req BindDocumentToRoomRequest
      * @return BindDocumentToRoomResponse
@@ -271,6 +291,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改房间
+     * @param req ModifyRoomRequest
+     * @return ModifyRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

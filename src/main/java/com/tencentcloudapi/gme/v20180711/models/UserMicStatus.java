@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class UserMicStatus extends AbstractModel{
 
     /**
-    * 客户端用于标识用户的Openid。
-    */
-    @SerializedName("Uid")
-    @Expose
-    private Long Uid;
-
-    /**
     * 开麦状态。1表示关闭麦克风，2表示打开麦克风。
     */
     @SerializedName("EnableMic")
@@ -37,20 +30,19 @@ public class UserMicStatus extends AbstractModel{
     private Long EnableMic;
 
     /**
-     * Get 客户端用于标识用户的Openid。 
-     * @return Uid 客户端用于标识用户的Openid。
-     */
-    public Long getUid() {
-        return this.Uid;
-    }
+    * 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+    */
+    @SerializedName("Uid")
+    @Expose
+    private Long Uid;
 
     /**
-     * Set 客户端用于标识用户的Openid。
-     * @param Uid 客户端用于标识用户的Openid。
-     */
-    public void setUid(Long Uid) {
-        this.Uid = Uid;
-    }
+    * 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StrUid")
+    @Expose
+    private String StrUid;
 
     /**
      * Get 开麦状态。1表示关闭麦克风，2表示打开麦克风。 
@@ -68,6 +60,42 @@ public class UserMicStatus extends AbstractModel{
         this.EnableMic = EnableMic;
     }
 
+    /**
+     * Get 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。） 
+     * @return Uid 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+     */
+    public Long getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+     * @param Uid 客户端用于标识用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+     */
+    public void setUid(Long Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
+     * Get 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStrUid() {
+        return this.StrUid;
+    }
+
+    /**
+     * Set 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStrUid(String StrUid) {
+        this.StrUid = StrUid;
+    }
+
     public UserMicStatus() {
     }
 
@@ -76,11 +104,14 @@ public class UserMicStatus extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UserMicStatus(UserMicStatus source) {
+        if (source.EnableMic != null) {
+            this.EnableMic = new Long(source.EnableMic);
+        }
         if (source.Uid != null) {
             this.Uid = new Long(source.Uid);
         }
-        if (source.EnableMic != null) {
-            this.EnableMic = new Long(source.EnableMic);
+        if (source.StrUid != null) {
+            this.StrUid = new String(source.StrUid);
         }
     }
 
@@ -89,8 +120,9 @@ public class UserMicStatus extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "EnableMic", this.EnableMic);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "StrUid", this.StrUid);
 
     }
 }

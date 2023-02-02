@@ -24,6 +24,7 @@ public class BeautifyPicResponse extends AbstractModel{
 
     /**
     * RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultImage")
     @Expose
@@ -31,6 +32,7 @@ public class BeautifyPicResponse extends AbstractModel{
 
     /**
     * RspImgType 为 url 时，返回处理后的图片 url 数据。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultUrl")
     @Expose
@@ -44,8 +46,10 @@ public class BeautifyPicResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64 
+     * Get RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultImage RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultImage() {
         return this.ResultImage;
@@ -53,15 +57,19 @@ public class BeautifyPicResponse extends AbstractModel{
 
     /**
      * Set RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultImage RspImgType 为 base64 时，返回处理后的图片 base64 数据。默认返回base64
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultImage(String ResultImage) {
         this.ResultImage = ResultImage;
     }
 
     /**
-     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。 
+     * Get RspImgType 为 url 时，返回处理后的图片 url 数据。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultUrl() {
         return this.ResultUrl;
@@ -69,7 +77,9 @@ public class BeautifyPicResponse extends AbstractModel{
 
     /**
      * Set RspImgType 为 url 时，返回处理后的图片 url 数据。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultUrl RspImgType 为 url 时，返回处理后的图片 url 数据。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultUrl(String ResultUrl) {
         this.ResultUrl = ResultUrl;

@@ -39,6 +39,14 @@ public class GroupResponse extends AbstractModel{
     private DescribeGroup [] GroupList;
 
     /**
+    * 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupCountQuota")
+    @Expose
+    private Long GroupCountQuota;
+
+    /**
      * Get 计数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 计数
@@ -78,6 +86,26 @@ public class GroupResponse extends AbstractModel{
         this.GroupList = GroupList;
     }
 
+    /**
+     * Get 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupCountQuota 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGroupCountQuota() {
+        return this.GroupCountQuota;
+    }
+
+    /**
+     * Set 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupCountQuota 消费分组配额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupCountQuota(Long GroupCountQuota) {
+        this.GroupCountQuota = GroupCountQuota;
+    }
+
     public GroupResponse() {
     }
 
@@ -95,6 +123,9 @@ public class GroupResponse extends AbstractModel{
                 this.GroupList[i] = new DescribeGroup(source.GroupList[i]);
             }
         }
+        if (source.GroupCountQuota != null) {
+            this.GroupCountQuota = new Long(source.GroupCountQuota);
+        }
     }
 
 
@@ -104,6 +135,7 @@ public class GroupResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
+        this.setParamSimple(map, prefix + "GroupCountQuota", this.GroupCountQuota);
 
     }
 }

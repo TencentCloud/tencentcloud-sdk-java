@@ -66,6 +66,20 @@ public class DescribeFlow extends AbstractModel{
     private DescribeOutput [] OutputGroup;
 
     /**
+    * 该Flow关联的媒体传输事件EventId。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
+    * 媒体传输输入流所属的区域，取值和InputRegion相同。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 流Id。 
      * @return FlowId 流Id。
      */
@@ -165,6 +179,38 @@ public class DescribeFlow extends AbstractModel{
         this.OutputGroup = OutputGroup;
     }
 
+    /**
+     * Get 该Flow关联的媒体传输事件EventId。 
+     * @return EventId 该Flow关联的媒体传输事件EventId。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 该Flow关联的媒体传输事件EventId。
+     * @param EventId 该Flow关联的媒体传输事件EventId。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
+     * Get 媒体传输输入流所属的区域，取值和InputRegion相同。 
+     * @return Region 媒体传输输入流所属的区域，取值和InputRegion相同。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 媒体传输输入流所属的区域，取值和InputRegion相同。
+     * @param Region 媒体传输输入流所属的区域，取值和InputRegion相同。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public DescribeFlow() {
     }
 
@@ -197,6 +243,12 @@ public class DescribeFlow extends AbstractModel{
                 this.OutputGroup[i] = new DescribeOutput(source.OutputGroup[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -210,6 +262,8 @@ public class DescribeFlow extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxBandwidth", this.MaxBandwidth);
         this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
         this.setParamArrayObj(map, prefix + "OutputGroup.", this.OutputGroup);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }
