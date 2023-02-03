@@ -58,7 +58,7 @@ public class AddCustomRuleRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 动作类型
+    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
     */
     @SerializedName("ActionType")
     @Expose
@@ -173,16 +173,16 @@ public class AddCustomRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 动作类型 
-     * @return ActionType 动作类型
+     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向 
+     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型
-     * @param ActionType 动作类型
+     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;

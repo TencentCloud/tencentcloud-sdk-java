@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateDataRepositoryTaskRequest extends AbstractModel{
 
     /**
-    * 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS)
+    * 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * bucket名
+    * COS存储桶名
     */
     @SerializedName("Bucket")
     @Expose
@@ -44,7 +44,7 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据
+    * 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
     */
     @SerializedName("TaskPath")
     @Expose
@@ -58,32 +58,46 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
     private String TaskName;
 
     /**
-     * Get 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS) 
-     * @return TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS)
+    * 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+    */
+    @SerializedName("RepositoryType")
+    @Expose
+    private String RepositoryType;
+
+    /**
+    * 文件列表下载地址，以http开头
+    */
+    @SerializedName("TextLocation")
+    @Expose
+    private String TextLocation;
+
+    /**
+     * Get 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统) 
+     * @return TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS)
-     * @param TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者Bucket到文件系统(COS_TO_FS)
+     * Set 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
+     * @param TaskType 数据流通任务类型, FS_TO_COS(文件系统到COS Bucket),或者COS_TO_FS(COS Bucket到文件系统)
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get bucket名 
-     * @return Bucket bucket名
+     * Get COS存储桶名 
+     * @return Bucket COS存储桶名
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set bucket名
-     * @param Bucket bucket名
+     * Set COS存储桶名
+     * @param Bucket COS存储桶名
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
@@ -106,16 +120,16 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据 
-     * @return TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据
+     * Get 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据 
+     * @return TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
      */
     public String getTaskPath() {
         return this.TaskPath;
     }
 
     /**
-     * Set 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据
-     * @param TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置位空, 则表示全部数据
+     * Set 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
+     * @param TaskPath 对于FS_TO_COS, TaskPath是Bucket映射目录的相对路径, 对于COS_TO_FS是COS上的路径。如果置为空, 则表示全部数据
      */
     public void setTaskPath(String TaskPath) {
         this.TaskPath = TaskPath;
@@ -135,6 +149,38 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
+    }
+
+    /**
+     * Get 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载 
+     * @return RepositoryType 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+     */
+    public String getRepositoryType() {
+        return this.RepositoryType;
+    }
+
+    /**
+     * Set 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+     * @param RepositoryType 数据流通方式 MSP_AFM 手动加载  RAW_AFM 按需加载
+     */
+    public void setRepositoryType(String RepositoryType) {
+        this.RepositoryType = RepositoryType;
+    }
+
+    /**
+     * Get 文件列表下载地址，以http开头 
+     * @return TextLocation 文件列表下载地址，以http开头
+     */
+    public String getTextLocation() {
+        return this.TextLocation;
+    }
+
+    /**
+     * Set 文件列表下载地址，以http开头
+     * @param TextLocation 文件列表下载地址，以http开头
+     */
+    public void setTextLocation(String TextLocation) {
+        this.TextLocation = TextLocation;
     }
 
     public CreateDataRepositoryTaskRequest() {
@@ -160,6 +206,12 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
+        if (source.RepositoryType != null) {
+            this.RepositoryType = new String(source.RepositoryType);
+        }
+        if (source.TextLocation != null) {
+            this.TextLocation = new String(source.TextLocation);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class CreateDataRepositoryTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "TaskPath", this.TaskPath);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
+        this.setParamSimple(map, prefix + "TextLocation", this.TextLocation);
 
     }
 }

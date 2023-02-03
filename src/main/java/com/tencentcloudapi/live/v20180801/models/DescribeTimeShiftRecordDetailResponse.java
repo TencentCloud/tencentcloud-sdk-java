@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvsResponse extends AbstractModel{
+public class DescribeTimeShiftRecordDetailResponse extends AbstractModel{
 
     /**
-    * 环境信息列表
+    * 时移录制会话数组。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("EnvList")
+    @SerializedName("RecordList")
     @Expose
-    private EnvInfo [] EnvList;
-
-    /**
-    * 环境个数
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private TimeShiftRecord [] RecordList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeEnvsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 环境信息列表 
-     * @return EnvList 环境信息列表
+     * Get 时移录制会话数组。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordList 时移录制会话数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public EnvInfo [] getEnvList() {
-        return this.EnvList;
+    public TimeShiftRecord [] getRecordList() {
+        return this.RecordList;
     }
 
     /**
-     * Set 环境信息列表
-     * @param EnvList 环境信息列表
+     * Set 时移录制会话数组。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordList 时移录制会话数组。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setEnvList(EnvInfo [] EnvList) {
-        this.EnvList = EnvList;
-    }
-
-    /**
-     * Get 环境个数 
-     * @return Total 环境个数
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set 环境个数
-     * @param Total 环境个数
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setRecordList(TimeShiftRecord [] RecordList) {
+        this.RecordList = RecordList;
     }
 
     /**
@@ -91,22 +73,19 @@ public class DescribeEnvsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeEnvsResponse() {
+    public DescribeTimeShiftRecordDetailResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEnvsResponse(DescribeEnvsResponse source) {
-        if (source.EnvList != null) {
-            this.EnvList = new EnvInfo[source.EnvList.length];
-            for (int i = 0; i < source.EnvList.length; i++) {
-                this.EnvList[i] = new EnvInfo(source.EnvList[i]);
+    public DescribeTimeShiftRecordDetailResponse(DescribeTimeShiftRecordDetailResponse source) {
+        if (source.RecordList != null) {
+            this.RecordList = new TimeShiftRecord[source.RecordList.length];
+            for (int i = 0; i < source.RecordList.length; i++) {
+                this.RecordList[i] = new TimeShiftRecord(source.RecordList[i]);
             }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +97,7 @@ public class DescribeEnvsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "EnvList.", this.EnvList);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

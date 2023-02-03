@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcb.v20180608.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeEnvsResponse extends AbstractModel{
+public class DescribeTimeShiftStreamListResponse extends AbstractModel{
 
     /**
-    * 环境信息列表
+    * 时间段内所有的数据量。
     */
-    @SerializedName("EnvList")
+    @SerializedName("TotalSize")
     @Expose
-    private EnvInfo [] EnvList;
+    private Long TotalSize;
 
     /**
-    * 环境个数
+    * 流列表。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Total")
+    @SerializedName("StreamList")
     @Expose
-    private Long Total;
+    private TimeShiftStreamInfo [] StreamList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class DescribeEnvsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 环境信息列表 
-     * @return EnvList 环境信息列表
+     * Get 时间段内所有的数据量。 
+     * @return TotalSize 时间段内所有的数据量。
      */
-    public EnvInfo [] getEnvList() {
-        return this.EnvList;
+    public Long getTotalSize() {
+        return this.TotalSize;
     }
 
     /**
-     * Set 环境信息列表
-     * @param EnvList 环境信息列表
+     * Set 时间段内所有的数据量。
+     * @param TotalSize 时间段内所有的数据量。
      */
-    public void setEnvList(EnvInfo [] EnvList) {
-        this.EnvList = EnvList;
+    public void setTotalSize(Long TotalSize) {
+        this.TotalSize = TotalSize;
     }
 
     /**
-     * Get 环境个数 
-     * @return Total 环境个数
+     * Get 流列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StreamList 流列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotal() {
-        return this.Total;
+    public TimeShiftStreamInfo [] getStreamList() {
+        return this.StreamList;
     }
 
     /**
-     * Set 环境个数
-     * @param Total 环境个数
+     * Set 流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamList 流列表。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setStreamList(TimeShiftStreamInfo [] StreamList) {
+        this.StreamList = StreamList;
     }
 
     /**
@@ -91,22 +96,22 @@ public class DescribeEnvsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeEnvsResponse() {
+    public DescribeTimeShiftStreamListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeEnvsResponse(DescribeEnvsResponse source) {
-        if (source.EnvList != null) {
-            this.EnvList = new EnvInfo[source.EnvList.length];
-            for (int i = 0; i < source.EnvList.length; i++) {
-                this.EnvList[i] = new EnvInfo(source.EnvList[i]);
-            }
+    public DescribeTimeShiftStreamListResponse(DescribeTimeShiftStreamListResponse source) {
+        if (source.TotalSize != null) {
+            this.TotalSize = new Long(source.TotalSize);
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+        if (source.StreamList != null) {
+            this.StreamList = new TimeShiftStreamInfo[source.StreamList.length];
+            for (int i = 0; i < source.StreamList.length; i++) {
+                this.StreamList[i] = new TimeShiftStreamInfo(source.StreamList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +123,8 @@ public class DescribeEnvsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "EnvList.", this.EnvList);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
+        this.setParamArrayObj(map, prefix + "StreamList.", this.StreamList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -2018,6 +2018,46 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *前提调用 DescribeTimeShiftStreamList 获得请求必要参数。查询指定范围内的时移流录制详情，最大支持24小时范围查询。
+     * @param req DescribeTimeShiftRecordDetailRequest
+     * @return DescribeTimeShiftRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimeShiftRecordDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询某个时间范围内所有时移流列表。最大支持查询24小时内的数据。
+     * @param req DescribeTimeShiftStreamListRequest
+     * @return DescribeTimeShiftStreamListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftStreamListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimeShiftStreamList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询某段时间top n客户端ip汇总信息（暂支持top 1000）
      * @param req DescribeTopClientIpSumInfoListRequest
      * @return DescribeTopClientIpSumInfoListResponse

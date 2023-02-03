@@ -51,7 +51,7 @@ public class DescribeDomainWhiteRulesRequest extends AbstractModel{
     private Long Count;
 
     /**
-    * 排序方式
+    * 排序方式,desc表示降序，asc表示升序
     */
     @SerializedName("Sort")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeDomainWhiteRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序方式 
-     * @return Sort 排序方式
+     * Get 排序方式,desc表示降序，asc表示升序 
+     * @return Sort 排序方式,desc表示降序，asc表示升序
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序方式
-     * @param Sort 排序方式
+     * Set 排序方式,desc表示降序，asc表示升序
+     * @param Sort 排序方式,desc表示降序，asc表示升序
      */
     public void setSort(String Sort) {
         this.Sort = Sort;

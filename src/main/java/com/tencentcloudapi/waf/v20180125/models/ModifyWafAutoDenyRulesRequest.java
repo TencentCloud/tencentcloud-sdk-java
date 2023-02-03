@@ -30,21 +30,21 @@ public class ModifyWafAutoDenyRulesRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 攻击次数阈值
+    * 触发IP封禁的攻击次数阈值，范围为2~100次
     */
     @SerializedName("AttackThreshold")
     @Expose
     private Long AttackThreshold;
 
     /**
-    * 攻击时间阈值
+    * IP封禁统计时间，范围为1-60分钟
     */
     @SerializedName("TimeThreshold")
     @Expose
     private Long TimeThreshold;
 
     /**
-    * 自动封禁时间
+    * 触发IP封禁后的封禁时间，范围为5~360分钟
     */
     @SerializedName("DenyTimeThreshold")
     @Expose
@@ -74,48 +74,48 @@ public class ModifyWafAutoDenyRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 攻击次数阈值 
-     * @return AttackThreshold 攻击次数阈值
+     * Get 触发IP封禁的攻击次数阈值，范围为2~100次 
+     * @return AttackThreshold 触发IP封禁的攻击次数阈值，范围为2~100次
      */
     public Long getAttackThreshold() {
         return this.AttackThreshold;
     }
 
     /**
-     * Set 攻击次数阈值
-     * @param AttackThreshold 攻击次数阈值
+     * Set 触发IP封禁的攻击次数阈值，范围为2~100次
+     * @param AttackThreshold 触发IP封禁的攻击次数阈值，范围为2~100次
      */
     public void setAttackThreshold(Long AttackThreshold) {
         this.AttackThreshold = AttackThreshold;
     }
 
     /**
-     * Get 攻击时间阈值 
-     * @return TimeThreshold 攻击时间阈值
+     * Get IP封禁统计时间，范围为1-60分钟 
+     * @return TimeThreshold IP封禁统计时间，范围为1-60分钟
      */
     public Long getTimeThreshold() {
         return this.TimeThreshold;
     }
 
     /**
-     * Set 攻击时间阈值
-     * @param TimeThreshold 攻击时间阈值
+     * Set IP封禁统计时间，范围为1-60分钟
+     * @param TimeThreshold IP封禁统计时间，范围为1-60分钟
      */
     public void setTimeThreshold(Long TimeThreshold) {
         this.TimeThreshold = TimeThreshold;
     }
 
     /**
-     * Get 自动封禁时间 
-     * @return DenyTimeThreshold 自动封禁时间
+     * Get 触发IP封禁后的封禁时间，范围为5~360分钟 
+     * @return DenyTimeThreshold 触发IP封禁后的封禁时间，范围为5~360分钟
      */
     public Long getDenyTimeThreshold() {
         return this.DenyTimeThreshold;
     }
 
     /**
-     * Set 自动封禁时间
-     * @param DenyTimeThreshold 自动封禁时间
+     * Set 触发IP封禁后的封禁时间，范围为5~360分钟
+     * @param DenyTimeThreshold 触发IP封禁后的封禁时间，范围为5~360分钟
      */
     public void setDenyTimeThreshold(Long DenyTimeThreshold) {
         this.DenyTimeThreshold = DenyTimeThreshold;

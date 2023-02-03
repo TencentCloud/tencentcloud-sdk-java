@@ -30,14 +30,14 @@ public class SearchAccessLogResponse extends AbstractModel{
     private String Context;
 
     /**
-    * 日志查询结果是否全部返回
+    * 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * 返回的是否为分析结果
+    * 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
     */
     @SerializedName("Analysis")
     @Expose
@@ -94,32 +94,32 @@ public class SearchAccessLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 日志查询结果是否全部返回 
-     * @return ListOver 日志查询结果是否全部返回
+     * Get 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回 
+     * @return ListOver 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set 日志查询结果是否全部返回
-     * @param ListOver 日志查询结果是否全部返回
+     * Set 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
+     * @param ListOver 日志查询结果是否全部返回，其中，“true”表示结果返回，“false”表示结果为返回
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get 返回的是否为分析结果 
-     * @return Analysis 返回的是否为分析结果
+     * Get 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果 
+     * @return Analysis 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set 返回的是否为分析结果
-     * @param Analysis 返回的是否为分析结果
+     * Set 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
+     * @param Analysis 返回的是否为分析结果，其中，“true”表示返回分析结果，“false”表示未返回分析结果
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;

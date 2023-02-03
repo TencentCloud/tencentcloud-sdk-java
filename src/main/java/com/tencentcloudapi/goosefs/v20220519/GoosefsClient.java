@@ -58,4 +58,24 @@ public class GoosefsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *获取数据流通任务实时状态，用作客户端控制
+     * @param req DescribeDataRepositoryTaskStatusRequest
+     * @return DescribeDataRepositoryTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(DescribeDataRepositoryTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataRepositoryTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataRepositoryTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

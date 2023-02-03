@@ -342,8 +342,6 @@ public class WafClient extends AbstractClient{
 
     /**
      *获取域名的规则白名单
-
-
      * @param req DescribeDomainWhiteRulesRequest
      * @return DescribeDomainWhiteRulesResponse
      * @throws TencentCloudSDKException
