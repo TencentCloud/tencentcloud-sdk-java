@@ -123,6 +123,12 @@ public enum DlcErrorCode {
     // 未找到结果路径。
      RESOURCENOTFOUND_RESULTOUTPUTPATHNOTFOUND("ResourceNotFound.ResultOutputPathNotFound"),
      
+    // session不存在。
+     RESOURCENOTFOUND_SESSIONNOTFOUND("ResourceNotFound.SessionNotFound"),
+     
+    // session已消亡。
+     RESOURCENOTFOUND_SESSIONSTATEDEAD("ResourceNotFound.SessionStateDead"),
+     
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      

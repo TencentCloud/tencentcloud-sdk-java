@@ -339,6 +339,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateNotebookSession）用于创建notebook livy session
+     * @param req CreateNotebookSessionRequest
+     * @return CreateNotebookSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookSessionResponse CreateNotebookSession(CreateNotebookSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotebookSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNotebookSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建查询结果下载任务
      * @param req CreateResultDownloadRequest
      * @return CreateResultDownloadResponse
@@ -751,6 +771,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDatabases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSession）用于获取notebook livy session详情信息
+     * @param req DescribeNotebookSessionRequest
+     * @return DescribeNotebookSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionResponse DescribeNotebookSession(DescribeNotebookSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSession");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

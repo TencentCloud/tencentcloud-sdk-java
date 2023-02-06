@@ -20,70 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsRequest extends AbstractModel{
+public class DescribeIntegrationMainOrganizationUserRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 操作人信息，userId必填
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 需要执行催办的签署流程id数组，最多100个
-    */
-    @SerializedName("FlowIds")
-    @Expose
-    private String [] FlowIds;
-
-    /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+     * Get 操作人信息，userId必填 
+     * @return Operator 操作人信息，userId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 操作人信息，userId必填
+     * @param Operator 操作人信息，userId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
-    /**
-     * Get 需要执行催办的签署流程id数组，最多100个 
-     * @return FlowIds 需要执行催办的签署流程id数组，最多100个
-     */
-    public String [] getFlowIds() {
-        return this.FlowIds;
-    }
-
-    /**
-     * Set 需要执行催办的签署流程id数组，最多100个
-     * @param FlowIds 需要执行催办的签署流程id数组，最多100个
-     */
-    public void setFlowIds(String [] FlowIds) {
-        this.FlowIds = FlowIds;
-    }
-
-    public CreateFlowRemindsRequest() {
+    public DescribeIntegrationMainOrganizationUserRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsRequest(CreateFlowRemindsRequest source) {
+    public DescribeIntegrationMainOrganizationUserRequest(DescribeIntegrationMainOrganizationUserRequest source) {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.FlowIds != null) {
-            this.FlowIds = new String[source.FlowIds.length];
-            for (int i = 0; i < source.FlowIds.length; i++) {
-                this.FlowIds[i] = new String(source.FlowIds[i]);
-            }
         }
     }
 
@@ -93,7 +64,6 @@ public class CreateFlowRemindsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
 
     }
 }

@@ -37,6 +37,13 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 应用信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 需要查询的流程ID列表，限制最大100个 
      * @return FlowIds 需要查询的流程ID列表，限制最大100个
      */
@@ -68,6 +75,22 @@ public class DescribeFlowInfoRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 应用信息 
+     * @return Agent 应用信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 应用信息
+     * @param Agent 应用信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DescribeFlowInfoRequest() {
     }
 
@@ -85,6 +108,9 @@ public class DescribeFlowInfoRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

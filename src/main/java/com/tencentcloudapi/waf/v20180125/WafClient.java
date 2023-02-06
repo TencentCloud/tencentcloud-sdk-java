@@ -601,6 +601,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改防护域名的地域封禁状态
+     * @param req ModifyAreaBanStatusRequest
+     * @return ModifyAreaBanStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAreaBanStatusResponse ModifyAreaBanStatus(ModifyAreaBanStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAreaBanStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAreaBanStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAreaBanStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *开启或禁用访问控制（自定义策略）
      * @param req ModifyCustomRuleStatusRequest
      * @return ModifyCustomRuleStatusResponse
@@ -733,6 +753,46 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchAccessLogResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchAccessLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新版本CLS接口存在参数变化，query改成了query_string支持lucence语法接口搜索查询。
+     * @param req SearchAttackLogRequest
+     * @return SearchAttackLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchAttackLogResponse SearchAttackLog(SearchAttackLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchAttackLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchAttackLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchAttackLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *切换域名的规则开关
+     * @param req SwitchDomainRulesRequest
+     * @return SwitchDomainRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDomainRulesResponse SwitchDomainRules(SwitchDomainRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDomainRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDomainRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDomainRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

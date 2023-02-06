@@ -538,6 +538,46 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过子企业影子账号查询主企业员工账号
+     * @param req DescribeIntegrationMainOrganizationUserRequest
+     * @return DescribeIntegrationMainOrganizationUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUser(DescribeIntegrationMainOrganizationUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIntegrationMainOrganizationUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此API接口用户查询加入集团的成员企业
+     * @param req DescribeOrganizationGroupOrganizationsRequest
+     * @return DescribeOrganizationGroupOrganizationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(DescribeOrganizationGroupOrganizationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationGroupOrganizations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询企业印章的列表，需要操作者具有查询印章权限
 客户指定需要获取的印章数量和偏移量，数量最多100，超过100按100处理；入参InfoType控制印章是否携带授权人信息，为1则携带，为0则返回的授权人信息为空数组。接口调用成功返回印章的信息列表还有企业印章的总数。
      * @param req DescribeOrganizationSealsRequest

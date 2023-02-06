@@ -39,6 +39,13 @@ DISABLE：不启用该路由
     private String Status;
 
     /**
+    * 路由CIDR
+    */
+    @SerializedName("DestinationCidrBlock")
+    @Expose
+    private String DestinationCidrBlock;
+
+    /**
      * Get 路由信息ID 
      * @return RouteId 路由信息ID
      */
@@ -78,6 +85,22 @@ DISABLE：不启用该路由
         this.Status = Status;
     }
 
+    /**
+     * Get 路由CIDR 
+     * @return DestinationCidrBlock 路由CIDR
+     */
+    public String getDestinationCidrBlock() {
+        return this.DestinationCidrBlock;
+    }
+
+    /**
+     * Set 路由CIDR
+     * @param DestinationCidrBlock 路由CIDR
+     */
+    public void setDestinationCidrBlock(String DestinationCidrBlock) {
+        this.DestinationCidrBlock = DestinationCidrBlock;
+    }
+
     public VpngwCcnRoutes() {
     }
 
@@ -92,6 +115,9 @@ DISABLE：不启用该路由
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.DestinationCidrBlock != null) {
+            this.DestinationCidrBlock = new String(source.DestinationCidrBlock);
+        }
     }
 
 
@@ -101,6 +127,7 @@ DISABLE：不启用该路由
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
 
     }
 }
