@@ -399,6 +399,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建轮播播单，数量上限：100。
+轮播播单的每个文件可以指定源文件，也可以指定某个转码文件。
+指定的文件必须是hls格式，所有的播单文件最好保持相同的码率和分辨率。
+     * @param req CreateRoundPlayRequest
+     * @return CreateRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoundPlayResponse CreateRoundPlay(CreateRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRoundPlay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义采样截图模板，数量上限：16。
      * @param req CreateSampleSnapshotTemplateRequest
      * @return CreateSampleSnapshotTemplateResponse
@@ -842,6 +864,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于删除轮播播单。
+     * @param req DeleteRoundPlayRequest
+     * @return DeleteRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoundPlayResponse DeleteRoundPlay(DeleteRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoundPlay");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1683,6 +1725,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *该接口用于获取轮播播单列表。
+     * @param req DescribeRoundPlaysRequest
+     * @return DescribeRoundPlaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoundPlaysResponse DescribeRoundPlays(DescribeRoundPlaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoundPlaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoundPlays");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询采样截图模板，支持根据条件，分页查询。
      * @param req DescribeSampleSnapshotTemplatesRequest
      * @return DescribeSampleSnapshotTemplatesResponse
@@ -2404,6 +2466,27 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于修改轮播播单。
+修改后只有新的播放请求会生效，已经在播放中的用户在七天之内还可以播放修改前的播单。
+     * @param req ModifyRoundPlayRequest
+     * @return ModifyRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoundPlayResponse ModifyRoundPlay(ModifyRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoundPlay");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

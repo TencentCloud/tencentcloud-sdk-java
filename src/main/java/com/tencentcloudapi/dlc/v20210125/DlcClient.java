@@ -1199,6 +1199,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *修改数据治理事件阈值
+     * @param req ModifyGovernEventRuleRequest
+     * @return ModifyGovernEventRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernEventRuleResponse ModifyGovernEventRule(ModifyGovernEventRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGovernEventRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGovernEventRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新spark应用
      * @param req ModifySparkAppRequest
      * @return ModifySparkAppResponse

@@ -191,6 +191,27 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String AppArchives;
 
     /**
+    * Spark Image 版本
+    */
+    @SerializedName("SparkImage")
+    @Expose
+    private String SparkImage;
+
+    /**
+    * Spark Image 版本名称
+    */
+    @SerializedName("SparkImageVersion")
+    @Expose
+    private String SparkImageVersion;
+
+    /**
+    * 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+    */
+    @SerializedName("AppExecutorMaxNumbers")
+    @Expose
+    private Long AppExecutorMaxNumbers;
+
+    /**
      * Get spark应用名 
      * @return AppName spark应用名
      */
@@ -574,6 +595,54 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.AppArchives = AppArchives;
     }
 
+    /**
+     * Get Spark Image 版本 
+     * @return SparkImage Spark Image 版本
+     */
+    public String getSparkImage() {
+        return this.SparkImage;
+    }
+
+    /**
+     * Set Spark Image 版本
+     * @param SparkImage Spark Image 版本
+     */
+    public void setSparkImage(String SparkImage) {
+        this.SparkImage = SparkImage;
+    }
+
+    /**
+     * Get Spark Image 版本名称 
+     * @return SparkImageVersion Spark Image 版本名称
+     */
+    public String getSparkImageVersion() {
+        return this.SparkImageVersion;
+    }
+
+    /**
+     * Set Spark Image 版本名称
+     * @param SparkImageVersion Spark Image 版本名称
+     */
+    public void setSparkImageVersion(String SparkImageVersion) {
+        this.SparkImageVersion = SparkImageVersion;
+    }
+
+    /**
+     * Get 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums 
+     * @return AppExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+     */
+    public Long getAppExecutorMaxNumbers() {
+        return this.AppExecutorMaxNumbers;
+    }
+
+    /**
+     * Set 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+     * @param AppExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于AppExecutorNums
+     */
+    public void setAppExecutorMaxNumbers(Long AppExecutorMaxNumbers) {
+        this.AppExecutorMaxNumbers = AppExecutorMaxNumbers;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -654,6 +723,15 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.AppArchives != null) {
             this.AppArchives = new String(source.AppArchives);
         }
+        if (source.SparkImage != null) {
+            this.SparkImage = new String(source.SparkImage);
+        }
+        if (source.SparkImageVersion != null) {
+            this.SparkImageVersion = new String(source.SparkImageVersion);
+        }
+        if (source.AppExecutorMaxNumbers != null) {
+            this.AppExecutorMaxNumbers = new Long(source.AppExecutorMaxNumbers);
+        }
     }
 
 
@@ -685,6 +763,9 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DataSource", this.DataSource);
         this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
         this.setParamSimple(map, prefix + "AppArchives", this.AppArchives);
+        this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
+        this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+        this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
 
     }
 }

@@ -30,6 +30,13 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private String EnvironmentName;
 
     /**
+    * 环境描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
     * 私有网络名称
     */
     @SerializedName("Vpc")
@@ -42,13 +49,6 @@ public class CreateEnvironmentRequest extends AbstractModel{
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
-
-    /**
-    * 环境描述
-    */
-    @SerializedName("Description")
-    @Expose
-    private String Description;
 
     /**
     * K8s version
@@ -93,6 +93,34 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private String CreateRegion;
 
     /**
+    * 是否创建私有网络
+    */
+    @SerializedName("SetupVpc")
+    @Expose
+    private Boolean SetupVpc;
+
+    /**
+    * 是否创建 Prometheus 实例
+    */
+    @SerializedName("SetupPrometheus")
+    @Expose
+    private Boolean SetupPrometheus;
+
+    /**
+    * prometheus 实例 id
+    */
+    @SerializedName("PrometheusId")
+    @Expose
+    private String PrometheusId;
+
+    /**
+    * apm id
+    */
+    @SerializedName("ApmId")
+    @Expose
+    private String ApmId;
+
+    /**
      * Get 环境名称 
      * @return EnvironmentName 环境名称
      */
@@ -106,6 +134,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;
+    }
+
+    /**
+     * Get 环境描述 
+     * @return Description 环境描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 环境描述
+     * @param Description 环境描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -138,22 +182,6 @@ public class CreateEnvironmentRequest extends AbstractModel{
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
-    }
-
-    /**
-     * Get 环境描述 
-     * @return Description 环境描述
-     */
-    public String getDescription() {
-        return this.Description;
-    }
-
-    /**
-     * Set 环境描述
-     * @param Description 环境描述
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
     }
 
     /**
@@ -252,6 +280,70 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.CreateRegion = CreateRegion;
     }
 
+    /**
+     * Get 是否创建私有网络 
+     * @return SetupVpc 是否创建私有网络
+     */
+    public Boolean getSetupVpc() {
+        return this.SetupVpc;
+    }
+
+    /**
+     * Set 是否创建私有网络
+     * @param SetupVpc 是否创建私有网络
+     */
+    public void setSetupVpc(Boolean SetupVpc) {
+        this.SetupVpc = SetupVpc;
+    }
+
+    /**
+     * Get 是否创建 Prometheus 实例 
+     * @return SetupPrometheus 是否创建 Prometheus 实例
+     */
+    public Boolean getSetupPrometheus() {
+        return this.SetupPrometheus;
+    }
+
+    /**
+     * Set 是否创建 Prometheus 实例
+     * @param SetupPrometheus 是否创建 Prometheus 实例
+     */
+    public void setSetupPrometheus(Boolean SetupPrometheus) {
+        this.SetupPrometheus = SetupPrometheus;
+    }
+
+    /**
+     * Get prometheus 实例 id 
+     * @return PrometheusId prometheus 实例 id
+     */
+    public String getPrometheusId() {
+        return this.PrometheusId;
+    }
+
+    /**
+     * Set prometheus 实例 id
+     * @param PrometheusId prometheus 实例 id
+     */
+    public void setPrometheusId(String PrometheusId) {
+        this.PrometheusId = PrometheusId;
+    }
+
+    /**
+     * Get apm id 
+     * @return ApmId apm id
+     */
+    public String getApmId() {
+        return this.ApmId;
+    }
+
+    /**
+     * Set apm id
+     * @param ApmId apm id
+     */
+    public void setApmId(String ApmId) {
+        this.ApmId = ApmId;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -263,6 +355,9 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.EnvironmentName != null) {
             this.EnvironmentName = new String(source.EnvironmentName);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
         if (source.Vpc != null) {
             this.Vpc = new String(source.Vpc);
         }
@@ -271,9 +366,6 @@ public class CreateEnvironmentRequest extends AbstractModel{
             for (int i = 0; i < source.SubnetIds.length; i++) {
                 this.SubnetIds[i] = new String(source.SubnetIds[i]);
             }
-        }
-        if (source.Description != null) {
-            this.Description = new String(source.Description);
         }
         if (source.K8sVersion != null) {
             this.K8sVersion = new String(source.K8sVersion);
@@ -296,6 +388,18 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.CreateRegion != null) {
             this.CreateRegion = new String(source.CreateRegion);
         }
+        if (source.SetupVpc != null) {
+            this.SetupVpc = new Boolean(source.SetupVpc);
+        }
+        if (source.SetupPrometheus != null) {
+            this.SetupPrometheus = new Boolean(source.SetupPrometheus);
+        }
+        if (source.PrometheusId != null) {
+            this.PrometheusId = new String(source.PrometheusId);
+        }
+        if (source.ApmId != null) {
+            this.ApmId = new String(source.ApmId);
+        }
     }
 
 
@@ -304,15 +408,19 @@ public class CreateEnvironmentRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Vpc", this.Vpc);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
-        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "CreateRegion", this.CreateRegion);
+        this.setParamSimple(map, prefix + "SetupVpc", this.SetupVpc);
+        this.setParamSimple(map, prefix + "SetupPrometheus", this.SetupPrometheus);
+        this.setParamSimple(map, prefix + "PrometheusId", this.PrometheusId);
+        this.setParamSimple(map, prefix + "ApmId", this.ApmId);
 
     }
 }

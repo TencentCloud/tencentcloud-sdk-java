@@ -44,6 +44,13 @@ public class TransferCloudStorageRequest extends AbstractModel{
     private String ToDeviceName;
 
     /**
+    * 未开通云存的设备产品ID
+    */
+    @SerializedName("ToProductId")
+    @Expose
+    private String ToProductId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -91,6 +98,22 @@ public class TransferCloudStorageRequest extends AbstractModel{
         this.ToDeviceName = ToDeviceName;
     }
 
+    /**
+     * Get 未开通云存的设备产品ID 
+     * @return ToProductId 未开通云存的设备产品ID
+     */
+    public String getToProductId() {
+        return this.ToProductId;
+    }
+
+    /**
+     * Set 未开通云存的设备产品ID
+     * @param ToProductId 未开通云存的设备产品ID
+     */
+    public void setToProductId(String ToProductId) {
+        this.ToProductId = ToProductId;
+    }
+
     public TransferCloudStorageRequest() {
     }
 
@@ -108,6 +131,9 @@ public class TransferCloudStorageRequest extends AbstractModel{
         if (source.ToDeviceName != null) {
             this.ToDeviceName = new String(source.ToDeviceName);
         }
+        if (source.ToProductId != null) {
+            this.ToProductId = new String(source.ToProductId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class TransferCloudStorageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ToDeviceName", this.ToDeviceName);
+        this.setParamSimple(map, prefix + "ToProductId", this.ToProductId);
 
     }
 }

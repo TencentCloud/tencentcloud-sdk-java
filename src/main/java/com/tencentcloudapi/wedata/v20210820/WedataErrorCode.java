@@ -27,6 +27,9 @@ public enum WedataErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // ClientIp未被授权。
+     INVALIDPARAMETER_CLIENTIPNOTAUTHORIZED("InvalidParameter.ClientIpNotAuthorized"),
+     
     // 名称重复。
      INVALIDPARAMETER_DUPLICATENAME("InvalidParameter.DuplicateName"),
      

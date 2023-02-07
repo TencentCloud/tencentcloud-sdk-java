@@ -659,6 +659,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeFlow）用于查询任务流信息
+     * @param req DescribeFlowRequest
+     * @return DescribeFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeInstanceDetail)用于查询实例详情。
      * @param req DescribeInstanceDetailRequest
      * @return DescribeInstanceDetailResponse

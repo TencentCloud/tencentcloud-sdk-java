@@ -99,6 +99,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *查询备份策略信息
+     * @param req DescribeBackUpScheduleRequest
+     * @return DescribeBackUpScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpScheduleResponse DescribeBackUpSchedule(DescribeBackUpScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackUpScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackUpScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackUpSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询集群用户、集群表，数据库等相关信息
      * @param req DescribeCkSqlApisRequest
      * @return DescribeCkSqlApisResponse
@@ -119,6 +139,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *获取集群的最新的几个配置文件（config.xml、metrika.xml、user.xml）的内容，显示给用户
+     * @param req DescribeClusterConfigsRequest
+     * @return DescribeClusterConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterConfigsResponse DescribeClusterConfigs(DescribeClusterConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据实例ID查询某个实例的具体信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -131,6 +171,26 @@ public class CdwchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *在集群详情页面获取所有参数列表
+     * @param req DescribeInstanceKeyValConfigsRequest
+     * @return DescribeInstanceKeyValConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceKeyValConfigsResponse DescribeInstanceKeyValConfigs(DescribeInstanceKeyValConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceKeyValConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceKeyValConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceKeyValConfigs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -199,6 +259,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *KV模式修改配置接口
+     * @param req ModifyInstanceKeyValConfigsRequest
+     * @return ModifyInstanceKeyValConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigs(ModifyInstanceKeyValConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceKeyValConfigsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceKeyValConfigsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceKeyValConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *针对ck账号的权限做管控（新版）
      * @param req ModifyUserNewPrivilegeRequest
      * @return ModifyUserNewPrivilegeResponse
@@ -231,6 +311,66 @@ public class CdwchClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenBackUpResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenBackUp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *扩容磁盘，包含扩容数据节点，zk节点
+     * @param req ResizeDiskRequest
+     * @return ResizeDiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResizeDiskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResizeDiskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResizeDisk");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *调整clickhouse节点数量
+     * @param req ScaleOutInstanceRequest
+     * @return ScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *垂直扩缩容节点规格，修改节点cvm的规格cpu，内存。 规格变化阶段，服务不可用。
+     * @param req ScaleUpInstanceRequest
+     * @return ScaleUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleUpInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleUpInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleUpInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

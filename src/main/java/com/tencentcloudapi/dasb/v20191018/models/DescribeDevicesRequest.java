@@ -107,6 +107,14 @@ public class DescribeDevicesRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
+    * 过滤数组。支持的Name：
+BindingStatus 绑定状态
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 资产ID集合 
      * @return IdSet 资产ID集合
      */
@@ -298,6 +306,26 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get 过滤数组。支持的Name：
+BindingStatus 绑定状态 
+     * @return Filters 过滤数组。支持的Name：
+BindingStatus 绑定状态
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤数组。支持的Name：
+BindingStatus 绑定状态
+     * @param Filters 过滤数组。支持的Name：
+BindingStatus 绑定状态
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeDevicesRequest() {
     }
 
@@ -360,6 +388,12 @@ public class DescribeDevicesRequest extends AbstractModel{
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -379,6 +413,7 @@ public class DescribeDevicesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "KindSet.", this.KindSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

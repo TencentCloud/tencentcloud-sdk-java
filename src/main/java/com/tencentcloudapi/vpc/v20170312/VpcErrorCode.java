@@ -279,6 +279,9 @@ public enum VpcErrorCode {
     // 该操作仅对主网卡支持。
      INVALIDPARAMETERVALUE_ONLYSUPPORTEDFORMASTERNETWORKCARD("InvalidParameterValue.OnlySupportedForMasterNetworkCard"),
      
+    // 参数值格式不匹配。
+     INVALIDPARAMETERVALUE_PARAMETERMISMATCH("InvalidParameterValue.ParameterMismatch"),
+     
     // 参数值不在指定范围。
      INVALIDPARAMETERVALUE_RANGE("InvalidParameterValue.Range"),
      

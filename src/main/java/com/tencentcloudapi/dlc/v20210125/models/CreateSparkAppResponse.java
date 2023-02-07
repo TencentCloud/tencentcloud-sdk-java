@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateSparkAppResponse extends AbstractModel{
 
     /**
+    * App唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkAppId")
+    @Expose
+    private String SparkAppId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get App唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkAppId App唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkAppId() {
+        return this.SparkAppId;
+    }
+
+    /**
+     * Set App唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkAppId App唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkAppId(String SparkAppId) {
+        this.SparkAppId = SparkAppId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateSparkAppResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateSparkAppResponse(CreateSparkAppResponse source) {
+        if (source.SparkAppId != null) {
+            this.SparkAppId = new String(source.SparkAppId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateSparkAppResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

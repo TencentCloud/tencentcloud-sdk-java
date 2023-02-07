@@ -45,6 +45,14 @@ public class Group extends AbstractModel{
     private Department Department;
 
     /**
+    * 个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 组ID 
      * @return Id 组ID
      */
@@ -96,6 +104,26 @@ public class Group extends AbstractModel{
         this.Department = Department;
     }
 
+    /**
+     * Get 个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Count 个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Count 个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public Group() {
     }
 
@@ -113,6 +141,9 @@ public class Group extends AbstractModel{
         if (source.Department != null) {
             this.Department = new Department(source.Department);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class Group extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

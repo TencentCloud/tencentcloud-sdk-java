@@ -239,6 +239,14 @@ public class SparkJobInfo extends AbstractModel{
     private String JobArchives;
 
     /**
+    * Spark Image 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkImage")
+    @Expose
+    private String SparkImage;
+
+    /**
     * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -261,6 +269,14 @@ public class SparkJobInfo extends AbstractModel{
     @SerializedName("DataEngineStatus")
     @Expose
     private Long DataEngineStatus;
+
+    /**
+    * 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobExecutorMaxNumbers")
+    @Expose
+    private Long JobExecutorMaxNumbers;
 
     /**
      * Get spark作业ID 
@@ -767,6 +783,26 @@ public class SparkJobInfo extends AbstractModel{
     }
 
     /**
+     * Get Spark Image 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkImage Spark Image 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkImage() {
+        return this.SparkImage;
+    }
+
+    /**
+     * Set Spark Image 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkImage Spark Image 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkImage(String SparkImage) {
+        this.SparkImage = SparkImage;
+    }
+
+    /**
      * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
@@ -824,6 +860,26 @@ public class SparkJobInfo extends AbstractModel{
      */
     public void setDataEngineStatus(Long DataEngineStatus) {
         this.DataEngineStatus = DataEngineStatus;
+    }
+
+    /**
+     * Get 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJobExecutorMaxNumbers() {
+        return this.JobExecutorMaxNumbers;
+    }
+
+    /**
+     * Set 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于JobExecutorNums
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobExecutorMaxNumbers(Long JobExecutorMaxNumbers) {
+        this.JobExecutorMaxNumbers = JobExecutorMaxNumbers;
     }
 
     public SparkJobInfo() {
@@ -924,6 +980,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.JobArchives != null) {
             this.JobArchives = new String(source.JobArchives);
         }
+        if (source.SparkImage != null) {
+            this.SparkImage = new String(source.SparkImage);
+        }
         if (source.JobPythonFiles != null) {
             this.JobPythonFiles = new String(source.JobPythonFiles);
         }
@@ -932,6 +991,9 @@ public class SparkJobInfo extends AbstractModel{
         }
         if (source.DataEngineStatus != null) {
             this.DataEngineStatus = new Long(source.DataEngineStatus);
+        }
+        if (source.JobExecutorMaxNumbers != null) {
+            this.JobExecutorMaxNumbers = new Long(source.JobExecutorMaxNumbers);
         }
     }
 
@@ -970,9 +1032,11 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
         this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
         this.setParamSimple(map, prefix + "JobArchives", this.JobArchives);
+        this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
         this.setParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
         this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
+        this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
 
     }
 }
