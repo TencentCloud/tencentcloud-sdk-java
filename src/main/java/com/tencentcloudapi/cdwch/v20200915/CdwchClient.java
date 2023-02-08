@@ -239,6 +239,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *销毁集群 open api
+     * @param req DestroyInstanceRequest
+     * @return DestroyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyInstanceResponse DestroyInstance(DestroyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在集群配置页面修改集群配置文件接口，xml模式
      * @param req ModifyClusterConfigsRequest
      * @return ModifyClusterConfigsResponse

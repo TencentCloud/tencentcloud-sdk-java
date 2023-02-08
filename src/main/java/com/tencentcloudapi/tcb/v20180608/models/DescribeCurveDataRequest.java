@@ -50,6 +50,11 @@ public class DescribeCurveDataRequest extends AbstractModel{
 <li> TkeCpuUsed: 容器CPU使用量 </li>
 <li> TkeMemUsed: 容器内存使用量 </li>
 <li> TkeInvokeNum: 调用量 </li>
+<li> FunctionConcurrentExecutions: 云函数并发执行个数</li>
+<li> FunctionIdleProvisioned: 云函数预置并发闲置量 </li>
+<li> FunctionConcurrencyMemoryMB: 云函数并发执行内存量 </li>
+<li> FunctionThrottle: 云函数受限次数 </li>
+<li> FunctionProvisionedConcurrency: 云函数预置并发 </li>
     */
     @SerializedName("MetricName")
     @Expose
@@ -112,7 +117,12 @@ public class DescribeCurveDataRequest extends AbstractModel{
 <li> TkeMemRatio: 容器内存占用率 </li>
 <li> TkeCpuUsed: 容器CPU使用量 </li>
 <li> TkeMemUsed: 容器内存使用量 </li>
-<li> TkeInvokeNum: 调用量 </li> 
+<li> TkeInvokeNum: 调用量 </li>
+<li> FunctionConcurrentExecutions: 云函数并发执行个数</li>
+<li> FunctionIdleProvisioned: 云函数预置并发闲置量 </li>
+<li> FunctionConcurrencyMemoryMB: 云函数并发执行内存量 </li>
+<li> FunctionThrottle: 云函数受限次数 </li>
+<li> FunctionProvisionedConcurrency: 云函数预置并发 </li> 
      * @return MetricName <li> 指标名: </li>
 <li> StorageRead: 存储读请求次数 </li>
 <li> StorageWrite: 存储写请求次数 </li>
@@ -133,6 +143,11 @@ public class DescribeCurveDataRequest extends AbstractModel{
 <li> TkeCpuUsed: 容器CPU使用量 </li>
 <li> TkeMemUsed: 容器内存使用量 </li>
 <li> TkeInvokeNum: 调用量 </li>
+<li> FunctionConcurrentExecutions: 云函数并发执行个数</li>
+<li> FunctionIdleProvisioned: 云函数预置并发闲置量 </li>
+<li> FunctionConcurrencyMemoryMB: 云函数并发执行内存量 </li>
+<li> FunctionThrottle: 云函数受限次数 </li>
+<li> FunctionProvisionedConcurrency: 云函数预置并发 </li>
      */
     public String getMetricName() {
         return this.MetricName;
@@ -159,6 +174,11 @@ public class DescribeCurveDataRequest extends AbstractModel{
 <li> TkeCpuUsed: 容器CPU使用量 </li>
 <li> TkeMemUsed: 容器内存使用量 </li>
 <li> TkeInvokeNum: 调用量 </li>
+<li> FunctionConcurrentExecutions: 云函数并发执行个数</li>
+<li> FunctionIdleProvisioned: 云函数预置并发闲置量 </li>
+<li> FunctionConcurrencyMemoryMB: 云函数并发执行内存量 </li>
+<li> FunctionThrottle: 云函数受限次数 </li>
+<li> FunctionProvisionedConcurrency: 云函数预置并发 </li>
      * @param MetricName <li> 指标名: </li>
 <li> StorageRead: 存储读请求次数 </li>
 <li> StorageWrite: 存储写请求次数 </li>
@@ -179,6 +199,11 @@ public class DescribeCurveDataRequest extends AbstractModel{
 <li> TkeCpuUsed: 容器CPU使用量 </li>
 <li> TkeMemUsed: 容器内存使用量 </li>
 <li> TkeInvokeNum: 调用量 </li>
+<li> FunctionConcurrentExecutions: 云函数并发执行个数</li>
+<li> FunctionIdleProvisioned: 云函数预置并发闲置量 </li>
+<li> FunctionConcurrencyMemoryMB: 云函数并发执行内存量 </li>
+<li> FunctionThrottle: 云函数受限次数 </li>
+<li> FunctionProvisionedConcurrency: 云函数预置并发 </li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

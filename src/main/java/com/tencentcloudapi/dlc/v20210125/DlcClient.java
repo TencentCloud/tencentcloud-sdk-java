@@ -339,6 +339,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *创建托管存储内表
+     * @param req CreateInternalTableRequest
+     * @return CreateInternalTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInternalTableResponse CreateInternalTable(CreateInternalTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInternalTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInternalTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInternalTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateNotebookSession）用于创建notebook livy session
      * @param req CreateNotebookSessionRequest
      * @return CreateNotebookSessionResponse

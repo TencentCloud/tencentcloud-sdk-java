@@ -59,11 +59,18 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Long UserSubnetIPNum;
 
     /**
-    * 节点同步ip
+    * 同步元数据节点IP （uip）
     */
     @SerializedName("ScaleOutNodeIp")
     @Expose
     private String ScaleOutNodeIp;
+
+    /**
+    * 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+    */
+    @SerializedName("ReduceShardInfo")
+    @Expose
+    private String [] ReduceShardInfo;
 
     /**
      * Get 实例唯一ID 
@@ -150,19 +157,35 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点同步ip 
-     * @return ScaleOutNodeIp 节点同步ip
+     * Get 同步元数据节点IP （uip） 
+     * @return ScaleOutNodeIp 同步元数据节点IP （uip）
      */
     public String getScaleOutNodeIp() {
         return this.ScaleOutNodeIp;
     }
 
     /**
-     * Set 节点同步ip
-     * @param ScaleOutNodeIp 节点同步ip
+     * Set 同步元数据节点IP （uip）
+     * @param ScaleOutNodeIp 同步元数据节点IP （uip）
      */
     public void setScaleOutNodeIp(String ScaleOutNodeIp) {
         this.ScaleOutNodeIp = ScaleOutNodeIp;
+    }
+
+    /**
+     * Get 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔 
+     * @return ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     */
+    public String [] getReduceShardInfo() {
+        return this.ReduceShardInfo;
+    }
+
+    /**
+     * Set 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     * @param ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     */
+    public void setReduceShardInfo(String [] ReduceShardInfo) {
+        this.ReduceShardInfo = ReduceShardInfo;
     }
 
     public ScaleOutInstanceRequest() {
@@ -191,6 +214,12 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         if (source.ScaleOutNodeIp != null) {
             this.ScaleOutNodeIp = new String(source.ScaleOutNodeIp);
         }
+        if (source.ReduceShardInfo != null) {
+            this.ReduceShardInfo = new String[source.ReduceShardInfo.length];
+            for (int i = 0; i < source.ReduceShardInfo.length; i++) {
+                this.ReduceShardInfo[i] = new String(source.ReduceShardInfo[i]);
+            }
+        }
     }
 
 
@@ -204,6 +233,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScaleOutCluster", this.ScaleOutCluster);
         this.setParamSimple(map, prefix + "UserSubnetIPNum", this.UserSubnetIPNum);
         this.setParamSimple(map, prefix + "ScaleOutNodeIp", this.ScaleOutNodeIp);
+        this.setParamArraySimple(map, prefix + "ReduceShardInfo.", this.ReduceShardInfo);
 
     }
 }

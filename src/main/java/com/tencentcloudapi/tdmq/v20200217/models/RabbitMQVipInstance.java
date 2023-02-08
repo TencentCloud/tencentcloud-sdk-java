@@ -123,6 +123,14 @@ public class RabbitMQVipInstance extends AbstractModel{
     private String SpecName;
 
     /**
+    * 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExceptionInformation")
+    @Expose
+    private String ExceptionInformation;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -354,6 +362,26 @@ public class RabbitMQVipInstance extends AbstractModel{
         this.SpecName = SpecName;
     }
 
+    /**
+     * Get 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExceptionInformation 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExceptionInformation() {
+        return this.ExceptionInformation;
+    }
+
+    /**
+     * Set 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExceptionInformation 集群异常。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExceptionInformation(String ExceptionInformation) {
+        this.ExceptionInformation = ExceptionInformation;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -404,6 +432,9 @@ public class RabbitMQVipInstance extends AbstractModel{
         if (source.SpecName != null) {
             this.SpecName = new String(source.SpecName);
         }
+        if (source.ExceptionInformation != null) {
+            this.ExceptionInformation = new String(source.ExceptionInformation);
+        }
     }
 
 
@@ -425,6 +456,7 @@ public class RabbitMQVipInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
 
     }
 }

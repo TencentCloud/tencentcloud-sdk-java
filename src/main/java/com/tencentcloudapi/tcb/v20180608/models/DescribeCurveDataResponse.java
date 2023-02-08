@@ -65,6 +65,13 @@ public class DescribeCurveDataResponse extends AbstractModel{
     private Long [] Time;
 
     /**
+    * 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+    */
+    @SerializedName("NewValues")
+    @Expose
+    private Float NewValues;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +175,22 @@ public class DescribeCurveDataResponse extends AbstractModel{
     }
 
     /**
+     * Get 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到. 
+     * @return NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     */
+    public Float getNewValues() {
+        return this.NewValues;
+    }
+
+    /**
+     * Set 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     * @param NewValues 有效的监控数据, 每个有效监控数据的上报时间可以从时间数组中的对应位置上获取到.
+     */
+    public void setNewValues(Float NewValues) {
+        this.NewValues = NewValues;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -215,6 +238,9 @@ public class DescribeCurveDataResponse extends AbstractModel{
                 this.Time[i] = new Long(source.Time[i]);
             }
         }
+        if (source.NewValues != null) {
+            this.NewValues = new Float(source.NewValues);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -231,6 +257,7 @@ public class DescribeCurveDataResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamArraySimple(map, prefix + "Time.", this.Time);
+        this.setParamSimple(map, prefix + "NewValues", this.NewValues);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

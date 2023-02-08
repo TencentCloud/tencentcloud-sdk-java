@@ -317,6 +317,46 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *将指定印章授权给企业下的某些员工
+     * @param req ChannelCreateSealPolicyRequest
+     * @return ChannelCreateSealPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(ChannelCreateSealPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateSealPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateSealPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateSealPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除指定印章下多个授权信息
+     * @param req ChannelDeleteSealPoliciesRequest
+     * @return ChannelDeleteSealPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDeleteSealPoliciesResponse ChannelDeleteSealPolicies(ChannelDeleteSealPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelDeleteSealPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelDeleteSealPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelDeleteSealPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询企业员工列表
      * @param req ChannelDescribeEmployeesRequest
      * @return ChannelDescribeEmployeesResponse

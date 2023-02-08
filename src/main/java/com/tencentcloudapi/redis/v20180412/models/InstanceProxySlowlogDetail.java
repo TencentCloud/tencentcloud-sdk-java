@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel{
 
     /**
-    * 慢查询耗时
+    * 慢查询耗时（单位：毫秒）。
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * 客户端地址
+    * 客户端地址。
     */
     @SerializedName("Client")
     @Expose
     private String Client;
 
     /**
-    * 命令
+    * 命令。
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * 详细命令行信息
+    * 详细命令行信息。
     */
     @SerializedName("CommandLine")
     @Expose
     private String CommandLine;
 
     /**
-    * 执行时间
+    * 执行时间。
     */
     @SerializedName("ExecuteTime")
     @Expose
     private String ExecuteTime;
 
     /**
-     * Get 慢查询耗时 
-     * @return Duration 慢查询耗时
+     * Get 慢查询耗时（单位：毫秒）。 
+     * @return Duration 慢查询耗时（单位：毫秒）。
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 慢查询耗时
-     * @param Duration 慢查询耗时
+     * Set 慢查询耗时（单位：毫秒）。
+     * @param Duration 慢查询耗时（单位：毫秒）。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 客户端地址 
-     * @return Client 客户端地址
+     * Get 客户端地址。 
+     * @return Client 客户端地址。
      */
     public String getClient() {
         return this.Client;
     }
 
     /**
-     * Set 客户端地址
-     * @param Client 客户端地址
+     * Set 客户端地址。
+     * @param Client 客户端地址。
      */
     public void setClient(String Client) {
         this.Client = Client;
     }
 
     /**
-     * Get 命令 
-     * @return Command 命令
+     * Get 命令。 
+     * @return Command 命令。
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 命令
-     * @param Command 命令
+     * Set 命令。
+     * @param Command 命令。
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 详细命令行信息 
-     * @return CommandLine 详细命令行信息
+     * Get 详细命令行信息。 
+     * @return CommandLine 详细命令行信息。
      */
     public String getCommandLine() {
         return this.CommandLine;
     }
 
     /**
-     * Set 详细命令行信息
-     * @param CommandLine 详细命令行信息
+     * Set 详细命令行信息。
+     * @param CommandLine 详细命令行信息。
      */
     public void setCommandLine(String CommandLine) {
         this.CommandLine = CommandLine;
     }
 
     /**
-     * Get 执行时间 
-     * @return ExecuteTime 执行时间
+     * Get 执行时间。 
+     * @return ExecuteTime 执行时间。
      */
     public String getExecuteTime() {
         return this.ExecuteTime;
     }
 
     /**
-     * Set 执行时间
-     * @param ExecuteTime 执行时间
+     * Set 执行时间。
+     * @param ExecuteTime 执行时间。
      */
     public void setExecuteTime(String ExecuteTime) {
         this.ExecuteTime = ExecuteTime;

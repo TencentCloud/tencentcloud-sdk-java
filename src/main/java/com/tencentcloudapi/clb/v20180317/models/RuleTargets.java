@@ -52,6 +52,14 @@ public class RuleTargets extends AbstractModel{
     private Backend [] Targets;
 
     /**
+    * 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FunctionTargets")
+    @Expose
+    private FunctionTarget [] FunctionTargets;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -119,6 +127,26 @@ public class RuleTargets extends AbstractModel{
         this.Targets = Targets;
     }
 
+    /**
+     * Get 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FunctionTargets 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FunctionTarget [] getFunctionTargets() {
+        return this.FunctionTargets;
+    }
+
+    /**
+     * Set 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FunctionTargets 后端云函数的信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
+        this.FunctionTargets = FunctionTargets;
+    }
+
     public RuleTargets() {
     }
 
@@ -142,6 +170,12 @@ public class RuleTargets extends AbstractModel{
                 this.Targets[i] = new Backend(source.Targets[i]);
             }
         }
+        if (source.FunctionTargets != null) {
+            this.FunctionTargets = new FunctionTarget[source.FunctionTargets.length];
+            for (int i = 0; i < source.FunctionTargets.length; i++) {
+                this.FunctionTargets[i] = new FunctionTarget(source.FunctionTargets[i]);
+            }
+        }
     }
 
 
@@ -153,6 +187,7 @@ public class RuleTargets extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamArrayObj(map, prefix + "FunctionTargets.", this.FunctionTargets);
 
     }
 }

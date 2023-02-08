@@ -394,6 +394,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *对企业员工进行印章授权
+     * @param req CreateSealPolicyRequest
+     * @return CreateSealPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSealPolicyResponse CreateSealPolicy(CreateSealPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSealPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSealPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSealPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移除员工
      * @param req DeleteIntegrationEmployeesRequest
      * @return DeleteIntegrationEmployeesResponse
@@ -406,6 +426,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationEmployeesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIntegrationEmployees");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *撤销员工持有的印章权限
+     * @param req DeleteSealPoliciesRequest
+     * @return DeleteSealPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSealPoliciesResponse DeleteSealPolicies(DeleteSealPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSealPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSealPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSealPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

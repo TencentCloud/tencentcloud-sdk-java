@@ -37,6 +37,14 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     private String Output;
 
     /**
+    * 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Result")
+    @Expose
+    private VpcTaskResultDetailInfo [] Result;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     }
 
     /**
+     * Get 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpcTaskResultDetailInfo [] getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResult(VpcTaskResultDetailInfo [] Result) {
+        this.Result = Result;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +133,12 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
         if (source.Output != null) {
             this.Output = new String(source.Output);
         }
+        if (source.Result != null) {
+            this.Result = new VpcTaskResultDetailInfo[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new VpcTaskResultDetailInfo(source.Result[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +151,7 @@ public class DescribeVpcTaskResultResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Output", this.Output);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

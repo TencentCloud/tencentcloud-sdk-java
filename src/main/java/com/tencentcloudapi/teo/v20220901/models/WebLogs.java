@@ -30,11 +30,11 @@ public class WebLogs extends AbstractModel{
     private String EventId;
 
     /**
-    * 攻击源（客户端）Ip。
+    * http 日志内容。
     */
-    @SerializedName("AttackIp")
+    @SerializedName("HttpLog")
     @Expose
-    private String AttackIp;
+    private String HttpLog;
 
     /**
     * 受攻击子域名。
@@ -44,11 +44,11 @@ public class WebLogs extends AbstractModel{
     private String Domain;
 
     /**
-    * http 日志内容。
+    * 攻击源（客户端）Ip。
     */
-    @SerializedName("HttpLog")
+    @SerializedName("AttackIp")
     @Expose
-    private String HttpLog;
+    private String AttackIp;
 
     /**
     * IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)
@@ -56,6 +56,20 @@ public class WebLogs extends AbstractModel{
     @SerializedName("SipCountryCode")
     @Expose
     private String SipCountryCode;
+
+    /**
+    * 真实客户端Ip。
+    */
+    @SerializedName("RealClientIp")
+    @Expose
+    private String RealClientIp;
+
+    /**
+    * 真实客户端Ip所在国家iso-3166中alpha-2编码。
+    */
+    @SerializedName("RealClientIpCountryCode")
+    @Expose
+    private String RealClientIpCountryCode;
 
     /**
     * 攻击时间，采用unix秒级时间戳。
@@ -72,12 +86,12 @@ public class WebLogs extends AbstractModel{
     private String RequestUri;
 
     /**
-    * 攻击内容。
+    * 请求类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AttackContent")
+    @SerializedName("ReqMethod")
     @Expose
-    private String AttackContent;
+    private String ReqMethod;
 
     /**
     * 规则相关信息列表。
@@ -88,12 +102,12 @@ public class WebLogs extends AbstractModel{
     private SecRuleRelatedInfo [] RuleDetailList;
 
     /**
-    * 请求类型。
+    * 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ReqMethod")
+    @SerializedName("AttackContent")
     @Expose
-    private String ReqMethod;
+    private String AttackContent;
 
     /**
     * 日志所属区域。
@@ -120,19 +134,19 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 攻击源（客户端）Ip。 
-     * @return AttackIp 攻击源（客户端）Ip。
+     * Get http 日志内容。 
+     * @return HttpLog http 日志内容。
      */
-    public String getAttackIp() {
-        return this.AttackIp;
+    public String getHttpLog() {
+        return this.HttpLog;
     }
 
     /**
-     * Set 攻击源（客户端）Ip。
-     * @param AttackIp 攻击源（客户端）Ip。
+     * Set http 日志内容。
+     * @param HttpLog http 日志内容。
      */
-    public void setAttackIp(String AttackIp) {
-        this.AttackIp = AttackIp;
+    public void setHttpLog(String HttpLog) {
+        this.HttpLog = HttpLog;
     }
 
     /**
@@ -152,19 +166,19 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get http 日志内容。 
-     * @return HttpLog http 日志内容。
+     * Get 攻击源（客户端）Ip。 
+     * @return AttackIp 攻击源（客户端）Ip。
      */
-    public String getHttpLog() {
-        return this.HttpLog;
+    public String getAttackIp() {
+        return this.AttackIp;
     }
 
     /**
-     * Set http 日志内容。
-     * @param HttpLog http 日志内容。
+     * Set 攻击源（客户端）Ip。
+     * @param AttackIp 攻击源（客户端）Ip。
      */
-    public void setHttpLog(String HttpLog) {
-        this.HttpLog = HttpLog;
+    public void setAttackIp(String AttackIp) {
+        this.AttackIp = AttackIp;
     }
 
     /**
@@ -181,6 +195,38 @@ public class WebLogs extends AbstractModel{
      */
     public void setSipCountryCode(String SipCountryCode) {
         this.SipCountryCode = SipCountryCode;
+    }
+
+    /**
+     * Get 真实客户端Ip。 
+     * @return RealClientIp 真实客户端Ip。
+     */
+    public String getRealClientIp() {
+        return this.RealClientIp;
+    }
+
+    /**
+     * Set 真实客户端Ip。
+     * @param RealClientIp 真实客户端Ip。
+     */
+    public void setRealClientIp(String RealClientIp) {
+        this.RealClientIp = RealClientIp;
+    }
+
+    /**
+     * Get 真实客户端Ip所在国家iso-3166中alpha-2编码。 
+     * @return RealClientIpCountryCode 真实客户端Ip所在国家iso-3166中alpha-2编码。
+     */
+    public String getRealClientIpCountryCode() {
+        return this.RealClientIpCountryCode;
+    }
+
+    /**
+     * Set 真实客户端Ip所在国家iso-3166中alpha-2编码。
+     * @param RealClientIpCountryCode 真实客户端Ip所在国家iso-3166中alpha-2编码。
+     */
+    public void setRealClientIpCountryCode(String RealClientIpCountryCode) {
+        this.RealClientIpCountryCode = RealClientIpCountryCode;
     }
 
     /**
@@ -216,23 +262,23 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 攻击内容。
+     * Get 请求类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttackContent 攻击内容。
+     * @return ReqMethod 请求类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getAttackContent() {
-        return this.AttackContent;
+    public String getReqMethod() {
+        return this.ReqMethod;
     }
 
     /**
-     * Set 攻击内容。
+     * Set 请求类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttackContent 攻击内容。
+     * @param ReqMethod 请求类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAttackContent(String AttackContent) {
-        this.AttackContent = AttackContent;
+    public void setReqMethod(String ReqMethod) {
+        this.ReqMethod = ReqMethod;
     }
 
     /**
@@ -256,23 +302,23 @@ public class WebLogs extends AbstractModel{
     }
 
     /**
-     * Get 请求类型。
+     * Get 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReqMethod 请求类型。
+     * @return AttackContent 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getReqMethod() {
-        return this.ReqMethod;
+    public String getAttackContent() {
+        return this.AttackContent;
     }
 
     /**
-     * Set 请求类型。
+     * Set 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReqMethod 请求类型。
+     * @param AttackContent 攻击内容。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setReqMethod(String ReqMethod) {
-        this.ReqMethod = ReqMethod;
+    public void setAttackContent(String AttackContent) {
+        this.AttackContent = AttackContent;
     }
 
     /**
@@ -306,17 +352,23 @@ public class WebLogs extends AbstractModel{
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
-        if (source.AttackIp != null) {
-            this.AttackIp = new String(source.AttackIp);
+        if (source.HttpLog != null) {
+            this.HttpLog = new String(source.HttpLog);
         }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.HttpLog != null) {
-            this.HttpLog = new String(source.HttpLog);
+        if (source.AttackIp != null) {
+            this.AttackIp = new String(source.AttackIp);
         }
         if (source.SipCountryCode != null) {
             this.SipCountryCode = new String(source.SipCountryCode);
+        }
+        if (source.RealClientIp != null) {
+            this.RealClientIp = new String(source.RealClientIp);
+        }
+        if (source.RealClientIpCountryCode != null) {
+            this.RealClientIpCountryCode = new String(source.RealClientIpCountryCode);
         }
         if (source.AttackTime != null) {
             this.AttackTime = new Long(source.AttackTime);
@@ -324,8 +376,8 @@ public class WebLogs extends AbstractModel{
         if (source.RequestUri != null) {
             this.RequestUri = new String(source.RequestUri);
         }
-        if (source.AttackContent != null) {
-            this.AttackContent = new String(source.AttackContent);
+        if (source.ReqMethod != null) {
+            this.ReqMethod = new String(source.ReqMethod);
         }
         if (source.RuleDetailList != null) {
             this.RuleDetailList = new SecRuleRelatedInfo[source.RuleDetailList.length];
@@ -333,8 +385,8 @@ public class WebLogs extends AbstractModel{
                 this.RuleDetailList[i] = new SecRuleRelatedInfo(source.RuleDetailList[i]);
             }
         }
-        if (source.ReqMethod != null) {
-            this.ReqMethod = new String(source.ReqMethod);
+        if (source.AttackContent != null) {
+            this.AttackContent = new String(source.AttackContent);
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -347,15 +399,17 @@ public class WebLogs extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
-        this.setParamSimple(map, prefix + "AttackIp", this.AttackIp);
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "HttpLog", this.HttpLog);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "AttackIp", this.AttackIp);
         this.setParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+        this.setParamSimple(map, prefix + "RealClientIp", this.RealClientIp);
+        this.setParamSimple(map, prefix + "RealClientIpCountryCode", this.RealClientIpCountryCode);
         this.setParamSimple(map, prefix + "AttackTime", this.AttackTime);
         this.setParamSimple(map, prefix + "RequestUri", this.RequestUri);
-        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
-        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         this.setParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
