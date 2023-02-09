@@ -30,7 +30,7 @@ public class DBPrivilegeModifyInfo extends AbstractModel{
     private String DBName;
 
     /**
-    * 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+    * 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
     */
     @SerializedName("Privilege")
     @Expose
@@ -53,16 +53,16 @@ public class DBPrivilegeModifyInfo extends AbstractModel{
     }
 
     /**
-     * Get 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限 
-     * @return Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * Get 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者 
+     * @return Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
-     * @param Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限
+     * Set 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
+     * @param Privilege 权限变更信息。ReadWrite表示可读写，ReadOnly表示只读，Delete表示删除账号对该DB的权限，DBOwner所有者
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

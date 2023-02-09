@@ -65,6 +65,13 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
     private String [] BackupFiles;
 
     /**
+    * 需要重命名的数据库名称集合
+    */
+    @SerializedName("DBRename")
+    @Expose
+    private RenameRestoreDatabase [] DBRename;
+
+    /**
      * Get 导入目标实例ID 
      * @return InstanceId 导入目标实例ID
      */
@@ -160,6 +167,22 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
         this.BackupFiles = BackupFiles;
     }
 
+    /**
+     * Get 需要重命名的数据库名称集合 
+     * @return DBRename 需要重命名的数据库名称集合
+     */
+    public RenameRestoreDatabase [] getDBRename() {
+        return this.DBRename;
+    }
+
+    /**
+     * Set 需要重命名的数据库名称集合
+     * @param DBRename 需要重命名的数据库名称集合
+     */
+    public void setDBRename(RenameRestoreDatabase [] DBRename) {
+        this.DBRename = DBRename;
+    }
+
     public ModifyBackupMigrationRequest() {
     }
 
@@ -189,6 +212,12 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
                 this.BackupFiles[i] = new String(source.BackupFiles[i]);
             }
         }
+        if (source.DBRename != null) {
+            this.DBRename = new RenameRestoreDatabase[source.DBRename.length];
+            for (int i = 0; i < source.DBRename.length; i++) {
+                this.DBRename[i] = new RenameRestoreDatabase(source.DBRename[i]);
+            }
+        }
     }
 
 
@@ -202,6 +231,7 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RecoveryType", this.RecoveryType);
         this.setParamSimple(map, prefix + "UploadType", this.UploadType);
         this.setParamArraySimple(map, prefix + "BackupFiles.", this.BackupFiles);
+        this.setParamArrayObj(map, prefix + "DBRename.", this.DBRename);
 
     }
 }

@@ -41,7 +41,7 @@ public class CommonMixOutputParams extends AbstractModel{
     private Long OutputStreamType;
 
     /**
-    * 输出流比特率。取值范围[1，50000]。
+    * 输出流比特率。取值范围[1，10000]。
 不填的情况下，系统会自动判断。
     */
     @SerializedName("OutputStreamBitRate")
@@ -144,9 +144,9 @@ public class CommonMixOutputParams extends AbstractModel{
     }
 
     /**
-     * Get 输出流比特率。取值范围[1，50000]。
+     * Get 输出流比特率。取值范围[1，10000]。
 不填的情况下，系统会自动判断。 
-     * @return OutputStreamBitRate 输出流比特率。取值范围[1，50000]。
+     * @return OutputStreamBitRate 输出流比特率。取值范围[1，10000]。
 不填的情况下，系统会自动判断。
      */
     public Long getOutputStreamBitRate() {
@@ -154,9 +154,9 @@ public class CommonMixOutputParams extends AbstractModel{
     }
 
     /**
-     * Set 输出流比特率。取值范围[1，50000]。
+     * Set 输出流比特率。取值范围[1，10000]。
 不填的情况下，系统会自动判断。
-     * @param OutputStreamBitRate 输出流比特率。取值范围[1，50000]。
+     * @param OutputStreamBitRate 输出流比特率。取值范围[1，10000]。
 不填的情况下，系统会自动判断。
      */
     public void setOutputStreamBitRate(Long OutputStreamBitRate) {

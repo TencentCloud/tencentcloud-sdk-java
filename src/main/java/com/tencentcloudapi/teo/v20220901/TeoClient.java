@@ -79,6 +79,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *创建加速域名
+     * @param req CreateAccelerationDomainRequest
+     * @return CreateAccelerationDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccelerationDomainResponse CreateAccelerationDomain(CreateAccelerationDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccelerationDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccelerationDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccelerationDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建别称域名。
      * @param req CreateAliasDomainRequest
      * @return CreateAliasDomainResponse
@@ -319,6 +339,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *批量删除加速域名
+     * @param req DeleteAccelerationDomainsRequest
+     * @return DeleteAccelerationDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccelerationDomainsResponse DeleteAccelerationDomains(DeleteAccelerationDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccelerationDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccelerationDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccelerationDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除别称域名。
      * @param req DeleteAliasDomainRequest
      * @return DeleteAliasDomainResponse
@@ -431,6 +471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询加速域名列表，支持搜索、分页、排序、过滤。
+     * @param req DescribeAccelerationDomainsRequest
+     * @return DescribeAccelerationDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccelerationDomainsResponse DescribeAccelerationDomains(DescribeAccelerationDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccelerationDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccelerationDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccelerationDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1291,6 +1351,46 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IdentifyZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "IdentifyZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改加速域名信息
+     * @param req ModifyAccelerationDomainRequest
+     * @return ModifyAccelerationDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccelerationDomainResponse ModifyAccelerationDomain(ModifyAccelerationDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccelerationDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccelerationDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量修改加速域名状态
+     * @param req ModifyAccelerationDomainStatusesRequest
+     * @return ModifyAccelerationDomainStatusesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccelerationDomainStatusesResponse ModifyAccelerationDomainStatuses(ModifyAccelerationDomainStatusesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccelerationDomainStatusesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainStatusesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccelerationDomainStatuses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

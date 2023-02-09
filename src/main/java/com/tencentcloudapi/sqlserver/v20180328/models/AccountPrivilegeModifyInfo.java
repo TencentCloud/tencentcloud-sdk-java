@@ -37,11 +37,18 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
     private DBPrivilegeModifyInfo [] DBPrivileges;
 
     /**
-    * 是否为管理员账户
+    * 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
     */
     @SerializedName("IsAdmin")
     @Expose
     private Boolean IsAdmin;
+
+    /**
+    * 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 数据库用户名 
@@ -76,19 +83,35 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否为管理员账户 
-     * @return IsAdmin 是否为管理员账户
+     * Get 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false 
+     * @return IsAdmin 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
      */
     public Boolean getIsAdmin() {
         return this.IsAdmin;
     }
 
     /**
-     * Set 是否为管理员账户
-     * @param IsAdmin 是否为管理员账户
+     * Set 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
+     * @param IsAdmin 是否为管理员账户,当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false时，表示删除管理员权限，默认false
      */
     public void setIsAdmin(Boolean IsAdmin) {
         this.IsAdmin = IsAdmin;
+    }
+
+    /**
+     * Get 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3 
+     * @return AccountType 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     * @param AccountType 账号类型，IsAdmin字段的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public AccountPrivilegeModifyInfo() {
@@ -111,6 +134,9 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

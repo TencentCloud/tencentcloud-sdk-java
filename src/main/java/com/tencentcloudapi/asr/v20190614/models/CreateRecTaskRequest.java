@@ -173,11 +173,19 @@ public class CreateRecTaskRequest extends AbstractModel{
     private Long ReinforceHotword;
 
     /**
-    * 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。
+    * 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数（设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果）。
     */
     @SerializedName("SentenceMaxLength")
     @Expose
     private Long SentenceMaxLength;
+
+    /**
+    * 情绪识别能力(目前支持16k_zh) 默认为0，不开启。 1：开启情绪识别但是不会在文本展示“情绪标签”， 2：开启情绪识别并且在文本展示“情绪标签”。（该功能需要设置ResTextFormat 大于0）
+注意：本功能为增值服务，购买对应套餐包后，将参数设置为1或2时方可按对应方式生效，并消耗套餐包对应资源。参数设置为0时无需购买套餐包，也不会消耗对应资源。
+    */
+    @SerializedName("EmotionRecognition")
+    @Expose
+    private Long EmotionRecognition;
 
     /**
      * Get 引擎模型类型。注意：非电话场景请务必使用16k的引擎。
@@ -552,19 +560,39 @@ public class CreateRecTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。 
-     * @return SentenceMaxLength 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。
+     * Get 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数（设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果）。 
+     * @return SentenceMaxLength 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数（设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果）。
      */
     public Long getSentenceMaxLength() {
         return this.SentenceMaxLength;
     }
 
     /**
-     * Set 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。
-     * @param SentenceMaxLength 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数。
+     * Set 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数（设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果）。
+     * @param SentenceMaxLength 单标点最多字数，取值范围：[6，40]。默认为0，不开启该功能。该参数可用于字幕生成场景，控制单行字幕最大字数（设置ResTextFormat为3，解析返回的ResultDetail列表，通过结构中FinalSentence获取单个标点断句结果）。
      */
     public void setSentenceMaxLength(Long SentenceMaxLength) {
         this.SentenceMaxLength = SentenceMaxLength;
+    }
+
+    /**
+     * Get 情绪识别能力(目前支持16k_zh) 默认为0，不开启。 1：开启情绪识别但是不会在文本展示“情绪标签”， 2：开启情绪识别并且在文本展示“情绪标签”。（该功能需要设置ResTextFormat 大于0）
+注意：本功能为增值服务，购买对应套餐包后，将参数设置为1或2时方可按对应方式生效，并消耗套餐包对应资源。参数设置为0时无需购买套餐包，也不会消耗对应资源。 
+     * @return EmotionRecognition 情绪识别能力(目前支持16k_zh) 默认为0，不开启。 1：开启情绪识别但是不会在文本展示“情绪标签”， 2：开启情绪识别并且在文本展示“情绪标签”。（该功能需要设置ResTextFormat 大于0）
+注意：本功能为增值服务，购买对应套餐包后，将参数设置为1或2时方可按对应方式生效，并消耗套餐包对应资源。参数设置为0时无需购买套餐包，也不会消耗对应资源。
+     */
+    public Long getEmotionRecognition() {
+        return this.EmotionRecognition;
+    }
+
+    /**
+     * Set 情绪识别能力(目前支持16k_zh) 默认为0，不开启。 1：开启情绪识别但是不会在文本展示“情绪标签”， 2：开启情绪识别并且在文本展示“情绪标签”。（该功能需要设置ResTextFormat 大于0）
+注意：本功能为增值服务，购买对应套餐包后，将参数设置为1或2时方可按对应方式生效，并消耗套餐包对应资源。参数设置为0时无需购买套餐包，也不会消耗对应资源。
+     * @param EmotionRecognition 情绪识别能力(目前支持16k_zh) 默认为0，不开启。 1：开启情绪识别但是不会在文本展示“情绪标签”， 2：开启情绪识别并且在文本展示“情绪标签”。（该功能需要设置ResTextFormat 大于0）
+注意：本功能为增值服务，购买对应套餐包后，将参数设置为1或2时方可按对应方式生效，并消耗套餐包对应资源。参数设置为0时无需购买套餐包，也不会消耗对应资源。
+     */
+    public void setEmotionRecognition(Long EmotionRecognition) {
+        this.EmotionRecognition = EmotionRecognition;
     }
 
     public CreateRecTaskRequest() {
@@ -635,6 +663,9 @@ public class CreateRecTaskRequest extends AbstractModel{
         if (source.SentenceMaxLength != null) {
             this.SentenceMaxLength = new Long(source.SentenceMaxLength);
         }
+        if (source.EmotionRecognition != null) {
+            this.EmotionRecognition = new Long(source.EmotionRecognition);
+        }
     }
 
 
@@ -662,6 +693,7 @@ public class CreateRecTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
         this.setParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
         this.setParamSimple(map, prefix + "SentenceMaxLength", this.SentenceMaxLength);
+        this.setParamSimple(map, prefix + "EmotionRecognition", this.EmotionRecognition);
 
     }
 }

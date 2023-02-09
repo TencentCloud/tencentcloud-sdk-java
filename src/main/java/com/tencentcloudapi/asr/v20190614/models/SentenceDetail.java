@@ -103,6 +103,14 @@ public class SentenceDetail extends AbstractModel{
     private Long SilenceTime;
 
     /**
+    * 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmotionType")
+    @Expose
+    private String [] EmotionType;
+
+    /**
      * Get 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence 单句最终识别结果
@@ -302,6 +310,26 @@ public class SentenceDetail extends AbstractModel{
         this.SilenceTime = SilenceTime;
     }
 
+    /**
+     * Get 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmotionType 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getEmotionType() {
+        return this.EmotionType;
+    }
+
+    /**
+     * Set 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmotionType 情绪类型（可能为空）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmotionType(String [] EmotionType) {
+        this.EmotionType = EmotionType;
+    }
+
     public SentenceDetail() {
     }
 
@@ -343,6 +371,12 @@ public class SentenceDetail extends AbstractModel{
         if (source.SilenceTime != null) {
             this.SilenceTime = new Long(source.SilenceTime);
         }
+        if (source.EmotionType != null) {
+            this.EmotionType = new String[source.EmotionType.length];
+            for (int i = 0; i < source.EmotionType.length; i++) {
+                this.EmotionType[i] = new String(source.EmotionType[i]);
+            }
+        }
     }
 
 
@@ -360,6 +394,7 @@ public class SentenceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
         this.setParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
         this.setParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
+        this.setParamArraySimple(map, prefix + "EmotionType.", this.EmotionType);
 
     }
 }

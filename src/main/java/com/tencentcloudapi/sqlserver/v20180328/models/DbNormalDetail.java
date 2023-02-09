@@ -149,6 +149,13 @@ public class DbNormalDetail extends AbstractModel{
     private String UserAccessDesc;
 
     /**
+    * 数据库创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 是否已订阅 0：否 1：是 
      * @return IsSubscribed 是否已订阅 0：否 1：是
      */
@@ -436,6 +443,22 @@ public class DbNormalDetail extends AbstractModel{
         this.UserAccessDesc = UserAccessDesc;
     }
 
+    /**
+     * Get 数据库创建时间 
+     * @return CreateTime 数据库创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 数据库创建时间
+     * @param CreateTime 数据库创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public DbNormalDetail() {
     }
 
@@ -498,6 +521,9 @@ public class DbNormalDetail extends AbstractModel{
         if (source.UserAccessDesc != null) {
             this.UserAccessDesc = new String(source.UserAccessDesc);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class DbNormalDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RetentionPeriod", this.RetentionPeriod);
         this.setParamSimple(map, prefix + "StateDesc", this.StateDesc);
         this.setParamSimple(map, prefix + "UserAccessDesc", this.UserAccessDesc);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

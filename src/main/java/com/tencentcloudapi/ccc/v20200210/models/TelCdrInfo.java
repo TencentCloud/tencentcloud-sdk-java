@@ -312,6 +312,14 @@ notInService       不在服务区
     private String QueuedSkillGroupName;
 
     /**
+    * 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoicemailRecordURL")
+    @Expose
+    private String [] VoicemailRecordURL;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1083,6 +1091,26 @@ notInService       不在服务区
         this.QueuedSkillGroupName = QueuedSkillGroupName;
     }
 
+    /**
+     * Get 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoicemailRecordURL 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getVoicemailRecordURL() {
+        return this.VoicemailRecordURL;
+    }
+
+    /**
+     * Set 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoicemailRecordURL 通话中语音留言录音URL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoicemailRecordURL(String [] VoicemailRecordURL) {
+        this.VoicemailRecordURL = VoicemailRecordURL;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1199,6 +1227,12 @@ notInService       不在服务区
         if (source.QueuedSkillGroupName != null) {
             this.QueuedSkillGroupName = new String(source.QueuedSkillGroupName);
         }
+        if (source.VoicemailRecordURL != null) {
+            this.VoicemailRecordURL = new String[source.VoicemailRecordURL.length];
+            for (int i = 0; i < source.VoicemailRecordURL.length; i++) {
+                this.VoicemailRecordURL[i] = new String(source.VoicemailRecordURL[i]);
+            }
+        }
     }
 
 
@@ -1238,6 +1272,7 @@ notInService       不在服务区
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
+        this.setParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
 
     }
 }

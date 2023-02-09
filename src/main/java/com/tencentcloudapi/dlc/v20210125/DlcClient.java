@@ -199,6 +199,46 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CancelNotebookSessionStatement）用于取消session statement
+     * @param req CancelNotebookSessionStatementRequest
+     * @return CancelNotebookSessionStatementResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelNotebookSessionStatementResponse CancelNotebookSessionStatement(CancelNotebookSessionStatementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelNotebookSessionStatementResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelNotebookSessionStatementResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelNotebookSessionStatement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CancelNotebookSessionStatementBatch）用于按批取消Session statement。
+     * @param req CancelNotebookSessionStatementBatchRequest
+     * @return CancelNotebookSessionStatementBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(CancelNotebookSessionStatementBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelNotebookSessionStatementBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelNotebookSessionStatementBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelNotebookSessionStatementBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CancelTask），用于取消任务执行
      * @param req CancelTaskRequest
      * @return CancelTaskResponse
@@ -339,7 +379,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *创建托管存储内表
+     *创建托管存储内表（该接口已废弃）
      * @param req CreateInternalTableRequest
      * @return CreateInternalTableResponse
      * @throws TencentCloudSDKException
@@ -371,6 +411,46 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateNotebookSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateNotebookSessionStatement）用于创建session statement
+     * @param req CreateNotebookSessionStatementRequest
+     * @return CreateNotebookSessionStatementResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(CreateNotebookSessionStatementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotebookSessionStatementResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionStatementResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNotebookSessionStatement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateNotebookSessionStatementSupportBatchSQL）用于创建Statement批量运行SQL任务。
+     * @param req CreateNotebookSessionStatementSupportBatchSQLRequest
+     * @return CreateNotebookSessionStatementSupportBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(CreateNotebookSessionStatementSupportBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNotebookSessionStatementSupportBatchSQL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -599,6 +679,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteNotebookSession）用于删除notebook livy session
+     * @param req DeleteNotebookSessionRequest
+     * @return DeleteNotebookSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNotebookSessionResponse DeleteNotebookSession(DeleteNotebookSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNotebookSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNotebookSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNotebookSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DeleteScript）用于删除sql脚本。
      * @param req DeleteScriptRequest
      * @return DeleteScriptResponse
@@ -779,6 +879,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDataEngines）用于获取DataEngines信息列表
+     * @param req DescribeDataEnginesRequest
+     * @return DescribeDataEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEnginesResponse DescribeDataEngines(DescribeDataEnginesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataEnginesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataEnginesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataEngines");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDatabases）用于查询数据库列表。
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
@@ -811,6 +931,106 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNotebookSession");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSessionLog）用于获取notebook livy session日志
+     * @param req DescribeNotebookSessionLogRequest
+     * @return DescribeNotebookSessionLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionLogResponse DescribeNotebookSessionLog(DescribeNotebookSessionLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSessionLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSessionStatement）用于获取session statement信息
+     * @param req DescribeNotebookSessionStatementRequest
+     * @return DescribeNotebookSessionStatementResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatement(DescribeNotebookSessionStatementRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionStatementResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSessionStatement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSessionStatementSqlResult）用于获取statement运行结果。
+     * @param req DescribeNotebookSessionStatementSqlResultRequest
+     * @return DescribeNotebookSessionStatementSqlResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionStatementSqlResultResponse DescribeNotebookSessionStatementSqlResult(DescribeNotebookSessionStatementSqlResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSessionStatementSqlResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSessionStatements）用于获取Session Statement列表。
+     * @param req DescribeNotebookSessionStatementsRequest
+     * @return DescribeNotebookSessionStatementsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatements(DescribeNotebookSessionStatementsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionStatementsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSessionStatements");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeNotebookSessions）用于获取notebook livy session列表
+     * @param req DescribeNotebookSessionsRequest
+     * @return DescribeNotebookSessionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookSessionsResponse DescribeNotebookSessions(DescribeNotebookSessionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookSessionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookSessions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1171,6 +1391,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DropDMSTableResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DropDMSTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *生成创建托管表语句
+     * @param req GenerateCreateMangedTableSqlRequest
+     * @return GenerateCreateMangedTableSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateCreateMangedTableSql");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

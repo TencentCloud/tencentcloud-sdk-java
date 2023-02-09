@@ -137,6 +137,14 @@ public class Migration extends AbstractModel{
     private String IsRecovery;
 
     /**
+    * 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DBRename")
+    @Expose
+    private DBRenameRes [] DBRename;
+
+    /**
      * Get 备份导入任务ID 或 增量导入任务ID 
      * @return MigrationId 备份导入任务ID 或 增量导入任务ID
      */
@@ -400,6 +408,26 @@ public class Migration extends AbstractModel{
         this.IsRecovery = IsRecovery;
     }
 
+    /**
+     * Get 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DBRename 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DBRenameRes [] getDBRename() {
+        return this.DBRename;
+    }
+
+    /**
+     * Set 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DBRename 重命名的数据库名称集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDBRename(DBRenameRes [] DBRename) {
+        this.DBRename = DBRename;
+    }
+
     public Migration() {
     }
 
@@ -459,6 +487,12 @@ public class Migration extends AbstractModel{
         if (source.IsRecovery != null) {
             this.IsRecovery = new String(source.IsRecovery);
         }
+        if (source.DBRename != null) {
+            this.DBRename = new DBRenameRes[source.DBRename.length];
+            for (int i = 0; i < source.DBRename.length; i++) {
+                this.DBRename[i] = new DBRenameRes(source.DBRename[i]);
+            }
+        }
     }
 
 
@@ -482,6 +516,7 @@ public class Migration extends AbstractModel{
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamSimple(map, prefix + "IsRecovery", this.IsRecovery);
+        this.setParamArrayObj(map, prefix + "DBRename.", this.DBRename);
 
     }
 }

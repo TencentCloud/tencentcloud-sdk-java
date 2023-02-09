@@ -288,6 +288,13 @@ public class Disk extends AbstractModel{
     private Long DeleteSnapshot;
 
     /**
+    * 云硬盘备份点配额。表示最大可以保留的备份点数量。
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
     * 云硬盘备份点已使用的数量。
     */
     @SerializedName("DiskBackupCount")
@@ -930,6 +937,22 @@ public class Disk extends AbstractModel{
     }
 
     /**
+     * Get 云硬盘备份点配额。表示最大可以保留的备份点数量。 
+     * @return DiskBackupQuota 云硬盘备份点配额。表示最大可以保留的备份点数量。
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set 云硬盘备份点配额。表示最大可以保留的备份点数量。
+     * @param DiskBackupQuota 云硬盘备份点配额。表示最大可以保留的备份点数量。
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
+    /**
      * Get 云硬盘备份点已使用的数量。 
      * @return DiskBackupCount 云硬盘备份点已使用的数量。
      */
@@ -1086,6 +1109,9 @@ public class Disk extends AbstractModel{
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
         if (source.DiskBackupCount != null) {
             this.DiskBackupCount = new Long(source.DiskBackupCount);
         }
@@ -1135,6 +1161,7 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 

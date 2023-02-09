@@ -30,11 +30,18 @@ public class AccountPrivilege extends AbstractModel{
     private String UserName;
 
     /**
-    * 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+    * 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
+
+    /**
+    * 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 数据库用户名 
@@ -53,19 +60,35 @@ public class AccountPrivilege extends AbstractModel{
     }
 
     /**
-     * Get 数据库权限。ReadWrite表示可读写，ReadOnly表示只读 
-     * @return Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+     * Get 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者 
+     * @return Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
-     * @param Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读
+     * Set 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
+     * @param Privilege 数据库权限。ReadWrite表示可读写，ReadOnly表示只读,Delete表示删除DB对该账户的权限，DBOwner所有者
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
+    }
+
+    /**
+     * Get 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限 
+     * @return AccountType 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     * @param AccountType 账户名称，L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public AccountPrivilege() {
@@ -82,6 +105,9 @@ public class AccountPrivilege extends AbstractModel{
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class AccountPrivilege extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

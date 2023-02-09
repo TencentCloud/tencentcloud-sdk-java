@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class TimeRange extends AbstractModel{
 
     /**
-    * 开始时间，使用 ISO 日期格式。
+    * 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，使用 ISO 日期格式。
+    * 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 开始时间，使用 ISO 日期格式。 
-     * @return StartTime 开始时间，使用 ISO 日期格式。
+     * Get 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，使用 ISO 日期格式。
-     * @param StartTime 开始时间，使用 ISO 日期格式。
+     * Set 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 开始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，使用 ISO 日期格式。 
-     * @return EndTime 结束时间，使用 ISO 日期格式。
+     * Get 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，使用 ISO 日期格式。
-     * @param EndTime 结束时间，使用 ISO 日期格式。
+     * Set 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

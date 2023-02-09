@@ -51,7 +51,7 @@ public class AccountCreateInfo extends AbstractModel{
     private String Remark;
 
     /**
-    * 是否为管理员账户，默认为否
+    * 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
     */
     @SerializedName("IsAdmin")
     @Expose
@@ -63,6 +63,13 @@ public class AccountCreateInfo extends AbstractModel{
     @SerializedName("Authentication")
     @Expose
     private String Authentication;
+
+    /**
+    * 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get 实例用户名 
@@ -129,16 +136,16 @@ public class AccountCreateInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否为管理员账户，默认为否 
-     * @return IsAdmin 是否为管理员账户，默认为否
+     * Get 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3 
+     * @return IsAdmin 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
      */
     public Boolean getIsAdmin() {
         return this.IsAdmin;
     }
 
     /**
-     * Set 是否为管理员账户，默认为否
-     * @param IsAdmin 是否为管理员账户，默认为否
+     * Set 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
+     * @param IsAdmin 是否为管理员账户，当值为true 等价于基础版AccountType=L0，高可用AccountType=L1，当值为false，等价于AccountType=L3
      */
     public void setIsAdmin(Boolean IsAdmin) {
         this.IsAdmin = IsAdmin;
@@ -158,6 +165,22 @@ public class AccountCreateInfo extends AbstractModel{
      */
     public void setAuthentication(String Authentication) {
         this.Authentication = Authentication;
+    }
+
+    /**
+     * Get 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3 
+     * @return AccountType 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     * @param AccountType 账号类型，IsAdmin的扩展字段。 L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限，默认L3
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public AccountCreateInfo() {
@@ -189,6 +212,9 @@ public class AccountCreateInfo extends AbstractModel{
         if (source.Authentication != null) {
             this.Authentication = new String(source.Authentication);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class AccountCreateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

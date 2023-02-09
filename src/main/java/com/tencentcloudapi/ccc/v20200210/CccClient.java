@@ -39,6 +39,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *绑定号码外呼技能组
+     * @param req BindNumberCallOutSkillGroupRequest
+     * @return BindNumberCallOutSkillGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroup(BindNumberCallOutSkillGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindNumberCallOutSkillGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindNumberCallOutSkillGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindNumberCallOutSkillGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *绑定坐席所属技能组
      * @param req BindStaffSkillGroupListRequest
      * @return BindStaffSkillGroupListResponse
@@ -461,6 +481,26 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *查询号码列表
+     * @param req DescribeNumbersRequest
+     * @return DescribeNumbersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNumbersResponse DescribeNumbers(DescribeNumbersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNumbersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNumbersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNumbers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取当前正在通话的会话列表
      * @param req DescribePSTNActiveSessionListRequest
      * @return DescribePSTNActiveSessionListResponse
@@ -733,6 +773,26 @@ public class CccClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopAutoCalloutTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopAutoCalloutTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑号码外呼技能组
+     * @param req UnbindNumberCallOutSkillGroupRequest
+     * @return UnbindNumberCallOutSkillGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindNumberCallOutSkillGroupResponse UnbindNumberCallOutSkillGroup(UnbindNumberCallOutSkillGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindNumberCallOutSkillGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindNumberCallOutSkillGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindNumberCallOutSkillGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,7 +30,7 @@ public class DBPrivilege extends AbstractModel{
     private String DBName;
 
     /**
-    * 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+    * 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
     */
     @SerializedName("Privilege")
     @Expose
@@ -53,16 +53,16 @@ public class DBPrivilege extends AbstractModel{
     }
 
     /**
-     * Get 数据库权限，ReadWrite表示可读写，ReadOnly表示只读 
-     * @return Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+     * Get 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者 
+     * @return Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
-     * @param Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读
+     * Set 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
+     * @param Privilege 数据库权限，ReadWrite表示可读写，ReadOnly表示只读，DBOwner所有者
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

@@ -100,6 +100,13 @@ public class AccountDetail extends AbstractModel{
     private String Host;
 
     /**
+    * 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 账户名 
      * @return Name 账户名
      */
@@ -275,6 +282,22 @@ public class AccountDetail extends AbstractModel{
         this.Host = Host;
     }
 
+    /**
+     * Get 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限 
+     * @return AccountType 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     * @param AccountType 账号类型。L0-超级权限(基础版独有),L1-高级权限,L2-特殊权限,L3-普通权限
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public AccountDetail() {
     }
 
@@ -319,6 +342,9 @@ public class AccountDetail extends AbstractModel{
         if (source.Host != null) {
             this.Host = new String(source.Host);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class AccountDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

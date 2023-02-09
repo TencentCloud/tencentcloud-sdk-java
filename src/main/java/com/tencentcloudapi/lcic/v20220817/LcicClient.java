@@ -39,6 +39,46 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *批量创建房间接口
+     * @param req BatchCreateRoomRequest
+     * @return BatchCreateRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateRoomResponse BatchCreateRoom(BatchCreateRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除多个房间的录制文件
+     * @param req BatchDeleteRecordRequest
+     * @return BatchDeleteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteRecordResponse BatchDeleteRecord(BatchDeleteRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
      * @param req BatchRegisterRequest
      * @return BatchRegisterResponse
@@ -139,6 +179,46 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除文档
+     * @param req DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除指定房间的录制文件
+     * @param req DeleteRecordRequest
+     * @return DeleteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除房间
      * @param req DeleteRoomRequest
      * @return DeleteRoomResponse
@@ -171,6 +251,46 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAppDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAppDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取文档信息
+     * @param req DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口获取指定房间下课件列表
+     * @param req DescribeDocumentsByRoomRequest
+     * @return DescribeDocumentsByRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocumentsByRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -219,6 +339,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *此接口用于获取指定应用ID下用户列表
+     * @param req DescribeSdkAppIdUsersRequest
+     * @return DescribeSdkAppIdUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSdkAppIdUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSdkAppIdUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取用户信息
      * @param req DescribeUserRequest
      * @return DescribeUserResponse
@@ -231,6 +371,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取水印设置
+     * @param req GetWatermarkRequest
+     * @return GetWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWatermarkResponse GetWatermark(GetWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -319,6 +479,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *此接口用于修改用户配置，如头像，昵称/用户名等。
+     * @param req ModifyUserProfileRequest
+     * @return ModifyUserProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserProfileResponse ModifyUserProfile(ModifyUserProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *注册用户
      * @param req RegisterUserRequest
      * @return RegisterUserResponse
@@ -351,6 +531,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetAppCustomContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *设置水印
+     * @param req SetWatermarkRequest
+     * @return SetWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetWatermarkResponse SetWatermark(SetWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
