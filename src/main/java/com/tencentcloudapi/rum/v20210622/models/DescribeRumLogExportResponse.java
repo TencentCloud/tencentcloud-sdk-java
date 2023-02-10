@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
+public class DescribeRumLogExportResponse extends AbstractModel{
 
     /**
-    * 创建托管存储内表sql语句描述
+    * 返回字符串
     */
-    @SerializedName("Execution")
+    @SerializedName("Result")
     @Expose
-    private Execution Execution;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建托管存储内表sql语句描述 
-     * @return Execution 创建托管存储内表sql语句描述
+     * Get 返回字符串 
+     * @return Result 返回字符串
      */
-    public Execution getExecution() {
-        return this.Execution;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 创建托管存储内表sql语句描述
-     * @param Execution 创建托管存储内表sql语句描述
+     * Set 返回字符串
+     * @param Result 返回字符串
      */
-    public void setExecution(Execution Execution) {
-        this.Execution = Execution;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,16 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GenerateCreateMangedTableSqlResponse() {
+    public DescribeRumLogExportResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GenerateCreateMangedTableSqlResponse(GenerateCreateMangedTableSqlResponse source) {
-        if (source.Execution != null) {
-            this.Execution = new Execution(source.Execution);
+    public DescribeRumLogExportResponse(DescribeRumLogExportResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Execution.", this.Execution);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

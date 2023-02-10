@@ -13,21 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dlc.v20210125.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
+public class DeleteFileConfigResponse extends AbstractModel{
 
     /**
-    * 创建托管存储内表sql语句描述
+    * 删除结果
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Execution")
+    @SerializedName("Result")
     @Expose
-    private Execution Execution;
+    private Boolean Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +38,23 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建托管存储内表sql语句描述 
-     * @return Execution 创建托管存储内表sql语句描述
+     * Get 删除结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 删除结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Execution getExecution() {
-        return this.Execution;
+    public Boolean getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 创建托管存储内表sql语句描述
-     * @param Execution 创建托管存储内表sql语句描述
+     * Set 删除结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 删除结果
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setExecution(Execution Execution) {
-        this.Execution = Execution;
+    public void setResult(Boolean Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +73,16 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GenerateCreateMangedTableSqlResponse() {
+    public DeleteFileConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GenerateCreateMangedTableSqlResponse(GenerateCreateMangedTableSqlResponse source) {
-        if (source.Execution != null) {
-            this.Execution = new Execution(source.Execution);
+    public DeleteFileConfigResponse(DeleteFileConfigResponse source) {
+        if (source.Result != null) {
+            this.Result = new Boolean(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class GenerateCreateMangedTableSqlResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Execution.", this.Execution);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -47,7 +47,7 @@ public class Objects extends AbstractModel{
     private String [] AdvancedObjects;
 
     /**
-    * OnlineDDL类型
+    * OnlineDDL类型，冗余字段不做配置用途
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineDDL")
@@ -115,9 +115,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Get OnlineDDL类型
+     * Get OnlineDDL类型，冗余字段不做配置用途
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OnlineDDL OnlineDDL类型
+     * @return OnlineDDL OnlineDDL类型，冗余字段不做配置用途
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public OnlineDDL getOnlineDDL() {
@@ -125,9 +125,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Set OnlineDDL类型
+     * Set OnlineDDL类型，冗余字段不做配置用途
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OnlineDDL OnlineDDL类型
+     * @param OnlineDDL OnlineDDL类型，冗余字段不做配置用途
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineDDL(OnlineDDL OnlineDDL) {

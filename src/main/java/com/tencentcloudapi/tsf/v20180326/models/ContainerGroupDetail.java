@@ -319,6 +319,38 @@ public class ContainerGroupDetail extends AbstractModel{
     private HealthCheckSettings HealthCheckSettings;
 
     /**
+    * 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowPlainYamlDeploy")
+    @Expose
+    private Boolean AllowPlainYamlDeploy;
+
+    /**
+    * 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNotEqualServiceConfig")
+    @Expose
+    private Boolean IsNotEqualServiceConfig;
+
+    /**
+    * 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepoName")
+    @Expose
+    private String RepoName;
+
+    /**
+    * 别名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -1058,6 +1090,86 @@ public class ContainerGroupDetail extends AbstractModel{
         this.HealthCheckSettings = HealthCheckSettings;
     }
 
+    /**
+     * Get 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowPlainYamlDeploy 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowPlainYamlDeploy() {
+        return this.AllowPlainYamlDeploy;
+    }
+
+    /**
+     * Set 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowPlainYamlDeploy 允许PlainYamlDeploy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowPlainYamlDeploy(Boolean AllowPlainYamlDeploy) {
+        this.AllowPlainYamlDeploy = AllowPlainYamlDeploy;
+    }
+
+    /**
+     * Get 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNotEqualServiceConfig 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsNotEqualServiceConfig() {
+        return this.IsNotEqualServiceConfig;
+    }
+
+    /**
+     * Set 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNotEqualServiceConfig 是否不等于ServiceConfig
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNotEqualServiceConfig(Boolean IsNotEqualServiceConfig) {
+        this.IsNotEqualServiceConfig = IsNotEqualServiceConfig;
+    }
+
+    /**
+     * Get 仓库名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepoName 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepoName() {
+        return this.RepoName;
+    }
+
+    /**
+     * Set 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepoName 仓库名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepoName(String RepoName) {
+        this.RepoName = RepoName;
+    }
+
+    /**
+     * Get 别名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alias 别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alias 别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public ContainerGroupDetail() {
     }
 
@@ -1183,6 +1295,18 @@ public class ContainerGroupDetail extends AbstractModel{
         if (source.HealthCheckSettings != null) {
             this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
         }
+        if (source.AllowPlainYamlDeploy != null) {
+            this.AllowPlainYamlDeploy = new Boolean(source.AllowPlainYamlDeploy);
+        }
+        if (source.IsNotEqualServiceConfig != null) {
+            this.IsNotEqualServiceConfig = new Boolean(source.IsNotEqualServiceConfig);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -1227,6 +1351,10 @@ public class ContainerGroupDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxSurge", this.MaxSurge);
         this.setParamSimple(map, prefix + "MaxUnavailable", this.MaxUnavailable);
         this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamSimple(map, prefix + "AllowPlainYamlDeploy", this.AllowPlainYamlDeploy);
+        this.setParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
+        this.setParamSimple(map, prefix + "RepoName", this.RepoName);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

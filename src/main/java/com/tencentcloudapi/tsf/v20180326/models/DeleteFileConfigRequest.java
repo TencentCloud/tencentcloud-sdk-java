@@ -13,53 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class DeleteFileConfigRequest extends AbstractModel{
 
     /**
-    * 状态
-注意：此字段可能返回 null，表示取不到有效值。
+    * 文件配置项ID
     */
-    @SerializedName("Status")
+    @SerializedName("ConfigId")
     @Expose
-    private String Status;
+    private String ConfigId;
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件配置项ID 
+     * @return ConfigId 文件配置项ID
      */
-    public String getStatus() {
-        return this.Status;
+    public String getConfigId() {
+        return this.ConfigId;
     }
 
     /**
-     * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 文件配置项ID
+     * @param ConfigId 文件配置项ID
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setConfigId(String ConfigId) {
+        this.ConfigId = ConfigId;
     }
 
-    public OnlineDDL() {
+    public DeleteFileConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public DeleteFileConfigRequest(DeleteFileConfigRequest source) {
+        if (source.ConfigId != null) {
+            this.ConfigId = new String(source.ConfigId);
         }
     }
 
@@ -68,7 +63,7 @@ public class OnlineDDL extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
 
     }
 }

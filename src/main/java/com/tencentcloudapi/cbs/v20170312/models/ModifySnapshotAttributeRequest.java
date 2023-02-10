@@ -30,18 +30,18 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
     private String SnapshotId;
 
     /**
-    * 新的快照名称。最长为60个字符。
-    */
-    @SerializedName("SnapshotName")
-    @Expose
-    private String SnapshotName;
-
-    /**
     * 快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
+
+    /**
+    * 新的快照名称。最长为60个字符。
+    */
+    @SerializedName("SnapshotName")
+    @Expose
+    private String SnapshotName;
 
     /**
     * 快照的到期时间；设置好快照将会被同时设置为非永久保留方式；超过到期时间后快照将会被自动删除。
@@ -67,22 +67,6 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 新的快照名称。最长为60个字符。 
-     * @return SnapshotName 新的快照名称。最长为60个字符。
-     */
-    public String getSnapshotName() {
-        return this.SnapshotName;
-    }
-
-    /**
-     * Set 新的快照名称。最长为60个字符。
-     * @param SnapshotName 新的快照名称。最长为60个字符。
-     */
-    public void setSnapshotName(String SnapshotName) {
-        this.SnapshotName = SnapshotName;
-    }
-
-    /**
      * Get 快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。 
      * @return IsPermanent 快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
      */
@@ -96,6 +80,22 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
+    }
+
+    /**
+     * Get 新的快照名称。最长为60个字符。 
+     * @return SnapshotName 新的快照名称。最长为60个字符。
+     */
+    public String getSnapshotName() {
+        return this.SnapshotName;
+    }
+
+    /**
+     * Set 新的快照名称。最长为60个字符。
+     * @param SnapshotName 新的快照名称。最长为60个字符。
+     */
+    public void setSnapshotName(String SnapshotName) {
+        this.SnapshotName = SnapshotName;
     }
 
     /**
@@ -125,11 +125,11 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
-        if (source.SnapshotName != null) {
-            this.SnapshotName = new String(source.SnapshotName);
-        }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
         }
         if (source.Deadline != null) {
             this.Deadline = new String(source.Deadline);
@@ -142,8 +142,8 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
-        this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }

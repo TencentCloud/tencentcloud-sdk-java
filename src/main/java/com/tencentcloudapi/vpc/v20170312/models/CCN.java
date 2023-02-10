@@ -80,7 +80,7 @@ public class CCN extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-    * 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+    * 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthLimitType")
@@ -95,7 +95,7 @@ public class CCN extends AbstractModel{
     private Tag [] TagSet;
 
     /**
-    * 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+    * 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
     */
     @SerializedName("RoutePriorityFlag")
     @Expose
@@ -110,12 +110,20 @@ public class CCN extends AbstractModel{
     private Long RouteTableCount;
 
     /**
-    * 是否开启云联网多路由表特性。False：未开启，True：开启。
+    * 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableFlag")
     @Expose
     private Boolean RouteTableFlag;
+
+    /**
+    * `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSecurityLock")
+    @Expose
+    private Boolean IsSecurityLock;
 
     /**
     * 是否开启云联网路由传播策略。`False` 未开启，`True` 开启。
@@ -258,9 +266,9 @@ public class CCN extends AbstractModel{
     }
 
     /**
-     * Get 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * Get 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @return BandwidthLimitType 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBandwidthLimitType() {
@@ -268,9 +276,9 @@ public class CCN extends AbstractModel{
     }
 
     /**
-     * Set 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * Set 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
+     * @param BandwidthLimitType 限速类型，`INTER_REGION_LIMIT` 为地域间限速；`OUTER_REGION_LIMIT` 为地域出口限速。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthLimitType(String BandwidthLimitType) {
@@ -294,16 +302,16 @@ public class CCN extends AbstractModel{
     }
 
     /**
-     * Get 是否支持云联网路由优先级的功能。False：不支持，True：支持。 
-     * @return RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * Get 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。 
+     * @return RoutePriorityFlag 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
      */
     public Boolean getRoutePriorityFlag() {
         return this.RoutePriorityFlag;
     }
 
     /**
-     * Set 是否支持云联网路由优先级的功能。False：不支持，True：支持。
-     * @param RoutePriorityFlag 是否支持云联网路由优先级的功能。False：不支持，True：支持。
+     * Set 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
+     * @param RoutePriorityFlag 是否支持云联网路由优先级的功能。`False`：不支持，`True`：支持。
      */
     public void setRoutePriorityFlag(Boolean RoutePriorityFlag) {
         this.RoutePriorityFlag = RoutePriorityFlag;
@@ -330,9 +338,9 @@ public class CCN extends AbstractModel{
     }
 
     /**
-     * Get 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * Get 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * @return RouteTableFlag 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getRouteTableFlag() {
@@ -340,13 +348,33 @@ public class CCN extends AbstractModel{
     }
 
     /**
-     * Set 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * Set 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RouteTableFlag 是否开启云联网多路由表特性。False：未开启，True：开启。
+     * @param RouteTableFlag 是否开启云联网多路由表特性。`False`：未开启，`True`：开启。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableFlag(Boolean RouteTableFlag) {
         this.RouteTableFlag = RouteTableFlag;
+    }
+
+    /**
+     * Get `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSecurityLock `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSecurityLock() {
+        return this.IsSecurityLock;
+    }
+
+    /**
+     * Set `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSecurityLock `true`：实例已被封禁，流量不通，`false`:解封禁。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSecurityLock(Boolean IsSecurityLock) {
+        this.IsSecurityLock = IsSecurityLock;
     }
 
     /**
@@ -419,6 +447,9 @@ public class CCN extends AbstractModel{
         if (source.RouteTableFlag != null) {
             this.RouteTableFlag = new Boolean(source.RouteTableFlag);
         }
+        if (source.IsSecurityLock != null) {
+            this.IsSecurityLock = new Boolean(source.IsSecurityLock);
+        }
         if (source.RouteBroadcastPolicyFlag != null) {
             this.RouteBroadcastPolicyFlag = new Boolean(source.RouteBroadcastPolicyFlag);
         }
@@ -442,6 +473,7 @@ public class CCN extends AbstractModel{
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
         this.setParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
         this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
+        this.setParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
         this.setParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
 
     }

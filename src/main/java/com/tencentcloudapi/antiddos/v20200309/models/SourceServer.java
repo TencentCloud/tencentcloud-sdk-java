@@ -47,6 +47,13 @@ public class SourceServer extends AbstractModel{
     private Long Weight;
 
     /**
+    * 端口号：0~65535
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get 源站的地址（IP或者域名） 
      * @return RealServer 源站的地址（IP或者域名）
      */
@@ -106,6 +113,22 @@ public class SourceServer extends AbstractModel{
         this.Weight = Weight;
     }
 
+    /**
+     * Get 端口号：0~65535 
+     * @return Port 端口号：0~65535
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口号：0~65535
+     * @param Port 端口号：0~65535
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public SourceServer() {
     }
 
@@ -123,6 +146,9 @@ public class SourceServer extends AbstractModel{
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -133,6 +159,7 @@ public class SourceServer extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServer", this.RealServer);
         this.setParamSimple(map, prefix + "RsType", this.RsType);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

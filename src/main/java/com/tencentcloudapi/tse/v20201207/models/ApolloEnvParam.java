@@ -31,6 +31,9 @@ public class ApolloEnvParam extends AbstractModel{
 
     /**
     * 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
     */
     @SerializedName("EngineResourceSpec")
     @Expose
@@ -65,6 +68,13 @@ public class ApolloEnvParam extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 环境描述
+    */
+    @SerializedName("EnvDesc")
+    @Expose
+    private String EnvDesc;
+
+    /**
      * Get 环境名称 
      * @return Name 环境名称
      */
@@ -81,8 +91,14 @@ public class ApolloEnvParam extends AbstractModel{
     }
 
     /**
-     * Get 环境内引擎的节点规格 ID 
+     * Get 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID 
      * @return EngineResourceSpec 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
      */
     public String getEngineResourceSpec() {
         return this.EngineResourceSpec;
@@ -90,7 +106,13 @@ public class ApolloEnvParam extends AbstractModel{
 
     /**
      * Set 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
      * @param EngineResourceSpec 环境内引擎的节点规格 ID
+-1C2G
+-2C4G
+兼容原spec-xxxxxx形式的规格ID
      */
     public void setEngineResourceSpec(String EngineResourceSpec) {
         this.EngineResourceSpec = EngineResourceSpec;
@@ -160,6 +182,22 @@ public class ApolloEnvParam extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 环境描述 
+     * @return EnvDesc 环境描述
+     */
+    public String getEnvDesc() {
+        return this.EnvDesc;
+    }
+
+    /**
+     * Set 环境描述
+     * @param EnvDesc 环境描述
+     */
+    public void setEnvDesc(String EnvDesc) {
+        this.EnvDesc = EnvDesc;
+    }
+
     public ApolloEnvParam() {
     }
 
@@ -186,6 +224,9 @@ public class ApolloEnvParam extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.EnvDesc != null) {
+            this.EnvDesc = new String(source.EnvDesc);
+        }
     }
 
 
@@ -199,6 +240,7 @@ public class ApolloEnvParam extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
 
     }
 }

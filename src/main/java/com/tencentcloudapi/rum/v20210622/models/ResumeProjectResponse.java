@@ -13,53 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class ResumeProjectResponse extends AbstractModel{
 
     /**
-    * 状态
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Status")
+    @SerializedName("RequestId")
     @Expose
-    private String Status;
+    private String RequestId;
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getStatus() {
-        return this.Status;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public OnlineDDL() {
+    public ResumeProjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public ResumeProjectResponse(ResumeProjectResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -68,7 +63,7 @@ public class OnlineDDL extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

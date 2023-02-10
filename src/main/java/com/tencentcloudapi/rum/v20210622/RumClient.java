@@ -953,6 +953,46 @@ public class RumClient extends AbstractClient{
 
     /**
      *获取项目下的日志列表（实例创建的项目下的日志列表）
+     * @param req DescribeRumLogExportRequest
+     * @return DescribeRumLogExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportResponse DescribeRumLogExport(DescribeRumLogExportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumLogExport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取项目下的日志导出列表
+     * @param req DescribeRumLogExportsRequest
+     * @return DescribeRumLogExportsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportsResponse DescribeRumLogExports(DescribeRumLogExportsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumLogExports");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取项目下的日志列表（实例创建的项目下的日志列表）
      * @param req DescribeRumLogListRequest
      * @return DescribeRumLogListResponse
      * @throws TencentCloudSDKException
@@ -1164,6 +1204,26 @@ public class RumClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResumeInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResumeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *恢复应用使用与上报数据
+     * @param req ResumeProjectRequest
+     * @return ResumeProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeProjectResponse ResumeProject(ResumeProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeProject");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

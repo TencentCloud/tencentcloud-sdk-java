@@ -30,7 +30,7 @@ public class CreateBackupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+    * 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -68,16 +68,16 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。 
-     * @return BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * Get 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。 
+     * @return BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
-     * @param BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备。
+     * Set 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
+     * @param BackupMethod 目标备份方法，可选的值：logical - 逻辑冷备，physical - 物理冷备，snapshot - 快照备份。基础版实例仅支持快照备份。
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;

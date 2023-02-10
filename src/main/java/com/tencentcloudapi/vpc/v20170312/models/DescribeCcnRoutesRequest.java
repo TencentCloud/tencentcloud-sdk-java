@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCcnRoutesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID，形如：ccn-gree226l。
+    * CCN实例ID，形如：`ccn-gree226l`。
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+    * CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
     */
     @SerializedName("RouteIds")
     @Expose
@@ -64,32 +64,32 @@ public class DescribeCcnRoutesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get CCN实例ID，形如：ccn-gree226l。 
-     * @return CcnId CCN实例ID，形如：ccn-gree226l。
+     * Get CCN实例ID，形如：`ccn-gree226l`。 
+     * @return CcnId CCN实例ID，形如：`ccn-gree226l`。
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID，形如：ccn-gree226l。
-     * @param CcnId CCN实例ID，形如：ccn-gree226l。
+     * Set CCN实例ID，形如：`ccn-gree226l`。
+     * @param CcnId CCN实例ID，形如：`ccn-gree226l`。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
-     * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。 
+     * @return RouteIds CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
-     * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
+     * @param RouteIds CCN路由策略唯一ID，形如：`ccnr-f49l6u0z`。
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;

@@ -759,6 +759,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *删除文件配置项
+     * @param req DeleteFileConfigRequest
+     * @return DeleteFileConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFileConfigResponse DeleteFileConfig(DeleteFileConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFileConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFileConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFileConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除容器部署组
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse

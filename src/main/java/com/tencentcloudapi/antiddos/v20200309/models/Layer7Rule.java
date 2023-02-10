@@ -58,6 +58,20 @@ public class Layer7Rule extends AbstractModel{
     private RuleInstanceRelation [] InstanceDetailRule;
 
     /**
+    * 协议
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * 端口号
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Long Vport;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -137,6 +151,38 @@ public class Layer7Rule extends AbstractModel{
         this.InstanceDetailRule = InstanceDetailRule;
     }
 
+    /**
+     * Get 协议 
+     * @return Protocol 协议
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 协议
+     * @param Protocol 协议
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 端口号 
+     * @return Vport 端口号
+     */
+    public Long getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set 端口号
+     * @param Vport 端口号
+     */
+    public void setVport(Long Vport) {
+        this.Vport = Vport;
+    }
+
     public Layer7Rule() {
     }
 
@@ -172,6 +218,12 @@ public class Layer7Rule extends AbstractModel{
                 this.InstanceDetailRule[i] = new RuleInstanceRelation(source.InstanceDetailRule[i]);
             }
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
     }
 
 
@@ -184,6 +236,8 @@ public class Layer7Rule extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RealServers.", this.RealServers);
         this.setParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
         this.setParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
 
     }
 }

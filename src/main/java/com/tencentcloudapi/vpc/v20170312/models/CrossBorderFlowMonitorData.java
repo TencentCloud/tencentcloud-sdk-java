@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CrossBorderFlowMonitorData extends AbstractModel{
 
     /**
-    * 入带宽
+    * 入带宽，单位：`bps`。
     */
     @SerializedName("InBandwidth")
     @Expose
     private Long [] InBandwidth;
 
     /**
-    * 出带宽
+    * 出带宽，单位：`bps`。
     */
     @SerializedName("OutBandwidth")
     @Expose
     private Long [] OutBandwidth;
 
     /**
-    * 入包
+    * 入包，单位：`pps`。
     */
     @SerializedName("InPkg")
     @Expose
     private Long [] InPkg;
 
     /**
-    * 出包
+    * 出包，单位：`pps`。
     */
     @SerializedName("OutPkg")
     @Expose
     private Long [] OutPkg;
 
     /**
-     * Get 入带宽 
-     * @return InBandwidth 入带宽
+     * Get 入带宽，单位：`bps`。 
+     * @return InBandwidth 入带宽，单位：`bps`。
      */
     public Long [] getInBandwidth() {
         return this.InBandwidth;
     }
 
     /**
-     * Set 入带宽
-     * @param InBandwidth 入带宽
+     * Set 入带宽，单位：`bps`。
+     * @param InBandwidth 入带宽，单位：`bps`。
      */
     public void setInBandwidth(Long [] InBandwidth) {
         this.InBandwidth = InBandwidth;
     }
 
     /**
-     * Get 出带宽 
-     * @return OutBandwidth 出带宽
+     * Get 出带宽，单位：`bps`。 
+     * @return OutBandwidth 出带宽，单位：`bps`。
      */
     public Long [] getOutBandwidth() {
         return this.OutBandwidth;
     }
 
     /**
-     * Set 出带宽
-     * @param OutBandwidth 出带宽
+     * Set 出带宽，单位：`bps`。
+     * @param OutBandwidth 出带宽，单位：`bps`。
      */
     public void setOutBandwidth(Long [] OutBandwidth) {
         this.OutBandwidth = OutBandwidth;
     }
 
     /**
-     * Get 入包 
-     * @return InPkg 入包
+     * Get 入包，单位：`pps`。 
+     * @return InPkg 入包，单位：`pps`。
      */
     public Long [] getInPkg() {
         return this.InPkg;
     }
 
     /**
-     * Set 入包
-     * @param InPkg 入包
+     * Set 入包，单位：`pps`。
+     * @param InPkg 入包，单位：`pps`。
      */
     public void setInPkg(Long [] InPkg) {
         this.InPkg = InPkg;
     }
 
     /**
-     * Get 出包 
-     * @return OutPkg 出包
+     * Get 出包，单位：`pps`。 
+     * @return OutPkg 出包，单位：`pps`。
      */
     public Long [] getOutPkg() {
         return this.OutPkg;
     }
 
     /**
-     * Set 出包
-     * @param OutPkg 出包
+     * Set 出包，单位：`pps`。
+     * @param OutPkg 出包，单位：`pps`。
      */
     public void setOutPkg(Long [] OutPkg) {
         this.OutPkg = OutPkg;

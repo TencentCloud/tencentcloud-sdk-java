@@ -40,13 +40,14 @@ public class DescribeDailyMostPlayedStatRequest extends AbstractModel{
     * Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
-    * 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+    * <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -87,10 +88,12 @@ public class DescribeDailyMostPlayedStatRequest extends AbstractModel{
     /**
      * Get Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
-<li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li> 
+<li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。 
      * @return Metric Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
      */
     public String getMetric() {
         return this.Metric;
@@ -100,25 +103,27 @@ public class DescribeDailyMostPlayedStatRequest extends AbstractModel{
      * Set Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
      * @param Metric Top 数据的统计指标，取值有：
 <li>Traffic：播放流量，按播放流量统计 Top100 的数据。</li>
 <li>PlayTimes：播放次数，按播放次数统计播放 Top100 的数据。</li>
+默认值为Traffic。
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
     }
 
     /**
-     * Get 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。 
-     * @return SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Get <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b> 
+     * @return SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-     * @param SubAppId 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+     * Set <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+     * @param SubAppId <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

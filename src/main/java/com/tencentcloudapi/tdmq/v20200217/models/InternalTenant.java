@@ -173,6 +173,14 @@ public class InternalTenant extends AbstractModel{
     private Long MaxRetentionSizeInMB;
 
     /**
+    * public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get 虚拟集群ID 
      * @return TenantId 虚拟集群ID
      */
@@ -520,6 +528,26 @@ public class InternalTenant extends AbstractModel{
         this.MaxRetentionSizeInMB = MaxRetentionSizeInMB;
     }
 
+    /**
+     * Get public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicAccessEnabled public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicAccessEnabled public Access Enabled
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public InternalTenant() {
     }
 
@@ -591,6 +619,9 @@ public class InternalTenant extends AbstractModel{
         if (source.MaxRetentionSizeInMB != null) {
             this.MaxRetentionSizeInMB = new Long(source.MaxRetentionSizeInMB);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -619,6 +650,7 @@ public class InternalTenant extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxDispatchRateInBytes", this.MaxDispatchRateInBytes);
         this.setParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
         this.setParamSimple(map, prefix + "MaxRetentionSizeInMB", this.MaxRetentionSizeInMB);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

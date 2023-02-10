@@ -86,6 +86,14 @@ public class RocketMQClusterConfig extends AbstractModel{
     private Long MaxLatencyTime;
 
     /**
+    * 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxQueuesPerTopic")
+    @Expose
+    private Long MaxQueuesPerTopic;
+
+    /**
      * Get 单命名空间TPS上线 
      * @return MaxTpsPerNamespace 单命名空间TPS上线
      */
@@ -229,6 +237,26 @@ public class RocketMQClusterConfig extends AbstractModel{
         this.MaxLatencyTime = MaxLatencyTime;
     }
 
+    /**
+     * Get 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxQueuesPerTopic 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxQueuesPerTopic() {
+        return this.MaxQueuesPerTopic;
+    }
+
+    /**
+     * Set 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxQueuesPerTopic 单个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxQueuesPerTopic(Long MaxQueuesPerTopic) {
+        this.MaxQueuesPerTopic = MaxQueuesPerTopic;
+    }
+
     public RocketMQClusterConfig() {
     }
 
@@ -264,6 +292,9 @@ public class RocketMQClusterConfig extends AbstractModel{
         if (source.MaxLatencyTime != null) {
             this.MaxLatencyTime = new Long(source.MaxLatencyTime);
         }
+        if (source.MaxQueuesPerTopic != null) {
+            this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
+        }
     }
 
 
@@ -280,6 +311,7 @@ public class RocketMQClusterConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "UsedGroupNum", this.UsedGroupNum);
         this.setParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
         this.setParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
+        this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
 
     }
 }
