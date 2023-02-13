@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
+public class CVEWhitelistItem extends AbstractModel{
 
     /**
-    * CCN实例ID，形如：ccn-f49l6u0z。
+    * 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CcnId")
+    @SerializedName("CVEID")
     @Expose
-    private String CcnId;
+    private String CVEID;
 
     /**
-     * Get CCN实例ID，形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID，形如：ccn-f49l6u0z。
+     * Get 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVEID 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCcnId() {
-        return this.CcnId;
+    public String getCVEID() {
+        return this.CVEID;
     }
 
     /**
-     * Set CCN实例ID，形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID，形如：ccn-f49l6u0z。
+     * Set 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVEID 漏洞白名单 ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCcnId(String CcnId) {
-        this.CcnId = CcnId;
+    public void setCVEID(String CVEID) {
+        this.CVEID = CVEID;
     }
 
-    public DescribeCcnRegionBandwidthLimitsRequest() {
+    public CVEWhitelistItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCcnRegionBandwidthLimitsRequest(DescribeCcnRegionBandwidthLimitsRequest source) {
-        if (source.CcnId != null) {
-            this.CcnId = new String(source.CcnId);
+    public CVEWhitelistItem(CVEWhitelistItem source) {
+        if (source.CVEID != null) {
+            this.CVEID = new String(source.CVEID);
         }
     }
 
@@ -63,7 +68,7 @@ public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "CVEID", this.CVEID);
 
     }
 }

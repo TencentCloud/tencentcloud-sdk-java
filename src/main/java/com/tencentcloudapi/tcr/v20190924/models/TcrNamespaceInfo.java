@@ -67,6 +67,34 @@ public class TcrNamespaceInfo extends AbstractModel{
     private KeyValueString [] Metadata;
 
     /**
+    * 漏洞白名单列表
+    */
+    @SerializedName("CVEWhitelistItems")
+    @Expose
+    private CVEWhitelistItem [] CVEWhitelistItems;
+
+    /**
+    * 扫描级别，true为自动，false为手动
+    */
+    @SerializedName("AutoScan")
+    @Expose
+    private Boolean AutoScan;
+
+    /**
+    * 安全阻断级别，true为开启，false为关闭
+    */
+    @SerializedName("PreventVUL")
+    @Expose
+    private Boolean PreventVUL;
+
+    /**
+    * 阻断漏洞等级，目前仅支持low、medium、high, 为""时表示没有设置
+    */
+    @SerializedName("Severity")
+    @Expose
+    private String Severity;
+
+    /**
      * Get 命名空间名称 
      * @return Name 命名空间名称
      */
@@ -170,6 +198,70 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.Metadata = Metadata;
     }
 
+    /**
+     * Get 漏洞白名单列表 
+     * @return CVEWhitelistItems 漏洞白名单列表
+     */
+    public CVEWhitelistItem [] getCVEWhitelistItems() {
+        return this.CVEWhitelistItems;
+    }
+
+    /**
+     * Set 漏洞白名单列表
+     * @param CVEWhitelistItems 漏洞白名单列表
+     */
+    public void setCVEWhitelistItems(CVEWhitelistItem [] CVEWhitelistItems) {
+        this.CVEWhitelistItems = CVEWhitelistItems;
+    }
+
+    /**
+     * Get 扫描级别，true为自动，false为手动 
+     * @return AutoScan 扫描级别，true为自动，false为手动
+     */
+    public Boolean getAutoScan() {
+        return this.AutoScan;
+    }
+
+    /**
+     * Set 扫描级别，true为自动，false为手动
+     * @param AutoScan 扫描级别，true为自动，false为手动
+     */
+    public void setAutoScan(Boolean AutoScan) {
+        this.AutoScan = AutoScan;
+    }
+
+    /**
+     * Get 安全阻断级别，true为开启，false为关闭 
+     * @return PreventVUL 安全阻断级别，true为开启，false为关闭
+     */
+    public Boolean getPreventVUL() {
+        return this.PreventVUL;
+    }
+
+    /**
+     * Set 安全阻断级别，true为开启，false为关闭
+     * @param PreventVUL 安全阻断级别，true为开启，false为关闭
+     */
+    public void setPreventVUL(Boolean PreventVUL) {
+        this.PreventVUL = PreventVUL;
+    }
+
+    /**
+     * Get 阻断漏洞等级，目前仅支持low、medium、high, 为""时表示没有设置 
+     * @return Severity 阻断漏洞等级，目前仅支持low、medium、high, 为""时表示没有设置
+     */
+    public String getSeverity() {
+        return this.Severity;
+    }
+
+    /**
+     * Set 阻断漏洞等级，目前仅支持low、medium、high, 为""时表示没有设置
+     * @param Severity 阻断漏洞等级，目前仅支持low、medium、high, 为""时表示没有设置
+     */
+    public void setSeverity(String Severity) {
+        this.Severity = Severity;
+    }
+
     public TcrNamespaceInfo() {
     }
 
@@ -199,6 +291,21 @@ public class TcrNamespaceInfo extends AbstractModel{
                 this.Metadata[i] = new KeyValueString(source.Metadata[i]);
             }
         }
+        if (source.CVEWhitelistItems != null) {
+            this.CVEWhitelistItems = new CVEWhitelistItem[source.CVEWhitelistItems.length];
+            for (int i = 0; i < source.CVEWhitelistItems.length; i++) {
+                this.CVEWhitelistItems[i] = new CVEWhitelistItem(source.CVEWhitelistItems[i]);
+            }
+        }
+        if (source.AutoScan != null) {
+            this.AutoScan = new Boolean(source.AutoScan);
+        }
+        if (source.PreventVUL != null) {
+            this.PreventVUL = new Boolean(source.PreventVUL);
+        }
+        if (source.Severity != null) {
+            this.Severity = new String(source.Severity);
+        }
     }
 
 
@@ -212,6 +319,10 @@ public class TcrNamespaceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamArrayObj(map, prefix + "Metadata.", this.Metadata);
+        this.setParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
+        this.setParamSimple(map, prefix + "AutoScan", this.AutoScan);
+        this.setParamSimple(map, prefix + "PreventVUL", this.PreventVUL);
+        this.setParamSimple(map, prefix + "Severity", this.Severity);
 
     }
 }

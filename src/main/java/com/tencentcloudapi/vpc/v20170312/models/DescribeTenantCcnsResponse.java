@@ -23,11 +23,62 @@ import java.util.HashMap;
 public class DescribeTenantCcnsResponse extends AbstractModel{
 
     /**
+    * 云联网（CCN）对象。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnSet")
+    @Expose
+    private CcnInstanceInfo [] CcnSet;
+
+    /**
+    * 符合条件的对象总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 云联网（CCN）对象。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcnSet 云联网（CCN）对象。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CcnInstanceInfo [] getCcnSet() {
+        return this.CcnSet;
+    }
+
+    /**
+     * Set 云联网（CCN）对象。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnSet 云联网（CCN）对象。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnSet(CcnInstanceInfo [] CcnSet) {
+        this.CcnSet = CcnSet;
+    }
+
+    /**
+     * Get 符合条件的对象总数。 
+     * @return TotalCount 符合条件的对象总数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的对象总数。
+     * @param TotalCount 符合条件的对象总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +104,15 @@ public class DescribeTenantCcnsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTenantCcnsResponse(DescribeTenantCcnsResponse source) {
+        if (source.CcnSet != null) {
+            this.CcnSet = new CcnInstanceInfo[source.CcnSet.length];
+            for (int i = 0; i < source.CcnSet.length; i++) {
+                this.CcnSet[i] = new CcnInstanceInfo(source.CcnSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +123,8 @@ public class DescribeTenantCcnsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "CcnSet.", this.CcnSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

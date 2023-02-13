@@ -58,6 +58,19 @@ public class DescribeOrganizationSealsRequest extends AbstractModel{
     private String SealId;
 
     /**
+    * 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+    */
+    @SerializedName("SealTypes")
+    @Expose
+    private String [] SealTypes;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -137,6 +150,46 @@ public class DescribeOrganizationSealsRequest extends AbstractModel{
         this.SealId = SealId;
     }
 
+    /**
+     * Get 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章 
+     * @return SealTypes 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+     */
+    public String [] getSealTypes() {
+        return this.SealTypes;
+    }
+
+    /**
+     * Set 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+     * @param SealTypes 印章类型列表（都是组织机构印章）。
+为空时查询所有类型的印章。
+目前支持以下类型：
+OFFICIAL：企业公章；
+CONTRACT：合同专用章；
+ORGANIZATION_SEAL：企业印章(图片上传创建)；
+LEGAL_PERSON_SEAL：法定代表人章
+     */
+    public void setSealTypes(String [] SealTypes) {
+        this.SealTypes = SealTypes;
+    }
+
     public DescribeOrganizationSealsRequest() {
     }
 
@@ -160,6 +213,12 @@ public class DescribeOrganizationSealsRequest extends AbstractModel{
         if (source.SealId != null) {
             this.SealId = new String(source.SealId);
         }
+        if (source.SealTypes != null) {
+            this.SealTypes = new String[source.SealTypes.length];
+            for (int i = 0; i < source.SealTypes.length; i++) {
+                this.SealTypes[i] = new String(source.SealTypes[i]);
+            }
+        }
     }
 
 
@@ -172,6 +231,7 @@ public class DescribeOrganizationSealsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "InfoType", this.InfoType);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
+        this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
 
     }
 }

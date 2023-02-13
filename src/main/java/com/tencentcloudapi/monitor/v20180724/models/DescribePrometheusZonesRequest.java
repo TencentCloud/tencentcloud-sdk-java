@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class DescribePrometheusZonesRequest extends AbstractModel{
 
     /**
-    * 地域 ID
+    * 地域 ID（RegionId 和 RegionName 只需要填一个）
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-     * Get 地域 ID 
-     * @return RegionId 地域 ID
+    * 地域名（RegionId 和 RegionName 只需要填一个）
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+     * Get 地域 ID（RegionId 和 RegionName 只需要填一个） 
+     * @return RegionId 地域 ID（RegionId 和 RegionName 只需要填一个）
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域 ID
-     * @param RegionId 地域 ID
+     * Set 地域 ID（RegionId 和 RegionName 只需要填一个）
+     * @param RegionId 地域 ID（RegionId 和 RegionName 只需要填一个）
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
+    }
+
+    /**
+     * Get 地域名（RegionId 和 RegionName 只需要填一个） 
+     * @return RegionName 地域名（RegionId 和 RegionName 只需要填一个）
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set 地域名（RegionId 和 RegionName 只需要填一个）
+     * @param RegionName 地域名（RegionId 和 RegionName 只需要填一个）
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
     }
 
     public DescribePrometheusZonesRequest() {
@@ -56,6 +79,9 @@ public class DescribePrometheusZonesRequest extends AbstractModel{
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribePrometheusZonesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }
 }

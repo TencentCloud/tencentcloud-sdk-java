@@ -100,6 +100,13 @@ public class TemplateInfo extends AbstractModel{
     private String InvalidReason;
 
     /**
+    * 是包含黑名单手机或邮箱
+    */
+    @SerializedName("IsBlack")
+    @Expose
+    private Boolean IsBlack;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -275,6 +282,22 @@ public class TemplateInfo extends AbstractModel{
         this.InvalidReason = InvalidReason;
     }
 
+    /**
+     * Get 是包含黑名单手机或邮箱 
+     * @return IsBlack 是包含黑名单手机或邮箱
+     */
+    public Boolean getIsBlack() {
+        return this.IsBlack;
+    }
+
+    /**
+     * Set 是包含黑名单手机或邮箱
+     * @param IsBlack 是包含黑名单手机或邮箱
+     */
+    public void setIsBlack(Boolean IsBlack) {
+        this.IsBlack = IsBlack;
+    }
+
     public TemplateInfo() {
     }
 
@@ -316,6 +339,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.InvalidReason != null) {
             this.InvalidReason = new String(source.InvalidReason);
         }
+        if (source.IsBlack != null) {
+            this.IsBlack = new Boolean(source.IsBlack);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamObj(map, prefix + "ContactInfo.", this.ContactInfo);
         this.setParamSimple(map, prefix + "IsValidTemplate", this.IsValidTemplate);
         this.setParamSimple(map, prefix + "InvalidReason", this.InvalidReason);
+        this.setParamSimple(map, prefix + "IsBlack", this.IsBlack);
 
     }
 }

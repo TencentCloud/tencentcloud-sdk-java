@@ -44,6 +44,34 @@ public class ModifyNamespaceRequest extends AbstractModel{
     private Boolean IsPublic;
 
     /**
+    * 扫描级别，True为自动，False为手动
+    */
+    @SerializedName("IsAutoScan")
+    @Expose
+    private Boolean IsAutoScan;
+
+    /**
+    * 阻断开关，True为开放，False为关闭
+    */
+    @SerializedName("IsPreventVUL")
+    @Expose
+    private Boolean IsPreventVUL;
+
+    /**
+    * 阻断漏洞等级，目前仅支持 low、medium、high
+    */
+    @SerializedName("Severity")
+    @Expose
+    private String Severity;
+
+    /**
+    * 漏洞白名单列表
+    */
+    @SerializedName("CVEWhitelistItems")
+    @Expose
+    private CVEWhitelistItem [] CVEWhitelistItems;
+
+    /**
      * Get 实例Id 
      * @return RegistryId 实例Id
      */
@@ -91,6 +119,70 @@ public class ModifyNamespaceRequest extends AbstractModel{
         this.IsPublic = IsPublic;
     }
 
+    /**
+     * Get 扫描级别，True为自动，False为手动 
+     * @return IsAutoScan 扫描级别，True为自动，False为手动
+     */
+    public Boolean getIsAutoScan() {
+        return this.IsAutoScan;
+    }
+
+    /**
+     * Set 扫描级别，True为自动，False为手动
+     * @param IsAutoScan 扫描级别，True为自动，False为手动
+     */
+    public void setIsAutoScan(Boolean IsAutoScan) {
+        this.IsAutoScan = IsAutoScan;
+    }
+
+    /**
+     * Get 阻断开关，True为开放，False为关闭 
+     * @return IsPreventVUL 阻断开关，True为开放，False为关闭
+     */
+    public Boolean getIsPreventVUL() {
+        return this.IsPreventVUL;
+    }
+
+    /**
+     * Set 阻断开关，True为开放，False为关闭
+     * @param IsPreventVUL 阻断开关，True为开放，False为关闭
+     */
+    public void setIsPreventVUL(Boolean IsPreventVUL) {
+        this.IsPreventVUL = IsPreventVUL;
+    }
+
+    /**
+     * Get 阻断漏洞等级，目前仅支持 low、medium、high 
+     * @return Severity 阻断漏洞等级，目前仅支持 low、medium、high
+     */
+    public String getSeverity() {
+        return this.Severity;
+    }
+
+    /**
+     * Set 阻断漏洞等级，目前仅支持 low、medium、high
+     * @param Severity 阻断漏洞等级，目前仅支持 low、medium、high
+     */
+    public void setSeverity(String Severity) {
+        this.Severity = Severity;
+    }
+
+    /**
+     * Get 漏洞白名单列表 
+     * @return CVEWhitelistItems 漏洞白名单列表
+     */
+    public CVEWhitelistItem [] getCVEWhitelistItems() {
+        return this.CVEWhitelistItems;
+    }
+
+    /**
+     * Set 漏洞白名单列表
+     * @param CVEWhitelistItems 漏洞白名单列表
+     */
+    public void setCVEWhitelistItems(CVEWhitelistItem [] CVEWhitelistItems) {
+        this.CVEWhitelistItems = CVEWhitelistItems;
+    }
+
     public ModifyNamespaceRequest() {
     }
 
@@ -108,6 +200,21 @@ public class ModifyNamespaceRequest extends AbstractModel{
         if (source.IsPublic != null) {
             this.IsPublic = new Boolean(source.IsPublic);
         }
+        if (source.IsAutoScan != null) {
+            this.IsAutoScan = new Boolean(source.IsAutoScan);
+        }
+        if (source.IsPreventVUL != null) {
+            this.IsPreventVUL = new Boolean(source.IsPreventVUL);
+        }
+        if (source.Severity != null) {
+            this.Severity = new String(source.Severity);
+        }
+        if (source.CVEWhitelistItems != null) {
+            this.CVEWhitelistItems = new CVEWhitelistItem[source.CVEWhitelistItems.length];
+            for (int i = 0; i < source.CVEWhitelistItems.length; i++) {
+                this.CVEWhitelistItems[i] = new CVEWhitelistItem(source.CVEWhitelistItems[i]);
+            }
+        }
     }
 
 
@@ -118,6 +225,10 @@ public class ModifyNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
+        this.setParamSimple(map, prefix + "IsAutoScan", this.IsAutoScan);
+        this.setParamSimple(map, prefix + "IsPreventVUL", this.IsPreventVUL);
+        this.setParamSimple(map, prefix + "Severity", this.Severity);
+        this.setParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
 
     }
 }

@@ -30,6 +30,13 @@ public class DeleteAttackLogsRequest extends AbstractModel{
     private Long [] Ids;
 
     /**
+    * 是否全部删除
+    */
+    @SerializedName("IsAll")
+    @Expose
+    private Boolean IsAll;
+
+    /**
      * Get 日志ID数组，最大100条。 
      * @return Ids 日志ID数组，最大100条。
      */
@@ -43,6 +50,22 @@ public class DeleteAttackLogsRequest extends AbstractModel{
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;
+    }
+
+    /**
+     * Get 是否全部删除 
+     * @return IsAll 是否全部删除
+     */
+    public Boolean getIsAll() {
+        return this.IsAll;
+    }
+
+    /**
+     * Set 是否全部删除
+     * @param IsAll 是否全部删除
+     */
+    public void setIsAll(Boolean IsAll) {
+        this.IsAll = IsAll;
     }
 
     public DeleteAttackLogsRequest() {
@@ -59,6 +82,9 @@ public class DeleteAttackLogsRequest extends AbstractModel{
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
+        if (source.IsAll != null) {
+            this.IsAll = new Boolean(source.IsAll);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class DeleteAttackLogsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "IsAll", this.IsAll);
 
     }
 }

@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class DescribeCrossBorderFlowMonitorRequest extends AbstractModel{
 
     /**
-    * 源地域
+    * 源地域。
     */
     @SerializedName("SourceRegion")
     @Expose
     private String SourceRegion;
 
     /**
-    * 目的地域
+    * 目的地域。
     */
     @SerializedName("DestinationRegion")
     @Expose
     private String DestinationRegion;
 
     /**
-    * 云联网Id
+    * 云联网ID。
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 云联网所属账号
+    * 云联网所属账号。
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-    * 时间粒度
+    * 时间粒度。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 开始时间
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 源地域 
-     * @return SourceRegion 源地域
+     * Get 源地域。 
+     * @return SourceRegion 源地域。
      */
     public String getSourceRegion() {
         return this.SourceRegion;
     }
 
     /**
-     * Set 源地域
-     * @param SourceRegion 源地域
+     * Set 源地域。
+     * @param SourceRegion 源地域。
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get 目的地域 
-     * @return DestinationRegion 目的地域
+     * Get 目的地域。 
+     * @return DestinationRegion 目的地域。
      */
     public String getDestinationRegion() {
         return this.DestinationRegion;
     }
 
     /**
-     * Set 目的地域
-     * @param DestinationRegion 目的地域
+     * Set 目的地域。
+     * @param DestinationRegion 目的地域。
      */
     public void setDestinationRegion(String DestinationRegion) {
         this.DestinationRegion = DestinationRegion;
     }
 
     /**
-     * Get 云联网Id 
-     * @return CcnId 云联网Id
+     * Get 云联网ID。 
+     * @return CcnId 云联网ID。
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网Id
-     * @param CcnId 云联网Id
+     * Set 云联网ID。
+     * @param CcnId 云联网ID。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 云联网所属账号 
-     * @return CcnUin 云联网所属账号
+     * Get 云联网所属账号。 
+     * @return CcnUin 云联网所属账号。
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * Set 云联网所属账号
-     * @param CcnUin 云联网所属账号
+     * Set 云联网所属账号。
+     * @param CcnUin 云联网所属账号。
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;
     }
 
     /**
-     * Get 时间粒度 
-     * @return Period 时间粒度
+     * Get 时间粒度。 
+     * @return Period 时间粒度。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 时间粒度
-     * @param Period 时间粒度
+     * Set 时间粒度。
+     * @param Period 时间粒度。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

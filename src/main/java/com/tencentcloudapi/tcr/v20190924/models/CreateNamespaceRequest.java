@@ -51,6 +51,34 @@ public class CreateNamespaceRequest extends AbstractModel{
     private TagSpecification TagSpecification;
 
     /**
+    * 自动扫描级别，true为自动，false为手动
+    */
+    @SerializedName("IsAutoScan")
+    @Expose
+    private Boolean IsAutoScan;
+
+    /**
+    * 安全阻断级别，true为自动，false为手动
+    */
+    @SerializedName("IsPreventVUL")
+    @Expose
+    private Boolean IsPreventVUL;
+
+    /**
+    * 阻断漏洞等级，目前仅支持low、medium、high
+    */
+    @SerializedName("Severity")
+    @Expose
+    private String Severity;
+
+    /**
+    * 漏洞白名单列表
+    */
+    @SerializedName("CVEWhitelistItems")
+    @Expose
+    private CVEWhitelistItem [] CVEWhitelistItems;
+
+    /**
      * Get 实例ID 
      * @return RegistryId 实例ID
      */
@@ -114,6 +142,70 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 自动扫描级别，true为自动，false为手动 
+     * @return IsAutoScan 自动扫描级别，true为自动，false为手动
+     */
+    public Boolean getIsAutoScan() {
+        return this.IsAutoScan;
+    }
+
+    /**
+     * Set 自动扫描级别，true为自动，false为手动
+     * @param IsAutoScan 自动扫描级别，true为自动，false为手动
+     */
+    public void setIsAutoScan(Boolean IsAutoScan) {
+        this.IsAutoScan = IsAutoScan;
+    }
+
+    /**
+     * Get 安全阻断级别，true为自动，false为手动 
+     * @return IsPreventVUL 安全阻断级别，true为自动，false为手动
+     */
+    public Boolean getIsPreventVUL() {
+        return this.IsPreventVUL;
+    }
+
+    /**
+     * Set 安全阻断级别，true为自动，false为手动
+     * @param IsPreventVUL 安全阻断级别，true为自动，false为手动
+     */
+    public void setIsPreventVUL(Boolean IsPreventVUL) {
+        this.IsPreventVUL = IsPreventVUL;
+    }
+
+    /**
+     * Get 阻断漏洞等级，目前仅支持low、medium、high 
+     * @return Severity 阻断漏洞等级，目前仅支持low、medium、high
+     */
+    public String getSeverity() {
+        return this.Severity;
+    }
+
+    /**
+     * Set 阻断漏洞等级，目前仅支持low、medium、high
+     * @param Severity 阻断漏洞等级，目前仅支持low、medium、high
+     */
+    public void setSeverity(String Severity) {
+        this.Severity = Severity;
+    }
+
+    /**
+     * Get 漏洞白名单列表 
+     * @return CVEWhitelistItems 漏洞白名单列表
+     */
+    public CVEWhitelistItem [] getCVEWhitelistItems() {
+        return this.CVEWhitelistItems;
+    }
+
+    /**
+     * Set 漏洞白名单列表
+     * @param CVEWhitelistItems 漏洞白名单列表
+     */
+    public void setCVEWhitelistItems(CVEWhitelistItem [] CVEWhitelistItems) {
+        this.CVEWhitelistItems = CVEWhitelistItems;
+    }
+
     public CreateNamespaceRequest() {
     }
 
@@ -134,6 +226,21 @@ public class CreateNamespaceRequest extends AbstractModel{
         if (source.TagSpecification != null) {
             this.TagSpecification = new TagSpecification(source.TagSpecification);
         }
+        if (source.IsAutoScan != null) {
+            this.IsAutoScan = new Boolean(source.IsAutoScan);
+        }
+        if (source.IsPreventVUL != null) {
+            this.IsPreventVUL = new Boolean(source.IsPreventVUL);
+        }
+        if (source.Severity != null) {
+            this.Severity = new String(source.Severity);
+        }
+        if (source.CVEWhitelistItems != null) {
+            this.CVEWhitelistItems = new CVEWhitelistItem[source.CVEWhitelistItems.length];
+            for (int i = 0; i < source.CVEWhitelistItems.length; i++) {
+                this.CVEWhitelistItems[i] = new CVEWhitelistItem(source.CVEWhitelistItems[i]);
+            }
+        }
     }
 
 
@@ -145,6 +252,10 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "IsAutoScan", this.IsAutoScan);
+        this.setParamSimple(map, prefix + "IsPreventVUL", this.IsPreventVUL);
+        this.setParamSimple(map, prefix + "Severity", this.Severity);
+        this.setParamArrayObj(map, prefix + "CVEWhitelistItems.", this.CVEWhitelistItems);
 
     }
 }

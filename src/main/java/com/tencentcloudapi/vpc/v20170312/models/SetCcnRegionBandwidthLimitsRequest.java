@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * CCN实例ID，形如：ccn-f49l6u0z。
     */
     @SerializedName("CcnId")
     @Expose
@@ -44,16 +44,16 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private Boolean SetDefaultLimitFlag;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get CCN实例ID，形如：ccn-f49l6u0z。 
+     * @return CcnId CCN实例ID，形如：ccn-f49l6u0z。
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set CCN实例ID，形如：ccn-f49l6u0z。
+     * @param CcnId CCN实例ID，形如：ccn-f49l6u0z。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

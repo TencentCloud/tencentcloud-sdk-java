@@ -20,42 +20,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
+public class CcnInstanceInfo extends AbstractModel{
 
-    /**
-    * CCN实例ID，形如：ccn-f49l6u0z。
-    */
-    @SerializedName("CcnId")
-    @Expose
-    private String CcnId;
-
-    /**
-     * Get CCN实例ID，形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID，形如：ccn-f49l6u0z。
-     */
-    public String getCcnId() {
-        return this.CcnId;
-    }
-
-    /**
-     * Set CCN实例ID，形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID，形如：ccn-f49l6u0z。
-     */
-    public void setCcnId(String CcnId) {
-        this.CcnId = CcnId;
-    }
-
-    public DescribeCcnRegionBandwidthLimitsRequest() {
+    public CcnInstanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCcnRegionBandwidthLimitsRequest(DescribeCcnRegionBandwidthLimitsRequest source) {
-        if (source.CcnId != null) {
-            this.CcnId = new String(source.CcnId);
-        }
+    public CcnInstanceInfo(CcnInstanceInfo source) {
     }
 
 
@@ -63,7 +37,6 @@ public class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }
