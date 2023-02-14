@@ -760,6 +760,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupEncryptionStatus)用于查询实例默认备份加密状态。
+     * @param req DescribeBackupEncryptionStatusRequest
+     * @return DescribeBackupEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatus(DescribeBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeBackupOverview)用于查询用户的备份概览。返回用户当前备份总个数、备份总的占用容量、赠送的免费容量、计费容量（容量单位为字节）。
      * @param req DescribeBackupOverviewRequest
      * @return DescribeBackupOverviewResponse
@@ -1989,6 +2009,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+     * @param req ModifyBackupEncryptionStatusRequest
+     * @return ModifyBackupEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(ModifyBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
      * @param req ModifyCDBProxyConnectionPoolRequest
      * @return ModifyCDBProxyConnectionPoolResponse
@@ -2699,7 +2739,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *调整数据库代理配置
+     *接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
+
+调整数据库代理配置
      * @param req UpgradeCDBProxyRequest
      * @return UpgradeCDBProxyResponse
      * @throws TencentCloudSDKException

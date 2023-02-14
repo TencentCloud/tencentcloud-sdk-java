@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class HaVipAssociateAddressIpRequest extends AbstractModel{
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+    * 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP` 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。 
+     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
+     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`。
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP` 
-     * @return AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Get 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。 
+     * @return AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
-     * @param AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Set 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
+     * @param AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`。
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceTemplateRequest extends AbstractModel{
 
     /**
-    * 协议端口模板名称
+    * 协议端口模板名称。
     */
     @SerializedName("ServiceTemplateName")
     @Expose
@@ -44,16 +44,16 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     private ServicesInfo [] ServicesExtra;
 
     /**
-     * Get 协议端口模板名称 
-     * @return ServiceTemplateName 协议端口模板名称
+     * Get 协议端口模板名称。 
+     * @return ServiceTemplateName 协议端口模板名称。
      */
     public String getServiceTemplateName() {
         return this.ServiceTemplateName;
     }
 
     /**
-     * Set 协议端口模板名称
-     * @param ServiceTemplateName 协议端口模板名称
+     * Set 协议端口模板名称。
+     * @param ServiceTemplateName 协议端口模板名称。
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
         this.ServiceTemplateName = ServiceTemplateName;

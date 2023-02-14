@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DeleteLocalGatewayRequest extends AbstractModel{
 
     /**
-    * 本地网关实例ID
+    * 本地网关实例ID。
     */
     @SerializedName("LocalGatewayId")
     @Expose
     private String LocalGatewayId;
 
     /**
-    * CDC实例ID
+    * CDC实例ID。
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * VPC实例ID
+    * VPC实例ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * Get 本地网关实例ID 
-     * @return LocalGatewayId 本地网关实例ID
+     * Get 本地网关实例ID。 
+     * @return LocalGatewayId 本地网关实例ID。
      */
     public String getLocalGatewayId() {
         return this.LocalGatewayId;
     }
 
     /**
-     * Set 本地网关实例ID
-     * @param LocalGatewayId 本地网关实例ID
+     * Set 本地网关实例ID。
+     * @param LocalGatewayId 本地网关实例ID。
      */
     public void setLocalGatewayId(String LocalGatewayId) {
         this.LocalGatewayId = LocalGatewayId;
     }
 
     /**
-     * Get CDC实例ID 
-     * @return CdcId CDC实例ID
+     * Get CDC实例ID。 
+     * @return CdcId CDC实例ID。
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC实例ID
-     * @param CdcId CDC实例ID
+     * Set CDC实例ID。
+     * @param CdcId CDC实例ID。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get VPC实例ID 
-     * @return VpcId VPC实例ID
+     * Get VPC实例ID。 
+     * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID
-     * @param VpcId VPC实例ID
+     * Set VPC实例ID。
+     * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

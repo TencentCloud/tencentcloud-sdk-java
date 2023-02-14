@@ -71,6 +71,13 @@ LEGAL_PERSON_SEAL：法定代表人章
     private String [] SealTypes;
 
     /**
+    * 主企业代子企业操作 或 渠道子客应用相关信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -190,6 +197,22 @@ LEGAL_PERSON_SEAL：法定代表人章
         this.SealTypes = SealTypes;
     }
 
+    /**
+     * Get 主企业代子企业操作 或 渠道子客应用相关信息 
+     * @return Agent 主企业代子企业操作 或 渠道子客应用相关信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 主企业代子企业操作 或 渠道子客应用相关信息
+     * @param Agent 主企业代子企业操作 或 渠道子客应用相关信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DescribeOrganizationSealsRequest() {
     }
 
@@ -219,6 +242,9 @@ LEGAL_PERSON_SEAL：法定代表人章
                 this.SealTypes[i] = new String(source.SealTypes[i]);
             }
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -232,6 +258,7 @@ LEGAL_PERSON_SEAL：法定代表人章
         this.setParamSimple(map, prefix + "InfoType", this.InfoType);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

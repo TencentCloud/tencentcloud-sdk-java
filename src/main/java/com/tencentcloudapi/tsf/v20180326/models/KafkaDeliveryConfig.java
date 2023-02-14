@@ -127,6 +127,14 @@ public class KafkaDeliveryConfig extends AbstractModel{
     private String CustomRule;
 
     /**
+    * KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaAddress")
+    @Expose
+    private String KafkaAddress;
+
+    /**
      * Get 配置项id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigId 配置项id
@@ -386,6 +394,26 @@ public class KafkaDeliveryConfig extends AbstractModel{
         this.CustomRule = CustomRule;
     }
 
+    /**
+     * Get KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaAddress KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKafkaAddress() {
+        return this.KafkaAddress;
+    }
+
+    /**
+     * Set KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaAddress KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaAddress(String KafkaAddress) {
+        this.KafkaAddress = KafkaAddress;
+    }
+
     public KafkaDeliveryConfig() {
     }
 
@@ -439,6 +467,9 @@ public class KafkaDeliveryConfig extends AbstractModel{
         if (source.CustomRule != null) {
             this.CustomRule = new String(source.CustomRule);
         }
+        if (source.KafkaAddress != null) {
+            this.KafkaAddress = new String(source.KafkaAddress);
+        }
     }
 
 
@@ -459,6 +490,7 @@ public class KafkaDeliveryConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
         this.setParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
         this.setParamSimple(map, prefix + "CustomRule", this.CustomRule);
+        this.setParamSimple(map, prefix + "KafkaAddress", this.KafkaAddress);
 
     }
 }

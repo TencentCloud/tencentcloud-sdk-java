@@ -42,6 +42,9 @@ public enum PtsErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // 超过配额限制。
+     LIMITEXCEEDED("LimitExceeded"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound");
      

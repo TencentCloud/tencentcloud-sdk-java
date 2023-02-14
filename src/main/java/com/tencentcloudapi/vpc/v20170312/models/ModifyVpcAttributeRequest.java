@@ -44,14 +44,14 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     private String EnableMulticast;
 
     /**
-    * DNS地址，最多支持4个，第1个默认为主，其余为备
+    * DNS地址，最多支持4个，第1个默认为主，其余为备。
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * 域名
+    * 域名。
     */
     @SerializedName("DomainName")
     @Expose
@@ -106,32 +106,32 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get DNS地址，最多支持4个，第1个默认为主，其余为备 
-     * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Get DNS地址，最多支持4个，第1个默认为主，其余为备。 
+     * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Set DNS地址，最多支持4个，第1个默认为主，其余为备。
+     * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备。
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get 域名 
-     * @return DomainName 域名
+     * Get 域名。 
+     * @return DomainName 域名。
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名
-     * @param DomainName 域名
+     * Set 域名。
+     * @param DomainName 域名。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

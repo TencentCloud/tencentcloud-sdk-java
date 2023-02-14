@@ -37,18 +37,25 @@ public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
     private String [] Ipv6Addresses;
 
     /**
-    * 偏移量。
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * VPC下的子网ID。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
      * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
@@ -83,35 +90,51 @@ public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。 
-     * @return Limit 返回数量。
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。
-     * @param Limit 返回数量。
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get VPC下的子网ID。 
+     * @return SubnetId VPC下的子网ID。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set VPC下的子网ID。
+     * @param SubnetId VPC下的子网ID。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     public DescribeVpcIpv6AddressesRequest() {
@@ -137,6 +160,9 @@ public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

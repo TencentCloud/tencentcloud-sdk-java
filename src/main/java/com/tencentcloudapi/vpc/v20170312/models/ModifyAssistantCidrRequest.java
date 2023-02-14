@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAssistantCidrRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
     */
     @SerializedName("VpcId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyAssistantCidrRequest extends AbstractModel{
     private String [] OldCidrBlocks;
 
     /**
-     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
-     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。 
+     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
-     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
+     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

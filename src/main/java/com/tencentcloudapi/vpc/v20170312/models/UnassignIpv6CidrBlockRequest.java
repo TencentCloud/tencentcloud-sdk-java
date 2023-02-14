@@ -30,7 +30,7 @@ public class UnassignIpv6CidrBlockRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+    * `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
@@ -53,16 +53,16 @@ public class UnassignIpv6CidrBlockRequest extends AbstractModel{
     }
 
     /**
-     * Get `IPv6`网段。形如：`3402:4e00:20:1000::/56` 
-     * @return Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Get `IPv6`网段。形如：`3402:4e00:20:1000::/56`。 
+     * @return Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set `IPv6`网段。形如：`3402:4e00:20:1000::/56`
-     * @param Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Set `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
+     * @param Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;

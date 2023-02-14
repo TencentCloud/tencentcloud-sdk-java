@@ -13,46 +13,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
+public class DescribeBackupEncryptionStatusRequest extends AbstractModel{
 
     /**
-    * 要查询的CVM实例ID或弹性网卡ID。
+    * 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 要查询的CVM实例ID或弹性网卡ID。 
-     * @return InstanceId 要查询的CVM实例ID或弹性网卡ID。
+     * Get 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 要查询的CVM实例ID或弹性网卡ID。
-     * @param InstanceId 要查询的CVM实例ID或弹性网卡ID。
+     * Set 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例ID，格式如：cdb-XXXX。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeNetworkInterfaceLimitRequest() {
+    public DescribeBackupEncryptionStatusRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeNetworkInterfaceLimitRequest(DescribeNetworkInterfaceLimitRequest source) {
+    public DescribeBackupEncryptionStatusRequest(DescribeBackupEncryptionStatusRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }

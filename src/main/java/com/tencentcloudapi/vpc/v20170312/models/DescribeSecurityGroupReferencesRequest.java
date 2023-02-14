@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupReferencesRequest extends AbstractModel{
 
     /**
-    * 安全组实例ID数组。格式如：['sg-12345678']
+    * 安全组实例ID数组。格式如：['sg-12345678']。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 安全组实例ID数组。格式如：['sg-12345678'] 
-     * @return SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']
+     * Get 安全组实例ID数组。格式如：['sg-12345678']。 
+     * @return SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组实例ID数组。格式如：['sg-12345678']
-     * @param SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']
+     * Set 安全组实例ID数组。格式如：['sg-12345678']。
+     * @param SecurityGroupIds 安全组实例ID数组。格式如：['sg-12345678']。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

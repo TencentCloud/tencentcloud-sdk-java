@@ -45,6 +45,30 @@ public class UnitNamespace extends AbstractModel{
     private String Id;
 
     /**
+    * 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayInstanceId")
+    @Expose
+    private String GatewayInstanceId;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
@@ -96,6 +120,66 @@ public class UnitNamespace extends AbstractModel{
         this.Id = Id;
     }
 
+    /**
+     * Get 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayInstanceId 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayInstanceId() {
+        return this.GatewayInstanceId;
+    }
+
+    /**
+     * Set 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayInstanceId 网关实体ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayInstanceId(String GatewayInstanceId) {
+        this.GatewayInstanceId = GatewayInstanceId;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public UnitNamespace() {
     }
 
@@ -113,6 +197,15 @@ public class UnitNamespace extends AbstractModel{
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.GatewayInstanceId != null) {
+            this.GatewayInstanceId = new String(source.GatewayInstanceId);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -123,6 +216,9 @@ public class UnitNamespace extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

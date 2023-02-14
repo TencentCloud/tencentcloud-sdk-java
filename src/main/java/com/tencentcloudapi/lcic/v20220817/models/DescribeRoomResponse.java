@@ -129,6 +129,14 @@ coteaching 双师
     private String RecordUrl;
 
     /**
+    * 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -404,6 +412,26 @@ coteaching 双师
     }
 
     /**
+     * Get 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -469,6 +497,9 @@ coteaching 双师
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -492,6 +523,7 @@ coteaching 双师
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

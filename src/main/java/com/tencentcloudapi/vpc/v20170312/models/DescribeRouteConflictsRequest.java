@@ -30,7 +30,7 @@ public class DescribeRouteConflictsRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * 要检查的与之冲突的目的端列表
+    * 要检查的与之冲突的目的端列表。
     */
     @SerializedName("DestinationCidrBlocks")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeRouteConflictsRequest extends AbstractModel{
     }
 
     /**
-     * Get 要检查的与之冲突的目的端列表 
-     * @return DestinationCidrBlocks 要检查的与之冲突的目的端列表
+     * Get 要检查的与之冲突的目的端列表。 
+     * @return DestinationCidrBlocks 要检查的与之冲突的目的端列表。
      */
     public String [] getDestinationCidrBlocks() {
         return this.DestinationCidrBlocks;
     }
 
     /**
-     * Set 要检查的与之冲突的目的端列表
-     * @param DestinationCidrBlocks 要检查的与之冲突的目的端列表
+     * Set 要检查的与之冲突的目的端列表。
+     * @param DestinationCidrBlocks 要检查的与之冲突的目的端列表。
      */
     public void setDestinationCidrBlocks(String [] DestinationCidrBlocks) {
         this.DestinationCidrBlocks = DestinationCidrBlocks;

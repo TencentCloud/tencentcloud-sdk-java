@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSubnetsRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
     */
     @SerializedName("VpcId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateSubnetsRequest extends AbstractModel{
     private SubnetInput [] Subnets;
 
     /**
-    * 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+    * 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
     */
     @SerializedName("Tags")
     @Expose
@@ -51,16 +51,16 @@ public class CreateSubnetsRequest extends AbstractModel{
     private String CdcId;
 
     /**
-     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
-     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。 
+     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
-     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
+     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -83,16 +83,16 @@ public class CreateSubnetsRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，注意这里的标签集合为列表中所有子网对象所共享，不能为每个子网对象单独指定标签，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

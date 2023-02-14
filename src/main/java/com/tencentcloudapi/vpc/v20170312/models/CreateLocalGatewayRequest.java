@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateLocalGatewayRequest extends AbstractModel{
 
     /**
-    * 本地网关名称
+    * 本地网关名称。
     */
     @SerializedName("LocalGatewayName")
     @Expose
     private String LocalGatewayName;
 
     /**
-    * VPC实例ID
+    * VPC实例ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * CDC实例ID
+    * CDC实例ID。
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-     * Get 本地网关名称 
-     * @return LocalGatewayName 本地网关名称
+     * Get 本地网关名称。 
+     * @return LocalGatewayName 本地网关名称。
      */
     public String getLocalGatewayName() {
         return this.LocalGatewayName;
     }
 
     /**
-     * Set 本地网关名称
-     * @param LocalGatewayName 本地网关名称
+     * Set 本地网关名称。
+     * @param LocalGatewayName 本地网关名称。
      */
     public void setLocalGatewayName(String LocalGatewayName) {
         this.LocalGatewayName = LocalGatewayName;
     }
 
     /**
-     * Get VPC实例ID 
-     * @return VpcId VPC实例ID
+     * Get VPC实例ID。 
+     * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID
-     * @param VpcId VPC实例ID
+     * Set VPC实例ID。
+     * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get CDC实例ID 
-     * @return CdcId CDC实例ID
+     * Get CDC实例ID。 
+     * @return CdcId CDC实例ID。
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC实例ID
-     * @param CdcId CDC实例ID
+     * Set CDC实例ID。
+     * @param CdcId CDC实例ID。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

@@ -79,6 +79,22 @@ public class ScalableRule extends AbstractModel{
     private String Description;
 
     /**
+    * 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableMetricAS")
+    @Expose
+    private Long DisableMetricAS;
+
+    /**
+    * 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableCronAS")
+    @Expose
+    private Long EnableCronAS;
+
+    /**
      * Get RuleId值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId RuleId值
@@ -218,6 +234,46 @@ public class ScalableRule extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableMetricAS 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDisableMetricAS() {
+        return this.DisableMetricAS;
+    }
+
+    /**
+     * Set 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableMetricAS 是否关闭指标伸缩, 默认0, 0:打开指标伸缩 1:关闭指标伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableMetricAS(Long DisableMetricAS) {
+        this.DisableMetricAS = DisableMetricAS;
+    }
+
+    /**
+     * Get 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableCronAS 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableCronAS() {
+        return this.EnableCronAS;
+    }
+
+    /**
+     * Set 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableCronAS 开启定时伸缩规则, 默认0, 0:关闭定时伸缩 1:开启定时伸缩
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableCronAS(Long EnableCronAS) {
+        this.EnableCronAS = EnableCronAS;
+    }
+
     public ScalableRule() {
     }
 
@@ -247,6 +303,12 @@ public class ScalableRule extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.DisableMetricAS != null) {
+            this.DisableMetricAS = new Long(source.DisableMetricAS);
+        }
+        if (source.EnableCronAS != null) {
+            this.EnableCronAS = new Long(source.EnableCronAS);
+        }
     }
 
 
@@ -261,6 +323,8 @@ public class ScalableRule extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupCount", this.GroupCount);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "DisableMetricAS", this.DisableMetricAS);
+        this.setParamSimple(map, prefix + "EnableCronAS", this.EnableCronAS);
 
     }
 }

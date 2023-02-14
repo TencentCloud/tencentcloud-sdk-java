@@ -32,14 +32,14 @@ public class DescribeClassicLinkInstancesRequest extends AbstractModel{
     private FilterObject [] Filters;
 
     /**
-    * 偏移量
+    * 偏移量，默认值0。
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 返回数量
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -70,32 +70,32 @@ public class DescribeClassicLinkInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认值0。 
+     * @return Offset 偏移量，默认值0。
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认值0。
+     * @param Offset 偏移量，默认值0。
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

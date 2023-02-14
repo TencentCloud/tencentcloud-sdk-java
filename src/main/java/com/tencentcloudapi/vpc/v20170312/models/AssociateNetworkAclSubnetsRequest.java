@@ -30,7 +30,7 @@ public class AssociateNetworkAclSubnetsRequest extends AbstractModel{
     private String NetworkAclId;
 
     /**
-    * 子网实例ID数组。例如：[subnet-12345678]
+    * 子网实例ID数组。例如：[subnet-12345678]。
     */
     @SerializedName("SubnetIds")
     @Expose
@@ -53,16 +53,16 @@ public class AssociateNetworkAclSubnetsRequest extends AbstractModel{
     }
 
     /**
-     * Get 子网实例ID数组。例如：[subnet-12345678] 
-     * @return SubnetIds 子网实例ID数组。例如：[subnet-12345678]
+     * Get 子网实例ID数组。例如：[subnet-12345678]。 
+     * @return SubnetIds 子网实例ID数组。例如：[subnet-12345678]。
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网实例ID数组。例如：[subnet-12345678]
-     * @param SubnetIds 子网实例ID数组。例如：[subnet-12345678]
+     * Set 子网实例ID数组。例如：[subnet-12345678]。
+     * @param SubnetIds 子网实例ID数组。例如：[subnet-12345678]。
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

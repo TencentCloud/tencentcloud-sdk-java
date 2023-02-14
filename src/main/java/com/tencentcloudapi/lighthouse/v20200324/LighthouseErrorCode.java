@@ -9,6 +9,9 @@ public enum LighthouseErrorCode {
     // 创建镜像失败。
      FAILEDOPERATION_CREATEBLUEPRINTFAILED("FailedOperation.CreateBlueprintFailed"),
      
+    // 创建实例失败。
+     FAILEDOPERATION_CREATEINSTANCESFAILED("FailedOperation.CreateInstancesFailed"),
+     
     // 对密钥对的创建操作失败。
      FAILEDOPERATION_CREATEKEYPAIRFAILED("FailedOperation.CreateKeyPairFailed"),
      

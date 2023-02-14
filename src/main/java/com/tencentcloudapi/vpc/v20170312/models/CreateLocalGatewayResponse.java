@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLocalGatewayResponse extends AbstractModel{
 
     /**
-    * 本地网关信息
+    * 本地网关信息。
     */
     @SerializedName("LocalGateway")
     @Expose
@@ -37,16 +37,16 @@ public class CreateLocalGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 本地网关信息 
-     * @return LocalGateway 本地网关信息
+     * Get 本地网关信息。 
+     * @return LocalGateway 本地网关信息。
      */
     public LocalGateway getLocalGateway() {
         return this.LocalGateway;
     }
 
     /**
-     * Set 本地网关信息
-     * @param LocalGateway 本地网关信息
+     * Set 本地网关信息。
+     * @param LocalGateway 本地网关信息。
      */
     public void setLocalGateway(LocalGateway LocalGateway) {
         this.LocalGateway = LocalGateway;

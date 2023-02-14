@@ -43,14 +43,16 @@ public class DescribeHaVipsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * 偏移量，默认为0。
+
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量，默认为20，最大值为100。
+
     */
     @SerializedName("Limit")
     @Expose
@@ -113,32 +115,40 @@ public class DescribeHaVipsRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量，默认为0。
+ 
+     * @return Offset 偏移量，默认为0。
+
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量，默认为0。
+
+     * @param Offset 偏移量，默认为0。
+
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量，默认为20，最大值为100。
+ 
+     * @return Limit 返回数量，默认为20，最大值为100。
+
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量，默认为20，最大值为100。
+
+     * @param Limit 返回数量，默认为20，最大值为100。
+
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

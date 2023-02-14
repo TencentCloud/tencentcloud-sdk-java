@@ -151,6 +151,14 @@ public class ImageRepository extends AbstractModel{
     private String ApplicationNameReal;
 
     /**
+    * 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Public")
+    @Expose
+    private Long Public;
+
+    /**
      * Get 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Reponame 仓库名,含命名空间,如tsf/nginx
@@ -470,6 +478,26 @@ public class ImageRepository extends AbstractModel{
         this.ApplicationNameReal = ApplicationNameReal;
     }
 
+    /**
+     * Get 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Public 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPublic() {
+        return this.Public;
+    }
+
+    /**
+     * Set 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Public 是否公共,1:公有,0:私有
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublic(Long Public) {
+        this.Public = Public;
+    }
+
     public ImageRepository() {
     }
 
@@ -526,6 +554,9 @@ public class ImageRepository extends AbstractModel{
         if (source.ApplicationNameReal != null) {
             this.ApplicationNameReal = new String(source.ApplicationNameReal);
         }
+        if (source.Public != null) {
+            this.Public = new Long(source.Public);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class ImageRepository extends AbstractModel{
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
         this.setParamSimple(map, prefix + "ApplicationNameReal", this.ApplicationNameReal);
+        this.setParamSimple(map, prefix + "Public", this.Public);
 
     }
 }

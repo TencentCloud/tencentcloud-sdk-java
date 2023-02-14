@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLocalGatewayResponse extends AbstractModel{
+public class DescribeBackupEncryptionStatusResponse extends AbstractModel{
 
     /**
-    * 本地网关信息集合。
+    * 实例是否开启了物理备份加密。可能的值有 on, off 。
     */
-    @SerializedName("LocalGatewaySet")
+    @SerializedName("EncryptionStatus")
     @Expose
-    private LocalGateway [] LocalGatewaySet;
-
-    /**
-    * 本地网关总数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private String EncryptionStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 本地网关信息集合。 
-     * @return LocalGatewaySet 本地网关信息集合。
+     * Get 实例是否开启了物理备份加密。可能的值有 on, off 。 
+     * @return EncryptionStatus 实例是否开启了物理备份加密。可能的值有 on, off 。
      */
-    public LocalGateway [] getLocalGatewaySet() {
-        return this.LocalGatewaySet;
+    public String getEncryptionStatus() {
+        return this.EncryptionStatus;
     }
 
     /**
-     * Set 本地网关信息集合。
-     * @param LocalGatewaySet 本地网关信息集合。
+     * Set 实例是否开启了物理备份加密。可能的值有 on, off 。
+     * @param EncryptionStatus 实例是否开启了物理备份加密。可能的值有 on, off 。
      */
-    public void setLocalGatewaySet(LocalGateway [] LocalGatewaySet) {
-        this.LocalGatewaySet = LocalGatewaySet;
-    }
-
-    /**
-     * Get 本地网关总数。 
-     * @return TotalCount 本地网关总数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 本地网关总数。
-     * @param TotalCount 本地网关总数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setEncryptionStatus(String EncryptionStatus) {
+        this.EncryptionStatus = EncryptionStatus;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLocalGatewayResponse() {
+    public DescribeBackupEncryptionStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLocalGatewayResponse(DescribeLocalGatewayResponse source) {
-        if (source.LocalGatewaySet != null) {
-            this.LocalGatewaySet = new LocalGateway[source.LocalGatewaySet.length];
-            for (int i = 0; i < source.LocalGatewaySet.length; i++) {
-                this.LocalGatewaySet[i] = new LocalGateway(source.LocalGatewaySet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeBackupEncryptionStatusResponse(DescribeBackupEncryptionStatusResponse source) {
+        if (source.EncryptionStatus != null) {
+            this.EncryptionStatus = new String(source.EncryptionStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "LocalGatewaySet.", this.LocalGatewaySet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "EncryptionStatus", this.EncryptionStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

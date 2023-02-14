@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteAssistantCidrRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]
+    * CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。
     */
     @SerializedName("CidrBlocks")
     @Expose
     private String [] CidrBlocks;
 
     /**
-     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
-     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。 
+     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
-     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
+     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"] 
-     * @return CidrBlocks CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]
+     * Get CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。 
+     * @return CidrBlocks CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。
      */
     public String [] getCidrBlocks() {
         return this.CidrBlocks;
     }
 
     /**
-     * Set CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]
-     * @param CidrBlocks CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]
+     * Set CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。
+     * @param CidrBlocks CIDR数组，格式如["10.0.0.0/16", "172.16.0.0/16"]。
      */
     public void setCidrBlocks(String [] CidrBlocks) {
         this.CidrBlocks = CidrBlocks;

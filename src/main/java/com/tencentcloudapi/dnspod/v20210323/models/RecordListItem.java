@@ -116,6 +116,13 @@ public class RecordListItem extends AbstractModel{
     private Long MX;
 
     /**
+    * 是否是默认的ns记录
+    */
+    @SerializedName("DefaultNS")
+    @Expose
+    private Boolean DefaultNS;
+
+    /**
      * Get 记录Id 
      * @return RecordId 记录Id
      */
@@ -331,6 +338,22 @@ public class RecordListItem extends AbstractModel{
         this.MX = MX;
     }
 
+    /**
+     * Get 是否是默认的ns记录 
+     * @return DefaultNS 是否是默认的ns记录
+     */
+    public Boolean getDefaultNS() {
+        return this.DefaultNS;
+    }
+
+    /**
+     * Set 是否是默认的ns记录
+     * @param DefaultNS 是否是默认的ns记录
+     */
+    public void setDefaultNS(Boolean DefaultNS) {
+        this.DefaultNS = DefaultNS;
+    }
+
     public RecordListItem() {
     }
 
@@ -378,6 +401,9 @@ public class RecordListItem extends AbstractModel{
         if (source.MX != null) {
             this.MX = new Long(source.MX);
         }
+        if (source.DefaultNS != null) {
+            this.DefaultNS = new Boolean(source.DefaultNS);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class RecordListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TTL", this.TTL);
         this.setParamSimple(map, prefix + "MX", this.MX);
+        this.setParamSimple(map, prefix + "DefaultNS", this.DefaultNS);
 
     }
 }

@@ -20,42 +20,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
+public class DescribeNetworkAccountTypeRequest extends AbstractModel{
 
-    /**
-    * 要查询的CVM实例ID或弹性网卡ID。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-     * Get 要查询的CVM实例ID或弹性网卡ID。 
-     * @return InstanceId 要查询的CVM实例ID或弹性网卡ID。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 要查询的CVM实例ID或弹性网卡ID。
-     * @param InstanceId 要查询的CVM实例ID或弹性网卡ID。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    public DescribeNetworkInterfaceLimitRequest() {
+    public DescribeNetworkAccountTypeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeNetworkInterfaceLimitRequest(DescribeNetworkInterfaceLimitRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
+    public DescribeNetworkAccountTypeRequest(DescribeNetworkAccountTypeRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

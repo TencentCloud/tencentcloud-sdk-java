@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssignIpv6CidrBlockResponse extends AbstractModel{
 
     /**
-    * 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+    * 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
@@ -37,16 +37,16 @@ public class AssignIpv6CidrBlockResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56` 
-     * @return Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+     * Get 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。 
+     * @return Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
-     * @param Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`
+     * Set 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
+     * @param Ipv6CidrBlock 分配的 `IPv6` 网段。形如：`3402:4e00:20:1000::/56`。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;

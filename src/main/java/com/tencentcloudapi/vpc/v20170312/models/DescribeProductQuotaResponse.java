@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeProductQuotaResponse extends AbstractModel{
 
     /**
-    * ProductQuota对象数组
+    * ProductQuota对象数组。
     */
     @SerializedName("ProductQuotaSet")
     @Expose
     private ProductQuota [] ProductQuotaSet;
 
     /**
-    * 符合条件的产品类型个数
+    * 符合条件的产品类型个数。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeProductQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ProductQuota对象数组 
-     * @return ProductQuotaSet ProductQuota对象数组
+     * Get ProductQuota对象数组。 
+     * @return ProductQuotaSet ProductQuota对象数组。
      */
     public ProductQuota [] getProductQuotaSet() {
         return this.ProductQuotaSet;
     }
 
     /**
-     * Set ProductQuota对象数组
-     * @param ProductQuotaSet ProductQuota对象数组
+     * Set ProductQuota对象数组。
+     * @param ProductQuotaSet ProductQuota对象数组。
      */
     public void setProductQuotaSet(ProductQuota [] ProductQuotaSet) {
         this.ProductQuotaSet = ProductQuotaSet;
     }
 
     /**
-     * Get 符合条件的产品类型个数 
-     * @return TotalCount 符合条件的产品类型个数
+     * Get 符合条件的产品类型个数。 
+     * @return TotalCount 符合条件的产品类型个数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的产品类型个数
-     * @param TotalCount 符合条件的产品类型个数
+     * Set 符合条件的产品类型个数。
+     * @param TotalCount 符合条件的产品类型个数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

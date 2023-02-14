@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRouteConflictsResponse extends AbstractModel{
 
     /**
-    * 路由策略冲突列表
+    * 路由策略冲突列表。
     */
     @SerializedName("RouteConflictSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeRouteConflictsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 路由策略冲突列表 
-     * @return RouteConflictSet 路由策略冲突列表
+     * Get 路由策略冲突列表。 
+     * @return RouteConflictSet 路由策略冲突列表。
      */
     public RouteConflict [] getRouteConflictSet() {
         return this.RouteConflictSet;
     }
 
     /**
-     * Set 路由策略冲突列表
-     * @param RouteConflictSet 路由策略冲突列表
+     * Set 路由策略冲突列表。
+     * @param RouteConflictSet 路由策略冲突列表。
      */
     public void setRouteConflictSet(RouteConflict [] RouteConflictSet) {
         this.RouteConflictSet = RouteConflictSet;

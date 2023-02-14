@@ -37,7 +37,7 @@ public class CreateNetworkAclRequest extends AbstractModel{
     private String NetworkAclName;
 
     /**
-    * 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+    * 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
     */
     @SerializedName("NetworkAclType")
     @Expose
@@ -83,16 +83,16 @@ public class CreateNetworkAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE) 
-     * @return NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+     * Get 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。 
+     * @return NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
      */
     public String getNetworkAclType() {
         return this.NetworkAclType;
     }
 
     /**
-     * Set 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
-     * @param NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)
+     * Set 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+     * @param NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
      */
     public void setNetworkAclType(String NetworkAclType) {
         this.NetworkAclType = NetworkAclType;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDhcpIpResponse extends AbstractModel{
 
     /**
-    * 新创建的`DhcpIp`信息
+    * 新创建的`DhcpIp`信息。
     */
     @SerializedName("DhcpIpSet")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDhcpIpResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新创建的`DhcpIp`信息 
-     * @return DhcpIpSet 新创建的`DhcpIp`信息
+     * Get 新创建的`DhcpIp`信息。 
+     * @return DhcpIpSet 新创建的`DhcpIp`信息。
      */
     public DhcpIp [] getDhcpIpSet() {
         return this.DhcpIpSet;
     }
 
     /**
-     * Set 新创建的`DhcpIp`信息
-     * @param DhcpIpSet 新创建的`DhcpIp`信息
+     * Set 新创建的`DhcpIp`信息。
+     * @param DhcpIpSet 新创建的`DhcpIp`信息。
      */
     public void setDhcpIpSet(DhcpIp [] DhcpIpSet) {
         this.DhcpIpSet = DhcpIpSet;

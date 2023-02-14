@@ -30,7 +30,7 @@ public class ModifyIpv6AddressesAttributeRequest extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-    * 指定的内网IPv6`地址信息。
+    * 指定的内网IPv6地址信息。
     */
     @SerializedName("Ipv6Addresses")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyIpv6AddressesAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定的内网IPv6`地址信息。 
-     * @return Ipv6Addresses 指定的内网IPv6`地址信息。
+     * Get 指定的内网IPv6地址信息。 
+     * @return Ipv6Addresses 指定的内网IPv6地址信息。
      */
     public Ipv6Address [] getIpv6Addresses() {
         return this.Ipv6Addresses;
     }
 
     /**
-     * Set 指定的内网IPv6`地址信息。
-     * @param Ipv6Addresses 指定的内网IPv6`地址信息。
+     * Set 指定的内网IPv6地址信息。
+     * @param Ipv6Addresses 指定的内网IPv6地址信息。
      */
     public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
         this.Ipv6Addresses = Ipv6Addresses;

@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLocalGatewayResponse extends AbstractModel{
+public class DescribeNetworkAccountTypeResponse extends AbstractModel{
 
     /**
-    * 本地网关信息集合。
+    * 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
     */
-    @SerializedName("LocalGatewaySet")
+    @SerializedName("NetworkAccountType")
     @Expose
-    private LocalGateway [] LocalGatewaySet;
-
-    /**
-    * 本地网关总数。
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private String NetworkAccountType;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 本地网关信息集合。 
-     * @return LocalGatewaySet 本地网关信息集合。
+     * Get 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户 
+     * @return NetworkAccountType 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
      */
-    public LocalGateway [] getLocalGatewaySet() {
-        return this.LocalGatewaySet;
+    public String getNetworkAccountType() {
+        return this.NetworkAccountType;
     }
 
     /**
-     * Set 本地网关信息集合。
-     * @param LocalGatewaySet 本地网关信息集合。
+     * Set 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
+     * @param NetworkAccountType 用户账号的网络类型，STANDARD为标准用户，LEGACY为传统用户
      */
-    public void setLocalGatewaySet(LocalGateway [] LocalGatewaySet) {
-        this.LocalGatewaySet = LocalGatewaySet;
-    }
-
-    /**
-     * Get 本地网关总数。 
-     * @return TotalCount 本地网关总数。
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 本地网关总数。
-     * @param TotalCount 本地网关总数。
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setNetworkAccountType(String NetworkAccountType) {
+        this.NetworkAccountType = NetworkAccountType;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLocalGatewayResponse() {
+    public DescribeNetworkAccountTypeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLocalGatewayResponse(DescribeLocalGatewayResponse source) {
-        if (source.LocalGatewaySet != null) {
-            this.LocalGatewaySet = new LocalGateway[source.LocalGatewaySet.length];
-            for (int i = 0; i < source.LocalGatewaySet.length; i++) {
-                this.LocalGatewaySet[i] = new LocalGateway(source.LocalGatewaySet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeNetworkAccountTypeResponse(DescribeNetworkAccountTypeResponse source) {
+        if (source.NetworkAccountType != null) {
+            this.NetworkAccountType = new String(source.NetworkAccountType);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeLocalGatewayResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "LocalGatewaySet.", this.LocalGatewaySet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "NetworkAccountType", this.NetworkAccountType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -378,6 +378,14 @@ public class ClusterInstancesInfo extends AbstractModel{
     private Boolean IsMultiZoneCluster;
 
     /**
+    * 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCvmReplace")
+    @Expose
+    private Boolean IsCvmReplace;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -1305,6 +1313,26 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
+    /**
+     * Get 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCvmReplace 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsCvmReplace() {
+        return this.IsCvmReplace;
+    }
+
+    /**
+     * Set 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCvmReplace 是否开通异常节点自动补偿
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCvmReplace(Boolean IsCvmReplace) {
+        this.IsCvmReplace = IsCvmReplace;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1445,6 +1473,9 @@ public class ClusterInstancesInfo extends AbstractModel{
         if (source.IsMultiZoneCluster != null) {
             this.IsMultiZoneCluster = new Boolean(source.IsMultiZoneCluster);
         }
+        if (source.IsCvmReplace != null) {
+            this.IsCvmReplace = new Boolean(source.IsCvmReplace);
+        }
     }
 
 
@@ -1493,6 +1524,7 @@ public class ClusterInstancesInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+        this.setParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
 
     }
 }

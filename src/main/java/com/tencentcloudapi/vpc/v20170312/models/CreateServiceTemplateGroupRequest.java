@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceTemplateGroupRequest extends AbstractModel{
 
     /**
-    * 协议端口模板集合名称
+    * 协议端口模板集合名称。
     */
     @SerializedName("ServiceTemplateGroupName")
     @Expose
@@ -37,16 +37,16 @@ public class CreateServiceTemplateGroupRequest extends AbstractModel{
     private String [] ServiceTemplateIds;
 
     /**
-     * Get 协议端口模板集合名称 
-     * @return ServiceTemplateGroupName 协议端口模板集合名称
+     * Get 协议端口模板集合名称。 
+     * @return ServiceTemplateGroupName 协议端口模板集合名称。
      */
     public String getServiceTemplateGroupName() {
         return this.ServiceTemplateGroupName;
     }
 
     /**
-     * Set 协议端口模板集合名称
-     * @param ServiceTemplateGroupName 协议端口模板集合名称
+     * Set 协议端口模板集合名称。
+     * @param ServiceTemplateGroupName 协议端口模板集合名称。
      */
     public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
         this.ServiceTemplateGroupName = ServiceTemplateGroupName;

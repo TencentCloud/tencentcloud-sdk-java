@@ -44,7 +44,7 @@ public class CreateDhcpIpRequest extends AbstractModel{
     private String DhcpIpName;
 
     /**
-    * 新申请的内网IP地址个数。总数不能超过64个。
+    * 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -99,16 +99,16 @@ public class CreateDhcpIpRequest extends AbstractModel{
     }
 
     /**
-     * Get 新申请的内网IP地址个数。总数不能超过64个。 
-     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个。
+     * Get 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。 
+     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
      */
     public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Set 新申请的内网IP地址个数。总数不能超过64个。
-     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个。
+     * Set 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
+     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数。总数不能超过64个，为了兼容性，当前参数必填。
      */
     public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
