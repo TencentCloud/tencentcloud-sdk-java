@@ -44,7 +44,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 慢查询平均执行时间阈值（单位：微秒）。
+    * 慢查询平均执行时间阈值（单位：毫秒）。
     */
     @SerializedName("MinQueryTime")
     @Expose
@@ -120,16 +120,16 @@ public class DescribeSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 慢查询平均执行时间阈值（单位：微秒）。 
-     * @return MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
+     * Get 慢查询平均执行时间阈值（单位：毫秒）。 
+     * @return MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询平均执行时间阈值（单位：微秒）。
-     * @param MinQueryTime 慢查询平均执行时间阈值（单位：微秒）。
+     * Set 慢查询平均执行时间阈值（单位：毫秒）。
+     * @param MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;

@@ -99,7 +99,7 @@ public class BmeipClient extends AbstractClient{
     }
 
     /**
-     *黑石EIP绑定VPCIP
+     *黑石EIP绑定VPC IP
      * @param req BindVpcIpRequest
      * @return BindVpcIpResponse
      * @throws TencentCloudSDKException
@@ -139,7 +139,7 @@ public class BmeipClient extends AbstractClient{
     }
 
     /**
-     *创建黑石弹性公网 EIPACL
+     *创建黑石弹性公网 EIP ACL
      * @param req CreateEipAclRequest
      * @return CreateEipAclResponse
      * @throws TencentCloudSDKException

@@ -259,6 +259,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取当前房间的成员列表，房间结束或过期后无法使用。
+     * @param req DescribeCurrentMemberListRequest
+     * @return DescribeCurrentMemberListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentMemberListResponse DescribeCurrentMemberList(DescribeCurrentMemberListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCurrentMemberListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCurrentMemberList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取文档信息
      * @param req DescribeDocumentRequest
      * @return DescribeDocumentResponse

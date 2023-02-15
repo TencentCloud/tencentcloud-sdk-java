@@ -53,10 +53,9 @@ public class ModifyReviewTemplateRequest extends AbstractModel{
     /**
     * 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -134,10 +133,9 @@ public class ModifyReviewTemplateRequest extends AbstractModel{
     /**
      * Get 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -145,10 +143,9 @@ public class ModifyReviewTemplateRequest extends AbstractModel{
 注意：不填表示不更新。 
      * @return Labels 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -162,10 +159,9 @@ public class ModifyReviewTemplateRequest extends AbstractModel{
     /**
      * Set 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>
@@ -173,10 +169,9 @@ public class ModifyReviewTemplateRequest extends AbstractModel{
 注意：不填表示不更新。
      * @param Labels 需要返回的违规标签列表，可选值为：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂；</li>
 <li>Ad：广告；</li>
 <li>Moan：娇喘。</li>

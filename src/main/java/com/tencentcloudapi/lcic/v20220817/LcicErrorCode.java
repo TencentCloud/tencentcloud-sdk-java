@@ -9,6 +9,12 @@ public enum LcicErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 房间状态错误，房间已结束。
+     FAILEDOPERATION_CLASSENDED("FailedOperation.ClassEnded"),
+     
+    // 房间状态错误，房间已过期。
+     FAILEDOPERATION_CLASSEXPIRED("FailedOperation.ClassExpired"),
+     
     // 课堂状态错误，课堂已开始。
      FAILEDOPERATION_CLASSSTARTED("FailedOperation.ClassStarted"),
      

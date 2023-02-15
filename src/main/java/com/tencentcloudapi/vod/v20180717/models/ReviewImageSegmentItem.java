@@ -41,11 +41,10 @@ public class ReviewImageSegmentItem extends AbstractModel{
     /**
     * 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
     */
     @SerializedName("Label")
@@ -132,19 +131,17 @@ public class ReviewImageSegmentItem extends AbstractModel{
     /**
      * Get 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li> 
      * @return Label 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
      */
     public String getLabel() {
@@ -154,19 +151,17 @@ public class ReviewImageSegmentItem extends AbstractModel{
     /**
      * Set 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
      * @param Label 嫌疑片段最可能的违规的标签，取值范围：
 <li>Porn：色情；</li>
-<li>Terror：暴恐；</li>
+<li>Terror：暴力；</li>
 <li>Polity：不适宜的信息；</li>
 <li>Ad：广告；</li>
 <li>Illegal：违法；</li>
-<li>Religion：宗教；</li>
 <li>Abuse：谩骂。</li>
      */
     public void setLabel(String Label) {

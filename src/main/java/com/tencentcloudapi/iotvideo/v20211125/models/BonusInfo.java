@@ -72,6 +72,14 @@ public class BonusInfo extends AbstractModel{
     private Long CreateTime;
 
     /**
+    * 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 资源包ID 
      * @return BonusId 资源包ID
      */
@@ -183,6 +191,26 @@ public class BonusInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 资源包状态 0.未使用 1.使用中 2.已退款 3.已过期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public BonusInfo() {
     }
 
@@ -212,6 +240,9 @@ public class BonusInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class BonusInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Used", this.Used);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

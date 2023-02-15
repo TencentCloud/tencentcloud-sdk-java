@@ -3279,7 +3279,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *修改告警规则 
+     *修改告警规则
      * @param req ModifyPrometheusAlertRuleRequest
      * @return ModifyPrometheusAlertRuleResponse
      * @throws TencentCloudSDKException

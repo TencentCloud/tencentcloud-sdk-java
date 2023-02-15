@@ -299,6 +299,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量删除域名
+     * @param req DeleteDomainBatchRequest
+     * @return DeleteDomainBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDomainBatchResponse DeleteDomainBatch(DeleteDomainBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDomainBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDomainBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDomainBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除记录
      * @param req DeleteRecordRequest
      * @return DeleteRecordResponse
@@ -519,6 +539,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取域名概览信息
+     * @param req DescribeDomainPreviewRequest
+     * @return DescribeDomainPreviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainPreviewResponse DescribeDomainPreview(DescribeDomainPreviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainPreviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainPreviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainPreview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取域名权限
      * @param req DescribeDomainPurviewRequest
      * @return DescribeDomainPurviewResponse
@@ -559,6 +599,46 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取域名Whois信息
+     * @param req DescribeDomainWhoisRequest
+     * @return DescribeDomainWhoisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainWhoisResponse DescribeDomainWhois(DescribeDomainWhoisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainWhoisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainWhoisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainWhois");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取各套餐配置详情
+     * @param req DescribePackageDetailRequest
+     * @return DescribePackageDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePackageDetailResponse DescribePackageDetail(DescribePackageDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePackageDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePackageDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePackageDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取记录信息
      * @param req DescribeRecordRequest
      * @return DescribeRecordResponse
@@ -571,6 +651,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *判断是否有除系统默认的@-NS记录之外的记录存在
+     * @param req DescribeRecordExistExceptDefaultNSRequest
+     * @return DescribeRecordExistExceptDefaultNSResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordExistExceptDefaultNSResponse DescribeRecordExistExceptDefaultNS(DescribeRecordExistExceptDefaultNSRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordExistExceptDefaultNSResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordExistExceptDefaultNS");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -791,6 +891,26 @@ public class DnspodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUserDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取域名增值服务用量
+     * @param req DescribeVASStatisticRequest
+     * @return DescribeVASStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVASStatisticResponse DescribeVASStatistic(DescribeVASStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVASStatisticResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVASStatisticResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVASStatistic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

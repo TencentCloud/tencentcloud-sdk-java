@@ -207,6 +207,30 @@ public class DatasetGroup extends AbstractModel{
     private String DatasetScope;
 
     /**
+    * 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrScene")
+    @Expose
+    private String OcrScene;
+
+    /**
+    * 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnnotationKeyStatus")
+    @Expose
+    private String AnnotationKeyStatus;
+
+    /**
+    * 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContentType")
+    @Expose
+    private String ContentType;
+
+    /**
      * Get 数据集ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasetId 数据集ID
@@ -666,6 +690,66 @@ public class DatasetGroup extends AbstractModel{
         this.DatasetScope = DatasetScope;
     }
 
+    /**
+     * Get 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrScene 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOcrScene() {
+        return this.OcrScene;
+    }
+
+    /**
+     * Set 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrScene 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrScene(String OcrScene) {
+        this.OcrScene = OcrScene;
+    }
+
+    /**
+     * Get 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnnotationKeyStatus 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnnotationKeyStatus() {
+        return this.AnnotationKeyStatus;
+    }
+
+    /**
+     * Set 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnnotationKeyStatus 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotationKeyStatus(String AnnotationKeyStatus) {
+        this.AnnotationKeyStatus = AnnotationKeyStatus;
+    }
+
+    /**
+     * Get 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContentType 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContentType() {
+        return this.ContentType;
+    }
+
+    /**
+     * Set 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContentType 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContentType(String ContentType) {
+        this.ContentType = ContentType;
+    }
+
     public DatasetGroup() {
     }
 
@@ -749,6 +833,15 @@ public class DatasetGroup extends AbstractModel{
         if (source.DatasetScope != null) {
             this.DatasetScope = new String(source.DatasetScope);
         }
+        if (source.OcrScene != null) {
+            this.OcrScene = new String(source.OcrScene);
+        }
+        if (source.AnnotationKeyStatus != null) {
+            this.AnnotationKeyStatus = new String(source.AnnotationKeyStatus);
+        }
+        if (source.ContentType != null) {
+            this.ContentType = new String(source.ContentType);
+        }
     }
 
 
@@ -779,6 +872,9 @@ public class DatasetGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "AnnotationType", this.AnnotationType);
         this.setParamSimple(map, prefix + "AnnotationFormat", this.AnnotationFormat);
         this.setParamSimple(map, prefix + "DatasetScope", this.DatasetScope);
+        this.setParamSimple(map, prefix + "OcrScene", this.OcrScene);
+        this.setParamSimple(map, prefix + "AnnotationKeyStatus", this.AnnotationKeyStatus);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
 
     }
 }

@@ -44,6 +44,13 @@ public class SpecPrice extends AbstractModel{
     private Long RealTotalCost;
 
     /**
+    * 计费项数量
+    */
+    @SerializedName("SpecCount")
+    @Expose
+    private Long SpecCount;
+
+    /**
      * Get 计费项名称 
      * @return SpecName 计费项名称
      */
@@ -91,6 +98,22 @@ public class SpecPrice extends AbstractModel{
         this.RealTotalCost = RealTotalCost;
     }
 
+    /**
+     * Get 计费项数量 
+     * @return SpecCount 计费项数量
+     */
+    public Long getSpecCount() {
+        return this.SpecCount;
+    }
+
+    /**
+     * Set 计费项数量
+     * @param SpecCount 计费项数量
+     */
+    public void setSpecCount(Long SpecCount) {
+        this.SpecCount = SpecCount;
+    }
+
     public SpecPrice() {
     }
 
@@ -108,6 +131,9 @@ public class SpecPrice extends AbstractModel{
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new Long(source.RealTotalCost);
         }
+        if (source.SpecCount != null) {
+            this.SpecCount = new Long(source.SpecCount);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class SpecPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+        this.setParamSimple(map, prefix + "SpecCount", this.SpecCount);
 
     }
 }

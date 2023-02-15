@@ -95,6 +95,14 @@ public class VmGroupOther extends AbstractModel{
     private Boolean IsNotEqualServiceConfig;
 
     /**
+    * HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheckSettings")
+    @Expose
+    private HealthCheckSettings HealthCheckSettings;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -274,6 +282,26 @@ public class VmGroupOther extends AbstractModel{
         this.IsNotEqualServiceConfig = IsNotEqualServiceConfig;
     }
 
+    /**
+     * Get HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheckSettings HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HealthCheckSettings getHealthCheckSettings() {
+        return this.HealthCheckSettings;
+    }
+
+    /**
+     * Set HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckSettings HealthCheckSettings
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
+        this.HealthCheckSettings = HealthCheckSettings;
+    }
+
     public VmGroupOther() {
     }
 
@@ -309,6 +337,9 @@ public class VmGroupOther extends AbstractModel{
         if (source.IsNotEqualServiceConfig != null) {
             this.IsNotEqualServiceConfig = new Boolean(source.IsNotEqualServiceConfig);
         }
+        if (source.HealthCheckSettings != null) {
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class VmGroupOther extends AbstractModel{
         this.setParamSimple(map, prefix + "OffInstanceCount", this.OffInstanceCount);
         this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
         this.setParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
 
     }
 }

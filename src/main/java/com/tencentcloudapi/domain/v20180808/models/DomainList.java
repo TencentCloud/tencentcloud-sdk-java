@@ -49,6 +49,7 @@ false 不是
     * 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -160,10 +161,12 @@ false 不是
     /**
      * Get 是否已设置自动续费 。
 0：未设置 
-1：已设置 
+1：已设置
+2：设置后，关闭 
      * @return AutoRenew 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
@@ -173,9 +176,11 @@ false 不是
      * Set 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
      * @param AutoRenew 是否已设置自动续费 。
 0：未设置 
 1：已设置
+2：设置后，关闭
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;

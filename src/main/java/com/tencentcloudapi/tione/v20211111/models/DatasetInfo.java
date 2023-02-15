@@ -199,6 +199,22 @@ public class DatasetInfo extends AbstractModel{
     private String DatasetScope;
 
     /**
+    * 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OcrScene")
+    @Expose
+    private String OcrScene;
+
+    /**
+    * 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnnotationKeyStatus")
+    @Expose
+    private String AnnotationKeyStatus;
+
+    /**
      * Get 数据集id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasetId 数据集id
@@ -638,6 +654,46 @@ public class DatasetInfo extends AbstractModel{
         this.DatasetScope = DatasetScope;
     }
 
+    /**
+     * Get 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OcrScene 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOcrScene() {
+        return this.OcrScene;
+    }
+
+    /**
+     * Set 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OcrScene 数据集OCR子场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOcrScene(String OcrScene) {
+        this.OcrScene = OcrScene;
+    }
+
+    /**
+     * Get 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnnotationKeyStatus 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnnotationKeyStatus() {
+        return this.AnnotationKeyStatus;
+    }
+
+    /**
+     * Set 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnnotationKeyStatus 数据集字典修改状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotationKeyStatus(String AnnotationKeyStatus) {
+        this.AnnotationKeyStatus = AnnotationKeyStatus;
+    }
+
     public DatasetInfo() {
     }
 
@@ -715,6 +771,12 @@ public class DatasetInfo extends AbstractModel{
         if (source.DatasetScope != null) {
             this.DatasetScope = new String(source.DatasetScope);
         }
+        if (source.OcrScene != null) {
+            this.OcrScene = new String(source.OcrScene);
+        }
+        if (source.AnnotationKeyStatus != null) {
+            this.AnnotationKeyStatus = new String(source.AnnotationKeyStatus);
+        }
     }
 
 
@@ -744,6 +806,8 @@ public class DatasetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AnnotationType", this.AnnotationType);
         this.setParamSimple(map, prefix + "AnnotationFormat", this.AnnotationFormat);
         this.setParamSimple(map, prefix + "DatasetScope", this.DatasetScope);
+        this.setParamSimple(map, prefix + "OcrScene", this.OcrScene);
+        this.setParamSimple(map, prefix + "AnnotationKeyStatus", this.AnnotationKeyStatus);
 
     }
 }
