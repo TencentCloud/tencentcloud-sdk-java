@@ -693,6 +693,22 @@ public class TemServiceVersionInfo extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreStopEncoded")
+    @Expose
+    private String PreStopEncoded;
+
+    /**
+    * 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PostStartEncoded")
+    @Expose
+    private String PostStartEncoded;
+
+    /**
      * Get 主键 
      * @return VersionId 主键
      */
@@ -2340,6 +2356,46 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 是否编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreStopEncoded 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreStopEncoded() {
+        return this.PreStopEncoded;
+    }
+
+    /**
+     * Set 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreStopEncoded 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreStopEncoded(String PreStopEncoded) {
+        this.PreStopEncoded = PreStopEncoded;
+    }
+
+    /**
+     * Get 是否编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PostStartEncoded 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPostStartEncoded() {
+        return this.PostStartEncoded;
+    }
+
+    /**
+     * Set 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostStartEncoded 是否编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPostStartEncoded(String PostStartEncoded) {
+        this.PostStartEncoded = PostStartEncoded;
+    }
+
     public TemServiceVersionInfo() {
     }
 
@@ -2645,6 +2701,12 @@ public class TemServiceVersionInfo extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PreStopEncoded != null) {
+            this.PreStopEncoded = new String(source.PreStopEncoded);
+        }
+        if (source.PostStartEncoded != null) {
+            this.PostStartEncoded = new String(source.PostStartEncoded);
+        }
     }
 
 
@@ -2738,6 +2800,8 @@ public class TemServiceVersionInfo extends AbstractModel{
         this.setParamObj(map, prefix + "PodList.", this.PodList);
         this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PreStopEncoded", this.PreStopEncoded);
+        this.setParamSimple(map, prefix + "PostStartEncoded", this.PostStartEncoded);
 
     }
 }

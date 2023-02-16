@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateBPFakeURLsRequest extends AbstractModel{
 
     /**
-    * 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+    * 批量模版
     */
     @SerializedName("FakeURLs")
     @Expose
     private String FakeURLs;
 
     /**
-     * Get 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx 
-     * @return FakeURLs 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+     * Get 批量模版 
+     * @return FakeURLs 批量模版
      */
     public String getFakeURLs() {
         return this.FakeURLs;
     }
 
     /**
-     * Set 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
-     * @param FakeURLs 仿冒网址下载链接：请严格按照模版要求填写，https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221124/ff3273b24104d03fa3a8d0629a7f71a9/批量仿冒网址举报模板.xlsx
+     * Set 批量模版
+     * @param FakeURLs 批量模版
      */
     public void setFakeURLs(String FakeURLs) {
         this.FakeURLs = FakeURLs;

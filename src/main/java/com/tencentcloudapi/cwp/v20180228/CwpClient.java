@@ -4222,6 +4222,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *修改主机备注信息
+     * @param req ModifyMachineRemarkRequest
+     * @return ModifyMachineRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMachineRemarkResponse ModifyMachineRemark(ModifyMachineRemarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMachineRemarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMachineRemarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMachineRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *定时扫描设置
      * @param req ModifyMalwareTimingScanSettingsRequest
      * @return ModifyMalwareTimingScanSettingsResponse

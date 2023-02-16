@@ -39,6 +39,14 @@ public class TemEnvironmentStoppingStatus extends AbstractModel{
     private Long StoppedApplicationNum;
 
     /**
+    * 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StopFailedApplicationNum")
+    @Expose
+    private Long StopFailedApplicationNum;
+
+    /**
      * Get 需要停止的应用数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationNumNeedToStop 需要停止的应用数量
@@ -78,6 +86,26 @@ public class TemEnvironmentStoppingStatus extends AbstractModel{
         this.StoppedApplicationNum = StoppedApplicationNum;
     }
 
+    /**
+     * Get 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StopFailedApplicationNum 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStopFailedApplicationNum() {
+        return this.StopFailedApplicationNum;
+    }
+
+    /**
+     * Set 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StopFailedApplicationNum 停止失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStopFailedApplicationNum(Long StopFailedApplicationNum) {
+        this.StopFailedApplicationNum = StopFailedApplicationNum;
+    }
+
     public TemEnvironmentStoppingStatus() {
     }
 
@@ -92,6 +120,9 @@ public class TemEnvironmentStoppingStatus extends AbstractModel{
         if (source.StoppedApplicationNum != null) {
             this.StoppedApplicationNum = new Long(source.StoppedApplicationNum);
         }
+        if (source.StopFailedApplicationNum != null) {
+            this.StopFailedApplicationNum = new Long(source.StopFailedApplicationNum);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class TemEnvironmentStoppingStatus extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationNumNeedToStop", this.ApplicationNumNeedToStop);
         this.setParamSimple(map, prefix + "StoppedApplicationNum", this.StoppedApplicationNum);
+        this.setParamSimple(map, prefix + "StopFailedApplicationNum", this.StopFailedApplicationNum);
 
     }
 }

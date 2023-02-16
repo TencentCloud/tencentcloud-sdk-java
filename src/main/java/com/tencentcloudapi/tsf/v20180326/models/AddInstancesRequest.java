@@ -79,6 +79,13 @@ public class AddInstancesRequest extends AbstractModel{
     private String InstanceImportMode;
 
     /**
+    * 安全组id
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String SecurityGroupIds;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -206,6 +213,22 @@ public class AddInstancesRequest extends AbstractModel{
         this.InstanceImportMode = InstanceImportMode;
     }
 
+    /**
+     * Get 安全组id 
+     * @return SecurityGroupIds 安全组id
+     */
+    public String getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组id
+     * @param SecurityGroupIds 安全组id
+     */
+    public void setSecurityGroupIds(String SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -241,6 +264,9 @@ public class AddInstancesRequest extends AbstractModel{
         if (source.InstanceImportMode != null) {
             this.InstanceImportMode = new String(source.InstanceImportMode);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String(source.SecurityGroupIds);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamSimple(map, prefix + "InstanceImportMode", this.InstanceImportMode);
+        this.setParamSimple(map, prefix + "SecurityGroupIds", this.SecurityGroupIds);
 
     }
 }

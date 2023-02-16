@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateBPFakeAPPListRequest extends AbstractModel{
 
     /**
-    * 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+    * 批量模版
     */
     @SerializedName("FakeAPPs")
     @Expose
     private String FakeAPPs;
 
     /**
-     * Get 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx 
-     * @return FakeAPPs 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+     * Get 批量模版 
+     * @return FakeAPPs 批量模版
      */
     public String getFakeAPPs() {
         return this.FakeAPPs;
     }
 
     /**
-     * Set 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
-     * @param FakeAPPs 仿冒应用下载链接。请严格按照模版进行填写：https://bma-privacy-detection-1251316161.cosgz.myqcloud.com/20221206/f8c7521fbd84f4c4e7c2a25ac233857e/批量仿冒应用举报模板.xlsx
+     * Set 批量模版
+     * @param FakeAPPs 批量模版
      */
     public void setFakeAPPs(String FakeAPPs) {
         this.FakeAPPs = FakeAPPs;

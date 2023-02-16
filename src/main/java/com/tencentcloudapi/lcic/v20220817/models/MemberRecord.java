@@ -100,6 +100,27 @@ public class MemberRecord extends AbstractModel{
     private Long Rewords;
 
     /**
+    * 用户IP。
+    */
+    @SerializedName("IPAddress")
+    @Expose
+    private String IPAddress;
+
+    /**
+    * 用户位置信息。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+    */
+    @SerializedName("Device")
+    @Expose
+    private Long Device;
+
+    /**
      * Get 用户ID。 
      * @return UserId 用户ID。
      */
@@ -275,6 +296,54 @@ public class MemberRecord extends AbstractModel{
         this.Rewords = Rewords;
     }
 
+    /**
+     * Get 用户IP。 
+     * @return IPAddress 用户IP。
+     */
+    public String getIPAddress() {
+        return this.IPAddress;
+    }
+
+    /**
+     * Set 用户IP。
+     * @param IPAddress 用户IP。
+     */
+    public void setIPAddress(String IPAddress) {
+        this.IPAddress = IPAddress;
+    }
+
+    /**
+     * Get 用户位置信息。 
+     * @return Location 用户位置信息。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 用户位置信息。
+     * @param Location 用户位置信息。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序） 
+     * @return Device 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+     */
+    public Long getDevice() {
+        return this.Device;
+    }
+
+    /**
+     * Set 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+     * @param Device 用户设备平台信息。0:unknown  1:windows  2:mac  3:android  4:ios  5:web   6:h5   7:miniprogram （小程序）
+     */
+    public void setDevice(Long Device) {
+        this.Device = Device;
+    }
+
     public MemberRecord() {
     }
 
@@ -316,6 +385,15 @@ public class MemberRecord extends AbstractModel{
         if (source.Rewords != null) {
             this.Rewords = new Long(source.Rewords);
         }
+        if (source.IPAddress != null) {
+            this.IPAddress = new String(source.IPAddress);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Device != null) {
+            this.Device = new Long(source.Device);
+        }
     }
 
 
@@ -334,6 +412,9 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstJoinTimestamp", this.FirstJoinTimestamp);
         this.setParamSimple(map, prefix + "LastQuitTimestamp", this.LastQuitTimestamp);
         this.setParamSimple(map, prefix + "Rewords", this.Rewords);
+        this.setParamSimple(map, prefix + "IPAddress", this.IPAddress);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "Device", this.Device);
 
     }
 }

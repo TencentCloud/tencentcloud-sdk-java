@@ -178,6 +178,14 @@ public class ServiceVersionBrief extends AbstractModel{
     private String CreateDate;
 
     /**
+    * 地域id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get 版本名称 
      * @return VersionName 版本名称
      */
@@ -557,6 +565,26 @@ public class ServiceVersionBrief extends AbstractModel{
         this.CreateDate = CreateDate;
     }
 
+    /**
+     * Get 地域id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionId 地域id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 地域id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionId 地域id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public ServiceVersionBrief() {
     }
 
@@ -631,6 +659,9 @@ public class ServiceVersionBrief extends AbstractModel{
         if (source.CreateDate != null) {
             this.CreateDate = new String(source.CreateDate);
         }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -658,6 +689,7 @@ public class ServiceVersionBrief extends AbstractModel{
         this.setParamObj(map, prefix + "PodList.", this.PodList);
         this.setParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
         this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

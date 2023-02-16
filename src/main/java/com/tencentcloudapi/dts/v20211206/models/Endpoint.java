@@ -223,6 +223,14 @@ public class Endpoint extends AbstractModel{
     private String EncryptConn;
 
     /**
+    * 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseNetEnv")
+    @Expose
+    private String DatabaseNetEnv;
+
+    /**
      * Get 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域英文名，如：ap-guangzhou
@@ -722,6 +730,26 @@ public class Endpoint extends AbstractModel{
         this.EncryptConn = EncryptConn;
     }
 
+    /**
+     * Get 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseNetEnv() {
+        return this.DatabaseNetEnv;
+    }
+
+    /**
+     * Set 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseNetEnv(String DatabaseNetEnv) {
+        this.DatabaseNetEnv = DatabaseNetEnv;
+    }
+
     public Endpoint() {
     }
 
@@ -805,6 +833,9 @@ public class Endpoint extends AbstractModel{
         if (source.EncryptConn != null) {
             this.EncryptConn = new String(source.EncryptConn);
         }
+        if (source.DatabaseNetEnv != null) {
+            this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
+        }
     }
 
 
@@ -837,6 +868,7 @@ public class Endpoint extends AbstractModel{
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
+        this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
 
     }
 }

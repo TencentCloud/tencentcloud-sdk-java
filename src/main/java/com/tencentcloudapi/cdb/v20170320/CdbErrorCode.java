@@ -195,6 +195,9 @@ public enum CdbErrorCode {
     // json解析失败。
      INTERNALERROR_JSONERROR("InternalError.JSONError"),
      
+    // 开通加密失败。
+     INTERNALERROR_KMSERROR("InternalError.KmsError"),
+     
     // 网络错误。
      INTERNALERROR_NETWORKERROR("InternalError.NetworkError"),
      

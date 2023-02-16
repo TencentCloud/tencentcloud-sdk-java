@@ -95,6 +95,22 @@ public class LogConfigExtractRule extends AbstractModel{
     private String UnMatchedKey;
 
     /**
+    * tracking
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Backtracking")
+    @Expose
+    private String Backtracking;
+
+    /**
+    * 分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Delimiter")
+    @Expose
+    private String Delimiter;
+
+    /**
      * Get 首行正则表达式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BeginningRegex 首行正则表达式
@@ -274,6 +290,46 @@ public class LogConfigExtractRule extends AbstractModel{
         this.UnMatchedKey = UnMatchedKey;
     }
 
+    /**
+     * Get tracking
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Backtracking tracking
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBacktracking() {
+        return this.Backtracking;
+    }
+
+    /**
+     * Set tracking
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Backtracking tracking
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBacktracking(String Backtracking) {
+        this.Backtracking = Backtracking;
+    }
+
+    /**
+     * Get 分隔符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Delimiter 分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDelimiter() {
+        return this.Delimiter;
+    }
+
+    /**
+     * Set 分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Delimiter 分隔符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDelimiter(String Delimiter) {
+        this.Delimiter = Delimiter;
+    }
+
     public LogConfigExtractRule() {
     }
 
@@ -318,6 +374,12 @@ public class LogConfigExtractRule extends AbstractModel{
         if (source.UnMatchedKey != null) {
             this.UnMatchedKey = new String(source.UnMatchedKey);
         }
+        if (source.Backtracking != null) {
+            this.Backtracking = new String(source.Backtracking);
+        }
+        if (source.Delimiter != null) {
+            this.Delimiter = new String(source.Delimiter);
+        }
     }
 
 
@@ -334,6 +396,8 @@ public class LogConfigExtractRule extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
         this.setParamSimple(map, prefix + "UnMatchUpload", this.UnMatchUpload);
         this.setParamSimple(map, prefix + "UnMatchedKey", this.UnMatchedKey);
+        this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
+        this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
 
     }
 }

@@ -44,6 +44,13 @@ public class EnableEventPersistenceRequest extends AbstractModel{
     private String TopicId;
 
     /**
+    * topic所在地域，默认为集群所在地域
+    */
+    @SerializedName("TopicRegion")
+    @Expose
+    private String TopicRegion;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -91,6 +98,22 @@ public class EnableEventPersistenceRequest extends AbstractModel{
         this.TopicId = TopicId;
     }
 
+    /**
+     * Get topic所在地域，默认为集群所在地域 
+     * @return TopicRegion topic所在地域，默认为集群所在地域
+     */
+    public String getTopicRegion() {
+        return this.TopicRegion;
+    }
+
+    /**
+     * Set topic所在地域，默认为集群所在地域
+     * @param TopicRegion topic所在地域，默认为集群所在地域
+     */
+    public void setTopicRegion(String TopicRegion) {
+        this.TopicRegion = TopicRegion;
+    }
+
     public EnableEventPersistenceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class EnableEventPersistenceRequest extends AbstractModel{
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
+        if (source.TopicRegion != null) {
+            this.TopicRegion = new String(source.TopicRegion);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class EnableEventPersistenceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "TopicRegion", this.TopicRegion);
 
     }
 }

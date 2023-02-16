@@ -2393,6 +2393,36 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(OpenDBInstanceEncryption)用于启用实例数据存储加密功能，支持用户指定自定义密钥。
+
+注意，启用实例数据存储加密之前，需要进行以下操作：
+
+1、进行 [实例初始化](https://cloud.tencent.com/document/api/236/15873) 操作；
+
+2、开启 [KMS服务](https://console.cloud.tencent.com/kms2)；
+
+3、对云数据库(MySQL)[授予访问KMS密钥的权限](https://console.cloud.tencent.com/cam/role)，角色名为MySQL_QCSRole，预设策略名为QcloudAccessForMySQLRole；
+
+该 API 耗时可能到10s，客户端可能超时，如果调用 API 返回 InternalError ，请您调用DescribeDBInstanceInfo 确认后端加密是否开通成功。
+     * @param req OpenDBInstanceEncryptionRequest
+     * @return OpenDBInstanceEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(OpenDBInstanceEncryptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenDBInstanceEncryptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenDBInstanceEncryptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenDBInstanceEncryption");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(OpenDBInstanceGTID)用于开启云数据库实例的 GTID，只支持版本为 5.6 以及以上的实例。
      * @param req OpenDBInstanceGTIDRequest
      * @return OpenDBInstanceGTIDResponse

@@ -39,6 +39,26 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
+     *添加品牌
+     * @param req CreateBPBrandRequest
+     * @return CreateBPBrandResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPBrandResponse CreateBPBrand(CreateBPBrandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPBrandResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPBrandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPBrand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *仿冒应用举报
      * @param req CreateBPFakeAPPRequest
      * @return CreateBPFakeAPPResponse
@@ -111,6 +131,126 @@ public class BmaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBPFakeURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *添加白名单
+     * @param req CreateBPWhiteListRequest
+     * @return CreateBPWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBPWhiteListResponse CreateBPWhiteList(CreateBPWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBPWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBPWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBPWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除白名单
+     * @param req DeleteBPWhiteListRequest
+     * @return DeleteBPWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBPWhiteListResponse DeleteBPWhiteList(DeleteBPWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBPWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBPWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBPWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询品牌列表
+     * @param req DescribeBPBrandsRequest
+     * @return DescribeBPBrandsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPBrandsResponse DescribeBPBrands(DescribeBPBrandsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPBrandsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPBrandsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPBrands");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询仿冒应用列表
+     * @param req DescribeBPFakeAPPListRequest
+     * @return DescribeBPFakeAPPListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPFakeAPPListResponse DescribeBPFakeAPPList(DescribeBPFakeAPPListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPFakeAPPListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPFakeAPPListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPFakeAPPList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询仿冒网址列表
+     * @param req DescribeBPFakeURLsRequest
+     * @return DescribeBPFakeURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPFakeURLsResponse DescribeBPFakeURLs(DescribeBPFakeURLsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPFakeURLsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPFakeURLs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询白名单列表
+     * @param req DescribeBPWhiteListsRequest
+     * @return DescribeBPWhiteListsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBPWhiteListsResponse DescribeBPWhiteLists(DescribeBPWhiteListsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBPWhiteListsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBPWhiteListsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBPWhiteLists");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

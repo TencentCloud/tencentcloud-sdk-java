@@ -77,6 +77,13 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String Protocol;
 
     /**
+    * 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
      * Get 带宽包类型, 默认值: BGP, 可选值:
 <li>BGP: 普通BGP共享带宽包</li>
 <li>HIGH_QUALITY_BGP: 精品BGP共享带宽包</li> 
@@ -208,6 +215,22 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。 
+     * @return TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     * @param TimeSpan 预付费包月带宽包的购买时长，单位: 月，取值范围: 1~60。
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
     public CreateBandwidthPackageRequest() {
     }
 
@@ -240,6 +263,9 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetMaxBandwidth", this.InternetMaxBandwidth);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
 
     }
 }

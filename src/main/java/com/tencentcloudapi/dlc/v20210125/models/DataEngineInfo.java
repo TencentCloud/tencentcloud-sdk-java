@@ -266,6 +266,38 @@ public class DataEngineInfo extends AbstractModel{
     private String UiURL;
 
     /**
+    * 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageVersionId")
+    @Expose
+    private String ImageVersionId;
+
+    /**
+    * 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChildImageVersionId")
+    @Expose
+    private String ChildImageVersionId;
+
+    /**
+    * 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageVersionName")
+    @Expose
+    private String ImageVersionName;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -853,6 +885,86 @@ public class DataEngineInfo extends AbstractModel{
         this.UiURL = UiURL;
     }
 
+    /**
+     * Get 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceType 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceType 引擎的资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageVersionId 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageVersionId() {
+        return this.ImageVersionId;
+    }
+
+    /**
+     * Set 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageVersionId 集群镜像版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageVersionId(String ImageVersionId) {
+        this.ImageVersionId = ImageVersionId;
+    }
+
+    /**
+     * Get 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChildImageVersionId 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChildImageVersionId() {
+        return this.ChildImageVersionId;
+    }
+
+    /**
+     * Set 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChildImageVersionId 集群镜像小版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildImageVersionId(String ChildImageVersionId) {
+        this.ChildImageVersionId = ChildImageVersionId;
+    }
+
+    /**
+     * Get 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageVersionName 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageVersionName() {
+        return this.ImageVersionName;
+    }
+
+    /**
+     * Set 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageVersionName 集群镜像版本名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageVersionName(String ImageVersionName) {
+        this.ImageVersionName = ImageVersionName;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -966,6 +1078,18 @@ public class DataEngineInfo extends AbstractModel{
         if (source.UiURL != null) {
             this.UiURL = new String(source.UiURL);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ImageVersionId != null) {
+            this.ImageVersionId = new String(source.ImageVersionId);
+        }
+        if (source.ChildImageVersionId != null) {
+            this.ChildImageVersionId = new String(source.ChildImageVersionId);
+        }
+        if (source.ImageVersionName != null) {
+            this.ImageVersionName = new String(source.ImageVersionName);
+        }
     }
 
 
@@ -1005,6 +1129,10 @@ public class DataEngineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoSuspendTime", this.AutoSuspendTime);
         this.setParamArrayObj(map, prefix + "NetworkConnectionSet.", this.NetworkConnectionSet);
         this.setParamSimple(map, prefix + "UiURL", this.UiURL);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ImageVersionId", this.ImageVersionId);
+        this.setParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
+        this.setParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
 
     }
 }

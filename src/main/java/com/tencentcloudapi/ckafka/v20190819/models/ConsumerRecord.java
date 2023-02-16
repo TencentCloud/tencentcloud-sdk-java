@@ -68,6 +68,14 @@ public class ConsumerRecord extends AbstractModel{
     private Long Timestamp;
 
     /**
+    * 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Headers")
+    @Expose
+    private String Headers;
+
+    /**
      * Get 主题名 
      * @return Topic 主题名
      */
@@ -175,6 +183,26 @@ public class ConsumerRecord extends AbstractModel{
         this.Timestamp = Timestamp;
     }
 
+    /**
+     * Get 消息headers
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Headers 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHeaders() {
+        return this.Headers;
+    }
+
+    /**
+     * Set 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Headers 消息headers
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeaders(String Headers) {
+        this.Headers = Headers;
+    }
+
     public ConsumerRecord() {
     }
 
@@ -201,6 +229,9 @@ public class ConsumerRecord extends AbstractModel{
         if (source.Timestamp != null) {
             this.Timestamp = new Long(source.Timestamp);
         }
+        if (source.Headers != null) {
+            this.Headers = new String(source.Headers);
+        }
     }
 
 
@@ -214,6 +245,7 @@ public class ConsumerRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "Headers", this.Headers);
 
     }
 }

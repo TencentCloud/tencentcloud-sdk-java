@@ -418,6 +418,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *本接口（ChannelUpdateSealStatus）由于渠道版更新印章状态
+     * @param req ChannelUpdateSealStatusRequest
+     * @return ChannelUpdateSealStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(ChannelUpdateSealStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelUpdateSealStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelUpdateSealStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelUpdateSealStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *合同文件验签
      * @param req ChannelVerifyPdfRequest
      * @return ChannelVerifyPdfResponse

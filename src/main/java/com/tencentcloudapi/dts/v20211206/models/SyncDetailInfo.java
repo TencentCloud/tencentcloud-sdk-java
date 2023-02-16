@@ -87,6 +87,14 @@ public class SyncDetailInfo extends AbstractModel{
     private StepInfo [] StepInfos;
 
     /**
+    * 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CauseOfCompareDisable")
+    @Expose
+    private String CauseOfCompareDisable;
+
+    /**
      * Get 总步骤数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StepAll 总步骤数
@@ -246,6 +254,26 @@ public class SyncDetailInfo extends AbstractModel{
         this.StepInfos = StepInfos;
     }
 
+    /**
+     * Get 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CauseOfCompareDisable 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCauseOfCompareDisable() {
+        return this.CauseOfCompareDisable;
+    }
+
+    /**
+     * Set 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CauseOfCompareDisable 不能发起一致性校验的原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCauseOfCompareDisable(String CauseOfCompareDisable) {
+        this.CauseOfCompareDisable = CauseOfCompareDisable;
+    }
+
     public SyncDetailInfo() {
     }
 
@@ -281,6 +309,9 @@ public class SyncDetailInfo extends AbstractModel{
                 this.StepInfos[i] = new StepInfo(source.StepInfos[i]);
             }
         }
+        if (source.CauseOfCompareDisable != null) {
+            this.CauseOfCompareDisable = new String(source.CauseOfCompareDisable);
+        }
     }
 
 
@@ -296,6 +327,7 @@ public class SyncDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SecondsBehindMaster", this.SecondsBehindMaster);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
+        this.setParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
 
     }
 }

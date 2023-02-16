@@ -39,6 +39,14 @@ public class TemEnvironmentStartingStatus extends AbstractModel{
     private Long StartedApplicationNum;
 
     /**
+    * 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartFailedApplicationNum")
+    @Expose
+    private Long StartFailedApplicationNum;
+
+    /**
      * Get 需要启动的应用数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationNumNeedToStart 需要启动的应用数量
@@ -78,6 +86,26 @@ public class TemEnvironmentStartingStatus extends AbstractModel{
         this.StartedApplicationNum = StartedApplicationNum;
     }
 
+    /**
+     * Get 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartFailedApplicationNum 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStartFailedApplicationNum() {
+        return this.StartFailedApplicationNum;
+    }
+
+    /**
+     * Set 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartFailedApplicationNum 启动失败的应用数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartFailedApplicationNum(Long StartFailedApplicationNum) {
+        this.StartFailedApplicationNum = StartFailedApplicationNum;
+    }
+
     public TemEnvironmentStartingStatus() {
     }
 
@@ -92,6 +120,9 @@ public class TemEnvironmentStartingStatus extends AbstractModel{
         if (source.StartedApplicationNum != null) {
             this.StartedApplicationNum = new Long(source.StartedApplicationNum);
         }
+        if (source.StartFailedApplicationNum != null) {
+            this.StartFailedApplicationNum = new Long(source.StartFailedApplicationNum);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class TemEnvironmentStartingStatus extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationNumNeedToStart", this.ApplicationNumNeedToStart);
         this.setParamSimple(map, prefix + "StartedApplicationNum", this.StartedApplicationNum);
+        this.setParamSimple(map, prefix + "StartFailedApplicationNum", this.StartFailedApplicationNum);
 
     }
 }

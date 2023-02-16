@@ -74,6 +74,20 @@ Activity：活动来源
     private Boolean IsOpenCloudInvoke;
 
     /**
+    * 创建来源：wechat | cloud
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * 渠道：wechat | cloud
+    */
+    @SerializedName("Channel")
+    @Expose
+    private String Channel;
+
+    /**
      * Get wx应用Id 
      * @return WxAppId wx应用Id
      */
@@ -193,6 +207,38 @@ Activity：活动来源
         this.IsOpenCloudInvoke = IsOpenCloudInvoke;
     }
 
+    /**
+     * Get 创建来源：wechat | cloud 
+     * @return Source 创建来源：wechat | cloud
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 创建来源：wechat | cloud
+     * @param Source 创建来源：wechat | cloud
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 渠道：wechat | cloud 
+     * @return Channel 渠道：wechat | cloud
+     */
+    public String getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set 渠道：wechat | cloud
+     * @param Channel 渠道：wechat | cloud
+     */
+    public void setChannel(String Channel) {
+        this.Channel = Channel;
+    }
+
     public CreateWxCloudBaseRunEnvRequest() {
     }
 
@@ -225,6 +271,12 @@ Activity：活动来源
         if (source.IsOpenCloudInvoke != null) {
             this.IsOpenCloudInvoke = new Boolean(source.IsOpenCloudInvoke);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
     }
 
 
@@ -239,6 +291,8 @@ Activity：活动来源
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "SubNetIds.", this.SubNetIds);
         this.setParamSimple(map, prefix + "IsOpenCloudInvoke", this.IsOpenCloudInvoke);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

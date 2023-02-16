@@ -37,6 +37,13 @@ public class CreateEventBusRequest extends AbstractModel{
     private String Description;
 
     /**
+    * EB存储时长
+    */
+    @SerializedName("SaveDays")
+    @Expose
+    private Long SaveDays;
+
+    /**
      * Get 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符 
      * @return EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      */
@@ -68,6 +75,22 @@ public class CreateEventBusRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get EB存储时长 
+     * @return SaveDays EB存储时长
+     */
+    public Long getSaveDays() {
+        return this.SaveDays;
+    }
+
+    /**
+     * Set EB存储时长
+     * @param SaveDays EB存储时长
+     */
+    public void setSaveDays(Long SaveDays) {
+        this.SaveDays = SaveDays;
+    }
+
     public CreateEventBusRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreateEventBusRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.SaveDays != null) {
+            this.SaveDays = new Long(source.SaveDays);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreateEventBusRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "SaveDays", this.SaveDays);
 
     }
 }
