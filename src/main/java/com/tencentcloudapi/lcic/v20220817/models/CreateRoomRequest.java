@@ -127,6 +127,13 @@ coteaching 双师
     private Long RecordLayout;
 
     /**
+    * 房间绑定的群组ID,非空时限制组成员进入
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -386,6 +393,22 @@ coteaching 双师
         this.RecordLayout = RecordLayout;
     }
 
+    /**
+     * Get 房间绑定的群组ID,非空时限制组成员进入 
+     * @return GroupId 房间绑定的群组ID,非空时限制组成员进入
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 房间绑定的群组ID,非空时限制组成员进入
+     * @param GroupId 房间绑定的群组ID,非空时限制组成员进入
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -436,6 +459,9 @@ coteaching 双师
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -456,6 +482,7 @@ coteaching 双师
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

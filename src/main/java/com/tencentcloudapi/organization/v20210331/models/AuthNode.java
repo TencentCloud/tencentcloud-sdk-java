@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AuthNode extends AbstractModel{
 
     /**
-    * 主体关系ID
+    * 互信主体关系ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelationId")
@@ -31,7 +31,7 @@ public class AuthNode extends AbstractModel{
     private Long RelationId;
 
     /**
-    * 主体名称
+    * 互信主体名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthName")
@@ -39,9 +39,17 @@ public class AuthNode extends AbstractModel{
     private String AuthName;
 
     /**
-     * Get 主体关系ID
+    * 主体管理员
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Manager")
+    @Expose
+    private MemberMainInfo Manager;
+
+    /**
+     * Get 互信主体关系ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RelationId 主体关系ID
+     * @return RelationId 互信主体关系ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRelationId() {
@@ -49,9 +57,9 @@ public class AuthNode extends AbstractModel{
     }
 
     /**
-     * Set 主体关系ID
+     * Set 互信主体关系ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RelationId 主体关系ID
+     * @param RelationId 互信主体关系ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelationId(Long RelationId) {
@@ -59,9 +67,9 @@ public class AuthNode extends AbstractModel{
     }
 
     /**
-     * Get 主体名称
+     * Get 互信主体名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AuthName 主体名称
+     * @return AuthName 互信主体名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthName() {
@@ -69,13 +77,33 @@ public class AuthNode extends AbstractModel{
     }
 
     /**
-     * Set 主体名称
+     * Set 互信主体名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AuthName 主体名称
+     * @param AuthName 互信主体名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthName(String AuthName) {
         this.AuthName = AuthName;
+    }
+
+    /**
+     * Get 主体管理员
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Manager 主体管理员
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MemberMainInfo getManager() {
+        return this.Manager;
+    }
+
+    /**
+     * Set 主体管理员
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Manager 主体管理员
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setManager(MemberMainInfo Manager) {
+        this.Manager = Manager;
     }
 
     public AuthNode() {
@@ -92,6 +120,9 @@ public class AuthNode extends AbstractModel{
         if (source.AuthName != null) {
             this.AuthName = new String(source.AuthName);
         }
+        if (source.Manager != null) {
+            this.Manager = new MemberMainInfo(source.Manager);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class AuthNode extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RelationId", this.RelationId);
         this.setParamSimple(map, prefix + "AuthName", this.AuthName);
+        this.setParamObj(map, prefix + "Manager.", this.Manager);
 
     }
 }

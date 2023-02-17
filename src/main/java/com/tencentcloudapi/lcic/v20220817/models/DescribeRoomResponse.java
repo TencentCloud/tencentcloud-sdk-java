@@ -129,12 +129,20 @@ coteaching 双师
     private String RecordUrl;
 
     /**
-    * 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+    * 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -412,9 +420,9 @@ coteaching 双师
     }
 
     /**
-     * Get 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * Get 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * @return Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -422,13 +430,33 @@ coteaching 双师
     }
 
     /**
-     * Set 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * Set 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 课堂状态。0为未开始，1为正在上课，2为已结束，3为已过期。
+     * @param Status 课堂状态。0为未开始，1为已开始，2为已结束，3为已过期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -500,6 +528,9 @@ coteaching 双师
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -524,6 +555,7 @@ coteaching 双师
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

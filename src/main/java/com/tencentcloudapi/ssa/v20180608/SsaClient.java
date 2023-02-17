@@ -478,4 +478,24 @@ public class SsaClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *安全事件通用字段
+     * @param req SaEventPubRequest
+     * @return SaEventPubResponse
+     * @throws TencentCloudSDKException
+     */
+    public SaEventPubResponse SaEventPub(SaEventPubRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SaEventPubResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SaEventPubResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SaEventPub");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

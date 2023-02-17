@@ -30,14 +30,14 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 开始时间戳。
+    * 开始时间戳。例如 1585142640 。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间戳。
+    * 结束时间戳。例如 1585142640 。
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间戳。 
-     * @return StartTime 开始时间戳。
+     * Get 开始时间戳。例如 1585142640 。 
+     * @return StartTime 开始时间戳。例如 1585142640 。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间戳。
-     * @param StartTime 开始时间戳。
+     * Set 开始时间戳。例如 1585142640 。
+     * @param StartTime 开始时间戳。例如 1585142640 。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间戳。 
-     * @return EndTime 结束时间戳。
+     * Get 结束时间戳。例如 1585142640 。 
+     * @return EndTime 结束时间戳。例如 1585142640 。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳。
-     * @param EndTime 结束时间戳。
+     * Set 结束时间戳。例如 1585142640 。
+     * @param EndTime 结束时间戳。例如 1585142640 。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

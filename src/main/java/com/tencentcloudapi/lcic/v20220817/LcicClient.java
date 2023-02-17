@@ -39,6 +39,66 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *此接口用于添加成员列表到指定群组
+     * @param req AddGroupMemberRequest
+     * @return AddGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddGroupMemberResponse AddGroupMember(AddGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于批量添加成员列表到指定群组
+     * @param req BatchAddGroupMemberRequest
+     * @return BatchAddGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchAddGroupMemberResponse BatchAddGroupMember(BatchAddGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchAddGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchAddGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于批量创建群组
+     * @param req BatchCreateGroupWithMembersRequest
+     * @return BatchCreateGroupWithMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateGroupWithMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateGroupWithMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量创建房间接口
      * @param req BatchCreateRoomRequest
      * @return BatchCreateRoomResponse
@@ -51,6 +111,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "BatchCreateRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于批量删除成员列表到指定群组列表
+     * @param req BatchDeleteGroupMemberRequest
+     * @return BatchDeleteGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteGroupMemberResponse BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteGroupMember");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -139,6 +219,46 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *此接口根据成员列表创建群组
+     * @param req CreateGroupWithMembersRequest
+     * @return CreateGroupWithMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupWithMembersResponse CreateGroupWithMembers(CreateGroupWithMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGroupWithMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGroupWithMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口会聚合子群组创建联合群组
+     * @param req CreateGroupWithSubGroupRequest
+     * @return CreateGroupWithSubGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGroupWithSubGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGroupWithSubGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建房间
      * @param req CreateRoomRequest
      * @return CreateRoomResponse
@@ -191,6 +311,46 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于删除指定群组，支持批量操作。
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于删除群组中指定成员
+     * @param req DeleteGroupMemberRequest
+     * @return DeleteGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGroupMember");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -311,6 +471,66 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDocumentsByRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于获取群组详情
+     * @param req DescribeGroupRequest
+     * @return DescribeGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取群组列表
+     * @param req DescribeGroupListRequest
+     * @return DescribeGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口用于获取群组成员列表
+     * @param req DescribeGroupMemberListRequest
+     * @return DescribeGroupMemberListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupMemberListResponse DescribeGroupMemberList(DescribeGroupMemberListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupMemberListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupMemberList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -471,6 +691,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口修改群组信息
+     * @param req ModifyGroupRequest
+     * @return ModifyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

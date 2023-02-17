@@ -143,6 +143,14 @@ public class RoomInfo extends AbstractModel{
     private Long RecordLayout;
 
     /**
+    * 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 房间名称。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 房间名称。
@@ -442,6 +450,26 @@ public class RoomInfo extends AbstractModel{
         this.RecordLayout = RecordLayout;
     }
 
+    /**
+     * Get 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 房间绑定的群组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public RoomInfo() {
     }
 
@@ -498,6 +526,9 @@ public class RoomInfo extends AbstractModel{
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -520,6 +551,7 @@ public class RoomInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RTCAudienceNumber", this.RTCAudienceNumber);
         this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -127,6 +127,14 @@ public class ApplicationForPage extends AbstractModel{
     private ServiceConfig [] ServiceConfigList;
 
     /**
+    * IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IgnoreCreateImageRepository")
+    @Expose
+    private Boolean IgnoreCreateImageRepository;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -386,6 +394,26 @@ public class ApplicationForPage extends AbstractModel{
         this.ServiceConfigList = ServiceConfigList;
     }
 
+    /**
+     * Get IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IgnoreCreateImageRepository IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIgnoreCreateImageRepository() {
+        return this.IgnoreCreateImageRepository;
+    }
+
+    /**
+     * Set IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IgnoreCreateImageRepository IgnoreCreateImageRepository
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIgnoreCreateImageRepository(Boolean IgnoreCreateImageRepository) {
+        this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
+    }
+
     public ApplicationForPage() {
     }
 
@@ -436,6 +464,9 @@ public class ApplicationForPage extends AbstractModel{
                 this.ServiceConfigList[i] = new ServiceConfig(source.ServiceConfigList[i]);
             }
         }
+        if (source.IgnoreCreateImageRepository != null) {
+            this.IgnoreCreateImageRepository = new Boolean(source.IgnoreCreateImageRepository);
+        }
     }
 
 
@@ -456,6 +487,7 @@ public class ApplicationForPage extends AbstractModel{
         this.setParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
         this.setParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
         this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+        this.setParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
 
     }
 }

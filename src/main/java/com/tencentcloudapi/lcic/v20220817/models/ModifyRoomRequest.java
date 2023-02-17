@@ -132,6 +132,13 @@ coteaching 双师
     private String [] Assistants;
 
     /**
+    * 房间绑定的群组ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -411,6 +418,22 @@ coteaching 双师
         this.Assistants = Assistants;
     }
 
+    /**
+     * Get 房间绑定的群组ID 
+     * @return GroupId 房间绑定的群组ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 房间绑定的群组ID
+     * @param GroupId 房间绑定的群组ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -461,6 +484,9 @@ coteaching 双师
                 this.Assistants[i] = new String(source.Assistants[i]);
             }
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -481,6 +507,7 @@ coteaching 双师
         this.setParamSimple(map, prefix + "SubType", this.SubType);
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

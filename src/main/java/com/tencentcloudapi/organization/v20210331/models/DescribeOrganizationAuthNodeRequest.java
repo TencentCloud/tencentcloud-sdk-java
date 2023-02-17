@@ -37,6 +37,13 @@ public class DescribeOrganizationAuthNodeRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 互信主体名称。
+    */
+    @SerializedName("AuthName")
+    @Expose
+    private String AuthName;
+
+    /**
      * Get 偏移量。 
      * @return Offset 偏移量。
      */
@@ -68,6 +75,22 @@ public class DescribeOrganizationAuthNodeRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 互信主体名称。 
+     * @return AuthName 互信主体名称。
+     */
+    public String getAuthName() {
+        return this.AuthName;
+    }
+
+    /**
+     * Set 互信主体名称。
+     * @param AuthName 互信主体名称。
+     */
+    public void setAuthName(String AuthName) {
+        this.AuthName = AuthName;
+    }
+
     public DescribeOrganizationAuthNodeRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeOrganizationAuthNodeRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.AuthName != null) {
+            this.AuthName = new String(source.AuthName);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeOrganizationAuthNodeRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AuthName", this.AuthName);
 
     }
 }

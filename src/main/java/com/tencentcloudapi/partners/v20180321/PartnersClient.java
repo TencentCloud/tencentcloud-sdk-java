@@ -79,6 +79,29 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *为代客or申请中代客分派跟进人（业务员）
+- 代客列表获取API： [DescribeAgentAuditedClients](https://cloud.tencent.com/document/product/563/19184)
+- 申请中代客列表获取API：[DescribeAgentClients](https://cloud.tencent.com/document/product/563/16046)
+- 业务员列表获取API：[DescribeSalesmans](https://cloud.tencent.com/document/product/563/35196)
+     * @param req AssignClientsToSalesRequest
+     * @return AssignClientsToSalesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignClientsToSalesResponse AssignClientsToSales(AssignClientsToSalesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignClientsToSalesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignClientsToSalesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssignClientsToSales");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *代理商可以审核其名下申请中代客
      * @param req AuditApplyClientRequest
      * @return AuditApplyClientResponse

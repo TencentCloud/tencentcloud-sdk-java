@@ -70,6 +70,22 @@ public class UnitRule extends AbstractModel{
     private UnitRuleItem [] UnitRuleItemList;
 
     /**
+    * CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -185,6 +201,46 @@ public class UnitRule extends AbstractModel{
         this.UnitRuleItemList = UnitRuleItemList;
     }
 
+    /**
+     * Get CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedTime CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedTime CreatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime UpdatedTime
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public UnitRule() {
     }
 
@@ -214,6 +270,12 @@ public class UnitRule extends AbstractModel{
                 this.UnitRuleItemList[i] = new UnitRuleItem(source.UnitRuleItemList[i]);
             }
         }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -227,6 +289,8 @@ public class UnitRule extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "UnitRuleItemList.", this.UnitRuleItemList);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

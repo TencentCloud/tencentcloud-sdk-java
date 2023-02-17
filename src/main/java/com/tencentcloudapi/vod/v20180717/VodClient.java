@@ -2892,6 +2892,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *发起音画质重生
+     * @param req RebuildMediaRequest
+     * @return RebuildMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebuildMediaResponse RebuildMedia(RebuildMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RebuildMediaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RebuildMediaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RebuildMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *1. 刷新指定的 URL 列表。
 2. URL 的域名必须已在云点播中注册。
 3. 单次请求最多指定20个 URL。

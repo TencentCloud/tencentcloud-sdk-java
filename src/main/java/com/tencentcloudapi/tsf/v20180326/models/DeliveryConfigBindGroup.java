@@ -61,6 +61,94 @@ public class DeliveryConfigBindGroup extends AbstractModel{
     private String CreateTime;
 
     /**
+    * KafkaVIp
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaVIp")
+    @Expose
+    private String KafkaVIp;
+
+    /**
+    * KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaAddress")
+    @Expose
+    private String KafkaAddress;
+
+    /**
+    * KafkaVPort
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaVPort")
+    @Expose
+    private String KafkaVPort;
+
+    /**
+    * Topic
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Topic")
+    @Expose
+    private String Topic;
+
+    /**
+    * LineRule
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LineRule")
+    @Expose
+    private String LineRule;
+
+    /**
+    * CustomRule
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CustomRule")
+    @Expose
+    private String CustomRule;
+
+    /**
+    * EnableGlobalLineRule
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableGlobalLineRule")
+    @Expose
+    private Boolean EnableGlobalLineRule;
+
+    /**
+    * EnableAuth
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableAuth")
+    @Expose
+    private Boolean EnableAuth;
+
+    /**
+    * Username
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Username")
+    @Expose
+    private String Username;
+
+    /**
+    * Password
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * KafkaInfos
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaInfos")
+    @Expose
+    private DeliveryKafkaInfo [] KafkaInfos;
+
+    /**
      * Get 配置id 
      * @return ConfigId 配置id
      */
@@ -152,6 +240,226 @@ public class DeliveryConfigBindGroup extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get KafkaVIp
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaVIp KafkaVIp
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKafkaVIp() {
+        return this.KafkaVIp;
+    }
+
+    /**
+     * Set KafkaVIp
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaVIp KafkaVIp
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaVIp(String KafkaVIp) {
+        this.KafkaVIp = KafkaVIp;
+    }
+
+    /**
+     * Get KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaAddress KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKafkaAddress() {
+        return this.KafkaAddress;
+    }
+
+    /**
+     * Set KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaAddress KafkaAddress
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaAddress(String KafkaAddress) {
+        this.KafkaAddress = KafkaAddress;
+    }
+
+    /**
+     * Get KafkaVPort
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaVPort KafkaVPort
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKafkaVPort() {
+        return this.KafkaVPort;
+    }
+
+    /**
+     * Set KafkaVPort
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaVPort KafkaVPort
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaVPort(String KafkaVPort) {
+        this.KafkaVPort = KafkaVPort;
+    }
+
+    /**
+     * Get Topic
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Topic Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * Set Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Topic Topic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
+    }
+
+    /**
+     * Get LineRule
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LineRule LineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLineRule() {
+        return this.LineRule;
+    }
+
+    /**
+     * Set LineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LineRule LineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLineRule(String LineRule) {
+        this.LineRule = LineRule;
+    }
+
+    /**
+     * Get CustomRule
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomRule CustomRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCustomRule() {
+        return this.CustomRule;
+    }
+
+    /**
+     * Set CustomRule
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomRule CustomRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomRule(String CustomRule) {
+        this.CustomRule = CustomRule;
+    }
+
+    /**
+     * Get EnableGlobalLineRule
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableGlobalLineRule EnableGlobalLineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableGlobalLineRule() {
+        return this.EnableGlobalLineRule;
+    }
+
+    /**
+     * Set EnableGlobalLineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableGlobalLineRule EnableGlobalLineRule
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableGlobalLineRule(Boolean EnableGlobalLineRule) {
+        this.EnableGlobalLineRule = EnableGlobalLineRule;
+    }
+
+    /**
+     * Get EnableAuth
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableAuth EnableAuth
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableAuth() {
+        return this.EnableAuth;
+    }
+
+    /**
+     * Set EnableAuth
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableAuth EnableAuth
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableAuth(Boolean EnableAuth) {
+        this.EnableAuth = EnableAuth;
+    }
+
+    /**
+     * Get Username
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Username Username
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUsername() {
+        return this.Username;
+    }
+
+    /**
+     * Set Username
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Username Username
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsername(String Username) {
+        this.Username = Username;
+    }
+
+    /**
+     * Get Password
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Password Password
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set Password
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Password Password
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get KafkaInfos
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaInfos KafkaInfos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeliveryKafkaInfo [] getKafkaInfos() {
+        return this.KafkaInfos;
+    }
+
+    /**
+     * Set KafkaInfos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaInfos KafkaInfos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaInfos(DeliveryKafkaInfo [] KafkaInfos) {
+        this.KafkaInfos = KafkaInfos;
+    }
+
     public DeliveryConfigBindGroup() {
     }
 
@@ -181,6 +489,42 @@ public class DeliveryConfigBindGroup extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.KafkaVIp != null) {
+            this.KafkaVIp = new String(source.KafkaVIp);
+        }
+        if (source.KafkaAddress != null) {
+            this.KafkaAddress = new String(source.KafkaAddress);
+        }
+        if (source.KafkaVPort != null) {
+            this.KafkaVPort = new String(source.KafkaVPort);
+        }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.LineRule != null) {
+            this.LineRule = new String(source.LineRule);
+        }
+        if (source.CustomRule != null) {
+            this.CustomRule = new String(source.CustomRule);
+        }
+        if (source.EnableGlobalLineRule != null) {
+            this.EnableGlobalLineRule = new Boolean(source.EnableGlobalLineRule);
+        }
+        if (source.EnableAuth != null) {
+            this.EnableAuth = new Boolean(source.EnableAuth);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.KafkaInfos != null) {
+            this.KafkaInfos = new DeliveryKafkaInfo[source.KafkaInfos.length];
+            for (int i = 0; i < source.KafkaInfos.length; i++) {
+                this.KafkaInfos[i] = new DeliveryKafkaInfo(source.KafkaInfos[i]);
+            }
+        }
     }
 
 
@@ -193,6 +537,17 @@ public class DeliveryConfigBindGroup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CollectPath.", this.CollectPath);
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "KafkaVIp", this.KafkaVIp);
+        this.setParamSimple(map, prefix + "KafkaAddress", this.KafkaAddress);
+        this.setParamSimple(map, prefix + "KafkaVPort", this.KafkaVPort);
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "LineRule", this.LineRule);
+        this.setParamSimple(map, prefix + "CustomRule", this.CustomRule);
+        this.setParamSimple(map, prefix + "EnableGlobalLineRule", this.EnableGlobalLineRule);
+        this.setParamSimple(map, prefix + "EnableAuth", this.EnableAuth);
+        this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArrayObj(map, prefix + "KafkaInfos.", this.KafkaInfos);
 
     }
 }

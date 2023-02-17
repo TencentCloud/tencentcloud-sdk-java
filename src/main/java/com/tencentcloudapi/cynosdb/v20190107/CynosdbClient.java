@@ -1539,6 +1539,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *更换集群vpc
+     * @param req SwitchClusterVpcRequest
+     * @return SwitchClusterVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchClusterVpcResponse SwitchClusterVpc(SwitchClusterVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchClusterVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchClusterVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *切换到从可用区
      * @param req SwitchClusterZoneRequest
      * @return SwitchClusterZoneResponse

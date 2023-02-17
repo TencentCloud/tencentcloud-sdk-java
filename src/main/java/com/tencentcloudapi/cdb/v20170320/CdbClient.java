@@ -2769,28 +2769,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-
-调整数据库代理配置
-     * @param req UpgradeCDBProxyRequest
-     * @return UpgradeCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeCDBProxyResponse UpgradeCDBProxy(UpgradeCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeCDBProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *升级数据库代理版本
      * @param req UpgradeCDBProxyVersionRequest
      * @return UpgradeCDBProxyVersionResponse

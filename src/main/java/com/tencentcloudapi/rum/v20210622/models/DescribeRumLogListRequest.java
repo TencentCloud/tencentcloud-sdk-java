@@ -30,7 +30,7 @@ public class DescribeRumLogListRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * 开始时间（必填）
+    * 开始时间（必填）格式为时间戳 毫秒
     */
     @SerializedName("StartTime")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeRumLogListRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 结束时间（必填）
+    * 结束时间（必填）格式为时间戳 毫秒
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeRumLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 开始时间（必填） 
-     * @return StartTime 开始时间（必填）
+     * Get 开始时间（必填）格式为时间戳 毫秒 
+     * @return StartTime 开始时间（必填）格式为时间戳 毫秒
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间（必填）
-     * @param StartTime 开始时间（必填）
+     * Set 开始时间（必填）格式为时间戳 毫秒
+     * @param StartTime 开始时间（必填）格式为时间戳 毫秒
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -152,16 +152,16 @@ public class DescribeRumLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get 结束时间（必填） 
-     * @return EndTime 结束时间（必填）
+     * Get 结束时间（必填）格式为时间戳 毫秒 
+     * @return EndTime 结束时间（必填）格式为时间戳 毫秒
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间（必填）
-     * @param EndTime 结束时间（必填）
+     * Set 结束时间（必填）格式为时间戳 毫秒
+     * @param EndTime 结束时间（必填）格式为时间戳 毫秒
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

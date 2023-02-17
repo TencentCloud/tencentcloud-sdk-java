@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeCDBProxyResponse extends AbstractModel{
+public class SwitchClusterVpcResponse extends AbstractModel{
 
     /**
-    * 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 异步任务id。
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("FlowId")
     @Expose
-    private String AsyncRequestId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class UpgradeCDBProxyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncRequestId 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 异步任务id。 
+     * @return FlowId 异步任务id。
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncRequestId 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 异步任务id。
+     * @param FlowId 异步任务id。
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -73,16 +68,16 @@ public class UpgradeCDBProxyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public UpgradeCDBProxyResponse() {
+    public SwitchClusterVpcResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeCDBProxyResponse(UpgradeCDBProxyResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public SwitchClusterVpcResponse(SwitchClusterVpcResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ public class UpgradeCDBProxyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

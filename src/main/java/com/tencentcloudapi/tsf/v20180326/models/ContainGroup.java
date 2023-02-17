@@ -151,6 +151,14 @@ public class ContainGroup extends AbstractModel{
     private Boolean KubeInjectEnable;
 
     /**
+    * 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -470,6 +478,26 @@ public class ContainGroup extends AbstractModel{
         this.KubeInjectEnable = KubeInjectEnable;
     }
 
+    /**
+     * Get 更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public ContainGroup() {
     }
 
@@ -526,6 +554,9 @@ public class ContainGroup extends AbstractModel{
         if (source.KubeInjectEnable != null) {
             this.KubeInjectEnable = new Boolean(source.KubeInjectEnable);
         }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -549,6 +580,7 @@ public class ContainGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

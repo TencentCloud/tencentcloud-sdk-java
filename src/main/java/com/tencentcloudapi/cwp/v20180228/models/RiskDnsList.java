@@ -171,7 +171,7 @@ public class RiskDnsList extends AbstractModel{
     private String MachineWanIp;
 
     /**
-    * 主机在线状态 OFFLINE  ONLINE
+    * 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineStatus")
@@ -519,9 +519,9 @@ public class RiskDnsList extends AbstractModel{
     }
 
     /**
-     * Get 主机在线状态 OFFLINE  ONLINE
+     * Get 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MachineStatus 主机在线状态 OFFLINE  ONLINE
+     * @return MachineStatus 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineStatus() {
@@ -529,9 +529,9 @@ public class RiskDnsList extends AbstractModel{
     }
 
     /**
-     * Set 主机在线状态 OFFLINE  ONLINE
+     * Set 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MachineStatus 主机在线状态 OFFLINE  ONLINE
+     * @param MachineStatus 主机在线状态[OFFLINE:离线|ONLINE:在线|UNKNOWN:未知]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineStatus(String MachineStatus) {

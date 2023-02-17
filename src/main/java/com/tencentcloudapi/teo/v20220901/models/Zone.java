@@ -168,6 +168,16 @@ public class Zone extends AbstractModel{
     private String AliasZoneName;
 
     /**
+    * 是否伪站点，取值有：
+<li> 0：非伪站点；</li>
+<li> 1：伪站点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsFake")
+    @Expose
+    private Long IsFake;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -531,6 +541,34 @@ public class Zone extends AbstractModel{
         this.AliasZoneName = AliasZoneName;
     }
 
+    /**
+     * Get 是否伪站点，取值有：
+<li> 0：非伪站点；</li>
+<li> 1：伪站点。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsFake 是否伪站点，取值有：
+<li> 0：非伪站点；</li>
+<li> 1：伪站点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsFake() {
+        return this.IsFake;
+    }
+
+    /**
+     * Set 是否伪站点，取值有：
+<li> 0：非伪站点；</li>
+<li> 1：伪站点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsFake 是否伪站点，取值有：
+<li> 0：非伪站点；</li>
+<li> 1：伪站点。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsFake(Long IsFake) {
+        this.IsFake = IsFake;
+    }
+
     public Zone() {
     }
 
@@ -608,6 +646,9 @@ public class Zone extends AbstractModel{
         if (source.AliasZoneName != null) {
             this.AliasZoneName = new String(source.AliasZoneName);
         }
+        if (source.IsFake != null) {
+            this.IsFake = new Long(source.IsFake);
+        }
     }
 
 
@@ -633,6 +674,7 @@ public class Zone extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+        this.setParamSimple(map, prefix + "IsFake", this.IsFake);
 
     }
 }

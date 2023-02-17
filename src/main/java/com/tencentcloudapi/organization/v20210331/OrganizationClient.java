@@ -200,7 +200,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *获取可创建组织成员的认证主体关系列表
+     *获取已设置管理员的互信主体关系列表
      * @param req DescribeOrganizationAuthNodeRequest
      * @return DescribeOrganizationAuthNodeResponse
      * @throws TencentCloudSDKException

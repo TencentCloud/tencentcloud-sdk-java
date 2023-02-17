@@ -57,7 +57,7 @@ public enum GmeErrorCode {
     // 应用ID不正确
      RESOURCENOTFOUND_BIZIDISNOTFOUND("ResourceNotFound.BizidIsNotFound"),
      
-    // 任务ID不正确
+    // 任务ID不存在
      RESOURCENOTFOUND_TASKNOTFOUND("ResourceNotFound.TaskNotFound"),
      
     // 资源不可用。

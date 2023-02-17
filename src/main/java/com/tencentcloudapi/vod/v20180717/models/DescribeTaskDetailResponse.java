@@ -34,7 +34,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -176,6 +177,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
+    * 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RebuildMediaTask")
+    @Expose
+    private RebuildMediaTask RebuildMediaTask;
+
+    /**
     * 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -226,7 +235,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li> 
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li> 
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -238,7 +248,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -256,7 +267,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -268,7 +280,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia：快速剪辑任务；</li>
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
-<li> ReviewAudioVideo：音视频审核任务。</li>
+<li>RebuildMedia：音画质重生任务；</li>
+<li>ReviewAudioVideo：音视频审核任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -611,6 +624,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RebuildMediaTask getRebuildMediaTask() {
+        return this.RebuildMediaTask;
+    }
+
+    /**
+     * Set 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RebuildMediaTask 音画质重生任务信息，仅当 TaskType 为 RebuildMedia，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
+        this.RebuildMediaTask = RebuildMediaTask;
+    }
+
+    /**
      * Get 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtractTraceWatermarkTask 提取溯源水印任务信息，仅当 TaskType 为 ExtractTraceWatermark，该字段有值。
@@ -768,6 +801,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.RemoveWatermarkTask != null) {
             this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
         }
+        if (source.RebuildMediaTask != null) {
+            this.RebuildMediaTask = new RebuildMediaTask(source.RebuildMediaTask);
+        }
         if (source.ExtractTraceWatermarkTask != null) {
             this.ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkTask);
         }
@@ -808,6 +844,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+        this.setParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);

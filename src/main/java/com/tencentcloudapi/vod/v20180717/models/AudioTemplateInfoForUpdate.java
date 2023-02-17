@@ -40,6 +40,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -54,6 +56,7 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 
     /**
     * 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -91,7 +94,9 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 当外层参数 Container 为 hls 时，可选值为：
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
-<li>libfdk_aac。</li> 
+<li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li> 
      * @return Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -109,6 +114,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
      */
     public String getCodec() {
         return this.Codec;
@@ -132,6 +139,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
      * @param Codec 音频流的编码格式。
 当外层参数 Container 为 mp3 时，可选值为：
 <li>libmp3lame。</li>
@@ -149,6 +158,8 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 <li>libfdk_aac。</li>
 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
 <li>libfdk_aac。</li>
+当外层参数 Container 为 wav 时，可选值为：
+<li>pcm16。</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -172,11 +183,13 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 
     /**
      * Get 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 单位：Hz。 
      * @return SampleRate 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
@@ -188,11 +201,13 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 
     /**
      * Set 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>
 单位：Hz。
      * @param SampleRate 音频流的采样率，可选值：
+<li>16000，仅当 Codec 为 pcm16 时可选。</li>
 <li>32000</li>
 <li>44100</li>
 <li>48000</li>

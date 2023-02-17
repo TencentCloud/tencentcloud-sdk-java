@@ -279,6 +279,26 @@ public class CaptchaClient extends AbstractClient{
     }
 
     /**
+     *查询单个CaptchaAppID验证的统计数据，包括：请求量、验证量、验证通过量、验证拦截量。
+     * @param req GetRequestStatisticsRequest
+     * @return GetRequestStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRequestStatisticsResponse GetRequestStatistics(GetRequestStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRequestStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRequestStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRequestStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询单个CaptchaAppID票据校验数据，包括：票据校验量、票据校验通过量、票据校验拦截量。
      * @param req GetTicketStatisticsRequest
      * @return GetTicketStatisticsResponse
@@ -291,6 +311,26 @@ public class CaptchaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetTicketStatisticsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetTicketStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询全部验证的统计数据，包括：总请求量、总验证量、总验证通过量、总验证拦截量等数据。
+     * @param req GetTotalRequestStatisticsRequest
+     * @return GetTotalRequestStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTotalRequestStatisticsResponse GetTotalRequestStatistics(GetTotalRequestStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTotalRequestStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTotalRequestStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTotalRequestStatistics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
