@@ -380,6 +380,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询入侵防御放通封禁列表
+     * @param req DescribeBlockIgnoreListRequest
+     * @return DescribeBlockIgnoreListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockIgnoreListResponse DescribeBlockIgnoreList(DescribeBlockIgnoreListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlockIgnoreListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlockIgnoreListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBlockIgnoreList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeBlockStaticList 告警中心柱形图
 
      * @param req DescribeBlockStaticListRequest

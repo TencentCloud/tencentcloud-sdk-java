@@ -58,6 +58,20 @@ public class CommandDocument extends AbstractModel{
     private String Username;
 
     /**
+    * 保存输出的 COS Bucket 链接。
+    */
+    @SerializedName("OutputCOSBucketUrl")
+    @Expose
+    private String OutputCOSBucketUrl;
+
+    /**
+    * 保存输出的文件名称前缀。
+    */
+    @SerializedName("OutputCOSKeyPrefix")
+    @Expose
+    private String OutputCOSKeyPrefix;
+
+    /**
      * Get Base64 编码后的执行命令。 
      * @return Content Base64 编码后的执行命令。
      */
@@ -137,6 +151,38 @@ public class CommandDocument extends AbstractModel{
         this.Username = Username;
     }
 
+    /**
+     * Get 保存输出的 COS Bucket 链接。 
+     * @return OutputCOSBucketUrl 保存输出的 COS Bucket 链接。
+     */
+    public String getOutputCOSBucketUrl() {
+        return this.OutputCOSBucketUrl;
+    }
+
+    /**
+     * Set 保存输出的 COS Bucket 链接。
+     * @param OutputCOSBucketUrl 保存输出的 COS Bucket 链接。
+     */
+    public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
+        this.OutputCOSBucketUrl = OutputCOSBucketUrl;
+    }
+
+    /**
+     * Get 保存输出的文件名称前缀。 
+     * @return OutputCOSKeyPrefix 保存输出的文件名称前缀。
+     */
+    public String getOutputCOSKeyPrefix() {
+        return this.OutputCOSKeyPrefix;
+    }
+
+    /**
+     * Set 保存输出的文件名称前缀。
+     * @param OutputCOSKeyPrefix 保存输出的文件名称前缀。
+     */
+    public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
+        this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;
+    }
+
     public CommandDocument() {
     }
 
@@ -160,6 +206,12 @@ public class CommandDocument extends AbstractModel{
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.OutputCOSBucketUrl != null) {
+            this.OutputCOSBucketUrl = new String(source.OutputCOSBucketUrl);
+        }
+        if (source.OutputCOSKeyPrefix != null) {
+            this.OutputCOSKeyPrefix = new String(source.OutputCOSKeyPrefix);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class CommandDocument extends AbstractModel{
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+        this.setParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
 
     }
 }

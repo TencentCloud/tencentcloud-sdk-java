@@ -1029,6 +1029,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(ModifyDBEncryptAttributes)用于修改实例数据加密。
+     * @param req ModifyDBEncryptAttributesRequest
+     * @return ModifyDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBEncryptAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceName）用于修改云数据库实例的名称。
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse

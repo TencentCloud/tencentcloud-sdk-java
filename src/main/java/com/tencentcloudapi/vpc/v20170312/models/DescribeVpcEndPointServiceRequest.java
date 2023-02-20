@@ -24,9 +24,10 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -55,13 +56,15 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
-<li>service-name - String - （过滤条件）终端节点实例名称。</li>
-<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li> 
-     * @return Filters 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li> 
+     * @return Filters 过滤条件。
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
+<li>service-name - String - （过滤条件）终端节点实例名称。</li>
+<li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -69,13 +72,15 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
      * @param Filters 过滤条件。
-<li> service-id- String - （过滤条件）终端节点服务唯一ID。</li>
+<li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
+<li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

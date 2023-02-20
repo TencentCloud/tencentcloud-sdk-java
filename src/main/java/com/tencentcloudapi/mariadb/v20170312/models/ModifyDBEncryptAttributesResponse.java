@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogsResponse extends AbstractModel{
-
-    /**
-    * 流日志实例集合。
-    */
-    @SerializedName("FlowLog")
-    @Expose
-    private FlowLog [] FlowLog;
-
-    /**
-    * 流日志总数目。
-    */
-    @SerializedName("TotalNum")
-    @Expose
-    private Long TotalNum;
+public class ModifyDBEncryptAttributesResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeFlowLogsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 流日志实例集合。 
-     * @return FlowLog 流日志实例集合。
-     */
-    public FlowLog [] getFlowLog() {
-        return this.FlowLog;
-    }
-
-    /**
-     * Set 流日志实例集合。
-     * @param FlowLog 流日志实例集合。
-     */
-    public void setFlowLog(FlowLog [] FlowLog) {
-        this.FlowLog = FlowLog;
-    }
-
-    /**
-     * Get 流日志总数目。 
-     * @return TotalNum 流日志总数目。
-     */
-    public Long getTotalNum() {
-        return this.TotalNum;
-    }
-
-    /**
-     * Set 流日志总数目。
-     * @param TotalNum 流日志总数目。
-     */
-    public void setTotalNum(Long TotalNum) {
-        this.TotalNum = TotalNum;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeFlowLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowLogsResponse() {
+    public ModifyDBEncryptAttributesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowLogsResponse(DescribeFlowLogsResponse source) {
-        if (source.FlowLog != null) {
-            this.FlowLog = new FlowLog[source.FlowLog.length];
-            for (int i = 0; i < source.FlowLog.length; i++) {
-                this.FlowLog[i] = new FlowLog(source.FlowLog[i]);
-            }
-        }
-        if (source.TotalNum != null) {
-            this.TotalNum = new Long(source.TotalNum);
-        }
+    public ModifyDBEncryptAttributesResponse(ModifyDBEncryptAttributesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeFlowLogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);
-        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -375,7 +375,7 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *创建直播垫片模板。
+     *创建直播时移模板。
      * @param req CreateLiveTimeShiftTemplateRequest
      * @return CreateLiveTimeShiftTemplateResponse
      * @throws TencentCloudSDKException
@@ -2528,7 +2528,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *修改直播垫片模板。
+     *修改直播时移模板。
      * @param req ModifyLiveTimeShiftTemplateRequest
      * @return ModifyLiveTimeShiftTemplateResponse
      * @throws TencentCloudSDKException

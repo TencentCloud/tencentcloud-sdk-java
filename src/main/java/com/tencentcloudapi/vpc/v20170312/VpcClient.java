@@ -2812,7 +2812,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeFlowLogs）用于查询获取流日志集合
+     *本接口（DescribeFlowLogs）用于查询获取流日志集合。
      * @param req DescribeFlowLogsRequest
      * @return DescribeFlowLogsResponse
      * @throws TencentCloudSDKException
@@ -3618,7 +3618,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *查询终端节点列表。
+     *本接口（DescribeVpcEndPoint）用于查询终端节点列表。
      * @param req DescribeVpcEndPointRequest
      * @return DescribeVpcEndPointResponse
      * @throws TencentCloudSDKException

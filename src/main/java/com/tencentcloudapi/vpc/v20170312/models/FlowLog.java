@@ -115,7 +115,7 @@ public class FlowLog extends AbstractModel{
     private String StorageType;
 
     /**
-    * 消费端信息，当消费端类型为ckafka时返回
+    * 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowLogStorage")
@@ -123,7 +123,7 @@ public class FlowLog extends AbstractModel{
     private FlowLogStorage FlowLogStorage;
 
     /**
-    * 流日志存储ID对应的地域信息
+    * 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudLogRegion")
@@ -343,9 +343,9 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get 消费端信息，当消费端类型为ckafka时返回
+     * Get 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowLogStorage 消费端信息，当消费端类型为ckafka时返回
+     * @return FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FlowLogStorage getFlowLogStorage() {
@@ -353,9 +353,9 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Set 消费端信息，当消费端类型为ckafka时返回
+     * Set 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowLogStorage 消费端信息，当消费端类型为ckafka时返回
+     * @param FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowLogStorage(FlowLogStorage FlowLogStorage) {
@@ -363,9 +363,9 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get 流日志存储ID对应的地域信息
+     * Get 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CloudLogRegion 流日志存储ID对应的地域信息
+     * @return CloudLogRegion 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudLogRegion() {
@@ -373,9 +373,9 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Set 流日志存储ID对应的地域信息
+     * Set 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CloudLogRegion 流日志存储ID对应的地域信息
+     * @param CloudLogRegion 流日志存储ID对应的地域信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudLogRegion(String CloudLogRegion) {

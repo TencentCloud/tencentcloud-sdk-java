@@ -23,70 +23,70 @@ import java.util.HashMap;
 public class DescribeFlowLogsRequest extends AbstractModel{
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID
+    * 私用网络ID或者统一ID，建议使用统一ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 流日志唯一ID
+    * 流日志唯一ID。
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-    * 流日志实例名字
+    * 流日志实例名字。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 资源唯一ID
+    * 资源唯一ID。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 流日志采集类型，ACCEPT|REJECT|ALL
+    * 流日志采集类型，ACCEPT|REJECT|ALL。
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * 流日志存储ID
+    * 流日志存储ID。
     */
     @SerializedName("CloudLogId")
     @Expose
     private String CloudLogId;
 
     /**
-    * 流日志存储ID状态
+    * 流日志存储ID状态。
     */
     @SerializedName("CloudLogState")
     @Expose
     private String CloudLogState;
 
     /**
-    * 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+    * 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 升序（asc）还是降序（desc）,默认：desc
+    * 升序（asc）还是降序（desc）,默认：desc。
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -100,7 +100,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 每页行数，默认为10
+    * 每页行数，默认为10。
     */
     @SerializedName("Limit")
     @Expose
@@ -116,167 +116,167 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Filter Filters;
 
     /**
-    * 流日志存储ID对应的地域信息
+    * 流日志存储ID对应的地域信息。
     */
     @SerializedName("CloudLogRegion")
     @Expose
     private String CloudLogRegion;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID。 
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID。
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 流日志唯一ID 
-     * @return FlowLogId 流日志唯一ID
+     * Get 流日志唯一ID。 
+     * @return FlowLogId 流日志唯一ID。
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set 流日志唯一ID
-     * @param FlowLogId 流日志唯一ID
+     * Set 流日志唯一ID。
+     * @param FlowLogId 流日志唯一ID。
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
     }
 
     /**
-     * Get 流日志实例名字 
-     * @return FlowLogName 流日志实例名字
+     * Get 流日志实例名字。 
+     * @return FlowLogName 流日志实例名字。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字
-     * @param FlowLogName 流日志实例名字
+     * Set 流日志实例名字。
+     * @param FlowLogName 流日志实例名字。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。 
+     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
+     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源唯一ID 
-     * @return ResourceId 资源唯一ID
+     * Get 资源唯一ID。 
+     * @return ResourceId 资源唯一ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源唯一ID
-     * @param ResourceId 资源唯一ID
+     * Set 资源唯一ID。
+     * @param ResourceId 资源唯一ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 流日志采集类型，ACCEPT|REJECT|ALL 
-     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     * Get 流日志采集类型，ACCEPT|REJECT|ALL。 
+     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set 流日志采集类型，ACCEPT|REJECT|ALL
-     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     * Set 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get 流日志存储ID 
-     * @return CloudLogId 流日志存储ID
+     * Get 流日志存储ID。 
+     * @return CloudLogId 流日志存储ID。
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set 流日志存储ID
-     * @param CloudLogId 流日志存储ID
+     * Set 流日志存储ID。
+     * @param CloudLogId 流日志存储ID。
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
     }
 
     /**
-     * Get 流日志存储ID状态 
-     * @return CloudLogState 流日志存储ID状态
+     * Get 流日志存储ID状态。 
+     * @return CloudLogState 流日志存储ID状态。
      */
     public String getCloudLogState() {
         return this.CloudLogState;
     }
 
     /**
-     * Set 流日志存储ID状态
-     * @param CloudLogState 流日志存储ID状态
+     * Set 流日志存储ID状态。
+     * @param CloudLogState 流日志存储ID状态。
      */
     public void setCloudLogState(String CloudLogState) {
         this.CloudLogState = CloudLogState;
     }
 
     /**
-     * Get 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime 
-     * @return OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+     * Get 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。 
+     * @return OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
-     * @param OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime
+     * Set 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+     * @param OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 升序（asc）还是降序（desc）,默认：desc 
-     * @return OrderDirection 升序（asc）还是降序（desc）,默认：desc
+     * Get 升序（asc）还是降序（desc）,默认：desc。 
+     * @return OrderDirection 升序（asc）还是降序（desc）,默认：desc。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 升序（asc）还是降序（desc）,默认：desc
-     * @param OrderDirection 升序（asc）还是降序（desc）,默认：desc
+     * Set 升序（asc）还是降序（desc）,默认：desc。
+     * @param OrderDirection 升序（asc）还是降序（desc）,默认：desc。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
@@ -299,16 +299,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页行数，默认为10 
-     * @return Limit 每页行数，默认为10
+     * Get 每页行数，默认为10。 
+     * @return Limit 每页行数，默认为10。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页行数，默认为10
-     * @param Limit 每页行数，默认为10
+     * Set 每页行数，默认为10。
+     * @param Limit 每页行数，默认为10。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -339,16 +339,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 流日志存储ID对应的地域信息 
-     * @return CloudLogRegion 流日志存储ID对应的地域信息
+     * Get 流日志存储ID对应的地域信息。 
+     * @return CloudLogRegion 流日志存储ID对应的地域信息。
      */
     public String getCloudLogRegion() {
         return this.CloudLogRegion;
     }
 
     /**
-     * Set 流日志存储ID对应的地域信息
-     * @param CloudLogRegion 流日志存储ID对应的地域信息
+     * Set 流日志存储ID对应的地域信息。
+     * @param CloudLogRegion 流日志存储ID对应的地域信息。
      */
     public void setCloudLogRegion(String CloudLogRegion) {
         this.CloudLogRegion = CloudLogRegion;

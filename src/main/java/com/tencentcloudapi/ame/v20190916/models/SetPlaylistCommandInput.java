@@ -51,11 +51,19 @@ public class SetPlaylistCommandInput extends AbstractModel{
     private Long ChangedIndex;
 
     /**
-    * 歌曲 ID 列表，当 Type 取 Add 时，必填。
+    * 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
     */
     @SerializedName("MusicIds")
     @Expose
     private String [] MusicIds;
+
+    /**
+    * 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+    */
+    @SerializedName("MusicURLs")
+    @Expose
+    private String [] MusicURLs;
 
     /**
      * Get 变更类型，取值有：
@@ -134,19 +142,39 @@ public class SetPlaylistCommandInput extends AbstractModel{
     }
 
     /**
-     * Get 歌曲 ID 列表，当 Type 取 Add 时，必填。 
-     * @return MusicIds 歌曲 ID 列表，当 Type 取 Add 时，必填。
+     * Get 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。 
+     * @return MusicIds 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
      */
     public String [] getMusicIds() {
         return this.MusicIds;
     }
 
     /**
-     * Set 歌曲 ID 列表，当 Type 取 Add 时，必填。
-     * @param MusicIds 歌曲 ID 列表，当 Type 取 Add 时，必填。
+     * Set 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
+     * @param MusicIds 歌曲 ID 列表，当 Type 取 Add 时，与MusicURLs必填其中一项。
      */
     public void setMusicIds(String [] MusicIds) {
         this.MusicIds = MusicIds;
+    }
+
+    /**
+     * Get 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。 
+     * @return MusicURLs 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+     */
+    public String [] getMusicURLs() {
+        return this.MusicURLs;
+    }
+
+    /**
+     * Set 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+     * @param MusicURLs 歌曲 URL 列表，当 Type 取 Add 时，与MusicIds必填其中一项。
+注：URL必须以.mp3结尾且必须是mp3编码文件。
+     */
+    public void setMusicURLs(String [] MusicURLs) {
+        this.MusicURLs = MusicURLs;
     }
 
     public SetPlaylistCommandInput() {
@@ -172,6 +200,12 @@ public class SetPlaylistCommandInput extends AbstractModel{
                 this.MusicIds[i] = new String(source.MusicIds[i]);
             }
         }
+        if (source.MusicURLs != null) {
+            this.MusicURLs = new String[source.MusicURLs.length];
+            for (int i = 0; i < source.MusicURLs.length; i++) {
+                this.MusicURLs[i] = new String(source.MusicURLs[i]);
+            }
+        }
     }
 
 
@@ -183,6 +217,7 @@ public class SetPlaylistCommandInput extends AbstractModel{
         this.setParamSimple(map, prefix + "Index", this.Index);
         this.setParamSimple(map, prefix + "ChangedIndex", this.ChangedIndex);
         this.setParamArraySimple(map, prefix + "MusicIds.", this.MusicIds);
+        this.setParamArraySimple(map, prefix + "MusicURLs.", this.MusicURLs);
 
     }
 }

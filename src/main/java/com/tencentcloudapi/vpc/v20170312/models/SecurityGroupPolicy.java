@@ -73,7 +73,7 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String SecurityGroupId;
 
     /**
-    * IP地址ID或者ID地址组ID。
+    * IP地址ID或者IP地址组ID。
     */
     @SerializedName("AddressTemplate")
     @Expose
@@ -217,16 +217,16 @@ public class SecurityGroupPolicy extends AbstractModel{
     }
 
     /**
-     * Get IP地址ID或者ID地址组ID。 
-     * @return AddressTemplate IP地址ID或者ID地址组ID。
+     * Get IP地址ID或者IP地址组ID。 
+     * @return AddressTemplate IP地址ID或者IP地址组ID。
      */
     public AddressTemplateSpecification getAddressTemplate() {
         return this.AddressTemplate;
     }
 
     /**
-     * Set IP地址ID或者ID地址组ID。
-     * @param AddressTemplate IP地址ID或者ID地址组ID。
+     * Set IP地址ID或者IP地址组ID。
+     * @param AddressTemplate IP地址ID或者IP地址组ID。
      */
     public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
         this.AddressTemplate = AddressTemplate;

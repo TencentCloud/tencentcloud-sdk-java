@@ -62,6 +62,13 @@ public class AutomationAgentInfo extends AbstractModel{
     private String Environment;
 
     /**
+    * Agent 支持的功能列表。
+    */
+    @SerializedName("SupportFeatures")
+    @Expose
+    private String [] SupportFeatures;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -157,6 +164,22 @@ public class AutomationAgentInfo extends AbstractModel{
         this.Environment = Environment;
     }
 
+    /**
+     * Get Agent 支持的功能列表。 
+     * @return SupportFeatures Agent 支持的功能列表。
+     */
+    public String [] getSupportFeatures() {
+        return this.SupportFeatures;
+    }
+
+    /**
+     * Set Agent 支持的功能列表。
+     * @param SupportFeatures Agent 支持的功能列表。
+     */
+    public void setSupportFeatures(String [] SupportFeatures) {
+        this.SupportFeatures = SupportFeatures;
+    }
+
     public AutomationAgentInfo() {
     }
 
@@ -180,6 +203,12 @@ public class AutomationAgentInfo extends AbstractModel{
         if (source.Environment != null) {
             this.Environment = new String(source.Environment);
         }
+        if (source.SupportFeatures != null) {
+            this.SupportFeatures = new String[source.SupportFeatures.length];
+            for (int i = 0; i < source.SupportFeatures.length; i++) {
+                this.SupportFeatures[i] = new String(source.SupportFeatures[i]);
+            }
+        }
     }
 
 
@@ -192,6 +221,7 @@ public class AutomationAgentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
         this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamArraySimple(map, prefix + "SupportFeatures.", this.SupportFeatures);
 
     }
 }

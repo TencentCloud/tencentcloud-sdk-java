@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class GetTotalRequestStatisticsRequest extends AbstractModel{
 
+    /**
+    * 开始时间字符串
+    */
+    @SerializedName("StartTimeStr")
+    @Expose
+    private String StartTimeStr;
+
+    /**
+    * 结束时间字符串
+    */
+    @SerializedName("EndTimeStr")
+    @Expose
+    private String EndTimeStr;
+
+    /**
+    * 查询粒度
+    */
+    @SerializedName("Dimension")
+    @Expose
+    private String Dimension;
+
+    /**
+     * Get 开始时间字符串 
+     * @return StartTimeStr 开始时间字符串
+     */
+    public String getStartTimeStr() {
+        return this.StartTimeStr;
+    }
+
+    /**
+     * Set 开始时间字符串
+     * @param StartTimeStr 开始时间字符串
+     */
+    public void setStartTimeStr(String StartTimeStr) {
+        this.StartTimeStr = StartTimeStr;
+    }
+
+    /**
+     * Get 结束时间字符串 
+     * @return EndTimeStr 结束时间字符串
+     */
+    public String getEndTimeStr() {
+        return this.EndTimeStr;
+    }
+
+    /**
+     * Set 结束时间字符串
+     * @param EndTimeStr 结束时间字符串
+     */
+    public void setEndTimeStr(String EndTimeStr) {
+        this.EndTimeStr = EndTimeStr;
+    }
+
+    /**
+     * Get 查询粒度 
+     * @return Dimension 查询粒度
+     */
+    public String getDimension() {
+        return this.Dimension;
+    }
+
+    /**
+     * Set 查询粒度
+     * @param Dimension 查询粒度
+     */
+    public void setDimension(String Dimension) {
+        this.Dimension = Dimension;
+    }
+
     public GetTotalRequestStatisticsRequest() {
     }
 
@@ -30,6 +99,15 @@ public class GetTotalRequestStatisticsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetTotalRequestStatisticsRequest(GetTotalRequestStatisticsRequest source) {
+        if (source.StartTimeStr != null) {
+            this.StartTimeStr = new String(source.StartTimeStr);
+        }
+        if (source.EndTimeStr != null) {
+            this.EndTimeStr = new String(source.EndTimeStr);
+        }
+        if (source.Dimension != null) {
+            this.Dimension = new String(source.Dimension);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class GetTotalRequestStatisticsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "StartTimeStr", this.StartTimeStr);
+        this.setParamSimple(map, prefix + "EndTimeStr", this.EndTimeStr);
+        this.setParamSimple(map, prefix + "Dimension", this.Dimension);
 
     }
 }
