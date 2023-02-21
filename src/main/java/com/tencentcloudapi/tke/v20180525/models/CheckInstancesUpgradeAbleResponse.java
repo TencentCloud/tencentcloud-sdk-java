@@ -53,6 +53,14 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel{
     private Long Total;
 
     /**
+    * 不可升级原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnavailableVersionReason")
+    @Expose
+    private UnavailableReason [] UnavailableVersionReason;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -132,6 +140,26 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel{
     }
 
     /**
+     * Get 不可升级原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnavailableVersionReason 不可升级原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UnavailableReason [] getUnavailableVersionReason() {
+        return this.UnavailableVersionReason;
+    }
+
+    /**
+     * Set 不可升级原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnavailableVersionReason 不可升级原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnavailableVersionReason(UnavailableReason [] UnavailableVersionReason) {
+        this.UnavailableVersionReason = UnavailableVersionReason;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -170,6 +198,12 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel{
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.UnavailableVersionReason != null) {
+            this.UnavailableVersionReason = new UnavailableReason[source.UnavailableVersionReason.length];
+            for (int i = 0; i < source.UnavailableVersionReason.length; i++) {
+                this.UnavailableVersionReason[i] = new UnavailableReason(source.UnavailableVersionReason[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -184,6 +218,7 @@ public class CheckInstancesUpgradeAbleResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
         this.setParamArrayObj(map, prefix + "UpgradeAbleInstances.", this.UpgradeAbleInstances);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "UnavailableVersionReason.", this.UnavailableVersionReason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

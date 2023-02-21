@@ -79,6 +79,13 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
     private String EnLastName;
 
     /**
+    * 证件人像照片抠取
+    */
+    @SerializedName("PortraitImage")
+    @Expose
+    private String PortraitImage;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +221,22 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 证件人像照片抠取 
+     * @return PortraitImage 证件人像照片抠取
+     */
+    public String getPortraitImage() {
+        return this.PortraitImage;
+    }
+
+    /**
+     * Set 证件人像照片抠取
+     * @param PortraitImage 证件人像照片抠取
+     */
+    public void setPortraitImage(String PortraitImage) {
+        this.PortraitImage = PortraitImage;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +284,9 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
         if (source.EnLastName != null) {
             this.EnLastName = new String(source.EnLastName);
         }
+        if (source.PortraitImage != null) {
+            this.PortraitImage = new String(source.PortraitImage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +305,7 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "IssueDate", this.IssueDate);
         this.setParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
         this.setParamSimple(map, prefix + "EnLastName", this.EnLastName);
+        this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

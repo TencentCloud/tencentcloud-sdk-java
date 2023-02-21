@@ -23,6 +23,38 @@ import java.util.HashMap;
 public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
+    * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DesiredPodNumber")
+    @Expose
+    private Long DesiredPodNumber;
+
+    /**
+    * GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
+
+    /**
+    * 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Taints")
+    @Expose
+    private Taint [] Taints;
+
+    /**
     * 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
 注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -79,36 +111,84 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private InstanceExtraArgs ExtraArgs;
 
     /**
-    * 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DesiredPodNumber")
-    @Expose
-    private Long DesiredPodNumber;
+     */
+    public Long getDesiredPodNumber() {
+        return this.DesiredPodNumber;
+    }
 
     /**
-    * GPU驱动相关参数
+     * Set 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("GPUArgs")
-    @Expose
-    private GPUArgs GPUArgs;
+     * @param DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesiredPodNumber(Long DesiredPodNumber) {
+        this.DesiredPodNumber = DesiredPodNumber;
+    }
 
     /**
-    * base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+     * Get GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GPUArgs GPU驱动相关参数
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PreStartUserScript")
-    @Expose
-    private String PreStartUserScript;
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
 
     /**
-    * 节点污点
+     * Set GPU驱动相关参数
 注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Taints")
-    @Expose
-    private Taint [] Taints;
+     * @param GPUArgs GPU驱动相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
+    /**
+     * Get 节点污点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Taints 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Taint [] getTaints() {
+        return this.Taints;
+    }
+
+    /**
+     * Set 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Taints 节点污点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaints(Taint [] Taints) {
+        this.Taints = Taints;
+    }
 
     /**
      * Get 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
@@ -250,86 +330,6 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
-    /**
-     * Get 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getDesiredPodNumber() {
-        return this.DesiredPodNumber;
-    }
-
-    /**
-     * Set 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DesiredPodNumber 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDesiredPodNumber(Long DesiredPodNumber) {
-        this.DesiredPodNumber = DesiredPodNumber;
-    }
-
-    /**
-     * Get GPU驱动相关参数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GPUArgs GPU驱动相关参数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public GPUArgs getGPUArgs() {
-        return this.GPUArgs;
-    }
-
-    /**
-     * Set GPU驱动相关参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUArgs GPU驱动相关参数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setGPUArgs(GPUArgs GPUArgs) {
-        this.GPUArgs = GPUArgs;
-    }
-
-    /**
-     * Get base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPreStartUserScript() {
-        return this.PreStartUserScript;
-    }
-
-    /**
-     * Set base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreStartUserScript base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPreStartUserScript(String PreStartUserScript) {
-        this.PreStartUserScript = PreStartUserScript;
-    }
-
-    /**
-     * Get 节点污点
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Taints 节点污点
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Taint [] getTaints() {
-        return this.Taints;
-    }
-
-    /**
-     * Set 节点污点
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Taints 节点污点
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTaints(Taint [] Taints) {
-        this.Taints = Taints;
-    }
-
     public InstanceAdvancedSettings() {
     }
 
@@ -338,6 +338,21 @@ public class InstanceAdvancedSettings extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InstanceAdvancedSettings(InstanceAdvancedSettings source) {
+        if (source.DesiredPodNumber != null) {
+            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
+        }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
@@ -365,21 +380,6 @@ public class InstanceAdvancedSettings extends AbstractModel{
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
-        if (source.DesiredPodNumber != null) {
-            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
-        }
-        if (source.GPUArgs != null) {
-            this.GPUArgs = new GPUArgs(source.GPUArgs);
-        }
-        if (source.PreStartUserScript != null) {
-            this.PreStartUserScript = new String(source.PreStartUserScript);
-        }
-        if (source.Taints != null) {
-            this.Taints = new Taint[source.Taints.length];
-            for (int i = 0; i < source.Taints.length; i++) {
-                this.Taints[i] = new Taint(source.Taints[i]);
-            }
-        }
     }
 
 
@@ -387,6 +387,10 @@ public class InstanceAdvancedSettings extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
         this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
@@ -394,10 +398,6 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
-        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
-        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
-        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
-        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 
     }
 }

@@ -179,7 +179,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *检查给定节点列表中哪些是可升级的 
+     *检查给定节点列表中哪些是可升级的
      * @param req CheckInstancesUpgradeAbleRequest
      * @return CheckInstancesUpgradeAbleResponse
      * @throws TencentCloudSDKException
@@ -1439,7 +1439,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     * 查询集群下节点实例信息 
+     *查询集群下节点实例信息
      * @param req DescribeClusterInstancesRequest
      * @return DescribeClusterInstancesResponse
      * @throws TencentCloudSDKException

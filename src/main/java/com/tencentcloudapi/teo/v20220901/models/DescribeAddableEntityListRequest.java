@@ -43,6 +43,15 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
     private String EntityType;
 
     /**
+    * 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -98,6 +107,30 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
         this.EntityType = EntityType;
     }
 
+    /**
+     * Get 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。 
+     * @return Area 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+     * @param Area 服务区域，取值有：
+<li>mainland：中国大陆境内；</li>
+<li>overseas：全球（不含中国大陆）。</li>若为国内站账号，则默认取值为mainland；若为国际站账号，则默认取值为overseas。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeAddableEntityListRequest() {
     }
 
@@ -112,6 +145,9 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
         if (source.EntityType != null) {
             this.EntityType = new String(source.EntityType);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -121,6 +157,7 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "EntityType", this.EntityType);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

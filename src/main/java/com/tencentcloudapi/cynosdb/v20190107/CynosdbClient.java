@@ -1279,6 +1279,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改实例组ip，端口
+     * @param req ModifyVipVportRequest
+     * @return ModifyVipVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVipVportResponse ModifyVipVport(ModifyVipVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVipVportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVipVportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVipVport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *下线集群
      * @param req OfflineClusterRequest
      * @return OfflineClusterResponse

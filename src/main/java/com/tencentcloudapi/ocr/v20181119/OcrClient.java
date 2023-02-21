@@ -227,6 +227,28 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口可创建智能表单录入任务，支持多个识别图片和PDF的URL上传，返回含有识别内容的操作页面URL。
+
+智能表单录入产品提供高准确率的表单识别技术和人工核对工具，支持自定义字段，将识别结果自动填入到自定义条目中，并提供人工操作工具，完成整个表单识别过程。适用性强，可对票据、合同、货单等文件的识别，适用于金融、货代、保险、档案等领域。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+     * @param req CreateAIFormTaskRequest
+     * @return CreateAIFormTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIFormTaskResponse CreateAIFormTask(CreateAIFormTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAIFormTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAIFormTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAIFormTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持驾驶证主页和副页所有字段的自动定位与识别，重点字段的识别准确度达到99%以上。
 
 驾驶证主页：包括证号、姓名、性别、国籍、住址、出生日期、初次领证日期、准驾车型、有效期限、发证单位
@@ -724,6 +746,26 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GeneralHandwritingOCRResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GeneralHandwritingOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *支持查询智能表单录入任务的状态。本产品免费公测中，您可以点击demo（超连接：https://ocr.smartform.cloud.tencent.com/）试用，如需购买请与商务团队联系。
+     * @param req GetTaskStateRequest
+     * @return GetTaskStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskStateResponse GetTaskState(GetTaskStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetTaskStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetTaskStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetTaskState");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1337,6 +1379,28 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持中英文图片/PDF内常规表格、无线表格、多表格的检测和识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。识别效果比表格识别V2更好，覆盖场景更加广泛，对表格难例场景，如无线表格、嵌套表格（有线表格中包含无线表格）的识别效果均优于表格识别V2。
+
+默认接口请求频率限制：2次/秒。
+     * @param req RecognizeTableAccurateOCRRequest
+     * @return RecognizeTableAccurateOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizeTableAccurateOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizeTableAccurateOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
      * @param req RecognizeTableOCRRequest
      * @return RecognizeTableOCRResponse
@@ -1359,7 +1423,6 @@ public class OcrClient extends AbstractClient{
     /**
      *本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码。
 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
-
      * @param req RecognizeThaiIDCardOCRRequest
      * @return RecognizeThaiIDCardOCRResponse
      * @throws TencentCloudSDKException

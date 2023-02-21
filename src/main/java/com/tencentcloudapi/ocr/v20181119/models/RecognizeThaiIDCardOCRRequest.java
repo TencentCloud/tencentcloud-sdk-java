@@ -39,6 +39,14 @@ public class RecognizeThaiIDCardOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -78,6 +86,26 @@ public class RecognizeThaiIDCardOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码 
+     * @return CropPortrait 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码
+     * @param CropPortrait 图片开关。默认为false，不返回泰国身份证头像照片的base64编码。
+设置为true时，返回旋转矫正后的泰国身份证头像照片的base64编码
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public RecognizeThaiIDCardOCRRequest() {
     }
 
@@ -92,6 +120,9 @@ public class RecognizeThaiIDCardOCRRequest extends AbstractModel{
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class RecognizeThaiIDCardOCRRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }

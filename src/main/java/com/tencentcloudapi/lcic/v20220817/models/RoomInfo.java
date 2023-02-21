@@ -63,7 +63,7 @@ public class RoomInfo extends AbstractModel{
     private Long MaxMicNumber;
 
     /**
-    * 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+    * 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
@@ -251,9 +251,9 @@ public class RoomInfo extends AbstractModel{
     }
 
     /**
-     * Get 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * Get 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * @return SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
@@ -261,9 +261,9 @@ public class RoomInfo extends AbstractModel{
     }
 
     /**
-     * Set 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * Set 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 coteaching 双师
+     * @param SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {

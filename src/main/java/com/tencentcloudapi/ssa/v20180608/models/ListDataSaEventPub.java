@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ListDataSaEventPub extends AbstractModel{
 
     /**
-    * 受影响资产
+    * 时间
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 安全事件名称
+    * 安全事件1级分类
     */
     @SerializedName("EventType1")
     @Expose
     private Long EventType1;
 
     /**
-    * 安全事件1级分类
+    * 安全事件2级分类
     */
     @SerializedName("EventType2")
     @Expose
     private Long EventType2;
 
     /**
-    * 安全事件2级分类
+    * 安全事件名称
     */
     @SerializedName("EventName")
     @Expose
@@ -100,64 +100,64 @@ public class ListDataSaEventPub extends AbstractModel{
     private String OldIdMd5;
 
     /**
-     * Get 受影响资产 
-     * @return Time 受影响资产
+     * Get 时间 
+     * @return Time 时间
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 受影响资产
-     * @param Time 受影响资产
+     * Set 时间
+     * @param Time 时间
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 安全事件名称 
-     * @return EventType1 安全事件名称
+     * Get 安全事件1级分类 
+     * @return EventType1 安全事件1级分类
      */
     public Long getEventType1() {
         return this.EventType1;
     }
 
     /**
-     * Set 安全事件名称
-     * @param EventType1 安全事件名称
+     * Set 安全事件1级分类
+     * @param EventType1 安全事件1级分类
      */
     public void setEventType1(Long EventType1) {
         this.EventType1 = EventType1;
     }
 
     /**
-     * Get 安全事件1级分类 
-     * @return EventType2 安全事件1级分类
+     * Get 安全事件2级分类 
+     * @return EventType2 安全事件2级分类
      */
     public Long getEventType2() {
         return this.EventType2;
     }
 
     /**
-     * Set 安全事件1级分类
-     * @param EventType2 安全事件1级分类
+     * Set 安全事件2级分类
+     * @param EventType2 安全事件2级分类
      */
     public void setEventType2(Long EventType2) {
         this.EventType2 = EventType2;
     }
 
     /**
-     * Get 安全事件2级分类 
-     * @return EventName 安全事件2级分类
+     * Get 安全事件名称 
+     * @return EventName 安全事件名称
      */
     public String getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set 安全事件2级分类
-     * @param EventName 安全事件2级分类
+     * Set 安全事件名称
+     * @param EventName 安全事件名称
      */
     public void setEventName(String EventName) {
         this.EventName = EventName;

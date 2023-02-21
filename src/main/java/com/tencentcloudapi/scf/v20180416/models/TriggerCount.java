@@ -100,6 +100,14 @@ public class TriggerCount extends AbstractModel{
     private Long Vod;
 
     /**
+    * Eb触发器数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Eb")
+    @Expose
+    private Long Eb;
+
+    /**
      * Get Cos触发器数量 
      * @return Cos Cos触发器数量
      */
@@ -275,6 +283,26 @@ public class TriggerCount extends AbstractModel{
         this.Vod = Vod;
     }
 
+    /**
+     * Get Eb触发器数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Eb Eb触发器数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEb() {
+        return this.Eb;
+    }
+
+    /**
+     * Set Eb触发器数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Eb Eb触发器数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEb(Long Eb) {
+        this.Eb = Eb;
+    }
+
     public TriggerCount() {
     }
 
@@ -316,6 +344,9 @@ public class TriggerCount extends AbstractModel{
         if (source.Vod != null) {
             this.Vod = new Long(source.Vod);
         }
+        if (source.Eb != null) {
+            this.Eb = new Long(source.Eb);
+        }
     }
 
 
@@ -334,6 +365,7 @@ public class TriggerCount extends AbstractModel{
         this.setParamSimple(map, prefix + "Mps", this.Mps);
         this.setParamSimple(map, prefix + "Cm", this.Cm);
         this.setParamSimple(map, prefix + "Vod", this.Vod);
+        this.setParamSimple(map, prefix + "Eb", this.Eb);
 
     }
 }

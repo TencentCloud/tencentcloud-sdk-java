@@ -96,7 +96,6 @@ public class DescribeRoomResponse extends AbstractModel{
     * 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
     */
     @SerializedName("SubType")
     @Expose
@@ -326,12 +325,10 @@ coteaching 双师
     /**
      * Get 房间子类型，可以有以下取值：
 videodoc 文档+视频
-video 纯视频
-coteaching 双师 
+video 纯视频 
      * @return SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      */
     public String getSubType() {
         return this.SubType;
@@ -341,11 +338,9 @@ coteaching 双师
      * Set 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      * @param SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;

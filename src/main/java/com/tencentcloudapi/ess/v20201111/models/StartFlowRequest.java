@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StartFlowRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
     */
     @SerializedName("Operator")
     @Expose
@@ -51,16 +51,16 @@ public class StartFlowRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+     * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
+     * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @param Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

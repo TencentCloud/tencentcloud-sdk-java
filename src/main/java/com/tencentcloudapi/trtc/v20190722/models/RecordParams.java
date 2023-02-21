@@ -78,6 +78,14 @@ Hls 格式录制此参数不生效。
     private Long MaxMediaFileDuration;
 
     /**
+    * 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MediaId")
+    @Expose
+    private Long MediaId;
+
+    /**
      * Get 录制模式：
 1：单流录制，分别录制房间的订阅UserId的音频和视频，将录制文件上传至云存储；
 2：混流录制，将房间内订阅UserId的音视频混录成一个音视频文件，将录制文件上传至云存储； 
@@ -213,6 +221,26 @@ Hls 格式录制此参数不生效。
         this.MaxMediaFileDuration = MaxMediaFileDuration;
     }
 
+    /**
+     * Get 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMediaId() {
+        return this.MediaId;
+    }
+
+    /**
+     * Set 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMediaId(Long MediaId) {
+        this.MediaId = MediaId;
+    }
+
     public RecordParams() {
     }
 
@@ -242,6 +270,9 @@ Hls 格式录制此参数不生效。
         if (source.MaxMediaFileDuration != null) {
             this.MaxMediaFileDuration = new Long(source.MaxMediaFileDuration);
         }
+        if (source.MediaId != null) {
+            this.MediaId = new Long(source.MediaId);
+        }
     }
 
 
@@ -256,6 +287,7 @@ Hls 格式录制此参数不生效。
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
         this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
+        this.setParamSimple(map, prefix + "MediaId", this.MediaId);
 
     }
 }

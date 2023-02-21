@@ -309,6 +309,9 @@ public enum TemErrorCode {
     // 环境名称不能为空。
      MISSINGPARAMETER_ENVIRONMENTNAMENULL("MissingParameter.EnvironmentNameNull"),
      
+    // 镜像仓库不能为空。
+     MISSINGPARAMETER_IMGREPONULL("MissingParameter.ImgRepoNull"),
+     
     // logset 和 topic 不能为空。
      MISSINGPARAMETER_LOGSETORTOPICNULL("MissingParameter.LogsetOrTopicNull"),
      

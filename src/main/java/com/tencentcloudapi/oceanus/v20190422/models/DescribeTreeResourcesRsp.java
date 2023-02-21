@@ -20,11 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTreeResourcesResponse extends AbstractModel{
+public class DescribeTreeResourcesRsp extends AbstractModel{
 
     /**
     * 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -32,22 +31,20 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
 
     /**
     * 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 文件夹名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 文件列表
+    * 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
@@ -55,7 +52,7 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
     private TreeResourceItem [] Items;
 
     /**
-    * 子目录列表
+    * 子节点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Children")
@@ -71,17 +68,8 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父节点ID 
      * @return ParentId 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentId() {
         return this.ParentId;
@@ -89,19 +77,15 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
 
     /**
      * Set 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 父节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(String ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件夹ID 
      * @return Id 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -109,38 +93,32 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
 
     /**
      * Set 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 文件夹ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 文件夹名称 
+     * @return Name 文件夹名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 文件夹名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 文件夹名称
+     * @param Name 文件夹名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 文件列表
+     * Get 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 文件列表
+     * @return Items 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TreeResourceItem [] getItems() {
@@ -148,9 +126,9 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
     }
 
     /**
-     * Set 文件列表
+     * Set 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 文件列表
+     * @param Items 文件夹下资源数字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(TreeResourceItem [] Items) {
@@ -158,9 +136,9 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
     }
 
     /**
-     * Get 子目录列表
+     * Get 子节点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Children 子目录列表
+     * @return Children 子节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeTreeResourcesRsp [] getChildren() {
@@ -168,9 +146,9 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
     }
 
     /**
-     * Set 子目录列表
+     * Set 子节点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Children 子目录列表
+     * @param Children 子节点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChildren(DescribeTreeResourcesRsp [] Children) {
@@ -197,30 +175,14 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public DescribeTreeResourcesResponse() {
+    public DescribeTreeResourcesRsp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTreeResourcesResponse(DescribeTreeResourcesResponse source) {
+    public DescribeTreeResourcesRsp(DescribeTreeResourcesRsp source) {
         if (source.ParentId != null) {
             this.ParentId = new String(source.ParentId);
         }
@@ -245,9 +207,6 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
-        }
     }
 
 
@@ -261,7 +220,6 @@ public class DescribeTreeResourcesResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
