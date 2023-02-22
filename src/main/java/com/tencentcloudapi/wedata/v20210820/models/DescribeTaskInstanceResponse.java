@@ -30,6 +30,14 @@ public class DescribeTaskInstanceResponse extends AbstractModel{
     private TaskInstanceDetail TaskInstanceDetail;
 
     /**
+    * 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private TaskInstanceDetail Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeTaskInstanceResponse extends AbstractModel{
      */
     public void setTaskInstanceDetail(TaskInstanceDetail TaskInstanceDetail) {
         this.TaskInstanceDetail = TaskInstanceDetail;
+    }
+
+    /**
+     * Get 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskInstanceDetail getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 任务实例详情。与TaskInstanceDetail相同含义，优先取Data，Data为空时，取TaskInstanceDetail
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(TaskInstanceDetail Data) {
+        this.Data = Data;
     }
 
     /**
@@ -79,6 +107,9 @@ public class DescribeTaskInstanceResponse extends AbstractModel{
         if (source.TaskInstanceDetail != null) {
             this.TaskInstanceDetail = new TaskInstanceDetail(source.TaskInstanceDetail);
         }
+        if (source.Data != null) {
+            this.Data = new TaskInstanceDetail(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class DescribeTaskInstanceResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TaskInstanceDetail.", this.TaskInstanceDetail);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

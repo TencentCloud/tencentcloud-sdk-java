@@ -216,6 +216,46 @@ STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING�
     private CosPathInfo ModelHotUpdatePath;
 
     /**
+    * 推理环境id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReasoningEnvironmentId")
+    @Expose
+    private String ReasoningEnvironmentId;
+
+    /**
+    * 训练任务版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrainingJobVersion")
+    @Expose
+    private String TrainingJobVersion;
+
+    /**
+    * 训练偏好
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrainingPreference")
+    @Expose
+    private String TrainingPreference;
+
+    /**
+    * 自动学习任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoMLTaskId")
+    @Expose
+    private String AutoMLTaskId;
+
+    /**
+    * 是否QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsQAT")
+    @Expose
+    private Boolean IsQAT;
+
+    /**
      * Get 模型id 
      * @return TrainingModelId 模型id
      */
@@ -675,6 +715,106 @@ STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING�
         this.ModelHotUpdatePath = ModelHotUpdatePath;
     }
 
+    /**
+     * Get 推理环境id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReasoningEnvironmentId 推理环境id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReasoningEnvironmentId() {
+        return this.ReasoningEnvironmentId;
+    }
+
+    /**
+     * Set 推理环境id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReasoningEnvironmentId 推理环境id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReasoningEnvironmentId(String ReasoningEnvironmentId) {
+        this.ReasoningEnvironmentId = ReasoningEnvironmentId;
+    }
+
+    /**
+     * Get 训练任务版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrainingJobVersion 训练任务版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrainingJobVersion() {
+        return this.TrainingJobVersion;
+    }
+
+    /**
+     * Set 训练任务版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrainingJobVersion 训练任务版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrainingJobVersion(String TrainingJobVersion) {
+        this.TrainingJobVersion = TrainingJobVersion;
+    }
+
+    /**
+     * Get 训练偏好
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrainingPreference 训练偏好
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTrainingPreference() {
+        return this.TrainingPreference;
+    }
+
+    /**
+     * Set 训练偏好
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrainingPreference 训练偏好
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrainingPreference(String TrainingPreference) {
+        this.TrainingPreference = TrainingPreference;
+    }
+
+    /**
+     * Get 自动学习任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoMLTaskId 自动学习任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoMLTaskId() {
+        return this.AutoMLTaskId;
+    }
+
+    /**
+     * Set 自动学习任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoMLTaskId 自动学习任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoMLTaskId(String AutoMLTaskId) {
+        this.AutoMLTaskId = AutoMLTaskId;
+    }
+
+    /**
+     * Get 是否QAT模型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsQAT 是否QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsQAT() {
+        return this.IsQAT;
+    }
+
+    /**
+     * Set 是否QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsQAT 是否QAT模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsQAT(Boolean IsQAT) {
+        this.IsQAT = IsQAT;
+    }
+
     public TrainingModelVersionDTO() {
     }
 
@@ -761,6 +901,21 @@ STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING�
         if (source.ModelHotUpdatePath != null) {
             this.ModelHotUpdatePath = new CosPathInfo(source.ModelHotUpdatePath);
         }
+        if (source.ReasoningEnvironmentId != null) {
+            this.ReasoningEnvironmentId = new String(source.ReasoningEnvironmentId);
+        }
+        if (source.TrainingJobVersion != null) {
+            this.TrainingJobVersion = new String(source.TrainingJobVersion);
+        }
+        if (source.TrainingPreference != null) {
+            this.TrainingPreference = new String(source.TrainingPreference);
+        }
+        if (source.AutoMLTaskId != null) {
+            this.AutoMLTaskId = new String(source.AutoMLTaskId);
+        }
+        if (source.IsQAT != null) {
+            this.IsQAT = new Boolean(source.IsQAT);
+        }
     }
 
 
@@ -794,6 +949,11 @@ STATUS_SUCCESS：导入成功，STATUS_FAILED：导入失败 ，STATUS_RUNNING�
         this.setParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
         this.setParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
         this.setParamObj(map, prefix + "ModelHotUpdatePath.", this.ModelHotUpdatePath);
+        this.setParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
+        this.setParamSimple(map, prefix + "TrainingJobVersion", this.TrainingJobVersion);
+        this.setParamSimple(map, prefix + "TrainingPreference", this.TrainingPreference);
+        this.setParamSimple(map, prefix + "AutoMLTaskId", this.AutoMLTaskId);
+        this.setParamSimple(map, prefix + "IsQAT", this.IsQAT);
 
     }
 }

@@ -135,6 +135,22 @@ public class NatInstanceInfo extends AbstractModel{
     private String ZoneZhBak;
 
     /**
+    * 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleUsed")
+    @Expose
+    private Long RuleUsed;
+
+    /**
+    * 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleMax")
+    @Expose
+    private Long RuleMax;
+
+    /**
      * Get nat实例id 
      * @return NatinsId nat实例id
      */
@@ -402,6 +418,46 @@ public class NatInstanceInfo extends AbstractModel{
         this.ZoneZhBak = ZoneZhBak;
     }
 
+    /**
+     * Get 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleUsed 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleUsed() {
+        return this.RuleUsed;
+    }
+
+    /**
+     * Set 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleUsed 已使用规则数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleUsed(Long RuleUsed) {
+        this.RuleUsed = RuleUsed;
+    }
+
+    /**
+     * Get 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleMax 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleMax() {
+        return this.RuleMax;
+    }
+
+    /**
+     * Set 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleMax 实例的规则限制最大规格数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleMax(Long RuleMax) {
+        this.RuleMax = RuleMax;
+    }
+
     public NatInstanceInfo() {
     }
 
@@ -464,6 +520,12 @@ public class NatInstanceInfo extends AbstractModel{
         if (source.ZoneZhBak != null) {
             this.ZoneZhBak = new String(source.ZoneZhBak);
         }
+        if (source.RuleUsed != null) {
+            this.RuleUsed = new Long(source.RuleUsed);
+        }
+        if (source.RuleMax != null) {
+            this.RuleMax = new Long(source.RuleMax);
+        }
     }
 
 
@@ -486,6 +548,8 @@ public class NatInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionDetail", this.RegionDetail);
         this.setParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
         this.setParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
+        this.setParamSimple(map, prefix + "RuleUsed", this.RuleUsed);
+        this.setParamSimple(map, prefix + "RuleMax", this.RuleMax);
 
     }
 }

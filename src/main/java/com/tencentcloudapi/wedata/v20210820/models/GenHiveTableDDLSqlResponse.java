@@ -30,6 +30,14 @@ public class GenHiveTableDDLSqlResponse extends AbstractModel{
     private String DDLSql;
 
     /**
+    * 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class GenHiveTableDDLSqlResponse extends AbstractModel{
      */
     public void setDDLSql(String DDLSql) {
         this.DDLSql = DDLSql;
+    }
+
+    /**
+     * Get 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 生成的ddl语句。与DDLSql相同含义，优先取Data，如果Data为空，则取DDLSql。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(String Data) {
+        this.Data = Data;
     }
 
     /**
@@ -79,6 +107,9 @@ public class GenHiveTableDDLSqlResponse extends AbstractModel{
         if (source.DDLSql != null) {
             this.DDLSql = new String(source.DDLSql);
         }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class GenHiveTableDDLSqlResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DDLSql", this.DDLSql);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

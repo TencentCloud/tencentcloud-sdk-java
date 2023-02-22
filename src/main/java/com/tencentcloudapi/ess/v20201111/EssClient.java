@@ -679,6 +679,28 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *新增/删除应用callbackinfo
+callbackinfo包含： 回调地址和签名key
+操作：新增/删除
+     * @param req ModifyApplicationCallbackInfoRequest
+     * @return ModifyApplicationCallbackInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationCallbackInfoResponse ModifyApplicationCallbackInfo(ModifyApplicationCallbackInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationCallbackInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationCallbackInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationCallbackInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于发起流程
 适用场景：见创建签署流程接口。
 注：该接口是“创建电子文档”接口的后置接口，用于激活包含完整合同信息（模板及内容信息）的流程。激活后的流程就是一份待签署的电子合同。

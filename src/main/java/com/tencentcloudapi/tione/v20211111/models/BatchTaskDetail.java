@@ -258,6 +258,14 @@ public class BatchTaskDetail extends AbstractModel{
     private String BillingInfo;
 
     /**
+    * 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodList")
+    @Expose
+    private String [] PodList;
+
+    /**
      * Get 跑批任务ID 
      * @return BatchTaskId 跑批任务ID
      */
@@ -825,6 +833,26 @@ public class BatchTaskDetail extends AbstractModel{
         this.BillingInfo = BillingInfo;
     }
 
+    /**
+     * Get 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodList 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPodList() {
+        return this.PodList;
+    }
+
+    /**
+     * Set 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodList 运行中的Pod的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodList(String [] PodList) {
+        this.PodList = PodList;
+    }
+
     public BatchTaskDetail() {
     }
 
@@ -935,6 +963,12 @@ public class BatchTaskDetail extends AbstractModel{
         if (source.BillingInfo != null) {
             this.BillingInfo = new String(source.BillingInfo);
         }
+        if (source.PodList != null) {
+            this.PodList = new String[source.PodList.length];
+            for (int i = 0; i < source.PodList.length; i++) {
+                this.PodList[i] = new String(source.PodList[i]);
+            }
+        }
     }
 
 
@@ -973,6 +1007,7 @@ public class BatchTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "FailureReason", this.FailureReason);
         this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
+        this.setParamArraySimple(map, prefix + "PodList.", this.PodList);
 
     }
 }

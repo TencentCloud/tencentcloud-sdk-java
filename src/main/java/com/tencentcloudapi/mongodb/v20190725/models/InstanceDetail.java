@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -44,28 +44,28 @@ public class InstanceDetail extends AbstractModel{
     private Long PayMode;
 
     /**
-    * 项目ID
+    * 项目ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 集群类型，可能的返回值：0-副本集实例，1-分片实例，
+    * 集群类型，可能的返回值：0-副本集实例，1-分片实例。
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 地域信息
+    * 地域信息。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 可用区信息
+    * 可用区信息。
     */
     @SerializedName("Zone")
     @Expose
@@ -79,189 +79,189 @@ public class InstanceDetail extends AbstractModel{
     private Long NetType;
 
     /**
-    * 私有网络的ID
+    * 私有网络的ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络的子网ID
+    * 私有网络的子网ID。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+    * 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例IP
+    * 实例IP。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 端口号
+    * 端口号。
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 实例创建时间
+    * 实例创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例到期时间
+    * 实例到期时间。
     */
     @SerializedName("DeadLine")
     @Expose
     private String DeadLine;
 
     /**
-    * 实例版本信息
+    * 实例版本信息。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 实例内存规格，单位为MB
+    * 实例内存规格，单位为MB。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例磁盘规格，单位为MB
+    * 实例磁盘规格，单位为MB。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 实例CPU核心数
+    * 实例CPU核心数。
     */
     @SerializedName("CpuNum")
     @Expose
     private Long CpuNum;
 
     /**
-    * 实例机器类型
+    * 实例机器类型。
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 实例从节点数
+    * 实例从节点数。
     */
     @SerializedName("SecondaryNum")
     @Expose
     private Long SecondaryNum;
 
     /**
-    * 实例分片数
+    * 实例分片数。
     */
     @SerializedName("ReplicationSetNum")
     @Expose
     private Long ReplicationSetNum;
 
     /**
-    * 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+    * 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 已用容量，单位MB
+    * 已用容量，单位MB。
     */
     @SerializedName("UsedVolume")
     @Expose
     private Long UsedVolume;
 
     /**
-    * 维护窗口起始时间
+    * 维护窗口起始时间。
     */
     @SerializedName("MaintenanceStart")
     @Expose
     private String MaintenanceStart;
 
     /**
-    * 维护窗口结束时间
+    * 维护窗口结束时间。
     */
     @SerializedName("MaintenanceEnd")
     @Expose
     private String MaintenanceEnd;
 
     /**
-    * 分片信息
+    * 分片信息。
     */
     @SerializedName("ReplicaSets")
     @Expose
     private ShardInfo [] ReplicaSets;
 
     /**
-    * 只读实例信息
+    * 只读实例信息。
     */
     @SerializedName("ReadonlyInstances")
     @Expose
     private DBInstanceInfo [] ReadonlyInstances;
 
     /**
-    * 灾备实例信息
+    * 灾备实例信息。
     */
     @SerializedName("StandbyInstances")
     @Expose
     private DBInstanceInfo [] StandbyInstances;
 
     /**
-    * 临时实例信息
+    * 临时实例信息。
     */
     @SerializedName("CloneInstances")
     @Expose
     private DBInstanceInfo [] CloneInstances;
 
     /**
-    * 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+    * 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
     */
     @SerializedName("RelatedInstance")
     @Expose
     private DBInstanceInfo RelatedInstance;
 
     /**
-    * 实例标签信息集合
+    * 实例标签信息集合。
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * 实例版本标记
+    * 实例版本标记。
     */
     @SerializedName("InstanceVer")
     @Expose
     private Long InstanceVer;
 
     /**
-    * 实例版本标记
+    * 实例版本标记。
     */
     @SerializedName("ClusterVer")
     @Expose
     private Long ClusterVer;
 
     /**
-    * 协议信息，可能的返回值：1-mongodb，2-dynamodb
+    * 协议信息，可能的返回值：1-mongodb，2-dynamodb。
     */
     @SerializedName("Protocol")
     @Expose
@@ -289,32 +289,96 @@ public class InstanceDetail extends AbstractModel{
     private String RealInstanceId;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MongosNodeNum")
+    @Expose
+    private Long MongosNodeNum;
+
+    /**
+    * mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MongosMemory")
+    @Expose
+    private Long MongosMemory;
+
+    /**
+    * mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MongosCpuNum")
+    @Expose
+    private Long MongosCpuNum;
+
+    /**
+    * Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigServerNodeNum")
+    @Expose
+    private Long ConfigServerNodeNum;
+
+    /**
+    * Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigServerMemory")
+    @Expose
+    private Long ConfigServerMemory;
+
+    /**
+    * Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigServerVolume")
+    @Expose
+    private Long ConfigServerVolume;
+
+    /**
+    * Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigServerCpuNum")
+    @Expose
+    private Long ConfigServerCpuNum;
+
+    /**
+    * readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadonlyNodeNum")
+    @Expose
+    private Long ReadonlyNodeNum;
+
+    /**
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -337,64 +401,64 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID。 
+     * @return ProjectId 项目ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID。
+     * @param ProjectId 项目ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 集群类型，可能的返回值：0-副本集实例，1-分片实例， 
-     * @return ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
+     * Get 集群类型，可能的返回值：0-副本集实例，1-分片实例。 
+     * @return ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，可能的返回值：0-副本集实例，1-分片实例，
-     * @param ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例，
+     * Set 集群类型，可能的返回值：0-副本集实例，1-分片实例。
+     * @param ClusterType 集群类型，可能的返回值：0-副本集实例，1-分片实例。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 地域信息 
-     * @return Region 地域信息
+     * Get 地域信息。 
+     * @return Region 地域信息。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域信息
-     * @param Region 地域信息
+     * Set 地域信息。
+     * @param Region 地域信息。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 可用区信息 
-     * @return Zone 可用区信息
+     * Get 可用区信息。 
+     * @return Zone 可用区信息。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区信息
-     * @param Zone 可用区信息
+     * Set 可用区信息。
+     * @param Zone 可用区信息。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -417,432 +481,432 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 私有网络的ID 
-     * @return VpcId 私有网络的ID
+     * Get 私有网络的ID。 
+     * @return VpcId 私有网络的ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络的ID
-     * @param VpcId 私有网络的ID
+     * Set 私有网络的ID。
+     * @param VpcId 私有网络的ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络的子网ID 
-     * @return SubnetId 私有网络的子网ID
+     * Get 私有网络的子网ID。 
+     * @return SubnetId 私有网络的子网ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络的子网ID
-     * @param SubnetId 私有网络的子网ID
+     * Set 私有网络的子网ID。
+     * @param SubnetId 私有网络的子网ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期 
-     * @return Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+     * Get 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。 
+     * @return Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
-     * @param Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期
+     * Set 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * @param Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例IP 
-     * @return Vip 实例IP
+     * Get 实例IP。 
+     * @return Vip 实例IP。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 实例IP
-     * @param Vip 实例IP
+     * Set 实例IP。
+     * @param Vip 实例IP。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口号 
-     * @return Vport 端口号
+     * Get 端口号。 
+     * @return Vport 端口号。
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 端口号
-     * @param Vport 端口号
+     * Set 端口号。
+     * @param Vport 端口号。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return CreateTime 实例创建时间
+     * Get 实例创建时间。 
+     * @return CreateTime 实例创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param CreateTime 实例创建时间
+     * Set 实例创建时间。
+     * @param CreateTime 实例创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例到期时间 
-     * @return DeadLine 实例到期时间
+     * Get 实例到期时间。 
+     * @return DeadLine 实例到期时间。
      */
     public String getDeadLine() {
         return this.DeadLine;
     }
 
     /**
-     * Set 实例到期时间
-     * @param DeadLine 实例到期时间
+     * Set 实例到期时间。
+     * @param DeadLine 实例到期时间。
      */
     public void setDeadLine(String DeadLine) {
         this.DeadLine = DeadLine;
     }
 
     /**
-     * Get 实例版本信息 
-     * @return MongoVersion 实例版本信息
+     * Get 实例版本信息。 
+     * @return MongoVersion 实例版本信息。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 实例版本信息
-     * @param MongoVersion 实例版本信息
+     * Set 实例版本信息。
+     * @param MongoVersion 实例版本信息。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 实例内存规格，单位为MB 
-     * @return Memory 实例内存规格，单位为MB
+     * Get 实例内存规格，单位为MB。 
+     * @return Memory 实例内存规格，单位为MB。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存规格，单位为MB
-     * @param Memory 实例内存规格，单位为MB
+     * Set 实例内存规格，单位为MB。
+     * @param Memory 实例内存规格，单位为MB。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例磁盘规格，单位为MB 
-     * @return Volume 实例磁盘规格，单位为MB
+     * Get 实例磁盘规格，单位为MB。 
+     * @return Volume 实例磁盘规格，单位为MB。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例磁盘规格，单位为MB
-     * @param Volume 实例磁盘规格，单位为MB
+     * Set 实例磁盘规格，单位为MB。
+     * @param Volume 实例磁盘规格，单位为MB。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 实例CPU核心数 
-     * @return CpuNum 实例CPU核心数
+     * Get 实例CPU核心数。 
+     * @return CpuNum 实例CPU核心数。
      */
     public Long getCpuNum() {
         return this.CpuNum;
     }
 
     /**
-     * Set 实例CPU核心数
-     * @param CpuNum 实例CPU核心数
+     * Set 实例CPU核心数。
+     * @param CpuNum 实例CPU核心数。
      */
     public void setCpuNum(Long CpuNum) {
         this.CpuNum = CpuNum;
     }
 
     /**
-     * Get 实例机器类型 
-     * @return MachineType 实例机器类型
+     * Get 实例机器类型。 
+     * @return MachineType 实例机器类型。
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 实例机器类型
-     * @param MachineType 实例机器类型
+     * Set 实例机器类型。
+     * @param MachineType 实例机器类型。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get 实例从节点数 
-     * @return SecondaryNum 实例从节点数
+     * Get 实例从节点数。 
+     * @return SecondaryNum 实例从节点数。
      */
     public Long getSecondaryNum() {
         return this.SecondaryNum;
     }
 
     /**
-     * Set 实例从节点数
-     * @param SecondaryNum 实例从节点数
+     * Set 实例从节点数。
+     * @param SecondaryNum 实例从节点数。
      */
     public void setSecondaryNum(Long SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
     }
 
     /**
-     * Get 实例分片数 
-     * @return ReplicationSetNum 实例分片数
+     * Get 实例分片数。 
+     * @return ReplicationSetNum 实例分片数。
      */
     public Long getReplicationSetNum() {
         return this.ReplicationSetNum;
     }
 
     /**
-     * Set 实例分片数
-     * @param ReplicationSetNum 实例分片数
+     * Set 实例分片数。
+     * @param ReplicationSetNum 实例分片数。
      */
     public void setReplicationSetNum(Long ReplicationSetNum) {
         this.ReplicationSetNum = ReplicationSetNum;
     }
 
     /**
-     * Get 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费 
-     * @return AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+     * Get 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。 
+     * @return AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
-     * @param AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费
+     * Set 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
+     * @param AutoRenewFlag 实例自动续费标志，可能的返回值：0-手动续费，1-自动续费，2-确认不续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 已用容量，单位MB 
-     * @return UsedVolume 已用容量，单位MB
+     * Get 已用容量，单位MB。 
+     * @return UsedVolume 已用容量，单位MB。
      */
     public Long getUsedVolume() {
         return this.UsedVolume;
     }
 
     /**
-     * Set 已用容量，单位MB
-     * @param UsedVolume 已用容量，单位MB
+     * Set 已用容量，单位MB。
+     * @param UsedVolume 已用容量，单位MB。
      */
     public void setUsedVolume(Long UsedVolume) {
         this.UsedVolume = UsedVolume;
     }
 
     /**
-     * Get 维护窗口起始时间 
-     * @return MaintenanceStart 维护窗口起始时间
+     * Get 维护窗口起始时间。 
+     * @return MaintenanceStart 维护窗口起始时间。
      */
     public String getMaintenanceStart() {
         return this.MaintenanceStart;
     }
 
     /**
-     * Set 维护窗口起始时间
-     * @param MaintenanceStart 维护窗口起始时间
+     * Set 维护窗口起始时间。
+     * @param MaintenanceStart 维护窗口起始时间。
      */
     public void setMaintenanceStart(String MaintenanceStart) {
         this.MaintenanceStart = MaintenanceStart;
     }
 
     /**
-     * Get 维护窗口结束时间 
-     * @return MaintenanceEnd 维护窗口结束时间
+     * Get 维护窗口结束时间。 
+     * @return MaintenanceEnd 维护窗口结束时间。
      */
     public String getMaintenanceEnd() {
         return this.MaintenanceEnd;
     }
 
     /**
-     * Set 维护窗口结束时间
-     * @param MaintenanceEnd 维护窗口结束时间
+     * Set 维护窗口结束时间。
+     * @param MaintenanceEnd 维护窗口结束时间。
      */
     public void setMaintenanceEnd(String MaintenanceEnd) {
         this.MaintenanceEnd = MaintenanceEnd;
     }
 
     /**
-     * Get 分片信息 
-     * @return ReplicaSets 分片信息
+     * Get 分片信息。 
+     * @return ReplicaSets 分片信息。
      */
     public ShardInfo [] getReplicaSets() {
         return this.ReplicaSets;
     }
 
     /**
-     * Set 分片信息
-     * @param ReplicaSets 分片信息
+     * Set 分片信息。
+     * @param ReplicaSets 分片信息。
      */
     public void setReplicaSets(ShardInfo [] ReplicaSets) {
         this.ReplicaSets = ReplicaSets;
     }
 
     /**
-     * Get 只读实例信息 
-     * @return ReadonlyInstances 只读实例信息
+     * Get 只读实例信息。 
+     * @return ReadonlyInstances 只读实例信息。
      */
     public DBInstanceInfo [] getReadonlyInstances() {
         return this.ReadonlyInstances;
     }
 
     /**
-     * Set 只读实例信息
-     * @param ReadonlyInstances 只读实例信息
+     * Set 只读实例信息。
+     * @param ReadonlyInstances 只读实例信息。
      */
     public void setReadonlyInstances(DBInstanceInfo [] ReadonlyInstances) {
         this.ReadonlyInstances = ReadonlyInstances;
     }
 
     /**
-     * Get 灾备实例信息 
-     * @return StandbyInstances 灾备实例信息
+     * Get 灾备实例信息。 
+     * @return StandbyInstances 灾备实例信息。
      */
     public DBInstanceInfo [] getStandbyInstances() {
         return this.StandbyInstances;
     }
 
     /**
-     * Set 灾备实例信息
-     * @param StandbyInstances 灾备实例信息
+     * Set 灾备实例信息。
+     * @param StandbyInstances 灾备实例信息。
      */
     public void setStandbyInstances(DBInstanceInfo [] StandbyInstances) {
         this.StandbyInstances = StandbyInstances;
     }
 
     /**
-     * Get 临时实例信息 
-     * @return CloneInstances 临时实例信息
+     * Get 临时实例信息。 
+     * @return CloneInstances 临时实例信息。
      */
     public DBInstanceInfo [] getCloneInstances() {
         return this.CloneInstances;
     }
 
     /**
-     * Set 临时实例信息
-     * @param CloneInstances 临时实例信息
+     * Set 临时实例信息。
+     * @param CloneInstances 临时实例信息。
      */
     public void setCloneInstances(DBInstanceInfo [] CloneInstances) {
         this.CloneInstances = CloneInstances;
     }
 
     /**
-     * Get 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息 
-     * @return RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+     * Get 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。 
+     * @return RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
      */
     public DBInstanceInfo getRelatedInstance() {
         return this.RelatedInstance;
     }
 
     /**
-     * Set 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-     * @param RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
+     * Set 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
+     * @param RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息。
      */
     public void setRelatedInstance(DBInstanceInfo RelatedInstance) {
         this.RelatedInstance = RelatedInstance;
     }
 
     /**
-     * Get 实例标签信息集合 
-     * @return Tags 实例标签信息集合
+     * Get 实例标签信息集合。 
+     * @return Tags 实例标签信息集合。
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例标签信息集合
-     * @param Tags 实例标签信息集合
+     * Set 实例标签信息集合。
+     * @param Tags 实例标签信息集合。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 实例版本标记 
-     * @return InstanceVer 实例版本标记
+     * Get 实例版本标记。 
+     * @return InstanceVer 实例版本标记。
      */
     public Long getInstanceVer() {
         return this.InstanceVer;
     }
 
     /**
-     * Set 实例版本标记
-     * @param InstanceVer 实例版本标记
+     * Set 实例版本标记。
+     * @param InstanceVer 实例版本标记。
      */
     public void setInstanceVer(Long InstanceVer) {
         this.InstanceVer = InstanceVer;
     }
 
     /**
-     * Get 实例版本标记 
-     * @return ClusterVer 实例版本标记
+     * Get 实例版本标记。 
+     * @return ClusterVer 实例版本标记。
      */
     public Long getClusterVer() {
         return this.ClusterVer;
     }
 
     /**
-     * Set 实例版本标记
-     * @param ClusterVer 实例版本标记
+     * Set 实例版本标记。
+     * @param ClusterVer 实例版本标记。
      */
     public void setClusterVer(Long ClusterVer) {
         this.ClusterVer = ClusterVer;
     }
 
     /**
-     * Get 协议信息，可能的返回值：1-mongodb，2-dynamodb 
-     * @return Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * Get 协议信息，可能的返回值：1-mongodb，2-dynamodb。 
+     * @return Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
      */
     public Long getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议信息，可能的返回值：1-mongodb，2-dynamodb
-     * @param Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb
+     * Set 协议信息，可能的返回值：1-mongodb，2-dynamodb。
+     * @param Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb。
      */
     public void setProtocol(Long Protocol) {
         this.Protocol = Protocol;
@@ -894,6 +958,166 @@ public class InstanceDetail extends AbstractModel{
      */
     public void setRealInstanceId(String RealInstanceId) {
         this.RealInstanceId = RealInstanceId;
+    }
+
+    /**
+     * Get mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MongosNodeNum mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMongosNodeNum() {
+        return this.MongosNodeNum;
+    }
+
+    /**
+     * Set mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MongosNodeNum mongos节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMongosNodeNum(Long MongosNodeNum) {
+        this.MongosNodeNum = MongosNodeNum;
+    }
+
+    /**
+     * Get mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MongosMemory mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMongosMemory() {
+        return this.MongosMemory;
+    }
+
+    /**
+     * Set mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MongosMemory mongos节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMongosMemory(Long MongosMemory) {
+        this.MongosMemory = MongosMemory;
+    }
+
+    /**
+     * Get mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MongosCpuNum mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMongosCpuNum() {
+        return this.MongosCpuNum;
+    }
+
+    /**
+     * Set mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MongosCpuNum mongos节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMongosCpuNum(Long MongosCpuNum) {
+        this.MongosCpuNum = MongosCpuNum;
+    }
+
+    /**
+     * Get Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigServerNodeNum Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigServerNodeNum() {
+        return this.ConfigServerNodeNum;
+    }
+
+    /**
+     * Set Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigServerNodeNum Config Server节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigServerNodeNum(Long ConfigServerNodeNum) {
+        this.ConfigServerNodeNum = ConfigServerNodeNum;
+    }
+
+    /**
+     * Get Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigServerMemory Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigServerMemory() {
+        return this.ConfigServerMemory;
+    }
+
+    /**
+     * Set Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigServerMemory Config Server节点内存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigServerMemory(Long ConfigServerMemory) {
+        this.ConfigServerMemory = ConfigServerMemory;
+    }
+
+    /**
+     * Get Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigServerVolume Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigServerVolume() {
+        return this.ConfigServerVolume;
+    }
+
+    /**
+     * Set Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigServerVolume Config Server节点磁盘大小。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigServerVolume(Long ConfigServerVolume) {
+        this.ConfigServerVolume = ConfigServerVolume;
+    }
+
+    /**
+     * Get Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigServerCpuNum Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigServerCpuNum() {
+        return this.ConfigServerCpuNum;
+    }
+
+    /**
+     * Set Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigServerCpuNum Config Server节点CPU核数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigServerCpuNum(Long ConfigServerCpuNum) {
+        this.ConfigServerCpuNum = ConfigServerCpuNum;
+    }
+
+    /**
+     * Get readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadonlyNodeNum readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadonlyNodeNum() {
+        return this.ReadonlyNodeNum;
+    }
+
+    /**
+     * Set readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadonlyNodeNum readonly节点个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
+        this.ReadonlyNodeNum = ReadonlyNodeNum;
     }
 
     public InstanceDetail() {
@@ -1033,6 +1257,30 @@ public class InstanceDetail extends AbstractModel{
         if (source.RealInstanceId != null) {
             this.RealInstanceId = new String(source.RealInstanceId);
         }
+        if (source.MongosNodeNum != null) {
+            this.MongosNodeNum = new Long(source.MongosNodeNum);
+        }
+        if (source.MongosMemory != null) {
+            this.MongosMemory = new Long(source.MongosMemory);
+        }
+        if (source.MongosCpuNum != null) {
+            this.MongosCpuNum = new Long(source.MongosCpuNum);
+        }
+        if (source.ConfigServerNodeNum != null) {
+            this.ConfigServerNodeNum = new Long(source.ConfigServerNodeNum);
+        }
+        if (source.ConfigServerMemory != null) {
+            this.ConfigServerMemory = new Long(source.ConfigServerMemory);
+        }
+        if (source.ConfigServerVolume != null) {
+            this.ConfigServerVolume = new Long(source.ConfigServerVolume);
+        }
+        if (source.ConfigServerCpuNum != null) {
+            this.ConfigServerCpuNum = new Long(source.ConfigServerCpuNum);
+        }
+        if (source.ReadonlyNodeNum != null) {
+            this.ReadonlyNodeNum = new Long(source.ReadonlyNodeNum);
+        }
     }
 
 
@@ -1078,6 +1326,14 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
         this.setParamSimple(map, prefix + "RealInstanceId", this.RealInstanceId);
+        this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+        this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+        this.setParamSimple(map, prefix + "MongosCpuNum", this.MongosCpuNum);
+        this.setParamSimple(map, prefix + "ConfigServerNodeNum", this.ConfigServerNodeNum);
+        this.setParamSimple(map, prefix + "ConfigServerMemory", this.ConfigServerMemory);
+        this.setParamSimple(map, prefix + "ConfigServerVolume", this.ConfigServerVolume);
+        this.setParamSimple(map, prefix + "ConfigServerCpuNum", this.ConfigServerCpuNum);
+        this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
 
     }
 }

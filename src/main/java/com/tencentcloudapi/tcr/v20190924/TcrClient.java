@@ -1259,7 +1259,9 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询全部实例信息
+     *内部替换接口+DescribeInstanceAllForCoding
+
+查询全部实例信息
      * @param req DescribeInstanceAllRequest
      * @return DescribeInstanceAllResponse
      * @throws TencentCloudSDKException

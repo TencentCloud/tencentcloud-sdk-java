@@ -72,29 +72,48 @@ public class TelCdrInfo extends AbstractModel{
     private SeatUserInfo SeatUser;
 
     /**
-    * 结束状态
-0	错误
-1	正常结束
-2	未接通
-17	坐席未接
-100	黑名单
-101	坐席转接
-102	IVR 期间用户放弃
-103	会话排队期间用户放弃
-104	会话振铃期间用户放弃
-105	无坐席在线
-106	非工作时间
-107	IVR后直接结束
-201	未知状态
-202	未接听
-203	拒接挂断
-204	关机
-205	空号
-206	通话中
-207	欠费
-208	运营商线路异常
-209	主叫取消
-210	不在服务区
+    * EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
     */
     @SerializedName("EndStatus")
     @Expose
@@ -179,28 +198,49 @@ public class TelCdrInfo extends AbstractModel{
     private Long SkillGroupId;
 
     /**
-    * error                   错误
-ok                       正常结束
-unconnected      未接通
-seatGiveUp         坐席未接
-blackList             黑名单
-seatForward       坐席转接
-ivrGiveUp           IVR 期间用户放弃
-waitingGiveUp   会话排队期间用户放弃
-ringingGiveUp   会话振铃期间用户放弃
-noSeatOnline     无坐席在线
-notWorkTime     非工作时间
-ivrEnd                 IVR后直接结束
-unknown            未知状态
-notAnswer          未接听
-userReject          拒接挂断
-powerOff            关机
-numberNotExist  空号
-busy                    通话中
-outOfCredit        欠费
-operatorError     运营商线路异常
-callerCancel        主叫取消
-notInService       不在服务区
+    * EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+听
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndStatusString")
@@ -432,104 +472,180 @@ notInService       不在服务区
     }
 
     /**
-     * Get 结束状态
-0	错误
-1	正常结束
-2	未接通
-17	坐席未接
-100	黑名单
-101	坐席转接
-102	IVR 期间用户放弃
-103	会话排队期间用户放弃
-104	会话振铃期间用户放弃
-105	无坐席在线
-106	非工作时间
-107	IVR后直接结束
-201	未知状态
-202	未接听
-203	拒接挂断
-204	关机
-205	空号
-206	通话中
-207	欠费
-208	运营商线路异常
-209	主叫取消
-210	不在服务区 
-     * @return EndStatus 结束状态
-0	错误
-1	正常结束
-2	未接通
-17	坐席未接
-100	黑名单
-101	坐席转接
-102	IVR 期间用户放弃
-103	会话排队期间用户放弃
-104	会话振铃期间用户放弃
-105	无坐席在线
-106	非工作时间
-107	IVR后直接结束
-201	未知状态
-202	未接听
-203	拒接挂断
-204	关机
-205	空号
-206	通话中
-207	欠费
-208	运营商线路异常
-209	主叫取消
-210	不在服务区
+     * Get EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+ 
+     * @return EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
      */
     public Long getEndStatus() {
         return this.EndStatus;
     }
 
     /**
-     * Set 结束状态
-0	错误
-1	正常结束
-2	未接通
-17	坐席未接
-100	黑名单
-101	坐席转接
-102	IVR 期间用户放弃
-103	会话排队期间用户放弃
-104	会话振铃期间用户放弃
-105	无坐席在线
-106	非工作时间
-107	IVR后直接结束
-201	未知状态
-202	未接听
-203	拒接挂断
-204	关机
-205	空号
-206	通话中
-207	欠费
-208	运营商线路异常
-209	主叫取消
-210	不在服务区
-     * @param EndStatus 结束状态
-0	错误
-1	正常结束
-2	未接通
-17	坐席未接
-100	黑名单
-101	坐席转接
-102	IVR 期间用户放弃
-103	会话排队期间用户放弃
-104	会话振铃期间用户放弃
-105	无坐席在线
-106	非工作时间
-107	IVR后直接结束
-201	未知状态
-202	未接听
-203	拒接挂断
-204	关机
-205	空号
-206	通话中
-207	欠费
-208	运营商线路异常
-209	主叫取消
-210	不在服务区
+     * Set EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+     * @param EndStatus EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
@@ -728,51 +844,93 @@ notInService       不在服务区
     }
 
     /**
-     * Get error                   错误
-ok                       正常结束
-unconnected      未接通
-seatGiveUp         坐席未接
-blackList             黑名单
-seatForward       坐席转接
-ivrGiveUp           IVR 期间用户放弃
-waitingGiveUp   会话排队期间用户放弃
-ringingGiveUp   会话振铃期间用户放弃
-noSeatOnline     无坐席在线
-notWorkTime     非工作时间
-ivrEnd                 IVR后直接结束
-unknown            未知状态
-notAnswer          未接听
-userReject          拒接挂断
-powerOff            关机
-numberNotExist  空号
-busy                    通话中
-outOfCredit        欠费
-operatorError     运营商线路异常
-callerCancel        主叫取消
-notInService       不在服务区
+     * Get EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+听
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndStatusString error                   错误
-ok                       正常结束
-unconnected      未接通
-seatGiveUp         坐席未接
-blackList             黑名单
-seatForward       坐席转接
-ivrGiveUp           IVR 期间用户放弃
-waitingGiveUp   会话排队期间用户放弃
-ringingGiveUp   会话振铃期间用户放弃
-noSeatOnline     无坐席在线
-notWorkTime     非工作时间
-ivrEnd                 IVR后直接结束
-unknown            未知状态
-notAnswer          未接听
-userReject          拒接挂断
-powerOff            关机
-numberNotExist  空号
-busy                    通话中
-outOfCredit        欠费
-operatorError     运营商线路异常
-callerCancel        主叫取消
-notInService       不在服务区
+     * @return EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+听
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndStatusString() {
@@ -780,51 +938,93 @@ notInService       不在服务区
     }
 
     /**
-     * Set error                   错误
-ok                       正常结束
-unconnected      未接通
-seatGiveUp         坐席未接
-blackList             黑名单
-seatForward       坐席转接
-ivrGiveUp           IVR 期间用户放弃
-waitingGiveUp   会话排队期间用户放弃
-ringingGiveUp   会话振铃期间用户放弃
-noSeatOnline     无坐席在线
-notWorkTime     非工作时间
-ivrEnd                 IVR后直接结束
-unknown            未知状态
-notAnswer          未接听
-userReject          拒接挂断
-powerOff            关机
-numberNotExist  空号
-busy                    通话中
-outOfCredit        欠费
-operatorError     运营商线路异常
-callerCancel        主叫取消
-notInService       不在服务区
+     * Set EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+听
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndStatusString error                   错误
-ok                       正常结束
-unconnected      未接通
-seatGiveUp         坐席未接
-blackList             黑名单
-seatForward       坐席转接
-ivrGiveUp           IVR 期间用户放弃
-waitingGiveUp   会话排队期间用户放弃
-ringingGiveUp   会话振铃期间用户放弃
-noSeatOnline     无坐席在线
-notWorkTime     非工作时间
-ivrEnd                 IVR后直接结束
-unknown            未知状态
-notAnswer          未接听
-userReject          拒接挂断
-powerOff            关机
-numberNotExist  空号
-busy                    通话中
-outOfCredit        欠费
-operatorError     运营商线路异常
-callerCancel        主叫取消
-notInService       不在服务区
+     * @param EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
+
+**场景	         EndStatus	EndStatusString	状态说明**
+
+电话呼入&呼出	1	        ok	                        正常结束
+
+电话呼入&呼出	0	        error	                系统错误
+
+电话呼入	             102	        ivrGiveUp	        IVR 期间用户放弃
+
+电话呼入	             103	        waitingGiveUp	       会话排队期间用户放弃
+
+电话呼入	             104	        ringingGiveUp	       会话振铃期间用户放弃
+
+电话呼入	             105	        noSeatOnline	       无坐席在线
+
+电话呼入              106	       notWorkTime	       非工作时间   
+
+电话呼入	            107	       ivrEnd	               IVR 后直接结束
+
+电话呼入	            100	      CallinBlockedContact  呼入黑名单 
+
+电话呼出               2	              unconnected	未接通
+                         
+电话呼出             201            unknown	未知状态
+听
+电话呼出            203	    userReject	拒接挂断
+
+电话呼出	          204	    powerOff	关机
+
+电话呼出           205            numberNotExist	空号
+
+电话呼出	         206	           busy	通话中
+
+电话呼出   	 207	           outOfCredit	欠费
+
+电话呼出	         208	           operatorError	运营商线路异常
+
+电话呼出         	209	           callerCancel	主叫取消
+
+电话呼出	        210	           notInService	不在服务区
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndStatusString(String EndStatusString) {

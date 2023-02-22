@@ -93,6 +93,14 @@ public class HostInfo extends AbstractModel{
     private String ExpireTime;
 
     /**
+    * 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostId")
+    @Expose
+    private String HostId;
+
+    /**
      * Get 宿主机IP 
      * @return HostIp 宿主机IP
      */
@@ -252,6 +260,26 @@ public class HostInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostId 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostId() {
+        return this.HostId;
+    }
+
+    /**
+     * Set 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostId 宿主机id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostId(String HostId) {
+        this.HostId = HostId;
+    }
+
     public HostInfo() {
     }
 
@@ -290,6 +318,9 @@ public class HostInfo extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.HostId != null) {
+            this.HostId = new String(source.HostId);
+        }
     }
 
 
@@ -307,6 +338,7 @@ public class HostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MemTotal", this.MemTotal);
         this.setParamSimple(map, prefix + "RunTime", this.RunTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "HostId", this.HostId);
 
     }
 }

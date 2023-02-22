@@ -30,6 +30,13 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+    */
+    @SerializedName("ReserveDuration")
+    @Expose
+    private Long ReserveDuration;
+
+    /**
     * 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
     */
     @SerializedName("BackupTimeBeg")
@@ -42,13 +49,6 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
-
-    /**
-    * 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-    */
-    @SerializedName("ReserveDuration")
-    @Expose
-    private Long ReserveDuration;
 
     /**
     * 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
@@ -81,6 +81,22 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000 
+     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     */
+    public Long getReserveDuration() {
+        return this.ReserveDuration;
+    }
+
+    /**
+     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
+     */
+    public void setReserveDuration(Long ReserveDuration) {
+        this.ReserveDuration = ReserveDuration;
+    }
+
+    /**
      * Get 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200 
      * @return BackupTimeBeg 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
      */
@@ -110,22 +126,6 @@ public class ModifyBackupConfigRequest extends AbstractModel{
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
-    }
-
-    /**
-     * Get 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000 
-     * @return ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-     */
-    public Long getReserveDuration() {
-        return this.ReserveDuration;
-    }
-
-    /**
-     * Set 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-     * @param ReserveDuration 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
-     */
-    public void setReserveDuration(Long ReserveDuration) {
-        this.ReserveDuration = ReserveDuration;
     }
 
     /**
@@ -171,14 +171,14 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.ReserveDuration != null) {
+            this.ReserveDuration = new Long(source.ReserveDuration);
+        }
         if (source.BackupTimeBeg != null) {
             this.BackupTimeBeg = new Long(source.BackupTimeBeg);
         }
         if (source.BackupTimeEnd != null) {
             this.BackupTimeEnd = new Long(source.BackupTimeEnd);
-        }
-        if (source.ReserveDuration != null) {
-            this.ReserveDuration = new Long(source.ReserveDuration);
         }
         if (source.BackupFreq != null) {
             this.BackupFreq = new String[source.BackupFreq.length];
@@ -197,9 +197,9 @@ public class ModifyBackupConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamSimple(map, prefix + "BackupTimeBeg", this.BackupTimeBeg);
         this.setParamSimple(map, prefix + "BackupTimeEnd", this.BackupTimeEnd);
-        this.setParamSimple(map, prefix + "ReserveDuration", this.ReserveDuration);
         this.setParamArraySimple(map, prefix + "BackupFreq.", this.BackupFreq);
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
 

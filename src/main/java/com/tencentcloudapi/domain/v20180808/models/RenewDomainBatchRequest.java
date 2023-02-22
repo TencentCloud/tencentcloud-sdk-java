@@ -37,7 +37,7 @@ public class RenewDomainBatchRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-    * 付费模式 0手动在线付费，1使用余额付费。
+    * 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
     */
     @SerializedName("PayMode")
     @Expose
@@ -52,6 +52,34 @@ public class RenewDomainBatchRequest extends AbstractModel{
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
+
+    /**
+    * 特惠包ID
+    */
+    @SerializedName("PackageResourceId")
+    @Expose
+    private String PackageResourceId;
+
+    /**
+    * 渠道来源，pc/miniprogram/h5等
+    */
+    @SerializedName("ChannelFrom")
+    @Expose
+    private String ChannelFrom;
+
+    /**
+    * 订单来源，common正常/dianshi_active点石活动等
+    */
+    @SerializedName("OrderFrom")
+    @Expose
+    private String OrderFrom;
+
+    /**
+    * 活动id
+    */
+    @SerializedName("ActivityId")
+    @Expose
+    private String ActivityId;
 
     /**
      * Get 域名续费的年限。 
@@ -86,16 +114,16 @@ public class RenewDomainBatchRequest extends AbstractModel{
     }
 
     /**
-     * Get 付费模式 0手动在线付费，1使用余额付费。 
-     * @return PayMode 付费模式 0手动在线付费，1使用余额付费。
+     * Get 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。 
+     * @return PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式 0手动在线付费，1使用余额付费。
-     * @param PayMode 付费模式 0手动在线付费，1使用余额付费。
+     * Set 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
+     * @param PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -129,6 +157,70 @@ public class RenewDomainBatchRequest extends AbstractModel{
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
+    /**
+     * Get 特惠包ID 
+     * @return PackageResourceId 特惠包ID
+     */
+    public String getPackageResourceId() {
+        return this.PackageResourceId;
+    }
+
+    /**
+     * Set 特惠包ID
+     * @param PackageResourceId 特惠包ID
+     */
+    public void setPackageResourceId(String PackageResourceId) {
+        this.PackageResourceId = PackageResourceId;
+    }
+
+    /**
+     * Get 渠道来源，pc/miniprogram/h5等 
+     * @return ChannelFrom 渠道来源，pc/miniprogram/h5等
+     */
+    public String getChannelFrom() {
+        return this.ChannelFrom;
+    }
+
+    /**
+     * Set 渠道来源，pc/miniprogram/h5等
+     * @param ChannelFrom 渠道来源，pc/miniprogram/h5等
+     */
+    public void setChannelFrom(String ChannelFrom) {
+        this.ChannelFrom = ChannelFrom;
+    }
+
+    /**
+     * Get 订单来源，common正常/dianshi_active点石活动等 
+     * @return OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     */
+    public String getOrderFrom() {
+        return this.OrderFrom;
+    }
+
+    /**
+     * Set 订单来源，common正常/dianshi_active点石活动等
+     * @param OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     */
+    public void setOrderFrom(String OrderFrom) {
+        this.OrderFrom = OrderFrom;
+    }
+
+    /**
+     * Get 活动id 
+     * @return ActivityId 活动id
+     */
+    public String getActivityId() {
+        return this.ActivityId;
+    }
+
+    /**
+     * Set 活动id
+     * @param ActivityId 活动id
+     */
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
+    }
+
     public RenewDomainBatchRequest() {
     }
 
@@ -152,6 +244,18 @@ public class RenewDomainBatchRequest extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.PackageResourceId != null) {
+            this.PackageResourceId = new String(source.PackageResourceId);
+        }
+        if (source.ChannelFrom != null) {
+            this.ChannelFrom = new String(source.ChannelFrom);
+        }
+        if (source.OrderFrom != null) {
+            this.OrderFrom = new String(source.OrderFrom);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
     }
 
 
@@ -163,6 +267,10 @@ public class RenewDomainBatchRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "PackageResourceId", this.PackageResourceId);
+        this.setParamSimple(map, prefix + "ChannelFrom", this.ChannelFrom);
+        this.setParamSimple(map, prefix + "OrderFrom", this.OrderFrom);
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
 
     }
 }

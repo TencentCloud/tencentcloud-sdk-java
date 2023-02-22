@@ -39,6 +39,14 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
     private InferGatewayCallInfo InferGatewayCallInfo;
 
     /**
+    * 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultNginxGatewayCallInfo")
+    @Expose
+    private DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DefaultNginxGatewayCallInfo getDefaultNginxGatewayCallInfo() {
+        return this.DefaultNginxGatewayCallInfo;
+    }
+
+    /**
+     * Set 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultNginxGatewayCallInfo 默认nginx网关的调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultNginxGatewayCallInfo(DefaultNginxGatewayCallInfo DefaultNginxGatewayCallInfo) {
+        this.DefaultNginxGatewayCallInfo = DefaultNginxGatewayCallInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -115,6 +143,9 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
         if (source.InferGatewayCallInfo != null) {
             this.InferGatewayCallInfo = new InferGatewayCallInfo(source.InferGatewayCallInfo);
         }
+        if (source.DefaultNginxGatewayCallInfo != null) {
+            this.DefaultNginxGatewayCallInfo = new DefaultNginxGatewayCallInfo(source.DefaultNginxGatewayCallInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ServiceCallInfo.", this.ServiceCallInfo);
         this.setParamObj(map, prefix + "InferGatewayCallInfo.", this.InferGatewayCallInfo);
+        this.setParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

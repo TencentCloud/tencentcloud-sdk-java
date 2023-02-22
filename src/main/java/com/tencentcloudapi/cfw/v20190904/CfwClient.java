@@ -1190,6 +1190,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *日志存储设置，可以修改存储时间和清空日志
+     * @param req ModifyStorageSettingRequest
+     * @return ModifyStorageSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStorageSettingResponse ModifyStorageSetting(ModifyStorageSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStorageSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStorageSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStorageSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改规则表状态
      * @param req ModifyTableStatusRequest
      * @return ModifyTableStatusResponse

@@ -83,6 +83,27 @@ false：关闭60天内禁止转移注册商锁定
     private Long TransferProhibition;
 
     /**
+    * 渠道来源，pc/miniprogram/h5等
+    */
+    @SerializedName("ChannelFrom")
+    @Expose
+    private String ChannelFrom;
+
+    /**
+    * 订单来源，common正常/dianshi_active点石活动等
+    */
+    @SerializedName("OrderFrom")
+    @Expose
+    private String OrderFrom;
+
+    /**
+    * 活动id
+    */
+    @SerializedName("ActivityId")
+    @Expose
+    private String ActivityId;
+
+    /**
      * Get 转入的域名名称数组。 
      * @return Domains 转入的域名名称数组。
      */
@@ -226,6 +247,54 @@ false：关闭60天内禁止转移注册商锁定
         this.TransferProhibition = TransferProhibition;
     }
 
+    /**
+     * Get 渠道来源，pc/miniprogram/h5等 
+     * @return ChannelFrom 渠道来源，pc/miniprogram/h5等
+     */
+    public String getChannelFrom() {
+        return this.ChannelFrom;
+    }
+
+    /**
+     * Set 渠道来源，pc/miniprogram/h5等
+     * @param ChannelFrom 渠道来源，pc/miniprogram/h5等
+     */
+    public void setChannelFrom(String ChannelFrom) {
+        this.ChannelFrom = ChannelFrom;
+    }
+
+    /**
+     * Get 订单来源，common正常/dianshi_active点石活动等 
+     * @return OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     */
+    public String getOrderFrom() {
+        return this.OrderFrom;
+    }
+
+    /**
+     * Set 订单来源，common正常/dianshi_active点石活动等
+     * @param OrderFrom 订单来源，common正常/dianshi_active点石活动等
+     */
+    public void setOrderFrom(String OrderFrom) {
+        this.OrderFrom = OrderFrom;
+    }
+
+    /**
+     * Get 活动id 
+     * @return ActivityId 活动id
+     */
+    public String getActivityId() {
+        return this.ActivityId;
+    }
+
+    /**
+     * Set 活动id
+     * @param ActivityId 活动id
+     */
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
+    }
+
     public TransferInDomainBatchRequest() {
     }
 
@@ -264,6 +333,15 @@ false：关闭60天内禁止转移注册商锁定
         if (source.TransferProhibition != null) {
             this.TransferProhibition = new Long(source.TransferProhibition);
         }
+        if (source.ChannelFrom != null) {
+            this.ChannelFrom = new String(source.ChannelFrom);
+        }
+        if (source.OrderFrom != null) {
+            this.OrderFrom = new String(source.OrderFrom);
+        }
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
+        }
     }
 
 
@@ -279,6 +357,9 @@ false：关闭60天内禁止转移注册商锁定
         this.setParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
         this.setParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
         this.setParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
+        this.setParamSimple(map, prefix + "ChannelFrom", this.ChannelFrom);
+        this.setParamSimple(map, prefix + "OrderFrom", this.OrderFrom);
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
 
     }
 }

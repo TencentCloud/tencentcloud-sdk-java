@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealTimeTaskSpeedResponse extends AbstractModel{
+public class RealTimeTaskSpeed extends AbstractModel{
 
     /**
     * 同步速度条/s列表
@@ -35,20 +35,6 @@ public class DescribeRealTimeTaskSpeedResponse extends AbstractModel{
     @SerializedName("BytesSpeedList")
     @Expose
     private BytesSpeed [] BytesSpeedList;
-
-    /**
-    * 同步速度，包括了RecordsSpeedList和BytesSpeedList
-    */
-    @SerializedName("Data")
-    @Expose
-    private RealTimeTaskSpeed Data;
-
-    /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
 
     /**
      * Get 同步速度条/s列表 
@@ -82,46 +68,14 @@ public class DescribeRealTimeTaskSpeedResponse extends AbstractModel{
         this.BytesSpeedList = BytesSpeedList;
     }
 
-    /**
-     * Get 同步速度，包括了RecordsSpeedList和BytesSpeedList 
-     * @return Data 同步速度，包括了RecordsSpeedList和BytesSpeedList
-     */
-    public RealTimeTaskSpeed getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 同步速度，包括了RecordsSpeedList和BytesSpeedList
-     * @param Data 同步速度，包括了RecordsSpeedList和BytesSpeedList
-     */
-    public void setData(RealTimeTaskSpeed Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public DescribeRealTimeTaskSpeedResponse() {
+    public RealTimeTaskSpeed() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealTimeTaskSpeedResponse(DescribeRealTimeTaskSpeedResponse source) {
+    public RealTimeTaskSpeed(RealTimeTaskSpeed source) {
         if (source.RecordsSpeedList != null) {
             this.RecordsSpeedList = new RecordsSpeed[source.RecordsSpeedList.length];
             for (int i = 0; i < source.RecordsSpeedList.length; i++) {
@@ -134,12 +88,6 @@ public class DescribeRealTimeTaskSpeedResponse extends AbstractModel{
                 this.BytesSpeedList[i] = new BytesSpeed(source.BytesSpeedList[i]);
             }
         }
-        if (source.Data != null) {
-            this.Data = new RealTimeTaskSpeed(source.Data);
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
-        }
     }
 
 
@@ -149,8 +97,6 @@ public class DescribeRealTimeTaskSpeedResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "RecordsSpeedList.", this.RecordsSpeedList);
         this.setParamArrayObj(map, prefix + "BytesSpeedList.", this.BytesSpeedList);
-        this.setParamObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

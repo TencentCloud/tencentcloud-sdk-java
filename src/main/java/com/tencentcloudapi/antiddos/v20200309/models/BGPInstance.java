@@ -162,6 +162,13 @@ public class BGPInstance extends AbstractModel{
     private Long ElasticServiceBandwidth;
 
     /**
+    * 赠送的业务带宽
+    */
+    @SerializedName("GiftServiceBandWidth")
+    @Expose
+    private Long GiftServiceBandWidth;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -501,6 +508,22 @@ public class BGPInstance extends AbstractModel{
         this.ElasticServiceBandwidth = ElasticServiceBandwidth;
     }
 
+    /**
+     * Get 赠送的业务带宽 
+     * @return GiftServiceBandWidth 赠送的业务带宽
+     */
+    public Long getGiftServiceBandWidth() {
+        return this.GiftServiceBandWidth;
+    }
+
+    /**
+     * Set 赠送的业务带宽
+     * @param GiftServiceBandWidth 赠送的业务带宽
+     */
+    public void setGiftServiceBandWidth(Long GiftServiceBandWidth) {
+        this.GiftServiceBandWidth = GiftServiceBandWidth;
+    }
+
     public BGPInstance() {
     }
 
@@ -569,6 +592,9 @@ public class BGPInstance extends AbstractModel{
         if (source.ElasticServiceBandwidth != null) {
             this.ElasticServiceBandwidth = new Long(source.ElasticServiceBandwidth);
         }
+        if (source.GiftServiceBandWidth != null) {
+            this.GiftServiceBandWidth = new Long(source.GiftServiceBandWidth);
+        }
     }
 
 
@@ -594,6 +620,7 @@ public class BGPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
         this.setParamSimple(map, prefix + "Line", this.Line);
         this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
+        this.setParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
 
     }
 }

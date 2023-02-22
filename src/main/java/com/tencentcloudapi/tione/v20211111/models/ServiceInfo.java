@@ -174,6 +174,14 @@ HYBRID_PAID:
     private Boolean ModelHotUpdateEnable;
 
     /**
+    * Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pods")
+    @Expose
+    private Pod Pods;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -561,6 +569,26 @@ HYBRID_PAID:
         this.ModelHotUpdateEnable = ModelHotUpdateEnable;
     }
 
+    /**
+     * Get Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pods Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Pod getPods() {
+        return this.Pods;
+    }
+
+    /**
+     * Set Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pods Pod列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPods(Pod Pods) {
+        this.Pods = Pods;
+    }
+
     public ServiceInfo() {
     }
 
@@ -629,6 +657,9 @@ HYBRID_PAID:
         if (source.ModelHotUpdateEnable != null) {
             this.ModelHotUpdateEnable = new Boolean(source.ModelHotUpdateEnable);
         }
+        if (source.Pods != null) {
+            this.Pods = new Pod(source.Pods);
+        }
     }
 
 
@@ -654,6 +685,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
+        this.setParamObj(map, prefix + "Pods.", this.Pods);
 
     }
 }

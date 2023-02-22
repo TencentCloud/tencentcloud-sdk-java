@@ -117,6 +117,30 @@ public class AutoSnapshotPolicy extends AbstractModel{
     private String [] InstanceIdSet;
 
     /**
+    * 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionMonths")
+    @Expose
+    private Long RetentionMonths;
+
+    /**
+    * 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RetentionAmount")
+    @Expose
+    private Long RetentionAmount;
+
+    /**
+    * 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvancedRetentionPolicy")
+    @Expose
+    private AdvancedRetentionPolicy AdvancedRetentionPolicy;
+
+    /**
      * Get 已绑定当前定期快照策略的云盘ID列表。 
      * @return DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      */
@@ -336,6 +360,66 @@ public class AutoSnapshotPolicy extends AbstractModel{
         this.InstanceIdSet = InstanceIdSet;
     }
 
+    /**
+     * Get 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionMonths 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetentionMonths() {
+        return this.RetentionMonths;
+    }
+
+    /**
+     * Set 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionMonths 该定期快照创建的快照可以保留的月数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionMonths(Long RetentionMonths) {
+        this.RetentionMonths = RetentionMonths;
+    }
+
+    /**
+     * Get 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RetentionAmount 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetentionAmount() {
+        return this.RetentionAmount;
+    }
+
+    /**
+     * Set 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RetentionAmount 该定期快照创建的快照最大保留数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetentionAmount(Long RetentionAmount) {
+        this.RetentionAmount = RetentionAmount;
+    }
+
+    /**
+     * Get 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvancedRetentionPolicy 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvancedRetentionPolicy getAdvancedRetentionPolicy() {
+        return this.AdvancedRetentionPolicy;
+    }
+
+    /**
+     * Set 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvancedRetentionPolicy 定期快照高级保留策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvancedRetentionPolicy(AdvancedRetentionPolicy AdvancedRetentionPolicy) {
+        this.AdvancedRetentionPolicy = AdvancedRetentionPolicy;
+    }
+
     public AutoSnapshotPolicy() {
     }
 
@@ -392,6 +476,15 @@ public class AutoSnapshotPolicy extends AbstractModel{
                 this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
             }
         }
+        if (source.RetentionMonths != null) {
+            this.RetentionMonths = new Long(source.RetentionMonths);
+        }
+        if (source.RetentionAmount != null) {
+            this.RetentionAmount = new Long(source.RetentionAmount);
+        }
+        if (source.AdvancedRetentionPolicy != null) {
+            this.AdvancedRetentionPolicy = new AdvancedRetentionPolicy(source.AdvancedRetentionPolicy);
+        }
     }
 
 
@@ -412,6 +505,9 @@ public class AutoSnapshotPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         this.setParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+        this.setParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
+        this.setParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
+        this.setParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
 
     }
 }
