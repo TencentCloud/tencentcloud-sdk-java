@@ -23,32 +23,39 @@ import java.util.HashMap;
 public class ModifyNetworkConfigResponse extends AbstractModel{
 
     /**
-    * 执行状态：true|false
+    * 执行状态，请忽略该参数。
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * 子网ID
+    * 指实例新私有网络所属子网 ID。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 私有网络ID
+    * 指实例新的私有网络ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VIP地址
+    * 指实例新的内网 IPv4 地址。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
+
+    /**
+    * 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -58,67 +65,83 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 执行状态：true|false 
-     * @return Status 执行状态：true|false
+     * Get 执行状态，请忽略该参数。 
+     * @return Status 执行状态，请忽略该参数。
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 执行状态：true|false
-     * @param Status 执行状态：true|false
+     * Set 执行状态，请忽略该参数。
+     * @param Status 执行状态，请忽略该参数。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 子网ID 
-     * @return SubnetId 子网ID
+     * Get 指实例新私有网络所属子网 ID。 
+     * @return SubnetId 指实例新私有网络所属子网 ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID
-     * @param SubnetId 子网ID
+     * Set 指实例新私有网络所属子网 ID。
+     * @param SubnetId 指实例新私有网络所属子网 ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 私有网络ID 
-     * @return VpcId 私有网络ID
+     * Get 指实例新的私有网络ID。 
+     * @return VpcId 指实例新的私有网络ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID
-     * @param VpcId 私有网络ID
+     * Set 指实例新的私有网络ID。
+     * @param VpcId 指实例新的私有网络ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VIP地址 
-     * @return Vip VIP地址
+     * Get 指实例新的内网 IPv4 地址。 
+     * @return Vip 指实例新的内网 IPv4 地址。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP地址
-     * @param Vip VIP地址
+     * Set 指实例新的内网 IPv4 地址。
+     * @param Vip 指实例新的内网 IPv4 地址。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
+    }
+
+    /**
+     * Get 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。 
+     * @return TaskId 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     * @param TaskId 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -157,6 +180,9 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +197,7 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

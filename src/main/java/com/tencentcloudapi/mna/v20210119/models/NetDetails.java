@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class NetDetails extends AbstractModel{
 
     /**
-    * 时间点，单位：s
-    */
-    @SerializedName("Time")
-    @Expose
-    private String Time;
-
-    /**
     * 流量值（bit）
     */
     @SerializedName("Current")
@@ -37,20 +30,11 @@ public class NetDetails extends AbstractModel{
     private Float Current;
 
     /**
-     * Get 时间点，单位：s 
-     * @return Time 时间点，单位：s
-     */
-    public String getTime() {
-        return this.Time;
-    }
-
-    /**
-     * Set 时间点，单位：s
-     * @param Time 时间点，单位：s
-     */
-    public void setTime(String Time) {
-        this.Time = Time;
-    }
+    * 时间点，单位：s
+    */
+    @SerializedName("Time")
+    @Expose
+    private String Time;
 
     /**
      * Get 流量值（bit） 
@@ -68,6 +52,22 @@ public class NetDetails extends AbstractModel{
         this.Current = Current;
     }
 
+    /**
+     * Get 时间点，单位：s 
+     * @return Time 时间点，单位：s
+     */
+    public String getTime() {
+        return this.Time;
+    }
+
+    /**
+     * Set 时间点，单位：s
+     * @param Time 时间点，单位：s
+     */
+    public void setTime(String Time) {
+        this.Time = Time;
+    }
+
     public NetDetails() {
     }
 
@@ -76,11 +76,11 @@ public class NetDetails extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NetDetails(NetDetails source) {
-        if (source.Time != null) {
-            this.Time = new String(source.Time);
-        }
         if (source.Current != null) {
             this.Current = new Float(source.Current);
+        }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
         }
     }
 
@@ -89,8 +89,8 @@ public class NetDetails extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Current", this.Current);
+        this.setParamSimple(map, prefix + "Time", this.Time);
 
     }
 }

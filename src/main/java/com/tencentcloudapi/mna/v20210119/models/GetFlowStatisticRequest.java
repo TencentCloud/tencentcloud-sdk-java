@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetFlowStatisticRequest extends AbstractModel{
 
     /**
-    * 设备ID，ID="-1"时默认查找所有设备
+    * 设备ID
     */
     @SerializedName("DeviceId")
     @Expose
@@ -58,16 +58,16 @@ public class GetFlowStatisticRequest extends AbstractModel{
     private Long TimeGranularity;
 
     /**
-     * Get 设备ID，ID="-1"时默认查找所有设备 
-     * @return DeviceId 设备ID，ID="-1"时默认查找所有设备
+     * Get 设备ID 
+     * @return DeviceId 设备ID
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID，ID="-1"时默认查找所有设备
-     * @param DeviceId 设备ID，ID="-1"时默认查找所有设备
+     * Set 设备ID
+     * @param DeviceId 设备ID
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

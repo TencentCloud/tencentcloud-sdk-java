@@ -38,6 +38,30 @@ public class DeviceDetails extends AbstractModel{
     private DeviceNetInfo [] DeviceNetInfo;
 
     /**
+    * 聚合服务器地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewaySite")
+    @Expose
+    private String GatewaySite;
+
+    /**
+    * 业务下行速率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessDownRate")
+    @Expose
+    private Float BusinessDownRate;
+
+    /**
+    * 业务上行速率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessUpRate")
+    @Expose
+    private Float BusinessUpRate;
+
+    /**
      * Get 设备基本信息 
      * @return DeviceBaseInfo 设备基本信息
      */
@@ -73,6 +97,66 @@ public class DeviceDetails extends AbstractModel{
         this.DeviceNetInfo = DeviceNetInfo;
     }
 
+    /**
+     * Get 聚合服务器地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewaySite 聚合服务器地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewaySite() {
+        return this.GatewaySite;
+    }
+
+    /**
+     * Set 聚合服务器地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewaySite 聚合服务器地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewaySite(String GatewaySite) {
+        this.GatewaySite = GatewaySite;
+    }
+
+    /**
+     * Get 业务下行速率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessDownRate 业务下行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBusinessDownRate() {
+        return this.BusinessDownRate;
+    }
+
+    /**
+     * Set 业务下行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessDownRate 业务下行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessDownRate(Float BusinessDownRate) {
+        this.BusinessDownRate = BusinessDownRate;
+    }
+
+    /**
+     * Get 业务上行速率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessUpRate 业务上行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBusinessUpRate() {
+        return this.BusinessUpRate;
+    }
+
+    /**
+     * Set 业务上行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessUpRate 业务上行速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessUpRate(Float BusinessUpRate) {
+        this.BusinessUpRate = BusinessUpRate;
+    }
+
     public DeviceDetails() {
     }
 
@@ -90,6 +174,15 @@ public class DeviceDetails extends AbstractModel{
                 this.DeviceNetInfo[i] = new DeviceNetInfo(source.DeviceNetInfo[i]);
             }
         }
+        if (source.GatewaySite != null) {
+            this.GatewaySite = new String(source.GatewaySite);
+        }
+        if (source.BusinessDownRate != null) {
+            this.BusinessDownRate = new Float(source.BusinessDownRate);
+        }
+        if (source.BusinessUpRate != null) {
+            this.BusinessUpRate = new Float(source.BusinessUpRate);
+        }
     }
 
 
@@ -99,6 +192,9 @@ public class DeviceDetails extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "DeviceBaseInfo.", this.DeviceBaseInfo);
         this.setParamArrayObj(map, prefix + "DeviceNetInfo.", this.DeviceNetInfo);
+        this.setParamSimple(map, prefix + "GatewaySite", this.GatewaySite);
+        this.setParamSimple(map, prefix + "BusinessDownRate", this.BusinessDownRate);
+        this.setParamSimple(map, prefix + "BusinessUpRate", this.BusinessUpRate);
 
     }
 }

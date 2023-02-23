@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDosageCosDetailByDateRequest extends AbstractModel{
 
     /**
-    * 查询用量开始时间
+    * 查询用量开始时间，例如：2020-09-01
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * 查询用量结束时间（与开始时间同月，不支持跨月查询）
+    * 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
     */
     @SerializedName("EndDate")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDosageCosDetailByDateRequest extends AbstractModel{
     private String BucketName;
 
     /**
-     * Get 查询用量开始时间 
-     * @return StartDate 查询用量开始时间
+     * Get 查询用量开始时间，例如：2020-09-01 
+     * @return StartDate 查询用量开始时间，例如：2020-09-01
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set 查询用量开始时间
-     * @param StartDate 查询用量开始时间
+     * Set 查询用量开始时间，例如：2020-09-01
+     * @param StartDate 查询用量开始时间，例如：2020-09-01
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get 查询用量结束时间（与开始时间同月，不支持跨月查询） 
-     * @return EndDate 查询用量结束时间（与开始时间同月，不支持跨月查询）
+     * Get 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询） 
+     * @return EndDate 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 查询用量结束时间（与开始时间同月，不支持跨月查询）
-     * @param EndDate 查询用量结束时间（与开始时间同月，不支持跨月查询）
+     * Set 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
+     * @param EndDate 查询用量结束时间，例如：2020-09-30（与开始时间同月，不支持跨月查询）
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

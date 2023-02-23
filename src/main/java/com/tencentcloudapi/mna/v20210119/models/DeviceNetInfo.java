@@ -133,6 +133,22 @@ public class DeviceNetInfo extends AbstractModel{
     private String NetInfoName;
 
     /**
+    * 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DownRate")
+    @Expose
+    private Float DownRate;
+
+    /**
+    * 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpRate")
+    @Expose
+    private Float UpRate;
+
+    /**
      * Get 网络类型：
 0:数据
 1:Wi-Fi
@@ -428,6 +444,46 @@ public class DeviceNetInfo extends AbstractModel{
         this.NetInfoName = NetInfoName;
     }
 
+    /**
+     * Get 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getDownRate() {
+        return this.DownRate;
+    }
+
+    /**
+     * Set 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DownRate 下行实时速率（浮点数类型代替上一版本DataRx的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDownRate(Float DownRate) {
+        this.DownRate = DownRate;
+    }
+
+    /**
+     * Get 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpRate 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getUpRate() {
+        return this.UpRate;
+    }
+
+    /**
+     * Set 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpRate 上行实时速率（浮点数类型代替上一版本TxRate的整型）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpRate(Float UpRate) {
+        this.UpRate = UpRate;
+    }
+
     public DeviceNetInfo() {
     }
 
@@ -472,6 +528,12 @@ public class DeviceNetInfo extends AbstractModel{
         if (source.NetInfoName != null) {
             this.NetInfoName = new String(source.NetInfoName);
         }
+        if (source.DownRate != null) {
+            this.DownRate = new Float(source.DownRate);
+        }
+        if (source.UpRate != null) {
+            this.UpRate = new Float(source.UpRate);
+        }
     }
 
 
@@ -491,6 +553,8 @@ public class DeviceNetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SignalStrength", this.SignalStrength);
         this.setParamSimple(map, prefix + "Rat", this.Rat);
         this.setParamSimple(map, prefix + "NetInfoName", this.NetInfoName);
+        this.setParamSimple(map, prefix + "DownRate", this.DownRate);
+        this.setParamSimple(map, prefix + "UpRate", this.UpRate);
 
     }
 }

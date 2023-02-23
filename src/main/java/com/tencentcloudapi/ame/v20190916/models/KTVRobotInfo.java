@@ -94,11 +94,18 @@ public class KTVRobotInfo extends AbstractModel{
     private SetPlayModeCommandInput SetPlayModeInput;
 
     /**
-    * 音量，范围 0~100，默认为 50。
+    * <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
     */
     @SerializedName("SetVolumeInput")
     @Expose
     private SetVolumeCommandInput SetVolumeInput;
+
+    /**
+    * 真实音量，范围 0~100，默认为 50。
+    */
+    @SerializedName("SetRealVolumeInput")
+    @Expose
+    private SetRealVolumeCommandInput SetRealVolumeInput;
 
     /**
      * Get 机器人Id。 
@@ -277,19 +284,35 @@ public class KTVRobotInfo extends AbstractModel{
     }
 
     /**
-     * Get 音量，范围 0~100，默认为 50。 
-     * @return SetVolumeInput 音量，范围 0~100，默认为 50。
+     * Get <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ） 
+     * @return SetVolumeInput <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
      */
     public SetVolumeCommandInput getSetVolumeInput() {
         return this.SetVolumeInput;
     }
 
     /**
-     * Set 音量，范围 0~100，默认为 50。
-     * @param SetVolumeInput 音量，范围 0~100，默认为 50。
+     * Set <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
+     * @param SetVolumeInput <del>音量，范围 0~100，默认为 50。</del>（已废弃，请采用 SetRealVolumeInput ）
      */
     public void setSetVolumeInput(SetVolumeCommandInput SetVolumeInput) {
         this.SetVolumeInput = SetVolumeInput;
+    }
+
+    /**
+     * Get 真实音量，范围 0~100，默认为 50。 
+     * @return SetRealVolumeInput 真实音量，范围 0~100，默认为 50。
+     */
+    public SetRealVolumeCommandInput getSetRealVolumeInput() {
+        return this.SetRealVolumeInput;
+    }
+
+    /**
+     * Set 真实音量，范围 0~100，默认为 50。
+     * @param SetRealVolumeInput 真实音量，范围 0~100，默认为 50。
+     */
+    public void setSetRealVolumeInput(SetRealVolumeCommandInput SetRealVolumeInput) {
+        this.SetRealVolumeInput = SetRealVolumeInput;
     }
 
     public KTVRobotInfo() {
@@ -333,6 +356,9 @@ public class KTVRobotInfo extends AbstractModel{
         if (source.SetVolumeInput != null) {
             this.SetVolumeInput = new SetVolumeCommandInput(source.SetVolumeInput);
         }
+        if (source.SetRealVolumeInput != null) {
+            this.SetRealVolumeInput = new SetRealVolumeCommandInput(source.SetRealVolumeInput);
+        }
     }
 
 
@@ -350,6 +376,7 @@ public class KTVRobotInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
         this.setParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
         this.setParamObj(map, prefix + "SetVolumeInput.", this.SetVolumeInput);
+        this.setParamObj(map, prefix + "SetRealVolumeInput.", this.SetRealVolumeInput);
 
     }
 }

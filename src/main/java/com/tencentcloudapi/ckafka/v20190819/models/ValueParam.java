@@ -102,6 +102,14 @@ public class ValueParam extends AbstractModel{
     private UrlDecodeParam UrlDecode;
 
     /**
+    * 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Lowercase")
+    @Expose
+    private LowercaseParam Lowercase;
+
+    /**
      * Get 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写 
      * @return Type 处理模式，REPLACE替换，SUBSTR截取，DATE日期转换，TRIM去除前后空格，REGEX_REPLACE正则替换，URL_DECODE，LOWERCASE转换为小写
      */
@@ -297,6 +305,26 @@ public class ValueParam extends AbstractModel{
         this.UrlDecode = UrlDecode;
     }
 
+    /**
+     * Get 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Lowercase 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LowercaseParam getLowercase() {
+        return this.Lowercase;
+    }
+
+    /**
+     * Set 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Lowercase 小写字符解析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLowercase(LowercaseParam Lowercase) {
+        this.Lowercase = Lowercase;
+    }
+
     public ValueParam() {
     }
 
@@ -335,6 +363,9 @@ public class ValueParam extends AbstractModel{
         if (source.UrlDecode != null) {
             this.UrlDecode = new UrlDecodeParam(source.UrlDecode);
         }
+        if (source.Lowercase != null) {
+            this.Lowercase = new LowercaseParam(source.Lowercase);
+        }
     }
 
 
@@ -352,6 +383,7 @@ public class ValueParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamObj(map, prefix + "JsonPathReplace.", this.JsonPathReplace);
         this.setParamObj(map, prefix + "UrlDecode.", this.UrlDecode);
+        this.setParamObj(map, prefix + "Lowercase.", this.Lowercase);
 
     }
 }

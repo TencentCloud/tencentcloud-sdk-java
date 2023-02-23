@@ -73,6 +73,13 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private ApproverRestriction [] Restrictions;
 
     /**
+    * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
     * 回调地址,最大长度1000字符串
 回调时机：
 用户通过签署二维码发起签署流程时，企业额度不足导致失败
@@ -212,6 +219,22 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
+     * Get 用户自定义字段，回调的时候会进行透传，长度需要小于20480 
+     * @return UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     * @param UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
      * Get 回调地址,最大长度1000字符串
 回调时机：
 用户通过签署二维码发起签署流程时，企业额度不足导致失败 
@@ -299,6 +322,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
                 this.Restrictions[i] = new ApproverRestriction(source.Restrictions[i]);
             }
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
@@ -322,6 +348,7 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
         this.setParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);

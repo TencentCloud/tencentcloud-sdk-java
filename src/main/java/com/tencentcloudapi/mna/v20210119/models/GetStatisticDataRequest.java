@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetStatisticDataRequest extends AbstractModel{
 
     /**
-    * 设备ID，设备ID="-1"获取所有设备流量统计
+    * 设备ID
     */
     @SerializedName("DeviceId")
     @Expose
@@ -53,16 +53,16 @@ public class GetStatisticDataRequest extends AbstractModel{
     private Long TimeGranularity;
 
     /**
-     * Get 设备ID，设备ID="-1"获取所有设备流量统计 
-     * @return DeviceId 设备ID，设备ID="-1"获取所有设备流量统计
+     * Get 设备ID 
+     * @return DeviceId 设备ID
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID，设备ID="-1"获取所有设备流量统计
-     * @param DeviceId 设备ID，设备ID="-1"获取所有设备流量统计
+     * Set 设备ID
+     * @param DeviceId 设备ID
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;

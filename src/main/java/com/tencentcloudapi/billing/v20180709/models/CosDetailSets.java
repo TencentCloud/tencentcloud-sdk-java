@@ -44,14 +44,14 @@ public class CosDetailSets extends AbstractModel{
     private String DosageEndTime;
 
     /**
-    * 一级产品类型名称
+    * 子产品名称
     */
     @SerializedName("SubProductCodeName")
     @Expose
     private String SubProductCodeName;
 
     /**
-    * 二级产品类型名称
+    * 计费项名称
     */
     @SerializedName("BillingItemCodeName")
     @Expose
@@ -120,32 +120,32 @@ public class CosDetailSets extends AbstractModel{
     }
 
     /**
-     * Get 一级产品类型名称 
-     * @return SubProductCodeName 一级产品类型名称
+     * Get 子产品名称 
+     * @return SubProductCodeName 子产品名称
      */
     public String getSubProductCodeName() {
         return this.SubProductCodeName;
     }
 
     /**
-     * Set 一级产品类型名称
-     * @param SubProductCodeName 一级产品类型名称
+     * Set 子产品名称
+     * @param SubProductCodeName 子产品名称
      */
     public void setSubProductCodeName(String SubProductCodeName) {
         this.SubProductCodeName = SubProductCodeName;
     }
 
     /**
-     * Get 二级产品类型名称 
-     * @return BillingItemCodeName 二级产品类型名称
+     * Get 计费项名称 
+     * @return BillingItemCodeName 计费项名称
      */
     public String getBillingItemCodeName() {
         return this.BillingItemCodeName;
     }
 
     /**
-     * Set 二级产品类型名称
-     * @param BillingItemCodeName 二级产品类型名称
+     * Set 计费项名称
+     * @param BillingItemCodeName 计费项名称
      */
     public void setBillingItemCodeName(String BillingItemCodeName) {
         this.BillingItemCodeName = BillingItemCodeName;

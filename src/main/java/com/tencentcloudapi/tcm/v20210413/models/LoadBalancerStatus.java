@@ -44,6 +44,14 @@ public class LoadBalancerStatus extends AbstractModel{
     private String LoadBalancerVip;
 
     /**
+    * 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerHostname")
+    @Expose
+    private String LoadBalancerHostname;
+
+    /**
      * Get 负载均衡实例 ID 
      * @return LoadBalancerId 负载均衡实例 ID
      */
@@ -91,6 +99,26 @@ public class LoadBalancerStatus extends AbstractModel{
         this.LoadBalancerVip = LoadBalancerVip;
     }
 
+    /**
+     * Get 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerHostname 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerHostname() {
+        return this.LoadBalancerHostname;
+    }
+
+    /**
+     * Set 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerHostname 负载均衡实例 Hostname
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerHostname(String LoadBalancerHostname) {
+        this.LoadBalancerHostname = LoadBalancerHostname;
+    }
+
     public LoadBalancerStatus() {
     }
 
@@ -108,6 +136,9 @@ public class LoadBalancerStatus extends AbstractModel{
         if (source.LoadBalancerVip != null) {
             this.LoadBalancerVip = new String(source.LoadBalancerVip);
         }
+        if (source.LoadBalancerHostname != null) {
+            this.LoadBalancerHostname = new String(source.LoadBalancerHostname);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class LoadBalancerStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamSimple(map, prefix + "LoadBalancerVip", this.LoadBalancerVip);
+        this.setParamSimple(map, prefix + "LoadBalancerHostname", this.LoadBalancerHostname);
 
     }
 }

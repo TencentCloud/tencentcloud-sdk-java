@@ -23,141 +23,204 @@ import java.util.HashMap;
 public class ModifyNetworkConfigRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+    * 指预修改网络的类别，包括：
+- changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+- changeVpc：指切换私有网络所属子网。
+- changeBaseToVpc：指基础网络切换为私有网络。
+- changeVPort：指仅修改实例网络端口。
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * VIP地址，changeVip的时候填写，不填则默认分配
+    * 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+    * 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网ID，changeVpc、changeBaseToVpc的时候需要提供
+    * 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+    * 原内网 IPv4 地址保留时长。
+- 单位：天。
+- 取值范围：0、1、2、3、7、15。
+
+**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
     */
     @SerializedName("Recycle")
     @Expose
     private Long Recycle;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
+    */
+    @SerializedName("VPort")
+    @Expose
+    private Long VPort;
+
+    /**
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络 
-     * @return Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+     * Get 指预修改网络的类别，包括：
+- changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+- changeVpc：指切换私有网络所属子网。
+- changeBaseToVpc：指基础网络切换为私有网络。
+- changeVPort：指仅修改实例网络端口。 
+     * @return Operation 指预修改网络的类别，包括：
+- changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+- changeVpc：指切换私有网络所属子网。
+- changeBaseToVpc：指基础网络切换为私有网络。
+- changeVPort：指仅修改实例网络端口。
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
-     * @param Operation 操作类型：changeVip——修改实例VIP；changeVpc——修改实例子网；changeBaseToVpc——基础网络转VPC网络
+     * Set 指预修改网络的类别，包括：
+- changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+- changeVpc：指切换私有网络所属子网。
+- changeBaseToVpc：指基础网络切换为私有网络。
+- changeVPort：指仅修改实例网络端口。
+     * @param Operation 指预修改网络的类别，包括：
+- changeVip：指切换私有网络，包含其内网IPv4地址及端口。
+- changeVpc：指切换私有网络所属子网。
+- changeBaseToVpc：指基础网络切换为私有网络。
+- changeVPort：指仅修改实例网络端口。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get VIP地址，changeVip的时候填写，不填则默认分配 
-     * @return Vip VIP地址，changeVip的时候填写，不填则默认分配
+     * Get 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。 
+     * @return Vip 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP地址，changeVip的时候填写，不填则默认分配
-     * @param Vip VIP地址，changeVip的时候填写，不填则默认分配
+     * Set 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
+     * @param Vip 指实例私有网络内网 IPv4 地址。当**Operation**为**changeVip**时，需配置该参数。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供 
-     * @return VpcId 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Get 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。 
+     * @return VpcId 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
-     * @param VpcId 私有网络ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Set 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * @param VpcId 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID，changeVpc、changeBaseToVpc的时候需要提供 
-     * @return SubnetId 子网ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Get 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。 
+     * @return SubnetId 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网ID，changeVpc、changeBaseToVpc的时候需要提供
-     * @param SubnetId 子网ID，changeVpc、changeBaseToVpc的时候需要提供
+     * Set 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * @param SubnetId 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk) 
-     * @return Recycle 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+     * Get 原内网 IPv4 地址保留时长。
+- 单位：天。
+- 取值范围：0、1、2、3、7、15。
+
+**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。 
+     * @return Recycle 原内网 IPv4 地址保留时长。
+- 单位：天。
+- 取值范围：0、1、2、3、7、15。
+
+**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      */
     public Long getRecycle() {
         return this.Recycle;
     }
 
     /**
-     * Set 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
-     * @param Recycle 原VIP保留时间，单位：天，注：需要最新版SDK，否则原VIP立即释放，查看SDK版本，详见 [SDK中心](https://cloud.tencent.com/document/sdk)
+     * Set 原内网 IPv4 地址保留时长。
+- 单位：天。
+- 取值范围：0、1、2、3、7、15。
+
+**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
+     * @param Recycle 原内网 IPv4 地址保留时长。
+- 单位：天。
+- 取值范围：0、1、2、3、7、15。
+
+**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;
+    }
+
+    /**
+     * Get 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。 
+     * @return VPort 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
+     */
+    public Long getVPort() {
+        return this.VPort;
+    }
+
+    /**
+     * Set 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
+     * @param VPort 指修改后的网络端口。当**Operation**为**changeVPort**或**changeVip**时，需配置该参数。取值范围为[1024,65535]。
+     */
+    public void setVPort(Long VPort) {
+        this.VPort = VPort;
     }
 
     public ModifyNetworkConfigRequest() {
@@ -186,6 +249,9 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         if (source.Recycle != null) {
             this.Recycle = new Long(source.Recycle);
         }
+        if (source.VPort != null) {
+            this.VPort = new Long(source.VPort);
+        }
     }
 
 
@@ -199,6 +265,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Recycle", this.Recycle);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
 
     }
 }
