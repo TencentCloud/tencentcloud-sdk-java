@@ -55,6 +55,14 @@ public class FakeURLData extends AbstractModel{
     private String FakeURL;
 
     /**
+    * 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FakeDomain")
+    @Expose
+    private String FakeDomain;
+
+    /**
     * 热度
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -252,6 +260,26 @@ public class FakeURLData extends AbstractModel{
      */
     public void setFakeURL(String FakeURL) {
         this.FakeURL = FakeURL;
+    }
+
+    /**
+     * Get 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FakeDomain 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFakeDomain() {
+        return this.FakeDomain;
+    }
+
+    /**
+     * Set 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FakeDomain 仿冒域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFakeDomain(String FakeDomain) {
+        this.FakeDomain = FakeDomain;
     }
 
     /**
@@ -574,6 +602,9 @@ public class FakeURLData extends AbstractModel{
         if (source.FakeURL != null) {
             this.FakeURL = new String(source.FakeURL);
         }
+        if (source.FakeDomain != null) {
+            this.FakeDomain = new String(source.FakeDomain);
+        }
         if (source.Heat != null) {
             this.Heat = new Long(source.Heat);
         }
@@ -630,6 +661,7 @@ public class FakeURLData extends AbstractModel{
         this.setParamSimple(map, prefix + "BrandName", this.BrandName);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "FakeURL", this.FakeURL);
+        this.setParamSimple(map, prefix + "FakeDomain", this.FakeDomain);
         this.setParamSimple(map, prefix + "Heat", this.Heat);
         this.setParamSimple(map, prefix + "BlockStatus", this.BlockStatus);
         this.setParamSimple(map, prefix + "BlockNote", this.BlockNote);

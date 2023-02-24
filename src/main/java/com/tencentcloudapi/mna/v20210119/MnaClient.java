@@ -219,6 +219,26 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *批量获取设备流量统计曲线
+     * @param req GetMultiFlowStatisticRequest
+     * @return GetMultiFlowStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMultiFlowStatisticResponse GetMultiFlowStatistic(GetMultiFlowStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetMultiFlowStatisticResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetMultiFlowStatisticResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetMultiFlowStatistic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取公钥用于验签
      * @param req GetPublicKeyRequest
      * @return GetPublicKeyResponse

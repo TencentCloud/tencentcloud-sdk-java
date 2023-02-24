@@ -76,6 +76,14 @@ public class ZookeeperReplica extends AbstractModel{
     private String AliasName;
 
     /**
+    * VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -203,6 +211,26 @@ public class ZookeeperReplica extends AbstractModel{
         this.AliasName = AliasName;
     }
 
+    /**
+     * Get VPC ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId VPC ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public ZookeeperReplica() {
     }
 
@@ -232,6 +260,9 @@ public class ZookeeperReplica extends AbstractModel{
         if (source.AliasName != null) {
             this.AliasName = new String(source.AliasName);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -246,6 +277,7 @@ public class ZookeeperReplica extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

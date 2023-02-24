@@ -86,6 +86,13 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
+    * 根据标签列表过滤实例（取交集）
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get （过滤条件）按照实例ID过滤 
      * @return InstanceId （过滤条件）按照实例ID过滤
      */
@@ -229,6 +236,22 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.InstanceIdList = InstanceIdList;
     }
 
+    /**
+     * Get 根据标签列表过滤实例（取交集） 
+     * @return TagList 根据标签列表过滤实例（取交集）
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 根据标签列表过滤实例（取交集）
+     * @param TagList 根据标签列表过滤实例（取交集）
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DescribeInstancesDetailRequest() {
     }
 
@@ -273,6 +296,12 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
                 this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -289,6 +318,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

@@ -116,6 +116,14 @@ public class IngressInfo extends AbstractModel{
     private String RewriteType;
 
     /**
+    * clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 环境ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnvironmentId 环境ID
@@ -343,6 +351,26 @@ public class IngressInfo extends AbstractModel{
         this.RewriteType = RewriteType;
     }
 
+    /**
+     * Get clb 域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IngressInfo() {
     }
 
@@ -393,6 +421,9 @@ public class IngressInfo extends AbstractModel{
         if (source.RewriteType != null) {
             this.RewriteType = new String(source.RewriteType);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -412,6 +443,7 @@ public class IngressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Mixed", this.Mixed);
         this.setParamSimple(map, prefix + "RewriteType", this.RewriteType);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

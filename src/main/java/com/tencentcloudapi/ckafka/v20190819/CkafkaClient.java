@@ -839,6 +839,46 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *获取Datahub主题属性
+     * @param req DescribeDatahubTopicRequest
+     * @return DescribeDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTopicResponse DescribeDatahubTopic(DescribeDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询DIP主题列表
+     * @param req DescribeDatahubTopicsRequest
+     * @return DescribeDatahubTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTopicsResponse DescribeDatahubTopics(DescribeDatahubTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *枚举消费分组(精简版)
      * @param req DescribeGroupRequest
      * @return DescribeGroupResponse

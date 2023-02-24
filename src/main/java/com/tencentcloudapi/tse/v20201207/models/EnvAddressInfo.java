@@ -60,6 +60,14 @@ public class EnvAddressInfo extends AbstractModel{
     private Boolean EnableConfigIntranet;
 
     /**
+    * 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternetBandWidth")
+    @Expose
+    private Long InternetBandWidth;
+
+    /**
      * Get 环境名 
      * @return EnvName 环境名
      */
@@ -147,6 +155,26 @@ public class EnvAddressInfo extends AbstractModel{
         this.EnableConfigIntranet = EnableConfigIntranet;
     }
 
+    /**
+     * Get 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInternetBandWidth() {
+        return this.InternetBandWidth;
+    }
+
+    /**
+     * Set 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternetBandWidth 客户端公网带宽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternetBandWidth(Long InternetBandWidth) {
+        this.InternetBandWidth = InternetBandWidth;
+    }
+
     public EnvAddressInfo() {
     }
 
@@ -170,6 +198,9 @@ public class EnvAddressInfo extends AbstractModel{
         if (source.EnableConfigIntranet != null) {
             this.EnableConfigIntranet = new Boolean(source.EnableConfigIntranet);
         }
+        if (source.InternetBandWidth != null) {
+            this.InternetBandWidth = new Long(source.InternetBandWidth);
+        }
     }
 
 
@@ -182,6 +213,7 @@ public class EnvAddressInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
         this.setParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
         this.setParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
+        this.setParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
 
     }
 }

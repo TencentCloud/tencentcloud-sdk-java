@@ -55,7 +55,7 @@ public class DiscountDetail extends AbstractModel{
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
     * 具体折扣详情。
@@ -132,7 +132,7 @@ public class DiscountDetail extends AbstractModel{
      * Get 折扣。 
      * @return Discount 折扣。
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
@@ -140,7 +140,7 @@ public class DiscountDetail extends AbstractModel{
      * Set 折扣。
      * @param Discount 折扣。
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
@@ -181,7 +181,7 @@ public class DiscountDetail extends AbstractModel{
             this.RealTotalCost = new Float(source.RealTotalCost);
         }
         if (source.Discount != null) {
-            this.Discount = new Long(source.Discount);
+            this.Discount = new Float(source.Discount);
         }
         if (source.PolicyDetail != null) {
             this.PolicyDetail = new PolicyDetail(source.PolicyDetail);

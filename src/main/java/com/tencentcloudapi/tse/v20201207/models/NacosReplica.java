@@ -68,6 +68,14 @@ public class NacosReplica extends AbstractModel{
     private String ZoneId;
 
     /**
+    * VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -175,6 +183,26 @@ public class NacosReplica extends AbstractModel{
         this.ZoneId = ZoneId;
     }
 
+    /**
+     * Get VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId VPC ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public NacosReplica() {
     }
 
@@ -201,6 +229,9 @@ public class NacosReplica extends AbstractModel{
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -214,6 +245,7 @@ public class NacosReplica extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

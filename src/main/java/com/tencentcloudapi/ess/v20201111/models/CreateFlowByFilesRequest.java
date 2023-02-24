@@ -132,13 +132,6 @@ false：有序签
     private String UserData;
 
     /**
-    * 应用号信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
     * 签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
@@ -161,6 +154,13 @@ MobileCheck：手机号验证
     @SerializedName("SignBeanTag")
     @Expose
     private Long SignBeanTag;
+
+    /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
 
     /**
      * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同 
@@ -431,22 +431,6 @@ false：有序签
     }
 
     /**
-     * Get 应用号信息 
-     * @return Agent 应用号信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用号信息
-     * @param Agent 应用号信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
      * Get 签署人校验方式
 VerifyCheck: 人脸识别（默认）
 MobileCheck：手机号验证
@@ -504,6 +488,22 @@ MobileCheck：手机号验证
      */
     public void setSignBeanTag(Long SignBeanTag) {
         this.SignBeanTag = SignBeanTag;
+    }
+
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     public CreateFlowByFilesRequest() {
@@ -568,9 +568,6 @@ MobileCheck：手机号验证
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.ApproverVerifyType != null) {
             this.ApproverVerifyType = new String(source.ApproverVerifyType);
         }
@@ -579,6 +576,9 @@ MobileCheck：手机号验证
         }
         if (source.SignBeanTag != null) {
             this.SignBeanTag = new Long(source.SignBeanTag);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -601,10 +601,10 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

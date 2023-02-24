@@ -37,6 +37,38 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel{
     private Long HostCount;
 
     /**
+    * vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpnConnectionState")
+    @Expose
+    private String VpnConnectionState;
+
+    /**
+    * vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpngwBandwidthData")
+    @Expose
+    private VpngwBandwidthData VpngwBandwidthData;
+
+    /**
+    * 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalNetInfo")
+    @Expose
+    private LocalNetInfo LocalNetInfo;
+
+    /**
+    * vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpnConnectionBandwidthData")
+    @Expose
+    private VpngwBandwidthData [] VpnConnectionBandwidthData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +108,86 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpnConnectionState vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpnConnectionState() {
+        return this.VpnConnectionState;
+    }
+
+    /**
+     * Set vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpnConnectionState vpn通道状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpnConnectionState(String VpnConnectionState) {
+        this.VpnConnectionState = VpnConnectionState;
+    }
+
+    /**
+     * Get vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpngwBandwidthData vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpngwBandwidthData getVpngwBandwidthData() {
+        return this.VpngwBandwidthData;
+    }
+
+    /**
+     * Set vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpngwBandwidthData vpn网关监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpngwBandwidthData(VpngwBandwidthData VpngwBandwidthData) {
+        this.VpngwBandwidthData = VpngwBandwidthData;
+    }
+
+    /**
+     * Get 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalNetInfo 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LocalNetInfo getLocalNetInfo() {
+        return this.LocalNetInfo;
+    }
+
+    /**
+     * Set 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalNetInfo 本地网关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalNetInfo(LocalNetInfo LocalNetInfo) {
+        this.LocalNetInfo = LocalNetInfo;
+    }
+
+    /**
+     * Get vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpnConnectionBandwidthData vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VpngwBandwidthData [] getVpnConnectionBandwidthData() {
+        return this.VpnConnectionBandwidthData;
+    }
+
+    /**
+     * Set vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpnConnectionBandwidthData vpn网关通道监控数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpnConnectionBandwidthData(VpngwBandwidthData [] VpnConnectionBandwidthData) {
+        this.VpnConnectionBandwidthData = VpnConnectionBandwidthData;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +217,21 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel{
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.VpnConnectionState != null) {
+            this.VpnConnectionState = new String(source.VpnConnectionState);
+        }
+        if (source.VpngwBandwidthData != null) {
+            this.VpngwBandwidthData = new VpngwBandwidthData(source.VpngwBandwidthData);
+        }
+        if (source.LocalNetInfo != null) {
+            this.LocalNetInfo = new LocalNetInfo(source.LocalNetInfo);
+        }
+        if (source.VpnConnectionBandwidthData != null) {
+            this.VpnConnectionBandwidthData = new VpngwBandwidthData[source.VpnConnectionBandwidthData.length];
+            for (int i = 0; i < source.VpnConnectionBandwidthData.length; i++) {
+                this.VpnConnectionBandwidthData[i] = new VpngwBandwidthData(source.VpnConnectionBandwidthData[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +244,10 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CvmCount", this.CvmCount);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamSimple(map, prefix + "VpnConnectionState", this.VpnConnectionState);
+        this.setParamObj(map, prefix + "VpngwBandwidthData.", this.VpngwBandwidthData);
+        this.setParamObj(map, prefix + "LocalNetInfo.", this.LocalNetInfo);
+        this.setParamArrayObj(map, prefix + "VpnConnectionBandwidthData.", this.VpnConnectionBandwidthData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

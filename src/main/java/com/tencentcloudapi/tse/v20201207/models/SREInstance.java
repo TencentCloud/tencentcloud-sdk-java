@@ -255,6 +255,30 @@ public class SREInstance extends AbstractModel{
     private DescribeInstanceRegionInfo [] RegionInfos;
 
     /**
+    * 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EKSType")
+    @Expose
+    private String EKSType;
+
+    /**
+    * 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeatureVersion")
+    @Expose
+    private String FeatureVersion;
+
+    /**
+    * 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableClientIntranet")
+    @Expose
+    private Boolean EnableClientIntranet;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -822,6 +846,66 @@ public class SREInstance extends AbstractModel{
         this.RegionInfos = RegionInfos;
     }
 
+    /**
+     * Get 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EKSType 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEKSType() {
+        return this.EKSType;
+    }
+
+    /**
+     * Set 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EKSType 所在EKS环境，分为common和yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEKSType(String EKSType) {
+        this.EKSType = EKSType;
+    }
+
+    /**
+     * Get 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeatureVersion 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFeatureVersion() {
+        return this.FeatureVersion;
+    }
+
+    /**
+     * Set 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeatureVersion 引擎的产品版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeatureVersion(String FeatureVersion) {
+        this.FeatureVersion = FeatureVersion;
+    }
+
+    /**
+     * Get 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableClientIntranet 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableClientIntranet() {
+        return this.EnableClientIntranet;
+    }
+
+    /**
+     * Set 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableClientIntranet 引擎实例是否开启客户端内网访问地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableClientIntranet(Boolean EnableClientIntranet) {
+        this.EnableClientIntranet = EnableClientIntranet;
+    }
+
     public SREInstance() {
     }
 
@@ -938,6 +1022,15 @@ public class SREInstance extends AbstractModel{
                 this.RegionInfos[i] = new DescribeInstanceRegionInfo(source.RegionInfos[i]);
             }
         }
+        if (source.EKSType != null) {
+            this.EKSType = new String(source.EKSType);
+        }
+        if (source.FeatureVersion != null) {
+            this.FeatureVersion = new String(source.FeatureVersion);
+        }
+        if (source.EnableClientIntranet != null) {
+            this.EnableClientIntranet = new Boolean(source.EnableClientIntranet);
+        }
     }
 
 
@@ -975,6 +1068,9 @@ public class SREInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamArrayObj(map, prefix + "RegionInfos.", this.RegionInfos);
+        this.setParamSimple(map, prefix + "EKSType", this.EKSType);
+        this.setParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
+        this.setParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
 
     }
 }

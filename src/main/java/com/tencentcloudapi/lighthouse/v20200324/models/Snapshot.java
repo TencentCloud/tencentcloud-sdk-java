@@ -105,6 +105,7 @@ public class Snapshot extends AbstractModel{
 
     /**
     * 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -315,8 +316,10 @@ public class Snapshot extends AbstractModel{
     }
 
     /**
-     * Get 快照的创建时间。 
+     * Get 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -324,7 +327,9 @@ public class Snapshot extends AbstractModel{
 
     /**
      * Set 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 快照的创建时间。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

@@ -151,6 +151,14 @@ public class EksService extends AbstractModel{
     private Boolean AllIpDone;
 
     /**
+    * clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalDomain")
+    @Expose
+    private String ExternalDomain;
+
+    /**
      * Get service name 
      * @return Name service name
      */
@@ -470,6 +478,26 @@ public class EksService extends AbstractModel{
         this.AllIpDone = AllIpDone;
     }
 
+    /**
+     * Get clb 域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalDomain clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalDomain() {
+        return this.ExternalDomain;
+    }
+
+    /**
+     * Set clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalDomain clb 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalDomain(String ExternalDomain) {
+        this.ExternalDomain = ExternalDomain;
+    }
+
     public EksService() {
     }
 
@@ -538,6 +566,9 @@ public class EksService extends AbstractModel{
         if (source.AllIpDone != null) {
             this.AllIpDone = new Boolean(source.AllIpDone);
         }
+        if (source.ExternalDomain != null) {
+            this.ExternalDomain = new String(source.ExternalDomain);
+        }
     }
 
 
@@ -561,6 +592,7 @@ public class EksService extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
+        this.setParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
 
     }
 }

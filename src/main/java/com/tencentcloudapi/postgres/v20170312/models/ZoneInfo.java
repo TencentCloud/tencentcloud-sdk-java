@@ -44,7 +44,11 @@ public class ZoneInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
+    * 可用状态包含，
+UNAVAILABLE：不可用。
+AVAILABLE：可用。
+SELLOUT：售罄。
+SUPPORTMODIFYONLY：支持变配。
     */
     @SerializedName("ZoneState")
     @Expose
@@ -114,16 +118,32 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄 
-     * @return ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
+     * Get 可用状态包含，
+UNAVAILABLE：不可用。
+AVAILABLE：可用。
+SELLOUT：售罄。
+SUPPORTMODIFYONLY：支持变配。 
+     * @return ZoneState 可用状态包含，
+UNAVAILABLE：不可用。
+AVAILABLE：可用。
+SELLOUT：售罄。
+SUPPORTMODIFYONLY：支持变配。
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
-     * @param ZoneState 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
+     * Set 可用状态包含，
+UNAVAILABLE：不可用。
+AVAILABLE：可用。
+SELLOUT：售罄。
+SUPPORTMODIFYONLY：支持变配。
+     * @param ZoneState 可用状态包含，
+UNAVAILABLE：不可用。
+AVAILABLE：可用。
+SELLOUT：售罄。
+SUPPORTMODIFYONLY：支持变配。
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;

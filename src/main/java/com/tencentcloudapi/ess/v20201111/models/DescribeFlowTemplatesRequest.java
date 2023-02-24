@@ -30,14 +30,14 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 企业组织相关信息
+    * 企业组织相关信息，一般不用填
     */
     @SerializedName("Organization")
     @Expose
     private OrganizationInfo Organization;
 
     /**
-    * 应用相关信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
@@ -113,32 +113,32 @@ ApplicationId为空，查询渠道模板列表
     }
 
     /**
-     * Get 企业组织相关信息 
-     * @return Organization 企业组织相关信息
+     * Get 企业组织相关信息，一般不用填 
+     * @return Organization 企业组织相关信息，一般不用填
      */
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
 
     /**
-     * Set 企业组织相关信息
-     * @param Organization 企业组织相关信息
+     * Set 企业组织相关信息，一般不用填
+     * @param Organization 企业组织相关信息，一般不用填
      */
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

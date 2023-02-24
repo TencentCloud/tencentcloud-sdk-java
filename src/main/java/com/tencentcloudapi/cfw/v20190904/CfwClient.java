@@ -79,6 +79,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *添加nat访问控制规则
+     * @param req AddNatAcRuleRequest
+     * @return AddNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddNatAcRuleResponse AddNatAcRule(AddNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddNatAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建访问控制规则
      * @param req CreateAcRulesRequest
      * @return CreateAcRulesResponse
@@ -513,6 +533,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStatusListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIPStatusList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询NAT访问控制列表
+     * @param req DescribeNatAcRuleRequest
+     * @return DescribeNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatAcRuleResponse DescribeNatAcRule(DescribeNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -988,6 +1028,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *修改NAT访问控制规则
+     * @param req ModifyNatAcRuleRequest
+     * @return ModifyNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatAcRuleResponse ModifyNatAcRule(ModifyNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *防火墙实例重新选择vpc或nat
      * @param req ModifyNatFwReSelectRequest
      * @return ModifyNatFwReSelectResponse
@@ -1262,6 +1322,26 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveEnterpriseSecurityGroupRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除NAT访问控制规则
+     * @param req RemoveNatAcRuleRequest
+     * @return RemoveNatAcRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveNatAcRuleResponse RemoveNatAcRule(RemoveNatAcRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveNatAcRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveNatAcRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveNatAcRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

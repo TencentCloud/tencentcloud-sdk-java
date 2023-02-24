@@ -103,6 +103,14 @@ public class ServicePortMapping extends AbstractModel{
     private ServicePortMappingItem [] PortMappingItemList;
 
     /**
+    * clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalDomain")
+    @Expose
+    private String ExternalDomain;
+
+    /**
      * Get 服务类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 服务类型
@@ -302,6 +310,26 @@ public class ServicePortMapping extends AbstractModel{
         this.PortMappingItemList = PortMappingItemList;
     }
 
+    /**
+     * Get clb domain
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalDomain clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalDomain() {
+        return this.ExternalDomain;
+    }
+
+    /**
+     * Set clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalDomain clb domain
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalDomain(String ExternalDomain) {
+        this.ExternalDomain = ExternalDomain;
+    }
+
     public ServicePortMapping() {
     }
 
@@ -346,6 +374,9 @@ public class ServicePortMapping extends AbstractModel{
                 this.PortMappingItemList[i] = new ServicePortMappingItem(source.PortMappingItemList[i]);
             }
         }
+        if (source.ExternalDomain != null) {
+            this.ExternalDomain = new String(source.ExternalDomain);
+        }
     }
 
 
@@ -363,6 +394,7 @@ public class ServicePortMapping extends AbstractModel{
         this.setParamSimple(map, prefix + "Yaml", this.Yaml);
         this.setParamArraySimple(map, prefix + "Ports.", this.Ports);
         this.setParamArrayObj(map, prefix + "PortMappingItemList.", this.PortMappingItemList);
+        this.setParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
 
     }
 }

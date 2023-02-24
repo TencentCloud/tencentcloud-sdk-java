@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Agent extends AbstractModel{
 
     /**
-    * 应用编号,32位字符串
+    * 代理机构的应用编号,32位字符串，一般不用传
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * 主组织的应用号
+    * 被代理机构的应用号，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAppId")
@@ -38,7 +38,7 @@ public class Agent extends AbstractModel{
     private String ProxyAppId;
 
     /**
-    * 主组织在平台的机构编号
+    * 被代理机构在电子签平台的机构编号，集团代理下场景必传
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationId")
@@ -46,7 +46,7 @@ public class Agent extends AbstractModel{
     private String ProxyOrganizationId;
 
     /**
-    * 主组织的操作人
+    * 被代理机构的经办人，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOperator")
@@ -54,25 +54,25 @@ public class Agent extends AbstractModel{
     private String ProxyOperator;
 
     /**
-     * Get 应用编号,32位字符串 
-     * @return AppId 应用编号,32位字符串
+     * Get 代理机构的应用编号,32位字符串，一般不用传 
+     * @return AppId 代理机构的应用编号,32位字符串，一般不用传
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 应用编号,32位字符串
-     * @param AppId 应用编号,32位字符串
+     * Set 代理机构的应用编号,32位字符串，一般不用传
+     * @param AppId 代理机构的应用编号,32位字符串，一般不用传
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主组织的应用号
+     * Get 被代理机构的应用号，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyAppId 主组织的应用号
+     * @return ProxyAppId 被代理机构的应用号，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyAppId() {
@@ -80,9 +80,9 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Set 主组织的应用号
+     * Set 被代理机构的应用号，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyAppId 主组织的应用号
+     * @param ProxyAppId 被代理机构的应用号，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAppId(String ProxyAppId) {
@@ -90,9 +90,9 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 主组织在平台的机构编号
+     * Get 被代理机构在电子签平台的机构编号，集团代理下场景必传
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOrganizationId 主组织在平台的机构编号
+     * @return ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOrganizationId() {
@@ -100,9 +100,9 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Set 主组织在平台的机构编号
+     * Set 被代理机构在电子签平台的机构编号，集团代理下场景必传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOrganizationId 主组织在平台的机构编号
+     * @param ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationId(String ProxyOrganizationId) {
@@ -110,9 +110,9 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 主组织的操作人
+     * Get 被代理机构的经办人，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOperator 主组织的操作人
+     * @return ProxyOperator 被代理机构的经办人，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOperator() {
@@ -120,9 +120,9 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Set 主组织的操作人
+     * Set 被代理机构的经办人，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOperator 主组织的操作人
+     * @param ProxyOperator 被代理机构的经办人，一般不用传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOperator(String ProxyOperator) {
