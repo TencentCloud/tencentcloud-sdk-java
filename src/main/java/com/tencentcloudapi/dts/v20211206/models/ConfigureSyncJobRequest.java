@@ -44,13 +44,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String DstAccessType;
 
     /**
-    * 同步任务选项
-    */
-    @SerializedName("Options")
-    @Expose
-    private Options Options;
-
-    /**
     * 同步库表对象信息
     */
     @SerializedName("Objects")
@@ -98,6 +91,13 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     @SerializedName("DstInfo")
     @Expose
     private Endpoint DstInfo;
+
+    /**
+    * 同步任务选项
+    */
+    @SerializedName("Options")
+    @Expose
+    private Options Options;
 
     /**
     * 自动重试的时间段、可设置5至720分钟、0表示不重试
@@ -152,22 +152,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
      */
     public void setDstAccessType(String DstAccessType) {
         this.DstAccessType = DstAccessType;
-    }
-
-    /**
-     * Get 同步任务选项 
-     * @return Options 同步任务选项
-     */
-    public Options getOptions() {
-        return this.Options;
-    }
-
-    /**
-     * Set 同步任务选项
-     * @param Options 同步任务选项
-     */
-    public void setOptions(Options Options) {
-        this.Options = Options;
     }
 
     /**
@@ -283,6 +267,22 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 同步任务选项 
+     * @return Options 同步任务选项
+     */
+    public Options getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set 同步任务选项
+     * @param Options 同步任务选项
+     */
+    public void setOptions(Options Options) {
+        this.Options = Options;
+    }
+
+    /**
      * Get 自动重试的时间段、可设置5至720分钟、0表示不重试 
      * @return AutoRetryTimeRangeMinutes 自动重试的时间段、可设置5至720分钟、0表示不重试
      */
@@ -315,9 +315,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.DstAccessType != null) {
             this.DstAccessType = new String(source.DstAccessType);
         }
-        if (source.Options != null) {
-            this.Options = new Options(source.Options);
-        }
         if (source.Objects != null) {
             this.Objects = new Objects(source.Objects);
         }
@@ -339,6 +336,9 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.DstInfo != null) {
             this.DstInfo = new Endpoint(source.DstInfo);
         }
+        if (source.Options != null) {
+            this.Options = new Options(source.Options);
+        }
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
@@ -352,7 +352,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-        this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "JobMode", this.JobMode);
@@ -360,6 +359,7 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }

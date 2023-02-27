@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class InquiryPriceResizeDiskRequest extends AbstractModel{
 
     /**
-    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String DiskId;
-
-    /**
     * 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
     */
     @SerializedName("DiskSize")
@@ -37,27 +30,18 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
+
+    /**
     * 云盘所属项目ID。 如传入则仅用于鉴权。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
-
-    /**
-     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
 
     /**
      * Get 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。 
@@ -73,6 +57,22 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。 
+     * @return DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
     }
 
     /**
@@ -99,11 +99,11 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InquiryPriceResizeDiskRequest(InquiryPriceResizeDiskRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
@@ -115,8 +115,8 @@ public class InquiryPriceResizeDiskRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }

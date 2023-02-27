@@ -79,6 +79,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(AddQueue)用于添加队列到指定集群。
+     * @param req AddQueueRequest
+     * @return AddQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddQueueResponse AddQueue(AddQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddQueue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
      * @param req BindAutoScalingGroupRequest
      * @return BindAutoScalingGroupResponse
@@ -179,6 +199,28 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DeleteQueue)用于从指定集群删除队列。
+
+* 删除队列时，需要保证队列内不存在节点。
+     * @param req DeleteQueueRequest
+     * @return DeleteQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQueueResponse DeleteQueue(DeleteQueueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteQueueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteQueueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteQueue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeAutoScalingConfiguration)用于查询集群弹性伸缩配置信息。本接口仅适用于弹性伸缩类型为THPC_AS的集群。
      * @param req DescribeAutoScalingConfigurationRequest
      * @return DescribeAutoScalingConfigurationResponse
@@ -251,6 +293,46 @@ public class ThpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
+     * @param req DescribeNodesRequest
+     * @return DescribeNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodesResponse DescribeNodes(DescribeNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
+     * @param req DescribeQueuesRequest
+     * @return DescribeQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQueuesResponse DescribeQueues(DescribeQueuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQueuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQueuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeQueues");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

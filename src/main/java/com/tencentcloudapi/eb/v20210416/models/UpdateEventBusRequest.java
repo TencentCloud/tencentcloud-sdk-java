@@ -58,6 +58,13 @@ public class UpdateEventBusRequest extends AbstractModel{
     private String LogTopicId;
 
     /**
+    * 是否开启存储
+    */
+    @SerializedName("EnableStore")
+    @Expose
+    private Boolean EnableStore;
+
+    /**
      * Get 事件集ID 
      * @return EventBusId 事件集ID
      */
@@ -137,6 +144,22 @@ public class UpdateEventBusRequest extends AbstractModel{
         this.LogTopicId = LogTopicId;
     }
 
+    /**
+     * Get 是否开启存储 
+     * @return EnableStore 是否开启存储
+     */
+    public Boolean getEnableStore() {
+        return this.EnableStore;
+    }
+
+    /**
+     * Set 是否开启存储
+     * @param EnableStore 是否开启存储
+     */
+    public void setEnableStore(Boolean EnableStore) {
+        this.EnableStore = EnableStore;
+    }
+
     public UpdateEventBusRequest() {
     }
 
@@ -160,6 +183,9 @@ public class UpdateEventBusRequest extends AbstractModel{
         if (source.LogTopicId != null) {
             this.LogTopicId = new String(source.LogTopicId);
         }
+        if (source.EnableStore != null) {
+            this.EnableStore = new Boolean(source.EnableStore);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class UpdateEventBusRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "SaveDays", this.SaveDays);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "EnableStore", this.EnableStore);
 
     }
 }

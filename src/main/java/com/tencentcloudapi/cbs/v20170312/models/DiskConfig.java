@@ -104,6 +104,14 @@ public class DiskConfig extends AbstractModel{
     private Long MaxDiskSize;
 
     /**
+    * 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Price")
+    @Expose
+    private Price Price;
+
+    /**
      * Get 配置是否可用。 
      * @return Available 配置是否可用。
      */
@@ -295,6 +303,26 @@ public class DiskConfig extends AbstractModel{
         this.MaxDiskSize = MaxDiskSize;
     }
 
+    /**
+     * Get 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Price 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Price getPrice() {
+        return this.Price;
+    }
+
+    /**
+     * Set 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Price 描述预付费或后付费云盘的价格。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrice(Price Price) {
+        this.Price = Price;
+    }
+
     public DiskConfig() {
     }
 
@@ -339,6 +367,9 @@ public class DiskConfig extends AbstractModel{
         if (source.MaxDiskSize != null) {
             this.MaxDiskSize = new Long(source.MaxDiskSize);
         }
+        if (source.Price != null) {
+            this.Price = new Price(source.Price);
+        }
     }
 
 
@@ -357,6 +388,7 @@ public class DiskConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
         this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
+        this.setParamObj(map, prefix + "Price.", this.Price);
 
     }
 }

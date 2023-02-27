@@ -45,6 +45,14 @@ public class Placement extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 实例所属项目名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
     * 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -120,6 +128,26 @@ public class Placement extends AbstractModel{
     }
 
     /**
+     * Get 实例所属项目名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName 实例所属项目名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 实例所属项目名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 实例所属项目名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
      * Get 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CdcName 独享集群名字。作为入参时，忽略。作为出参时，表示云硬盘所属的独享集群名，可为空。
@@ -192,6 +220,9 @@ public class Placement extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
         if (source.CdcName != null) {
             this.CdcName = new String(source.CdcName);
         }
@@ -211,6 +242,7 @@ public class Placement extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "CdcName", this.CdcName);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);

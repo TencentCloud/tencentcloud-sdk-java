@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateSessionRequest extends AbstractModel{
 
     /**
-    * 客户端session信息，从JSSDK请求中获得
-    */
-    @SerializedName("ClientSession")
-    @Expose
-    private String ClientSession;
-
-    /**
     * 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
     */
     @SerializedName("UserId")
@@ -56,6 +49,13 @@ public class CreateSessionRequest extends AbstractModel{
     @SerializedName("GameParas")
     @Expose
     private String GameParas;
+
+    /**
+    * 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+    */
+    @SerializedName("ClientSession")
+    @Expose
+    private String ClientSession;
 
     /**
     * 分辨率,，可设置为1080p或720p或1920x1080格式
@@ -151,22 +151,6 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     private String RunMode;
 
     /**
-     * Get 客户端session信息，从JSSDK请求中获得 
-     * @return ClientSession 客户端session信息，从JSSDK请求中获得
-     */
-    public String getClientSession() {
-        return this.ClientSession;
-    }
-
-    /**
-     * Set 客户端session信息，从JSSDK请求中获得
-     * @param ClientSession 客户端session信息，从JSSDK请求中获得
-     */
-    public void setClientSession(String ClientSession) {
-        this.ClientSession = ClientSession;
-    }
-
-    /**
      * Get 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变） 
      * @return UserId 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变）
      */
@@ -228,6 +212,22 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
      */
     public void setGameParas(String GameParas) {
         this.GameParas = GameParas;
+    }
+
+    /**
+     * Get 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空 
+     * @return ClientSession 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+     */
+    public String getClientSession() {
+        return this.ClientSession;
+    }
+
+    /**
+     * Set 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+     * @param ClientSession 客户端session信息，从JSSDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+     */
+    public void setClientSession(String ClientSession) {
+        this.ClientSession = ClientSession;
     }
 
     /**
@@ -454,9 +454,6 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateSessionRequest(CreateSessionRequest source) {
-        if (source.ClientSession != null) {
-            this.ClientSession = new String(source.ClientSession);
-        }
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
@@ -468,6 +465,9 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
         }
         if (source.GameParas != null) {
             this.GameParas = new String(source.GameParas);
+        }
+        if (source.ClientSession != null) {
+            this.ClientSession = new String(source.ClientSession);
         }
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
@@ -515,11 +515,11 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientSession", this.ClientSession);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "GameId", this.GameId);
         this.setParamSimple(map, prefix + "GameRegion", this.GameRegion);
         this.setParamSimple(map, prefix + "GameParas", this.GameParas);
+        this.setParamSimple(map, prefix + "ClientSession", this.ClientSession);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "SetNo", this.SetNo);

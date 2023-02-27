@@ -82,6 +82,20 @@ public class Cdc extends AbstractModel{
     private String ExpiredTime;
 
     /**
+    * 存储池创建时间。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * 当前集群中已创建的云盘数量。
+    */
+    @SerializedName("DiskNumber")
+    @Expose
+    private Long DiskNumber;
+
+    /**
      * Get 独享集群围笼ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CageId 独享集群围笼ID。
@@ -221,6 +235,38 @@ public class Cdc extends AbstractModel{
         this.ExpiredTime = ExpiredTime;
     }
 
+    /**
+     * Get 存储池创建时间。 
+     * @return CreatedTime 存储池创建时间。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 存储池创建时间。
+     * @param CreatedTime 存储池创建时间。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get 当前集群中已创建的云盘数量。 
+     * @return DiskNumber 当前集群中已创建的云盘数量。
+     */
+    public Long getDiskNumber() {
+        return this.DiskNumber;
+    }
+
+    /**
+     * Set 当前集群中已创建的云盘数量。
+     * @param DiskNumber 当前集群中已创建的云盘数量。
+     */
+    public void setDiskNumber(Long DiskNumber) {
+        this.DiskNumber = DiskNumber;
+    }
+
     public Cdc() {
     }
 
@@ -253,6 +299,12 @@ public class Cdc extends AbstractModel{
         if (source.ExpiredTime != null) {
             this.ExpiredTime = new String(source.ExpiredTime);
         }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.DiskNumber != null) {
+            this.DiskNumber = new Long(source.DiskNumber);
+        }
     }
 
 
@@ -268,6 +320,8 @@ public class Cdc extends AbstractModel{
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "DiskNumber", this.DiskNumber);
 
     }
 }

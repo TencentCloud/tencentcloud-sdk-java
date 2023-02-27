@@ -30,18 +30,18 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     private String BundleId;
 
     /**
+    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
     * 创建数量，默认为 1。
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
-
-    /**
-    * 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-    */
-    @SerializedName("InstanceChargePrepaid")
-    @Expose
-    private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
     * 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
@@ -67,6 +67,22 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。 
+     * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
      * Get 创建数量，默认为 1。 
      * @return InstanceCount 创建数量，默认为 1。
      */
@@ -80,22 +96,6 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
-    }
-
-    /**
-     * Get 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。 
-     * @return InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     */
-    public InstanceChargePrepaid getInstanceChargePrepaid() {
-        return this.InstanceChargePrepaid;
-    }
-
-    /**
-     * Set 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     * @param InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
-     */
-    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
-        this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
@@ -125,11 +125,11 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
         if (source.BundleId != null) {
             this.BundleId = new String(source.BundleId);
         }
-        if (source.InstanceCount != null) {
-            this.InstanceCount = new Long(source.InstanceCount);
-        }
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
         }
         if (source.BlueprintId != null) {
             this.BlueprintId = new String(source.BlueprintId);
@@ -142,8 +142,8 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
-        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
 
     }

@@ -141,6 +141,22 @@ public class AutoSnapshotPolicy extends AbstractModel{
     private AdvancedRetentionPolicy AdvancedRetentionPolicy;
 
     /**
+    * 该复制快照策略的源端账户ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CopyFromAccountUin")
+    @Expose
+    private String CopyFromAccountUin;
+
+    /**
+    * 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 已绑定当前定期快照策略的云盘ID列表。 
      * @return DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
      */
@@ -420,6 +436,46 @@ public class AutoSnapshotPolicy extends AbstractModel{
         this.AdvancedRetentionPolicy = AdvancedRetentionPolicy;
     }
 
+    /**
+     * Get 该复制快照策略的源端账户ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CopyFromAccountUin 该复制快照策略的源端账户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCopyFromAccountUin() {
+        return this.CopyFromAccountUin;
+    }
+
+    /**
+     * Set 该复制快照策略的源端账户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CopyFromAccountUin 该复制快照策略的源端账户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCopyFromAccountUin(String CopyFromAccountUin) {
+        this.CopyFromAccountUin = CopyFromAccountUin;
+    }
+
+    /**
+     * Get 标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AutoSnapshotPolicy() {
     }
 
@@ -485,6 +541,15 @@ public class AutoSnapshotPolicy extends AbstractModel{
         if (source.AdvancedRetentionPolicy != null) {
             this.AdvancedRetentionPolicy = new AdvancedRetentionPolicy(source.AdvancedRetentionPolicy);
         }
+        if (source.CopyFromAccountUin != null) {
+            this.CopyFromAccountUin = new String(source.CopyFromAccountUin);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -508,6 +573,8 @@ public class AutoSnapshotPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
         this.setParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
         this.setParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+        this.setParamSimple(map, prefix + "CopyFromAccountUin", this.CopyFromAccountUin);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

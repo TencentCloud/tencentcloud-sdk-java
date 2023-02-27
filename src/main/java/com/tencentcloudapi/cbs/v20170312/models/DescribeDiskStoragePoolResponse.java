@@ -32,6 +32,13 @@ public class DescribeDiskStoragePoolResponse extends AbstractModel{
     /**
     * 独享集群的详细信息列表
     */
+    @SerializedName("CdcSet")
+    @Expose
+    private Cdc [] CdcSet;
+
+    /**
+    * 独享集群的详细信息列表
+    */
     @SerializedName("DiskStoragePoolSet")
     @Expose
     private Cdc [] DiskStoragePoolSet;
@@ -57,6 +64,22 @@ public class DescribeDiskStoragePoolResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 独享集群的详细信息列表 
+     * @return CdcSet 独享集群的详细信息列表
+     */
+    public Cdc [] getCdcSet() {
+        return this.CdcSet;
+    }
+
+    /**
+     * Set 独享集群的详细信息列表
+     * @param CdcSet 独享集群的详细信息列表
+     */
+    public void setCdcSet(Cdc [] CdcSet) {
+        this.CdcSet = CdcSet;
     }
 
     /**
@@ -102,6 +125,12 @@ public class DescribeDiskStoragePoolResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.CdcSet != null) {
+            this.CdcSet = new Cdc[source.CdcSet.length];
+            for (int i = 0; i < source.CdcSet.length; i++) {
+                this.CdcSet[i] = new Cdc(source.CdcSet[i]);
+            }
+        }
         if (source.DiskStoragePoolSet != null) {
             this.DiskStoragePoolSet = new Cdc[source.DiskStoragePoolSet.length];
             for (int i = 0; i < source.DiskStoragePoolSet.length; i++) {
@@ -119,6 +148,7 @@ public class DescribeDiskStoragePoolResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CdcSet.", this.CdcSet);
         this.setParamArrayObj(map, prefix + "DiskStoragePoolSet.", this.DiskStoragePoolSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

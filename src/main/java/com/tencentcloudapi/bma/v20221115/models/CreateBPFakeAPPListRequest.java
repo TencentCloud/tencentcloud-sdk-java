@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateBPFakeAPPListRequest extends AbstractModel{
 
     /**
-    * 批量模版
+    * 批量模板
     */
     @SerializedName("FakeAPPs")
     @Expose
     private String FakeAPPs;
 
     /**
-     * Get 批量模版 
-     * @return FakeAPPs 批量模版
+     * Get 批量模板 
+     * @return FakeAPPs 批量模板
      */
     public String getFakeAPPs() {
         return this.FakeAPPs;
     }
 
     /**
-     * Set 批量模版
-     * @param FakeAPPs 批量模版
+     * Set 批量模板
+     * @param FakeAPPs 批量模板
      */
     public void setFakeAPPs(String FakeAPPs) {
         this.FakeAPPs = FakeAPPs;

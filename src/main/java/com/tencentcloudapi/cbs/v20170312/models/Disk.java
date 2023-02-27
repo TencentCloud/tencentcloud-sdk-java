@@ -309,6 +309,22 @@ public class Disk extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastAttachInsId")
+    @Expose
+    private String LastAttachInsId;
+
+    /**
+    * 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorPrompt")
+    @Expose
+    private String ErrorPrompt;
+
+    /**
      * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
@@ -984,6 +1000,46 @@ public class Disk extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastAttachInsId 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastAttachInsId() {
+        return this.LastAttachInsId;
+    }
+
+    /**
+     * Set 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastAttachInsId 云硬盘最后一次挂载的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastAttachInsId(String LastAttachInsId) {
+        this.LastAttachInsId = LastAttachInsId;
+    }
+
+    /**
+     * Get 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorPrompt 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorPrompt() {
+        return this.ErrorPrompt;
+    }
+
+    /**
+     * Set 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorPrompt 云硬盘最后一次操作错误提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorPrompt(String ErrorPrompt) {
+        this.ErrorPrompt = ErrorPrompt;
+    }
+
     public Disk() {
     }
 
@@ -1118,6 +1174,12 @@ public class Disk extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.LastAttachInsId != null) {
+            this.LastAttachInsId = new String(source.LastAttachInsId);
+        }
+        if (source.ErrorPrompt != null) {
+            this.ErrorPrompt = new String(source.ErrorPrompt);
+        }
     }
 
 
@@ -1164,6 +1226,8 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
+        this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
 
     }
 }

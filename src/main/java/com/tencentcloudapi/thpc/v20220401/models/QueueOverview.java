@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.bma.v20221115.models;
+package com.tencentcloudapi.thpc.v20220401.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBPFakeURLsRequest extends AbstractModel{
+public class QueueOverview extends AbstractModel{
 
     /**
-    * 批量模板
+    * 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FakeURLs")
+    @SerializedName("QueueName")
     @Expose
-    private String FakeURLs;
+    private String QueueName;
 
     /**
-     * Get 批量模板 
-     * @return FakeURLs 批量模板
+     * Get 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QueueName 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getFakeURLs() {
-        return this.FakeURLs;
+    public String getQueueName() {
+        return this.QueueName;
     }
 
     /**
-     * Set 批量模板
-     * @param FakeURLs 批量模板
+     * Set 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QueueName 队列名称。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFakeURLs(String FakeURLs) {
-        this.FakeURLs = FakeURLs;
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
     }
 
-    public CreateBPFakeURLsRequest() {
+    public QueueOverview() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBPFakeURLsRequest(CreateBPFakeURLsRequest source) {
-        if (source.FakeURLs != null) {
-            this.FakeURLs = new String(source.FakeURLs);
+    public QueueOverview(QueueOverview source) {
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
         }
     }
 
@@ -63,7 +68,7 @@ public class CreateBPFakeURLsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FakeURLs", this.FakeURLs);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
 
     }
 }

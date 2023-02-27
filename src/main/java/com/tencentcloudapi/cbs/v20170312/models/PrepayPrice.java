@@ -95,6 +95,14 @@ public class PrepayPrice extends AbstractModel{
     private Float UnitPrice;
 
     /**
+    * 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetailPrices")
+    @Expose
+    private DetailPrice [] DetailPrices;
+
+    /**
      * Get 预付费云盘或快照预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiscountPrice 预付费云盘或快照预支费用的折扣价，单位：元。
@@ -274,6 +282,26 @@ public class PrepayPrice extends AbstractModel{
         this.UnitPrice = UnitPrice;
     }
 
+    /**
+     * Get 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetailPrices 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DetailPrice [] getDetailPrices() {
+        return this.DetailPrices;
+    }
+
+    /**
+     * Set 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailPrices 计费项目明细列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetailPrices(DetailPrice [] DetailPrices) {
+        this.DetailPrices = DetailPrices;
+    }
+
     public PrepayPrice() {
     }
 
@@ -309,6 +337,12 @@ public class PrepayPrice extends AbstractModel{
         if (source.UnitPrice != null) {
             this.UnitPrice = new Float(source.UnitPrice);
         }
+        if (source.DetailPrices != null) {
+            this.DetailPrices = new DetailPrice[source.DetailPrices.length];
+            for (int i = 0; i < source.DetailPrices.length; i++) {
+                this.DetailPrices[i] = new DetailPrice(source.DetailPrices[i]);
+            }
+        }
     }
 
 
@@ -325,6 +359,7 @@ public class PrepayPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
         this.setParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
+        this.setParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
 
     }
 }
