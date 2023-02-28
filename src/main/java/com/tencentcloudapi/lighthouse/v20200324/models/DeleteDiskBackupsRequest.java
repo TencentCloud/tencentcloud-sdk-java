@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteDiskBackupsRequest extends AbstractModel{
 
     /**
-    * 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。
+    * 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
     */
     @SerializedName("DiskBackupIds")
     @Expose
     private String [] DiskBackupIds;
 
     /**
-     * Get 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。 
-     * @return DiskBackupIds 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。
+     * Get 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。 
+     * @return DiskBackupIds 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     public String [] getDiskBackupIds() {
         return this.DiskBackupIds;
     }
 
     /**
-     * Set 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。
-     * @param DiskBackupIds 云硬盘备份点ID列表，可通过 DescribeDiskBackups接口查询。
+     * Set 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
+     * @param DiskBackupIds 云硬盘备份点ID列表，可通过 [DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     public void setDiskBackupIds(String [] DiskBackupIds) {
         this.DiskBackupIds = DiskBackupIds;

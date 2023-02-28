@@ -30,7 +30,7 @@ public class ApplyDiskBackupRequest extends AbstractModel{
     private String DiskId;
 
     /**
-    * 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+    * 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
     */
     @SerializedName("DiskBackupId")
     @Expose
@@ -53,16 +53,16 @@ public class ApplyDiskBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。 
-     * @return DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+     * Get 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。 
+     * @return DiskBackupId 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
-     * @param DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 接口查询。
+     * Set 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
+     * @param DiskBackupId 云硬盘备份点ID，可通过[DescribeDiskBackups](https://cloud.tencent.com/document/api/1207/84379)接口查询。
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;

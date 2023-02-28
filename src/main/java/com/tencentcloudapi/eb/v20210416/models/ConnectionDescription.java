@@ -46,6 +46,14 @@ public class ConnectionDescription extends AbstractModel{
     private CkafkaParams CkafkaParams;
 
     /**
+    * data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DTSParams")
+    @Expose
+    private DTSParams DTSParams;
+
+    /**
      * Get 资源qcs六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606) 
      * @return ResourceDescription 资源qcs六段式，更多参考 [资源六段式](https://cloud.tencent.com/document/product/598/10606)
      */
@@ -101,6 +109,26 @@ public class ConnectionDescription extends AbstractModel{
         this.CkafkaParams = CkafkaParams;
     }
 
+    /**
+     * Get data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DTSParams data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DTSParams getDTSParams() {
+        return this.DTSParams;
+    }
+
+    /**
+     * Set data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DTSParams data transfer service (DTS)参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDTSParams(DTSParams DTSParams) {
+        this.DTSParams = DTSParams;
+    }
+
     public ConnectionDescription() {
     }
 
@@ -118,6 +146,9 @@ public class ConnectionDescription extends AbstractModel{
         if (source.CkafkaParams != null) {
             this.CkafkaParams = new CkafkaParams(source.CkafkaParams);
         }
+        if (source.DTSParams != null) {
+            this.DTSParams = new DTSParams(source.DTSParams);
+        }
     }
 
 
@@ -128,6 +159,7 @@ public class ConnectionDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
         this.setParamObj(map, prefix + "APIGWParams.", this.APIGWParams);
         this.setParamObj(map, prefix + "CkafkaParams.", this.CkafkaParams);
+        this.setParamObj(map, prefix + "DTSParams.", this.DTSParams);
 
     }
 }

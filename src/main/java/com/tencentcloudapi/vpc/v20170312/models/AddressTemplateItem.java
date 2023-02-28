@@ -23,46 +23,92 @@ import java.util.HashMap;
 public class AddressTemplateItem extends AbstractModel{
 
     /**
-    * 起始地址。
+    * ipm-xxxxxxxx
+    */
+    @SerializedName("AddressTemplateId")
+    @Expose
+    private String AddressTemplateId;
+
+    /**
+    * IP模板名称
+    */
+    @SerializedName("AddressTemplateName")
+    @Expose
+    private String AddressTemplateName;
+
+    /**
+    * 废弃字段
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-    * 结束地址。
+    * 废弃字段
     */
     @SerializedName("To")
     @Expose
     private String To;
 
     /**
-     * Get 起始地址。 
-     * @return From 起始地址。
+     * Get ipm-xxxxxxxx 
+     * @return AddressTemplateId ipm-xxxxxxxx
+     */
+    public String getAddressTemplateId() {
+        return this.AddressTemplateId;
+    }
+
+    /**
+     * Set ipm-xxxxxxxx
+     * @param AddressTemplateId ipm-xxxxxxxx
+     */
+    public void setAddressTemplateId(String AddressTemplateId) {
+        this.AddressTemplateId = AddressTemplateId;
+    }
+
+    /**
+     * Get IP模板名称 
+     * @return AddressTemplateName IP模板名称
+     */
+    public String getAddressTemplateName() {
+        return this.AddressTemplateName;
+    }
+
+    /**
+     * Set IP模板名称
+     * @param AddressTemplateName IP模板名称
+     */
+    public void setAddressTemplateName(String AddressTemplateName) {
+        this.AddressTemplateName = AddressTemplateName;
+    }
+
+    /**
+     * Get 废弃字段 
+     * @return From 废弃字段
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 起始地址。
-     * @param From 起始地址。
+     * Set 废弃字段
+     * @param From 废弃字段
      */
     public void setFrom(String From) {
         this.From = From;
     }
 
     /**
-     * Get 结束地址。 
-     * @return To 结束地址。
+     * Get 废弃字段 
+     * @return To 废弃字段
      */
     public String getTo() {
         return this.To;
     }
 
     /**
-     * Set 结束地址。
-     * @param To 结束地址。
+     * Set 废弃字段
+     * @param To 废弃字段
      */
     public void setTo(String To) {
         this.To = To;
@@ -76,6 +122,12 @@ public class AddressTemplateItem extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddressTemplateItem(AddressTemplateItem source) {
+        if (source.AddressTemplateId != null) {
+            this.AddressTemplateId = new String(source.AddressTemplateId);
+        }
+        if (source.AddressTemplateName != null) {
+            this.AddressTemplateName = new String(source.AddressTemplateName);
+        }
         if (source.From != null) {
             this.From = new String(source.From);
         }
@@ -89,6 +141,8 @@ public class AddressTemplateItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
+        this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
 

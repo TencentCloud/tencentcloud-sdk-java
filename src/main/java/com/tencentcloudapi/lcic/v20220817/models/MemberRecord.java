@@ -121,6 +121,21 @@ public class MemberRecord extends AbstractModel{
     private Long Device;
 
     /**
+    * 每个成员上麦次数。
+    */
+    @SerializedName("PerMemberMicCount")
+    @Expose
+    private Long PerMemberMicCount;
+
+    /**
+    * 每个成员发送消息数量。
+
+    */
+    @SerializedName("PerMemberMessageCount")
+    @Expose
+    private Long PerMemberMessageCount;
+
+    /**
      * Get 用户ID。 
      * @return UserId 用户ID。
      */
@@ -344,6 +359,42 @@ public class MemberRecord extends AbstractModel{
         this.Device = Device;
     }
 
+    /**
+     * Get 每个成员上麦次数。 
+     * @return PerMemberMicCount 每个成员上麦次数。
+     */
+    public Long getPerMemberMicCount() {
+        return this.PerMemberMicCount;
+    }
+
+    /**
+     * Set 每个成员上麦次数。
+     * @param PerMemberMicCount 每个成员上麦次数。
+     */
+    public void setPerMemberMicCount(Long PerMemberMicCount) {
+        this.PerMemberMicCount = PerMemberMicCount;
+    }
+
+    /**
+     * Get 每个成员发送消息数量。
+ 
+     * @return PerMemberMessageCount 每个成员发送消息数量。
+
+     */
+    public Long getPerMemberMessageCount() {
+        return this.PerMemberMessageCount;
+    }
+
+    /**
+     * Set 每个成员发送消息数量。
+
+     * @param PerMemberMessageCount 每个成员发送消息数量。
+
+     */
+    public void setPerMemberMessageCount(Long PerMemberMessageCount) {
+        this.PerMemberMessageCount = PerMemberMessageCount;
+    }
+
     public MemberRecord() {
     }
 
@@ -394,6 +445,12 @@ public class MemberRecord extends AbstractModel{
         if (source.Device != null) {
             this.Device = new Long(source.Device);
         }
+        if (source.PerMemberMicCount != null) {
+            this.PerMemberMicCount = new Long(source.PerMemberMicCount);
+        }
+        if (source.PerMemberMessageCount != null) {
+            this.PerMemberMessageCount = new Long(source.PerMemberMessageCount);
+        }
     }
 
 
@@ -415,6 +472,8 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "IPAddress", this.IPAddress);
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Device", this.Device);
+        this.setParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
+        this.setParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
 
     }
 }

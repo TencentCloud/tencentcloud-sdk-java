@@ -120,6 +120,9 @@ public enum KmsErrorCode {
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
     // 用户导入类型的CMK禁止轮换。
      UNSUPPORTEDOPERATION_EXTERNALCMKCANNOTROTATE("UnsupportedOperation.ExternalCmkCanNotRotate"),
      

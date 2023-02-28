@@ -44,6 +44,13 @@ public class CreateEventBusRequest extends AbstractModel{
     private Long SaveDays;
 
     /**
+    * EB是否开启存储
+    */
+    @SerializedName("EnableStore")
+    @Expose
+    private Boolean EnableStore;
+
+    /**
      * Get 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符 
      * @return EventBusName 事件集名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
      */
@@ -91,6 +98,22 @@ public class CreateEventBusRequest extends AbstractModel{
         this.SaveDays = SaveDays;
     }
 
+    /**
+     * Get EB是否开启存储 
+     * @return EnableStore EB是否开启存储
+     */
+    public Boolean getEnableStore() {
+        return this.EnableStore;
+    }
+
+    /**
+     * Set EB是否开启存储
+     * @param EnableStore EB是否开启存储
+     */
+    public void setEnableStore(Boolean EnableStore) {
+        this.EnableStore = EnableStore;
+    }
+
     public CreateEventBusRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateEventBusRequest extends AbstractModel{
         if (source.SaveDays != null) {
             this.SaveDays = new Long(source.SaveDays);
         }
+        if (source.EnableStore != null) {
+            this.EnableStore = new Boolean(source.EnableStore);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateEventBusRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SaveDays", this.SaveDays);
+        this.setParamSimple(map, prefix + "EnableStore", this.EnableStore);
 
     }
 }

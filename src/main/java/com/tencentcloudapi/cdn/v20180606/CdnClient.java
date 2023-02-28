@@ -573,6 +573,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *DescribeHttpsPackages 用于查询 CDN HTTPS请求包详情。
+     * @param req DescribeHttpsPackagesRequest
+     * @return DescribeHttpsPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHttpsPackagesResponse DescribeHttpsPackages(DescribeHttpsPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHttpsPackagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHttpsPackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHttpsPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。 
      * @param req DescribeImageConfigRequest
      * @return DescribeImageConfigResponse

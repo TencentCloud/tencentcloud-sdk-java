@@ -67,6 +67,20 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
     private Long RealEndTime;
 
     /**
+    * 房间消息总数。
+    */
+    @SerializedName("MessageCount")
+    @Expose
+    private Long MessageCount;
+
+    /**
+    * 房间连麦总数。
+    */
+    @SerializedName("MicCount")
+    @Expose
+    private Long MicCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -178,6 +192,38 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
     }
 
     /**
+     * Get 房间消息总数。 
+     * @return MessageCount 房间消息总数。
+     */
+    public Long getMessageCount() {
+        return this.MessageCount;
+    }
+
+    /**
+     * Set 房间消息总数。
+     * @param MessageCount 房间消息总数。
+     */
+    public void setMessageCount(Long MessageCount) {
+        this.MessageCount = MessageCount;
+    }
+
+    /**
+     * Get 房间连麦总数。 
+     * @return MicCount 房间连麦总数。
+     */
+    public Long getMicCount() {
+        return this.MicCount;
+    }
+
+    /**
+     * Set 房间连麦总数。
+     * @param MicCount 房间连麦总数。
+     */
+    public void setMicCount(Long MicCount) {
+        this.MicCount = MicCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -222,6 +268,12 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
         if (source.RealEndTime != null) {
             this.RealEndTime = new Long(source.RealEndTime);
         }
+        if (source.MessageCount != null) {
+            this.MessageCount = new Long(source.MessageCount);
+        }
+        if (source.MicCount != null) {
+            this.MicCount = new Long(source.MicCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -238,6 +290,8 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "MemberRecords.", this.MemberRecords);
         this.setParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
         this.setParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
+        this.setParamSimple(map, prefix + "MessageCount", this.MessageCount);
+        this.setParamSimple(map, prefix + "MicCount", this.MicCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

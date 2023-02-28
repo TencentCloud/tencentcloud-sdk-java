@@ -88,7 +88,10 @@ public enum WedataErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // 请先配置不少于一个规则。
+     UNSUPPORTEDOPERATION_NORULEINRULEGROUP("UnsupportedOperation.NoRuleInRuleGroup");
      
     private String value;
     private WedataErrorCode (String value){

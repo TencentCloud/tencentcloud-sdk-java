@@ -65,6 +65,30 @@ public class EventBus extends AbstractModel{
     private String Type;
 
     /**
+    * 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectionBriefs")
+    @Expose
+    private ConnectionBrief [] ConnectionBriefs;
+
+    /**
+    * 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetBriefs")
+    @Expose
+    private TargetBrief [] TargetBriefs;
+
+    /**
      * Get 更新时间 
      * @return ModTime 更新时间
      */
@@ -160,6 +184,66 @@ public class EventBus extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 计费模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 计费模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectionBriefs 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConnectionBrief [] getConnectionBriefs() {
+        return this.ConnectionBriefs;
+    }
+
+    /**
+     * Set 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectionBriefs 连接器基础信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectionBriefs(ConnectionBrief [] ConnectionBriefs) {
+        this.ConnectionBriefs = ConnectionBriefs;
+    }
+
+    /**
+     * Get 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetBriefs 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TargetBrief [] getTargetBriefs() {
+        return this.TargetBriefs;
+    }
+
+    /**
+     * Set 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetBriefs 目标简要信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetBriefs(TargetBrief [] TargetBriefs) {
+        this.TargetBriefs = TargetBriefs;
+    }
+
     public EventBus() {
     }
 
@@ -186,6 +270,21 @@ public class EventBus extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.ConnectionBriefs != null) {
+            this.ConnectionBriefs = new ConnectionBrief[source.ConnectionBriefs.length];
+            for (int i = 0; i < source.ConnectionBriefs.length; i++) {
+                this.ConnectionBriefs[i] = new ConnectionBrief(source.ConnectionBriefs[i]);
+            }
+        }
+        if (source.TargetBriefs != null) {
+            this.TargetBriefs = new TargetBrief[source.TargetBriefs.length];
+            for (int i = 0; i < source.TargetBriefs.length; i++) {
+                this.TargetBriefs[i] = new TargetBrief(source.TargetBriefs[i]);
+            }
+        }
     }
 
 
@@ -199,6 +298,9 @@ public class EventBus extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamArrayObj(map, prefix + "ConnectionBriefs.", this.ConnectionBriefs);
+        this.setParamArrayObj(map, prefix + "TargetBriefs.", this.TargetBriefs);
 
     }
 }

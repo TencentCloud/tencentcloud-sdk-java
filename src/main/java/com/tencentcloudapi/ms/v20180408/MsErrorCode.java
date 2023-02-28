@@ -60,6 +60,9 @@ public enum MsErrorCode {
     // 缺少ItemIds字段。
      MISSINGPARAMETER_MISSINGITEMIDS("MissingParameter.MissingItemIds"),
      
+    // 资源不存在。
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
     // ItemId不存在。
      RESOURCENOTFOUND_ITEMIDNOTFOUND("ResourceNotFound.ItemIdNotFound"),
      

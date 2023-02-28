@@ -36,6 +36,9 @@ public enum DomainErrorCode {
     // 域名过户失败。
      FAILEDOPERATION_MODIFYDOMAINOWNERFAILED("FailedOperation.ModifyDomainOwnerFailed"),
      
+    // 禁止的手机或邮箱。
+     FAILEDOPERATION_PROHIBITPHONEEMAIL("FailedOperation.ProhibitPhoneEmail"),
+     
     // 域名注册操作失败，请稍后重试。
      FAILEDOPERATION_REGISTERDOMAIN("FailedOperation.RegisterDomain"),
      

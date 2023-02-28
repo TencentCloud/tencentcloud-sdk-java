@@ -79,6 +79,45 @@ public class GetEventBusResponse extends AbstractModel{
     private String Type;
 
     /**
+    * 计费模式
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SaveDays")
+    @Expose
+    private Long SaveDays;
+
+    /**
+    * EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogTopicId")
+    @Expose
+    private String LogTopicId;
+
+    /**
+    * 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableStore")
+    @Expose
+    private Boolean EnableStore;
+
+    /**
+    * 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LinkMode")
+    @Expose
+    private String LinkMode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +253,102 @@ public class GetEventBusResponse extends AbstractModel{
     }
 
     /**
+     * Get 计费模式 
+     * @return PayMode 计费模式
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费模式
+     * @param PayMode 计费模式
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SaveDays EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSaveDays() {
+        return this.SaveDays;
+    }
+
+    /**
+     * Set EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SaveDays EB日志存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSaveDays(Long SaveDays) {
+        this.SaveDays = SaveDays;
+    }
+
+    /**
+     * Get EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogTopicId EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogTopicId() {
+        return this.LogTopicId;
+    }
+
+    /**
+     * Set EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogTopicId EB日志主题ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogTopicId(String LogTopicId) {
+        this.LogTopicId = LogTopicId;
+    }
+
+    /**
+     * Get 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableStore 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableStore() {
+        return this.EnableStore;
+    }
+
+    /**
+     * Set 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableStore 是否开启存储
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableStore(Boolean EnableStore) {
+        this.EnableStore = EnableStore;
+    }
+
+    /**
+     * Get 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LinkMode 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLinkMode() {
+        return this.LinkMode;
+    }
+
+    /**
+     * Set 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LinkMode 消息序列，是否有序
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLinkMode(String LinkMode) {
+        this.LinkMode = LinkMode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +396,21 @@ public class GetEventBusResponse extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.SaveDays != null) {
+            this.SaveDays = new Long(source.SaveDays);
+        }
+        if (source.LogTopicId != null) {
+            this.LogTopicId = new String(source.LogTopicId);
+        }
+        if (source.EnableStore != null) {
+            this.EnableStore = new Boolean(source.EnableStore);
+        }
+        if (source.LinkMode != null) {
+            this.LinkMode = new String(source.LinkMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +429,11 @@ public class GetEventBusResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusName", this.EventBusName);
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "SaveDays", this.SaveDays);
+        this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "EnableStore", this.EnableStore);
+        this.setParamSimple(map, prefix + "LinkMode", this.LinkMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
