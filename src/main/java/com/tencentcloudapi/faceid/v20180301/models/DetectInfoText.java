@@ -55,7 +55,7 @@ public class DetectInfoText extends AbstractModel{
     private String Name;
 
     /**
-    * Ocr识别结果。民族。
+    * 身份校验环节识别结果：民族。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrNation")
@@ -63,7 +63,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrNation;
 
     /**
-    * Ocr识别结果。家庭住址。
+    * 身份校验环节识别结果：家庭住址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrAddress")
@@ -71,7 +71,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrAddress;
 
     /**
-    * Ocr识别结果。生日。
+    * 身份校验环节识别结果：生日。格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrBirth")
@@ -79,7 +79,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrBirth;
 
     /**
-    * Ocr识别结果。签发机关。
+    * 身份校验环节识别结果：签发机关。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrAuthority")
@@ -87,7 +87,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrAuthority;
 
     /**
-    * Ocr识别结果。有效日期。
+    * 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrValidDate")
@@ -95,7 +95,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrValidDate;
 
     /**
-    * Ocr识别结果。姓名。
+    * 身份校验环节识别结果：姓名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrName")
@@ -103,7 +103,7 @@ public class DetectInfoText extends AbstractModel{
     private String OcrName;
 
     /**
-    * Ocr识别结果。身份证号。
+    * 身份校验环节识别结果：身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrIdCard")
@@ -111,12 +111,21 @@ public class DetectInfoText extends AbstractModel{
     private String OcrIdCard;
 
     /**
-    * Ocr识别结果。性别。
+    * 身份校验环节识别结果：性别。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrGender")
     @Expose
     private String OcrGender;
+
+    /**
+    * 身份校验环节采用的信息上传方式。
+取值有"NFC"、"OCR"、"手动输入"、"其他"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdInfoFrom")
+    @Expose
+    private String IdInfoFrom;
 
     /**
     * 本次流程最终活体结果。0为成功
@@ -296,9 +305,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。民族。
+     * Get 身份校验环节识别结果：民族。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrNation Ocr识别结果。民族。
+     * @return OcrNation 身份校验环节识别结果：民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrNation() {
@@ -306,9 +315,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。民族。
+     * Set 身份校验环节识别结果：民族。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrNation Ocr识别结果。民族。
+     * @param OcrNation 身份校验环节识别结果：民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrNation(String OcrNation) {
@@ -316,9 +325,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。家庭住址。
+     * Get 身份校验环节识别结果：家庭住址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrAddress Ocr识别结果。家庭住址。
+     * @return OcrAddress 身份校验环节识别结果：家庭住址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrAddress() {
@@ -326,9 +335,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。家庭住址。
+     * Set 身份校验环节识别结果：家庭住址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrAddress Ocr识别结果。家庭住址。
+     * @param OcrAddress 身份校验环节识别结果：家庭住址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrAddress(String OcrAddress) {
@@ -336,9 +345,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。生日。
+     * Get 身份校验环节识别结果：生日。格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrBirth Ocr识别结果。生日。
+     * @return OcrBirth 身份校验环节识别结果：生日。格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrBirth() {
@@ -346,9 +355,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。生日。
+     * Set 身份校验环节识别结果：生日。格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrBirth Ocr识别结果。生日。
+     * @param OcrBirth 身份校验环节识别结果：生日。格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrBirth(String OcrBirth) {
@@ -356,9 +365,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。签发机关。
+     * Get 身份校验环节识别结果：签发机关。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrAuthority Ocr识别结果。签发机关。
+     * @return OcrAuthority 身份校验环节识别结果：签发机关。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrAuthority() {
@@ -366,9 +375,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。签发机关。
+     * Set 身份校验环节识别结果：签发机关。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrAuthority Ocr识别结果。签发机关。
+     * @param OcrAuthority 身份校验环节识别结果：签发机关。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrAuthority(String OcrAuthority) {
@@ -376,9 +385,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。有效日期。
+     * Get 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrValidDate Ocr识别结果。有效日期。
+     * @return OcrValidDate 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrValidDate() {
@@ -386,9 +395,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。有效日期。
+     * Set 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrValidDate Ocr识别结果。有效日期。
+     * @param OcrValidDate 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrValidDate(String OcrValidDate) {
@@ -396,9 +405,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。姓名。
+     * Get 身份校验环节识别结果：姓名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrName Ocr识别结果。姓名。
+     * @return OcrName 身份校验环节识别结果：姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrName() {
@@ -406,9 +415,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。姓名。
+     * Set 身份校验环节识别结果：姓名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrName Ocr识别结果。姓名。
+     * @param OcrName 身份校验环节识别结果：姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrName(String OcrName) {
@@ -416,9 +425,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。身份证号。
+     * Get 身份校验环节识别结果：身份证号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrIdCard Ocr识别结果。身份证号。
+     * @return OcrIdCard 身份校验环节识别结果：身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrIdCard() {
@@ -426,9 +435,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。身份证号。
+     * Set 身份校验环节识别结果：身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrIdCard Ocr识别结果。身份证号。
+     * @param OcrIdCard 身份校验环节识别结果：身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrIdCard(String OcrIdCard) {
@@ -436,9 +445,9 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Get Ocr识别结果。性别。
+     * Get 身份校验环节识别结果：性别。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrGender Ocr识别结果。性别。
+     * @return OcrGender 身份校验环节识别结果：性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrGender() {
@@ -446,13 +455,37 @@ public class DetectInfoText extends AbstractModel{
     }
 
     /**
-     * Set Ocr识别结果。性别。
+     * Set 身份校验环节识别结果：性别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrGender Ocr识别结果。性别。
+     * @param OcrGender 身份校验环节识别结果：性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrGender(String OcrGender) {
         this.OcrGender = OcrGender;
+    }
+
+    /**
+     * Get 身份校验环节采用的信息上传方式。
+取值有"NFC"、"OCR"、"手动输入"、"其他"
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdInfoFrom 身份校验环节采用的信息上传方式。
+取值有"NFC"、"OCR"、"手动输入"、"其他"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdInfoFrom() {
+        return this.IdInfoFrom;
+    }
+
+    /**
+     * Set 身份校验环节采用的信息上传方式。
+取值有"NFC"、"OCR"、"手动输入"、"其他"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdInfoFrom 身份校验环节采用的信息上传方式。
+取值有"NFC"、"OCR"、"手动输入"、"其他"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdInfoFrom(String IdInfoFrom) {
+        this.IdInfoFrom = IdInfoFrom;
     }
 
     /**
@@ -755,6 +788,9 @@ public class DetectInfoText extends AbstractModel{
         if (source.OcrGender != null) {
             this.OcrGender = new String(source.OcrGender);
         }
+        if (source.IdInfoFrom != null) {
+            this.IdInfoFrom = new String(source.IdInfoFrom);
+        }
         if (source.LiveStatus != null) {
             this.LiveStatus = new Long(source.LiveStatus);
         }
@@ -810,6 +846,7 @@ public class DetectInfoText extends AbstractModel{
         this.setParamSimple(map, prefix + "OcrName", this.OcrName);
         this.setParamSimple(map, prefix + "OcrIdCard", this.OcrIdCard);
         this.setParamSimple(map, prefix + "OcrGender", this.OcrGender);
+        this.setParamSimple(map, prefix + "IdInfoFrom", this.IdInfoFrom);
         this.setParamSimple(map, prefix + "LiveStatus", this.LiveStatus);
         this.setParamSimple(map, prefix + "LiveMsg", this.LiveMsg);
         this.setParamSimple(map, prefix + "Comparestatus", this.Comparestatus);

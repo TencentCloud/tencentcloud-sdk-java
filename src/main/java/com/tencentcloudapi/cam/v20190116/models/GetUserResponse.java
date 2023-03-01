@@ -80,6 +80,22 @@ public class GetUserResponse extends AbstractModel{
     private String Email;
 
     /**
+    * 最近一次登录ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecentlyLoginIP")
+    @Expose
+    private String RecentlyLoginIP;
+
+    /**
+    * 最近一次登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecentlyLoginTime")
+    @Expose
+    private String RecentlyLoginTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -219,6 +235,46 @@ public class GetUserResponse extends AbstractModel{
     }
 
     /**
+     * Get 最近一次登录ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecentlyLoginIP 最近一次登录ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecentlyLoginIP() {
+        return this.RecentlyLoginIP;
+    }
+
+    /**
+     * Set 最近一次登录ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecentlyLoginIP 最近一次登录ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecentlyLoginIP(String RecentlyLoginIP) {
+        this.RecentlyLoginIP = RecentlyLoginIP;
+    }
+
+    /**
+     * Get 最近一次登录时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecentlyLoginTime 最近一次登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecentlyLoginTime() {
+        return this.RecentlyLoginTime;
+    }
+
+    /**
+     * Set 最近一次登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecentlyLoginTime 最近一次登录时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecentlyLoginTime(String RecentlyLoginTime) {
+        this.RecentlyLoginTime = RecentlyLoginTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -266,6 +322,12 @@ public class GetUserResponse extends AbstractModel{
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.RecentlyLoginIP != null) {
+            this.RecentlyLoginIP = new String(source.RecentlyLoginIP);
+        }
+        if (source.RecentlyLoginTime != null) {
+            this.RecentlyLoginTime = new String(source.RecentlyLoginTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -284,6 +346,8 @@ public class GetUserResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "RecentlyLoginIP", this.RecentlyLoginIP);
+        this.setParamSimple(map, prefix + "RecentlyLoginTime", this.RecentlyLoginTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

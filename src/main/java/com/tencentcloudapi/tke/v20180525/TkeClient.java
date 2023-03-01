@@ -1999,7 +1999,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *获取事件、审计和日志的状态接口
+     *获取事件、审计和日志的状态
      * @param req DescribeEdgeLogSwitchesRequest
      * @return DescribeEdgeLogSwitchesResponse
      * @throws TencentCloudSDKException

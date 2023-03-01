@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.ims.v20201229.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstanceHourResponse extends AbstractModel{
+public class CreateImageModerationAsyncTaskResponse extends AbstractModel{
 
     /**
-    * 订单ID。
+    * 该字段用于返回检测对象对应请求参数中的DataId。
     */
-    @SerializedName("DealId")
+    @SerializedName("DataId")
     @Expose
-    private String DealId;
-
-    /**
-    * 创建的实例ID列表。
-    */
-    @SerializedName("InstanceIds")
-    @Expose
-    private String [] InstanceIds;
+    private String DataId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class CreateDBInstanceHourResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单ID。 
-     * @return DealId 订单ID。
+     * Get 该字段用于返回检测对象对应请求参数中的DataId。 
+     * @return DataId 该字段用于返回检测对象对应请求参数中的DataId。
      */
-    public String getDealId() {
-        return this.DealId;
+    public String getDataId() {
+        return this.DataId;
     }
 
     /**
-     * Set 订单ID。
-     * @param DealId 订单ID。
+     * Set 该字段用于返回检测对象对应请求参数中的DataId。
+     * @param DataId 该字段用于返回检测对象对应请求参数中的DataId。
      */
-    public void setDealId(String DealId) {
-        this.DealId = DealId;
-    }
-
-    /**
-     * Get 创建的实例ID列表。 
-     * @return InstanceIds 创建的实例ID列表。
-     */
-    public String [] getInstanceIds() {
-        return this.InstanceIds;
-    }
-
-    /**
-     * Set 创建的实例ID列表。
-     * @param InstanceIds 创建的实例ID列表。
-     */
-    public void setInstanceIds(String [] InstanceIds) {
-        this.InstanceIds = InstanceIds;
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class CreateDBInstanceHourResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateDBInstanceHourResponse() {
+    public CreateImageModerationAsyncTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDBInstanceHourResponse(CreateDBInstanceHourResponse source) {
-        if (source.DealId != null) {
-            this.DealId = new String(source.DealId);
-        }
-        if (source.InstanceIds != null) {
-            this.InstanceIds = new String[source.InstanceIds.length];
-            for (int i = 0; i < source.InstanceIds.length; i++) {
-                this.InstanceIds[i] = new String(source.InstanceIds[i]);
-            }
+    public CreateImageModerationAsyncTaskResponse(CreateImageModerationAsyncTaskResponse source) {
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class CreateDBInstanceHourResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealId", this.DealId);
-        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

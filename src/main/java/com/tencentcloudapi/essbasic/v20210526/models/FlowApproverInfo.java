@@ -123,7 +123,8 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     private Component [] SignComponents;
 
     /**
-    * 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
+    * 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
+HANDWRITE -手写签名
     */
     @SerializedName("ComponentLimitType")
     @Expose
@@ -402,16 +403,20 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     }
 
     /**
-     * Get 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名) 
-     * @return ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
+     * Get 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
+HANDWRITE -手写签名 
+     * @return ComponentLimitType 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
+HANDWRITE -手写签名
      */
     public String [] getComponentLimitType() {
         return this.ComponentLimitType;
     }
 
     /**
-     * Set 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
-     * @param ComponentLimitType 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
+     * Set 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
+HANDWRITE -手写签名
+     * @param ComponentLimitType 个人签署方指定签署控件类型，目前支持：OCR_ESIGN -AI智慧手写签名
+HANDWRITE -手写签名
      */
     public void setComponentLimitType(String [] ComponentLimitType) {
         this.ComponentLimitType = ComponentLimitType;

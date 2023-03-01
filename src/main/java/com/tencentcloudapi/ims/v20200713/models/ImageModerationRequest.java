@@ -44,7 +44,7 @@ public class ImageModerationRequest extends AbstractModel{
     private String FileContent;
 
     /**
-    * 图片资源访问链接，__与FileContent参数必须二选一输入__
+    * 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
     */
     @SerializedName("FileUrl")
     @Expose
@@ -127,16 +127,16 @@ public class ImageModerationRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片资源访问链接，__与FileContent参数必须二选一输入__ 
-     * @return FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__
+     * Get 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError 
+     * @return FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set 图片资源访问链接，__与FileContent参数必须二选一输入__
-     * @param FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__
+     * Set 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
+     * @param FileUrl 图片资源访问链接，__与FileContent参数必须二选一输入__ 。由于网络安全策略，送审带重定向的链接，可能引起下载失败，请尽量避免，比如Http返回302状态码的链接，可能导致接口返回ResourceUnavailable.ImageDownloadError
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;

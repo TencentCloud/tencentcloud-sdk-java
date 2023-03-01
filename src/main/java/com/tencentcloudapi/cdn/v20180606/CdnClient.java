@@ -99,7 +99,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *CreateDiagnoseUrl 用于添加域名诊断任务URL
+     *CreateDiagnoseUrl 用于添加域名诊断任务URL， <font color=red>将于 **2023年5月31日** 下线</font><br>
      * @param req CreateDiagnoseUrlRequest
      * @return CreateDiagnoseUrlResponse
      * @throws TencentCloudSDKException
@@ -452,7 +452,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *DescribeDiagnoseReport 用于获取指定报告id的内容
+     *DescribeDiagnoseReport 用于获取指定报告id的内容， <font color=red>将于 **2023年5月31日** 下线</font><br>
      * @param req DescribeDiagnoseReportRequest
      * @return DescribeDiagnoseReportResponse
      * @throws TencentCloudSDKException
@@ -1181,7 +1181,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情。
+     *ListDiagnoseReport 用于获取用户诊断URL访问后各个子任务的简要详情， <font color=red>将于 **2023年5月31日** 下线</font><br>
      * @param req ListDiagnoseReportRequest
      * @return ListDiagnoseReportResponse
      * @throws TencentCloudSDKException
