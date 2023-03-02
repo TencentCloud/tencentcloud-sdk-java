@@ -63,6 +63,14 @@ public class NormPart extends AbstractModel{
     private String Upper;
 
     /**
+    * 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartDetail")
+    @Expose
+    private PartDesc PartDetail;
+
+    /**
      * Get 部位值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Part 部位值
@@ -162,6 +170,26 @@ public class NormPart extends AbstractModel{
         this.Upper = Upper;
     }
 
+    /**
+     * Get 部位详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartDetail 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PartDesc getPartDetail() {
+        return this.PartDetail;
+    }
+
+    /**
+     * Set 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartDetail 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartDetail(PartDesc PartDetail) {
+        this.PartDetail = PartDetail;
+    }
+
     public NormPart() {
     }
 
@@ -185,6 +213,9 @@ public class NormPart extends AbstractModel{
         if (source.Upper != null) {
             this.Upper = new String(source.Upper);
         }
+        if (source.PartDetail != null) {
+            this.PartDetail = new PartDesc(source.PartDetail);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class NormPart extends AbstractModel{
         this.setParamSimple(map, prefix + "Tissue", this.Tissue);
         this.setParamSimple(map, prefix + "TissueDirection", this.TissueDirection);
         this.setParamSimple(map, prefix + "Upper", this.Upper);
+        this.setParamObj(map, prefix + "PartDetail.", this.PartDetail);
 
     }
 }

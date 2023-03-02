@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ChannelCreateSealPolicyRequest extends AbstractModel{
 
     /**
-    * 用户渠道信息
+    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 指定印章
+    * 指定印章ID
     */
     @SerializedName("SealId")
     @Expose
@@ -44,46 +44,46 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     private String [] UserIds;
 
     /**
-    * 企业机构信息
+    * 企业机构信息，不用传
     */
     @SerializedName("Organization")
     @Expose
     private OrganizationInfo Organization;
 
     /**
-    * 操作人（用户）信息
+    * 操作人（用户）信息，不用传
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-     * Get 用户渠道信息 
-     * @return Agent 用户渠道信息
+     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 用户渠道信息
-     * @param Agent 用户渠道信息
+     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 指定印章 
-     * @return SealId 指定印章
+     * Get 指定印章ID 
+     * @return SealId 指定印章ID
      */
     public String getSealId() {
         return this.SealId;
     }
 
     /**
-     * Set 指定印章
-     * @param SealId 指定印章
+     * Set 指定印章ID
+     * @param SealId 指定印章ID
      */
     public void setSealId(String SealId) {
         this.SealId = SealId;
@@ -106,32 +106,32 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 企业机构信息 
-     * @return Organization 企业机构信息
+     * Get 企业机构信息，不用传 
+     * @return Organization 企业机构信息，不用传
      */
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
 
     /**
-     * Set 企业机构信息
-     * @param Organization 企业机构信息
+     * Set 企业机构信息，不用传
+     * @param Organization 企业机构信息，不用传
      */
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
 
     /**
-     * Get 操作人（用户）信息 
-     * @return Operator 操作人（用户）信息
+     * Get 操作人（用户）信息，不用传 
+     * @return Operator 操作人（用户）信息，不用传
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人（用户）信息
-     * @param Operator 操作人（用户）信息
+     * Set 操作人（用户）信息，不用传
+     * @param Operator 操作人（用户）信息，不用传
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

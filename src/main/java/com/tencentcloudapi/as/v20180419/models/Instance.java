@@ -58,13 +58,19 @@ public class Instance extends AbstractModel{
 <li>TERMINATING：中止中
 <li>TERMINATION_FAILED：中止失败
 <li>ATTACHING：绑定中
+<li>ATTACH_FAILED：绑定失败
 <li>DETACHING：解绑中
-<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>DETACH_FAILED：解绑失败
+<li>ATTACHING_LB：绑定LB中
+<li>DETACHING_LB：解绑LB中
+<li>MODIFYING_LB：修改LB中
 <li>STARTING：开机中
 <li>START_FAILED：开机失败
 <li>STOPPING：关机中
 <li>STOP_FAILED：关机失败
 <li>STOPPED：已关机
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -198,13 +204,19 @@ public class Instance extends AbstractModel{
 <li>TERMINATING：中止中
 <li>TERMINATION_FAILED：中止失败
 <li>ATTACHING：绑定中
+<li>ATTACH_FAILED：绑定失败
 <li>DETACHING：解绑中
-<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>DETACH_FAILED：解绑失败
+<li>ATTACHING_LB：绑定LB中
+<li>DETACHING_LB：解绑LB中
+<li>MODIFYING_LB：修改LB中
 <li>STARTING：开机中
 <li>START_FAILED：开机失败
 <li>STOPPING：关机中
 <li>STOP_FAILED：关机失败
-<li>STOPPED：已关机 
+<li>STOPPED：已关机
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中 
      * @return LifeCycleState 生命周期状态，取值如下：<br>
 <li>IN_SERVICE：运行中
 <li>CREATING：创建中
@@ -212,13 +224,19 @@ public class Instance extends AbstractModel{
 <li>TERMINATING：中止中
 <li>TERMINATION_FAILED：中止失败
 <li>ATTACHING：绑定中
+<li>ATTACH_FAILED：绑定失败
 <li>DETACHING：解绑中
-<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>DETACH_FAILED：解绑失败
+<li>ATTACHING_LB：绑定LB中
+<li>DETACHING_LB：解绑LB中
+<li>MODIFYING_LB：修改LB中
 <li>STARTING：开机中
 <li>START_FAILED：开机失败
 <li>STOPPING：关机中
 <li>STOP_FAILED：关机失败
 <li>STOPPED：已关机
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
@@ -232,13 +250,19 @@ public class Instance extends AbstractModel{
 <li>TERMINATING：中止中
 <li>TERMINATION_FAILED：中止失败
 <li>ATTACHING：绑定中
+<li>ATTACH_FAILED：绑定失败
 <li>DETACHING：解绑中
-<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>DETACH_FAILED：解绑失败
+<li>ATTACHING_LB：绑定LB中
+<li>DETACHING_LB：解绑LB中
+<li>MODIFYING_LB：修改LB中
 <li>STARTING：开机中
 <li>START_FAILED：开机失败
 <li>STOPPING：关机中
 <li>STOP_FAILED：关机失败
 <li>STOPPED：已关机
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
      * @param LifeCycleState 生命周期状态，取值如下：<br>
 <li>IN_SERVICE：运行中
 <li>CREATING：创建中
@@ -246,13 +270,19 @@ public class Instance extends AbstractModel{
 <li>TERMINATING：中止中
 <li>TERMINATION_FAILED：中止失败
 <li>ATTACHING：绑定中
+<li>ATTACH_FAILED：绑定失败
 <li>DETACHING：解绑中
-<li>ATTACHING_LB：绑定LB中<li>DETACHING_LB：解绑LB中
+<li>DETACH_FAILED：解绑失败
+<li>ATTACHING_LB：绑定LB中
+<li>DETACHING_LB：解绑LB中
+<li>MODIFYING_LB：修改LB中
 <li>STARTING：开机中
 <li>START_FAILED：开机失败
 <li>STOPPING：关机中
 <li>STOP_FAILED：关机失败
 <li>STOPPED：已关机
+<li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中
+<li>IN_TERMINATING_HOOK：缩容生命周期挂钩中
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;

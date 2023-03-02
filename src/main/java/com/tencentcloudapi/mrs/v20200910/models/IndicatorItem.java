@@ -119,6 +119,14 @@ public class IndicatorItem extends AbstractModel{
     private Coordinate Coords;
 
     /**
+    * 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InferNormal")
+    @Expose
+    private String InferNormal;
+
+    /**
      * Get 英文缩写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 英文缩写
@@ -358,6 +366,26 @@ public class IndicatorItem extends AbstractModel{
         this.Coords = Coords;
     }
 
+    /**
+     * Get 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InferNormal 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInferNormal() {
+        return this.InferNormal;
+    }
+
+    /**
+     * Set 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InferNormal 推测结果是否异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInferNormal(String InferNormal) {
+        this.InferNormal = InferNormal;
+    }
+
     public IndicatorItem() {
     }
 
@@ -402,6 +430,9 @@ public class IndicatorItem extends AbstractModel{
         if (source.Coords != null) {
             this.Coords = new Coordinate(source.Coords);
         }
+        if (source.InferNormal != null) {
+            this.InferNormal = new String(source.InferNormal);
+        }
     }
 
 
@@ -421,6 +452,7 @@ public class IndicatorItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ItemString", this.ItemString);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamObj(map, prefix + "Coords.", this.Coords);
+        this.setParamSimple(map, prefix + "InferNormal", this.InferNormal);
 
     }
 }

@@ -73,7 +73,7 @@ public class MixLayoutParams extends AbstractModel{
     private Long MediaId;
 
     /**
-    * 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+    * 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
     */
     @SerializedName("BackgroundImageUrl")
     @Expose
@@ -262,16 +262,16 @@ public class MixLayoutParams extends AbstractModel{
     }
 
     /**
-     * Get 下载的url地址， 只支持jpg， png，大小限制不超过5M。 
-     * @return BackgroundImageUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * Get 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。 
+     * @return BackgroundImageUrl 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
      */
     public String getBackgroundImageUrl() {
         return this.BackgroundImageUrl;
     }
 
     /**
-     * Set 下载的url地址， 只支持jpg， png，大小限制不超过5M。
-     * @param BackgroundImageUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * Set 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
+     * @param BackgroundImageUrl 图片的url地址， 只支持jpg， png，大小限制不超过5M，url不可包含中文。
      */
     public void setBackgroundImageUrl(String BackgroundImageUrl) {
         this.BackgroundImageUrl = BackgroundImageUrl;

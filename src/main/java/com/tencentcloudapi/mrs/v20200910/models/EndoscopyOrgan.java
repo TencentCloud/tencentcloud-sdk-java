@@ -63,6 +63,14 @@ public class EndoscopyOrgan extends AbstractModel{
     private BlockInfo [] SymDescList;
 
     /**
+    * 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coords")
+    @Expose
+    private Coord [] Coords;
+
+    /**
      * Get 部位
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Part 部位
@@ -162,6 +170,26 @@ public class EndoscopyOrgan extends AbstractModel{
         this.SymDescList = SymDescList;
     }
 
+    /**
+     * Get 坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coord [] getCoords() {
+        return this.Coords;
+    }
+
+    /**
+     * Set 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoords(Coord [] Coords) {
+        this.Coords = Coords;
+    }
+
     public EndoscopyOrgan() {
     }
 
@@ -191,6 +219,12 @@ public class EndoscopyOrgan extends AbstractModel{
                 this.SymDescList[i] = new BlockInfo(source.SymDescList[i]);
             }
         }
+        if (source.Coords != null) {
+            this.Coords = new Coord[source.Coords.length];
+            for (int i = 0; i < source.Coords.length; i++) {
+                this.Coords[i] = new Coord(source.Coords[i]);
+            }
+        }
     }
 
 
@@ -203,6 +237,7 @@ public class EndoscopyOrgan extends AbstractModel{
         this.setParamSimple(map, prefix + "Src", this.Src);
         this.setParamSimple(map, prefix + "PartAlias", this.PartAlias);
         this.setParamArrayObj(map, prefix + "SymDescList.", this.SymDescList);
+        this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
 
     }
 }

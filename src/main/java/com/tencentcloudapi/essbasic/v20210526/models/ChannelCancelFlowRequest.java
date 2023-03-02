@@ -30,7 +30,7 @@ public class ChannelCancelFlowRequest extends AbstractModel{
     private String FlowId;
 
     /**
-    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -44,13 +44,6 @@ public class ChannelCancelFlowRequest extends AbstractModel{
     private String CancelMessage;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 撤销理由自定义格式；选项：
 0 默认格式
 1 只保留身份信息：展示为【发起方】
@@ -60,6 +53,13 @@ public class ChannelCancelFlowRequest extends AbstractModel{
     @SerializedName("CancelMessageFormat")
     @Expose
     private Long CancelMessageFormat;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 签署流程编号 
@@ -78,16 +78,16 @@ public class ChannelCancelFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
-     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -107,22 +107,6 @@ public class ChannelCancelFlowRequest extends AbstractModel{
      */
     public void setCancelMessage(String CancelMessage) {
         this.CancelMessage = CancelMessage;
-    }
-
-    /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
     }
 
     /**
@@ -157,6 +141,22 @@ public class ChannelCancelFlowRequest extends AbstractModel{
         this.CancelMessageFormat = CancelMessageFormat;
     }
 
+    /**
+     * Get 暂未开放 
+     * @return Operator 暂未开放
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Operator 暂未开放
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public ChannelCancelFlowRequest() {
     }
 
@@ -174,11 +174,11 @@ public class ChannelCancelFlowRequest extends AbstractModel{
         if (source.CancelMessage != null) {
             this.CancelMessage = new String(source.CancelMessage);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.CancelMessageFormat != null) {
             this.CancelMessageFormat = new Long(source.CancelMessageFormat);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -190,8 +190,8 @@ public class ChannelCancelFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "CancelMessageFormat", this.CancelMessageFormat);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

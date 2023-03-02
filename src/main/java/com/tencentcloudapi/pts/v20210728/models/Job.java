@@ -353,6 +353,22 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private String Message;
 
     /**
+    * test-project
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
+    * test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScenarioName")
+    @Expose
+    private String ScenarioName;
+
+    /**
      * Get 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务的JobID
@@ -1180,6 +1196,46 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.Message = Message;
     }
 
+    /**
+     * Get test-project
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName test-project
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set test-project
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName test-project
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
+     * Get test-scenario
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScenarioName test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScenarioName() {
+        return this.ScenarioName;
+    }
+
+    /**
+     * Set test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScenarioName test-scenario
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScenarioName(String ScenarioName) {
+        this.ScenarioName = ScenarioName;
+    }
+
     public Job() {
     }
 
@@ -1341,6 +1397,12 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.ScenarioName != null) {
+            this.ScenarioName = new String(source.ScenarioName);
+        }
     }
 
 
@@ -1389,6 +1451,8 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.setParamSimple(map, prefix + "NetworkReceiveRate", this.NetworkReceiveRate);
         this.setParamSimple(map, prefix + "NetworkSendRate", this.NetworkSendRate);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
 
     }
 }

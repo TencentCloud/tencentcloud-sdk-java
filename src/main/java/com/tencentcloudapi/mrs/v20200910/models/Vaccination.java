@@ -95,6 +95,14 @@ public class Vaccination extends AbstractModel{
     private String Provider;
 
     /**
+    * 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Lot")
+    @Expose
+    private String Lot;
+
+    /**
      * Get 序号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 序号
@@ -274,6 +282,26 @@ public class Vaccination extends AbstractModel{
         this.Provider = Provider;
     }
 
+    /**
+     * Get 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Lot 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLot() {
+        return this.Lot;
+    }
+
+    /**
+     * Set 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Lot 疫苗批号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLot(String Lot) {
+        this.Lot = Lot;
+    }
+
     public Vaccination() {
     }
 
@@ -309,6 +337,9 @@ public class Vaccination extends AbstractModel{
         if (source.Provider != null) {
             this.Provider = new String(source.Provider);
         }
+        if (source.Lot != null) {
+            this.Lot = new String(source.Lot);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class Vaccination extends AbstractModel{
         this.setParamSimple(map, prefix + "Clinic", this.Clinic);
         this.setParamSimple(map, prefix + "Site", this.Site);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
+        this.setParamSimple(map, prefix + "Lot", this.Lot);
 
     }
 }

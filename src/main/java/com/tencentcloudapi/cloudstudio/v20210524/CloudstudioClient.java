@@ -119,6 +119,26 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
+     *为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
+     * @param req CreateWorkspaceTemporaryTokenRequest
+     * @return CreateWorkspaceTemporaryTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkspaceTemporaryTokenResponse CreateWorkspaceTemporaryToken(CreateWorkspaceTemporaryTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWorkspaceTemporaryTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWorkspaceTemporaryTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateWorkspaceTemporaryToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除自定义模板
      * @param req DeleteCustomizeTemplatesByIdRequest
      * @return DeleteCustomizeTemplatesByIdResponse

@@ -143,7 +143,7 @@ public class Template extends AbstractModel{
     private Prescription Prescription;
 
     /**
-    * 免疫接种证明
+    * 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VaccineCertificate")
@@ -165,6 +165,94 @@ public class Template extends AbstractModel{
     @SerializedName("OcrResult")
     @Expose
     private String OcrResult;
+
+    /**
+    * 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportTypeDesc")
+    @Expose
+    private String ReportTypeDesc;
+
+    /**
+    * 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathologyV2")
+    @Expose
+    private PathologyV2 PathologyV2;
+
+    /**
+    * 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("C14")
+    @Expose
+    private Indicator C14;
+
+    /**
+    * 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exame")
+    @Expose
+    private Exame Exame;
+
+    /**
+    * 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedDocV2")
+    @Expose
+    private DischargeInfoBlock MedDocV2;
+
+    /**
+    * 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndicatorV3")
+    @Expose
+    private IndicatorV3 IndicatorV3;
+
+    /**
+    * 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Covid")
+    @Expose
+    private CovidItemsInfo Covid;
+
+    /**
+    * 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Maternity")
+    @Expose
+    private Maternity Maternity;
+
+    /**
+    * 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Eye")
+    @Expose
+    private EyeItemsInfo Eye;
+
+    /**
+    * 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BirthCert")
+    @Expose
+    private BirthCert BirthCert;
+
+    /**
+    * 时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Timeline")
+    @Expose
+    private TimelineInformation Timeline;
 
     /**
      * Get 患者信息
@@ -467,9 +555,9 @@ public class Template extends AbstractModel{
     }
 
     /**
-     * Get 免疫接种证明
+     * Get 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VaccineCertificate 免疫接种证明
+     * @return VaccineCertificate 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public VaccineCertificate getVaccineCertificate() {
@@ -477,9 +565,9 @@ public class Template extends AbstractModel{
     }
 
     /**
-     * Set 免疫接种证明
+     * Set 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VaccineCertificate 免疫接种证明
+     * @param VaccineCertificate 疫苗接种凭证
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaccineCertificate(VaccineCertificate VaccineCertificate) {
@@ -524,6 +612,226 @@ public class Template extends AbstractModel{
      */
     public void setOcrResult(String OcrResult) {
         this.OcrResult = OcrResult;
+    }
+
+    /**
+     * Get 报告类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportTypeDesc 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReportTypeDesc() {
+        return this.ReportTypeDesc;
+    }
+
+    /**
+     * Set 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportTypeDesc 报告类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportTypeDesc(String ReportTypeDesc) {
+        this.ReportTypeDesc = ReportTypeDesc;
+    }
+
+    /**
+     * Get 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathologyV2 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PathologyV2 getPathologyV2() {
+        return this.PathologyV2;
+    }
+
+    /**
+     * Set 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathologyV2 病理报告v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathologyV2(PathologyV2 PathologyV2) {
+        this.PathologyV2 = PathologyV2;
+    }
+
+    /**
+     * Get 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return C14 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Indicator getC14() {
+        return this.C14;
+    }
+
+    /**
+     * Set 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param C14 碳14尿素呼气试验
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setC14(Indicator C14) {
+        this.C14 = C14;
+    }
+
+    /**
+     * Get 体检结论
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exame 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Exame getExame() {
+        return this.Exame;
+    }
+
+    /**
+     * Set 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exame 体检结论
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExame(Exame Exame) {
+        this.Exame = Exame;
+    }
+
+    /**
+     * Get 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedDocV2 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DischargeInfoBlock getMedDocV2() {
+        return this.MedDocV2;
+    }
+
+    /**
+     * Set 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedDocV2 出院报告v2，入院报告v2，门诊病历v2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedDocV2(DischargeInfoBlock MedDocV2) {
+        this.MedDocV2 = MedDocV2;
+    }
+
+    /**
+     * Get 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndicatorV3 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IndicatorV3 getIndicatorV3() {
+        return this.IndicatorV3;
+    }
+
+    /**
+     * Set 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndicatorV3 检验报告v3
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndicatorV3(IndicatorV3 IndicatorV3) {
+        this.IndicatorV3 = IndicatorV3;
+    }
+
+    /**
+     * Get 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Covid 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CovidItemsInfo getCovid() {
+        return this.Covid;
+    }
+
+    /**
+     * Set 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Covid 核酸报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCovid(CovidItemsInfo Covid) {
+        this.Covid = Covid;
+    }
+
+    /**
+     * Get 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Maternity 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Maternity getMaternity() {
+        return this.Maternity;
+    }
+
+    /**
+     * Set 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Maternity 孕产报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaternity(Maternity Maternity) {
+        this.Maternity = Maternity;
+    }
+
+    /**
+     * Get 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Eye 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EyeItemsInfo getEye() {
+        return this.Eye;
+    }
+
+    /**
+     * Set 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Eye 眼科报告
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEye(EyeItemsInfo Eye) {
+        this.Eye = Eye;
+    }
+
+    /**
+     * Get 出生证明
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BirthCert 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BirthCert getBirthCert() {
+        return this.BirthCert;
+    }
+
+    /**
+     * Set 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BirthCert 出生证明
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBirthCert(BirthCert BirthCert) {
+        this.BirthCert = BirthCert;
+    }
+
+    /**
+     * Get 时间轴
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Timeline 时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TimelineInformation getTimeline() {
+        return this.Timeline;
+    }
+
+    /**
+     * Set 时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Timeline 时间轴
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeline(TimelineInformation Timeline) {
+        this.Timeline = Timeline;
     }
 
     public Template() {
@@ -588,6 +896,39 @@ public class Template extends AbstractModel{
         if (source.OcrResult != null) {
             this.OcrResult = new String(source.OcrResult);
         }
+        if (source.ReportTypeDesc != null) {
+            this.ReportTypeDesc = new String(source.ReportTypeDesc);
+        }
+        if (source.PathologyV2 != null) {
+            this.PathologyV2 = new PathologyV2(source.PathologyV2);
+        }
+        if (source.C14 != null) {
+            this.C14 = new Indicator(source.C14);
+        }
+        if (source.Exame != null) {
+            this.Exame = new Exame(source.Exame);
+        }
+        if (source.MedDocV2 != null) {
+            this.MedDocV2 = new DischargeInfoBlock(source.MedDocV2);
+        }
+        if (source.IndicatorV3 != null) {
+            this.IndicatorV3 = new IndicatorV3(source.IndicatorV3);
+        }
+        if (source.Covid != null) {
+            this.Covid = new CovidItemsInfo(source.Covid);
+        }
+        if (source.Maternity != null) {
+            this.Maternity = new Maternity(source.Maternity);
+        }
+        if (source.Eye != null) {
+            this.Eye = new EyeItemsInfo(source.Eye);
+        }
+        if (source.BirthCert != null) {
+            this.BirthCert = new BirthCert(source.BirthCert);
+        }
+        if (source.Timeline != null) {
+            this.Timeline = new TimelineInformation(source.Timeline);
+        }
     }
 
 
@@ -613,6 +954,17 @@ public class Template extends AbstractModel{
         this.setParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
         this.setParamSimple(map, prefix + "OcrText", this.OcrText);
         this.setParamSimple(map, prefix + "OcrResult", this.OcrResult);
+        this.setParamSimple(map, prefix + "ReportTypeDesc", this.ReportTypeDesc);
+        this.setParamObj(map, prefix + "PathologyV2.", this.PathologyV2);
+        this.setParamObj(map, prefix + "C14.", this.C14);
+        this.setParamObj(map, prefix + "Exame.", this.Exame);
+        this.setParamObj(map, prefix + "MedDocV2.", this.MedDocV2);
+        this.setParamObj(map, prefix + "IndicatorV3.", this.IndicatorV3);
+        this.setParamObj(map, prefix + "Covid.", this.Covid);
+        this.setParamObj(map, prefix + "Maternity.", this.Maternity);
+        this.setParamObj(map, prefix + "Eye.", this.Eye);
+        this.setParamObj(map, prefix + "BirthCert.", this.BirthCert);
+        this.setParamObj(map, prefix + "Timeline.", this.Timeline);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
 
     /**
-    * 渠道信息
+    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -44,30 +44,30 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     private String [] UserIds;
 
     /**
-    * 操作人（用户）信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
-    * 组织机构信息
+    * 组织机构信息，不用传
     */
     @SerializedName("Organization")
     @Expose
     private OrganizationInfo Organization;
 
     /**
-     * Get 渠道信息 
-     * @return Agent 渠道信息
+    * 操作人（用户）信息，不用传
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
+     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道信息
-     * @param Agent 渠道信息
+     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -106,35 +106,35 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作人（用户）信息 
-     * @return Operator 操作人（用户）信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作人（用户）信息
-     * @param Operator 操作人（用户）信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
-     * Get 组织机构信息 
-     * @return Organization 组织机构信息
+     * Get 组织机构信息，不用传 
+     * @return Organization 组织机构信息，不用传
      */
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
 
     /**
-     * Set 组织机构信息
-     * @param Organization 组织机构信息
+     * Set 组织机构信息，不用传
+     * @param Organization 组织机构信息，不用传
      */
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
+    }
+
+    /**
+     * Get 操作人（用户）信息，不用传 
+     * @return Operator 操作人（用户）信息，不用传
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人（用户）信息，不用传
+     * @param Operator 操作人（用户）信息，不用传
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelDeleteSealPoliciesRequest() {
@@ -157,11 +157,11 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -173,8 +173,8 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

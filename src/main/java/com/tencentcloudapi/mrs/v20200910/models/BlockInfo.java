@@ -71,6 +71,14 @@ public class BlockInfo extends AbstractModel{
     private String Name;
 
     /**
+    * 大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Size")
+    @Expose
+    private Size [] Size;
+
+    /**
      * Get 原文位置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 原文位置
@@ -190,6 +198,26 @@ public class BlockInfo extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Size 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Size [] getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Size 大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSize(Size [] Size) {
+        this.Size = Size;
+    }
+
     public BlockInfo() {
     }
 
@@ -219,6 +247,12 @@ public class BlockInfo extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Size != null) {
+            this.Size = new Size[source.Size.length];
+            for (int i = 0; i < source.Size.length; i++) {
+                this.Size[i] = new Size(source.Size[i]);
+            }
+        }
     }
 
 
@@ -232,6 +266,7 @@ public class BlockInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "Size.", this.Size);
 
     }
 }

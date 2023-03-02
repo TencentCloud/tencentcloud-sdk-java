@@ -199,6 +199,126 @@ public class Organ extends AbstractModel{
     private Long [] Index;
 
     /**
+    * 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Transparent")
+    @Expose
+    private BlockInfo Transparent;
+
+    /**
+    * MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MriAdc")
+    @Expose
+    private BlockInfo MriAdc;
+
+    /**
+    * MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MriDwi")
+    @Expose
+    private BlockInfo MriDwi;
+
+    /**
+    * MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MriT1")
+    @Expose
+    private BlockInfo MriT1;
+
+    /**
+    * MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MriT2")
+    @Expose
+    private BlockInfo MriT2;
+
+    /**
+    * CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CtHu")
+    @Expose
+    private BlockInfo CtHu;
+
+    /**
+    * SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Suvmax")
+    @Expose
+    private BlockInfo Suvmax;
+
+    /**
+    * 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Metabolism")
+    @Expose
+    private BlockInfo Metabolism;
+
+    /**
+    * 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RadioactiveUptake")
+    @Expose
+    private BlockInfo RadioactiveUptake;
+
+    /**
+    * 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LymphEnlargement")
+    @Expose
+    private BlockInfo LymphEnlargement;
+
+    /**
+    * 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageFeature")
+    @Expose
+    private BlockInfo ImageFeature;
+
+    /**
+    * 导管
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Duct")
+    @Expose
+    private BlockInfo Duct;
+
+    /**
+    * 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Trend")
+    @Expose
+    private BlockInfo Trend;
+
+    /**
+    * 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Operation")
+    @Expose
+    private BlockInfo Operation;
+
+    /**
+    * 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coords")
+    @Expose
+    private Coord [] Coords;
+
+    /**
      * Get 部位
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Part 部位
@@ -638,6 +758,306 @@ public class Organ extends AbstractModel{
         this.Index = Index;
     }
 
+    /**
+     * Get 透声度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Transparent 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getTransparent() {
+        return this.Transparent;
+    }
+
+    /**
+     * Set 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Transparent 透声度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransparent(BlockInfo Transparent) {
+        this.Transparent = Transparent;
+    }
+
+    /**
+     * Get MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MriAdc MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getMriAdc() {
+        return this.MriAdc;
+    }
+
+    /**
+     * Set MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MriAdc MRI ADC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMriAdc(BlockInfo MriAdc) {
+        this.MriAdc = MriAdc;
+    }
+
+    /**
+     * Get MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MriDwi MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getMriDwi() {
+        return this.MriDwi;
+    }
+
+    /**
+     * Set MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MriDwi MRI DWI
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMriDwi(BlockInfo MriDwi) {
+        this.MriDwi = MriDwi;
+    }
+
+    /**
+     * Get MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MriT1 MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getMriT1() {
+        return this.MriT1;
+    }
+
+    /**
+     * Set MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MriT1 MRI T1信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMriT1(BlockInfo MriT1) {
+        this.MriT1 = MriT1;
+    }
+
+    /**
+     * Get MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MriT2 MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getMriT2() {
+        return this.MriT2;
+    }
+
+    /**
+     * Set MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MriT2 MRI T2信号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMriT2(BlockInfo MriT2) {
+        this.MriT2 = MriT2;
+    }
+
+    /**
+     * Get CT HU值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CtHu CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getCtHu() {
+        return this.CtHu;
+    }
+
+    /**
+     * Set CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CtHu CT HU值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCtHu(BlockInfo CtHu) {
+        this.CtHu = CtHu;
+    }
+
+    /**
+     * Get SUmax值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Suvmax SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getSuvmax() {
+        return this.Suvmax;
+    }
+
+    /**
+     * Set SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Suvmax SUmax值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuvmax(BlockInfo Suvmax) {
+        this.Suvmax = Suvmax;
+    }
+
+    /**
+     * Get 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Metabolism 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getMetabolism() {
+        return this.Metabolism;
+    }
+
+    /**
+     * Set 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Metabolism 代谢情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetabolism(BlockInfo Metabolism) {
+        this.Metabolism = Metabolism;
+    }
+
+    /**
+     * Get 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RadioactiveUptake 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getRadioactiveUptake() {
+        return this.RadioactiveUptake;
+    }
+
+    /**
+     * Set 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RadioactiveUptake 放射性摄取
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRadioactiveUptake(BlockInfo RadioactiveUptake) {
+        this.RadioactiveUptake = RadioactiveUptake;
+    }
+
+    /**
+     * Get 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LymphEnlargement 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getLymphEnlargement() {
+        return this.LymphEnlargement;
+    }
+
+    /**
+     * Set 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LymphEnlargement 淋巴结情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLymphEnlargement(BlockInfo LymphEnlargement) {
+        this.LymphEnlargement = LymphEnlargement;
+    }
+
+    /**
+     * Get 影像特征
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageFeature 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getImageFeature() {
+        return this.ImageFeature;
+    }
+
+    /**
+     * Set 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageFeature 影像特征
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageFeature(BlockInfo ImageFeature) {
+        this.ImageFeature = ImageFeature;
+    }
+
+    /**
+     * Get 导管
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Duct 导管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getDuct() {
+        return this.Duct;
+    }
+
+    /**
+     * Set 导管
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Duct 导管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDuct(BlockInfo Duct) {
+        this.Duct = Duct;
+    }
+
+    /**
+     * Get 趋势
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Trend 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getTrend() {
+        return this.Trend;
+    }
+
+    /**
+     * Set 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Trend 趋势
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrend(BlockInfo Trend) {
+        this.Trend = Trend;
+    }
+
+    /**
+     * Get 手术情况
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Operation 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfo getOperation() {
+        return this.Operation;
+    }
+
+    /**
+     * Set 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Operation 手术情况
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperation(BlockInfo Operation) {
+        this.Operation = Operation;
+    }
+
+    /**
+     * Get 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coords 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coord [] getCoords() {
+        return this.Coords;
+    }
+
+    /**
+     * Set 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coords 器官在报告图片中的坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoords(Coord [] Coords) {
+        this.Coords = Coords;
+    }
+
     public Organ() {
     }
 
@@ -718,6 +1138,54 @@ public class Organ extends AbstractModel{
                 this.Index[i] = new Long(source.Index[i]);
             }
         }
+        if (source.Transparent != null) {
+            this.Transparent = new BlockInfo(source.Transparent);
+        }
+        if (source.MriAdc != null) {
+            this.MriAdc = new BlockInfo(source.MriAdc);
+        }
+        if (source.MriDwi != null) {
+            this.MriDwi = new BlockInfo(source.MriDwi);
+        }
+        if (source.MriT1 != null) {
+            this.MriT1 = new BlockInfo(source.MriT1);
+        }
+        if (source.MriT2 != null) {
+            this.MriT2 = new BlockInfo(source.MriT2);
+        }
+        if (source.CtHu != null) {
+            this.CtHu = new BlockInfo(source.CtHu);
+        }
+        if (source.Suvmax != null) {
+            this.Suvmax = new BlockInfo(source.Suvmax);
+        }
+        if (source.Metabolism != null) {
+            this.Metabolism = new BlockInfo(source.Metabolism);
+        }
+        if (source.RadioactiveUptake != null) {
+            this.RadioactiveUptake = new BlockInfo(source.RadioactiveUptake);
+        }
+        if (source.LymphEnlargement != null) {
+            this.LymphEnlargement = new BlockInfo(source.LymphEnlargement);
+        }
+        if (source.ImageFeature != null) {
+            this.ImageFeature = new BlockInfo(source.ImageFeature);
+        }
+        if (source.Duct != null) {
+            this.Duct = new BlockInfo(source.Duct);
+        }
+        if (source.Trend != null) {
+            this.Trend = new BlockInfo(source.Trend);
+        }
+        if (source.Operation != null) {
+            this.Operation = new BlockInfo(source.Operation);
+        }
+        if (source.Coords != null) {
+            this.Coords = new Coord[source.Coords.length];
+            for (int i = 0; i < source.Coords.length; i++) {
+                this.Coords[i] = new Coord(source.Coords[i]);
+            }
+        }
     }
 
 
@@ -747,6 +1215,21 @@ public class Organ extends AbstractModel{
         this.setParamObj(map, prefix + "InnerEchoDistribution.", this.InnerEchoDistribution);
         this.setParamSimple(map, prefix + "Src", this.Src);
         this.setParamArraySimple(map, prefix + "Index.", this.Index);
+        this.setParamObj(map, prefix + "Transparent.", this.Transparent);
+        this.setParamObj(map, prefix + "MriAdc.", this.MriAdc);
+        this.setParamObj(map, prefix + "MriDwi.", this.MriDwi);
+        this.setParamObj(map, prefix + "MriT1.", this.MriT1);
+        this.setParamObj(map, prefix + "MriT2.", this.MriT2);
+        this.setParamObj(map, prefix + "CtHu.", this.CtHu);
+        this.setParamObj(map, prefix + "Suvmax.", this.Suvmax);
+        this.setParamObj(map, prefix + "Metabolism.", this.Metabolism);
+        this.setParamObj(map, prefix + "RadioactiveUptake.", this.RadioactiveUptake);
+        this.setParamObj(map, prefix + "LymphEnlargement.", this.LymphEnlargement);
+        this.setParamObj(map, prefix + "ImageFeature.", this.ImageFeature);
+        this.setParamObj(map, prefix + "Duct.", this.Duct);
+        this.setParamObj(map, prefix + "Trend.", this.Trend);
+        this.setParamObj(map, prefix + "Operation.", this.Operation);
+        this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
 
     }
 }

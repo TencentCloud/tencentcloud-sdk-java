@@ -45,11 +45,21 @@ public class TextToObjectRequest extends AbstractModel{
     private Boolean IsUsedClassify;
 
     /**
-    * 用户类型，新客户传1，老客户可不传
+    * 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
+
+    /**
+    * 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+（1）检验报告 11，默认使用 V2，最高支持 V3。
+（2）病理报告 15，默认使用 V1，最高支持 V2。
+（3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+    */
+    @SerializedName("ReportTypeVersion")
+    @Expose
+    private ReportTypeVersion [] ReportTypeVersion;
 
     /**
      * Get 报告文本 
@@ -104,19 +114,47 @@ public class TextToObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户类型，新客户传1，老客户可不传 
-     * @return UserType 用户类型，新客户传1，老客户可不传
+     * Get 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。 
+     * @return UserType 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 用户类型，新客户传1，老客户可不传
-     * @param UserType 用户类型，新客户传1，老客户可不传
+     * Set 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
+     * @param UserType 后付费的用户类型，新客户传1，老客户可不传或传 0。2022 年 12 月 15 新增了计费项，在此时间之前已经通过商务指定优惠价格的大客户，请不传这个字段或传 0，如果传 1 会导致以前获得的折扣价格失效。在 2022 年 12 月 15 日之后，通过商务指定优惠价格的大客户请传 1。
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
+    }
+
+    /**
+     * Get 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+（1）检验报告 11，默认使用 V2，最高支持 V3。
+（2）病理报告 15，默认使用 V1，最高支持 V2。
+（3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。 
+     * @return ReportTypeVersion 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+（1）检验报告 11，默认使用 V2，最高支持 V3。
+（2）病理报告 15，默认使用 V1，最高支持 V2。
+（3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+     */
+    public ReportTypeVersion [] getReportTypeVersion() {
+        return this.ReportTypeVersion;
+    }
+
+    /**
+     * Set 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+（1）检验报告 11，默认使用 V2，最高支持 V3。
+（2）病理报告 15，默认使用 V1，最高支持 V2。
+（3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+     * @param ReportTypeVersion 可选。用于指定不同报告使用的结构化引擎版本，不同版本返回的JSON 数据结果不兼容。若不指定版本号，就默认用旧的版本号。
+（1）检验报告 11，默认使用 V2，最高支持 V3。
+（2）病理报告 15，默认使用 V1，最高支持 V2。
+（3）入院记录29、出院记录 28、病理记录 216、病程记录 217、门诊记录 210，默认使用 V1，最高支持 V2。
+     */
+    public void setReportTypeVersion(ReportTypeVersion [] ReportTypeVersion) {
+        this.ReportTypeVersion = ReportTypeVersion;
     }
 
     public TextToObjectRequest() {
@@ -139,6 +177,12 @@ public class TextToObjectRequest extends AbstractModel{
         if (source.UserType != null) {
             this.UserType = new Long(source.UserType);
         }
+        if (source.ReportTypeVersion != null) {
+            this.ReportTypeVersion = new ReportTypeVersion[source.ReportTypeVersion.length];
+            for (int i = 0; i < source.ReportTypeVersion.length; i++) {
+                this.ReportTypeVersion[i] = new ReportTypeVersion(source.ReportTypeVersion[i]);
+            }
+        }
     }
 
 
@@ -150,6 +194,7 @@ public class TextToObjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamArrayObj(map, prefix + "ReportTypeVersion.", this.ReportTypeVersion);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
-    * 网络探测实例`ID`数组。形如：[`netd-12345678`]
+    * 网络探测实例`ID`数组。形如：[`netd-12345678`]。
     */
     @SerializedName("NetDetectIds")
     @Expose
@@ -31,7 +31,7 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
     * 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 网络探测实例`ID`数组。形如：[`netd-12345678`] 
-     * @return NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * Get 网络探测实例`ID`数组。形如：[`netd-12345678`]。 
+     * @return NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      */
     public String [] getNetDetectIds() {
         return this.NetDetectIds;
     }
 
     /**
-     * Set 网络探测实例`ID`数组。形如：[`netd-12345678`]
-     * @param NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]
+     * Set 网络探测实例`ID`数组。形如：[`netd-12345678`]。
+     * @param NetDetectIds 网络探测实例`ID`数组。形如：[`netd-12345678`]。
      */
     public void setNetDetectIds(String [] NetDetectIds) {
         this.NetDetectIds = NetDetectIds;
@@ -69,9 +69,9 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
      * Get 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li> 
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li> 
      * @return Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -79,9 +79,9 @@ public class DescribeNetDetectStatesRequest extends AbstractModel{
 
     /**
      * Set 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
      * @param Filters 过滤条件，参数不支持同时指定NetDetectIds和Filters。
-<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678</li>
+<li>net-detect-id - String - （过滤条件）网络探测实例ID，形如：netd-12345678。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

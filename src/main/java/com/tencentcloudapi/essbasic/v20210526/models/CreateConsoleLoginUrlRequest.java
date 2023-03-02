@@ -87,18 +87,18 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     private String AutoJumpBackEvent;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
     */
     @SerializedName("AuthorizationTypes")
     @Expose
     private Long [] AuthorizationTypes;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用信息
@@ -249,22 +249,6 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证 
      * @return AuthorizationTypes 支持的授权方式,授权方式: "1" - 上传授权书认证  "2" - 法定代表人认证
      */
@@ -278,6 +262,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
      */
     public void setAuthorizationTypes(Long [] AuthorizationTypes) {
         this.AuthorizationTypes = AuthorizationTypes;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return Operator 暂未开放
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Operator 暂未开放
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public CreateConsoleLoginUrlRequest() {
@@ -315,14 +315,14 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         if (source.AutoJumpBackEvent != null) {
             this.AutoJumpBackEvent = new String(source.AutoJumpBackEvent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.AuthorizationTypes != null) {
             this.AuthorizationTypes = new Long[source.AuthorizationTypes.length];
             for (int i = 0; i < source.AuthorizationTypes.length; i++) {
                 this.AuthorizationTypes[i] = new Long(source.AuthorizationTypes[i]);
             }
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -340,8 +340,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "AutoJumpBackEvent", this.AutoJumpBackEvent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "AuthorizationTypes.", this.AuthorizationTypes);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

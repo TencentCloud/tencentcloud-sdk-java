@@ -31,6 +31,14 @@ public class Surgery extends AbstractModel{
     private SurgeryHistory SurgeryHistory;
 
     /**
+    * 其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OtherInfo")
+    @Expose
+    private OtherInfo OtherInfo;
+
+    /**
      * Get 手术史
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SurgeryHistory 手术史
@@ -50,6 +58,26 @@ public class Surgery extends AbstractModel{
         this.SurgeryHistory = SurgeryHistory;
     }
 
+    /**
+     * Get 其他信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OtherInfo 其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OtherInfo getOtherInfo() {
+        return this.OtherInfo;
+    }
+
+    /**
+     * Set 其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OtherInfo 其他信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOtherInfo(OtherInfo OtherInfo) {
+        this.OtherInfo = OtherInfo;
+    }
+
     public Surgery() {
     }
 
@@ -61,6 +89,9 @@ public class Surgery extends AbstractModel{
         if (source.SurgeryHistory != null) {
             this.SurgeryHistory = new SurgeryHistory(source.SurgeryHistory);
         }
+        if (source.OtherInfo != null) {
+            this.OtherInfo = new OtherInfo(source.OtherInfo);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class Surgery extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SurgeryHistory.", this.SurgeryHistory);
+        this.setParamObj(map, prefix + "OtherInfo.", this.OtherInfo);
 
     }
 }

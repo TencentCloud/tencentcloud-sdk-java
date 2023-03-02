@@ -30,7 +30,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
+    * 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填""。
     */
     @SerializedName("AppName")
     @Expose
@@ -67,16 +67,16 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。 
-     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
+     * Get 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填""。 
+     * @return AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填""。
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
-     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填空。
+     * Set 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填""。
+     * @param AppName 推流路径，与推流和播放地址中的AppName保持一致。如果只绑定域名，则此处填""。
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

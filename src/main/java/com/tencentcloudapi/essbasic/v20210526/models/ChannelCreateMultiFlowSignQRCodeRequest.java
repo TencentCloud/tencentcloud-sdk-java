@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息。
+    * 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
     */
     @SerializedName("Agent")
@@ -82,13 +82,6 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 用户信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 限制二维码用户条件（已弃用）
     */
     @SerializedName("ApproverRestrictions")
@@ -96,9 +89,16 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private ApproverRestriction ApproverRestrictions;
 
     /**
-     * Get 渠道应用相关信息。
+    * 暂未开放
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
+     * Get 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
-     * @return Agent 渠道应用相关信息。
+     * @return Agent 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
     public Agent getAgent() {
@@ -106,9 +106,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Set 渠道应用相关信息。
+     * Set 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
-     * @param Agent 渠道应用相关信息。
+     * @param Agent 应用相关信息。
 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
      */
     public void setAgent(Agent Agent) {
@@ -236,22 +236,6 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户信息 
-     * @return Operator 用户信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 用户信息
-     * @param Operator 用户信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 限制二维码用户条件（已弃用） 
      * @return ApproverRestrictions 限制二维码用户条件（已弃用）
      */
@@ -265,6 +249,22 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
      */
     public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
         this.ApproverRestrictions = ApproverRestrictions;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return Operator 暂未开放
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Operator 暂未开放
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelCreateMultiFlowSignQRCodeRequest() {
@@ -302,11 +302,11 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.ApproverRestrictions != null) {
             this.ApproverRestrictions = new ApproverRestriction(source.ApproverRestrictions);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -323,8 +323,8 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
         this.setParamArrayObj(map, prefix + "Restrictions.", this.Restrictions);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

@@ -71,6 +71,14 @@ public class SymptomInfo extends AbstractModel{
     private String Src;
 
     /**
+    * 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coords")
+    @Expose
+    private Coord [] Coords;
+
+    /**
      * Get 等级
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Grade 等级
@@ -190,6 +198,26 @@ public class SymptomInfo extends AbstractModel{
         this.Src = Src;
     }
 
+    /**
+     * Get 坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coord [] getCoords() {
+        return this.Coords;
+    }
+
+    /**
+     * Set 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoords(Coord [] Coords) {
+        this.Coords = Coords;
+    }
+
     public SymptomInfo() {
     }
 
@@ -222,6 +250,12 @@ public class SymptomInfo extends AbstractModel{
         if (source.Src != null) {
             this.Src = new String(source.Src);
         }
+        if (source.Coords != null) {
+            this.Coords = new Coord[source.Coords.length];
+            for (int i = 0; i < source.Coords.length; i++) {
+                this.Coords[i] = new Coord(source.Coords[i]);
+            }
+        }
     }
 
 
@@ -235,6 +269,7 @@ public class SymptomInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Symptom.", this.Symptom);
         this.setParamArrayObj(map, prefix + "Attrs.", this.Attrs);
         this.setParamSimple(map, prefix + "Src", this.Src);
+        this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
 
     }
 }

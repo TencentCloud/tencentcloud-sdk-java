@@ -51,6 +51,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
     */
     @SerializedName("NextHopType")
     @Expose
@@ -63,7 +64,8 @@ CCN：云联网网关；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-44csczop；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
     */
     @SerializedName("NextHopDestination")
     @Expose
@@ -131,7 +133,8 @@ DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
-CCN：云联网网关； 
+CCN：云联网网关；
+NONEXTHOP：无下一跳； 
      * @return NextHopType 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -139,6 +142,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
      */
     public String getNextHopType() {
         return this.NextHopType;
@@ -152,6 +156,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
      * @param NextHopType 下一跳类型，目前我们支持的类型有：
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
@@ -159,6 +164,7 @@ PEERCONNECTION：对等连接；
 NAT：NAT网关；
 NORMAL_CVM：普通云服务器；
 CCN：云联网网关；
+NONEXTHOP：无下一跳；
      */
     public void setNextHopType(String NextHopType) {
         this.NextHopType = NextHopType;
@@ -171,14 +177,16 @@ CCN：云联网网关；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-44csczop； 
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测； 
      * @return NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-44csczop；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      */
     public String getNextHopDestination() {
         return this.NextHopDestination;
@@ -191,14 +199,16 @@ CCN：云联网网关；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-44csczop；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      * @param NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
 下一跳类型为DIRECTCONNECT，取值专线网关ID，形如：dcg-12345678；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云联网ID，形如：ccn-44csczop；
+下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      */
     public void setNextHopDestination(String NextHopDestination) {
         this.NextHopDestination = NextHopDestination;

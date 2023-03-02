@@ -63,6 +63,14 @@ public class Part extends AbstractModel{
     private String Name;
 
     /**
+    * 值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValueBrief")
+    @Expose
+    private String ValueBrief;
+
+    /**
      * Get 原文位置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 原文位置
@@ -162,6 +170,26 @@ public class Part extends AbstractModel{
         this.Name = Name;
     }
 
+    /**
+     * Get 值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValueBrief 值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValueBrief() {
+        return this.ValueBrief;
+    }
+
+    /**
+     * Set 值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValueBrief 值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValueBrief(String ValueBrief) {
+        this.ValueBrief = ValueBrief;
+    }
+
     public Part() {
     }
 
@@ -188,6 +216,9 @@ public class Part extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.ValueBrief != null) {
+            this.ValueBrief = new String(source.ValueBrief);
+        }
     }
 
 
@@ -200,6 +231,7 @@ public class Part extends AbstractModel{
         this.setParamSimple(map, prefix + "Src", this.Src);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ValueBrief", this.ValueBrief);
 
     }
 }

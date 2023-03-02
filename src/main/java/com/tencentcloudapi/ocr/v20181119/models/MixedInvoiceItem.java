@@ -75,6 +75,13 @@ FailedOperation.UnKnowError：表示识别失败；
     private SingleInvoiceInfo [] SingleInvoiceInfos;
 
     /**
+    * 发票处于识别图片或PDF文件中的页教，默认从1开始。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 识别结果。
 OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
@@ -222,6 +229,22 @@ FailedOperation.UnKnowError：表示识别失败；
         this.SingleInvoiceInfos = SingleInvoiceInfos;
     }
 
+    /**
+     * Get 发票处于识别图片或PDF文件中的页教，默认从1开始。 
+     * @return Page 发票处于识别图片或PDF文件中的页教，默认从1开始。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 发票处于识别图片或PDF文件中的页教，默认从1开始。
+     * @param Page 发票处于识别图片或PDF文件中的页教，默认从1开始。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public MixedInvoiceItem() {
     }
 
@@ -248,6 +271,9 @@ FailedOperation.UnKnowError：表示识别失败；
                 this.SingleInvoiceInfos[i] = new SingleInvoiceInfo(source.SingleInvoiceInfos[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -260,6 +286,7 @@ FailedOperation.UnKnowError：表示识别失败；
         this.setParamObj(map, prefix + "Rect.", this.Rect);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "SingleInvoiceInfos.", this.SingleInvoiceInfos);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

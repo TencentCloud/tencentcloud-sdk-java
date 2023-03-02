@@ -44,6 +44,13 @@ public class CreateFlowApproversRequest extends AbstractModel{
     private FillApproverInfo [] Approvers;
 
     /**
+    * 企微消息中的发起人
+    */
+    @SerializedName("Initiator")
+    @Expose
+    private String Initiator;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -91,6 +98,22 @@ public class CreateFlowApproversRequest extends AbstractModel{
         this.Approvers = Approvers;
     }
 
+    /**
+     * Get 企微消息中的发起人 
+     * @return Initiator 企微消息中的发起人
+     */
+    public String getInitiator() {
+        return this.Initiator;
+    }
+
+    /**
+     * Set 企微消息中的发起人
+     * @param Initiator 企微消息中的发起人
+     */
+    public void setInitiator(String Initiator) {
+        this.Initiator = Initiator;
+    }
+
     public CreateFlowApproversRequest() {
     }
 
@@ -111,6 +134,9 @@ public class CreateFlowApproversRequest extends AbstractModel{
                 this.Approvers[i] = new FillApproverInfo(source.Approvers[i]);
             }
         }
+        if (source.Initiator != null) {
+            this.Initiator = new String(source.Initiator);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class CreateFlowApproversRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
+        this.setParamSimple(map, prefix + "Initiator", this.Initiator);
 
     }
 }

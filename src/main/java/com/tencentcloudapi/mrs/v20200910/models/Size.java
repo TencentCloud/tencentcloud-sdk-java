@@ -55,6 +55,14 @@ public class Size extends AbstractModel{
     private String Value;
 
     /**
+    * 名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 原文位置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Index 原文位置
@@ -134,6 +142,26 @@ public class Size extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get 名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public Size() {
     }
 
@@ -157,6 +185,9 @@ public class Size extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -168,6 +199,7 @@ public class Size extends AbstractModel{
         this.setParamObj(map, prefix + "NormSize.", this.NormSize);
         this.setParamSimple(map, prefix + "Src", this.Src);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

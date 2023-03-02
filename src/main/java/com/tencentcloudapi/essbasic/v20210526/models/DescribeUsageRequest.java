@@ -68,7 +68,7 @@ public class DescribeUsageRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 操作者的信息
+    * 暂未开放
     */
     @SerializedName("Operator")
     @Expose
@@ -183,16 +183,16 @@ public class DescribeUsageRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
+     * Get 暂未开放 
+     * @return Operator 暂未开放
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
+     * Set 暂未开放
+     * @param Operator 暂未开放
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

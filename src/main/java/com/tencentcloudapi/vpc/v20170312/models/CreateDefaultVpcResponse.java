@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDefaultVpcResponse extends AbstractModel{
 
     /**
-    * 默认VPC和子网ID
+    * 默认VPC和子网ID。
     */
     @SerializedName("Vpc")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDefaultVpcResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 默认VPC和子网ID 
-     * @return Vpc 默认VPC和子网ID
+     * Get 默认VPC和子网ID。 
+     * @return Vpc 默认VPC和子网ID。
      */
     public DefaultVpcSubnet getVpc() {
         return this.Vpc;
     }
 
     /**
-     * Set 默认VPC和子网ID
-     * @param Vpc 默认VPC和子网ID
+     * Set 默认VPC和子网ID。
+     * @param Vpc 默认VPC和子网ID。
      */
     public void setVpc(DefaultVpcSubnet Vpc) {
         this.Vpc = Vpc;

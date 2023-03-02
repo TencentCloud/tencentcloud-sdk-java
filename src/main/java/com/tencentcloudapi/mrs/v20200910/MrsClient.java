@@ -99,7 +99,9 @@ public class MrsClient extends AbstractClient{
     }
 
     /**
-     *文本转结构化对象
+     *文本转结构化对象。
+
+适用场景：经过腾讯医疗专用 OCR 从图片识别之后的文本，可以调用此接口。通过其它 OCR 识别的文本可能不适配。医院的 XML 格式文本也不适配，XML 文件需要经过特殊转换才能直接调用此接口。单次调用传入的文本不宜超过 2000 字。
      * @param req TextToObjectRequest
      * @return TextToObjectResponse
      * @throws TencentCloudSDKException

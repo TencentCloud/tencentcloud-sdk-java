@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteNetDetectRequest extends AbstractModel{
 
     /**
-    * 网络探测实例`ID`。形如：`netd-12345678`
+    * 网络探测实例`ID`。形如：`netd-12345678`。
     */
     @SerializedName("NetDetectId")
     @Expose
     private String NetDetectId;
 
     /**
-     * Get 网络探测实例`ID`。形如：`netd-12345678` 
-     * @return NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
+     * Get 网络探测实例`ID`。形如：`netd-12345678`。 
+     * @return NetDetectId 网络探测实例`ID`。形如：`netd-12345678`。
      */
     public String getNetDetectId() {
         return this.NetDetectId;
     }
 
     /**
-     * Set 网络探测实例`ID`。形如：`netd-12345678`
-     * @param NetDetectId 网络探测实例`ID`。形如：`netd-12345678`
+     * Set 网络探测实例`ID`。形如：`netd-12345678`。
+     * @param NetDetectId 网络探测实例`ID`。形如：`netd-12345678`。
      */
     public void setNetDetectId(String NetDetectId) {
         this.NetDetectId = NetDetectId;

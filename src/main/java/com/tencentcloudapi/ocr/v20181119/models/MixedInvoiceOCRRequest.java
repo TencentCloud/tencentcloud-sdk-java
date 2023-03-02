@@ -59,7 +59,7 @@ public class MixedInvoiceOCRRequest extends AbstractModel{
 15：非税发票
 16：全电发票
 ----------------------
--1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
+-1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
     */
     @SerializedName("Types")
     @Expose
@@ -87,6 +87,13 @@ No：不识别其他类型发票
     @SerializedName("PdfPageNumber")
     @Expose
     private Long PdfPageNumber;
+
+    /**
+    * 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。
+    */
+    @SerializedName("ReturnMultiplePage")
+    @Expose
+    private Boolean ReturnMultiplePage;
 
     /**
      * Get 图片的 Base64 值。
@@ -164,7 +171,7 @@ No：不识别其他类型发票
 15：非税发票
 16：全电发票
 ----------------------
--1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回） 
+-1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别） 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -180,7 +187,7 @@ No：不识别其他类型发票
 15：非税发票
 16：全电发票
 ----------------------
--1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
+-1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
      */
     public Long [] getTypes() {
         return this.Types;
@@ -202,7 +209,7 @@ No：不识别其他类型发票
 15：非税发票
 16：全电发票
 ----------------------
--1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
+-1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -218,7 +225,7 @@ No：不识别其他类型发票
 15：非税发票
 16：全电发票
 ----------------------
--1：其他发票,（仅返回，本参数不支持传入-1，请在ReturnOther中控制是否返回）
+-1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
      */
     public void setTypes(Long [] Types) {
         this.Types = Types;
@@ -280,6 +287,22 @@ No：不识别其他类型发票
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。 
+     * @return ReturnMultiplePage 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。
+     */
+    public Boolean getReturnMultiplePage() {
+        return this.ReturnMultiplePage;
+    }
+
+    /**
+     * Set 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。
+     * @param ReturnMultiplePage 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后IsPDF和PdfPageNumber入参不进行控制。
+     */
+    public void setReturnMultiplePage(Boolean ReturnMultiplePage) {
+        this.ReturnMultiplePage = ReturnMultiplePage;
+    }
+
     public MixedInvoiceOCRRequest() {
     }
 
@@ -309,6 +332,9 @@ No：不识别其他类型发票
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.ReturnMultiplePage != null) {
+            this.ReturnMultiplePage = new Boolean(source.ReturnMultiplePage);
+        }
     }
 
 
@@ -322,6 +348,7 @@ No：不识别其他类型发票
         this.setParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "ReturnMultiplePage", this.ReturnMultiplePage);
 
     }
 }

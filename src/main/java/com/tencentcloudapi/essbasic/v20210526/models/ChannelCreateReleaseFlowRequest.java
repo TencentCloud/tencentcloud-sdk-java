@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelCreateReleaseFlowRequest extends AbstractModel{
 
     /**
-    * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -58,30 +58,30 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 机构信息
+    * 暂未开放
     */
     @SerializedName("Organization")
     @Expose
     private OrganizationInfo Organization;
 
     /**
-    * 用户信息
+    * 暂未开放
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-     * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
-     * @return Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
+     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
-     * @param Agent 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
+     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
@@ -152,32 +152,32 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 机构信息 
-     * @return Organization 机构信息
+     * Get 暂未开放 
+     * @return Organization 暂未开放
      */
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
 
     /**
-     * Set 机构信息
-     * @param Organization 机构信息
+     * Set 暂未开放
+     * @param Organization 暂未开放
      */
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
 
     /**
-     * Get 用户信息 
-     * @return Operator 用户信息
+     * Get 暂未开放 
+     * @return Operator 暂未开放
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 用户信息
-     * @param Operator 用户信息
+     * Set 暂未开放
+     * @param Operator 暂未开放
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

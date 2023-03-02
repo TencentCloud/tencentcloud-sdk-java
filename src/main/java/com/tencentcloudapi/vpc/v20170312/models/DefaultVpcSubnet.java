@@ -23,49 +23,118 @@ import java.util.HashMap;
 public class DefaultVpcSubnet extends AbstractModel{
 
     /**
-    * 默认VpcId
+    * 默认VpcId。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 默认SubnetId
+    * 默认SubnetId。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 默认VpcId 
-     * @return VpcId 默认VpcId
+    * 默认Vpc名字。
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
+    * 默认Subnet名字。
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
+
+    /**
+    * 默认子网网段。
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
+     * Get 默认VpcId。 
+     * @return VpcId 默认VpcId。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 默认VpcId
-     * @param VpcId 默认VpcId
+     * Set 默认VpcId。
+     * @param VpcId 默认VpcId。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 默认SubnetId 
-     * @return SubnetId 默认SubnetId
+     * Get 默认SubnetId。 
+     * @return SubnetId 默认SubnetId。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 默认SubnetId
-     * @param SubnetId 默认SubnetId
+     * Set 默认SubnetId。
+     * @param SubnetId 默认SubnetId。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get 默认Vpc名字。 
+     * @return VpcName 默认Vpc名字。
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set 默认Vpc名字。
+     * @param VpcName 默认Vpc名字。
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
+     * Get 默认Subnet名字。 
+     * @return SubnetName 默认Subnet名字。
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set 默认Subnet名字。
+     * @param SubnetName 默认Subnet名字。
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
+    }
+
+    /**
+     * Get 默认子网网段。 
+     * @return CidrBlock 默认子网网段。
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set 默认子网网段。
+     * @param CidrBlock 默认子网网段。
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
     }
 
     public DefaultVpcSubnet() {
@@ -82,6 +151,15 @@ public class DefaultVpcSubnet extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -91,6 +169,9 @@ public class DefaultVpcSubnet extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }

@@ -39,6 +39,14 @@ public class Summary extends AbstractModel{
     private String Text;
 
     /**
+    * 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Coords")
+    @Expose
+    private Coord [] Coords;
+
+    /**
      * Get 症状
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Symptom 症状
@@ -78,6 +86,26 @@ public class Summary extends AbstractModel{
         this.Text = Text;
     }
 
+    /**
+     * Get 坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Coord [] getCoords() {
+        return this.Coords;
+    }
+
+    /**
+     * Set 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Coords 坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoords(Coord [] Coords) {
+        this.Coords = Coords;
+    }
+
     public Summary() {
     }
 
@@ -95,6 +123,12 @@ public class Summary extends AbstractModel{
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
+        if (source.Coords != null) {
+            this.Coords = new Coord[source.Coords.length];
+            for (int i = 0; i < source.Coords.length; i++) {
+                this.Coords[i] = new Coord(source.Coords[i]);
+            }
+        }
     }
 
 
@@ -104,6 +138,7 @@ public class Summary extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Symptom.", this.Symptom);
         this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamArrayObj(map, prefix + "Coords.", this.Coords);
 
     }
 }

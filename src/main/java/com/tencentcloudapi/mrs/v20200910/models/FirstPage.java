@@ -47,6 +47,22 @@ public class FirstPage extends AbstractModel{
     private BlockInfo ClinicalDiagnosis;
 
     /**
+    * 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DamagePoi")
+    @Expose
+    private BlockInfoV2 DamagePoi;
+
+    /**
+    * 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Fp2NdItems")
+    @Expose
+    private Fp2NdItem [] Fp2NdItems;
+
+    /**
      * Get 出入院诊断
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DischargeDiagnosis 出入院诊断
@@ -106,6 +122,46 @@ public class FirstPage extends AbstractModel{
         this.ClinicalDiagnosis = ClinicalDiagnosis;
     }
 
+    /**
+     * Get 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DamagePoi 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BlockInfoV2 getDamagePoi() {
+        return this.DamagePoi;
+    }
+
+    /**
+     * Set 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DamagePoi 受伤中毒的外部原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDamagePoi(BlockInfoV2 DamagePoi) {
+        this.DamagePoi = DamagePoi;
+    }
+
+    /**
+     * Get 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Fp2NdItems 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Fp2NdItem [] getFp2NdItems() {
+        return this.Fp2NdItems;
+    }
+
+    /**
+     * Set 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Fp2NdItems 病案首页第二页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFp2NdItems(Fp2NdItem [] Fp2NdItems) {
+        this.Fp2NdItems = Fp2NdItems;
+    }
+
     public FirstPage() {
     }
 
@@ -126,6 +182,15 @@ public class FirstPage extends AbstractModel{
         if (source.ClinicalDiagnosis != null) {
             this.ClinicalDiagnosis = new BlockInfo(source.ClinicalDiagnosis);
         }
+        if (source.DamagePoi != null) {
+            this.DamagePoi = new BlockInfoV2(source.DamagePoi);
+        }
+        if (source.Fp2NdItems != null) {
+            this.Fp2NdItems = new Fp2NdItem[source.Fp2NdItems.length];
+            for (int i = 0; i < source.Fp2NdItems.length; i++) {
+                this.Fp2NdItems[i] = new Fp2NdItem(source.Fp2NdItems[i]);
+            }
+        }
     }
 
 
@@ -136,6 +201,8 @@ public class FirstPage extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DischargeDiagnosis.", this.DischargeDiagnosis);
         this.setParamObj(map, prefix + "PathologicalDiagnosis.", this.PathologicalDiagnosis);
         this.setParamObj(map, prefix + "ClinicalDiagnosis.", this.ClinicalDiagnosis);
+        this.setParamObj(map, prefix + "DamagePoi.", this.DamagePoi);
+        this.setParamArrayObj(map, prefix + "Fp2NdItems.", this.Fp2NdItems);
 
     }
 }

@@ -47,6 +47,14 @@ public class NormSize extends AbstractModel{
     private String Unit;
 
     /**
+    * 归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Impl")
+    @Expose
+    private String Impl;
+
+    /**
      * Get 数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Number 数量
@@ -106,6 +114,26 @@ public class NormSize extends AbstractModel{
         this.Unit = Unit;
     }
 
+    /**
+     * Get 归一化值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Impl 归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImpl() {
+        return this.Impl;
+    }
+
+    /**
+     * Set 归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Impl 归一化值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImpl(String Impl) {
+        this.Impl = Impl;
+    }
+
     public NormSize() {
     }
 
@@ -126,6 +154,9 @@ public class NormSize extends AbstractModel{
         if (source.Unit != null) {
             this.Unit = new String(source.Unit);
         }
+        if (source.Impl != null) {
+            this.Impl = new String(source.Impl);
+        }
     }
 
 
@@ -136,6 +167,7 @@ public class NormSize extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Number.", this.Number);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamSimple(map, prefix + "Impl", this.Impl);
 
     }
 }

@@ -94,7 +94,7 @@ public class MixLayout extends AbstractModel{
     private Long ImageLayer;
 
     /**
-    * 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+    * 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
     */
     @SerializedName("SubBackgroundImage")
     @Expose
@@ -277,16 +277,16 @@ public class MixLayout extends AbstractModel{
     }
 
     /**
-     * Get 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。 
-     * @return SubBackgroundImage 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * Get 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。 
+     * @return SubBackgroundImage 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      */
     public String getSubBackgroundImage() {
         return this.SubBackgroundImage;
     }
 
     /**
-     * Set 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
-     * @param SubBackgroundImage 下载的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * Set 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
+     * @param SubBackgroundImage 图片的url地址， 只支持jpg， png，大小限制不超过5M，宽高比不一致的处理方案同 RenderMode。
      */
     public void setSubBackgroundImage(String SubBackgroundImage) {
         this.SubBackgroundImage = SubBackgroundImage;

@@ -227,6 +227,14 @@ public class Scenario extends AbstractModel{
     private String Owner;
 
     /**
+    * 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
      * Get 场景ID 
      * @return ScenarioId 场景ID
      */
@@ -730,6 +738,26 @@ public class Scenario extends AbstractModel{
         this.Owner = Owner;
     }
 
+    /**
+     * Get 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 场景所在的项目的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
     public Scenario() {
     }
 
@@ -840,6 +868,9 @@ public class Scenario extends AbstractModel{
         if (source.Owner != null) {
             this.Owner = new String(source.Owner);
         }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
     }
 
 
@@ -873,6 +904,7 @@ public class Scenario extends AbstractModel{
         this.setParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
         this.setParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }
