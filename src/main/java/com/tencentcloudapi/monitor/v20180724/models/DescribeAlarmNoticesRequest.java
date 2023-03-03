@@ -93,7 +93,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private String [] NoticeIds;
 
     /**
-    * 模版根据标签过滤
+    * 模板根据标签过滤
     */
     @SerializedName("Tags")
     @Expose
@@ -260,16 +260,16 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版根据标签过滤 
-     * @return Tags 模版根据标签过滤
+     * Get 模板根据标签过滤 
+     * @return Tags 模板根据标签过滤
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 模版根据标签过滤
-     * @param Tags 模版根据标签过滤
+     * Set 模板根据标签过滤
+     * @param Tags 模板根据标签过滤
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

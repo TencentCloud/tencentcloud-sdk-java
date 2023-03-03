@@ -97,11 +97,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+    * 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -361,32 +357,16 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。 
-     * @return DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+     * Get 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。 
+     * @return DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
-     * @param DbVersionId 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。
-8.0.18 - MySQL 8.0.18；
-10.1.9 - Mariadb 10.1.9；
-5.7.17 - Percona 5.7.17。
-如果不填的话，默认为5.7.17，表示Percona 5.7.17。
+     * Set 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+     * @param DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

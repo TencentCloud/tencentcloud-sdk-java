@@ -245,7 +245,7 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *查询同步校验任务结果
+     *查询同步校验任务结果，检查必要参数和周边配置
      * @param req DescribeCheckSyncJobResultRequest
      * @return DescribeCheckSyncJobResultResponse
      * @throws TencentCloudSDKException

@@ -13,29 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceAllResponse extends AbstractModel{
-
-    /**
-    * 总实例个数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Registries")
-    @Expose
-    private Registry [] Registries;
+public class ModifyBackupDownloadRestrictionResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,42 +28,6 @@ public class DescribeInstanceAllResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 总实例个数 
-     * @return TotalCount 总实例个数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 总实例个数
-     * @param TotalCount 总实例个数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Registries 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Registry [] getRegistries() {
-        return this.Registries;
-    }
-
-    /**
-     * Set 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Registries 实例信息列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRegistries(Registry [] Registries) {
-        this.Registries = Registries;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -96,23 +45,14 @@ public class DescribeInstanceAllResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceAllResponse() {
+    public ModifyBackupDownloadRestrictionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceAllResponse(DescribeInstanceAllResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Registries != null) {
-            this.Registries = new Registry[source.Registries.length];
-            for (int i = 0; i < source.Registries.length; i++) {
-                this.Registries[i] = new Registry(source.Registries[i]);
-            }
-        }
+    public ModifyBackupDownloadRestrictionResponse(ModifyBackupDownloadRestrictionResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ public class DescribeInstanceAllResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Registries.", this.Registries);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -35,7 +35,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -236,7 +237,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li> 
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li> 
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -249,7 +251,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -268,7 +271,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -281,7 +285,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>RemoveWatermarkTask：智能去除水印任务；</li>
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
-<li>ReviewAudioVideo：音视频审核任务。</li>
+<li>ReviewAudioVideo：音视频审核任务；</li>
+<li>ExtractTraceWatermark：提取溯源水印任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

@@ -37,6 +37,22 @@ public class McuLayoutVolume extends AbstractModel{
     private Long PayloadType;
 
     /**
+    * SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Interval")
+    @Expose
+    private Long Interval;
+
+    /**
+    * 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FollowIdr")
+    @Expose
+    private Long FollowIdr;
+
+    /**
      * Get AppData的内容，会被写入自定义SEI中的app_data字段，长度需小于4096。 
      * @return AppData AppData的内容，会被写入自定义SEI中的app_data字段，长度需小于4096。
      */
@@ -68,6 +84,46 @@ public class McuLayoutVolume extends AbstractModel{
         this.PayloadType = PayloadType;
     }
 
+    /**
+     * Get SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interval SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interval SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFollowIdr() {
+        return this.FollowIdr;
+    }
+
+    /**
+     * Set 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFollowIdr(Long FollowIdr) {
+        this.FollowIdr = FollowIdr;
+    }
+
     public McuLayoutVolume() {
     }
 
@@ -82,6 +138,12 @@ public class McuLayoutVolume extends AbstractModel{
         if (source.PayloadType != null) {
             this.PayloadType = new Long(source.PayloadType);
         }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.FollowIdr != null) {
+            this.FollowIdr = new Long(source.FollowIdr);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class McuLayoutVolume extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppData", this.AppData);
         this.setParamSimple(map, prefix + "PayloadType", this.PayloadType);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "FollowIdr", this.FollowIdr);
 
     }
 }

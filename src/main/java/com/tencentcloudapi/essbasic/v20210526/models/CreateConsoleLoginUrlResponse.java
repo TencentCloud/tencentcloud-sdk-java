@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateConsoleLoginUrlResponse extends AbstractModel{
 
     /**
-    * 子客Web控制台url注意事项：
+    * 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
@@ -35,7 +35,7 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     private String ConsoleUrl;
 
     /**
-    * 渠道子客企业是否已开通腾讯电子签
+    * 子客企业是否已开通腾讯电子签
     */
     @SerializedName("IsActivated")
     @Expose
@@ -56,13 +56,13 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 子客Web控制台url注意事项：
+     * Get 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义 
-     * @return ConsoleUrl 子客Web控制台url注意事项：
+     * @return ConsoleUrl 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
@@ -74,13 +74,13 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     }
 
     /**
-     * Set 子客Web控制台url注意事项：
+     * Set 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
 4. 此链接仅单次有效，使用后需要再次创建新的链接（部分聊天软件，如企业微信默认会对链接进行解析，此时需要使用类似“代码片段”的方式或者放到txt文件里发送链接）
 5. 创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义
-     * @param ConsoleUrl 子客Web控制台url注意事项：
+     * @param ConsoleUrl 子客企业Web控制台url注意事项：
 1. 所有类型的链接在企业未认证/员工未认证完成时，只要在有效期内（一年）都可以访问
 2. 若企业认证完成且员工认证完成后，重新获取pc端的链接5分钟之内有效，且只能访问一次
 3. 若企业认证完成且员工认证完成后，重新获取H5/APP的链接只要在有效期内（一年）都可以访问
@@ -92,16 +92,16 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     }
 
     /**
-     * Get 渠道子客企业是否已开通腾讯电子签 
-     * @return IsActivated 渠道子客企业是否已开通腾讯电子签
+     * Get 子客企业是否已开通腾讯电子签 
+     * @return IsActivated 子客企业是否已开通腾讯电子签
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 渠道子客企业是否已开通腾讯电子签
-     * @param IsActivated 渠道子客企业是否已开通腾讯电子签
+     * Set 子客企业是否已开通腾讯电子签
+     * @param IsActivated 子客企业是否已开通腾讯电子签
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;

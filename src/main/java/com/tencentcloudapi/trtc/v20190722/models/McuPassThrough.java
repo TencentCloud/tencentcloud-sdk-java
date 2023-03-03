@@ -44,6 +44,22 @@ public class McuPassThrough extends AbstractModel{
     private String PayloadUuid;
 
     /**
+    * SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Interval")
+    @Expose
+    private Long Interval;
+
+    /**
+    * 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FollowIdr")
+    @Expose
+    private Long FollowIdr;
+
+    /**
      * Get 透传SEI的payload内容。 
      * @return PayloadContent 透传SEI的payload内容。
      */
@@ -91,6 +107,46 @@ public class McuPassThrough extends AbstractModel{
         this.PayloadUuid = PayloadUuid;
     }
 
+    /**
+     * Get SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interval SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interval SEI发送间隔，单位毫秒，默认值为1000。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFollowIdr() {
+        return this.FollowIdr;
+    }
+
+    /**
+     * Set 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFollowIdr(Long FollowIdr) {
+        this.FollowIdr = FollowIdr;
+    }
+
     public McuPassThrough() {
     }
 
@@ -108,6 +164,12 @@ public class McuPassThrough extends AbstractModel{
         if (source.PayloadUuid != null) {
             this.PayloadUuid = new String(source.PayloadUuid);
         }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.FollowIdr != null) {
+            this.FollowIdr = new Long(source.FollowIdr);
+        }
     }
 
 
@@ -118,6 +180,8 @@ public class McuPassThrough extends AbstractModel{
         this.setParamSimple(map, prefix + "PayloadContent", this.PayloadContent);
         this.setParamSimple(map, prefix + "PayloadType", this.PayloadType);
         this.setParamSimple(map, prefix + "PayloadUuid", this.PayloadUuid);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "FollowIdr", this.FollowIdr);
 
     }
 }

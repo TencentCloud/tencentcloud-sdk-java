@@ -37,7 +37,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 策略组所属视图的名称，若通过模版创建，可不传入
+    * 策略组所属视图的名称，若通过模板创建，可不传入
     */
     @SerializedName("ViewName")
     @Expose
@@ -51,7 +51,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 模版策略组Id, 通过模版创建时才需要传
+    * 模板策略组Id, 通过模板创建时才需要传
     */
     @SerializedName("ConditionTempGroupId")
     @Expose
@@ -93,7 +93,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private CreatePolicyGroupEventCondition [] EventConditions;
 
     /**
-    * 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+    * 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
     */
     @SerializedName("BackEndCall")
     @Expose
@@ -139,16 +139,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 策略组所属视图的名称，若通过模版创建，可不传入 
-     * @return ViewName 策略组所属视图的名称，若通过模版创建，可不传入
+     * Get 策略组所属视图的名称，若通过模板创建，可不传入 
+     * @return ViewName 策略组所属视图的名称，若通过模板创建，可不传入
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 策略组所属视图的名称，若通过模版创建，可不传入
-     * @param ViewName 策略组所属视图的名称，若通过模版创建，可不传入
+     * Set 策略组所属视图的名称，若通过模板创建，可不传入
+     * @param ViewName 策略组所属视图的名称，若通过模板创建，可不传入
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
@@ -171,16 +171,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版策略组Id, 通过模版创建时才需要传 
-     * @return ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
+     * Get 模板策略组Id, 通过模板创建时才需要传 
+     * @return ConditionTempGroupId 模板策略组Id, 通过模板创建时才需要传
      */
     public Long getConditionTempGroupId() {
         return this.ConditionTempGroupId;
     }
 
     /**
-     * Set 模版策略组Id, 通过模版创建时才需要传
-     * @param ConditionTempGroupId 模版策略组Id, 通过模版创建时才需要传
+     * Set 模板策略组Id, 通过模板创建时才需要传
+     * @param ConditionTempGroupId 模板策略组Id, 通过模板创建时才需要传
      */
     public void setConditionTempGroupId(Long ConditionTempGroupId) {
         this.ConditionTempGroupId = ConditionTempGroupId;
@@ -267,16 +267,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段 
-     * @return BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+     * Get 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段 
+     * @return BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
      */
     public Long getBackEndCall() {
         return this.BackEndCall;
     }
 
     /**
-     * Set 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
-     * @param BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模版中的规则填充入Conditions以及EventConditions字段
+     * Set 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
+     * @param BackEndCall 是否为后端调用。当且仅当值为1时，后台拉取策略模板中的规则填充入Conditions以及EventConditions字段
      */
     public void setBackEndCall(Long BackEndCall) {
         this.BackEndCall = BackEndCall;

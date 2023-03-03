@@ -75,6 +75,7 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
 
     /**
     * 主播 IP。
+当客户端为内网推流时，展示为: - 。
     */
     @SerializedName("ClientIp")
     @Expose
@@ -208,8 +209,10 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
     }
 
     /**
-     * Get 主播 IP。 
+     * Get 主播 IP。
+当客户端为内网推流时，展示为: - 。 
      * @return ClientIp 主播 IP。
+当客户端为内网推流时，展示为: - 。
      */
     public String getClientIp() {
         return this.ClientIp;
@@ -217,7 +220,9 @@ UTC 格式时间，例如：2019-01-07T15:00:00Z。
 
     /**
      * Set 主播 IP。
+当客户端为内网推流时，展示为: - 。
      * @param ClientIp 主播 IP。
+当客户端为内网推流时，展示为: - 。
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;

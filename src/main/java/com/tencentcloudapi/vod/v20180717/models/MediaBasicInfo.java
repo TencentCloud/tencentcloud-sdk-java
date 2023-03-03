@@ -141,7 +141,7 @@ public class MediaBasicInfo extends AbstractModel{
     /**
     * 文件状态：Normal：正常，Forbidden：封禁。
 
-*注意：此字段暂不支持。
+*注意：此字段暂不支持。	
     */
     @SerializedName("Status")
     @Expose
@@ -433,10 +433,10 @@ public class MediaBasicInfo extends AbstractModel{
     /**
      * Get 文件状态：Normal：正常，Forbidden：封禁。
 
-*注意：此字段暂不支持。 
+*注意：此字段暂不支持。	 
      * @return Status 文件状态：Normal：正常，Forbidden：封禁。
 
-*注意：此字段暂不支持。
+*注意：此字段暂不支持。	
      */
     public String getStatus() {
         return this.Status;
@@ -445,10 +445,10 @@ public class MediaBasicInfo extends AbstractModel{
     /**
      * Set 文件状态：Normal：正常，Forbidden：封禁。
 
-*注意：此字段暂不支持。
+*注意：此字段暂不支持。	
      * @param Status 文件状态：Normal：正常，Forbidden：封禁。
 
-*注意：此字段暂不支持。
+*注意：此字段暂不支持。	
      */
     public void setStatus(String Status) {
         this.Status = Status;

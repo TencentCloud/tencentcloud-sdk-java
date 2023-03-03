@@ -30,7 +30,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private Long Definition;
 
     /**
-    * 打包格式，只能为 HLS。
+    * 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
     */
     @SerializedName("Package")
     @Expose
@@ -70,6 +72,13 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private String DigitalWatermarkType;
 
     /**
+    * 子流信息列表。
+    */
+    @SerializedName("SubStreamSet")
+    @Expose
+    private MediaSubStreamInfoItem [] SubStreamSet;
+
+    /**
      * Get 转自适应码流规格。 
      * @return Definition 转自适应码流规格。
      */
@@ -86,16 +95,24 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     }
 
     /**
-     * Get 打包格式，只能为 HLS。 
-     * @return Package 打包格式，只能为 HLS。
+     * Get 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li> 
+     * @return Package 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set 打包格式，只能为 HLS。
-     * @param Package 打包格式，只能为 HLS。
+     * Set 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
+     * @param Package 打包格式，取值范围：
+<li>HLS；</li>
+<li>DASH。</li>
      */
     public void setPackage(String Package) {
         this.Package = Package;
@@ -185,6 +202,22 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
+    /**
+     * Get 子流信息列表。 
+     * @return SubStreamSet 子流信息列表。
+     */
+    public MediaSubStreamInfoItem [] getSubStreamSet() {
+        return this.SubStreamSet;
+    }
+
+    /**
+     * Set 子流信息列表。
+     * @param SubStreamSet 子流信息列表。
+     */
+    public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
+        this.SubStreamSet = SubStreamSet;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -211,6 +244,12 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.DigitalWatermarkType != null) {
             this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
         }
+        if (source.SubStreamSet != null) {
+            this.SubStreamSet = new MediaSubStreamInfoItem[source.SubStreamSet.length];
+            for (int i = 0; i < source.SubStreamSet.length; i++) {
+                this.SubStreamSet[i] = new MediaSubStreamInfoItem(source.SubStreamSet[i]);
+            }
+        }
     }
 
 
@@ -224,6 +263,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+        this.setParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
 
     }
 }

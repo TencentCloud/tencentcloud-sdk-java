@@ -301,6 +301,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *攻击总览
+     * @param req DescribeAttackOverviewRequest
+     * @return DescribeAttackOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAttackOverviewResponse DescribeAttackOverview(DescribeAttackOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAttackOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAttackOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAttackOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *描述WAF自动封禁IP详情,对齐自动封堵状态
      * @param req DescribeAutoDenyIPRequest
      * @return DescribeAutoDenyIPResponse

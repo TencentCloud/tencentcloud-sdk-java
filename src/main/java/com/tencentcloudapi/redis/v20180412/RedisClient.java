@@ -399,6 +399,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupDownloadRestriction）用于查询当前地域数据库备份文件的下载地址。
+     * @param req DescribeBackupDownloadRestrictionRequest
+     * @return DescribeBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadRestriction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBackupUrl）用于查询备份 Rdb 文件的下载地址。
      * @param req DescribeBackupUrlRequest
      * @return DescribeBackupUrlResponse
@@ -1311,6 +1331,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAutoBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载的网络信息与地址。
+     * @param req ModifyBackupDownloadRestrictionRequest
+     * @return ModifyBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupDownloadRestriction");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

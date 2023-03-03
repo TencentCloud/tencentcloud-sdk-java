@@ -30,35 +30,35 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 产品类型过滤，比如"cvm"表示云服务器
+    * 产品类型过滤，例如"cvm"表示云服务器
     */
     @SerializedName("ProductName")
     @Expose
     private String [] ProductName;
 
     /**
-    * 事件名称过滤，比如"guest_reboot"表示机器重启
+    * 事件名称过滤，例如"guest_reboot"表示机器重启
     */
     @SerializedName("EventName")
     @Expose
     private String [] EventName;
 
     /**
-    * 影响对象，比如"ins-19708ino"
+    * 影响对象，例如"ins-19708ino"
     */
     @SerializedName("InstanceId")
     @Expose
     private String [] InstanceId;
 
     /**
-    * 维度过滤，比如外网IP:10.0.0.1
+    * 维度过滤，例如外网IP:10.0.0.1
     */
     @SerializedName("Dimensions")
     @Expose
     private DescribeProductEventListDimensions [] Dimensions;
 
     /**
-    * 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+    * 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
     */
     @SerializedName("RegionList")
     @Expose
@@ -144,80 +144,80 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get 产品类型过滤，比如"cvm"表示云服务器 
-     * @return ProductName 产品类型过滤，比如"cvm"表示云服务器
+     * Get 产品类型过滤，例如"cvm"表示云服务器 
+     * @return ProductName 产品类型过滤，例如"cvm"表示云服务器
      */
     public String [] getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 产品类型过滤，比如"cvm"表示云服务器
-     * @param ProductName 产品类型过滤，比如"cvm"表示云服务器
+     * Set 产品类型过滤，例如"cvm"表示云服务器
+     * @param ProductName 产品类型过滤，例如"cvm"表示云服务器
      */
     public void setProductName(String [] ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 事件名称过滤，比如"guest_reboot"表示机器重启 
-     * @return EventName 事件名称过滤，比如"guest_reboot"表示机器重启
+     * Get 事件名称过滤，例如"guest_reboot"表示机器重启 
+     * @return EventName 事件名称过滤，例如"guest_reboot"表示机器重启
      */
     public String [] getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set 事件名称过滤，比如"guest_reboot"表示机器重启
-     * @param EventName 事件名称过滤，比如"guest_reboot"表示机器重启
+     * Set 事件名称过滤，例如"guest_reboot"表示机器重启
+     * @param EventName 事件名称过滤，例如"guest_reboot"表示机器重启
      */
     public void setEventName(String [] EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get 影响对象，比如"ins-19708ino" 
-     * @return InstanceId 影响对象，比如"ins-19708ino"
+     * Get 影响对象，例如"ins-19708ino" 
+     * @return InstanceId 影响对象，例如"ins-19708ino"
      */
     public String [] getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 影响对象，比如"ins-19708ino"
-     * @param InstanceId 影响对象，比如"ins-19708ino"
+     * Set 影响对象，例如"ins-19708ino"
+     * @param InstanceId 影响对象，例如"ins-19708ino"
      */
     public void setInstanceId(String [] InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 维度过滤，比如外网IP:10.0.0.1 
-     * @return Dimensions 维度过滤，比如外网IP:10.0.0.1
+     * Get 维度过滤，例如外网IP:10.0.0.1 
+     * @return Dimensions 维度过滤，例如外网IP:10.0.0.1
      */
     public DescribeProductEventListDimensions [] getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set 维度过滤，比如外网IP:10.0.0.1
-     * @param Dimensions 维度过滤，比如外网IP:10.0.0.1
+     * Set 维度过滤，例如外网IP:10.0.0.1
+     * @param Dimensions 维度过滤，例如外网IP:10.0.0.1
      */
     public void setDimensions(DescribeProductEventListDimensions [] Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863) 
-     * @return RegionList 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * Get 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863) 
+     * @return RegionList 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
-     * @param RegionList 产品事件地域过滤参数，比如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * Set 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
+     * @param RegionList 产品事件地域过滤参数，例如gz，各地域缩写可参见[地域列表](https://cloud.tencent.com/document/product/248/50863)
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;

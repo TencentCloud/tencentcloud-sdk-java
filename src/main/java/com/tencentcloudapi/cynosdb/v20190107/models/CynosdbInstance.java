@@ -359,6 +359,22 @@ pause
     private Tag [] ResourceTags;
 
     /**
+    * 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1138,6 +1154,46 @@ pause
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get 主可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterZone 主可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get 备可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZones 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZones 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1293,6 +1349,15 @@ pause
                 this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
             }
         }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
     }
 
 
@@ -1347,6 +1412,8 @@ pause
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
 
     }
 }

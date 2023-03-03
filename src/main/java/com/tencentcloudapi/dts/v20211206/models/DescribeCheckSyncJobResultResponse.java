@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCheckSyncJobResultResponse extends AbstractModel{
 
     /**
-    * 校验结果
+    * 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -47,7 +47,7 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel{
     private Long StepCur;
 
     /**
-    * 总体进度
+    * 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
@@ -70,9 +70,9 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 校验结果
+     * Get 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 校验结果
+     * @return Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -80,9 +80,9 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel{
     }
 
     /**
-     * Set 校验结果
+     * Set 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 校验结果
+     * @param Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
@@ -130,9 +130,9 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel{
     }
 
     /**
-     * Get 总体进度
+     * Get 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Progress 总体进度
+     * @return Progress 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
@@ -140,9 +140,9 @@ public class DescribeCheckSyncJobResultResponse extends AbstractModel{
     }
 
     /**
-     * Set 总体进度
+     * Set 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Progress 总体进度
+     * @param Progress 总体进度，范围为[0,100]
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {

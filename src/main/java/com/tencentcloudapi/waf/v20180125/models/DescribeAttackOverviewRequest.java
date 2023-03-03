@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCheckSyncJobResultRequest extends AbstractModel{
+public class DescribeAttackOverviewRequest extends AbstractModel{
 
-    /**
-    * 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
-
-    /**
-     * Get 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填 
-     * @return JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
-     * @param JobId 同步实例id（即标识一个同步作业），形如sync-werwfs23，此值必填
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
-
-    public DescribeCheckSyncJobResultRequest() {
+    public DescribeAttackOverviewRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCheckSyncJobResultRequest(DescribeCheckSyncJobResultRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
-        }
+    public DescribeAttackOverviewRequest(DescribeAttackOverviewRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class DescribeCheckSyncJobResultRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

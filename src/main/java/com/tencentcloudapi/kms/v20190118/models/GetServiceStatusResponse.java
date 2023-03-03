@@ -85,6 +85,14 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Boolean ExclusiveHSMEnabled;
 
     /**
+    * KMS 订阅信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscriptionInfo")
+    @Expose
+    private String SubscriptionInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -244,6 +252,26 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get KMS 订阅信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionInfo KMS 订阅信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubscriptionInfo() {
+        return this.SubscriptionInfo;
+    }
+
+    /**
+     * Set KMS 订阅信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionInfo KMS 订阅信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionInfo(String SubscriptionInfo) {
+        this.SubscriptionInfo = SubscriptionInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -291,6 +319,9 @@ public class GetServiceStatusResponse extends AbstractModel{
         if (source.ExclusiveHSMEnabled != null) {
             this.ExclusiveHSMEnabled = new Boolean(source.ExclusiveHSMEnabled);
         }
+        if (source.SubscriptionInfo != null) {
+            this.SubscriptionInfo = new String(source.SubscriptionInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -309,6 +340,7 @@ public class GetServiceStatusResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
         this.setParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
         this.setParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
+        this.setParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

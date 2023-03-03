@@ -121,7 +121,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private String [] GroupBy;
 
     /**
-    * 模版绑定的标签
+    * 模板绑定的标签
     */
     @SerializedName("Tags")
     @Expose
@@ -380,16 +380,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版绑定的标签 
-     * @return Tags 模版绑定的标签
+     * Get 模板绑定的标签 
+     * @return Tags 模板绑定的标签
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 模版绑定的标签
-     * @param Tags 模版绑定的标签
+     * Set 模板绑定的标签
+     * @param Tags 模板绑定的标签
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

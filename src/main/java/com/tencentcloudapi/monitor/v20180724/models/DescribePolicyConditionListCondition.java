@@ -82,6 +82,14 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
     private String [] SupportRegions;
 
     /**
+    * 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeprecatingInfo")
+    @Expose
+    private DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo;
+
+    /**
      * Get 策略视图名称 
      * @return PolicyViewName 策略视图名称
      */
@@ -221,6 +229,26 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
         this.SupportRegions = SupportRegions;
     }
 
+    /**
+     * Get 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeprecatingInfo 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() {
+        return this.DeprecatingInfo;
+    }
+
+    /**
+     * Set 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeprecatingInfo 弃用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo) {
+        this.DeprecatingInfo = DeprecatingInfo;
+    }
+
     public DescribePolicyConditionListCondition() {
     }
 
@@ -262,6 +290,9 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
                 this.SupportRegions[i] = new String(source.SupportRegions[i]);
             }
         }
+        if (source.DeprecatingInfo != null) {
+            this.DeprecatingInfo = new DescribePolicyConditionListResponseDeprecatingInfo(source.DeprecatingInfo);
+        }
     }
 
 
@@ -277,6 +308,7 @@ public class DescribePolicyConditionListCondition extends AbstractModel{
         this.setParamSimple(map, prefix + "SortId", this.SortId);
         this.setParamSimple(map, prefix + "SupportDefault", this.SupportDefault);
         this.setParamArraySimple(map, prefix + "SupportRegions.", this.SupportRegions);
+        this.setParamObj(map, prefix + "DeprecatingInfo.", this.DeprecatingInfo);
 
     }
 }

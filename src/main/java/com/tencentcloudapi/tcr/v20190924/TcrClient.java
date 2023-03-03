@@ -1259,28 +1259,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *内部替换接口+DescribeInstanceAllForCoding
-
-查询全部实例信息
-     * @param req DescribeInstanceAllRequest
-     * @return DescribeInstanceAllResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceAllResponse DescribeInstanceAll(DescribeInstanceAllRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAllResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceAll");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询所有实例命名空间列表
      * @param req DescribeInstanceAllNamespacesRequest
      * @return DescribeInstanceAllNamespacesResponse

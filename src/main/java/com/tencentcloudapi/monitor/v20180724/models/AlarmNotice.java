@@ -119,7 +119,7 @@ public class AlarmNotice extends AbstractModel{
     private CLSNotice [] CLSNotices;
 
     /**
-    * 通知模版绑定的标签
+    * 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -367,9 +367,9 @@ public class AlarmNotice extends AbstractModel{
     }
 
     /**
-     * Get 通知模版绑定的标签
+     * Get 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 通知模版绑定的标签
+     * @return Tags 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
@@ -377,9 +377,9 @@ public class AlarmNotice extends AbstractModel{
     }
 
     /**
-     * Set 通知模版绑定的标签
+     * Set 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 通知模版绑定的标签
+     * @param Tags 通知模板绑定的标签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {

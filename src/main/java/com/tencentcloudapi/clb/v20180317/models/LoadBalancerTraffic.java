@@ -58,6 +58,14 @@ public class LoadBalancerTraffic extends AbstractModel{
     private Float OutBandwidth;
 
     /**
+    * CLB域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 负载均衡ID 
      * @return LoadBalancerId 负载均衡ID
      */
@@ -137,6 +145,26 @@ public class LoadBalancerTraffic extends AbstractModel{
         this.OutBandwidth = OutBandwidth;
     }
 
+    /**
+     * Get CLB域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain CLB域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set CLB域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain CLB域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public LoadBalancerTraffic() {
     }
 
@@ -160,6 +188,9 @@ public class LoadBalancerTraffic extends AbstractModel{
         if (source.OutBandwidth != null) {
             this.OutBandwidth = new Float(source.OutBandwidth);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class LoadBalancerTraffic extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "OutBandwidth", this.OutBandwidth);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

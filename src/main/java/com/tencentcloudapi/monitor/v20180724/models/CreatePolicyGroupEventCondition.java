@@ -44,7 +44,7 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     private Long AlarmNotifyPeriod;
 
     /**
-    * 如果通过模版创建，需要传入模版中该指标的对应RuleId
+    * 如果通过模板创建，需要传入模板中该指标的对应RuleId
     */
     @SerializedName("RuleId")
     @Expose
@@ -99,16 +99,16 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     }
 
     /**
-     * Get 如果通过模版创建，需要传入模版中该指标的对应RuleId 
-     * @return RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * Get 如果通过模板创建，需要传入模板中该指标的对应RuleId 
+     * @return RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 如果通过模版创建，需要传入模版中该指标的对应RuleId
-     * @param RuleId 如果通过模版创建，需要传入模版中该指标的对应RuleId
+     * Set 如果通过模板创建，需要传入模板中该指标的对应RuleId
+     * @param RuleId 如果通过模板创建，需要传入模板中该指标的对应RuleId
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
