@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UsageDetail extends AbstractModel{
 
     /**
-    * 渠道侧合作企业唯一标识
+    * 子客企业唯一标识
     */
     @SerializedName("ProxyOrganizationOpenId")
     @Expose
     private String ProxyOrganizationOpenId;
 
     /**
-    * 渠道侧合作企业名
+    * 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationName")
@@ -69,25 +69,25 @@ public class UsageDetail extends AbstractModel{
     private String FlowChannel;
 
     /**
-     * Get 渠道侧合作企业唯一标识 
-     * @return ProxyOrganizationOpenId 渠道侧合作企业唯一标识
+     * Get 子客企业唯一标识 
+     * @return ProxyOrganizationOpenId 子客企业唯一标识
      */
     public String getProxyOrganizationOpenId() {
         return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 渠道侧合作企业唯一标识
-     * @param ProxyOrganizationOpenId 渠道侧合作企业唯一标识
+     * Set 子客企业唯一标识
+     * @param ProxyOrganizationOpenId 子客企业唯一标识
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
         this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
     }
 
     /**
-     * Get 渠道侧合作企业名
+     * Get 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOrganizationName 渠道侧合作企业名
+     * @return ProxyOrganizationName 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOrganizationName() {
@@ -95,9 +95,9 @@ public class UsageDetail extends AbstractModel{
     }
 
     /**
-     * Set 渠道侧合作企业名
+     * Set 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOrganizationName 渠道侧合作企业名
+     * @param ProxyOrganizationName 子客企业名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {

@@ -289,6 +289,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *查询录制任务信息。
+     * @param req DescribeRecordInfoRequest
+     * @return DescribeRecordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordInfoResponse DescribeRecordInfo(DescribeRecordInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取房间内用户信息
      * @param req DescribeRoomInfoRequest
      * @return DescribeRoomInfoResponse
@@ -322,6 +342,26 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeScanResultListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeScanResultList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询房间录制的详细信息
+     * @param req DescribeTaskInfoRequest
+     * @return DescribeTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -422,6 +462,26 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomizationStateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCustomizationState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改录制配置信息
+     * @param req ModifyRecordInfoRequest
+     * @return ModifyRecordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordInfoResponse ModifyRecordInfo(ModifyRecordInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -599,6 +659,47 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ScanVoiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ScanVoice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启录制
+     * @param req StartRecordRequest
+     * @return StartRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRecordResponse StartRecord(StartRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止录制
+
+     * @param req StopRecordRequest
+     * @return StopRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRecordResponse StopRecord(StopRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopRecord");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

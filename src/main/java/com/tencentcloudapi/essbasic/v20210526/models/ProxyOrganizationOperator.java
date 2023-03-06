@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProxyOrganizationOperator extends AbstractModel{
 
     /**
-    * 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+    * 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
     */
     @SerializedName("Id")
     @Expose
@@ -61,16 +61,27 @@ public class ProxyOrganizationOperator extends AbstractModel{
     private String Mobile;
 
     /**
-     * Get 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串 
-     * @return Id 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+    * 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultRole")
+    @Expose
+    private String DefaultRole;
+
+    /**
+     * Get 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串 
+     * @return Id 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
-     * @param Id 对应Agent-ProxyOperator-OpenId。渠道平台自定义，对渠道子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要渠道平台保存），最大64位字符串
+     * Set 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
+     * @param Id 对应Agent-ProxyOperator-OpenId。第三方应用平台自定义，对子客企业员的唯一标识。一个OpenId在一个子客企业内唯一对应一个真实员工，不可在其他子客企业内重复使用。（例如，可以使用经办人企业名+员工身份证的hash值，需要第三方应用平台保存），最大64位字符串
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -152,6 +163,38 @@ public class ProxyOrganizationOperator extends AbstractModel{
         this.Mobile = Mobile;
     }
 
+    /**
+     * Get 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultRole 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDefaultRole() {
+        return this.DefaultRole;
+    }
+
+    /**
+     * Set 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultRole 默认角色，值为以下三个对应的英文：
+业务管理员：admin
+经办人：channel-normal-operator
+业务员：channel-sales-man
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultRole(String DefaultRole) {
+        this.DefaultRole = DefaultRole;
+    }
+
     public ProxyOrganizationOperator() {
     }
 
@@ -175,6 +218,9 @@ public class ProxyOrganizationOperator extends AbstractModel{
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.DefaultRole != null) {
+            this.DefaultRole = new String(source.DefaultRole);
+        }
     }
 
 
@@ -187,6 +233,7 @@ public class ProxyOrganizationOperator extends AbstractModel{
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "DefaultRole", this.DefaultRole);
 
     }
 }

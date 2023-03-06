@@ -290,8 +290,8 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private Float OffsetY;
 
     /**
-    * 渠道控件ID。
-如果不为空，属于渠道预设控件；
+    * 平台企业控件ID。
+如果不为空，属于平台企业预设控件；
     */
     @SerializedName("ChannelComponentId")
     @Expose
@@ -1167,20 +1167,20 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
-     * Get 渠道控件ID。
-如果不为空，属于渠道预设控件； 
-     * @return ChannelComponentId 渠道控件ID。
-如果不为空，属于渠道预设控件；
+     * Get 平台企业控件ID。
+如果不为空，属于平台企业预设控件； 
+     * @return ChannelComponentId 平台企业控件ID。
+如果不为空，属于平台企业预设控件；
      */
     public String getChannelComponentId() {
         return this.ChannelComponentId;
     }
 
     /**
-     * Set 渠道控件ID。
-如果不为空，属于渠道预设控件；
-     * @param ChannelComponentId 渠道控件ID。
-如果不为空，属于渠道预设控件；
+     * Set 平台企业控件ID。
+如果不为空，属于平台企业预设控件；
+     * @param ChannelComponentId 平台企业控件ID。
+如果不为空，属于平台企业预设控件；
      */
     public void setChannelComponentId(String ChannelComponentId) {
         this.ChannelComponentId = ChannelComponentId;

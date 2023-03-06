@@ -101,7 +101,7 @@ public class TemplateInfo extends AbstractModel{
     private String PreviewUrl;
 
     /**
-    * 渠道版-模板PDF文件链接
+    * 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PdfUrl")
@@ -109,14 +109,14 @@ public class TemplateInfo extends AbstractModel{
     private String PdfUrl;
 
     /**
-    * 关联的渠道模板ID
+    * 关联的平台企业模板ID
     */
     @SerializedName("ChannelTemplateId")
     @Expose
     private String ChannelTemplateId;
 
     /**
-    * 关联的渠道模板名称
+    * 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelTemplateName")
@@ -124,7 +124,7 @@ public class TemplateInfo extends AbstractModel{
     private String ChannelTemplateName;
 
     /**
-    * 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+    * 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChannelAutoSave")
@@ -320,9 +320,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 渠道版-模板PDF文件链接
+     * Get 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PdfUrl 渠道版-模板PDF文件链接
+     * @return PdfUrl 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPdfUrl() {
@@ -330,9 +330,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 渠道版-模板PDF文件链接
+     * Set 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PdfUrl 渠道版-模板PDF文件链接
+     * @param PdfUrl 第三方应用集成-模板PDF文件链接
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPdfUrl(String PdfUrl) {
@@ -340,25 +340,25 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 关联的渠道模板ID 
-     * @return ChannelTemplateId 关联的渠道模板ID
+     * Get 关联的平台企业模板ID 
+     * @return ChannelTemplateId 关联的平台企业模板ID
      */
     public String getChannelTemplateId() {
         return this.ChannelTemplateId;
     }
 
     /**
-     * Set 关联的渠道模板ID
-     * @param ChannelTemplateId 关联的渠道模板ID
+     * Set 关联的平台企业模板ID
+     * @param ChannelTemplateId 关联的平台企业模板ID
      */
     public void setChannelTemplateId(String ChannelTemplateId) {
         this.ChannelTemplateId = ChannelTemplateId;
     }
 
     /**
-     * Get 关联的渠道模板名称
+     * Get 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelTemplateName 关联的渠道模板名称
+     * @return ChannelTemplateName 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannelTemplateName() {
@@ -366,9 +366,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 关联的渠道模板名称
+     * Set 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelTemplateName 关联的渠道模板名称
+     * @param ChannelTemplateName 关联的平台企业模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelTemplateName(String ChannelTemplateName) {
@@ -376,9 +376,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * Get 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * @return ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChannelAutoSave() {
@@ -386,9 +386,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * Set 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChannelAutoSave 0-需要渠道子客手动领取渠道的模板(默认); 1-渠道自动设置子客模板
+     * @param ChannelAutoSave 0-需要子客企业手动领取平台企业的模板(默认); 1-平台自动设置子客模板
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannelAutoSave(Long ChannelAutoSave) {

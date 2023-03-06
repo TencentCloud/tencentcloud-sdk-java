@@ -414,6 +414,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *企业方可以通过此接口获取个人用户开启自动签的跳转链接
+     * @param req CreateUserAutoSignEnableUrlRequest
+     * @return CreateUserAutoSignEnableUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserAutoSignEnableUrlResponse CreateUserAutoSignEnableUrl(CreateUserAutoSignEnableUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserAutoSignEnableUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUserAutoSignEnableUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移除员工
      * @param req DeleteIntegrationEmployeesRequest
      * @return DeleteIntegrationEmployeesResponse
@@ -651,6 +671,46 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeThirdPartyAuthCodeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeThirdPartyAuthCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业方可以通过此接口查询个人用户自动签开启状态
+     * @param req DescribeUserAutoSignStatusRequest
+     * @return DescribeUserAutoSignStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatus(DescribeUserAutoSignStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserAutoSignStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserAutoSignStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserAutoSignStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业方可以通过此接口关闭个人的自动签功能
+     * @param req DisableUserAutoSignRequest
+     * @return DisableUserAutoSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableUserAutoSignResponse DisableUserAutoSign(DisableUserAutoSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableUserAutoSignResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableUserAutoSignResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableUserAutoSign");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

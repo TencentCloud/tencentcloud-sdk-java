@@ -30,7 +30,7 @@ public class FlowApproverDetail extends AbstractModel{
     private String ReceiptId;
 
     /**
-    * 渠道侧企业的第三方id
+    * 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationOpenId")
@@ -38,14 +38,14 @@ public class FlowApproverDetail extends AbstractModel{
     private String ProxyOrganizationOpenId;
 
     /**
-    * 渠道侧企业操作人的第三方id
+    * 平台企业操作人的第三方id
     */
     @SerializedName("ProxyOperatorOpenId")
     @Expose
     private String ProxyOperatorOpenId;
 
     /**
-    * 渠道侧企业名称
+    * 平台企业名称
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
@@ -121,9 +121,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧企业的第三方id
+     * Get 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProxyOrganizationOpenId 渠道侧企业的第三方id
+     * @return ProxyOrganizationOpenId 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOrganizationOpenId() {
@@ -131,9 +131,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 渠道侧企业的第三方id
+     * Set 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProxyOrganizationOpenId 渠道侧企业的第三方id
+     * @param ProxyOrganizationOpenId 平台企业的第三方id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
@@ -141,32 +141,32 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧企业操作人的第三方id 
-     * @return ProxyOperatorOpenId 渠道侧企业操作人的第三方id
+     * Get 平台企业操作人的第三方id 
+     * @return ProxyOperatorOpenId 平台企业操作人的第三方id
      */
     public String getProxyOperatorOpenId() {
         return this.ProxyOperatorOpenId;
     }
 
     /**
-     * Set 渠道侧企业操作人的第三方id
-     * @param ProxyOperatorOpenId 渠道侧企业操作人的第三方id
+     * Set 平台企业操作人的第三方id
+     * @param ProxyOperatorOpenId 平台企业操作人的第三方id
      */
     public void setProxyOperatorOpenId(String ProxyOperatorOpenId) {
         this.ProxyOperatorOpenId = ProxyOperatorOpenId;
     }
 
     /**
-     * Get 渠道侧企业名称 
-     * @return ProxyOrganizationName 渠道侧企业名称
+     * Get 平台企业名称 
+     * @return ProxyOrganizationName 平台企业名称
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 渠道侧企业名称
-     * @param ProxyOrganizationName 渠道侧企业名称
+     * Set 平台企业名称
+     * @param ProxyOrganizationName 平台企业名称
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;

@@ -86,14 +86,14 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Boolean WithPreviewUrl;
 
     /**
-    * 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+    * 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
     */
     @SerializedName("WithPdfUrl")
     @Expose
     private Boolean WithPdfUrl;
 
     /**
-    * 渠道模板ID
+    * 模板ID
     */
     @SerializedName("ChannelTemplateId")
     @Expose
@@ -244,32 +244,32 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。 
-     * @return WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     * Get 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。 
+     * @return WithPdfUrl 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
      */
     public Boolean getWithPdfUrl() {
         return this.WithPdfUrl;
     }
 
     /**
-     * Set 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
-     * @param WithPdfUrl 是否获取模板的PDF文件链接-渠道版需要开启白名单时才能使用。
+     * Set 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
+     * @param WithPdfUrl 是否获取模板的PDF文件链接- 第三方应用集成需要开启白名单时才能使用。
      */
     public void setWithPdfUrl(Boolean WithPdfUrl) {
         this.WithPdfUrl = WithPdfUrl;
     }
 
     /**
-     * Get 渠道模板ID 
-     * @return ChannelTemplateId 渠道模板ID
+     * Get 模板ID 
+     * @return ChannelTemplateId 模板ID
      */
     public String getChannelTemplateId() {
         return this.ChannelTemplateId;
     }
 
     /**
-     * Set 渠道模板ID
-     * @param ChannelTemplateId 渠道模板ID
+     * Set 模板ID
+     * @param ChannelTemplateId 模板ID
      */
     public void setChannelTemplateId(String ChannelTemplateId) {
         this.ChannelTemplateId = ChannelTemplateId;

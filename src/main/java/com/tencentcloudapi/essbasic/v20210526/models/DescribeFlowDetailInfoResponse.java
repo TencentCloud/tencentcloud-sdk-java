@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeFlowDetailInfoResponse extends AbstractModel{
 
     /**
-    * 渠道侧应用号Id
+    * 第三方平台应用号Id
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * 渠道侧企业第三方Id
+    * 第三方平台子客企业OpenId
     */
     @SerializedName("ProxyOrganizationOpenId")
     @Expose
@@ -68,32 +68,32 @@ public class DescribeFlowDetailInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 渠道侧应用号Id 
-     * @return ApplicationId 渠道侧应用号Id
+     * Get 第三方平台应用号Id 
+     * @return ApplicationId 第三方平台应用号Id
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set 渠道侧应用号Id
-     * @param ApplicationId 渠道侧应用号Id
+     * Set 第三方平台应用号Id
+     * @param ApplicationId 第三方平台应用号Id
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get 渠道侧企业第三方Id 
-     * @return ProxyOrganizationOpenId 渠道侧企业第三方Id
+     * Get 第三方平台子客企业OpenId 
+     * @return ProxyOrganizationOpenId 第三方平台子客企业OpenId
      */
     public String getProxyOrganizationOpenId() {
         return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 渠道侧企业第三方Id
-     * @param ProxyOrganizationOpenId 渠道侧企业第三方Id
+     * Set 第三方平台子客企业OpenId
+     * @param ProxyOrganizationOpenId 第三方平台子客企业OpenId
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
         this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;

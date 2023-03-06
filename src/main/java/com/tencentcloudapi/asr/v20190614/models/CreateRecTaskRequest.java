@@ -33,6 +33,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_vi：16k 越南语；
+• 16k_ms：16k 马来语；
 • 16k_zh_edu 中文教育；
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
@@ -198,6 +200,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_vi：16k 越南语；
+• 16k_ms：16k 马来语；
 • 16k_zh_edu 中文教育；
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
@@ -214,6 +218,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_vi：16k 越南语；
+• 16k_ms：16k 马来语；
 • 16k_zh_edu 中文教育；
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
@@ -236,6 +242,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_vi：16k 越南语；
+• 16k_ms：16k 马来语；
 • 16k_zh_edu 中文教育；
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；
@@ -252,6 +260,8 @@ public class CreateRecTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_ja：16k 日语；
+• 16k_vi：16k 越南语；
+• 16k_ms：16k 马来语；
 • 16k_zh_edu 中文教育；
 • 16k_en_edu 英文教育；
 • 16k_zh_medical  医疗；

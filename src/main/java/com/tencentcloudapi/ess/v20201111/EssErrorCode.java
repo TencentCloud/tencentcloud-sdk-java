@@ -63,6 +63,12 @@ public enum EssErrorCode {
     // 缓存错误。
      INTERNALERROR_CACHE("InternalError.Cache"),
      
+    // 调用OpenCloud云api内部错误。
+     INTERNALERROR_CALLOPENCLOUDAPIERROR("InternalError.CallOpenCloudApiError"),
+     
+    // 回调错误。
+     INTERNALERROR_CALLBACK("InternalError.Callback"),
+     
     // 数据库异常。
      INTERNALERROR_DB("InternalError.Db"),
      

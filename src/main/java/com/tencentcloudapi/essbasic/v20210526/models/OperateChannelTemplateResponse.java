@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OperateChannelTemplateResponse extends AbstractModel{
 
     /**
-    * 腾讯电子签颁发给渠道的应用ID
+    * 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
@@ -31,7 +31,7 @@ public class OperateChannelTemplateResponse extends AbstractModel{
     private String AppId;
 
     /**
-    * 渠道方模板库模板唯一标识
+    * 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
@@ -78,9 +78,9 @@ public class OperateChannelTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 腾讯电子签颁发给渠道的应用ID
+     * Get 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppId 腾讯电子签颁发给渠道的应用ID
+     * @return AppId 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
@@ -88,9 +88,9 @@ public class OperateChannelTemplateResponse extends AbstractModel{
     }
 
     /**
-     * Set 腾讯电子签颁发给渠道的应用ID
+     * Set 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppId 腾讯电子签颁发给渠道的应用ID
+     * @param AppId 腾讯电子签颁发给第三方应用平台的应用ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
@@ -98,9 +98,9 @@ public class OperateChannelTemplateResponse extends AbstractModel{
     }
 
     /**
-     * Get 渠道方模板库模板唯一标识
+     * Get 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateId 渠道方模板库模板唯一标识
+     * @return TemplateId 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
@@ -108,9 +108,9 @@ public class OperateChannelTemplateResponse extends AbstractModel{
     }
 
     /**
-     * Set 渠道方模板库模板唯一标识
+     * Set 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateId 渠道方模板库模板唯一标识
+     * @param TemplateId 第三方应用平台模板库模板唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {

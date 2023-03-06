@@ -53,8 +53,8 @@ public class CreateSignUrlsRequest extends AbstractModel{
     /**
     * 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：渠道合作企业；
-"NOT_CHANNEL"：非渠道合作企业；
+"CHANNEL"：第三方平台子客企业企业；
+"NOT_CHANNEL"：非第三方平台子客企业企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
     */
@@ -63,7 +63,7 @@ public class CreateSignUrlsRequest extends AbstractModel{
     private String GenerateType;
 
     /**
-    * 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+    * 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -85,14 +85,14 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private String Mobile;
 
     /**
-    * 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
+    * 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
     */
     @SerializedName("OrganizationOpenId")
     @Expose
     private String OrganizationOpenId;
 
     /**
-    * 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+    * 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
     */
     @SerializedName("OpenId")
     @Expose
@@ -186,14 +186,14 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Get 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：渠道合作企业；
-"NOT_CHANNEL"：非渠道合作企业；
+"CHANNEL"：第三方平台子客企业企业；
+"NOT_CHANNEL"：非第三方平台子客企业企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方； 
      * @return GenerateType 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：渠道合作企业；
-"NOT_CHANNEL"：非渠道合作企业；
+"CHANNEL"：第三方平台子客企业企业；
+"NOT_CHANNEL"：非第三方平台子客企业企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
      */
@@ -204,14 +204,14 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Set 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：渠道合作企业；
-"NOT_CHANNEL"：非渠道合作企业；
+"CHANNEL"：第三方平台子客企业企业；
+"NOT_CHANNEL"：非第三方平台子客企业企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
      * @param GenerateType 签署链接生成类型，默认是 "ALL"；
 "ALL"：全部签署方签署链接，此时不会给自动签署的签署方创建签署链接；
-"CHANNEL"：渠道合作企业；
-"NOT_CHANNEL"：非渠道合作企业；
+"CHANNEL"：第三方平台子客企业企业；
+"NOT_CHANNEL"：非第三方平台子客企业企业；
 "PERSON"：个人；
 "FOLLOWER"：关注方，目前是合同抄送方；
      */
@@ -220,16 +220,16 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填 
-     * @return OrganizationName 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+     * Get 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填 
+     * @return OrganizationName 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
-     * @param OrganizationName 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+     * Set 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+     * @param OrganizationName 非第三方平台子客企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
@@ -272,32 +272,32 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     }
 
     /**
-     * Get 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填 
-     * @return OrganizationOpenId 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
+     * Get 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填 
+     * @return OrganizationOpenId 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
-     * @param OrganizationOpenId 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
+     * Set 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
+     * @param OrganizationOpenId 第三方平台子客企业的企业OpenId，GenerateType为"CHANNEL"时必填
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息 
-     * @return OpenId 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+     * Get 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息 
+     * @return OpenId 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
-     * @param OpenId 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+     * Set 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
+     * @param OpenId 第三方平台子客企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人, 仅展示已经实名的经办人信息
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

@@ -61,8 +61,8 @@ public class FlowApproverInfo extends AbstractModel{
     private String OrganizationName;
 
     /**
-    * 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+    * 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
     */
     @SerializedName("NotChannelOrganization")
     @Expose
@@ -70,14 +70,14 @@ public class FlowApproverInfo extends AbstractModel{
 
     /**
     * 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+    * 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -251,20 +251,20 @@ HANDWRITE -手写签名
     }
 
     /**
-     * Get 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下； 
-     * @return NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+     * Get 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下； 
+     * @return NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
      */
     public Boolean getNotChannelOrganization() {
         return this.NotChannelOrganization;
     }
 
     /**
-     * Set 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
-     * @param NotChannelOrganization 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
-默认为false，即签署人位于同一个渠道应用号下；
+     * Set 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
+     * @param NotChannelOrganization 指定签署人非第三方平台子客企业下员工，在ApproverType为ORGANIZATION时指定。
+默认为false，即签署人位于同一个第三方平台应用号下；默认为false，即签署人位于同一个第三方应用号下；
      */
     public void setNotChannelOrganization(Boolean NotChannelOrganization) {
         this.NotChannelOrganization = NotChannelOrganization;
@@ -272,9 +272,9 @@ HANDWRITE -手写签名
 
     /**
      * Get 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程 
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程 
      * @return OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public String getOpenId() {
         return this.OpenId;
@@ -282,25 +282,25 @@ HANDWRITE -手写签名
 
     /**
      * Set 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      * @param OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字段若不指定，则发起【待领取】的流程
+当签署方为同一第三方平台下的员工时，该字段若不指定，则发起【待领取】的流程
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符； 
-     * @return OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Get 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符； 
+     * @return OrganizationOpenId 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
-     * @param OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * Set 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
+     * @param OrganizationOpenId 企业签署方在同一第三方平台应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符；
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;

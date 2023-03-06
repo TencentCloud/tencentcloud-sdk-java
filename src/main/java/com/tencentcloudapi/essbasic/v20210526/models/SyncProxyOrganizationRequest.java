@@ -31,7 +31,7 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 渠道侧合作企业名称，最大长度64个字符
+    * 第三方平台子客企业名称，最大长度64个字符
     */
     @SerializedName("ProxyOrganizationName")
     @Expose
@@ -45,14 +45,14 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     private String BusinessLicense;
 
     /**
-    * 渠道侧合作企业统一社会信用代码，最大长度200个字符
+    * 第三方平台子客企业统一社会信用代码，最大长度200个字符
     */
     @SerializedName("UniformSocialCreditCode")
     @Expose
     private String UniformSocialCreditCode;
 
     /**
-    * 渠道侧合作企业法人/负责人姓名
+    * 第三方平台子客企业法人/负责人姓名
     */
     @SerializedName("ProxyLegalName")
     @Expose
@@ -86,16 +86,16 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧合作企业名称，最大长度64个字符 
-     * @return ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * Get 第三方平台子客企业名称，最大长度64个字符 
+     * @return ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
      */
     public String getProxyOrganizationName() {
         return this.ProxyOrganizationName;
     }
 
     /**
-     * Set 渠道侧合作企业名称，最大长度64个字符
-     * @param ProxyOrganizationName 渠道侧合作企业名称，最大长度64个字符
+     * Set 第三方平台子客企业名称，最大长度64个字符
+     * @param ProxyOrganizationName 第三方平台子客企业名称，最大长度64个字符
      */
     public void setProxyOrganizationName(String ProxyOrganizationName) {
         this.ProxyOrganizationName = ProxyOrganizationName;
@@ -118,32 +118,32 @@ public class SyncProxyOrganizationRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道侧合作企业统一社会信用代码，最大长度200个字符 
-     * @return UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * Get 第三方平台子客企业统一社会信用代码，最大长度200个字符 
+     * @return UniformSocialCreditCode 第三方平台子客企业统一社会信用代码，最大长度200个字符
      */
     public String getUniformSocialCreditCode() {
         return this.UniformSocialCreditCode;
     }
 
     /**
-     * Set 渠道侧合作企业统一社会信用代码，最大长度200个字符
-     * @param UniformSocialCreditCode 渠道侧合作企业统一社会信用代码，最大长度200个字符
+     * Set 第三方平台子客企业统一社会信用代码，最大长度200个字符
+     * @param UniformSocialCreditCode 第三方平台子客企业统一社会信用代码，最大长度200个字符
      */
     public void setUniformSocialCreditCode(String UniformSocialCreditCode) {
         this.UniformSocialCreditCode = UniformSocialCreditCode;
     }
 
     /**
-     * Get 渠道侧合作企业法人/负责人姓名 
-     * @return ProxyLegalName 渠道侧合作企业法人/负责人姓名
+     * Get 第三方平台子客企业法人/负责人姓名 
+     * @return ProxyLegalName 第三方平台子客企业法人/负责人姓名
      */
     public String getProxyLegalName() {
         return this.ProxyLegalName;
     }
 
     /**
-     * Set 渠道侧合作企业法人/负责人姓名
-     * @param ProxyLegalName 渠道侧合作企业法人/负责人姓名
+     * Set 第三方平台子客企业法人/负责人姓名
+     * @param ProxyLegalName 第三方平台子客企业法人/负责人姓名
      */
     public void setProxyLegalName(String ProxyLegalName) {
         this.ProxyLegalName = ProxyLegalName;

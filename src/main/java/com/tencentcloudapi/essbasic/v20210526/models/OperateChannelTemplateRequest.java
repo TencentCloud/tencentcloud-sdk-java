@@ -37,7 +37,7 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     private String OperateType;
 
     /**
-    * 渠道方模板库模板唯一标识
+    * 第三方应用平台模板库模板唯一标识
     */
     @SerializedName("TemplateId")
     @Expose
@@ -97,16 +97,16 @@ public class OperateChannelTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道方模板库模板唯一标识 
-     * @return TemplateId 渠道方模板库模板唯一标识
+     * Get 第三方应用平台模板库模板唯一标识 
+     * @return TemplateId 第三方应用平台模板库模板唯一标识
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 渠道方模板库模板唯一标识
-     * @param TemplateId 渠道方模板库模板唯一标识
+     * Set 第三方应用平台模板库模板唯一标识
+     * @param TemplateId 第三方应用平台模板库模板唯一标识
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

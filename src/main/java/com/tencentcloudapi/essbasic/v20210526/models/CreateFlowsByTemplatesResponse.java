@@ -30,7 +30,7 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 渠道的业务信息，限制1024字符
+    * 业务信息，限制1024字符
     */
     @SerializedName("CustomerData")
     @Expose
@@ -83,16 +83,16 @@ public class CreateFlowsByTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get 渠道的业务信息，限制1024字符 
-     * @return CustomerData 渠道的业务信息，限制1024字符
+     * Get 业务信息，限制1024字符 
+     * @return CustomerData 业务信息，限制1024字符
      */
     public String [] getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 渠道的业务信息，限制1024字符
-     * @param CustomerData 渠道的业务信息，限制1024字符
+     * Set 业务信息，限制1024字符
+     * @param CustomerData 业务信息，限制1024字符
      */
     public void setCustomerData(String [] CustomerData) {
         this.CustomerData = CustomerData;
