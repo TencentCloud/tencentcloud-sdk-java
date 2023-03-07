@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DescribeRocketMQVipInstancesRequest extends AbstractModel{
 
     /**
-    * 查询条件过滤器
+    * 查询条件过滤器，支持的查询条件如下：
+instanceIds - 实例ID
+instanceName - 实例名称
     */
     @SerializedName("Filters")
     @Expose
@@ -44,16 +46,24 @@ public class DescribeRocketMQVipInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get 查询条件过滤器 
-     * @return Filters 查询条件过滤器
+     * Get 查询条件过滤器，支持的查询条件如下：
+instanceIds - 实例ID
+instanceName - 实例名称 
+     * @return Filters 查询条件过滤器，支持的查询条件如下：
+instanceIds - 实例ID
+instanceName - 实例名称
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件过滤器
-     * @param Filters 查询条件过滤器
+     * Set 查询条件过滤器，支持的查询条件如下：
+instanceIds - 实例ID
+instanceName - 实例名称
+     * @param Filters 查询条件过滤器，支持的查询条件如下：
+instanceIds - 实例ID
+instanceName - 实例名称
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

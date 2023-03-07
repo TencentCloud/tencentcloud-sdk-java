@@ -76,7 +76,7 @@ ORGANIZATION-企业
     private String Mobile;
 
     /**
-    * 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+    * 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -84,7 +84,7 @@ ORGANIZATION-企业
 
     /**
     * 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
     */
     @SerializedName("OpenId")
     @Expose
@@ -219,16 +219,16 @@ ORGANIZATION-企业
     }
 
     /**
-     * Get 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符 
-     * @return OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * Get 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符 
+     * @return OrganizationOpenId 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
-     * @param OrganizationOpenId 企业签署方在同一渠道下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * Set 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
+     * @param OrganizationOpenId 企业签署方在同一第三方应用下的其他合作企业OpenId，签署方为非发起方企业场景下必传，最大长度64个字符
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
@@ -236,9 +236,9 @@ ORGANIZATION-企业
 
     /**
      * Get 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传 
+当签署方为同一第三方应用下的员工时，该字必传 
      * @return OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
      */
     public String getOpenId() {
         return this.OpenId;
@@ -246,9 +246,9 @@ ORGANIZATION-企业
 
     /**
      * Set 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
      * @param OpenId 用户侧第三方id，最大长度64个字符
-当签署方为同一渠道下的员工时，该字必传
+当签署方为同一第三方应用下的员工时，该字必传
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

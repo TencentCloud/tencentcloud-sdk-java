@@ -146,6 +146,14 @@ public class Policy extends AbstractModel{
     private String SourceName;
 
     /**
+    * 策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
      * Get 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。 
      * @return Database 需要授权的数据库名，填*代表当前Catalog下所有数据库。当授权类型为管理员级别时，只允许填“*”，当授权类型为数据连接级别时只允许填空，其他类型下可以任意指定数据库。
      */
@@ -445,6 +453,26 @@ public class Policy extends AbstractModel{
         this.SourceName = SourceName;
     }
 
+    /**
+     * Get 策略ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public Policy() {
     }
 
@@ -501,6 +529,9 @@ public class Policy extends AbstractModel{
         if (source.SourceName != null) {
             this.SourceName = new String(source.SourceName);
         }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
     }
 
 
@@ -524,6 +555,7 @@ public class Policy extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SourceId", this.SourceId);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

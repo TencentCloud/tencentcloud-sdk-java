@@ -61,6 +61,7 @@ public class SecurityDynamic extends AbstractModel{
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
     */
     @SerializedName("SecurityLevel")
     @Expose
@@ -155,12 +156,14 @@ public class SecurityDynamic extends AbstractModel{
 <li>RISK: 严重</li>
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
-<li>LOW: 低危</li> 
+<li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li> 
      * @return SecurityLevel 安全事件等级。
 <li>RISK: 严重</li>
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
      */
     public String getSecurityLevel() {
         return this.SecurityLevel;
@@ -172,11 +175,13 @@ public class SecurityDynamic extends AbstractModel{
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
      * @param SecurityLevel 安全事件等级。
 <li>RISK: 严重</li>
 <li>HIGH: 高危</li>
 <li>NORMAL: 中危</li>
 <li>LOW: 低危</li>
+<li>UNKNOWNED: 可疑</li>
      */
     public void setSecurityLevel(String SecurityLevel) {
         this.SecurityLevel = SecurityLevel;

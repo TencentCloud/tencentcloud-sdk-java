@@ -298,6 +298,14 @@ public class DataEngineInfo extends AbstractModel{
     private String ImageVersionName;
 
     /**
+    * 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartStandbyCluster")
+    @Expose
+    private Boolean StartStandbyCluster;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -965,6 +973,26 @@ public class DataEngineInfo extends AbstractModel{
         this.ImageVersionName = ImageVersionName;
     }
 
+    /**
+     * Get 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartStandbyCluster 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getStartStandbyCluster() {
+        return this.StartStandbyCluster;
+    }
+
+    /**
+     * Set 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartStandbyCluster 是否开启备集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartStandbyCluster(Boolean StartStandbyCluster) {
+        this.StartStandbyCluster = StartStandbyCluster;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1090,6 +1118,9 @@ public class DataEngineInfo extends AbstractModel{
         if (source.ImageVersionName != null) {
             this.ImageVersionName = new String(source.ImageVersionName);
         }
+        if (source.StartStandbyCluster != null) {
+            this.StartStandbyCluster = new Boolean(source.StartStandbyCluster);
+        }
     }
 
 
@@ -1133,6 +1164,7 @@ public class DataEngineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageVersionId", this.ImageVersionId);
         this.setParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
         this.setParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
+        this.setParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
 
     }
 }

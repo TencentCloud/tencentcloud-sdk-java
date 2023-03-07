@@ -44,6 +44,13 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     private Long SeatUsedCount;
 
     /**
+    * 音频套餐包消耗分钟数
+    */
+    @SerializedName("VoipCallInCount")
+    @Expose
+    private Long VoipCallInCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 音频套餐包消耗分钟数 
+     * @return VoipCallInCount 音频套餐包消耗分钟数
+     */
+    public Long getVoipCallInCount() {
+        return this.VoipCallInCount;
+    }
+
+    /**
+     * Set 音频套餐包消耗分钟数
+     * @param VoipCallInCount 音频套餐包消耗分钟数
+     */
+    public void setVoipCallInCount(Long VoipCallInCount) {
+        this.VoipCallInCount = VoipCallInCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,9 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         if (source.SeatUsedCount != null) {
             this.SeatUsedCount = new Long(source.SeatUsedCount);
         }
+        if (source.VoipCallInCount != null) {
+            this.VoipCallInCount = new Long(source.VoipCallInCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TelCallOutCount", this.TelCallOutCount);
         this.setParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
         this.setParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
+        this.setParamSimple(map, prefix + "VoipCallInCount", this.VoipCallInCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

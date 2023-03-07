@@ -123,6 +123,9 @@ public enum TeoErrorCode {
     // 非法操作-非法参数-参数名重复。
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMDUPLICATENAME("InvalidParameter.ErrInvalidActionParamDuplicateName"),
      
+    // 非法操作-非法参数-无效参数值类型。
+     INVALIDPARAMETER_ERRINVALIDACTIONPARAMNAME("InvalidParameter.ErrInvalidActionParamName"),
+     
     // 非法操作-非法参数-参数值数量超出限制。
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
      
@@ -131,6 +134,9 @@ public enum TeoErrorCode {
      
     // 非法条件-非法忽略大小写。
      INVALIDPARAMETER_ERRINVALIDCONDITIONIGNORECASE("InvalidParameter.ErrInvalidConditionIgnoreCase"),
+     
+    // 非法条件-非法参数名称-无效的参数名称。
+     INVALIDPARAMETER_ERRINVALIDCONDITIONNAMEBADNAME("InvalidParameter.ErrInvalidConditionNameBadName"),
      
     // 非法条件-非法参数名称-匹配类型不支持参数名称。
      INVALIDPARAMETER_ERRINVALIDCONDITIONNAMETARGETNOTSUPPORTNAME("InvalidParameter.ErrInvalidConditionNameTargetNotSupportName"),
@@ -173,6 +179,9 @@ public enum TeoErrorCode {
      
     // 无效的token鉴权。
      INVALIDPARAMETER_INVALIDAUTHENTICATION("InvalidParameter.InvalidAuthentication"),
+     
+    // 无效的token鉴权密钥。
+     INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESECRETKEY("InvalidParameter.InvalidAuthenticationTypeSecretKey"),
      
     // 无效的token鉴权参数。
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESIGNPARAM("InvalidParameter.InvalidAuthenticationTypeSignParam"),
@@ -233,6 +242,9 @@ public enum TeoErrorCode {
      
     // 无效的最大上传大小。
      INVALIDPARAMETER_INVALIDPOSTSIZEVALUE("InvalidParameter.InvalidPostSizeValue"),
+     
+    // 套餐包不支持Quic配置。
+     INVALIDPARAMETER_INVALIDQUICBILLING("InvalidParameter.InvalidQuicBilling"),
      
     // 无效的请求头header。
      INVALIDPARAMETER_INVALIDREQUESTHEADERNAME("InvalidParameter.InvalidRequestHeaderName"),
@@ -297,6 +309,9 @@ public enum TeoErrorCode {
     // 套餐不存在。
      INVALIDPARAMETER_PLANNOTFOUND("InvalidParameter.PlanNotFound"),
      
+    // 最大上传大小超出限制
+     INVALIDPARAMETER_POSTMAXSIZELIMITEXCEEDED("InvalidParameter.PostMaxSizeLimitExceeded"),
+     
     // 参数错误
      INVALIDPARAMETER_SECURITY("InvalidParameter.Security"),
      
@@ -332,6 +347,9 @@ public enum TeoErrorCode {
      
     // 入参中的域名与站点参数不匹配，请更正后重试。
      INVALIDPARAMETERVALUE_DOMAINNOTMATCHZONE("InvalidParameterValue.DomainNotMatchZone"),
+     
+    // DNS 记录内容错误。
+     INVALIDPARAMETERVALUE_INVALIDDNSCONTENT("InvalidParameterValue.InvalidDNSContent"),
      
     // DNS 记录名称错误。
      INVALIDPARAMETERVALUE_INVALIDDNSNAME("InvalidParameterValue.InvalidDNSName"),

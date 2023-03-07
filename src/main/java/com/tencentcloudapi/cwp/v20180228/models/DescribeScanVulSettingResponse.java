@@ -86,6 +86,13 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     private Long ClickTimeout;
 
     /**
+    * 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+    */
+    @SerializedName("Uuids")
+    @Expose
+    private String [] Uuids;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -237,6 +244,22 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机 
+     * @return Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     */
+    public String [] getUuids() {
+        return this.Uuids;
+    }
+
+    /**
+     * Set 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     * @param Uuids 为空默认扫描全部专业版、旗舰版、普惠版主机，不为空只扫描选中主机
+     */
+    public void setUuids(String [] Uuids) {
+        this.Uuids = Uuids;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -287,6 +310,12 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
         if (source.ClickTimeout != null) {
             this.ClickTimeout = new Long(source.ClickTimeout);
         }
+        if (source.Uuids != null) {
+            this.Uuids = new String[source.Uuids.length];
+            for (int i = 0; i < source.Uuids.length; i++) {
+                this.Uuids[i] = new String(source.Uuids[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -306,6 +335,7 @@ public class DescribeScanVulSettingResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableScan", this.EnableScan);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
+        this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

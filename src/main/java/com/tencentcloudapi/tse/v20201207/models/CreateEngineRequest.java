@@ -184,6 +184,13 @@ polarismesh - STANDARD版本
     private Long PrepaidRenewFlag;
 
     /**
+    * 跨地域部署的引擎地域配置详情
+    */
+    @SerializedName("EngineRegionInfos")
+    @Expose
+    private EngineRegionInfo [] EngineRegionInfos;
+
+    /**
      * Get 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -647,6 +654,22 @@ polarismesh - STANDARD版本
         this.PrepaidRenewFlag = PrepaidRenewFlag;
     }
 
+    /**
+     * Get 跨地域部署的引擎地域配置详情 
+     * @return EngineRegionInfos 跨地域部署的引擎地域配置详情
+     */
+    public EngineRegionInfo [] getEngineRegionInfos() {
+        return this.EngineRegionInfos;
+    }
+
+    /**
+     * Set 跨地域部署的引擎地域配置详情
+     * @param EngineRegionInfos 跨地域部署的引擎地域配置详情
+     */
+    public void setEngineRegionInfos(EngineRegionInfo [] EngineRegionInfos) {
+        this.EngineRegionInfos = EngineRegionInfos;
+    }
+
     public CreateEngineRequest() {
     }
 
@@ -706,6 +729,12 @@ polarismesh - STANDARD版本
         if (source.PrepaidRenewFlag != null) {
             this.PrepaidRenewFlag = new Long(source.PrepaidRenewFlag);
         }
+        if (source.EngineRegionInfos != null) {
+            this.EngineRegionInfos = new EngineRegionInfo[source.EngineRegionInfos.length];
+            for (int i = 0; i < source.EngineRegionInfos.length; i++) {
+                this.EngineRegionInfos[i] = new EngineRegionInfo(source.EngineRegionInfos[i]);
+            }
+        }
     }
 
 
@@ -728,6 +757,7 @@ polarismesh - STANDARD版本
         this.setParamObj(map, prefix + "EngineAdmin.", this.EngineAdmin);
         this.setParamSimple(map, prefix + "PrepaidPeriod", this.PrepaidPeriod);
         this.setParamSimple(map, prefix + "PrepaidRenewFlag", this.PrepaidRenewFlag);
+        this.setParamArrayObj(map, prefix + "EngineRegionInfos.", this.EngineRegionInfos);
 
     }
 }

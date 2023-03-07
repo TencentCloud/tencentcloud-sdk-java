@@ -100,6 +100,14 @@ public class RocketMQInstanceConfig extends AbstractModel{
     private RocketMQTopicDistribution [] TopicDistribution;
 
     /**
+    * 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxQueuesPerTopic")
+    @Expose
+    private Long MaxQueuesPerTopic;
+
+    /**
      * Get 单命名空间TPS上线 
      * @return MaxTpsPerNamespace 单命名空间TPS上线
      */
@@ -275,6 +283,26 @@ public class RocketMQInstanceConfig extends AbstractModel{
         this.TopicDistribution = TopicDistribution;
     }
 
+    /**
+     * Get 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxQueuesPerTopic 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxQueuesPerTopic() {
+        return this.MaxQueuesPerTopic;
+    }
+
+    /**
+     * Set 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxQueuesPerTopic 每个主题最大队列数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxQueuesPerTopic(Long MaxQueuesPerTopic) {
+        this.MaxQueuesPerTopic = MaxQueuesPerTopic;
+    }
+
     public RocketMQInstanceConfig() {
     }
 
@@ -322,6 +350,9 @@ public class RocketMQInstanceConfig extends AbstractModel{
                 this.TopicDistribution[i] = new RocketMQTopicDistribution(source.TopicDistribution[i]);
             }
         }
+        if (source.MaxQueuesPerTopic != null) {
+            this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
+        }
     }
 
 
@@ -340,6 +371,7 @@ public class RocketMQInstanceConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamArrayObj(map, prefix + "TopicDistribution.", this.TopicDistribution);
+        this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
 
     }
 }

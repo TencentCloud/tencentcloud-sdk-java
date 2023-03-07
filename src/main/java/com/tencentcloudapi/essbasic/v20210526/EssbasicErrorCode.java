@@ -63,6 +63,9 @@ public enum EssbasicErrorCode {
     // 依赖的其他api出错。
      INTERNALERROR_DEPENDSAPI("InternalError.DependsApi"),
      
+    // 数据库异常。
+     INTERNALERROR_DEPENDSDB("InternalError.DependsDb"),
+     
     // 加密错误。
      INTERNALERROR_ENCRYPTION("InternalError.Encryption"),
      
