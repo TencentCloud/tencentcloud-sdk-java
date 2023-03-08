@@ -179,6 +179,14 @@ public class StatusNode extends AbstractModel{
     private String ExternalUrl;
 
     /**
+    * 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParallelNodes")
+    @Expose
+    private String ParallelNodes;
+
+    /**
      * Get 节点id 
      * @return NodeId 节点id
      */
@@ -562,6 +570,26 @@ public class StatusNode extends AbstractModel{
         this.ExternalUrl = ExternalUrl;
     }
 
+    /**
+     * Get 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParallelNodes 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParallelNodes() {
+        return this.ParallelNodes;
+    }
+
+    /**
+     * Set 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParallelNodes 并行节点 3-4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParallelNodes(String ParallelNodes) {
+        this.ParallelNodes = ParallelNodes;
+    }
+
     public StatusNode() {
     }
 
@@ -633,6 +661,9 @@ public class StatusNode extends AbstractModel{
         if (source.ExternalUrl != null) {
             this.ExternalUrl = new String(source.ExternalUrl);
         }
+        if (source.ParallelNodes != null) {
+            this.ParallelNodes = new String(source.ParallelNodes);
+        }
     }
 
 
@@ -660,6 +691,7 @@ public class StatusNode extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "CKafkaRegion", this.CKafkaRegion);
         this.setParamSimple(map, prefix + "ExternalUrl", this.ExternalUrl);
+        this.setParamSimple(map, prefix + "ParallelNodes", this.ParallelNodes);
 
     }
 }

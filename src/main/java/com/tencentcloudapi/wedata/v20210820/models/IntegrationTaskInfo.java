@@ -236,6 +236,22 @@ public class IntegrationTaskInfo extends AbstractModel{
     private String InLongManagerVersion;
 
     /**
+    * dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataProxyUrl")
+    @Expose
+    private String [] DataProxyUrl;
+
+    /**
+    * 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Submit")
+    @Expose
+    private Boolean Submit;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -763,6 +779,46 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.InLongManagerVersion = InLongManagerVersion;
     }
 
+    /**
+     * Get dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataProxyUrl dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDataProxyUrl() {
+        return this.DataProxyUrl;
+    }
+
+    /**
+     * Set dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataProxyUrl dataproxy url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataProxyUrl(String [] DataProxyUrl) {
+        this.DataProxyUrl = DataProxyUrl;
+    }
+
+    /**
+     * Get 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Submit 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSubmit() {
+        return this.Submit;
+    }
+
+    /**
+     * Set 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Submit 任务版本是否已提交运维
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubmit(Boolean Submit) {
+        this.Submit = Submit;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -867,6 +923,15 @@ public class IntegrationTaskInfo extends AbstractModel{
         if (source.InLongManagerVersion != null) {
             this.InLongManagerVersion = new String(source.InLongManagerVersion);
         }
+        if (source.DataProxyUrl != null) {
+            this.DataProxyUrl = new String[source.DataProxyUrl.length];
+            for (int i = 0; i < source.DataProxyUrl.length; i++) {
+                this.DataProxyUrl[i] = new String(source.DataProxyUrl[i]);
+            }
+        }
+        if (source.Submit != null) {
+            this.Submit = new Boolean(source.Submit);
+        }
     }
 
 
@@ -901,6 +966,8 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InLongManagerUrl", this.InLongManagerUrl);
         this.setParamSimple(map, prefix + "InLongStreamId", this.InLongStreamId);
         this.setParamSimple(map, prefix + "InLongManagerVersion", this.InLongManagerVersion);
+        this.setParamArraySimple(map, prefix + "DataProxyUrl.", this.DataProxyUrl);
+        this.setParamSimple(map, prefix + "Submit", this.Submit);
 
     }
 }

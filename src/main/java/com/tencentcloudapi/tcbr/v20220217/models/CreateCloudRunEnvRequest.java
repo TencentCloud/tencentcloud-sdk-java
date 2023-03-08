@@ -88,6 +88,13 @@ Activity：活动来源
     private String Channel;
 
     /**
+    * 环境ID
+    */
+    @SerializedName("EnvId")
+    @Expose
+    private String EnvId;
+
+    /**
      * Get Trial,Standard,Professional,Enterprise 
      * @return PackageType Trial,Standard,Professional,Enterprise
      */
@@ -239,6 +246,22 @@ Activity：活动来源
         this.Channel = Channel;
     }
 
+    /**
+     * Get 环境ID 
+     * @return EnvId 环境ID
+     */
+    public String getEnvId() {
+        return this.EnvId;
+    }
+
+    /**
+     * Set 环境ID
+     * @param EnvId 环境ID
+     */
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
+    }
+
     public CreateCloudRunEnvRequest() {
     }
 
@@ -277,6 +300,9 @@ Activity：活动来源
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
+        }
     }
 
 
@@ -293,6 +319,7 @@ Activity：活动来源
         this.setParamSimple(map, prefix + "ReqKey", this.ReqKey);
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
 
     }
 }

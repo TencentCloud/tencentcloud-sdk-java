@@ -79,6 +79,14 @@ public class AlarmReceiverInfo extends AbstractModel{
     private Long Http;
 
     /**
+    * 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WecomGroup")
+    @Expose
+    private Long WecomGroup;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -206,6 +214,26 @@ public class AlarmReceiverInfo extends AbstractModel{
         this.Http = Http;
     }
 
+    /**
+     * Get 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WecomGroup 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWecomGroup() {
+        return this.WecomGroup;
+    }
+
+    /**
+     * Set 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WecomGroup 企业微信群，0：未设置，1：成功，2：失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWecomGroup(Long WecomGroup) {
+        this.WecomGroup = WecomGroup;
+    }
+
     public AlarmReceiverInfo() {
     }
 
@@ -238,6 +266,9 @@ public class AlarmReceiverInfo extends AbstractModel{
         if (source.Http != null) {
             this.Http = new Long(source.Http);
         }
+        if (source.WecomGroup != null) {
+            this.WecomGroup = new Long(source.WecomGroup);
+        }
     }
 
 
@@ -253,6 +284,7 @@ public class AlarmReceiverInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Voice", this.Voice);
         this.setParamSimple(map, prefix + "Wecom", this.Wecom);
         this.setParamSimple(map, prefix + "Http", this.Http);
+        this.setParamSimple(map, prefix + "WecomGroup", this.WecomGroup);
 
     }
 }

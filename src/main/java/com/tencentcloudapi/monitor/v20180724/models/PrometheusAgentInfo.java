@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class PrometheusAgentInfo extends AbstractModel{
 
+    /**
+    * 集群类型
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * 集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 备注
+    */
+    @SerializedName("Describe")
+    @Expose
+    private String Describe;
+
+    /**
+     * Get 集群类型 
+     * @return ClusterType 集群类型
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型
+     * @param ClusterType 集群类型
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 集群id 
+     * @return ClusterId 集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterId 集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 备注 
+     * @return Describe 备注
+     */
+    public String getDescribe() {
+        return this.Describe;
+    }
+
+    /**
+     * Set 备注
+     * @param Describe 备注
+     */
+    public void setDescribe(String Describe) {
+        this.Describe = Describe;
+    }
+
     public PrometheusAgentInfo() {
     }
 
@@ -30,6 +99,15 @@ public class PrometheusAgentInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PrometheusAgentInfo(PrometheusAgentInfo source) {
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class PrometheusAgentInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Describe", this.Describe);
 
     }
 }

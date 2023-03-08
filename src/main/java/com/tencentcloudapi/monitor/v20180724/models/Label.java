@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class Label extends AbstractModel{
 
+    /**
+    * map表中的Name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * map表中的Value
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get map表中的Name 
+     * @return Name map表中的Name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set map表中的Name
+     * @param Name map表中的Name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get map表中的Value 
+     * @return Value map表中的Value
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set map表中的Value
+     * @param Value map表中的Value
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
     public Label() {
     }
 
@@ -30,6 +76,12 @@ public class Label extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Label(Label source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class Label extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

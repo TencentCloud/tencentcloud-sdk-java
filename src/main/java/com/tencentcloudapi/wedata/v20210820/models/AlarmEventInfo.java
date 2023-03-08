@@ -58,13 +58,6 @@ public class AlarmEventInfo extends AbstractModel{
     private Long AlarmLevel;
 
     /**
-    * 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-    */
-    @SerializedName("AlarmIndicator")
-    @Expose
-    private Long AlarmIndicator;
-
-    /**
     * 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
     */
     @SerializedName("AlarmWay")
@@ -84,6 +77,13 @@ public class AlarmEventInfo extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
+
+    /**
+    * 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+    */
+    @SerializedName("AlarmIndicator")
+    @Expose
+    private Long AlarmIndicator;
 
     /**
     * 告警指标描述
@@ -230,22 +230,6 @@ public class AlarmEventInfo extends AbstractModel{
     }
 
     /**
-     * Get 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停 
-     * @return AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-     */
-    public Long getAlarmIndicator() {
-        return this.AlarmIndicator;
-    }
-
-    /**
-     * Set 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-     * @param AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
-     */
-    public void setAlarmIndicator(Long AlarmIndicator) {
-        this.AlarmIndicator = AlarmIndicator;
-    }
-
-    /**
      * Get 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http） 
      * @return AlarmWay 告警方式,多个用逗号隔开（1:邮件，2:短信，3:微信，4:语音，5:代表企业微信，6:http）
      */
@@ -291,6 +275,22 @@ public class AlarmEventInfo extends AbstractModel{
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停 
+     * @return AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     */
+    public Long getAlarmIndicator() {
+        return this.AlarmIndicator;
+    }
+
+    /**
+     * Set 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     * @param AlarmIndicator 告警指标,0表示任务失败，1表示任务运行超时，2表示任务停止，3表示任务暂停
+     */
+    public void setAlarmIndicator(Long AlarmIndicator) {
+        this.AlarmIndicator = AlarmIndicator;
     }
 
     /**
@@ -476,9 +476,6 @@ public class AlarmEventInfo extends AbstractModel{
         if (source.AlarmLevel != null) {
             this.AlarmLevel = new Long(source.AlarmLevel);
         }
-        if (source.AlarmIndicator != null) {
-            this.AlarmIndicator = new Long(source.AlarmIndicator);
-        }
         if (source.AlarmWay != null) {
             this.AlarmWay = new Long(source.AlarmWay);
         }
@@ -487,6 +484,9 @@ public class AlarmEventInfo extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.AlarmIndicator != null) {
+            this.AlarmIndicator = new Long(source.AlarmIndicator);
         }
         if (source.AlarmIndicatorDesc != null) {
             this.AlarmIndicatorDesc = new String(source.AlarmIndicatorDesc);
@@ -524,10 +524,10 @@ public class AlarmEventInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RegularName", this.RegularName);
         this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
-        this.setParamSimple(map, prefix + "AlarmIndicator", this.AlarmIndicator);
         this.setParamSimple(map, prefix + "AlarmWay", this.AlarmWay);
         this.setParamSimple(map, prefix + "AlarmRecipientId", this.AlarmRecipientId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "AlarmIndicator", this.AlarmIndicator);
         this.setParamSimple(map, prefix + "AlarmIndicatorDesc", this.AlarmIndicatorDesc);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);

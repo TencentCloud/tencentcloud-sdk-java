@@ -39,6 +39,22 @@ public class TableInfo extends AbstractModel{
     private String TableName;
 
     /**
+    * 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginDatabaseName")
+    @Expose
+    private String OriginDatabaseName;
+
+    /**
+    * 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginSchemaName")
+    @Expose
+    private String OriginSchemaName;
+
+    /**
      * Get 表Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表Id
@@ -78,6 +94,46 @@ public class TableInfo extends AbstractModel{
         this.TableName = TableName;
     }
 
+    /**
+     * Get 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginDatabaseName 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginDatabaseName() {
+        return this.OriginDatabaseName;
+    }
+
+    /**
+     * Set 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginDatabaseName 表databaseName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginDatabaseName(String OriginDatabaseName) {
+        this.OriginDatabaseName = OriginDatabaseName;
+    }
+
+    /**
+     * Get 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginSchemaName 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginSchemaName() {
+        return this.OriginSchemaName;
+    }
+
+    /**
+     * Set 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginSchemaName 表schemaName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginSchemaName(String OriginSchemaName) {
+        this.OriginSchemaName = OriginSchemaName;
+    }
+
     public TableInfo() {
     }
 
@@ -92,6 +148,12 @@ public class TableInfo extends AbstractModel{
         if (source.TableName != null) {
             this.TableName = new String(source.TableName);
         }
+        if (source.OriginDatabaseName != null) {
+            this.OriginDatabaseName = new String(source.OriginDatabaseName);
+        }
+        if (source.OriginSchemaName != null) {
+            this.OriginSchemaName = new String(source.OriginSchemaName);
+        }
     }
 
 
@@ -101,6 +163,8 @@ public class TableInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
+        this.setParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
+        this.setParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
 
     }
 }

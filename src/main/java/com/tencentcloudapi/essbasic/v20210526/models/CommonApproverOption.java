@@ -13,51 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryVoucherAmountByUinRequest extends AbstractModel{
+public class CommonApproverOption extends AbstractModel{
 
     /**
-    * 子客uin列表
+    * 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ClientUins")
+    @SerializedName("CanEditApprover")
     @Expose
-    private Long [] ClientUins;
+    private Boolean CanEditApprover;
 
     /**
-     * Get 子客uin列表 
-     * @return ClientUins 子客uin列表
+     * Get 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanEditApprover 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getClientUins() {
-        return this.ClientUins;
+    public Boolean getCanEditApprover() {
+        return this.CanEditApprover;
     }
 
     /**
-     * Set 子客uin列表
-     * @param ClientUins 子客uin列表
+     * Set 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanEditApprover 是否允许修改签署人信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setClientUins(Long [] ClientUins) {
-        this.ClientUins = ClientUins;
+    public void setCanEditApprover(Boolean CanEditApprover) {
+        this.CanEditApprover = CanEditApprover;
     }
 
-    public QueryVoucherAmountByUinRequest() {
+    public CommonApproverOption() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryVoucherAmountByUinRequest(QueryVoucherAmountByUinRequest source) {
-        if (source.ClientUins != null) {
-            this.ClientUins = new Long[source.ClientUins.length];
-            for (int i = 0; i < source.ClientUins.length; i++) {
-                this.ClientUins[i] = new Long(source.ClientUins[i]);
-            }
+    public CommonApproverOption(CommonApproverOption source) {
+        if (source.CanEditApprover != null) {
+            this.CanEditApprover = new Boolean(source.CanEditApprover);
         }
     }
 
@@ -66,7 +68,7 @@ public class QueryVoucherAmountByUinRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ClientUins.", this.ClientUins);
+        this.setParamSimple(map, prefix + "CanEditApprover", this.CanEditApprover);
 
     }
 }

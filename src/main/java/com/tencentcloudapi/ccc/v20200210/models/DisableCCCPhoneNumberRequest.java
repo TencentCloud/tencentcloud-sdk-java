@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DisableCCCPhoneNumberRequest extends AbstractModel{
 
     /**
-    * TCCC 实例应用 ID
-    */
-    @SerializedName("SdkAppId")
-    @Expose
-    private Long SdkAppId;
-
-    /**
     * 号码列表，0086开头
     */
     @SerializedName("PhoneNumbers")
@@ -44,20 +37,11 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel{
     private Long Disabled;
 
     /**
-     * Get TCCC 实例应用 ID 
-     * @return SdkAppId TCCC 实例应用 ID
-     */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
-    }
-
-    /**
-     * Set TCCC 实例应用 ID
-     * @param SdkAppId TCCC 实例应用 ID
-     */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
-    }
+    * TCCC 实例应用 ID
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
 
     /**
      * Get 号码列表，0086开头 
@@ -91,6 +75,22 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel{
         this.Disabled = Disabled;
     }
 
+    /**
+     * Get TCCC 实例应用 ID 
+     * @return SdkAppId TCCC 实例应用 ID
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set TCCC 实例应用 ID
+     * @param SdkAppId TCCC 实例应用 ID
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
     public DisableCCCPhoneNumberRequest() {
     }
 
@@ -99,9 +99,6 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DisableCCCPhoneNumberRequest(DisableCCCPhoneNumberRequest source) {
-        if (source.SdkAppId != null) {
-            this.SdkAppId = new Long(source.SdkAppId);
-        }
         if (source.PhoneNumbers != null) {
             this.PhoneNumbers = new String[source.PhoneNumbers.length];
             for (int i = 0; i < source.PhoneNumbers.length; i++) {
@@ -111,6 +108,9 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel{
         if (source.Disabled != null) {
             this.Disabled = new Long(source.Disabled);
         }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
     }
 
 
@@ -118,9 +118,9 @@ public class DisableCCCPhoneNumberRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArraySimple(map, prefix + "PhoneNumbers.", this.PhoneNumbers);
         this.setParamSimple(map, prefix + "Disabled", this.Disabled);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
 
     }
 }

@@ -13,51 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCreditByUinListRequest extends AbstractModel{
+public class CreateFlowOption extends AbstractModel{
 
     /**
-    * 用户列表
+    * 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("UinList")
+    @SerializedName("CanEditFlow")
     @Expose
-    private Long [] UinList;
+    private Boolean CanEditFlow;
 
     /**
-     * Get 用户列表 
-     * @return UinList 用户列表
+     * Get 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanEditFlow 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long [] getUinList() {
-        return this.UinList;
+    public Boolean getCanEditFlow() {
+        return this.CanEditFlow;
     }
 
     /**
-     * Set 用户列表
-     * @param UinList 用户列表
+     * Set 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanEditFlow 是否允许修改合同信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUinList(Long [] UinList) {
-        this.UinList = UinList;
+    public void setCanEditFlow(Boolean CanEditFlow) {
+        this.CanEditFlow = CanEditFlow;
     }
 
-    public QueryCreditByUinListRequest() {
+    public CreateFlowOption() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryCreditByUinListRequest(QueryCreditByUinListRequest source) {
-        if (source.UinList != null) {
-            this.UinList = new Long[source.UinList.length];
-            for (int i = 0; i < source.UinList.length; i++) {
-                this.UinList[i] = new Long(source.UinList[i]);
-            }
+    public CreateFlowOption(CreateFlowOption source) {
+        if (source.CanEditFlow != null) {
+            this.CanEditFlow = new Boolean(source.CanEditFlow);
         }
     }
 
@@ -66,7 +68,7 @@ public class QueryCreditByUinListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "UinList.", this.UinList);
+        this.setParamSimple(map, prefix + "CanEditFlow", this.CanEditFlow);
 
     }
 }

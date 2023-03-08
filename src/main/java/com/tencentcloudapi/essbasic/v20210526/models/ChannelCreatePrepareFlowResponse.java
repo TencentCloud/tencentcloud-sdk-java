@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCreditByUinListResponse extends AbstractModel{
+public class ChannelCreatePrepareFlowResponse extends AbstractModel{
 
     /**
-    * 用户信息列表
+    * 预发起的合同链接
     */
-    @SerializedName("Data")
+    @SerializedName("PrepareFlowUrl")
     @Expose
-    private QueryDirectCustomersCreditData [] Data;
+    private String PrepareFlowUrl;
+
+    /**
+    * 合同发起后预览链接
+    */
+    @SerializedName("PreviewFlowUrl")
+    @Expose
+    private String PreviewFlowUrl;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class QueryCreditByUinListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户信息列表 
-     * @return Data 用户信息列表
+     * Get 预发起的合同链接 
+     * @return PrepareFlowUrl 预发起的合同链接
      */
-    public QueryDirectCustomersCreditData [] getData() {
-        return this.Data;
+    public String getPrepareFlowUrl() {
+        return this.PrepareFlowUrl;
     }
 
     /**
-     * Set 用户信息列表
-     * @param Data 用户信息列表
+     * Set 预发起的合同链接
+     * @param PrepareFlowUrl 预发起的合同链接
      */
-    public void setData(QueryDirectCustomersCreditData [] Data) {
-        this.Data = Data;
+    public void setPrepareFlowUrl(String PrepareFlowUrl) {
+        this.PrepareFlowUrl = PrepareFlowUrl;
+    }
+
+    /**
+     * Get 合同发起后预览链接 
+     * @return PreviewFlowUrl 合同发起后预览链接
+     */
+    public String getPreviewFlowUrl() {
+        return this.PreviewFlowUrl;
+    }
+
+    /**
+     * Set 合同发起后预览链接
+     * @param PreviewFlowUrl 合同发起后预览链接
+     */
+    public void setPreviewFlowUrl(String PreviewFlowUrl) {
+        this.PreviewFlowUrl = PreviewFlowUrl;
     }
 
     /**
@@ -68,19 +91,19 @@ public class QueryCreditByUinListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public QueryCreditByUinListResponse() {
+    public ChannelCreatePrepareFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryCreditByUinListResponse(QueryCreditByUinListResponse source) {
-        if (source.Data != null) {
-            this.Data = new QueryDirectCustomersCreditData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new QueryDirectCustomersCreditData(source.Data[i]);
-            }
+    public ChannelCreatePrepareFlowResponse(ChannelCreatePrepareFlowResponse source) {
+        if (source.PrepareFlowUrl != null) {
+            this.PrepareFlowUrl = new String(source.PrepareFlowUrl);
+        }
+        if (source.PreviewFlowUrl != null) {
+            this.PreviewFlowUrl = new String(source.PreviewFlowUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +115,8 @@ public class QueryCreditByUinListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "PrepareFlowUrl", this.PrepareFlowUrl);
+        this.setParamSimple(map, prefix + "PreviewFlowUrl", this.PreviewFlowUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

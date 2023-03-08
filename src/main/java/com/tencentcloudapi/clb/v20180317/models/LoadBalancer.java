@@ -52,7 +52,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private Long Forward;
 
     /**
-    * 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+    * 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
@@ -444,6 +444,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String [] AttributeFlags;
 
     /**
+    * 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerDomain")
+    @Expose
+    private String LoadBalancerDomain;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -512,9 +520,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+     * Get 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+     * @return Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
@@ -522,9 +530,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+     * Set 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段
+     * @param Domain 负载均衡实例的域名，仅公网传统型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
@@ -1491,6 +1499,26 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.AttributeFlags = AttributeFlags;
     }
 
+    /**
+     * Get 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerDomain 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerDomain() {
+        return this.LoadBalancerDomain;
+    }
+
+    /**
+     * Set 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerDomain 负载均衡实例的域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerDomain(String LoadBalancerDomain) {
+        this.LoadBalancerDomain = LoadBalancerDomain;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1682,6 +1710,9 @@ OPEN：公网属性， INTERNAL：内网属性。
                 this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
             }
         }
+        if (source.LoadBalancerDomain != null) {
+            this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
+        }
     }
 
 
@@ -1742,6 +1773,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+        this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
 
     }
 }

@@ -295,6 +295,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *创建预发起合同
+     * @param req ChannelCreatePrepareFlowRequest
+     * @return ChannelCreatePrepareFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(ChannelCreatePrepareFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreatePrepareFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreatePrepareFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreatePrepareFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *发起解除协议，主要应用场景为：基于一份已经签署的合同，进行解除操作。
 合同发起人必须在电子签已经进行实名。
      * @param req ChannelCreateReleaseFlowRequest

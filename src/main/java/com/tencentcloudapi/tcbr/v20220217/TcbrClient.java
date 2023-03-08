@@ -39,7 +39,7 @@ public class TcbrClient extends AbstractClient{
     }
 
     /**
-     *创建云托管环境，并开通资源。	
+     *创建云托管环境，并开通资源。
      * @param req CreateCloudRunEnvRequest
      * @return CreateCloudRunEnvResponse
      * @throws TencentCloudSDKException

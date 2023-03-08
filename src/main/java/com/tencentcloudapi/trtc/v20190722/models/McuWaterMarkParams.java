@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class McuWaterMarkParams extends AbstractModel{
 
     /**
-    * 水印类型，0为图片（默认）。
+    * 水印类型，0为图片（默认），1为文字。
     */
     @SerializedName("WaterMarkType")
     @Expose
@@ -37,16 +37,24 @@ public class McuWaterMarkParams extends AbstractModel{
     private McuWaterMarkImage WaterMarkImage;
 
     /**
-     * Get 水印类型，0为图片（默认）。 
-     * @return WaterMarkType 水印类型，0为图片（默认）。
+    * 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaterMarkText")
+    @Expose
+    private McuWaterMarkText WaterMarkText;
+
+    /**
+     * Get 水印类型，0为图片（默认），1为文字。 
+     * @return WaterMarkType 水印类型，0为图片（默认），1为文字。
      */
     public Long getWaterMarkType() {
         return this.WaterMarkType;
     }
 
     /**
-     * Set 水印类型，0为图片（默认）。
-     * @param WaterMarkType 水印类型，0为图片（默认）。
+     * Set 水印类型，0为图片（默认），1为文字。
+     * @param WaterMarkType 水印类型，0为图片（默认），1为文字。
      */
     public void setWaterMarkType(Long WaterMarkType) {
         this.WaterMarkType = WaterMarkType;
@@ -68,6 +76,26 @@ public class McuWaterMarkParams extends AbstractModel{
         this.WaterMarkImage = WaterMarkImage;
     }
 
+    /**
+     * Get 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaterMarkText 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public McuWaterMarkText getWaterMarkText() {
+        return this.WaterMarkText;
+    }
+
+    /**
+     * Set 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaterMarkText 文字水印参数。WaterMarkType为1指定。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaterMarkText(McuWaterMarkText WaterMarkText) {
+        this.WaterMarkText = WaterMarkText;
+    }
+
     public McuWaterMarkParams() {
     }
 
@@ -82,6 +110,9 @@ public class McuWaterMarkParams extends AbstractModel{
         if (source.WaterMarkImage != null) {
             this.WaterMarkImage = new McuWaterMarkImage(source.WaterMarkImage);
         }
+        if (source.WaterMarkText != null) {
+            this.WaterMarkText = new McuWaterMarkText(source.WaterMarkText);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class McuWaterMarkParams extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
         this.setParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+        this.setParamObj(map, prefix + "WaterMarkText.", this.WaterMarkText);
 
     }
 }
