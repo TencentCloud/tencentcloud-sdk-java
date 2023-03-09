@@ -96,6 +96,13 @@ BYOL: 自带许可（Bring Your Own License）
     private String LicenseType;
 
     /**
+    * 启动模式
+    */
+    @SerializedName("BootMode")
+    @Expose
+    private String BootMode;
+
+    /**
      * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
@@ -267,6 +274,22 @@ BYOL: 自带许可（Bring Your Own License）
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get 启动模式 
+     * @return BootMode 启动模式
+     */
+    public String getBootMode() {
+        return this.BootMode;
+    }
+
+    /**
+     * Set 启动模式
+     * @param BootMode 启动模式
+     */
+    public void setBootMode(String BootMode) {
+        this.BootMode = BootMode;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -308,6 +331,9 @@ BYOL: 自带许可（Bring Your Own License）
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.BootMode != null) {
+            this.BootMode = new String(source.BootMode);
+        }
     }
 
 
@@ -325,6 +351,7 @@ BYOL: 自带许可（Bring Your Own License）
         this.setParamSimple(map, prefix + "Force", this.Force);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "BootMode", this.BootMode);
 
     }
 }

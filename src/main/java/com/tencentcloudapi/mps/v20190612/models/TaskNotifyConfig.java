@@ -63,6 +63,7 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
     */
     @SerializedName("NotifyType")
@@ -75,6 +76,15 @@ public class TaskNotifyConfig extends AbstractModel{
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
+
+    /**
+    * AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AwsSQS")
+    @Expose
+    private AwsSQS AwsSQS;
 
     /**
      * Get CMQ或TDMQ-CMQ 的模型，有 Queue 和 Topic 两种。 
@@ -162,12 +172,14 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font> 
      * @return NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      */
     public String getNotifyType() {
@@ -180,12 +192,14 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      * @param NotifyType 通知类型，可选值：
 <li>CMQ：已下线，建议切换到TDMQ-CMQ</li>
 <li>TDMQ-CMQ：消息队列</li>
 <li>URL：指定URL时HTTP回调推送到 NotifyUrl 指定的地址，回调协议http+json，包体内容同解析事件通知接口的输出参数 </li>
 <li>SCF：不推荐使用，需要在控制台额外配置SCF</li>
+<li>AWS-SQS：AWS 队列，只适用于 AWS 任务，且要求同区域</li>
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font>
      */
     public void setNotifyType(String NotifyType) {
@@ -206,6 +220,30 @@ public class TaskNotifyConfig extends AbstractModel{
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;
+    }
+
+    /**
+     * Get AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AwsSQS getAwsSQS() {
+        return this.AwsSQS;
+    }
+
+    /**
+     * Set AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsSQS AWS SQS 回调，NotifyType为 AWS-SQS 时必填。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAwsSQS(AwsSQS AwsSQS) {
+        this.AwsSQS = AwsSQS;
     }
 
     public TaskNotifyConfig() {
@@ -237,6 +275,9 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.NotifyUrl != null) {
             this.NotifyUrl = new String(source.NotifyUrl);
         }
+        if (source.AwsSQS != null) {
+            this.AwsSQS = new AwsSQS(source.AwsSQS);
+        }
     }
 
 
@@ -251,6 +292,7 @@ public class TaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamObj(map, prefix + "AwsSQS.", this.AwsSQS);
 
     }
 }

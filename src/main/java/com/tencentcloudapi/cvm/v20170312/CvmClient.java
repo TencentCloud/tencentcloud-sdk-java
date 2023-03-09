@@ -980,6 +980,31 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
+
+- 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
+- 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的维修任务列表。
+
+默认接口请求频率限制：10次/秒。</br>
+     * @param req DescribeTaskInfoRequest
+     * @return DescribeTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeZoneInstanceConfigInfos) 获取可用区的机型信息。
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse

@@ -107,7 +107,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+    * 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
     */
@@ -315,10 +315,10 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+     * Get 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+     * @return Filters 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
      */
@@ -327,10 +327,10 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+     * Set 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
-     * @param Filters 过滤条件，参数不支持同时指定FlowLogIds和Filters。
+     * @param Filters 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
      */

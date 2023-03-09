@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel{
 
     /**
-    * 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+    * 媒体处理输出对象存储位置的类型，支持：
+<li>COS：COS存储</li>
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +40,32 @@ public class TaskOutputStorage extends AbstractModel{
     private CosOutputStorage CosOutputStorage;
 
     /**
-     * Get 媒体处理输出对象存储位置的类型，现在仅支持 COS。 
-     * @return Type 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+    * 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("S3OutputStorage")
+    @Expose
+    private S3OutputStorage S3OutputStorage;
+
+    /**
+     * Get 媒体处理输出对象存储位置的类型，支持：
+<li>COS：COS存储</li>
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li> 
+     * @return Type 媒体处理输出对象存储位置的类型，支持：
+<li>COS：COS存储</li>
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 媒体处理输出对象存储位置的类型，现在仅支持 COS。
-     * @param Type 媒体处理输出对象存储位置的类型，现在仅支持 COS。
+     * Set 媒体处理输出对象存储位置的类型，支持：
+<li>COS：COS存储</li>
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+     * @param Type 媒体处理输出对象存储位置的类型，支持：
+<li>COS：COS存储</li>
+<li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -73,6 +91,26 @@ public class TaskOutputStorage extends AbstractModel{
         this.CosOutputStorage = CosOutputStorage;
     }
 
+    /**
+     * Get 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return S3OutputStorage 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public S3OutputStorage getS3OutputStorage() {
+        return this.S3OutputStorage;
+    }
+
+    /**
+     * Set 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param S3OutputStorage 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setS3OutputStorage(S3OutputStorage S3OutputStorage) {
+        this.S3OutputStorage = S3OutputStorage;
+    }
+
     public TaskOutputStorage() {
     }
 
@@ -87,6 +125,9 @@ public class TaskOutputStorage extends AbstractModel{
         if (source.CosOutputStorage != null) {
             this.CosOutputStorage = new CosOutputStorage(source.CosOutputStorage);
         }
+        if (source.S3OutputStorage != null) {
+            this.S3OutputStorage = new S3OutputStorage(source.S3OutputStorage);
+        }
     }
 
 
@@ -96,6 +137,7 @@ public class TaskOutputStorage extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
+        this.setParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
 
     }
 }

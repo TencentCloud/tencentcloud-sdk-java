@@ -37,6 +37,13 @@ public class CreateEmergencyVulScanRequest extends AbstractModel{
     private String [] Uuids;
 
     /**
+    * 扫描超时时长 ，单位秒
+    */
+    @SerializedName("TimeoutPeriod")
+    @Expose
+    private Long TimeoutPeriod;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -68,6 +75,22 @@ public class CreateEmergencyVulScanRequest extends AbstractModel{
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get 扫描超时时长 ，单位秒 
+     * @return TimeoutPeriod 扫描超时时长 ，单位秒
+     */
+    public Long getTimeoutPeriod() {
+        return this.TimeoutPeriod;
+    }
+
+    /**
+     * Set 扫描超时时长 ，单位秒
+     * @param TimeoutPeriod 扫描超时时长 ，单位秒
+     */
+    public void setTimeoutPeriod(Long TimeoutPeriod) {
+        this.TimeoutPeriod = TimeoutPeriod;
+    }
+
     public CreateEmergencyVulScanRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateEmergencyVulScanRequest extends AbstractModel{
                 this.Uuids[i] = new String(source.Uuids[i]);
             }
         }
+        if (source.TimeoutPeriod != null) {
+            this.TimeoutPeriod = new Long(source.TimeoutPeriod);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateEmergencyVulScanRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
 
     }
 }

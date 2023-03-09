@@ -169,6 +169,26 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *本接口（ChannelCreateEmbedWebUrl）用于创建嵌入web的链接
+     * @param req ChannelCreateEmbedWebUrlRequest
+     * @return ChannelCreateEmbedWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(ChannelCreateEmbedWebUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateEmbedWebUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateEmbedWebUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateEmbedWebUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口（ChannelCreateFlowByFiles）用于通过文件创建签署流程。此接口静默签能力不可直接使用，需要运营申请
      * @param req ChannelCreateFlowByFilesRequest
      * @return ChannelCreateFlowByFilesResponse

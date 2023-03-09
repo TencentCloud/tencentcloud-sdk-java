@@ -124,6 +124,38 @@ public class ResourceItem extends AbstractModel{
     private Long RefJobCount;
 
     /**
+    * 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsJobRun")
+    @Expose
+    private Long IsJobRun;
+
+    /**
+    * 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
+    * 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private Long WorkSpaceId;
+
+    /**
+    * 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefJobStatusCountSet")
+    @Expose
+    private RefJobStatusCountItem [] RefJobStatusCountSet;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -359,6 +391,86 @@ public class ResourceItem extends AbstractModel{
         this.RefJobCount = RefJobCount;
     }
 
+    /**
+     * Get 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsJobRun 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsJobRun() {
+        return this.IsJobRun;
+    }
+
+    /**
+     * Set 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsJobRun 作业运行状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsJobRun(Long IsJobRun) {
+        this.IsJobRun = IsJobRun;
+    }
+
+    /**
+     * Get 文件名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileName 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileName 文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
+    /**
+     * Get 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkSpaceId 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkSpaceId 工作空间ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkSpaceId(Long WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
+    /**
+     * Get 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RefJobStatusCountItem [] getRefJobStatusCountSet() {
+        return this.RefJobStatusCountSet;
+    }
+
+    /**
+     * Set 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefJobStatusCountSet(RefJobStatusCountItem [] RefJobStatusCountSet) {
+        this.RefJobStatusCountSet = RefJobStatusCountSet;
+    }
+
     public ResourceItem() {
     }
 
@@ -409,6 +521,21 @@ public class ResourceItem extends AbstractModel{
         if (source.RefJobCount != null) {
             this.RefJobCount = new Long(source.RefJobCount);
         }
+        if (source.IsJobRun != null) {
+            this.IsJobRun = new Long(source.IsJobRun);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new Long(source.WorkSpaceId);
+        }
+        if (source.RefJobStatusCountSet != null) {
+            this.RefJobStatusCountSet = new RefJobStatusCountItem[source.RefJobStatusCountSet.length];
+            for (int i = 0; i < source.RefJobStatusCountSet.length; i++) {
+                this.RefJobStatusCountSet[i] = new RefJobStatusCountItem(source.RefJobStatusCountSet[i]);
+            }
+        }
     }
 
 
@@ -430,6 +557,10 @@ public class ResourceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "VersionCount", this.VersionCount);
         this.setParamSimple(map, prefix + "RefJobCount", this.RefJobCount);
+        this.setParamSimple(map, prefix + "IsJobRun", this.IsJobRun);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
 
     }
 }

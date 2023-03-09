@@ -136,6 +136,15 @@ public class TopicInfo extends AbstractModel{
     private String Describes;
 
     /**
+    * 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HotPeriod")
+    @Expose
+    private Long HotPeriod;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -407,6 +416,30 @@ public class TopicInfo extends AbstractModel{
         this.Describes = Describes;
     }
 
+    /**
+     * Get 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHotPeriod() {
+        return this.HotPeriod;
+    }
+
+    /**
+     * Set 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HotPeriod 开启日志沉降，热存储的生命周期， hotPeriod < Period。
+热存储为 hotPeriod, 冷存储则为 Period-hotPeriod。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHotPeriod(Long HotPeriod) {
+        this.HotPeriod = HotPeriod;
+    }
+
     public TopicInfo() {
     }
 
@@ -463,6 +496,9 @@ public class TopicInfo extends AbstractModel{
         if (source.Describes != null) {
             this.Describes = new String(source.Describes);
         }
+        if (source.HotPeriod != null) {
+            this.HotPeriod = new Long(source.HotPeriod);
+        }
     }
 
 
@@ -485,6 +521,7 @@ public class TopicInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
+        this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
 
     }
 }

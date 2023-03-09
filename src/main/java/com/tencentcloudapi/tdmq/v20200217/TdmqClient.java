@@ -99,7 +99,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建AMQP集群
+     *产品下线了，对应的接口也要下线。
+
+创建AMQP集群
      * @param req CreateAMQPClusterRequest
      * @return CreateAMQPClusterResponse
      * @throws TencentCloudSDKException
@@ -119,7 +121,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建AMQP Exchange
+     *产品下线了，对应的接口也要下线。
+
+创建AMQP Exchange
      * @param req CreateAMQPExchangeRequest
      * @return CreateAMQPExchangeResponse
      * @throws TencentCloudSDKException
@@ -139,7 +143,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建AMQP队列
+     *产品下线了，对应的接口也要下线。
+
+创建AMQP队列
      * @param req CreateAMQPQueueRequest
      * @return CreateAMQPQueueResponse
      * @throws TencentCloudSDKException
@@ -159,7 +165,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建AMQP路由关系
+     *产品下线了，对应的接口也要下线。
+
+创建AMQP路由关系
      * @param req CreateAMQPRouteRelationRequest
      * @return CreateAMQPRouteRelationResponse
      * @throws TencentCloudSDKException
@@ -179,7 +187,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *创建Amqp Vhost
+     *产品下线了，对应的接口也要下线。
+
+创建Amqp Vhost
      * @param req CreateAMQPVHostRequest
      * @return CreateAMQPVHostResponse
      * @throws TencentCloudSDKException
@@ -459,7 +469,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除AMQP集群
+     *产品下线了，对应的接口也要下线。
+
+删除AMQP集群
      * @param req DeleteAMQPClusterRequest
      * @return DeleteAMQPClusterResponse
      * @throws TencentCloudSDKException
@@ -479,7 +491,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除Amqp交换机
+     *产品下线了，对应的接口也要下线。
+
+删除Amqp交换机
      * @param req DeleteAMQPExchangeRequest
      * @return DeleteAMQPExchangeResponse
      * @throws TencentCloudSDKException
@@ -499,7 +513,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除Amqp队列
+     *产品下线了，对应的接口也要下线。
+
+删除Amqp队列
      * @param req DeleteAMQPQueueRequest
      * @return DeleteAMQPQueueResponse
      * @throws TencentCloudSDKException
@@ -519,7 +535,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除Amqp路由关系
+     *产品下线了，对应的接口也要下线。
+
+删除Amqp路由关系
      * @param req DeleteAMQPRouteRelationRequest
      * @return DeleteAMQPRouteRelationResponse
      * @throws TencentCloudSDKException
@@ -539,7 +557,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *删除Vhost
+     *产品下线了，对应的接口也要下线。
+
+删除Vhost
      * @param req DeleteAMQPVHostRequest
      * @return DeleteAMQPVHostResponse
      * @throws TencentCloudSDKException
@@ -819,7 +839,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取单个Amqp集群信息
+     *产品下线了，对应的接口也要下线。
+
+获取单个Amqp集群信息
      * @param req DescribeAMQPClusterRequest
      * @return DescribeAMQPClusterResponse
      * @throws TencentCloudSDKException
@@ -859,7 +881,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取用户的配额，如Queue容量，Exchange容量，Vhost容量，单Vhost Tps数,剩余可创建集群数
+     *产品下线了，对应的接口也要下线。
+
+获取用户的配额，如Queue容量，Exchange容量，Vhost容量，单Vhost Tps数,剩余可创建集群数
      * @param req DescribeAMQPCreateQuotaRequest
      * @return DescribeAMQPCreateQuotaResponse
      * @throws TencentCloudSDKException
@@ -879,7 +903,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取AMQP Exchange列表
+     *产品下线了，对应的接口也要下线。
+
+获取AMQP Exchange列表
      * @param req DescribeAMQPExchangesRequest
      * @return DescribeAMQPExchangesResponse
      * @throws TencentCloudSDKException
@@ -899,7 +925,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取Amqp队列列表
+     *产品下线了，对应的接口也要下线。
+
+获取Amqp队列列表
      * @param req DescribeAMQPQueuesRequest
      * @return DescribeAMQPQueuesResponse
      * @throws TencentCloudSDKException
@@ -919,7 +947,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取Amqp路由关系列表
+     *产品下线了，对应的接口也要下线。
+
+获取Amqp路由关系列表
      * @param req DescribeAMQPRouteRelationsRequest
      * @return DescribeAMQPRouteRelationsResponse
      * @throws TencentCloudSDKException
@@ -939,7 +969,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取Amqp Vhost 列表
+     *产品下线了，对应的接口也要下线。
+
+获取Amqp Vhost 列表
      * @param req DescribeAMQPVHostsRequest
      * @return DescribeAMQPVHostsResponse
      * @throws TencentCloudSDKException
@@ -1579,7 +1611,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *更新Amqp交换机
+     *产品下线了，对应的接口也要下线。
+
+更新Amqp交换机
      * @param req ModifyAMQPExchangeRequest
      * @return ModifyAMQPExchangeResponse
      * @throws TencentCloudSDKException
@@ -1599,7 +1633,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *更新Amqp队列
+     *产品下线了，对应的接口也要下线。
+
+更新Amqp队列
      * @param req ModifyAMQPQueueRequest
      * @return ModifyAMQPQueueResponse
      * @throws TencentCloudSDKException
@@ -1619,7 +1655,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *更新Vhost
+     *产品下线了，对应的接口也要下线。
+
+更新Vhost
      * @param req ModifyAMQPVHostRequest
      * @return ModifyAMQPVHostResponse
      * @throws TencentCloudSDKException

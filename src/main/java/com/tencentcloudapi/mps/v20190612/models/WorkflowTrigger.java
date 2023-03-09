@@ -23,7 +23,11 @@ import java.util.HashMap;
 public class WorkflowTrigger extends AbstractModel{
 
     /**
-    * 触发器的类型，目前仅支持 CosFileUpload。
+    * 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +42,42 @@ public class WorkflowTrigger extends AbstractModel{
     private CosFileUploadTrigger CosFileUploadTrigger;
 
     /**
-     * Get 触发器的类型，目前仅支持 CosFileUpload。 
-     * @return Type 触发器的类型，目前仅支持 CosFileUpload。
+    * 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AwsS3FileUploadTrigger")
+    @Expose
+    private AwsS3FileUploadTrigger AwsS3FileUploadTrigger;
+
+    /**
+     * Get 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+ 
+     * @return Type 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 触发器的类型，目前仅支持 CosFileUpload。
-     * @param Type 触发器的类型，目前仅支持 CosFileUpload。
+     * Set 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
+     * @param Type 触发器的类型，可选值：
+<li>CosFileUpload：COS触发</li>
+<li>AwsS3FileUpload：AWS触发，目前只支持转码任务。只有编排支持，工作流不支持。  </li>
+
+
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -73,6 +103,34 @@ public class WorkflowTrigger extends AbstractModel{
         this.CosFileUploadTrigger = CosFileUploadTrigger;
     }
 
+    /**
+     * Get 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AwsS3FileUploadTrigger 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AwsS3FileUploadTrigger getAwsS3FileUploadTrigger() {
+        return this.AwsS3FileUploadTrigger;
+    }
+
+    /**
+     * Set 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AwsS3FileUploadTrigger 当 Type 为 AwsS3FileUpload 时必填且有效，为 AWS S3 触发规则。
+
+注意：目前AWS的S3、对应触发队列SQS、回调队列SQS的秘钥需要一致。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAwsS3FileUploadTrigger(AwsS3FileUploadTrigger AwsS3FileUploadTrigger) {
+        this.AwsS3FileUploadTrigger = AwsS3FileUploadTrigger;
+    }
+
     public WorkflowTrigger() {
     }
 
@@ -87,6 +145,9 @@ public class WorkflowTrigger extends AbstractModel{
         if (source.CosFileUploadTrigger != null) {
             this.CosFileUploadTrigger = new CosFileUploadTrigger(source.CosFileUploadTrigger);
         }
+        if (source.AwsS3FileUploadTrigger != null) {
+            this.AwsS3FileUploadTrigger = new AwsS3FileUploadTrigger(source.AwsS3FileUploadTrigger);
+        }
     }
 
 
@@ -96,6 +157,7 @@ public class WorkflowTrigger extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosFileUploadTrigger.", this.CosFileUploadTrigger);
+        this.setParamObj(map, prefix + "AwsS3FileUploadTrigger.", this.AwsS3FileUploadTrigger);
 
     }
 }

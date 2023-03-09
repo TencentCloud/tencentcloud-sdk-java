@@ -37,7 +37,7 @@ public class RunJobDescription extends AbstractModel{
     private Long RunType;
 
     /**
-    * 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+    * 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
     */
     @SerializedName("StartMode")
     @Expose
@@ -63,6 +63,14 @@ public class RunJobDescription extends AbstractModel{
     @SerializedName("SavepointId")
     @Expose
     private String SavepointId;
+
+    /**
+    * 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseOldSystemConnector")
+    @Expose
+    private Boolean UseOldSystemConnector;
 
     /**
      * Get 作业Id 
@@ -97,16 +105,16 @@ public class RunJobDescription extends AbstractModel{
     }
 
     /**
-     * Get 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点 
-     * @return StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * Get 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000） 
+     * @return StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
      */
     public String getStartMode() {
         return this.StartMode;
     }
 
     /**
-     * Set 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
-     * @param StartMode 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
+     * Set 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
+     * @param StartMode 兼容旧版 SQL 类型作业启动参数：指定数据源消费起始时间点（例:T1557394288000）
      */
     public void setStartMode(String StartMode) {
         this.StartMode = StartMode;
@@ -160,6 +168,26 @@ public class RunJobDescription extends AbstractModel{
         this.SavepointId = SavepointId;
     }
 
+    /**
+     * Get 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseOldSystemConnector 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseOldSystemConnector() {
+        return this.UseOldSystemConnector;
+    }
+
+    /**
+     * Set 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseOldSystemConnector 使用历史版本系统依赖
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseOldSystemConnector(Boolean UseOldSystemConnector) {
+        this.UseOldSystemConnector = UseOldSystemConnector;
+    }
+
     public RunJobDescription() {
     }
 
@@ -186,6 +214,9 @@ public class RunJobDescription extends AbstractModel{
         if (source.SavepointId != null) {
             this.SavepointId = new String(source.SavepointId);
         }
+        if (source.UseOldSystemConnector != null) {
+            this.UseOldSystemConnector = new Boolean(source.UseOldSystemConnector);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class RunJobDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "JobConfigVersion", this.JobConfigVersion);
         this.setParamSimple(map, prefix + "SavepointPath", this.SavepointPath);
         this.setParamSimple(map, prefix + "SavepointId", this.SavepointId);
+        this.setParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
 
     }
 }

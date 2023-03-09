@@ -1737,4 +1737,24 @@ public class MpsClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *提取视频中的盲水印。
+     * @param req WithdrawsWatermarkRequest
+     * @return WithdrawsWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public WithdrawsWatermarkResponse WithdrawsWatermark(WithdrawsWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<WithdrawsWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<WithdrawsWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "WithdrawsWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

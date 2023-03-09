@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * 输入来源对象的类型，支持 COS、URL 两种。
+    * 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +48,36 @@ public class MediaInputInfo extends AbstractModel{
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get 输入来源对象的类型，支持 COS、URL 两种。 
-     * @return Type 输入来源对象的类型，支持 COS、URL 两种。
+    * 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("S3InputInfo")
+    @Expose
+    private S3InputInfo S3InputInfo;
+
+    /**
+     * Get 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li> 
+     * @return Type 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 输入来源对象的类型，支持 COS、URL 两种。
-     * @param Type 输入来源对象的类型，支持 COS、URL 两种。
+     * Set 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
+     * @param Type 输入来源对象的类型，支持：
+<li> COS：COS源</li>
+<li> URL：URL源</li>
+<li> AWS-S3：AWS 源，目前只支持转码任务 </li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -96,6 +119,26 @@ public class MediaInputInfo extends AbstractModel{
         this.UrlInputInfo = UrlInputInfo;
     }
 
+    /**
+     * Get 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return S3InputInfo 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public S3InputInfo getS3InputInfo() {
+        return this.S3InputInfo;
+    }
+
+    /**
+     * Set 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param S3InputInfo 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 对象信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setS3InputInfo(S3InputInfo S3InputInfo) {
+        this.S3InputInfo = S3InputInfo;
+    }
+
     public MediaInputInfo() {
     }
 
@@ -113,6 +156,9 @@ public class MediaInputInfo extends AbstractModel{
         if (source.UrlInputInfo != null) {
             this.UrlInputInfo = new UrlInputInfo(source.UrlInputInfo);
         }
+        if (source.S3InputInfo != null) {
+            this.S3InputInfo = new S3InputInfo(source.S3InputInfo);
+        }
     }
 
 
@@ -123,6 +169,7 @@ public class MediaInputInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
         this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
+        this.setParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
 
     }
 }

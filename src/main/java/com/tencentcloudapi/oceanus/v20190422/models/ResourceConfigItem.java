@@ -109,6 +109,14 @@ public class ResourceConfigItem extends AbstractModel{
     private Long RefJobCount;
 
     /**
+    * 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefJobStatusCountSet")
+    @Expose
+    private RefJobStatusCountItem [] RefJobStatusCountSet;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -308,6 +316,26 @@ public class ResourceConfigItem extends AbstractModel{
         this.RefJobCount = RefJobCount;
     }
 
+    /**
+     * Get 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RefJobStatusCountItem [] getRefJobStatusCountSet() {
+        return this.RefJobStatusCountSet;
+    }
+
+    /**
+     * Set 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefJobStatusCountSet(RefJobStatusCountItem [] RefJobStatusCountSet) {
+        this.RefJobStatusCountSet = RefJobStatusCountSet;
+    }
+
     public ResourceConfigItem() {
     }
 
@@ -352,6 +380,12 @@ public class ResourceConfigItem extends AbstractModel{
         if (source.RefJobCount != null) {
             this.RefJobCount = new Long(source.RefJobCount);
         }
+        if (source.RefJobStatusCountSet != null) {
+            this.RefJobStatusCountSet = new RefJobStatusCountItem[source.RefJobStatusCountSet.length];
+            for (int i = 0; i < source.RefJobStatusCountSet.length; i++) {
+                this.RefJobStatusCountSet[i] = new RefJobStatusCountItem(source.RefJobStatusCountSet[i]);
+            }
+        }
     }
 
 
@@ -371,6 +405,7 @@ public class ResourceConfigItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RefJobCount", this.RefJobCount);
+        this.setParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
 
     }
 }
