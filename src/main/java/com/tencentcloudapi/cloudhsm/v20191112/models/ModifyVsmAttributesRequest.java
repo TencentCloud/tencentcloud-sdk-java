@@ -68,6 +68,13 @@ Default-默认不修改
     private String SubnetId;
 
     /**
+    * 告警开关，0表示关闭告警，1表示启用告警
+    */
+    @SerializedName("AlarmStatus")
+    @Expose
+    private Long AlarmStatus;
+
+    /**
      * Get 资源Id 
      * @return ResourceId 资源Id
      */
@@ -175,6 +182,22 @@ Default-默认不修改
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 告警开关，0表示关闭告警，1表示启用告警 
+     * @return AlarmStatus 告警开关，0表示关闭告警，1表示启用告警
+     */
+    public Long getAlarmStatus() {
+        return this.AlarmStatus;
+    }
+
+    /**
+     * Set 告警开关，0表示关闭告警，1表示启用告警
+     * @param AlarmStatus 告警开关，0表示关闭告警，1表示启用告警
+     */
+    public void setAlarmStatus(Long AlarmStatus) {
+        this.AlarmStatus = AlarmStatus;
+    }
+
     public ModifyVsmAttributesRequest() {
     }
 
@@ -207,6 +230,9 @@ Default-默认不修改
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new Long(source.AlarmStatus);
+        }
     }
 
 
@@ -220,6 +246,7 @@ Default-默认不修改
         this.setParamArraySimple(map, prefix + "SgIds.", this.SgIds);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
 
     }
 }

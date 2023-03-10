@@ -30,6 +30,33 @@ public class CcInfo extends AbstractModel{
     private String Mobile;
 
     /**
+    * 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 被抄送人类型
+0--个人. 1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcType")
+    @Expose
+    private Long CcType;
+
+    /**
+    * 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcPermission")
+    @Expose
+    private Long CcPermission;
+
+    /**
      * Get 被抄送人手机号，大陆11位手机号 
      * @return Mobile 被抄送人手机号，大陆11位手机号
      */
@@ -45,6 +72,78 @@ public class CcInfo extends AbstractModel{
         this.Mobile = Mobile;
     }
 
+    /**
+     * Get 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 被抄送人姓名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 被抄送人类型
+0--个人. 1--员工
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcType 被抄送人类型
+0--个人. 1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCcType() {
+        return this.CcType;
+    }
+
+    /**
+     * Set 被抄送人类型
+0--个人. 1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcType 被抄送人类型
+0--个人. 1--员工
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcType(Long CcType) {
+        this.CcType = CcType;
+    }
+
+    /**
+     * Get 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcPermission 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCcPermission() {
+        return this.CcPermission;
+    }
+
+    /**
+     * Set 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcPermission 被抄送人权限
+0--可查看
+1--可查看也可下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcPermission(Long CcPermission) {
+        this.CcPermission = CcPermission;
+    }
+
     public CcInfo() {
     }
 
@@ -56,6 +155,15 @@ public class CcInfo extends AbstractModel{
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.CcType != null) {
+            this.CcType = new Long(source.CcType);
+        }
+        if (source.CcPermission != null) {
+            this.CcPermission = new Long(source.CcPermission);
+        }
     }
 
 
@@ -64,6 +172,9 @@ public class CcInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "CcType", this.CcType);
+        this.setParamSimple(map, prefix + "CcPermission", this.CcPermission);
 
     }
 }

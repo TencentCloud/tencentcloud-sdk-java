@@ -120,7 +120,7 @@ video 纯视频
     private String [] Assistants;
 
     /**
-    * 录制地址。仅在房间结束后存在。
+    * 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordUrl")
@@ -395,9 +395,9 @@ video 纯视频
     }
 
     /**
-     * Get 录制地址。仅在房间结束后存在。
+     * Get 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordUrl 录制地址。仅在房间结束后存在。
+     * @return RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordUrl() {
@@ -405,9 +405,9 @@ video 纯视频
     }
 
     /**
-     * Set 录制地址。仅在房间结束后存在。
+     * Set 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordUrl 录制地址。仅在房间结束后存在。
+     * @param RecordUrl 录制地址（协议为https)。仅在房间结束后存在。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordUrl(String RecordUrl) {

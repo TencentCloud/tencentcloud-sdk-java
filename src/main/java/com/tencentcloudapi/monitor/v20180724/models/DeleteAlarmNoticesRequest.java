@@ -37,7 +37,7 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     private String [] NoticeIds;
 
     /**
-    * 通知模版与策略绑定关系
+    * 通知模板与策略绑定关系
     */
     @SerializedName("NoticeBindPolicys")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     }
 
     /**
-     * Get 通知模版与策略绑定关系 
-     * @return NoticeBindPolicys 通知模版与策略绑定关系
+     * Get 通知模板与策略绑定关系 
+     * @return NoticeBindPolicys 通知模板与策略绑定关系
      */
     public NoticeBindPolicys [] getNoticeBindPolicys() {
         return this.NoticeBindPolicys;
     }
 
     /**
-     * Set 通知模版与策略绑定关系
-     * @param NoticeBindPolicys 通知模版与策略绑定关系
+     * Set 通知模板与策略绑定关系
+     * @param NoticeBindPolicys 通知模板与策略绑定关系
      */
     public void setNoticeBindPolicys(NoticeBindPolicys [] NoticeBindPolicys) {
         this.NoticeBindPolicys = NoticeBindPolicys;

@@ -79,6 +79,20 @@ public class CloneItem extends AbstractModel{
     private String TaskStatus;
 
     /**
+    * 克隆实例所在地域Id
+    */
+    @SerializedName("NewRegionId")
+    @Expose
+    private Long NewRegionId;
+
+    /**
+    * 源实例所在地域Id
+    */
+    @SerializedName("SrcRegionId")
+    @Expose
+    private Long SrcRegionId;
+
+    /**
      * Get 克隆任务的源实例Id。 
      * @return SrcInstanceId 克隆任务的源实例Id。
      */
@@ -206,6 +220,38 @@ public class CloneItem extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    /**
+     * Get 克隆实例所在地域Id 
+     * @return NewRegionId 克隆实例所在地域Id
+     */
+    public Long getNewRegionId() {
+        return this.NewRegionId;
+    }
+
+    /**
+     * Set 克隆实例所在地域Id
+     * @param NewRegionId 克隆实例所在地域Id
+     */
+    public void setNewRegionId(Long NewRegionId) {
+        this.NewRegionId = NewRegionId;
+    }
+
+    /**
+     * Get 源实例所在地域Id 
+     * @return SrcRegionId 源实例所在地域Id
+     */
+    public Long getSrcRegionId() {
+        return this.SrcRegionId;
+    }
+
+    /**
+     * Set 源实例所在地域Id
+     * @param SrcRegionId 源实例所在地域Id
+     */
+    public void setSrcRegionId(Long SrcRegionId) {
+        this.SrcRegionId = SrcRegionId;
+    }
+
     public CloneItem() {
     }
 
@@ -238,6 +284,12 @@ public class CloneItem extends AbstractModel{
         if (source.TaskStatus != null) {
             this.TaskStatus = new String(source.TaskStatus);
         }
+        if (source.NewRegionId != null) {
+            this.NewRegionId = new Long(source.NewRegionId);
+        }
+        if (source.SrcRegionId != null) {
+            this.SrcRegionId = new Long(source.SrcRegionId);
+        }
     }
 
 
@@ -253,6 +305,8 @@ public class CloneItem extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "NewRegionId", this.NewRegionId);
+        this.setParamSimple(map, prefix + "SrcRegionId", this.SrcRegionId);
 
     }
 }

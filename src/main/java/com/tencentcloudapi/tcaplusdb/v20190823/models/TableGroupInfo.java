@@ -58,6 +58,37 @@ public class TableGroupInfo extends AbstractModel{
     private Long TotalSize;
 
     /**
+    * 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TxhBackupExpireDay")
+    @Expose
+    private Long TxhBackupExpireDay;
+
+    /**
+    * 是否开启mysql负载均衡,0未开启 1开启中 2已开启
+    */
+    @SerializedName("EnableMysql")
+    @Expose
+    private Long EnableMysql;
+
+    /**
+    * mysql负载均衡vip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MysqlConnIp")
+    @Expose
+    private String MysqlConnIp;
+
+    /**
+    * mysql负载均衡vport
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MysqlConnPort")
+    @Expose
+    private Long MysqlConnPort;
+
+    /**
      * Get 表格组ID 
      * @return TableGroupId 表格组ID
      */
@@ -137,6 +168,82 @@ public class TableGroupInfo extends AbstractModel{
         this.TotalSize = TotalSize;
     }
 
+    /**
+     * Get 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTxhBackupExpireDay() {
+        return this.TxhBackupExpireDay;
+    }
+
+    /**
+     * Set 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
+        this.TxhBackupExpireDay = TxhBackupExpireDay;
+    }
+
+    /**
+     * Get 是否开启mysql负载均衡,0未开启 1开启中 2已开启 
+     * @return EnableMysql 是否开启mysql负载均衡,0未开启 1开启中 2已开启
+     */
+    public Long getEnableMysql() {
+        return this.EnableMysql;
+    }
+
+    /**
+     * Set 是否开启mysql负载均衡,0未开启 1开启中 2已开启
+     * @param EnableMysql 是否开启mysql负载均衡,0未开启 1开启中 2已开启
+     */
+    public void setEnableMysql(Long EnableMysql) {
+        this.EnableMysql = EnableMysql;
+    }
+
+    /**
+     * Get mysql负载均衡vip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MysqlConnIp mysql负载均衡vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMysqlConnIp() {
+        return this.MysqlConnIp;
+    }
+
+    /**
+     * Set mysql负载均衡vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MysqlConnIp mysql负载均衡vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMysqlConnIp(String MysqlConnIp) {
+        this.MysqlConnIp = MysqlConnIp;
+    }
+
+    /**
+     * Get mysql负载均衡vport
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MysqlConnPort mysql负载均衡vport
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMysqlConnPort() {
+        return this.MysqlConnPort;
+    }
+
+    /**
+     * Set mysql负载均衡vport
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MysqlConnPort mysql负载均衡vport
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMysqlConnPort(Long MysqlConnPort) {
+        this.MysqlConnPort = MysqlConnPort;
+    }
+
     public TableGroupInfo() {
     }
 
@@ -160,6 +267,18 @@ public class TableGroupInfo extends AbstractModel{
         if (source.TotalSize != null) {
             this.TotalSize = new Long(source.TotalSize);
         }
+        if (source.TxhBackupExpireDay != null) {
+            this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
+        }
+        if (source.EnableMysql != null) {
+            this.EnableMysql = new Long(source.EnableMysql);
+        }
+        if (source.MysqlConnIp != null) {
+            this.MysqlConnIp = new String(source.MysqlConnIp);
+        }
+        if (source.MysqlConnPort != null) {
+            this.MysqlConnPort = new Long(source.MysqlConnPort);
+        }
     }
 
 
@@ -172,6 +291,10 @@ public class TableGroupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "TableCount", this.TableCount);
         this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
+        this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamSimple(map, prefix + "EnableMysql", this.EnableMysql);
+        this.setParamSimple(map, prefix + "MysqlConnIp", this.MysqlConnIp);
+        this.setParamSimple(map, prefix + "MysqlConnPort", this.MysqlConnPort);
 
     }
 }

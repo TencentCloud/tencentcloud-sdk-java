@@ -199,6 +199,14 @@ public class ResourceInfo extends AbstractModel{
     private String Manufacturer;
 
     /**
+    * 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmStatus")
+    @Expose
+    private Long AlarmStatus;
+
+    /**
      * Get 资源Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 资源Id
@@ -638,6 +646,26 @@ public class ResourceInfo extends AbstractModel{
         this.Manufacturer = Manufacturer;
     }
 
+    /**
+     * Get 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmStatus 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlarmStatus() {
+        return this.AlarmStatus;
+    }
+
+    /**
+     * Set 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmStatus 告警状态，0：停用，1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmStatus(Long AlarmStatus) {
+        this.AlarmStatus = AlarmStatus;
+    }
+
     public ResourceInfo() {
     }
 
@@ -718,6 +746,9 @@ public class ResourceInfo extends AbstractModel{
         if (source.Manufacturer != null) {
             this.Manufacturer = new String(source.Manufacturer);
         }
+        if (source.AlarmStatus != null) {
+            this.AlarmStatus = new Long(source.AlarmStatus);
+        }
     }
 
 
@@ -747,6 +778,7 @@ public class ResourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+        this.setParamSimple(map, prefix + "AlarmStatus", this.AlarmStatus);
 
     }
 }

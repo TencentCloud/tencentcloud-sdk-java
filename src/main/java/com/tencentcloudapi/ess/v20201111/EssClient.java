@@ -364,6 +364,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *发起解除协议，主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
+     * @param req CreateReleaseFlowRequest
+     * @return CreateReleaseFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReleaseFlowResponse CreateReleaseFlow(CreateReleaseFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReleaseFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReleaseFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReleaseFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取小程序跳转链接
 
 适用场景：如果需要签署人在自己的APP、小程序、H5应用中签署，可以通过此接口获取跳转腾讯电子签小程序的签署跳转链接。

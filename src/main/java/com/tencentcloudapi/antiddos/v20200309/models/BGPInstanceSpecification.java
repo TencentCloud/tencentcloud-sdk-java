@@ -102,6 +102,14 @@ public class BGPInstanceSpecification extends AbstractModel{
     private Long ElasticLimit;
 
     /**
+    * 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DownGradeProtect")
+    @Expose
+    private Long DownGradeProtect;
+
+    /**
      * Get 保底防护峰值，单位Gbps 
      * @return ProtectBandwidth 保底防护峰值，单位Gbps
      */
@@ -297,6 +305,26 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.ElasticLimit = ElasticLimit;
     }
 
+    /**
+     * Get 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DownGradeProtect 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDownGradeProtect() {
+        return this.DownGradeProtect;
+    }
+
+    /**
+     * Set 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DownGradeProtect 降配后的防护能力，单位Gbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDownGradeProtect(Long DownGradeProtect) {
+        this.DownGradeProtect = DownGradeProtect;
+    }
+
     public BGPInstanceSpecification() {
     }
 
@@ -335,6 +363,9 @@ public class BGPInstanceSpecification extends AbstractModel{
         if (source.ElasticLimit != null) {
             this.ElasticLimit = new Long(source.ElasticLimit);
         }
+        if (source.DownGradeProtect != null) {
+            this.DownGradeProtect = new Long(source.DownGradeProtect);
+        }
     }
 
 
@@ -352,6 +383,7 @@ public class BGPInstanceSpecification extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
         this.setParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+        this.setParamSimple(map, prefix + "DownGradeProtect", this.DownGradeProtect);
 
     }
 }

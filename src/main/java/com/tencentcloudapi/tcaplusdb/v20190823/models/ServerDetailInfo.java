@@ -65,6 +65,14 @@ public class ServerDetailInfo extends AbstractModel{
     private Long WriteNum;
 
     /**
+    * 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get svr唯一id 
      * @return ServerUid svr唯一id
      */
@@ -160,6 +168,26 @@ public class ServerDetailInfo extends AbstractModel{
         this.WriteNum = WriteNum;
     }
 
+    /**
+     * Get 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public ServerDetailInfo() {
     }
 
@@ -186,6 +214,9 @@ public class ServerDetailInfo extends AbstractModel{
         if (source.WriteNum != null) {
             this.WriteNum = new Long(source.WriteNum);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class ServerDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskRate", this.DiskRate);
         this.setParamSimple(map, prefix + "ReadNum", this.ReadNum);
         this.setParamSimple(map, prefix + "WriteNum", this.WriteNum);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

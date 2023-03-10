@@ -37,6 +37,13 @@ public class HsmInfo extends AbstractModel{
     private VsmInfo [] VsmTypes;
 
     /**
+    * 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+    */
+    @SerializedName("HsmType")
+    @Expose
+    private String HsmType;
+
+    /**
      * Get 加密机型号 
      * @return Model 加密机型号
      */
@@ -68,6 +75,22 @@ public class HsmInfo extends AbstractModel{
         this.VsmTypes = VsmTypes;
     }
 
+    /**
+     * Get 加密机母机类型：virtualization、GHSM、EHSM、SHSM 
+     * @return HsmType 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+     */
+    public String getHsmType() {
+        return this.HsmType;
+    }
+
+    /**
+     * Set 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+     * @param HsmType 加密机母机类型：virtualization、GHSM、EHSM、SHSM
+     */
+    public void setHsmType(String HsmType) {
+        this.HsmType = HsmType;
+    }
+
     public HsmInfo() {
     }
 
@@ -85,6 +108,9 @@ public class HsmInfo extends AbstractModel{
                 this.VsmTypes[i] = new VsmInfo(source.VsmTypes[i]);
             }
         }
+        if (source.HsmType != null) {
+            this.HsmType = new String(source.HsmType);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class HsmInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamArrayObj(map, prefix + "VsmTypes.", this.VsmTypes);
+        this.setParamSimple(map, prefix + "HsmType", this.HsmType);
 
     }
 }

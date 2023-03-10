@@ -58,6 +58,14 @@ public class ProxyDetailInfo extends AbstractModel{
     private Long SlowProcessSpeed;
 
     /**
+    * 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get proxy的唯一id 
      * @return ProxyUid proxy的唯一id
      */
@@ -137,6 +145,26 @@ public class ProxyDetailInfo extends AbstractModel{
         this.SlowProcessSpeed = SlowProcessSpeed;
     }
 
+    /**
+     * Get 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public ProxyDetailInfo() {
     }
 
@@ -160,6 +188,9 @@ public class ProxyDetailInfo extends AbstractModel{
         if (source.SlowProcessSpeed != null) {
             this.SlowProcessSpeed = new Long(source.SlowProcessSpeed);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ProxyDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcessSpeed", this.ProcessSpeed);
         this.setParamSimple(map, prefix + "AverageProcessDelay", this.AverageProcessDelay);
         this.setParamSimple(map, prefix + "SlowProcessSpeed", this.SlowProcessSpeed);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

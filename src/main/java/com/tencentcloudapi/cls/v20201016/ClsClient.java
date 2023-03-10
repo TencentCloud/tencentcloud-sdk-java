@@ -199,6 +199,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建cos导入任务
+     * @param req CreateCosRechargeRequest
+     * @return CreateCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosRechargeResponse CreateCosRecharge(CreateCosRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCosRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCosRecharge");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -699,6 +719,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取cos导入配置
+     * @param req DescribeCosRechargesRequest
+     * @return DescribeCosRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRechargesResponse DescribeCosRecharges(DescribeCosRechargesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCosRechargesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCosRecharges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取日志下载任务列表
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
@@ -1071,6 +1111,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于修改cos导入任务
+     * @param req ModifyCosRechargeRequest
+     * @return ModifyCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosRechargeResponse ModifyCosRecharge(ModifyCosRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCosRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCosRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -110,6 +110,13 @@ public class FlowInfo extends AbstractModel{
     private Boolean NeedSignReview;
 
     /**
+    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    */
+    @SerializedName("CcNotifyType")
+    @Expose
+    private Long CcNotifyType;
+
+    /**
      * Get 合同名字，最大长度200个字符 
      * @return FlowName 合同名字，最大长度200个字符
      */
@@ -313,6 +320,22 @@ public class FlowInfo extends AbstractModel{
         this.NeedSignReview = NeedSignReview;
     }
 
+    /**
+     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
+     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public Long getCcNotifyType() {
+        return this.CcNotifyType;
+    }
+
+    /**
+     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public void setCcNotifyType(Long CcNotifyType) {
+        this.CcNotifyType = CcNotifyType;
+    }
+
     public FlowInfo() {
     }
 
@@ -366,6 +389,9 @@ public class FlowInfo extends AbstractModel{
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
+        if (source.CcNotifyType != null) {
+            this.CcNotifyType = new Long(source.CcNotifyType);
+        }
     }
 
 
@@ -385,6 +411,7 @@ public class FlowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+        this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
 
     }
 }

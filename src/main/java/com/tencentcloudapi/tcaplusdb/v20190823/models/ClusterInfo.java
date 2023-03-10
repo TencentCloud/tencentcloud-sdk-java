@@ -130,7 +130,7 @@ public class ClusterInfo extends AbstractModel{
     private String ApiAccessIpv6;
 
     /**
-    * 集群类型
+    * 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -138,7 +138,7 @@ public class ClusterInfo extends AbstractModel{
     private Long ClusterType;
 
     /**
-    * 集群状态
+    * 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
@@ -239,6 +239,14 @@ public class ClusterInfo extends AbstractModel{
     @SerializedName("IsReadOnlyUlogBackupExpireDay")
     @Expose
     private Long IsReadOnlyUlogBackupExpireDay;
+
+    /**
+    * restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RestProxyStatus")
+    @Expose
+    private Long RestProxyStatus;
 
     /**
      * Get 集群名称 
@@ -489,9 +497,9 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
-     * Get 集群类型
+     * Get 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 集群类型
+     * @return ClusterType 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterType() {
@@ -499,9 +507,9 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
-     * Set 集群类型
+     * Set 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 集群类型
+     * @param ClusterType 集群类型，0,1:共享集群; 2:独立集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(Long ClusterType) {
@@ -509,9 +517,9 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
-     * Get 集群状态
+     * Get 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterStatus 集群状态
+     * @return ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterStatus() {
@@ -519,9 +527,9 @@ public class ClusterInfo extends AbstractModel{
     }
 
     /**
-     * Set 集群状态
+     * Set 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterStatus 集群状态
+     * @param ClusterStatus 集群状态, 0：表示正常运行中，1：表示冻结隔离一般欠费进入此状态，2：表示待回收，一般用户主动触发删除进入这个状态，3：待释放，进入这个状态，表示可以释放此表占用的资源了，4：变更中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(Long ClusterStatus) {
@@ -764,6 +772,26 @@ public class ClusterInfo extends AbstractModel{
         this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
     }
 
+    /**
+     * Get restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RestProxyStatus restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRestProxyStatus() {
+        return this.RestProxyStatus;
+    }
+
+    /**
+     * Set restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RestProxyStatus restproxy状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRestProxyStatus(Long RestProxyStatus) {
+        this.RestProxyStatus = RestProxyStatus;
+    }
+
     public ClusterInfo() {
     }
 
@@ -868,6 +896,9 @@ public class ClusterInfo extends AbstractModel{
         if (source.IsReadOnlyUlogBackupExpireDay != null) {
             this.IsReadOnlyUlogBackupExpireDay = new Long(source.IsReadOnlyUlogBackupExpireDay);
         }
+        if (source.RestProxyStatus != null) {
+            this.RestProxyStatus = new Long(source.RestProxyStatus);
+        }
     }
 
 
@@ -904,6 +935,7 @@ public class ClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
         this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
         this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
+        this.setParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
 
     }
 }

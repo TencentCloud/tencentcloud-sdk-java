@@ -39,6 +39,26 @@ public class IrpClient extends AbstractClient{
     }
 
     /**
+     *获取电商类推荐结果
+     * @param req DescribeGoodsRecommendRequest
+     * @return DescribeGoodsRecommendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGoodsRecommendResponse DescribeGoodsRecommend(DescribeGoodsRecommendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGoodsRecommendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGoodsRecommend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取信息流推荐结果
      * @param req FeedRecommendRequest
      * @return FeedRecommendResponse
@@ -111,6 +131,46 @@ public class IrpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReportFeedUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReportFeedUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上报电商类行为数据
+     * @param req ReportGoodsBehaviorRequest
+     * @return ReportGoodsBehaviorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportGoodsBehaviorResponse ReportGoodsBehavior(ReportGoodsBehaviorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportGoodsBehaviorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportGoodsBehavior");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *上报电商类商品信息
+     * @param req ReportGoodsInfoRequest
+     * @return ReportGoodsInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportGoodsInfoResponse ReportGoodsInfo(ReportGoodsInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportGoodsInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportGoodsInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

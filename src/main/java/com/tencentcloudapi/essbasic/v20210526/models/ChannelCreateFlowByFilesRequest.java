@@ -37,7 +37,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String FlowName;
 
     /**
-    * 签署流程签约方列表，最多不超过5个参与方
+    * 签署流程签约方列表，最多不超过50个参与方
     */
     @SerializedName("FlowApprovers")
     @Expose
@@ -138,6 +138,20 @@ MobileCheck：手机号验证
     private UserInfo Operator;
 
     /**
+    * 被抄送人信息列表
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
+    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    */
+    @SerializedName("CcNotifyType")
+    @Expose
+    private Long CcNotifyType;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -170,16 +184,16 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 签署流程签约方列表，最多不超过5个参与方 
-     * @return FlowApprovers 签署流程签约方列表，最多不超过5个参与方
+     * Get 签署流程签约方列表，最多不超过50个参与方 
+     * @return FlowApprovers 签署流程签约方列表，最多不超过50个参与方
      */
     public FlowApproverInfo [] getFlowApprovers() {
         return this.FlowApprovers;
     }
 
     /**
-     * Set 签署流程签约方列表，最多不超过5个参与方
-     * @param FlowApprovers 签署流程签约方列表，最多不超过5个参与方
+     * Set 签署流程签约方列表，最多不超过50个参与方
+     * @param FlowApprovers 签署流程签约方列表，最多不超过50个参与方
      */
     public void setFlowApprovers(FlowApproverInfo [] FlowApprovers) {
         this.FlowApprovers = FlowApprovers;
@@ -405,6 +419,38 @@ MobileCheck：手机号验证
         this.Operator = Operator;
     }
 
+    /**
+     * Get 被抄送人信息列表 
+     * @return CcInfos 被抄送人信息列表
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 被抄送人信息列表
+     * @param CcInfos 被抄送人信息列表
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
+    /**
+     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
+     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public Long getCcNotifyType() {
+        return this.CcNotifyType;
+    }
+
+    /**
+     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public void setCcNotifyType(Long CcNotifyType) {
+        this.CcNotifyType = CcNotifyType;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -470,6 +516,15 @@ MobileCheck：手机号验证
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.CcInfos != null) {
+            this.CcInfos = new CcInfo[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
+            }
+        }
+        if (source.CcNotifyType != null) {
+            this.CcNotifyType = new Long(source.CcNotifyType);
+        }
     }
 
 
@@ -493,6 +548,8 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
 
     }
 }

@@ -219,6 +219,46 @@ public class CloudhsmClient extends AbstractClient{
     }
 
     /**
+     *获取告警事件
+     * @param req GetAlarmEventRequest
+     * @return GetAlarmEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAlarmEventResponse GetAlarmEvent(GetAlarmEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAlarmEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAlarmEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAlarmEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取VSM监控信息
+     * @param req GetVsmMonitorInfoRequest
+     * @return GetVsmMonitorInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVsmMonitorInfoResponse GetVsmMonitorInfo(GetVsmMonitorInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetVsmMonitorInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetVsmMonitorInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetVsmMonitorInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *购买询价接口
      * @param req InquiryPriceBuyVsmRequest
      * @return InquiryPriceBuyVsmResponse
@@ -231,6 +271,26 @@ public class CloudhsmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceBuyVsmResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceBuyVsm");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改告警事件
+     * @param req ModifyAlarmEventRequest
+     * @return ModifyAlarmEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmEventResponse ModifyAlarmEvent(ModifyAlarmEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

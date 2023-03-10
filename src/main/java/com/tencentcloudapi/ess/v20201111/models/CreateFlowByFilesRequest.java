@@ -163,6 +163,13 @@ MobileCheck：手机号验证
     private Agent Agent;
 
     /**
+    * 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+    */
+    @SerializedName("CcNotifyType")
+    @Expose
+    private Long CcNotifyType;
+
+    /**
      * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同 
      * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
      */
@@ -506,6 +513,22 @@ MobileCheck：手机号验证
         this.Agent = Agent;
     }
 
+    /**
+     * Get 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知 
+     * @return CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public Long getCcNotifyType() {
+        return this.CcNotifyType;
+    }
+
+    /**
+     * Set 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     * @param CcNotifyType 给关注人发送短信通知的类型，0-合同发起时通知 1-签署完成后通知
+     */
+    public void setCcNotifyType(Long CcNotifyType) {
+        this.CcNotifyType = CcNotifyType;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -580,6 +603,9 @@ MobileCheck：手机号验证
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.CcNotifyType != null) {
+            this.CcNotifyType = new Long(source.CcNotifyType);
+        }
     }
 
 
@@ -605,6 +631,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
 
     }
 }

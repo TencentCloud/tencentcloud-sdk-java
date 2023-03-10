@@ -199,6 +199,37 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对 COS 中指定 Bucket 的目录下上传的媒体文件，设置处理规则，包括：
+1. 视频转码（带水印）；
+2. 视频转动图；
+3. 对视频按指定时间点截图；
+4. 对视频采样截图；
+5. 对视频截图雪碧图；
+6. 对视频转自适应码流；
+7. 智能内容审核（鉴黄、敏感信息检测）；
+8. 智能内容分析（标签、分类、封面、按帧标签）；
+9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+
+注意：创建编排成功后是禁用状态，需要手动启用。
+     * @param req CreateScheduleRequest
+     * @return CreateScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建用户自定义指定时间点截图模板，数量上限：16。
      * @param req CreateSnapshotByTimeOffsetTemplateRequest
      * @return CreateSnapshotByTimeOffsetTemplateResponse
@@ -504,6 +535,26 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSampleSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除编排
+     * @param req DeleteScheduleRequest
+     * @return DeleteScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -824,6 +875,26 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleSnapshotTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSampleSnapshotTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询编排。
+     * @param req DescribeSchedulesRequest
+     * @return DescribeSchedulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1156,6 +1227,26 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *禁用自动化触发编排任务。
+     * @param req DisableScheduleRequest
+     * @return DisableScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableScheduleResponse DisableSchedule(DisableScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *禁用工作流。
      * @param req DisableWorkflowRequest
      * @return DisableWorkflowResponse
@@ -1192,6 +1283,26 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EditMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启用自动化触发编排任务。
+     * @param req EnableScheduleRequest
+     * @return EnableScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableScheduleResponse EnableSchedule(EnableScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableSchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1414,6 +1525,26 @@ public class MpsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySampleSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改编排
+     * @param req ModifyScheduleRequest
+     * @return ModifyScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

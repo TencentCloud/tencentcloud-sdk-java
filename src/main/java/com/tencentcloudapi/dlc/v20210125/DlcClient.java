@@ -959,6 +959,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeForbiddenTablePro）用于获取被禁用的表属性列表
+     * @param req DescribeForbiddenTableProRequest
+     * @return DescribeForbiddenTableProResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForbiddenTableProResponse DescribeForbiddenTablePro(DescribeForbiddenTableProRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeForbiddenTableProResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeForbiddenTableProResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeForbiddenTablePro");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询托管存储指定目录的Summary
      * @param req DescribeLakeFsDirSummaryRequest
      * @return DescribeLakeFsDirSummaryResponse

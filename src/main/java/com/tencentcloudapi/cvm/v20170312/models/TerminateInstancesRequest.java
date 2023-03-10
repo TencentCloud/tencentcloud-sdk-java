@@ -30,6 +30,13 @@ public class TerminateInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * 释放实例挂载的包年包月数据盘。
+    */
+    @SerializedName("ReleasePrepaidDataDisks")
+    @Expose
+    private Boolean ReleasePrepaidDataDisks;
+
+    /**
      * Get 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。 
      * @return InstanceIds 一个或多个待操作的实例ID。可通过[`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728)接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
      */
@@ -43,6 +50,22 @@ public class TerminateInstancesRequest extends AbstractModel{
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get 释放实例挂载的包年包月数据盘。 
+     * @return ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。
+     */
+    public Boolean getReleasePrepaidDataDisks() {
+        return this.ReleasePrepaidDataDisks;
+    }
+
+    /**
+     * Set 释放实例挂载的包年包月数据盘。
+     * @param ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。
+     */
+    public void setReleasePrepaidDataDisks(Boolean ReleasePrepaidDataDisks) {
+        this.ReleasePrepaidDataDisks = ReleasePrepaidDataDisks;
     }
 
     public TerminateInstancesRequest() {
@@ -59,6 +82,9 @@ public class TerminateInstancesRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ReleasePrepaidDataDisks != null) {
+            this.ReleasePrepaidDataDisks = new Boolean(source.ReleasePrepaidDataDisks);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class TerminateInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ReleasePrepaidDataDisks", this.ReleasePrepaidDataDisks);
 
     }
 }
