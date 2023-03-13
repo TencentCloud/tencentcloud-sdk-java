@@ -44,7 +44,7 @@ public class DescribeBaselineItemIgnoreListRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+    * <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeBaselineItemIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i> 
-     * @return Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+     * Get <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li> 
+     * @return Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
-     * @param Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</i>
+     * Set <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
+     * @param Filters <li>CatgoryId - int64 - 是否必填：否 - 规则Id</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

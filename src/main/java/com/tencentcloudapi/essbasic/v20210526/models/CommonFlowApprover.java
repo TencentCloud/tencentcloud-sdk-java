@@ -96,6 +96,7 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
+注意：模版发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
@@ -316,8 +317,10 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Get 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
+注意：模版发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecipientId 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
+注意：模版发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
@@ -326,8 +329,10 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
+注意：模版发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 签署人Id，使用模版发起是，对应模版配置中的签署人RecipientId
+注意：模版发起时该字段必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {

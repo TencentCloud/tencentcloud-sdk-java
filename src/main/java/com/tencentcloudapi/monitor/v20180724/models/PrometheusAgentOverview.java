@@ -86,6 +86,14 @@ abnormal = 异常
     private String FailedReason;
 
     /**
+    * agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -241,6 +249,26 @@ abnormal = 异常
         this.FailedReason = FailedReason;
     }
 
+    /**
+     * Get agent名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name agent名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -276,6 +304,9 @@ abnormal = 异常
         if (source.FailedReason != null) {
             this.FailedReason = new String(source.FailedReason);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -291,6 +322,7 @@ abnormal = 异常
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

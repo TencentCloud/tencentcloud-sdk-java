@@ -299,6 +299,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除设置自定义元素。如果参数scenes为空则删除所有自定义元素，否则删除指定的scene自定义元素。
+     * @param req DeleteAppCustomContentRequest
+     * @return DeleteAppCustomContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAppCustomContentResponse DeleteAppCustomContent(DeleteAppCustomContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAppCustomContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAppCustomContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除文档
      * @param req DeleteDocumentRequest
      * @return DeleteDocumentResponse

@@ -329,6 +329,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建RabbitMQ专享版实例
+     * @param req CreateRabbitMQVipInstanceRequest
+     * @return CreateRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(CreateRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于创建一个RocketMQ集群
      * @param req CreateRocketMQClusterRequest
      * @return CreateRocketMQClusterResponse

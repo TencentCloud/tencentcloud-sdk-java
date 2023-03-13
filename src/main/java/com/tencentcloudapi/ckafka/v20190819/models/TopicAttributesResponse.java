@@ -104,6 +104,14 @@ public class TopicAttributesResponse extends AbstractModel{
     private InstanceQuotaConfigResp QuotaConfig;
 
     /**
+    * 副本数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplicaNum")
+    @Expose
+    private Long ReplicaNum;
+
+    /**
      * Get 主题 ID 
      * @return TopicId 主题 ID
      */
@@ -295,6 +303,26 @@ public class TopicAttributesResponse extends AbstractModel{
         this.QuotaConfig = QuotaConfig;
     }
 
+    /**
+     * Get 副本数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplicaNum 副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReplicaNum() {
+        return this.ReplicaNum;
+    }
+
+    /**
+     * Set 副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplicaNum 副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplicaNum(Long ReplicaNum) {
+        this.ReplicaNum = ReplicaNum;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -345,6 +373,9 @@ public class TopicAttributesResponse extends AbstractModel{
         if (source.QuotaConfig != null) {
             this.QuotaConfig = new InstanceQuotaConfigResp(source.QuotaConfig);
         }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
     }
 
 
@@ -363,6 +394,7 @@ public class TopicAttributesResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
         this.setParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
+        this.setParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
 
     }
 }

@@ -126,6 +126,14 @@ public class TopicDetail extends AbstractModel{
     private Long Status;
 
     /**
+    * 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 主题名称 
      * @return TopicName 主题名称
      */
@@ -369,6 +377,26 @@ public class TopicDetail extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TopicDetail() {
     }
 
@@ -419,6 +447,12 @@ public class TopicDetail extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -440,6 +474,7 @@ public class TopicDetail extends AbstractModel{
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

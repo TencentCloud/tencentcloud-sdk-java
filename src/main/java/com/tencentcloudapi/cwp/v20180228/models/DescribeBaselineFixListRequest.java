@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBaselineFixListRequest extends AbstractModel{
 
     /**
-    * <li>ItemName- string - 是否必填：否 - 项名称</i>
+    * <li>ItemName- string - 是否必填：否 - 项名称</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeBaselineFixListRequest extends AbstractModel{
     private String By;
 
     /**
-     * Get <li>ItemName- string - 是否必填：否 - 项名称</i> 
-     * @return Filters <li>ItemName- string - 是否必填：否 - 项名称</i>
+     * Get <li>ItemName- string - 是否必填：否 - 项名称</li> 
+     * @return Filters <li>ItemName- string - 是否必填：否 - 项名称</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>ItemName- string - 是否必填：否 - 项名称</i>
-     * @param Filters <li>ItemName- string - 是否必填：否 - 项名称</i>
+     * Set <li>ItemName- string - 是否必填：否 - 项名称</li>
+     * @param Filters <li>ItemName- string - 是否必填：否 - 项名称</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
