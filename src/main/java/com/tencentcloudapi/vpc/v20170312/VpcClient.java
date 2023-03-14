@@ -5946,6 +5946,27 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（ReplaceSecurityGroupPolicies）用于批量修改安全组规则（SecurityGroupPolicy）。
+单个请求中只能替换单个方向的一条或多条规则, 必须要指定索引（PolicyIndex）。
+     * @param req ReplaceSecurityGroupPoliciesRequest
+     * @return ReplaceSecurityGroupPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceSecurityGroupPoliciesResponse ReplaceSecurityGroupPolicies(ReplaceSecurityGroupPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReplaceSecurityGroupPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReplaceSecurityGroupPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReplaceSecurityGroupPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ReplaceSecurityGroupPolicy）用于替换单条安全组规则（SecurityGroupPolicy）。
 单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
      * @param req ReplaceSecurityGroupPolicyRequest

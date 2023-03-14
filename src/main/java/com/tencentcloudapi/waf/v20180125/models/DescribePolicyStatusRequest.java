@@ -13,79 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdentifyZoneRequest extends AbstractModel{
+public class DescribePolicyStatusRequest extends AbstractModel{
 
     /**
-    * 站点名称。
-    */
-    @SerializedName("ZoneName")
-    @Expose
-    private String ZoneName;
-
-    /**
-    * 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+    * 域名
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 站点名称。 
-     * @return ZoneName 站点名称。
-     */
-    public String getZoneName() {
-        return this.ZoneName;
-    }
+    * clb-waf或者saas-waf
+    */
+    @SerializedName("Edition")
+    @Expose
+    private String Edition;
 
     /**
-     * Set 站点名称。
-     * @param ZoneName 站点名称。
-     */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
-    }
-
-    /**
-     * Get 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
- 
-     * @return Domain 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+     * Get 域名 
+     * @return Domain 域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
-     * @param Domain 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+     * Set 域名
+     * @param Domain 域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
-    public IdentifyZoneRequest() {
+    /**
+     * Get clb-waf或者saas-waf 
+     * @return Edition clb-waf或者saas-waf
+     */
+    public String getEdition() {
+        return this.Edition;
+    }
+
+    /**
+     * Set clb-waf或者saas-waf
+     * @param Edition clb-waf或者saas-waf
+     */
+    public void setEdition(String Edition) {
+        this.Edition = Edition;
+    }
+
+    public DescribePolicyStatusRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public IdentifyZoneRequest(IdentifyZoneRequest source) {
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
-        }
+    public DescribePolicyStatusRequest(DescribePolicyStatusRequest source) {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
+        }
+        if (source.Edition != null) {
+            this.Edition = new String(source.Edition);
         }
     }
 
@@ -94,8 +89,8 @@ public class IdentifyZoneRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Edition", this.Edition);
 
     }
 }

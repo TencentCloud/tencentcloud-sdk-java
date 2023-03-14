@@ -341,6 +341,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取防护配置中的精准白名单策略列表
+     * @param req DescribeCustomWhiteRuleRequest
+     * @return DescribeCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomWhiteRuleResponse DescribeCustomWhiteRule(DescribeCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomWhiteRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询单个saas域名详情
      * @param req DescribeDomainDetailsSaasRequest
      * @return DescribeDomainDetailsSaasResponse
@@ -473,6 +493,46 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIpHitItemsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIpHitItems");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取防护状态以及生效的实例id
+     * @param req DescribePolicyStatusRequest
+     * @return DescribePolicyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyStatusResponse DescribePolicyStatus(DescribePolicyStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePolicyStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePolicyStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePolicyStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取各个模块具体的规格限制
+     * @param req DescribeRuleLimitRequest
+     * @return DescribeRuleLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRuleLimitResponse DescribeRuleLimit(DescribeRuleLimitRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRuleLimitResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRuleLimitResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRuleLimit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -81,6 +81,17 @@ public class Https extends AbstractModel{
     private String ApplyType;
 
     /**
+    * 密码套件，取值有：
+<li>loose-v2023：提供最高的兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
+<li>general-v2023：提供较高的兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
+<li>strict-v2023：提供最高的安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CipherSuite")
+    @Expose
+    private String CipherSuite;
+
+    /**
      * Get http2 配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
@@ -240,6 +251,38 @@ public class Https extends AbstractModel{
         this.ApplyType = ApplyType;
     }
 
+    /**
+     * Get 密码套件，取值有：
+<li>loose-v2023：提供最高的兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
+<li>general-v2023：提供较高的兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
+<li>strict-v2023：提供最高的安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CipherSuite 密码套件，取值有：
+<li>loose-v2023：提供最高的兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
+<li>general-v2023：提供较高的兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
+<li>strict-v2023：提供最高的安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCipherSuite() {
+        return this.CipherSuite;
+    }
+
+    /**
+     * Set 密码套件，取值有：
+<li>loose-v2023：提供最高的兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
+<li>general-v2023：提供较高的兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
+<li>strict-v2023：提供最高的安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CipherSuite 密码套件，取值有：
+<li>loose-v2023：提供最高的兼容性，安全性一般，支持 TLS 1.0-1.3 密码套件；</li>
+<li>general-v2023：提供较高的兼容性，安全性中等，支持 TLS 1.2-1.3 密码套件；</li>
+<li>strict-v2023：提供最高的安全性能，禁用所有含不安全隐患的加密套件，支持 TLS 1.2-1.3 密码套件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCipherSuite(String CipherSuite) {
+        this.CipherSuite = CipherSuite;
+    }
+
     public Https() {
     }
 
@@ -272,6 +315,9 @@ public class Https extends AbstractModel{
         if (source.ApplyType != null) {
             this.ApplyType = new String(source.ApplyType);
         }
+        if (source.CipherSuite != null) {
+            this.CipherSuite = new String(source.CipherSuite);
+        }
     }
 
 
@@ -285,6 +331,7 @@ public class Https extends AbstractModel{
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
         this.setParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
+        this.setParamSimple(map, prefix + "CipherSuite", this.CipherSuite);
 
     }
 }

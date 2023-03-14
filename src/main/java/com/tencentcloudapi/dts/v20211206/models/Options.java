@@ -79,6 +79,14 @@ public class Options extends AbstractModel{
     private DdlOption [] DdlOptions;
 
     /**
+    * kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaOption")
+    @Expose
+    private KafkaOption KafkaOption;
+
+    /**
      * Get 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InitType 同步初始化选项，Data(全量数据初始化)、Structure(结构初始化)、Full(全量数据且结构初始化，默认)、None(仅增量)
@@ -218,6 +226,26 @@ public class Options extends AbstractModel{
         this.DdlOptions = DdlOptions;
     }
 
+    /**
+     * Get kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaOption kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KafkaOption getKafkaOption() {
+        return this.KafkaOption;
+    }
+
+    /**
+     * Set kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaOption kafka同步选项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaOption(KafkaOption KafkaOption) {
+        this.KafkaOption = KafkaOption;
+    }
+
     public Options() {
     }
 
@@ -253,6 +281,9 @@ public class Options extends AbstractModel{
                 this.DdlOptions[i] = new DdlOption(source.DdlOptions[i]);
             }
         }
+        if (source.KafkaOption != null) {
+            this.KafkaOption = new KafkaOption(source.KafkaOption);
+        }
     }
 
 
@@ -267,6 +298,7 @@ public class Options extends AbstractModel{
         this.setParamArraySimple(map, prefix + "OpTypes.", this.OpTypes);
         this.setParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
         this.setParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
+        this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
 
     }
 }

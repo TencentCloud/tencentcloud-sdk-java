@@ -13,77 +13,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class IdentifyZoneRequest extends AbstractModel{
+public class DescribeRuleLimitRequest extends AbstractModel{
 
     /**
-    * 站点名称。
-    */
-    @SerializedName("ZoneName")
-    @Expose
-    private String ZoneName;
-
-    /**
-    * 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+    * 域名
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 站点名称。 
-     * @return ZoneName 站点名称。
-     */
-    public String getZoneName() {
-        return this.ZoneName;
-    }
-
-    /**
-     * Set 站点名称。
-     * @param ZoneName 站点名称。
-     */
-    public void setZoneName(String ZoneName) {
-        this.ZoneName = ZoneName;
-    }
-
-    /**
-     * Get 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
- 
-     * @return Domain 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+     * Get 域名 
+     * @return Domain 域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
-     * @param Domain 站点下的子域名。如果验证站点下的子域名，则传该值，否则为空。
-
+     * Set 域名
+     * @param Domain 域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
-    public IdentifyZoneRequest() {
+    public DescribeRuleLimitRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public IdentifyZoneRequest(IdentifyZoneRequest source) {
-        if (source.ZoneName != null) {
-            this.ZoneName = new String(source.ZoneName);
-        }
+    public DescribeRuleLimitRequest(DescribeRuleLimitRequest source) {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
@@ -94,7 +63,6 @@ public class IdentifyZoneRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }

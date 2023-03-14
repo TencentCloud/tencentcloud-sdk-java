@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class CreateSupervisorRequest extends AbstractModel{
 
+    /**
+    * 应用ID。
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
+    * 用户ID列表。
+    */
+    @SerializedName("Users")
+    @Expose
+    private String [] Users;
+
+    /**
+     * Get 应用ID。 
+     * @return SdkAppId 应用ID。
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 应用ID。
+     * @param SdkAppId 应用ID。
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 用户ID列表。 
+     * @return Users 用户ID列表。
+     */
+    public String [] getUsers() {
+        return this.Users;
+    }
+
+    /**
+     * Set 用户ID列表。
+     * @param Users 用户ID列表。
+     */
+    public void setUsers(String [] Users) {
+        this.Users = Users;
+    }
+
     public CreateSupervisorRequest() {
     }
 
@@ -30,6 +76,15 @@ public class CreateSupervisorRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateSupervisorRequest(CreateSupervisorRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Users != null) {
+            this.Users = new String[source.Users.length];
+            for (int i = 0; i < source.Users.length; i++) {
+                this.Users[i] = new String(source.Users[i]);
+            }
+        }
     }
 
 
@@ -37,6 +92,8 @@ public class CreateSupervisorRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamArraySimple(map, prefix + "Users.", this.Users);
 
     }
 }

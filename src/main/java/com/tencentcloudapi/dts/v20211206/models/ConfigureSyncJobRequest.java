@@ -86,11 +86,39 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private Endpoint SrcInfo;
 
     /**
+    * 源端信息，多节点数据库使用，且SrcNodeType传cluster
+    */
+    @SerializedName("SrcInfos")
+    @Expose
+    private SyncDBEndpointInfos SrcInfos;
+
+    /**
+    * 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
     * 目标端信息，单节点数据库使用
     */
     @SerializedName("DstInfo")
     @Expose
     private Endpoint DstInfo;
+
+    /**
+    * 目标端信息，多节点数据库使用，且DstNodeType传cluster
+    */
+    @SerializedName("DstInfos")
+    @Expose
+    private SyncDBEndpointInfos DstInfos;
+
+    /**
+    * 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+    */
+    @SerializedName("DstNodeType")
+    @Expose
+    private String DstNodeType;
 
     /**
     * 同步任务选项
@@ -251,6 +279,38 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
+     * Get 源端信息，多节点数据库使用，且SrcNodeType传cluster 
+     * @return SrcInfos 源端信息，多节点数据库使用，且SrcNodeType传cluster
+     */
+    public SyncDBEndpointInfos getSrcInfos() {
+        return this.SrcInfos;
+    }
+
+    /**
+     * Set 源端信息，多节点数据库使用，且SrcNodeType传cluster
+     * @param SrcInfos 源端信息，多节点数据库使用，且SrcNodeType传cluster
+     */
+    public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
+        this.SrcInfos = SrcInfos;
+    }
+
+    /**
+     * Get 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster 
+     * @return SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+     * @param SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
      * Get 目标端信息，单节点数据库使用 
      * @return DstInfo 目标端信息，单节点数据库使用
      */
@@ -264,6 +324,38 @@ public class ConfigureSyncJobRequest extends AbstractModel{
      */
     public void setDstInfo(Endpoint DstInfo) {
         this.DstInfo = DstInfo;
+    }
+
+    /**
+     * Get 目标端信息，多节点数据库使用，且DstNodeType传cluster 
+     * @return DstInfos 目标端信息，多节点数据库使用，且DstNodeType传cluster
+     */
+    public SyncDBEndpointInfos getDstInfos() {
+        return this.DstInfos;
+    }
+
+    /**
+     * Set 目标端信息，多节点数据库使用，且DstNodeType传cluster
+     * @param DstInfos 目标端信息，多节点数据库使用，且DstNodeType传cluster
+     */
+    public void setDstInfos(SyncDBEndpointInfos DstInfos) {
+        this.DstInfos = DstInfos;
+    }
+
+    /**
+     * Get 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster 
+     * @return DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+     */
+    public String getDstNodeType() {
+        return this.DstNodeType;
+    }
+
+    /**
+     * Set 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+     * @param DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
+     */
+    public void setDstNodeType(String DstNodeType) {
+        this.DstNodeType = DstNodeType;
     }
 
     /**
@@ -333,8 +425,20 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.SrcInfo != null) {
             this.SrcInfo = new Endpoint(source.SrcInfo);
         }
+        if (source.SrcInfos != null) {
+            this.SrcInfos = new SyncDBEndpointInfos(source.SrcInfos);
+        }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
         if (source.DstInfo != null) {
             this.DstInfo = new Endpoint(source.DstInfo);
+        }
+        if (source.DstInfos != null) {
+            this.DstInfos = new SyncDBEndpointInfos(source.DstInfos);
+        }
+        if (source.DstNodeType != null) {
+            this.DstNodeType = new String(source.DstNodeType);
         }
         if (source.Options != null) {
             this.Options = new Options(source.Options);
@@ -358,7 +462,11 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamObj(map, prefix + "DstInfos.", this.DstInfos);
+        this.setParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
         this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 

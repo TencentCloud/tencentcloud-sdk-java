@@ -222,6 +222,9 @@ public enum TeoErrorCode {
     // 无效的自定义错误页面。
      INVALIDPARAMETER_INVALIDERRORPAGEREDIRECTURL("InvalidParameter.InvalidErrorPageRedirectUrl"),
      
+    // 无效的HTTPS。
+     INVALIDPARAMETER_INVALIDHTTPS("InvalidParameter.InvalidHttps"),
+     
     // 无效的HTTPS HSTS。
      INVALIDPARAMETER_INVALIDHTTPSHSTSMAXAGE("InvalidParameter.InvalidHttpsHstsMaxAge"),
      
@@ -251,6 +254,9 @@ public enum TeoErrorCode {
      
     // x-forwarded-for 请求头配置无效
      INVALIDPARAMETER_INVALIDREQUESTHEADERNAMEXFF("InvalidParameter.InvalidRequestHeaderNameXff"),
+     
+    // 无效的请求头header。
+     INVALIDPARAMETER_INVALIDREQUESTHEADERVALUE("InvalidParameter.InvalidRequestHeaderValue"),
      
     // 无套餐包。
      INVALIDPARAMETER_INVALIDRESOURCEIDBILLING("InvalidParameter.InvalidResourceIdBilling"),

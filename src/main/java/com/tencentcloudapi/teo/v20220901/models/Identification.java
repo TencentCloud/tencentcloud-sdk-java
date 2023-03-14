@@ -30,6 +30,14 @@ public class Identification extends AbstractModel{
     private String ZoneName;
 
     /**
+    * 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
     * 验证状态，取值有：
 <li> pending：验证中；</li>
 <li> finished：验证完成。</li>
@@ -74,6 +82,26 @@ public class Identification extends AbstractModel{
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -163,6 +191,9 @@ public class Identification extends AbstractModel{
         if (source.ZoneName != null) {
             this.ZoneName = new String(source.ZoneName);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -186,6 +217,7 @@ public class Identification extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Ascription.", this.Ascription);
         this.setParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);

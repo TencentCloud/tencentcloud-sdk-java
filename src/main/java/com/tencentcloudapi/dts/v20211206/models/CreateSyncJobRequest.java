@@ -44,7 +44,7 @@ public class CreateSyncJobRequest extends AbstractModel{
     private String SrcRegion;
 
     /**
-    * 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+    * 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -155,16 +155,16 @@ public class CreateSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等 
-     * @return DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+     * Get 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等 
+     * @return DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
-     * @param DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
+     * Set 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
+     * @param DstDatabaseType 目标端数据库类型,如mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql,kafka等
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;

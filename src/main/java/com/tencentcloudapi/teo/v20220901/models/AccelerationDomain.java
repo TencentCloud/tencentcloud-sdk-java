@@ -78,6 +78,14 @@ public class AccelerationDomain extends AbstractModel{
     private String Cname;
 
     /**
+    * 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdentificationStatus")
+    @Expose
+    private String IdentificationStatus;
+
+    /**
      * Get 源站信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OriginDetail 源站信息。
@@ -213,6 +221,26 @@ public class AccelerationDomain extends AbstractModel{
         this.Cname = Cname;
     }
 
+    /**
+     * Get 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdentificationStatus() {
+        return this.IdentificationStatus;
+    }
+
+    /**
+     * Set 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdentificationStatus 加速域名归属权验证状态，取值有： <li>pending：待验证；</li> <li>finished：已完成验证。</li>	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdentificationStatus(String IdentificationStatus) {
+        this.IdentificationStatus = IdentificationStatus;
+    }
+
     public AccelerationDomain() {
     }
 
@@ -242,6 +270,9 @@ public class AccelerationDomain extends AbstractModel{
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
+        if (source.IdentificationStatus != null) {
+            this.IdentificationStatus = new String(source.IdentificationStatus);
+        }
     }
 
 
@@ -256,6 +287,7 @@ public class AccelerationDomain extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "IdentificationStatus", this.IdentificationStatus);
 
     }
 }
