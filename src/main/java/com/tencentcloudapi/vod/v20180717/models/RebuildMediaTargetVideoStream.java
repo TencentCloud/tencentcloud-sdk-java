@@ -60,7 +60,7 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     private String ResolutionAdaptive;
 
     /**
-    * 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+    * 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -73,7 +73,7 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     private Long Width;
 
     /**
-    * 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+    * 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -205,14 +205,14 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     }
 
     /**
-     * Get 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * Get 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。 
-     * @return Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @return Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -225,14 +225,14 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     }
 
     /**
-     * Set 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * Set 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
-     * @param Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @param Width 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -245,14 +245,14 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     }
 
     /**
-     * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * Get 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。 
-     * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @return Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -265,14 +265,14 @@ public class RebuildMediaTargetVideoStream extends AbstractModel{
     }
 
     /**
-     * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * Set 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
 <li>当 Width、Height 均非 0，则分辨率按用户指定。</li>
 
 默认值：0。
-     * @param Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
+     * @param Height 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
 <li>当 Width、Height 均为 0，则分辨率同源；</li>
 <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
 <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>

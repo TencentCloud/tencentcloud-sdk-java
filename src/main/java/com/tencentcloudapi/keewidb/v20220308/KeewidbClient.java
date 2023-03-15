@@ -239,6 +239,26 @@ public class KeewidbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceDealDetail）用于查询预付费订单信息。
+     * @param req DescribeInstanceDealDetailRequest
+     * @return DescribeInstanceDealDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceDealDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeInstanceNodeInfo）查询实例节点信息。
      * @param req DescribeInstanceNodeInfoRequest
      * @return DescribeInstanceNodeInfoResponse

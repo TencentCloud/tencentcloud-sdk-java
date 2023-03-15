@@ -259,6 +259,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *通过接口拉取租户已有潜客客户档案列表信息
+     * @param req QueryCustomerProfileListRequest
+     * @return QueryCustomerProfileListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCustomerProfileListResponse QueryCustomerProfileList(QueryCustomerProfileListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCustomerProfileListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCustomerProfileListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCustomerProfileList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
      * @param req QueryDealerInfoListRequest
      * @return QueryDealerInfoListResponse
@@ -291,6 +311,26 @@ public class WavClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryExternalContactDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryExternalContactDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *企业可通过传入起始和结束时间，获取该时间段的外部联系人详情列表
+     * @param req QueryExternalContactDetailByDateRequest
+     * @return QueryExternalContactDetailByDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryExternalContactDetailByDateResponse QueryExternalContactDetailByDate(QueryExternalContactDetailByDateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryExternalContactDetailByDateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryExternalContactDetailByDateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryExternalContactDetailByDate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

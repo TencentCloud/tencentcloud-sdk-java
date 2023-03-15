@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WaterMark extends AbstractModel{
 
     /**
-    * 水印类型，0为图片（默认），1为文字（暂不支持）。
+    * 水印类型，0为图片（默认），1为文字，2为时间戳。
     */
     @SerializedName("WaterMarkType")
     @Expose
@@ -37,16 +37,32 @@ public class WaterMark extends AbstractModel{
     private WaterMarkImage WaterMarkImage;
 
     /**
-     * Get 水印类型，0为图片（默认），1为文字（暂不支持）。 
-     * @return WaterMarkType 水印类型，0为图片（默认），1为文字（暂不支持）。
+    * 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaterMarkChar")
+    @Expose
+    private WaterMarkChar WaterMarkChar;
+
+    /**
+    * 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WaterMarkTimestamp")
+    @Expose
+    private WaterMarkTimestamp WaterMarkTimestamp;
+
+    /**
+     * Get 水印类型，0为图片（默认），1为文字，2为时间戳。 
+     * @return WaterMarkType 水印类型，0为图片（默认），1为文字，2为时间戳。
      */
     public Long getWaterMarkType() {
         return this.WaterMarkType;
     }
 
     /**
-     * Set 水印类型，0为图片（默认），1为文字（暂不支持）。
-     * @param WaterMarkType 水印类型，0为图片（默认），1为文字（暂不支持）。
+     * Set 水印类型，0为图片（默认），1为文字，2为时间戳。
+     * @param WaterMarkType 水印类型，0为图片（默认），1为文字，2为时间戳。
      */
     public void setWaterMarkType(Long WaterMarkType) {
         this.WaterMarkType = WaterMarkType;
@@ -68,6 +84,46 @@ public class WaterMark extends AbstractModel{
         this.WaterMarkImage = WaterMarkImage;
     }
 
+    /**
+     * Get 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WaterMarkChar getWaterMarkChar() {
+        return this.WaterMarkChar;
+    }
+
+    /**
+     * Set 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaterMarkChar(WaterMarkChar WaterMarkChar) {
+        this.WaterMarkChar = WaterMarkChar;
+    }
+
+    /**
+     * Get 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WaterMarkTimestamp getWaterMarkTimestamp() {
+        return this.WaterMarkTimestamp;
+    }
+
+    /**
+     * Set 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWaterMarkTimestamp(WaterMarkTimestamp WaterMarkTimestamp) {
+        this.WaterMarkTimestamp = WaterMarkTimestamp;
+    }
+
     public WaterMark() {
     }
 
@@ -82,6 +138,12 @@ public class WaterMark extends AbstractModel{
         if (source.WaterMarkImage != null) {
             this.WaterMarkImage = new WaterMarkImage(source.WaterMarkImage);
         }
+        if (source.WaterMarkChar != null) {
+            this.WaterMarkChar = new WaterMarkChar(source.WaterMarkChar);
+        }
+        if (source.WaterMarkTimestamp != null) {
+            this.WaterMarkTimestamp = new WaterMarkTimestamp(source.WaterMarkTimestamp);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class WaterMark extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
         this.setParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+        this.setParamObj(map, prefix + "WaterMarkChar.", this.WaterMarkChar);
+        this.setParamObj(map, prefix + "WaterMarkTimestamp.", this.WaterMarkTimestamp);
 
     }
 }

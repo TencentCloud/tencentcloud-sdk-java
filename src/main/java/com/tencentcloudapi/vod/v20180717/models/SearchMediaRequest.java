@@ -187,6 +187,14 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StorageClasses;
 
     /**
+    * 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+    */
+    @SerializedName("MediaTypes")
+    @Expose
+    private String [] MediaTypes;
+
+    /**
     * TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
     */
@@ -704,6 +712,26 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li> 
+     * @return MediaTypes 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public String [] getMediaTypes() {
+        return this.MediaTypes;
+    }
+
+    /**
+     * Set 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+     * @param MediaTypes 媒体文件封装格式集合，匹配集合中任意元素。
+<li>数组长度限制：10。</li>
+     */
+    public void setMediaTypes(String [] MediaTypes) {
+        this.MediaTypes = MediaTypes;
+    }
+
+    /**
      * Get TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li> 
      * @return TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
@@ -1001,6 +1029,12 @@ public class SearchMediaRequest extends AbstractModel{
                 this.StorageClasses[i] = new String(source.StorageClasses[i]);
             }
         }
+        if (source.MediaTypes != null) {
+            this.MediaTypes = new String[source.MediaTypes.length];
+            for (int i = 0; i < source.MediaTypes.length; i++) {
+                this.MediaTypes[i] = new String(source.MediaTypes[i]);
+            }
+        }
         if (source.TrtcSdkAppIds != null) {
             this.TrtcSdkAppIds = new Long[source.TrtcSdkAppIds.length];
             for (int i = 0; i < source.TrtcSdkAppIds.length; i++) {
@@ -1062,6 +1096,7 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+        this.setParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
         this.setParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
         this.setParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
         this.setParamSimple(map, prefix + "Text", this.Text);

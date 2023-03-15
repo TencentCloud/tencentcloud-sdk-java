@@ -86,6 +86,20 @@ public class DescribeLinksRequest extends AbstractModel{
     private Long [] TagIDs;
 
     /**
+    * 翻页大小, 默认翻页大小为10，最大数量为500
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 翻页起始
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 云兔卡ID 
      * @return LinkID 云兔卡ID
      */
@@ -229,6 +243,38 @@ public class DescribeLinksRequest extends AbstractModel{
         this.TagIDs = TagIDs;
     }
 
+    /**
+     * Get 翻页大小, 默认翻页大小为10，最大数量为500 
+     * @return Limit 翻页大小, 默认翻页大小为10，最大数量为500
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 翻页大小, 默认翻页大小为10，最大数量为500
+     * @param Limit 翻页大小, 默认翻页大小为10，最大数量为500
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 翻页起始 
+     * @return Offset 翻页起始
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 翻页起始
+     * @param Offset 翻页起始
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeLinksRequest() {
     }
 
@@ -267,6 +313,12 @@ public class DescribeLinksRequest extends AbstractModel{
                 this.TagIDs[i] = new Long(source.TagIDs[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class DescribeLinksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TacticID", this.TacticID);
         this.setParamSimple(map, prefix + "LinkedState", this.LinkedState);
         this.setParamArraySimple(map, prefix + "TagIDs.", this.TagIDs);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

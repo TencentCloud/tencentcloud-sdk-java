@@ -40,7 +40,10 @@ public enum WavErrorCode {
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
     // 未授权操作。
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未知参数错误。
+     UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;
     private WavErrorCode (String value){

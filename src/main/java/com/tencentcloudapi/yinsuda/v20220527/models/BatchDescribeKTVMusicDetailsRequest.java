@@ -44,6 +44,14 @@ public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel{
     private String [] MusicIds;
 
     /**
+    * 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+    */
+    @SerializedName("PlayScene")
+    @Expose
+    private String PlayScene;
+
+    /**
      * Get 应用名称。 
      * @return AppName 应用名称。
      */
@@ -91,6 +99,26 @@ public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel{
         this.MusicIds = MusicIds;
     }
 
+    /**
+     * Get 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li> 
+     * @return PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public String getPlayScene() {
+        return this.PlayScene;
+    }
+
+    /**
+     * Set 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     * @param PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public void setPlayScene(String PlayScene) {
+        this.PlayScene = PlayScene;
+    }
+
     public BatchDescribeKTVMusicDetailsRequest() {
     }
 
@@ -111,6 +139,9 @@ public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel{
                 this.MusicIds[i] = new String(source.MusicIds[i]);
             }
         }
+        if (source.PlayScene != null) {
+            this.PlayScene = new String(source.PlayScene);
+        }
     }
 
 
@@ -121,6 +152,7 @@ public class BatchDescribeKTVMusicDetailsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "MusicIds.", this.MusicIds);
+        this.setParamSimple(map, prefix + "PlayScene", this.PlayScene);
 
     }
 }

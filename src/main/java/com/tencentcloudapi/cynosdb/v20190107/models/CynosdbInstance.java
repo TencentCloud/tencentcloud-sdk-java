@@ -375,6 +375,14 @@ pause
     private String [] SlaveZones;
 
     /**
+    * 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNetInfo")
+    @Expose
+    private InstanceNetInfo [] InstanceNetInfo;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1194,6 +1202,26 @@ pause
         this.SlaveZones = SlaveZones;
     }
 
+    /**
+     * Get 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNetInfo 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceNetInfo [] getInstanceNetInfo() {
+        return this.InstanceNetInfo;
+    }
+
+    /**
+     * Set 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNetInfo 实例网络信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
+        this.InstanceNetInfo = InstanceNetInfo;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1358,6 +1386,12 @@ pause
                 this.SlaveZones[i] = new String(source.SlaveZones[i]);
             }
         }
+        if (source.InstanceNetInfo != null) {
+            this.InstanceNetInfo = new InstanceNetInfo[source.InstanceNetInfo.length];
+            for (int i = 0; i < source.InstanceNetInfo.length; i++) {
+                this.InstanceNetInfo[i] = new InstanceNetInfo(source.InstanceNetInfo[i]);
+            }
+        }
     }
 
 
@@ -1414,6 +1448,7 @@ pause
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
 
     }
 }

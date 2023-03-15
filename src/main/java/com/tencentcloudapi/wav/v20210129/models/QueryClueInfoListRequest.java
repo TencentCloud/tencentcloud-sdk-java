@@ -37,6 +37,20 @@ public class QueryClueInfoListRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 查询开始时间， 单位秒
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private Long BeginTime;
+
+    /**
+    * 查询结束时间， 单位秒
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
      * Get 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填 
      * @return Cursor 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
      */
@@ -68,6 +82,38 @@ public class QueryClueInfoListRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 查询开始时间， 单位秒 
+     * @return BeginTime 查询开始时间， 单位秒
+     */
+    public Long getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set 查询开始时间， 单位秒
+     * @param BeginTime 查询开始时间， 单位秒
+     */
+    public void setBeginTime(Long BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get 查询结束时间， 单位秒 
+     * @return EndTime 查询结束时间， 单位秒
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 查询结束时间， 单位秒
+     * @param EndTime 查询结束时间， 单位秒
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public QueryClueInfoListRequest() {
     }
 
@@ -82,6 +128,12 @@ public class QueryClueInfoListRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.BeginTime != null) {
+            this.BeginTime = new Long(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class QueryClueInfoListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cursor", this.Cursor);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

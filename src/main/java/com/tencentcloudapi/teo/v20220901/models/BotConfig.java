@@ -54,6 +54,21 @@ public class BotConfig extends AbstractModel{
     private IntelligenceRule IntelligenceRule;
 
     /**
+    * Bot自定义规则。如果为null，默认使用历史配置。
+    */
+    @SerializedName("BotUserRules")
+    @Expose
+    private BotUserRule [] BotUserRules;
+
+    /**
+    * Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Customizes")
+    @Expose
+    private BotUserRule [] Customizes;
+
+    /**
      * Get bot开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
@@ -129,6 +144,42 @@ public class BotConfig extends AbstractModel{
         this.IntelligenceRule = IntelligenceRule;
     }
 
+    /**
+     * Get Bot自定义规则。如果为null，默认使用历史配置。 
+     * @return BotUserRules Bot自定义规则。如果为null，默认使用历史配置。
+     */
+    public BotUserRule [] getBotUserRules() {
+        return this.BotUserRules;
+    }
+
+    /**
+     * Set Bot自定义规则。如果为null，默认使用历史配置。
+     * @param BotUserRules Bot自定义规则。如果为null，默认使用历史配置。
+     */
+    public void setBotUserRules(BotUserRule [] BotUserRules) {
+        this.BotUserRules = BotUserRules;
+    }
+
+    /**
+     * Get Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Customizes Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BotUserRule [] getCustomizes() {
+        return this.Customizes;
+    }
+
+    /**
+     * Set Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Customizes Bot托管定制策略，入参可不填，仅出参使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCustomizes(BotUserRule [] Customizes) {
+        this.Customizes = Customizes;
+    }
+
     public BotConfig() {
     }
 
@@ -149,6 +200,18 @@ public class BotConfig extends AbstractModel{
         if (source.IntelligenceRule != null) {
             this.IntelligenceRule = new IntelligenceRule(source.IntelligenceRule);
         }
+        if (source.BotUserRules != null) {
+            this.BotUserRules = new BotUserRule[source.BotUserRules.length];
+            for (int i = 0; i < source.BotUserRules.length; i++) {
+                this.BotUserRules[i] = new BotUserRule(source.BotUserRules[i]);
+            }
+        }
+        if (source.Customizes != null) {
+            this.Customizes = new BotUserRule[source.Customizes.length];
+            for (int i = 0; i < source.Customizes.length; i++) {
+                this.Customizes[i] = new BotUserRule(source.Customizes[i]);
+            }
+        }
     }
 
 
@@ -160,6 +223,8 @@ public class BotConfig extends AbstractModel{
         this.setParamObj(map, prefix + "BotManagedRule.", this.BotManagedRule);
         this.setParamObj(map, prefix + "BotPortraitRule.", this.BotPortraitRule);
         this.setParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
+        this.setParamArrayObj(map, prefix + "BotUserRules.", this.BotUserRules);
+        this.setParamArrayObj(map, prefix + "Customizes.", this.Customizes);
 
     }
 }

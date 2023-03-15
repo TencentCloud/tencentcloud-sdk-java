@@ -225,6 +225,22 @@ public class DetectInfoText extends AbstractModel{
     private Long LivenessMode;
 
     /**
+    * nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NFCRequestIds")
+    @Expose
+    private String [] NFCRequestIds;
+
+    /**
+    * nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NFCBillingCounts")
+    @Expose
+    private Long NFCBillingCounts;
+
+    /**
      * Get 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 本次流程最终验证结果。0为成功
@@ -744,6 +760,46 @@ public class DetectInfoText extends AbstractModel{
         this.LivenessMode = LivenessMode;
     }
 
+    /**
+     * Get nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NFCRequestIds nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getNFCRequestIds() {
+        return this.NFCRequestIds;
+    }
+
+    /**
+     * Set nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NFCRequestIds nfc重复计费requestId列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNFCRequestIds(String [] NFCRequestIds) {
+        this.NFCRequestIds = NFCRequestIds;
+    }
+
+    /**
+     * Get nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NFCBillingCounts nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNFCBillingCounts() {
+        return this.NFCBillingCounts;
+    }
+
+    /**
+     * Set nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NFCBillingCounts nfc重复计费计数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNFCBillingCounts(Long NFCBillingCounts) {
+        this.NFCBillingCounts = NFCBillingCounts;
+    }
+
     public DetectInfoText() {
     }
 
@@ -827,6 +883,15 @@ public class DetectInfoText extends AbstractModel{
         if (source.LivenessMode != null) {
             this.LivenessMode = new Long(source.LivenessMode);
         }
+        if (source.NFCRequestIds != null) {
+            this.NFCRequestIds = new String[source.NFCRequestIds.length];
+            for (int i = 0; i < source.NFCRequestIds.length; i++) {
+                this.NFCRequestIds[i] = new String(source.NFCRequestIds[i]);
+            }
+        }
+        if (source.NFCBillingCounts != null) {
+            this.NFCBillingCounts = new Long(source.NFCBillingCounts);
+        }
     }
 
 
@@ -858,6 +923,8 @@ public class DetectInfoText extends AbstractModel{
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
         this.setParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
+        this.setParamArraySimple(map, prefix + "NFCRequestIds.", this.NFCRequestIds);
+        this.setParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
 
     }
 }

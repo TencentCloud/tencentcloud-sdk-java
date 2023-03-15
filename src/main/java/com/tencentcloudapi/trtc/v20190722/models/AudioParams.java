@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioParams extends AbstractModel{
 
     /**
-    * 音频采样率:
+    * 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
@@ -33,7 +33,7 @@ public class AudioParams extends AbstractModel{
     private Long SampleRate;
 
     /**
-    * 声道数:
+    * 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
     */
@@ -49,11 +49,11 @@ public class AudioParams extends AbstractModel{
     private Long BitRate;
 
     /**
-     * Get 音频采样率:
+     * Get 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。 
-     * @return SampleRate 音频采样率:
+     * @return SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
@@ -63,11 +63,11 @@ public class AudioParams extends AbstractModel{
     }
 
     /**
-     * Set 音频采样率:
+     * Set 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
-     * @param SampleRate 音频采样率:
+     * @param SampleRate 音频采样率枚举值:(注意1 代表48000HZ, 2 代表44100HZ, 3 代表16000HZ)
 1：48000Hz（默认）;
 2：44100Hz
 3：16000Hz。
@@ -77,10 +77,10 @@ public class AudioParams extends AbstractModel{
     }
 
     /**
-     * Get 声道数:
+     * Get 声道数枚举值:
 1：单声道;
 2：双声道（默认）。 
-     * @return Channel 声道数:
+     * @return Channel 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
      */
@@ -89,10 +89,10 @@ public class AudioParams extends AbstractModel{
     }
 
     /**
-     * Set 声道数:
+     * Set 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
-     * @param Channel 声道数:
+     * @param Channel 声道数枚举值:
 1：单声道;
 2：双声道（默认）。
      */

@@ -59,14 +59,14 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Long UserSubnetIPNum;
 
     /**
-    * 同步元数据节点IP （uip）
+    * 同步元数据节点IP （uip），扩容的时候必填
     */
     @SerializedName("ScaleOutNodeIp")
     @Expose
     private String ScaleOutNodeIp;
 
     /**
-    * 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+    * 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
     */
     @SerializedName("ReduceShardInfo")
     @Expose
@@ -157,32 +157,32 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 同步元数据节点IP （uip） 
-     * @return ScaleOutNodeIp 同步元数据节点IP （uip）
+     * Get 同步元数据节点IP （uip），扩容的时候必填 
+     * @return ScaleOutNodeIp 同步元数据节点IP （uip），扩容的时候必填
      */
     public String getScaleOutNodeIp() {
         return this.ScaleOutNodeIp;
     }
 
     /**
-     * Set 同步元数据节点IP （uip）
-     * @param ScaleOutNodeIp 同步元数据节点IP （uip）
+     * Set 同步元数据节点IP （uip），扩容的时候必填
+     * @param ScaleOutNodeIp 同步元数据节点IP （uip），扩容的时候必填
      */
     public void setScaleOutNodeIp(String ScaleOutNodeIp) {
         this.ScaleOutNodeIp = ScaleOutNodeIp;
     }
 
     /**
-     * Get 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔 
-     * @return ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     * Get 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填 
+     * @return ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
      */
     public String [] getReduceShardInfo() {
         return this.ReduceShardInfo;
     }
 
     /**
-     * Set 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
-     * @param ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔
+     * Set 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
+     * @param ReduceShardInfo 缩容节点shard的节点IP （uip），其中ha集群需要主副节点ip都传入以逗号分隔，缩容的时候必填
      */
     public void setReduceShardInfo(String [] ReduceShardInfo) {
         this.ReduceShardInfo = ReduceShardInfo;

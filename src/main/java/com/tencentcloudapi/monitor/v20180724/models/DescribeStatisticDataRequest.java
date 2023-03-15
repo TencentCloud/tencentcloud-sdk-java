@@ -30,7 +30,7 @@ public class DescribeStatisticDataRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 命名空间，目前只支持QCE/TKE
+    * 命名空间，目前只支持QCE/TKE2
     */
     @SerializedName("Namespace")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeStatisticDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 命名空间，目前只支持QCE/TKE 
-     * @return Namespace 命名空间，目前只支持QCE/TKE
+     * Get 命名空间，目前只支持QCE/TKE2 
+     * @return Namespace 命名空间，目前只支持QCE/TKE2
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 命名空间，目前只支持QCE/TKE
-     * @param Namespace 命名空间，目前只支持QCE/TKE
+     * Set 命名空间，目前只支持QCE/TKE2
+     * @param Namespace 命名空间，目前只支持QCE/TKE2
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

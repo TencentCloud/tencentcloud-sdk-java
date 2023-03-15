@@ -129,6 +129,93 @@ public class ClueInfoDetail extends AbstractModel{
     private String UserName;
 
     /**
+    * 线索属性，0：个人，1：企业
+    */
+    @SerializedName("LeadUserType")
+    @Expose
+    private Long LeadUserType;
+
+    /**
+    * 线索来源类型，1：线上，2：线下
+    */
+    @SerializedName("LeadType")
+    @Expose
+    private Long LeadType;
+
+    /**
+    * 线索渠道对应ID
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private Long ChannelId;
+
+    /**
+    * 线索渠道类型，与线索来源对应的渠道名称
+    */
+    @SerializedName("ChannelName")
+    @Expose
+    private String ChannelName;
+
+    /**
+    * 线索渠道名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceChannelName")
+    @Expose
+    private String SourceChannelName;
+
+    /**
+    * 0：未知，1：男，2：女
+    */
+    @SerializedName("Gender")
+    @Expose
+    private Long Gender;
+
+    /**
+    * 线索创建时间戳，单位：秒
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
+    */
+    @SerializedName("LeadStatus")
+    @Expose
+    private Long LeadStatus;
+
+    /**
+    * 线索意向等级
+    */
+    @SerializedName("LevelCode")
+    @Expose
+    private String LevelCode;
+
+    /**
+    * 线索成功导入的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImportAtTime")
+    @Expose
+    private Long ImportAtTime;
+
+    /**
+    * 完成线索分配的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DistributeTime")
+    @Expose
+    private Long DistributeTime;
+
+    /**
+    * 获取线索的时间戳，单位：秒
+    */
+    @SerializedName("CreateAtTime")
+    @Expose
+    private Long CreateAtTime;
+
+    /**
      * Get 线索id，线索唯一识别编码 
      * @return ClueId 线索id，线索唯一识别编码
      */
@@ -372,6 +459,210 @@ public class ClueInfoDetail extends AbstractModel{
         this.UserName = UserName;
     }
 
+    /**
+     * Get 线索属性，0：个人，1：企业 
+     * @return LeadUserType 线索属性，0：个人，1：企业
+     */
+    public Long getLeadUserType() {
+        return this.LeadUserType;
+    }
+
+    /**
+     * Set 线索属性，0：个人，1：企业
+     * @param LeadUserType 线索属性，0：个人，1：企业
+     */
+    public void setLeadUserType(Long LeadUserType) {
+        this.LeadUserType = LeadUserType;
+    }
+
+    /**
+     * Get 线索来源类型，1：线上，2：线下 
+     * @return LeadType 线索来源类型，1：线上，2：线下
+     */
+    public Long getLeadType() {
+        return this.LeadType;
+    }
+
+    /**
+     * Set 线索来源类型，1：线上，2：线下
+     * @param LeadType 线索来源类型，1：线上，2：线下
+     */
+    public void setLeadType(Long LeadType) {
+        this.LeadType = LeadType;
+    }
+
+    /**
+     * Get 线索渠道对应ID 
+     * @return ChannelId 线索渠道对应ID
+     */
+    public Long getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 线索渠道对应ID
+     * @param ChannelId 线索渠道对应ID
+     */
+    public void setChannelId(Long ChannelId) {
+        this.ChannelId = ChannelId;
+    }
+
+    /**
+     * Get 线索渠道类型，与线索来源对应的渠道名称 
+     * @return ChannelName 线索渠道类型，与线索来源对应的渠道名称
+     */
+    public String getChannelName() {
+        return this.ChannelName;
+    }
+
+    /**
+     * Set 线索渠道类型，与线索来源对应的渠道名称
+     * @param ChannelName 线索渠道类型，与线索来源对应的渠道名称
+     */
+    public void setChannelName(String ChannelName) {
+        this.ChannelName = ChannelName;
+    }
+
+    /**
+     * Get 线索渠道名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceChannelName 线索渠道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceChannelName() {
+        return this.SourceChannelName;
+    }
+
+    /**
+     * Set 线索渠道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceChannelName 线索渠道名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceChannelName(String SourceChannelName) {
+        this.SourceChannelName = SourceChannelName;
+    }
+
+    /**
+     * Get 0：未知，1：男，2：女 
+     * @return Gender 0：未知，1：男，2：女
+     */
+    public Long getGender() {
+        return this.Gender;
+    }
+
+    /**
+     * Set 0：未知，1：男，2：女
+     * @param Gender 0：未知，1：男，2：女
+     */
+    public void setGender(Long Gender) {
+        this.Gender = Gender;
+    }
+
+    /**
+     * Get 线索创建时间戳，单位：秒 
+     * @return CreateTime 线索创建时间戳，单位：秒
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 线索创建时间戳，单位：秒
+     * @param CreateTime 线索创建时间戳，单位：秒
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成 
+     * @return LeadStatus 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
+     */
+    public Long getLeadStatus() {
+        return this.LeadStatus;
+    }
+
+    /**
+     * Set 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
+     * @param LeadStatus 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
+     */
+    public void setLeadStatus(Long LeadStatus) {
+        this.LeadStatus = LeadStatus;
+    }
+
+    /**
+     * Get 线索意向等级 
+     * @return LevelCode 线索意向等级
+     */
+    public String getLevelCode() {
+        return this.LevelCode;
+    }
+
+    /**
+     * Set 线索意向等级
+     * @param LevelCode 线索意向等级
+     */
+    public void setLevelCode(String LevelCode) {
+        this.LevelCode = LevelCode;
+    }
+
+    /**
+     * Get 线索成功导入的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImportAtTime 线索成功导入的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getImportAtTime() {
+        return this.ImportAtTime;
+    }
+
+    /**
+     * Set 线索成功导入的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImportAtTime 线索成功导入的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImportAtTime(Long ImportAtTime) {
+        this.ImportAtTime = ImportAtTime;
+    }
+
+    /**
+     * Get 完成线索分配的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DistributeTime 完成线索分配的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDistributeTime() {
+        return this.DistributeTime;
+    }
+
+    /**
+     * Set 完成线索分配的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DistributeTime 完成线索分配的时间戳，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDistributeTime(Long DistributeTime) {
+        this.DistributeTime = DistributeTime;
+    }
+
+    /**
+     * Get 获取线索的时间戳，单位：秒 
+     * @return CreateAtTime 获取线索的时间戳，单位：秒
+     */
+    public Long getCreateAtTime() {
+        return this.CreateAtTime;
+    }
+
+    /**
+     * Set 获取线索的时间戳，单位：秒
+     * @param CreateAtTime 获取线索的时间戳，单位：秒
+     */
+    public void setCreateAtTime(Long CreateAtTime) {
+        this.CreateAtTime = CreateAtTime;
+    }
+
     public ClueInfoDetail() {
     }
 
@@ -428,6 +719,42 @@ public class ClueInfoDetail extends AbstractModel{
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
         }
+        if (source.LeadUserType != null) {
+            this.LeadUserType = new Long(source.LeadUserType);
+        }
+        if (source.LeadType != null) {
+            this.LeadType = new Long(source.LeadType);
+        }
+        if (source.ChannelId != null) {
+            this.ChannelId = new Long(source.ChannelId);
+        }
+        if (source.ChannelName != null) {
+            this.ChannelName = new String(source.ChannelName);
+        }
+        if (source.SourceChannelName != null) {
+            this.SourceChannelName = new String(source.SourceChannelName);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.LeadStatus != null) {
+            this.LeadStatus = new Long(source.LeadStatus);
+        }
+        if (source.LevelCode != null) {
+            this.LevelCode = new String(source.LevelCode);
+        }
+        if (source.ImportAtTime != null) {
+            this.ImportAtTime = new Long(source.ImportAtTime);
+        }
+        if (source.DistributeTime != null) {
+            this.DistributeTime = new Long(source.DistributeTime);
+        }
+        if (source.CreateAtTime != null) {
+            this.CreateAtTime = new Long(source.CreateAtTime);
+        }
     }
 
 
@@ -450,6 +777,18 @@ public class ClueInfoDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "LeadUserType", this.LeadUserType);
+        this.setParamSimple(map, prefix + "LeadType", this.LeadType);
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
+        this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
+        this.setParamSimple(map, prefix + "SourceChannelName", this.SourceChannelName);
+        this.setParamSimple(map, prefix + "Gender", this.Gender);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "LeadStatus", this.LeadStatus);
+        this.setParamSimple(map, prefix + "LevelCode", this.LevelCode);
+        this.setParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);
+        this.setParamSimple(map, prefix + "DistributeTime", this.DistributeTime);
+        this.setParamSimple(map, prefix + "CreateAtTime", this.CreateAtTime);
 
     }
 }

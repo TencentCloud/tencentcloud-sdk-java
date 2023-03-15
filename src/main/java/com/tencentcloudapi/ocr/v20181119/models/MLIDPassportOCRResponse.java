@@ -118,6 +118,22 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String CodeCrc;
 
     /**
+    * 姓
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Surname")
+    @Expose
+    private String Surname;
+
+    /**
+    * 名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GivenName")
+    @Expose
+    private String GivenName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -361,6 +377,46 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 姓
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Surname 姓
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSurname() {
+        return this.Surname;
+    }
+
+    /**
+     * Set 姓
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Surname 姓
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSurname(String Surname) {
+        this.Surname = Surname;
+    }
+
+    /**
+     * Get 名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GivenName 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGivenName() {
+        return this.GivenName;
+    }
+
+    /**
+     * Set 名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GivenName 名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGivenName(String GivenName) {
+        this.GivenName = GivenName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -423,6 +479,12 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         if (source.CodeCrc != null) {
             this.CodeCrc = new String(source.CodeCrc);
         }
+        if (source.Surname != null) {
+            this.Surname = new String(source.Surname);
+        }
+        if (source.GivenName != null) {
+            this.GivenName = new String(source.GivenName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -445,6 +507,8 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "CodeSet", this.CodeSet);
         this.setParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
+        this.setParamSimple(map, prefix + "Surname", this.Surname);
+        this.setParamSimple(map, prefix + "GivenName", this.GivenName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

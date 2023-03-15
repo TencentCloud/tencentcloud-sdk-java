@@ -179,6 +179,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *集群vcluster列表
+     * @param req DescribeInstanceClustersRequest
+     * @return DescribeInstanceClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceClustersResponse DescribeInstanceClusters(DescribeInstanceClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在集群详情页面获取所有参数列表
      * @param req DescribeInstanceKeyValConfigsRequest
      * @return DescribeInstanceKeyValConfigsResponse

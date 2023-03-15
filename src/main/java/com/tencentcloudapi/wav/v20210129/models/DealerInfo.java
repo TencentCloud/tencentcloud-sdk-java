@@ -37,6 +37,30 @@ public class DealerInfo extends AbstractModel{
     private String DealerName;
 
     /**
+    * 所属省份编号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProvinceCode")
+    @Expose
+    private String ProvinceCode;
+
+    /**
+    * 所属城市编号列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CityCodeList")
+    @Expose
+    private String [] CityCodeList;
+
+    /**
+    * 业务覆盖品牌id列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BrandIdList")
+    @Expose
+    private String [] BrandIdList;
+
+    /**
      * Get 企微SaaS平台经销商id 
      * @return DealerId 企微SaaS平台经销商id
      */
@@ -68,6 +92,66 @@ public class DealerInfo extends AbstractModel{
         this.DealerName = DealerName;
     }
 
+    /**
+     * Get 所属省份编号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProvinceCode 所属省份编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProvinceCode() {
+        return this.ProvinceCode;
+    }
+
+    /**
+     * Set 所属省份编号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProvinceCode 所属省份编号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProvinceCode(String ProvinceCode) {
+        this.ProvinceCode = ProvinceCode;
+    }
+
+    /**
+     * Get 所属城市编号列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CityCodeList 所属城市编号列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getCityCodeList() {
+        return this.CityCodeList;
+    }
+
+    /**
+     * Set 所属城市编号列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CityCodeList 所属城市编号列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCityCodeList(String [] CityCodeList) {
+        this.CityCodeList = CityCodeList;
+    }
+
+    /**
+     * Get 业务覆盖品牌id列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BrandIdList 业务覆盖品牌id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBrandIdList() {
+        return this.BrandIdList;
+    }
+
+    /**
+     * Set 业务覆盖品牌id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BrandIdList 业务覆盖品牌id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBrandIdList(String [] BrandIdList) {
+        this.BrandIdList = BrandIdList;
+    }
+
     public DealerInfo() {
     }
 
@@ -82,6 +166,21 @@ public class DealerInfo extends AbstractModel{
         if (source.DealerName != null) {
             this.DealerName = new String(source.DealerName);
         }
+        if (source.ProvinceCode != null) {
+            this.ProvinceCode = new String(source.ProvinceCode);
+        }
+        if (source.CityCodeList != null) {
+            this.CityCodeList = new String[source.CityCodeList.length];
+            for (int i = 0; i < source.CityCodeList.length; i++) {
+                this.CityCodeList[i] = new String(source.CityCodeList[i]);
+            }
+        }
+        if (source.BrandIdList != null) {
+            this.BrandIdList = new String[source.BrandIdList.length];
+            for (int i = 0; i < source.BrandIdList.length; i++) {
+                this.BrandIdList[i] = new String(source.BrandIdList[i]);
+            }
+        }
     }
 
 
@@ -91,6 +190,9 @@ public class DealerInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealerId", this.DealerId);
         this.setParamSimple(map, prefix + "DealerName", this.DealerName);
+        this.setParamSimple(map, prefix + "ProvinceCode", this.ProvinceCode);
+        this.setParamArraySimple(map, prefix + "CityCodeList.", this.CityCodeList);
+        this.setParamArraySimple(map, prefix + "BrandIdList.", this.BrandIdList);
 
     }
 }

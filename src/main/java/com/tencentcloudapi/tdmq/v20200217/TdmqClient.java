@@ -1391,6 +1391,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取单个RabbitMQ专享实例信息
+     * @param req DescribeRabbitMQVipInstanceRequest
+     * @return DescribeRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(DescribeRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询用户已购的RabbitMQ专享实例列表
      * @param req DescribeRabbitMQVipInstancesRequest
      * @return DescribeRabbitMQVipInstancesResponse
