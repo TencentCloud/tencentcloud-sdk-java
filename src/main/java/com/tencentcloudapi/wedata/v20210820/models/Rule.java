@@ -247,6 +247,54 @@ public class Rule extends AbstractModel{
     private Boolean WhereFlag;
 
     /**
+    * 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateSql")
+    @Expose
+    private String TemplateSql;
+
+    /**
+    * 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubQualityDim")
+    @Expose
+    private Long SubQualityDim;
+
+    /**
+    * 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetObjectType")
+    @Expose
+    private Long TargetObjectType;
+
+    /**
+    * 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetObjectDataType")
+    @Expose
+    private Long TargetObjectDataType;
+
+    /**
+    * 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetObjectDataTypeName")
+    @Expose
+    private String TargetObjectDataTypeName;
+
+    /**
+    * 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetObjectValue")
+    @Expose
+    private String TargetObjectValue;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -806,6 +854,126 @@ public class Rule extends AbstractModel{
         this.WhereFlag = WhereFlag;
     }
 
+    /**
+     * Get 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateSql 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTemplateSql() {
+        return this.TemplateSql;
+    }
+
+    /**
+     * Set 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateSql 模版原始SQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateSql(String TemplateSql) {
+        this.TemplateSql = TemplateSql;
+    }
+
+    /**
+     * Get 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubQualityDim 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubQualityDim() {
+        return this.SubQualityDim;
+    }
+
+    /**
+     * Set 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubQualityDim 模版子维度：0.父维度类型,1.一致性: 枚举范围一致性,2.一致性：数值范围一致性,3.一致性：字段数据相关性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubQualityDim(Long SubQualityDim) {
+        this.SubQualityDim = SubQualityDim;
+    }
+
+    /**
+     * Get 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTargetObjectType() {
+        return this.TargetObjectType;
+    }
+
+    /**
+     * Set 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetObjectType 规则适用的目标数据对象类型（1：常量，2：离线表级，3：离线字段级别）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetObjectType(Long TargetObjectType) {
+        this.TargetObjectType = TargetObjectType;
+    }
+
+    /**
+     * Get 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTargetObjectDataType() {
+        return this.TargetObjectDataType;
+    }
+
+    /**
+     * Set 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetObjectDataType 规则适用的目标数据对象类型（1：数值，2：字符串）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetObjectDataType(Long TargetObjectDataType) {
+        this.TargetObjectDataType = TargetObjectDataType;
+    }
+
+    /**
+     * Get 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetObjectDataTypeName 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetObjectDataTypeName() {
+        return this.TargetObjectDataTypeName;
+    }
+
+    /**
+     * Set 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetObjectDataTypeName 目标字段详细类型，INT、STRING
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetObjectDataTypeName(String TargetObjectDataTypeName) {
+        this.TargetObjectDataTypeName = TargetObjectDataTypeName;
+    }
+
+    /**
+     * Get 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetObjectValue 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetObjectValue() {
+        return this.TargetObjectValue;
+    }
+
+    /**
+     * Set 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetObjectValue 目标字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetObjectValue(String TargetObjectValue) {
+        this.TargetObjectValue = TargetObjectValue;
+    }
+
     public Rule() {
     }
 
@@ -898,6 +1066,24 @@ public class Rule extends AbstractModel{
         if (source.WhereFlag != null) {
             this.WhereFlag = new Boolean(source.WhereFlag);
         }
+        if (source.TemplateSql != null) {
+            this.TemplateSql = new String(source.TemplateSql);
+        }
+        if (source.SubQualityDim != null) {
+            this.SubQualityDim = new Long(source.SubQualityDim);
+        }
+        if (source.TargetObjectType != null) {
+            this.TargetObjectType = new Long(source.TargetObjectType);
+        }
+        if (source.TargetObjectDataType != null) {
+            this.TargetObjectDataType = new Long(source.TargetObjectDataType);
+        }
+        if (source.TargetObjectDataTypeName != null) {
+            this.TargetObjectDataTypeName = new String(source.TargetObjectDataTypeName);
+        }
+        if (source.TargetObjectValue != null) {
+            this.TargetObjectValue = new String(source.TargetObjectValue);
+        }
     }
 
 
@@ -933,6 +1119,12 @@ public class Rule extends AbstractModel{
         this.setParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
         this.setParamSimple(map, prefix + "MultiSourceFlag", this.MultiSourceFlag);
         this.setParamSimple(map, prefix + "WhereFlag", this.WhereFlag);
+        this.setParamSimple(map, prefix + "TemplateSql", this.TemplateSql);
+        this.setParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
+        this.setParamSimple(map, prefix + "TargetObjectType", this.TargetObjectType);
+        this.setParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
+        this.setParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
+        this.setParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
 
     }
 }

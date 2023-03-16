@@ -239,6 +239,46 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *批量获取直播会员充值流水详细信息，包括：流水号，订单状态，下订单时间等
+     * @param req DescribeLiveVipTradeInfosRequest
+     * @return DescribeLiveVipTradeInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveVipTradeInfosResponse DescribeLiveVipTradeInfos(DescribeLiveVipTradeInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveVipTradeInfosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveVipTradeInfosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveVipTradeInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取用户信息，包括是否为直播会员，及直播会员信息等
+     * @param req DescribeUserInfoRequest
+     * @return DescribeUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *销毁机器人，机器人退出 RTC 房间。
      * @param req DestroyKTVRobotRequest
      * @return DestroyKTVRobotResponse
@@ -251,6 +291,26 @@ public class YinsudaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DestroyKTVRobotResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DestroyKTVRobot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *充值直播会员，使该用户可以在直播场景使用
+     * @param req RechargeLiveVipRequest
+     * @return RechargeLiveVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public RechargeLiveVipResponse RechargeLiveVip(RechargeLiveVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RechargeLiveVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RechargeLiveVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RechargeLiveVip");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

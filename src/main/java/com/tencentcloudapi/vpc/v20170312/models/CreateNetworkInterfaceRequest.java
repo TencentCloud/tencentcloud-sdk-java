@@ -51,7 +51,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     private String NetworkInterfaceDescription;
 
     /**
-    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -150,16 +150,16 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。 
-     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。 
+     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
      */
     public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
-     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
+     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配额数。
      */
     public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;

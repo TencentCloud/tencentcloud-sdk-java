@@ -266,6 +266,102 @@ Modify 集群变更中；
     private Long CosMoveFactor;
 
     /**
+    * external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Kind")
+    @Expose
+    private String Kind;
+
+    /**
+    * 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsElastic")
+    @Expose
+    private Boolean IsElastic;
+
+    /**
+    * 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceStateInfo")
+    @Expose
+    private InstanceStateInfo InstanceStateInfo;
+
+    /**
+    * ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HAZk")
+    @Expose
+    private Boolean HAZk;
+
+    /**
+    * 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MountDiskType")
+    @Expose
+    private Long MountDiskType;
+
+    /**
+    * 无
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CHProxyVip")
+    @Expose
+    private String CHProxyVip;
+
+    /**
+    * cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosBucketName")
+    @Expose
+    private String CosBucketName;
+
+    /**
+    * 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanAttachCbs")
+    @Expose
+    private Boolean CanAttachCbs;
+
+    /**
+    * 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanAttachCbsLvm")
+    @Expose
+    private Boolean CanAttachCbsLvm;
+
+    /**
+    * 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanAttachCos")
+    @Expose
+    private Boolean CanAttachCos;
+
+    /**
+    * 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Components")
+    @Expose
+    private ServiceInfo [] Components;
+
+    /**
+    * 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpgradeVersions")
+    @Expose
+    private String UpgradeVersions;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -877,6 +973,246 @@ Modify 集群变更中；
         this.CosMoveFactor = CosMoveFactor;
     }
 
+    /**
+     * Get external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Kind external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getKind() {
+        return this.Kind;
+    }
+
+    /**
+     * Set external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Kind external/local/yunti
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKind(String Kind) {
+        this.Kind = Kind;
+    }
+
+    /**
+     * Get 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsElastic 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsElastic() {
+        return this.IsElastic;
+    }
+
+    /**
+     * Set 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsElastic 是否弹性ck
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsElastic(Boolean IsElastic) {
+        this.IsElastic = IsElastic;
+    }
+
+    /**
+     * Get 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceStateInfo 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceStateInfo getInstanceStateInfo() {
+        return this.InstanceStateInfo;
+    }
+
+    /**
+     * Set 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStateInfo 集群详细状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceStateInfo(InstanceStateInfo InstanceStateInfo) {
+        this.InstanceStateInfo = InstanceStateInfo;
+    }
+
+    /**
+     * Get ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HAZk ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHAZk() {
+        return this.HAZk;
+    }
+
+    /**
+     * Set ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HAZk ZK高可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHAZk(Boolean HAZk) {
+        this.HAZk = HAZk;
+    }
+
+    /**
+     * Get 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMountDiskType() {
+        return this.MountDiskType;
+    }
+
+    /**
+     * Set 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountDiskType 挂载盘,默认0:没有类型；1:裸盘;2:lvm
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMountDiskType(Long MountDiskType) {
+        this.MountDiskType = MountDiskType;
+    }
+
+    /**
+     * Get 无
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CHProxyVip 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCHProxyVip() {
+        return this.CHProxyVip;
+    }
+
+    /**
+     * Set 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CHProxyVip 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCHProxyVip(String CHProxyVip) {
+        this.CHProxyVip = CHProxyVip;
+    }
+
+    /**
+     * Get cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosBucketName cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCosBucketName() {
+        return this.CosBucketName;
+    }
+
+    /**
+     * Set cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosBucketName cos buket的名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosBucketName(String CosBucketName) {
+        this.CosBucketName = CosBucketName;
+    }
+
+    /**
+     * Get 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanAttachCbs 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanAttachCbs() {
+        return this.CanAttachCbs;
+    }
+
+    /**
+     * Set 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanAttachCbs 是否可以挂载云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanAttachCbs(Boolean CanAttachCbs) {
+        this.CanAttachCbs = CanAttachCbs;
+    }
+
+    /**
+     * Get 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanAttachCbsLvm 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanAttachCbsLvm() {
+        return this.CanAttachCbsLvm;
+    }
+
+    /**
+     * Set 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanAttachCbsLvm 是否可以挂载云盘阵列
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanAttachCbsLvm(Boolean CanAttachCbsLvm) {
+        this.CanAttachCbsLvm = CanAttachCbsLvm;
+    }
+
+    /**
+     * Get 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanAttachCos 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanAttachCos() {
+        return this.CanAttachCos;
+    }
+
+    /**
+     * Set 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanAttachCos 是否可以挂载cos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanAttachCos(Boolean CanAttachCos) {
+        this.CanAttachCos = CanAttachCos;
+    }
+
+    /**
+     * Get 服务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Components 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceInfo [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Components 服务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComponents(ServiceInfo [] Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpgradeVersions 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpgradeVersions() {
+        return this.UpgradeVersions;
+    }
+
+    /**
+     * Set 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpgradeVersions 可升级的内核版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpgradeVersions(String UpgradeVersions) {
+        this.UpgradeVersions = UpgradeVersions;
+    }
+
     public InstanceInfo() {
     }
 
@@ -978,6 +1314,45 @@ Modify 集群变更中；
         if (source.CosMoveFactor != null) {
             this.CosMoveFactor = new Long(source.CosMoveFactor);
         }
+        if (source.Kind != null) {
+            this.Kind = new String(source.Kind);
+        }
+        if (source.IsElastic != null) {
+            this.IsElastic = new Boolean(source.IsElastic);
+        }
+        if (source.InstanceStateInfo != null) {
+            this.InstanceStateInfo = new InstanceStateInfo(source.InstanceStateInfo);
+        }
+        if (source.HAZk != null) {
+            this.HAZk = new Boolean(source.HAZk);
+        }
+        if (source.MountDiskType != null) {
+            this.MountDiskType = new Long(source.MountDiskType);
+        }
+        if (source.CHProxyVip != null) {
+            this.CHProxyVip = new String(source.CHProxyVip);
+        }
+        if (source.CosBucketName != null) {
+            this.CosBucketName = new String(source.CosBucketName);
+        }
+        if (source.CanAttachCbs != null) {
+            this.CanAttachCbs = new Boolean(source.CanAttachCbs);
+        }
+        if (source.CanAttachCbsLvm != null) {
+            this.CanAttachCbsLvm = new Boolean(source.CanAttachCbsLvm);
+        }
+        if (source.CanAttachCos != null) {
+            this.CanAttachCos = new Boolean(source.CanAttachCos);
+        }
+        if (source.Components != null) {
+            this.Components = new ServiceInfo[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new ServiceInfo(source.Components[i]);
+            }
+        }
+        if (source.UpgradeVersions != null) {
+            this.UpgradeVersions = new String(source.UpgradeVersions);
+        }
     }
 
 
@@ -1015,6 +1390,18 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "RegionDesc", this.RegionDesc);
         this.setParamSimple(map, prefix + "Eip", this.Eip);
         this.setParamSimple(map, prefix + "CosMoveFactor", this.CosMoveFactor);
+        this.setParamSimple(map, prefix + "Kind", this.Kind);
+        this.setParamSimple(map, prefix + "IsElastic", this.IsElastic);
+        this.setParamObj(map, prefix + "InstanceStateInfo.", this.InstanceStateInfo);
+        this.setParamSimple(map, prefix + "HAZk", this.HAZk);
+        this.setParamSimple(map, prefix + "MountDiskType", this.MountDiskType);
+        this.setParamSimple(map, prefix + "CHProxyVip", this.CHProxyVip);
+        this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+        this.setParamSimple(map, prefix + "CanAttachCbs", this.CanAttachCbs);
+        this.setParamSimple(map, prefix + "CanAttachCbsLvm", this.CanAttachCbsLvm);
+        this.setParamSimple(map, prefix + "CanAttachCos", this.CanAttachCos);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamSimple(map, prefix + "UpgradeVersions", this.UpgradeVersions);
 
     }
 }

@@ -1019,6 +1019,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询SSL状态
+     * @param req DescribeSSLStatusRequest
+     * @return DescribeSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSSLStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSSLStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSSLStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeSlowLog）查询实例慢查询记录。
      * @param req DescribeSlowLogRequest
      * @return DescribeSlowLogResponse

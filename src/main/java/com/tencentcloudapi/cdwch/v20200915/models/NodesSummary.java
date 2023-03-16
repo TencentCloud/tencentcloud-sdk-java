@@ -72,6 +72,62 @@ public class NodesSummary extends AbstractModel{
     private String DiskDesc;
 
     /**
+    * 挂载云盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttachCBSSpec")
+    @Expose
+    private AttachCBSSpec AttachCBSSpec;
+
+    /**
+    * 子产品类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubProductType")
+    @Expose
+    private String SubProductType;
+
+    /**
+    * 规格对应的核数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecCore")
+    @Expose
+    private Long SpecCore;
+
+    /**
+    * 规格对应的内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecMemory")
+    @Expose
+    private Long SpecMemory;
+
+    /**
+    * 磁盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskCount")
+    @Expose
+    private Long DiskCount;
+
+    /**
+    * 磁盘的最大大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxDiskSize")
+    @Expose
+    private Long MaxDiskSize;
+
+    /**
+    * 是否为加密云盘
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Long Encrypt;
+
+    /**
      * Get 机型，如 S1 
      * @return Spec 机型，如 S1
      */
@@ -183,6 +239,146 @@ public class NodesSummary extends AbstractModel{
         this.DiskDesc = DiskDesc;
     }
 
+    /**
+     * Get 挂载云盘信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttachCBSSpec 挂载云盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AttachCBSSpec getAttachCBSSpec() {
+        return this.AttachCBSSpec;
+    }
+
+    /**
+     * Set 挂载云盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttachCBSSpec 挂载云盘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttachCBSSpec(AttachCBSSpec AttachCBSSpec) {
+        this.AttachCBSSpec = AttachCBSSpec;
+    }
+
+    /**
+     * Get 子产品类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubProductType 子产品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubProductType() {
+        return this.SubProductType;
+    }
+
+    /**
+     * Set 子产品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubProductType 子产品类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubProductType(String SubProductType) {
+        this.SubProductType = SubProductType;
+    }
+
+    /**
+     * Get 规格对应的核数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecCore 规格对应的核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSpecCore() {
+        return this.SpecCore;
+    }
+
+    /**
+     * Set 规格对应的核数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecCore 规格对应的核数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecCore(Long SpecCore) {
+        this.SpecCore = SpecCore;
+    }
+
+    /**
+     * Get 规格对应的内存大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecMemory 规格对应的内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSpecMemory() {
+        return this.SpecMemory;
+    }
+
+    /**
+     * Set 规格对应的内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecMemory 规格对应的内存大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecMemory(Long SpecMemory) {
+        this.SpecMemory = SpecMemory;
+    }
+
+    /**
+     * Get 磁盘的数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskCount 磁盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDiskCount() {
+        return this.DiskCount;
+    }
+
+    /**
+     * Set 磁盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskCount 磁盘的数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskCount(Long DiskCount) {
+        this.DiskCount = DiskCount;
+    }
+
+    /**
+     * Get 磁盘的最大大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxDiskSize 磁盘的最大大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxDiskSize() {
+        return this.MaxDiskSize;
+    }
+
+    /**
+     * Set 磁盘的最大大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxDiskSize 磁盘的最大大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxDiskSize(Long MaxDiskSize) {
+        this.MaxDiskSize = MaxDiskSize;
+    }
+
+    /**
+     * Get 是否为加密云盘
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Encrypt 是否为加密云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 是否为加密云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Encrypt 是否为加密云盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncrypt(Long Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
     public NodesSummary() {
     }
 
@@ -212,6 +408,27 @@ public class NodesSummary extends AbstractModel{
         if (source.DiskDesc != null) {
             this.DiskDesc = new String(source.DiskDesc);
         }
+        if (source.AttachCBSSpec != null) {
+            this.AttachCBSSpec = new AttachCBSSpec(source.AttachCBSSpec);
+        }
+        if (source.SubProductType != null) {
+            this.SubProductType = new String(source.SubProductType);
+        }
+        if (source.SpecCore != null) {
+            this.SpecCore = new Long(source.SpecCore);
+        }
+        if (source.SpecMemory != null) {
+            this.SpecMemory = new Long(source.SpecMemory);
+        }
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
+        }
+        if (source.MaxDiskSize != null) {
+            this.MaxDiskSize = new Long(source.MaxDiskSize);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Long(source.Encrypt);
+        }
     }
 
 
@@ -226,6 +443,13 @@ public class NodesSummary extends AbstractModel{
         this.setParamSimple(map, prefix + "Disk", this.Disk);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskDesc", this.DiskDesc);
+        this.setParamObj(map, prefix + "AttachCBSSpec.", this.AttachCBSSpec);
+        this.setParamSimple(map, prefix + "SubProductType", this.SubProductType);
+        this.setParamSimple(map, prefix + "SpecCore", this.SpecCore);
+        this.setParamSimple(map, prefix + "SpecMemory", this.SpecMemory);
+        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
 
     }
 }
