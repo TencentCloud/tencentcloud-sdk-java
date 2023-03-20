@@ -163,6 +163,21 @@ public class FileSystemInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * 文件系统声明周期管理状态
+    */
+    @SerializedName("TieringState")
+    @Expose
+    private String TieringState;
+
+    /**
+    * 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TieringDetail")
+    @Expose
+    private TieringDetailInfo TieringDetail;
+
+    /**
      * Get 创建时间 
      * @return CreationTime 创建时间
      */
@@ -482,6 +497,42 @@ public class FileSystemInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 文件系统声明周期管理状态 
+     * @return TieringState 文件系统声明周期管理状态
+     */
+    public String getTieringState() {
+        return this.TieringState;
+    }
+
+    /**
+     * Set 文件系统声明周期管理状态
+     * @param TieringState 文件系统声明周期管理状态
+     */
+    public void setTieringState(String TieringState) {
+        this.TieringState = TieringState;
+    }
+
+    /**
+     * Get 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TieringDetail 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TieringDetailInfo getTieringDetail() {
+        return this.TieringDetail;
+    }
+
+    /**
+     * Set 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TieringDetail 分层存储详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTieringDetail(TieringDetailInfo TieringDetail) {
+        this.TieringDetail = TieringDetail;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -553,6 +604,12 @@ public class FileSystemInfo extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.TieringState != null) {
+            this.TieringState = new String(source.TieringState);
+        }
+        if (source.TieringDetail != null) {
+            this.TieringDetail = new TieringDetailInfo(source.TieringDetail);
+        }
     }
 
 
@@ -580,6 +637,8 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TieringState", this.TieringState);
+        this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
 
     }
 }

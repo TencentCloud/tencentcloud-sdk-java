@@ -51,6 +51,17 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
     private String [] ScanPath;
 
     /**
+    * 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+    */
+    @SerializedName("ScanPathMode")
+    @Expose
+    private String ScanPathMode;
+
+    /**
      * Get 是否开启定期扫描 
      * @return EnableScan 是否开启定期扫描
      */
@@ -114,6 +125,38 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
         this.ScanPath = ScanPath;
     }
 
+    /**
+     * Get 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+ 
+     * @return ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public String getScanPathMode() {
+        return this.ScanPathMode;
+    }
+
+    /**
+     * Set 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     * @param ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public void setScanPathMode(String ScanPathMode) {
+        this.ScanPathMode = ScanPathMode;
+    }
+
     public ModifyVirusMonitorSettingRequest() {
     }
 
@@ -137,6 +180,9 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
                 this.ScanPath[i] = new String(source.ScanPath[i]);
             }
         }
+        if (source.ScanPathMode != null) {
+            this.ScanPathMode = new String(source.ScanPathMode);
+        }
     }
 
 
@@ -148,6 +194,7 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanPathAll", this.ScanPathAll);
         this.setParamSimple(map, prefix + "ScanPathType", this.ScanPathType);
         this.setParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
+        this.setParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
 
     }
 }

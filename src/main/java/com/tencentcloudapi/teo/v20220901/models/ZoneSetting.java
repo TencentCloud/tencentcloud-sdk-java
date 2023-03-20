@@ -183,6 +183,14 @@ public class ZoneSetting extends AbstractModel{
     private Grpc Grpc;
 
     /**
+    * 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageOptimize")
+    @Expose
+    private ImageOptimize ImageOptimize;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -582,6 +590,26 @@ public class ZoneSetting extends AbstractModel{
         this.Grpc = Grpc;
     }
 
+    /**
+     * Get 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageOptimize 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageOptimize getImageOptimize() {
+        return this.ImageOptimize;
+    }
+
+    /**
+     * Set 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageOptimize 图片优化相关配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageOptimize(ImageOptimize ImageOptimize) {
+        this.ImageOptimize = ImageOptimize;
+    }
+
     public ZoneSetting() {
     }
 
@@ -650,6 +678,9 @@ public class ZoneSetting extends AbstractModel{
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.ImageOptimize != null) {
+            this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
+        }
     }
 
 
@@ -677,6 +708,7 @@ public class ZoneSetting extends AbstractModel{
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
 
     }
 }

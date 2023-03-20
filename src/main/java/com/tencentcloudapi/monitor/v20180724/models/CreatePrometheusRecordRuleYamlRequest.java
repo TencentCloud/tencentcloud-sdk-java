@@ -37,6 +37,13 @@ public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
     private String Content;
 
     /**
+    * 规则名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -68,6 +75,22 @@ public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get 规则名称 
+     * @return Name 规则名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 规则名称
+     * @param Name 规则名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public CreatePrometheusRecordRuleYamlRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreatePrometheusRecordRuleYamlRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

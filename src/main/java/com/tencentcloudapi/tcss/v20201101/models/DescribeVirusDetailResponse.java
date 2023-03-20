@@ -418,6 +418,22 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     private String [] CheckPlatform;
 
     /**
+    * 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileAccessTime")
+    @Expose
+    private String FileAccessTime;
+
+    /**
+    * 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileModifyTime")
+    @Expose
+    private String FileModifyTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1441,6 +1457,46 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileAccessTime 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileAccessTime() {
+        return this.FileAccessTime;
+    }
+
+    /**
+     * Set 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileAccessTime 文件访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileAccessTime(String FileAccessTime) {
+        this.FileAccessTime = FileAccessTime;
+    }
+
+    /**
+     * Get 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileModifyTime 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileModifyTime() {
+        return this.FileModifyTime;
+    }
+
+    /**
+     * Set 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileModifyTime 文件修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileModifyTime(String FileModifyTime) {
+        this.FileModifyTime = FileModifyTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1611,6 +1667,12 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
                 this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
             }
         }
+        if (source.FileAccessTime != null) {
+            this.FileAccessTime = new String(source.FileAccessTime);
+        }
+        if (source.FileModifyTime != null) {
+            this.FileModifyTime = new String(source.FileModifyTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1668,6 +1730,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+        this.setParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
+        this.setParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

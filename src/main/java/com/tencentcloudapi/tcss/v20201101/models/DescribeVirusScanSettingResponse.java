@@ -101,6 +101,17 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
     private Long ClickTimeout;
 
     /**
+    * 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+    */
+    @SerializedName("ScanPathMode")
+    @Expose
+    private String ScanPathMode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -288,6 +299,38 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+ 
+     * @return ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public String getScanPathMode() {
+        return this.ScanPathMode;
+    }
+
+    /**
+     * Set 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     * @param ScanPathMode 扫描路径模式：
+SCAN_PATH_ALL：全部路径
+SCAN_PATH_DEFAULT：默认路径
+SCAN_PATH_USER_DEFINE：用户自定义路径
+
+     */
+    public void setScanPathMode(String ScanPathMode) {
+        this.ScanPathMode = ScanPathMode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -350,6 +393,9 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
         if (source.ClickTimeout != null) {
             this.ClickTimeout = new Long(source.ClickTimeout);
         }
+        if (source.ScanPathMode != null) {
+            this.ScanPathMode = new String(source.ScanPathMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -371,6 +417,7 @@ public class DescribeVirusScanSettingResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ScanIds.", this.ScanIds);
         this.setParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
         this.setParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
+        this.setParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

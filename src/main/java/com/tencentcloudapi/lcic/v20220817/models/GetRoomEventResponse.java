@@ -13,30 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.organization.v20210331.models;
+package com.tencentcloudapi.lcic.v20220817.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel{
+public class GetRoomEventResponse extends AbstractModel{
 
     /**
-    * 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Items")
-    @Expose
-    private OrgMemberAuthIdentity [] Items;
-
-    /**
-    * 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 该房间的事件总数，keyword搜索不影响该值。
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
+
+    /**
+    * 详细事件内容。包含相应的类型、发生的时间戳。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Events")
+    @Expose
+    private EventInfo [] Events;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +45,39 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public OrgMemberAuthIdentity [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setItems(OrgMemberAuthIdentity [] Items) {
-        this.Items = Items;
-    }
-
-    /**
-     * Get 总数目。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该房间的事件总数，keyword搜索不影响该值。 
+     * @return Total 该房间的事件总数，keyword搜索不影响该值。
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 该房间的事件总数，keyword搜索不影响该值。
+     * @param Total 该房间的事件总数，keyword搜索不影响该值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
+    }
+
+    /**
+     * Get 详细事件内容。包含相应的类型、发生的时间戳。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Events 详细事件内容。包含相应的类型、发生的时间戳。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EventInfo [] getEvents() {
+        return this.Events;
+    }
+
+    /**
+     * Set 详细事件内容。包含相应的类型、发生的时间戳。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Events 详细事件内容。包含相应的类型、发生的时间戳。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEvents(EventInfo [] Events) {
+        this.Events = Events;
     }
 
     /**
@@ -101,22 +96,22 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
         this.RequestId = RequestId;
     }
 
-    public DescribeOrganizationMemberAuthIdentitiesResponse() {
+    public GetRoomEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOrganizationMemberAuthIdentitiesResponse(DescribeOrganizationMemberAuthIdentitiesResponse source) {
-        if (source.Items != null) {
-            this.Items = new OrgMemberAuthIdentity[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new OrgMemberAuthIdentity(source.Items[i]);
-            }
-        }
+    public GetRoomEventResponse(GetRoomEventResponse source) {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
+        }
+        if (source.Events != null) {
+            this.Events = new EventInfo[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new EventInfo(source.Events[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +123,8 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

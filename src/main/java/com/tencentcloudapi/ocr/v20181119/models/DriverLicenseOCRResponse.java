@@ -79,7 +79,8 @@ public class DriverLicenseOCRResponse extends AbstractModel{
     private String StartDate;
 
     /**
-    * 有效期截止时间（YYYY-MM-DD）
+    * 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
     */
     @SerializedName("EndDate")
     @Expose
@@ -286,16 +287,20 @@ WARN_DRIVER_LICENSE_PS_CARD ps告警
     }
 
     /**
-     * Get 有效期截止时间（YYYY-MM-DD） 
-     * @return EndDate 有效期截止时间（YYYY-MM-DD）
+     * Get 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年） 
+     * @return EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set 有效期截止时间（YYYY-MM-DD）
-     * @param EndDate 有效期截止时间（YYYY-MM-DD）
+     * Set 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
+     * @param EndDate 有效期截止时间（新版驾驶证返回 YYYY-MM-DD，
+老版驾驶证返回有效期限 X年）
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

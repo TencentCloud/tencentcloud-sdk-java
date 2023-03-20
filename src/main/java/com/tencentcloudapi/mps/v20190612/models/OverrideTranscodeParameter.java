@@ -76,6 +76,14 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private SubtitleTemplate SubtitleTemplate;
 
     /**
+    * 外挂音轨参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddonAudioStream")
+    @Expose
+    private MediaInputInfo [] AddonAudioStream;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -203,6 +211,26 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.SubtitleTemplate = SubtitleTemplate;
     }
 
+    /**
+     * Get 外挂音轨参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddonAudioStream 外挂音轨参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaInputInfo [] getAddonAudioStream() {
+        return this.AddonAudioStream;
+    }
+
+    /**
+     * Set 外挂音轨参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddonAudioStream 外挂音轨参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddonAudioStream(MediaInputInfo [] AddonAudioStream) {
+        this.AddonAudioStream = AddonAudioStream;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -232,6 +260,12 @@ public class OverrideTranscodeParameter extends AbstractModel{
         if (source.SubtitleTemplate != null) {
             this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
         }
+        if (source.AddonAudioStream != null) {
+            this.AddonAudioStream = new MediaInputInfo[source.AddonAudioStream.length];
+            for (int i = 0; i < source.AddonAudioStream.length; i++) {
+                this.AddonAudioStream[i] = new MediaInputInfo(source.AddonAudioStream[i]);
+            }
+        }
     }
 
 
@@ -246,6 +280,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
+        this.setParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
 
     }
 }

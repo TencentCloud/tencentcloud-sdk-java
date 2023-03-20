@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.organization.v20210331.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel{
+public class DescribeBackupFilesResponse extends AbstractModel{
 
     /**
-    * 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 备份文件列表
     */
-    @SerializedName("Items")
+    @SerializedName("Files")
     @Expose
-    private OrgMemberAuthIdentity [] Items;
+    private InstanceBackupFileItem [] Files;
 
     /**
-    * 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总条目数
     */
-    @SerializedName("Total")
+    @SerializedName("TotalCount")
     @Expose
-    private Long Total;
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 备份文件列表 
+     * @return Files 备份文件列表
      */
-    public OrgMemberAuthIdentity [] getItems() {
-        return this.Items;
+    public InstanceBackupFileItem [] getFiles() {
+        return this.Files;
     }
 
     /**
-     * Set 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 备份文件列表
+     * @param Files 备份文件列表
      */
-    public void setItems(OrgMemberAuthIdentity [] Items) {
-        this.Items = Items;
+    public void setFiles(InstanceBackupFileItem [] Files) {
+        this.Files = Files;
     }
 
     /**
-     * Get 总数目。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总条目数 
+     * @return TotalCount 总条目数
      */
-    public Long getTotal() {
-        return this.Total;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总条目数
+     * @param TotalCount 总条目数
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -101,22 +91,22 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
         this.RequestId = RequestId;
     }
 
-    public DescribeOrganizationMemberAuthIdentitiesResponse() {
+    public DescribeBackupFilesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeOrganizationMemberAuthIdentitiesResponse(DescribeOrganizationMemberAuthIdentitiesResponse source) {
-        if (source.Items != null) {
-            this.Items = new OrgMemberAuthIdentity[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new OrgMemberAuthIdentity(source.Items[i]);
+    public DescribeBackupFilesResponse(DescribeBackupFilesResponse source) {
+        if (source.Files != null) {
+            this.Files = new InstanceBackupFileItem[source.Files.length];
+            for (int i = 0; i < source.Files.length; i++) {
+                this.Files[i] = new InstanceBackupFileItem(source.Files[i]);
             }
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +118,8 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Files.", this.Files);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

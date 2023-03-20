@@ -25,6 +25,7 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
     /**
     * 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("StartTime")
     @Expose
@@ -34,6 +35,7 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
     * 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
+注：此字段为北京时间（UTC+8时区）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -47,10 +49,19 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
     private String [] PlayDomains;
 
     /**
+    * 快直播还是标准直播，0：标准直播，1：快直播。默认为0。
+    */
+    @SerializedName("IsFastLive")
+    @Expose
+    private Long IsFastLive;
+
+    /**
      * Get 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。 
+格式：yyyy-mm-dd HH:MM:SS。
+注：此字段为北京时间（UTC+8时区）。 
      * @return StartTime 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -59,8 +70,10 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
     /**
      * Set 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
+注：此字段为北京时间（UTC+8时区）。
      * @param StartTime 开始时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -69,10 +82,12 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
     /**
      * Get 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
-注意：结束时间 - 开始时间 <=7天。 
+注意：结束时间 - 开始时间 <=7天。
+注：此字段为北京时间（UTC+8时区）。 
      * @return EndTime 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
+注：此字段为北京时间（UTC+8时区）。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -82,9 +97,11 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
      * Set 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
+注：此字段为北京时间（UTC+8时区）。
      * @param EndTime 结束时间，北京时间。
 格式：yyyy-mm-dd HH:MM:SS。
 注意：结束时间 - 开始时间 <=7天。
+注：此字段为北京时间（UTC+8时区）。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -104,6 +121,22 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
+    }
+
+    /**
+     * Get 快直播还是标准直播，0：标准直播，1：快直播。默认为0。 
+     * @return IsFastLive 快直播还是标准直播，0：标准直播，1：快直播。默认为0。
+     */
+    public Long getIsFastLive() {
+        return this.IsFastLive;
+    }
+
+    /**
+     * Set 快直播还是标准直播，0：标准直播，1：快直播。默认为0。
+     * @param IsFastLive 快直播还是标准直播，0：标准直播，1：快直播。默认为0。
+     */
+    public void setIsFastLive(Long IsFastLive) {
+        this.IsFastLive = IsFastLive;
     }
 
     public DescribeLogDownloadListRequest() {
@@ -126,6 +159,9 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
                 this.PlayDomains[i] = new String(source.PlayDomains[i]);
             }
         }
+        if (source.IsFastLive != null) {
+            this.IsFastLive = new Long(source.IsFastLive);
+        }
     }
 
 
@@ -136,6 +172,7 @@ public class DescribeLogDownloadListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
+        this.setParamSimple(map, prefix + "IsFastLive", this.IsFastLive);
 
     }
 }

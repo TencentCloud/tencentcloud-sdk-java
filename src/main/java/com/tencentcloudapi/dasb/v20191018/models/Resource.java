@@ -219,6 +219,14 @@ public class Resource extends AbstractModel{
     private Long PackageNode;
 
     /**
+    * 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogDeliveryArgs")
+    @Expose
+    private String LogDeliveryArgs;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -666,6 +674,26 @@ public class Resource extends AbstractModel{
         this.PackageNode = PackageNode;
     }
 
+    /**
+     * Get 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogDeliveryArgs 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogDeliveryArgs() {
+        return this.LogDeliveryArgs;
+    }
+
+    /**
+     * Set 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogDeliveryArgs 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogDeliveryArgs(String LogDeliveryArgs) {
+        this.LogDeliveryArgs = LogDeliveryArgs;
+    }
+
     public Resource() {
     }
 
@@ -767,6 +795,9 @@ public class Resource extends AbstractModel{
         if (source.PackageNode != null) {
             this.PackageNode = new Long(source.PackageNode);
         }
+        if (source.LogDeliveryArgs != null) {
+            this.LogDeliveryArgs = new String(source.LogDeliveryArgs);
+        }
     }
 
 
@@ -802,6 +833,7 @@ public class Resource extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtendPoints", this.ExtendPoints);
         this.setParamSimple(map, prefix + "PackageBandwidth", this.PackageBandwidth);
         this.setParamSimple(map, prefix + "PackageNode", this.PackageNode);
+        this.setParamSimple(map, prefix + "LogDeliveryArgs", this.LogDeliveryArgs);
 
     }
 }

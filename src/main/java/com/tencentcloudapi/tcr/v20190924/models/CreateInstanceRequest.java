@@ -65,6 +65,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Boolean SyncTag;
 
     /**
+    * 是否开启Cos桶多AZ特性
+    */
+    @SerializedName("EnableCosMAZ")
+    @Expose
+    private Boolean EnableCosMAZ;
+
+    /**
      * Get 企业版实例名称 
      * @return RegistryName 企业版实例名称
      */
@@ -160,6 +167,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.SyncTag = SyncTag;
     }
 
+    /**
+     * Get 是否开启Cos桶多AZ特性 
+     * @return EnableCosMAZ 是否开启Cos桶多AZ特性
+     */
+    public Boolean getEnableCosMAZ() {
+        return this.EnableCosMAZ;
+    }
+
+    /**
+     * Set 是否开启Cos桶多AZ特性
+     * @param EnableCosMAZ 是否开启Cos桶多AZ特性
+     */
+    public void setEnableCosMAZ(Boolean EnableCosMAZ) {
+        this.EnableCosMAZ = EnableCosMAZ;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -186,6 +209,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.SyncTag != null) {
             this.SyncTag = new Boolean(source.SyncTag);
         }
+        if (source.EnableCosMAZ != null) {
+            this.EnableCosMAZ = new Boolean(source.EnableCosMAZ);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
         this.setParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
+        this.setParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
 
     }
 }

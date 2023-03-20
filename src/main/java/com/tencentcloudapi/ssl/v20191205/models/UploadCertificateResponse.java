@@ -30,6 +30,14 @@ public class UploadCertificateResponse extends AbstractModel{
     private String CertificateId;
 
     /**
+    * 重复证书的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepeatCertId")
+    @Expose
+    private String RepeatCertId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class UploadCertificateResponse extends AbstractModel{
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
+    }
+
+    /**
+     * Get 重复证书的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepeatCertId 重复证书的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepeatCertId() {
+        return this.RepeatCertId;
+    }
+
+    /**
+     * Set 重复证书的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepeatCertId 重复证书的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepeatCertId(String RepeatCertId) {
+        this.RepeatCertId = RepeatCertId;
     }
 
     /**
@@ -79,6 +107,9 @@ public class UploadCertificateResponse extends AbstractModel{
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
+        if (source.RepeatCertId != null) {
+            this.RepeatCertId = new String(source.RepeatCertId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class UploadCertificateResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamSimple(map, prefix + "RepeatCertId", this.RepeatCertId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

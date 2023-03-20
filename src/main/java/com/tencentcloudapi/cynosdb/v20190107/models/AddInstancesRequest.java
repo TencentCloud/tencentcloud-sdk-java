@@ -51,21 +51,21 @@ public class AddInstancesRequest extends AbstractModel{
     private Long ReadOnlyCount;
 
     /**
-    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+    * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * 所属VPC网络ID，该参数已废弃
+    * 所属VPC网络ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+    * 所属子网ID，如果设置了VpcId，则SubnetId必填。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -127,6 +127,13 @@ public class AddInstancesRequest extends AbstractModel{
     @SerializedName("InstanceParams")
     @Expose
     private ModifyParamItem [] InstanceParams;
+
+    /**
+    * 安全组ID，新建只读实例时可以指定安全组。
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
 
     /**
      * Get 集群ID 
@@ -193,48 +200,48 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。 
-     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * Get 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。 
+     * @return InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
      */
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
 
     /**
-     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
-     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
+     * Set 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
+     * @param InstanceGrpId 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。当前版本已废弃。
      */
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }
 
     /**
-     * Get 所属VPC网络ID，该参数已废弃 
-     * @return VpcId 所属VPC网络ID，该参数已废弃
+     * Get 所属VPC网络ID。 
+     * @return VpcId 所属VPC网络ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 所属VPC网络ID，该参数已废弃
-     * @param VpcId 所属VPC网络ID，该参数已废弃
+     * Set 所属VPC网络ID。
+     * @param VpcId 所属VPC网络ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。 
-     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+     * Get 所属子网ID，如果设置了VpcId，则SubnetId必填。 
+     * @return SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
-     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
+     * Set 所属子网ID，如果设置了VpcId，则SubnetId必填。
+     * @param SubnetId 所属子网ID，如果设置了VpcId，则SubnetId必填。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -372,6 +379,22 @@ public class AddInstancesRequest extends AbstractModel{
         this.InstanceParams = InstanceParams;
     }
 
+    /**
+     * Get 安全组ID，新建只读实例时可以指定安全组。 
+     * @return SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ID，新建只读实例时可以指定安全组。
+     * @param SecurityGroupIds 安全组ID，新建只读实例时可以指定安全组。
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -428,6 +451,12 @@ public class AddInstancesRequest extends AbstractModel{
                 this.InstanceParams[i] = new ModifyParamItem(source.InstanceParams[i]);
             }
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -450,6 +479,7 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }
