@@ -25,7 +25,6 @@ public class BatchUserRequest extends AbstractModel{
     /**
     * 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -34,7 +33,6 @@ public class BatchUserRequest extends AbstractModel{
     /**
     * 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -43,7 +41,6 @@ public class BatchUserRequest extends AbstractModel{
     /**
     * 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginId")
     @Expose
@@ -52,7 +49,6 @@ public class BatchUserRequest extends AbstractModel{
     /**
     * 用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Avatar")
     @Expose
@@ -60,11 +56,9 @@ public class BatchUserRequest extends AbstractModel{
 
     /**
      * Get 低代码互动课堂的SdkAppId。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SdkAppId 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
@@ -73,10 +67,8 @@ public class BatchUserRequest extends AbstractModel{
     /**
      * Set 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SdkAppId 低代码互动课堂的SdkAppId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -84,11 +76,9 @@ public class BatchUserRequest extends AbstractModel{
 
     /**
      * Get 用户名称。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Name 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -97,10 +87,8 @@ public class BatchUserRequest extends AbstractModel{
     /**
      * Set 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 用户名称。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -108,11 +96,9 @@ public class BatchUserRequest extends AbstractModel{
 
     /**
      * Get 用户在客户系统的Id，需要在同一应用下唯一。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OriginId 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginId() {
         return this.OriginId;
@@ -121,10 +107,8 @@ public class BatchUserRequest extends AbstractModel{
     /**
      * Set 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginId 用户在客户系统的Id，需要在同一应用下唯一。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginId(String OriginId) {
         this.OriginId = OriginId;
@@ -132,11 +116,9 @@ public class BatchUserRequest extends AbstractModel{
 
     /**
      * Get 用户头像。
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Avatar 用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvatar() {
         return this.Avatar;
@@ -145,10 +127,8 @@ public class BatchUserRequest extends AbstractModel{
     /**
      * Set 用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Avatar 用户头像。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;

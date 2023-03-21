@@ -24,7 +24,6 @@ public class PersonExDescriptionInfo extends AbstractModel{
 
     /**
     * 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonExDescriptionIndex")
     @Expose
@@ -38,10 +37,8 @@ public class PersonExDescriptionInfo extends AbstractModel{
     private String PersonExDescription;
 
     /**
-     * Get 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人员描述字段Index，从0开始 
      * @return PersonExDescriptionIndex 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPersonExDescriptionIndex() {
         return this.PersonExDescriptionIndex;
@@ -49,9 +46,7 @@ public class PersonExDescriptionInfo extends AbstractModel{
 
     /**
      * Set 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonExDescriptionIndex 人员描述字段Index，从0开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonExDescriptionIndex(Long PersonExDescriptionIndex) {
         this.PersonExDescriptionIndex = PersonExDescriptionIndex;

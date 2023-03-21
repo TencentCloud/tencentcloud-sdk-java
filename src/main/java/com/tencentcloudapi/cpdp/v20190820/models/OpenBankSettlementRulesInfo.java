@@ -25,7 +25,6 @@ public class OpenBankSettlementRulesInfo extends AbstractModel{
     /**
     * ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnfreezeRule")
     @Expose
@@ -34,7 +33,6 @@ MULTI：多次解冻
     /**
     * ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefundRule")
     @Expose
@@ -42,11 +40,9 @@ MULTI：多次退款
 
     /**
      * Get ONCE：仅单次解冻（默认）
-MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。 
+MULTI：多次解冻 
      * @return UnfreezeRule ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnfreezeRule() {
         return this.UnfreezeRule;
@@ -55,10 +51,8 @@ MULTI：多次解冻
     /**
      * Set ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnfreezeRule ONCE：仅单次解冻（默认）
 MULTI：多次解冻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnfreezeRule(String UnfreezeRule) {
         this.UnfreezeRule = UnfreezeRule;
@@ -66,11 +60,9 @@ MULTI：多次解冻
 
     /**
      * Get ONCE：仅单次退款（默认）
-MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。 
+MULTI：多次退款 
      * @return RefundRule ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRefundRule() {
         return this.RefundRule;
@@ -79,10 +71,8 @@ MULTI：多次退款
     /**
      * Set ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefundRule ONCE：仅单次退款（默认）
 MULTI：多次退款
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefundRule(String RefundRule) {
         this.RefundRule = RefundRule;

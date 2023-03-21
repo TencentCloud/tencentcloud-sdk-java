@@ -24,7 +24,6 @@ public class WorkspaceTokenDTO extends AbstractModel{
 
     /**
     * 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpaceKey")
     @Expose
@@ -32,17 +31,14 @@ public class WorkspaceTokenDTO extends AbstractModel{
 
     /**
     * token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TokenExpiredLimitSec")
     @Expose
     private Long TokenExpiredLimitSec;
 
     /**
-     * Get 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间 SpaceKey 
      * @return SpaceKey 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpaceKey() {
         return this.SpaceKey;
@@ -50,19 +46,15 @@ public class WorkspaceTokenDTO extends AbstractModel{
 
     /**
      * Set 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpaceKey 工作空间 SpaceKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpaceKey(String SpaceKey) {
         this.SpaceKey = SpaceKey;
     }
 
     /**
-     * Get token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get token过期时间，单位是秒，默认 3600 
      * @return TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTokenExpiredLimitSec() {
         return this.TokenExpiredLimitSec;
@@ -70,9 +62,7 @@ public class WorkspaceTokenDTO extends AbstractModel{
 
     /**
      * Set token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TokenExpiredLimitSec token过期时间，单位是秒，默认 3600
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTokenExpiredLimitSec(Long TokenExpiredLimitSec) {
         this.TokenExpiredLimitSec = TokenExpiredLimitSec;

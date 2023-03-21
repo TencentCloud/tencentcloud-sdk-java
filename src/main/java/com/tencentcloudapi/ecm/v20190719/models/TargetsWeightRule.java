@@ -24,7 +24,6 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
     * 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -32,7 +31,6 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
     * 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Targets")
     @Expose
@@ -40,17 +38,14 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
     * 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡监听器 ID 
      * @return ListenerId 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -58,19 +53,15 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
      * Set 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerId 负载均衡监听器 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 要修改权重的后端机器列表 
      * @return Targets 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Target [] getTargets() {
         return this.Targets;
@@ -78,19 +69,15 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
      * Set 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Targets 要修改权重的后端机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后端服务新的转发权重，取值范围：0~100。 
      * @return Weight 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -98,9 +85,7 @@ public class TargetsWeightRule extends AbstractModel{
 
     /**
      * Set 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 后端服务新的转发权重，取值范围：0~100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

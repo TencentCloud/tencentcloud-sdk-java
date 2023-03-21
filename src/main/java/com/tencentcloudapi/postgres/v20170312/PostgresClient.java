@@ -119,6 +119,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateBaseBackup）用于创建实例的全量备份。
+     * @param req CreateBaseBackupRequest
+     * @return CreateBaseBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBaseBackupResponse CreateBaseBackup(CreateBaseBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBaseBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBaseBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBaseBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *可对实例进行网络的添加操作。
      * @param req CreateDBInstanceNetworkAccessRequest
      * @return CreateDBInstanceNetworkAccessResponse
@@ -279,6 +299,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteBaseBackup）用于删除实例指定全量备份。
+     * @param req DeleteBaseBackupRequest
+     * @return DeleteBaseBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaseBackupResponse DeleteBaseBackup(DeleteBaseBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBaseBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBaseBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBaseBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *可对实例进行网络的删除操作。
      * @param req DeleteDBInstanceNetworkAccessRequest
      * @return DeleteDBInstanceNetworkAccessResponse
@@ -291,6 +331,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteLogBackup）用于删除实例指定日志备份。
+     * @param req DeleteLogBackupRequest
+     * @return DeleteLogBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogBackupResponse DeleteLogBackup(DeleteLogBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLogBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLogBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLogBackup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -419,6 +479,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeBackupDownloadURL) 用于获取备份下载链接。
+     * @param req DescribeBackupDownloadURLRequest
+     * @return DescribeBackupDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadURLResponse DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeBackupOverview）用于查询用户的备份概览信息。返回用户当前备份个数、备份占用容量、免费容量、收费容量等信息（容量单位为字节）。
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeBackupPlans) 用于实例所有的备份计划查询
      * @param req DescribeBackupPlansRequest
      * @return DescribeBackupPlansResponse
@@ -431,6 +531,66 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupPlansResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupPlans");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeBackupSummaries)用于查询实例备份的统计信息，返回以实例为维度的备份个数、占用容量等信息（容量单位为字节）。
+     * @param req DescribeBackupSummariesRequest
+     * @return DescribeBackupSummariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummariesResponse DescribeBackupSummaries(DescribeBackupSummariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupSummaries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeBaseBackups) 用于查询基础备份列表。
+     * @param req DescribeBaseBackupsRequest
+     * @return DescribeBaseBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaseBackupsResponse DescribeBaseBackups(DescribeBaseBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaseBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaseBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaseBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeClasses）用于查询实例售卖规格。
+     * @param req DescribeClassesRequest
+     * @return DescribeClassesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassesResponse DescribeClasses(DescribeClassesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClasses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -599,6 +759,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBVersions）用于查询支持的数据库版本号列表。
+     * @param req DescribeDBVersionsRequest
+     * @return DescribeDBVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBVersionsResponse DescribeDBVersions(DescribeDBVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDBXlogs）用于获取实例Xlog列表。
      * @param req DescribeDBXlogsRequest
      * @return DescribeDBXlogsResponse
@@ -671,6 +851,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEncryptionKeysResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEncryptionKeys");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口 (DescribeLogBackups) 用于查询日志备份列表。
+     * @param req DescribeLogBackupsRequest
+     * @return DescribeLogBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogBackupsResponse DescribeLogBackups(DescribeLogBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1079,6 +1279,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteBaseBackup）用于修改实例指定全量备份的过期时间。
+     * @param req ModifyBaseBackupExpireTimeRequest
+     * @return ModifyBaseBackupExpireTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTime(ModifyBaseBackupExpireTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBaseBackupExpireTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBaseBackupExpireTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceDeployment）用于修改节点可用区部署方式，仅支持主实例。
      * @param req ModifyDBInstanceDeploymentRequest
      * @return ModifyDBInstanceDeploymentResponse
@@ -1451,6 +1671,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpgradeDBInstanceKernelVersion）用于升级实例的内核版本号。
+     * @param req UpgradeDBInstanceKernelVersionRequest
+     * @return UpgradeDBInstanceKernelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceKernelVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceKernelVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDBInstanceKernelVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

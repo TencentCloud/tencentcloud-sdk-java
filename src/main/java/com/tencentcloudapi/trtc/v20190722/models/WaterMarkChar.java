@@ -24,7 +24,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Top")
     @Expose
@@ -32,7 +31,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Left")
     @Expose
@@ -40,7 +38,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -48,7 +45,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
@@ -56,7 +52,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Chars")
     @Expose
@@ -64,7 +59,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontSize")
     @Expose
@@ -72,7 +66,6 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontColor")
     @Expose
@@ -80,17 +73,14 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
     * 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackGroundColor")
     @Expose
     private String BackGroundColor;
 
     /**
-     * Get 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印的起始坐标Y值，从左上角开始 
      * @return Top 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTop() {
         return this.Top;
@@ -98,19 +88,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Top 文字水印的起始坐标Y值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTop(Long Top) {
         this.Top = Top;
     }
 
     /**
-     * Get 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印的起始坐标X值，从左上角开始 
      * @return Left 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLeft() {
         return this.Left;
@@ -118,19 +104,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Left 文字水印的起始坐标X值，从左上角开始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeft(Long Left) {
         this.Left = Left;
     }
 
     /**
-     * Get 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印的宽度，单位像素值 
      * @return Width 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -138,19 +120,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 文字水印的宽度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印的高度，单位像素值 
      * @return Height 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -158,19 +136,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 文字水印的高度，单位像素值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印文字的内容 
      * @return Chars 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChars() {
         return this.Chars;
@@ -178,19 +152,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Chars 水印文字的内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChars(String Chars) {
         this.Chars = Chars;
     }
 
     /**
-     * Get 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印文字的大小，单位像素，默认14 
      * @return FontSize 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFontSize() {
         return this.FontSize;
@@ -198,19 +168,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FontSize 水印文字的大小，单位像素，默认14
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontSize(Long FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印文字的颜色，默认白色 
      * @return FontColor 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontColor() {
         return this.FontColor;
@@ -218,19 +184,15 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FontColor 水印文字的颜色，默认白色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
     }
 
     /**
-     * Get 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印文字的背景色，为空代表背景透明，默认为空 
      * @return BackGroundColor 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackGroundColor() {
         return this.BackGroundColor;
@@ -238,9 +200,7 @@ public class WaterMarkChar extends AbstractModel{
 
     /**
      * Set 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackGroundColor 水印文字的背景色，为空代表背景透明，默认为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackGroundColor(String BackGroundColor) {
         this.BackGroundColor = BackGroundColor;

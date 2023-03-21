@@ -38,7 +38,6 @@ public class McuLayoutVolume extends AbstractModel{
 
     /**
     * SEI发送间隔，单位毫秒，默认值为1000。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interval")
     @Expose
@@ -46,7 +45,6 @@ public class McuLayoutVolume extends AbstractModel{
 
     /**
     * 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowIdr")
     @Expose
@@ -85,10 +83,8 @@ public class McuLayoutVolume extends AbstractModel{
     }
 
     /**
-     * Get SEI发送间隔，单位毫秒，默认值为1000。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SEI发送间隔，单位毫秒，默认值为1000。 
      * @return Interval SEI发送间隔，单位毫秒，默认值为1000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInterval() {
         return this.Interval;
@@ -96,19 +92,15 @@ public class McuLayoutVolume extends AbstractModel{
 
     /**
      * Set SEI发送间隔，单位毫秒，默认值为1000。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interval SEI发送间隔，单位毫秒，默认值为1000。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。 
      * @return FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFollowIdr() {
         return this.FollowIdr;
@@ -116,9 +108,7 @@ public class McuLayoutVolume extends AbstractModel{
 
     /**
      * Set 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FollowIdr 取值范围[0,1]，填1：发送关键帧时会确保带SEI；填0：发送关键帧时不确保带SEI。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowIdr(Long FollowIdr) {
         this.FollowIdr = FollowIdr;

@@ -31,7 +31,6 @@ public class Resource extends AbstractModel{
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -54,10 +53,8 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -65,9 +62,7 @@ public class Resource extends AbstractModel{
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;

@@ -24,7 +24,6 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
     * 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineRegion")
     @Expose
@@ -32,7 +31,6 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
     * 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Replica")
     @Expose
@@ -40,17 +38,14 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
     * 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcInfos")
     @Expose
     private VpcInfo [] VpcInfos;
 
     /**
-     * Get 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎节点所在地域 
      * @return EngineRegion 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineRegion() {
         return this.EngineRegion;
@@ -58,19 +53,15 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
      * Set 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineRegion 引擎节点所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;
     }
 
     /**
-     * Get 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此地域节点分配数量 
      * @return Replica 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplica() {
         return this.Replica;
@@ -78,19 +69,15 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
      * Set 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Replica 此地域节点分配数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplica(Long Replica) {
         this.Replica = Replica;
     }
 
     /**
-     * Get 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群网络信息 
      * @return VpcInfos 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcInfo [] getVpcInfos() {
         return this.VpcInfos;
@@ -98,9 +85,7 @@ public class EngineRegionInfo extends AbstractModel{
 
     /**
      * Set 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcInfos 集群网络信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcInfos(VpcInfo [] VpcInfos) {
         this.VpcInfos = VpcInfos;

@@ -175,6 +175,14 @@ public class DescribeConnectResourceResp extends AbstractModel{
     private DorisConnectParam DorisConnectParam;
 
     /**
+    * Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KafkaConnectParam")
+    @Expose
+    private KafkaConnectParam KafkaConnectParam;
+
+    /**
      * Get 连接源的Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceId 连接源的Id
@@ -554,6 +562,26 @@ public class DescribeConnectResourceResp extends AbstractModel{
         this.DorisConnectParam = DorisConnectParam;
     }
 
+    /**
+     * Get Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KafkaConnectParam getKafkaConnectParam() {
+        return this.KafkaConnectParam;
+    }
+
+    /**
+     * Set Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KafkaConnectParam Kafka配置，Type 为 KAFKA 时返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKafkaConnectParam(KafkaConnectParam KafkaConnectParam) {
+        this.KafkaConnectParam = KafkaConnectParam;
+    }
+
     public DescribeConnectResourceResp() {
     }
 
@@ -622,6 +650,9 @@ public class DescribeConnectResourceResp extends AbstractModel{
         if (source.DorisConnectParam != null) {
             this.DorisConnectParam = new DorisConnectParam(source.DorisConnectParam);
         }
+        if (source.KafkaConnectParam != null) {
+            this.KafkaConnectParam = new KafkaConnectParam(source.KafkaConnectParam);
+        }
     }
 
 
@@ -648,6 +679,7 @@ public class DescribeConnectResourceResp extends AbstractModel{
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
         this.setParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
+        this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
 
     }
 }

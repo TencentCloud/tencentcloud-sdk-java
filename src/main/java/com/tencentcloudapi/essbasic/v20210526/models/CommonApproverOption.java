@@ -24,17 +24,14 @@ public class CommonApproverOption extends AbstractModel{
 
     /**
     * 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanEditApprover")
     @Expose
     private Boolean CanEditApprover;
 
     /**
-     * Get 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许修改签署人信息 
      * @return CanEditApprover 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanEditApprover() {
         return this.CanEditApprover;
@@ -42,9 +39,7 @@ public class CommonApproverOption extends AbstractModel{
 
     /**
      * Set 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanEditApprover 是否允许修改签署人信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanEditApprover(Boolean CanEditApprover) {
         this.CanEditApprover = CanEditApprover;

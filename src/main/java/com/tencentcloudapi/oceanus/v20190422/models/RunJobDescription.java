@@ -66,7 +66,6 @@ public class RunJobDescription extends AbstractModel{
 
     /**
     * 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseOldSystemConnector")
     @Expose
@@ -169,10 +168,8 @@ public class RunJobDescription extends AbstractModel{
     }
 
     /**
-     * Get 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用历史版本系统依赖 
      * @return UseOldSystemConnector 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseOldSystemConnector() {
         return this.UseOldSystemConnector;
@@ -180,9 +177,7 @@ public class RunJobDescription extends AbstractModel{
 
     /**
      * Set 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseOldSystemConnector 使用历史版本系统依赖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseOldSystemConnector(Boolean UseOldSystemConnector) {
         this.UseOldSystemConnector = UseOldSystemConnector;

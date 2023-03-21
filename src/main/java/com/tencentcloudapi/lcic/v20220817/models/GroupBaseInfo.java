@@ -24,7 +24,6 @@ public class GroupBaseInfo extends AbstractModel{
 
     /**
     * 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -32,17 +31,14 @@ public class GroupBaseInfo extends AbstractModel{
 
     /**
     * 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-     * Get 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待创建群组名 
      * @return GroupName 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -50,19 +46,15 @@ public class GroupBaseInfo extends AbstractModel{
 
     /**
      * Set 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 待创建群组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 群组主讲人ID 
      * @return TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTeacherId() {
         return this.TeacherId;
@@ -70,9 +62,7 @@ public class GroupBaseInfo extends AbstractModel{
 
     /**
      * Set 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TeacherId 群组主讲人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;

@@ -24,7 +24,6 @@ public class WaterMarkTimestamp extends AbstractModel{
 
     /**
     * 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pos")
     @Expose
@@ -32,17 +31,14 @@ public class WaterMarkTimestamp extends AbstractModel{
 
     /**
     * 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeZone")
     @Expose
     private Long TimeZone;
 
     /**
-     * Get 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中 
      * @return Pos 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPos() {
         return this.Pos;
@@ -50,19 +46,15 @@ public class WaterMarkTimestamp extends AbstractModel{
 
     /**
      * Set 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pos 时间戳的位置，取值范围0-6，分别代表上左，上右，下左，下右，上居中，下居中，居中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPos(Long Pos) {
         this.Pos = Pos;
     }
 
     /**
-     * Get 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 显示时间戳的时区，默认东八区 
      * @return TimeZone 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeZone() {
         return this.TimeZone;
@@ -70,9 +62,7 @@ public class WaterMarkTimestamp extends AbstractModel{
 
     /**
      * Set 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeZone 显示时间戳的时区，默认东八区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeZone(Long TimeZone) {
         this.TimeZone = TimeZone;

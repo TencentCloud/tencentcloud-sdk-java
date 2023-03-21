@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class StorageOption extends AbstractModel{
 
     /**
-    * 集群挂载CFS文件系统选项
+    * 集群挂载CFS文件系统选项。
     */
     @SerializedName("CFSOptions")
     @Expose
     private CFSOption [] CFSOptions;
 
     /**
-    * 集群挂在GooseFS文件系统选项
+    * 集群挂载GooseFS文件系统选项。
     */
     @SerializedName("GooseFSOptions")
     @Expose
     private GooseFSOption [] GooseFSOptions;
 
     /**
-     * Get 集群挂载CFS文件系统选项 
-     * @return CFSOptions 集群挂载CFS文件系统选项
+     * Get 集群挂载CFS文件系统选项。 
+     * @return CFSOptions 集群挂载CFS文件系统选项。
      */
     public CFSOption [] getCFSOptions() {
         return this.CFSOptions;
     }
 
     /**
-     * Set 集群挂载CFS文件系统选项
-     * @param CFSOptions 集群挂载CFS文件系统选项
+     * Set 集群挂载CFS文件系统选项。
+     * @param CFSOptions 集群挂载CFS文件系统选项。
      */
     public void setCFSOptions(CFSOption [] CFSOptions) {
         this.CFSOptions = CFSOptions;
     }
 
     /**
-     * Get 集群挂在GooseFS文件系统选项 
-     * @return GooseFSOptions 集群挂在GooseFS文件系统选项
+     * Get 集群挂载GooseFS文件系统选项。 
+     * @return GooseFSOptions 集群挂载GooseFS文件系统选项。
      */
     public GooseFSOption [] getGooseFSOptions() {
         return this.GooseFSOptions;
     }
 
     /**
-     * Set 集群挂在GooseFS文件系统选项
-     * @param GooseFSOptions 集群挂在GooseFS文件系统选项
+     * Set 集群挂载GooseFS文件系统选项。
+     * @param GooseFSOptions 集群挂载GooseFS文件系统选项。
      */
     public void setGooseFSOptions(GooseFSOption [] GooseFSOptions) {
         this.GooseFSOptions = GooseFSOptions;

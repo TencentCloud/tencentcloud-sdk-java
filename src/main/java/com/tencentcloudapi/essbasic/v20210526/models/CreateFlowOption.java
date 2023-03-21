@@ -24,17 +24,14 @@ public class CreateFlowOption extends AbstractModel{
 
     /**
     * 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanEditFlow")
     @Expose
     private Boolean CanEditFlow;
 
     /**
-     * Get 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许修改合同信息 
      * @return CanEditFlow 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCanEditFlow() {
         return this.CanEditFlow;
@@ -42,9 +39,7 @@ public class CreateFlowOption extends AbstractModel{
 
     /**
      * Set 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanEditFlow 是否允许修改合同信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanEditFlow(Boolean CanEditFlow) {
         this.CanEditFlow = CanEditFlow;

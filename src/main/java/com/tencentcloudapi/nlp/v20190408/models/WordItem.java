@@ -38,7 +38,6 @@ public class WordItem extends AbstractModel{
 
     /**
     * 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pos")
     @Expose
@@ -77,10 +76,8 @@ public class WordItem extends AbstractModel{
     }
 
     /**
-     * Get 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 词条的词性。 
      * @return Pos 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPos() {
         return this.Pos;
@@ -88,9 +85,7 @@ public class WordItem extends AbstractModel{
 
     /**
      * Set 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pos 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPos(String Pos) {
         this.Pos = Pos;

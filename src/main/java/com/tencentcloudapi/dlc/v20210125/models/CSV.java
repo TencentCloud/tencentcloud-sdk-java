@@ -38,7 +38,6 @@ public class CSV extends AbstractModel{
 
     /**
     * 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadLines")
     @Expose
@@ -46,7 +45,6 @@ public class CSV extends AbstractModel{
 
     /**
     * 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -85,10 +83,8 @@ public class CSV extends AbstractModel{
     }
 
     /**
-     * Get 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标题行，默认为0。 
      * @return HeadLines 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeadLines() {
         return this.HeadLines;
@@ -96,19 +92,15 @@ public class CSV extends AbstractModel{
 
     /**
      * Set 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadLines 标题行，默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadLines(Long HeadLines) {
         this.HeadLines = HeadLines;
     }
 
     /**
-     * Get 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式，默认值为CSV 
      * @return Format 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -116,9 +108,7 @@ public class CSV extends AbstractModel{
 
     /**
      * Set 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 格式，默认值为CSV
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;

@@ -24,7 +24,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotChannelOrganization")
     @Expose
@@ -32,7 +31,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -40,7 +38,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 企业id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationId")
     @Expose
@@ -48,7 +45,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -56,7 +52,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -64,7 +59,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 用户id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -72,7 +66,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
     @Expose
@@ -80,7 +73,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverName")
     @Expose
@@ -88,7 +80,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverMobile")
     @Expose
@@ -97,7 +88,6 @@ public class CommonFlowApprover extends AbstractModel{
     /**
     * 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
     @Expose
@@ -105,7 +95,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreReadTime")
     @Expose
@@ -113,7 +102,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFullText")
     @Expose
@@ -121,7 +109,6 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyType")
     @Expose
@@ -129,17 +116,14 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
     * 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverOption")
     @Expose
     private CommonApproverOption ApproverOption;
 
     /**
-     * Get 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户 
      * @return NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNotChannelOrganization() {
         return this.NotChannelOrganization;
@@ -147,19 +131,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotChannelOrganization 指定当前签署人为第三方应用集成子客，默认false：当前签署人为第三方应用集成子客，true：当前签署人为saas企业用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotChannelOrganization(Boolean NotChannelOrganization) {
         this.NotChannelOrganization = NotChannelOrganization;
     }
 
     /**
-     * Get 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人 
      * @return ApproverType 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -167,19 +147,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverType 签署人类型,目前支持：0-企业签署人，1-个人签署人，3-企业静默签署人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
     }
 
     /**
-     * Get 企业id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业id 
      * @return OrganizationId 企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationId() {
         return this.OrganizationId;
@@ -187,19 +163,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 企业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationId 企业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传 
      * @return OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
@@ -207,19 +179,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传 
      * @return OrganizationName 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
         return this.OrganizationName;
@@ -227,19 +195,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrganizationName 企业名称，第三方应用集成非静默签子客企业签署人必传，saas企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 用户id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户id 
      * @return UserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -247,19 +211,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户openId，第三方应用集成非静默签子客企业签署人必传 
      * @return OpenId 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
         return this.OpenId;
@@ -267,19 +227,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpenId 用户openId，第三方应用集成非静默签子客企业签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人名称，saas企业签署人，个人签署人必传 
      * @return ApproverName 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverName() {
         return this.ApproverName;
@@ -287,19 +243,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverName 签署人名称，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人手机号，saas企业签署人，个人签署人必传 
      * @return ApproverMobile 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
@@ -307,9 +259,7 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverMobile 签署人手机号，saas企业签署人，个人签署人必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;
@@ -317,11 +267,9 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Get 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
-注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：模板发起时该字段必填 
      * @return RecipientId 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -330,20 +278,16 @@ public class CommonFlowApprover extends AbstractModel{
     /**
      * Set 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientId 签署人Id，使用模板发起是，对应模板配置中的签署人RecipientId
 注意：模板发起时该字段必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s 
      * @return PreReadTime 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPreReadTime() {
         return this.PreReadTime;
@@ -351,19 +295,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PreReadTime 签署前置条件：阅读时长限制，不传默认10s,最大300s，最小3s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreReadTime(Long PreReadTime) {
         this.PreReadTime = PreReadTime;
     }
 
     /**
-     * Get 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署前置条件：阅读全文限制 
      * @return IsFullText 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFullText() {
         return this.IsFullText;
@@ -371,19 +311,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFullText 签署前置条件：阅读全文限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFullText(Boolean IsFullText) {
         this.IsFullText = IsFullText;
     }
 
     /**
-     * Get 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS 
      * @return NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNotifyType() {
         return this.NotifyType;
@@ -391,19 +327,15 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人配置 
      * @return ApproverOption 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommonApproverOption getApproverOption() {
         return this.ApproverOption;
@@ -411,9 +343,7 @@ public class CommonFlowApprover extends AbstractModel{
 
     /**
      * Set 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproverOption 签署人配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverOption(CommonApproverOption ApproverOption) {
         this.ApproverOption = ApproverOption;

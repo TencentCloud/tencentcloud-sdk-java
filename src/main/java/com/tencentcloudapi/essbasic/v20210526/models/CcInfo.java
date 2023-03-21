@@ -31,7 +31,6 @@ public class CcInfo extends AbstractModel{
 
     /**
     * 被抄送人姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class CcInfo extends AbstractModel{
     /**
     * 被抄送人类型
 0--个人. 1--员工
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcType")
     @Expose
@@ -50,7 +48,6 @@ public class CcInfo extends AbstractModel{
     * 被抄送人权限
 0--可查看
 1--可查看也可下载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcPermission")
     @Expose
@@ -73,10 +70,8 @@ public class CcInfo extends AbstractModel{
     }
 
     /**
-     * Get 被抄送人姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被抄送人姓名 
      * @return Name 被抄送人姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -84,9 +79,7 @@ public class CcInfo extends AbstractModel{
 
     /**
      * Set 被抄送人姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 被抄送人姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -94,11 +87,9 @@ public class CcInfo extends AbstractModel{
 
     /**
      * Get 被抄送人类型
-0--个人. 1--员工
-注意：此字段可能返回 null，表示取不到有效值。 
+0--个人. 1--员工 
      * @return CcType 被抄送人类型
 0--个人. 1--员工
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCcType() {
         return this.CcType;
@@ -107,10 +98,8 @@ public class CcInfo extends AbstractModel{
     /**
      * Set 被抄送人类型
 0--个人. 1--员工
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcType 被抄送人类型
 0--个人. 1--员工
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcType(Long CcType) {
         this.CcType = CcType;
@@ -119,12 +108,10 @@ public class CcInfo extends AbstractModel{
     /**
      * Get 被抄送人权限
 0--可查看
-1--可查看也可下载
-注意：此字段可能返回 null，表示取不到有效值。 
+1--可查看也可下载 
      * @return CcPermission 被抄送人权限
 0--可查看
 1--可查看也可下载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCcPermission() {
         return this.CcPermission;
@@ -134,11 +121,9 @@ public class CcInfo extends AbstractModel{
      * Set 被抄送人权限
 0--可查看
 1--可查看也可下载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcPermission 被抄送人权限
 0--可查看
 1--可查看也可下载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcPermission(Long CcPermission) {
         this.CcPermission = CcPermission;

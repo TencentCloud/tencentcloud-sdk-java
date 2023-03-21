@@ -24,7 +24,6 @@ public class MediaFilter extends AbstractModel{
 
     /**
     * 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaNameSet")
     @Expose
@@ -32,7 +31,6 @@ public class MediaFilter extends AbstractModel{
 
     /**
     * 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusSet")
     @Expose
@@ -40,7 +38,6 @@ public class MediaFilter extends AbstractModel{
 
     /**
     * 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaIdSet")
     @Expose
@@ -48,7 +45,6 @@ public class MediaFilter extends AbstractModel{
 
     /**
     * 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelSet")
     @Expose
@@ -56,17 +52,14 @@ public class MediaFilter extends AbstractModel{
 
     /**
     * 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaType")
     @Expose
     private Long MediaType;
 
     /**
-     * Get 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资名称过滤条件 
      * @return MediaNameSet 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMediaNameSet() {
         return this.MediaNameSet;
@@ -74,19 +67,15 @@ public class MediaFilter extends AbstractModel{
 
     /**
      * Set 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaNameSet 媒资名称过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaNameSet(String [] MediaNameSet) {
         this.MediaNameSet = MediaNameSet;
     }
 
     /**
-     * Get 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资状态数组，媒资状态可选值参见MediaInfo 
      * @return StatusSet 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getStatusSet() {
         return this.StatusSet;
@@ -94,19 +83,15 @@ public class MediaFilter extends AbstractModel{
 
     /**
      * Set 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusSet 媒资状态数组，媒资状态可选值参见MediaInfo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusSet(Long [] StatusSet) {
         this.StatusSet = StatusSet;
     }
 
     /**
-     * Get 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资ID数组 
      * @return MediaIdSet 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMediaIdSet() {
         return this.MediaIdSet;
@@ -114,19 +99,15 @@ public class MediaFilter extends AbstractModel{
 
     /**
      * Set 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaIdSet 媒资ID数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaIdSet(String [] MediaIdSet) {
         this.MediaIdSet = MediaIdSet;
     }
 
     /**
-     * Get 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资自定义标签数组 
      * @return LabelSet 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabelSet() {
         return this.LabelSet;
@@ -134,19 +115,15 @@ public class MediaFilter extends AbstractModel{
 
     /**
      * Set 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelSet 媒资自定义标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo) 
      * @return MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMediaType() {
         return this.MediaType;
@@ -154,9 +131,7 @@ public class MediaFilter extends AbstractModel{
 
     /**
      * Set 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaType 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaType(Long MediaType) {
         this.MediaType = MediaType;

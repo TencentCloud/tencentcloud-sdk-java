@@ -44,6 +44,13 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
     private String VpcId;
 
     /**
+    * 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+    */
+    @SerializedName("SkipAddingNonMasqueradeCIDRs")
+    @Expose
+    private Boolean SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -91,6 +98,22 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加 
+     * @return SkipAddingNonMasqueradeCIDRs 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+     */
+    public Boolean getSkipAddingNonMasqueradeCIDRs() {
+        return this.SkipAddingNonMasqueradeCIDRs;
+    }
+
+    /**
+     * Set 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+     * @param SkipAddingNonMasqueradeCIDRs 是否同步添加 vpc 网段到 ip-masq-agent-config 的 NonMasqueradeCIDRs 字段，默认 false 会同步添加
+     */
+    public void setSkipAddingNonMasqueradeCIDRs(Boolean SkipAddingNonMasqueradeCIDRs) {
+        this.SkipAddingNonMasqueradeCIDRs = SkipAddingNonMasqueradeCIDRs;
+    }
+
     public AddVpcCniSubnetsRequest() {
     }
 
@@ -111,6 +134,9 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.SkipAddingNonMasqueradeCIDRs != null) {
+            this.SkipAddingNonMasqueradeCIDRs = new Boolean(source.SkipAddingNonMasqueradeCIDRs);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SkipAddingNonMasqueradeCIDRs", this.SkipAddingNonMasqueradeCIDRs);
 
     }
 }

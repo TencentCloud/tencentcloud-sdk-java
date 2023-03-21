@@ -18,6 +18,9 @@ public enum MemcachedErrorCode {
     // 未提供有效的账号
      RESOURCENOTFOUND_ACCOUNTDOESNOTEXISTS("ResourceNotFound.AccountDoesNotExists"),
      
+    // 请求的实例不存在
+     RESOURCENOTFOUND_INSTANCENOTEXISTS("ResourceNotFound.InstanceNotExists"),
+     
     // Cam鉴权失败
      UNAUTHORIZEDOPERATION_NOCAMAUTHED("UnauthorizedOperation.NoCAMAuthed");
      

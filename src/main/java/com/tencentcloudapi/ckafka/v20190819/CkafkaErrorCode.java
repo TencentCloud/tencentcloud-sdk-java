@@ -15,6 +15,9 @@ public enum CkafkaErrorCode {
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
      
+    // 已存在同名Topic。
+     INVALIDPARAMETER_TOPICEXIST("InvalidParameter.TopicExist"),
+     
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

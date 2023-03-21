@@ -38,7 +38,6 @@ public class UserMicStatus extends AbstractModel{
 
     /**
     * 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrUid")
     @Expose
@@ -77,10 +76,8 @@ public class UserMicStatus extends AbstractModel{
     }
 
     /**
-     * Get 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。） 
      * @return StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrUid() {
         return this.StrUid;
@@ -88,9 +85,7 @@ public class UserMicStatus extends AbstractModel{
 
     /**
      * Set 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrUid 客户端用于标识字符串型用户的Openid。（Uid、StrUid必须填一个，优先处理StrUid。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrUid(String StrUid) {
         this.StrUid = StrUid;

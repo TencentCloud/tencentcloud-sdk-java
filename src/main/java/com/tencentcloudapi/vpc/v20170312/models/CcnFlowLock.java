@@ -24,7 +24,6 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
     * 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -32,7 +31,6 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
     * 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserAccountID")
     @Expose
@@ -40,17 +38,14 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
     * 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionFlowControlId")
     @Expose
     private String RegionFlowControlId;
 
     /**
-     * Get 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽所属的云联网ID。 
      * @return CcnId 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -58,19 +53,15 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
      * Set 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所属用户主账号ID。 
      * @return UserAccountID 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserAccountID() {
         return this.UserAccountID;
@@ -78,19 +69,15 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
      * Set 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserAccountID 实例所属用户主账号ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserAccountID(String UserAccountID) {
         this.UserAccountID = UserAccountID;
     }
 
     /**
-     * Get 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。 
      * @return RegionFlowControlId 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionFlowControlId() {
         return this.RegionFlowControlId;
@@ -98,9 +85,7 @@ public class CcnFlowLock extends AbstractModel{
 
     /**
      * Set 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionFlowControlId 带宽实例的唯一ID。作为`UnlockCcnBandwidths`接口和`LockCcnBandwidths`接口的入参时，该字段必传。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionFlowControlId(String RegionFlowControlId) {
         this.RegionFlowControlId = RegionFlowControlId;

@@ -24,7 +24,6 @@ public class DpToken extends AbstractModel{
 
     /**
     * 句法依存关系的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
@@ -32,7 +31,6 @@ public class DpToken extends AbstractModel{
 
     /**
     * 当前词父节点的序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadId")
     @Expose
@@ -40,7 +38,6 @@ public class DpToken extends AbstractModel{
 
     /**
     * 基础词
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Word")
     @Expose
@@ -48,17 +45,14 @@ public class DpToken extends AbstractModel{
 
     /**
     * 基础词的序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 句法依存关系的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 句法依存关系的类型 
      * @return Relation 句法依存关系的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -66,19 +60,15 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 句法依存关系的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 句法依存关系的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get 当前词父节点的序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前词父节点的序号 
      * @return HeadId 当前词父节点的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeadId() {
         return this.HeadId;
@@ -86,19 +76,15 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 当前词父节点的序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadId 当前词父节点的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadId(Long HeadId) {
         this.HeadId = HeadId;
     }
 
     /**
-     * Get 基础词
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础词 
      * @return Word 基础词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWord() {
         return this.Word;
@@ -106,19 +92,15 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 基础词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Word 基础词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * Get 基础词的序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基础词的序号 
      * @return Id 基础词的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -126,9 +108,7 @@ public class DpToken extends AbstractModel{
 
     /**
      * Set 基础词的序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 基础词的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;

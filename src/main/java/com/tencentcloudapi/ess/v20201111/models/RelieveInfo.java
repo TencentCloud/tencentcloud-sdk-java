@@ -24,7 +24,6 @@ public class RelieveInfo extends AbstractModel{
 
     /**
     * 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
@@ -33,7 +32,6 @@ public class RelieveInfo extends AbstractModel{
     /**
     * 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainInForceItem")
     @Expose
@@ -42,7 +40,6 @@ public class RelieveInfo extends AbstractModel{
     /**
     * 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalExpenseSettlement")
     @Expose
@@ -51,7 +48,6 @@ public class RelieveInfo extends AbstractModel{
     /**
     * 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalOtherSettlement")
     @Expose
@@ -60,17 +56,14 @@ public class RelieveInfo extends AbstractModel{
     /**
     * 其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherDeals")
     @Expose
     private String OtherDeals;
 
     /**
-     * Get 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解除理由，最大支持200个字 
      * @return Reason 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -78,9 +71,7 @@ public class RelieveInfo extends AbstractModel{
 
     /**
      * Set 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 解除理由，最大支持200个字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
@@ -88,11 +79,9 @@ public class RelieveInfo extends AbstractModel{
 
     /**
      * Get 解除后仍然有效的条款，保留条款，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemainInForceItem() {
         return this.RemainInForceItem;
@@ -101,10 +90,8 @@ public class RelieveInfo extends AbstractModel{
     /**
      * Set 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainInForceItem 解除后仍然有效的条款，保留条款，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainInForceItem(String RemainInForceItem) {
         this.RemainInForceItem = RemainInForceItem;
@@ -112,11 +99,9 @@ public class RelieveInfo extends AbstractModel{
 
     /**
      * Get 原合同事项处理-费用结算，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalExpenseSettlement() {
         return this.OriginalExpenseSettlement;
@@ -125,10 +110,8 @@ public class RelieveInfo extends AbstractModel{
     /**
      * Set 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalExpenseSettlement 原合同事项处理-费用结算，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalExpenseSettlement(String OriginalExpenseSettlement) {
         this.OriginalExpenseSettlement = OriginalExpenseSettlement;
@@ -136,11 +119,9 @@ public class RelieveInfo extends AbstractModel{
 
     /**
      * Get 原合同事项处理-其他事项，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalOtherSettlement() {
         return this.OriginalOtherSettlement;
@@ -149,10 +130,8 @@ public class RelieveInfo extends AbstractModel{
     /**
      * Set 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalOtherSettlement 原合同事项处理-其他事项，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalOtherSettlement(String OriginalOtherSettlement) {
         this.OriginalOtherSettlement = OriginalOtherSettlement;
@@ -160,11 +139,9 @@ public class RelieveInfo extends AbstractModel{
 
     /**
      * Get 其他约定，最大支持200个字
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return OtherDeals 其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOtherDeals() {
         return this.OtherDeals;
@@ -173,10 +150,8 @@ public class RelieveInfo extends AbstractModel{
     /**
      * Set 其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherDeals 其他约定，最大支持200个字
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherDeals(String OtherDeals) {
         this.OtherDeals = OtherDeals;

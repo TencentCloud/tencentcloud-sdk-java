@@ -24,7 +24,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -32,7 +31,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -40,7 +38,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -48,7 +45,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -56,7 +52,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -64,7 +59,6 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdate")
     @Expose
@@ -72,17 +66,14 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
     * Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts实例Id【不支持修改】 
      * @return Resource Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -90,19 +81,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource Dts实例Id【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts的连接port【不支持修改】 
      * @return Port Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -110,19 +97,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port Dts的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的Id 
      * @return GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -130,19 +113,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId Dts消费分组的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的账号 
      * @return UserName Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -150,19 +129,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName Dts消费分组的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts消费分组的密码 
      * @return Password Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -170,19 +145,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Password Dts消费分组的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否更新到关联的Datahub任务，默认为true 
      * @return IsUpdate 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdate() {
         return this.IsUpdate;
@@ -190,19 +161,15 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdate 是否更新到关联的Datahub任务，默认为true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdate(Boolean IsUpdate) {
         this.IsUpdate = IsUpdate;
     }
 
     /**
-     * Get Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dts订阅的topic【不支持修改】 
      * @return Topic Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -210,9 +177,7 @@ public class DtsModifyConnectParam extends AbstractModel{
 
     /**
      * Set Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Dts订阅的topic【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

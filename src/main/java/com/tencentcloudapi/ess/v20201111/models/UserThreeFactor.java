@@ -24,7 +24,6 @@ public class UserThreeFactor extends AbstractModel{
 
     /**
     * 姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -35,7 +34,6 @@ public class UserThreeFactor extends AbstractModel{
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCardType")
     @Expose
@@ -43,17 +41,14 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
     * 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-     * Get 姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 姓名 
      * @return Name 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -61,9 +56,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -73,13 +66,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * Get 证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
-HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。 
+HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
      * @return IdCardType 证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCardType() {
         return this.IdCardType;
@@ -90,22 +81,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCardType 证件类型: 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证件号，如果有 X 请大写 
      * @return IdCardNumber 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
@@ -113,9 +100,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCardNumber 证件号，如果有 X 请大写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;

@@ -79,7 +79,6 @@ Hls 格式录制此参数不生效。
 
     /**
     * 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MediaId")
     @Expose
@@ -222,10 +221,8 @@ Hls 格式录制此参数不生效。
     }
 
     /**
-     * Get 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。 
      * @return MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMediaId() {
         return this.MediaId;
@@ -233,9 +230,7 @@ Hls 格式录制此参数不生效。
 
     /**
      * Set 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaId 指定录制主辅流，0：主流+辅流（默认）；1:主流；2:辅流。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMediaId(Long MediaId) {
         this.MediaId = MediaId;

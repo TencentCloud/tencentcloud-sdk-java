@@ -65,7 +65,6 @@ public class ProxyOrganizationOperator extends AbstractModel{
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultRole")
     @Expose
@@ -167,13 +166,11 @@ public class ProxyOrganizationOperator extends AbstractModel{
      * Get 默认角色，值为以下三个对应的英文：
 业务管理员：admin
 经办人：channel-normal-operator
-业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。 
+业务员：channel-sales-man 
      * @return DefaultRole 默认角色，值为以下三个对应的英文：
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultRole() {
         return this.DefaultRole;
@@ -184,12 +181,10 @@ public class ProxyOrganizationOperator extends AbstractModel{
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultRole 默认角色，值为以下三个对应的英文：
 业务管理员：admin
 经办人：channel-normal-operator
 业务员：channel-sales-man
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultRole(String DefaultRole) {
         this.DefaultRole = DefaultRole;

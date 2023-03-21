@@ -24,7 +24,6 @@ public class Filter extends AbstractModel{
 
     /**
     * 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,17 +31,14 @@ public class Filter extends AbstractModel{
 
     /**
     * 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤参数键 
      * @return Name 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -50,19 +46,15 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 过滤参数键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤参数值 
      * @return Value 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -70,9 +62,7 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 过滤参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

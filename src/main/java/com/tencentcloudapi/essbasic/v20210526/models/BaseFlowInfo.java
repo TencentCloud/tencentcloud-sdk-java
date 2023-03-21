@@ -24,7 +24,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowName")
     @Expose
@@ -32,7 +31,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowType")
     @Expose
@@ -40,7 +38,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowDescription")
     @Expose
@@ -48,7 +45,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
     @Expose
@@ -56,7 +52,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unordered")
     @Expose
@@ -64,7 +59,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntelligentStatus")
     @Expose
@@ -72,7 +66,6 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FormFields")
     @Expose
@@ -80,17 +73,14 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedSignReview")
     @Expose
     private Boolean NeedSignReview;
 
     /**
-     * Get 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程名称 
      * @return FlowName 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowName() {
         return this.FlowName;
@@ -98,19 +88,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowName 合同流程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程类型 
      * @return FlowType 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowType() {
         return this.FlowType;
@@ -118,19 +104,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowType 合同流程类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
     }
 
     /**
-     * Get 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程描述信息 
      * @return FlowDescription 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowDescription() {
         return this.FlowDescription;
@@ -138,19 +120,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowDescription 合同流程描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
     }
 
     /**
-     * Get 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合同流程截止时间，unix时间戳 
      * @return Deadline 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
         return this.Deadline;
@@ -158,19 +136,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deadline 合同流程截止时间，unix时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否顺序签署(true:无序签,false:顺序签) 
      * @return Unordered 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUnordered() {
         return this.Unordered;
@@ -178,19 +152,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unordered 是否顺序签署(true:无序签,false:顺序签)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
     }
 
     /**
-     * Get 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE") 
      * @return IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntelligentStatus() {
         return this.IntelligentStatus;
@@ -198,19 +168,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntelligentStatus(String IntelligentStatus) {
         this.IntelligentStatus = IntelligentStatus;
     }
 
     /**
-     * Get 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 填写控件内容 
      * @return FormFields 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FormField [] getFormFields() {
         return this.FormFields;
@@ -218,19 +184,15 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FormFields 填写控件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormFields(FormField [] FormFields) {
         this.FormFields = FormFields;
     }
 
     /**
-     * Get 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批 
      * @return NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
@@ -238,9 +200,7 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;

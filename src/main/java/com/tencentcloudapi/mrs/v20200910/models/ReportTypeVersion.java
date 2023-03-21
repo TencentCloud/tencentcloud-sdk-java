@@ -24,7 +24,6 @@ public class ReportTypeVersion extends AbstractModel{
 
     /**
     * 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportType")
     @Expose
@@ -32,17 +31,14 @@ public class ReportTypeVersion extends AbstractModel{
 
     /**
     * 版本2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-     * Get 检验报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验报告 
      * @return ReportType 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportType() {
         return this.ReportType;
@@ -50,19 +46,15 @@ public class ReportTypeVersion extends AbstractModel{
 
     /**
      * Set 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportType 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 版本2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本2 
      * @return Version 版本2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
         return this.Version;
@@ -70,9 +62,7 @@ public class ReportTypeVersion extends AbstractModel{
 
     /**
      * Set 版本2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
         this.Version = Version;

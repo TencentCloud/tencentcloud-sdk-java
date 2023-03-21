@@ -24,7 +24,6 @@ public class LookupAttribute extends AbstractModel{
 
     /**
     * AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttributeKey")
     @Expose
@@ -32,17 +31,14 @@ public class LookupAttribute extends AbstractModel{
 
     /**
     * AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttributeValue")
     @Expose
     private String AttributeValue;
 
     /**
-     * Get AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId 
      * @return AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttributeKey() {
         return this.AttributeKey;
@@ -50,19 +46,15 @@ public class LookupAttribute extends AbstractModel{
 
     /**
      * Set AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttributeKey AttributeKey的有效取值范围是:RequestId、EventName、ReadOnly、Username、ResourceType、ResourceName和AccessKeyId，EventId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttributeKey(String AttributeKey) {
         this.AttributeKey = AttributeKey;
     }
 
     /**
-     * Get AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AttributeValue的值 
      * @return AttributeValue AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttributeValue() {
         return this.AttributeValue;
@@ -70,9 +62,7 @@ public class LookupAttribute extends AbstractModel{
 
     /**
      * Set AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttributeValue AttributeValue的值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttributeValue(String AttributeValue) {
         this.AttributeValue = AttributeValue;

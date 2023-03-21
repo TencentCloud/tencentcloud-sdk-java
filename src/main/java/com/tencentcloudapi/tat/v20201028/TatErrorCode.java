@@ -150,6 +150,9 @@ public enum TatErrorCode {
     // 角色不存在。
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),
      
+    // 资源不可用。
+     RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
     // Agent 未安装。
      RESOURCEUNAVAILABLE_AGENTNOTINSTALLED("ResourceUnavailable.AgentNotInstalled"),
      

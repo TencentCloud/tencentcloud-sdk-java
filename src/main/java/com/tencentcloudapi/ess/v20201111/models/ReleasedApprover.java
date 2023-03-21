@@ -25,7 +25,6 @@ public class ReleasedApprover extends AbstractModel{
     /**
     * 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
     * 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mobile")
     @Expose
@@ -41,7 +39,6 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
     * 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelievedApproverReceiptId")
     @Expose
@@ -49,11 +46,9 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
      * Get 签署人姓名，最大长度50个字符
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Name 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -62,20 +57,16 @@ public class ReleasedApprover extends AbstractModel{
     /**
      * Set 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 签署人姓名，最大长度50个字符
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签署人手机号 
      * @return Mobile 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMobile() {
         return this.Mobile;
@@ -83,19 +74,15 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
      * Set 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mobile 签署人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ） 
      * @return RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelievedApproverReceiptId() {
         return this.RelievedApproverReceiptId;
@@ -103,9 +90,7 @@ public class ReleasedApprover extends AbstractModel{
 
     /**
      * Set 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelievedApproverReceiptId 要替换的参与人在原合同参与人列表中的签署人编号,通过DescribeFlowInfo 接口获取（即FlowDetailInfos. FlowApproverInfos 结构中的ReceiptId ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelievedApproverReceiptId(String RelievedApproverReceiptId) {
         this.RelievedApproverReceiptId = RelievedApproverReceiptId;

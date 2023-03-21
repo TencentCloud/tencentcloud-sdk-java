@@ -24,7 +24,6 @@ public class BatchTarget extends AbstractModel{
 
     /**
     * 监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -32,7 +31,6 @@ public class BatchTarget extends AbstractModel{
 
     /**
     * 绑定端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -40,7 +38,6 @@ public class BatchTarget extends AbstractModel{
 
     /**
     * 子机ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -48,7 +45,6 @@ public class BatchTarget extends AbstractModel{
 
     /**
     * 弹性网卡ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EniIp")
     @Expose
@@ -56,17 +52,14 @@ public class BatchTarget extends AbstractModel{
 
     /**
     * 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 监听器ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器ID 
      * @return ListenerId 监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -74,19 +67,15 @@ public class BatchTarget extends AbstractModel{
 
     /**
      * Set 监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerId 监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 绑定端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定端口 
      * @return Port 绑定端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -94,19 +83,15 @@ public class BatchTarget extends AbstractModel{
 
     /**
      * Set 绑定端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 绑定端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 子机ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子机ID 
      * @return InstanceId 子机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -114,19 +99,15 @@ public class BatchTarget extends AbstractModel{
 
     /**
      * Set 子机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 子机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 弹性网卡ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性网卡ip 
      * @return EniIp 弹性网卡ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEniIp() {
         return this.EniIp;
@@ -134,19 +115,15 @@ public class BatchTarget extends AbstractModel{
 
     /**
      * Set 弹性网卡ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EniIp 弹性网卡ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。 
      * @return Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -154,9 +131,7 @@ public class BatchTarget extends AbstractModel{
 
     /**
      * Set 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 子机权重，范围[0, 100]。绑定时如果不存在，则默认为10。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

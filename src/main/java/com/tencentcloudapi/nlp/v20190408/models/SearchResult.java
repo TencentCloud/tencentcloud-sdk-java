@@ -38,7 +38,6 @@ public class SearchResult extends AbstractModel{
 
     /**
     * 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchText")
     @Expose
@@ -46,7 +45,6 @@ public class SearchResult extends AbstractModel{
 
     /**
     * 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pos")
     @Expose
@@ -85,10 +83,8 @@ public class SearchResult extends AbstractModel{
     }
 
     /**
-     * Get 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配到的词条文本。 
      * @return MatchText 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchText() {
         return this.MatchText;
@@ -96,19 +92,15 @@ public class SearchResult extends AbstractModel{
 
     /**
      * Set 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchText 匹配到的词条文本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchText(String MatchText) {
         this.MatchText = MatchText;
     }
 
     /**
-     * Get 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 词条的词性。 
      * @return Pos 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPos() {
         return this.Pos;
@@ -116,9 +108,7 @@ public class SearchResult extends AbstractModel{
 
     /**
      * Set 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pos 词条的词性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPos(String Pos) {
         this.Pos = Pos;

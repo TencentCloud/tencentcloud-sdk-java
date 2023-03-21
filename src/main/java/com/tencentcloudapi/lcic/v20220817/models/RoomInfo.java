@@ -24,7 +24,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,7 +31,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -40,7 +38,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -48,7 +45,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resolution")
     @Expose
@@ -56,7 +52,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMicNumber")
     @Expose
@@ -64,7 +59,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -72,7 +66,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TeacherId")
     @Expose
@@ -80,7 +73,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoMic")
     @Expose
@@ -88,7 +80,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TurnOffMic")
     @Expose
@@ -96,7 +87,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioQuality")
     @Expose
@@ -104,7 +94,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisableRecord")
     @Expose
@@ -112,7 +101,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Assistants")
     @Expose
@@ -120,7 +108,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RTCAudienceNumber")
     @Expose
@@ -128,7 +115,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudienceType")
     @Expose
@@ -136,7 +122,6 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordLayout")
     @Expose
@@ -144,17 +129,14 @@ public class RoomInfo extends AbstractModel{
 
     /**
     * 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间名称。 
      * @return Name 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -162,19 +144,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 房间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预定的房间开始时间，unix时间戳。 
      * @return StartTime 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -182,19 +160,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 预定的房间开始时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预定的房间结束时间，unix时间戳。 
      * @return EndTime 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -202,19 +176,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 预定的房间结束时间，unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清 
      * @return Resolution 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResolution() {
         return this.Resolution;
@@ -222,19 +192,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resolution 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大连麦人数（不包括老师）。取值范围[0, 16] 
      * @return MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
@@ -242,19 +208,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMicNumber 最大连麦人数（不包括老师）。取值范围[0, 16]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
     }
 
     /**
-     * Get 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频 
      * @return SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -262,19 +224,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 房间子类型，可以有以下取值： videodoc 文档+视频 video 纯视频
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 老师ID。通过[注册用户]接口获取的UserId。 
      * @return TeacherId 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTeacherId() {
         return this.TeacherId;
@@ -282,19 +240,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TeacherId 老师ID。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
     }
 
     /**
-     * Get 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦 
      * @return AutoMic 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoMic() {
         return this.AutoMic;
@@ -302,19 +256,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoMic 进入课堂时是否自动连麦。可以有以下取值： 0 不自动连麦（需要手动申请上麦，默认值） 1 自动连麦
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoMic(Long AutoMic) {
         this.AutoMic = AutoMic;
     }
 
     /**
-     * Get 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态 
      * @return TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTurnOffMic() {
         return this.TurnOffMic;
@@ -322,19 +272,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值： 0 自动取消连麦（默认值） 1 保持连麦状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTurnOffMic(Long TurnOffMic) {
         this.TurnOffMic = TurnOffMic;
     }
 
     /**
-     * Get 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质 
      * @return AudioQuality 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAudioQuality() {
         return this.AudioQuality;
@@ -342,19 +288,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioQuality 高音质模式。可以有以下取值： 0 不开启高音质（默认值） 1 开启高音质
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioQuality(Long AudioQuality) {
         this.AudioQuality = AudioQuality;
     }
 
     /**
-     * Get 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。 
      * @return DisableRecord 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
@@ -362,19 +304,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisableRecord 上课后是否禁止自动录制。可以有以下取值： 0 不禁止录制（自动开启录制，默认值） 1 禁止录制 注：如果该配置取值为0，录制将从上课后开始，课堂结束后停止。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;
     }
 
     /**
-     * Get 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 助教Id列表。通过[注册用户]接口获取的UserId。 
      * @return Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAssistants() {
         return this.Assistants;
@@ -382,19 +320,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Assistants 助教Id列表。通过[注册用户]接口获取的UserId。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
     }
 
     /**
-     * Get rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rtc人数。 
      * @return RTCAudienceNumber rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRTCAudienceNumber() {
         return this.RTCAudienceNumber;
@@ -402,19 +336,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RTCAudienceNumber rtc人数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRTCAudienceNumber(Long RTCAudienceNumber) {
         this.RTCAudienceNumber = RTCAudienceNumber;
     }
 
     /**
-     * Get 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 观看类型。 
      * @return AudienceType 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAudienceType() {
         return this.AudienceType;
@@ -422,19 +352,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudienceType 观看类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudienceType(Long AudienceType) {
         this.AudienceType = AudienceType;
     }
 
     /**
-     * Get 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制布局。 
      * @return RecordLayout 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordLayout() {
         return this.RecordLayout;
@@ -442,19 +368,15 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordLayout 录制布局。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;
     }
 
     /**
-     * Get 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 房间绑定的群组ID 
      * @return GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupId() {
         return this.GroupId;
@@ -462,9 +384,7 @@ public class RoomInfo extends AbstractModel{
 
     /**
      * Set 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 房间绑定的群组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

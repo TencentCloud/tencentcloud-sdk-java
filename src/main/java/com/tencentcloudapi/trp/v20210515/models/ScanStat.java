@@ -86,6 +86,20 @@ public class ScanStat extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * 商户名称
+    */
+    @SerializedName("MerchantName")
+    @Expose
+    private String MerchantName;
+
+    /**
+    * 产品名称
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
      * Get 安心码 
      * @return Code 安心码
      */
@@ -229,6 +243,38 @@ public class ScanStat extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 商户名称 
+     * @return MerchantName 商户名称
+     */
+    public String getMerchantName() {
+        return this.MerchantName;
+    }
+
+    /**
+     * Set 商户名称
+     * @param MerchantName 商户名称
+     */
+    public void setMerchantName(String MerchantName) {
+        this.MerchantName = MerchantName;
+    }
+
+    /**
+     * Get 产品名称 
+     * @return ProductName 产品名称
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 产品名称
+     * @param ProductName 产品名称
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
     public ScanStat() {
     }
 
@@ -264,6 +310,12 @@ public class ScanStat extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.MerchantName != null) {
+            this.MerchantName = new String(source.MerchantName);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class ScanStat extends AbstractModel{
         this.setParamSimple(map, prefix + "Uv", this.Uv);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

@@ -24,7 +24,6 @@ public class LogoRect extends AbstractModel{
 
     /**
     * 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -32,7 +31,6 @@ public class LogoRect extends AbstractModel{
 
     /**
     * 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -40,7 +38,6 @@ public class LogoRect extends AbstractModel{
 
     /**
     * 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -48,17 +45,14 @@ public class LogoRect extends AbstractModel{
 
     /**
     * 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左上角X坐标 
      * @return X 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getX() {
         return this.X;
@@ -66,19 +60,15 @@ public class LogoRect extends AbstractModel{
 
     /**
      * Set 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X 左上角X坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左上角Y坐标 
      * @return Y 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getY() {
         return this.Y;
@@ -86,19 +76,15 @@ public class LogoRect extends AbstractModel{
 
     /**
      * Set 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y 左上角Y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方框宽度 
      * @return Width 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -106,19 +92,15 @@ public class LogoRect extends AbstractModel{
 
     /**
      * Set 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 方框宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 方框高度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方框高度 
      * @return Height 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -126,9 +108,7 @@ public class LogoRect extends AbstractModel{
 
     /**
      * Set 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 方框高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

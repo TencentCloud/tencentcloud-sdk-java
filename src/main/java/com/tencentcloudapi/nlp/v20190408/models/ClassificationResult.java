@@ -38,7 +38,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstClassProbability")
     @Expose
@@ -46,7 +45,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondClassProbability")
     @Expose
@@ -54,7 +52,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThirdClassName")
     @Expose
@@ -62,7 +59,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThirdClassProbability")
     @Expose
@@ -70,7 +66,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FourthClassName")
     @Expose
@@ -78,7 +73,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FourthClassProbability")
     @Expose
@@ -86,7 +80,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FifthClassName")
     @Expose
@@ -94,7 +87,6 @@ public class ClassificationResult extends AbstractModel{
 
     /**
     * 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FifthClassProbability")
     @Expose
@@ -133,10 +125,8 @@ public class ClassificationResult extends AbstractModel{
     }
 
     /**
-     * Get 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一级分类概率 
      * @return FirstClassProbability 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFirstClassProbability() {
         return this.FirstClassProbability;
@@ -144,19 +134,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstClassProbability 一级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstClassProbability(Float FirstClassProbability) {
         this.FirstClassProbability = FirstClassProbability;
     }
 
     /**
-     * Get 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二级分类概率 
      * @return SecondClassProbability 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getSecondClassProbability() {
         return this.SecondClassProbability;
@@ -164,19 +150,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondClassProbability 二级分类概率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondClassProbability(Float SecondClassProbability) {
         this.SecondClassProbability = SecondClassProbability;
     }
 
     /**
-     * Get 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return ThirdClassName 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getThirdClassName() {
         return this.ThirdClassName;
@@ -184,19 +166,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThirdClassName 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThirdClassName(String ThirdClassName) {
         this.ThirdClassName = ThirdClassName;
     }
 
     /**
-     * Get 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return ThirdClassProbability 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getThirdClassProbability() {
         return this.ThirdClassProbability;
@@ -204,19 +182,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ThirdClassProbability 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThirdClassProbability(Float ThirdClassProbability) {
         this.ThirdClassProbability = ThirdClassProbability;
     }
 
     /**
-     * Get 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return FourthClassName 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFourthClassName() {
         return this.FourthClassName;
@@ -224,19 +198,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FourthClassName 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFourthClassName(String FourthClassName) {
         this.FourthClassName = FourthClassName;
     }
 
     /**
-     * Get 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return FourthClassProbability 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFourthClassProbability() {
         return this.FourthClassProbability;
@@ -244,19 +214,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FourthClassProbability 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFourthClassProbability(Float FourthClassProbability) {
         this.FourthClassProbability = FourthClassProbability;
     }
 
     /**
-     * Get 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return FifthClassName 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFifthClassName() {
         return this.FifthClassName;
@@ -264,19 +230,15 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FifthClassName 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFifthClassName(String FifthClassName) {
         this.FifthClassName = FifthClassName;
     }
 
     /**
-     * Get 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档 
      * @return FifthClassProbability 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFifthClassProbability() {
         return this.FifthClassProbability;
@@ -284,9 +246,7 @@ public class ClassificationResult extends AbstractModel{
 
     /**
      * Set 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FifthClassProbability 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFifthClassProbability(Float FifthClassProbability) {
         this.FifthClassProbability = FifthClassProbability;

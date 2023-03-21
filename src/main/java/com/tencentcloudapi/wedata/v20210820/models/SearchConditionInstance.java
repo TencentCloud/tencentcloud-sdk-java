@@ -31,7 +31,6 @@ public class SearchConditionInstance extends AbstractModel{
 
     /**
     * 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -39,7 +38,6 @@ public class SearchConditionInstance extends AbstractModel{
 
     /**
     * 资源组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroup")
     @Expose
@@ -62,10 +60,8 @@ public class SearchConditionInstance extends AbstractModel{
     }
 
     /**
-     * Get 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称，可选 
      * @return ProductName 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProductName() {
         return this.ProductName;
@@ -73,19 +69,15 @@ public class SearchConditionInstance extends AbstractModel{
 
     /**
      * Set 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称，可选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(Long ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 资源组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源组 
      * @return ResourceGroup 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceGroup() {
         return this.ResourceGroup;
@@ -93,9 +85,7 @@ public class SearchConditionInstance extends AbstractModel{
 
     /**
      * Set 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceGroup 资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroup(Long ResourceGroup) {
         this.ResourceGroup = ResourceGroup;

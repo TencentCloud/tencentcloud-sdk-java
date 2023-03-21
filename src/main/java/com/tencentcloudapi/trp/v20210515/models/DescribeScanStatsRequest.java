@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeScanStatsRequest extends AbstractModel{
 
     /**
-    * 批次ID
-    */
-    @SerializedName("BatchId")
-    @Expose
-    private String BatchId;
-
-    /**
     * 企业ID
     */
     @SerializedName("CorpId")
@@ -51,20 +44,25 @@ public class DescribeScanStatsRequest extends AbstractModel{
     private Long PageNumber;
 
     /**
-     * Get 批次ID 
-     * @return BatchId 批次ID
-     */
-    public String getBatchId() {
-        return this.BatchId;
-    }
+    * 商户ID
+    */
+    @SerializedName("MerchantId")
+    @Expose
+    private String MerchantId;
 
     /**
-     * Set 批次ID
-     * @param BatchId 批次ID
-     */
-    public void setBatchId(String BatchId) {
-        this.BatchId = BatchId;
-    }
+    * 产品ID
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
+    * 批次ID
+    */
+    @SerializedName("BatchId")
+    @Expose
+    private String BatchId;
 
     /**
      * Get 企业ID 
@@ -114,6 +112,54 @@ public class DescribeScanStatsRequest extends AbstractModel{
         this.PageNumber = PageNumber;
     }
 
+    /**
+     * Get 商户ID 
+     * @return MerchantId 商户ID
+     */
+    public String getMerchantId() {
+        return this.MerchantId;
+    }
+
+    /**
+     * Set 商户ID
+     * @param MerchantId 商户ID
+     */
+    public void setMerchantId(String MerchantId) {
+        this.MerchantId = MerchantId;
+    }
+
+    /**
+     * Get 产品ID 
+     * @return ProductId 产品ID
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set 产品ID
+     * @param ProductId 产品ID
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get 批次ID 
+     * @return BatchId 批次ID
+     */
+    public String getBatchId() {
+        return this.BatchId;
+    }
+
+    /**
+     * Set 批次ID
+     * @param BatchId 批次ID
+     */
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
+    }
+
     public DescribeScanStatsRequest() {
     }
 
@@ -122,9 +168,6 @@ public class DescribeScanStatsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeScanStatsRequest(DescribeScanStatsRequest source) {
-        if (source.BatchId != null) {
-            this.BatchId = new String(source.BatchId);
-        }
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
@@ -134,6 +177,15 @@ public class DescribeScanStatsRequest extends AbstractModel{
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
     }
 
 
@@ -141,10 +193,12 @@ public class DescribeScanStatsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
 
     }
 }

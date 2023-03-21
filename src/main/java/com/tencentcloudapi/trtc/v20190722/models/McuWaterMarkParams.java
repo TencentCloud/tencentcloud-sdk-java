@@ -38,7 +38,6 @@ public class McuWaterMarkParams extends AbstractModel{
 
     /**
     * 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterMarkText")
     @Expose
@@ -77,10 +76,8 @@ public class McuWaterMarkParams extends AbstractModel{
     }
 
     /**
-     * Get 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文字水印参数。WaterMarkType为1指定。 
      * @return WaterMarkText 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public McuWaterMarkText getWaterMarkText() {
         return this.WaterMarkText;
@@ -88,9 +85,7 @@ public class McuWaterMarkParams extends AbstractModel{
 
     /**
      * Set 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkText 文字水印参数。WaterMarkType为1指定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterMarkText(McuWaterMarkText WaterMarkText) {
         this.WaterMarkText = WaterMarkText;

@@ -24,7 +24,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceContent")
     @Expose
@@ -32,7 +31,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -40,7 +38,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetContent")
     @Expose
@@ -48,7 +45,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -56,7 +52,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -64,7 +59,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleAction")
     @Expose
@@ -72,7 +66,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -80,7 +73,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Direction")
     @Expose
@@ -88,7 +80,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderIndex")
     @Expose
@@ -96,7 +87,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -104,7 +94,6 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -112,17 +101,14 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceContent() {
         return this.SourceContent;
@@ -130,19 +116,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
     }
 
     /**
-     * Get 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag 
      * @return SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceType() {
         return this.SourceType;
@@ -150,19 +132,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com 
      * @return TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetContent() {
         return this.TargetContent;
@@ -170,19 +148,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetContent(String TargetContent) {
         this.TargetContent = TargetContent;
     }
 
     /**
-     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location 
      * @return TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
         return this.TargetType;
@@ -190,19 +164,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为  ip,net,domain,template,location
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS 
      * @return Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -210,19 +180,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察 
      * @return RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleAction() {
         return this.RuleAction;
@@ -230,19 +196,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口 
      * @return Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -250,19 +212,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 访问控制策略的端口。取值： -1/-1：全部端口 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则方向：1，入站；0，出站 
      * @return Direction 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDirection() {
         return this.Direction;
@@ -270,19 +228,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Direction 规则方向：1，入站；0，出站
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 规则序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则序号 
      * @return OrderIndex 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
@@ -290,19 +244,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderIndex 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态，true表示启用，false表示禁用 
      * @return Enable 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnable() {
         return this.Enable;
@@ -310,19 +260,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则对应的唯一id，创建规则时无需填写 
      * @return Uuid 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUuid() {
         return this.Uuid;
@@ -330,19 +276,15 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 规则对应的唯一id，创建规则时无需填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(Long Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -350,9 +292,7 @@ public class CreateNatRuleItem extends AbstractModel{
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

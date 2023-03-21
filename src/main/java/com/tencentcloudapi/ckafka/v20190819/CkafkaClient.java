@@ -259,6 +259,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *创建Datahub主题
+     * @param req CreateDatahubTopicRequest
+     * @return CreateDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatahubTopicResponse CreateDatahubTopic(CreateDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDatahubTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建按量计费实例
      * @param req CreateInstancePostRequest
      * @return CreateInstancePostResponse

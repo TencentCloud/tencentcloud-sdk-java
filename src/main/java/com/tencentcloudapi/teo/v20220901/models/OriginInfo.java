@@ -28,7 +28,6 @@ public class OriginInfo extends AbstractModel{
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginType")
     @Expose
@@ -36,7 +35,6 @@ public class OriginInfo extends AbstractModel{
 
     /**
     * 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origin")
     @Expose
@@ -44,7 +42,6 @@ public class OriginInfo extends AbstractModel{
 
     /**
     * 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupOrigin")
     @Expose
@@ -54,7 +51,6 @@ public class OriginInfo extends AbstractModel{
     * 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateAccess")
     @Expose
@@ -62,7 +58,6 @@ public class OriginInfo extends AbstractModel{
 
     /**
     * 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateParameters")
     @Expose
@@ -73,14 +68,12 @@ public class OriginInfo extends AbstractModel{
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
-<li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>AWS_S3：AWS S3对象存储源站。</li> 
      * @return OriginType 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginType() {
         return this.OriginType;
@@ -92,23 +85,19 @@ public class OriginInfo extends AbstractModel{
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginType 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。 
      * @return Origin 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrigin() {
         return this.Origin;
@@ -116,19 +105,15 @@ public class OriginInfo extends AbstractModel{
 
     /**
      * Set 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Origin 源站地址，当OriginType参数指定为ORIGIN_GROUP时，该参数填写源站组ID，其他情况下填写源站地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。 
      * @return BackupOrigin 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupOrigin() {
         return this.BackupOrigin;
@@ -136,9 +121,7 @@ public class OriginInfo extends AbstractModel{
 
     /**
      * Set 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupOrigin 备用源站组ID，该参数在OriginType参数指定为ORIGIN_GROUP时生效，为空表示不使用备用源站。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupOrigin(String BackupOrigin) {
         this.BackupOrigin = BackupOrigin;
@@ -147,12 +130,10 @@ public class OriginInfo extends AbstractModel{
     /**
      * Get 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
-<li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>off：不使用私有鉴权。</li>不填写，默认值为：off。 
      * @return PrivateAccess 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateAccess() {
         return this.PrivateAccess;
@@ -162,21 +143,17 @@ public class OriginInfo extends AbstractModel{
      * Set 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateAccess 指定是否允许访问私有对象存储源站，当源站类型OriginType=COS或AWS_S3时有效，取值有：
 <li>on：使用私有鉴权；</li>
 <li>off：不使用私有鉴权。</li>不填写，默认值为：off。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateAccess(String PrivateAccess) {
         this.PrivateAccess = PrivateAccess;
     }
 
     /**
-     * Get 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。 
      * @return PrivateParameters 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrivateParameter [] getPrivateParameters() {
         return this.PrivateParameters;
@@ -184,9 +161,7 @@ public class OriginInfo extends AbstractModel{
 
     /**
      * Set 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateParameters 私有鉴权使用参数，当源站类型PrivateAccess=on时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateParameters(PrivateParameter [] PrivateParameters) {
         this.PrivateParameters = PrivateParameters;

@@ -24,7 +24,6 @@ public class Filter extends AbstractModel{
 
     /**
     * 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,17 +31,14 @@ public class Filter extends AbstractModel{
 
     /**
     * 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 筛选字段名 
      * @return Name 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -50,19 +46,15 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 筛选字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 筛选条件值 
      * @return Values 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -70,9 +62,7 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 筛选条件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

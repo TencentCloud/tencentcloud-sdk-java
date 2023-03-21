@@ -31,7 +31,7 @@ public class InstanceNetInfo extends AbstractModel{
     private String InstanceGroupType;
 
     /**
-    * 接入组ID
+    * 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceGroupId")
@@ -131,9 +131,9 @@ public class InstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get 接入组ID
+     * Get 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceGroupId 接入组ID
+     * @return InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceGroupId() {
@@ -141,9 +141,9 @@ public class InstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Set 接入组ID
+     * Set 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceGroupId 接入组ID
+     * @param InstanceGroupId 实例组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceGroupId(String InstanceGroupId) {

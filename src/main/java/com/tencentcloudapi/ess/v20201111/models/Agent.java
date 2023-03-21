@@ -31,7 +31,6 @@ public class Agent extends AbstractModel{
 
     /**
     * 被代理机构的应用号，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAppId")
     @Expose
@@ -39,7 +38,6 @@ public class Agent extends AbstractModel{
 
     /**
     * 被代理机构在电子签平台的机构编号，集团代理下场景必传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOrganizationId")
     @Expose
@@ -47,7 +45,6 @@ public class Agent extends AbstractModel{
 
     /**
     * 被代理机构的经办人，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyOperator")
     @Expose
@@ -70,10 +67,8 @@ public class Agent extends AbstractModel{
     }
 
     /**
-     * Get 被代理机构的应用号，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被代理机构的应用号，一般不用传 
      * @return ProxyAppId 被代理机构的应用号，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyAppId() {
         return this.ProxyAppId;
@@ -81,19 +76,15 @@ public class Agent extends AbstractModel{
 
     /**
      * Set 被代理机构的应用号，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyAppId 被代理机构的应用号，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAppId(String ProxyAppId) {
         this.ProxyAppId = ProxyAppId;
     }
 
     /**
-     * Get 被代理机构在电子签平台的机构编号，集团代理下场景必传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被代理机构在电子签平台的机构编号，集团代理下场景必传 
      * @return ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOrganizationId() {
         return this.ProxyOrganizationId;
@@ -101,19 +92,15 @@ public class Agent extends AbstractModel{
 
     /**
      * Set 被代理机构在电子签平台的机构编号，集团代理下场景必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyOrganizationId 被代理机构在电子签平台的机构编号，集团代理下场景必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOrganizationId(String ProxyOrganizationId) {
         this.ProxyOrganizationId = ProxyOrganizationId;
     }
 
     /**
-     * Get 被代理机构的经办人，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被代理机构的经办人，一般不用传 
      * @return ProxyOperator 被代理机构的经办人，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyOperator() {
         return this.ProxyOperator;
@@ -121,9 +108,7 @@ public class Agent extends AbstractModel{
 
     /**
      * Set 被代理机构的经办人，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyOperator 被代理机构的经办人，一般不用传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyOperator(String ProxyOperator) {
         this.ProxyOperator = ProxyOperator;

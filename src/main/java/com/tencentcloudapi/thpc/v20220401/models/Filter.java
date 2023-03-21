@@ -24,7 +24,6 @@ public class Filter extends AbstractModel{
 
     /**
     * 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,17 +31,14 @@ public class Filter extends AbstractModel{
 
     /**
     * 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要过滤的字段。 
      * @return Name 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -50,19 +46,15 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 需要过滤的字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段的过滤值。 
      * @return Values 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -70,9 +62,7 @@ public class Filter extends AbstractModel{
 
     /**
      * Set 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 字段的过滤值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

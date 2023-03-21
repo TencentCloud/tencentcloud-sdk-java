@@ -38,7 +38,6 @@ public class WaterMark extends AbstractModel{
 
     /**
     * 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterMarkChar")
     @Expose
@@ -46,7 +45,6 @@ public class WaterMark extends AbstractModel{
 
     /**
     * 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterMarkTimestamp")
     @Expose
@@ -85,10 +83,8 @@ public class WaterMark extends AbstractModel{
     }
 
     /**
-     * Get 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印为文字时的参数列表，水印为文字时校验必填。 
      * @return WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WaterMarkChar getWaterMarkChar() {
         return this.WaterMarkChar;
@@ -96,19 +92,15 @@ public class WaterMark extends AbstractModel{
 
     /**
      * Set 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkChar 水印为文字时的参数列表，水印为文字时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterMarkChar(WaterMarkChar WaterMarkChar) {
         this.WaterMarkChar = WaterMarkChar;
     }
 
     /**
-     * Get 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印为时间戳时的参数列表，水印为时间戳时校验必填。 
      * @return WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WaterMarkTimestamp getWaterMarkTimestamp() {
         return this.WaterMarkTimestamp;
@@ -116,9 +108,7 @@ public class WaterMark extends AbstractModel{
 
     /**
      * Set 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterMarkTimestamp 水印为时间戳时的参数列表，水印为时间戳时校验必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterMarkTimestamp(WaterMarkTimestamp WaterMarkTimestamp) {
         this.WaterMarkTimestamp = WaterMarkTimestamp;

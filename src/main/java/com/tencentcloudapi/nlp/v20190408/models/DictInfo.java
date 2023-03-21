@@ -38,7 +38,6 @@ public class DictInfo extends AbstractModel{
 
     /**
     * 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -46,7 +45,6 @@ public class DictInfo extends AbstractModel{
 
     /**
     * 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -54,7 +52,6 @@ public class DictInfo extends AbstractModel{
 
     /**
     * 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -93,10 +90,8 @@ public class DictInfo extends AbstractModel{
     }
 
     /**
-     * Get 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义词库描述信息。 
      * @return Description 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -104,19 +99,15 @@ public class DictInfo extends AbstractModel{
 
     /**
      * Set 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 自定义词库描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。 
      * @return UpdateTime 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -124,19 +115,15 @@ public class DictInfo extends AbstractModel{
 
     /**
      * Set 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 自定义词库修改时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。 
      * @return CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -144,9 +131,7 @@ public class DictInfo extends AbstractModel{
 
     /**
      * Set 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 自定义词库创建时间，形式为:yyyy-mm-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
