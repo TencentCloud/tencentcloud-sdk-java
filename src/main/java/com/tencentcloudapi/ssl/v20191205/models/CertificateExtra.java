@@ -63,6 +63,14 @@ public class CertificateExtra extends AbstractModel{
     private String RenewOrder;
 
     /**
+    * 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SMCert")
+    @Expose
+    private Long SMCert;
+
+    /**
      * Get 证书可配置域名数量。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DomainNumber 证书可配置域名数量。
@@ -162,6 +170,26 @@ public class CertificateExtra extends AbstractModel{
         this.RenewOrder = RenewOrder;
     }
 
+    /**
+     * Get 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SMCert 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSMCert() {
+        return this.SMCert;
+    }
+
+    /**
+     * Set 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SMCert 是否是国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSMCert(Long SMCert) {
+        this.SMCert = SMCert;
+    }
+
     public CertificateExtra() {
     }
 
@@ -185,6 +213,9 @@ public class CertificateExtra extends AbstractModel{
         if (source.RenewOrder != null) {
             this.RenewOrder = new String(source.RenewOrder);
         }
+        if (source.SMCert != null) {
+            this.SMCert = new Long(source.SMCert);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class CertificateExtra extends AbstractModel{
         this.setParamSimple(map, prefix + "ReplacedBy", this.ReplacedBy);
         this.setParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
         this.setParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
+        this.setParamSimple(map, prefix + "SMCert", this.SMCert);
 
     }
 }

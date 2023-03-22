@@ -59,6 +59,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *在不同过滤条件下的审计日志结果集中，选定特定的数据列进行聚合统计。
+     * @param req AnalyzeAuditLogsRequest
+     * @return AnalyzeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AnalyzeAuditLogsResponse AnalyzeAuditLogs(AnalyzeAuditLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AnalyzeAuditLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AnalyzeAuditLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AnalyzeAuditLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -1746,7 +1766,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(InitDBInstances)用于初始化云数据库实例，包括初始化密码、默认字符集、实例端口号等。该接口已经废弃，在发货接口CreateDBInstance、CreateDBInstanceHour可以直接使用参数Password设置密码，使用参数ParamList设置字符集，使用参数Port设置端口号。
+     *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
+
+本接口(InitDBInstances)用于初始化云数据库实例，包括初始化密码、默认字符集、实例端口号等。该接口已经废弃，在发货接口CreateDBInstance、CreateDBInstanceHour可以直接使用参数Password设置密码，使用参数ParamList设置字符集，使用参数Port设置端口号。
      * @param req InitDBInstancesRequest
      * @return InitDBInstancesResponse
      * @throws TencentCloudSDKException

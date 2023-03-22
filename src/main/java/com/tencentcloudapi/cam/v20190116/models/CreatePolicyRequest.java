@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePolicyRequest extends AbstractModel{
 
     /**
-    * 策略名
+    * 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -44,16 +44,16 @@ public class CreatePolicyRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get 策略名 
-     * @return PolicyName 策略名
+     * Get 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。 
+     * @return PolicyName 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名
-     * @param PolicyName 策略名
+     * Set 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+     * @param PolicyName 策略名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

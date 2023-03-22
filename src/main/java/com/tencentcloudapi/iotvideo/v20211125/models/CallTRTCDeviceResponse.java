@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.wedata.v20210820.models;
+package com.tencentcloudapi.iotvideo.v20211125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOfflineTaskResponse extends AbstractModel{
+public class CallTRTCDeviceResponse extends AbstractModel{
 
     /**
-    * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * TRTC SDK房间参数
     */
-    @SerializedName("TaskId")
+    @SerializedName("TRTCParams")
     @Expose
-    private String TaskId;
-
-    /**
-    * 结果
-    */
-    @SerializedName("Data")
-    @Expose
-    private String Data;
+    private TRTCParams TRTCParams;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class CreateOfflineTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get TRTC SDK房间参数 
+     * @return TRTCParams TRTC SDK房间参数
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public TRTCParams getTRTCParams() {
+        return this.TRTCParams;
     }
 
     /**
-     * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set TRTC SDK房间参数
+     * @param TRTCParams TRTC SDK房间参数
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    /**
-     * Get 结果 
-     * @return Data 结果
-     */
-    public String getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 结果
-     * @param Data 结果
-     */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setTRTCParams(TRTCParams TRTCParams) {
+        this.TRTCParams = TRTCParams;
     }
 
     /**
@@ -96,19 +68,16 @@ public class CreateOfflineTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateOfflineTaskResponse() {
+    public CallTRTCDeviceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOfflineTaskResponse(CreateOfflineTaskResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public CallTRTCDeviceResponse(CallTRTCDeviceResponse source) {
+        if (source.TRTCParams != null) {
+            this.TRTCParams = new TRTCParams(source.TRTCParams);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +89,7 @@ public class CreateOfflineTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamObj(map, prefix + "TRTCParams.", this.TRTCParams);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

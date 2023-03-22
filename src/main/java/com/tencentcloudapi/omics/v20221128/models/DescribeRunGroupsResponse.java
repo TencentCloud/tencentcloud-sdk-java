@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.wedata.v20210820.models;
+package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOfflineTaskResponse extends AbstractModel{
+public class DescribeRunGroupsResponse extends AbstractModel{
 
     /**
-    * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 符合条件的数量。
     */
-    @SerializedName("TaskId")
+    @SerializedName("TotalCount")
     @Expose
-    private String TaskId;
+    private Long TotalCount;
 
     /**
-    * 结果
+    * 任务批次列表。
     */
-    @SerializedName("Data")
+    @SerializedName("RunGroups")
     @Expose
-    private String Data;
+    private RunGroup [] RunGroups;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class CreateOfflineTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合条件的数量。 
+     * @return TotalCount 符合条件的数量。
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 符合条件的数量。
+     * @param TotalCount 符合条件的数量。
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 结果 
-     * @return Data 结果
+     * Get 任务批次列表。 
+     * @return RunGroups 任务批次列表。
      */
-    public String getData() {
-        return this.Data;
+    public RunGroup [] getRunGroups() {
+        return this.RunGroups;
     }
 
     /**
-     * Set 结果
-     * @param Data 结果
+     * Set 任务批次列表。
+     * @param RunGroups 任务批次列表。
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setRunGroups(RunGroup [] RunGroups) {
+        this.RunGroups = RunGroups;
     }
 
     /**
@@ -96,19 +91,22 @@ public class CreateOfflineTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateOfflineTaskResponse() {
+    public DescribeRunGroupsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOfflineTaskResponse(CreateOfflineTaskResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeRunGroupsResponse(DescribeRunGroupsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+        if (source.RunGroups != null) {
+            this.RunGroups = new RunGroup[source.RunGroups.length];
+            for (int i = 0; i < source.RunGroups.length; i++) {
+                this.RunGroups[i] = new RunGroup(source.RunGroups[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +118,8 @@ public class CreateOfflineTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "RunGroups.", this.RunGroups);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

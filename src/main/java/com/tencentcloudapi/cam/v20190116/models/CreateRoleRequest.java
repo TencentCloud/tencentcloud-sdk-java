@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateRoleRequest extends AbstractModel{
 
     /**
-    * 角色名称
+    * 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
     */
     @SerializedName("RoleName")
     @Expose
@@ -65,16 +65,16 @@ public class CreateRoleRequest extends AbstractModel{
     private RoleTags [] Tags;
 
     /**
-     * Get 角色名称 
-     * @return RoleName 角色名称
+     * Get 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。 
+     * @return RoleName 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 角色名称
-     * @param RoleName 角色名称
+     * Set 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
+     * @param RoleName 角色名称。长度为1~128个字符，可包含英文字母、数字和+=,.@-_。
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;

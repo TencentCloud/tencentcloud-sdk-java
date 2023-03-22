@@ -1039,6 +1039,26 @@ public class TcbClient extends AbstractClient{
     }
 
     /**
+     *查询网关监控数据
+     * @param req DescribeGatewayCurveDataRequest
+     * @return DescribeGatewayCurveDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayCurveDataResponse DescribeGatewayCurveData(DescribeGatewayCurveDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGatewayCurveDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGatewayCurveDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGatewayCurveData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询静态托管域名任务状态
      * @param req DescribeHostingDomainTaskRequest
      * @return DescribeHostingDomainTaskResponse

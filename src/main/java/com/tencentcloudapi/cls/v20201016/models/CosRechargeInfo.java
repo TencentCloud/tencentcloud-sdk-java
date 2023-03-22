@@ -47,7 +47,7 @@ public class CosRechargeInfo extends AbstractModel{
     private String LogsetId;
 
     /**
-    * cos导入任务名称
+    * COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -55,7 +55,7 @@ public class CosRechargeInfo extends AbstractModel{
     private String Name;
 
     /**
-    * cos存储桶
+    * COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
@@ -63,7 +63,7 @@ public class CosRechargeInfo extends AbstractModel{
     private String Bucket;
 
     /**
-    * cos存储桶地域
+    * COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketRegion")
@@ -71,7 +71,7 @@ public class CosRechargeInfo extends AbstractModel{
     private String BucketRegion;
 
     /**
-    * cos存储桶前缀地址
+    * COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Prefix")
@@ -79,7 +79,7 @@ public class CosRechargeInfo extends AbstractModel{
     private String Prefix;
 
     /**
-    * 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+    * 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -204,9 +204,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Get cos导入任务名称
+     * Get COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name cos导入任务名称
+     * @return Name COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -214,9 +214,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Set cos导入任务名称
+     * Set COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name cos导入任务名称
+     * @param Name COS导入任务名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -224,9 +224,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Get cos存储桶
+     * Get COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bucket cos存储桶
+     * @return Bucket COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
@@ -234,9 +234,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Set cos存储桶
+     * Set COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bucket cos存储桶
+     * @param Bucket COS存储桶
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
@@ -244,9 +244,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Get cos存储桶地域
+     * Get COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BucketRegion cos存储桶地域
+     * @return BucketRegion COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketRegion() {
@@ -254,9 +254,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Set cos存储桶地域
+     * Set COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BucketRegion cos存储桶地域
+     * @param BucketRegion COS存储桶所在地域
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketRegion(String BucketRegion) {
@@ -264,9 +264,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Get cos存储桶前缀地址
+     * Get COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Prefix cos存储桶前缀地址
+     * @return Prefix COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrefix() {
@@ -274,9 +274,9 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Set cos存储桶前缀地址
+     * Set COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Prefix cos存储桶前缀地址
+     * @param Prefix COS文件所在文件夹的前缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrefix(String Prefix) {
@@ -284,10 +284,10 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Get 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * Get 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * @return LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -296,10 +296,10 @@ public class CosRechargeInfo extends AbstractModel{
     }
 
     /**
-     * Set 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * Set 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表极简日志；
+     * @param LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
 注意：此字段可能返回 null，表示取不到有效值。
      */
