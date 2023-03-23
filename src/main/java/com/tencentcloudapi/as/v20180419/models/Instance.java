@@ -133,6 +133,17 @@ public class Instance extends AbstractModel{
     private String AutoScalingGroupName;
 
     /**
+    * 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+    */
+    @SerializedName("WarmupStatus")
+    @Expose
+    private String WarmupStatus;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -416,6 +427,38 @@ public class Instance extends AbstractModel{
         this.AutoScalingGroupName = AutoScalingGroupName;
     }
 
+    /**
+     * Get 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热 
+     * @return WarmupStatus 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+     */
+    public String getWarmupStatus() {
+        return this.WarmupStatus;
+    }
+
+    /**
+     * Set 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+     * @param WarmupStatus 预热状态，取值如下：
+<li>WAITING_ENTER_WARMUP：等待进入预热
+<li>NO_NEED_WARMUP：无需预热
+<li>IN_WARMUP：预热中
+<li>AFTER_WARMUP：完成预热
+     */
+    public void setWarmupStatus(String WarmupStatus) {
+        this.WarmupStatus = WarmupStatus;
+    }
+
     public Instance() {
     }
 
@@ -463,6 +506,9 @@ public class Instance extends AbstractModel{
         if (source.AutoScalingGroupName != null) {
             this.AutoScalingGroupName = new String(source.AutoScalingGroupName);
         }
+        if (source.WarmupStatus != null) {
+            this.WarmupStatus = new String(source.WarmupStatus);
+        }
     }
 
 
@@ -483,6 +529,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
         this.setParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
+        this.setParamSimple(map, prefix + "WarmupStatus", this.WarmupStatus);
 
     }
 }

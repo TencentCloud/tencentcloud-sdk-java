@@ -131,6 +131,13 @@ public class DescribeOutput extends AbstractModel{
     private DescribeOutputHLSPullSettings HLSPullSettings;
 
     /**
+    * 最大拉流并发数，最大为4，默认4。
+    */
+    @SerializedName("MaxConcurrent")
+    @Expose
+    private Long MaxConcurrent;
+
+    /**
      * Get 输出Id。 
      * @return OutputId 输出Id。
      */
@@ -394,6 +401,22 @@ public class DescribeOutput extends AbstractModel{
         this.HLSPullSettings = HLSPullSettings;
     }
 
+    /**
+     * Get 最大拉流并发数，最大为4，默认4。 
+     * @return MaxConcurrent 最大拉流并发数，最大为4，默认4。
+     */
+    public Long getMaxConcurrent() {
+        return this.MaxConcurrent;
+    }
+
+    /**
+     * Set 最大拉流并发数，最大为4，默认4。
+     * @param MaxConcurrent 最大拉流并发数，最大为4，默认4。
+     */
+    public void setMaxConcurrent(Long MaxConcurrent) {
+        this.MaxConcurrent = MaxConcurrent;
+    }
+
     public DescribeOutput() {
     }
 
@@ -450,6 +473,9 @@ public class DescribeOutput extends AbstractModel{
         if (source.HLSPullSettings != null) {
             this.HLSPullSettings = new DescribeOutputHLSPullSettings(source.HLSPullSettings);
         }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
     }
 
 
@@ -471,6 +497,7 @@ public class DescribeOutput extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamObj(map, prefix + "RTSPPullSettings.", this.RTSPPullSettings);
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
+        this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
 
     }
 }

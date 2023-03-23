@@ -159,6 +159,22 @@ HANDWRITE -手写签名
     private Boolean ApproverNeedSignReview;
 
     /**
+    * 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+    */
+    @SerializedName("ApproverVerifyTypes")
+    @Expose
+    private Long [] ApproverVerifyTypes;
+
+    /**
+    * 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+    */
+    @SerializedName("ApproverSignTypes")
+    @Expose
+    private Long [] ApproverSignTypes;
+
+    /**
      * Get 签署人姓名，最大长度50个字符 
      * @return Name 签署人姓名，最大长度50个字符
      */
@@ -486,6 +502,46 @@ HANDWRITE -手写签名
         this.ApproverNeedSignReview = ApproverNeedSignReview;
     }
 
+    /**
+     * Get 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的 
+     * @return ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+     */
+    public Long [] getApproverVerifyTypes() {
+        return this.ApproverVerifyTypes;
+    }
+
+    /**
+     * Set 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+     * @param ApproverVerifyTypes 签署人查看合同时认证方式, 1-实名查看 2-短信验证码查看(企业签署方不支持该方式) 如果不传默认为1
+查看合同的签署方式 Flow层级的优先于approver层级的
+     */
+    public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
+        this.ApproverVerifyTypes = ApproverVerifyTypes;
+    }
+
+    /**
+     * Get 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2) 
+     * @return ApproverSignTypes 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+     */
+    public Long [] getApproverSignTypes() {
+        return this.ApproverSignTypes;
+    }
+
+    /**
+     * Set 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+     * @param ApproverSignTypes 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+     */
+    public void setApproverSignTypes(Long [] ApproverSignTypes) {
+        this.ApproverSignTypes = ApproverSignTypes;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -554,6 +610,18 @@ HANDWRITE -手写签名
         if (source.ApproverNeedSignReview != null) {
             this.ApproverNeedSignReview = new Boolean(source.ApproverNeedSignReview);
         }
+        if (source.ApproverVerifyTypes != null) {
+            this.ApproverVerifyTypes = new Long[source.ApproverVerifyTypes.length];
+            for (int i = 0; i < source.ApproverVerifyTypes.length; i++) {
+                this.ApproverVerifyTypes[i] = new Long(source.ApproverVerifyTypes[i]);
+            }
+        }
+        if (source.ApproverSignTypes != null) {
+            this.ApproverSignTypes = new Long[source.ApproverSignTypes.length];
+            for (int i = 0; i < source.ApproverSignTypes.length; i++) {
+                this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
+            }
+        }
     }
 
 
@@ -579,6 +647,8 @@ HANDWRITE -手写签名
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
         this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
+        this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+        this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
 
     }
 }

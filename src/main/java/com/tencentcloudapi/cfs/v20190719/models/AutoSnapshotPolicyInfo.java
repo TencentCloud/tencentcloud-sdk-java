@@ -51,7 +51,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private Long FileSystemNums;
 
     /**
-    * 快照定期备份在一星期哪一天
+    * 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -112,6 +112,22 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     @SerializedName("FileSystems")
     @Expose
     private FileSystemByPolicy [] FileSystems;
+
+    /**
+    * 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private String DayOfMonth;
+
+    /**
+    * 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
 
     /**
      * Get 快照策略ID 
@@ -178,16 +194,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get 快照定期备份在一星期哪一天 
-     * @return DayOfWeek 快照定期备份在一星期哪一天
+     * Get 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥 
+     * @return DayOfWeek 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set 快照定期备份在一星期哪一天
-     * @param DayOfWeek 快照定期备份在一星期哪一天
+     * Set 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
+     * @param DayOfWeek 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
@@ -321,6 +337,46 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.FileSystems = FileSystems;
     }
 
+    /**
+     * Get 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DayOfMonth 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DayOfMonth 快照定期备份在一个月的某个时间；该参数与DayOfWeek,IntervalDays互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDayOfMonth(String DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IntervalDays 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IntervalDays 快照定期间隔天数，1-365 天；该参数与DayOfMonth,DayOfWeek互斥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public AutoSnapshotPolicyInfo() {
     }
 
@@ -371,6 +427,12 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
                 this.FileSystems[i] = new FileSystemByPolicy(source.FileSystems[i]);
             }
         }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new String(source.DayOfMonth);
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
+        }
     }
 
 
@@ -391,6 +453,8 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
+        this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }

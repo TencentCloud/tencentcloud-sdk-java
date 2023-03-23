@@ -30,7 +30,7 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
     private String Module;
 
     /**
-    * 消息策略ID，在云监控自定义消息页面配置
+    * 消息策略ID，在自定义消息页面配置
     */
     @SerializedName("PolicyId")
     @Expose
@@ -60,16 +60,16 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
     }
 
     /**
-     * Get 消息策略ID，在云监控自定义消息页面配置 
-     * @return PolicyId 消息策略ID，在云监控自定义消息页面配置
+     * Get 消息策略ID，在自定义消息页面配置 
+     * @return PolicyId 消息策略ID，在自定义消息页面配置
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 消息策略ID，在云监控自定义消息页面配置
-     * @param PolicyId 消息策略ID，在云监控自定义消息页面配置
+     * Set 消息策略ID，在自定义消息页面配置
+     * @param PolicyId 消息策略ID，在自定义消息页面配置
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

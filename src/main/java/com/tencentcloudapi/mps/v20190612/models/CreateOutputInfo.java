@@ -80,6 +80,13 @@ public class CreateOutputInfo extends AbstractModel{
     private String [] AllowIpList;
 
     /**
+    * 最大拉流并发数，最大4，默认4。
+    */
+    @SerializedName("MaxConcurrent")
+    @Expose
+    private Long MaxConcurrent;
+
+    /**
      * Get 输出的名称。 
      * @return OutputName 输出的名称。
      */
@@ -211,6 +218,22 @@ public class CreateOutputInfo extends AbstractModel{
         this.AllowIpList = AllowIpList;
     }
 
+    /**
+     * Get 最大拉流并发数，最大4，默认4。 
+     * @return MaxConcurrent 最大拉流并发数，最大4，默认4。
+     */
+    public Long getMaxConcurrent() {
+        return this.MaxConcurrent;
+    }
+
+    /**
+     * Set 最大拉流并发数，最大4，默认4。
+     * @param MaxConcurrent 最大拉流并发数，最大4，默认4。
+     */
+    public void setMaxConcurrent(Long MaxConcurrent) {
+        this.MaxConcurrent = MaxConcurrent;
+    }
+
     public CreateOutputInfo() {
     }
 
@@ -246,6 +269,9 @@ public class CreateOutputInfo extends AbstractModel{
                 this.AllowIpList[i] = new String(source.AllowIpList[i]);
             }
         }
+        if (source.MaxConcurrent != null) {
+            this.MaxConcurrent = new Long(source.MaxConcurrent);
+        }
     }
 
 
@@ -261,6 +287,7 @@ public class CreateOutputInfo extends AbstractModel{
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
+        this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
 
     }
 }

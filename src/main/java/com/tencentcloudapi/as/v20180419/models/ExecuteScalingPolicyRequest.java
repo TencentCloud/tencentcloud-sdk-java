@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ExecuteScalingPolicyRequest extends AbstractModel{
 
     /**
-    * 告警伸缩策略ID
+    * 告警伸缩策略ID，不支持目标追踪策略。
     */
     @SerializedName("AutoScalingPolicyId")
     @Expose
@@ -44,16 +44,16 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     private String TriggerSource;
 
     /**
-     * Get 告警伸缩策略ID 
-     * @return AutoScalingPolicyId 告警伸缩策略ID
+     * Get 告警伸缩策略ID，不支持目标追踪策略。 
+     * @return AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。
      */
     public String getAutoScalingPolicyId() {
         return this.AutoScalingPolicyId;
     }
 
     /**
-     * Set 告警伸缩策略ID
-     * @param AutoScalingPolicyId 告警伸缩策略ID
+     * Set 告警伸缩策略ID，不支持目标追踪策略。
+     * @param AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。
      */
     public void setAutoScalingPolicyId(String AutoScalingPolicyId) {
         this.AutoScalingPolicyId = AutoScalingPolicyId;

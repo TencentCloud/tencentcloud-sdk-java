@@ -135,6 +135,24 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private ApproverOption ApproverOption;
 
     /**
+    * 签署人查看合同时认证方式, 
+1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+如果不传默认为1
+    */
+    @SerializedName("ApproverVerifyTypes")
+    @Expose
+    private Long [] ApproverVerifyTypes;
+
+    /**
+    * 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+合同签署认证方式的优先级 verifyChannel>approverSignTypes
+    */
+    @SerializedName("ApproverSignTypes")
+    @Expose
+    private Long [] ApproverSignTypes;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -402,6 +420,54 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.ApproverOption = ApproverOption;
     }
 
+    /**
+     * Get 签署人查看合同时认证方式, 
+1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+如果不传默认为1 
+     * @return ApproverVerifyTypes 签署人查看合同时认证方式, 
+1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+如果不传默认为1
+     */
+    public Long [] getApproverVerifyTypes() {
+        return this.ApproverVerifyTypes;
+    }
+
+    /**
+     * Set 签署人查看合同时认证方式, 
+1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+如果不传默认为1
+     * @param ApproverVerifyTypes 签署人查看合同时认证方式, 
+1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
+如果不传默认为1
+     */
+    public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
+        this.ApproverVerifyTypes = ApproverVerifyTypes;
+    }
+
+    /**
+     * Get 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+合同签署认证方式的优先级 verifyChannel>approverSignTypes 
+     * @return ApproverSignTypes 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+合同签署认证方式的优先级 verifyChannel>approverSignTypes
+     */
+    public Long [] getApproverSignTypes() {
+        return this.ApproverSignTypes;
+    }
+
+    /**
+     * Set 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+合同签署认证方式的优先级 verifyChannel>approverSignTypes
+     * @param ApproverSignTypes 签署人签署合同时的认证方式
+1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
+合同签署认证方式的优先级 verifyChannel>approverSignTypes
+     */
+    public void setApproverSignTypes(Long [] ApproverSignTypes) {
+        this.ApproverSignTypes = ApproverSignTypes;
+    }
+
     public ApproverInfo() {
     }
 
@@ -461,6 +527,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.ApproverOption != null) {
             this.ApproverOption = new ApproverOption(source.ApproverOption);
         }
+        if (source.ApproverVerifyTypes != null) {
+            this.ApproverVerifyTypes = new Long[source.ApproverVerifyTypes.length];
+            for (int i = 0; i < source.ApproverVerifyTypes.length; i++) {
+                this.ApproverVerifyTypes[i] = new Long(source.ApproverVerifyTypes[i]);
+            }
+        }
+        if (source.ApproverSignTypes != null) {
+            this.ApproverSignTypes = new Long[source.ApproverSignTypes.length];
+            for (int i = 0; i < source.ApproverSignTypes.length; i++) {
+                this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
+            }
+        }
     }
 
 
@@ -483,6 +561,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
         this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+        this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
+        this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
 
     }
 }

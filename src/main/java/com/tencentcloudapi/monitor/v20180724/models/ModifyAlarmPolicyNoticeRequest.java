@@ -51,6 +51,13 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
     private String [] PolicyIds;
 
     /**
+    * 告警分级通知规则配置
+    */
+    @SerializedName("HierarchicalNotices")
+    @Expose
+    private AlarmHierarchicalNotice [] HierarchicalNotices;
+
+    /**
      * Get 模块名，这里填“monitor”。 
      * @return Module 模块名，这里填“monitor”。
      */
@@ -114,6 +121,22 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get 告警分级通知规则配置 
+     * @return HierarchicalNotices 告警分级通知规则配置
+     */
+    public AlarmHierarchicalNotice [] getHierarchicalNotices() {
+        return this.HierarchicalNotices;
+    }
+
+    /**
+     * Set 告警分级通知规则配置
+     * @param HierarchicalNotices 告警分级通知规则配置
+     */
+    public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
+        this.HierarchicalNotices = HierarchicalNotices;
+    }
+
     public ModifyAlarmPolicyNoticeRequest() {
     }
 
@@ -140,6 +163,12 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.HierarchicalNotices != null) {
+            this.HierarchicalNotices = new AlarmHierarchicalNotice[source.HierarchicalNotices.length];
+            for (int i = 0; i < source.HierarchicalNotices.length; i++) {
+                this.HierarchicalNotices[i] = new AlarmHierarchicalNotice(source.HierarchicalNotices[i]);
+            }
+        }
     }
 
 
@@ -151,6 +180,7 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
 
     }
 }

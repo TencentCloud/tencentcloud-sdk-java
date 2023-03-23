@@ -489,6 +489,29 @@ peakCurrentUsers：峰值同时在线人数。
     }
 
     /**
+     *查询TRTC音视频房间维度用量。
+- 单次只能查询一天数据，返回查询时间段内的汇总数据；通过多次查询可以查不同天数据。若查询跨天用量，由于统计延迟等原因，返回数据可能不够准确。
+- 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+- 默认接口请求频率限制：1次/15秒。
+     * @param req DescribeTrtcRoomUsageRequest
+     * @return DescribeTrtcRoomUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(DescribeTrtcRoomUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcRoomUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcRoomUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcRoomUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取TRTC音视频互动的用量明细。
 - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
 - 单次查询统计区间最多不能超过31天。

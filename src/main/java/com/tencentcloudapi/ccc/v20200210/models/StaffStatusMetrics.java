@@ -121,6 +121,22 @@ public class StaffStatusMetrics extends AbstractModel{
     private Boolean UseMobileCallOut;
 
     /**
+    * 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastOnlineTimestamp")
+    @Expose
+    private Long LastOnlineTimestamp;
+
+    /**
+    * 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastStatusTimestamp")
+    @Expose
+    private Long LastStatusTimestamp;
+
+    /**
      * Get 坐席邮箱 
      * @return Email 坐席邮箱
      */
@@ -344,6 +360,46 @@ public class StaffStatusMetrics extends AbstractModel{
         this.UseMobileCallOut = UseMobileCallOut;
     }
 
+    /**
+     * Get 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastOnlineTimestamp 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastOnlineTimestamp() {
+        return this.LastOnlineTimestamp;
+    }
+
+    /**
+     * Set 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastOnlineTimestamp 最近一次上线时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastOnlineTimestamp(Long LastOnlineTimestamp) {
+        this.LastOnlineTimestamp = LastOnlineTimestamp;
+    }
+
+    /**
+     * Get 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastStatusTimestamp 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastStatusTimestamp() {
+        return this.LastStatusTimestamp;
+    }
+
+    /**
+     * Set 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastStatusTimestamp 最近一次状态时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastStatusTimestamp(Long LastStatusTimestamp) {
+        this.LastStatusTimestamp = LastStatusTimestamp;
+    }
+
     public StaffStatusMetrics() {
     }
 
@@ -394,6 +450,12 @@ public class StaffStatusMetrics extends AbstractModel{
         if (source.UseMobileCallOut != null) {
             this.UseMobileCallOut = new Boolean(source.UseMobileCallOut);
         }
+        if (source.LastOnlineTimestamp != null) {
+            this.LastOnlineTimestamp = new Long(source.LastOnlineTimestamp);
+        }
+        if (source.LastStatusTimestamp != null) {
+            this.LastStatusTimestamp = new Long(source.LastStatusTimestamp);
+        }
     }
 
 
@@ -415,6 +477,8 @@ public class StaffStatusMetrics extends AbstractModel{
         this.setParamSimple(map, prefix + "ReserveNotReady", this.ReserveNotReady);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
+        this.setParamSimple(map, prefix + "LastOnlineTimestamp", this.LastOnlineTimestamp);
+        this.setParamSimple(map, prefix + "LastStatusTimestamp", this.LastStatusTimestamp);
 
     }
 }

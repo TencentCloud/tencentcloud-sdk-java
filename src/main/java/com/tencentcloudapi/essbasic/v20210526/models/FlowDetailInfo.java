@@ -86,6 +86,13 @@ public class FlowDetailInfo extends AbstractModel{
     private FlowApproverDetail [] FlowApproverInfos;
 
     /**
+    * 合同(流程)关注方信息列表
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private FlowApproverDetail [] CcInfos;
+
+    /**
      * Get 合同(流程)的Id 
      * @return FlowId 合同(流程)的Id
      */
@@ -229,6 +236,22 @@ public class FlowDetailInfo extends AbstractModel{
         this.FlowApproverInfos = FlowApproverInfos;
     }
 
+    /**
+     * Get 合同(流程)关注方信息列表 
+     * @return CcInfos 合同(流程)关注方信息列表
+     */
+    public FlowApproverDetail [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 合同(流程)关注方信息列表
+     * @param CcInfos 合同(流程)关注方信息列表
+     */
+    public void setCcInfos(FlowApproverDetail [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
     public FlowDetailInfo() {
     }
 
@@ -267,6 +290,12 @@ public class FlowDetailInfo extends AbstractModel{
                 this.FlowApproverInfos[i] = new FlowApproverDetail(source.FlowApproverInfos[i]);
             }
         }
+        if (source.CcInfos != null) {
+            this.CcInfos = new FlowApproverDetail[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new FlowApproverDetail(source.CcInfos[i]);
+            }
+        }
     }
 
 
@@ -283,6 +312,7 @@ public class FlowDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
         this.setParamSimple(map, prefix + "CustomData", this.CustomData);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
 
     }
 }

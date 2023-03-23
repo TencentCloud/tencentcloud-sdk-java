@@ -37,6 +37,15 @@ public class ScalingPolicy extends AbstractModel{
     private String AutoScalingPolicyId;
 
     /**
+    * 告警触发策略类型。取值：
+- SIMPLE：简单策略
+- TARGET_TRACKING：目标追踪策略
+    */
+    @SerializedName("ScalingPolicyType")
+    @Expose
+    private String ScalingPolicyType;
+
+    /**
     * 告警触发策略名称。
     */
     @SerializedName("ScalingPolicyName")
@@ -44,32 +53,72 @@ public class ScalingPolicy extends AbstractModel{
     private String ScalingPolicyName;
 
     /**
-    * 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+    * 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
     */
     @SerializedName("AdjustmentType")
     @Expose
     private String AdjustmentType;
 
     /**
-    * 告警触发后，期望实例数的调整值。
+    * 告警触发后，期望实例数的调整值，仅适用于简单策略。
     */
     @SerializedName("AdjustmentValue")
     @Expose
     private Long AdjustmentValue;
 
     /**
-    * 冷却时间。
+    * 冷却时间，仅适用于简单策略。
     */
     @SerializedName("Cooldown")
     @Expose
     private Long Cooldown;
 
     /**
-    * 告警监控指标。
+    * 简单告警触发策略告警监控指标，仅适用于简单策略。
     */
     @SerializedName("MetricAlarm")
     @Expose
     private MetricAlarm MetricAlarm;
+
+    /**
+    * 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PredefinedMetricType")
+    @Expose
+    private String PredefinedMetricType;
+
+    /**
+    * 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetValue")
+    @Expose
+    private Long TargetValue;
+
+    /**
+    * 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EstimatedInstanceWarmup")
+    @Expose
+    private Long EstimatedInstanceWarmup;
+
+    /**
+    * 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableScaleIn")
+    @Expose
+    private Boolean DisableScaleIn;
+
+    /**
+    * 告警监控指标列表，仅适用于目标追踪策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricAlarms")
+    @Expose
+    private MetricAlarm [] MetricAlarms;
 
     /**
     * 通知组ID，即为用户组ID集合。
@@ -111,6 +160,30 @@ public class ScalingPolicy extends AbstractModel{
     }
 
     /**
+     * Get 告警触发策略类型。取值：
+- SIMPLE：简单策略
+- TARGET_TRACKING：目标追踪策略 
+     * @return ScalingPolicyType 告警触发策略类型。取值：
+- SIMPLE：简单策略
+- TARGET_TRACKING：目标追踪策略
+     */
+    public String getScalingPolicyType() {
+        return this.ScalingPolicyType;
+    }
+
+    /**
+     * Set 告警触发策略类型。取值：
+- SIMPLE：简单策略
+- TARGET_TRACKING：目标追踪策略
+     * @param ScalingPolicyType 告警触发策略类型。取值：
+- SIMPLE：简单策略
+- TARGET_TRACKING：目标追踪策略
+     */
+    public void setScalingPolicyType(String ScalingPolicyType) {
+        this.ScalingPolicyType = ScalingPolicyType;
+    }
+
+    /**
      * Get 告警触发策略名称。 
      * @return ScalingPolicyName 告警触发策略名称。
      */
@@ -127,67 +200,167 @@ public class ScalingPolicy extends AbstractModel{
     }
 
     /**
-     * Get 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li> 
-     * @return AdjustmentType 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Get 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li> 
+     * @return AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public String getAdjustmentType() {
         return this.AdjustmentType;
     }
 
     /**
-     * Set 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
-     * @param AdjustmentType 告警触发后，期望实例数修改方式。取值 ：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * Set 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
+     * @param AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      */
     public void setAdjustmentType(String AdjustmentType) {
         this.AdjustmentType = AdjustmentType;
     }
 
     /**
-     * Get 告警触发后，期望实例数的调整值。 
-     * @return AdjustmentValue 告警触发后，期望实例数的调整值。
+     * Get 告警触发后，期望实例数的调整值，仅适用于简单策略。 
+     * @return AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
      */
     public Long getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
     /**
-     * Set 告警触发后，期望实例数的调整值。
-     * @param AdjustmentValue 告警触发后，期望实例数的调整值。
+     * Set 告警触发后，期望实例数的调整值，仅适用于简单策略。
+     * @param AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
      */
     public void setAdjustmentValue(Long AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
     }
 
     /**
-     * Get 冷却时间。 
-     * @return Cooldown 冷却时间。
+     * Get 冷却时间，仅适用于简单策略。 
+     * @return Cooldown 冷却时间，仅适用于简单策略。
      */
     public Long getCooldown() {
         return this.Cooldown;
     }
 
     /**
-     * Set 冷却时间。
-     * @param Cooldown 冷却时间。
+     * Set 冷却时间，仅适用于简单策略。
+     * @param Cooldown 冷却时间，仅适用于简单策略。
      */
     public void setCooldown(Long Cooldown) {
         this.Cooldown = Cooldown;
     }
 
     /**
-     * Get 告警监控指标。 
-     * @return MetricAlarm 告警监控指标。
+     * Get 简单告警触发策略告警监控指标，仅适用于简单策略。 
+     * @return MetricAlarm 简单告警触发策略告警监控指标，仅适用于简单策略。
      */
     public MetricAlarm getMetricAlarm() {
         return this.MetricAlarm;
     }
 
     /**
-     * Set 告警监控指标。
-     * @param MetricAlarm 告警监控指标。
+     * Set 简单告警触发策略告警监控指标，仅适用于简单策略。
+     * @param MetricAlarm 简单告警触发策略告警监控指标，仅适用于简单策略。
      */
     public void setMetricAlarm(MetricAlarm MetricAlarm) {
         this.MetricAlarm = MetricAlarm;
+    }
+
+    /**
+     * Get 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPredefinedMetricType() {
+        return this.PredefinedMetricType;
+    }
+
+    /**
+     * Set 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPredefinedMetricType(String PredefinedMetricType) {
+        this.PredefinedMetricType = PredefinedMetricType;
+    }
+
+    /**
+     * Get 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTargetValue() {
+        return this.TargetValue;
+    }
+
+    /**
+     * Set 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetValue(Long TargetValue) {
+        this.TargetValue = TargetValue;
+    }
+
+    /**
+     * Get 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EstimatedInstanceWarmup 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEstimatedInstanceWarmup() {
+        return this.EstimatedInstanceWarmup;
+    }
+
+    /**
+     * Set 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EstimatedInstanceWarmup 实例预热时间，单位为秒，仅适用于目标追踪策略。取值范围为0-3600。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEstimatedInstanceWarmup(Long EstimatedInstanceWarmup) {
+        this.EstimatedInstanceWarmup = EstimatedInstanceWarmup;
+    }
+
+    /**
+     * Get 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisableScaleIn() {
+        return this.DisableScaleIn;
+    }
+
+    /**
+     * Set 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableScaleIn(Boolean DisableScaleIn) {
+        this.DisableScaleIn = DisableScaleIn;
+    }
+
+    /**
+     * Get 告警监控指标列表，仅适用于目标追踪策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricAlarms 告警监控指标列表，仅适用于目标追踪策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MetricAlarm [] getMetricAlarms() {
+        return this.MetricAlarms;
+    }
+
+    /**
+     * Set 告警监控指标列表，仅适用于目标追踪策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricAlarms 告警监控指标列表，仅适用于目标追踪策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricAlarms(MetricAlarm [] MetricAlarms) {
+        this.MetricAlarms = MetricAlarms;
     }
 
     /**
@@ -220,6 +393,9 @@ public class ScalingPolicy extends AbstractModel{
         if (source.AutoScalingPolicyId != null) {
             this.AutoScalingPolicyId = new String(source.AutoScalingPolicyId);
         }
+        if (source.ScalingPolicyType != null) {
+            this.ScalingPolicyType = new String(source.ScalingPolicyType);
+        }
         if (source.ScalingPolicyName != null) {
             this.ScalingPolicyName = new String(source.ScalingPolicyName);
         }
@@ -234,6 +410,24 @@ public class ScalingPolicy extends AbstractModel{
         }
         if (source.MetricAlarm != null) {
             this.MetricAlarm = new MetricAlarm(source.MetricAlarm);
+        }
+        if (source.PredefinedMetricType != null) {
+            this.PredefinedMetricType = new String(source.PredefinedMetricType);
+        }
+        if (source.TargetValue != null) {
+            this.TargetValue = new Long(source.TargetValue);
+        }
+        if (source.EstimatedInstanceWarmup != null) {
+            this.EstimatedInstanceWarmup = new Long(source.EstimatedInstanceWarmup);
+        }
+        if (source.DisableScaleIn != null) {
+            this.DisableScaleIn = new Boolean(source.DisableScaleIn);
+        }
+        if (source.MetricAlarms != null) {
+            this.MetricAlarms = new MetricAlarm[source.MetricAlarms.length];
+            for (int i = 0; i < source.MetricAlarms.length; i++) {
+                this.MetricAlarms[i] = new MetricAlarm(source.MetricAlarms[i]);
+            }
         }
         if (source.NotificationUserGroupIds != null) {
             this.NotificationUserGroupIds = new String[source.NotificationUserGroupIds.length];
@@ -250,11 +444,17 @@ public class ScalingPolicy extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);
+        this.setParamSimple(map, prefix + "ScalingPolicyType", this.ScalingPolicyType);
         this.setParamSimple(map, prefix + "ScalingPolicyName", this.ScalingPolicyName);
         this.setParamSimple(map, prefix + "AdjustmentType", this.AdjustmentType);
         this.setParamSimple(map, prefix + "AdjustmentValue", this.AdjustmentValue);
         this.setParamSimple(map, prefix + "Cooldown", this.Cooldown);
         this.setParamObj(map, prefix + "MetricAlarm.", this.MetricAlarm);
+        this.setParamSimple(map, prefix + "PredefinedMetricType", this.PredefinedMetricType);
+        this.setParamSimple(map, prefix + "TargetValue", this.TargetValue);
+        this.setParamSimple(map, prefix + "EstimatedInstanceWarmup", this.EstimatedInstanceWarmup);
+        this.setParamSimple(map, prefix + "DisableScaleIn", this.DisableScaleIn);
+        this.setParamArrayObj(map, prefix + "MetricAlarms.", this.MetricAlarms);
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
 
     }

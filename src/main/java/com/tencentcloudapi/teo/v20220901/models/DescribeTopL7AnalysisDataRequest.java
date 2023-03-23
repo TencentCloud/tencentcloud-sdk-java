@@ -38,23 +38,34 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
     * 查询的指标，取值有：
-<li> l7Flow_outFlux_country：请求的国家；</li>
-<li> l7Flow_outFlux_statusCode：请求的状态码；</li>
-<li> l7Flow_outFlux_domain：请求域名；</li>
-<li> l7Flow_outFlux_url：请求的URL; </li>
-<li> l7Flow_outFlux_resourceType：请求的资源类型；</li>
-<li> l7Flow_outFlux_sip：客户端的源IP；</li>
-<li> l7Flow_outFlux_referers：refer信息；</li>
-<li> l7Flow_outFlux_ua_device：设备类型; </li>
-<li> l7Flow_outFlux_ua_browser：浏览器类型；</li>
-<li> l7Flow_outFlux_us_os：操作系统类型。</li>
+<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
+<li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
+<li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
+<li> l7Flow_outFlux_resourceType：按资源类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_sip：按客户端的源IP维度统计流量指标；</li>
+<li> l7Flow_outFlux_referers：按refer信息维度统计流量指标；</li>
+<li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
+<li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
+<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
+<li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
+<li> l7Flow_request_url：按URL维度统计请求数指标; </li>
+<li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
+<li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
+<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
+<li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
+<li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
+
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * 站点集合，不填默认选择全部站点。
+    * 站点集合，此参数必填，不填默认查询为空。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -146,27 +157,49 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
      * Get 查询的指标，取值有：
-<li> l7Flow_outFlux_country：请求的国家；</li>
-<li> l7Flow_outFlux_statusCode：请求的状态码；</li>
-<li> l7Flow_outFlux_domain：请求域名；</li>
-<li> l7Flow_outFlux_url：请求的URL; </li>
-<li> l7Flow_outFlux_resourceType：请求的资源类型；</li>
-<li> l7Flow_outFlux_sip：客户端的源IP；</li>
-<li> l7Flow_outFlux_referers：refer信息；</li>
-<li> l7Flow_outFlux_ua_device：设备类型; </li>
-<li> l7Flow_outFlux_ua_browser：浏览器类型；</li>
-<li> l7Flow_outFlux_us_os：操作系统类型。</li> 
+<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
+<li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
+<li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
+<li> l7Flow_outFlux_resourceType：按资源类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_sip：按客户端的源IP维度统计流量指标；</li>
+<li> l7Flow_outFlux_referers：按refer信息维度统计流量指标；</li>
+<li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
+<li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
+<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
+<li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
+<li> l7Flow_request_url：按URL维度统计请求数指标; </li>
+<li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
+<li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
+<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
+<li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
+<li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
+ 
      * @return MetricName 查询的指标，取值有：
-<li> l7Flow_outFlux_country：请求的国家；</li>
-<li> l7Flow_outFlux_statusCode：请求的状态码；</li>
-<li> l7Flow_outFlux_domain：请求域名；</li>
-<li> l7Flow_outFlux_url：请求的URL; </li>
-<li> l7Flow_outFlux_resourceType：请求的资源类型；</li>
-<li> l7Flow_outFlux_sip：客户端的源IP；</li>
-<li> l7Flow_outFlux_referers：refer信息；</li>
-<li> l7Flow_outFlux_ua_device：设备类型; </li>
-<li> l7Flow_outFlux_ua_browser：浏览器类型；</li>
-<li> l7Flow_outFlux_us_os：操作系统类型。</li>
+<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
+<li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
+<li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
+<li> l7Flow_outFlux_resourceType：按资源类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_sip：按客户端的源IP维度统计流量指标；</li>
+<li> l7Flow_outFlux_referers：按refer信息维度统计流量指标；</li>
+<li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
+<li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
+<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
+<li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
+<li> l7Flow_request_url：按URL维度统计请求数指标; </li>
+<li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
+<li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
+<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
+<li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
+<li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
+
      */
     public String getMetricName() {
         return this.MetricName;
@@ -174,43 +207,65 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
      * Set 查询的指标，取值有：
-<li> l7Flow_outFlux_country：请求的国家；</li>
-<li> l7Flow_outFlux_statusCode：请求的状态码；</li>
-<li> l7Flow_outFlux_domain：请求域名；</li>
-<li> l7Flow_outFlux_url：请求的URL; </li>
-<li> l7Flow_outFlux_resourceType：请求的资源类型；</li>
-<li> l7Flow_outFlux_sip：客户端的源IP；</li>
-<li> l7Flow_outFlux_referers：refer信息；</li>
-<li> l7Flow_outFlux_ua_device：设备类型; </li>
-<li> l7Flow_outFlux_ua_browser：浏览器类型；</li>
-<li> l7Flow_outFlux_us_os：操作系统类型。</li>
+<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
+<li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
+<li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
+<li> l7Flow_outFlux_resourceType：按资源类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_sip：按客户端的源IP维度统计流量指标；</li>
+<li> l7Flow_outFlux_referers：按refer信息维度统计流量指标；</li>
+<li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
+<li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
+<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
+<li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
+<li> l7Flow_request_url：按URL维度统计请求数指标; </li>
+<li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
+<li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
+<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
+<li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
+<li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
+
      * @param MetricName 查询的指标，取值有：
-<li> l7Flow_outFlux_country：请求的国家；</li>
-<li> l7Flow_outFlux_statusCode：请求的状态码；</li>
-<li> l7Flow_outFlux_domain：请求域名；</li>
-<li> l7Flow_outFlux_url：请求的URL; </li>
-<li> l7Flow_outFlux_resourceType：请求的资源类型；</li>
-<li> l7Flow_outFlux_sip：客户端的源IP；</li>
-<li> l7Flow_outFlux_referers：refer信息；</li>
-<li> l7Flow_outFlux_ua_device：设备类型; </li>
-<li> l7Flow_outFlux_ua_browser：浏览器类型；</li>
-<li> l7Flow_outFlux_us_os：操作系统类型。</li>
+<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
+<li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
+<li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
+<li> l7Flow_outFlux_resourceType：按资源类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_sip：按客户端的源IP维度统计流量指标；</li>
+<li> l7Flow_outFlux_referers：按refer信息维度统计流量指标；</li>
+<li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
+<li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
+<li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
+<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
+<li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
+<li> l7Flow_request_url：按URL维度统计请求数指标; </li>
+<li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
+<li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
+<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
+<li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
+<li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
+
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get 站点集合，不填默认选择全部站点。 
-     * @return ZoneIds 站点集合，不填默认选择全部站点。
+     * Get 站点集合，此参数必填，不填默认查询为空。 
+     * @return ZoneIds 站点集合，此参数必填，不填默认查询为空。
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set 站点集合，不填默认选择全部站点。
-     * @param ZoneIds 站点集合，不填默认选择全部站点。
+     * Set 站点集合，此参数必填，不填默认查询为空。
+     * @param ZoneIds 站点集合，此参数必填，不填默认查询为空。
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

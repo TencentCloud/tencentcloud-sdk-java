@@ -65,6 +65,20 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long IsActivated;
 
     /**
+    * 定期快照在月的某几天天，该参数与DayOfWeek互斥
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private String DayOfMonth;
+
+    /**
+    * 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
+
+    /**
      * Get 快照策略ID 
      * @return AutoSnapshotPolicyId 快照策略ID
      */
@@ -160,6 +174,38 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         this.IsActivated = IsActivated;
     }
 
+    /**
+     * Get 定期快照在月的某几天天，该参数与DayOfWeek互斥 
+     * @return DayOfMonth 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     */
+    public String getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     * @param DayOfMonth 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     */
+    public void setDayOfMonth(String DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥 
+     * @return IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     * @param IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public UpdateAutoSnapshotPolicyRequest() {
     }
 
@@ -186,6 +232,12 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         if (source.IsActivated != null) {
             this.IsActivated = new Long(source.IsActivated);
         }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new String(source.DayOfMonth);
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Hour", this.Hour);
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
         this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
+        this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }
