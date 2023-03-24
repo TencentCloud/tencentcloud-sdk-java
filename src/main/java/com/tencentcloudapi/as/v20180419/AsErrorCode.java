@@ -162,6 +162,9 @@ public enum AsErrorCode {
     // 为CLB指定的地域不合法。
      INVALIDPARAMETERVALUE_INVALIDCLBREGION("InvalidParameterValue.InvalidClbRegion"),
      
+    // 指定的置放群组ID格式不正确。
+     INVALIDPARAMETERVALUE_INVALIDDISASTERRECOVERGROUPID("InvalidParameterValue.InvalidDisasterRecoverGroupId"),
+     
     // 过滤条件无效。
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
@@ -365,6 +368,9 @@ public enum AsErrorCode {
      
     // 命令不存在。
      RESOURCENOTFOUND_COMMANDNOTFOUND("ResourceNotFound.CommandNotFound"),
+     
+    // 指定的置放群组ID不存在。
+     RESOURCENOTFOUND_DISASTERRECOVERGROUPNOTFOUND("ResourceNotFound.DisasterRecoverGroupNotFound"),
      
     // 指定的实例不存在。
      RESOURCENOTFOUND_INSTANCESNOTFOUND("ResourceNotFound.InstancesNotFound"),

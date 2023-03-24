@@ -72,7 +72,7 @@ public class McuLayout extends AbstractModel{
     private Long RenderMode;
 
     /**
-    * 子画面的背景颜色，常用的颜色有：
+    * 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -212,7 +212,7 @@ public class McuLayout extends AbstractModel{
     }
 
     /**
-     * Get 子画面的背景颜色，常用的颜色有：
+     * Get 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -220,7 +220,7 @@ public class McuLayout extends AbstractModel{
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。 
-     * @return BackGroundColor 子画面的背景颜色，常用的颜色有：
+     * @return BackGroundColor 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -234,7 +234,7 @@ public class McuLayout extends AbstractModel{
     }
 
     /**
-     * Set 子画面的背景颜色，常用的颜色有：
+     * Set 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。
@@ -242,7 +242,7 @@ public class McuLayout extends AbstractModel{
 黑色：0x000000。
 白色：0xFFFFFF。
 灰色：0x999999。
-     * @param BackGroundColor 子画面的背景颜色，常用的颜色有：
+     * @param BackGroundColor 【此参数配置无效，暂不支持】子画面的背景颜色，常用的颜色有：
 红色：0xcc0033。
 黄色：0xcc9900。
 绿色：0xcccc33。

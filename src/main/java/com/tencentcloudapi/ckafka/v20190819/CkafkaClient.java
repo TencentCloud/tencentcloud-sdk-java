@@ -179,6 +179,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *添加 ACL 规则
+     * @param req CreateAclRuleRequest
+     * @return CreateAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAclRuleResponse CreateAclRule(CreateAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAclRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于cdc的专用ckafka集群
      * @param req CreateCdcClusterRequest
      * @return CreateCdcClusterResponse
@@ -691,6 +711,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeACLResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeACL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询ACL规则列表
+     * @param req DescribeAclRuleRequest
+     * @return DescribeAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAclRuleResponse DescribeAclRule(DescribeAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1293,6 +1333,26 @@ public class CkafkaClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquireCkafkaPrice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
+     * @param req ModifyAclRuleRequest
+     * @return ModifyAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAclRuleResponse ModifyAclRule(ModifyAclRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAclRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAclRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAclRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

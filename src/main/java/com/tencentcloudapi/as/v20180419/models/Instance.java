@@ -144,6 +144,14 @@ public class Instance extends AbstractModel{
     private String WarmupStatus;
 
     /**
+    * 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -459,6 +467,26 @@ public class Instance extends AbstractModel{
         this.WarmupStatus = WarmupStatus;
     }
 
+    /**
+     * Get 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
     public Instance() {
     }
 
@@ -509,6 +537,12 @@ public class Instance extends AbstractModel{
         if (source.WarmupStatus != null) {
             this.WarmupStatus = new String(source.WarmupStatus);
         }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
     }
 
 
@@ -530,6 +564,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
         this.setParamSimple(map, prefix + "AutoScalingGroupName", this.AutoScalingGroupName);
         this.setParamSimple(map, prefix + "WarmupStatus", this.WarmupStatus);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
 
     }
 }

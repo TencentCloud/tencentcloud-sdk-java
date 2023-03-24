@@ -189,6 +189,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private IPv6InternetAccessible IPv6InternetAccessible;
 
     /**
+    * 置放群组id，仅支持指定一个。
+    */
+    @SerializedName("DisasterRecoverGroupIds")
+    @Expose
+    private String [] DisasterRecoverGroupIds;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -612,6 +619,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.IPv6InternetAccessible = IPv6InternetAccessible;
     }
 
+    /**
+     * Get 置放群组id，仅支持指定一个。 
+     * @return DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     */
+    public String [] getDisasterRecoverGroupIds() {
+        return this.DisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set 置放群组id，仅支持指定一个。
+     * @param DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     */
+    public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
+        this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -689,6 +712,12 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.IPv6InternetAccessible != null) {
             this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
         }
+        if (source.DisasterRecoverGroupIds != null) {
+            this.DisasterRecoverGroupIds = new String[source.DisasterRecoverGroupIds.length];
+            for (int i = 0; i < source.DisasterRecoverGroupIds.length; i++) {
+                this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
+            }
+        }
     }
 
 
@@ -716,6 +745,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
+        this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
 
     }
 }

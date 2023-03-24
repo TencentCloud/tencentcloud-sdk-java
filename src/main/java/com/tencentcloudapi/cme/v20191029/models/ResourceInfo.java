@@ -24,7 +24,6 @@ public class ResourceInfo extends AbstractModel{
 
     /**
     * 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -38,10 +37,8 @@ public class ResourceInfo extends AbstractModel{
     private Entity Owner;
 
     /**
-     * Get 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒资和分类资源。 
      * @return Resource 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource getResource() {
         return this.Resource;
@@ -49,9 +46,7 @@ public class ResourceInfo extends AbstractModel{
 
     /**
      * Set 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 媒资和分类资源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceDealDetailResponse extends AbstractModel{
 
     /**
-    * 订单详细信息
+    * 订单详细信息。
     */
     @SerializedName("DealDetails")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeInstanceDealDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单详细信息 
-     * @return DealDetails 订单详细信息
+     * Get 订单详细信息。 
+     * @return DealDetails 订单详细信息。
      */
     public TradeDealDetail [] getDealDetails() {
         return this.DealDetails;
     }
 
     /**
-     * Set 订单详细信息
-     * @param DealDetails 订单详细信息
+     * Set 订单详细信息。
+     * @param DealDetails 订单详细信息。
      */
     public void setDealDetails(TradeDealDetail [] DealDetails) {
         this.DealDetails = DealDetails;

@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class MediaCastSourceInfo extends AbstractModel{
 
     /**
+    * 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
@@ -32,13 +40,6 @@ public class MediaCastSourceInfo extends AbstractModel{
     private String Type;
 
     /**
-    * 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-    */
-    @SerializedName("MaterialId")
-    @Expose
-    private String MaterialId;
-
-    /**
     * 云点播媒体文件 ID。当 Type = VOD 时必填。
     */
     @SerializedName("FileId")
@@ -46,11 +47,31 @@ public class MediaCastSourceInfo extends AbstractModel{
     private String FileId;
 
     /**
-    * 序号，位于输入源列表中的序号，由系统分配。
+    * 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
     */
-    @SerializedName("Index")
+    @SerializedName("MaterialId")
     @Expose
-    private Long Index;
+    private String MaterialId;
+
+    /**
+     * Get 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 输入源 Id，由系统分配。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get 输入源的媒体类型，取值有：
@@ -77,22 +98,6 @@ public class MediaCastSourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。 
-     * @return MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-     */
-    public String getMaterialId() {
-        return this.MaterialId;
-    }
-
-    /**
-     * Set 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-     * @param MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
-     */
-    public void setMaterialId(String MaterialId) {
-        this.MaterialId = MaterialId;
-    }
-
-    /**
      * Get 云点播媒体文件 ID。当 Type = VOD 时必填。 
      * @return FileId 云点播媒体文件 ID。当 Type = VOD 时必填。
      */
@@ -109,19 +114,19 @@ public class MediaCastSourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 序号，位于输入源列表中的序号，由系统分配。 
-     * @return Index 序号，位于输入源列表中的序号，由系统分配。
+     * Get 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。 
+     * @return MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
      */
-    public Long getIndex() {
-        return this.Index;
+    public String getMaterialId() {
+        return this.MaterialId;
     }
 
     /**
-     * Set 序号，位于输入源列表中的序号，由系统分配。
-     * @param Index 序号，位于输入源列表中的序号，由系统分配。
+     * Set 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
+     * @param MaterialId 多媒体创作引擎的媒体 ID。当 Type = CME  时必填。
      */
-    public void setIndex(Long Index) {
-        this.Index = Index;
+    public void setMaterialId(String MaterialId) {
+        this.MaterialId = MaterialId;
     }
 
     public MediaCastSourceInfo() {
@@ -132,17 +137,17 @@ public class MediaCastSourceInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public MediaCastSourceInfo(MediaCastSourceInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.Type != null) {
             this.Type = new String(source.Type);
-        }
-        if (source.MaterialId != null) {
-            this.MaterialId = new String(source.MaterialId);
         }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.Index != null) {
-            this.Index = new Long(source.Index);
+        if (source.MaterialId != null) {
+            this.MaterialId = new String(source.MaterialId);
         }
     }
 
@@ -151,10 +156,10 @@ public class MediaCastSourceInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
-        this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
 
     }
 }

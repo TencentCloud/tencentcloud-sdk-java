@@ -539,7 +539,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询订单信息
+     *本接口（DescribeInstanceDealDetail）用于查询订单信息。
      * @param req DescribeInstanceDealDetailRequest
      * @return DescribeInstanceDealDetailResponse
      * @throws TencentCloudSDKException
@@ -1019,7 +1019,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询SSL状态
+     *本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。
      * @param req DescribeSSLStatusRequest
      * @return DescribeSSLStatusResponse
      * @throws TencentCloudSDKException
@@ -1319,7 +1319,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *修改redis密码
+     *本接口（ModfiyInstancePassword）用于修改实例访问密码。
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException

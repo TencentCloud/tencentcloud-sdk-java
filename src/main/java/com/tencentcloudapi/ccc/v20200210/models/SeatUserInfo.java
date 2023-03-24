@@ -37,6 +37,14 @@ public class SeatUserInfo extends AbstractModel{
     private String Mail;
 
     /**
+    * 工号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StaffNumber")
+    @Expose
+    private String StaffNumber;
+
+    /**
     * 坐席电话号码（带0086前缀）
     */
     @SerializedName("Phone")
@@ -64,14 +72,6 @@ public class SeatUserInfo extends AbstractModel{
     @SerializedName("SkillGroupNameList")
     @Expose
     private String [] SkillGroupNameList;
-
-    /**
-    * 工号
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StaffNumber")
-    @Expose
-    private String StaffNumber;
 
     /**
      * Get 坐席名称 
@@ -103,6 +103,26 @@ public class SeatUserInfo extends AbstractModel{
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
+    }
+
+    /**
+     * Get 工号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StaffNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStaffNumber() {
+        return this.StaffNumber;
+    }
+
+    /**
+     * Set 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StaffNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStaffNumber(String StaffNumber) {
+        this.StaffNumber = StaffNumber;
     }
 
     /**
@@ -173,26 +193,6 @@ public class SeatUserInfo extends AbstractModel{
         this.SkillGroupNameList = SkillGroupNameList;
     }
 
-    /**
-     * Get 工号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StaffNumber 工号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getStaffNumber() {
-        return this.StaffNumber;
-    }
-
-    /**
-     * Set 工号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StaffNumber 工号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStaffNumber(String StaffNumber) {
-        this.StaffNumber = StaffNumber;
-    }
-
     public SeatUserInfo() {
     }
 
@@ -206,6 +206,9 @@ public class SeatUserInfo extends AbstractModel{
         }
         if (source.Mail != null) {
             this.Mail = new String(source.Mail);
+        }
+        if (source.StaffNumber != null) {
+            this.StaffNumber = new String(source.StaffNumber);
         }
         if (source.Phone != null) {
             this.Phone = new String(source.Phone);
@@ -222,9 +225,6 @@ public class SeatUserInfo extends AbstractModel{
                 this.SkillGroupNameList[i] = new String(source.SkillGroupNameList[i]);
             }
         }
-        if (source.StaffNumber != null) {
-            this.StaffNumber = new String(source.StaffNumber);
-        }
     }
 
 
@@ -234,11 +234,11 @@ public class SeatUserInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
+        this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
-        this.setParamSimple(map, prefix + "StaffNumber", this.StaffNumber);
 
     }
 }

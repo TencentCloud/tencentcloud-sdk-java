@@ -37,7 +37,7 @@ public class DescribeGatewayCurveDataRequest extends AbstractModel{
     private String GatewayId;
 
     /**
-    * 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+    * 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
     */
     @SerializedName("MetricName")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeGatewayCurveDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 
-     * @return MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+     * Get 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit 
+     * @return MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
-     * @param MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502
+     * Set 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
+     * @param MetricName 监控类型 GWQps GWBandwidth GwHttpError GwHttp404 GwHttp502 GwConnect GwCircuit
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

@@ -72,6 +72,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
+    * 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Boolean Quic;
+
+    /**
     * 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
     */
     @SerializedName("NewDefaultServerDomain")
@@ -205,6 +212,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get 是否开启Quic，注意，只有HTTPS域名才能开启Quic 
+     * @return Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     */
+    public Boolean getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     * @param Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     */
+    public void setQuic(Boolean Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Get 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。 
      * @return NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      */
@@ -281,6 +304,9 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         if (source.DefaultServer != null) {
             this.DefaultServer = new Boolean(source.DefaultServer);
         }
+        if (source.Quic != null) {
+            this.Quic = new Boolean(source.Quic);
+        }
         if (source.NewDefaultServerDomain != null) {
             this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
         }
@@ -307,6 +333,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);

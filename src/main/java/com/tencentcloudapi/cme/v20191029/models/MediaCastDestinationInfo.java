@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class MediaCastDestinationInfo extends AbstractModel{
 
     /**
-    * 输出源序号。由系统进行分配。
+    * 输出源 Id。由系统进行分配。
     */
-    @SerializedName("Index")
+    @SerializedName("Id")
     @Expose
-    private Long Index;
-
-    /**
-    * 输出源的名称。
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
+    private String Id;
 
     /**
     * 输出直播流地址。支持的直播流类型为 RTMP 和 SRT。
@@ -44,35 +37,26 @@ public class MediaCastDestinationInfo extends AbstractModel{
     private String PushUrl;
 
     /**
-     * Get 输出源序号。由系统进行分配。 
-     * @return Index 输出源序号。由系统进行分配。
+    * 输出源的名称。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+     * Get 输出源 Id。由系统进行分配。 
+     * @return Id 输出源 Id。由系统进行分配。
      */
-    public Long getIndex() {
-        return this.Index;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 输出源序号。由系统进行分配。
-     * @param Index 输出源序号。由系统进行分配。
+     * Set 输出源 Id。由系统进行分配。
+     * @param Id 输出源 Id。由系统进行分配。
      */
-    public void setIndex(Long Index) {
-        this.Index = Index;
-    }
-
-    /**
-     * Get 输出源的名称。 
-     * @return Name 输出源的名称。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 输出源的名称。
-     * @param Name 输出源的名称。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     /**
@@ -91,6 +75,22 @@ public class MediaCastDestinationInfo extends AbstractModel{
         this.PushUrl = PushUrl;
     }
 
+    /**
+     * Get 输出源的名称。 
+     * @return Name 输出源的名称。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 输出源的名称。
+     * @param Name 输出源的名称。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public MediaCastDestinationInfo() {
     }
 
@@ -99,14 +99,14 @@ public class MediaCastDestinationInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public MediaCastDestinationInfo(MediaCastDestinationInfo source) {
-        if (source.Index != null) {
-            this.Index = new Long(source.Index);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
         }
         if (source.PushUrl != null) {
             this.PushUrl = new String(source.PushUrl);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -115,9 +115,9 @@ public class MediaCastDestinationInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Index", this.Index);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "PushUrl", this.PushUrl);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

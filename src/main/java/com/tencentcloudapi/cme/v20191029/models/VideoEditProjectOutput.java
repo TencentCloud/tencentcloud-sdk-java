@@ -52,6 +52,13 @@ public class VideoEditProjectOutput extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
+    * 导出视频的封面图片 URL。
+    */
+    @SerializedName("CoverURL")
+    @Expose
+    private String CoverURL;
+
+    /**
      * Get 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。 
      * @return MaterialId 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
      */
@@ -119,6 +126,22 @@ public class VideoEditProjectOutput extends AbstractModel{
         this.MetaData = MetaData;
     }
 
+    /**
+     * Get 导出视频的封面图片 URL。 
+     * @return CoverURL 导出视频的封面图片 URL。
+     */
+    public String getCoverURL() {
+        return this.CoverURL;
+    }
+
+    /**
+     * Set 导出视频的封面图片 URL。
+     * @param CoverURL 导出视频的封面图片 URL。
+     */
+    public void setCoverURL(String CoverURL) {
+        this.CoverURL = CoverURL;
+    }
+
     public VideoEditProjectOutput() {
     }
 
@@ -139,6 +162,9 @@ public class VideoEditProjectOutput extends AbstractModel{
         if (source.MetaData != null) {
             this.MetaData = new MediaMetaData(source.MetaData);
         }
+        if (source.CoverURL != null) {
+            this.CoverURL = new String(source.CoverURL);
+        }
     }
 
 
@@ -150,6 +176,7 @@ public class VideoEditProjectOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "VodFileId", this.VodFileId);
         this.setParamSimple(map, prefix + "URL", this.URL);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "CoverURL", this.CoverURL);
 
     }
 }

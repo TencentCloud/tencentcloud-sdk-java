@@ -23,35 +23,41 @@ import java.util.HashMap;
 public class DescribeSSLStatusResponse extends AbstractModel{
 
     /**
-    * 证书下载地址
+    * SSL 证书下载地址。
     */
     @SerializedName("CertDownloadUrl")
     @Expose
     private String CertDownloadUrl;
 
     /**
-    * 证书下载链接到期时间
+    * 证书下载链接到期时间。
     */
     @SerializedName("UrlExpiredTime")
     @Expose
     private String UrlExpiredTime;
 
     /**
-    * 实例SSL配置状态， true：开启 false：关闭
+    * 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
     */
     @SerializedName("SSLConfig")
     @Expose
     private Boolean SSLConfig;
 
     /**
-    * 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
+    * 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
     */
     @SerializedName("FeatureSupport")
     @Expose
     private Boolean FeatureSupport;
 
     /**
-    * SSL配置状态，1: 配置中 2：配置成功
+    * 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
     */
     @SerializedName("Status")
     @Expose
@@ -65,80 +71,104 @@ public class DescribeSSLStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 证书下载地址 
-     * @return CertDownloadUrl 证书下载地址
+     * Get SSL 证书下载地址。 
+     * @return CertDownloadUrl SSL 证书下载地址。
      */
     public String getCertDownloadUrl() {
         return this.CertDownloadUrl;
     }
 
     /**
-     * Set 证书下载地址
-     * @param CertDownloadUrl 证书下载地址
+     * Set SSL 证书下载地址。
+     * @param CertDownloadUrl SSL 证书下载地址。
      */
     public void setCertDownloadUrl(String CertDownloadUrl) {
         this.CertDownloadUrl = CertDownloadUrl;
     }
 
     /**
-     * Get 证书下载链接到期时间 
-     * @return UrlExpiredTime 证书下载链接到期时间
+     * Get 证书下载链接到期时间。 
+     * @return UrlExpiredTime 证书下载链接到期时间。
      */
     public String getUrlExpiredTime() {
         return this.UrlExpiredTime;
     }
 
     /**
-     * Set 证书下载链接到期时间
-     * @param UrlExpiredTime 证书下载链接到期时间
+     * Set 证书下载链接到期时间。
+     * @param UrlExpiredTime 证书下载链接到期时间。
      */
     public void setUrlExpiredTime(String UrlExpiredTime) {
         this.UrlExpiredTime = UrlExpiredTime;
     }
 
     /**
-     * Get 实例SSL配置状态， true：开启 false：关闭 
-     * @return SSLConfig 实例SSL配置状态， true：开启 false：关闭
+     * Get 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。 
+     * @return SSLConfig 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
      */
     public Boolean getSSLConfig() {
         return this.SSLConfig;
     }
 
     /**
-     * Set 实例SSL配置状态， true：开启 false：关闭
-     * @param SSLConfig 实例SSL配置状态， true：开启 false：关闭
+     * Set 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
+     * @param SSLConfig 标识实例开启 SSL 功能。
+- true：开启 。
+- false：关闭。
      */
     public void setSSLConfig(Boolean SSLConfig) {
         this.SSLConfig = SSLConfig;
     }
 
     /**
-     * Get 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性） 
-     * @return FeatureSupport 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
+     * Get 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。 
+     * @return FeatureSupport 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
      */
     public Boolean getFeatureSupport() {
         return this.FeatureSupport;
     }
 
     /**
-     * Set 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
-     * @param FeatureSupport 实例SSL特性支持， true：支持 false：不支持（小版本升级后才能支持SSL特性）
+     * Set 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
+     * @param FeatureSupport 标识实例是否支持 SSL特性。
+- true：支持。
+- false：不支持。
      */
     public void setFeatureSupport(Boolean FeatureSupport) {
         this.FeatureSupport = FeatureSupport;
     }
 
     /**
-     * Get SSL配置状态，1: 配置中 2：配置成功 
-     * @return Status SSL配置状态，1: 配置中 2：配置成功
+     * Get 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。 
+     * @return Status 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set SSL配置状态，1: 配置中 2：配置成功
-     * @param Status SSL配置状态，1: 配置中 2：配置成功
+     * Set 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
+     * @param Status 说明配置 SSL 的状态。
+- 1: 配置中。
+- 2：配置成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

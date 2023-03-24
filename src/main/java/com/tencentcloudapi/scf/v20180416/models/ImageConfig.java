@@ -77,6 +77,17 @@ public class ImageConfig extends AbstractModel{
     private Boolean ContainerImageAccelerate;
 
     /**
+    * 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImagePort")
+    @Expose
+    private Long ImagePort;
+
+    /**
      * Get 镜像仓库类型，个人版或者企业版：personal/enterprise 
      * @return ImageType 镜像仓库类型，个人版或者企业版：personal/enterprise
      */
@@ -208,6 +219,38 @@ public class ImageConfig extends AbstractModel{
         this.ContainerImageAccelerate = ContainerImageAccelerate;
     }
 
+    /**
+     * Get 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImagePort 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getImagePort() {
+        return this.ImagePort;
+    }
+
+    /**
+     * Set 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImagePort 镜像函数端口设置
+-1: 无端口镜像函数
+0: 默认端口，当前默认端口是9000
+其他: 特殊端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImagePort(Long ImagePort) {
+        this.ImagePort = ImagePort;
+    }
+
     public ImageConfig() {
     }
 
@@ -237,6 +280,9 @@ public class ImageConfig extends AbstractModel{
         if (source.ContainerImageAccelerate != null) {
             this.ContainerImageAccelerate = new Boolean(source.ContainerImageAccelerate);
         }
+        if (source.ImagePort != null) {
+            this.ImagePort = new Long(source.ImagePort);
+        }
     }
 
 
@@ -251,6 +297,7 @@ public class ImageConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Args", this.Args);
         this.setParamSimple(map, prefix + "ContainerImageAccelerate", this.ContainerImageAccelerate);
+        this.setParamSimple(map, prefix + "ImagePort", this.ImagePort);
 
     }
 }

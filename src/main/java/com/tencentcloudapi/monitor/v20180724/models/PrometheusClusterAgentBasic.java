@@ -79,6 +79,13 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
     private Boolean NotScrape;
 
     /**
+    * 是否开启默认预聚合规则
+    */
+    @SerializedName("OpenDefaultRecord")
+    @Expose
+    private Boolean OpenDefaultRecord;
+
+    /**
      * Get 集群ID 
      * @return Region 集群ID
      */
@@ -206,6 +213,22 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         this.NotScrape = NotScrape;
     }
 
+    /**
+     * Get 是否开启默认预聚合规则 
+     * @return OpenDefaultRecord 是否开启默认预聚合规则
+     */
+    public Boolean getOpenDefaultRecord() {
+        return this.OpenDefaultRecord;
+    }
+
+    /**
+     * Set 是否开启默认预聚合规则
+     * @param OpenDefaultRecord 是否开启默认预聚合规则
+     */
+    public void setOpenDefaultRecord(Boolean OpenDefaultRecord) {
+        this.OpenDefaultRecord = OpenDefaultRecord;
+    }
+
     public PrometheusClusterAgentBasic() {
     }
 
@@ -241,6 +264,9 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         if (source.NotScrape != null) {
             this.NotScrape = new Boolean(source.NotScrape);
         }
+        if (source.OpenDefaultRecord != null) {
+            this.OpenDefaultRecord = new Boolean(source.OpenDefaultRecord);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
         this.setParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
         this.setParamSimple(map, prefix + "NotScrape", this.NotScrape);
+        this.setParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
 
     }
 }

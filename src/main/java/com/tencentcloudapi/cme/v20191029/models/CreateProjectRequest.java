@@ -52,6 +52,7 @@ public class CreateProjectRequest extends AbstractModel{
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+<li>MEDIA_CAST：点播转直播。</li>
     */
     @SerializedName("Category")
     @Expose
@@ -127,6 +128,13 @@ public class CreateProjectRequest extends AbstractModel{
     private RecordReplayProjectInput RecordReplayProjectInput;
 
     /**
+    * 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+    */
+    @SerializedName("MediaCastProjectInput")
+    @Expose
+    private MediaCastProjectInput MediaCastProjectInput;
+
+    /**
      * Get 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。 
      * @return Platform 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
@@ -188,13 +196,15 @@ public class CreateProjectRequest extends AbstractModel{
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
-<li>RECORD_REPLAY：录制回放。</li> 
+<li>RECORD_REPLAY：录制回放。</li>
+<li>MEDIA_CAST：点播转直播。</li> 
      * @return Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+<li>MEDIA_CAST：点播转直播。</li>
      */
     public String getCategory() {
         return this.Category;
@@ -207,12 +217,14 @@ public class CreateProjectRequest extends AbstractModel{
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+<li>MEDIA_CAST：点播转直播。</li>
      * @param Category 项目类别，取值有：
 <li>VIDEO_EDIT：视频编辑。</li>
 <li>SWITCHER：导播台。</li>
 <li>VIDEO_SEGMENTATION：视频拆条。</li>
 <li>STREAM_CONNECT：云转推。</li>
 <li>RECORD_REPLAY：录制回放。</li>
+<li>MEDIA_CAST：点播转直播。</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;
@@ -386,6 +398,22 @@ public class CreateProjectRequest extends AbstractModel{
         this.RecordReplayProjectInput = RecordReplayProjectInput;
     }
 
+    /**
+     * Get 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。 
+     * @return MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     */
+    public MediaCastProjectInput getMediaCastProjectInput() {
+        return this.MediaCastProjectInput;
+    }
+
+    /**
+     * Set 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * @param MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     */
+    public void setMediaCastProjectInput(MediaCastProjectInput MediaCastProjectInput) {
+        this.MediaCastProjectInput = MediaCastProjectInput;
+    }
+
     public CreateProjectRequest() {
     }
 
@@ -433,6 +461,9 @@ public class CreateProjectRequest extends AbstractModel{
         if (source.RecordReplayProjectInput != null) {
             this.RecordReplayProjectInput = new RecordReplayProjectInput(source.RecordReplayProjectInput);
         }
+        if (source.MediaCastProjectInput != null) {
+            this.MediaCastProjectInput = new MediaCastProjectInput(source.MediaCastProjectInput);
+        }
     }
 
 
@@ -453,6 +484,7 @@ public class CreateProjectRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoSegmentationProjectInput.", this.VideoSegmentationProjectInput);
         this.setParamObj(map, prefix + "StreamConnectProjectInput.", this.StreamConnectProjectInput);
         this.setParamObj(map, prefix + "RecordReplayProjectInput.", this.RecordReplayProjectInput);
+        this.setParamObj(map, prefix + "MediaCastProjectInput.", this.MediaCastProjectInput);
 
     }
 }

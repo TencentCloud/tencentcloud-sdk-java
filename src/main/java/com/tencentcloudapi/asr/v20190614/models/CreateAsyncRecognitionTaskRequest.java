@@ -29,6 +29,7 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_id：16k 印度尼西亚语；
+• 16k_fil：16k 菲律宾语；
     */
     @SerializedName("EngineType")
     @Expose
@@ -110,13 +111,15 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
-• 16k_id：16k 印度尼西亚语； 
+• 16k_id：16k 印度尼西亚语；
+• 16k_fil：16k 菲律宾语； 
      * @return EngineType 引擎模型类型。
 • 16k_zh：16k 中文普通话通用；
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_id：16k 印度尼西亚语；
+• 16k_fil：16k 菲律宾语；
      */
     public String getEngineType() {
         return this.EngineType;
@@ -129,12 +132,14 @@ public class CreateAsyncRecognitionTaskRequest extends AbstractModel{
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_id：16k 印度尼西亚语；
+• 16k_fil：16k 菲律宾语；
      * @param EngineType 引擎模型类型。
 • 16k_zh：16k 中文普通话通用；
 • 16k_zh_video：16k 音视频领域；
 • 16k_en：16k 英语；
 • 16k_ca：16k 粤语；
 • 16k_id：16k 印度尼西亚语；
+• 16k_fil：16k 菲律宾语；
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

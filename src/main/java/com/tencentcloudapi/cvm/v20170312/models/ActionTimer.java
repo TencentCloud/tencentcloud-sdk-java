@@ -24,6 +24,7 @@ public class ActionTimer extends AbstractModel{
 
     /**
     * 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimerAction")
     @Expose
@@ -31,6 +32,7 @@ public class ActionTimer extends AbstractModel{
 
     /**
     * 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTime")
     @Expose
@@ -38,14 +40,17 @@ public class ActionTimer extends AbstractModel{
 
     /**
     * 扩展数据
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Externals")
     @Expose
     private Externals Externals;
 
     /**
-     * Get 定时器名称，目前仅支持销毁一个值：TerminateInstances。 
+     * Get 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimerAction() {
         return this.TimerAction;
@@ -53,15 +58,19 @@ public class ActionTimer extends AbstractModel{
 
     /**
      * Set 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TimerAction 定时器名称，目前仅支持销毁一个值：TerminateInstances。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimerAction(String TimerAction) {
         this.TimerAction = TimerAction;
     }
 
     /**
-     * Get 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。 
+     * Get 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActionTime 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTime() {
         return this.ActionTime;
@@ -69,15 +78,19 @@ public class ActionTimer extends AbstractModel{
 
     /**
      * Set 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTime 执行时间，按照ISO8601标准表示，并且使用UTC时间。格式为 YYYY-MM-DDThh:mm:ssZ。例如 2018-05-29T11:26:40Z，执行时间必须大于当前时间5分钟。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
     }
 
     /**
-     * Get 扩展数据 
+     * Get 扩展数据
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Externals 扩展数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Externals getExternals() {
         return this.Externals;
@@ -85,7 +98,9 @@ public class ActionTimer extends AbstractModel{
 
     /**
      * Set 扩展数据
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Externals 扩展数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternals(Externals Externals) {
         this.Externals = Externals;

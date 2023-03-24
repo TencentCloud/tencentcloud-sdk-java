@@ -207,6 +207,19 @@ public class LaunchTemplateVersionData extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
      * Get 实例所在的位置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Placement 实例所在的位置。
@@ -666,6 +679,46 @@ public class LaunchTemplateVersionData extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableApiTermination 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：
+
+TRUE：表示开启实例保护，不允许通过api接口删除实例
+FALSE：表示关闭实例保护，允许通过api接口删除实例
+
+默认取值：FALSE。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
     public LaunchTemplateVersionData() {
     }
 
@@ -755,6 +808,9 @@ public class LaunchTemplateVersionData extends AbstractModel{
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
     }
 
 
@@ -785,6 +841,7 @@ public class LaunchTemplateVersionData extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 
     }
 }

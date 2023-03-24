@@ -54,6 +54,14 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
     private Boolean ClearInstanceNameSettings;
 
     /**
+    * 是否清空置放群组信息，非必填，默认为 false。
+填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+    */
+    @SerializedName("ClearDisasterRecoverGroupIds")
+    @Expose
+    private Boolean ClearDisasterRecoverGroupIds;
+
+    /**
      * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -129,6 +137,26 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
         this.ClearInstanceNameSettings = ClearInstanceNameSettings;
     }
 
+    /**
+     * Get 是否清空置放群组信息，非必填，默认为 false。
+填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。 
+     * @return ClearDisasterRecoverGroupIds 是否清空置放群组信息，非必填，默认为 false。
+填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+     */
+    public Boolean getClearDisasterRecoverGroupIds() {
+        return this.ClearDisasterRecoverGroupIds;
+    }
+
+    /**
+     * Set 是否清空置放群组信息，非必填，默认为 false。
+填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+     * @param ClearDisasterRecoverGroupIds 是否清空置放群组信息，非必填，默认为 false。
+填 true 代表清空置放群组信息，清空后基于此新创建的云主机将不指定任何置放群组。
+     */
+    public void setClearDisasterRecoverGroupIds(Boolean ClearDisasterRecoverGroupIds) {
+        this.ClearDisasterRecoverGroupIds = ClearDisasterRecoverGroupIds;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -149,6 +177,9 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
         if (source.ClearInstanceNameSettings != null) {
             this.ClearInstanceNameSettings = new Boolean(source.ClearInstanceNameSettings);
         }
+        if (source.ClearDisasterRecoverGroupIds != null) {
+            this.ClearDisasterRecoverGroupIds = new Boolean(source.ClearDisasterRecoverGroupIds);
+        }
     }
 
 
@@ -160,6 +191,7 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
         this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
+        this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
 
     }
 }

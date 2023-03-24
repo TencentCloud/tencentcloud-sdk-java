@@ -279,6 +279,26 @@ public class EbClient extends AbstractClient{
     }
 
     /**
+     *查询日志索引维度值
+     * @param req DescribeLogTagValueRequest
+     * @return DescribeLogTagValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogTagValueResponse DescribeLogTagValue(DescribeLogTagValueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogTagValueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogTagValue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取事件集详情
      * @param req GetEventBusRequest
      * @return GetEventBusResponse
@@ -451,6 +471,26 @@ public class EbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<PutEventsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PutEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *日志检索
+     * @param req SearchLogRequest
+     * @return SearchLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

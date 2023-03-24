@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class ModfiyInstancePasswordRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例旧密码
+    * 实例旧密码。
     */
     @SerializedName("OldPassword")
     @Expose
     private String OldPassword;
 
     /**
-    * 实例新密码
+    * 实例新密码。密码复杂度要求如下：
+- 长度8 - 30位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例旧密码 
-     * @return OldPassword 实例旧密码
+     * Get 实例旧密码。 
+     * @return OldPassword 实例旧密码。
      */
     public String getOldPassword() {
         return this.OldPassword;
     }
 
     /**
-     * Set 实例旧密码
-     * @param OldPassword 实例旧密码
+     * Set 实例旧密码。
+     * @param OldPassword 实例旧密码。
      */
     public void setOldPassword(String OldPassword) {
         this.OldPassword = OldPassword;
     }
 
     /**
-     * Get 实例新密码 
-     * @return Password 实例新密码
+     * Get 实例新密码。密码复杂度要求如下：
+- 长度8 - 30位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。 
+     * @return Password 实例新密码。密码复杂度要求如下：
+- 长度8 - 30位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例新密码
-     * @param Password 实例新密码
+     * Set 实例新密码。密码复杂度要求如下：
+- 长度8 - 30位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
+     * @param Password 实例新密码。密码复杂度要求如下：
+- 长度8 - 30位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
     public void setPassword(String Password) {
         this.Password = Password;

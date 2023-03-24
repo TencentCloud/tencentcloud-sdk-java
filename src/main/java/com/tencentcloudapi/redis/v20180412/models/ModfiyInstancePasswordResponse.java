@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModfiyInstancePasswordResponse extends AbstractModel{
 
     /**
-    * 任务ID
+    * 任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class ModfiyInstancePasswordResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务 ID。 
+     * @return TaskId 任务 ID。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务 ID。
+     * @param TaskId 任务 ID。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

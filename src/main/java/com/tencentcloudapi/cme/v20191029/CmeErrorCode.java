@@ -87,6 +87,9 @@ public enum CmeErrorCode {
     // 媒体 ID 无效。
      INVALIDPARAMETERVALUE_MATERIALID("InvalidParameterValue.MaterialId"),
      
+    // 输入源信息非法。
+     INVALIDPARAMETERVALUE_MEDIACASTSOURCEINFOSINVALID("InvalidParameterValue.MediaCastSourceInfosInvalid"),
+     
     // 媒体替换信息无效。
      INVALIDPARAMETERVALUE_MEDIAREPLACEMENTINFO("InvalidParameterValue.MediaReplacementInfo"),
      
@@ -107,6 +110,9 @@ public enum CmeErrorCode {
      
     // 分页偏移不合法。
      INVALIDPARAMETERVALUE_OFFSET("InvalidParameterValue.Offset"),
+     
+    // 转推操作非法。
+     INVALIDPARAMETERVALUE_OPERATIONINVALID("InvalidParameterValue.OperationInvalid"),
      
     // 无效的操作者。
      INVALIDPARAMETERVALUE_OPERATOR("InvalidParameterValue.Operator"),

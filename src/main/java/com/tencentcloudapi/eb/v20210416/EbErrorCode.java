@@ -78,6 +78,9 @@ public enum EbErrorCode {
     // AMPParams取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_AMPPARAMS("InvalidParameterValue.AMPParams"),
      
+    // Action 操作参数取值与规范不符，请修正后再试。
+     INVALIDPARAMETERVALUE_ACTION("InvalidParameterValue.Action"),
+     
     // BatchEventCount取值与规范不符，请修正后再试。
      INVALIDPARAMETERVALUE_BATCHEVENTCOUNT("InvalidParameterValue.BatchEventCount"),
      
