@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class CreateFlowLogRequest extends AbstractModel{
 
     /**
-    * 流日志实例名字
+    * 流日志实例名字。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+    * 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 资源唯一ID
+    * 资源唯一ID。
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 流日志采集类型，ACCEPT|REJECT|ALL
+    * 流日志采集类型，ACCEPT|REJECT|ALL。
     */
     @SerializedName("TrafficType")
     @Expose
@@ -58,28 +58,28 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * 流日志实例描述
+    * 流日志实例描述。
     */
     @SerializedName("FlowLogDescription")
     @Expose
     private String FlowLogDescription;
 
     /**
-    * 流日志存储ID
+    * 流日志存储ID。
     */
     @SerializedName("CloudLogId")
     @Expose
     private String CloudLogId;
 
     /**
-    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 消费端类型：cls、ckafka
+    * 消费端类型：cls、ckafka。默认值cls。
     */
     @SerializedName("StorageType")
     @Expose
@@ -100,64 +100,64 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String CloudLogRegion;
 
     /**
-     * Get 流日志实例名字 
-     * @return FlowLogName 流日志实例名字
+     * Get 流日志实例名字。 
+     * @return FlowLogName 流日志实例名字。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字
-     * @param FlowLogName 流日志实例名字
+     * Set 流日志实例名字。
+     * @param FlowLogName 流日志实例名字。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG 
-     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+     * Get 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。 
+     * @return ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
-     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG
+     * Set 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * @param ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get 资源唯一ID 
-     * @return ResourceId 资源唯一ID
+     * Get 资源唯一ID。 
+     * @return ResourceId 资源唯一ID。
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源唯一ID
-     * @param ResourceId 资源唯一ID
+     * Set 资源唯一ID。
+     * @param ResourceId 资源唯一ID。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 流日志采集类型，ACCEPT|REJECT|ALL 
-     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     * Get 流日志采集类型，ACCEPT|REJECT|ALL。 
+     * @return TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set 流日志采集类型，ACCEPT|REJECT|ALL
-     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL
+     * Set 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @param TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
@@ -180,64 +180,64 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 流日志实例描述 
-     * @return FlowLogDescription 流日志实例描述
+     * Get 流日志实例描述。 
+     * @return FlowLogDescription 流日志实例描述。
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set 流日志实例描述
-     * @param FlowLogDescription 流日志实例描述
+     * Set 流日志实例描述。
+     * @param FlowLogDescription 流日志实例描述。
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;
     }
 
     /**
-     * Get 流日志存储ID 
-     * @return CloudLogId 流日志存储ID
+     * Get 流日志存储ID。 
+     * @return CloudLogId 流日志存储ID。
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set 流日志存储ID
-     * @param CloudLogId 流日志存储ID
+     * Set 流日志存储ID。
+     * @param CloudLogId 流日志存储ID。
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
     }
 
     /**
-     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 消费端类型：cls、ckafka 
-     * @return StorageType 消费端类型：cls、ckafka
+     * Get 消费端类型：cls、ckafka。默认值cls。 
+     * @return StorageType 消费端类型：cls、ckafka。默认值cls。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 消费端类型：cls、ckafka
-     * @param StorageType 消费端类型：cls、ckafka
+     * Set 消费端类型：cls、ckafka。默认值cls。
+     * @param StorageType 消费端类型：cls、ckafka。默认值cls。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

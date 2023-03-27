@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBillListRequest extends AbstractModel{
 
     /**
-    * 查询范围的起始时间（包含）
+    * 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询范围的结束时间（包含）
+    * 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
     */
     @SerializedName("EndTime")
     @Expose
@@ -95,32 +95,32 @@ other 第三方解冻;hour 按量解冻;month 按月解冻
     private Long WithZeroAmount;
 
     /**
-     * Get 查询范围的起始时间（包含） 
-     * @return StartTime 查询范围的起始时间（包含）
+     * Get 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月 
+     * @return StartTime 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询范围的起始时间（包含）
-     * @param StartTime 查询范围的起始时间（包含）
+     * Set 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
+     * @param StartTime 查询范围的起始时间（包含）时间格式 yyyy-MM-dd HH:mm:ss 开始时间和结束时间差值小于等于六个月
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询范围的结束时间（包含） 
-     * @return EndTime 查询范围的结束时间（包含）
+     * Get 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月 
+     * @return EndTime 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询范围的结束时间（包含）
-     * @param EndTime 查询范围的结束时间（包含）
+     * Set 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
+     * @param EndTime 查询范围的结束时间（包含）时间格式 yyyy-MM-dd HH:mm:ss ，开始时间和结束时间差值小于等于六个月
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

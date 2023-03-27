@@ -300,7 +300,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *创建员工
+     *创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
      * @param req CreateIntegrationEmployeesRequest
      * @return CreateIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -356,6 +356,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePrepareFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePrepareFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreatePreparedPersonalEsign）由于创建导入个人印章。
+     * @param req CreatePreparedPersonalEsignRequest
+     * @return CreatePreparedPersonalEsignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsign(CreatePreparedPersonalEsignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePreparedPersonalEsignResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePreparedPersonalEsignResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePreparedPersonalEsign");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

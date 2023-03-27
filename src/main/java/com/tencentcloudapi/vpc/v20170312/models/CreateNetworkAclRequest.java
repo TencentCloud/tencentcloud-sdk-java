@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateNetworkAclRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateNetworkAclRequest extends AbstractModel{
     private String NetworkAclName;
 
     /**
-    * 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+    * 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
     */
     @SerializedName("NetworkAclType")
     @Expose
@@ -51,16 +51,16 @@ public class CreateNetworkAclRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。 
+     * @return VpcId VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
+     * @param VpcId VPC实例ID。可通过<a href="https://cloud.tencent.com/document/product/215/15778">DescribeVpcs</a>接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -83,16 +83,16 @@ public class CreateNetworkAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。 
-     * @return NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+     * Get 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。 
+     * @return NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
      */
     public String getNetworkAclType() {
         return this.NetworkAclType;
     }
 
     /**
-     * Set 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
-     * @param NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。
+     * Set 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
+     * @param NetworkAclType 网络ACL类型，三元组(TRIPLE)或五元组(QUINTUPLE)。默认值三元组(TRIPLE)。
      */
     public void setNetworkAclType(String NetworkAclType) {
         this.NetworkAclType = NetworkAclType;

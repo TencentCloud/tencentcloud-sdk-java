@@ -381,6 +381,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBInstanceDetail)用于查询指定实例的详细信息。
+     * @param req DescribeDBInstanceDetailRequest
+     * @return DescribeDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(DescribeDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
      * @param req DescribeDBInstanceSpecsRequest
      * @return DescribeDBInstanceSpecsResponse

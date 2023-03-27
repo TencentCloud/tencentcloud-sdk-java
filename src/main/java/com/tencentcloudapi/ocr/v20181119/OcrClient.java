@@ -1355,6 +1355,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
+
+默认接口请求频率限制：20次/秒。
      * @param req RecognizeOnlineTaxiItineraryOCRRequest
      * @return RecognizeOnlineTaxiItineraryOCRResponse
      * @throws TencentCloudSDKException
@@ -1435,6 +1437,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
+
+默认接口请求频率限制：10次/秒。
      * @param req RecognizeTableOCRRequest
      * @return RecognizeTableOCRResponse
      * @throws TencentCloudSDKException
@@ -1498,6 +1502,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
+
+默认接口请求频率限制：5次/秒。
      * @param req ResidenceBookletOCRRequest
      * @return ResidenceBookletOCRResponse
      * @throws TencentCloudSDKException
@@ -1518,6 +1524,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持网约车驾驶证关键字段的识别，包括姓名、证号、起始日期、截止日期、发证日期。
+
+默认接口请求频率限制：5次/秒。
      * @param req RideHailingDriverLicenseOCRRequest
      * @return RideHailingDriverLicenseOCRResponse
      * @throws TencentCloudSDKException
@@ -1538,7 +1546,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持网约车运输证关键字段的识别，包括交运管许可字号、车辆所有人、车辆号牌、起始日期、截止日期、发证日期。
-           
+
+默认接口请求频率限制：5次/秒。
      * @param req RideHailingTransportLicenseOCRRequest
      * @return RideHailingTransportLicenseOCRResponse
      * @throws TencentCloudSDKException
@@ -1628,7 +1637,7 @@ public class OcrClient extends AbstractClient{
 
 本接口支持图片内表格文档的检测和识别，返回每个单元格的文字内容，支持将识别结果保存为 Excel 格式。
 
-
+默认接口请求频率限制：10次/秒。
      * @param req TableOCRRequest
      * @return TableOCRResponse
      * @throws TencentCloudSDKException
@@ -1851,6 +1860,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *本接口支持国内机动车登记证书主要字段的结构化识别，包括机动车所有人、身份证明名称、号码、车辆型号、车辆识别代号、发动机号、制造厂名称等。
+
+默认接口请求频率限制：5次/秒。
      * @param req VehicleRegCertOCRRequest
      * @return VehicleRegCertOCRResponse
      * @throws TencentCloudSDKException

@@ -381,6 +381,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+     * @param req DescribeDCDBInstanceDetailRequest
+     * @return DescribeDCDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBInstanceDetailResponse DescribeDCDBInstanceDetail(DescribeDCDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDCDBInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
      * @param req DescribeDCDBInstanceNodeInfoRequest
      * @return DescribeDCDBInstanceNodeInfoResponse

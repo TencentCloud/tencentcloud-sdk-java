@@ -39,7 +39,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *DID添加标签
+     *下线已有内测接口，待上线正式版本的接口
+
+DID添加标签
 
      * @param req AddLabelRequest
      * @return AddLabelResponse
@@ -60,7 +62,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *撤消权威机构认证
+     *下线已有内测接口，待上线正式版本的接口
+
+撤消权威机构认证
      * @param req CancelAuthorityIssuerRequest
      * @return CancelAuthorityIssuerResponse
      * @throws TencentCloudSDKException
@@ -100,7 +104,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *检查部署情况
+     *下线已有内测接口，待上线正式版本的接口
+
+检查部署情况
      * @param req CheckDidDeployRequest
      * @return CheckDidDeployResponse
      * @throws TencentCloudSDKException
@@ -140,7 +146,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *创建DID服务
+     *下线已有内测接口，待上线正式版本的接口
+
+创建DID服务
      * @param req CreateDidServiceRequest
      * @return CreateDidServiceResponse
      * @throws TencentCloudSDKException
@@ -160,7 +168,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *新建标签
+     *下线已有内测接口，待上线正式版本的接口
+
+新建标签
      * @param req CreateLabelRequest
      * @return CreateLabelResponse
      * @throws TencentCloudSDKException
@@ -260,7 +270,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *通过Name部署TDID合约
+     *下线已有内测接口，待上线正式版本的接口
+
+通过Name部署TDID合约
      * @param req DeployByNameRequest
      * @return DeployByNameResponse
      * @throws TencentCloudSDKException
@@ -280,7 +292,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *凭证模版下载
+     *下线已有内测接口，待上线正式版本的接口
+
+凭证模版下载
      * @param req DownCptRequest
      * @return DownCptResponse
      * @throws TencentCloudSDKException
@@ -300,7 +314,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *启用合约
+     *下线已有内测接口，待上线正式版本的接口
+
+启用合约
      * @param req EnableHashRequest
      * @return EnableHashResponse
      * @throws TencentCloudSDKException
@@ -342,7 +358,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *权威机构列表
+     *下线已有内测接口，待上线正式版本的接口
+
+权威机构列表
      * @param req GetAuthoritiesListRequest
      * @return GetAuthoritiesListResponse
      * @throws TencentCloudSDKException
@@ -382,7 +400,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取联盟bcos网络列表
+     *下线已有内测接口，待上线正式版本的接口
+
+获取联盟bcos网络列表
      * @param req GetConsortiumClusterListRequest
      * @return GetConsortiumClusterListResponse
      * @throws TencentCloudSDKException
@@ -402,7 +422,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取联盟列表
+     *下线已有内测接口，待上线正式版本的接口
+
+获取联盟列表
      * @param req GetConsortiumListRequest
      * @return GetConsortiumListResponse
      * @throws TencentCloudSDKException
@@ -442,7 +464,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *凭证模版列表
+     *下线已有内测接口，待上线正式版本的接口
+
+凭证模版列表
      * @param req GetCptListRequest
      * @return GetCptListResponse
      * @throws TencentCloudSDKException
@@ -462,7 +486,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *凭证颁发按机构排行
+     *下线已有内测接口，待上线正式版本的接口
+
+凭证颁发按机构排行
      * @param req GetCredentialCptRankRequest
      * @return GetCredentialCptRankResponse
      * @throws TencentCloudSDKException
@@ -482,7 +508,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *凭证颁发按机构排行
+     *下线已有内测接口，待上线正式版本的接口
+
+凭证颁发按机构排行
      * @param req GetCredentialIssueRankRequest
      * @return GetCredentialIssueRankResponse
      * @throws TencentCloudSDKException
@@ -502,7 +530,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *凭证颁发趋势
+     *下线已有内测接口，待上线正式版本的接口
+
+凭证颁发趋势
      * @param req GetCredentialIssueTrendRequest
      * @return GetCredentialIssueTrendResponse
      * @throws TencentCloudSDKException
@@ -542,7 +572,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *概览
+     *下线已有内测接口，待上线正式版本的接口
+
+概览
 
      * @param req GetDataPanelRequest
      * @return GetDataPanelResponse
@@ -563,7 +595,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *合约部署详情
+     *下线已有内测接口，待上线正式版本的接口
+
+合约部署详情
 
      * @param req GetDeployInfoRequest
      * @return GetDeployInfoResponse
@@ -584,7 +618,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *合约部署列表
+     *下线已有内测接口，待上线正式版本的接口
+
+合约部署列表
      * @param req GetDeployListRequest
      * @return GetDeployListResponse
      * @throws TencentCloudSDKException
@@ -604,7 +640,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取DID区块链网络详情
+     *下线已有内测接口，待上线正式版本的接口
+
+获取DID区块链网络详情
      * @param req GetDidClusterDetailRequest
      * @return GetDidClusterDetailResponse
      * @throws TencentCloudSDKException
@@ -624,7 +662,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取用户的DID网络列表
+     *下线已有内测接口，待上线正式版本的接口
+
+获取用户的DID网络列表
      * @param req GetDidClusterListRequest
      * @return GetDidClusterListResponse
      * @throws TencentCloudSDKException
@@ -644,7 +684,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *DID详情
+     *下线已有内测接口，待上线正式版本的接口
+
+DID详情
      * @param req GetDidDetailRequest
      * @return GetDidDetailResponse
      * @throws TencentCloudSDKException
@@ -685,7 +727,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *DID列表
+     *下线已有内测接口，待上线正式版本的接口
+
+DID列表
      * @param req GetDidListRequest
      * @return GetDidListResponse
      * @throws TencentCloudSDKException
@@ -705,7 +749,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *DID注册趋势
+     *下线已有内测接口，待上线正式版本的接口
+
+DID注册趋势
      * @param req GetDidRegisterTrendRequest
      * @return GetDidRegisterTrendResponse
      * @throws TencentCloudSDKException
@@ -725,7 +771,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取DID服务详情
+     *下线已有内测接口，待上线正式版本的接口
+
+获取DID服务详情
      * @param req GetDidServiceDetailRequest
      * @return GetDidServiceDetailResponse
      * @throws TencentCloudSDKException
@@ -745,7 +793,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *获取DID服务列表
+     *下线已有内测接口，待上线正式版本的接口
+
+获取DID服务列表
      * @param req GetDidServiceListRequest
      * @return GetDidServiceListResponse
      * @throws TencentCloudSDKException
@@ -765,7 +815,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *主群组配置列表
+     *下线已有内测接口，待上线正式版本的接口
+
+主群组配置列表
      * @param req GetGroupListRequest
      * @return GetGroupListResponse
      * @throws TencentCloudSDKException
@@ -785,7 +837,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *标签列表
+     *下线已有内测接口，待上线正式版本的接口
+
+标签列表
      * @param req GetLabelListRequest
      * @return GetLabelListResponse
      * @throws TencentCloudSDKException
@@ -805,7 +859,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *披露策略Policy管理列表
+     *下线已有内测接口，待上线正式版本的接口
+
+披露策略Policy管理列表
      * @param req GetPolicyListRequest
      * @return GetPolicyListResponse
      * @throws TencentCloudSDKException
@@ -825,7 +881,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *查看公钥
+     *下线已有内测接口，待上线正式版本的接口
+
+查看公钥
      * @param req GetPublicKeyRequest
      * @return GetPublicKeyResponse
      * @throws TencentCloudSDKException
@@ -845,7 +903,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *披露策略Policy查看
+     *下线已有内测接口，待上线正式版本的接口
+
+披露策略Policy查看
      * @param req QueryPolicyRequest
      * @return QueryPolicyResponse
      * @throws TencentCloudSDKException
@@ -865,7 +925,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *认证权威机构
+     *下线已有内测接口，待上线正式版本的接口
+
+认证权威机构
      * @param req RecognizeAuthorityIssuerRequest
      * @return RecognizeAuthorityIssuerResponse
      * @throws TencentCloudSDKException
@@ -885,7 +947,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *披露策略Policy注册
+     *下线已有内测接口，待上线正式版本的接口
+
+披露策略Policy注册
      * @param req RegisterClaimPolicyRequest
      * @return RegisterClaimPolicyResponse
      * @throws TencentCloudSDKException
@@ -925,7 +989,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *注册为权威机构
+     *下线已有内测接口，待上线正式版本的接口
+
+注册为权威机构
      * @param req RegisterIssuerRequest
      * @return RegisterIssuerResponse
      * @throws TencentCloudSDKException
@@ -945,7 +1011,9 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *删除合约
+     *下线已有内测接口，待上线正式版本的接口
+
+删除合约
      * @param req RemoveHashRequest
      * @return RemoveHashResponse
      * @throws TencentCloudSDKException

@@ -1771,7 +1771,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *获取与云监控融合实例列表
+     *获取与 Prometheus 监控融合实例列表
      * @param req DescribePrometheusInstancesOverviewRequest
      * @return DescribePrometheusInstancesOverviewResponse
      * @throws TencentCloudSDKException
@@ -2159,7 +2159,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *云监控告警编辑告警通知模板
+     *编辑告警通知模板
      * @param req ModifyAlarmNoticeRequest
      * @return ModifyAlarmNoticeResponse
      * @throws TencentCloudSDKException

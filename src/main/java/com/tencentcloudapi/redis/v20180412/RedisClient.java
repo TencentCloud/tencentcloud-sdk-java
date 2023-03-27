@@ -219,6 +219,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+     * @param req CloneInstancesRequest
+     * @return CloneInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneInstancesResponse CloneInstances(CloneInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *关闭SSL
      * @param req CloseSSLRequest
      * @return CloseSSLResponse

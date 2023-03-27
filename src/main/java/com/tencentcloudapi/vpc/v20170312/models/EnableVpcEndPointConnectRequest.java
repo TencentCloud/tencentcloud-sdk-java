@@ -38,6 +38,7 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
 
     /**
     * 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
     */
     @SerializedName("AcceptFlag")
     @Expose
@@ -76,8 +77,10 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否接受终端节点连接请求。 
+     * Get 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li> 
      * @return AcceptFlag 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
      */
     public Boolean getAcceptFlag() {
         return this.AcceptFlag;
@@ -85,7 +88,9 @@ public class EnableVpcEndPointConnectRequest extends AbstractModel{
 
     /**
      * Set 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
      * @param AcceptFlag 是否接受终端节点连接请求。
+<li> true：自动接受。</li> <li> false：不自动接受。</li>
      */
     public void setAcceptFlag(Boolean AcceptFlag) {
         this.AcceptFlag = AcceptFlag;

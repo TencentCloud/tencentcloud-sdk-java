@@ -51,6 +51,13 @@ public class DescribeConnectResourcesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
+
+    /**
      * Get 连接源类型 
      * @return Type 连接源类型
      */
@@ -114,6 +121,22 @@ public class DescribeConnectResourcesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源) 
+     * @return ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     */
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     * @param ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
+     */
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
     public DescribeConnectResourcesRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeConnectResourcesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeConnectResourcesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
 
     }
 }

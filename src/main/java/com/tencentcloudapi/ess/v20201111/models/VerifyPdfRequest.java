@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VerifyPdfRequest extends AbstractModel{
 
     /**
-    * 合同Id，流程Id
+    * 流程ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,16 +37,16 @@ public class VerifyPdfRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 合同Id，流程Id 
-     * @return FlowId 合同Id，流程Id
+     * Get 流程ID 
+     * @return FlowId 流程ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同Id，流程Id
-     * @param FlowId 合同Id，流程Id
+     * Set 流程ID
+     * @param FlowId 流程ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

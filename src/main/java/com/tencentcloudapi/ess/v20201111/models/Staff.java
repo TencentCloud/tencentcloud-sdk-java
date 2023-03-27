@@ -52,7 +52,7 @@ public class Staff extends AbstractModel{
     private String Email;
 
     /**
-    * 用户在第三方平台id
+    * 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
@@ -104,6 +104,20 @@ public class Staff extends AbstractModel{
     @SerializedName("QuiteJob")
     @Expose
     private Long QuiteJob;
+
+    /**
+    * 员工离职交接人用户id
+    */
+    @SerializedName("ReceiveUserId")
+    @Expose
+    private String ReceiveUserId;
+
+    /**
+    * 员工离职交接人用户OpenId
+    */
+    @SerializedName("ReceiveOpenId")
+    @Expose
+    private String ReceiveOpenId;
 
     /**
      * Get 用户在电子签平台的id 
@@ -174,9 +188,9 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 用户在第三方平台id
+     * Get 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpenId 用户在第三方平台id
+     * @return OpenId 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
@@ -184,9 +198,9 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Set 用户在第三方平台id
+     * Set 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenId 用户在第三方平台id
+     * @param OpenId 用户在第三方平台id，如需在此接口提醒员工实名，该参数不传
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
@@ -305,6 +319,38 @@ public class Staff extends AbstractModel{
         this.QuiteJob = QuiteJob;
     }
 
+    /**
+     * Get 员工离职交接人用户id 
+     * @return ReceiveUserId 员工离职交接人用户id
+     */
+    public String getReceiveUserId() {
+        return this.ReceiveUserId;
+    }
+
+    /**
+     * Set 员工离职交接人用户id
+     * @param ReceiveUserId 员工离职交接人用户id
+     */
+    public void setReceiveUserId(String ReceiveUserId) {
+        this.ReceiveUserId = ReceiveUserId;
+    }
+
+    /**
+     * Get 员工离职交接人用户OpenId 
+     * @return ReceiveOpenId 员工离职交接人用户OpenId
+     */
+    public String getReceiveOpenId() {
+        return this.ReceiveOpenId;
+    }
+
+    /**
+     * Set 员工离职交接人用户OpenId
+     * @param ReceiveOpenId 员工离职交接人用户OpenId
+     */
+    public void setReceiveOpenId(String ReceiveOpenId) {
+        this.ReceiveOpenId = ReceiveOpenId;
+    }
+
     public Staff() {
     }
 
@@ -349,6 +395,12 @@ public class Staff extends AbstractModel{
         if (source.QuiteJob != null) {
             this.QuiteJob = new Long(source.QuiteJob);
         }
+        if (source.ReceiveUserId != null) {
+            this.ReceiveUserId = new String(source.ReceiveUserId);
+        }
+        if (source.ReceiveOpenId != null) {
+            this.ReceiveOpenId = new String(source.ReceiveOpenId);
+        }
     }
 
 
@@ -367,6 +419,8 @@ public class Staff extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "VerifiedOn", this.VerifiedOn);
         this.setParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
+        this.setParamSimple(map, prefix + "ReceiveUserId", this.ReceiveUserId);
+        this.setParamSimple(map, prefix + "ReceiveOpenId", this.ReceiveOpenId);
 
     }
 }

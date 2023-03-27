@@ -37,6 +37,13 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     private Staff [] Employees;
 
     /**
+    * 代理信息
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 操作人信息，userId必填 
      * @return Operator 操作人信息，userId必填
      */
@@ -68,6 +75,22 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
         this.Employees = Employees;
     }
 
+    /**
+     * Get 代理信息 
+     * @return Agent 代理信息
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理信息
+     * @param Agent 代理信息
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DeleteIntegrationEmployeesRequest() {
     }
 
@@ -85,6 +108,9 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
                 this.Employees[i] = new Staff(source.Employees[i]);
             }
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Employees.", this.Employees);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

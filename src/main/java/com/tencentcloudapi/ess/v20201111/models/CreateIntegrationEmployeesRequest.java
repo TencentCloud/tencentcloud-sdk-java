@@ -37,6 +37,13 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
     private Staff [] Employees;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 操作人信息，userId必填 
      * @return Operator 操作人信息，userId必填
      */
@@ -68,6 +75,22 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
         this.Employees = Employees;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateIntegrationEmployeesRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
                 this.Employees[i] = new Staff(source.Employees[i]);
             }
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Employees.", this.Employees);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

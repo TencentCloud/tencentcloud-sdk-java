@@ -219,6 +219,29 @@ public class InstanceInfo extends AbstractModel{
     private String AuditRunningStatus;
 
     /**
+    * 内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternalVip")
+    @Expose
+    private String InternalVip;
+
+    /**
+    * 内网port
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternalVport")
+    @Expose
+    private Long InternalVport;
+
+    /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -666,6 +689,62 @@ public class InstanceInfo extends AbstractModel{
         this.AuditRunningStatus = AuditRunningStatus;
     }
 
+    /**
+     * Get 内网vip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternalVip 内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInternalVip() {
+        return this.InternalVip;
+    }
+
+    /**
+     * Set 内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternalVip 内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternalVip(String InternalVip) {
+        this.InternalVip = InternalVip;
+    }
+
+    /**
+     * Get 内网port
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternalVport 内网port
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInternalVport() {
+        return this.InternalVport;
+    }
+
+    /**
+     * Set 内网port
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternalVport 内网port
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternalVport(Long InternalVport) {
+        this.InternalVport = InternalVport;
+    }
+
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public InstanceInfo() {
     }
 
@@ -758,6 +837,15 @@ public class InstanceInfo extends AbstractModel{
         if (source.AuditRunningStatus != null) {
             this.AuditRunningStatus = new String(source.AuditRunningStatus);
         }
+        if (source.InternalVip != null) {
+            this.InternalVip = new String(source.InternalVip);
+        }
+        if (source.InternalVport != null) {
+            this.InternalVport = new Long(source.InternalVport);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -793,6 +881,9 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SecAuditStatus", this.SecAuditStatus);
         this.setParamSimple(map, prefix + "AuditPolicyStatus", this.AuditPolicyStatus);
         this.setParamSimple(map, prefix + "AuditRunningStatus", this.AuditRunningStatus);
+        this.setParamSimple(map, prefix + "InternalVip", this.InternalVip);
+        this.setParamSimple(map, prefix + "InternalVport", this.InternalVport);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

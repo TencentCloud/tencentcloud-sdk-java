@@ -279,6 +279,14 @@ public class SparkJobInfo extends AbstractModel{
     private Long JobExecutorMaxNumbers;
 
     /**
+    * 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkImageVersion")
+    @Expose
+    private String SparkImageVersion;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -882,6 +890,26 @@ public class SparkJobInfo extends AbstractModel{
         this.JobExecutorMaxNumbers = JobExecutorMaxNumbers;
     }
 
+    /**
+     * Get 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkImageVersion 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSparkImageVersion() {
+        return this.SparkImageVersion;
+    }
+
+    /**
+     * Set 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkImageVersion 镜像版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkImageVersion(String SparkImageVersion) {
+        this.SparkImageVersion = SparkImageVersion;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -995,6 +1023,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.JobExecutorMaxNumbers != null) {
             this.JobExecutorMaxNumbers = new Long(source.JobExecutorMaxNumbers);
         }
+        if (source.SparkImageVersion != null) {
+            this.SparkImageVersion = new String(source.SparkImageVersion);
+        }
     }
 
 
@@ -1037,6 +1068,7 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
         this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
 
     }
 }
