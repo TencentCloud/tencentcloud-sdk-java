@@ -44,21 +44,22 @@ public class ProductEntry extends AbstractModel{
     private Long CategoryId;
 
     /**
-    * 加密类型
+    * 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
     */
     @SerializedName("EncryptionType")
     @Expose
     private String EncryptionType;
 
     /**
-    * 连接类型
+    * 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * 数据协议
+    * 数据协议 (1 使用物模型 2 为自定义类型)
     */
     @SerializedName("DataProtocol")
     @Expose
@@ -72,7 +73,7 @@ public class ProductEntry extends AbstractModel{
     private String ProductDesc;
 
     /**
-    * 状态
+    * 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
     */
     @SerializedName("DevStatus")
     @Expose
@@ -100,7 +101,7 @@ public class ProductEntry extends AbstractModel{
     private String Region;
 
     /**
-    * 产品类型
+    * 产品类型。如： 0 普通产品 ， 5 网关产品
     */
     @SerializedName("ProductType")
     @Expose
@@ -143,6 +144,14 @@ public class ProductEntry extends AbstractModel{
     @SerializedName("CreatorNickName")
     @Expose
     private String CreatorNickName;
+
+    /**
+    * 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindStrategy")
+    @Expose
+    private Long BindStrategy;
 
     /**
      * Get 产品ID 
@@ -193,48 +202,52 @@ public class ProductEntry extends AbstractModel{
     }
 
     /**
-     * Get 加密类型 
-     * @return EncryptionType 加密类型
+     * Get 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式 
+     * @return EncryptionType 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * Set 加密类型
-     * @param EncryptionType 加密类型
+     * Set 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @param EncryptionType 加密类型。1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;
     }
 
     /**
-     * Get 连接类型 
-     * @return NetType 连接类型
+     * Get 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh 
+     * @return NetType 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 连接类型
-     * @param NetType 连接类型
+     * Set 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * @param NetType 连接类型。如：
+wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get 数据协议 
-     * @return DataProtocol 数据协议
+     * Get 数据协议 (1 使用物模型 2 为自定义类型) 
+     * @return DataProtocol 数据协议 (1 使用物模型 2 为自定义类型)
      */
     public Long getDataProtocol() {
         return this.DataProtocol;
     }
 
     /**
-     * Set 数据协议
-     * @param DataProtocol 数据协议
+     * Set 数据协议 (1 使用物模型 2 为自定义类型)
+     * @param DataProtocol 数据协议 (1 使用物模型 2 为自定义类型)
      */
     public void setDataProtocol(Long DataProtocol) {
         this.DataProtocol = DataProtocol;
@@ -257,16 +270,16 @@ public class ProductEntry extends AbstractModel{
     }
 
     /**
-     * Get 状态 
-     * @return DevStatus 状态
+     * Get 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布 
+     * @return DevStatus 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
      */
     public String getDevStatus() {
         return this.DevStatus;
     }
 
     /**
-     * Set 状态
-     * @param DevStatus 状态
+     * Set 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
+     * @param DevStatus 状态 如：all 全部, dev 开发中, audit 审核中 released 已发布
      */
     public void setDevStatus(String DevStatus) {
         this.DevStatus = DevStatus;
@@ -321,16 +334,16 @@ public class ProductEntry extends AbstractModel{
     }
 
     /**
-     * Get 产品类型 
-     * @return ProductType 产品类型
+     * Get 产品类型。如： 0 普通产品 ， 5 网关产品 
+     * @return ProductType 产品类型。如： 0 普通产品 ， 5 网关产品
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型
-     * @param ProductType 产品类型
+     * Set 产品类型。如： 0 普通产品 ， 5 网关产品
+     * @param ProductType 产品类型。如： 0 普通产品 ， 5 网关产品
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
@@ -428,6 +441,26 @@ public class ProductEntry extends AbstractModel{
         this.CreatorNickName = CreatorNickName;
     }
 
+    /**
+     * Get 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBindStrategy() {
+        return this.BindStrategy;
+    }
+
+    /**
+     * Set 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindStrategy(Long BindStrategy) {
+        this.BindStrategy = BindStrategy;
+    }
+
     public ProductEntry() {
     }
 
@@ -487,6 +520,9 @@ public class ProductEntry extends AbstractModel{
         if (source.CreatorNickName != null) {
             this.CreatorNickName = new String(source.CreatorNickName);
         }
+        if (source.BindStrategy != null) {
+            this.BindStrategy = new Long(source.BindStrategy);
+        }
     }
 
 
@@ -511,6 +547,7 @@ public class ProductEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+        this.setParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
 
     }
 }

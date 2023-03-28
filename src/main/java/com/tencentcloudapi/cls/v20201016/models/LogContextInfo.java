@@ -73,6 +73,22 @@ public class LogContextInfo extends AbstractModel{
     private String HostName;
 
     /**
+    * 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RawLog")
+    @Expose
+    private String RawLog;
+
+    /**
+    * 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexStatus")
+    @Expose
+    private String IndexStatus;
+
+    /**
      * Get 日志来源设备 
      * @return Source 日志来源设备
      */
@@ -188,6 +204,46 @@ public class LogContextInfo extends AbstractModel{
         this.HostName = HostName;
     }
 
+    /**
+     * Get 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RawLog 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRawLog() {
+        return this.RawLog;
+    }
+
+    /**
+     * Set 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RawLog 原始日志(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRawLog(String RawLog) {
+        this.RawLog = RawLog;
+    }
+
+    /**
+     * Get 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIndexStatus() {
+        return this.IndexStatus;
+    }
+
+    /**
+     * Set 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexStatus 日志创建索引异常原因(仅在日志创建索引异常时有值)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexStatus(String IndexStatus) {
+        this.IndexStatus = IndexStatus;
+    }
+
     public LogContextInfo() {
     }
 
@@ -217,6 +273,12 @@ public class LogContextInfo extends AbstractModel{
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.RawLog != null) {
+            this.RawLog = new String(source.RawLog);
+        }
+        if (source.IndexStatus != null) {
+            this.IndexStatus = new String(source.IndexStatus);
+        }
     }
 
 
@@ -231,6 +293,8 @@ public class LogContextInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "BTime", this.BTime);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "RawLog", this.RawLog);
+        this.setParamSimple(map, prefix + "IndexStatus", this.IndexStatus);
 
     }
 }

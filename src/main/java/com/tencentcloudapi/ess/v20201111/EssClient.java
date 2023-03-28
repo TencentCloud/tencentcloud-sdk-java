@@ -320,6 +320,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *集成版绑定员工角色
+     * @param req CreateIntegrationUserRolesRequest
+     * @return CreateIntegrationUserRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(CreateIntegrationUserRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIntegrationUserRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIntegrationUserRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIntegrationUserRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（CreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
 适用场景：无需填写签署人信息，可通过模板id生成签署二维码，签署人可通过扫描二维码补充签署信息进行实名签署。常用于提前不知道签署人的身份信息场景，例如：劳务工招工、大批量员工入职等场景。
 适用的模板仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模板，且模板中发起方没有填写控件。
@@ -494,6 +514,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *解绑用户角色绑定关系
+     * @param req DeleteIntegrationRoleUsersRequest
+     * @return DeleteIntegrationRoleUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsers(DeleteIntegrationRoleUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIntegrationRoleUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIntegrationRoleUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIntegrationRoleUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *撤销员工持有的印章权限
      * @param req DeleteSealPoliciesRequest
      * @return DeleteSealPoliciesResponse
@@ -650,6 +690,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIntegrationMainOrganizationUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询集成版角色
+     * @param req DescribeIntegrationRolesRequest
+     * @return DescribeIntegrationRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrationRolesResponse DescribeIntegrationRoles(DescribeIntegrationRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIntegrationRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIntegrationRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIntegrationRoles");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -815,6 +875,26 @@ callbackinfo包含： 回调地址和签名key
                 Type type = new TypeToken<JsonResponseModel<StartFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新集成版员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
+     * @param req UpdateIntegrationEmployeesRequest
+     * @return UpdateIntegrationEmployeesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateIntegrationEmployeesResponse UpdateIntegrationEmployees(UpdateIntegrationEmployeesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateIntegrationEmployeesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateIntegrationEmployeesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateIntegrationEmployees");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

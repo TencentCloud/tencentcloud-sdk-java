@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class DescribeTrtcRoomUsageRequest extends AbstractModel{
 
+    /**
+    * TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+    */
+    @SerializedName("SdkAppid")
+    @Expose
+    private Long SdkAppid;
+
+    /**
+    * 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get TRTC的SdkAppId，和房间所对应的SdkAppId相同。 
+     * @return SdkAppid TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+     */
+    public Long getSdkAppid() {
+        return this.SdkAppid;
+    }
+
+    /**
+     * Set TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+     * @param SdkAppid TRTC的SdkAppId，和房间所对应的SdkAppId相同。
+     */
+    public void setSdkAppid(Long SdkAppid) {
+        this.SdkAppid = SdkAppid;
+    }
+
+    /**
+     * Get 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。 
+     * @return StartTime 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+     * @param StartTime 查询开始时间，格式为YYYY-MM-DD HH:MM，精确到分钟级。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。 
+     * @return EndTime 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+     * @param EndTime 查询结束时间，格式为YYYY-MM-DD HH:MM，单次查询不超过24h。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeTrtcRoomUsageRequest() {
     }
 
@@ -30,6 +99,15 @@ public class DescribeTrtcRoomUsageRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTrtcRoomUsageRequest(DescribeTrtcRoomUsageRequest source) {
+        if (source.SdkAppid != null) {
+            this.SdkAppid = new Long(source.SdkAppid);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class DescribeTrtcRoomUsageRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SdkAppid", this.SdkAppid);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

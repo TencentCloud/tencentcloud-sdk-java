@@ -104,6 +104,15 @@ public class SearchLogRequest extends AbstractModel{
     private Float SamplingRate;
 
     /**
+    * 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get 要检索分析的日志的起始时间，Unix时间戳（毫秒） 
      * @return From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      */
@@ -319,6 +328,30 @@ public class SearchLogRequest extends AbstractModel{
         this.SamplingRate = SamplingRate;
     }
 
+    /**
+     * Get 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules 
+     * @return SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+     * @param SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -354,6 +387,9 @@ public class SearchLogRequest extends AbstractModel{
         if (source.SamplingRate != null) {
             this.SamplingRate = new Float(source.SamplingRate);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -370,6 +406,7 @@ public class SearchLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

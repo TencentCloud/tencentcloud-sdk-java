@@ -246,7 +246,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Long ComponentDateFontSize;
 
     /**
-    * 渠道版控件 id 标识
+    * 平台模板控件 id 标识
     */
     @SerializedName("ChannelComponentId")
     @Expose
@@ -267,7 +267,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Float OffsetY;
 
     /**
-    * //渠道子客控件来源。0-渠道指定；1-用户自定义
+    * //子客控件来源。0-平台指定；1-用户自定义
     */
     @SerializedName("ChannelComponentSource")
     @Expose
@@ -1003,16 +1003,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 渠道版控件 id 标识 
-     * @return ChannelComponentId 渠道版控件 id 标识
+     * Get 平台模板控件 id 标识 
+     * @return ChannelComponentId 平台模板控件 id 标识
      */
     public String getChannelComponentId() {
         return this.ChannelComponentId;
     }
 
     /**
-     * Set 渠道版控件 id 标识
-     * @param ChannelComponentId 渠道版控件 id 标识
+     * Set 平台模板控件 id 标识
+     * @param ChannelComponentId 平台模板控件 id 标识
      */
     public void setChannelComponentId(String ChannelComponentId) {
         this.ChannelComponentId = ChannelComponentId;
@@ -1051,16 +1051,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get //渠道子客控件来源。0-渠道指定；1-用户自定义 
-     * @return ChannelComponentSource //渠道子客控件来源。0-渠道指定；1-用户自定义
+     * Get //子客控件来源。0-平台指定；1-用户自定义 
+     * @return ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
      */
     public Long getChannelComponentSource() {
         return this.ChannelComponentSource;
     }
 
     /**
-     * Set //渠道子客控件来源。0-渠道指定；1-用户自定义
-     * @param ChannelComponentSource //渠道子客控件来源。0-渠道指定；1-用户自定义
+     * Set //子客控件来源。0-平台指定；1-用户自定义
+     * @param ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
      */
     public void setChannelComponentSource(Long ChannelComponentSource) {
         this.ChannelComponentSource = ChannelComponentSource;

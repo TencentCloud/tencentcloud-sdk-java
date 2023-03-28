@@ -349,6 +349,13 @@ public class InstanceInfo extends AbstractModel{
     private Long MaxDelayTime;
 
     /**
+    * 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1112,6 +1119,22 @@ public class InstanceInfo extends AbstractModel{
         this.MaxDelayTime = MaxDelayTime;
     }
 
+    /**
+     * Get 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘 
+     * @return DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     * @param DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1264,6 +1287,9 @@ public class InstanceInfo extends AbstractModel{
         if (source.MaxDelayTime != null) {
             this.MaxDelayTime = new Long(source.MaxDelayTime);
         }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -1316,6 +1342,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

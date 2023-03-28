@@ -315,6 +315,9 @@ public enum EmrErrorCode {
     // 引导脚本数量超过限制。
      LIMITEXCEEDED_BOOTSTRAPACTIONSNUMLIMITEXCEEDED("LimitExceeded.BootstrapActionsNumLimitExceeded"),
      
+    // 安全组数量超过限制。
+     LIMITEXCEEDED_SECURITYGROUPNUMLIMITEXCEEDED("LimitExceeded.SecurityGroupNumLimitExceeded"),
+     
     // 缺少参数错误。
      MISSINGPARAMETER("MissingParameter"),
      
@@ -362,6 +365,9 @@ public enum EmrErrorCode {
      
     // 云服务器已售罄。
      RESOURCESSOLDOUT_CVMSOLDOUT("ResourcesSoldOut.CvmSoldOut"),
+     
+    // 校验账号操作无权限。
+     UNAUTHORIZEDOPERATION_CHECKCAMAUTH("UnauthorizedOperation.CheckCamAuth"),
      
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),

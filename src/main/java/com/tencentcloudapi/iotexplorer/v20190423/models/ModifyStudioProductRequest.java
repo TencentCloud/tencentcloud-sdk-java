@@ -58,6 +58,13 @@ public class ModifyStudioProductRequest extends AbstractModel{
     private String EnableProductScript;
 
     /**
+    * 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+    */
+    @SerializedName("BindStrategy")
+    @Expose
+    private Long BindStrategy;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -137,6 +144,22 @@ public class ModifyStudioProductRequest extends AbstractModel{
         this.EnableProductScript = EnableProductScript;
     }
 
+    /**
+     * Get 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理 
+     * @return BindStrategy 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+     */
+    public Long getBindStrategy() {
+        return this.BindStrategy;
+    }
+
+    /**
+     * Set 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+     * @param BindStrategy 传1或者2；1代表强踢，2代表非强踢。传其它值不做任何处理
+     */
+    public void setBindStrategy(Long BindStrategy) {
+        this.BindStrategy = BindStrategy;
+    }
+
     public ModifyStudioProductRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ModifyStudioProductRequest extends AbstractModel{
         if (source.EnableProductScript != null) {
             this.EnableProductScript = new String(source.EnableProductScript);
         }
+        if (source.BindStrategy != null) {
+            this.BindStrategy = new Long(source.BindStrategy);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyStudioProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
         this.setParamSimple(map, prefix + "ModuleId", this.ModuleId);
         this.setParamSimple(map, prefix + "EnableProductScript", this.EnableProductScript);
+        this.setParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
 
     }
 }

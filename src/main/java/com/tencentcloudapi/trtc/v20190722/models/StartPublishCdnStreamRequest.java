@@ -51,14 +51,14 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private AgentParams AgentParams;
 
     /**
-    * 是否转码，0表示无需转码，1表示需要转码。
+    * 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
     */
     @SerializedName("WithTranscoding")
     @Expose
     private Long WithTranscoding;
 
     /**
-    * 转推流的音频编码参数。
+    * 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
     */
     @SerializedName("AudioParams")
     @Expose
@@ -79,7 +79,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private SingleSubscribeParams SingleSubscribeParams;
 
     /**
-    * 转推的CDN参数。
+    * 转推的CDN参数。和回推房间参数必须要有一个。
     */
     @SerializedName("PublishCdnParams")
     @Expose
@@ -93,7 +93,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private McuSeiParams SeiParams;
 
     /**
-    * 回推房间信息
+    * 回推房间信息，和转推CDN参数必须要有一个。
     */
     @SerializedName("FeedBackRoomParams")
     @Expose
@@ -164,32 +164,32 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否转码，0表示无需转码，1表示需要转码。 
-     * @return WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
+     * Get 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。 
+     * @return WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
      */
     public Long getWithTranscoding() {
         return this.WithTranscoding;
     }
 
     /**
-     * Set 是否转码，0表示无需转码，1表示需要转码。
-     * @param WithTranscoding 是否转码，0表示无需转码，1表示需要转码。
+     * Set 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+     * @param WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
      */
     public void setWithTranscoding(Long WithTranscoding) {
         this.WithTranscoding = WithTranscoding;
     }
 
     /**
-     * Get 转推流的音频编码参数。 
-     * @return AudioParams 转推流的音频编码参数。
+     * Get 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。 
+     * @return AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
      */
     public McuAudioParams getAudioParams() {
         return this.AudioParams;
     }
 
     /**
-     * Set 转推流的音频编码参数。
-     * @param AudioParams 转推流的音频编码参数。
+     * Set 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
+     * @param AudioParams 转推流的音频编码参数。由于音频是必转码的（不会收取转码费用），所以启动任务的时候，必须填写。
      */
     public void setAudioParams(McuAudioParams AudioParams) {
         this.AudioParams = AudioParams;
@@ -228,16 +228,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 转推的CDN参数。 
-     * @return PublishCdnParams 转推的CDN参数。
+     * Get 转推的CDN参数。和回推房间参数必须要有一个。 
+     * @return PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
      */
     public McuPublishCdnParam [] getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set 转推的CDN参数。
-     * @param PublishCdnParams 转推的CDN参数。
+     * Set 转推的CDN参数。和回推房间参数必须要有一个。
+     * @param PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
      */
     public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;
@@ -260,16 +260,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 回推房间信息 
-     * @return FeedBackRoomParams 回推房间信息
+     * Get 回推房间信息，和转推CDN参数必须要有一个。 
+     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。
      */
     public McuFeedBackRoomParams [] getFeedBackRoomParams() {
         return this.FeedBackRoomParams;
     }
 
     /**
-     * Set 回推房间信息
-     * @param FeedBackRoomParams 回推房间信息
+     * Set 回推房间信息，和转推CDN参数必须要有一个。
+     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。
      */
     public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
         this.FeedBackRoomParams = FeedBackRoomParams;

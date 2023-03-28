@@ -79,14 +79,14 @@ public class DescribeVoucherInfoRequest extends AbstractModel{
     private String VoucherName;
 
     /**
-    * 发放开始时间
+    * 发放开始时间,例：2021-01-01
     */
     @SerializedName("TimeFrom")
     @Expose
     private String TimeFrom;
 
     /**
-    * 发放结束时间
+    * 发放结束时间，例：2021-01-01
     */
     @SerializedName("TimeTo")
     @Expose
@@ -256,32 +256,32 @@ public class DescribeVoucherInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 发放开始时间 
-     * @return TimeFrom 发放开始时间
+     * Get 发放开始时间,例：2021-01-01 
+     * @return TimeFrom 发放开始时间,例：2021-01-01
      */
     public String getTimeFrom() {
         return this.TimeFrom;
     }
 
     /**
-     * Set 发放开始时间
-     * @param TimeFrom 发放开始时间
+     * Set 发放开始时间,例：2021-01-01
+     * @param TimeFrom 发放开始时间,例：2021-01-01
      */
     public void setTimeFrom(String TimeFrom) {
         this.TimeFrom = TimeFrom;
     }
 
     /**
-     * Get 发放结束时间 
-     * @return TimeTo 发放结束时间
+     * Get 发放结束时间，例：2021-01-01 
+     * @return TimeTo 发放结束时间，例：2021-01-01
      */
     public String getTimeTo() {
         return this.TimeTo;
     }
 
     /**
-     * Set 发放结束时间
-     * @param TimeTo 发放结束时间
+     * Set 发放结束时间，例：2021-01-01
+     * @param TimeTo 发放结束时间，例：2021-01-01
      */
     public void setTimeTo(String TimeTo) {
         this.TimeTo = TimeTo;

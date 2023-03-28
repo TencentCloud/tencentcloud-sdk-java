@@ -65,6 +65,41 @@ public class DescribeVulSummaryResponse extends AbstractModel{
     private Long SeriousVulNewestImageCount;
 
     /**
+    * 系统漏洞重点关注数
+    */
+    @SerializedName("SystemVulnerabilityFocusCount")
+    @Expose
+    private Long SystemVulnerabilityFocusCount;
+
+    /**
+    * web漏洞重点关注数
+    */
+    @SerializedName("WebVulnerabilityFocusCount")
+    @Expose
+    private Long WebVulnerabilityFocusCount;
+
+    /**
+    * 受影响本地镜像数
+    */
+    @SerializedName("SeriousVulnerabilityLocalImageCount")
+    @Expose
+    private Long SeriousVulnerabilityLocalImageCount;
+
+    /**
+    * 受影响仓库镜像数
+    */
+    @SerializedName("SeriousVulnerabilityRegistryImageCount")
+    @Expose
+    private Long SeriousVulnerabilityRegistryImageCount;
+
+    /**
+    * 应急漏洞数量
+    */
+    @SerializedName("EmergencyVulnerabilityCount")
+    @Expose
+    private Long EmergencyVulnerabilityCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -168,6 +203,86 @@ public class DescribeVulSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 系统漏洞重点关注数 
+     * @return SystemVulnerabilityFocusCount 系统漏洞重点关注数
+     */
+    public Long getSystemVulnerabilityFocusCount() {
+        return this.SystemVulnerabilityFocusCount;
+    }
+
+    /**
+     * Set 系统漏洞重点关注数
+     * @param SystemVulnerabilityFocusCount 系统漏洞重点关注数
+     */
+    public void setSystemVulnerabilityFocusCount(Long SystemVulnerabilityFocusCount) {
+        this.SystemVulnerabilityFocusCount = SystemVulnerabilityFocusCount;
+    }
+
+    /**
+     * Get web漏洞重点关注数 
+     * @return WebVulnerabilityFocusCount web漏洞重点关注数
+     */
+    public Long getWebVulnerabilityFocusCount() {
+        return this.WebVulnerabilityFocusCount;
+    }
+
+    /**
+     * Set web漏洞重点关注数
+     * @param WebVulnerabilityFocusCount web漏洞重点关注数
+     */
+    public void setWebVulnerabilityFocusCount(Long WebVulnerabilityFocusCount) {
+        this.WebVulnerabilityFocusCount = WebVulnerabilityFocusCount;
+    }
+
+    /**
+     * Get 受影响本地镜像数 
+     * @return SeriousVulnerabilityLocalImageCount 受影响本地镜像数
+     */
+    public Long getSeriousVulnerabilityLocalImageCount() {
+        return this.SeriousVulnerabilityLocalImageCount;
+    }
+
+    /**
+     * Set 受影响本地镜像数
+     * @param SeriousVulnerabilityLocalImageCount 受影响本地镜像数
+     */
+    public void setSeriousVulnerabilityLocalImageCount(Long SeriousVulnerabilityLocalImageCount) {
+        this.SeriousVulnerabilityLocalImageCount = SeriousVulnerabilityLocalImageCount;
+    }
+
+    /**
+     * Get 受影响仓库镜像数 
+     * @return SeriousVulnerabilityRegistryImageCount 受影响仓库镜像数
+     */
+    public Long getSeriousVulnerabilityRegistryImageCount() {
+        return this.SeriousVulnerabilityRegistryImageCount;
+    }
+
+    /**
+     * Set 受影响仓库镜像数
+     * @param SeriousVulnerabilityRegistryImageCount 受影响仓库镜像数
+     */
+    public void setSeriousVulnerabilityRegistryImageCount(Long SeriousVulnerabilityRegistryImageCount) {
+        this.SeriousVulnerabilityRegistryImageCount = SeriousVulnerabilityRegistryImageCount;
+    }
+
+    /**
+     * Get 应急漏洞数量 
+     * @return EmergencyVulnerabilityCount 应急漏洞数量
+     */
+    public Long getEmergencyVulnerabilityCount() {
+        return this.EmergencyVulnerabilityCount;
+    }
+
+    /**
+     * Set 应急漏洞数量
+     * @param EmergencyVulnerabilityCount 应急漏洞数量
+     */
+    public void setEmergencyVulnerabilityCount(Long EmergencyVulnerabilityCount) {
+        this.EmergencyVulnerabilityCount = EmergencyVulnerabilityCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +324,21 @@ public class DescribeVulSummaryResponse extends AbstractModel{
         if (source.SeriousVulNewestImageCount != null) {
             this.SeriousVulNewestImageCount = new Long(source.SeriousVulNewestImageCount);
         }
+        if (source.SystemVulnerabilityFocusCount != null) {
+            this.SystemVulnerabilityFocusCount = new Long(source.SystemVulnerabilityFocusCount);
+        }
+        if (source.WebVulnerabilityFocusCount != null) {
+            this.WebVulnerabilityFocusCount = new Long(source.WebVulnerabilityFocusCount);
+        }
+        if (source.SeriousVulnerabilityLocalImageCount != null) {
+            this.SeriousVulnerabilityLocalImageCount = new Long(source.SeriousVulnerabilityLocalImageCount);
+        }
+        if (source.SeriousVulnerabilityRegistryImageCount != null) {
+            this.SeriousVulnerabilityRegistryImageCount = new Long(source.SeriousVulnerabilityRegistryImageCount);
+        }
+        if (source.EmergencyVulnerabilityCount != null) {
+            this.EmergencyVulnerabilityCount = new Long(source.EmergencyVulnerabilityCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +355,11 @@ public class DescribeVulSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PocExpLevelVulCount", this.PocExpLevelVulCount);
         this.setParamSimple(map, prefix + "RemoteExpLevelVulCount", this.RemoteExpLevelVulCount);
         this.setParamSimple(map, prefix + "SeriousVulNewestImageCount", this.SeriousVulNewestImageCount);
+        this.setParamSimple(map, prefix + "SystemVulnerabilityFocusCount", this.SystemVulnerabilityFocusCount);
+        this.setParamSimple(map, prefix + "WebVulnerabilityFocusCount", this.WebVulnerabilityFocusCount);
+        this.setParamSimple(map, prefix + "SeriousVulnerabilityLocalImageCount", this.SeriousVulnerabilityLocalImageCount);
+        this.setParamSimple(map, prefix + "SeriousVulnerabilityRegistryImageCount", this.SeriousVulnerabilityRegistryImageCount);
+        this.setParamSimple(map, prefix + "EmergencyVulnerabilityCount", this.EmergencyVulnerabilityCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

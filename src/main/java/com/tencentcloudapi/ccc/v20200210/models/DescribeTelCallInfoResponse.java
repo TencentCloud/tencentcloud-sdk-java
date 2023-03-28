@@ -51,6 +51,20 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     private Long VoipCallInCount;
 
     /**
+    * 离线语音转文字套餐包消耗分钟数
+    */
+    @SerializedName("AsrOfflineCount")
+    @Expose
+    private Long AsrOfflineCount;
+
+    /**
+    * 实时语音转文字套餐包消耗分钟数
+    */
+    @SerializedName("AsrRealtimeCount")
+    @Expose
+    private Long AsrRealtimeCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +136,38 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 离线语音转文字套餐包消耗分钟数 
+     * @return AsrOfflineCount 离线语音转文字套餐包消耗分钟数
+     */
+    public Long getAsrOfflineCount() {
+        return this.AsrOfflineCount;
+    }
+
+    /**
+     * Set 离线语音转文字套餐包消耗分钟数
+     * @param AsrOfflineCount 离线语音转文字套餐包消耗分钟数
+     */
+    public void setAsrOfflineCount(Long AsrOfflineCount) {
+        this.AsrOfflineCount = AsrOfflineCount;
+    }
+
+    /**
+     * Get 实时语音转文字套餐包消耗分钟数 
+     * @return AsrRealtimeCount 实时语音转文字套餐包消耗分钟数
+     */
+    public Long getAsrRealtimeCount() {
+        return this.AsrRealtimeCount;
+    }
+
+    /**
+     * Set 实时语音转文字套餐包消耗分钟数
+     * @param AsrRealtimeCount 实时语音转文字套餐包消耗分钟数
+     */
+    public void setAsrRealtimeCount(Long AsrRealtimeCount) {
+        this.AsrRealtimeCount = AsrRealtimeCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -157,6 +203,12 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         if (source.VoipCallInCount != null) {
             this.VoipCallInCount = new Long(source.VoipCallInCount);
         }
+        if (source.AsrOfflineCount != null) {
+            this.AsrOfflineCount = new Long(source.AsrOfflineCount);
+        }
+        if (source.AsrRealtimeCount != null) {
+            this.AsrRealtimeCount = new Long(source.AsrRealtimeCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +223,8 @@ public class DescribeTelCallInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
         this.setParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
         this.setParamSimple(map, prefix + "VoipCallInCount", this.VoipCallInCount);
+        this.setParamSimple(map, prefix + "AsrOfflineCount", this.AsrOfflineCount);
+        this.setParamSimple(map, prefix + "AsrRealtimeCount", this.AsrRealtimeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

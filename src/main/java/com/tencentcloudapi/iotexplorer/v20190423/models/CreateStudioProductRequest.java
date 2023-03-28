@@ -37,21 +37,21 @@ public class CreateStudioProductRequest extends AbstractModel{
     private Long CategoryId;
 
     /**
-    * 产品类型 填写 ( 0 普通产品 )
+    * 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 加密类型 加密类型，1表示证书认证，2表示签名认证。
+    * 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
     */
     @SerializedName("EncryptionType")
     @Expose
     private String EncryptionType;
 
     /**
-    * 连接类型 可以填写 wifi cellular else
+    * 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
     */
     @SerializedName("NetType")
     @Expose
@@ -111,48 +111,48 @@ public class CreateStudioProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 产品类型 填写 ( 0 普通产品 ) 
-     * @return ProductType 产品类型 填写 ( 0 普通产品 )
+     * Get 产品类型 填写 ( 0 普通产品 ， 5 网关产品) 
+     * @return ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型 填写 ( 0 普通产品 )
-     * @param ProductType 产品类型 填写 ( 0 普通产品 )
+     * Set 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
+     * @param ProductType 产品类型 填写 ( 0 普通产品 ， 5 网关产品)
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 加密类型 加密类型，1表示证书认证，2表示签名认证。 
-     * @return EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * Get 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式 
+     * @return EncryptionType 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public String getEncryptionType() {
         return this.EncryptionType;
     }
 
     /**
-     * Set 加密类型 加密类型，1表示证书认证，2表示签名认证。
-     * @param EncryptionType 加密类型 加密类型，1表示证书认证，2表示签名认证。
+     * Set 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
+     * @param EncryptionType 加密类型 ，1表示证书认证，2表示秘钥认证，21表示TID认证-SE方式，22表示TID认证-软加固方式
      */
     public void setEncryptionType(String EncryptionType) {
         this.EncryptionType = EncryptionType;
     }
 
     /**
-     * Get 连接类型 可以填写 wifi cellular else 
-     * @return NetType 连接类型 可以填写 wifi cellular else
+     * Get 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh 
+     * @return NetType 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 连接类型 可以填写 wifi cellular else
-     * @param NetType 连接类型 可以填写 wifi cellular else
+     * Set 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
+     * @param NetType 连接类型 可以填写 wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、else、sub_zigbee、sub_ble、sub_433mhz、sub_else、sub_blemesh
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

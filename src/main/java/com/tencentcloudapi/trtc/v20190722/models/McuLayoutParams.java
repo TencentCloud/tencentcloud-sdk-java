@@ -51,6 +51,13 @@ public class McuLayoutParams extends AbstractModel{
     private MaxVideoUser MaxVideoUser;
 
     /**
+    * 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+    */
+    @SerializedName("RenderMode")
+    @Expose
+    private Long RenderMode;
+
+    /**
      * Get 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。 
      * @return MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
      */
@@ -114,6 +121,22 @@ public class McuLayoutParams extends AbstractModel{
         this.MaxVideoUser = MaxVideoUser;
     }
 
+    /**
+     * Get 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底 
+     * @return RenderMode 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     */
+    public Long getRenderMode() {
+        return this.RenderMode;
+    }
+
+    /**
+     * Set 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     * @param RenderMode 屏幕分享模板、悬浮模板、九宫格模版有效，画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底
+     */
+    public void setRenderMode(Long RenderMode) {
+        this.RenderMode = RenderMode;
+    }
+
     public McuLayoutParams() {
     }
 
@@ -137,6 +160,9 @@ public class McuLayoutParams extends AbstractModel{
         if (source.MaxVideoUser != null) {
             this.MaxVideoUser = new MaxVideoUser(source.MaxVideoUser);
         }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class McuLayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
         this.setParamArrayObj(map, prefix + "MixLayoutList.", this.MixLayoutList);
         this.setParamObj(map, prefix + "MaxVideoUser.", this.MaxVideoUser);
+        this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
 
     }
 }

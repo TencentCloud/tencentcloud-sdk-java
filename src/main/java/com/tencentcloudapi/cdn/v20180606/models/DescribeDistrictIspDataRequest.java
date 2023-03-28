@@ -48,7 +48,14 @@ public class DescribeDistrictIspDataRequest extends AbstractModel{
     /**
     * 指定查询指标，支持:
 bandwidth：带宽，单位为 bps
+flux：流量，单位为 byte
 request：请求数，单位为 次
+statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
+支持指定具体状态码查询，若未产生过，则返回为空
     */
     @SerializedName("Metric")
     @Expose
@@ -159,10 +166,24 @@ min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间�
     /**
      * Get 指定查询指标，支持:
 bandwidth：带宽，单位为 bps
-request：请求数，单位为 次 
+flux：流量，单位为 byte
+request：请求数，单位为 次
+statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
+支持指定具体状态码查询，若未产生过，则返回为空 
      * @return Metric 指定查询指标，支持:
 bandwidth：带宽，单位为 bps
+flux：流量，单位为 byte
 request：请求数，单位为 次
+statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
+支持指定具体状态码查询，若未产生过，则返回为空
      */
     public String getMetric() {
         return this.Metric;
@@ -171,10 +192,24 @@ request：请求数，单位为 次
     /**
      * Set 指定查询指标，支持:
 bandwidth：带宽，单位为 bps
+flux：流量，单位为 byte
 request：请求数，单位为 次
+statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
+支持指定具体状态码查询，若未产生过，则返回为空
      * @param Metric 指定查询指标，支持:
 bandwidth：带宽，单位为 bps
+flux：流量，单位为 byte
 request：请求数，单位为 次
+statusCode：状态码，返回 0、2xx、3xx、4xx、5xx 汇总数据，单位为 次
+2xx：返回 2xx 状态码汇总及各 2 开头状态码数据，单位为 次
+3xx：返回 3xx 状态码汇总及各 3 开头状态码数据，单位为 次
+4xx：返回 4xx 状态码汇总及各 4 开头状态码数据，单位为 次
+5xx：返回 5xx 状态码汇总及各 5 开头状态码数据，单位为 次
+支持指定具体状态码查询，若未产生过，则返回为空
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

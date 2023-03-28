@@ -27,7 +27,7 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
     */
     @SerializedName("Type")
     @Expose
@@ -55,7 +55,7 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     private LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet;
 
     /**
-    * 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+    * 声音违规的结果，当 Type 为 VoicePorn 时有效。
     */
     @SerializedName("VoicePornResultSet")
     @Expose
@@ -66,12 +66,12 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li> 
+<li>VoicePorn：声音违规</li> 
      * @return Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
      */
     public String getType() {
         return this.Type;
@@ -82,12 +82,12 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
      * @param Type 审核结果的类型，可以取的值有：
 <li>ImagePorn：图片鉴黄</li>
 <li>ImageTerrorism：图片涉敏</li>
 <li>ImagePolitical：图片涉敏</li>
-<li>PornVoice：声音鉴黄</li>
+<li>VoicePorn：声音违规</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -142,16 +142,16 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     }
 
     /**
-     * Get 声音鉴黄的结果，当 Type 为 PornVoice 时有效。 
-     * @return VoicePornResultSet 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * Get 声音违规的结果，当 Type 为 VoicePorn 时有效。 
+     * @return VoicePornResultSet 声音违规的结果，当 Type 为 VoicePorn 时有效。
      */
     public LiveStreamAiReviewVoicePornResult [] getVoicePornResultSet() {
         return this.VoicePornResultSet;
     }
 
     /**
-     * Set 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
-     * @param VoicePornResultSet 声音鉴黄的结果，当 Type 为 PornVoice 时有效。
+     * Set 声音违规的结果，当 Type 为 VoicePorn 时有效。
+     * @param VoicePornResultSet 声音违规的结果，当 Type 为 VoicePorn 时有效。
      */
     public void setVoicePornResultSet(LiveStreamAiReviewVoicePornResult [] VoicePornResultSet) {
         this.VoicePornResultSet = VoicePornResultSet;

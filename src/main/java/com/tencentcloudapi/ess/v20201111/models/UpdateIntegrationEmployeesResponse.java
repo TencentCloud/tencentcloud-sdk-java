@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
+public class UpdateIntegrationEmployeesResponse extends AbstractModel{
 
     /**
-    * 被关联集群信息
+    * 更新成功的用户列表
     */
-    @SerializedName("Agents")
+    @SerializedName("SuccessEmployeeData")
     @Expose
-    private PrometheusAgentOverview [] Agents;
+    private SuccessUpdateStaffData [] SuccessEmployeeData;
 
     /**
-    * 被关联集群总量
+    * 更新失败的用户列表
     */
-    @SerializedName("Total")
+    @SerializedName("FailedEmployeeData")
     @Expose
-    private Long Total;
-
-    /**
-    * 是否为首次绑定，需要安装预聚合规则
-    */
-    @SerializedName("IsFirstBind")
-    @Expose
-    private Boolean IsFirstBind;
+    private FailedUpdateStaffData [] FailedEmployeeData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 被关联集群信息 
-     * @return Agents 被关联集群信息
+     * Get 更新成功的用户列表 
+     * @return SuccessEmployeeData 更新成功的用户列表
      */
-    public PrometheusAgentOverview [] getAgents() {
-        return this.Agents;
+    public SuccessUpdateStaffData [] getSuccessEmployeeData() {
+        return this.SuccessEmployeeData;
     }
 
     /**
-     * Set 被关联集群信息
-     * @param Agents 被关联集群信息
+     * Set 更新成功的用户列表
+     * @param SuccessEmployeeData 更新成功的用户列表
      */
-    public void setAgents(PrometheusAgentOverview [] Agents) {
-        this.Agents = Agents;
+    public void setSuccessEmployeeData(SuccessUpdateStaffData [] SuccessEmployeeData) {
+        this.SuccessEmployeeData = SuccessEmployeeData;
     }
 
     /**
-     * Get 被关联集群总量 
-     * @return Total 被关联集群总量
+     * Get 更新失败的用户列表 
+     * @return FailedEmployeeData 更新失败的用户列表
      */
-    public Long getTotal() {
-        return this.Total;
+    public FailedUpdateStaffData [] getFailedEmployeeData() {
+        return this.FailedEmployeeData;
     }
 
     /**
-     * Set 被关联集群总量
-     * @param Total 被关联集群总量
+     * Set 更新失败的用户列表
+     * @param FailedEmployeeData 更新失败的用户列表
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 是否为首次绑定，需要安装预聚合规则 
-     * @return IsFirstBind 是否为首次绑定，需要安装预聚合规则
-     */
-    public Boolean getIsFirstBind() {
-        return this.IsFirstBind;
-    }
-
-    /**
-     * Set 是否为首次绑定，需要安装预聚合规则
-     * @param IsFirstBind 是否为首次绑定，需要安装预聚合规则
-     */
-    public void setIsFirstBind(Boolean IsFirstBind) {
-        this.IsFirstBind = IsFirstBind;
+    public void setFailedEmployeeData(FailedUpdateStaffData [] FailedEmployeeData) {
+        this.FailedEmployeeData = FailedEmployeeData;
     }
 
     /**
@@ -114,25 +91,25 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribePrometheusClusterAgentsResponse() {
+    public UpdateIntegrationEmployeesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribePrometheusClusterAgentsResponse(DescribePrometheusClusterAgentsResponse source) {
-        if (source.Agents != null) {
-            this.Agents = new PrometheusAgentOverview[source.Agents.length];
-            for (int i = 0; i < source.Agents.length; i++) {
-                this.Agents[i] = new PrometheusAgentOverview(source.Agents[i]);
+    public UpdateIntegrationEmployeesResponse(UpdateIntegrationEmployeesResponse source) {
+        if (source.SuccessEmployeeData != null) {
+            this.SuccessEmployeeData = new SuccessUpdateStaffData[source.SuccessEmployeeData.length];
+            for (int i = 0; i < source.SuccessEmployeeData.length; i++) {
+                this.SuccessEmployeeData[i] = new SuccessUpdateStaffData(source.SuccessEmployeeData[i]);
             }
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
-        if (source.IsFirstBind != null) {
-            this.IsFirstBind = new Boolean(source.IsFirstBind);
+        if (source.FailedEmployeeData != null) {
+            this.FailedEmployeeData = new FailedUpdateStaffData[source.FailedEmployeeData.length];
+            for (int i = 0; i < source.FailedEmployeeData.length; i++) {
+                this.FailedEmployeeData[i] = new FailedUpdateStaffData(source.FailedEmployeeData[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -144,9 +121,8 @@ public class DescribePrometheusClusterAgentsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamSimple(map, prefix + "IsFirstBind", this.IsFirstBind);
+        this.setParamArrayObj(map, prefix + "SuccessEmployeeData.", this.SuccessEmployeeData);
+        this.setParamArrayObj(map, prefix + "FailedEmployeeData.", this.FailedEmployeeData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
