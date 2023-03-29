@@ -151,6 +151,13 @@ public class DescribeManagerDetailResponse extends AbstractModel{
     private Long ManagerId;
 
     /**
+    * 审核状态详细信息
+    */
+    @SerializedName("StatusInfo")
+    @Expose
+    private ManagerStatusInfo [] StatusInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -454,6 +461,22 @@ public class DescribeManagerDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 审核状态详细信息 
+     * @return StatusInfo 审核状态详细信息
+     */
+    public ManagerStatusInfo [] getStatusInfo() {
+        return this.StatusInfo;
+    }
+
+    /**
+     * Set 审核状态详细信息
+     * @param StatusInfo 审核状态详细信息
+     */
+    public void setStatusInfo(ManagerStatusInfo [] StatusInfo) {
+        this.StatusInfo = StatusInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -531,6 +554,12 @@ public class DescribeManagerDetailResponse extends AbstractModel{
         if (source.ManagerId != null) {
             this.ManagerId = new Long(source.ManagerId);
         }
+        if (source.StatusInfo != null) {
+            this.StatusInfo = new ManagerStatusInfo[source.StatusInfo.length];
+            for (int i = 0; i < source.StatusInfo.length; i++) {
+                this.StatusInfo[i] = new ManagerStatusInfo(source.StatusInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -559,6 +588,7 @@ public class DescribeManagerDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CompanyInfo.", this.CompanyInfo);
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "ManagerId", this.ManagerId);
+        this.setParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

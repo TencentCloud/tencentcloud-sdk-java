@@ -4322,7 +4322,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+     *本接口（DownloadCustomerGatewayConfiguration）用于下载VPN通道配置。
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
      * @throws TencentCloudSDKException

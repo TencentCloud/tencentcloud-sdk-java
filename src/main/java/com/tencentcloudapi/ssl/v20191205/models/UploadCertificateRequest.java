@@ -37,7 +37,7 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificatePrivateKey;
 
     /**
-    * 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+    * 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
     */
     @SerializedName("CertificateType")
     @Expose
@@ -104,16 +104,16 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。 
-     * @return CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+     * Get 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。 
+     * @return CertificateType 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
-     * @param CertificateType 证书类型，默认 SVR。CA = 客户端证书，SVR = 服务器证书。
+     * Set 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
+     * @param CertificateType 证书类型，默认 SVR。CA = CA证书，SVR = 服务器证书。
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;

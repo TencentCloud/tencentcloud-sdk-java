@@ -195,6 +195,27 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] MediaTypes;
 
     /**
+    * 媒体文件状态，匹配集合中任意元素。
+<li> Normal：正常；</li>
+<li> SystemForbidden：平台封禁；</li>
+<li> Forbidden：主动封禁。</li>
+    */
+    @SerializedName("Status")
+    @Expose
+    private String [] Status;
+
+    /**
+    * 媒体文件审核结果，匹配集合中任意元素。
+<li> pass：审核通过；</li>
+<li> review：疑似违规，建议复审；</li>
+<li> block：确认违规，建议封禁；</li>
+<li> notModerated：未审核。</li>
+    */
+    @SerializedName("ReviewResults")
+    @Expose
+    private String [] ReviewResults;
+
+    /**
     * TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li>
     */
@@ -732,6 +753,66 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get 媒体文件状态，匹配集合中任意元素。
+<li> Normal：正常；</li>
+<li> SystemForbidden：平台封禁；</li>
+<li> Forbidden：主动封禁。</li> 
+     * @return Status 媒体文件状态，匹配集合中任意元素。
+<li> Normal：正常；</li>
+<li> SystemForbidden：平台封禁；</li>
+<li> Forbidden：主动封禁。</li>
+     */
+    public String [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 媒体文件状态，匹配集合中任意元素。
+<li> Normal：正常；</li>
+<li> SystemForbidden：平台封禁；</li>
+<li> Forbidden：主动封禁。</li>
+     * @param Status 媒体文件状态，匹配集合中任意元素。
+<li> Normal：正常；</li>
+<li> SystemForbidden：平台封禁；</li>
+<li> Forbidden：主动封禁。</li>
+     */
+    public void setStatus(String [] Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 媒体文件审核结果，匹配集合中任意元素。
+<li> pass：审核通过；</li>
+<li> review：疑似违规，建议复审；</li>
+<li> block：确认违规，建议封禁；</li>
+<li> notModerated：未审核。</li> 
+     * @return ReviewResults 媒体文件审核结果，匹配集合中任意元素。
+<li> pass：审核通过；</li>
+<li> review：疑似违规，建议复审；</li>
+<li> block：确认违规，建议封禁；</li>
+<li> notModerated：未审核。</li>
+     */
+    public String [] getReviewResults() {
+        return this.ReviewResults;
+    }
+
+    /**
+     * Set 媒体文件审核结果，匹配集合中任意元素。
+<li> pass：审核通过；</li>
+<li> review：疑似违规，建议复审；</li>
+<li> block：确认违规，建议封禁；</li>
+<li> notModerated：未审核。</li>
+     * @param ReviewResults 媒体文件审核结果，匹配集合中任意元素。
+<li> pass：审核通过；</li>
+<li> review：疑似违规，建议复审；</li>
+<li> block：确认违规，建议封禁；</li>
+<li> notModerated：未审核。</li>
+     */
+    public void setReviewResults(String [] ReviewResults) {
+        this.ReviewResults = ReviewResults;
+    }
+
+    /**
      * Get TRTC 应用 ID 集合。匹配集合中的任意元素。
 <li>数组长度限制：10。</li> 
      * @return TrtcSdkAppIds TRTC 应用 ID 集合。匹配集合中的任意元素。
@@ -1035,6 +1116,18 @@ public class SearchMediaRequest extends AbstractModel{
                 this.MediaTypes[i] = new String(source.MediaTypes[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
+        if (source.ReviewResults != null) {
+            this.ReviewResults = new String[source.ReviewResults.length];
+            for (int i = 0; i < source.ReviewResults.length; i++) {
+                this.ReviewResults[i] = new String(source.ReviewResults[i]);
+            }
+        }
         if (source.TrtcSdkAppIds != null) {
             this.TrtcSdkAppIds = new Long[source.TrtcSdkAppIds.length];
             for (int i = 0; i < source.TrtcSdkAppIds.length; i++) {
@@ -1097,6 +1190,8 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
         this.setParamArraySimple(map, prefix + "MediaTypes.", this.MediaTypes);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "ReviewResults.", this.ReviewResults);
         this.setParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
         this.setParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
         this.setParamSimple(map, prefix + "Text", this.Text);

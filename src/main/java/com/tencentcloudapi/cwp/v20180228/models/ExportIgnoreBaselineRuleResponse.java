@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ExportIgnoreBaselineRuleResponse extends AbstractModel{
 
     /**
-    * 文件下载地址
+    * 该参数已废弃
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * 导出任务Id , 可通过ExportTasks 接口下载
+    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
     */
     @SerializedName("TaskId")
     @Expose
@@ -44,32 +44,32 @@ public class ExportIgnoreBaselineRuleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件下载地址 
-     * @return DownloadUrl 文件下载地址
+     * Get 该参数已废弃 
+     * @return DownloadUrl 该参数已废弃
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 文件下载地址
-     * @param DownloadUrl 文件下载地址
+     * Set 该参数已废弃
+     * @param DownloadUrl 该参数已废弃
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 导出任务Id , 可通过ExportTasks 接口下载 
-     * @return TaskId 导出任务Id , 可通过ExportTasks 接口下载
+     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
+     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 导出任务Id , 可通过ExportTasks 接口下载
-     * @param TaskId 导出任务Id , 可通过ExportTasks 接口下载
+     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

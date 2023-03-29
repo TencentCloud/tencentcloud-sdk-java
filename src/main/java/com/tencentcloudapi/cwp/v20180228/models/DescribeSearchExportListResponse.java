@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSearchExportListResponse extends AbstractModel{
 
     /**
-    * 导出的任务号
+    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 下载地址
+    * 该参数作废
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSearchExportListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 导出的任务号 
-     * @return TaskId 导出的任务号
+     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
+     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 导出的任务号
-     * @param TaskId 导出的任务号
+     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 下载地址 
-     * @return DownloadUrl 下载地址
+     * Get 该参数作废 
+     * @return DownloadUrl 该参数作废
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 下载地址
-     * @param DownloadUrl 下载地址
+     * Set 该参数作废
+     * @param DownloadUrl 该参数作废
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

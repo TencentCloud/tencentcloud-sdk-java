@@ -58,6 +58,14 @@ public class Subtitle extends AbstractModel{
     private Long EndIndex;
 
     /**
+    * 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Phoneme")
+    @Expose
+    private String Phoneme;
+
+    /**
      * Get ⽂本信息。 
      * @return Text ⽂本信息。
      */
@@ -137,6 +145,26 @@ public class Subtitle extends AbstractModel{
         this.EndIndex = EndIndex;
     }
 
+    /**
+     * Get 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Phoneme 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhoneme() {
+        return this.Phoneme;
+    }
+
+    /**
+     * Set 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Phoneme 该字的音素
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhoneme(String Phoneme) {
+        this.Phoneme = Phoneme;
+    }
+
     public Subtitle() {
     }
 
@@ -160,6 +188,9 @@ public class Subtitle extends AbstractModel{
         if (source.EndIndex != null) {
             this.EndIndex = new Long(source.EndIndex);
         }
+        if (source.Phoneme != null) {
+            this.Phoneme = new String(source.Phoneme);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class Subtitle extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "BeginIndex", this.BeginIndex);
         this.setParamSimple(map, prefix + "EndIndex", this.EndIndex);
+        this.setParamSimple(map, prefix + "Phoneme", this.Phoneme);
 
     }
 }

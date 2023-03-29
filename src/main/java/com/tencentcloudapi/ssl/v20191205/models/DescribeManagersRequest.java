@@ -44,14 +44,14 @@ public class DescribeManagersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 管理人姓名
+    * 管理人姓名（将废弃），请使用SearchKey
     */
     @SerializedName("ManagerName")
     @Expose
     private String ManagerName;
 
     /**
-    * 模糊查询管理人邮箱
+    * 模糊查询管理人邮箱（将废弃），请使用SearchKey
     */
     @SerializedName("ManagerMail")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeManagersRequest extends AbstractModel{
     private String Status;
 
     /**
-    * 管理人姓名/邮箱/部门精准匹配
+    * 管理人姓/管理人名/邮箱/部门精准匹配
     */
     @SerializedName("SearchKey")
     @Expose
@@ -127,32 +127,32 @@ public class DescribeManagersRequest extends AbstractModel{
     }
 
     /**
-     * Get 管理人姓名 
-     * @return ManagerName 管理人姓名
+     * Get 管理人姓名（将废弃），请使用SearchKey 
+     * @return ManagerName 管理人姓名（将废弃），请使用SearchKey
      */
     public String getManagerName() {
         return this.ManagerName;
     }
 
     /**
-     * Set 管理人姓名
-     * @param ManagerName 管理人姓名
+     * Set 管理人姓名（将废弃），请使用SearchKey
+     * @param ManagerName 管理人姓名（将废弃），请使用SearchKey
      */
     public void setManagerName(String ManagerName) {
         this.ManagerName = ManagerName;
     }
 
     /**
-     * Get 模糊查询管理人邮箱 
-     * @return ManagerMail 模糊查询管理人邮箱
+     * Get 模糊查询管理人邮箱（将废弃），请使用SearchKey 
+     * @return ManagerMail 模糊查询管理人邮箱（将废弃），请使用SearchKey
      */
     public String getManagerMail() {
         return this.ManagerMail;
     }
 
     /**
-     * Set 模糊查询管理人邮箱
-     * @param ManagerMail 模糊查询管理人邮箱
+     * Set 模糊查询管理人邮箱（将废弃），请使用SearchKey
+     * @param ManagerMail 模糊查询管理人邮箱（将废弃），请使用SearchKey
      */
     public void setManagerMail(String ManagerMail) {
         this.ManagerMail = ManagerMail;
@@ -203,16 +203,16 @@ public class DescribeManagersRequest extends AbstractModel{
     }
 
     /**
-     * Get 管理人姓名/邮箱/部门精准匹配 
-     * @return SearchKey 管理人姓名/邮箱/部门精准匹配
+     * Get 管理人姓/管理人名/邮箱/部门精准匹配 
+     * @return SearchKey 管理人姓/管理人名/邮箱/部门精准匹配
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 管理人姓名/邮箱/部门精准匹配
-     * @param SearchKey 管理人姓名/邮箱/部门精准匹配
+     * Set 管理人姓/管理人名/邮箱/部门精准匹配
+     * @param SearchKey 管理人姓/管理人名/邮箱/部门精准匹配
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

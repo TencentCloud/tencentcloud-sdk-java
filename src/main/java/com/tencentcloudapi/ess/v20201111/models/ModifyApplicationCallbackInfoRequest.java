@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
 
+    /**
+    * 调用方用户信息，userId 必填
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
+    * 操作类型：1-新增，2-删除
+    */
+    @SerializedName("OperateType")
+    @Expose
+    private Long OperateType;
+
+    /**
+    * 回调信息
+    */
+    @SerializedName("CallbackInfo")
+    @Expose
+    private CallbackInfo CallbackInfo;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 操作类型：1-新增，2-删除 
+     * @return OperateType 操作类型：1-新增，2-删除
+     */
+    public Long getOperateType() {
+        return this.OperateType;
+    }
+
+    /**
+     * Set 操作类型：1-新增，2-删除
+     * @param OperateType 操作类型：1-新增，2-删除
+     */
+    public void setOperateType(Long OperateType) {
+        this.OperateType = OperateType;
+    }
+
+    /**
+     * Get 回调信息 
+     * @return CallbackInfo 回调信息
+     */
+    public CallbackInfo getCallbackInfo() {
+        return this.CallbackInfo;
+    }
+
+    /**
+     * Set 回调信息
+     * @param CallbackInfo 回调信息
+     */
+    public void setCallbackInfo(CallbackInfo CallbackInfo) {
+        this.CallbackInfo = CallbackInfo;
+    }
+
     public ModifyApplicationCallbackInfoRequest() {
     }
 
@@ -30,6 +99,15 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyApplicationCallbackInfoRequest(ModifyApplicationCallbackInfoRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.OperateType != null) {
+            this.OperateType = new Long(source.OperateType);
+        }
+        if (source.CallbackInfo != null) {
+            this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "OperateType", this.OperateType);
+        this.setParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
 
     }
 }

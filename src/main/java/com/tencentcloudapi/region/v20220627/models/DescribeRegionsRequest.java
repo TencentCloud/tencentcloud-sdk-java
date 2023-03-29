@@ -30,6 +30,13 @@ public class DescribeRegionsRequest extends AbstractModel{
     private String Product;
 
     /**
+    * 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+    */
+    @SerializedName("Scene")
+    @Expose
+    private Long Scene;
+
+    /**
      * Get 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口 
      * @return Product 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
      */
@@ -45,6 +52,22 @@ public class DescribeRegionsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    /**
+     * Get 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单 
+     * @return Scene 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+     */
+    public Long getScene() {
+        return this.Scene;
+    }
+
+    /**
+     * Set 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+     * @param Scene 不传或者0表示不查询【可选业务白名单】，1表示查询【可选业务白名单】，该参数设置了1，只有在业务白名单查不到情况下，才会查该白名单
+     */
+    public void setScene(Long Scene) {
+        this.Scene = Scene;
+    }
+
     public DescribeRegionsRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeRegionsRequest extends AbstractModel{
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Scene != null) {
+            this.Scene = new Long(source.Scene);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeRegionsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Scene", this.Scene);
 
     }
 }

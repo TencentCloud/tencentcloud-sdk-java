@@ -37,7 +37,7 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 分账标签键
+    * 分账标签键，用户自定义
     */
     @SerializedName("TagKey")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     }
 
     /**
-     * Get 分账标签键 
-     * @return TagKey 分账标签键
+     * Get 分账标签键，用户自定义 
+     * @return TagKey 分账标签键，用户自定义
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 分账标签键
-     * @param TagKey 分账标签键
+     * Set 分账标签键，用户自定义
+     * @param TagKey 分账标签键，用户自定义
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

@@ -1401,6 +1401,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *修改Datahub主题属性
+     * @param req ModifyDatahubTopicRequest
+     * @return ModifyDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatahubTopicResponse ModifyDatahubTopic(ModifyDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatahubTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *设置Groups 消费分组offset
      * @param req ModifyGroupOffsetsRequest
      * @return ModifyGroupOffsetsResponse

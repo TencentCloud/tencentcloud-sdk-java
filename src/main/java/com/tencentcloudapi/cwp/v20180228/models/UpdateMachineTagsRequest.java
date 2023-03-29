@@ -30,6 +30,13 @@ public class UpdateMachineTagsRequest extends AbstractModel{
     private String Quuid;
 
     /**
+    * 标签ID，该操作会覆盖原有的标签列表
+    */
+    @SerializedName("TagIds")
+    @Expose
+    private Long [] TagIds;
+
+    /**
     * 服务器地区 如: ap-guangzhou
     */
     @SerializedName("MachineRegion")
@@ -42,13 +49,6 @@ public class UpdateMachineTagsRequest extends AbstractModel{
     @SerializedName("MachineArea")
     @Expose
     private String MachineArea;
-
-    /**
-    * 标签ID，该操作会覆盖原有的标签列表
-    */
-    @SerializedName("TagIds")
-    @Expose
-    private Long [] TagIds;
 
     /**
      * Get 机器 Quuid 
@@ -64,6 +64,22 @@ public class UpdateMachineTagsRequest extends AbstractModel{
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
+    }
+
+    /**
+     * Get 标签ID，该操作会覆盖原有的标签列表 
+     * @return TagIds 标签ID，该操作会覆盖原有的标签列表
+     */
+    public Long [] getTagIds() {
+        return this.TagIds;
+    }
+
+    /**
+     * Set 标签ID，该操作会覆盖原有的标签列表
+     * @param TagIds 标签ID，该操作会覆盖原有的标签列表
+     */
+    public void setTagIds(Long [] TagIds) {
+        this.TagIds = TagIds;
     }
 
     /**
@@ -98,22 +114,6 @@ public class UpdateMachineTagsRequest extends AbstractModel{
         this.MachineArea = MachineArea;
     }
 
-    /**
-     * Get 标签ID，该操作会覆盖原有的标签列表 
-     * @return TagIds 标签ID，该操作会覆盖原有的标签列表
-     */
-    public Long [] getTagIds() {
-        return this.TagIds;
-    }
-
-    /**
-     * Set 标签ID，该操作会覆盖原有的标签列表
-     * @param TagIds 标签ID，该操作会覆盖原有的标签列表
-     */
-    public void setTagIds(Long [] TagIds) {
-        this.TagIds = TagIds;
-    }
-
     public UpdateMachineTagsRequest() {
     }
 
@@ -125,17 +125,17 @@ public class UpdateMachineTagsRequest extends AbstractModel{
         if (source.Quuid != null) {
             this.Quuid = new String(source.Quuid);
         }
-        if (source.MachineRegion != null) {
-            this.MachineRegion = new String(source.MachineRegion);
-        }
-        if (source.MachineArea != null) {
-            this.MachineArea = new String(source.MachineArea);
-        }
         if (source.TagIds != null) {
             this.TagIds = new Long[source.TagIds.length];
             for (int i = 0; i < source.TagIds.length; i++) {
                 this.TagIds[i] = new Long(source.TagIds[i]);
             }
+        }
+        if (source.MachineRegion != null) {
+            this.MachineRegion = new String(source.MachineRegion);
+        }
+        if (source.MachineArea != null) {
+            this.MachineArea = new String(source.MachineArea);
         }
     }
 
@@ -145,9 +145,9 @@ public class UpdateMachineTagsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
         this.setParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
         this.setParamSimple(map, prefix + "MachineArea", this.MachineArea);
-        this.setParamArraySimple(map, prefix + "TagIds.", this.TagIds);
 
     }
 }

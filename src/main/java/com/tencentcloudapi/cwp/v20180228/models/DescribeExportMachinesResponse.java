@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeExportMachinesResponse extends AbstractModel{
 
     /**
-    * 任务id
+    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeExportMachinesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
+     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

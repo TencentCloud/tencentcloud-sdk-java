@@ -12,6 +12,9 @@ public enum TcbErrorCode {
     // 部分失败（有一部分操作失败）。
      FAILEDOPERATION_PARTIALFAILURE("FailedOperation.PartialFailure"),
      
+    // 操作失败，后台依赖平台错误。
+     FAILEDOPERATION_PLATFORMERROR("FailedOperation.PlatformError"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

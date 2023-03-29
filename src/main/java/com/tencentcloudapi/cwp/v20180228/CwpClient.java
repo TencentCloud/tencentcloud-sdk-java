@@ -4382,7 +4382,7 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *根据任务id导出指定扫描任务详情 
+     *根据任务id导出指定扫描任务详情
      * @param req ExportScanTaskDetailsRequest
      * @return ExportScanTaskDetailsResponse
      * @throws TencentCloudSDKException

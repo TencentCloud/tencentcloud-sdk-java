@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportScanTaskDetailsResponse extends AbstractModel{
+public class ModifyDatahubTopicResponse extends AbstractModel{
 
     /**
-    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+    * 返回结果集
     */
-    @SerializedName("TaskId")
+    @SerializedName("Result")
     @Expose
-    private String TaskId;
+    private JgwOperateResponse Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id) 
-     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+     * Get 返回结果集 
+     * @return Result 返回结果集
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public JgwOperateResponse getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
-     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+     * Set 返回结果集
+     * @param Result 返回结果集
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setResult(JgwOperateResponse Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,16 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ExportScanTaskDetailsResponse() {
+    public ModifyDatahubTopicResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExportScanTaskDetailsResponse(ExportScanTaskDetailsResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public ModifyDatahubTopicResponse(ModifyDatahubTopicResponse source) {
+        if (source.Result != null) {
+            this.Result = new JgwOperateResponse(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

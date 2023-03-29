@@ -419,6 +419,14 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     private Long ExclusterType;
 
     /**
+    * VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RsAccessStrategy")
+    @Expose
+    private Long RsAccessStrategy;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1362,6 +1370,26 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RsAccessStrategy VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRsAccessStrategy() {
+        return this.RsAccessStrategy;
+    }
+
+    /**
+     * Set VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RsAccessStrategy VPC就近访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRsAccessStrategy(Long RsAccessStrategy) {
+        this.RsAccessStrategy = RsAccessStrategy;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1556,6 +1584,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
         if (source.ExclusterType != null) {
             this.ExclusterType = new Long(source.ExclusterType);
         }
+        if (source.RsAccessStrategy != null) {
+            this.RsAccessStrategy = new Long(source.RsAccessStrategy);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1620,6 +1651,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
         this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
+        this.setParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

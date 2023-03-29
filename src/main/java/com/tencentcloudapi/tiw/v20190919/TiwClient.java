@@ -379,6 +379,26 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *根据房间号搜索实时录制任务
+     * @param req DescribeRecordSearchRequest
+     * @return DescribeRecordSearchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordSearchResponse DescribeRecordSearch(DescribeRecordSearchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordSearchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordSearchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordSearch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询白板房间列表
      * @param req DescribeRoomListRequest
      * @return DescribeRoomListResponse

@@ -121,6 +121,13 @@ public class ModifyConnectResourceRequest extends AbstractModel{
     private DorisModifyConnectParam DorisConnectParam;
 
     /**
+    * Kafka配置，Type为 KAFKA 时必填
+    */
+    @SerializedName("KafkaConnectParam")
+    @Expose
+    private KafkaConnectParam KafkaConnectParam;
+
+    /**
      * Get 连接源的Id 
      * @return ResourceId 连接源的Id
      */
@@ -344,6 +351,22 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.DorisConnectParam = DorisConnectParam;
     }
 
+    /**
+     * Get Kafka配置，Type为 KAFKA 时必填 
+     * @return KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     */
+    public KafkaConnectParam getKafkaConnectParam() {
+        return this.KafkaConnectParam;
+    }
+
+    /**
+     * Set Kafka配置，Type为 KAFKA 时必填
+     * @param KafkaConnectParam Kafka配置，Type为 KAFKA 时必填
+     */
+    public void setKafkaConnectParam(KafkaConnectParam KafkaConnectParam) {
+        this.KafkaConnectParam = KafkaConnectParam;
+    }
+
     public ModifyConnectResourceRequest() {
     }
 
@@ -394,6 +417,9 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         if (source.DorisConnectParam != null) {
             this.DorisConnectParam = new DorisModifyConnectParam(source.DorisConnectParam);
         }
+        if (source.KafkaConnectParam != null) {
+            this.KafkaConnectParam = new KafkaConnectParam(source.KafkaConnectParam);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class ModifyConnectResourceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
         this.setParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
         this.setParamObj(map, prefix + "DorisConnectParam.", this.DorisConnectParam);
+        this.setParamObj(map, prefix + "KafkaConnectParam.", this.KafkaConnectParam);
 
     }
 }

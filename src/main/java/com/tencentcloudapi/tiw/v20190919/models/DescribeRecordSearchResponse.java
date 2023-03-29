@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.tiw.v20190919.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportScanTaskDetailsResponse extends AbstractModel{
+public class DescribeRecordSearchResponse extends AbstractModel{
 
     /**
-    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+    * 录制任务搜索结果集合
     */
-    @SerializedName("TaskId")
+    @SerializedName("RecordTaskSet")
     @Expose
-    private String TaskId;
+    private RecordTaskSearchResult [] RecordTaskSet;
+
+    /**
+    * 录制总任务数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id) 
-     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+     * Get 录制任务搜索结果集合 
+     * @return RecordTaskSet 录制任务搜索结果集合
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public RecordTaskSearchResult [] getRecordTaskSet() {
+        return this.RecordTaskSet;
     }
 
     /**
-     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
-     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址(不同于入参的本次检测任务id)
+     * Set 录制任务搜索结果集合
+     * @param RecordTaskSet 录制任务搜索结果集合
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setRecordTaskSet(RecordTaskSearchResult [] RecordTaskSet) {
+        this.RecordTaskSet = RecordTaskSet;
+    }
+
+    /**
+     * Get 录制总任务数 
+     * @return TotalCount 录制总任务数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 录制总任务数
+     * @param TotalCount 录制总任务数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -68,16 +91,22 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ExportScanTaskDetailsResponse() {
+    public DescribeRecordSearchResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExportScanTaskDetailsResponse(ExportScanTaskDetailsResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DescribeRecordSearchResponse(DescribeRecordSearchResponse source) {
+        if (source.RecordTaskSet != null) {
+            this.RecordTaskSet = new RecordTaskSearchResult[source.RecordTaskSet.length];
+            for (int i = 0; i < source.RecordTaskSet.length; i++) {
+                this.RecordTaskSet[i] = new RecordTaskSearchResult(source.RecordTaskSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class ExportScanTaskDetailsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "RecordTaskSet.", this.RecordTaskSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

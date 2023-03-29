@@ -44,7 +44,13 @@ public class FileSystemInfo extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * 文件系统状态
+    * 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -163,7 +169,7 @@ public class FileSystemInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-    * 文件系统声明周期管理状态
+    * 文件系统生命周期管理状态
     */
     @SerializedName("TieringState")
     @Expose
@@ -226,16 +232,40 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统状态 
-     * @return LifeCycleState 文件系统状态
+     * Get 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中 
+     * @return LifeCycleState 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set 文件系统状态
-     * @param LifeCycleState 文件系统状态
+     * Set 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
+     * @param LifeCycleState 文件系统状态。取值范围：
+- creating:创建中
+- mounting:挂载中
+- create_failed:创建失败
+- available:可使用
+- unserviced:停服中
+- upgrading:升级中
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
@@ -498,16 +528,16 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件系统声明周期管理状态 
-     * @return TieringState 文件系统声明周期管理状态
+     * Get 文件系统生命周期管理状态 
+     * @return TieringState 文件系统生命周期管理状态
      */
     public String getTieringState() {
         return this.TieringState;
     }
 
     /**
-     * Set 文件系统声明周期管理状态
-     * @param TieringState 文件系统声明周期管理状态
+     * Set 文件系统生命周期管理状态
+     * @param TieringState 文件系统生命周期管理状态
      */
     public void setTieringState(String TieringState) {
         this.TieringState = TieringState;

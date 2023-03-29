@@ -30,7 +30,7 @@ public class ExportLicenseDetailResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
-    * 任务ID,可通过任务ID去查下载任务
+    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
     */
     @SerializedName("TaskId")
     @Expose
@@ -60,16 +60,16 @@ public class ExportLicenseDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 任务ID,可通过任务ID去查下载任务 
-     * @return TaskId 任务ID,可通过任务ID去查下载任务
+     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
+     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID,可通过任务ID去查下载任务
-     * @param TaskId 任务ID,可通过任务ID去查下载任务
+     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
