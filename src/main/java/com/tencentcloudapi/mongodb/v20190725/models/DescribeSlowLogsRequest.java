@@ -65,7 +65,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+    * 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
     */
     @SerializedName("Format")
     @Expose
@@ -168,16 +168,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。 
-     * @return Format 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     * Get 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。 
+     * @return Format 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
-     * @param Format 慢日志返回格式，可设置为json，不传默认返回原生慢日志格式。
+     * Set 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
+     * @param Format 慢日志返回格式。默认返回原生慢日志格式，4.4及以上版本可设置为json。
      */
     public void setFormat(String Format) {
         this.Format = Format;

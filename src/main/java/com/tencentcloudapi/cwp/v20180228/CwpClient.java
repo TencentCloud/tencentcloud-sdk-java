@@ -3162,6 +3162,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取恶意请求事件列表
+     * @param req DescribeRiskDnsEventListRequest
+     * @return DescribeRiskDnsEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskDnsEventListResponse DescribeRiskDnsEventList(DescribeRiskDnsEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRiskDnsEventListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRiskDnsEventListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRiskDnsEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *入侵检测，获取恶意请求列表
      * @param req DescribeRiskDnsListRequest
      * @return DescribeRiskDnsListResponse

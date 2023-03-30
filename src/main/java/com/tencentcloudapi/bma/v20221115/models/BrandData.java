@@ -114,6 +114,13 @@ public class BrandData extends AbstractModel{
     private ServiceData Services;
 
     /**
+    * 账号id
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
      * Get 品牌Id 
      * @return CompanyId 品牌Id
      */
@@ -321,6 +328,22 @@ public class BrandData extends AbstractModel{
         this.Services = Services;
     }
 
+    /**
+     * Get 账号id 
+     * @return Uin 账号id
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set 账号id
+     * @param Uin 账号id
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
     public BrandData() {
     }
 
@@ -371,6 +394,9 @@ public class BrandData extends AbstractModel{
         if (source.Services != null) {
             this.Services = new ServiceData(source.Services);
         }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class BrandData extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Trademarks.", this.Trademarks);
         this.setParamSimple(map, prefix + "InsertTime", this.InsertTime);
         this.setParamObj(map, prefix + "Services.", this.Services);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

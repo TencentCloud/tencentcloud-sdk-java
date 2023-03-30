@@ -37,6 +37,46 @@ public class CloudNativeAPIGatewayNode extends AbstractModel{
     private String NodeIp;
 
     /**
+    * Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * Zone
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 云原生网关节点 id 
      * @return NodeId 云原生网关节点 id
      */
@@ -68,6 +108,106 @@ public class CloudNativeAPIGatewayNode extends AbstractModel{
         this.NodeIp = NodeIp;
     }
 
+    /**
+     * Get Zone id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId Zone id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get Zone
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone Zone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Zone
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone Zone
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 分组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupId 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupId 分组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 分组名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 分组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public CloudNativeAPIGatewayNode() {
     }
 
@@ -82,6 +222,21 @@ public class CloudNativeAPIGatewayNode extends AbstractModel{
         if (source.NodeIp != null) {
             this.NodeIp = new String(source.NodeIp);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -91,6 +246,11 @@ public class CloudNativeAPIGatewayNode extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "NodeIp", this.NodeIp);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }
