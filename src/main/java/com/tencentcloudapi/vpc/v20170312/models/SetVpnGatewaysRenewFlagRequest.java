@@ -23,74 +23,74 @@ import java.util.HashMap;
 public class SetVpnGatewaysRenewFlagRequest extends AbstractModel{
 
     /**
-    * VPNGW字符型ID列表
+    * VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
     */
     @SerializedName("VpnGatewayIds")
     @Expose
     private String [] VpnGatewayIds;
 
     /**
-    * 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
+    * 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * VPNGW类型['IPSEC', 'SSL']
+    * VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get VPNGW字符型ID列表 
-     * @return VpnGatewayIds VPNGW字符型ID列表
+     * Get VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。 
+     * @return VpnGatewayIds VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
      */
     public String [] getVpnGatewayIds() {
         return this.VpnGatewayIds;
     }
 
     /**
-     * Set VPNGW字符型ID列表
-     * @param VpnGatewayIds VPNGW字符型ID列表
+     * Set VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
+     * @param VpnGatewayIds VPNGW字符型ID列表。可通过[DescribeVpnGateways](https://cloud.tencent.com/document/api/215/17514)接口返回值VpnGatewaySet中的VpnGatewayId获取。
      */
     public void setVpnGatewayIds(String [] VpnGatewayIds) {
         this.VpnGatewayIds = VpnGatewayIds;
     }
 
     /**
-     * Get 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费 
-     * @return AutoRenewFlag 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
+     * Get 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。 
+     * @return AutoRenewFlag 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
-     * @param AutoRenewFlag 自动续费标记[0, 1, 2]
-0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费
+     * Set 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
+     * @param AutoRenewFlag 自动续费标记 [0, 1, 2]
+0表示默认状态(初始状态)， 1表示自动续费，2表示明确不自动续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get VPNGW类型['IPSEC', 'SSL'] 
-     * @return Type VPNGW类型['IPSEC', 'SSL']
+     * Get VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。 
+     * @return Type VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set VPNGW类型['IPSEC', 'SSL']
-     * @param Type VPNGW类型['IPSEC', 'SSL']
+     * Set VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
+     * @param Type VPNGW类型['IPSEC', 'SSL']， 默认为IPSEC。
      */
     public void setType(String Type) {
         this.Type = Type;

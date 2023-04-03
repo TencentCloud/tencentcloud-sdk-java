@@ -118,6 +118,14 @@ public class InLongAgentDetail extends AbstractModel{
     private Long AgentTotal;
 
     /**
+    * 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LifeDays")
+    @Expose
+    private Long LifeDays;
+
+    /**
      * Get Agent ID 
      * @return AgentId Agent ID
      */
@@ -341,6 +349,26 @@ public class InLongAgentDetail extends AbstractModel{
         this.AgentTotal = AgentTotal;
     }
 
+    /**
+     * Get 生命周期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LifeDays 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLifeDays() {
+        return this.LifeDays;
+    }
+
+    /**
+     * Set 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifeDays 生命周期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLifeDays(Long LifeDays) {
+        this.LifeDays = LifeDays;
+    }
+
     public InLongAgentDetail() {
     }
 
@@ -391,6 +419,9 @@ public class InLongAgentDetail extends AbstractModel{
         if (source.AgentTotal != null) {
             this.AgentTotal = new Long(source.AgentTotal);
         }
+        if (source.LifeDays != null) {
+            this.LifeDays = new Long(source.LifeDays);
+        }
     }
 
 
@@ -411,6 +442,7 @@ public class InLongAgentDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentGroupId", this.AgentGroupId);
         this.setParamArrayObj(map, prefix + "CvmAgentStatusList.", this.CvmAgentStatusList);
         this.setParamSimple(map, prefix + "AgentTotal", this.AgentTotal);
+        this.setParamSimple(map, prefix + "LifeDays", this.LifeDays);
 
     }
 }

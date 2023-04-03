@@ -30,7 +30,7 @@ public class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel{
     private String CcnId;
 
     /**
-    * 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
+    * 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。
     */
     @SerializedName("BandwidthLimitType")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel{
     }
 
     /**
-     * Get 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。 
-     * @return BandwidthLimitType 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
+     * Get 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。 
+     * @return BandwidthLimitType 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。
      */
     public String getBandwidthLimitType() {
         return this.BandwidthLimitType;
     }
 
     /**
-     * Set 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
-     * @param BandwidthLimitType 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。
+     * Set 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。
+     * @param BandwidthLimitType 云联网限速类型，INTER_REGION_LIMIT：地域间限速，OUTER_REGION_LIMIT：地域出口限速。默认值：OUTER_REGION_LIMIT。
      */
     public void setBandwidthLimitType(String BandwidthLimitType) {
         this.BandwidthLimitType = BandwidthLimitType;

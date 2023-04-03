@@ -15,6 +15,9 @@ public enum CarErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // 参数错误。
+     INVALIDPARAMETER("InvalidParameter"),
+     
     // Json 解析失败。
      INVALIDPARAMETER_JSONPARSEERROR("InvalidParameter.JsonParseError"),
      

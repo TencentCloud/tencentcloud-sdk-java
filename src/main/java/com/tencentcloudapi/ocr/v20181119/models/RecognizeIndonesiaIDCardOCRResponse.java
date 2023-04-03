@@ -135,6 +135,20 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel{
     private String Photo;
 
     /**
+    * 省份，Scene为V2时支持识别
+    */
+    @SerializedName("Provinsi")
+    @Expose
+    private String Provinsi;
+
+    /**
+    * 城市，Scene为V2时支持识别
+    */
+    @SerializedName("Kota")
+    @Expose
+    private String Kota;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -398,6 +412,38 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get 省份，Scene为V2时支持识别 
+     * @return Provinsi 省份，Scene为V2时支持识别
+     */
+    public String getProvinsi() {
+        return this.Provinsi;
+    }
+
+    /**
+     * Set 省份，Scene为V2时支持识别
+     * @param Provinsi 省份，Scene为V2时支持识别
+     */
+    public void setProvinsi(String Provinsi) {
+        this.Provinsi = Provinsi;
+    }
+
+    /**
+     * Get 城市，Scene为V2时支持识别 
+     * @return Kota 城市，Scene为V2时支持识别
+     */
+    public String getKota() {
+        return this.Kota;
+    }
+
+    /**
+     * Set 城市，Scene为V2时支持识别
+     * @param Kota 城市，Scene为V2时支持识别
+     */
+    public void setKota(String Kota) {
+        this.Kota = Kota;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -469,6 +515,12 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel{
         if (source.Photo != null) {
             this.Photo = new String(source.Photo);
         }
+        if (source.Provinsi != null) {
+            this.Provinsi = new String(source.Provinsi);
+        }
+        if (source.Kota != null) {
+            this.Kota = new String(source.Kota);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -495,6 +547,8 @@ public class RecognizeIndonesiaIDCardOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BerlakuHingga", this.BerlakuHingga);
         this.setParamSimple(map, prefix + "IssuedDate", this.IssuedDate);
         this.setParamSimple(map, prefix + "Photo", this.Photo);
+        this.setParamSimple(map, prefix + "Provinsi", this.Provinsi);
+        this.setParamSimple(map, prefix + "Kota", this.Kota);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyVpnGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * VPN网关实例ID
+    * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 云联网路由（IDC网段）列表
+    * 云联网路由（IDC网段）列表。
     */
     @SerializedName("Routes")
     @Expose
     private VpngwCcnRoutes [] Routes;
 
     /**
-     * Get VPN网关实例ID 
-     * @return VpnGatewayId VPN网关实例ID
+     * Get VPN网关实例ID。 
+     * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID
-     * @param VpnGatewayId VPN网关实例ID
+     * Set VPN网关实例ID。
+     * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 云联网路由（IDC网段）列表 
-     * @return Routes 云联网路由（IDC网段）列表
+     * Get 云联网路由（IDC网段）列表。 
+     * @return Routes 云联网路由（IDC网段）列表。
      */
     public VpngwCcnRoutes [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 云联网路由（IDC网段）列表
-     * @param Routes 云联网路由（IDC网段）列表
+     * Set 云联网路由（IDC网段）列表。
+     * @param Routes 云联网路由（IDC网段）列表。
      */
     public void setRoutes(VpngwCcnRoutes [] Routes) {
         this.Routes = Routes;

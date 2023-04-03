@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeVpnGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * VPN网关实例ID
+    * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 偏移量
+    * 偏移量。默认值：0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量。默认值：20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get VPN网关实例ID 
-     * @return VpnGatewayId VPN网关实例ID
+     * Get VPN网关实例ID。 
+     * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID
-     * @param VpnGatewayId VPN网关实例ID
+     * Set VPN网关实例ID。
+     * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。默认值：0 
+     * @return Offset 偏移量。默认值：0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。默认值：0
+     * @param Offset 偏移量。默认值：0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量。默认值：20 
+     * @return Limit 返回数量。默认值：20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量。默认值：20
+     * @param Limit 返回数量。默认值：20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

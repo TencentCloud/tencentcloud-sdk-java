@@ -2102,6 +2102,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查询高危命令事件详情(新)
+     * @param req DescribeBashEventsInfoNewRequest
+     * @return DescribeBashEventsInfoNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBashEventsInfoNewResponse DescribeBashEventsInfoNew(DescribeBashEventsInfoNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBashEventsInfoNewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBashEventsInfoNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBashEventsInfoNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取高危命令列表(新)
      * @param req DescribeBashEventsNewRequest
      * @return DescribeBashEventsNewResponse

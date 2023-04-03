@@ -23,11 +23,19 @@ import java.util.HashMap;
 public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
 
     /**
-    * VPN网关目的路由
+    * VPN网关目的路由。
     */
     @SerializedName("Routes")
     @Expose
     private VpnGatewayRoute [] Routes;
+
+    /**
+    * 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get VPN网关目的路由 
-     * @return Routes VPN网关目的路由
+     * Get VPN网关目的路由。 
+     * @return Routes VPN网关目的路由。
      */
     public VpnGatewayRoute [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set VPN网关目的路由
-     * @param Routes VPN网关目的路由
+     * Set VPN网关目的路由。
+     * @param Routes VPN网关目的路由。
      */
     public void setRoutes(VpnGatewayRoute [] Routes) {
         this.Routes = Routes;
+    }
+
+    /**
+     * Get 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 路由条数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -82,6 +110,9 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
                 this.Routes[i] = new VpnGatewayRoute(source.Routes[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +124,7 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Routes.", this.Routes);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

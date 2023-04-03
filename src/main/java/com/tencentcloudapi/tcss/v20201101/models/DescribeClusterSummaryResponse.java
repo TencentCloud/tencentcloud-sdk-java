@@ -93,6 +93,13 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     private Long FailedClusterCount;
 
     /**
+    * 未导入的集群数量
+    */
+    @SerializedName("NotImportedClusterCount")
+    @Expose
+    private Long NotImportedClusterCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -260,6 +267,22 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 未导入的集群数量 
+     * @return NotImportedClusterCount 未导入的集群数量
+     */
+    public Long getNotImportedClusterCount() {
+        return this.NotImportedClusterCount;
+    }
+
+    /**
+     * Set 未导入的集群数量
+     * @param NotImportedClusterCount 未导入的集群数量
+     */
+    public void setNotImportedClusterCount(Long NotImportedClusterCount) {
+        this.NotImportedClusterCount = NotImportedClusterCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -313,6 +336,9 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         if (source.FailedClusterCount != null) {
             this.FailedClusterCount = new Long(source.FailedClusterCount);
         }
+        if (source.NotImportedClusterCount != null) {
+            this.NotImportedClusterCount = new Long(source.NotImportedClusterCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +359,7 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoCheckClusterCount", this.AutoCheckClusterCount);
         this.setParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
         this.setParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
+        this.setParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

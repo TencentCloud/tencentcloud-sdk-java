@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDefaultParamsRequest extends AbstractModel{
 
     /**
-    * mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+    * 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
     private String EngineType;
 
     /**
-     * Get mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。 
-     * @return EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * Get 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"] 
+     * @return EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
-     * @param EngineVersion mysql版本，目前支持 ["5.1", "5.5", "5.6", "5.7"]。
+     * Set 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+     * @param EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

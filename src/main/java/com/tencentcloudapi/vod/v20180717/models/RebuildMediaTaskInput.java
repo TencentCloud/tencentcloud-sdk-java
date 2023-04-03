@@ -44,6 +44,13 @@ public class RebuildMediaTaskInput extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
+    * 音画质重生模版号。
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * 画质修复控制参数。
     */
     @SerializedName("RepairInfo")
@@ -180,6 +187,22 @@ public class RebuildMediaTaskInput extends AbstractModel{
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
+    }
+
+    /**
+     * Get 音画质重生模版号。 
+     * @return Definition 音画质重生模版号。
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 音画质重生模版号。
+     * @param Definition 音画质重生模版号。
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -407,6 +430,9 @@ public class RebuildMediaTaskInput extends AbstractModel{
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.RepairInfo != null) {
             this.RepairInfo = new RepairInfo(source.RepairInfo);
         }
@@ -456,6 +482,7 @@ public class RebuildMediaTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RepairInfo.", this.RepairInfo);
         this.setParamObj(map, prefix + "VideoFrameInterpolationInfo.", this.VideoFrameInterpolationInfo);
         this.setParamObj(map, prefix + "SuperResolutionInfo.", this.SuperResolutionInfo);

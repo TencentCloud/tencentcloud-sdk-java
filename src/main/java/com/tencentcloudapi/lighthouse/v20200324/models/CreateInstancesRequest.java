@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * 套餐ID。
+    * 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * 镜像ID。
+    * 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -104,32 +104,32 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean AutoVoucher;
 
     /**
-     * Get 套餐ID。 
-     * @return BundleId 套餐ID。
+     * Get 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。 
+     * @return BundleId 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set 套餐ID。
-     * @param BundleId 套餐ID。
+     * Set 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
+     * @param BundleId 套餐ID。可以通过调用 [查询套餐](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get 镜像ID。 
-     * @return BlueprintId 镜像ID。
+     * Get 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。 
+     * @return BlueprintId 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set 镜像ID。
-     * @param BlueprintId 镜像ID。
+     * Set 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
+     * @param BlueprintId 镜像ID。可以通过调用 [查询镜像信息](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;

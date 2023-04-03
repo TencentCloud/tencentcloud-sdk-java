@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeCrossBorderCcnRegionBandwidthLimitsResponse extends AbstractModel{
 
     /**
+    * 符合条件的对象总数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 云联网地域间限速带宽实例的信息。
+    */
+    @SerializedName("CcnBandwidthSet")
+    @Expose
+    private CcnBandwidth [] CcnBandwidthSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 符合条件的对象总数。 
+     * @return TotalCount 符合条件的对象总数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 符合条件的对象总数。
+     * @param TotalCount 符合条件的对象总数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 云联网地域间限速带宽实例的信息。 
+     * @return CcnBandwidthSet 云联网地域间限速带宽实例的信息。
+     */
+    public CcnBandwidth [] getCcnBandwidthSet() {
+        return this.CcnBandwidthSet;
+    }
+
+    /**
+     * Set 云联网地域间限速带宽实例的信息。
+     * @param CcnBandwidthSet 云联网地域间限速带宽实例的信息。
+     */
+    public void setCcnBandwidthSet(CcnBandwidth [] CcnBandwidthSet) {
+        this.CcnBandwidthSet = CcnBandwidthSet;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,15 @@ public class DescribeCrossBorderCcnRegionBandwidthLimitsResponse extends Abstrac
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCrossBorderCcnRegionBandwidthLimitsResponse(DescribeCrossBorderCcnRegionBandwidthLimitsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CcnBandwidthSet != null) {
+            this.CcnBandwidthSet = new CcnBandwidth[source.CcnBandwidthSet.length];
+            for (int i = 0; i < source.CcnBandwidthSet.length; i++) {
+                this.CcnBandwidthSet[i] = new CcnBandwidth(source.CcnBandwidthSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DescribeCrossBorderCcnRegionBandwidthLimitsResponse extends Abstrac
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CcnBandwidthSet.", this.CcnBandwidthSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

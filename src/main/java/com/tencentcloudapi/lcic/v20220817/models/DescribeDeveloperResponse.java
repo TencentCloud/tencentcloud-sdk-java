@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeDeveloperResponse extends AbstractModel{
 
     /**
+    * 服务商ID
+    */
+    @SerializedName("DeveloperId")
+    @Expose
+    private String DeveloperId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 服务商ID 
+     * @return DeveloperId 服务商ID
+     */
+    public String getDeveloperId() {
+        return this.DeveloperId;
+    }
+
+    /**
+     * Set 服务商ID
+     * @param DeveloperId 服务商ID
+     */
+    public void setDeveloperId(String DeveloperId) {
+        this.DeveloperId = DeveloperId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class DescribeDeveloperResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDeveloperResponse(DescribeDeveloperResponse source) {
+        if (source.DeveloperId != null) {
+            this.DeveloperId = new String(source.DeveloperId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class DescribeDeveloperResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeveloperId", this.DeveloperId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

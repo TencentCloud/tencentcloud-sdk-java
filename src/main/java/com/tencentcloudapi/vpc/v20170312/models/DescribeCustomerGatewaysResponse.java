@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCustomerGatewaysResponse extends AbstractModel{
 
     /**
-    * 对端网关对象列表
+    * 对端网关对象列表。
     */
     @SerializedName("CustomerGatewaySet")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeCustomerGatewaysResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 对端网关对象列表 
-     * @return CustomerGatewaySet 对端网关对象列表
+     * Get 对端网关对象列表。 
+     * @return CustomerGatewaySet 对端网关对象列表。
      */
     public CustomerGateway [] getCustomerGatewaySet() {
         return this.CustomerGatewaySet;
     }
 
     /**
-     * Set 对端网关对象列表
-     * @param CustomerGatewaySet 对端网关对象列表
+     * Set 对端网关对象列表。
+     * @param CustomerGatewaySet 对端网关对象列表。
      */
     public void setCustomerGatewaySet(CustomerGateway [] CustomerGatewaySet) {
         this.CustomerGatewaySet = CustomerGatewaySet;

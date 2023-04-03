@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyVpnGatewayRoutesRequest extends AbstractModel{
 
     /**
-    * Vpn网关id
+    * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 路由修改参数
+    * 路由修改参数。
     */
     @SerializedName("Routes")
     @Expose
     private VpnGatewayRouteModify [] Routes;
 
     /**
-     * Get Vpn网关id 
-     * @return VpnGatewayId Vpn网关id
+     * Get VPN网关实例ID。 
+     * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set Vpn网关id
-     * @param VpnGatewayId Vpn网关id
+     * Set VPN网关实例ID。
+     * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 路由修改参数 
-     * @return Routes 路由修改参数
+     * Get 路由修改参数。 
+     * @return Routes 路由修改参数。
      */
     public VpnGatewayRouteModify [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 路由修改参数
-     * @param Routes 路由修改参数
+     * Set 路由修改参数。
+     * @param Routes 路由修改参数。
      */
     public void setRoutes(VpnGatewayRouteModify [] Routes) {
         this.Routes = Routes;

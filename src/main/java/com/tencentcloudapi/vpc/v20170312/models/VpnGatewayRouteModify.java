@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class VpnGatewayRouteModify extends AbstractModel{
 
     /**
-    * Vpn网关路由ID
+    * VPN网关路由ID。
     */
     @SerializedName("RouteId")
     @Expose
     private String RouteId;
 
     /**
-    * Vpn网关状态, ENABEL 启用, DISABLE禁用
+    * VPN网关状态, ENABLE 启用, DISABLE禁用。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Vpn网关路由ID 
-     * @return RouteId Vpn网关路由ID
+     * Get VPN网关路由ID。 
+     * @return RouteId VPN网关路由ID。
      */
     public String getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set Vpn网关路由ID
-     * @param RouteId Vpn网关路由ID
+     * Set VPN网关路由ID。
+     * @param RouteId VPN网关路由ID。
      */
     public void setRouteId(String RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * Get Vpn网关状态, ENABEL 启用, DISABLE禁用 
-     * @return Status Vpn网关状态, ENABEL 启用, DISABLE禁用
+     * Get VPN网关状态, ENABLE 启用, DISABLE禁用。 
+     * @return Status VPN网关状态, ENABLE 启用, DISABLE禁用。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Vpn网关状态, ENABEL 启用, DISABLE禁用
-     * @param Status Vpn网关状态, ENABEL 启用, DISABLE禁用
+     * Set VPN网关状态, ENABLE 启用, DISABLE禁用。
+     * @param Status VPN网关状态, ENABLE 启用, DISABLE禁用。
      */
     public void setStatus(String Status) {
         this.Status = Status;

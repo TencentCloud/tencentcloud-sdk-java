@@ -79,6 +79,14 @@ public class CcnBandwidthInfo extends AbstractModel{
     private String MarketId;
 
     /**
+    * 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 带宽所属的云联网ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CcnId 带宽所属的云联网ID。
@@ -218,6 +226,26 @@ public class CcnBandwidthInfo extends AbstractModel{
         this.MarketId = MarketId;
     }
 
+    /**
+     * Get 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 资源绑定的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public CcnBandwidthInfo() {
     }
 
@@ -247,6 +275,12 @@ public class CcnBandwidthInfo extends AbstractModel{
         if (source.MarketId != null) {
             this.MarketId = new String(source.MarketId);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -261,6 +295,7 @@ public class CcnBandwidthInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
         this.setParamSimple(map, prefix + "MarketId", this.MarketId);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

@@ -191,6 +191,13 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     private Long IngressCount;
 
     /**
+    * 主节点的ip列表
+    */
+    @SerializedName("MasterIps")
+    @Expose
+    private String MasterIps;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -582,6 +589,22 @@ public class DescribeClusterDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 主节点的ip列表 
+     * @return MasterIps 主节点的ip列表
+     */
+    public String getMasterIps() {
+        return this.MasterIps;
+    }
+
+    /**
+     * Set 主节点的ip列表
+     * @param MasterIps 主节点的ip列表
+     */
+    public void setMasterIps(String MasterIps) {
+        this.MasterIps = MasterIps;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -677,6 +700,9 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         if (source.IngressCount != null) {
             this.IngressCount = new Long(source.IngressCount);
         }
+        if (source.MasterIps != null) {
+            this.MasterIps = new String(source.MasterIps);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -711,6 +737,7 @@ public class DescribeClusterDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "PodCount", this.PodCount);
         this.setParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
         this.setParamSimple(map, prefix + "IngressCount", this.IngressCount);
+        this.setParamSimple(map, prefix + "MasterIps", this.MasterIps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -561,6 +561,14 @@ off：不支持
     private HttpsBilling HttpsBilling;
 
     /**
+    * 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OthersPrivateAccess")
+    @Expose
+    private OthersPrivateAccess OthersPrivateAccess;
+
+    /**
      * Get 域名 ID 
      * @return ResourceId 域名 ID
      */
@@ -1932,6 +1940,26 @@ off：不支持
         this.HttpsBilling = HttpsBilling;
     }
 
+    /**
+     * Get 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OthersPrivateAccess 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OthersPrivateAccess getOthersPrivateAccess() {
+        return this.OthersPrivateAccess;
+    }
+
+    /**
+     * Set 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OthersPrivateAccess 其他厂商对象存储回源鉴权
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOthersPrivateAccess(OthersPrivateAccess OthersPrivateAccess) {
+        this.OthersPrivateAccess = OthersPrivateAccess;
+    }
+
     public DetailDomain() {
     }
 
@@ -2144,6 +2172,9 @@ off：不支持
         if (source.HttpsBilling != null) {
             this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
         }
+        if (source.OthersPrivateAccess != null) {
+            this.OthersPrivateAccess = new OthersPrivateAccess(source.OthersPrivateAccess);
+        }
     }
 
 
@@ -2216,6 +2247,7 @@ off：不支持
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
+        this.setParamObj(map, prefix + "OthersPrivateAccess.", this.OthersPrivateAccess);
 
     }
 }

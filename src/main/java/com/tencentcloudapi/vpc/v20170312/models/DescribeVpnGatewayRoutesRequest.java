@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeVpnGatewayRoutesRequest extends AbstractModel{
 
     /**
-    * VPN网关的ID
+    * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
+    * 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量, 默认0
+    * 偏移量, 默认0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 单页个数, 默认20, 最大值100
+    * 单页个数, 默认20, 最大值100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get VPN网关的ID 
-     * @return VpnGatewayId VPN网关的ID
+     * Get VPN网关实例ID。 
+     * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关的ID
-     * @param VpnGatewayId VPN网关的ID
+     * Set VPN网关实例ID。
+     * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType) 
-     * @return Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
+     * Get 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。 
+     * @return Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
-     * @param Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)
+     * Set 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
+     * @param Filters 过滤条件,  条件包括(DestinationCidr, InstanceId,InstanceType)。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量, 默认0 
-     * @return Offset 偏移量, 默认0
+     * Get 偏移量, 默认0。 
+     * @return Offset 偏移量, 默认0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量, 默认0
-     * @param Offset 偏移量, 默认0
+     * Set 偏移量, 默认0。
+     * @param Offset 偏移量, 默认0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 单页个数, 默认20, 最大值100 
-     * @return Limit 单页个数, 默认20, 最大值100
+     * Get 单页个数, 默认20, 最大值100。 
+     * @return Limit 单页个数, 默认20, 最大值100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单页个数, 默认20, 最大值100
-     * @param Limit 单页个数, 默认20, 最大值100
+     * Set 单页个数, 默认20, 最大值100。
+     * @param Limit 单页个数, 默认20, 最大值100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

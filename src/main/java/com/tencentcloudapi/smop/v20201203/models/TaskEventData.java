@@ -79,7 +79,7 @@ public class TaskEventData extends AbstractModel{
     private Long TaskType;
 
     /**
-    * 当前积分/成长值
+    * 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCoin")
@@ -117,6 +117,14 @@ public class TaskEventData extends AbstractModel{
     @SerializedName("TaskName")
     @Expose
     private String TaskName;
+
+    /**
+    * 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GrowScore")
+    @Expose
+    private Long GrowScore;
 
     /**
      * Get 状态码
@@ -259,9 +267,9 @@ public class TaskEventData extends AbstractModel{
     }
 
     /**
-     * Get 当前积分/成长值
+     * Get 当前积分
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCoin 当前积分/成长值
+     * @return TotalCoin 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCoin() {
@@ -269,9 +277,9 @@ public class TaskEventData extends AbstractModel{
     }
 
     /**
-     * Set 当前积分/成长值
+     * Set 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCoin 当前积分/成长值
+     * @param TotalCoin 当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCoin(Long TotalCoin) {
@@ -358,6 +366,26 @@ public class TaskEventData extends AbstractModel{
         this.TaskName = TaskName;
     }
 
+    /**
+     * Get 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GrowScore 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGrowScore() {
+        return this.GrowScore;
+    }
+
+    /**
+     * Set 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GrowScore 当前成长值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGrowScore(Long GrowScore) {
+        this.GrowScore = GrowScore;
+    }
+
     public TaskEventData() {
     }
 
@@ -402,6 +430,9 @@ public class TaskEventData extends AbstractModel{
         if (source.TaskName != null) {
             this.TaskName = new String(source.TaskName);
         }
+        if (source.GrowScore != null) {
+            this.GrowScore = new Long(source.GrowScore);
+        }
     }
 
 
@@ -421,6 +452,7 @@ public class TaskEventData extends AbstractModel{
         this.setParamSimple(map, prefix + "DoneTimes", this.DoneTimes);
         this.setParamSimple(map, prefix + "TotalTimes", this.TotalTimes);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
+        this.setParamSimple(map, prefix + "GrowScore", this.GrowScore);
 
     }
 }

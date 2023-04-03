@@ -30,7 +30,7 @@ public class DeleteVpnGatewayRoutesRequest extends AbstractModel{
     private String VpnGatewayId;
 
     /**
-    * 路由ID信息列表
+    * 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
     */
     @SerializedName("RouteIds")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteVpnGatewayRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get 路由ID信息列表 
-     * @return RouteIds 路由ID信息列表
+     * Get 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。 
+     * @return RouteIds 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set 路由ID信息列表
-     * @param RouteIds 路由ID信息列表
+     * Set 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
+     * @param RouteIds 路由ID信息列表，可以通过[DescribeVpnGatewayRoutes](https://cloud.tencent.com/document/api/215/57676)接口查询。
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;

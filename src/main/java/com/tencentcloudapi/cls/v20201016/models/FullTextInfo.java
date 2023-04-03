@@ -32,7 +32,7 @@ public class FullTextInfo extends AbstractModel{
     /**
     * 全文索引的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
-注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
+注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -65,10 +65,10 @@ public class FullTextInfo extends AbstractModel{
     /**
      * Get 全文索引的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
-注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义 
+注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义 
      * @return Tokenizer 全文索引的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
-注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
+注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
      */
     public String getTokenizer() {
         return this.Tokenizer;
@@ -77,10 +77,10 @@ public class FullTextInfo extends AbstractModel{
     /**
      * Set 全文索引的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
-注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
+注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
      * @param Tokenizer 全文索引的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
-注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义
+注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

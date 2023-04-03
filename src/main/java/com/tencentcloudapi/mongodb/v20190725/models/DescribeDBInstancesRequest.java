@@ -23,324 +23,324 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+    * 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+    * 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+    * 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 私有网络的ID，基础网络则不传该参数
+    * 私有网络的ID，基础网络则不传该参数。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+    * 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+    * 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 单次请求返回的数量，最小值为1，最大值为100，默认值为20
+    * 单次请求返回的数量。默认值为20，取值范围为[1,100]。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认值为0
+    * 偏移量，默认值为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+    * 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 返回结果集排序方式，目前支持："ASC"或者"DESC"
+    * 返回结果集排序方式，目前支持："ASC"或者"DESC"。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * 项目 ID
+    * 项目 ID。
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 搜索关键词，支持实例ID、实例名称、完整IP
+    * 搜索关键词，支持实例ID、实例名称、完整IP。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * Tag信息
+    * Tag信息。
     */
     @SerializedName("Tags")
     @Expose
-    private TagInfo Tags;
+    private TagInfo [] Tags;
 
     /**
-     * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。 
+     * @return InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * @param InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例 
-     * @return InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+     * Get 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul> 
+     * @return InstanceType 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
-     * @param InstanceType 实例类型，取值范围：0-所有实例,1-正式实例，2-临时实例, 3-只读实例，-1-正式实例+只读+灾备实例
+     * Set 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
+     * @param InstanceType 实例类型。取值范围如下：<ul><li>0：所有实例。</li><li>1：正式实例。</li><li>2：临时实例。</li><li>3：只读实例。</li><li>-1：正式实例、只读、灾备实例。</li></ul>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例 
-     * @return ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+     * Get 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul> 
+     * @return ClusterType 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
-     * @param ClusterType 集群类型，取值范围：0-副本集实例，1-分片实例，-1-所有实例
+     * Set 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
+     * @param ClusterType 集群类型，取值范围如下：<ul><li>0：副本集实例。</li><li>1：分片实例。</li><li>-1：所有实例。</li></ul>
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例） 
-     * @return Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+     * Get 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul> 
+     * @return Status 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
-     * @param Status 实例状态，取值范围：0-待初始化，1-流程执行中，2-实例有效，-2-已隔离（包年包月实例），-3-已隔离（按量计费实例）
+     * Set 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
+     * @param Status 实例状态，取值范围如下所示：<ul><li>0：待初始化。</li><li>1：流程执行中。</li><li>2：实例有效。</li><li>-2：已隔离（包年包月实例）。</li><li>-3：已隔离（按量计费实例）。</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 私有网络的ID，基础网络则不传该参数 
-     * @return VpcId 私有网络的ID，基础网络则不传该参数
+     * Get 私有网络的ID，基础网络则不传该参数。 
+     * @return VpcId 私有网络的ID，基础网络则不传该参数。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络的ID，基础网络则不传该参数
-     * @param VpcId 私有网络的ID，基础网络则不传该参数
+     * Set 私有网络的ID，基础网络则不传该参数。
+     * @param VpcId 私有网络的ID，基础网络则不传该参数。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId 
-     * @return SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+     * Get 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。 
+     * @return SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
-     * @param SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId
+     * Set 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
+     * @param SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月 
-     * @return PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+     * Get 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul> 
+     * @return PayMode 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
-     * @param PayMode 付费类型，取值范围：0-按量计费，1-包年包月，-1-按量计费+包年包月
+     * Set 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
+     * @param PayMode 付费类型，取值范围如下：<ul><li>0：查询按量计费实例。</li><li>1：查询包年包月实例。</li><li>-1：查询按量计费与包年包月实例。</li></ul>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 单次请求返回的数量，最小值为1，最大值为100，默认值为20 
-     * @return Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
+     * Get 单次请求返回的数量。默认值为20，取值范围为[1,100]。 
+     * @return Limit 单次请求返回的数量。默认值为20，取值范围为[1,100]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，最小值为1，最大值为100，默认值为20
-     * @param Limit 单次请求返回的数量，最小值为1，最大值为100，默认值为20
+     * Set 单次请求返回的数量。默认值为20，取值范围为[1,100]。
+     * @param Limit 单次请求返回的数量。默认值为20，取值范围为[1,100]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认值为0 
-     * @return Offset 偏移量，默认值为0
+     * Get 偏移量，默认值为0。 
+     * @return Offset 偏移量，默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0
-     * @param Offset 偏移量，默认值为0
+     * Set 偏移量，默认值为0。
+     * @param Offset 偏移量，默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序 
-     * @return OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+     * Get 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。 
+     * @return OrderBy 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
-     * @param OrderBy 返回结果集排序的字段，目前支持："ProjectId", "InstanceName", "CreateTime"，默认为升序排序
+     * Set 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
+     * @param OrderBy 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回结果集排序方式，目前支持："ASC"或者"DESC" 
-     * @return OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * Get 返回结果集排序方式，目前支持："ASC"或者"DESC"。 
+     * @return OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 返回结果集排序方式，目前支持："ASC"或者"DESC"
-     * @param OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"
+     * Set 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+     * @param OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get 项目 ID 
-     * @return ProjectIds 项目 ID
+     * Get 项目 ID。 
+     * @return ProjectIds 项目 ID。
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目 ID
-     * @param ProjectIds 项目 ID
+     * Set 项目 ID。
+     * @param ProjectIds 项目 ID。
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 搜索关键词，支持实例ID、实例名称、完整IP 
-     * @return SearchKey 搜索关键词，支持实例ID、实例名称、完整IP
+     * Get 搜索关键词，支持实例ID、实例名称、完整IP。 
+     * @return SearchKey 搜索关键词，支持实例ID、实例名称、完整IP。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词，支持实例ID、实例名称、完整IP
-     * @param SearchKey 搜索关键词，支持实例ID、实例名称、完整IP
+     * Set 搜索关键词，支持实例ID、实例名称、完整IP。
+     * @param SearchKey 搜索关键词，支持实例ID、实例名称、完整IP。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get Tag信息 
-     * @return Tags Tag信息
+     * Get Tag信息。 
+     * @return Tags Tag信息。
      */
-    public TagInfo getTags() {
+    public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag信息
-     * @param Tags Tag信息
+     * Set Tag信息。
+     * @param Tags Tag信息。
      */
-    public void setTags(TagInfo Tags) {
+    public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
@@ -401,7 +401,10 @@ public class DescribeDBInstancesRequest extends AbstractModel{
             this.SearchKey = new String(source.SearchKey);
         }
         if (source.Tags != null) {
-            this.Tags = new TagInfo(source.Tags);
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
         }
     }
 
@@ -423,7 +426,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
-        this.setParamObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

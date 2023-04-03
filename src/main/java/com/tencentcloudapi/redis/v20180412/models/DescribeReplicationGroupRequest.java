@@ -44,7 +44,7 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+    * 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
     */
     @SerializedName("SearchKey")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。 
-     * @return SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+     * Get 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。 
+     * @return SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
-     * @param SearchKey 设置模糊查询的关键字，可以设置为实例ID或实例名称进行模糊查询。
+     * Set 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+     * @param SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

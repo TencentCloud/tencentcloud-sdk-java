@@ -239,6 +239,26 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *集群详情页中显示集群状态、流程进度等
+     * @param req DescribeInstanceStateRequest
+     * @return DescribeInstanceStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceStateResponse DescribeInstanceState(DescribeInstanceStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *购买页拉取集群的数据节点和zookeeper节点的规格列表
      * @param req DescribeSpecRequest
      * @return DescribeSpecResponse

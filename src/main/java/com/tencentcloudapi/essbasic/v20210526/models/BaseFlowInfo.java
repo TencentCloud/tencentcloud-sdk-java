@@ -79,6 +79,13 @@ public class BaseFlowInfo extends AbstractModel{
     private Boolean NeedSignReview;
 
     /**
+    * 用户流程自定义数据参数
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * Get 合同流程名称 
      * @return FlowName 合同流程名称
      */
@@ -206,6 +213,22 @@ public class BaseFlowInfo extends AbstractModel{
         this.NeedSignReview = NeedSignReview;
     }
 
+    /**
+     * Get 用户流程自定义数据参数 
+     * @return UserData 用户流程自定义数据参数
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 用户流程自定义数据参数
+     * @param UserData 用户流程自定义数据参数
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
     public BaseFlowInfo() {
     }
 
@@ -241,6 +264,9 @@ public class BaseFlowInfo extends AbstractModel{
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class BaseFlowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

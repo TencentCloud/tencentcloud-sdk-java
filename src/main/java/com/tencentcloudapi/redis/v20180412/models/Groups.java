@@ -30,21 +30,39 @@ public class Groups extends AbstractModel{
     private Long AppId;
 
     /**
-    * 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+    * 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 复制组信息
+    * 复制组 ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 复制组名称
+    * 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
@@ -52,21 +70,26 @@ public class Groups extends AbstractModel{
     private String GroupName;
 
     /**
-    * 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
+    * 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 复制组数量
+    * 复制组数量。
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 复制组实例
+    * 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instances")
@@ -74,7 +97,7 @@ public class Groups extends AbstractModel{
     private Instances [] Instances;
 
     /**
-    * 备注信息
+    * 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -98,41 +121,113 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Get 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本 
-     * @return RegionId 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Get 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本 
+     * @return RegionId 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-     * @param RegionId 地域ID 1--广州 4--上海 5-- 中国香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+     * Set 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
+     * @param RegionId 地域ID 。
+- 1：广州 
+- 4：上海 
+- 5：中国香港 
+- 6：多伦多 
+- 7：上海金融 
+- 8：北京 
+- 9：新加坡
+- 11：深圳金融
+- 15：美西（硅谷）
+- 16：成都 
+- 17：德国 
+- 18：韩国 
+- 19：重庆 
+- 21：印度 
+- 22：美东（弗吉尼亚）
+- 23：泰国 
+- 24：俄罗斯 
+- 25：日本
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 复制组信息 
-     * @return GroupId 复制组信息
+     * Get 复制组 ID。 
+     * @return GroupId 复制组 ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组信息
-     * @param GroupId 复制组信息
+     * Set 复制组 ID。
+     * @param GroupId 复制组 ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 复制组名称
+     * Get 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupName 复制组名称
+     * @return GroupName 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
@@ -140,9 +235,9 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Set 复制组名称
+     * Set 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupName 复制组名称
+     * @param GroupName 复制组名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
@@ -150,41 +245,61 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Get 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中" 
-     * @return Status 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
+     * Get 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。 
+     * @return Status 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
-     * @param Status 复制组状态，37："绑定复制组中"，38："复制组重连中"，51："解绑复制组中"，52："复制组实例切主中"，53："角色变更中"
+     * Set 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
+     * @param Status 复制组状态。
+- 37：绑定复制组中。
+- 38：复制组重连中。
+- 51：解绑复制组中。
+- 52：复制组实例切主中。
+- 53：角色变更中。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 复制组数量 
-     * @return InstanceCount 复制组数量
+     * Get 复制组数量。 
+     * @return InstanceCount 复制组数量。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 复制组数量
-     * @param InstanceCount 复制组数量
+     * Set 复制组数量。
+     * @param InstanceCount 复制组数量。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 复制组实例
+     * Get 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Instances 复制组实例
+     * @return Instances 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instances [] getInstances() {
@@ -192,9 +307,9 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Set 复制组实例
+     * Set 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Instances 复制组实例
+     * @param Instances 复制组中的实例信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstances(Instances [] Instances) {
@@ -202,9 +317,9 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Get 备注信息
+     * Get 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 备注信息
+     * @return Remark 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -212,9 +327,9 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Set 备注信息
+     * Set 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 备注信息
+     * @param Remark 备注信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {

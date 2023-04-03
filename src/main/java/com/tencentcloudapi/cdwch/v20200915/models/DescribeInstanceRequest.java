@@ -30,6 +30,13 @@ public class DescribeInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 是否是open api查询
+    */
+    @SerializedName("IsOpenApi")
+    @Expose
+    private Boolean IsOpenApi;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -45,6 +52,22 @@ public class DescribeInstanceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否是open api查询 
+     * @return IsOpenApi 是否是open api查询
+     */
+    public Boolean getIsOpenApi() {
+        return this.IsOpenApi;
+    }
+
+    /**
+     * Set 是否是open api查询
+     * @param IsOpenApi 是否是open api查询
+     */
+    public void setIsOpenApi(Boolean IsOpenApi) {
+        this.IsOpenApi = IsOpenApi;
+    }
+
     public DescribeInstanceRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeInstanceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IsOpenApi != null) {
+            this.IsOpenApi = new Boolean(source.IsOpenApi);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsOpenApi", this.IsOpenApi);
 
     }
 }

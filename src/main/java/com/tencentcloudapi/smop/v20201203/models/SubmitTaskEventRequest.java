@@ -51,7 +51,7 @@ public class SubmitTaskEventRequest extends AbstractModel{
     private String Code;
 
     /**
-    * 同步异步方式
+    * 同步异步方式：0为同步、1位异步
     */
     @SerializedName("Async")
     @Expose
@@ -136,16 +136,16 @@ public class SubmitTaskEventRequest extends AbstractModel{
     }
 
     /**
-     * Get 同步异步方式 
-     * @return Async 同步异步方式
+     * Get 同步异步方式：0为同步、1位异步 
+     * @return Async 同步异步方式：0为同步、1位异步
      */
     public Long getAsync() {
         return this.Async;
     }
 
     /**
-     * Set 同步异步方式
-     * @param Async 同步异步方式
+     * Set 同步异步方式：0为同步、1位异步
+     * @param Async 同步异步方式：0为同步、1位异步
      */
     public void setAsync(Long Async) {
         this.Async = Async;

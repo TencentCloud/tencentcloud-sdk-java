@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
 
     /**
-    * 云联网（CCN）各地域出带宽带宽详情。
+    * 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnBandwidthSet")
@@ -46,9 +46,9 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 云联网（CCN）各地域出带宽带宽详情。
+     * Get 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CcnBandwidthSet 云联网（CCN）各地域出带宽带宽详情。
+     * @return CcnBandwidthSet 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnBandwidthInfo [] getCcnBandwidthSet() {
@@ -56,9 +56,9 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
     }
 
     /**
-     * Set 云联网（CCN）各地域出带宽带宽详情。
+     * Set 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CcnBandwidthSet 云联网（CCN）各地域出带宽带宽详情。
+     * @param CcnBandwidthSet 云联网（CCN）各地域出带宽详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnBandwidthSet(CcnBandwidthInfo [] CcnBandwidthSet) {

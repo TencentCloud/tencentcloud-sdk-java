@@ -39,28 +39,28 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
+    * 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
     */
     @SerializedName("SortedBy")
     @Expose
     private String SortedBy;
 
     /**
-    * 偏移量
+    * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * 返回数量。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序方式，'ASC':升序,'DESC':降序。
+    * 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -107,64 +107,64 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime） 
-     * @return SortedBy 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
+     * Get 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。 
+     * @return SortedBy 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
      */
     public String getSortedBy() {
         return this.SortedBy;
     }
 
     /**
-     * Set 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
-     * @param SortedBy 排序条件，目前支持带宽（BandwidthLimit）和过期时间（ExpireTime）
+     * Set 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
+     * @param SortedBy 排序条件，目前支持带宽（`BandwidthLimit`）和过期时间（`ExpireTime`），默认按 `ExpireTime` 排序。
      */
     public void setSortedBy(String SortedBy) {
         this.SortedBy = SortedBy;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。 
+     * @return Offset 偏移量。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。
+     * @param Offset 偏移量。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get 返回数量。 
+     * @return Limit 返回数量。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set 返回数量。
+     * @param Limit 返回数量。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序方式，'ASC':升序,'DESC':降序。 
-     * @return OrderBy 排序方式，'ASC':升序,'DESC':降序。
+     * Get 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。 
+     * @return OrderBy 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序方式，'ASC':升序,'DESC':降序。
-     * @param OrderBy 排序方式，'ASC':升序,'DESC':降序。
+     * Set 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
+     * @param OrderBy 排序方式，'ASC':升序,'DESC':降序。默认按'ASC'排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

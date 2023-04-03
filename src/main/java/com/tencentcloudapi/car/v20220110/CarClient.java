@@ -98,4 +98,44 @@ public class CarClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *开始云端推流
+     * @param req StartPublishStreamRequest
+     * @return StartPublishStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishStreamResponse StartPublishStream(StartPublishStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartPublishStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartPublishStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartPublishStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止云端推流
+     * @param req StopPublishStreamRequest
+     * @return StopPublishStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopPublishStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopPublishStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopPublishStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

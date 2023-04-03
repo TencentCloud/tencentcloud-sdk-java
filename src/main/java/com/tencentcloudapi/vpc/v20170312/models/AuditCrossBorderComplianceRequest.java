@@ -30,7 +30,7 @@ public class AuditCrossBorderComplianceRequest extends AbstractModel{
     private String ServiceProvider;
 
     /**
-    * 表单唯一`ID`。
+    * 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -60,16 +60,16 @@ public class AuditCrossBorderComplianceRequest extends AbstractModel{
     }
 
     /**
-     * Get 表单唯一`ID`。 
-     * @return ComplianceId 表单唯一`ID`。
+     * Get 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息 
+     * @return ComplianceId 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
      */
     public Long getComplianceId() {
         return this.ComplianceId;
     }
 
     /**
-     * Set 表单唯一`ID`。
-     * @param ComplianceId 表单唯一`ID`。
+     * Set 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
+     * @param ComplianceId 表单唯一`ID`。可通过[DescribeCrossBorderCompliance](https://cloud.tencent.com/document/product/215/47838)接口查询ComplianceId信息
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;
