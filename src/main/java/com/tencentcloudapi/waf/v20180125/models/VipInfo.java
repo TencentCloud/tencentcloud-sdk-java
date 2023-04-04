@@ -13,79 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Bucket extends AbstractModel{
+public class VipInfo extends AbstractModel{
 
     /**
-    * 无
+    * Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Key")
+    @SerializedName("Vip")
     @Expose
-    private String Key;
+    private String Vip;
 
     /**
-    * key值出现的次数。
+    * waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Count")
+    @SerializedName("InstanceId")
     @Expose
-    private Long Count;
+    private String InstanceId;
 
     /**
-     * Get 无
+     * Get Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 无
+     * @return Vip Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getKey() {
-        return this.Key;
+    public String getVip() {
+        return this.Vip;
     }
 
     /**
-     * Set 无
+     * Set Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 无
+     * @param Vip Virtual IP
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setVip(String Vip) {
+        this.Vip = Vip;
     }
 
     /**
-     * Get key值出现的次数。 
-     * @return Count key值出现的次数。
+     * Get waf实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getCount() {
-        return this.Count;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set key值出现的次数。
-     * @param Count key值出现的次数。
+     * Set waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId waf实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCount(Long Count) {
-        this.Count = Count;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public Bucket() {
+    public VipInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Bucket(Bucket source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
+    public VipInfo(VipInfo source) {
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
         }
-        if (source.Count != null) {
-            this.Count = new Long(source.Count);
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -94,8 +99,8 @@ public class Bucket extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ChannelCreateUserRolesRequest extends AbstractModel{
 
     /**
-    * 操作者信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
     */
     @SerializedName("Agent")
@@ -51,20 +44,11 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     private String [] RoleIds;
 
     /**
-     * Get 操作者信息 
-     * @return Operator 操作者信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者信息
-     * @param Operator 操作者信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
+    * 操作者信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
@@ -114,6 +98,22 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
         this.RoleIds = RoleIds;
     }
 
+    /**
+     * Get 操作者信息 
+     * @return Operator 操作者信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者信息
+     * @param Operator 操作者信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public ChannelCreateUserRolesRequest() {
     }
 
@@ -122,9 +122,6 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChannelCreateUserRolesRequest(ChannelCreateUserRolesRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -140,6 +137,9 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
                 this.RoleIds[i] = new String(source.RoleIds[i]);
             }
         }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
     }
 
 
@@ -147,10 +147,10 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

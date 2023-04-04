@@ -13,79 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Bucket extends AbstractModel{
+public class RebuildAudioInfo extends AbstractModel{
 
     /**
-    * 无
+    * 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Key")
+    @SerializedName("AudioDenoiseInfo")
     @Expose
-    private String Key;
+    private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-    * key值出现的次数。
-    */
-    @SerializedName("Count")
-    @Expose
-    private Long Count;
-
-    /**
-     * Get 无
+     * Get 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 无
+     * @return AudioDenoiseInfo 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getKey() {
-        return this.Key;
+    public AudioDenoiseInfo getAudioDenoiseInfo() {
+        return this.AudioDenoiseInfo;
     }
 
     /**
-     * Set 无
+     * Set 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 无
+     * @param AudioDenoiseInfo 音频降噪控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
+        this.AudioDenoiseInfo = AudioDenoiseInfo;
     }
 
-    /**
-     * Get key值出现的次数。 
-     * @return Count key值出现的次数。
-     */
-    public Long getCount() {
-        return this.Count;
-    }
-
-    /**
-     * Set key值出现的次数。
-     * @param Count key值出现的次数。
-     */
-    public void setCount(Long Count) {
-        this.Count = Count;
-    }
-
-    public Bucket() {
+    public RebuildAudioInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Bucket(Bucket source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
-        }
-        if (source.Count != null) {
-            this.Count = new Long(source.Count);
+    public RebuildAudioInfo(RebuildAudioInfo source) {
+        if (source.AudioDenoiseInfo != null) {
+            this.AudioDenoiseInfo = new AudioDenoiseInfo(source.AudioDenoiseInfo);
         }
     }
 
@@ -94,8 +68,7 @@ public class Bucket extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamObj(map, prefix + "AudioDenoiseInfo.", this.AudioDenoiseInfo);
 
     }
 }

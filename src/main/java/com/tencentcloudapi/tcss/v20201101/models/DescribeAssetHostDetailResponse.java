@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAssetHostDetailResponse extends AbstractModel{
 
     /**
-    * 云镜uuid
+    * 容器安全uuid
     */
     @SerializedName("UUID")
     @Expose
@@ -212,16 +212,16 @@ public class DescribeAssetHostDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 云镜uuid 
-     * @return UUID 云镜uuid
+     * Get 容器安全uuid 
+     * @return UUID 容器安全uuid
      */
     public String getUUID() {
         return this.UUID;
     }
 
     /**
-     * Set 云镜uuid
-     * @param UUID 云镜uuid
+     * Set 容器安全uuid
+     * @param UUID 容器安全uuid
      */
     public void setUUID(String UUID) {
         this.UUID = UUID;

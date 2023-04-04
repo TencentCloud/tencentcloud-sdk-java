@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ChannelDescribeRolesRequest extends AbstractModel{
 
     /**
-    * 操作人信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
     */
     @SerializedName("Agent")
@@ -51,6 +44,13 @@ public class ChannelDescribeRolesRequest extends AbstractModel{
     private String Limit;
 
     /**
+    * 操作人信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
     * 查询的关键字段:
 Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
@@ -58,22 +58,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-
-    /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
@@ -124,6 +108,22 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     }
 
     /**
+     * Get 操作人信息 
+     * @return Operator 操作人信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人信息
+     * @param Operator 操作人信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
      * Get 查询的关键字段:
 Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色 
@@ -155,9 +155,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChannelDescribeRolesRequest(ChannelDescribeRolesRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -166,6 +163,9 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
         }
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -180,10 +180,10 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

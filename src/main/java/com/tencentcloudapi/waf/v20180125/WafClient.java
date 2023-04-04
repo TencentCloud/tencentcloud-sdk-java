@@ -581,6 +581,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *根据过滤条件查询VIP信息
+     * @param req DescribeVipInfoRequest
+     * @return DescribeVipInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVipInfoResponse DescribeVipInfo(DescribeVipInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVipInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVipInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVipInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *返回ip惩罚规则详细信息
      * @param req DescribeWafAutoDenyRulesRequest
      * @return DescribeWafAutoDenyRulesResponse

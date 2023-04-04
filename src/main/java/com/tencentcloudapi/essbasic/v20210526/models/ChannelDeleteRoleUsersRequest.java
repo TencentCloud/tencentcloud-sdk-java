@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ChannelDeleteRoleUsersRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 代理信息
     */
-    @SerializedName("Operator")
+    @SerializedName("Agent")
     @Expose
-    private UserInfo Operator;
+    private Agent Agent;
 
     /**
     * 角色Id
@@ -44,26 +44,26 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private String [] UserIds;
 
     /**
-    * 代理信息
+    * 操作人信息
     */
-    @SerializedName("Agent")
+    @SerializedName("Operator")
     @Expose
-    private Agent Agent;
+    private UserInfo Operator;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 代理信息 
+     * @return Agent 代理信息
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 代理信息
+     * @param Agent 代理信息
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
     /**
@@ -99,19 +99,19 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理信息 
-     * @return Agent 代理信息
+     * Get 操作人信息 
+     * @return Operator 操作人信息
      */
-    public Agent getAgent() {
-        return this.Agent;
+    public UserInfo getOperator() {
+        return this.Operator;
     }
 
     /**
-     * Set 代理信息
-     * @param Agent 代理信息
+     * Set 操作人信息
+     * @param Operator 操作人信息
      */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelDeleteRoleUsersRequest() {
@@ -122,8 +122,8 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChannelDeleteRoleUsersRequest(ChannelDeleteRoleUsersRequest source) {
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
         if (source.RoleId != null) {
             this.RoleId = new String(source.RoleId);
@@ -134,8 +134,8 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -144,10 +144,10 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

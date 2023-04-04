@@ -134,6 +134,22 @@ public class PrometheusInstancesOverview extends AbstractModel{
     private Long BoundNormal;
 
     /**
+    * 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourcePackageStatus")
+    @Expose
+    private Long ResourcePackageStatus;
+
+    /**
+    * 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourcePackageSpecName")
+    @Expose
+    private String ResourcePackageSpecName;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -397,6 +413,46 @@ public class PrometheusInstancesOverview extends AbstractModel{
         this.BoundNormal = BoundNormal;
     }
 
+    /**
+     * Get 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourcePackageStatus() {
+        return this.ResourcePackageStatus;
+    }
+
+    /**
+     * Set 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourcePackageStatus 资源包状态，0-无可用资源包，1-有可用资源包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourcePackageStatus(Long ResourcePackageStatus) {
+        this.ResourcePackageStatus = ResourcePackageStatus;
+    }
+
+    /**
+     * Get 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourcePackageSpecName 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourcePackageSpecName() {
+        return this.ResourcePackageSpecName;
+    }
+
+    /**
+     * Set 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourcePackageSpecName 资源包规格名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourcePackageSpecName(String ResourcePackageSpecName) {
+        this.ResourcePackageSpecName = ResourcePackageSpecName;
+    }
+
     public PrometheusInstancesOverview() {
     }
 
@@ -450,6 +506,12 @@ public class PrometheusInstancesOverview extends AbstractModel{
         if (source.BoundNormal != null) {
             this.BoundNormal = new Long(source.BoundNormal);
         }
+        if (source.ResourcePackageStatus != null) {
+            this.ResourcePackageStatus = new Long(source.ResourcePackageStatus);
+        }
+        if (source.ResourcePackageSpecName != null) {
+            this.ResourcePackageSpecName = new String(source.ResourcePackageSpecName);
+        }
     }
 
 
@@ -472,6 +534,8 @@ public class PrometheusInstancesOverview extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "BoundTotal", this.BoundTotal);
         this.setParamSimple(map, prefix + "BoundNormal", this.BoundNormal);
+        this.setParamSimple(map, prefix + "ResourcePackageStatus", this.ResourcePackageStatus);
+        this.setParamSimple(map, prefix + "ResourcePackageSpecName", this.ResourcePackageSpecName);
 
     }
 }

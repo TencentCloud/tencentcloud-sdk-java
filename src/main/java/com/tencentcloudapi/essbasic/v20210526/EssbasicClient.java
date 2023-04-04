@@ -385,7 +385,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *渠道版绑定员工角色
+     *绑定员工角色
      * @param req ChannelCreateUserRolesRequest
      * @return ChannelCreateUserRolesResponse
      * @throws TencentCloudSDKException
@@ -405,7 +405,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *渠道版删除员工绑定角色
+     *删除员工绑定角色
      * @param req ChannelDeleteRoleUsersRequest
      * @return ChannelDeleteRoleUsersResponse
      * @throws TencentCloudSDKException
@@ -486,7 +486,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *渠道办查询用户角色
+     *查询用户角色
      * @param req ChannelDescribeRolesRequest
      * @return ChannelDescribeRolesResponse
      * @throws TencentCloudSDKException

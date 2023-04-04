@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskStatus extends AbstractModel{
 
     /**
-    * 任务标识。
+    * 任务标识。注意：TaskId数据类型为uint64。
     */
     @SerializedName("TaskId")
     @Expose
@@ -74,16 +74,16 @@ public class TaskStatus extends AbstractModel{
     private Float AudioDuration;
 
     /**
-     * Get 任务标识。 
-     * @return TaskId 任务标识。
+     * Get 任务标识。注意：TaskId数据类型为uint64。 
+     * @return TaskId 任务标识。注意：TaskId数据类型为uint64。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务标识。
-     * @param TaskId 任务标识。
+     * Set 任务标识。注意：TaskId数据类型为uint64。
+     * @param TaskId 任务标识。注意：TaskId数据类型为uint64。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

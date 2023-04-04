@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class ServiceAccountAuthenticationOptions extends AbstractModel{
 
     /**
+    * 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseTKEDefault")
+    @Expose
+    private Boolean UseTKEDefault;
+
+    /**
     * service-account-issuer
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -45,6 +53,26 @@ public class ServiceAccountAuthenticationOptions extends AbstractModel{
     @SerializedName("AutoCreateDiscoveryAnonymousAuth")
     @Expose
     private Boolean AutoCreateDiscoveryAnonymousAuth;
+
+    /**
+     * Get 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseTKEDefault 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseTKEDefault() {
+        return this.UseTKEDefault;
+    }
+
+    /**
+     * Set 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseTKEDefault 使用TKE默认issuer和jwksuri
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseTKEDefault(Boolean UseTKEDefault) {
+        this.UseTKEDefault = UseTKEDefault;
+    }
 
     /**
      * Get service-account-issuer
@@ -114,6 +142,9 @@ public class ServiceAccountAuthenticationOptions extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ServiceAccountAuthenticationOptions(ServiceAccountAuthenticationOptions source) {
+        if (source.UseTKEDefault != null) {
+            this.UseTKEDefault = new Boolean(source.UseTKEDefault);
+        }
         if (source.Issuer != null) {
             this.Issuer = new String(source.Issuer);
         }
@@ -130,6 +161,7 @@ public class ServiceAccountAuthenticationOptions extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UseTKEDefault", this.UseTKEDefault);
         this.setParamSimple(map, prefix + "Issuer", this.Issuer);
         this.setParamSimple(map, prefix + "JWKSURI", this.JWKSURI);
         this.setParamSimple(map, prefix + "AutoCreateDiscoveryAnonymousAuth", this.AutoCreateDiscoveryAnonymousAuth);

@@ -44,6 +44,20 @@ public class Filter extends AbstractModel{
     private String Value;
 
     /**
+    * 过滤条件名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 过滤条件取值范围
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
      * Get 过滤方式（=, !=, in） 
      * @return Type 过滤方式（=, !=, in）
      */
@@ -91,6 +105,38 @@ public class Filter extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get 过滤条件名称 
+     * @return Name 过滤条件名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 过滤条件名称
+     * @param Name 过滤条件名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 过滤条件取值范围 
+     * @return Values 过滤条件取值范围
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 过滤条件取值范围
+     * @param Values 过滤条件取值范围
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
     public Filter() {
     }
 
@@ -108,6 +154,15 @@ public class Filter extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class Filter extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

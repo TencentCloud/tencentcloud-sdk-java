@@ -184,7 +184,10 @@ public enum TatErrorCode {
      UNAUTHORIZEDOPERATION_MFANOTFOUND("UnauthorizedOperation.MFANotFound"),
      
     // 未知参数错误。
-     UNKNOWNPARAMETER("UnknownParameter");
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // 操作不支持。
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TatErrorCode (String value){
