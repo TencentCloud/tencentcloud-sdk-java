@@ -79,6 +79,26 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
+     * @param req BoundLicensesRequest
+     * @return BoundLicensesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BoundLicensesResponse BoundLicenses(BoundLicensesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BoundLicensesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BoundLicensesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BoundLicenses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于创建设备
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -279,6 +299,26 @@ public class TrroClient extends AbstractClient{
     }
 
     /**
+     *获取最新设备会话列表
+     * @param req DescribeRecentSessionListRequest
+     * @return DescribeRecentSessionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecentSessionListResponse DescribeRecentSessionList(DescribeRecentSessionListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecentSessionListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecentSessionListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecentSessionList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取会话统计值
      * @param req DescribeSessionStatisticsRequest
      * @return DescribeSessionStatisticsResponse
@@ -311,6 +351,86 @@ public class TrroClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSessionStatisticsByIntervalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSessionStatisticsByInterval");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取设备已经绑定的可用授权数量
+     * @param req GetDeviceLicenseRequest
+     * @return GetDeviceLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDeviceLicenseResponse GetDeviceLicense(GetDeviceLicenseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDeviceLicenseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDeviceLicenseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDeviceLicense");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户设备的授权绑定情况
+     * @param req GetDevicesRequest
+     * @return GetDevicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDevicesResponse GetDevices(GetDevicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetDevicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetDevicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetDevices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *统计license类型数量
+     * @param req GetLicenseStatRequest
+     * @return GetLicenseStatResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLicenseStatResponse GetLicenseStat(GetLicenseStatRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLicenseStatResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLicenseStatResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetLicenseStat");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *按授权查看license列表
+     * @param req GetLicensesRequest
+     * @return GetLicensesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLicensesResponse GetLicenses(GetLicensesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLicensesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLicensesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetLicenses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

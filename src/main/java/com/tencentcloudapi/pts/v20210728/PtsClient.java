@@ -439,6 +439,26 @@ public class PtsClient extends AbstractClient{
     }
 
     /**
+     *查询错误详情汇总信息
+     * @param req DescribeErrorSummaryRequest
+     * @return DescribeErrorSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeErrorSummaryResponse DescribeErrorSummary(DescribeErrorSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeErrorSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeErrorSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeErrorSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文件列表
      * @param req DescribeFilesRequest
      * @return DescribeFilesResponse

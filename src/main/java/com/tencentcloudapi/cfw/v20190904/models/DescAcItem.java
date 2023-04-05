@@ -213,6 +213,14 @@ public class DescAcItem extends AbstractModel{
     private Long Status;
 
     /**
+    * 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BetaList")
+    @Expose
+    private BetaInfoByACL [] BetaList;
+
+    /**
      * Get 访问源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContent 访问源
@@ -684,6 +692,26 @@ public class DescAcItem extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BetaList 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BetaInfoByACL [] getBetaList() {
+        return this.BetaList;
+    }
+
+    /**
+     * Set 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BetaList 关联任务详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBetaList(BetaInfoByACL [] BetaList) {
+        this.BetaList = BetaList;
+    }
+
     public DescAcItem() {
     }
 
@@ -764,6 +792,12 @@ public class DescAcItem extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.BetaList != null) {
+            this.BetaList = new BetaInfoByACL[source.BetaList.length];
+            for (int i = 0; i < source.BetaList.length; i++) {
+                this.BetaList[i] = new BetaInfoByACL(source.BetaList[i]);
+            }
+        }
     }
 
 
@@ -795,6 +829,7 @@ public class DescAcItem extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
 
     }
 }

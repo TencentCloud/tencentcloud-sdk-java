@@ -44,6 +44,13 @@ public class DescribeClusterReleasesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
     * helm Release 安装的namespace
     */
     @SerializedName("Namespace")
@@ -113,6 +120,22 @@ public class DescribeClusterReleasesRequest extends AbstractModel{
     }
 
     /**
+     * Get 集群类型, 目前支持传入 tke, eks, tkeedge, external  
+     * @return ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     * @param ClusterType 集群类型, 目前支持传入 tke, eks, tkeedge, external 
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
      * Get helm Release 安装的namespace 
      * @return Namespace helm Release 安装的namespace
      */
@@ -177,6 +200,9 @@ public class DescribeClusterReleasesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
@@ -196,6 +222,7 @@ public class DescribeClusterReleasesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ReleaseName", this.ReleaseName);
         this.setParamSimple(map, prefix + "ChartName", this.ChartName);

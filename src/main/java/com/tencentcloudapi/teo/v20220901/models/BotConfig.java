@@ -61,6 +61,13 @@ public class BotConfig extends AbstractModel{
     private BotUserRule [] BotUserRules;
 
     /**
+    * Bot主动特征识别规则。
+    */
+    @SerializedName("AlgDetectRule")
+    @Expose
+    private AlgDetectRule [] AlgDetectRule;
+
+    /**
     * Bot托管定制策略，入参可不填，仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -161,6 +168,22 @@ public class BotConfig extends AbstractModel{
     }
 
     /**
+     * Get Bot主动特征识别规则。 
+     * @return AlgDetectRule Bot主动特征识别规则。
+     */
+    public AlgDetectRule [] getAlgDetectRule() {
+        return this.AlgDetectRule;
+    }
+
+    /**
+     * Set Bot主动特征识别规则。
+     * @param AlgDetectRule Bot主动特征识别规则。
+     */
+    public void setAlgDetectRule(AlgDetectRule [] AlgDetectRule) {
+        this.AlgDetectRule = AlgDetectRule;
+    }
+
+    /**
      * Get Bot托管定制策略，入参可不填，仅出参使用。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Customizes Bot托管定制策略，入参可不填，仅出参使用。
@@ -206,6 +229,12 @@ public class BotConfig extends AbstractModel{
                 this.BotUserRules[i] = new BotUserRule(source.BotUserRules[i]);
             }
         }
+        if (source.AlgDetectRule != null) {
+            this.AlgDetectRule = new AlgDetectRule[source.AlgDetectRule.length];
+            for (int i = 0; i < source.AlgDetectRule.length; i++) {
+                this.AlgDetectRule[i] = new AlgDetectRule(source.AlgDetectRule[i]);
+            }
+        }
         if (source.Customizes != null) {
             this.Customizes = new BotUserRule[source.Customizes.length];
             for (int i = 0; i < source.Customizes.length; i++) {
@@ -224,6 +253,7 @@ public class BotConfig extends AbstractModel{
         this.setParamObj(map, prefix + "BotPortraitRule.", this.BotPortraitRule);
         this.setParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
         this.setParamArrayObj(map, prefix + "BotUserRules.", this.BotUserRules);
+        this.setParamArrayObj(map, prefix + "AlgDetectRule.", this.AlgDetectRule);
         this.setParamArrayObj(map, prefix + "Customizes.", this.Customizes);
 
     }

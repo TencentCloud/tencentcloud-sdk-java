@@ -44,7 +44,16 @@ public class FlowDetailInfo extends AbstractModel{
     private String FlowType;
 
     /**
-    * 合同(流程)的状态
+    * 合同(流程)的状态, 状态如下
+
+INIT 还没发起
+PART 部分签署
+REJECT 拒签
+ALL 全部签署
+DEADLINE 流签
+CANCEL 取消
+RELIEVED 解除
+ 
     */
     @SerializedName("FlowStatus")
     @Expose
@@ -141,16 +150,52 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)的状态 
-     * @return FlowStatus 合同(流程)的状态
+     * Get 合同(流程)的状态, 状态如下
+
+INIT 还没发起
+PART 部分签署
+REJECT 拒签
+ALL 全部签署
+DEADLINE 流签
+CANCEL 取消
+RELIEVED 解除
+  
+     * @return FlowStatus 合同(流程)的状态, 状态如下
+
+INIT 还没发起
+PART 部分签署
+REJECT 拒签
+ALL 全部签署
+DEADLINE 流签
+CANCEL 取消
+RELIEVED 解除
+ 
      */
     public String getFlowStatus() {
         return this.FlowStatus;
     }
 
     /**
-     * Set 合同(流程)的状态
-     * @param FlowStatus 合同(流程)的状态
+     * Set 合同(流程)的状态, 状态如下
+
+INIT 还没发起
+PART 部分签署
+REJECT 拒签
+ALL 全部签署
+DEADLINE 流签
+CANCEL 取消
+RELIEVED 解除
+ 
+     * @param FlowStatus 合同(流程)的状态, 状态如下
+
+INIT 还没发起
+PART 部分签署
+REJECT 拒签
+ALL 全部签署
+DEADLINE 流签
+CANCEL 取消
+RELIEVED 解除
+ 
      */
     public void setFlowStatus(String FlowStatus) {
         this.FlowStatus = FlowStatus;

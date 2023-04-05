@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
 
     /**
-    * 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String DiskId;
-
-    /**
     * 额外购买的云硬盘性能值，单位MB/s。
     */
     @SerializedName("ThroughputPerformance")
@@ -37,20 +30,11 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
     private Long ThroughputPerformance;
 
     /**
-     * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
-     * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
+    * 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
 
     /**
      * Get 额外购买的云硬盘性能值，单位MB/s。 
@@ -68,6 +52,22 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    /**
+     * Get 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。 
+     * @return DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public ModifyDiskExtraPerformanceRequest() {
     }
 
@@ -76,11 +76,11 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyDiskExtraPerformanceRequest(ModifyDiskExtraPerformanceRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -89,8 +89,8 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

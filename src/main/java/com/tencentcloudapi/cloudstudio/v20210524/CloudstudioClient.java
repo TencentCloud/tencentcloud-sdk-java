@@ -239,6 +239,26 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
+     *获取工作空间是否已经启动就绪
+     * @param req DescribeWorkspaceIsReadyRequest
+     * @return DescribeWorkspaceIsReadyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspaceIsReadyResponse DescribeWorkspaceIsReady(DescribeWorkspaceIsReadyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkspaceIsReadyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceIsReadyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkspaceIsReady");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *检查工作空间是否存在
      * @param req DescribeWorkspaceNameExistRequest
      * @return DescribeWorkspaceNameExistResponse

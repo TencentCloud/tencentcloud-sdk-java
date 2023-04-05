@@ -24,6 +24,7 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
     * 分析名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -31,6 +32,7 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
     * 分析类型：query，field ，original
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -38,6 +40,7 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
     * 分析内容
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -45,14 +48,17 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
     * 配置
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigInfo")
     @Expose
     private AlarmAnalysisConfig [] ConfigInfo;
 
     /**
-     * Get 分析名称 
+     * Get 分析名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 分析名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -60,15 +66,19 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
      * Set 分析名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 分析名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分析类型：query，field ，original 
+     * Get 分析类型：query，field ，original
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 分析类型：query，field ，original
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -76,15 +86,19 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
      * Set 分析类型：query，field ，original
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 分析类型：query，field ，original
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 分析内容 
+     * Get 分析内容
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 分析内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -92,15 +106,19 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
      * Set 分析内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 分析内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 配置 
+     * Get 配置
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigInfo 配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmAnalysisConfig [] getConfigInfo() {
         return this.ConfigInfo;
@@ -108,7 +126,9 @@ public class AnalysisDimensional extends AbstractModel{
 
     /**
      * Set 配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigInfo 配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigInfo(AlarmAnalysisConfig [] ConfigInfo) {
         this.ConfigInfo = ConfigInfo;

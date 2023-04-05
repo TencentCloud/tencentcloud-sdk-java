@@ -13,26 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.pts.v20210728.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTLogInfoResponse extends AbstractModel{
+public class DescribeErrorSummaryResponse extends AbstractModel{
 
     /**
-    * "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+    * 错误汇总信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Data")
+    @SerializedName("ErrorSummarySet")
     @Expose
-    private TLogInfo Data;
+    private ErrorSummary [] ErrorSummarySet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,39 +38,23 @@ public class DescribeTLogInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0 
-     * @return Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * Get 错误汇总信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorSummarySet 错误汇总信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TLogInfo getData() {
-        return this.Data;
+    public ErrorSummary [] getErrorSummarySet() {
+        return this.ErrorSummarySet;
     }
 
     /**
-     * Set "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     * @param Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * Set 错误汇总信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorSummarySet 错误汇总信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(TLogInfo Data) {
-        this.Data = Data;
+    public void setErrorSummarySet(ErrorSummary [] ErrorSummarySet) {
+        this.ErrorSummarySet = ErrorSummarySet;
     }
 
     /**
@@ -93,16 +73,19 @@ public class DescribeTLogInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTLogInfoResponse() {
+    public DescribeErrorSummaryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTLogInfoResponse(DescribeTLogInfoResponse source) {
-        if (source.Data != null) {
-            this.Data = new TLogInfo(source.Data);
+    public DescribeErrorSummaryResponse(DescribeErrorSummaryResponse source) {
+        if (source.ErrorSummarySet != null) {
+            this.ErrorSummarySet = new ErrorSummary[source.ErrorSummarySet.length];
+            for (int i = 0; i < source.ErrorSummarySet.length; i++) {
+                this.ErrorSummarySet[i] = new ErrorSummary(source.ErrorSummarySet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -114,7 +97,7 @@ public class DescribeTLogInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "ErrorSummarySet.", this.ErrorSummarySet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

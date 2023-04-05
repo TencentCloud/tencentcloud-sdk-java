@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDealsByCondRequest extends AbstractModel{
 
     /**
-    * 开始时间
+    * 开始时间 2016-01-01 00:00:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
     */
     @SerializedName("EndTime")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeDealsByCondRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间 2016-01-01 00:00:00 
+     * @return StartTime 开始时间 2016-01-01 00:00:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间 2016-01-01 00:00:00
+     * @param StartTime 开始时间 2016-01-01 00:00:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月 
+     * @return EndTime 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
+     * @param EndTime 结束时间 2016-02-01 00:00:00 建议跨度不超过3个月
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

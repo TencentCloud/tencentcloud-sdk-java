@@ -13,26 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTLogInfoResponse extends AbstractModel{
-
-    /**
-    * "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-    */
-    @SerializedName("Data")
-    @Expose
-    private TLogInfo Data;
+public class BoundLicensesResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,42 +28,6 @@ public class DescribeTLogInfoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0 
-     * @return Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     */
-    public TLogInfo getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     * @param Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     */
-    public void setData(TLogInfo Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -93,17 +45,14 @@ public class DescribeTLogInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTLogInfoResponse() {
+    public BoundLicensesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTLogInfoResponse(DescribeTLogInfoResponse source) {
-        if (source.Data != null) {
-            this.Data = new TLogInfo(source.Data);
-        }
+    public BoundLicensesResponse(BoundLicensesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -114,7 +63,6 @@ public class DescribeTLogInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

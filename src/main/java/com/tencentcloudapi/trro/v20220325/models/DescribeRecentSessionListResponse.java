@@ -13,26 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.trro.v20220325.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTLogInfoResponse extends AbstractModel{
+public class DescribeRecentSessionListResponse extends AbstractModel{
 
     /**
-    * "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+    * 总个数
     */
-    @SerializedName("Data")
+    @SerializedName("Total")
     @Expose
-    private TLogInfo Data;
+    private Long Total;
+
+    /**
+    * 会话列表
+    */
+    @SerializedName("RecentSessionList")
+    @Expose
+    private RecentSessionInfo [] RecentSessionList;
+
+    /**
+    * 本页数量
+    */
+    @SerializedName("Num")
+    @Expose
+    private Long Num;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,39 +51,51 @@ public class DescribeTLogInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0 
-     * @return Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * Get 总个数 
+     * @return Total 总个数
      */
-    public TLogInfo getData() {
-        return this.Data;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
-     * @param Data "NetworkNum":网络扫描探测
- "HandleNum": 待处理事件
-"BanNum": 
-  "VulNum": 漏洞利用
-  "OutNum": 失陷主机
-"BruteForceNum": 0
+     * Set 总个数
+     * @param Total 总个数
      */
-    public void setData(TLogInfo Data) {
-        this.Data = Data;
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 会话列表 
+     * @return RecentSessionList 会话列表
+     */
+    public RecentSessionInfo [] getRecentSessionList() {
+        return this.RecentSessionList;
+    }
+
+    /**
+     * Set 会话列表
+     * @param RecentSessionList 会话列表
+     */
+    public void setRecentSessionList(RecentSessionInfo [] RecentSessionList) {
+        this.RecentSessionList = RecentSessionList;
+    }
+
+    /**
+     * Get 本页数量 
+     * @return Num 本页数量
+     */
+    public Long getNum() {
+        return this.Num;
+    }
+
+    /**
+     * Set 本页数量
+     * @param Num 本页数量
+     */
+    public void setNum(Long Num) {
+        this.Num = Num;
     }
 
     /**
@@ -93,16 +114,25 @@ public class DescribeTLogInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTLogInfoResponse() {
+    public DescribeRecentSessionListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTLogInfoResponse(DescribeTLogInfoResponse source) {
-        if (source.Data != null) {
-            this.Data = new TLogInfo(source.Data);
+    public DescribeRecentSessionListResponse(DescribeRecentSessionListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.RecentSessionList != null) {
+            this.RecentSessionList = new RecentSessionInfo[source.RecentSessionList.length];
+            for (int i = 0; i < source.RecentSessionList.length; i++) {
+                this.RecentSessionList[i] = new RecentSessionInfo(source.RecentSessionList[i]);
+            }
+        }
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -114,7 +144,9 @@ public class DescribeTLogInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "RecentSessionList.", this.RecentSessionList);
+        this.setParamSimple(map, prefix + "Num", this.Num);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -37,7 +37,7 @@ public class GetRoomMessageRequest extends AbstractModel{
     private Long RoomId;
 
     /**
-    * 消息序列。获取该序列以前前的消息(不包含该seq消息)
+    * 消息序列。获取该序列以前的消息(不包含该seq消息)
     */
     @SerializedName("Seq")
     @Expose
@@ -83,16 +83,16 @@ public class GetRoomMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get 消息序列。获取该序列以前前的消息(不包含该seq消息) 
-     * @return Seq 消息序列。获取该序列以前前的消息(不包含该seq消息)
+     * Get 消息序列。获取该序列以前的消息(不包含该seq消息) 
+     * @return Seq 消息序列。获取该序列以前的消息(不包含该seq消息)
      */
     public Long getSeq() {
         return this.Seq;
     }
 
     /**
-     * Set 消息序列。获取该序列以前前的消息(不包含该seq消息)
-     * @param Seq 消息序列。获取该序列以前前的消息(不包含该seq消息)
+     * Set 消息序列。获取该序列以前的消息(不包含该seq消息)
+     * @param Seq 消息序列。获取该序列以前的消息(不包含该seq消息)
      */
     public void setSeq(Long Seq) {
         this.Seq = Seq;

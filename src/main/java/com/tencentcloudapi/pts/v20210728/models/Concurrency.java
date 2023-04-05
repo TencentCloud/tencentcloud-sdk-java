@@ -55,6 +55,14 @@ public class Concurrency extends AbstractModel{
     private Long GracefulStopSeconds;
 
     /**
+    * 资源数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Long Resources;
+
+    /**
      * Get 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stages 多阶段配置数组
@@ -134,6 +142,26 @@ public class Concurrency extends AbstractModel{
         this.GracefulStopSeconds = GracefulStopSeconds;
     }
 
+    /**
+     * Get 资源数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Resources 资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set 资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Resources 资源数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResources(Long Resources) {
+        this.Resources = Resources;
+    }
+
     public Concurrency() {
     }
 
@@ -157,6 +185,9 @@ public class Concurrency extends AbstractModel{
         if (source.GracefulStopSeconds != null) {
             this.GracefulStopSeconds = new Long(source.GracefulStopSeconds);
         }
+        if (source.Resources != null) {
+            this.Resources = new Long(source.Resources);
+        }
     }
 
 
@@ -168,6 +199,7 @@ public class Concurrency extends AbstractModel{
         this.setParamSimple(map, prefix + "IterationCount", this.IterationCount);
         this.setParamSimple(map, prefix + "MaxRequestsPerSecond", this.MaxRequestsPerSecond);
         this.setParamSimple(map, prefix + "GracefulStopSeconds", this.GracefulStopSeconds);
+        this.setParamSimple(map, prefix + "Resources", this.Resources);
 
     }
 }
