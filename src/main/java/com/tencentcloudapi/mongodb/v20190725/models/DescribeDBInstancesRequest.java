@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+    * 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -51,14 +51,18 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long [] Status;
 
     /**
-    * 私有网络的ID，基础网络则不传该参数。
+    * 私有网络的 ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
+    * 私有网络的子网ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -86,51 +90,53 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
+    * 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+    * 配置返回结果的排序方式。
+- ASC：升序。
+- DESC：降序。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * 项目 ID。
+    * 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 搜索关键词，支持实例ID、实例名称、完整IP。
+    * 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * Tag信息。
+    * 标签信息，包含标签键与标签值。
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-     * Get 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。 
-     * @return InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Get 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceIds 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
-     * @param InstanceIds 实例ID列表，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同。
+     * Set 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceIds 实例ID列表。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -185,32 +191,48 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 私有网络的ID，基础网络则不传该参数。 
-     * @return VpcId 私有网络的ID，基础网络则不传该参数。
+     * Get 私有网络的 ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。 
+     * @return VpcId 私有网络的 ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络的ID，基础网络则不传该参数。
-     * @param VpcId 私有网络的ID，基础网络则不传该参数。
+     * Set 私有网络的 ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
+     * @param VpcId 私有网络的 ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其 ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。 
-     * @return SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
+     * Get 私有网络的子网ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。 
+     * @return SubnetId 私有网络的子网ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
-     * @param SubnetId 私有网络的子网ID，基础网络则不传该参数。入参设置该参数的同时，必须设置相应的VpcId。
+     * Set 私有网络的子网ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
+     * @param SubnetId 私有网络的子网ID。
+- 基础网络则无需配置该参数。
+- 请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表中，单击私有网络名称，在**私有网络**页面获取其子网 ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -265,80 +287,88 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。 
-     * @return OrderBy 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
+     * Get 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。 
+     * @return OrderBy 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
-     * @param OrderBy 返回结果集排序的字段，目前支持："ProjectId"、"InstanceName"、"CreateTime"，默认为升序排序。
+     * Set 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
+     * @param OrderBy 配置返回结果排序依据的字段。目前支持依据"ProjectId"、"InstanceName"、"CreateTime"排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 返回结果集排序方式，目前支持："ASC"或者"DESC"。 
-     * @return OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+     * Get 配置返回结果的排序方式。
+- ASC：升序。
+- DESC：降序。 
+     * @return OrderByType 配置返回结果的排序方式。
+- ASC：升序。
+- DESC：降序。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 返回结果集排序方式，目前支持："ASC"或者"DESC"。
-     * @param OrderByType 返回结果集排序方式，目前支持："ASC"或者"DESC"。
+     * Set 配置返回结果的排序方式。
+- ASC：升序。
+- DESC：降序。
+     * @param OrderByType 配置返回结果的排序方式。
+- ASC：升序。
+- DESC：降序。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get 项目 ID。 
-     * @return ProjectIds 项目 ID。
+     * Get 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。 
+     * @return ProjectIds 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目 ID。
-     * @param ProjectIds 项目 ID。
+     * Set 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。
+     * @param ProjectIds 项目 ID。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)，在右上角的账户信息下拉菜单中，选择项目管理查询项目。
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 搜索关键词，支持实例ID、实例名称、完整IP。 
-     * @return SearchKey 搜索关键词，支持实例ID、实例名称、完整IP。
+     * Get 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。 
+     * @return SearchKey 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词，支持实例ID、实例名称、完整IP。
-     * @param SearchKey 搜索关键词，支持实例ID、实例名称、完整IP。
+     * Set 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
+     * @param SearchKey 配置查询搜索的关键词。支持配置为实例ID、实例名称或者内网 IP 地址。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get Tag信息。 
-     * @return Tags Tag信息。
+     * Get 标签信息，包含标签键与标签值。 
+     * @return Tags 标签信息，包含标签键与标签值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag信息。
-     * @param Tags Tag信息。
+     * Set 标签信息，包含标签键与标签值。
+     * @param Tags 标签信息，包含标签键与标签值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

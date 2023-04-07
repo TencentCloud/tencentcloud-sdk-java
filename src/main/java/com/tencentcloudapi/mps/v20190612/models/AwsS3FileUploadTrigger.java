@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class AwsS3FileUploadTrigger extends AbstractModel{
 
     /**
-    * 工作流绑定的 AWS S3 存储桶。
+    * 绑定的 AWS S3 存储桶。
     */
     @SerializedName("S3Bucket")
     @Expose
     private String S3Bucket;
 
     /**
-    * 工作流绑定的桶所在 AWS 区域。
+    * 绑定的桶所在 AWS 区域。
     */
     @SerializedName("S3Region")
     @Expose
     private String S3Region;
 
     /**
-    * 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+    * 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
     */
     @SerializedName("Dir")
     @Expose
     private String Dir;
 
     /**
-    * 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+    * 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
     */
     @SerializedName("Formats")
     @Expose
     private String [] Formats;
 
     /**
-    * 工作流绑定的 AWS S3 存储桶的秘钥ID。
+    * 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretId")
@@ -59,7 +59,7 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     private String S3SecretId;
 
     /**
-    * 工作流绑定的 AWS S3 存储桶的秘钥Key。
+    * 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretKey")
@@ -67,7 +67,7 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     private String S3SecretKey;
 
     /**
-    * 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+    * 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -76,73 +76,73 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     private AwsSQS AwsSQS;
 
     /**
-     * Get 工作流绑定的 AWS S3 存储桶。 
-     * @return S3Bucket 工作流绑定的 AWS S3 存储桶。
+     * Get 绑定的 AWS S3 存储桶。 
+     * @return S3Bucket 绑定的 AWS S3 存储桶。
      */
     public String getS3Bucket() {
         return this.S3Bucket;
     }
 
     /**
-     * Set 工作流绑定的 AWS S3 存储桶。
-     * @param S3Bucket 工作流绑定的 AWS S3 存储桶。
+     * Set 绑定的 AWS S3 存储桶。
+     * @param S3Bucket 绑定的 AWS S3 存储桶。
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
     }
 
     /**
-     * Get 工作流绑定的桶所在 AWS 区域。 
-     * @return S3Region 工作流绑定的桶所在 AWS 区域。
+     * Get 绑定的桶所在 AWS 区域。 
+     * @return S3Region 绑定的桶所在 AWS 区域。
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set 工作流绑定的桶所在 AWS 区域。
-     * @param S3Region 工作流绑定的桶所在 AWS 区域。
+     * Set 绑定的桶所在 AWS 区域。
+     * @param S3Region 绑定的桶所在 AWS 区域。
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	 
-     * @return Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+     * Get 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	 
+     * @return Dir 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
      */
     public String getDir() {
         return this.Dir;
     }
 
     /**
-     * Set 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
-     * @param Dir 工作流绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+     * Set 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
+     * @param Dir 绑定的输入路径目录，必须为绝对路径，即以 `/` 开头和结尾。如`/movie/201907/`，不填代表根目录`/`。	
      */
     public void setDir(String Dir) {
         this.Dir = Dir;
     }
 
     /**
-     * Get 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	 
-     * @return Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+     * Get 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	 
+     * @return Formats 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
      */
     public String [] getFormats() {
         return this.Formats;
     }
 
     /**
-     * Set 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
-     * @param Formats 工作流允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+     * Set 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
+     * @param Formats 允许触发的文件格式列表，如 ["mp4", "flv", "mov"]。不填代表所有格式的文件都可以触发工作流。	
      */
     public void setFormats(String [] Formats) {
         this.Formats = Formats;
     }
 
     /**
-     * Get 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * Get 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return S3SecretId 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * @return S3SecretId 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretId() {
@@ -150,9 +150,9 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Set 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * Set 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param S3SecretId 工作流绑定的 AWS S3 存储桶的秘钥ID。
+     * @param S3SecretId 绑定的 AWS S3 存储桶的秘钥ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretId(String S3SecretId) {
@@ -160,9 +160,9 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Get 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * Get 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return S3SecretKey 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * @return S3SecretKey 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretKey() {
@@ -170,9 +170,9 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Set 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * Set 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param S3SecretKey 工作流绑定的 AWS S3 存储桶的秘钥Key。
+     * @param S3SecretKey 绑定的 AWS S3 存储桶的秘钥Key。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretKey(String S3SecretKey) {
@@ -180,10 +180,10 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Get 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * Get 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AwsSQS 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * @return AwsSQS 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -192,10 +192,10 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Set 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * Set 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AwsSQS 工作流绑定的 AWS S3 存储桶对应的 SQS事件队列。
+     * @param AwsSQS 绑定的 AWS S3 存储桶对应的 SQS事件队列。
 注意：队列和桶需要在同一区域。
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -38,14 +38,25 @@ public class CreateDirectConnectRequest extends AbstractModel{
     private String AccessPointId;
 
     /**
-    * 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+    * 提供接入物理专线的运营商。
+ChinaTelecom：中国电信； 
+ChinaMobile：中国移动；
+ChinaUnicom：中国联通；
+ In-houseWiring：楼内线；
+ChinaOther：中国其他；
+ InternationalOperator：境外其他。
     */
     @SerializedName("LineOperator")
     @Expose
     private String LineOperator;
 
     /**
-    * 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
+    * 物理专线接入端口类型，取值：
+100Base-T：百兆电口；
+1000Base-T（默认值）：千兆电口；
+1000Base-LX：千兆单模光口（10千米）；
+10GBase-T：万兆电口；
+10GBase-LR（默认值）：万兆单模光口（10千米）。
     */
     @SerializedName("PortType")
     @Expose
@@ -136,7 +147,7 @@ public class CreateDirectConnectRequest extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
-    * 物理专线申请者是否签署了用户使用协议。默认已签署
+    * 物理专线申请者是否签署了用户使用协议。默认已签署。
     */
     @SerializedName("SignLaw")
     @Expose
@@ -179,32 +190,76 @@ public class CreateDirectConnectRequest extends AbstractModel{
     }
 
     /**
-     * Get 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。 
-     * @return LineOperator 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+     * Get 提供接入物理专线的运营商。
+ChinaTelecom：中国电信； 
+ChinaMobile：中国移动；
+ChinaUnicom：中国联通；
+ In-houseWiring：楼内线；
+ChinaOther：中国其他；
+ InternationalOperator：境外其他。 
+     * @return LineOperator 提供接入物理专线的运营商。
+ChinaTelecom：中国电信； 
+ChinaMobile：中国移动；
+ChinaUnicom：中国联通；
+ In-houseWiring：楼内线；
+ChinaOther：中国其他；
+ InternationalOperator：境外其他。
      */
     public String getLineOperator() {
         return this.LineOperator;
     }
 
     /**
-     * Set 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
-     * @param LineOperator 提供接入物理专线的运营商。ChinaTelecom：中国电信， ChinaMobile：中国移动，ChinaUnicom：中国联通， In-houseWiring：楼内线，ChinaOther：中国其他， InternationalOperator：境外其他。
+     * Set 提供接入物理专线的运营商。
+ChinaTelecom：中国电信； 
+ChinaMobile：中国移动；
+ChinaUnicom：中国联通；
+ In-houseWiring：楼内线；
+ChinaOther：中国其他；
+ InternationalOperator：境外其他。
+     * @param LineOperator 提供接入物理专线的运营商。
+ChinaTelecom：中国电信； 
+ChinaMobile：中国移动；
+ChinaUnicom：中国联通；
+ In-houseWiring：楼内线；
+ChinaOther：中国其他；
+ InternationalOperator：境外其他。
      */
     public void setLineOperator(String LineOperator) {
         this.LineOperator = LineOperator;
     }
 
     /**
-     * Get 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。 
-     * @return PortType 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
+     * Get 物理专线接入端口类型，取值：
+100Base-T：百兆电口；
+1000Base-T（默认值）：千兆电口；
+1000Base-LX：千兆单模光口（10千米）；
+10GBase-T：万兆电口；
+10GBase-LR（默认值）：万兆单模光口（10千米）。 
+     * @return PortType 物理专线接入端口类型，取值：
+100Base-T：百兆电口；
+1000Base-T（默认值）：千兆电口；
+1000Base-LX：千兆单模光口（10千米）；
+10GBase-T：万兆电口；
+10GBase-LR（默认值）：万兆单模光口（10千米）。
      */
     public String getPortType() {
         return this.PortType;
     }
 
     /**
-     * Set 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
-     * @param PortType 物理专线接入端口类型,取值：100Base-T：百兆电口,1000Base-T（默认值）：千兆电口,1000Base-LX：千兆单模光口（10千米）,10GBase-T：万兆电口10GBase-LR：万兆单模光口（10千米），默认值，千兆单模光口（10千米）。
+     * Set 物理专线接入端口类型，取值：
+100Base-T：百兆电口；
+1000Base-T（默认值）：千兆电口；
+1000Base-LX：千兆单模光口（10千米）；
+10GBase-T：万兆电口；
+10GBase-LR（默认值）：万兆单模光口（10千米）。
+     * @param PortType 物理专线接入端口类型，取值：
+100Base-T：百兆电口；
+1000Base-T（默认值）：千兆电口；
+1000Base-LX：千兆单模光口（10千米）；
+10GBase-T：万兆电口；
+10GBase-LR（默认值）：万兆单模光口（10千米）。
      */
     public void setPortType(String PortType) {
         this.PortType = PortType;
@@ -403,16 +458,16 @@ public class CreateDirectConnectRequest extends AbstractModel{
     }
 
     /**
-     * Get 物理专线申请者是否签署了用户使用协议。默认已签署 
-     * @return SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署
+     * Get 物理专线申请者是否签署了用户使用协议。默认已签署。 
+     * @return SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
      */
     public Boolean getSignLaw() {
         return this.SignLaw;
     }
 
     /**
-     * Set 物理专线申请者是否签署了用户使用协议。默认已签署
-     * @param SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署
+     * Set 物理专线申请者是否签署了用户使用协议。默认已签署。
+     * @param SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
      */
     public void setSignLaw(Boolean SignLaw) {
         this.SignLaw = SignLaw;

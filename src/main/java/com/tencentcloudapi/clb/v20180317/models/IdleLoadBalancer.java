@@ -73,6 +73,14 @@ public class IdleLoadBalancer extends AbstractModel{
     private Long Forward;
 
     /**
+    * 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 负载均衡ID 
      * @return LoadBalancerId 负载均衡ID
      */
@@ -188,6 +196,26 @@ public class IdleLoadBalancer extends AbstractModel{
         this.Forward = Forward;
     }
 
+    /**
+     * Get 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 负载均衡域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IdleLoadBalancer() {
     }
 
@@ -217,6 +245,9 @@ public class IdleLoadBalancer extends AbstractModel{
         if (source.Forward != null) {
             this.Forward = new Long(source.Forward);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -231,6 +262,7 @@ public class IdleLoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "IdleReason", this.IdleReason);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Forward", this.Forward);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

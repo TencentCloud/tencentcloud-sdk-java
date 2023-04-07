@@ -35,6 +35,7 @@ public class Activity extends AbstractModel{
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityType")
     @Expose
@@ -42,6 +43,7 @@ public class Activity extends AbstractModel{
 
     /**
     * 后驱节点索引数组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReardriveIndex")
     @Expose
@@ -49,6 +51,7 @@ public class Activity extends AbstractModel{
 
     /**
     * 原子任务参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityPara")
     @Expose
@@ -66,7 +69,8 @@ public class Activity extends AbstractModel{
 <li>action-animated-graphics：转动图</li>
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
-<li>action-adaptive-substream：自适应码流</li> 
+<li>action-adaptive-substream：自适应码流</li>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActivityType 原子任务类型：
 <li>input: 起始节点</li>
 <li>output：终止节点</li>
@@ -79,6 +83,7 @@ public class Activity extends AbstractModel{
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -97,6 +102,7 @@ public class Activity extends AbstractModel{
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityType 原子任务类型：
 <li>input: 起始节点</li>
 <li>output：终止节点</li>
@@ -109,14 +115,17 @@ public class Activity extends AbstractModel{
 <li>action-image-sprite：雪碧图</li>
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
     }
 
     /**
-     * Get 后驱节点索引数组 
+     * Get 后驱节点索引数组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReardriveIndex 后驱节点索引数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getReardriveIndex() {
         return this.ReardriveIndex;
@@ -124,15 +133,19 @@ public class Activity extends AbstractModel{
 
     /**
      * Set 后驱节点索引数组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ReardriveIndex 后驱节点索引数组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReardriveIndex(Long [] ReardriveIndex) {
         this.ReardriveIndex = ReardriveIndex;
     }
 
     /**
-     * Get 原子任务参数 
+     * Get 原子任务参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActivityPara 原子任务参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ActivityPara getActivityPara() {
         return this.ActivityPara;
@@ -140,7 +153,9 @@ public class Activity extends AbstractModel{
 
     /**
      * Set 原子任务参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityPara 原子任务参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityPara(ActivityPara ActivityPara) {
         this.ActivityPara = ActivityPara;

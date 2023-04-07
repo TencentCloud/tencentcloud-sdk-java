@@ -53,6 +53,14 @@ public class TrainingModelDTO extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrainingModelVersions")
+    @Expose
+    private TrainingModelVersionDTO [] TrainingModelVersions;
+
+    /**
      * Get 模型id 
      * @return TrainingModelId 模型id
      */
@@ -124,6 +132,26 @@ public class TrainingModelDTO extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrainingModelVersions 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TrainingModelVersionDTO [] getTrainingModelVersions() {
+        return this.TrainingModelVersions;
+    }
+
+    /**
+     * Set 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrainingModelVersions 模型版本列表。默认不返回，仅在指定请求参数开启时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrainingModelVersions(TrainingModelVersionDTO [] TrainingModelVersions) {
+        this.TrainingModelVersions = TrainingModelVersions;
+    }
+
     public TrainingModelDTO() {
     }
 
@@ -147,6 +175,12 @@ public class TrainingModelDTO extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.TrainingModelVersions != null) {
+            this.TrainingModelVersions = new TrainingModelVersionDTO[source.TrainingModelVersions.length];
+            for (int i = 0; i < source.TrainingModelVersions.length; i++) {
+                this.TrainingModelVersions[i] = new TrainingModelVersionDTO(source.TrainingModelVersions[i]);
+            }
+        }
     }
 
 
@@ -158,6 +192,7 @@ public class TrainingModelDTO extends AbstractModel{
         this.setParamSimple(map, prefix + "TrainingModelName", this.TrainingModelName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "TrainingModelVersions.", this.TrainingModelVersions);
 
     }
 }

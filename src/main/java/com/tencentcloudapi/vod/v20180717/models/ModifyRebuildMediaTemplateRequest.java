@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
 
     /**
-    * 音画质重生模版号。
+    * 音画质重生模板号。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,14 +37,14 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     private String SubAppId;
 
     /**
-    * 音画质重生模版名称。
+    * 音画质重生模板名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 音画质重生模版描述。
+    * 音画质重生模板描述。
     */
     @SerializedName("Comment")
     @Expose
@@ -104,16 +104,16 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     private Long RemoveAudio;
 
     /**
-     * Get 音画质重生模版号。 
-     * @return Definition 音画质重生模版号。
+     * Get 音画质重生模板号。 
+     * @return Definition 音画质重生模板号。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质重生模版号。
-     * @param Definition 音画质重生模版号。
+     * Set 音画质重生模板号。
+     * @param Definition 音画质重生模板号。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -136,32 +136,32 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 音画质重生模版名称。 
-     * @return Name 音画质重生模版名称。
+     * Get 音画质重生模板名称。 
+     * @return Name 音画质重生模板名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 音画质重生模版名称。
-     * @param Name 音画质重生模版名称。
+     * Set 音画质重生模板名称。
+     * @param Name 音画质重生模板名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 音画质重生模版描述。 
-     * @return Comment 音画质重生模版描述。
+     * Get 音画质重生模板描述。 
+     * @return Comment 音画质重生模板描述。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 音画质重生模版描述。
-     * @param Comment 音画质重生模版描述。
+     * Set 音画质重生模板描述。
+     * @param Comment 音画质重生模板描述。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

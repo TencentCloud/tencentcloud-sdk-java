@@ -120,6 +120,15 @@ public class ClusterNetworkSettings extends AbstractModel{
     private String Ipv6ServiceCIDR;
 
     /**
+    * 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CiliumMode")
+    @Expose
+    private String CiliumMode;
+
+    /**
      * Get 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突 
      * @return ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      */
@@ -351,6 +360,30 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.Ipv6ServiceCIDR = Ipv6ServiceCIDR;
     }
 
+    /**
+     * Get 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CiliumMode 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCiliumMode() {
+        return this.CiliumMode;
+    }
+
+    /**
+     * Set 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CiliumMode 集群Cilium Mode配置
+- clusterIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCiliumMode(String CiliumMode) {
+        this.CiliumMode = CiliumMode;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -401,6 +434,9 @@ public class ClusterNetworkSettings extends AbstractModel{
         if (source.Ipv6ServiceCIDR != null) {
             this.Ipv6ServiceCIDR = new String(source.Ipv6ServiceCIDR);
         }
+        if (source.CiliumMode != null) {
+            this.CiliumMode = new String(source.CiliumMode);
+        }
     }
 
 
@@ -421,6 +457,7 @@ public class ClusterNetworkSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
         this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
         this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
+        this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
 
     }
 }

@@ -97,6 +97,14 @@ public class WorkflowTask extends AbstractModel{
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
+    * 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiQualityControlTaskResult")
+    @Expose
+    private ScheduleQualityControlTaskResult AiQualityControlTaskResult;
+
+    /**
      * Get 媒体处理任务 ID。 
      * @return TaskId 媒体处理任务 ID。
      */
@@ -272,6 +280,26 @@ public class WorkflowTask extends AbstractModel{
         this.AiRecognitionResultSet = AiRecognitionResultSet;
     }
 
+    /**
+     * Get 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiQualityControlTaskResult 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
+        return this.AiQualityControlTaskResult;
+    }
+
+    /**
+     * Set 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiQualityControlTaskResult 视频质检任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {
+        this.AiQualityControlTaskResult = AiQualityControlTaskResult;
+    }
+
     public WorkflowTask() {
     }
 
@@ -322,6 +350,9 @@ public class WorkflowTask extends AbstractModel{
                 this.AiRecognitionResultSet[i] = new AiRecognitionResult(source.AiRecognitionResultSet[i]);
             }
         }
+        if (source.AiQualityControlTaskResult != null) {
+            this.AiQualityControlTaskResult = new ScheduleQualityControlTaskResult(source.AiQualityControlTaskResult);
+        }
     }
 
 
@@ -339,6 +370,7 @@ public class WorkflowTask extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AiContentReviewResultSet.", this.AiContentReviewResultSet);
         this.setParamArrayObj(map, prefix + "AiAnalysisResultSet.", this.AiAnalysisResultSet);
         this.setParamArrayObj(map, prefix + "AiRecognitionResultSet.", this.AiRecognitionResultSet);
+        this.setParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
 
     }
 }

@@ -30,7 +30,7 @@ public class CreateScheduleRequest extends AbstractModel{
     private String ScheduleName;
 
     /**
-    * 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+    * 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
     */
     @SerializedName("Trigger")
     @Expose
@@ -51,7 +51,8 @@ public class CreateScheduleRequest extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+    * 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
     */
     @SerializedName("OutputDir")
     @Expose
@@ -81,16 +82,16 @@ public class CreateScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Get 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。 
-     * @return Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Get 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。 
+     * @return Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
      */
     public WorkflowTrigger getTrigger() {
         return this.Trigger;
     }
 
     /**
-     * Set 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
-     * @param Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发工作流。
+     * Set 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
+     * @param Trigger 编排绑定的触发规则，当上传视频命中该规则到该对象时即触发编排。
      */
     public void setTrigger(WorkflowTrigger Trigger) {
         this.Trigger = Trigger;
@@ -129,16 +130,20 @@ public class CreateScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Get 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。 
-     * @return OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * Get 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。 
+     * @return OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
-     * @param OutputDir 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与触发文件所在的目录一致。
+     * Set 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
+     * @param OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾，如`/movie/201907/`。
+如果不填，表示与触发文件所在的目录一致。
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;

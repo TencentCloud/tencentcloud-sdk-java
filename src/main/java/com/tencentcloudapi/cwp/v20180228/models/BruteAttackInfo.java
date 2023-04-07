@@ -198,6 +198,14 @@ public class BruteAttackInfo extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
      * Get 唯一Id 
      * @return Id 唯一Id
      */
@@ -633,6 +641,26 @@ public class BruteAttackInfo extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Location 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Location 地理位置中文名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
     public BruteAttackInfo() {
     }
 
@@ -707,6 +735,9 @@ public class BruteAttackInfo extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
     }
 
 
@@ -736,6 +767,7 @@ public class BruteAttackInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DataStatus", this.DataStatus);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

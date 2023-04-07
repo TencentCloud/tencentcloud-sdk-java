@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRebuildMediaTemplatesRequest extends AbstractModel{
 
     /**
-    * 音画质重生模版列表。
+    * 音画质重生模板列表。
     */
     @SerializedName("Definitions")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeRebuildMediaTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get 音画质重生模版列表。 
-     * @return Definitions 音画质重生模版列表。
+     * Get 音画质重生模板列表。 
+     * @return Definitions 音画质重生模板列表。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 音画质重生模版列表。
-     * @param Definitions 音画质重生模版列表。
+     * Set 音画质重生模板列表。
+     * @param Definitions 音画质重生模板列表。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

@@ -39,6 +39,20 @@ public class ScheduleTask extends AbstractModel{
     private String Status;
 
     /**
+    * 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+    */
+    @SerializedName("ErrCode")
+    @Expose
+    private Long ErrCode;
+
+    /**
+    * 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 媒体处理的目标文件信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -100,6 +114,38 @@ public class ScheduleTask extends AbstractModel{
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。 
+     * @return ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     */
+    public Long getErrCode() {
+        return this.ErrCode;
+    }
+
+    /**
+     * Set 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     * @param ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+     */
+    public void setErrCode(Long ErrCode) {
+        this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。 
+     * @return Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     * @param Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -176,6 +222,12 @@ public class ScheduleTask extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.InputInfo != null) {
             this.InputInfo = new MediaInputInfo(source.InputInfo);
         }
@@ -197,6 +249,8 @@ public class ScheduleTask extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamArrayObj(map, prefix + "ActivityResultSet.", this.ActivityResultSet);

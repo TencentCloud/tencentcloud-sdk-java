@@ -65,14 +65,14 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     private String AppSecretKey;
 
     /**
-    * 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+    * 预留字段
     */
     @SerializedName("BusinessId")
     @Expose
     private Long BusinessId;
 
     /**
-    * 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+    * 预留字段
     */
     @SerializedName("SceneId")
     @Expose
@@ -196,32 +196,32 @@ public class DescribeCaptchaResultRequest extends AbstractModel{
     }
 
     /**
-     * Get 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据 
-     * @return BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+     * Get 预留字段 
+     * @return BusinessId 预留字段
      */
     public Long getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
-     * @param BusinessId 业务 ID，网站或应用在多个业务中使用此服务，通过此 ID 区分统计数据
+     * Set 预留字段
+     * @param BusinessId 预留字段
      */
     public void setBusinessId(Long BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据 
-     * @return SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * Get 预留字段 
+     * @return SceneId 预留字段
      */
     public Long getSceneId() {
         return this.SceneId;
     }
 
     /**
-     * Set 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
-     * @param SceneId 场景 ID，网站或应用的业务下有多个场景使用此服务，通过此 ID 区分统计数据
+     * Set 预留字段
+     * @param SceneId 预留字段
      */
     public void setSceneId(Long SceneId) {
         this.SceneId = SceneId;

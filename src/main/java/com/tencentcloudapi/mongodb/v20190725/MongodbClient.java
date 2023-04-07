@@ -320,7 +320,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+     *本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -360,7 +360,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *查询实例绑定的安全组
+     *本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -580,7 +580,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *修改实例绑定的安全组
+     *本接口（ModifyDBInstanceSecurityGroup）用于修改实例绑定的安全组
      * @param req ModifyDBInstanceSecurityGroupRequest
      * @return ModifyDBInstanceSecurityGroupResponse
      * @throws TencentCloudSDKException

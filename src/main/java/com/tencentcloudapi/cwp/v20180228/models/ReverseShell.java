@@ -171,6 +171,14 @@ public class ReverseShell extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pid")
+    @Expose
+    private Long Pid;
+
+    /**
      * Get ID 主键 
      * @return Id ID 主键
      */
@@ -510,6 +518,26 @@ public class ReverseShell extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 进程id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pid 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPid() {
+        return this.Pid;
+    }
+
+    /**
+     * Set 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pid 进程id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPid(Long Pid) {
+        this.Pid = Pid;
+    }
+
     public ReverseShell() {
     }
 
@@ -581,6 +609,9 @@ public class ReverseShell extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
     }
 
 
@@ -609,6 +640,7 @@ public class ReverseShell extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcTree", this.ProcTree);
         this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Pid", this.Pid);
 
     }
 }

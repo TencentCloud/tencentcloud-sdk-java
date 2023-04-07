@@ -47,6 +47,14 @@ public class EngineVersion extends AbstractModel{
     private Boolean IsSupportIntEightQuantization;
 
     /**
+    * 框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FrameworkVersion")
+    @Expose
+    private String FrameworkVersion;
+
+    /**
      * Get 引擎版本
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 引擎版本
@@ -106,6 +114,26 @@ public class EngineVersion extends AbstractModel{
         this.IsSupportIntEightQuantization = IsSupportIntEightQuantization;
     }
 
+    /**
+     * Get 框架版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FrameworkVersion 框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFrameworkVersion() {
+        return this.FrameworkVersion;
+    }
+
+    /**
+     * Set 框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FrameworkVersion 框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFrameworkVersion(String FrameworkVersion) {
+        this.FrameworkVersion = FrameworkVersion;
+    }
+
     public EngineVersion() {
     }
 
@@ -123,6 +151,9 @@ public class EngineVersion extends AbstractModel{
         if (source.IsSupportIntEightQuantization != null) {
             this.IsSupportIntEightQuantization = new Boolean(source.IsSupportIntEightQuantization);
         }
+        if (source.FrameworkVersion != null) {
+            this.FrameworkVersion = new String(source.FrameworkVersion);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class EngineVersion extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "IsSupportIntEightQuantization", this.IsSupportIntEightQuantization);
+        this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
 
     }
 }

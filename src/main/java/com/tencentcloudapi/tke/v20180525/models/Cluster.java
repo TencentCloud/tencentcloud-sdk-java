@@ -94,7 +94,7 @@ public class Cluster extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-    * 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+    * 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -194,6 +194,14 @@ public class Cluster extends AbstractModel{
     @SerializedName("RuntimeVersion")
     @Expose
     private String RuntimeVersion;
+
+    /**
+    * 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterEtcdNodeNum")
+    @Expose
+    private Long ClusterEtcdNodeNum;
 
     /**
      * Get 集群ID 
@@ -360,16 +368,16 @@ public class Cluster extends AbstractModel{
     }
 
     /**
-     * Get 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  ) 
-     * @return ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+     * Get 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常) 
+     * @return ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
-     * @param ClusterStatus 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
+     * Set 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
+     * @param ClusterStatus 集群状态 (Trading 集群开通中,Creating 创建中,Running 运行中,Deleting 删除中,Idling 闲置中,Recovering 唤醒中,Scaling 规模调整中,Upgrading 升级中,WaittingForConnect 等待注册,Trading 集群开通中,Isolated 欠费隔离中,Pause 集群升级暂停,NodeUpgrading 节点升级中,RuntimeUpgrading 节点运行时升级中,MasterScaling Master扩缩容中,ClusterLevelUpgrading 调整规格中,ResourceIsolate 隔离中,ResourceIsolated 已隔离,ResourceReverse 冲正中,Abnormal 异常)
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
@@ -611,6 +619,26 @@ public class Cluster extends AbstractModel{
         this.RuntimeVersion = RuntimeVersion;
     }
 
+    /**
+     * Get 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterEtcdNodeNum 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterEtcdNodeNum() {
+        return this.ClusterEtcdNodeNum;
+    }
+
+    /**
+     * Set 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterEtcdNodeNum 集群当前etcd数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterEtcdNodeNum(Long ClusterEtcdNodeNum) {
+        this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
+    }
+
     public Cluster() {
     }
 
@@ -691,6 +719,9 @@ public class Cluster extends AbstractModel{
         if (source.RuntimeVersion != null) {
             this.RuntimeVersion = new String(source.RuntimeVersion);
         }
+        if (source.ClusterEtcdNodeNum != null) {
+            this.ClusterEtcdNodeNum = new Long(source.ClusterEtcdNodeNum);
+        }
     }
 
 
@@ -721,6 +752,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
 
     }
 }

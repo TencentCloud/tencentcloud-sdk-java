@@ -156,6 +156,13 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
     private String ModelSignature;
 
     /**
+    * 加速引擎对应的框架版本
+    */
+    @SerializedName("FrameworkVersion")
+    @Expose
+    private String FrameworkVersion;
+
+    /**
      * Get 模型加速任务ID 
      * @return ModelAccTaskId 模型加速任务ID
      */
@@ -459,6 +466,22 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
         this.ModelSignature = ModelSignature;
     }
 
+    /**
+     * Get 加速引擎对应的框架版本 
+     * @return FrameworkVersion 加速引擎对应的框架版本
+     */
+    public String getFrameworkVersion() {
+        return this.FrameworkVersion;
+    }
+
+    /**
+     * Set 加速引擎对应的框架版本
+     * @param FrameworkVersion 加速引擎对应的框架版本
+     */
+    public void setFrameworkVersion(String FrameworkVersion) {
+        this.FrameworkVersion = FrameworkVersion;
+    }
+
     public RestartModelAccelerateTaskRequest() {
     }
 
@@ -533,6 +556,9 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
         if (source.ModelSignature != null) {
             this.ModelSignature = new String(source.ModelSignature);
         }
+        if (source.FrameworkVersion != null) {
+            this.FrameworkVersion = new String(source.FrameworkVersion);
+        }
     }
 
 
@@ -559,6 +585,7 @@ public class RestartModelAccelerateTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AccEngineVersion", this.AccEngineVersion);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
+        this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
 
     }
 }

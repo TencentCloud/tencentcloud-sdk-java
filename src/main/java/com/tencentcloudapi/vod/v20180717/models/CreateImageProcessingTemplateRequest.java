@@ -24,7 +24,7 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
 
     /**
     * 图片处理操作数组，操作将以其在数组中的顺序执行。
-<li>长度限制：3。</li>
+<li>长度限制：10。</li>
     */
     @SerializedName("Operations")
     @Expose
@@ -53,9 +53,9 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
 
     /**
      * Get 图片处理操作数组，操作将以其在数组中的顺序执行。
-<li>长度限制：3。</li> 
+<li>长度限制：10。</li> 
      * @return Operations 图片处理操作数组，操作将以其在数组中的顺序执行。
-<li>长度限制：3。</li>
+<li>长度限制：10。</li>
      */
     public ImageOperation [] getOperations() {
         return this.Operations;
@@ -63,9 +63,9 @@ public class CreateImageProcessingTemplateRequest extends AbstractModel{
 
     /**
      * Set 图片处理操作数组，操作将以其在数组中的顺序执行。
-<li>长度限制：3。</li>
+<li>长度限制：10。</li>
      * @param Operations 图片处理操作数组，操作将以其在数组中的顺序执行。
-<li>长度限制：3。</li>
+<li>长度限制：10。</li>
      */
     public void setOperations(ImageOperation [] Operations) {
         this.Operations = Operations;

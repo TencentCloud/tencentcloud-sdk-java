@@ -193,6 +193,14 @@ XTI - 威胁情报
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 请求目的端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
      * Get 记录Id 
      * @return Id 记录Id
      */
@@ -620,6 +628,26 @@ XTI - 威胁情报
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 请求目的端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Port 请求目的端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 请求目的端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Port 请求目的端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
     public HostLoginList() {
     }
 
@@ -691,6 +719,9 @@ XTI - 威胁情报
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
     }
 
 
@@ -719,6 +750,7 @@ XTI - 威胁情报
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

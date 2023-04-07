@@ -67,6 +67,14 @@ public class AiAnalysisResult extends AbstractModel{
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
+    * 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HighlightTask")
+    @Expose
+    private AiAnalysisTaskHighlightResult HighlightTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -182,6 +190,26 @@ public class AiAnalysisResult extends AbstractModel{
         this.FrameTagTask = FrameTagTask;
     }
 
+    /**
+     * Get 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HighlightTask 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskHighlightResult getHighlightTask() {
+        return this.HighlightTask;
+    }
+
+    /**
+     * Set 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HighlightTask 视频内容分析集锦任务的查询结果，当任务类型为 Highlight时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
+        this.HighlightTask = HighlightTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -205,6 +233,9 @@ public class AiAnalysisResult extends AbstractModel{
         if (source.FrameTagTask != null) {
             this.FrameTagTask = new AiAnalysisTaskFrameTagResult(source.FrameTagTask);
         }
+        if (source.HighlightTask != null) {
+            this.HighlightTask = new AiAnalysisTaskHighlightResult(source.HighlightTask);
+        }
     }
 
 
@@ -217,6 +248,7 @@ public class AiAnalysisResult extends AbstractModel{
         this.setParamObj(map, prefix + "CoverTask.", this.CoverTask);
         this.setParamObj(map, prefix + "TagTask.", this.TagTask);
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
+        this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
 
     }
 }

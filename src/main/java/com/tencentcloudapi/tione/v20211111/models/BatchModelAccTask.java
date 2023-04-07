@@ -86,6 +86,13 @@ public class BatchModelAccTask extends AbstractModel{
     private String ModelSignature;
 
     /**
+    * 加速引擎对应的框架版本
+    */
+    @SerializedName("FrameworkVersion")
+    @Expose
+    private String FrameworkVersion;
+
+    /**
      * Get 模型ID 
      * @return ModelId 模型ID
      */
@@ -229,6 +236,22 @@ public class BatchModelAccTask extends AbstractModel{
         this.ModelSignature = ModelSignature;
     }
 
+    /**
+     * Get 加速引擎对应的框架版本 
+     * @return FrameworkVersion 加速引擎对应的框架版本
+     */
+    public String getFrameworkVersion() {
+        return this.FrameworkVersion;
+    }
+
+    /**
+     * Set 加速引擎对应的框架版本
+     * @param FrameworkVersion 加速引擎对应的框架版本
+     */
+    public void setFrameworkVersion(String FrameworkVersion) {
+        this.FrameworkVersion = FrameworkVersion;
+    }
+
     public BatchModelAccTask() {
     }
 
@@ -267,6 +290,9 @@ public class BatchModelAccTask extends AbstractModel{
         if (source.ModelSignature != null) {
             this.ModelSignature = new String(source.ModelSignature);
         }
+        if (source.FrameworkVersion != null) {
+            this.FrameworkVersion = new String(source.FrameworkVersion);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class BatchModelAccTask extends AbstractModel{
         this.setParamObj(map, prefix + "ModelInputPath.", this.ModelInputPath);
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
+        this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
 
     }
 }

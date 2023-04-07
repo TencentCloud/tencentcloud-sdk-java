@@ -63,6 +63,21 @@ EvilLevel=100 请求有恶意
     private Long GetCaptchaTime;
 
     /**
+    * 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EvilBitmap")
+    @Expose
+    private Long EvilBitmap;
+
+    /**
+    * 提交验证码时间
+    */
+    @SerializedName("SubmitCaptchaTime")
+    @Expose
+    private Long SubmitCaptchaTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -182,6 +197,42 @@ EvilLevel=100 请求有恶意
     }
 
     /**
+     * Get 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EvilBitmap 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEvilBitmap() {
+        return this.EvilBitmap;
+    }
+
+    /**
+     * Set 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EvilBitmap 拦截类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEvilBitmap(Long EvilBitmap) {
+        this.EvilBitmap = EvilBitmap;
+    }
+
+    /**
+     * Get 提交验证码时间 
+     * @return SubmitCaptchaTime 提交验证码时间
+     */
+    public Long getSubmitCaptchaTime() {
+        return this.SubmitCaptchaTime;
+    }
+
+    /**
+     * Set 提交验证码时间
+     * @param SubmitCaptchaTime 提交验证码时间
+     */
+    public void setSubmitCaptchaTime(Long SubmitCaptchaTime) {
+        this.SubmitCaptchaTime = SubmitCaptchaTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -217,6 +268,12 @@ EvilLevel=100 请求有恶意
         if (source.GetCaptchaTime != null) {
             this.GetCaptchaTime = new Long(source.GetCaptchaTime);
         }
+        if (source.EvilBitmap != null) {
+            this.EvilBitmap = new Long(source.EvilBitmap);
+        }
+        if (source.SubmitCaptchaTime != null) {
+            this.SubmitCaptchaTime = new Long(source.SubmitCaptchaTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -231,6 +288,8 @@ EvilLevel=100 请求有恶意
         this.setParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
         this.setParamSimple(map, prefix + "EvilLevel", this.EvilLevel);
         this.setParamSimple(map, prefix + "GetCaptchaTime", this.GetCaptchaTime);
+        this.setParamSimple(map, prefix + "EvilBitmap", this.EvilBitmap);
+        this.setParamSimple(map, prefix + "SubmitCaptchaTime", this.SubmitCaptchaTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

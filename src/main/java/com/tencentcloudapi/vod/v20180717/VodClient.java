@@ -298,7 +298,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
+     *创建一个用户自定义的图片处理模板，数量上限：16。最多支持十次操作，例如：裁剪-缩略-裁剪-模糊-缩略-裁剪-缩略-裁剪-模糊-缩略。
      * @param req CreateImageProcessingTemplateRequest
      * @return CreateImageProcessingTemplateResponse
      * @throws TencentCloudSDKException
@@ -378,7 +378,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建音画质重生模版。
+     *创建音画质重生模板。
      * @param req CreateRebuildMediaTemplateRequest
      * @return CreateRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -871,7 +871,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除音画质重生模版。
+     *删除音画质重生模板。
      * @param req DeleteRebuildMediaTemplateRequest
      * @return DeleteRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -1719,7 +1719,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取音画质重生模版列表。
+     *获取音画质重生模板列表。
      * @param req DescribeRebuildMediaTemplatesRequest
      * @return DescribeRebuildMediaTemplatesResponse
      * @throws TencentCloudSDKException
@@ -2513,7 +2513,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改音画质重生模版。
+     *修改音画质重生模板。
      * @param req ModifyRebuildMediaTemplateRequest
      * @return ModifyRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -2992,7 +2992,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *使用模版发起音画质重生。
+     *使用模板发起音画质重生。
      * @param req RebuildMediaByTemplateRequest
      * @return RebuildMediaByTemplateResponse
      * @throws TencentCloudSDKException

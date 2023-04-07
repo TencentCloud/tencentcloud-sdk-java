@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupResponse extends AbstractModel{
 
     /**
-    * 实例绑定的安全组
+    * 实例绑定的安全组信息。
     */
     @SerializedName("Groups")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSecurityGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例绑定的安全组 
-     * @return Groups 实例绑定的安全组
+     * Get 实例绑定的安全组信息。 
+     * @return Groups 实例绑定的安全组信息。
      */
     public SecurityGroup [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set 实例绑定的安全组
-     * @param Groups 实例绑定的安全组
+     * Set 实例绑定的安全组信息。
+     * @param Groups 实例绑定的安全组信息。
      */
     public void setGroups(SecurityGroup [] Groups) {
         this.Groups = Groups;

@@ -79,6 +79,14 @@ public class Pod extends AbstractModel{
     private Container Containers;
 
     /**
+    * 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerInfos")
+    @Expose
+    private Container [] ContainerInfos;
+
+    /**
      * Get pod名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name pod名
@@ -218,6 +226,26 @@ public class Pod extends AbstractModel{
         this.Containers = Containers;
     }
 
+    /**
+     * Get 容器列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerInfos 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Container [] getContainerInfos() {
+        return this.ContainerInfos;
+    }
+
+    /**
+     * Set 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerInfos 容器列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerInfos(Container [] ContainerInfos) {
+        this.ContainerInfos = ContainerInfos;
+    }
+
     public Pod() {
     }
 
@@ -247,6 +275,12 @@ public class Pod extends AbstractModel{
         if (source.Containers != null) {
             this.Containers = new Container(source.Containers);
         }
+        if (source.ContainerInfos != null) {
+            this.ContainerInfos = new Container[source.ContainerInfos.length];
+            for (int i = 0; i < source.ContainerInfos.length; i++) {
+                this.ContainerInfos[i] = new Container(source.ContainerInfos[i]);
+            }
+        }
     }
 
 
@@ -261,6 +295,7 @@ public class Pod extends AbstractModel{
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "Containers.", this.Containers);
+        this.setParamArrayObj(map, prefix + "ContainerInfos.", this.ContainerInfos);
 
     }
 }

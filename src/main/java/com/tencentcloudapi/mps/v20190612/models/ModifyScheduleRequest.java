@@ -59,7 +59,7 @@ public class ModifyScheduleRequest extends AbstractModel{
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 媒体处理生成的文件输出的目标目录。
+    * 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
     */
     @SerializedName("OutputDir")
@@ -158,9 +158,9 @@ public class ModifyScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Get 媒体处理生成的文件输出的目标目录。
+     * Get 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。 
-     * @return OutputDir 媒体处理生成的文件输出的目标目录。
+     * @return OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
      */
     public String getOutputDir() {
@@ -168,9 +168,9 @@ public class ModifyScheduleRequest extends AbstractModel{
     }
 
     /**
-     * Set 媒体处理生成的文件输出的目标目录。
+     * Set 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
-     * @param OutputDir 媒体处理生成的文件输出的目标目录。
+     * @param OutputDir 媒体处理生成的文件输出的目标目录，必选以 / 开头和结尾。
 注意：如果设置为空，则表示取消老配置的OutputDir值。
      */
     public void setOutputDir(String OutputDir) {

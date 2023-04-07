@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupRequest extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。
+    * 实例 ID。例如：cmgo-p8vn****。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。
+     * Get 实例 ID。例如：cmgo-p8vn****。 
+     * @return InstanceId 实例 ID。例如：cmgo-p8vn****。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。
+     * Set 实例 ID。例如：cmgo-p8vn****。
+     * @param InstanceId 实例 ID。例如：cmgo-p8vn****。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
