@@ -239,6 +239,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *根据任务id删除健康报告生成任务
+     * @param req DeleteDBDiagReportTasksRequest
+     * @return DeleteDBDiagReportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBDiagReportTasksResponse DeleteDBDiagReportTasks(DeleteDBDiagReportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDBDiagReportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDBDiagReportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDBDiagReportTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除安全审计日志导出任务。
      * @param req DeleteSecurityAuditLogExportTasksRequest
      * @return DeleteSecurityAuditLogExportTasksResponse

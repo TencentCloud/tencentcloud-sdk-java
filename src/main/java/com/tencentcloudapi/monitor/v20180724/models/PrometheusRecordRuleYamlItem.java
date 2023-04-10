@@ -60,6 +60,30 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 实例名称 
      * @return Name 实例名称
      */
@@ -147,6 +171,66 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 规则数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Count 规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Count 规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PrometheusRecordRuleYamlItem() {
     }
 
@@ -170,6 +254,15 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -182,6 +275,9 @@ public class PrometheusRecordRuleYamlItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

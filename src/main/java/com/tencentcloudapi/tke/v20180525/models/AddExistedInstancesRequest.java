@@ -95,7 +95,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
 
     /**
-    * 节点镜像（节点选项时，该参数是必传参数）
+    * 节点镜像
     */
     @SerializedName("ImageId")
     @Expose
@@ -270,16 +270,16 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 节点镜像（节点选项时，该参数是必传参数） 
-     * @return ImageId 节点镜像（节点选项时，该参数是必传参数）
+     * Get 节点镜像 
+     * @return ImageId 节点镜像
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 节点镜像（节点选项时，该参数是必传参数）
-     * @param ImageId 节点镜像（节点选项时，该参数是必传参数）
+     * Set 节点镜像
+     * @param ImageId 节点镜像
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

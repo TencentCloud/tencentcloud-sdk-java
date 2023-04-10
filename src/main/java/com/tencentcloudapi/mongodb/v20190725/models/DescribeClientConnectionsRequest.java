@@ -23,69 +23,74 @@ import java.util.HashMap;
 public class DescribeClientConnectionsRequest extends AbstractModel{
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+    * 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，默认值为0。
+    * 偏移量，默认值为0。Offset=Limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+ 
+     * @return InstanceId 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
+     * @param InstanceId 指定待查询的实例ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。 
-     * @return Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+     * Get 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。 
+     * @return Limit 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
-     * @param Limit 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
+     * Set 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
+     * @param Limit 单次请求返回的数量。最小值为1，最大值为1000，默认值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，默认值为0。 
-     * @return Offset 偏移量，默认值为0。
+     * Get 偏移量，默认值为0。Offset=Limit*(页码-1)。 
+     * @return Offset 偏移量，默认值为0。Offset=Limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认值为0。
-     * @param Offset 偏移量，默认值为0。
+     * Set 偏移量，默认值为0。Offset=Limit*(页码-1)。
+     * @param Offset 偏移量，默认值为0。Offset=Limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

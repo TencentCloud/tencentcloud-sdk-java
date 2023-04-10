@@ -51,7 +51,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private AgentParams AgentParams;
 
     /**
-    * 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+    * 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
     */
     @SerializedName("WithTranscoding")
     @Expose
@@ -93,7 +93,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private McuSeiParams SeiParams;
 
     /**
-    * 回推房间信息，和转推CDN参数必须要有一个。
+    * 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
     */
     @SerializedName("FeedBackRoomParams")
     @Expose
@@ -164,16 +164,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。 
-     * @return WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+     * Get 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。 
+     * @return WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
      */
     public Long getWithTranscoding() {
         return this.WithTranscoding;
     }
 
     /**
-     * Set 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
-     * @param WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转吗费用。
+     * Set 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
+     * @param WithTranscoding 是否转码，0表示无需转码，1表示需要转码。是否收取转码费是由WithTranscoding参数决定的，WithTranscoding为0，表示旁路转推，不会收取转码费用，WithTranscoding为1，表示混流转推，会收取转码费用。
      */
     public void setWithTranscoding(Long WithTranscoding) {
         this.WithTranscoding = WithTranscoding;
@@ -260,16 +260,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get 回推房间信息，和转推CDN参数必须要有一个。 
-     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。
+     * Get 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。 
+     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public McuFeedBackRoomParams [] getFeedBackRoomParams() {
         return this.FeedBackRoomParams;
     }
 
     /**
-     * Set 回推房间信息，和转推CDN参数必须要有一个。
-     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。
+     * Set 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用特殊的SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
         this.FeedBackRoomParams = FeedBackRoomParams;

@@ -100,14 +100,14 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String DeviceType;
 
     /**
-    * 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+    * 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+    * 是否极速变配。0-普通升级，1-极速变配，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
     */
     @SerializedName("FastUpgrade")
     @Expose
@@ -311,32 +311,32 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。 
-     * @return Cpu 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * Get 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。 
+     * @return Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
-     * @param Cpu 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * Set 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * @param Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。 
-     * @return FastUpgrade 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+     * Get 是否极速变配。0-普通升级，1-极速变配，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。 
+     * @return FastUpgrade 是否极速变配。0-普通升级，1-极速变配，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
      */
     public Long getFastUpgrade() {
         return this.FastUpgrade;
     }
 
     /**
-     * Set 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
-     * @param FastUpgrade 是否极速变配。0-普通升级，1-极速变配,，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+     * Set 是否极速变配。0-普通升级，1-极速变配，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
+     * @param FastUpgrade 是否极速变配。0-普通升级，1-极速变配，2 极速优先。选择极速变配会根据资源状况校验是否可以进行极速变配，满足条件则进行极速变配，不满足条件会返回报错信息。
      */
     public void setFastUpgrade(Long FastUpgrade) {
         this.FastUpgrade = FastUpgrade;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeClientConnectionsResponse extends AbstractModel{
 
     /**
-    * 客户端连接信息，包括客户端IP和对应IP的连接数量。
+    * 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
     */
     @SerializedName("Clients")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 客户端连接信息，包括客户端IP和对应IP的连接数量。 
-     * @return Clients 客户端连接信息，包括客户端IP和对应IP的连接数量。
+     * Get 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。 
+     * @return Clients 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
      */
     public ClientConnection [] getClients() {
         return this.Clients;
     }
 
     /**
-     * Set 客户端连接信息，包括客户端IP和对应IP的连接数量。
-     * @param Clients 客户端连接信息，包括客户端IP和对应IP的连接数量。
+     * Set 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
+     * @param Clients 客户端连接信息，包括客户端 IP 和对应 IP 的连接数量。
      */
     public void setClients(ClientConnection [] Clients) {
         this.Clients = Clients;

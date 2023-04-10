@@ -2422,6 +2422,26 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *核心文件监控事件列表
+     * @param req DescribeFileTamperEventsRequest
+     * @return DescribeFileTamperEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileTamperEventsResponse DescribeFileTamperEvents(DescribeFileTamperEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileTamperEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileTamperEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileTamperEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取主机相关统计
      * @param req DescribeGeneralStatRequest
      * @return DescribeGeneralStatResponse

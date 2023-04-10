@@ -55,7 +55,7 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel{
     private String [] ZoneIds;
 
     /**
-    * 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+    * 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
     */
     @SerializedName("Limit")
     @Expose
@@ -177,16 +177,16 @@ public class DescribeTopL7CacheDataRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。 
-     * @return Limit 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+     * Get 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。 
+     * @return Limit 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
-     * @param Limit 查询前多少个数据，不填默认默认为10， 表示查询前top 10的数据。
+     * Set 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
+     * @param Limit 查询前多少个数据，最大值为1000，不填默认默认为10， 表示查询前top 10的数据。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

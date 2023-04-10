@@ -759,6 +759,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *获取房间列表
+     * @param req GetRoomsRequest
+     * @return GetRoomsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRoomsResponse GetRooms(GetRoomsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRoomsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRoomsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRooms");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取水印设置
      * @param req GetWatermarkRequest
      * @return GetWatermarkResponse

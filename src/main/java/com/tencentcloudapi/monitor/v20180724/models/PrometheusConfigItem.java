@@ -45,6 +45,14 @@ public class PrometheusConfigItem extends AbstractModel{
     private String TemplateId;
 
     /**
+    * 目标数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Targets")
+    @Expose
+    private Targets Targets;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -96,6 +104,26 @@ public class PrometheusConfigItem extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get 目标数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Targets 目标数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Targets getTargets() {
+        return this.Targets;
+    }
+
+    /**
+     * Set 目标数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Targets 目标数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargets(Targets Targets) {
+        this.Targets = Targets;
+    }
+
     public PrometheusConfigItem() {
     }
 
@@ -113,6 +141,9 @@ public class PrometheusConfigItem extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.Targets != null) {
+            this.Targets = new Targets(source.Targets);
+        }
     }
 
 
@@ -123,6 +154,7 @@ public class PrometheusConfigItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamObj(map, prefix + "Targets.", this.Targets);
 
     }
 }

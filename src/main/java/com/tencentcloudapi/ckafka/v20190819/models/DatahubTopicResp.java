@@ -30,6 +30,14 @@ public class DatahubTopicResp extends AbstractModel{
     private String TopicName;
 
     /**
+    * TopicId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
      * Get Topic名称 
      * @return TopicName Topic名称
      */
@@ -45,6 +53,26 @@ public class DatahubTopicResp extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    /**
+     * Get TopicId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicId TopicId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set TopicId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicId TopicId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
     public DatahubTopicResp() {
     }
 
@@ -56,6 +84,9 @@ public class DatahubTopicResp extends AbstractModel{
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
+        }
     }
 
 
@@ -64,6 +95,7 @@ public class DatahubTopicResp extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
 
     }
 }

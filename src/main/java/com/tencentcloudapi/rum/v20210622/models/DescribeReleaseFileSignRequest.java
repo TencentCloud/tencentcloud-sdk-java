@@ -30,6 +30,13 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
     private Long Timeout;
 
     /**
+    * bucket类型，不填默认web，2:app
+    */
+    @SerializedName("FileType")
+    @Expose
+    private Long FileType;
+
+    /**
      * Get 超时时间，不填默认是 5 分钟 
      * @return Timeout 超时时间，不填默认是 5 分钟
      */
@@ -45,6 +52,22 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
         this.Timeout = Timeout;
     }
 
+    /**
+     * Get bucket类型，不填默认web，2:app 
+     * @return FileType bucket类型，不填默认web，2:app
+     */
+    public Long getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set bucket类型，不填默认web，2:app
+     * @param FileType bucket类型，不填默认web，2:app
+     */
+    public void setFileType(Long FileType) {
+        this.FileType = FileType;
+    }
+
     public DescribeReleaseFileSignRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
         if (source.Timeout != null) {
             this.Timeout = new Long(source.Timeout);
         }
+        if (source.FileType != null) {
+            this.FileType = new Long(source.FileType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeReleaseFileSignRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
 
     }
 }

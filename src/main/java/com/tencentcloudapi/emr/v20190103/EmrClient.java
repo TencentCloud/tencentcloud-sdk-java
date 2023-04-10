@@ -522,6 +522,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *用于启动或停止监控或服务
+     * @param req StartStopServiceOrMonitorRequest
+     * @return StartStopServiceOrMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartStopServiceOrMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartStopServiceOrMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *EMR同步TKE中POD状态
      * @param req SyncPodStateRequest
      * @return SyncPodStateResponse
@@ -534,6 +554,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SyncPodStateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SyncPodState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *销毁集群节点
+     * @param req TerminateClusterNodesRequest
+     * @return TerminateClusterNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateClusterNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateClusterNodes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

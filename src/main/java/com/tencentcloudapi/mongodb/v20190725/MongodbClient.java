@@ -60,7 +60,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateAccountUser)用于创建mongodb实例账号。
+     *本接口（CreateAccountUser）用于自定义实例访问账号。
      * @param req CreateAccountUserRequest
      * @return CreateAccountUserResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAccountUsers)用于获取当前实例的全部账号。
+     *本接口（DescribeAccountUsers）用于获取当前实例的全部账号。
      * @param req DescribeAccountUsersRequest
      * @return DescribeAccountUsersResponse
      * @throws TencentCloudSDKException
@@ -220,7 +220,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeClientConnections)用于查询实例客户端连接信息，包括连接IP和连接数量。
+     *本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
      * @param req DescribeClientConnectionsRequest
      * @return DescribeClientConnectionsResponse
      * @throws TencentCloudSDKException

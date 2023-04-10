@@ -143,6 +143,13 @@ public class CreateListenerRequest extends AbstractModel{
     private Long MaxCps;
 
     /**
+    * 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+    */
+    @SerializedName("IdleConnectTimeout")
+    @Expose
+    private Long IdleConnectTimeout;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -418,6 +425,22 @@ public class CreateListenerRequest extends AbstractModel{
         this.MaxCps = MaxCps;
     }
 
+    /**
+     * Get 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。 
+     * @return IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     */
+    public Long getIdleConnectTimeout() {
+        return this.IdleConnectTimeout;
+    }
+
+    /**
+     * Set 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * @param IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~2000。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     */
+    public void setIdleConnectTimeout(Long IdleConnectTimeout) {
+        this.IdleConnectTimeout = IdleConnectTimeout;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -483,6 +506,9 @@ public class CreateListenerRequest extends AbstractModel{
         if (source.MaxCps != null) {
             this.MaxCps = new Long(source.MaxCps);
         }
+        if (source.IdleConnectTimeout != null) {
+            this.IdleConnectTimeout = new Long(source.IdleConnectTimeout);
+        }
     }
 
 
@@ -507,6 +533,7 @@ public class CreateListenerRequest extends AbstractModel{
         this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
         this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
+        this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
 
     }
 }
