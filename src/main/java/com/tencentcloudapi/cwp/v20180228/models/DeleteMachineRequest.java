@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteMachineRequest extends AbstractModel{
 
     /**
-    * 云镜客户端Uuid。
+    * 主机安全客户端Uuid。
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-     * Get 云镜客户端Uuid。 
-     * @return Uuid 云镜客户端Uuid。
+     * Get 主机安全客户端Uuid。 
+     * @return Uuid 主机安全客户端Uuid。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端Uuid。
-     * @param Uuid 云镜客户端Uuid。
+     * Set 主机安全客户端Uuid。
+     * @param Uuid 主机安全客户端Uuid。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

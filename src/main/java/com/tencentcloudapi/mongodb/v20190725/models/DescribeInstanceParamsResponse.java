@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DescribeInstanceParamsResponse extends AbstractModel{
 
     /**
-    * 值为枚举类型参数集合
+    * 参数值为枚举类型参数集合。
     */
     @SerializedName("InstanceEnumParam")
     @Expose
     private InstanceEnumParam [] InstanceEnumParam;
 
     /**
-    * 值为integer类型参数集合
+    * 参数值为 Integer 类型参数集合。
     */
     @SerializedName("InstanceIntegerParam")
     @Expose
     private InstanceIntegerParam [] InstanceIntegerParam;
 
     /**
-    * 值为text类型的参数集合
+    * 参数值为 Text 类型的参数集合。
     */
     @SerializedName("InstanceTextParam")
     @Expose
     private InstanceTextParam [] InstanceTextParam;
 
     /**
-    * 值为混合类型的参数集合
+    * 参数值为混合类型的参数集合。
     */
     @SerializedName("InstanceMultiParam")
     @Expose
@@ -65,64 +65,64 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 值为枚举类型参数集合 
-     * @return InstanceEnumParam 值为枚举类型参数集合
+     * Get 参数值为枚举类型参数集合。 
+     * @return InstanceEnumParam 参数值为枚举类型参数集合。
      */
     public InstanceEnumParam [] getInstanceEnumParam() {
         return this.InstanceEnumParam;
     }
 
     /**
-     * Set 值为枚举类型参数集合
-     * @param InstanceEnumParam 值为枚举类型参数集合
+     * Set 参数值为枚举类型参数集合。
+     * @param InstanceEnumParam 参数值为枚举类型参数集合。
      */
     public void setInstanceEnumParam(InstanceEnumParam [] InstanceEnumParam) {
         this.InstanceEnumParam = InstanceEnumParam;
     }
 
     /**
-     * Get 值为integer类型参数集合 
-     * @return InstanceIntegerParam 值为integer类型参数集合
+     * Get 参数值为 Integer 类型参数集合。 
+     * @return InstanceIntegerParam 参数值为 Integer 类型参数集合。
      */
     public InstanceIntegerParam [] getInstanceIntegerParam() {
         return this.InstanceIntegerParam;
     }
 
     /**
-     * Set 值为integer类型参数集合
-     * @param InstanceIntegerParam 值为integer类型参数集合
+     * Set 参数值为 Integer 类型参数集合。
+     * @param InstanceIntegerParam 参数值为 Integer 类型参数集合。
      */
     public void setInstanceIntegerParam(InstanceIntegerParam [] InstanceIntegerParam) {
         this.InstanceIntegerParam = InstanceIntegerParam;
     }
 
     /**
-     * Get 值为text类型的参数集合 
-     * @return InstanceTextParam 值为text类型的参数集合
+     * Get 参数值为 Text 类型的参数集合。 
+     * @return InstanceTextParam 参数值为 Text 类型的参数集合。
      */
     public InstanceTextParam [] getInstanceTextParam() {
         return this.InstanceTextParam;
     }
 
     /**
-     * Set 值为text类型的参数集合
-     * @param InstanceTextParam 值为text类型的参数集合
+     * Set 参数值为 Text 类型的参数集合。
+     * @param InstanceTextParam 参数值为 Text 类型的参数集合。
      */
     public void setInstanceTextParam(InstanceTextParam [] InstanceTextParam) {
         this.InstanceTextParam = InstanceTextParam;
     }
 
     /**
-     * Get 值为混合类型的参数集合 
-     * @return InstanceMultiParam 值为混合类型的参数集合
+     * Get 参数值为混合类型的参数集合。 
+     * @return InstanceMultiParam 参数值为混合类型的参数集合。
      */
     public InstanceMultiParam [] getInstanceMultiParam() {
         return this.InstanceMultiParam;
     }
 
     /**
-     * Set 值为混合类型的参数集合
-     * @param InstanceMultiParam 值为混合类型的参数集合
+     * Set 参数值为混合类型的参数集合。
+     * @param InstanceMultiParam 参数值为混合类型的参数集合。
      */
     public void setInstanceMultiParam(InstanceMultiParam [] InstanceMultiParam) {
         this.InstanceMultiParam = InstanceMultiParam;

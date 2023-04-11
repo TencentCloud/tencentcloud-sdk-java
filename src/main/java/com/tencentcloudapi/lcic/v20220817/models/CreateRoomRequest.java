@@ -93,6 +93,15 @@ video 纯视频
     private Long AutoMic;
 
     /**
+    * 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+    */
+    @SerializedName("TurnOffMic")
+    @Expose
+    private Long TurnOffMic;
+
+    /**
     * 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质
@@ -117,6 +126,20 @@ video 纯视频
     @SerializedName("Assistants")
     @Expose
     private String [] Assistants;
+
+    /**
+    * rtc人数。
+    */
+    @SerializedName("RTCAudienceNumber")
+    @Expose
+    private Long RTCAudienceNumber;
+
+    /**
+    * 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+    */
+    @SerializedName("AudienceType")
+    @Expose
+    private Long AudienceType;
 
     /**
     * 录制布局。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
@@ -305,6 +328,30 @@ video 纯视频
     }
 
     /**
+     * Get 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态 
+     * @return TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+     */
+    public Long getTurnOffMic() {
+        return this.TurnOffMic;
+    }
+
+    /**
+     * Set 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+     * @param TurnOffMic 释放音视频权限后是否自动取消连麦。可以有以下取值：
+0 自动取消连麦（默认值）
+1 保持连麦状态
+     */
+    public void setTurnOffMic(Long TurnOffMic) {
+        this.TurnOffMic = TurnOffMic;
+    }
+
+    /**
      * Get 高音质模式。可以有以下取值：
 0 不开启高音质（默认值）
 1 开启高音质 
@@ -370,6 +417,38 @@ video 纯视频
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
+    }
+
+    /**
+     * Get rtc人数。 
+     * @return RTCAudienceNumber rtc人数。
+     */
+    public Long getRTCAudienceNumber() {
+        return this.RTCAudienceNumber;
+    }
+
+    /**
+     * Set rtc人数。
+     * @param RTCAudienceNumber rtc人数。
+     */
+    public void setRTCAudienceNumber(Long RTCAudienceNumber) {
+        this.RTCAudienceNumber = RTCAudienceNumber;
+    }
+
+    /**
+     * Get 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型 
+     * @return AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     */
+    public Long getAudienceType() {
+        return this.AudienceType;
+    }
+
+    /**
+     * Set 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     * @param AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     */
+    public void setAudienceType(Long AudienceType) {
+        this.AudienceType = AudienceType;
     }
 
     /**
@@ -439,6 +518,9 @@ video 纯视频
         if (source.AutoMic != null) {
             this.AutoMic = new Long(source.AutoMic);
         }
+        if (source.TurnOffMic != null) {
+            this.TurnOffMic = new Long(source.TurnOffMic);
+        }
         if (source.AudioQuality != null) {
             this.AudioQuality = new Long(source.AudioQuality);
         }
@@ -450,6 +532,12 @@ video 纯视频
             for (int i = 0; i < source.Assistants.length; i++) {
                 this.Assistants[i] = new String(source.Assistants[i]);
             }
+        }
+        if (source.RTCAudienceNumber != null) {
+            this.RTCAudienceNumber = new Long(source.RTCAudienceNumber);
+        }
+        if (source.AudienceType != null) {
+            this.AudienceType = new Long(source.AudienceType);
         }
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
@@ -473,9 +561,12 @@ video 纯视频
         this.setParamSimple(map, prefix + "SubType", this.SubType);
         this.setParamSimple(map, prefix + "TeacherId", this.TeacherId);
         this.setParamSimple(map, prefix + "AutoMic", this.AutoMic);
+        this.setParamSimple(map, prefix + "TurnOffMic", this.TurnOffMic);
         this.setParamSimple(map, prefix + "AudioQuality", this.AudioQuality);
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
+        this.setParamSimple(map, prefix + "RTCAudienceNumber", this.RTCAudienceNumber);
+        this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 

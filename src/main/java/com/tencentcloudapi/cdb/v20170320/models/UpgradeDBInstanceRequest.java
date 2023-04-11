@@ -135,6 +135,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String ZoneId;
 
     /**
+    * 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+    */
+    @SerializedName("RoTransType")
+    @Expose
+    private String RoTransType;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -390,6 +397,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.ZoneId = ZoneId;
     }
 
+    /**
+     * Get 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。 
+     * @return RoTransType 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+     */
+    public String getRoTransType() {
+        return this.RoTransType;
+    }
+
+    /**
+     * Set 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+     * @param RoTransType 针对跨集群搬迁场景，选择同可用区RO的处理逻辑。together-同可用区RO跟随主实例迁移至目标可用区（默认选项），severally-同可用区RO保持原部署模式、不迁移至目标可用区。
+     */
+    public void setRoTransType(String RoTransType) {
+        this.RoTransType = RoTransType;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -446,6 +469,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.RoTransType != null) {
+            this.RoTransType = new String(source.RoTransType);
+        }
     }
 
 
@@ -469,6 +495,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "RoTransType", this.RoTransType);
 
     }
 }

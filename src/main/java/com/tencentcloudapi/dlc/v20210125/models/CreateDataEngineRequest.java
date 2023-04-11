@@ -212,6 +212,20 @@ public class CreateDataEngineRequest extends AbstractModel{
     private String MainClusterName;
 
     /**
+    * spark jar 包年包月集群是否开启弹性
+    */
+    @SerializedName("ElasticSwitch")
+    @Expose
+    private Boolean ElasticSwitch;
+
+    /**
+    * spark jar 包年包月集群弹性上限
+    */
+    @SerializedName("ElasticLimit")
+    @Expose
+    private Long ElasticLimit;
+
+    /**
      * Get 引擎类型spark/presto 
      * @return EngineType 引擎类型spark/presto
      */
@@ -643,6 +657,38 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.MainClusterName = MainClusterName;
     }
 
+    /**
+     * Get spark jar 包年包月集群是否开启弹性 
+     * @return ElasticSwitch spark jar 包年包月集群是否开启弹性
+     */
+    public Boolean getElasticSwitch() {
+        return this.ElasticSwitch;
+    }
+
+    /**
+     * Set spark jar 包年包月集群是否开启弹性
+     * @param ElasticSwitch spark jar 包年包月集群是否开启弹性
+     */
+    public void setElasticSwitch(Boolean ElasticSwitch) {
+        this.ElasticSwitch = ElasticSwitch;
+    }
+
+    /**
+     * Get spark jar 包年包月集群弹性上限 
+     * @return ElasticLimit spark jar 包年包月集群弹性上限
+     */
+    public Long getElasticLimit() {
+        return this.ElasticLimit;
+    }
+
+    /**
+     * Set spark jar 包年包月集群弹性上限
+     * @param ElasticLimit spark jar 包年包月集群弹性上限
+     */
+    public void setElasticLimit(Long ElasticLimit) {
+        this.ElasticLimit = ElasticLimit;
+    }
+
     public CreateDataEngineRequest() {
     }
 
@@ -738,6 +784,12 @@ public class CreateDataEngineRequest extends AbstractModel{
         if (source.MainClusterName != null) {
             this.MainClusterName = new String(source.MainClusterName);
         }
+        if (source.ElasticSwitch != null) {
+            this.ElasticSwitch = new Boolean(source.ElasticSwitch);
+        }
+        if (source.ElasticLimit != null) {
+            this.ElasticLimit = new Long(source.ElasticLimit);
+        }
     }
 
 
@@ -772,6 +824,8 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataEngineConfigPairs.", this.DataEngineConfigPairs);
         this.setParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
         this.setParamSimple(map, prefix + "MainClusterName", this.MainClusterName);
+        this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+        this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
 
     }
 }

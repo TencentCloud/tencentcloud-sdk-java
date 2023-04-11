@@ -23,69 +23,79 @@ import java.util.HashMap;
 public class CreateBackupDBInstanceRequest extends AbstractModel{
 
     /**
-    * 实例id
+    * 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 0-逻辑备份，1-物理备份
+    * 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * 备份备注
+    * 备份备注信息。
     */
     @SerializedName("BackupRemark")
     @Expose
     private String BackupRemark;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 0-逻辑备份，1-物理备份 
-     * @return BackupMethod 0-逻辑备份，1-物理备份
+     * Get 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。 
+     * @return BackupMethod 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set 0-逻辑备份，1-物理备份
-     * @param BackupMethod 0-逻辑备份，1-物理备份
+     * Set 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
+     * @param BackupMethod 设置备份方式。
+- 0：逻辑备份。
+- 1：物理备份。
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get 备份备注 
-     * @return BackupRemark 备份备注
+     * Get 备份备注信息。 
+     * @return BackupRemark 备份备注信息。
      */
     public String getBackupRemark() {
         return this.BackupRemark;
     }
 
     /**
-     * Set 备份备注
-     * @param BackupRemark 备份备注
+     * Set 备份备注信息。
+     * @param BackupRemark 备份备注信息。
      */
     public void setBackupRemark(String BackupRemark) {
         this.BackupRemark = BackupRemark;

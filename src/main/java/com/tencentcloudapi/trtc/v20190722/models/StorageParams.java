@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class StorageParams extends AbstractModel{
 
     /**
-    * 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+    * 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
     */
     @SerializedName("CloudStorage")
     @Expose
     private CloudStorage CloudStorage;
 
     /**
-    * 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+    * 腾讯云云点播的账号信息。
     */
     @SerializedName("CloudVod")
     @Expose
     private CloudVod CloudVod;
 
     /**
-     * Get 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。 
-     * @return CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+     * Get 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。 
+     * @return CloudStorage 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
-     * @param CloudStorage 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+     * Set 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
+     * @param CloudStorage 第三方云存储的账号信息（特别说明：若您选择存储至对象存储COS将会收取录制文件投递至COS的费用，详见云端录制收费说明，存储至VOD将不收取此项费用。）。
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;
     }
 
     /**
-     * Get 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。 
-     * @return CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+     * Get 腾讯云云点播的账号信息。 
+     * @return CloudVod 腾讯云云点播的账号信息。
      */
     public CloudVod getCloudVod() {
         return this.CloudVod;
     }
 
     /**
-     * Set 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
-     * @param CloudVod 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+     * Set 腾讯云云点播的账号信息。
+     * @param CloudVod 腾讯云云点播的账号信息。
      */
     public void setCloudVod(CloudVod CloudVod) {
         this.CloudVod = CloudVod;

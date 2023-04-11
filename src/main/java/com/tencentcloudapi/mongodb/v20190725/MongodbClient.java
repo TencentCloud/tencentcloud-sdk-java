@@ -80,7 +80,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *备份实例接口
+     *本接口（CreateBackupDBInstance）用于备份实例。
      * @param req CreateBackupDBInstanceRequest
      * @return CreateBackupDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -152,6 +152,26 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDBInstanceHour");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DeleteAccountUser）用于删除实例的自定义账号。
+     * @param req DeleteAccountUserRequest
+     * @return DeleteAccountUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountUserResponse DeleteAccountUser(DeleteAccountUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccountUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccountUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccountUser");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -340,7 +360,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+     *本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
      * @throws TencentCloudSDKException
@@ -700,7 +720,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SetAccountUserPrivilege)用于设置mongodb实例的账号权限。
+     *本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
      * @param req SetAccountUserPrivilegeRequest
      * @return SetAccountUserPrivilegeResponse
      * @throws TencentCloudSDKException

@@ -99,7 +99,7 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *查询账单资源汇总数据 
+     *查询账单资源汇总数据
      * @param req DescribeBillResourceSummaryRequest
      * @return DescribeBillResourceSummaryResponse
      * @throws TencentCloudSDKException

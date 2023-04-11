@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBackupDBInstanceResponse extends AbstractModel{
 
     /**
-    * 查询备份流程的状态
+    * 查询备份流程的状态。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateBackupDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询备份流程的状态 
-     * @return AsyncRequestId 查询备份流程的状态
+     * Get 查询备份流程的状态。 
+     * @return AsyncRequestId 查询备份流程的状态。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set 查询备份流程的状态
-     * @param AsyncRequestId 查询备份流程的状态
+     * Set 查询备份流程的状态。
+     * @param AsyncRequestId 查询备份流程的状态。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

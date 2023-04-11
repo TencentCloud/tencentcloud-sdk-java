@@ -102,6 +102,14 @@ public class CreateRecordBatchRecord extends AbstractModel{
     private Long MX;
 
     /**
+    * 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private Long Weight;
+
+    /**
      * Get 子域名(主机记录)。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubDomain 子域名(主机记录)。
@@ -297,6 +305,26 @@ public class CreateRecordBatchRecord extends AbstractModel{
         this.MX = MX;
     }
 
+    /**
+     * Get 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 记录的权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(Long Weight) {
+        this.Weight = Weight;
+    }
+
     public CreateRecordBatchRecord() {
     }
 
@@ -335,6 +363,9 @@ public class CreateRecordBatchRecord extends AbstractModel{
         if (source.MX != null) {
             this.MX = new Long(source.MX);
         }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
     }
 
 
@@ -352,6 +383,7 @@ public class CreateRecordBatchRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "MX", this.MX);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
 
     }
 }

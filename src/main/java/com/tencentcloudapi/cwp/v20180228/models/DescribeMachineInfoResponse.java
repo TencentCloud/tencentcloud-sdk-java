@@ -30,7 +30,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private String MachineIp;
 
     /**
-    * 受云镜保护天数。
+    * 受主机安全保护天数。
     */
     @SerializedName("ProtectDays")
     @Expose
@@ -81,7 +81,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private String Quuid;
 
     /**
-    * 云镜客户端唯一Uuid。
+    * 主机安全客户端唯一Uuid。
     */
     @SerializedName("Uuid")
     @Expose
@@ -167,7 +167,7 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     private Long HasAssetScan;
 
     /**
-    * 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+    * 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
     */
     @SerializedName("ProtectType")
     @Expose
@@ -197,16 +197,16 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 受云镜保护天数。 
-     * @return ProtectDays 受云镜保护天数。
+     * Get 受主机安全保护天数。 
+     * @return ProtectDays 受主机安全保护天数。
      */
     public Long getProtectDays() {
         return this.ProtectDays;
     }
 
     /**
-     * Set 受云镜保护天数。
-     * @param ProtectDays 受云镜保护天数。
+     * Set 受主机安全保护天数。
+     * @param ProtectDays 受主机安全保护天数。
      */
     public void setProtectDays(Long ProtectDays) {
         this.ProtectDays = ProtectDays;
@@ -317,16 +317,16 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 云镜客户端唯一Uuid。 
-     * @return Uuid 云镜客户端唯一Uuid。
+     * Get 主机安全客户端唯一Uuid。 
+     * @return Uuid 主机安全客户端唯一Uuid。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一Uuid。
-     * @param Uuid 云镜客户端唯一Uuid。
+     * Set 主机安全客户端唯一Uuid。
+     * @param Uuid 主机安全客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -529,16 +529,16 @@ public class DescribeMachineInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版. 
-     * @return ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * Get 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版 
+     * @return ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      */
     public String getProtectType() {
         return this.ProtectType;
     }
 
     /**
-     * Set 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
-     * @param ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+     * Set 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @param ProtectType 防护版本：BASIC_VERSION 基础版，PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;

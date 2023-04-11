@@ -196,6 +196,14 @@ public class BillDetail extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * 价格属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PriceInfo")
+    @Expose
+    private String [] PriceInfo;
+
+    /**
      * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
      * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
      */
@@ -599,6 +607,26 @@ public class BillDetail extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 价格属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PriceInfo 价格属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getPriceInfo() {
+        return this.PriceInfo;
+    }
+
+    /**
+     * Set 价格属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceInfo 价格属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPriceInfo(String [] PriceInfo) {
+        this.PriceInfo = PriceInfo;
+    }
+
     public BillDetail() {
     }
 
@@ -685,6 +713,12 @@ public class BillDetail extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.PriceInfo != null) {
+            this.PriceInfo = new String[source.PriceInfo.length];
+            for (int i = 0; i < source.PriceInfo.length; i++) {
+                this.PriceInfo[i] = new String(source.PriceInfo[i]);
+            }
+        }
     }
 
 
@@ -716,6 +750,7 @@ public class BillDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "PriceInfo.", this.PriceInfo);
 
     }
 }

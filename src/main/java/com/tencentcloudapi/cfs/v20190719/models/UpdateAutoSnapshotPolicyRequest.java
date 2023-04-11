@@ -65,7 +65,7 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long IsActivated;
 
     /**
-    * 定期快照在月的某几天天，该参数与DayOfWeek互斥
+    * 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
     */
     @SerializedName("DayOfMonth")
     @Expose
@@ -175,16 +175,16 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 定期快照在月的某几天天，该参数与DayOfWeek互斥 
-     * @return DayOfMonth 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     * Get 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥 
+     * @return DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set 定期快照在月的某几天天，该参数与DayOfWeek互斥
-     * @param DayOfMonth 定期快照在月的某几天天，该参数与DayOfWeek互斥
+     * Set 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+     * @param DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;

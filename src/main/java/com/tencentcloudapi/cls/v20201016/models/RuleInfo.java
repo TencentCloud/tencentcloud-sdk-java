@@ -47,6 +47,14 @@ public class RuleInfo extends AbstractModel{
     private RuleTagInfo Tag;
 
     /**
+    * 动态索引配置，如果为空时代表未开启动态段索引
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DynamicIndex")
+    @Expose
+    private DynamicIndex DynamicIndex;
+
+    /**
      * Get 全文索引配置, 如果为空时代表未开启全文索引
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FullText 全文索引配置, 如果为空时代表未开启全文索引
@@ -106,6 +114,26 @@ public class RuleInfo extends AbstractModel{
         this.Tag = Tag;
     }
 
+    /**
+     * Get 动态索引配置，如果为空时代表未开启动态段索引
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DynamicIndex 动态索引配置，如果为空时代表未开启动态段索引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DynamicIndex getDynamicIndex() {
+        return this.DynamicIndex;
+    }
+
+    /**
+     * Set 动态索引配置，如果为空时代表未开启动态段索引
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DynamicIndex 动态索引配置，如果为空时代表未开启动态段索引
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDynamicIndex(DynamicIndex DynamicIndex) {
+        this.DynamicIndex = DynamicIndex;
+    }
+
     public RuleInfo() {
     }
 
@@ -123,6 +151,9 @@ public class RuleInfo extends AbstractModel{
         if (source.Tag != null) {
             this.Tag = new RuleTagInfo(source.Tag);
         }
+        if (source.DynamicIndex != null) {
+            this.DynamicIndex = new DynamicIndex(source.DynamicIndex);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class RuleInfo extends AbstractModel{
         this.setParamObj(map, prefix + "FullText.", this.FullText);
         this.setParamObj(map, prefix + "KeyValue.", this.KeyValue);
         this.setParamObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "DynamicIndex.", this.DynamicIndex);
 
     }
 }

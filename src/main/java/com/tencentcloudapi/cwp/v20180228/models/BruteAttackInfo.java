@@ -30,7 +30,7 @@ public class BruteAttackInfo extends AbstractModel{
     private Long Id;
 
     /**
-    * 云镜客户端唯一标识UUID
+    * 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
@@ -222,9 +222,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Get 云镜客户端唯一标识UUID
+     * Get 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uuid 云镜客户端唯一标识UUID
+     * @return Uuid 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
@@ -232,9 +232,9 @@ public class BruteAttackInfo extends AbstractModel{
     }
 
     /**
-     * Set 云镜客户端唯一标识UUID
+     * Set 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uuid 云镜客户端唯一标识UUID
+     * @param Uuid 主机安全客户端唯一标识UUID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {

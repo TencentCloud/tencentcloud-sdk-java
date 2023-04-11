@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetAccountUserPrivilegeResponse extends AbstractModel{
 
     /**
-    * 设置任务ID,用于查询是否设置完成
+    * 任务ID。
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,16 +37,16 @@ public class SetAccountUserPrivilegeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 设置任务ID,用于查询是否设置完成 
-     * @return FlowId 设置任务ID,用于查询是否设置完成
+     * Get 任务ID。 
+     * @return FlowId 任务ID。
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 设置任务ID,用于查询是否设置完成
-     * @param FlowId 设置任务ID,用于查询是否设置完成
+     * Set 任务ID。
+     * @param FlowId 任务ID。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

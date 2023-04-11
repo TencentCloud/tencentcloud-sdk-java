@@ -89,6 +89,14 @@ public class SearchLogResponse extends AbstractModel{
     private Column [] Columns;
 
     /**
+    * 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SamplingRate")
+    @Expose
+    private Float SamplingRate;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -264,6 +272,26 @@ public class SearchLogResponse extends AbstractModel{
     }
 
     /**
+     * Get 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SamplingRate 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getSamplingRate() {
+        return this.SamplingRate;
+    }
+
+    /**
+     * Set 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SamplingRate 本次统计分析使用的采样率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSamplingRate(Float SamplingRate) {
+        this.SamplingRate = SamplingRate;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -326,6 +354,9 @@ public class SearchLogResponse extends AbstractModel{
                 this.Columns[i] = new Column(source.Columns[i]);
             }
         }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Float(source.SamplingRate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -344,6 +375,7 @@ public class SearchLogResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
         this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
+        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

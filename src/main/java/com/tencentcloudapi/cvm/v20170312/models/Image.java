@@ -93,7 +93,7 @@ IMPORTFAILED-导入失败
     private String ImageState;
 
     /**
-    * 镜像来源平台
+    * 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
     */
     @SerializedName("Platform")
     @Expose
@@ -325,16 +325,16 @@ IMPORTFAILED-导入失败
     }
 
     /**
-     * Get 镜像来源平台 
-     * @return Platform 镜像来源平台
+     * Get 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。 
+     * @return Platform 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 镜像来源平台
-     * @param Platform 镜像来源平台
+     * Set 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
+     * @param Platform 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;

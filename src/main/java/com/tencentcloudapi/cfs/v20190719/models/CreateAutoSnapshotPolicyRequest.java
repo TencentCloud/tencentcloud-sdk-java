@@ -51,7 +51,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long AliveDays;
 
     /**
-    * 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+    * 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
     */
     @SerializedName("DayOfMonth")
     @Expose
@@ -129,16 +129,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 快照按月重复，每月1-31号，选择一天，每月这一天打快照。 
-     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     * Get 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。 
+     * @return DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
-     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月这一天打快照。
+     * Set 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+     * @param DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;

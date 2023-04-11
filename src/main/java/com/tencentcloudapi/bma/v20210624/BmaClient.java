@@ -200,7 +200,9 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *版权保护-新建取证接口
+     *不对外提供接口能力了
+
+版权保护-新建取证接口
      * @param req CreateCRObtainRequest
      * @return CreateCRObtainResponse
      * @throws TencentCloudSDKException

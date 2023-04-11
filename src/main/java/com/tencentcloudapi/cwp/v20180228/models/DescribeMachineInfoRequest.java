@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeMachineInfoRequest extends AbstractModel{
 
     /**
-    * 云镜客户端唯一Uuid。
+    * 主机安全客户端唯一Uuid。
     */
     @SerializedName("Uuid")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeMachineInfoRequest extends AbstractModel{
     private String Quuid;
 
     /**
-     * Get 云镜客户端唯一Uuid。 
-     * @return Uuid 云镜客户端唯一Uuid。
+     * Get 主机安全客户端唯一Uuid。 
+     * @return Uuid 主机安全客户端唯一Uuid。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一Uuid。
-     * @param Uuid 云镜客户端唯一Uuid。
+     * Set 主机安全客户端唯一Uuid。
+     * @param Uuid 主机安全客户端唯一Uuid。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

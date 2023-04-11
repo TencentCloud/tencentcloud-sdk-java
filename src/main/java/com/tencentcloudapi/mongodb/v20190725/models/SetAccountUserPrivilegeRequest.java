@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class SetAccountUserPrivilegeRequest extends AbstractModel{
 
     /**
-    * 实例ID。
+    * 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 账号名称。
+    * 设置账号名称。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 权限信息。
+    * 设置权限信息。
     */
     @SerializedName("AuthRole")
     @Expose
     private Auth [] AuthRole;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 指定待设置账号的实例ID。例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 账号名称。 
-     * @return UserName 账号名称。
+     * Get 设置账号名称。 
+     * @return UserName 设置账号名称。
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 账号名称。
-     * @param UserName 账号名称。
+     * Set 设置账号名称。
+     * @param UserName 设置账号名称。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 权限信息。 
-     * @return AuthRole 权限信息。
+     * Get 设置权限信息。 
+     * @return AuthRole 设置权限信息。
      */
     public Auth [] getAuthRole() {
         return this.AuthRole;
     }
 
     /**
-     * Set 权限信息。
-     * @param AuthRole 权限信息。
+     * Set 设置权限信息。
+     * @param AuthRole 设置权限信息。
      */
     public void setAuthRole(Auth [] AuthRole) {
         this.AuthRole = AuthRole;

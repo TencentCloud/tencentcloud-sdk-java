@@ -719,6 +719,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *获取指定时间内某个sql模版的慢日志明细
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实例SQL限流任务列表。
      * @param req DescribeSqlFiltersRequest
      * @return DescribeSqlFiltersResponse

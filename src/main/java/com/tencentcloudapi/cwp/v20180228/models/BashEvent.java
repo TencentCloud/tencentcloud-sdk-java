@@ -30,7 +30,7 @@ public class BashEvent extends AbstractModel{
     private Long Id;
 
     /**
-    * 云镜ID
+    * 主机安全ID
     */
     @SerializedName("Uuid")
     @Expose
@@ -178,16 +178,16 @@ public class BashEvent extends AbstractModel{
     }
 
     /**
-     * Get 云镜ID 
-     * @return Uuid 云镜ID
+     * Get 主机安全ID 
+     * @return Uuid 主机安全ID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜ID
-     * @param Uuid 云镜ID
+     * Set 主机安全ID
+     * @param Uuid 主机安全ID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
