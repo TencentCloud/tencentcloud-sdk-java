@@ -17,6 +17,9 @@
 
 package com.tencentcloudapi.common.profile;
 
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.X509TrustManager;
+
 public class HttpProfile {
 
   public static final String REQ_HTTPS = "https://";
@@ -61,6 +64,10 @@ public class HttpProfile {
 
   /** http proxy password */
   private String proxyPassword;
+
+  private SSLSocketFactory sslSocketFactory;
+
+  private X509TrustManager trustManager;
 
   public HttpProfile() {
     this.reqMethod = HttpProfile.REQ_POST;
@@ -194,5 +201,21 @@ public class HttpProfile {
 
   public void setRootDomain(String rootDomain) {
     this.rootDomain = rootDomain;
+  }
+
+  public SSLSocketFactory getSslSocketFactory() {
+    return sslSocketFactory;
+  }
+
+  public void setSslSocketFactory(SSLSocketFactory sslSocketFactory) {
+    this.sslSocketFactory = sslSocketFactory;
+  }
+
+  public X509TrustManager getX509TrustManager() {
+    return trustManager;
+  }
+
+  public void setX509TrustManager(X509TrustManager trustManager) {
+    this.trustManager = trustManager;
   }
 }

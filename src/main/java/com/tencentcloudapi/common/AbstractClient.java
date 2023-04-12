@@ -29,6 +29,8 @@ import java.util.UUID;
 import java.security.SecureRandom;
 import javax.crypto.Mac;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.X509TrustManager;
 import javax.xml.bind.DatatypeConverter;
 
 import java.io.ByteArrayOutputStream;
@@ -102,6 +104,7 @@ public abstract class AbstractClient {
     );
     this.httpConnection.addInterceptors(this.log);
     this.trySetProxy(this.httpConnection);
+    this.trySetSSLSocketFactory(this.httpConnection);
     warmup();
   }
 
@@ -320,6 +323,18 @@ public abstract class AbstractClient {
                     .build();
           }
         });
+  }
+
+  private void trySetSSLSocketFactory(HttpConnection conn){
+    SSLSocketFactory sslSocketFactory = this.profile.getHttpProfile().getSslSocketFactory();
+    X509TrustManager trustManager = this.profile.getHttpProfile().getX509TrustManager();
+    if(sslSocketFactory != null) {
+      if(trustManager != null) {
+        this.httpConnection.setSSLSocketFactory(sslSocketFactory, trustManager);
+      }else{
+        this.httpConnection.setSSLSocketFactory(sslSocketFactory);
+      }
+    }
   }
 
   protected String internalRequest(AbstractModel request, String actionName)
