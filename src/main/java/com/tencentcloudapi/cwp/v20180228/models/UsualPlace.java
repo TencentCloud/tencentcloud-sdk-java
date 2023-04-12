@@ -30,7 +30,7 @@ public class UsualPlace extends AbstractModel{
     private Long Id;
 
     /**
-    * 云镜客户端唯一标识UUID。
+    * 主机安全客户端唯一标识UUID。
     */
     @SerializedName("Uuid")
     @Expose
@@ -74,16 +74,16 @@ public class UsualPlace extends AbstractModel{
     }
 
     /**
-     * Get 云镜客户端唯一标识UUID。 
-     * @return Uuid 云镜客户端唯一标识UUID。
+     * Get 主机安全客户端唯一标识UUID。 
+     * @return Uuid 主机安全客户端唯一标识UUID。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一标识UUID。
-     * @param Uuid 云镜客户端唯一标识UUID。
+     * Set 主机安全客户端唯一标识UUID。
+     * @param Uuid 主机安全客户端唯一标识UUID。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

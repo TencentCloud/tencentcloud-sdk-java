@@ -30,7 +30,7 @@ public class CreateInputSRTSettings extends AbstractModel{
     private String Mode;
 
     /**
-    * 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+    * 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
     */
     @SerializedName("StreamId")
     @Expose
@@ -102,16 +102,16 @@ public class CreateInputSRTSettings extends AbstractModel{
     }
 
     /**
-     * Get 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。 
-     * @return StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+     * Get 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。 
+     * @return StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
-     * @param StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
+     * Set 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
+     * @param StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

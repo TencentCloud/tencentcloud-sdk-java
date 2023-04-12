@@ -65,6 +65,13 @@ public class DescribeScanStatsRequest extends AbstractModel{
     private String BatchId;
 
     /**
+    * 安心码
+    */
+    @SerializedName("Code")
+    @Expose
+    private String Code;
+
+    /**
      * Get 企业ID 
      * @return CorpId 企业ID
      */
@@ -160,6 +167,22 @@ public class DescribeScanStatsRequest extends AbstractModel{
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 安心码 
+     * @return Code 安心码
+     */
+    public String getCode() {
+        return this.Code;
+    }
+
+    /**
+     * Set 安心码
+     * @param Code 安心码
+     */
+    public void setCode(String Code) {
+        this.Code = Code;
+    }
+
     public DescribeScanStatsRequest() {
     }
 
@@ -186,6 +209,9 @@ public class DescribeScanStatsRequest extends AbstractModel{
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.Code != null) {
+            this.Code = new String(source.Code);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeScanStatsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "Code", this.Code);
 
     }
 }

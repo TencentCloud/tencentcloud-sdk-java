@@ -140,6 +140,14 @@ public class TemplateInfo extends AbstractModel{
     private String TemplateVersion;
 
     /**
+    * 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Available")
+    @Expose
+    private Long Available;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -415,6 +423,26 @@ public class TemplateInfo extends AbstractModel{
         this.TemplateVersion = TemplateVersion;
     }
 
+    /**
+     * Get 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Available 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAvailable() {
+        return this.Available;
+    }
+
+    /**
+     * Set 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Available 模板可用状态，取值：1启用（默认），2停用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAvailable(Long Available) {
+        this.Available = Available;
+    }
+
     public TemplateInfo() {
     }
 
@@ -480,6 +508,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.TemplateVersion != null) {
             this.TemplateVersion = new String(source.TemplateVersion);
         }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
     }
 
 
@@ -503,6 +534,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelTemplateName", this.ChannelTemplateName);
         this.setParamSimple(map, prefix + "ChannelAutoSave", this.ChannelAutoSave);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
+        this.setParamSimple(map, prefix + "Available", this.Available);
 
     }
 }

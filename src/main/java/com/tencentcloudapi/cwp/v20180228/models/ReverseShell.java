@@ -30,7 +30,7 @@ public class ReverseShell extends AbstractModel{
     private Long Id;
 
     /**
-    * 云镜UUID
+    * 主机安全UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -195,16 +195,16 @@ public class ReverseShell extends AbstractModel{
     }
 
     /**
-     * Get 云镜UUID 
-     * @return Uuid 云镜UUID
+     * Get 主机安全UUID 
+     * @return Uuid 主机安全UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜UUID
-     * @param Uuid 云镜UUID
+     * Set 主机安全UUID
+     * @param Uuid 主机安全UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

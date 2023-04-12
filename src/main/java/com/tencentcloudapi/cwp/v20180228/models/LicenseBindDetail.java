@@ -51,7 +51,7 @@ public class LicenseBindDetail extends AbstractModel{
     private String Quuid;
 
     /**
-    * 云镜客户端UUID
+    * 主机安全客户端UUID
     */
     @SerializedName("Uuid")
     @Expose
@@ -65,7 +65,7 @@ public class LicenseBindDetail extends AbstractModel{
     private String [] Tags;
 
     /**
-    * 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
+    * 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
     */
     @SerializedName("AgentStatus")
     @Expose
@@ -158,16 +158,16 @@ public class LicenseBindDetail extends AbstractModel{
     }
 
     /**
-     * Get 云镜客户端UUID 
-     * @return Uuid 云镜客户端UUID
+     * Get 主机安全客户端UUID 
+     * @return Uuid 主机安全客户端UUID
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端UUID
-     * @param Uuid 云镜客户端UUID
+     * Set 主机安全客户端UUID
+     * @param Uuid 主机安全客户端UUID
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -190,16 +190,16 @@ public class LicenseBindDetail extends AbstractModel{
     }
 
     /**
-     * Get 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装 
-     * @return AgentStatus 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
+     * Get 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装 
+     * @return AgentStatus 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
-     * @param AgentStatus 云镜客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
+     * Set 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
+     * @param AgentStatus 主机安全客户端状态,OFFLINE 离线,ONLINE 在线,UNINSTALL 未安装
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;

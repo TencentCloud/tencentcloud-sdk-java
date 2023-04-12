@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SecurityDynamic extends AbstractModel{
 
     /**
-    * 云镜客户端UUID。
+    * 主机安全客户端UUID。
     */
     @SerializedName("Uuid")
     @Expose
@@ -68,16 +68,16 @@ public class SecurityDynamic extends AbstractModel{
     private String SecurityLevel;
 
     /**
-     * Get 云镜客户端UUID。 
-     * @return Uuid 云镜客户端UUID。
+     * Get 主机安全客户端UUID。 
+     * @return Uuid 主机安全客户端UUID。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端UUID。
-     * @param Uuid 云镜客户端UUID。
+     * Set 主机安全客户端UUID。
+     * @param Uuid 主机安全客户端UUID。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

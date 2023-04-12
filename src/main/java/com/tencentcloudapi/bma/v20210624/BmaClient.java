@@ -200,28 +200,6 @@ public class BmaClient extends AbstractClient{
     }
 
     /**
-     *不对外提供接口能力了
-
-版权保护-新建取证接口
-     * @param req CreateCRObtainRequest
-     * @return CreateCRObtainResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCRObtainResponse CreateCRObtain(CreateCRObtainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateCRObtainResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateCRObtainResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateCRObtain");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *版权保护-新建发函接口
      * @param req CreateCRRightRequest
      * @return CreateCRRightResponse

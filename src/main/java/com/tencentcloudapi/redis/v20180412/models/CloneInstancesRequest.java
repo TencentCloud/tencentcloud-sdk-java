@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class CloneInstancesRequest extends AbstractModel{
 
     /**
-    * 当前实例ID。
+    * 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。
+    * 单次克隆实例的数量。
+- 包年包月每次购买最大数量为100。
+- 按量计费每次购买最大数量为30。
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -79,14 +81,14 @@ public class CloneInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-    * 私有网络ID。如果未配置该参数，默认选择基础网络。
+    * 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络所属子网。基础网络时该参数无需配置。
+    * 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -107,7 +109,7 @@ public class CloneInstancesRequest extends AbstractModel{
     private String Password;
 
     /**
-    * 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+    * 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -128,7 +130,7 @@ public class CloneInstancesRequest extends AbstractModel{
     private RedisNodeInfo [] NodeSet;
 
     /**
-    * 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+    * 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -142,46 +144,56 @@ public class CloneInstancesRequest extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
-    * 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。
+    * 指定克隆实例相关的参数模板 ID。
+- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。
+    * 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
     */
     @SerializedName("AlarmPolicyList")
     @Expose
     private String [] AlarmPolicyList;
 
     /**
-     * Get 当前实例ID。 
-     * @return InstanceId 当前实例ID。
+     * Get 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 当前实例ID。
-     * @param InstanceId 当前实例ID。
+     * Set 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。 
-     * @return GoodsNum 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。
+     * Get 单次克隆实例的数量。
+- 包年包月每次购买最大数量为100。
+- 按量计费每次购买最大数量为30。 
+     * @return GoodsNum 单次克隆实例的数量。
+- 包年包月每次购买最大数量为100。
+- 按量计费每次购买最大数量为30。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。
-     * @param GoodsNum 单次克隆实例的数量。包年包月每次购买最大数量为100。按量计费每次购买最大数量为30，每个地域购买数量取值范围为[1,100]。
+     * Set 单次克隆实例的数量。
+- 包年包月每次购买最大数量为100。
+- 按量计费每次购买最大数量为30。
+     * @param GoodsNum 单次克隆实例的数量。
+- 包年包月每次购买最大数量为100。
+- 按量计费每次购买最大数量为30。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
@@ -284,32 +296,32 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 私有网络ID。如果未配置该参数，默认选择基础网络。 
-     * @return VpcId 私有网络ID。如果未配置该参数，默认选择基础网络。
+     * Get 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。 
+     * @return VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID。如果未配置该参数，默认选择基础网络。
-     * @param VpcId 私有网络ID。如果未配置该参数，默认选择基础网络。
+     * Set 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
+     * @param VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络所属子网。基础网络时该参数无需配置。 
-     * @return SubnetId 私有网络所属子网。基础网络时该参数无需配置。
+     * Get 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。 
+     * @return SubnetId 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络所属子网。基础网络时该参数无需配置。
-     * @param SubnetId 私有网络所属子网。基础网络时该参数无需配置。
+     * Set 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
+     * @param SubnetId 配置克隆实例所属私有网络的子网。基础网络时该参数无需配置。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -348,16 +360,16 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul> 
-     * @return AutoRenew 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * Get 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul> 
+     * @return AutoRenew 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
-     * @param AutoRenew 自动续费标识。<ul><li>0：默认状态（手动续费）。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * Set 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
+     * @param AutoRenew 自动续费标识。<ul><li>0：默认状态，手动续费。</li><li>1：自动续费。</li><li>2：不自动续费，到期自动隔离。</li></ul>
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -396,16 +408,16 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。 
-     * @return ProjectId 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * Get 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。 
+     * @return ProjectId 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
-     * @param ProjectId 项目 ID。登录控制台，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * Set 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
+     * @param ProjectId 项目 ID。登录[Redis 控制台](https://console.cloud.tencent.com/redis#/)，可在右上角的<b>账号中心</b> > <b>项目管理</b>中查找项目ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -428,32 +440,40 @@ public class CloneInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。 
-     * @return TemplateId 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。
+     * Get 指定克隆实例相关的参数模板 ID。
+- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。 
+     * @return TemplateId 指定克隆实例相关的参数模板 ID。
+- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。
-     * @param TemplateId 克隆实例需要应用的参数模板ID,请登录 Redis 控制台，在<b>参数模板</b>页面获取。若不配置该参数，则应用默认的参数模板。
+     * Set 指定克隆实例相关的参数模板 ID。
+- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
+     * @param TemplateId 指定克隆实例相关的参数模板 ID。
+- 若不配置该参数，则系统会依据所选择的兼容版本及架构，自动适配对应的默认模板。
+- 请通过[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)接口，查询实例的参数模板列表，获取模板 ID 编号。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。 
-     * @return AlarmPolicyList 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。
+     * Get 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。 
+     * @return AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
      */
     public String [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。
-     * @param AlarmPolicyList 指定克隆实例的告警策略 ID。请登录控制台，在<b>云监控</b> > <b>告警配置</b> > <b>告警策略</b>页面获取策略 ID 信息。
+     * Set 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
+     * @param AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
      */
     public void setAlarmPolicyList(String [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

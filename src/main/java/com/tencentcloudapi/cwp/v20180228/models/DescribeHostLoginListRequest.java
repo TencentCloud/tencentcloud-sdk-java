@@ -39,7 +39,7 @@ public class DescribeHostLoginListRequest extends AbstractModel{
     /**
     * 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -101,7 +101,7 @@ public class DescribeHostLoginListRequest extends AbstractModel{
     /**
      * Get 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -111,7 +111,7 @@ public class DescribeHostLoginListRequest extends AbstractModel{
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li> 
      * @return Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -127,7 +127,7 @@ public class DescribeHostLoginListRequest extends AbstractModel{
     /**
      * Set 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>
@@ -137,7 +137,7 @@ public class DescribeHostLoginListRequest extends AbstractModel{
 <li>RiskLevel - int - 是否必填：否 - 状态筛选0:高危；1：可疑</li>
      * @param Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
-<li>Uuid - String - 是否必填：否 - 云镜唯一Uuid</li>
+<li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
 <li>Quuid - String - 是否必填：否 - 云服务器uuid</li>
 <li>UserName - String - 是否必填：否 - 用户名筛选</li>
 <li>LoginTimeBegin - String - 是否必填：否 - 按照修改时间段筛选，开始时间</li>

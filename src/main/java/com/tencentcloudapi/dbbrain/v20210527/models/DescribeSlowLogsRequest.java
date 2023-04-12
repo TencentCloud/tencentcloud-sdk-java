@@ -58,14 +58,14 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 分页参数
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页参数
+    * 查询数目，默认为20，最大为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -187,32 +187,32 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页参数 
-     * @return Offset 分页参数
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页参数
-     * @param Offset 分页参数
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页参数 
-     * @return Limit 分页参数
+     * Get 查询数目，默认为20，最大为100。 
+     * @return Limit 查询数目，默认为20，最大为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页参数
-     * @param Limit 分页参数
+     * Set 查询数目，默认为20，最大为100。
+     * @param Limit 查询数目，默认为20，最大为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

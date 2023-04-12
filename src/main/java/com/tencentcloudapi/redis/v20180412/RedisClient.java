@@ -219,7 +219,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口（CloneInstances）可基于当前实例的备份文件克隆一个完整的新实例。
+     *本接口（CloneInstances）用于基于当前实例的备份文件克隆一个完整的新实例。
      * @param req CloneInstancesRequest
      * @return CloneInstancesResponse
      * @throws TencentCloudSDKException
@@ -451,6 +451,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeBandwidthRange）用于查询实例带宽信息。
+     * @param req DescribeBandwidthRangeRequest
+     * @return DescribeBandwidthRangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthRangeResponse DescribeBandwidthRange(DescribeBandwidthRangeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthRangeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBandwidthRange");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1611,6 +1631,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseWanAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *移除复制组成员
+     * @param req RemoveReplicationInstanceRequest
+     * @return RemoveReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveReplicationInstanceResponse RemoveReplicationInstance(RemoveReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveReplicationInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

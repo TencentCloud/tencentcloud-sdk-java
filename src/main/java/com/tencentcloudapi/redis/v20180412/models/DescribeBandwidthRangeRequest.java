@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProVersionStatusRequest extends AbstractModel{
+public class DescribeBandwidthRangeRequest extends AbstractModel{
 
     /**
-    * 主机安全客户端UUID、填写"all"表示所有主机。
+    * 实例 ID。
     */
-    @SerializedName("Uuid")
+    @SerializedName("InstanceId")
     @Expose
-    private String Uuid;
+    private String InstanceId;
 
     /**
-     * Get 主机安全客户端UUID、填写"all"表示所有主机。 
-     * @return Uuid 主机安全客户端UUID、填写"all"表示所有主机。
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
-    public String getUuid() {
-        return this.Uuid;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set 主机安全客户端UUID、填写"all"表示所有主机。
-     * @param Uuid 主机安全客户端UUID、填写"all"表示所有主机。
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
-    public void setUuid(String Uuid) {
-        this.Uuid = Uuid;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public DescribeProVersionStatusRequest() {
+    public DescribeBandwidthRangeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProVersionStatusRequest(DescribeProVersionStatusRequest source) {
-        if (source.Uuid != null) {
-            this.Uuid = new String(source.Uuid);
+    public DescribeBandwidthRangeRequest(DescribeBandwidthRangeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeProVersionStatusRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

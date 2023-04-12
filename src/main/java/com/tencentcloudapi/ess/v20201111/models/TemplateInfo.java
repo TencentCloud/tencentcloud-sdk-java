@@ -121,6 +121,13 @@ public class TemplateInfo extends AbstractModel{
     private Recipient Promoter;
 
     /**
+    * 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+    */
+    @SerializedName("Available")
+    @Expose
+    private Long Available;
+
+    /**
     * 模板创建组织id
     */
     @SerializedName("OrganizationId")
@@ -376,6 +383,22 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用 
+     * @return Available 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     */
+    public Long getAvailable() {
+        return this.Available;
+    }
+
+    /**
+     * Set 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     * @param Available 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     */
+    public void setAvailable(Long Available) {
+        this.Available = Available;
+    }
+
+    /**
      * Get 模板创建组织id 
      * @return OrganizationId 模板创建组织id
      */
@@ -522,6 +545,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.Promoter != null) {
             this.Promoter = new Recipient(source.Promoter);
         }
+        if (source.Available != null) {
+            this.Available = new Long(source.Available);
+        }
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
         }
@@ -555,6 +581,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamObj(map, prefix + "Promoter.", this.Promoter);
+        this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
