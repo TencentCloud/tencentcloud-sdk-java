@@ -424,3 +424,12 @@ Credential cred = new DefaultCredentialsProvider().getCredentials();
 ```
 
 凭证管理详细使用请参阅示例：[使用凭证提供链](./examples/common/credential_manager/CredentialManager.java)
+
+
+
+# 自定义 SSLSocketFactory 和 X509TrustManager
+```java
+ClientProfile cpf = new ClientProfile();
+cpf.getHttpProfile().setSslSocketFactory(new MySSLSocketFactoryImpl());
+cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
+```

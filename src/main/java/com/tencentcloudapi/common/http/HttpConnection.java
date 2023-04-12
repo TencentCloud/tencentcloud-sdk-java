@@ -27,6 +27,8 @@ import okhttp3.Interceptor;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
+import javax.net.ssl.SSLSocketFactory;
+import javax.net.ssl.X509TrustManager;
 import java.util.concurrent.TimeUnit;
 import java.io.IOException;
 import java.net.Proxy;;
@@ -46,13 +48,22 @@ public class HttpConnection {
   public void addInterceptors(Interceptor interceptor) {
     this.client = this.client.newBuilder().addInterceptor(interceptor).build();
   }
-  
+
   public void setProxy(Proxy proxy) {
     this.client = this.client.newBuilder().proxy(proxy).build();
   }
 
   public void setProxyAuthenticator(Authenticator authenticator) {
     this.client = this.client.newBuilder().proxyAuthenticator(authenticator).build();
+  }
+
+  @Deprecated
+  public void setSSLSocketFactory(SSLSocketFactory sslSocketFactory){
+    this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory).build();
+  }
+
+  public void setSSLSocketFactory(SSLSocketFactory sslSocketFactory, X509TrustManager trustManager){
+    this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory, trustManager).build();
   }
 
   public Response doRequest(Request request) throws TencentCloudSDKException {
