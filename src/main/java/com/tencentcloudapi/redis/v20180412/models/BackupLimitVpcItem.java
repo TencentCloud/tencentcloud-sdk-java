@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class BackupLimitVpcItem extends AbstractModel{
 
     /**
-    * 自定义下载备份文件的VPC 所属地域。
+    * 备份文件的下载地址对应VPC 所属的地域。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 自定义下载备份文件的 VPC 列表。
+    * 备份文件下载地址的 VPC 列表。
     */
     @SerializedName("VpcList")
     @Expose
     private String [] VpcList;
 
     /**
-     * Get 自定义下载备份文件的VPC 所属地域。 
-     * @return Region 自定义下载备份文件的VPC 所属地域。
+     * Get 备份文件的下载地址对应VPC 所属的地域。 
+     * @return Region 备份文件的下载地址对应VPC 所属的地域。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 自定义下载备份文件的VPC 所属地域。
-     * @param Region 自定义下载备份文件的VPC 所属地域。
+     * Set 备份文件的下载地址对应VPC 所属的地域。
+     * @param Region 备份文件的下载地址对应VPC 所属的地域。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 自定义下载备份文件的 VPC 列表。 
-     * @return VpcList 自定义下载备份文件的 VPC 列表。
+     * Get 备份文件下载地址的 VPC 列表。 
+     * @return VpcList 备份文件下载地址的 VPC 列表。
      */
     public String [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set 自定义下载备份文件的 VPC 列表。
-     * @param VpcList 自定义下载备份文件的 VPC 列表。
+     * Set 备份文件下载地址的 VPC 列表。
+     * @param VpcList 备份文件下载地址的 VPC 列表。
      */
     public void setVpcList(String [] VpcList) {
         this.VpcList = VpcList;

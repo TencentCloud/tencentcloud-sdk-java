@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoResponse extends AbstractModel{
 
     /**
-    * 实例参数个数
+    * 参数模板的参数数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,21 +44,31 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String Name;
 
     /**
-    * 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+    * 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * 参数模板描述
+    * 参数模板描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 参数详情
+    * 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
     */
     @SerializedName("Items")
     @Expose
@@ -72,16 +82,16 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例参数个数 
-     * @return TotalCount 实例参数个数
+     * Get 参数模板的参数数量。 
+     * @return TotalCount 参数模板的参数数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例参数个数
-     * @param TotalCount 实例参数个数
+     * Set 参数模板的参数数量。
+     * @param TotalCount 参数模板的参数数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -120,48 +130,88 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构） 
-     * @return ProductType 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Get 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。 
+     * @return ProductType 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
-     * @param ProductType 产品类型：1 – Redis2.8内存版（集群架构），2 – Redis2.8内存版（标准架构），3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版（单机），6 – Redis4.0内存版（标准架构），7 – Redis4.0内存版（集群架构），8 – Redis5.0内存版（标准架构），9 – Redis5.0内存版（集群架构）
+     * Set 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
+     * @param ProductType 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get 参数模板描述 
-     * @return Description 参数模板描述
+     * Get 参数模板描述。 
+     * @return Description 参数模板描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 参数模板描述
-     * @param Description 参数模板描述
+     * Set 参数模板描述。
+     * @param Description 参数模板描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 参数详情 
-     * @return Items 参数详情
+     * Get 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。 
+     * @return Items 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
      */
     public ParameterDetail [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 参数详情
-     * @param Items 参数详情
+     * Set 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
+     * @param Items 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
      */
     public void setItems(ParameterDetail [] Items) {
         this.Items = Items;

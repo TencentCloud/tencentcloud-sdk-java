@@ -23,115 +23,130 @@ import java.util.HashMap;
 public class InstanceParamHistory extends AbstractModel{
 
     /**
-    * 参数名称
+    * 参数名称。
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * 修改前值
+    * 参数修改之前的值。
     */
     @SerializedName("PreValue")
     @Expose
     private String PreValue;
 
     /**
-    * 修改后值
+    * 参数修改之后的值。
     */
     @SerializedName("NewValue")
     @Expose
     private String NewValue;
 
     /**
-    * 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+    * 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 修改时间
+    * 修改时间。
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 参数名称 
-     * @return ParamName 参数名称
+     * Get 参数名称。 
+     * @return ParamName 参数名称。
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set 参数名称
-     * @param ParamName 参数名称
+     * Set 参数名称。
+     * @param ParamName 参数名称。
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get 修改前值 
-     * @return PreValue 修改前值
+     * Get 参数修改之前的值。 
+     * @return PreValue 参数修改之前的值。
      */
     public String getPreValue() {
         return this.PreValue;
     }
 
     /**
-     * Set 修改前值
-     * @param PreValue 修改前值
+     * Set 参数修改之前的值。
+     * @param PreValue 参数修改之前的值。
      */
     public void setPreValue(String PreValue) {
         this.PreValue = PreValue;
     }
 
     /**
-     * Get 修改后值 
-     * @return NewValue 修改后值
+     * Get 参数修改之后的值。 
+     * @return NewValue 参数修改之后的值。
      */
     public String getNewValue() {
         return this.NewValue;
     }
 
     /**
-     * Set 修改后值
-     * @param NewValue 修改后值
+     * Set 参数修改之后的值。
+     * @param NewValue 参数修改之后的值。
      */
     public void setNewValue(String NewValue) {
         this.NewValue = NewValue;
     }
 
     /**
-     * Get 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败 
-     * @return Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+     * Get 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。 
+     * @return Status 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
-     * @param Status 状态：1-参数配置修改中；2-参数配置修改成功；3-参数配置修改失败
+     * Set 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
+     * @param Status 参数配置状态。
+- 1：参数配置修改中。
+- 2：参数配置修改成功。
+- 3：参数配置修改失败。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 修改时间 
-     * @return ModifyTime 修改时间
+     * Get 修改时间。 
+     * @return ModifyTime 修改时间。
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set 修改时间
-     * @param ModifyTime 修改时间
+     * Set 修改时间。
+     * @param ModifyTime 修改时间。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

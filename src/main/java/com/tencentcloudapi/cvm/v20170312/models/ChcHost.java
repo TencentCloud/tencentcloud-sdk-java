@@ -46,10 +46,12 @@ public class ChcHost extends AbstractModel{
     /**
     * CHC的状态<br/>
 <ul>
-<li>REGISTERED: 设备已录入。还未配置带外和部署网络</li>
-<li>VPC_READY: 已配置带外和部署网络</li>
+<li>INIT: 设备已录入。还未配置带外和部署网络</li>
+<li>READY: 已配置带外和部署网络</li>
 <li>PREPARED: 可分配云主机</li>
 <li>ONLINE: 已分配云主机</li>
+<li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
+<li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
     */
     @SerializedName("InstanceState")
@@ -251,17 +253,21 @@ TENANT: 租赁
     /**
      * Get CHC的状态<br/>
 <ul>
-<li>REGISTERED: 设备已录入。还未配置带外和部署网络</li>
-<li>VPC_READY: 已配置带外和部署网络</li>
+<li>INIT: 设备已录入。还未配置带外和部署网络</li>
+<li>READY: 已配置带外和部署网络</li>
 <li>PREPARED: 可分配云主机</li>
 <li>ONLINE: 已分配云主机</li>
+<li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
+<li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul> 
      * @return InstanceState CHC的状态<br/>
 <ul>
-<li>REGISTERED: 设备已录入。还未配置带外和部署网络</li>
-<li>VPC_READY: 已配置带外和部署网络</li>
+<li>INIT: 设备已录入。还未配置带外和部署网络</li>
+<li>READY: 已配置带外和部署网络</li>
 <li>PREPARED: 可分配云主机</li>
 <li>ONLINE: 已分配云主机</li>
+<li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
+<li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
      */
     public String getInstanceState() {
@@ -271,17 +277,21 @@ TENANT: 租赁
     /**
      * Set CHC的状态<br/>
 <ul>
-<li>REGISTERED: 设备已录入。还未配置带外和部署网络</li>
-<li>VPC_READY: 已配置带外和部署网络</li>
+<li>INIT: 设备已录入。还未配置带外和部署网络</li>
+<li>READY: 已配置带外和部署网络</li>
 <li>PREPARED: 可分配云主机</li>
 <li>ONLINE: 已分配云主机</li>
+<li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
+<li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
      * @param InstanceState CHC的状态<br/>
 <ul>
-<li>REGISTERED: 设备已录入。还未配置带外和部署网络</li>
-<li>VPC_READY: 已配置带外和部署网络</li>
+<li>INIT: 设备已录入。还未配置带外和部署网络</li>
+<li>READY: 已配置带外和部署网络</li>
 <li>PREPARED: 可分配云主机</li>
 <li>ONLINE: 已分配云主机</li>
+<li>OPERATING: 设备操作中，如正在配置带外网络等。</li>
+<li>CLEAR_NETWORK_FAILED: 清理带外和部署网络失败</li>
 </ul>
      */
     public void setInstanceState(String InstanceState) {

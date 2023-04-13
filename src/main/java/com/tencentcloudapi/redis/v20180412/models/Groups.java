@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Groups extends AbstractModel{
 
     /**
-    * 用户AppID
+    * 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
     */
     @SerializedName("AppId")
     @Expose
@@ -55,7 +55,7 @@ public class Groups extends AbstractModel{
     private Long RegionId;
 
     /**
-    * 复制组 ID。
+    * 复制组 ID。格式如：crs-rpl-deind****。
     */
     @SerializedName("GroupId")
     @Expose
@@ -105,16 +105,16 @@ public class Groups extends AbstractModel{
     private String Remark;
 
     /**
-     * Get 用户AppID 
-     * @return AppId 用户AppID
+     * Get 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。 
+     * @return AppId 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户AppID
-     * @param AppId 用户AppID
+     * Set 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @param AppId 用户 APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -209,16 +209,16 @@ public class Groups extends AbstractModel{
     }
 
     /**
-     * Get 复制组 ID。 
-     * @return GroupId 复制组 ID。
+     * Get 复制组 ID。格式如：crs-rpl-deind****。 
+     * @return GroupId 复制组 ID。格式如：crs-rpl-deind****。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组 ID。
-     * @param GroupId 复制组 ID。
+     * Set 复制组 ID。格式如：crs-rpl-deind****。
+     * @param GroupId 复制组 ID。格式如：crs-rpl-deind****。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

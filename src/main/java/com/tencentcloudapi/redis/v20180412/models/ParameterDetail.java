@@ -23,49 +23,51 @@ import java.util.HashMap;
 public class ParameterDetail extends AbstractModel{
 
     /**
-    * 参数名称
+    * 参数名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 参数类型
+    * 参数类型。
     */
     @SerializedName("ParamType")
     @Expose
     private String ParamType;
 
     /**
-    * 参数默认值
+    * 参数默认值。
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-    * 参数描述
+    * 参数描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 参数当前值
+    * 参数当前值。
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+    * 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
     */
     @SerializedName("NeedReboot")
     @Expose
     private Long NeedReboot;
 
     /**
-    * 参数允许的最大值
+    * 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
@@ -73,7 +75,7 @@ public class ParameterDetail extends AbstractModel{
     private String Max;
 
     /**
-    * 参数允许的最小值
+    * 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
@@ -81,7 +83,7 @@ public class ParameterDetail extends AbstractModel{
     private String Min;
 
     /**
-    * 参数的可选枚举值。如果为非枚举参数，则为空
+    * 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnumValue")
@@ -89,105 +91,113 @@ public class ParameterDetail extends AbstractModel{
     private String [] EnumValue;
 
     /**
-     * Get 参数名称 
-     * @return Name 参数名称
+     * Get 参数名称。 
+     * @return Name 参数名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 参数名称
-     * @param Name 参数名称
+     * Set 参数名称。
+     * @param Name 参数名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数类型 
-     * @return ParamType 参数类型
+     * Get 参数类型。 
+     * @return ParamType 参数类型。
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set 参数类型
-     * @param ParamType 参数类型
+     * Set 参数类型。
+     * @param ParamType 参数类型。
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
     }
 
     /**
-     * Get 参数默认值 
-     * @return Default 参数默认值
+     * Get 参数默认值。 
+     * @return Default 参数默认值。
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set 参数默认值
-     * @param Default 参数默认值
+     * Set 参数默认值。
+     * @param Default 参数默认值。
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get 参数描述 
-     * @return Description 参数描述
+     * Get 参数描述。 
+     * @return Description 参数描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 参数描述
-     * @param Description 参数描述
+     * Set 参数描述。
+     * @param Description 参数描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 参数当前值 
-     * @return CurrentValue 参数当前值
+     * Get 参数当前值。 
+     * @return CurrentValue 参数当前值。
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set 参数当前值
-     * @param CurrentValue 参数当前值
+     * Set 参数当前值。
+     * @param CurrentValue 参数当前值。
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启 
-     * @return NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+     * Get 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。 
+     * @return NeedReboot 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
-     * @param NeedReboot 修改参数后，是否需要重启数据库以使参数生效。可能的值包括：0-不需要重启；1-需要重启
+     * Set 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
+     * @param NeedReboot 修改参数后，是否需要重启数据库以使参数生效。
+- 0：不需要重启。
+- 1：需要重启。
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get 参数允许的最大值
+     * Get 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Max 参数允许的最大值
+     * @return Max 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMax() {
@@ -195,9 +205,9 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Set 参数允许的最大值
+     * Set 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Max 参数允许的最大值
+     * @param Max 参数允许的最大值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(String Max) {
@@ -205,9 +215,9 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Get 参数允许的最小值
+     * Get 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Min 参数允许的最小值
+     * @return Min 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMin() {
@@ -215,9 +225,9 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Set 参数允许的最小值
+     * Set 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Min 参数允许的最小值
+     * @param Min 参数允许的最小值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(String Min) {
@@ -225,9 +235,9 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Get 参数的可选枚举值。如果为非枚举参数，则为空
+     * Get 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
+     * @return EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEnumValue() {
@@ -235,9 +245,9 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Set 参数的可选枚举值。如果为非枚举参数，则为空
+     * Set 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnumValue 参数的可选枚举值。如果为非枚举参数，则为空
+     * @param EnumValue 参数可选枚举值。如果为非枚举参数，则为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnumValue(String [] EnumValue) {

@@ -241,6 +241,22 @@ public class DetectInfoText extends AbstractModel{
     private Long NFCBillingCounts;
 
     /**
+    * 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PassNo")
+    @Expose
+    private String PassNo;
+
+    /**
+    * 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VisaNum")
+    @Expose
+    private String VisaNum;
+
+    /**
      * Get 本次流程最终验证结果。0为成功
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrCode 本次流程最终验证结果。0为成功
@@ -800,6 +816,46 @@ public class DetectInfoText extends AbstractModel{
         this.NFCBillingCounts = NFCBillingCounts;
     }
 
+    /**
+     * Get 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PassNo 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPassNo() {
+        return this.PassNo;
+    }
+
+    /**
+     * Set 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PassNo 港澳台居住证通行证号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPassNo(String PassNo) {
+        this.PassNo = PassNo;
+    }
+
+    /**
+     * Get 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VisaNum 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVisaNum() {
+        return this.VisaNum;
+    }
+
+    /**
+     * Set 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VisaNum 港澳台居住证签发次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVisaNum(String VisaNum) {
+        this.VisaNum = VisaNum;
+    }
+
     public DetectInfoText() {
     }
 
@@ -892,6 +948,12 @@ public class DetectInfoText extends AbstractModel{
         if (source.NFCBillingCounts != null) {
             this.NFCBillingCounts = new Long(source.NFCBillingCounts);
         }
+        if (source.PassNo != null) {
+            this.PassNo = new String(source.PassNo);
+        }
+        if (source.VisaNum != null) {
+            this.VisaNum = new String(source.VisaNum);
+        }
     }
 
 
@@ -925,6 +987,8 @@ public class DetectInfoText extends AbstractModel{
         this.setParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
         this.setParamArraySimple(map, prefix + "NFCRequestIds.", this.NFCRequestIds);
         this.setParamSimple(map, prefix + "NFCBillingCounts", this.NFCBillingCounts);
+        this.setParamSimple(map, prefix + "PassNo", this.PassNo);
+        this.setParamSimple(map, prefix + "VisaNum", this.VisaNum);
 
     }
 }

@@ -179,6 +179,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *删除手工备份
+     * @param req DeleteBackupRecordsRequest
+     * @return DeleteBackupRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupRecordsResponse DeleteBackupRecords(DeleteBackupRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除TcaplusDB集群，必须在集群所属所有资源（包括表格组，表）都已经释放的情况下才会成功。
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -331,6 +351,30 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeApplications");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询备份记录
+
+查询集群级别时， 将TableGroupId设置为"-1", 将TableName设置为"-1"
+查询集群+表格组级别时， 将TableName设置为"-1"
+查询集群+表格组+表格级别时， 都不能设置为“-1”
+     * @param req DescribeBackupRecordsRequest
+     * @return DescribeBackupRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupRecordsResponse DescribeBackupRecords(DescribeBackupRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupRecords");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -951,6 +995,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RollbackTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *新增、删除、修改备份过期策略， ClusterId必须为具体的集群Id（appid）
+     * @param req SetBackupExpireRuleRequest
+     * @return SetBackupExpireRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetBackupExpireRuleResponse SetBackupExpireRule(SetBackupExpireRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetBackupExpireRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetBackupExpireRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ResourceTag extends AbstractModel{
 
     /**
-    * 标签key
+    * 标签Key。
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 标签value
+    * 标签 Key 对应的 Value。
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get 标签key 
-     * @return TagKey 标签key
+     * Get 标签Key。 
+     * @return TagKey 标签Key。
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 标签key
-     * @param TagKey 标签key
+     * Set 标签Key。
+     * @param TagKey 标签Key。
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 标签value 
-     * @return TagValue 标签value
+     * Get 标签 Key 对应的 Value。 
+     * @return TagValue 标签 Key 对应的 Value。
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 标签value
-     * @param TagValue 标签value
+     * Set 标签 Key 对应的 Value。
+     * @param TagValue 标签 Key 对应的 Value。
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

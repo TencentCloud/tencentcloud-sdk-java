@@ -23,322 +23,367 @@ import java.util.HashMap;
 public class RedisCommonInstanceList extends AbstractModel{
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 实例id
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 用户id
+    * 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 实例所属项目id
+    * 实例所属项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 实例接入区域
+    * 实例接入区域。
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例接入zone
+    * 实例接入可用区。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 实例网络id
+    * 实例私有网络 ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id
+    * 私有网络所属子网 ID。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+    * 实例状态信息。
+- 1-流程中。
+- 2-运行中。
+- -2-实例已隔离。
+- -3-实例待回收。
+- -4-实例已删除。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实例网络ip
+    * 实例私有网络 IP 地址。
     */
     @SerializedName("Vips")
     @Expose
     private String [] Vips;
 
     /**
-    * 实例网络端口
+    * 实例网络端口。
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 实例创建时间
+    * 实例创建时间。
     */
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
 
     /**
-    * 计费类型，0-按量计费，1-包年包月
+    * 计费类型。
+- 0：按量计费。
+- 1：包年包月。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 网络类型，0-基础网络，1-VPC网络
+    * 网络类型。
+- 0：基础网络。
+- 1：VPC 网络。
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 用户id 
-     * @return AppId 用户id
+     * Get 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。 
+     * @return AppId 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 用户id
-     * @param AppId 用户id
+     * Set 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @param AppId 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 实例所属项目id 
-     * @return ProjectId 实例所属项目id
+     * Get 实例所属项目 ID。 
+     * @return ProjectId 实例所属项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 实例所属项目id
-     * @param ProjectId 实例所属项目id
+     * Set 实例所属项目 ID。
+     * @param ProjectId 实例所属项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 实例接入区域 
-     * @return Region 实例接入区域
+     * Get 实例接入区域。 
+     * @return Region 实例接入区域。
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例接入区域
-     * @param Region 实例接入区域
+     * Set 实例接入区域。
+     * @param Region 实例接入区域。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例接入zone 
-     * @return Zone 实例接入zone
+     * Get 实例接入可用区。 
+     * @return Zone 实例接入可用区。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 实例接入zone
-     * @param Zone 实例接入zone
+     * Set 实例接入可用区。
+     * @param Zone 实例接入可用区。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例网络id 
-     * @return VpcId 实例网络id
+     * Get 实例私有网络 ID。 
+     * @return VpcId 实例私有网络 ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 实例网络id
-     * @param VpcId 实例网络id
+     * Set 实例私有网络 ID。
+     * @param VpcId 实例私有网络 ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id 
-     * @return SubnetId 子网id
+     * Get 私有网络所属子网 ID。 
+     * @return SubnetId 私有网络所属子网 ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id
-     * @param SubnetId 子网id
+     * Set 私有网络所属子网 ID。
+     * @param SubnetId 私有网络所属子网 ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除 
-     * @return Status 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+     * Get 实例状态信息。
+- 1-流程中。
+- 2-运行中。
+- -2-实例已隔离。
+- -3-实例待回收。
+- -4-实例已删除。 
+     * @return Status 实例状态信息。
+- 1-流程中。
+- 2-运行中。
+- -2-实例已隔离。
+- -3-实例待回收。
+- -4-实例已删除。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
-     * @param Status 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
+     * Set 实例状态信息。
+- 1-流程中。
+- 2-运行中。
+- -2-实例已隔离。
+- -3-实例待回收。
+- -4-实例已删除。
+     * @param Status 实例状态信息。
+- 1-流程中。
+- 2-运行中。
+- -2-实例已隔离。
+- -3-实例待回收。
+- -4-实例已删除。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例网络ip 
-     * @return Vips 实例网络ip
+     * Get 实例私有网络 IP 地址。 
+     * @return Vips 实例私有网络 IP 地址。
      */
     public String [] getVips() {
         return this.Vips;
     }
 
     /**
-     * Set 实例网络ip
-     * @param Vips 实例网络ip
+     * Set 实例私有网络 IP 地址。
+     * @param Vips 实例私有网络 IP 地址。
      */
     public void setVips(String [] Vips) {
         this.Vips = Vips;
     }
 
     /**
-     * Get 实例网络端口 
-     * @return Vport 实例网络端口
+     * Get 实例网络端口。 
+     * @return Vport 实例网络端口。
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 实例网络端口
-     * @param Vport 实例网络端口
+     * Set 实例网络端口。
+     * @param Vport 实例网络端口。
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get 实例创建时间 
-     * @return Createtime 实例创建时间
+     * Get 实例创建时间。 
+     * @return Createtime 实例创建时间。
      */
     public String getCreatetime() {
         return this.Createtime;
     }
 
     /**
-     * Set 实例创建时间
-     * @param Createtime 实例创建时间
+     * Set 实例创建时间。
+     * @param Createtime 实例创建时间。
      */
     public void setCreatetime(String Createtime) {
         this.Createtime = Createtime;
     }
 
     /**
-     * Get 计费类型，0-按量计费，1-包年包月 
-     * @return PayMode 计费类型，0-按量计费，1-包年包月
+     * Get 计费类型。
+- 0：按量计费。
+- 1：包年包月。 
+     * @return PayMode 计费类型。
+- 0：按量计费。
+- 1：包年包月。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 计费类型，0-按量计费，1-包年包月
-     * @param PayMode 计费类型，0-按量计费，1-包年包月
+     * Set 计费类型。
+- 0：按量计费。
+- 1：包年包月。
+     * @param PayMode 计费类型。
+- 0：按量计费。
+- 1：包年包月。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 网络类型，0-基础网络，1-VPC网络 
-     * @return NetType 网络类型，0-基础网络，1-VPC网络
+     * Get 网络类型。
+- 0：基础网络。
+- 1：VPC 网络。 
+     * @return NetType 网络类型。
+- 0：基础网络。
+- 1：VPC 网络。
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，0-基础网络，1-VPC网络
-     * @param NetType 网络类型，0-基础网络，1-VPC网络
+     * Set 网络类型。
+- 0：基础网络。
+- 1：VPC 网络。
+     * @param NetType 网络类型。
+- 0：基础网络。
+- 1：VPC 网络。
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;

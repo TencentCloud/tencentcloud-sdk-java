@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeParamTemplateInfoRequest extends AbstractModel{
 
     /**
-    * 参数模板 ID。
+    * 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 参数模板 ID。 
-     * @return TemplateId 参数模板 ID。
+     * Get 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。 
+     * @return TemplateId 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模板 ID。
-     * @param TemplateId 参数模板 ID。
+     * Set 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。
+     * @param TemplateId 指定查询的参数模板 ID。请通过接口[DescribeParamTemplates](https://cloud.tencent.com/document/product/239/58750)获取参数模板列表信息。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

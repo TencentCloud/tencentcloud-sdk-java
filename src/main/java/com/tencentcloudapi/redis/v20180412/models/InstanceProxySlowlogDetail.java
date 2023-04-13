@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel{
 
     /**
-    * 慢查询耗时（单位：毫秒）。
+    * 慢查询耗时时长。单位：毫秒。
     */
     @SerializedName("Duration")
     @Expose
@@ -37,14 +37,14 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String Client;
 
     /**
-    * 命令。
+    * 慢查询的命令。
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * 详细命令行信息。
+    * 慢查询详细命令行信息。
     */
     @SerializedName("CommandLine")
     @Expose
@@ -58,16 +58,16 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String ExecuteTime;
 
     /**
-     * Get 慢查询耗时（单位：毫秒）。 
-     * @return Duration 慢查询耗时（单位：毫秒）。
+     * Get 慢查询耗时时长。单位：毫秒。 
+     * @return Duration 慢查询耗时时长。单位：毫秒。
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 慢查询耗时（单位：毫秒）。
-     * @param Duration 慢查询耗时（单位：毫秒）。
+     * Set 慢查询耗时时长。单位：毫秒。
+     * @param Duration 慢查询耗时时长。单位：毫秒。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
@@ -90,32 +90,32 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     }
 
     /**
-     * Get 命令。 
-     * @return Command 命令。
+     * Get 慢查询的命令。 
+     * @return Command 慢查询的命令。
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set 命令。
-     * @param Command 命令。
+     * Set 慢查询的命令。
+     * @param Command 慢查询的命令。
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 详细命令行信息。 
-     * @return CommandLine 详细命令行信息。
+     * Get 慢查询详细命令行信息。 
+     * @return CommandLine 慢查询详细命令行信息。
      */
     public String getCommandLine() {
         return this.CommandLine;
     }
 
     /**
-     * Set 详细命令行信息。
-     * @param CommandLine 详细命令行信息。
+     * Set 慢查询详细命令行信息。
+     * @param CommandLine 慢查询详细命令行信息。
      */
     public void setCommandLine(String CommandLine) {
         this.CommandLine = CommandLine;

@@ -81,7 +81,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *电子签企业版：指定需要批量撤回的签署流程Id，获取批量撤销链接
+     *指定需要批量撤回的签署流程Id，获取批量撤销链接
 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
      * @param req CreateBatchCancelFlowUrlRequest
      * @return CreateBatchCancelFlowUrlResponse
@@ -282,7 +282,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *创建签署链接，请联系客户经理申请使用
+     *创建集成页面签署链接，请联系客户经理申请使用
      * @param req CreateFlowSignUrlRequest
      * @return CreateFlowSignUrlResponse
      * @throws TencentCloudSDKException
@@ -322,7 +322,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *集成版绑定员工角色
+     *绑定员工与对应角色
      * @param req CreateIntegrationUserRolesRequest
      * @return CreateIntegrationUserRolesResponse
      * @throws TencentCloudSDKException
@@ -426,7 +426,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *获取小程序跳转链接
+     *获取小程序签署链接
 
 适用场景：如果需要签署人在自己的APP、小程序、H5应用中签署，可以通过此接口获取跳转腾讯电子签小程序的签署跳转链接。
 
@@ -516,7 +516,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *解绑用户角色绑定关系
+     *解绑员工与对应角色关系
      * @param req DeleteIntegrationRoleUsersRequest
      * @return DeleteIntegrationRoleUsersResponse
      * @throws TencentCloudSDKException
@@ -660,7 +660,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *查询员工信息，每次返回的数据量最大为20
+     *查询企业员工列表，每次返回的数据量最大为20
      * @param req DescribeIntegrationEmployeesRequest
      * @return DescribeIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -700,7 +700,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *查询集成版角色
+     *查询企业角色列表
      * @param req DescribeIntegrationRolesRequest
      * @return DescribeIntegrationRolesResponse
      * @throws TencentCloudSDKException
@@ -885,7 +885,7 @@ callbackinfo包含： 回调地址和签名key
     }
 
     /**
-     *更新集成版员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
+     *更新员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
      * @param req UpdateIntegrationEmployeesRequest
      * @return UpdateIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
