@@ -53,7 +53,8 @@ public class ParamTemplateInfo extends AbstractModel{
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
     */
     @SerializedName("ProductType")
     @Expose
@@ -117,7 +118,8 @@ public class ParamTemplateInfo extends AbstractModel{
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
- 
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。 
      * @return ProductType 实例类型。
 - 2：Redis 2.8内存版（标准架构）。
 - 3：CKV 3.2内存版（标准架构）。
@@ -127,7 +129,8 @@ public class ParamTemplateInfo extends AbstractModel{
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public Long getProductType() {
         return this.ProductType;
@@ -143,7 +146,8 @@ public class ParamTemplateInfo extends AbstractModel{
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      * @param ProductType 实例类型。
 - 2：Redis 2.8内存版（标准架构）。
 - 3：CKV 3.2内存版（标准架构）。
@@ -153,7 +157,8 @@ public class ParamTemplateInfo extends AbstractModel{
 - 7：Redis 4.0内存版（集群架构）。
 - 8：Redis 5.0内存版（标准架构）。
 - 9：Redis 5.0内存版（集群架构）。
-
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;

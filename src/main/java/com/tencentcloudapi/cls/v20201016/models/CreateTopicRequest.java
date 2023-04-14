@@ -94,6 +94,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long HotPeriod;
 
     /**
+    * webtracking开关； false: 关闭 true： 开启
+    */
+    @SerializedName("IsWebTracking")
+    @Expose
+    private Boolean IsWebTracking;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -257,6 +264,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.HotPeriod = HotPeriod;
     }
 
+    /**
+     * Get webtracking开关； false: 关闭 true： 开启 
+     * @return IsWebTracking webtracking开关； false: 关闭 true： 开启
+     */
+    public Boolean getIsWebTracking() {
+        return this.IsWebTracking;
+    }
+
+    /**
+     * Set webtracking开关； false: 关闭 true： 开启
+     * @param IsWebTracking webtracking开关； false: 关闭 true： 开启
+     */
+    public void setIsWebTracking(Boolean IsWebTracking) {
+        this.IsWebTracking = IsWebTracking;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -298,6 +321,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.HotPeriod != null) {
             this.HotPeriod = new Long(source.HotPeriod);
         }
+        if (source.IsWebTracking != null) {
+            this.IsWebTracking = new Boolean(source.IsWebTracking);
+        }
     }
 
 
@@ -315,6 +341,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
+        this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
 
     }
 }

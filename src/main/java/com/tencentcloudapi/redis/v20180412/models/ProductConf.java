@@ -23,299 +23,379 @@ import java.util.HashMap;
 public class ProductConf extends AbstractModel{
 
     /**
-    * 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+    * 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
+    * 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * 购买时的最小数量
+    * 购买时的最小数量。
     */
     @SerializedName("MinBuyNum")
     @Expose
     private Long MinBuyNum;
 
     /**
-    * 购买时的最大数量
+    * 购买时的最大数量。
     */
     @SerializedName("MaxBuyNum")
     @Expose
     private Long MaxBuyNum;
 
     /**
-    * 产品是否售罄
+    * 产品是否售罄。
+- true：售罄。
+- false：未售罄。
     */
     @SerializedName("Saleout")
     @Expose
     private Boolean Saleout;
 
     /**
-    * 产品引擎，腾讯云CKV或者社区版Redis
+    * 产品引擎。包括：腾讯云 CKV与社区版 Redis。
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+    * 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 规格总大小，单位G
+    * 规格总大小，单位GB。
     */
     @SerializedName("TotalSize")
     @Expose
     private String [] TotalSize;
 
     /**
-    * 每个分片大小，单位G
+    * 每个分片大小，单位GB。
     */
     @SerializedName("ShardSize")
     @Expose
     private String [] ShardSize;
 
     /**
-    * 副本数量
+    * 副本数量。
     */
     @SerializedName("ReplicaNum")
     @Expose
     private String [] ReplicaNum;
 
     /**
-    * 分片数量
+    * 分片数量。
     */
     @SerializedName("ShardNum")
     @Expose
     private String [] ShardNum;
 
     /**
-    * 支持的计费模式，1-包年包月，0-按量计费
+    * 支持的计费模式。
+- 1：包年包月。
+- 0：按量计费。
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 是否支持副本只读
+    * 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
     */
     @SerializedName("EnableRepicaReadOnly")
     @Expose
     private Boolean EnableRepicaReadOnly;
 
     /**
-     * Get 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis 
-     * @return Type 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+     * Get 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。 
+     * @return Type 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
-     * @param Type 产品类型，2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，5 – Redis2.8内存版(单机版)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)，10 – Redis4.0混合存储版Tendis
+     * Set 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
+     * @param Type 产品类型。
+- 2：Redis 2.8内存版（标准架构）。
+- 3：CKV 3.2内存版（标准架构）。
+- 4：CKV 3.2内存版（集群架构）。
+- 5：Redis 2.8内存版（单机）。
+- 6：Redis 4.0内存版（标准架构）。
+- 7：Redis 4.0内存版（集群架构）。
+- 8：Redis 5.0内存版（标准架构）。
+- 9：Redis 5.0内存版（集群架构）。
+- 15：Redis 6.2内存版（标准架构）。
+- 16：Redis 6.2内存版（集群架构）。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis 
-     * @return TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
+     * Get 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。 
+     * @return TypeName 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
-     * @param TypeName 产品名称，Redis主从版，CKV主从版，CKV集群版，Redis单机版，Redis集群版，混合存储版Tendis
+     * Set 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。
+     * @param TypeName 产品名称。包括：Redis 主从版、CKV 主从版、CKV 集群版、Redis 单机版、Redis 集群版。
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get 购买时的最小数量 
-     * @return MinBuyNum 购买时的最小数量
+     * Get 购买时的最小数量。 
+     * @return MinBuyNum 购买时的最小数量。
      */
     public Long getMinBuyNum() {
         return this.MinBuyNum;
     }
 
     /**
-     * Set 购买时的最小数量
-     * @param MinBuyNum 购买时的最小数量
+     * Set 购买时的最小数量。
+     * @param MinBuyNum 购买时的最小数量。
      */
     public void setMinBuyNum(Long MinBuyNum) {
         this.MinBuyNum = MinBuyNum;
     }
 
     /**
-     * Get 购买时的最大数量 
-     * @return MaxBuyNum 购买时的最大数量
+     * Get 购买时的最大数量。 
+     * @return MaxBuyNum 购买时的最大数量。
      */
     public Long getMaxBuyNum() {
         return this.MaxBuyNum;
     }
 
     /**
-     * Set 购买时的最大数量
-     * @param MaxBuyNum 购买时的最大数量
+     * Set 购买时的最大数量。
+     * @param MaxBuyNum 购买时的最大数量。
      */
     public void setMaxBuyNum(Long MaxBuyNum) {
         this.MaxBuyNum = MaxBuyNum;
     }
 
     /**
-     * Get 产品是否售罄 
-     * @return Saleout 产品是否售罄
+     * Get 产品是否售罄。
+- true：售罄。
+- false：未售罄。 
+     * @return Saleout 产品是否售罄。
+- true：售罄。
+- false：未售罄。
      */
     public Boolean getSaleout() {
         return this.Saleout;
     }
 
     /**
-     * Set 产品是否售罄
-     * @param Saleout 产品是否售罄
+     * Set 产品是否售罄。
+- true：售罄。
+- false：未售罄。
+     * @param Saleout 产品是否售罄。
+- true：售罄。
+- false：未售罄。
      */
     public void setSaleout(Boolean Saleout) {
         this.Saleout = Saleout;
     }
 
     /**
-     * Get 产品引擎，腾讯云CKV或者社区版Redis 
-     * @return Engine 产品引擎，腾讯云CKV或者社区版Redis
+     * Get 产品引擎。包括：腾讯云 CKV与社区版 Redis。 
+     * @return Engine 产品引擎。包括：腾讯云 CKV与社区版 Redis。
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 产品引擎，腾讯云CKV或者社区版Redis
-     * @param Engine 产品引擎，腾讯云CKV或者社区版Redis
+     * Set 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+     * @param Engine 产品引擎。包括：腾讯云 CKV与社区版 Redis。
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0 
-     * @return Version 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+     * Get 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。 
+     * @return Version 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
-     * @param Version 兼容版本，Redis-2.8，Redis-3.2，Redis-4.0
+     * Set 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
+     * @param Version 兼容版本。包括：Redis-2.8、Redis-3.2、Redis-4.0、Redis-5.0、Redis-6.2。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 规格总大小，单位G 
-     * @return TotalSize 规格总大小，单位G
+     * Get 规格总大小，单位GB。 
+     * @return TotalSize 规格总大小，单位GB。
      */
     public String [] getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set 规格总大小，单位G
-     * @param TotalSize 规格总大小，单位G
+     * Set 规格总大小，单位GB。
+     * @param TotalSize 规格总大小，单位GB。
      */
     public void setTotalSize(String [] TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get 每个分片大小，单位G 
-     * @return ShardSize 每个分片大小，单位G
+     * Get 每个分片大小，单位GB。 
+     * @return ShardSize 每个分片大小，单位GB。
      */
     public String [] getShardSize() {
         return this.ShardSize;
     }
 
     /**
-     * Set 每个分片大小，单位G
-     * @param ShardSize 每个分片大小，单位G
+     * Set 每个分片大小，单位GB。
+     * @param ShardSize 每个分片大小，单位GB。
      */
     public void setShardSize(String [] ShardSize) {
         this.ShardSize = ShardSize;
     }
 
     /**
-     * Get 副本数量 
-     * @return ReplicaNum 副本数量
+     * Get 副本数量。 
+     * @return ReplicaNum 副本数量。
      */
     public String [] getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set 副本数量
-     * @param ReplicaNum 副本数量
+     * Set 副本数量。
+     * @param ReplicaNum 副本数量。
      */
     public void setReplicaNum(String [] ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get 分片数量 
-     * @return ShardNum 分片数量
+     * Get 分片数量。 
+     * @return ShardNum 分片数量。
      */
     public String [] getShardNum() {
         return this.ShardNum;
     }
 
     /**
-     * Set 分片数量
-     * @param ShardNum 分片数量
+     * Set 分片数量。
+     * @param ShardNum 分片数量。
      */
     public void setShardNum(String [] ShardNum) {
         this.ShardNum = ShardNum;
     }
 
     /**
-     * Get 支持的计费模式，1-包年包月，0-按量计费 
-     * @return PayMode 支持的计费模式，1-包年包月，0-按量计费
+     * Get 支持的计费模式。
+- 1：包年包月。
+- 0：按量计费。 
+     * @return PayMode 支持的计费模式。
+- 1：包年包月。
+- 0：按量计费。
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 支持的计费模式，1-包年包月，0-按量计费
-     * @param PayMode 支持的计费模式，1-包年包月，0-按量计费
+     * Set 支持的计费模式。
+- 1：包年包月。
+- 0：按量计费。
+     * @param PayMode 支持的计费模式。
+- 1：包年包月。
+- 0：按量计费。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否支持副本只读 
-     * @return EnableRepicaReadOnly 是否支持副本只读
+     * Get 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。 
+     * @return EnableRepicaReadOnly 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
      */
     public Boolean getEnableRepicaReadOnly() {
         return this.EnableRepicaReadOnly;
     }
 
     /**
-     * Set 是否支持副本只读
-     * @param EnableRepicaReadOnly 是否支持副本只读
+     * Set 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
+     * @param EnableRepicaReadOnly 是否支持副本只读。
+- true：支持副本只读。
+- false：不支持。
      */
     public void setEnableRepicaReadOnly(Boolean EnableRepicaReadOnly) {
         this.EnableRepicaReadOnly = EnableRepicaReadOnly;

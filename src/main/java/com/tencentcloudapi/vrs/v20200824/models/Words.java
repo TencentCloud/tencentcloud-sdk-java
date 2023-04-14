@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Words extends AbstractModel{
 
     /**
-    * 准确度
+    * 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PronAccuracy")
@@ -31,7 +31,7 @@ public class Words extends AbstractModel{
     private Float PronAccuracy;
 
     /**
-    * 流畅度
+    * 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PronFluency")
@@ -39,7 +39,13 @@ public class Words extends AbstractModel{
     private Float PronFluency;
 
     /**
-    * tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+    * tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -55,9 +61,9 @@ public class Words extends AbstractModel{
     private String Word;
 
     /**
-     * Get 准确度
+     * Get 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PronAccuracy 准确度
+     * @return PronAccuracy 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPronAccuracy() {
@@ -65,9 +71,9 @@ public class Words extends AbstractModel{
     }
 
     /**
-     * Set 准确度
+     * Set 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PronAccuracy 准确度
+     * @param PronAccuracy 准确度 (<75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -75,9 +81,9 @@ public class Words extends AbstractModel{
     }
 
     /**
-     * Get 流畅度
+     * Get 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PronFluency 流畅度
+     * @return PronFluency 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPronFluency() {
@@ -85,9 +91,9 @@ public class Words extends AbstractModel{
     }
 
     /**
-     * Set 流畅度
+     * Set 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PronFluency 流畅度
+     * @param PronFluency 流畅度 (<0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPronFluency(Float PronFluency) {
@@ -95,9 +101,21 @@ public class Words extends AbstractModel{
     }
 
     /**
-     * Get tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * Get tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * @return Tag tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTag() {
@@ -105,9 +123,21 @@ public class Words extends AbstractModel{
     }
 
     /**
-     * Set tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * Set tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag tag: 0: match, 1: insert, 2: delete, 3: replace, 4: oov, 5: unknown
+     * @param Tag tag: 
+0: match  匹配
+1: insert   多读
+2: delete  少读
+3: replace 错读
+4: oov  待评估字不在发音评估的词库
+5: unknown 未知错误
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Long Tag) {

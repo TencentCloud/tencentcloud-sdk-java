@@ -58,7 +58,13 @@ public class Model extends AbstractModel{
     private String ServiceType;
 
     /**
-    * 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败
+    * 模型状态：
+-2：模型训练失败；
+-1：已下线；
+0：训练中；
+1：已上线；
+3：上线中；
+4：下线中；
     */
     @SerializedName("ModelState")
     @Expose
@@ -160,16 +166,40 @@ public class Model extends AbstractModel{
     }
 
     /**
-     * Get 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败 
-     * @return ModelState 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败
+     * Get 模型状态：
+-2：模型训练失败；
+-1：已下线；
+0：训练中；
+1：已上线；
+3：上线中；
+4：下线中； 
+     * @return ModelState 模型状态：
+-2：模型训练失败；
+-1：已下线；
+0：训练中；
+1：已上线；
+3：上线中；
+4：下线中；
      */
     public Long getModelState() {
         return this.ModelState;
     }
 
     /**
-     * Set 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败
-     * @param ModelState 模型状态，-1下线状态，1上线状态, 0训练中, -2 训练失败
+     * Set 模型状态：
+-2：模型训练失败；
+-1：已下线；
+0：训练中；
+1：已上线；
+3：上线中；
+4：下线中；
+     * @param ModelState 模型状态：
+-2：模型训练失败；
+-1：已下线；
+0：训练中；
+1：已上线；
+3：上线中；
+4：下线中；
      */
     public void setModelState(Long ModelState) {
         this.ModelState = ModelState;

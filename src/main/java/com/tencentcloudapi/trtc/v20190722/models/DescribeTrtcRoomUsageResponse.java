@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeTrtcRoomUsageResponse extends AbstractModel{
 
     /**
+    * 房间维度用量数据，csv文件格式。
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 房间维度用量数据，csv文件格式。 
+     * @return Data 房间维度用量数据，csv文件格式。
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 房间维度用量数据，csv文件格式。
+     * @param Data 房间维度用量数据，csv文件格式。
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTrtcRoomUsageResponse(DescribeTrtcRoomUsageResponse source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

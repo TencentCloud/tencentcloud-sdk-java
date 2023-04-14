@@ -30,28 +30,28 @@ public class AppCustomContent extends AbstractModel{
     private String Scene;
 
     /**
-    * logo地址。
+    * logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
     */
     @SerializedName("LogoUrl")
     @Expose
     private String LogoUrl;
 
     /**
-    * 主页地址，可设置用于跳转。
+    * HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
     */
     @SerializedName("HomeUrl")
     @Expose
     private String HomeUrl;
 
     /**
-    * 自定义的js。
+    * JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
     */
     @SerializedName("JsUrl")
     @Expose
     private String JsUrl;
 
     /**
-    * 自定义的css。
+    * Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
     */
     @SerializedName("CssUrl")
     @Expose
@@ -74,64 +74,64 @@ public class AppCustomContent extends AbstractModel{
     }
 
     /**
-     * Get logo地址。 
-     * @return LogoUrl logo地址。
+     * Get logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。 
+     * @return LogoUrl logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
      */
     public String getLogoUrl() {
         return this.LogoUrl;
     }
 
     /**
-     * Set logo地址。
-     * @param LogoUrl logo地址。
+     * Set logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
+     * @param LogoUrl logo地址，用于上课时展示的课堂或平台图标，支持开发商自定义业务品牌展示。
      */
     public void setLogoUrl(String LogoUrl) {
         this.LogoUrl = LogoUrl;
     }
 
     /**
-     * Get 主页地址，可设置用于跳转。 
-     * @return HomeUrl 主页地址，可设置用于跳转。
+     * Get HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。 
+     * @return HomeUrl HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
      */
     public String getHomeUrl() {
         return this.HomeUrl;
     }
 
     /**
-     * Set 主页地址，可设置用于跳转。
-     * @param HomeUrl 主页地址，可设置用于跳转。
+     * Set HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
+     * @param HomeUrl HomeUrl：主页地址，用于上课结束后课堂跳转，支持跳转到自己的业务系统。如果配置为空则下课后关闭课堂页面。
      */
     public void setHomeUrl(String HomeUrl) {
         this.HomeUrl = HomeUrl;
     }
 
     /**
-     * Get 自定义的js。 
-     * @return JsUrl 自定义的js。
+     * Get JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。 
+     * @return JsUrl JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
      */
     public String getJsUrl() {
         return this.JsUrl;
     }
 
     /**
-     * Set 自定义的js。
-     * @param JsUrl 自定义的js。
+     * Set JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
+     * @param JsUrl JsUrl ：自定义js。针对应用用于开发上自定义课堂界面、模块功能、监控操作，支持数据请求与响应处理。
      */
     public void setJsUrl(String JsUrl) {
         this.JsUrl = JsUrl;
     }
 
     /**
-     * Get 自定义的css。 
-     * @return CssUrl 自定义的css。
+     * Get Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。 
+     * @return CssUrl Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
      */
     public String getCssUrl() {
         return this.CssUrl;
     }
 
     /**
-     * Set 自定义的css。
-     * @param CssUrl 自定义的css。
+     * Set Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
+     * @param CssUrl Css : 自定义的css。针对应用用于支持课堂界面的、模块的UI渲染修改、皮肤配色修改、功能模块的隐藏和展示。
      */
     public void setCssUrl(String CssUrl) {
         this.CssUrl = CssUrl;

@@ -31,7 +31,7 @@ public class SetWarningCallbackRequest extends AbstractModel{
 
     /**
     * 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
     */
     @SerializedName("Callback")
     @Expose
@@ -62,9 +62,9 @@ public class SetWarningCallbackRequest extends AbstractModel{
 
     /**
      * Get 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档： 
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112 
      * @return Callback 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
      */
     public String getCallback() {
         return this.Callback;
@@ -72,9 +72,9 @@ public class SetWarningCallbackRequest extends AbstractModel{
 
     /**
      * Set 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
      * @param Callback 告警回调地址，如果传空字符串会删除原来的回调地址配置，回调地址仅支持http或https协议，即回调地址以http://或https://开头。
-回调数据格式请参考文档：
+回调数据格式请参考文档：https://cloud.tencent.com/document/product/1137/90112
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;
