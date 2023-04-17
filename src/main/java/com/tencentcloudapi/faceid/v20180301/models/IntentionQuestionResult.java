@@ -23,13 +23,39 @@ import java.util.HashMap;
 public class IntentionQuestionResult extends AbstractModel{
 
     /**
-    * 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+    * 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FinalResultCode")
+    @SerializedName("FinalResultDetailCode")
     @Expose
-    private String FinalResultCode;
+    private Long FinalResultDetailCode;
+
+    /**
+    * 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinalResultMessage")
+    @Expose
+    private String FinalResultMessage;
 
     /**
     * 视频base64（其中包含全程问题和回答音频，mp4格式）
@@ -73,27 +99,128 @@ public class IntentionQuestionResult extends AbstractModel{
     private String [] Audios;
 
     /**
-     * Get 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+    * 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinalResultCode")
+    @Expose
+    private String FinalResultCode;
+
+    /**
+     * Get 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FinalResultCode 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+     * @return FinalResultDetailCode 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getFinalResultCode() {
-        return this.FinalResultCode;
+    public Long getFinalResultDetailCode() {
+        return this.FinalResultDetailCode;
     }
 
     /**
-     * Set 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+     * Set 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FinalResultCode 意愿核身最终结果：
-0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验
+     * @param FinalResultDetailCode 意愿核身错误码：
+0: "成功"       
+-1: "参数错误"    
+-2: "系统异常"    
+-101: "请保持人脸在框内"    
+-102: "检测到多张人脸"   
+-103: "人脸检测失败"   
+-104: "人脸检测不完整"   
+-105: "请勿遮挡眼睛"    
+-106: "请勿遮挡嘴巴"     
+-107: "请勿遮挡鼻子"     
+-201: "人脸比对相似度低"    
+-202: "人脸比对失败"    
+-301: "意愿核验不通过"   
+-800: "前端不兼容错误"    
+-801: "用户未授权摄像头和麦克风权限"   
+-802: "获取视频流失败"   
+-803: "用户主动关闭链接/异常断开链接"   
+-998: "系统数据异常"   
+-999: "系统未知错误，请联系人工核实"   
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFinalResultCode(String FinalResultCode) {
-        this.FinalResultCode = FinalResultCode;
+    public void setFinalResultDetailCode(Long FinalResultDetailCode) {
+        this.FinalResultDetailCode = FinalResultDetailCode;
+    }
+
+    /**
+     * Get 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinalResultMessage 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFinalResultMessage() {
+        return this.FinalResultMessage;
+    }
+
+    /**
+     * Set 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinalResultMessage 意愿核身错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinalResultMessage(String FinalResultMessage) {
+        this.FinalResultMessage = FinalResultMessage;
     }
 
     /**
@@ -200,6 +327,30 @@ public class IntentionQuestionResult extends AbstractModel{
         this.Audios = Audios;
     }
 
+    /**
+     * Get 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinalResultCode 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFinalResultCode() {
+        return this.FinalResultCode;
+    }
+
+    /**
+     * Set 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinalResultCode 意愿核身最终结果：
+0：认证通过，-1：认证未通过，-2：浏览器内核不兼容，无法进行意愿校验。建议使用“FinalResultDetailCode”参数获取详细的错误码信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinalResultCode(String FinalResultCode) {
+        this.FinalResultCode = FinalResultCode;
+    }
+
     public IntentionQuestionResult() {
     }
 
@@ -208,8 +359,11 @@ public class IntentionQuestionResult extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public IntentionQuestionResult(IntentionQuestionResult source) {
-        if (source.FinalResultCode != null) {
-            this.FinalResultCode = new String(source.FinalResultCode);
+        if (source.FinalResultDetailCode != null) {
+            this.FinalResultDetailCode = new Long(source.FinalResultDetailCode);
+        }
+        if (source.FinalResultMessage != null) {
+            this.FinalResultMessage = new String(source.FinalResultMessage);
         }
         if (source.Video != null) {
             this.Video = new String(source.Video);
@@ -238,6 +392,9 @@ public class IntentionQuestionResult extends AbstractModel{
                 this.Audios[i] = new String(source.Audios[i]);
             }
         }
+        if (source.FinalResultCode != null) {
+            this.FinalResultCode = new String(source.FinalResultCode);
+        }
     }
 
 
@@ -245,12 +402,14 @@ public class IntentionQuestionResult extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FinalResultCode", this.FinalResultCode);
+        this.setParamSimple(map, prefix + "FinalResultDetailCode", this.FinalResultDetailCode);
+        this.setParamSimple(map, prefix + "FinalResultMessage", this.FinalResultMessage);
         this.setParamSimple(map, prefix + "Video", this.Video);
         this.setParamArraySimple(map, prefix + "ScreenShot.", this.ScreenShot);
         this.setParamArraySimple(map, prefix + "ResultCode.", this.ResultCode);
         this.setParamArraySimple(map, prefix + "AsrResult.", this.AsrResult);
         this.setParamArraySimple(map, prefix + "Audios.", this.Audios);
+        this.setParamSimple(map, prefix + "FinalResultCode", this.FinalResultCode);
 
     }
 }

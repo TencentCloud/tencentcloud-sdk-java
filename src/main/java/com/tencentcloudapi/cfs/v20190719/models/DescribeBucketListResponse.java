@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsResponse extends AbstractModel{
+public class DescribeBucketListResponse extends AbstractModel{
 
     /**
-    * 催办合同详情列表
+    * 桶的数量
     */
-    @SerializedName("RemindFlowRecords")
+    @SerializedName("TotalCount")
     @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+    private Long TotalCount;
+
+    /**
+    * 桶列表
+    */
+    @SerializedName("BucketList")
+    @Expose
+    private BucketInfo [] BucketList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateFlowRemindsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 催办合同详情列表 
-     * @return RemindFlowRecords 催办合同详情列表
+     * Get 桶的数量 
+     * @return TotalCount 桶的数量
      */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 催办合同详情列表
-     * @param RemindFlowRecords 催办合同详情列表
+     * Set 桶的数量
+     * @param TotalCount 桶的数量
      */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 桶列表 
+     * @return BucketList 桶列表
+     */
+    public BucketInfo [] getBucketList() {
+        return this.BucketList;
+    }
+
+    /**
+     * Set 桶列表
+     * @param BucketList 桶列表
+     */
+    public void setBucketList(BucketInfo [] BucketList) {
+        this.BucketList = BucketList;
     }
 
     /**
@@ -68,18 +91,21 @@ public class CreateFlowRemindsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateFlowRemindsResponse() {
+    public DescribeBucketListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsResponse(CreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
+    public DescribeBucketListResponse(DescribeBucketListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.BucketList != null) {
+            this.BucketList = new BucketInfo[source.BucketList.length];
+            for (int i = 0; i < source.BucketList.length; i++) {
+                this.BucketList[i] = new BucketInfo(source.BucketList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +118,8 @@ public class CreateFlowRemindsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "BucketList.", this.BucketList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

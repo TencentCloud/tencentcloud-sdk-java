@@ -720,6 +720,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询溯源ID查溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
+     * @param req DescribeTraceDataByIdRequest
+     * @return DescribeTraceDataByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTraceDataByIdResponse DescribeTraceDataById(DescribeTraceDataByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTraceDataByIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTraceDataByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTraceDataById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询溯源信息，通常溯源信息跟生产批次绑定，即一个批次的所有溯源信息都是一样的
      * @param req DescribeTraceDataListRequest
      * @return DescribeTraceDataListResponse

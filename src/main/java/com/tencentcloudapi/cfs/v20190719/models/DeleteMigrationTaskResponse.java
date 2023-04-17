@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsResponse extends AbstractModel{
-
-    /**
-    * 催办合同详情列表
-    */
-    @SerializedName("RemindFlowRecords")
-    @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+public class DeleteMigrationTaskResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class CreateFlowRemindsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 催办合同详情列表 
-     * @return RemindFlowRecords 催办合同详情列表
-     */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
-    }
-
-    /**
-     * Set 催办合同详情列表
-     * @param RemindFlowRecords 催办合同详情列表
-     */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,20 +45,14 @@ public class CreateFlowRemindsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateFlowRemindsResponse() {
+    public DeleteMigrationTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsResponse(CreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
-            }
-        }
+    public DeleteMigrationTaskResponse(DeleteMigrationTaskResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class CreateFlowRemindsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

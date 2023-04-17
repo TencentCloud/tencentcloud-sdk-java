@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsResponse extends AbstractModel{
+public class DescribeMigrationTasksResponse extends AbstractModel{
 
     /**
-    * 催办合同详情列表
+    * 迁移任务的数量
     */
-    @SerializedName("RemindFlowRecords")
+    @SerializedName("TotalCount")
     @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+    private Long TotalCount;
+
+    /**
+    * 迁移任务详情
+    */
+    @SerializedName("MigrationTasks")
+    @Expose
+    private MigrationTaskInfo [] MigrationTasks;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateFlowRemindsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 催办合同详情列表 
-     * @return RemindFlowRecords 催办合同详情列表
+     * Get 迁移任务的数量 
+     * @return TotalCount 迁移任务的数量
      */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 催办合同详情列表
-     * @param RemindFlowRecords 催办合同详情列表
+     * Set 迁移任务的数量
+     * @param TotalCount 迁移任务的数量
      */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 迁移任务详情 
+     * @return MigrationTasks 迁移任务详情
+     */
+    public MigrationTaskInfo [] getMigrationTasks() {
+        return this.MigrationTasks;
+    }
+
+    /**
+     * Set 迁移任务详情
+     * @param MigrationTasks 迁移任务详情
+     */
+    public void setMigrationTasks(MigrationTaskInfo [] MigrationTasks) {
+        this.MigrationTasks = MigrationTasks;
     }
 
     /**
@@ -68,18 +91,21 @@ public class CreateFlowRemindsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateFlowRemindsResponse() {
+    public DescribeMigrationTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsResponse(CreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
+    public DescribeMigrationTasksResponse(DescribeMigrationTasksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.MigrationTasks != null) {
+            this.MigrationTasks = new MigrationTaskInfo[source.MigrationTasks.length];
+            for (int i = 0; i < source.MigrationTasks.length; i++) {
+                this.MigrationTasks[i] = new MigrationTaskInfo(source.MigrationTasks[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +118,8 @@ public class CreateFlowRemindsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "MigrationTasks.", this.MigrationTasks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

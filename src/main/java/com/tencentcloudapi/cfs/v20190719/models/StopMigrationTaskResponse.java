@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsResponse extends AbstractModel{
+public class StopMigrationTaskResponse extends AbstractModel{
 
     /**
-    * 催办合同详情列表
+    * 迁移任务Id
     */
-    @SerializedName("RemindFlowRecords")
+    @SerializedName("TaskId")
     @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+    private String TaskId;
+
+    /**
+    * 迁移状态。0: 已完成；1: 进行中；2: 已终止
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateFlowRemindsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 催办合同详情列表 
-     * @return RemindFlowRecords 催办合同详情列表
+     * Get 迁移任务Id 
+     * @return TaskId 迁移任务Id
      */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 催办合同详情列表
-     * @param RemindFlowRecords 催办合同详情列表
+     * Set 迁移任务Id
+     * @param TaskId 迁移任务Id
      */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 迁移状态。0: 已完成；1: 进行中；2: 已终止 
+     * @return Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * @param Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -68,19 +91,19 @@ public class CreateFlowRemindsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateFlowRemindsResponse() {
+    public StopMigrationTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsResponse(CreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
-            }
+    public StopMigrationTaskResponse(StopMigrationTaskResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +115,8 @@ public class CreateFlowRemindsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

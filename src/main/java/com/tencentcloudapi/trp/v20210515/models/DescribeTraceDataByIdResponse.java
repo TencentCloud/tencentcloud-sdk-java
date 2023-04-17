@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.trp.v20210515.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateFlowRemindsResponse extends AbstractModel{
+public class DescribeTraceDataByIdResponse extends AbstractModel{
 
     /**
-    * 催办合同详情列表
+    * 无
     */
-    @SerializedName("RemindFlowRecords")
+    @SerializedName("TraceData")
     @Expose
-    private RemindFlowRecords [] RemindFlowRecords;
+    private TraceData TraceData;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class CreateFlowRemindsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 催办合同详情列表 
-     * @return RemindFlowRecords 催办合同详情列表
+     * Get 无 
+     * @return TraceData 无
      */
-    public RemindFlowRecords [] getRemindFlowRecords() {
-        return this.RemindFlowRecords;
+    public TraceData getTraceData() {
+        return this.TraceData;
     }
 
     /**
-     * Set 催办合同详情列表
-     * @param RemindFlowRecords 催办合同详情列表
+     * Set 无
+     * @param TraceData 无
      */
-    public void setRemindFlowRecords(RemindFlowRecords [] RemindFlowRecords) {
-        this.RemindFlowRecords = RemindFlowRecords;
+    public void setTraceData(TraceData TraceData) {
+        this.TraceData = TraceData;
     }
 
     /**
@@ -68,19 +68,16 @@ public class CreateFlowRemindsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateFlowRemindsResponse() {
+    public DescribeTraceDataByIdResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateFlowRemindsResponse(CreateFlowRemindsResponse source) {
-        if (source.RemindFlowRecords != null) {
-            this.RemindFlowRecords = new RemindFlowRecords[source.RemindFlowRecords.length];
-            for (int i = 0; i < source.RemindFlowRecords.length; i++) {
-                this.RemindFlowRecords[i] = new RemindFlowRecords(source.RemindFlowRecords[i]);
-            }
+    public DescribeTraceDataByIdResponse(DescribeTraceDataByIdResponse source) {
+        if (source.TraceData != null) {
+            this.TraceData = new TraceData(source.TraceData);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class CreateFlowRemindsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RemindFlowRecords.", this.RemindFlowRecords);
+        this.setParamObj(map, prefix + "TraceData.", this.TraceData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

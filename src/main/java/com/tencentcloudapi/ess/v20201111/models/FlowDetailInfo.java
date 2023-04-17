@@ -45,13 +45,18 @@ public class FlowDetailInfo extends AbstractModel{
     private String FlowType;
 
     /**
-    * 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+    * 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
     */
     @SerializedName("FlowStatus")
     @Expose
@@ -147,40 +152,60 @@ public class FlowDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消 
-     * @return FlowStatus 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+     * Get 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填 
+     * @return FlowStatus 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
      */
     public Long getFlowStatus() {
         return this.FlowStatus;
     }
 
     /**
-     * Set 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
-     * @param FlowStatus 合同(流程)的状态
-1：未签署
-2：部分签署
-3：已退回
-4：完成签署
-5：已过期
-6：已取消
+     * Set 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+     * @param FlowStatus 流程状态
+- 0 还没有发起
+- 1 未签署
+- 2 部分签署
+- 3 已退回
+- 4 完成签署
+- 5 已过期
+- 6 已取消
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
      */
     public void setFlowStatus(Long FlowStatus) {
         this.FlowStatus = FlowStatus;
