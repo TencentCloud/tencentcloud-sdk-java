@@ -347,6 +347,86 @@ public class RumClient extends AbstractClient{
     }
 
     /**
+     *用于查询 app 监控多维分析数据
+     * @param req DescribeAppDimensionMetricsRequest
+     * @return DescribeAppDimensionMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppDimensionMetricsResponse DescribeAppDimensionMetrics(DescribeAppDimensionMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppDimensionMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppDimensionMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAppDimensionMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取 app 监控指标数据
+     * @param req DescribeAppMetricsDataRequest
+     * @return DescribeAppMetricsDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppMetricsDataResponse DescribeAppMetricsData(DescribeAppMetricsDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppMetricsDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppMetricsDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAppMetricsData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 app 监控个例样本详情列表
+     * @param req DescribeAppSingleCaseDetailListRequest
+     * @return DescribeAppSingleCaseDetailListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailList(DescribeAppSingleCaseDetailListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppSingleCaseDetailListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppSingleCaseDetailListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAppSingleCaseDetailList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询 app 监控个例聚合列表
+     * @param req DescribeAppSingleCaseListRequest
+     * @return DescribeAppSingleCaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAppSingleCaseListResponse DescribeAppSingleCaseList(DescribeAppSingleCaseListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAppSingleCaseListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAppSingleCaseListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAppSingleCaseList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *转发monitor查询
      * @param req DescribeDataRequest
      * @return DescribeDataResponse

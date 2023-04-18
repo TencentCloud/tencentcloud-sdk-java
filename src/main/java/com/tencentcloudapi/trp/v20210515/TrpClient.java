@@ -39,6 +39,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *接收客户侧的用户已授权的号码。
+     * @param req AuthorizedTransferRequest
+     * @return AuthorizedTransferResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizedTransferResponse AuthorizedTransfer(AuthorizedTransferRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuthorizedTransferResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuthorizedTransferResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AuthorizedTransfer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新增批次
      * @param req CreateCodeBatchRequest
      * @return CreateCodeBatchResponse
@@ -760,6 +780,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *接收客户反馈的各环节数据
+     * @param req EffectFeedbackRequest
+     * @return EffectFeedbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public EffectFeedbackResponse EffectFeedback(EffectFeedbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EffectFeedbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EffectFeedbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EffectFeedback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改批次
      * @param req ModifyCodeBatchRequest
      * @return ModifyCodeBatchResponse
@@ -933,6 +973,26 @@ public class TrpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyTraceDataRanksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyTraceDataRanks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接收离线筛选包回执，用于效果统计和分析。
+     * @param req ReportBatchCallbackStatusRequest
+     * @return ReportBatchCallbackStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReportBatchCallbackStatusResponse ReportBatchCallbackStatus(ReportBatchCallbackStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReportBatchCallbackStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReportBatchCallbackStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReportBatchCallbackStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -39,6 +39,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *将电子签系统员工userId与客户系统员工openId进行绑定
+     * @param req BindEmployeeUserIdWithClientOpenIdRequest
+     * @return BindEmployeeUserIdWithClientOpenIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindEmployeeUserIdWithClientOpenIdResponse BindEmployeeUserIdWithClientOpenId(BindEmployeeUserIdWithClientOpenIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindEmployeeUserIdWithClientOpenId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于撤销签署流程
 适用场景：如果某个合同流程当前至少还有一方没有签署，则可通过该接口取消该合同流程。常用于合同发错、内容填错，需要及时撤销的场景。
 注：如果合同流程中的参与方均已签署完毕，则无法通过该接口撤销合同。
@@ -877,6 +897,26 @@ callbackinfo包含： 回调地址和签名key
                 Type type = new TypeToken<JsonResponseModel<StartFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *将存在绑定关系的电子签系统员工userId与客户系统员工openId进行解绑
+     * @param req UnbindEmployeeUserIdWithClientOpenIdRequest
+     * @return UnbindEmployeeUserIdWithClientOpenIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindEmployeeUserIdWithClientOpenIdResponse UnbindEmployeeUserIdWithClientOpenId(UnbindEmployeeUserIdWithClientOpenIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindEmployeeUserIdWithClientOpenId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

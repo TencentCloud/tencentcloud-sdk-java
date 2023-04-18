@@ -521,6 +521,46 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询业务和攻击概要趋势
+     * @param req DescribePeakPointsRequest
+     * @return DescribePeakPointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePeakPointsResponse DescribePeakPoints(DescribePeakPointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePeakPointsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePeakPointsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePeakPoints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取业务和攻击概览峰值
+     * @param req DescribePeakValueRequest
+     * @return DescribePeakValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePeakValueResponse DescribePeakValue(DescribePeakValueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePeakValueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePeakValueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePeakValue");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取防护状态以及生效的实例id
      * @param req DescribePolicyStatusRequest
      * @return DescribePolicyStatusResponse
