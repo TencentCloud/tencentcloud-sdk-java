@@ -67,6 +67,14 @@ public class DescribeKTVPlaylistDetailRequest extends AbstractModel{
     private String [] RightFilters;
 
     /**
+    * 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+    */
+    @SerializedName("PlayScene")
+    @Expose
+    private String PlayScene;
+
+    /**
      * Get 应用名称。 
      * @return AppName 应用名称。
      */
@@ -170,6 +178,26 @@ public class DescribeKTVPlaylistDetailRequest extends AbstractModel{
         this.RightFilters = RightFilters;
     }
 
+    /**
+     * Get 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li> 
+     * @return PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public String getPlayScene() {
+        return this.PlayScene;
+    }
+
+    /**
+     * Set 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     * @param PlayScene 播放场景。默认为Chat
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public void setPlayScene(String PlayScene) {
+        this.PlayScene = PlayScene;
+    }
+
     public DescribeKTVPlaylistDetailRequest() {
     }
 
@@ -199,6 +227,9 @@ public class DescribeKTVPlaylistDetailRequest extends AbstractModel{
                 this.RightFilters[i] = new String(source.RightFilters[i]);
             }
         }
+        if (source.PlayScene != null) {
+            this.PlayScene = new String(source.PlayScene);
+        }
     }
 
 
@@ -212,6 +243,7 @@ public class DescribeKTVPlaylistDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "RightFilters.", this.RightFilters);
+        this.setParamSimple(map, prefix + "PlayScene", this.PlayScene);
 
     }
 }
