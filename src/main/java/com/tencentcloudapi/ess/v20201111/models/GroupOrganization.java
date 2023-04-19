@@ -55,7 +55,7 @@ public class GroupOrganization extends AbstractModel{
     private Long UpdateTime;
 
     /**
-    * 成员企业状态
+    * 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -199,9 +199,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 成员企业状态
+     * Get 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 成员企业状态
+     * @return Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -209,9 +209,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 成员企业状态
+     * Set 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 成员企业状态
+     * @param Status 成员企业加入集团的当前状态:1-待授权;2-已授权待激活;3-拒绝授权;4-已解除;5-已加入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

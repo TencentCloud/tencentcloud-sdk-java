@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInstancesResponse extends AbstractModel{
 
     /**
-    * 交易的ID
+    * 交易的ID。
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * 实例ID
+    * 实例ID。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -44,32 +44,32 @@ public class CreateInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 交易的ID 
-     * @return DealId 交易的ID
+     * Get 交易的ID。 
+     * @return DealId 交易的ID。
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set 交易的ID
-     * @param DealId 交易的ID
+     * Set 交易的ID。
+     * @param DealId 交易的ID。
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceIds 实例ID
+     * Get 实例ID。 
+     * @return InstanceIds 实例ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceIds 实例ID
+     * Set 实例ID。
+     * @param InstanceIds 实例ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

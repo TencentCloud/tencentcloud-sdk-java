@@ -121,7 +121,7 @@ public class TemplateInfo extends AbstractModel{
     private Recipient Promoter;
 
     /**
-    * 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+    * 模板可用状态，取值：1启用（默认），2停用
     */
     @SerializedName("Available")
     @Expose
@@ -383,16 +383,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用 
-     * @return Available 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     * Get 模板可用状态，取值：1启用（默认），2停用 
+     * @return Available 模板可用状态，取值：1启用（默认），2停用
      */
     public Long getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
-     * @param Available 模板可用状态，取值：0未知，但默认会被转成启用；1启用（默认），2停用
+     * Set 模板可用状态，取值：1启用（默认），2停用
+     * @param Available 模板可用状态，取值：1启用（默认），2停用
      */
     public void setAvailable(Long Available) {
         this.Available = Available;

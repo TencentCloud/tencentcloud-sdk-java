@@ -37,7 +37,8 @@ public class DescribeReverseShellEventsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+    * 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
     */
     @SerializedName("Filters")
     @Expose
@@ -90,16 +91,20 @@ public class DescribeReverseShellEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}] 
-     * @return Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Get 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示 
+     * @return Filters 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
-     * @param Filters 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+     * Set 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
+     * @param Filters 过滤参数
+InnerNetAlarmShow- int - 是否必填：1 - 内网告警展示 0 - 不展示
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

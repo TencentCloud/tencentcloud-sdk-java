@@ -135,6 +135,38 @@ public class DocumentInfo extends AbstractModel{
     private Long UpdateTime;
 
     /**
+    * 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pages")
+    @Expose
+    private Long Pages;
+
+    /**
+    * 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cover")
+    @Expose
+    private String Cover;
+
+    /**
      * Get 文档Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocumentId 文档Id
@@ -414,6 +446,86 @@ public class DocumentInfo extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 课件页数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pages 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPages() {
+        return this.Pages;
+    }
+
+    /**
+     * Set 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pages 课件页数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPages(Long Pages) {
+        this.Pages = Pages;
+    }
+
+    /**
+     * Get 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Width 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Width 宽，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Height 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Height 高，仅在静态转码的课件有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cover 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCover() {
+        return this.Cover;
+    }
+
+    /**
+     * Set 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cover 封面，仅转码的课件会生成封面
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCover(String Cover) {
+        this.Cover = Cover;
+    }
+
     public DocumentInfo() {
     }
 
@@ -464,6 +576,18 @@ public class DocumentInfo extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.Pages != null) {
+            this.Pages = new Long(source.Pages);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Cover != null) {
+            this.Cover = new String(source.Cover);
+        }
     }
 
 
@@ -485,6 +609,10 @@ public class DocumentInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Pages", this.Pages);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Cover", this.Cover);
 
     }
 }

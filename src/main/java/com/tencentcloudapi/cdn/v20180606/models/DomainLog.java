@@ -60,6 +60,14 @@ overseas：境外
     private String LogName;
 
     /**
+    * 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private Long FileSize;
+
+    /**
      * Get 日志包起始时间 
      * @return StartTime 日志包起始时间
      */
@@ -147,6 +155,26 @@ overseas：境外
         this.LogName = LogName;
     }
 
+    /**
+     * Get 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileSize 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSize 文件大小，单位: Byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileSize(Long FileSize) {
+        this.FileSize = FileSize;
+    }
+
     public DomainLog() {
     }
 
@@ -170,6 +198,9 @@ overseas：境外
         if (source.LogName != null) {
             this.LogName = new String(source.LogName);
         }
+        if (source.FileSize != null) {
+            this.FileSize = new Long(source.FileSize);
+        }
     }
 
 
@@ -182,6 +213,7 @@ overseas：境外
         this.setParamSimple(map, prefix + "LogPath", this.LogPath);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "LogName", this.LogName);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

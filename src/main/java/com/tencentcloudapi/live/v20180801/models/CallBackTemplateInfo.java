@@ -101,6 +101,14 @@ public class CallBackTemplateInfo extends AbstractModel{
     private String PushExceptionNotifyUrl;
 
     /**
+    * 音频审核回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AudioAuditNotifyUrl")
+    @Expose
+    private String AudioAuditNotifyUrl;
+
+    /**
      * Get 模板 ID。 
      * @return TemplateId 模板 ID。
      */
@@ -280,6 +288,26 @@ public class CallBackTemplateInfo extends AbstractModel{
         this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
     }
 
+    /**
+     * Get 音频审核回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AudioAuditNotifyUrl 音频审核回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAudioAuditNotifyUrl() {
+        return this.AudioAuditNotifyUrl;
+    }
+
+    /**
+     * Set 音频审核回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AudioAuditNotifyUrl 音频审核回调 URL。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAudioAuditNotifyUrl(String AudioAuditNotifyUrl) {
+        this.AudioAuditNotifyUrl = AudioAuditNotifyUrl;
+    }
+
     public CallBackTemplateInfo() {
     }
 
@@ -321,6 +349,9 @@ public class CallBackTemplateInfo extends AbstractModel{
         if (source.PushExceptionNotifyUrl != null) {
             this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
         }
+        if (source.AudioAuditNotifyUrl != null) {
+            this.AudioAuditNotifyUrl = new String(source.AudioAuditNotifyUrl);
+        }
     }
 
 
@@ -339,6 +370,7 @@ public class CallBackTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
+        this.setParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
 
     }
 }

@@ -136,6 +136,36 @@ public class MemberRecord extends AbstractModel{
     private Long PerMemberMessageCount;
 
     /**
+    * 用户角色。0代表学生；1代表老师； 2助教；3巡课。
+    */
+    @SerializedName("Role")
+    @Expose
+    private Long Role;
+
+    /**
+    * 上课班号
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 子上课班号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubGroupId")
+    @Expose
+    private String [] SubGroupId;
+
+    /**
+    * 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stage")
+    @Expose
+    private Long Stage;
+
+    /**
      * Get 用户ID。 
      * @return UserId 用户ID。
      */
@@ -395,6 +425,78 @@ public class MemberRecord extends AbstractModel{
         this.PerMemberMessageCount = PerMemberMessageCount;
     }
 
+    /**
+     * Get 用户角色。0代表学生；1代表老师； 2助教；3巡课。 
+     * @return Role 用户角色。0代表学生；1代表老师； 2助教；3巡课。
+     */
+    public Long getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 用户角色。0代表学生；1代表老师； 2助教；3巡课。
+     * @param Role 用户角色。0代表学生；1代表老师； 2助教；3巡课。
+     */
+    public void setRole(Long Role) {
+        this.Role = Role;
+    }
+
+    /**
+     * Get 上课班号 
+     * @return GroupId 上课班号
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 上课班号
+     * @param GroupId 上课班号
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 子上课班号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubGroupId 子上课班号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSubGroupId() {
+        return this.SubGroupId;
+    }
+
+    /**
+     * Set 子上课班号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubGroupId 子上课班号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubGroupId(String [] SubGroupId) {
+        this.SubGroupId = SubGroupId;
+    }
+
+    /**
+     * Get 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stage 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStage() {
+        return this.Stage;
+    }
+
+    /**
+     * Set 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stage 用户的上台状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStage(Long Stage) {
+        this.Stage = Stage;
+    }
+
     public MemberRecord() {
     }
 
@@ -451,6 +553,21 @@ public class MemberRecord extends AbstractModel{
         if (source.PerMemberMessageCount != null) {
             this.PerMemberMessageCount = new Long(source.PerMemberMessageCount);
         }
+        if (source.Role != null) {
+            this.Role = new Long(source.Role);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
+        if (source.SubGroupId != null) {
+            this.SubGroupId = new String[source.SubGroupId.length];
+            for (int i = 0; i < source.SubGroupId.length; i++) {
+                this.SubGroupId[i] = new String(source.SubGroupId[i]);
+            }
+        }
+        if (source.Stage != null) {
+            this.Stage = new Long(source.Stage);
+        }
     }
 
 
@@ -474,6 +591,10 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "Device", this.Device);
         this.setParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
         this.setParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
+        this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
+        this.setParamSimple(map, prefix + "Stage", this.Stage);
 
     }
 }

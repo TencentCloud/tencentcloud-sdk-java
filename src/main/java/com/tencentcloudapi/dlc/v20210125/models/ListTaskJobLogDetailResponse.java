@@ -47,6 +47,14 @@ public class ListTaskJobLogDetailResponse extends AbstractModel{
     private JobLogResult [] Results;
 
     /**
+    * 日志url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogUrl")
+    @Expose
+    private String LogUrl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -114,6 +122,26 @@ public class ListTaskJobLogDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 日志url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogUrl 日志url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogUrl() {
+        return this.LogUrl;
+    }
+
+    /**
+     * Set 日志url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogUrl 日志url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogUrl(String LogUrl) {
+        this.LogUrl = LogUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -149,6 +177,9 @@ public class ListTaskJobLogDetailResponse extends AbstractModel{
                 this.Results[i] = new JobLogResult(source.Results[i]);
             }
         }
+        if (source.LogUrl != null) {
+            this.LogUrl = new String(source.LogUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -162,6 +193,7 @@ public class ListTaskJobLogDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamSimple(map, prefix + "LogUrl", this.LogUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

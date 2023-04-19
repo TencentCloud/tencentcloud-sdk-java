@@ -362,7 +362,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 (DescribeTemplateList) 用于获取信息模板列表。
-
      * @param req DescribeTemplateListRequest
      * @return DescribeTemplateListResponse
      * @throws TencentCloudSDKException

@@ -204,6 +204,38 @@ public class DomainsPartInfo extends AbstractModel{
     private Long ProxySendTimeout;
 
     /**
+    * 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SniType")
+    @Expose
+    private Long SniType;
+
+    /**
+    * SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SniHost")
+    @Expose
+    private String SniHost;
+
+    /**
+    * 无
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weights")
+    @Expose
+    private String [] Weights;
+
+    /**
+    * IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpHeaders")
+    @Expose
+    private String [] IpHeaders;
+
+    /**
      * Get 是否开启httpRewrite 
      * @return HttpsRewrite 是否开启httpRewrite
      */
@@ -627,6 +659,86 @@ public class DomainsPartInfo extends AbstractModel{
         this.ProxySendTimeout = ProxySendTimeout;
     }
 
+    /**
+     * Get 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSniType() {
+        return this.SniType;
+    }
+
+    /**
+     * Set 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSniType(Long SniType) {
+        this.SniType = SniType;
+    }
+
+    /**
+     * Get SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SniHost SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSniHost() {
+        return this.SniHost;
+    }
+
+    /**
+     * Set SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SniHost SniType=3时，需要填此参数，表示自定义的host；
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSniHost(String SniHost) {
+        this.SniHost = SniHost;
+    }
+
+    /**
+     * Get 无
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weights 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getWeights() {
+        return this.Weights;
+    }
+
+    /**
+     * Set 无
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weights 无
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeights(String [] Weights) {
+        this.Weights = Weights;
+    }
+
+    /**
+     * Get IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpHeaders IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpHeaders() {
+        return this.IpHeaders;
+    }
+
+    /**
+     * Set IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpHeaders IsCdn=3时，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpHeaders(String [] IpHeaders) {
+        this.IpHeaders = IpHeaders;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -719,6 +831,24 @@ public class DomainsPartInfo extends AbstractModel{
         if (source.ProxySendTimeout != null) {
             this.ProxySendTimeout = new Long(source.ProxySendTimeout);
         }
+        if (source.SniType != null) {
+            this.SniType = new Long(source.SniType);
+        }
+        if (source.SniHost != null) {
+            this.SniHost = new String(source.SniHost);
+        }
+        if (source.Weights != null) {
+            this.Weights = new String[source.Weights.length];
+            for (int i = 0; i < source.Weights.length; i++) {
+                this.Weights[i] = new String(source.Weights[i]);
+            }
+        }
+        if (source.IpHeaders != null) {
+            this.IpHeaders = new String[source.IpHeaders.length];
+            for (int i = 0; i < source.IpHeaders.length; i++) {
+                this.IpHeaders[i] = new String(source.IpHeaders[i]);
+            }
+        }
     }
 
 
@@ -751,6 +881,10 @@ public class DomainsPartInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
         this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
         this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
+        this.setParamSimple(map, prefix + "SniType", this.SniType);
+        this.setParamSimple(map, prefix + "SniHost", this.SniHost);
+        this.setParamArraySimple(map, prefix + "Weights.", this.Weights);
+        this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
 
     }
 }

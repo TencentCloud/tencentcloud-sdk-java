@@ -3639,6 +3639,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *对集群的Kubeconfig信息进行更新
+     * @param req UpdateClusterKubeconfigRequest
+     * @return UpdateClusterKubeconfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(UpdateClusterKubeconfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateClusterKubeconfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateClusterKubeconfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *升级集群 Master 组件到指定版本
      * @param req UpdateClusterVersionRequest
      * @return UpdateClusterVersionResponse

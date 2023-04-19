@@ -99,6 +99,25 @@ public class LivePackageInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WillRenew")
+    @Expose
+    private Long WillRenew;
+
+    /**
+    * 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewalResult")
+    @Expose
+    private Long RenewalResult;
+
+    /**
      * Get 包 ID。 
      * @return Id 包 ID。
      */
@@ -306,6 +325,58 @@ public class LivePackageInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WillRenew 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWillRenew() {
+        return this.WillRenew;
+    }
+
+    /**
+     * Set 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WillRenew 是否自动续购。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWillRenew(Long WillRenew) {
+        this.WillRenew = WillRenew;
+    }
+
+    /**
+     * Get 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewalResult 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewalResult() {
+        return this.RenewalResult;
+    }
+
+    /**
+     * Set 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewalResult 续购状态。
+1 ：续购成功。
+0 ：尚未续购。
+<0  : 续购失败。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewalResult(Long RenewalResult) {
+        this.RenewalResult = RenewalResult;
+    }
+
     public LivePackageInfo() {
     }
 
@@ -338,6 +409,12 @@ public class LivePackageInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.WillRenew != null) {
+            this.WillRenew = new Long(source.WillRenew);
+        }
+        if (source.RenewalResult != null) {
+            this.RenewalResult = new Long(source.RenewalResult);
+        }
     }
 
 
@@ -353,6 +430,8 @@ public class LivePackageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "WillRenew", this.WillRenew);
+        this.setParamSimple(map, prefix + "RenewalResult", this.RenewalResult);
 
     }
 }

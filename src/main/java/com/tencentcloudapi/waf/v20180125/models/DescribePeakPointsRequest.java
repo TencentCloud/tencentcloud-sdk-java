@@ -58,13 +58,20 @@ public class DescribePeakPointsRequest extends AbstractModel{
     private String InstanceID;
 
     /**
-    * 六个值可选：
+    * 十三个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
+StatusServerError-WAF返回给客户端状态码次数趋势图
+StatusClientError-WAF返回给客户端状态码次数趋势图
+StatusRedirect-WAF返回给客户端状态码次数趋势图
+StatusOk-WAF返回给客户端状态码次数趋势图
+UpstreamServerError-源站返回给WAF状态码次数趋势图
+UpstreamClientError-源站返回给WAF状态码次数趋势图
+UpstreamRedirect-源站返回给WAF状态码次数趋势图
     */
     @SerializedName("MetricName")
     @Expose
@@ -151,40 +158,68 @@ cc-CC攻击总数趋势图
     }
 
     /**
-     * Get 六个值可选：
-access-峰值qps趋势图
-botAccess- bot峰值qps趋势图
-down-下行峰值带宽趋势图
-up-上行峰值带宽趋势图
-attack-Web攻击总数趋势图
-cc-CC攻击总数趋势图 
-     * @return MetricName 六个值可选：
+     * Get 十三个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
+StatusServerError-WAF返回给客户端状态码次数趋势图
+StatusClientError-WAF返回给客户端状态码次数趋势图
+StatusRedirect-WAF返回给客户端状态码次数趋势图
+StatusOk-WAF返回给客户端状态码次数趋势图
+UpstreamServerError-源站返回给WAF状态码次数趋势图
+UpstreamClientError-源站返回给WAF状态码次数趋势图
+UpstreamRedirect-源站返回给WAF状态码次数趋势图 
+     * @return MetricName 十三个值可选：
+access-峰值qps趋势图
+botAccess- bot峰值qps趋势图
+down-下行峰值带宽趋势图
+up-上行峰值带宽趋势图
+attack-Web攻击总数趋势图
+cc-CC攻击总数趋势图
+StatusServerError-WAF返回给客户端状态码次数趋势图
+StatusClientError-WAF返回给客户端状态码次数趋势图
+StatusRedirect-WAF返回给客户端状态码次数趋势图
+StatusOk-WAF返回给客户端状态码次数趋势图
+UpstreamServerError-源站返回给WAF状态码次数趋势图
+UpstreamClientError-源站返回给WAF状态码次数趋势图
+UpstreamRedirect-源站返回给WAF状态码次数趋势图
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set 六个值可选：
+     * Set 十三个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
-     * @param MetricName 六个值可选：
+StatusServerError-WAF返回给客户端状态码次数趋势图
+StatusClientError-WAF返回给客户端状态码次数趋势图
+StatusRedirect-WAF返回给客户端状态码次数趋势图
+StatusOk-WAF返回给客户端状态码次数趋势图
+UpstreamServerError-源站返回给WAF状态码次数趋势图
+UpstreamClientError-源站返回给WAF状态码次数趋势图
+UpstreamRedirect-源站返回给WAF状态码次数趋势图
+     * @param MetricName 十三个值可选：
 access-峰值qps趋势图
 botAccess- bot峰值qps趋势图
 down-下行峰值带宽趋势图
 up-上行峰值带宽趋势图
 attack-Web攻击总数趋势图
 cc-CC攻击总数趋势图
+StatusServerError-WAF返回给客户端状态码次数趋势图
+StatusClientError-WAF返回给客户端状态码次数趋势图
+StatusRedirect-WAF返回给客户端状态码次数趋势图
+StatusOk-WAF返回给客户端状态码次数趋势图
+UpstreamServerError-源站返回给WAF状态码次数趋势图
+UpstreamClientError-源站返回给WAF状态码次数趋势图
+UpstreamRedirect-源站返回给WAF状态码次数趋势图
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

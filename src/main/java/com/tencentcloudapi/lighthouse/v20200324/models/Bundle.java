@@ -111,11 +111,26 @@ public class Bundle extends AbstractModel{
     /**
     * 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
     */
     @SerializedName("BundleType")
     @Expose
     private String BundleType;
+
+    /**
+    * 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BundleTypeDescription")
+    @Expose
+    private String BundleTypeDescription;
 
     /**
     * 套餐展示标签.
@@ -331,10 +346,24 @@ public class Bundle extends AbstractModel{
     /**
      * Get 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li> 
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li> 
      * @return BundleType 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
      */
     public String getBundleType() {
         return this.BundleType;
@@ -343,13 +372,47 @@ public class Bundle extends AbstractModel{
     /**
      * Set 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
      * @param BundleType 套餐类型。
 取值范围：
-<li> GENERAL_BUNDLE：通用型</li><li> STORAGE_BUNDLE：存储型 </li>
+<li>STARTER_BUNDLE：入门型</li>
+<li>GENERAL_BUNDLE：通用型</li>
+<li>ENTERPRISE_BUNDLE：企业型</li>
+<li>STORAGE_BUNDLE：存储型</li>
+<li>EXCLUSIVE_BUNDLE：专属型</li>
+<li>HK_EXCLUSIVE_BUNDLE：香港专属型 </li>
+<li>CAREFREE_BUNDLE：无忧型</li>
+<li>BEFAST_BUNDLE：蜂驰型 </li>
      */
     public void setBundleType(String BundleType) {
         this.BundleType = BundleType;
+    }
+
+    /**
+     * Get 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BundleTypeDescription 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBundleTypeDescription() {
+        return this.BundleTypeDescription;
+    }
+
+    /**
+     * Set 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BundleTypeDescription 套餐类型描述信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBundleTypeDescription(String BundleTypeDescription) {
+        this.BundleTypeDescription = BundleTypeDescription;
     }
 
     /**
@@ -431,6 +494,9 @@ public class Bundle extends AbstractModel{
         if (source.BundleType != null) {
             this.BundleType = new String(source.BundleType);
         }
+        if (source.BundleTypeDescription != null) {
+            this.BundleTypeDescription = new String(source.BundleTypeDescription);
+        }
         if (source.BundleDisplayLabel != null) {
             this.BundleDisplayLabel = new String(source.BundleDisplayLabel);
         }
@@ -454,6 +520,7 @@ public class Bundle extends AbstractModel{
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "BundleSalesState", this.BundleSalesState);
         this.setParamSimple(map, prefix + "BundleType", this.BundleType);
+        this.setParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
         this.setParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
 
     }

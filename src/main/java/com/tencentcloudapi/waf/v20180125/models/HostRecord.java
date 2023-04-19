@@ -138,6 +138,22 @@ public class HostRecord extends AbstractModel{
     private String AlbType;
 
     /**
+    * IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpHeaders")
+    @Expose
+    private String [] IpHeaders;
+
+    /**
+    * 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private Long EngineType;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -405,6 +421,46 @@ public class HostRecord extends AbstractModel{
         this.AlbType = AlbType;
     }
 
+    /**
+     * Get IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpHeaders IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpHeaders() {
+        return this.IpHeaders;
+    }
+
+    /**
+     * Set IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpHeaders IsCdn=3时，需要填此参数，表示自定义header
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpHeaders(String [] IpHeaders) {
+        this.IpHeaders = IpHeaders;
+    }
+
+    /**
+     * Get 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 规则引擎类型， 1: menshen,   2:tiga
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(Long EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public HostRecord() {
     }
 
@@ -467,6 +523,15 @@ public class HostRecord extends AbstractModel{
         if (source.AlbType != null) {
             this.AlbType = new String(source.AlbType);
         }
+        if (source.IpHeaders != null) {
+            this.IpHeaders = new String[source.IpHeaders.length];
+            for (int i = 0; i < source.IpHeaders.length; i++) {
+                this.IpHeaders[i] = new String(source.IpHeaders[i]);
+            }
+        }
+        if (source.EngineType != null) {
+            this.EngineType = new Long(source.EngineType);
+        }
     }
 
 
@@ -490,6 +555,8 @@ public class HostRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamArraySimple(map, prefix + "CdcClusters.", this.CdcClusters);
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
+        this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

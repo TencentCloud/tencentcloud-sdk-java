@@ -30,18 +30,18 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 代理信息
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
     * 员工信息
     */
     @SerializedName("Employees")
     @Expose
     private Staff [] Employees;
+
+    /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
 
     /**
      * Get 操作人信息 
@@ -60,22 +60,6 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理信息 
-     * @return Agent 代理信息
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 代理信息
-     * @param Agent 代理信息
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
-    }
-
-    /**
      * Get 员工信息 
      * @return Employees 员工信息
      */
@@ -91,6 +75,22 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
         this.Employees = Employees;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public UpdateIntegrationEmployeesRequest() {
     }
 
@@ -102,14 +102,14 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.Employees != null) {
             this.Employees = new Staff[source.Employees.length];
             for (int i = 0; i < source.Employees.length; i++) {
                 this.Employees[i] = new Staff(source.Employees[i]);
             }
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -119,8 +119,8 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "Employees.", this.Employees);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

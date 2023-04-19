@@ -37,7 +37,8 @@ public class InstanceSet extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 用户的 AppID。
+    * 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+
     */
     @SerializedName("Appid")
     @Expose
@@ -100,14 +101,14 @@ public class InstanceSet extends AbstractModel{
     private Long Port;
 
     /**
-    * 实例创建时间。
+    * 实例创建时间。格式如：2020-01-15 10:20:00。
     */
     @SerializedName("Createtime")
     @Expose
     private String Createtime;
 
     /**
-    * 实例容量大小，单位：MB。
+    * 实例内存容量大小。单位：MB，1MB=1024KB。
     */
     @SerializedName("Size")
     @Expose
@@ -145,7 +146,7 @@ public class InstanceSet extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 实例到期时间。
+    * 包年包月计费实例到期的时间。
     */
     @SerializedName("DeadlineTime")
     @Expose
@@ -194,7 +195,7 @@ public class InstanceSet extends AbstractModel{
     private String InstanceTitle;
 
     /**
-    * 计划下线时间。
+    * 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -250,7 +251,7 @@ public class InstanceSet extends AbstractModel{
     private Long PriceId;
 
     /**
-    * 隔离时间。
+    * 实例隔离开始的时间。
     */
     @SerializedName("CloseTime")
     @Expose
@@ -352,7 +353,7 @@ public class InstanceSet extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+    * 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorVersion")
@@ -400,7 +401,7 @@ public class InstanceSet extends AbstractModel{
     private String WanAddress;
 
     /**
-    * 北极星服务地址。
+    * 北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolarisServer")
@@ -472,16 +473,20 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 用户的 AppID。 
-     * @return Appid 用户的 AppID。
+     * Get 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ 
+     * @return Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set 用户的 AppID。
-     * @param Appid 用户的 AppID。
+     * Set 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+
+     * @param Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
@@ -616,32 +621,32 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例创建时间。 
-     * @return Createtime 实例创建时间。
+     * Get 实例创建时间。格式如：2020-01-15 10:20:00。 
+     * @return Createtime 实例创建时间。格式如：2020-01-15 10:20:00。
      */
     public String getCreatetime() {
         return this.Createtime;
     }
 
     /**
-     * Set 实例创建时间。
-     * @param Createtime 实例创建时间。
+     * Set 实例创建时间。格式如：2020-01-15 10:20:00。
+     * @param Createtime 实例创建时间。格式如：2020-01-15 10:20:00。
      */
     public void setCreatetime(String Createtime) {
         this.Createtime = Createtime;
     }
 
     /**
-     * Get 实例容量大小，单位：MB。 
-     * @return Size 实例容量大小，单位：MB。
+     * Get 实例内存容量大小。单位：MB，1MB=1024KB。 
+     * @return Size 实例内存容量大小。单位：MB，1MB=1024KB。
      */
     public Float getSize() {
         return this.Size;
     }
 
     /**
-     * Set 实例容量大小，单位：MB。
-     * @param Size 实例容量大小，单位：MB。
+     * Set 实例内存容量大小。单位：MB，1MB=1024KB。
+     * @param Size 实例内存容量大小。单位：MB，1MB=1024KB。
      */
     public void setSize(Float Size) {
         this.Size = Size;
@@ -736,16 +741,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 实例到期时间。 
-     * @return DeadlineTime 实例到期时间。
+     * Get 包年包月计费实例到期的时间。 
+     * @return DeadlineTime 包年包月计费实例到期的时间。
      */
     public String getDeadlineTime() {
         return this.DeadlineTime;
     }
 
     /**
-     * Set 实例到期时间。
-     * @param DeadlineTime 实例到期时间。
+     * Set 包年包月计费实例到期的时间。
+     * @param DeadlineTime 包年包月计费实例到期的时间。
      */
     public void setDeadlineTime(String DeadlineTime) {
         this.DeadlineTime = DeadlineTime;
@@ -848,16 +853,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 计划下线时间。 
-     * @return OfflineTime 计划下线时间。
+     * Get 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。 
+     * @return OfflineTime 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
     }
 
     /**
-     * Set 计划下线时间。
-     * @param OfflineTime 计划下线时间。
+     * Set 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
+     * @param OfflineTime 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
@@ -976,16 +981,16 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 隔离时间。 
-     * @return CloseTime 隔离时间。
+     * Get 实例隔离开始的时间。 
+     * @return CloseTime 实例隔离开始的时间。
      */
     public String getCloseTime() {
         return this.CloseTime;
     }
 
     /**
-     * Set 隔离时间。
-     * @param CloseTime 隔离时间。
+     * Set 实例隔离开始的时间。
+     * @param CloseTime 实例隔离开始的时间。
      */
     public void setCloseTime(String CloseTime) {
         this.CloseTime = CloseTime;
@@ -1228,9 +1233,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * Get 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * @return MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorVersion() {
@@ -1238,9 +1243,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * Set 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。</li><li>5s：5秒粒度监控。</li></ul>
+     * @param MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorVersion(String MonitorVersion) {
@@ -1348,9 +1353,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Get 北极星服务地址。
+     * Get 北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolarisServer 北极星服务地址。
+     * @return PolarisServer 北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolarisServer() {
@@ -1358,9 +1363,9 @@ public class InstanceSet extends AbstractModel{
     }
 
     /**
-     * Set 北极星服务地址。
+     * Set 北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolarisServer 北极星服务地址。
+     * @param PolarisServer 北极星服务地址，内部使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolarisServer(String PolarisServer) {

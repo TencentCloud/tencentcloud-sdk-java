@@ -306,6 +306,22 @@ public class DataEngineInfo extends AbstractModel{
     private Boolean StartStandbyCluster;
 
     /**
+    * spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticSwitch")
+    @Expose
+    private Boolean ElasticSwitch;
+
+    /**
+    * spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticLimit")
+    @Expose
+    private Long ElasticLimit;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -993,6 +1009,46 @@ public class DataEngineInfo extends AbstractModel{
         this.StartStandbyCluster = StartStandbyCluster;
     }
 
+    /**
+     * Get spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticSwitch spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getElasticSwitch() {
+        return this.ElasticSwitch;
+    }
+
+    /**
+     * Set spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticSwitch spark jar 包年包月集群是否开启弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticSwitch(Boolean ElasticSwitch) {
+        this.ElasticSwitch = ElasticSwitch;
+    }
+
+    /**
+     * Get spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticLimit spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticLimit() {
+        return this.ElasticLimit;
+    }
+
+    /**
+     * Set spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticLimit spark jar 包年包月集群弹性上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticLimit(Long ElasticLimit) {
+        this.ElasticLimit = ElasticLimit;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1121,6 +1177,12 @@ public class DataEngineInfo extends AbstractModel{
         if (source.StartStandbyCluster != null) {
             this.StartStandbyCluster = new Boolean(source.StartStandbyCluster);
         }
+        if (source.ElasticSwitch != null) {
+            this.ElasticSwitch = new Boolean(source.ElasticSwitch);
+        }
+        if (source.ElasticLimit != null) {
+            this.ElasticLimit = new Long(source.ElasticLimit);
+        }
     }
 
 
@@ -1165,6 +1227,8 @@ public class DataEngineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ChildImageVersionId", this.ChildImageVersionId);
         this.setParamSimple(map, prefix + "ImageVersionName", this.ImageVersionName);
         this.setParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
+        this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
+        this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
 
     }
 }

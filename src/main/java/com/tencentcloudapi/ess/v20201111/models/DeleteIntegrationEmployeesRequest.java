@@ -37,7 +37,7 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     private Staff [] Employees;
 
     /**
-    * 代理信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
     */
     @SerializedName("Agent")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理信息 
-     * @return Agent 代理信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理信息
-     * @param Agent 代理信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId需填充子企业Id
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

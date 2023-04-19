@@ -37,6 +37,13 @@ public class DescribeNotebookSessionStatementRequest extends AbstractModel{
     private String StatementId;
 
     /**
+    * 任务唯一标识
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
      * Get Session唯一标识 
      * @return SessionId Session唯一标识
      */
@@ -68,6 +75,22 @@ public class DescribeNotebookSessionStatementRequest extends AbstractModel{
         this.StatementId = StatementId;
     }
 
+    /**
+     * Get 任务唯一标识 
+     * @return TaskId 任务唯一标识
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务唯一标识
+     * @param TaskId 任务唯一标识
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public DescribeNotebookSessionStatementRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeNotebookSessionStatementRequest extends AbstractModel{
         if (source.StatementId != null) {
             this.StatementId = new String(source.StatementId);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeNotebookSessionStatementRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "StatementId", this.StatementId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

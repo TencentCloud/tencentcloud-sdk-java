@@ -66,11 +66,66 @@ public class PeakPointsItem extends AbstractModel{
 
     /**
     * Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotAccess")
     @Expose
     private Long BotAccess;
+
+    /**
+    * WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusServerError")
+    @Expose
+    private Long StatusServerError;
+
+    /**
+    * WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusClientError")
+    @Expose
+    private Long StatusClientError;
+
+    /**
+    * WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusRedirect")
+    @Expose
+    private Long StatusRedirect;
+
+    /**
+    * WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusOk")
+    @Expose
+    private Long StatusOk;
+
+    /**
+    * 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamServerError")
+    @Expose
+    private Long UpstreamServerError;
+
+    /**
+    * 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamClientError")
+    @Expose
+    private Long UpstreamClientError;
+
+    /**
+    * 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpstreamRedirect")
+    @Expose
+    private Long UpstreamRedirect;
 
     /**
      * Get 秒级别时间戳 
@@ -169,10 +224,8 @@ public class PeakPointsItem extends AbstractModel{
     }
 
     /**
-     * Get Bot qps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bot qps 
      * @return BotAccess Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBotAccess() {
         return this.BotAccess;
@@ -180,12 +233,150 @@ public class PeakPointsItem extends AbstractModel{
 
     /**
      * Set Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotAccess Bot qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotAccess(Long BotAccess) {
         this.BotAccess = BotAccess;
+    }
+
+    /**
+     * Get WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusServerError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatusServerError() {
+        return this.StatusServerError;
+    }
+
+    /**
+     * Set WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusServerError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusServerError(Long StatusServerError) {
+        this.StatusServerError = StatusServerError;
+    }
+
+    /**
+     * Get WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusClientError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatusClientError() {
+        return this.StatusClientError;
+    }
+
+    /**
+     * Set WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusClientError WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusClientError(Long StatusClientError) {
+        this.StatusClientError = StatusClientError;
+    }
+
+    /**
+     * Get WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusRedirect WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatusRedirect() {
+        return this.StatusRedirect;
+    }
+
+    /**
+     * Set WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusRedirect WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusRedirect(Long StatusRedirect) {
+        this.StatusRedirect = StatusRedirect;
+    }
+
+    /**
+     * Get WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusOk WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatusOk() {
+        return this.StatusOk;
+    }
+
+    /**
+     * Set WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusOk WAF返回给客户端状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusOk(Long StatusOk) {
+        this.StatusOk = StatusOk;
+    }
+
+    /**
+     * Get 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamServerError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpstreamServerError() {
+        return this.UpstreamServerError;
+    }
+
+    /**
+     * Set 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamServerError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamServerError(Long UpstreamServerError) {
+        this.UpstreamServerError = UpstreamServerError;
+    }
+
+    /**
+     * Get 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamClientError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpstreamClientError() {
+        return this.UpstreamClientError;
+    }
+
+    /**
+     * Set 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamClientError 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamClientError(Long UpstreamClientError) {
+        this.UpstreamClientError = UpstreamClientError;
+    }
+
+    /**
+     * Get 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpstreamRedirect 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpstreamRedirect() {
+        return this.UpstreamRedirect;
+    }
+
+    /**
+     * Set 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpstreamRedirect 源站返回给WAF状态码次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpstreamRedirect(Long UpstreamRedirect) {
+        this.UpstreamRedirect = UpstreamRedirect;
     }
 
     public PeakPointsItem() {
@@ -217,6 +408,27 @@ public class PeakPointsItem extends AbstractModel{
         if (source.BotAccess != null) {
             this.BotAccess = new Long(source.BotAccess);
         }
+        if (source.StatusServerError != null) {
+            this.StatusServerError = new Long(source.StatusServerError);
+        }
+        if (source.StatusClientError != null) {
+            this.StatusClientError = new Long(source.StatusClientError);
+        }
+        if (source.StatusRedirect != null) {
+            this.StatusRedirect = new Long(source.StatusRedirect);
+        }
+        if (source.StatusOk != null) {
+            this.StatusOk = new Long(source.StatusOk);
+        }
+        if (source.UpstreamServerError != null) {
+            this.UpstreamServerError = new Long(source.UpstreamServerError);
+        }
+        if (source.UpstreamClientError != null) {
+            this.UpstreamClientError = new Long(source.UpstreamClientError);
+        }
+        if (source.UpstreamRedirect != null) {
+            this.UpstreamRedirect = new Long(source.UpstreamRedirect);
+        }
     }
 
 
@@ -231,6 +443,13 @@ public class PeakPointsItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Attack", this.Attack);
         this.setParamSimple(map, prefix + "Cc", this.Cc);
         this.setParamSimple(map, prefix + "BotAccess", this.BotAccess);
+        this.setParamSimple(map, prefix + "StatusServerError", this.StatusServerError);
+        this.setParamSimple(map, prefix + "StatusClientError", this.StatusClientError);
+        this.setParamSimple(map, prefix + "StatusRedirect", this.StatusRedirect);
+        this.setParamSimple(map, prefix + "StatusOk", this.StatusOk);
+        this.setParamSimple(map, prefix + "UpstreamServerError", this.UpstreamServerError);
+        this.setParamSimple(map, prefix + "UpstreamClientError", this.UpstreamClientError);
+        this.setParamSimple(map, prefix + "UpstreamRedirect", this.UpstreamRedirect);
 
     }
 }

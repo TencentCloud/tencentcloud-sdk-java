@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class OrganizationInfo extends AbstractModel{
 
     /**
-    * 机构在平台的编号
+    * 机构在平台的编号，内部字段，暂未开放
     */
     @SerializedName("OrganizationId")
     @Expose
     private String OrganizationId;
 
     /**
-    * 用户渠道
+    * 用户渠道，内部字段，暂未开放
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 用户在渠道的机构编号
+    * 用户在渠道的机构编号，内部字段，暂未开放
     */
     @SerializedName("OrganizationOpenId")
     @Expose
     private String OrganizationOpenId;
 
     /**
-    * 用户真实的IP
+    * 用户真实的IP，内部字段，暂未开放
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 机构的代理IP
+    * 机构的代理IP，内部字段，暂未开放
     */
     @SerializedName("ProxyIp")
     @Expose
     private String ProxyIp;
 
     /**
-     * Get 机构在平台的编号 
-     * @return OrganizationId 机构在平台的编号
+     * Get 机构在平台的编号，内部字段，暂未开放 
+     * @return OrganizationId 机构在平台的编号，内部字段，暂未开放
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 机构在平台的编号
-     * @param OrganizationId 机构在平台的编号
+     * Set 机构在平台的编号，内部字段，暂未开放
+     * @param OrganizationId 机构在平台的编号，内部字段，暂未开放
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 用户渠道 
-     * @return Channel 用户渠道
+     * Get 用户渠道，内部字段，暂未开放 
+     * @return Channel 用户渠道，内部字段，暂未开放
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 用户渠道
-     * @param Channel 用户渠道
+     * Set 用户渠道，内部字段，暂未开放
+     * @param Channel 用户渠道，内部字段，暂未开放
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 用户在渠道的机构编号 
-     * @return OrganizationOpenId 用户在渠道的机构编号
+     * Get 用户在渠道的机构编号，内部字段，暂未开放 
+     * @return OrganizationOpenId 用户在渠道的机构编号，内部字段，暂未开放
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 用户在渠道的机构编号
-     * @param OrganizationOpenId 用户在渠道的机构编号
+     * Set 用户在渠道的机构编号，内部字段，暂未开放
+     * @param OrganizationOpenId 用户在渠道的机构编号，内部字段，暂未开放
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
 
     /**
-     * Get 用户真实的IP 
-     * @return ClientIp 用户真实的IP
+     * Get 用户真实的IP，内部字段，暂未开放 
+     * @return ClientIp 用户真实的IP，内部字段，暂未开放
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 用户真实的IP
-     * @param ClientIp 用户真实的IP
+     * Set 用户真实的IP，内部字段，暂未开放
+     * @param ClientIp 用户真实的IP，内部字段，暂未开放
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 机构的代理IP 
-     * @return ProxyIp 机构的代理IP
+     * Get 机构的代理IP，内部字段，暂未开放 
+     * @return ProxyIp 机构的代理IP，内部字段，暂未开放
      */
     public String getProxyIp() {
         return this.ProxyIp;
     }
 
     /**
-     * Set 机构的代理IP
-     * @param ProxyIp 机构的代理IP
+     * Set 机构的代理IP，内部字段，暂未开放
+     * @param ProxyIp 机构的代理IP，内部字段，暂未开放
      */
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;

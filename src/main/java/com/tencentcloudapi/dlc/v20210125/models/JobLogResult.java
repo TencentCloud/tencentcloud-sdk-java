@@ -55,6 +55,14 @@ public class JobLogResult extends AbstractModel{
     private String LogJson;
 
     /**
+    * 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PkgLogId")
+    @Expose
+    private String PkgLogId;
+
+    /**
      * Get 日志时间戳，毫秒
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Time 日志时间戳，毫秒
@@ -134,6 +142,26 @@ public class JobLogResult extends AbstractModel{
         this.LogJson = LogJson;
     }
 
+    /**
+     * Get 日志ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PkgLogId 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPkgLogId() {
+        return this.PkgLogId;
+    }
+
+    /**
+     * Set 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PkgLogId 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPkgLogId(String PkgLogId) {
+        this.PkgLogId = PkgLogId;
+    }
+
     public JobLogResult() {
     }
 
@@ -154,6 +182,9 @@ public class JobLogResult extends AbstractModel{
         if (source.LogJson != null) {
             this.LogJson = new String(source.LogJson);
         }
+        if (source.PkgLogId != null) {
+            this.PkgLogId = new String(source.PkgLogId);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class JobLogResult extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
+        this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
 
     }
 }

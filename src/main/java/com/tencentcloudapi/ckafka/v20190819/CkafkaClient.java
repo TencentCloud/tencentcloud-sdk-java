@@ -1521,6 +1521,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *续费Ckafka实例, 目前只支持国内站包年包月实例续费
+     * @param req RenewCkafkaInstanceRequest
+     * @return RenewCkafkaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewCkafkaInstanceResponse RenewCkafkaInstance(RenewCkafkaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewCkafkaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewCkafkaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewCkafkaInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过HTTP接入层发送消息
      * @param req SendMessageRequest
      * @return SendMessageResponse

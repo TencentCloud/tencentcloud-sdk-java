@@ -419,6 +419,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *删除巡课
+     * @param req DeleteSupervisorRequest
+     * @return DeleteSupervisorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSupervisorResponse DeleteSupervisor(DeleteSupervisorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSupervisorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSupervisorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSupervisor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取房间答题详情
      * @param req DescribeAnswerListRequest
      * @return DescribeAnswerListResponse
@@ -511,6 +531,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量获取文档信息
+     * @param req DescribeDocumentsRequest
+     * @return DescribeDocumentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentsResponse DescribeDocuments(DescribeDocumentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocuments");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -711,6 +751,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *结束房间的直播
+     * @param req EndRoomRequest
+     * @return EndRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EndRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EndRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EndRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -971,6 +1031,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开始房间的直播
+     * @param req StartRoomRequest
+     * @return StartRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartRoom");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

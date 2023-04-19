@@ -72,6 +72,30 @@ GZJGZY: 公证机构执业证。
     private String ImgUrl;
 
     /**
+    * 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegistrantCertificateCode")
+    @Expose
+    private String RegistrantCertificateCode;
+
+    /**
+    * 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegistrantCertificateType")
+    @Expose
+    private String RegistrantCertificateType;
+
+    /**
+    * 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegistrantImgUrl")
+    @Expose
+    private String RegistrantImgUrl;
+
+    /**
      * Get 证件号码。 
      * @return CertificateCode 证件号码。
      */
@@ -231,6 +255,66 @@ GZJGZY: 公证机构执业证。
         this.ImgUrl = ImgUrl;
     }
 
+    /**
+     * Get 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegistrantCertificateCode 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegistrantCertificateCode() {
+        return this.RegistrantCertificateCode;
+    }
+
+    /**
+     * Set 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegistrantCertificateCode 联系人证件号码。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegistrantCertificateCode(String RegistrantCertificateCode) {
+        this.RegistrantCertificateCode = RegistrantCertificateCode;
+    }
+
+    /**
+     * Get 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegistrantCertificateType 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegistrantCertificateType() {
+        return this.RegistrantCertificateType;
+    }
+
+    /**
+     * Set 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegistrantCertificateType 联系人证件类型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegistrantCertificateType(String RegistrantCertificateType) {
+        this.RegistrantCertificateType = RegistrantCertificateType;
+    }
+
+    /**
+     * Get 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegistrantImgUrl 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegistrantImgUrl() {
+        return this.RegistrantImgUrl;
+    }
+
+    /**
+     * Set 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegistrantImgUrl 联系人证件照片地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegistrantImgUrl(String RegistrantImgUrl) {
+        this.RegistrantImgUrl = RegistrantImgUrl;
+    }
+
     public CertificateInfo() {
     }
 
@@ -248,6 +332,15 @@ GZJGZY: 公证机构执业证。
         if (source.ImgUrl != null) {
             this.ImgUrl = new String(source.ImgUrl);
         }
+        if (source.RegistrantCertificateCode != null) {
+            this.RegistrantCertificateCode = new String(source.RegistrantCertificateCode);
+        }
+        if (source.RegistrantCertificateType != null) {
+            this.RegistrantCertificateType = new String(source.RegistrantCertificateType);
+        }
+        if (source.RegistrantImgUrl != null) {
+            this.RegistrantImgUrl = new String(source.RegistrantImgUrl);
+        }
     }
 
 
@@ -258,6 +351,9 @@ GZJGZY: 公证机构执业证。
         this.setParamSimple(map, prefix + "CertificateCode", this.CertificateCode);
         this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);
         this.setParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+        this.setParamSimple(map, prefix + "RegistrantCertificateCode", this.RegistrantCertificateCode);
+        this.setParamSimple(map, prefix + "RegistrantCertificateType", this.RegistrantCertificateType);
+        this.setParamSimple(map, prefix + "RegistrantImgUrl", this.RegistrantImgUrl);
 
     }
 }

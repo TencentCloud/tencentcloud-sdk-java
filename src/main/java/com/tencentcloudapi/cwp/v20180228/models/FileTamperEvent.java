@@ -286,6 +286,16 @@ public class FileTamperEvent extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileAction")
+    @Expose
+    private String FileAction;
+
+    /**
      * Get 机器名称 
      * @return HostName 机器名称
      */
@@ -893,6 +903,34 @@ public class FileTamperEvent extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileAction 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileAction() {
+        return this.FileAction;
+    }
+
+    /**
+     * Set 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileAction 文件威胁行为
+<li>read 读取文件</li>
+<li>write 修改文件</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileAction(String FileAction) {
+        this.FileAction = FileAction;
+    }
+
     public FileTamperEvent() {
     }
 
@@ -1012,6 +1050,9 @@ public class FileTamperEvent extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.FileAction != null) {
+            this.FileAction = new String(source.FileAction);
+        }
     }
 
 
@@ -1056,6 +1097,7 @@ public class FileTamperEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "ExeName", this.ExeName);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "FileAction", this.FileAction);
 
     }
 }

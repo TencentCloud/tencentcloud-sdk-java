@@ -379,6 +379,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建配置项，返回详细信息
+     * @param req CreateConfigWithDetailRespRequest
+     * @return CreateConfigWithDetailRespResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConfigWithDetailRespResponse CreateConfigWithDetailResp(CreateConfigWithDetailRespRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConfigWithDetailRespResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConfigWithDetailRespResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConfigWithDetailResp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *（已废弃，请使用 CreateGroup 和 DeployContainerGroup 创建和部署容器部署组）创建容器部署组
      * @param req CreateContainGroupRequest
      * @return CreateContainGroupResponse
@@ -411,6 +431,26 @@ public class TsfClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateFileConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateFileConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建文件配置项，返回详细信息
+     * @param req CreateFileConfigWithDetailRespRequest
+     * @return CreateFileConfigWithDetailRespResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailResp(CreateFileConfigWithDetailRespRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFileConfigWithDetailRespResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFileConfigWithDetailRespResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFileConfigWithDetailResp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

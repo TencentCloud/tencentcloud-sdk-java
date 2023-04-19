@@ -30,7 +30,7 @@ public class Recipient extends AbstractModel{
     private String RecipientId;
 
     /**
-    * 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+    * 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
     */
     @SerializedName("RecipientType")
     @Expose
@@ -102,16 +102,16 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人 
-     * @return RecipientType 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+     * Get 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方 
+     * @return RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public String getRecipientType() {
         return this.RecipientType;
     }
 
     /**
-     * Set 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
-     * @param RecipientType 签署方类型：ENTERPRISE-企业INDIVIDUAL-自然人
+     * Set 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+     * @param RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public void setRecipientType(String RecipientType) {
         this.RecipientType = RecipientType;

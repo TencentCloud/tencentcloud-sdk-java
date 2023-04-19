@@ -30,7 +30,7 @@ public class Recipient extends AbstractModel{
     private String RecipientId;
 
     /**
-    * 参与者类型（ENTERPRISE/INDIVIDUAL）
+    * 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
     */
     @SerializedName("RecipientType")
     @Expose
@@ -100,7 +100,7 @@ public class Recipient extends AbstractModel{
     private String UserId;
 
     /**
-    * 发送方式（EMAIL/MOBILE）
+    * 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
     */
     @SerializedName("DeliveryMethod")
     @Expose
@@ -130,16 +130,16 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 参与者类型（ENTERPRISE/INDIVIDUAL） 
-     * @return RecipientType 参与者类型（ENTERPRISE/INDIVIDUAL）
+     * Get 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方 
+     * @return RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public String getRecipientType() {
         return this.RecipientType;
     }
 
     /**
-     * Set 参与者类型（ENTERPRISE/INDIVIDUAL）
-     * @param RecipientType 参与者类型（ENTERPRISE/INDIVIDUAL）
+     * Set 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+     * @param RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
      */
     public void setRecipientType(String RecipientType) {
         this.RecipientType = RecipientType;
@@ -290,16 +290,16 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 发送方式（EMAIL/MOBILE） 
-     * @return DeliveryMethod 发送方式（EMAIL/MOBILE）
+     * Get 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知 
+     * @return DeliveryMethod 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
      */
     public String getDeliveryMethod() {
         return this.DeliveryMethod;
     }
 
     /**
-     * Set 发送方式（EMAIL/MOBILE）
-     * @param DeliveryMethod 发送方式（EMAIL/MOBILE）
+     * Set 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+     * @param DeliveryMethod 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
      */
     public void setDeliveryMethod(String DeliveryMethod) {
         this.DeliveryMethod = DeliveryMethod;

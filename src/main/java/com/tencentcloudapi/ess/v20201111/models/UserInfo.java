@@ -30,28 +30,28 @@ public class UserInfo extends AbstractModel{
     private String UserId;
 
     /**
-    * 用户的来源渠道
+    * 用户的来源渠道，一般不用传，特定场景根据接口说明传值
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * 用户在渠道的编号
+    * 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
     */
     @SerializedName("OpenId")
     @Expose
     private String OpenId;
 
     /**
-    * 用户真实IP
+    * 用户真实IP，内部字段，暂未开放
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 用户代理IP
+    * 用户代理IP，内部字段，暂未开放
     */
     @SerializedName("ProxyIp")
     @Expose
@@ -74,64 +74,64 @@ public class UserInfo extends AbstractModel{
     }
 
     /**
-     * Get 用户的来源渠道 
-     * @return Channel 用户的来源渠道
+     * Get 用户的来源渠道，一般不用传，特定场景根据接口说明传值 
+     * @return Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
      */
     public String getChannel() {
         return this.Channel;
     }
 
     /**
-     * Set 用户的来源渠道
-     * @param Channel 用户的来源渠道
+     * Set 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @param Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 用户在渠道的编号 
-     * @return OpenId 用户在渠道的编号
+     * Get 用户在渠道的编号，一般不用传，特定场景根据接口说明传值 
+     * @return OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 用户在渠道的编号
-     * @param OpenId 用户在渠道的编号
+     * Set 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @param OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
 
     /**
-     * Get 用户真实IP 
-     * @return ClientIp 用户真实IP
+     * Get 用户真实IP，内部字段，暂未开放 
+     * @return ClientIp 用户真实IP，内部字段，暂未开放
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 用户真实IP
-     * @param ClientIp 用户真实IP
+     * Set 用户真实IP，内部字段，暂未开放
+     * @param ClientIp 用户真实IP，内部字段，暂未开放
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get 用户代理IP 
-     * @return ProxyIp 用户代理IP
+     * Get 用户代理IP，内部字段，暂未开放 
+     * @return ProxyIp 用户代理IP，内部字段，暂未开放
      */
     public String getProxyIp() {
         return this.ProxyIp;
     }
 
     /**
-     * Set 用户代理IP
-     * @param ProxyIp 用户代理IP
+     * Set 用户代理IP，内部字段，暂未开放
+     * @param ProxyIp 用户代理IP，内部字段，暂未开放
      */
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;

@@ -72,6 +72,13 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
+    * SparkSQL任务唯一ID
+    */
+    @SerializedName("BatchId")
+    @Expose
+    private String BatchId;
+
+    /**
      * Get 列表返回的Id 
      * @return TaskId 列表返回的Id
      */
@@ -183,6 +190,22 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get SparkSQL任务唯一ID 
+     * @return BatchId SparkSQL任务唯一ID
+     */
+    public String getBatchId() {
+        return this.BatchId;
+    }
+
+    /**
+     * Set SparkSQL任务唯一ID
+     * @param BatchId SparkSQL任务唯一ID
+     */
+    public void setBatchId(String BatchId) {
+        this.BatchId = BatchId;
+    }
+
     public ListTaskJobLogDetailRequest() {
     }
 
@@ -215,6 +238,9 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.BatchId != null) {
+            this.BatchId = new String(source.BatchId);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ListTaskJobLogDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
 
     }
 }

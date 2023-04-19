@@ -52,6 +52,20 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private String UrlType;
 
     /**
+    * 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
+    * 若上方填写为 SMS，则此处为手机号
+    */
+    @SerializedName("NotifyAddress")
+    @Expose
+    private String NotifyAddress;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -119,6 +133,38 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.UrlType = UrlType;
     }
 
+    /**
+     * Get 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。 
+     * @return NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+     * @param NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get 若上方填写为 SMS，则此处为手机号 
+     * @return NotifyAddress 若上方填写为 SMS，则此处为手机号
+     */
+    public String getNotifyAddress() {
+        return this.NotifyAddress;
+    }
+
+    /**
+     * Set 若上方填写为 SMS，则此处为手机号
+     * @param NotifyAddress 若上方填写为 SMS，则此处为手机号
+     */
+    public void setNotifyAddress(String NotifyAddress) {
+        this.NotifyAddress = NotifyAddress;
+    }
+
     public CreateUserAutoSignEnableUrlRequest() {
     }
 
@@ -139,6 +185,12 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         if (source.UrlType != null) {
             this.UrlType = new String(source.UrlType);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
+        if (source.NotifyAddress != null) {
+            this.NotifyAddress = new String(source.NotifyAddress);
+        }
     }
 
 
@@ -150,6 +202,8 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
         this.setParamObj(map, prefix + "AutoSignConfig.", this.AutoSignConfig);
         this.setParamSimple(map, prefix + "UrlType", this.UrlType);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
 
     }
 }

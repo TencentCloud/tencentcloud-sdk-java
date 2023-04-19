@@ -101,8 +101,9 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *指定需要批量撤回的签署流程Id，获取批量撤销链接
-客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+     *注：此接口建会废弃，请使用撤销单个签署流程（CancelFlow）接口。
+指定需要批量撤回的签署流程Id，获取批量撤销链接。
+客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回。
      * @param req CreateBatchCancelFlowUrlRequest
      * @return CreateBatchCancelFlowUrlResponse
      * @throws TencentCloudSDKException

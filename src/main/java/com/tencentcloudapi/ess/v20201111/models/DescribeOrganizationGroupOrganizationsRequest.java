@@ -58,7 +58,7 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     private Long Status;
 
     /**
-    * 是否到处当前成员企业数据
+    * 是否导出当前成员企业数据
     */
     @SerializedName("Export")
     @Expose
@@ -152,16 +152,16 @@ public class DescribeOrganizationGroupOrganizationsRequest extends AbstractModel
     }
 
     /**
-     * Get 是否到处当前成员企业数据 
-     * @return Export 是否到处当前成员企业数据
+     * Get 是否导出当前成员企业数据 
+     * @return Export 是否导出当前成员企业数据
      */
     public Boolean getExport() {
         return this.Export;
     }
 
     /**
-     * Set 是否到处当前成员企业数据
-     * @param Export 是否到处当前成员企业数据
+     * Set 是否导出当前成员企业数据
+     * @param Export 是否导出当前成员企业数据
      */
     public void setExport(Boolean Export) {
         this.Export = Export;

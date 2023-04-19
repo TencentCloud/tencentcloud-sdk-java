@@ -205,6 +205,13 @@ public class CreateSparkAppRequest extends AbstractModel{
     private Long AppExecutorMaxNumbers;
 
     /**
+    * 关联dlc查询脚本id
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get spark应用名 
      * @return AppName spark应用名
      */
@@ -620,6 +627,22 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.AppExecutorMaxNumbers = AppExecutorMaxNumbers;
     }
 
+    /**
+     * Get 关联dlc查询脚本id 
+     * @return SessionId 关联dlc查询脚本id
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 关联dlc查询脚本id
+     * @param SessionId 关联dlc查询脚本id
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public CreateSparkAppRequest() {
     }
 
@@ -706,6 +729,9 @@ public class CreateSparkAppRequest extends AbstractModel{
         if (source.AppExecutorMaxNumbers != null) {
             this.AppExecutorMaxNumbers = new Long(source.AppExecutorMaxNumbers);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -739,6 +765,7 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

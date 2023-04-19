@@ -30,13 +30,6 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 企业组织相关信息，一般不用填
-    */
-    @SerializedName("Organization")
-    @Expose
-    private OrganizationInfo Organization;
-
-    /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
@@ -83,18 +76,25 @@ ApplicationId为空，查询所有应用下的模板列表
     private Boolean IsChannel;
 
     /**
-    * 暂未开放
-    */
-    @SerializedName("GenerateSource")
-    @Expose
-    private Long GenerateSource;
-
-    /**
     * 查询内容：0-模板列表及详情（默认），1-仅模板列表
     */
     @SerializedName("ContentType")
     @Expose
     private Long ContentType;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("GenerateSource")
+    @Expose
+    private Long GenerateSource;
 
     /**
      * Get 调用方用户信息，userId 必填 
@@ -110,22 +110,6 @@ ApplicationId为空，查询所有应用下的模板列表
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 企业组织相关信息，一般不用填 
-     * @return Organization 企业组织相关信息，一般不用填
-     */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
-    }
-
-    /**
-     * Set 企业组织相关信息，一般不用填
-     * @param Organization 企业组织相关信息，一般不用填
-     */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
     }
 
     /**
@@ -241,22 +225,6 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
-     * Get 暂未开放 
-     * @return GenerateSource 暂未开放
-     */
-    public Long getGenerateSource() {
-        return this.GenerateSource;
-    }
-
-    /**
-     * Set 暂未开放
-     * @param GenerateSource 暂未开放
-     */
-    public void setGenerateSource(Long GenerateSource) {
-        this.GenerateSource = GenerateSource;
-    }
-
-    /**
      * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
      * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
      */
@@ -272,6 +240,38 @@ ApplicationId为空，查询所有应用下的模板列表
         this.ContentType = ContentType;
     }
 
+    /**
+     * Get 暂未开放 
+     * @return Organization 暂未开放
+     */
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param Organization 暂未开放
+     */
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return GenerateSource 暂未开放
+     */
+    public Long getGenerateSource() {
+        return this.GenerateSource;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param GenerateSource 暂未开放
+     */
+    public void setGenerateSource(Long GenerateSource) {
+        this.GenerateSource = GenerateSource;
+    }
+
     public DescribeFlowTemplatesRequest() {
     }
 
@@ -282,9 +282,6 @@ ApplicationId为空，查询所有应用下的模板列表
     public DescribeFlowTemplatesRequest(DescribeFlowTemplatesRequest source) {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
-        }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
@@ -307,11 +304,14 @@ ApplicationId为空，查询所有应用下的模板列表
         if (source.IsChannel != null) {
             this.IsChannel = new Boolean(source.IsChannel);
         }
-        if (source.GenerateSource != null) {
-            this.GenerateSource = new Long(source.GenerateSource);
-        }
         if (source.ContentType != null) {
             this.ContentType = new Long(source.ContentType);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
+        }
+        if (source.GenerateSource != null) {
+            this.GenerateSource = new Long(source.GenerateSource);
         }
     }
 
@@ -321,15 +321,15 @@ ApplicationId为空，查询所有应用下的模板列表
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "IsChannel", this.IsChannel);
-        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
+        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
 
     }
 }

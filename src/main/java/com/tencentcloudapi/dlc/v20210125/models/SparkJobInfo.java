@@ -287,6 +287,14 @@ public class SparkJobInfo extends AbstractModel{
     private String SparkImageVersion;
 
     /**
+    * 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -910,6 +918,26 @@ public class SparkJobInfo extends AbstractModel{
         this.SparkImageVersion = SparkImageVersion;
     }
 
+    /**
+     * Get 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionId 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionId 查询脚本关联id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1026,6 +1054,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.SparkImageVersion != null) {
             this.SparkImageVersion = new String(source.SparkImageVersion);
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -1069,6 +1100,7 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
         this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }

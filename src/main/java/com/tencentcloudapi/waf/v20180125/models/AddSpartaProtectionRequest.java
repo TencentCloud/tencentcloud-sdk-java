@@ -156,7 +156,7 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     private PortItem [] Ports;
 
     /**
-    * 版本：sparta-waf、clb-waf、cdn-waf
+    * WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
     */
     @SerializedName("Edition")
     @Expose
@@ -231,6 +231,27 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     @SerializedName("ProxySendTimeout")
     @Expose
     private Long ProxySendTimeout;
+
+    /**
+    * 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+    */
+    @SerializedName("SniType")
+    @Expose
+    private Long SniType;
+
+    /**
+    * SniType=3时，需要填此参数，表示自定义的host；
+    */
+    @SerializedName("SniHost")
+    @Expose
+    private String SniHost;
+
+    /**
+    * is_cdn=3时，需要填此参数，表示自定义header
+    */
+    @SerializedName("IpHeaders")
+    @Expose
+    private String [] IpHeaders;
 
     /**
      * Get 需要防御的域名 
@@ -537,16 +558,16 @@ public class AddSpartaProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get 版本：sparta-waf、clb-waf、cdn-waf 
-     * @return Edition 版本：sparta-waf、clb-waf、cdn-waf
+     * Get WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力 
+     * @return Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 版本：sparta-waf、clb-waf、cdn-waf
-     * @param Edition 版本：sparta-waf、clb-waf、cdn-waf
+     * Set WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
+     * @param Edition WAF实例类型，sparta-waf表示SAAS型WAF，clb-waf表示负载均衡型WAF，cdn-waf表示CDN上的Web防护能力
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
@@ -712,6 +733,54 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.ProxySendTimeout = ProxySendTimeout;
     }
 
+    /**
+     * Get 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost； 
+     * @return SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     */
+    public Long getSniType() {
+        return this.SniType;
+    }
+
+    /**
+     * Set 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     * @param SniType 0:关闭SNI；1:开启SNI，SNI=源请求host；2:开启SNI，SNI=修改为源站host；3：开启SNI，自定义host，SNI=SniHost；
+     */
+    public void setSniType(Long SniType) {
+        this.SniType = SniType;
+    }
+
+    /**
+     * Get SniType=3时，需要填此参数，表示自定义的host； 
+     * @return SniHost SniType=3时，需要填此参数，表示自定义的host；
+     */
+    public String getSniHost() {
+        return this.SniHost;
+    }
+
+    /**
+     * Set SniType=3时，需要填此参数，表示自定义的host；
+     * @param SniHost SniType=3时，需要填此参数，表示自定义的host；
+     */
+    public void setSniHost(String SniHost) {
+        this.SniHost = SniHost;
+    }
+
+    /**
+     * Get is_cdn=3时，需要填此参数，表示自定义header 
+     * @return IpHeaders is_cdn=3时，需要填此参数，表示自定义header
+     */
+    public String [] getIpHeaders() {
+        return this.IpHeaders;
+    }
+
+    /**
+     * Set is_cdn=3时，需要填此参数，表示自定义header
+     * @param IpHeaders is_cdn=3时，需要填此参数，表示自定义header
+     */
+    public void setIpHeaders(String [] IpHeaders) {
+        this.IpHeaders = IpHeaders;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -825,6 +894,18 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         if (source.ProxySendTimeout != null) {
             this.ProxySendTimeout = new Long(source.ProxySendTimeout);
         }
+        if (source.SniType != null) {
+            this.SniType = new Long(source.SniType);
+        }
+        if (source.SniHost != null) {
+            this.SniHost = new String(source.SniHost);
+        }
+        if (source.IpHeaders != null) {
+            this.IpHeaders = new String[source.IpHeaders.length];
+            for (int i = 0; i < source.IpHeaders.length; i++) {
+                this.IpHeaders[i] = new String(source.IpHeaders[i]);
+            }
+        }
     }
 
 
@@ -862,6 +943,9 @@ public class AddSpartaProtectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
         this.setParamSimple(map, prefix + "ProxyReadTimeout", this.ProxyReadTimeout);
         this.setParamSimple(map, prefix + "ProxySendTimeout", this.ProxySendTimeout);
+        this.setParamSimple(map, prefix + "SniType", this.SniType);
+        this.setParamSimple(map, prefix + "SniHost", this.SniHost);
+        this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
 
     }
 }

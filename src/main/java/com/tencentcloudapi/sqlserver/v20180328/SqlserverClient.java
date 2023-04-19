@@ -779,6 +779,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBInstancesAttribute）用于查询实例附属属性
+     * @param req DescribeDBInstancesAttributeRequest
+     * @return DescribeDBInstancesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(DescribeDBInstancesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstancesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstancesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
@@ -1231,6 +1251,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadIncrementalInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUploadIncrementalInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeXEvents）用于查询扩展事件列表。
+     * @param req DescribeXEventsRequest
+     * @return DescribeXEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeXEventsResponse DescribeXEvents(DescribeXEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeXEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeXEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeXEvents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2034,6 +2074,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StartIncrementalMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartIncrementalMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（StartInstanceXEvent）用于开启、关闭扩展事件。
+     * @param req StartInstanceXEventRequest
+     * @return StartInstanceXEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartInstanceXEventResponse StartInstanceXEvent(StartInstanceXEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartInstanceXEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartInstanceXEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartInstanceXEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

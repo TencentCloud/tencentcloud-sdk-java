@@ -23,207 +23,227 @@ import java.util.HashMap;
 public class InstanceClusterShard extends AbstractModel{
 
     /**
-    * 分片节点名称
+    * 分片节点名称。
     */
     @SerializedName("ShardName")
     @Expose
     private String ShardName;
 
     /**
-    * 分片节点Id
+    * 分片节点序号。
     */
     @SerializedName("ShardId")
     @Expose
     private String ShardId;
 
     /**
-    * 角色
+    * 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
 
     /**
-    * Key数量
+    * Key数量。
     */
     @SerializedName("Keys")
     @Expose
     private Long Keys;
 
     /**
-    * slot信息
+    * Slot信息。
     */
     @SerializedName("Slots")
     @Expose
     private String Slots;
 
     /**
-    * 使用容量
+    * 已使用容量。
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 容量倾斜率
+    * 容量倾斜率。
     */
     @SerializedName("StorageSlope")
     @Expose
     private Float StorageSlope;
 
     /**
-    * 实例运行时节点Id
+    * 实例运行时节点 ID。
     */
     @SerializedName("Runid")
     @Expose
     private String Runid;
 
     /**
-    * 服务状态：0-down；1-on
+    * 服务状态。
+- 0：down。
+- 1：on。
     */
     @SerializedName("Connected")
     @Expose
     private Long Connected;
 
     /**
-     * Get 分片节点名称 
-     * @return ShardName 分片节点名称
+     * Get 分片节点名称。 
+     * @return ShardName 分片节点名称。
      */
     public String getShardName() {
         return this.ShardName;
     }
 
     /**
-     * Set 分片节点名称
-     * @param ShardName 分片节点名称
+     * Set 分片节点名称。
+     * @param ShardName 分片节点名称。
      */
     public void setShardName(String ShardName) {
         this.ShardName = ShardName;
     }
 
     /**
-     * Get 分片节点Id 
-     * @return ShardId 分片节点Id
+     * Get 分片节点序号。 
+     * @return ShardId 分片节点序号。
      */
     public String getShardId() {
         return this.ShardId;
     }
 
     /**
-     * Set 分片节点Id
-     * @param ShardId 分片节点Id
+     * Set 分片节点序号。
+     * @param ShardId 分片节点序号。
      */
     public void setShardId(String ShardId) {
         this.ShardId = ShardId;
     }
 
     /**
-     * Get 角色 
-     * @return Role 角色
+     * Get 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。 
+     * @return Role 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色
-     * @param Role 角色
+     * Set 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
+     * @param Role 分片节点的角色。
+- 0：主节点。
+- 1：副本节点。
      */
     public void setRole(Long Role) {
         this.Role = Role;
     }
 
     /**
-     * Get Key数量 
-     * @return Keys Key数量
+     * Get Key数量。 
+     * @return Keys Key数量。
      */
     public Long getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set Key数量
-     * @param Keys Key数量
+     * Set Key数量。
+     * @param Keys Key数量。
      */
     public void setKeys(Long Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get slot信息 
-     * @return Slots slot信息
+     * Get Slot信息。 
+     * @return Slots Slot信息。
      */
     public String getSlots() {
         return this.Slots;
     }
 
     /**
-     * Set slot信息
-     * @param Slots slot信息
+     * Set Slot信息。
+     * @param Slots Slot信息。
      */
     public void setSlots(String Slots) {
         this.Slots = Slots;
     }
 
     /**
-     * Get 使用容量 
-     * @return Storage 使用容量
+     * Get 已使用容量。 
+     * @return Storage 已使用容量。
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 使用容量
-     * @param Storage 使用容量
+     * Set 已使用容量。
+     * @param Storage 已使用容量。
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 容量倾斜率 
-     * @return StorageSlope 容量倾斜率
+     * Get 容量倾斜率。 
+     * @return StorageSlope 容量倾斜率。
      */
     public Float getStorageSlope() {
         return this.StorageSlope;
     }
 
     /**
-     * Set 容量倾斜率
-     * @param StorageSlope 容量倾斜率
+     * Set 容量倾斜率。
+     * @param StorageSlope 容量倾斜率。
      */
     public void setStorageSlope(Float StorageSlope) {
         this.StorageSlope = StorageSlope;
     }
 
     /**
-     * Get 实例运行时节点Id 
-     * @return Runid 实例运行时节点Id
+     * Get 实例运行时节点 ID。 
+     * @return Runid 实例运行时节点 ID。
      */
     public String getRunid() {
         return this.Runid;
     }
 
     /**
-     * Set 实例运行时节点Id
-     * @param Runid 实例运行时节点Id
+     * Set 实例运行时节点 ID。
+     * @param Runid 实例运行时节点 ID。
      */
     public void setRunid(String Runid) {
         this.Runid = Runid;
     }
 
     /**
-     * Get 服务状态：0-down；1-on 
-     * @return Connected 服务状态：0-down；1-on
+     * Get 服务状态。
+- 0：down。
+- 1：on。 
+     * @return Connected 服务状态。
+- 0：down。
+- 1：on。
      */
     public Long getConnected() {
         return this.Connected;
     }
 
     /**
-     * Set 服务状态：0-down；1-on
-     * @param Connected 服务状态：0-down；1-on
+     * Set 服务状态。
+- 0：down。
+- 1：on。
+     * @param Connected 服务状态。
+- 0：down。
+- 1：on。
      */
     public void setConnected(Long Connected) {
         this.Connected = Connected;

@@ -639,6 +639,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *获取告警历史，例如今天未恢复的告警
+     * @param req DescribeAlertRecordHistoryRequest
+     * @return DescribeAlertRecordHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlertRecordHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlertRecordHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlertRecordHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
      * @param req DescribeConfigExtrasRequest
      * @return DescribeConfigExtrasResponse
