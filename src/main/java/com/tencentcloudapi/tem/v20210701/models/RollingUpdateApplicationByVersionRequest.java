@@ -93,6 +93,13 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
     private Long MinAvailable;
 
     /**
+    * 是否强制发布
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -252,6 +259,22 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         this.MinAvailable = MinAvailable;
     }
 
+    /**
+     * Get 是否强制发布 
+     * @return Force 是否强制发布
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set 是否强制发布
+     * @param Force 是否强制发布
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
+    }
+
     public RollingUpdateApplicationByVersionRequest() {
     }
 
@@ -290,6 +313,9 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         if (source.MinAvailable != null) {
             this.MinAvailable = new Long(source.MinAvailable);
         }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
         this.setParamSimple(map, prefix + "BetaBatchNum", this.BetaBatchNum);
         this.setParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

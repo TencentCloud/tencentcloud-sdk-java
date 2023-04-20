@@ -65,7 +65,7 @@ public class CreateAppResp extends AbstractModel{
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * 语音消息及转文本服务配置数据
+    * 语音消息服务配置数据
     */
     @SerializedName("VoiceMessageConf")
     @Expose
@@ -77,6 +77,13 @@ public class CreateAppResp extends AbstractModel{
     @SerializedName("VoiceFilterConf")
     @Expose
     private VoiceFilterConf VoiceFilterConf;
+
+    /**
+    * 语音转文本服务配置数据
+    */
+    @SerializedName("AsrConf")
+    @Expose
+    private AsrConf AsrConf;
 
     /**
      * Get 应用ID，由后台自动生成。 
@@ -175,16 +182,16 @@ public class CreateAppResp extends AbstractModel{
     }
 
     /**
-     * Get 语音消息及转文本服务配置数据 
-     * @return VoiceMessageConf 语音消息及转文本服务配置数据
+     * Get 语音消息服务配置数据 
+     * @return VoiceMessageConf 语音消息服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * Set 语音消息及转文本服务配置数据
-     * @param VoiceMessageConf 语音消息及转文本服务配置数据
+     * Set 语音消息服务配置数据
+     * @param VoiceMessageConf 语音消息服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
@@ -204,6 +211,22 @@ public class CreateAppResp extends AbstractModel{
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;
+    }
+
+    /**
+     * Get 语音转文本服务配置数据 
+     * @return AsrConf 语音转文本服务配置数据
+     */
+    public AsrConf getAsrConf() {
+        return this.AsrConf;
+    }
+
+    /**
+     * Set 语音转文本服务配置数据
+     * @param AsrConf 语音转文本服务配置数据
+     */
+    public void setAsrConf(AsrConf AsrConf) {
+        this.AsrConf = AsrConf;
     }
 
     public CreateAppResp() {
@@ -238,6 +261,9 @@ public class CreateAppResp extends AbstractModel{
         if (source.VoiceFilterConf != null) {
             this.VoiceFilterConf = new VoiceFilterConf(source.VoiceFilterConf);
         }
+        if (source.AsrConf != null) {
+            this.AsrConf = new AsrConf(source.AsrConf);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateAppResp extends AbstractModel{
         this.setParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
         this.setParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
         this.setParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+        this.setParamObj(map, prefix + "AsrConf.", this.AsrConf);
 
     }
 }

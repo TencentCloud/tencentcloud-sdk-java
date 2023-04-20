@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealtimeSpeechConf extends AbstractModel{
+public class AsrConf extends AbstractModel{
 
     /**
-    * 实时语音服务开关，取值：open/close
+    * 语音转文本服务开关，取值：open/close
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 实时语音音质类型，取值：high-高音质 ordinary-普通音质
-    */
-    @SerializedName("Quality")
-    @Expose
-    private String Quality;
-
-    /**
-     * Get 实时语音服务开关，取值：open/close 
-     * @return Status 实时语音服务开关，取值：open/close
+     * Get 语音转文本服务开关，取值：open/close 
+     * @return Status 语音转文本服务开关，取值：open/close
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实时语音服务开关，取值：open/close
-     * @param Status 实时语音服务开关，取值：open/close
+     * Set 语音转文本服务开关，取值：open/close
+     * @param Status 语音转文本服务开关，取值：open/close
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
-    /**
-     * Get 实时语音音质类型，取值：high-高音质 ordinary-普通音质 
-     * @return Quality 实时语音音质类型，取值：high-高音质 ordinary-普通音质
-     */
-    public String getQuality() {
-        return this.Quality;
-    }
-
-    /**
-     * Set 实时语音音质类型，取值：high-高音质 ordinary-普通音质
-     * @param Quality 实时语音音质类型，取值：high-高音质 ordinary-普通音质
-     */
-    public void setQuality(String Quality) {
-        this.Quality = Quality;
-    }
-
-    public RealtimeSpeechConf() {
+    public AsrConf() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RealtimeSpeechConf(RealtimeSpeechConf source) {
+    public AsrConf(AsrConf source) {
         if (source.Status != null) {
             this.Status = new String(source.Status);
-        }
-        if (source.Quality != null) {
-            this.Quality = new String(source.Quality);
         }
     }
 
@@ -90,7 +64,6 @@ public class RealtimeSpeechConf extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Quality", this.Quality);
 
     }
 }

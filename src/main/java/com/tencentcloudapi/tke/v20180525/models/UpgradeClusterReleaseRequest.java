@@ -58,7 +58,7 @@ public class UpgradeClusterReleaseRequest extends AbstractModel{
     private ReleaseValues Values;
 
     /**
-    * 制品来源，范围：tke-market/tcr/other
+    * 制品来源，范围：tke-market 或 other
     */
     @SerializedName("ChartFrom")
     @Expose
@@ -187,16 +187,16 @@ public class UpgradeClusterReleaseRequest extends AbstractModel{
     }
 
     /**
-     * Get 制品来源，范围：tke-market/tcr/other 
-     * @return ChartFrom 制品来源，范围：tke-market/tcr/other
+     * Get 制品来源，范围：tke-market 或 other 
+     * @return ChartFrom 制品来源，范围：tke-market 或 other
      */
     public String getChartFrom() {
         return this.ChartFrom;
     }
 
     /**
-     * Set 制品来源，范围：tke-market/tcr/other
-     * @param ChartFrom 制品来源，范围：tke-market/tcr/other
+     * Set 制品来源，范围：tke-market 或 other
+     * @param ChartFrom 制品来源，范围：tke-market 或 other
      */
     public void setChartFrom(String ChartFrom) {
         this.ChartFrom = ChartFrom;

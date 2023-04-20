@@ -112,6 +112,20 @@ public class TextToVoiceRequest extends AbstractModel{
     private Long SegmentRate;
 
     /**
+    * 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+    */
+    @SerializedName("EmotionCategory")
+    @Expose
+    private String EmotionCategory;
+
+    /**
+    * 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+    */
+    @SerializedName("EmotionIntensity")
+    @Expose
+    private Long EmotionIntensity;
+
+    /**
      * Get 合成语音的源文本，按UTF-8编码统一计算。
 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。 
      * @return Text 合成语音的源文本，按UTF-8编码统一计算。
@@ -323,6 +337,38 @@ public class TextToVoiceRequest extends AbstractModel{
         this.SegmentRate = SegmentRate;
     }
 
+    /**
+     * Get 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等； 
+     * @return EmotionCategory 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     */
+    public String getEmotionCategory() {
+        return this.EmotionCategory;
+    }
+
+    /**
+     * Set 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     * @param EmotionCategory 控制合成音频的情感，仅支持情绪音色使用。取值: peaceful、exciting、thrill、neutral、sad、angry、cute、fear、poetry、happy、regretful、exciting_strong、aojiao、sajiao、story、raido、call、jieshuo等等；
+     */
+    public void setEmotionCategory(String EmotionCategory) {
+        this.EmotionCategory = EmotionCategory;
+    }
+
+    /**
+     * Get 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效； 
+     * @return EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     */
+    public Long getEmotionIntensity() {
+        return this.EmotionIntensity;
+    }
+
+    /**
+     * Set 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     * @param EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     */
+    public void setEmotionIntensity(Long EmotionIntensity) {
+        this.EmotionIntensity = EmotionIntensity;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -367,6 +413,12 @@ public class TextToVoiceRequest extends AbstractModel{
         if (source.SegmentRate != null) {
             this.SegmentRate = new Long(source.SegmentRate);
         }
+        if (source.EmotionCategory != null) {
+            this.EmotionCategory = new String(source.EmotionCategory);
+        }
+        if (source.EmotionIntensity != null) {
+            this.EmotionIntensity = new Long(source.EmotionIntensity);
+        }
     }
 
 
@@ -386,6 +438,8 @@ public class TextToVoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
         this.setParamSimple(map, prefix + "SegmentRate", this.SegmentRate);
+        this.setParamSimple(map, prefix + "EmotionCategory", this.EmotionCategory);
+        this.setParamSimple(map, prefix + "EmotionIntensity", this.EmotionIntensity);
 
     }
 }

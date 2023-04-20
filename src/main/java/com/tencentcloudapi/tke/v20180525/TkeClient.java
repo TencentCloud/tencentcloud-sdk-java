@@ -299,7 +299,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *在应用市场中给集群创建应用
+     *集群创建应用
      * @param req CreateClusterReleaseRequest
      * @return CreateClusterReleaseResponse
      * @throws TencentCloudSDKException

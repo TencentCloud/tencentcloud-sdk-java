@@ -59,6 +59,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *增加精准白名单规则
+     * @param req AddCustomWhiteRuleRequest
+     * @return AddCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCustomWhiteRuleResponse AddCustomWhiteRule(AddCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCustomWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCustomWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddCustomWhiteRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *增加域名规则白名单
      * @param req AddDomainWhiteRuleRequest
      * @return AddDomainWhiteRuleResponse
@@ -171,6 +191,26 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAttackDownloadRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAttackDownloadRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除精准白名单规则
+     * @param req DeleteCustomWhiteRuleRequest
+     * @return DeleteCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(DeleteCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCustomWhiteRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -793,6 +833,26 @@ public class WafClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCustomRuleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑精准白名单
+     * @param req ModifyCustomWhiteRuleRequest
+     * @return ModifyCustomWhiteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(ModifyCustomWhiteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomWhiteRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomWhiteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomWhiteRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

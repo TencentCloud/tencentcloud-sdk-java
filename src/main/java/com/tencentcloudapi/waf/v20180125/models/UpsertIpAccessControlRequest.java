@@ -44,7 +44,7 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     private String Edition;
 
     /**
-    * 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+    * 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
     */
     @SerializedName("SourceType")
     @Expose
@@ -99,16 +99,16 @@ public class UpsertIpAccessControlRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空 
-     * @return SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+     * Get 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空 
+     * @return SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
-     * @param SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，佛祖饿为空
+     * Set 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+     * @param SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

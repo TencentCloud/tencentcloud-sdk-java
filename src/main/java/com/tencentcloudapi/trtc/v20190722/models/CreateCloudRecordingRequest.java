@@ -58,7 +58,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     private RecordParams RecordParams;
 
     /**
-    * 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
+    * 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。
     */
     @SerializedName("StorageParams")
     @Expose
@@ -182,16 +182,16 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     }
 
     /**
-     * Get 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。 
-     * @return StorageParams 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
+     * Get 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。 
+     * @return StorageParams 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
-     * @param StorageParams 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
+     * Set 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。
+     * @param StorageParams 云端录制文件上传到云存储的参数(目前支持云点播VOD和对象存储COS)。
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;

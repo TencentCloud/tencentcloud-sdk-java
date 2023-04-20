@@ -30,6 +30,14 @@ public class VoiceFilterConf extends AbstractModel{
     private String Status;
 
     /**
+    * 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneInfos")
+    @Expose
+    private SceneInfo [] SceneInfos;
+
+    /**
      * Get 语音过滤服务开关，取值：open/close 
      * @return Status 语音过滤服务开关，取值：open/close
      */
@@ -45,6 +53,26 @@ public class VoiceFilterConf extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneInfos 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SceneInfo [] getSceneInfos() {
+        return this.SceneInfos;
+    }
+
+    /**
+     * Set 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneInfos 场景配置信息，如开关状态，回调地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneInfos(SceneInfo [] SceneInfos) {
+        this.SceneInfos = SceneInfos;
+    }
+
     public VoiceFilterConf() {
     }
 
@@ -56,6 +84,12 @@ public class VoiceFilterConf extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.SceneInfos != null) {
+            this.SceneInfos = new SceneInfo[source.SceneInfos.length];
+            for (int i = 0; i < source.SceneInfos.length; i++) {
+                this.SceneInfos[i] = new SceneInfo(source.SceneInfos[i]);
+            }
+        }
     }
 
 
@@ -64,6 +98,7 @@ public class VoiceFilterConf extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "SceneInfos.", this.SceneInfos);
 
     }
 }

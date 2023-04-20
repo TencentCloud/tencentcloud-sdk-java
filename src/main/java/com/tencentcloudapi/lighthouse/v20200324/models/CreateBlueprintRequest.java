@@ -44,6 +44,18 @@ public class CreateBlueprintRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+    */
+    @SerializedName("ForcePowerOff")
+    @Expose
+    private Boolean ForcePowerOff;
+
+    /**
      * Get 镜像名称。最大长度60。 
      * @return BlueprintName 镜像名称。最大长度60。
      */
@@ -91,6 +103,42 @@ public class CreateBlueprintRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。 
+     * @return ForcePowerOff 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     */
+    public Boolean getForcePowerOff() {
+        return this.ForcePowerOff;
+    }
+
+    /**
+     * Set 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     * @param ForcePowerOff 是否执行强制关机以制作镜像。
+取值范围：
+True：表示关机之后制作镜像
+False：表示开机状态制作镜像
+默认取值：True
+开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+     */
+    public void setForcePowerOff(Boolean ForcePowerOff) {
+        this.ForcePowerOff = ForcePowerOff;
+    }
+
     public CreateBlueprintRequest() {
     }
 
@@ -108,6 +156,9 @@ public class CreateBlueprintRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ForcePowerOff != null) {
+            this.ForcePowerOff = new Boolean(source.ForcePowerOff);
+        }
     }
 
 
@@ -118,6 +169,7 @@ public class CreateBlueprintRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ForcePowerOff", this.ForcePowerOff);
 
     }
 }

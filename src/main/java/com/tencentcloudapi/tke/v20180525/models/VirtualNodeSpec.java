@@ -37,6 +37,13 @@ public class VirtualNodeSpec extends AbstractModel{
     private String SubnetId;
 
     /**
+    * 腾讯云标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 节点展示名称 
      * @return DisplayName 节点展示名称
      */
@@ -68,6 +75,22 @@ public class VirtualNodeSpec extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get 腾讯云标签 
+     * @return Tags 腾讯云标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 腾讯云标签
+     * @param Tags 腾讯云标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public VirtualNodeSpec() {
     }
 
@@ -82,6 +105,12 @@ public class VirtualNodeSpec extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class VirtualNodeSpec extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

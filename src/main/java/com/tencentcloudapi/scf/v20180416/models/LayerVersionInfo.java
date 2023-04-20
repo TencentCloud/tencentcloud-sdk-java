@@ -75,6 +75,14 @@ public class LayerVersionInfo extends AbstractModel{
     private String Status;
 
     /**
+    * Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stamp")
+    @Expose
+    private String Stamp;
+
+    /**
      * Get 版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompatibleRuntimes 版本适用的运行时
@@ -198,6 +206,26 @@ public class LayerVersionInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get Stamp
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stamp Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStamp() {
+        return this.Stamp;
+    }
+
+    /**
+     * Set Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stamp Stamp
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStamp(String Stamp) {
+        this.Stamp = Stamp;
+    }
+
     public LayerVersionInfo() {
     }
 
@@ -230,6 +258,9 @@ public class LayerVersionInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Stamp != null) {
+            this.Stamp = new String(source.Stamp);
+        }
     }
 
 
@@ -244,6 +275,7 @@ public class LayerVersionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LayerVersion", this.LayerVersion);
         this.setParamSimple(map, prefix + "LayerName", this.LayerName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Stamp", this.Stamp);
 
     }
 }

@@ -37,6 +37,20 @@ public class DescribeDataRepositoryTaskStatusResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 已完成的文件数量
+    */
+    @SerializedName("FinishedFileNumber")
+    @Expose
+    private Long FinishedFileNumber;
+
+    /**
+    * 已完成的数据量
+    */
+    @SerializedName("FinishedCapacity")
+    @Expose
+    private Long FinishedCapacity;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +90,38 @@ public class DescribeDataRepositoryTaskStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 已完成的文件数量 
+     * @return FinishedFileNumber 已完成的文件数量
+     */
+    public Long getFinishedFileNumber() {
+        return this.FinishedFileNumber;
+    }
+
+    /**
+     * Set 已完成的文件数量
+     * @param FinishedFileNumber 已完成的文件数量
+     */
+    public void setFinishedFileNumber(Long FinishedFileNumber) {
+        this.FinishedFileNumber = FinishedFileNumber;
+    }
+
+    /**
+     * Get 已完成的数据量 
+     * @return FinishedCapacity 已完成的数据量
+     */
+    public Long getFinishedCapacity() {
+        return this.FinishedCapacity;
+    }
+
+    /**
+     * Set 已完成的数据量
+     * @param FinishedCapacity 已完成的数据量
+     */
+    public void setFinishedCapacity(Long FinishedCapacity) {
+        this.FinishedCapacity = FinishedCapacity;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +151,12 @@ public class DescribeDataRepositoryTaskStatusResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.FinishedFileNumber != null) {
+            this.FinishedFileNumber = new Long(source.FinishedFileNumber);
+        }
+        if (source.FinishedCapacity != null) {
+            this.FinishedCapacity = new Long(source.FinishedCapacity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +169,8 @@ public class DescribeDataRepositoryTaskStatusResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FinishedFileNumber", this.FinishedFileNumber);
+        this.setParamSimple(map, prefix + "FinishedCapacity", this.FinishedCapacity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -77,7 +77,7 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     private String Mobile;
 
     /**
-    * 是否需开通自动签
+    * 是否开通自动签，该功能需联系运营工作人员开通后使用
     */
     @SerializedName("EnableAutoSign")
     @Expose
@@ -216,16 +216,16 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     }
 
     /**
-     * Get 是否需开通自动签 
-     * @return EnableAutoSign 是否需开通自动签
+     * Get 是否开通自动签，该功能需联系运营工作人员开通后使用 
+     * @return EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
      */
     public Boolean getEnableAutoSign() {
         return this.EnableAutoSign;
     }
 
     /**
-     * Set 是否需开通自动签
-     * @param EnableAutoSign 是否需开通自动签
+     * Set 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * @param EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
      */
     public void setEnableAutoSign(Boolean EnableAutoSign) {
         this.EnableAutoSign = EnableAutoSign;

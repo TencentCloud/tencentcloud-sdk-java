@@ -72,7 +72,7 @@ public class Result extends AbstractModel{
     private String FunctionRequestId;
 
     /**
-    * 0为正确，异步调用返回为空
+    * 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
     */
     @SerializedName("InvokeResult")
     @Expose
@@ -191,16 +191,16 @@ public class Result extends AbstractModel{
     }
 
     /**
-     * Get 0为正确，异步调用返回为空 
-     * @return InvokeResult 0为正确，异步调用返回为空
+     * Get 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。 
+     * @return InvokeResult 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
      */
     public Long getInvokeResult() {
         return this.InvokeResult;
     }
 
     /**
-     * Set 0为正确，异步调用返回为空
-     * @param InvokeResult 0为正确，异步调用返回为空
+     * Set 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
+     * @param InvokeResult 请求 Invoke 接口，该参数已弃用。请求 InvokeFunction 接口，该参数值为请求执行[状态码](https://cloud.tencent.com/document/product/583/42611)。
      */
     public void setInvokeResult(Long InvokeResult) {
         this.InvokeResult = InvokeResult;
