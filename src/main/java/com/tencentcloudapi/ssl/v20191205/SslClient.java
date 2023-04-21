@@ -279,6 +279,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *查询公司列表
+     * @param req DescribeCompaniesRequest
+     * @return DescribeCompaniesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCompaniesResponse DescribeCompanies(DescribeCompaniesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCompaniesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCompaniesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCompanies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *证书查询关联资源
      * @param req DescribeDeployedResourcesRequest
      * @return DescribeDeployedResourcesResponse

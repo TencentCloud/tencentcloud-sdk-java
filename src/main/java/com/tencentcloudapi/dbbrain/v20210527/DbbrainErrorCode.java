@@ -55,7 +55,10 @@ public enum DbbrainErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // 该时间范围内的审计日志已下载
+     UNSUPPORTEDOPERATION_HASDUPLICATEDTASK("UnsupportedOperation.HasDuplicatedTask");
      
     private String value;
     private DbbrainErrorCode (String value){

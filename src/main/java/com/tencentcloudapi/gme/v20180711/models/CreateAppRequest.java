@@ -38,6 +38,7 @@ public class CreateAppRequest extends AbstractModel{
 
     /**
     * 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
     */
     @SerializedName("EngineList")
     @Expose
@@ -45,6 +46,7 @@ public class CreateAppRequest extends AbstractModel{
 
     /**
     * 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
     */
     @SerializedName("RegionList")
     @Expose
@@ -58,7 +60,7 @@ public class CreateAppRequest extends AbstractModel{
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * 语音消息及转文本服务配置数据
+    * 语音消息服务配置数据
     */
     @SerializedName("VoiceMessageConf")
     @Expose
@@ -70,6 +72,13 @@ public class CreateAppRequest extends AbstractModel{
     @SerializedName("VoiceFilterConf")
     @Expose
     private VoiceFilterConf VoiceFilterConf;
+
+    /**
+    * 语音转文本配置数据
+    */
+    @SerializedName("AsrConf")
+    @Expose
+    private AsrConf AsrConf;
 
     /**
     * 需要添加的标签列表
@@ -111,8 +120,10 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要支持的引擎列表，默认全选。 
+     * Get 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows 
      * @return EngineList 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
      */
     public String [] getEngineList() {
         return this.EngineList;
@@ -120,15 +131,19 @@ public class CreateAppRequest extends AbstractModel{
 
     /**
      * Set 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
      * @param EngineList 需要支持的引擎列表，默认全选。
+取值：android/ios/unity/cocos/unreal/windows
      */
     public void setEngineList(String [] EngineList) {
         this.EngineList = EngineList;
     }
 
     /**
-     * Get 服务区域列表，默认全选。 
+     * Get 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东 
      * @return RegionList 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
      */
     public String [] getRegionList() {
         return this.RegionList;
@@ -136,7 +151,9 @@ public class CreateAppRequest extends AbstractModel{
 
     /**
      * Set 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
      * @param RegionList 服务区域列表，默认全选。
+取值：mainland-大陆地区，hmt-港澳台，sea-东南亚，na-北美，eu-欧洲，jpkr-日韩亚太，sa-南美，oc-澳洲，me-中东
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;
@@ -159,16 +176,16 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 语音消息及转文本服务配置数据 
-     * @return VoiceMessageConf 语音消息及转文本服务配置数据
+     * Get 语音消息服务配置数据 
+     * @return VoiceMessageConf 语音消息服务配置数据
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * Set 语音消息及转文本服务配置数据
-     * @param VoiceMessageConf 语音消息及转文本服务配置数据
+     * Set 语音消息服务配置数据
+     * @param VoiceMessageConf 语音消息服务配置数据
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
@@ -188,6 +205,22 @@ public class CreateAppRequest extends AbstractModel{
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;
+    }
+
+    /**
+     * Get 语音转文本配置数据 
+     * @return AsrConf 语音转文本配置数据
+     */
+    public AsrConf getAsrConf() {
+        return this.AsrConf;
+    }
+
+    /**
+     * Set 语音转文本配置数据
+     * @param AsrConf 语音转文本配置数据
+     */
+    public void setAsrConf(AsrConf AsrConf) {
+        this.AsrConf = AsrConf;
     }
 
     /**
@@ -241,6 +274,9 @@ public class CreateAppRequest extends AbstractModel{
         if (source.VoiceFilterConf != null) {
             this.VoiceFilterConf = new VoiceFilterConf(source.VoiceFilterConf);
         }
+        if (source.AsrConf != null) {
+            this.AsrConf = new AsrConf(source.AsrConf);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -261,6 +297,7 @@ public class CreateAppRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
         this.setParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
         this.setParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+        this.setParamObj(map, prefix + "AsrConf.", this.AsrConf);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

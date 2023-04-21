@@ -395,6 +395,22 @@ public class DBInstance extends AbstractModel{
     private SlaveZones SlaveZones;
 
     /**
+    * 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Architecture")
+    @Expose
+    private String Architecture;
+
+    /**
+    * 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Style")
+    @Expose
+    private String Style;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1258,6 +1274,46 @@ public class DBInstance extends AbstractModel{
         this.SlaveZones = SlaveZones;
     }
 
+    /**
+     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArchitecture() {
+        return this.Architecture;
+    }
+
+    /**
+     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchitecture(String Architecture) {
+        this.Architecture = Architecture;
+    }
+
+    /**
+     * Get 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStyle() {
+        return this.Style;
+    }
+
+    /**
+     * Set 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStyle(String Style) {
+        this.Style = Style;
+    }
+
     public DBInstance() {
     }
 
@@ -1431,6 +1487,12 @@ public class DBInstance extends AbstractModel{
         if (source.SlaveZones != null) {
             this.SlaveZones = new SlaveZones(source.SlaveZones);
         }
+        if (source.Architecture != null) {
+            this.Architecture = new String(source.Architecture);
+        }
+        if (source.Style != null) {
+            this.Style = new String(source.Style);
+        }
     }
 
 
@@ -1490,6 +1552,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
         this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "Architecture", this.Architecture);
+        this.setParamSimple(map, prefix + "Style", this.Style);
 
     }
 }

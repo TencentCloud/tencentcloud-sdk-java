@@ -37,6 +37,14 @@ public class DescribeBizTrendResponse extends AbstractModel{
     private String MetricName;
 
     /**
+    * 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxData")
+    @Expose
+    private Long MaxData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeBizTrendResponse extends AbstractModel{
     }
 
     /**
+     * Get 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxData 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxData() {
+        return this.MaxData;
+    }
+
+    /**
+     * Set 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxData 返回DataList中的最大值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxData(Long MaxData) {
+        this.MaxData = MaxData;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +136,9 @@ public class DescribeBizTrendResponse extends AbstractModel{
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
+        if (source.MaxData != null) {
+            this.MaxData = new Long(source.MaxData);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +151,7 @@ public class DescribeBizTrendResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DataList.", this.DataList);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "MaxData", this.MaxData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

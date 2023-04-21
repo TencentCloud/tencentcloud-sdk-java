@@ -199,6 +199,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建备份仓库，指定了存储仓库类型（如COS）、COS桶地区、名称等信息，当前最多允许创建100个仓库， 注意此接口当前是全局接口，多个地域的TKE集群如果要备份到相同的备份仓库中，不需要重复创建备份仓库
+     * @param req CreateBackupStorageLocationRequest
+     * @return CreateBackupStorageLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupStorageLocationResponse CreateBackupStorageLocation(CreateBackupStorageLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupStorageLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupStorageLocation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建集群
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -711,6 +731,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateTKEEdgeClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除备份仓库
+     * @param req DeleteBackupStorageLocationRequest
+     * @return DeleteBackupStorageLocationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(DeleteBackupStorageLocationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupStorageLocationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupStorageLocation");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1271,6 +1311,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailableTKEEdgeVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询备份仓库信息
+     * @param req DescribeBackupStorageLocationsRequest
+     * @return DescribeBackupStorageLocationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(DescribeBackupStorageLocationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupStorageLocationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupStorageLocations");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

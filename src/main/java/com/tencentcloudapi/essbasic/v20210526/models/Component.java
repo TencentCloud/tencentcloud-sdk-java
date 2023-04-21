@@ -165,6 +165,16 @@ BORDERLESS_ESIGN – 自动生成无边框腾讯体
 OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+
+ComponentType为SIGN_DATE时，支持以下参数：
+1 Font：字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"
+2 FontSize： 数字类型，范围6-72，默认值为12
+3 FontAlign： 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐
+4 Format： 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。
+5 Gaps:： 字符串类型，仅在Format为“yyyy m d”时起作用，格式为用逗号分开的两个整数，例如”2,2”，两个数字分别是日期格式的前后两个空隙钟的空格个数
+如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
+特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
+参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
     */
     @SerializedName("ComponentExtra")
     @Expose
@@ -684,7 +694,17 @@ HANDWRITE – 手写签名
 BORDERLESS_ESIGN – 自动生成无边框腾讯体
 OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
-如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]} 
+如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+
+ComponentType为SIGN_DATE时，支持以下参数：
+1 Font：字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"
+2 FontSize： 数字类型，范围6-72，默认值为12
+3 FontAlign： 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐
+4 Format： 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。
+5 Gaps:： 字符串类型，仅在Format为“yyyy m d”时起作用，格式为用逗号分开的两个整数，例如”2,2”，两个数字分别是日期格式的前后两个空隙钟的空格个数
+如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
+特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
+参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}", 
      * @return ComponentExtra 参数控件样式，json格式表述
 
 不同类型的控件会有部分非通用参数
@@ -707,6 +727,16 @@ BORDERLESS_ESIGN – 自动生成无边框腾讯体
 OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+
+ComponentType为SIGN_DATE时，支持以下参数：
+1 Font：字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"
+2 FontSize： 数字类型，范围6-72，默认值为12
+3 FontAlign： 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐
+4 Format： 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。
+5 Gaps:： 字符串类型，仅在Format为“yyyy m d”时起作用，格式为用逗号分开的两个整数，例如”2,2”，两个数字分别是日期格式的前后两个空隙钟的空格个数
+如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
+特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
+参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
      */
     public String getComponentExtra() {
         return this.ComponentExtra;
@@ -735,6 +765,16 @@ BORDERLESS_ESIGN – 自动生成无边框腾讯体
 OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+
+ComponentType为SIGN_DATE时，支持以下参数：
+1 Font：字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"
+2 FontSize： 数字类型，范围6-72，默认值为12
+3 FontAlign： 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐
+4 Format： 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。
+5 Gaps:： 字符串类型，仅在Format为“yyyy m d”时起作用，格式为用逗号分开的两个整数，例如”2,2”，两个数字分别是日期格式的前后两个空隙钟的空格个数
+如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
+特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
+参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
      * @param ComponentExtra 参数控件样式，json格式表述
 
 不同类型的控件会有部分非通用参数
@@ -757,6 +797,16 @@ BORDERLESS_ESIGN – 自动生成无边框腾讯体
 OCR_ESIGN -- AI智能识别手写签名
 ESIGN -- 个人印章类型
 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
+
+ComponentType为SIGN_DATE时，支持以下参数：
+1 Font：字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"
+2 FontSize： 数字类型，范围6-72，默认值为12
+3 FontAlign： 字符串类型，可取Left/Right/Center，对应左对齐/居中/右对齐
+4 Format： 字符串类型，日期格式，必须是以下五种之一 “yyyy m d”，”yyyy年m月d日”，”yyyy/m/d”，”yyyy-m-d”，”yyyy.m.d”。
+5 Gaps:： 字符串类型，仅在Format为“yyyy m d”时起作用，格式为用逗号分开的两个整数，例如”2,2”，两个数字分别是日期格式的前后两个空隙钟的空格个数
+如果extra参数为空，默认为”yyyy年m月d日”格式的居中日期
+特别地，如果extra中Format字段为空或无法被识别，则extra参数会被当作默认值处理（Font，FontSize，Gaps和FontAlign都不会起效）
+参数样例：    "ComponentExtra": "{\"Format\":“yyyy m d”,\"FontSize\":12,\"Gaps\":\"2,2\", \"FontAlign\":\"Right\"}",
      */
     public void setComponentExtra(String ComponentExtra) {
         this.ComponentExtra = ComponentExtra;

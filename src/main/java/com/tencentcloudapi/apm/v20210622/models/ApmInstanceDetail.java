@@ -213,6 +213,22 @@ public class ApmInstanceDetail extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogSet")
+    @Expose
+    private String LogSet;
+
+    /**
+    * Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricDuration")
+    @Expose
+    private Long MetricDuration;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -684,6 +700,46 @@ public class ApmInstanceDetail extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogSet CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogSet() {
+        return this.LogSet;
+    }
+
+    /**
+     * Set CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogSet CLS日志集 | ES集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogSet(String LogSet) {
+        this.LogSet = LogSet;
+    }
+
+    /**
+     * Get Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricDuration Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMetricDuration() {
+        return this.MetricDuration;
+    }
+
+    /**
+     * Set Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricDuration Metric数据保存时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricDuration(Long MetricDuration) {
+        this.MetricDuration = MetricDuration;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -767,6 +823,12 @@ public class ApmInstanceDetail extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.LogSet != null) {
+            this.LogSet = new String(source.LogSet);
+        }
+        if (source.MetricDuration != null) {
+            this.MetricDuration = new Long(source.MetricDuration);
+        }
     }
 
 
@@ -798,6 +860,8 @@ public class ApmInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
         this.setParamSimple(map, prefix + "ClientCount", this.ClientCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "LogSet", this.LogSet);
+        this.setParamSimple(map, prefix + "MetricDuration", this.MetricDuration);
 
     }
 }

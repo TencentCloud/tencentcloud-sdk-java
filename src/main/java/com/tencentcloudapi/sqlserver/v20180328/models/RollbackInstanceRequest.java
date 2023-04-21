@@ -37,18 +37,18 @@ public class RollbackInstanceRequest extends AbstractModel{
     private Long Type;
 
     /**
-    * 需要回档的数据库
-    */
-    @SerializedName("DBs")
-    @Expose
-    private String [] DBs;
-
-    /**
     * 回档目标时间点
     */
     @SerializedName("Time")
     @Expose
     private String Time;
+
+    /**
+    * 需要回档的数据库
+    */
+    @SerializedName("DBs")
+    @Expose
+    private String [] DBs;
 
     /**
     * 备份恢复到的同一个APPID下的实例ID，不填则恢复到原实例ID
@@ -97,22 +97,6 @@ public class RollbackInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要回档的数据库 
-     * @return DBs 需要回档的数据库
-     */
-    public String [] getDBs() {
-        return this.DBs;
-    }
-
-    /**
-     * Set 需要回档的数据库
-     * @param DBs 需要回档的数据库
-     */
-    public void setDBs(String [] DBs) {
-        this.DBs = DBs;
-    }
-
-    /**
      * Get 回档目标时间点 
      * @return Time 回档目标时间点
      */
@@ -126,6 +110,22 @@ public class RollbackInstanceRequest extends AbstractModel{
      */
     public void setTime(String Time) {
         this.Time = Time;
+    }
+
+    /**
+     * Get 需要回档的数据库 
+     * @return DBs 需要回档的数据库
+     */
+    public String [] getDBs() {
+        return this.DBs;
+    }
+
+    /**
+     * Set 需要回档的数据库
+     * @param DBs 需要回档的数据库
+     */
+    public void setDBs(String [] DBs) {
+        this.DBs = DBs;
     }
 
     /**
@@ -174,14 +174,14 @@ public class RollbackInstanceRequest extends AbstractModel{
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.Time != null) {
+            this.Time = new String(source.Time);
+        }
         if (source.DBs != null) {
             this.DBs = new String[source.DBs.length];
             for (int i = 0; i < source.DBs.length; i++) {
                 this.DBs[i] = new String(source.DBs[i]);
             }
-        }
-        if (source.Time != null) {
-            this.Time = new String(source.Time);
         }
         if (source.TargetInstanceId != null) {
             this.TargetInstanceId = new String(source.TargetInstanceId);
@@ -201,8 +201,8 @@ public class RollbackInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 

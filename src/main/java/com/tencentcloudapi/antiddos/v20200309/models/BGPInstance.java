@@ -169,6 +169,14 @@ public class BGPInstance extends AbstractModel{
     private Long GiftServiceBandWidth;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -524,6 +532,26 @@ public class BGPInstance extends AbstractModel{
         this.GiftServiceBandWidth = GiftServiceBandWidth;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public BGPInstance() {
     }
 
@@ -595,6 +623,9 @@ public class BGPInstance extends AbstractModel{
         if (source.GiftServiceBandWidth != null) {
             this.GiftServiceBandWidth = new Long(source.GiftServiceBandWidth);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -621,6 +652,7 @@ public class BGPInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Line", this.Line);
         this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
         this.setParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

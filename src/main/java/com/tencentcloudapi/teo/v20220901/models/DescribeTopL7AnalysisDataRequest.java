@@ -38,7 +38,7 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
     * 查询的指标，取值有：
-<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_country：按国家/地区维度统计流量指标；</li>
 <li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
 <li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
 <li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
@@ -48,13 +48,13 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 <li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
 <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
 <li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
-<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_country：按国家/地区维度统计请求数指标；</li>
 <li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
 <li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
 <li> l7Flow_request_url：按URL维度统计请求数指标; </li>
 <li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
 <li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
-<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_referer：按refer信息维度统计请求数指标；</li>
 <li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
@@ -157,7 +157,7 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
      * Get 查询的指标，取值有：
-<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_country：按国家/地区维度统计流量指标；</li>
 <li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
 <li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
 <li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
@@ -167,19 +167,19 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 <li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
 <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
 <li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
-<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_country：按国家/地区维度统计请求数指标；</li>
 <li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
 <li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
 <li> l7Flow_request_url：按URL维度统计请求数指标; </li>
 <li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
 <li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
-<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_referer：按refer信息维度统计请求数指标；</li>
 <li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
  
      * @return MetricName 查询的指标，取值有：
-<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_country：按国家/地区维度统计流量指标；</li>
 <li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
 <li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
 <li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
@@ -189,13 +189,13 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 <li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
 <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
 <li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
-<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_country：按国家/地区维度统计请求数指标；</li>
 <li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
 <li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
 <li> l7Flow_request_url：按URL维度统计请求数指标; </li>
 <li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
 <li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
-<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_referer：按refer信息维度统计请求数指标；</li>
 <li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
@@ -207,7 +207,7 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 
     /**
      * Set 查询的指标，取值有：
-<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_country：按国家/地区维度统计流量指标；</li>
 <li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
 <li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
 <li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
@@ -217,19 +217,19 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 <li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
 <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
 <li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
-<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_country：按国家/地区维度统计请求数指标；</li>
 <li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
 <li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
 <li> l7Flow_request_url：按URL维度统计请求数指标; </li>
 <li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
 <li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
-<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_referer：按refer信息维度统计请求数指标；</li>
 <li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>
 
      * @param MetricName 查询的指标，取值有：
-<li> l7Flow_outFlux_country：按国家维度统计流量指标；</li>
+<li> l7Flow_outFlux_country：按国家/地区维度统计流量指标；</li>
 <li> l7Flow_outFlux_statusCode：按状态码维度统计流量指标；</li>
 <li> l7Flow_outFlux_domain：按域名维度统计流量指标；</li>
 <li> l7Flow_outFlux_url：按URL维度统计流量指标; </li>
@@ -239,13 +239,13 @@ public class DescribeTopL7AnalysisDataRequest extends AbstractModel{
 <li> l7Flow_outFlux_ua_device：按设备类型维度统计流量指标; </li>
 <li> l7Flow_outFlux_ua_browser：按浏览器类型维度统计流量指标；</li>
 <li> l7Flow_outFlux_us_os：按操作系统类型维度统计流量指标；</li>
-<li> l7Flow_request_country：按国家维度统计请求数指标；</li>
+<li> l7Flow_request_country：按国家/地区维度统计请求数指标；</li>
 <li> l7Flow_request_statusCode：按状态码维度统计请求数指标；</li>
 <li> l7Flow_request_domain：按域名维度统计请求数指标；</li>
 <li> l7Flow_request_url：按URL维度统计请求数指标; </li>
 <li> l7Flow_request_resourceType：按资源类型维度统计请求数指标；</li>
 <li> l7Flow_request_sip：按客户端的源IP维度统计请求数指标；</li>
-<li> l7Flow_request_refere请求的rs：按refer信息维度统计请求数指标；</li>
+<li> l7Flow_request_referer：按refer信息维度统计请求数指标；</li>
 <li> l7Flow_request_ua_device：按设备类型维度统计请求数指标; </li>
 <li> l7Flow_request_ua_browser：按浏览器类型维度统计请求数指标；</li>
 <li> l7Flow_request_us_os：按操作系统类型维度统计请求数指标。</li>

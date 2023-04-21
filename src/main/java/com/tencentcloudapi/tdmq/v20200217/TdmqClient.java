@@ -1371,6 +1371,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取Pulsar专业版集群实例信息
+     * @param req DescribePulsarProInstanceDetailRequest
+     * @return DescribePulsarProInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(DescribePulsarProInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePulsarProInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户已购的Pulsar专业版实例列表
+     * @param req DescribePulsarProInstancesRequest
+     * @return DescribePulsarProInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePulsarProInstancesResponse DescribePulsarProInstances(DescribePulsarProInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePulsarProInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *RabbitMQ专享版查询节点列表
      * @param req DescribeRabbitMQNodeListRequest
      * @return DescribeRabbitMQNodeListResponse

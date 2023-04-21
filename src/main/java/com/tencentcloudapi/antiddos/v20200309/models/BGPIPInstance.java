@@ -64,14 +64,14 @@ public class BGPIPInstance extends AbstractModel{
     private String Status;
 
     /**
-    * 购买时间
+    * 到期时间
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 到期时间
+    * 购买时间
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -337,32 +337,32 @@ public class BGPIPInstance extends AbstractModel{
     }
 
     /**
-     * Get 购买时间 
-     * @return ExpiredTime 购买时间
+     * Get 到期时间 
+     * @return ExpiredTime 到期时间
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 购买时间
-     * @param ExpiredTime 购买时间
+     * Set 到期时间
+     * @param ExpiredTime 到期时间
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 到期时间 
-     * @return CreatedTime 到期时间
+     * Get 购买时间 
+     * @return CreatedTime 购买时间
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 到期时间
-     * @param CreatedTime 到期时间
+     * Set 购买时间
+     * @param CreatedTime 购买时间
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

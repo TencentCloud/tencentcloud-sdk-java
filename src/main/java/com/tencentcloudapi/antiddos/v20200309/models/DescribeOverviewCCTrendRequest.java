@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class DescribeOverviewCCTrendRequest extends AbstractModel{
 
     /**
-    * 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
-    */
-    @SerializedName("Business")
-    @Expose
-    private String Business;
-
-    /**
     * 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)]
     */
     @SerializedName("Period")
@@ -58,6 +51,13 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
     private String MetricName;
 
     /**
+    * 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
     * 资源的IP
     */
     @SerializedName("IpList")
@@ -70,22 +70,6 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private String Id;
-
-    /**
-     * Get 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护） 
-     * @return Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
-     */
-    public String getBusiness() {
-        return this.Business;
-    }
-
-    /**
-     * Set 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
-     * @param Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
-     */
-    public void setBusiness(String Business) {
-        this.Business = Business;
-    }
 
     /**
      * Get 统计粒度，取值[300(5分钟)，3600(小时)，86400(天)] 
@@ -152,6 +136,22 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
     }
 
     /**
+     * Get 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护） 
+     * @return Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+     * @param Business 大禹子产品代号（bgpip表示高防IP；bgp-multip表示共享包；basic表示DDoS基础防护）
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
+    /**
      * Get 资源的IP 
      * @return IpList 资源的IP
      */
@@ -191,9 +191,6 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeOverviewCCTrendRequest(DescribeOverviewCCTrendRequest source) {
-        if (source.Business != null) {
-            this.Business = new String(source.Business);
-        }
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
@@ -205,6 +202,9 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
         }
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
+        }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
         }
         if (source.IpList != null) {
             this.IpList = new String[source.IpList.length];
@@ -222,11 +222,11 @@ public class DescribeOverviewCCTrendRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamSimple(map, prefix + "Id", this.Id);
 

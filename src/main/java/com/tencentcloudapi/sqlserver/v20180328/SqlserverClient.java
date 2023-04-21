@@ -1982,7 +1982,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（RestoreInstance）用于根据备份文件恢复实例。
+     *本接口（RestoreInstance）用于按照备份集回档数据库。
      * @param req RestoreInstanceRequest
      * @return RestoreInstanceResponse
      * @throws TencentCloudSDKException
@@ -2002,7 +2002,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（RollbackInstance）用于回档实例
+     *本接口（RollbackInstance）用于按照时间点回档实例
      * @param req RollbackInstanceRequest
      * @return RollbackInstanceResponse
      * @throws TencentCloudSDKException

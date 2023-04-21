@@ -51,7 +51,21 @@ public class RestoreInstanceRequest extends AbstractModel{
     private RenameRestoreDatabase [] RenameRestore;
 
     /**
-    * 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+    * 回档类型，0-覆盖方式；1-重命名方式，默认1
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 需要覆盖回档的数据库，只有覆盖回档时必填
+    */
+    @SerializedName("DBList")
+    @Expose
+    private String [] DBList;
+
+    /**
+    * 备份任务组ID，在单库备份文件模式下
     */
     @SerializedName("GroupId")
     @Expose
@@ -122,16 +136,48 @@ public class RestoreInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。 
-     * @return GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     * Get 回档类型，0-覆盖方式；1-重命名方式，默认1 
+     * @return Type 回档类型，0-覆盖方式；1-重命名方式，默认1
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 回档类型，0-覆盖方式；1-重命名方式，默认1
+     * @param Type 回档类型，0-覆盖方式；1-重命名方式，默认1
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 需要覆盖回档的数据库，只有覆盖回档时必填 
+     * @return DBList 需要覆盖回档的数据库，只有覆盖回档时必填
+     */
+    public String [] getDBList() {
+        return this.DBList;
+    }
+
+    /**
+     * Set 需要覆盖回档的数据库，只有覆盖回档时必填
+     * @param DBList 需要覆盖回档的数据库，只有覆盖回档时必填
+     */
+    public void setDBList(String [] DBList) {
+        this.DBList = DBList;
+    }
+
+    /**
+     * Get 备份任务组ID，在单库备份文件模式下 
+     * @return GroupId 备份任务组ID，在单库备份文件模式下
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
-     * @param GroupId 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+     * Set 备份任务组ID，在单库备份文件模式下
+     * @param GroupId 备份任务组ID，在单库备份文件模式下
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -160,6 +206,15 @@ public class RestoreInstanceRequest extends AbstractModel{
                 this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.DBList != null) {
+            this.DBList = new String[source.DBList.length];
+            for (int i = 0; i < source.DBList.length; i++) {
+                this.DBList[i] = new String(source.DBList[i]);
+            }
+        }
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
@@ -174,6 +229,8 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "DBList.", this.DBList);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }

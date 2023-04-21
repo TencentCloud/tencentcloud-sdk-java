@@ -57,6 +57,14 @@ public class IPLineInfo extends AbstractModel{
     private Long ResourceFlag;
 
     /**
+    * 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get IP线路类型，取值[
 "bgp"：BGP线路IP
 "ctcc"：电信线路IP
@@ -144,6 +152,26 @@ public class IPLineInfo extends AbstractModel{
         this.ResourceFlag = ResourceFlag;
     }
 
+    /**
+     * Get 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IPLineInfo() {
     }
 
@@ -164,6 +192,9 @@ public class IPLineInfo extends AbstractModel{
         if (source.ResourceFlag != null) {
             this.ResourceFlag = new Long(source.ResourceFlag);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -175,6 +206,7 @@ public class IPLineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Eip", this.Eip);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

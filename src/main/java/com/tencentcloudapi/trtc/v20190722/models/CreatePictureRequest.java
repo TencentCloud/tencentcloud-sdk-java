@@ -30,7 +30,7 @@ public class CreatePictureRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 图片内容经base64编码后的string格式
+    * 图片内容经base64编码后的string格式,最大长度为2M
     */
     @SerializedName("Content")
     @Expose
@@ -88,16 +88,16 @@ public class CreatePictureRequest extends AbstractModel{
     }
 
     /**
-     * Get 图片内容经base64编码后的string格式 
-     * @return Content 图片内容经base64编码后的string格式
+     * Get 图片内容经base64编码后的string格式,最大长度为2M 
+     * @return Content 图片内容经base64编码后的string格式,最大长度为2M
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set 图片内容经base64编码后的string格式
-     * @param Content 图片内容经base64编码后的string格式
+     * Set 图片内容经base64编码后的string格式,最大长度为2M
+     * @param Content 图片内容经base64编码后的string格式,最大长度为2M
      */
     public void setContent(String Content) {
         this.Content = Content;

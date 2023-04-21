@@ -159,6 +159,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *批量获取文档详情
+     * @param req BatchDescribeDocumentRequest
+     * @return BatchDescribeDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDescribeDocumentResponse BatchDescribeDocument(BatchDescribeDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDescribeDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *如果批量注册的用户已存在，则会被覆盖。一次最多注册1000个用户。默认请求频率限制：10次/秒
      * @param req BatchRegisterRequest
      * @return BatchRegisterResponse
@@ -539,7 +559,9 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
-     *批量获取文档信息
+     *有新接口替换
+
+批量获取文档信息（已废弃，替代接口BatchDescribeDocument）
      * @param req DescribeDocumentsRequest
      * @return DescribeDocumentsResponse
      * @throws TencentCloudSDKException
@@ -1039,7 +1061,7 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
-     *开始房间的直播
+     *开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
      * @param req StartRoomRequest
      * @return StartRoomResponse
      * @throws TencentCloudSDKException

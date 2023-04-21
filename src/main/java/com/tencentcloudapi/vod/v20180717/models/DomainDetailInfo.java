@@ -80,6 +80,14 @@ public class DomainDetailInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QUICConfig")
+    @Expose
+    private DomainQUICConfig QUICConfig;
+
+    /**
      * Get 域名名称。 
      * @return Domain 域名名称。
      */
@@ -223,6 +231,26 @@ public class DomainDetailInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QUICConfig 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DomainQUICConfig getQUICConfig() {
+        return this.QUICConfig;
+    }
+
+    /**
+     * Set 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QUICConfig 域名 QUIC 配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQUICConfig(DomainQUICConfig QUICConfig) {
+        this.QUICConfig = QUICConfig;
+    }
+
     public DomainDetailInfo() {
     }
 
@@ -255,6 +283,9 @@ public class DomainDetailInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.QUICConfig != null) {
+            this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
+        }
     }
 
 
@@ -269,6 +300,7 @@ public class DomainDetailInfo extends AbstractModel{
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
 
     }
 }

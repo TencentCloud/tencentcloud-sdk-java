@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class PdfVerifyResult extends AbstractModel{
 
     /**
-    * 验签结果
+    * 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
     */
     @SerializedName("VerifyResult")
     @Expose
     private Long VerifyResult;
 
     /**
-    * 签署平台
+    * 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
     */
     @SerializedName("SignPlatform")
     @Expose
@@ -121,32 +121,32 @@ public class PdfVerifyResult extends AbstractModel{
     private Long ComponentPage;
 
     /**
-     * Get 验签结果 
-     * @return VerifyResult 验签结果
+     * Get 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。 
+     * @return VerifyResult 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
      */
     public Long getVerifyResult() {
         return this.VerifyResult;
     }
 
     /**
-     * Set 验签结果
-     * @param VerifyResult 验签结果
+     * Set 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
+     * @param VerifyResult 验签结果。0-签名域未签名；1-验签成功； 3-验签失败；4-未找到签名域：文件内没有签名域；5-签名值格式不正确。
      */
     public void setVerifyResult(Long VerifyResult) {
         this.VerifyResult = VerifyResult;
     }
 
     /**
-     * Get 签署平台 
-     * @return SignPlatform 签署平台
+     * Get 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。 
+     * @return SignPlatform 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
      */
     public String getSignPlatform() {
         return this.SignPlatform;
     }
 
     /**
-     * Set 签署平台
-     * @param SignPlatform 签署平台
+     * Set 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
+     * @param SignPlatform 签署平台，如果文件是在腾讯电子签平台签署，则返回腾讯电子签，如果文件不在腾讯电子签平台签署，则返回其他平台。
      */
     public void setSignPlatform(String SignPlatform) {
         this.SignPlatform = SignPlatform;

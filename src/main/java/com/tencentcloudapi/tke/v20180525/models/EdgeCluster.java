@@ -133,6 +133,14 @@ public class EdgeCluster extends AbstractModel{
     private String ChargeType;
 
     /**
+    * 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EdgeVersion")
+    @Expose
+    private String EdgeVersion;
+
+    /**
      * Get 集群Id 
      * @return ClusterId 集群Id
      */
@@ -392,6 +400,26 @@ public class EdgeCluster extends AbstractModel{
         this.ChargeType = ChargeType;
     }
 
+    /**
+     * Get 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EdgeVersion 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEdgeVersion() {
+        return this.EdgeVersion;
+    }
+
+    /**
+     * Set 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EdgeVersion 边缘集群组件的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEdgeVersion(String EdgeVersion) {
+        this.EdgeVersion = EdgeVersion;
+    }
+
     public EdgeCluster() {
     }
 
@@ -445,6 +473,9 @@ public class EdgeCluster extends AbstractModel{
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
+        if (source.EdgeVersion != null) {
+            this.EdgeVersion = new String(source.EdgeVersion);
+        }
     }
 
 
@@ -467,6 +498,7 @@ public class EdgeCluster extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
 
     }
 }

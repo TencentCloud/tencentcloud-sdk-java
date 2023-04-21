@@ -61,6 +61,14 @@ other(托管IP)
     private String InstanceId;
 
     /**
+    * 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -164,6 +172,26 @@ other(托管IP)
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public EipProductInfo() {
     }
 
@@ -184,6 +212,9 @@ other(托管IP)
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -195,6 +226,7 @@ other(托管IP)
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

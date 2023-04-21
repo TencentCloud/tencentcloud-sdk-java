@@ -79,6 +79,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *用于创建云数据库实例的审计日志文件，最多下载600w审计日志。
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditLogFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditLogFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAuditLogFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建健康报告，并可以选择是否发送邮件。
      * @param req CreateDBDiagReportTaskRequest
      * @return CreateDBDiagReportTaskResponse
@@ -239,6 +259,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *用于删除云数据库实例的审计日志文件。
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditLogFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditLogFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAuditLogFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据任务id删除健康报告生成任务
      * @param req DeleteDBDiagReportTasksRequest
      * @return DeleteDBDiagReportTasksResponse
@@ -331,6 +371,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAllUserGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAllUserGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用于创建云数据库实例的审计日志文件
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditLogFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditLogFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditLogFiles");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

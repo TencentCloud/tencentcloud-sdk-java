@@ -142,6 +142,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Boolean ExcludeAdvancedInfo;
 
     /**
+    * 资产IP数组
+    */
+    @SerializedName("FilterAssetIpList")
+    @Expose
+    private String [] FilterAssetIpList;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -413,6 +420,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.ExcludeAdvancedInfo = ExcludeAdvancedInfo;
     }
 
+    /**
+     * Get 资产IP数组 
+     * @return FilterAssetIpList 资产IP数组
+     */
+    public String [] getFilterAssetIpList() {
+        return this.FilterAssetIpList;
+    }
+
+    /**
+     * Set 资产IP数组
+     * @param FilterAssetIpList 资产IP数组
+     */
+    public void setFilterAssetIpList(String [] FilterAssetIpList) {
+        this.FilterAssetIpList = FilterAssetIpList;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -475,6 +498,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.ExcludeAdvancedInfo != null) {
             this.ExcludeAdvancedInfo = new Boolean(source.ExcludeAdvancedInfo);
         }
+        if (source.FilterAssetIpList != null) {
+            this.FilterAssetIpList = new String[source.FilterAssetIpList.length];
+            for (int i = 0; i < source.FilterAssetIpList.length; i++) {
+                this.FilterAssetIpList[i] = new String(source.FilterAssetIpList[i]);
+            }
+        }
     }
 
 
@@ -499,6 +528,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
         this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
         this.setParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
+        this.setParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
 
     }
 }

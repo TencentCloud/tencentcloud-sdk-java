@@ -44,6 +44,13 @@ public class DescribeListSchedulingDomainRequest extends AbstractModel{
     private String FilterDomain;
 
     /**
+    * 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -91,6 +98,22 @@ public class DescribeListSchedulingDomainRequest extends AbstractModel{
         this.FilterDomain = FilterDomain;
     }
 
+    /**
+     * Get 运行状态 0 代表未运行  1 正在运行  2 运行异常  
+     * @return Status 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+     * @param Status 运行状态 0 代表未运行  1 正在运行  2 运行异常 
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public DescribeListSchedulingDomainRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeListSchedulingDomainRequest extends AbstractModel{
         if (source.FilterDomain != null) {
             this.FilterDomain = new String(source.FilterDomain);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeListSchedulingDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "FilterDomain", this.FilterDomain);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }
