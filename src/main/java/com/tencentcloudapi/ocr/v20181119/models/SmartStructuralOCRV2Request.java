@@ -67,6 +67,13 @@ ItemNames=["姓名","性别"]
     private String [] ItemNames;
 
     /**
+    * 是否开启全文字段识别
+    */
+    @SerializedName("ReturnFullText")
+    @Expose
+    private Boolean ReturnFullText;
+
+    /**
      * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -182,6 +189,22 @@ ItemNames=["姓名","性别"]
         this.ItemNames = ItemNames;
     }
 
+    /**
+     * Get 是否开启全文字段识别 
+     * @return ReturnFullText 是否开启全文字段识别
+     */
+    public Boolean getReturnFullText() {
+        return this.ReturnFullText;
+    }
+
+    /**
+     * Set 是否开启全文字段识别
+     * @param ReturnFullText 是否开启全文字段识别
+     */
+    public void setReturnFullText(Boolean ReturnFullText) {
+        this.ReturnFullText = ReturnFullText;
+    }
+
     public SmartStructuralOCRV2Request() {
     }
 
@@ -208,6 +231,9 @@ ItemNames=["姓名","性别"]
                 this.ItemNames[i] = new String(source.ItemNames[i]);
             }
         }
+        if (source.ReturnFullText != null) {
+            this.ReturnFullText = new Boolean(source.ReturnFullText);
+        }
     }
 
 
@@ -220,6 +246,7 @@ ItemNames=["姓名","性别"]
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         this.setParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
+        this.setParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
 
     }
 }

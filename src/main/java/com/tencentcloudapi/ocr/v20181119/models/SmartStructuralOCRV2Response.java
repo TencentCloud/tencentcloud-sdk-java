@@ -38,6 +38,13 @@ public class SmartStructuralOCRV2Response extends AbstractModel{
     private GroupInfo [] StructuralList;
 
     /**
+    * 还原文本信息
+    */
+    @SerializedName("WordList")
+    @Expose
+    private WordItem [] WordList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +88,22 @@ public class SmartStructuralOCRV2Response extends AbstractModel{
     }
 
     /**
+     * Get 还原文本信息 
+     * @return WordList 还原文本信息
+     */
+    public WordItem [] getWordList() {
+        return this.WordList;
+    }
+
+    /**
+     * Set 还原文本信息
+     * @param WordList 还原文本信息
+     */
+    public void setWordList(WordItem [] WordList) {
+        this.WordList = WordList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -113,6 +136,12 @@ public class SmartStructuralOCRV2Response extends AbstractModel{
                 this.StructuralList[i] = new GroupInfo(source.StructuralList[i]);
             }
         }
+        if (source.WordList != null) {
+            this.WordList = new WordItem[source.WordList.length];
+            for (int i = 0; i < source.WordList.length; i++) {
+                this.WordList[i] = new WordItem(source.WordList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +154,7 @@ public class SmartStructuralOCRV2Response extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamArrayObj(map, prefix + "StructuralList.", this.StructuralList);
+        this.setParamArrayObj(map, prefix + "WordList.", this.WordList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -65,8 +65,9 @@ public class ListTriggersRequest extends AbstractModel{
     private String Order;
 
     /**
-    * * Qualifier:
-函数版本，别名
+    * * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
     */
     @SerializedName("Filters")
     @Expose
@@ -169,20 +170,24 @@ public class ListTriggersRequest extends AbstractModel{
     }
 
     /**
-     * Get * Qualifier:
-函数版本，别名 
-     * @return Filters * Qualifier:
-函数版本，别名
+     * Get * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述 
+     * @return Filters * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set * Qualifier:
-函数版本，别名
-     * @param Filters * Qualifier:
-函数版本，别名
+     * Set * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
+     * @param Filters * Qualifier: 函数版本，别名
+* TriggerName: 函数触发器名称
+* Description: 函数触发器描述
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

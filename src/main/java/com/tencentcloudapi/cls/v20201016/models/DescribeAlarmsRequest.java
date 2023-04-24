@@ -23,37 +23,26 @@ import java.util.HashMap;
 public class DescribeAlarmsRequest extends AbstractModel{
 
     /**
-    * <br><li> name
+    * name
+- 按照【告警策略名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【告警策略名称】进行过滤。
-类型：String
+alarmId
+- 按照【告警策略ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+topicId
+- 按照【监控对象的日志主题ID】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> alarmId
-
-按照【告警策略ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【监控对象的日志主题ID】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> enable
-
-按照【启用状态】进行过滤。
-
-类型：String
-
-备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
-
-必选：否
+enable
+- 按照【启用状态】进行过滤。
+- 类型：String
+- 备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
     */
@@ -76,70 +65,48 @@ public class DescribeAlarmsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get <br><li> name
+     * Get name
+- 按照【告警策略名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【告警策略名称】进行过滤。
-类型：String
+alarmId
+- 按照【告警策略ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+topicId
+- 按照【监控对象的日志主题ID】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> alarmId
-
-按照【告警策略ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【监控对象的日志主题ID】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> enable
-
-按照【启用状态】进行过滤。
-
-类型：String
-
-备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
-
-必选：否
+enable
+- 按照【启用状态】进行过滤。
+- 类型：String
+- 备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters <br><li> name
+     * @return Filters name
+- 按照【告警策略名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【告警策略名称】进行过滤。
-类型：String
+alarmId
+- 按照【告警策略ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+topicId
+- 按照【监控对象的日志主题ID】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> alarmId
-
-按照【告警策略ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【监控对象的日志主题ID】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> enable
-
-按照【启用状态】进行过滤。
-
-类型：String
-
-备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
-
-必选：否
+enable
+- 按照【启用状态】进行过滤。
+- 类型：String
+- 备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -148,70 +115,48 @@ public class DescribeAlarmsRequest extends AbstractModel{
     }
 
     /**
-     * Set <br><li> name
+     * Set name
+- 按照【告警策略名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【告警策略名称】进行过滤。
-类型：String
+alarmId
+- 按照【告警策略ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+topicId
+- 按照【监控对象的日志主题ID】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> alarmId
-
-按照【告警策略ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【监控对象的日志主题ID】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> enable
-
-按照【启用状态】进行过滤。
-
-类型：String
-
-备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
-
-必选：否
+enable
+- 按照【启用状态】进行过滤。
+- 类型：String
+- 备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters <br><li> name
+     * @param Filters name
+- 按照【告警策略名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【告警策略名称】进行过滤。
-类型：String
+alarmId
+- 按照【告警策略ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+topicId
+- 按照【监控对象的日志主题ID】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> alarmId
-
-按照【告警策略ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【监控对象的日志主题ID】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> enable
-
-按照【启用状态】进行过滤。
-
-类型：String
-
-备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
-
-必选：否
+enable
+- 按照【启用状态】进行过滤。
+- 类型：String
+- 备注：enable参数值范围: 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False。 其它值将返回参数错误信息.
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */

@@ -179,6 +179,26 @@ public class KeewidbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeConnectionConfig）用于查询实例连接配置，包括出流量和入流量带宽、最大连接数限制。
+     * @param req DescribeConnectionConfigRequest
+     * @return DescribeConnectionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConnectionConfigResponse DescribeConnectionConfig(DescribeConnectionConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConnectionConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConnectionConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConnectionConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse

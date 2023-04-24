@@ -22,6 +22,90 @@ import java.util.HashMap;
 
 public class CcnRegionBandwidthLimitInfo extends AbstractModel{
 
+    /**
+    * 源地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceRegion")
+    @Expose
+    private String SourceRegion;
+
+    /**
+    * 目的地域， 例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DestinationRegion")
+    @Expose
+    private String DestinationRegion;
+
+    /**
+    * 出带宽上限，单位：Mbps。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BandwidthLimit")
+    @Expose
+    private Long BandwidthLimit;
+
+    /**
+     * Get 源地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceRegion 源地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceRegion() {
+        return this.SourceRegion;
+    }
+
+    /**
+     * Set 源地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceRegion 源地域，例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceRegion(String SourceRegion) {
+        this.SourceRegion = SourceRegion;
+    }
+
+    /**
+     * Get 目的地域， 例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DestinationRegion 目的地域， 例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDestinationRegion() {
+        return this.DestinationRegion;
+    }
+
+    /**
+     * Set 目的地域， 例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DestinationRegion 目的地域， 例如：ap-shanghai
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDestinationRegion(String DestinationRegion) {
+        this.DestinationRegion = DestinationRegion;
+    }
+
+    /**
+     * Get 出带宽上限，单位：Mbps。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BandwidthLimit 出带宽上限，单位：Mbps。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBandwidthLimit() {
+        return this.BandwidthLimit;
+    }
+
+    /**
+     * Set 出带宽上限，单位：Mbps。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BandwidthLimit 出带宽上限，单位：Mbps。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidthLimit(Long BandwidthLimit) {
+        this.BandwidthLimit = BandwidthLimit;
+    }
+
     public CcnRegionBandwidthLimitInfo() {
     }
 
@@ -30,6 +114,15 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CcnRegionBandwidthLimitInfo(CcnRegionBandwidthLimitInfo source) {
+        if (source.SourceRegion != null) {
+            this.SourceRegion = new String(source.SourceRegion);
+        }
+        if (source.DestinationRegion != null) {
+            this.DestinationRegion = new String(source.DestinationRegion);
+        }
+        if (source.BandwidthLimit != null) {
+            this.BandwidthLimit = new Long(source.BandwidthLimit);
+        }
     }
 
 
@@ -37,6 +130,9 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SourceRegion", this.SourceRegion);
+        this.setParamSimple(map, prefix + "DestinationRegion", this.DestinationRegion);
+        this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
 
     }
 }

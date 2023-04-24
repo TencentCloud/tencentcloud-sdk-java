@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigRequest extends AbstractModel{
 
     /**
-    * 实例ID。
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,23 +45,27 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String TimePeriod;
 
     /**
-    * 自动备份类型： 1 “定时回档”。
+    * 自动备份类型。目前仅能配置为：1 ，指定时备份。
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -99,16 +104,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动备份类型： 1 “定时回档”。 
-     * @return AutoBackupType 自动备份类型： 1 “定时回档”。
+     * Get 自动备份类型。目前仅能配置为：1 ，指定时备份。 
+     * @return AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set 自动备份类型： 1 “定时回档”。
-     * @param AutoBackupType 自动备份类型： 1 “定时回档”。
+     * Set 自动备份类型。目前仅能配置为：1 ，指定时备份。
+     * @param AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;

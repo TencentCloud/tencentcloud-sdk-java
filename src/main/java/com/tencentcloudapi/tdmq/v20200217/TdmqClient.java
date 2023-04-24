@@ -1937,6 +1937,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
+     * @param req ModifyRocketMQInstanceSpecRequest
+     * @return ModifyRocketMQInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(ModifyRocketMQInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRocketMQInstanceSpec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新RocketMQ命名空间
      * @param req ModifyRocketMQNamespaceRequest
      * @return ModifyRocketMQNamespaceResponse

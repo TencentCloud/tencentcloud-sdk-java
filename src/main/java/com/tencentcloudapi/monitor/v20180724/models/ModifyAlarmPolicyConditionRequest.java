@@ -79,7 +79,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
-    * 模版id，专供prom使用
+    * 模板id，专供prom使用
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -235,16 +235,16 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版id，专供prom使用 
-     * @return NoticeIds 模版id，专供prom使用
+     * Get 模板id，专供prom使用 
+     * @return NoticeIds 模板id，专供prom使用
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set 模版id，专供prom使用
-     * @param NoticeIds 模版id，专供prom使用
+     * Set 模板id，专供prom使用
+     * @param NoticeIds 模板id，专供prom使用
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;

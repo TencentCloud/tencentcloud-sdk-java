@@ -72,6 +72,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean DeleteProtect;
 
     /**
+    * 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+    */
+    @SerializedName("ModifyClassicDomain")
+    @Expose
+    private Boolean ModifyClassicDomain;
+
+    /**
      * Get 负载均衡的唯一ID 
      * @return LoadBalancerId 负载均衡的唯一ID
      */
@@ -183,6 +190,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.DeleteProtect = DeleteProtect;
     }
 
+    /**
+     * Get 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。 
+     * @return ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     */
+    public Boolean getModifyClassicDomain() {
+        return this.ModifyClassicDomain;
+    }
+
+    /**
+     * Set 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     * @param ModifyClassicDomain 将负载均衡二级域名由mycloud.com改为tencentclb.com，子域名也会变换。修改后mycloud.com域名将失效。
+     */
+    public void setModifyClassicDomain(Boolean ModifyClassicDomain) {
+        this.ModifyClassicDomain = ModifyClassicDomain;
+    }
+
     public ModifyLoadBalancerAttributesRequest() {
     }
 
@@ -212,6 +235,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         if (source.DeleteProtect != null) {
             this.DeleteProtect = new Boolean(source.DeleteProtect);
         }
+        if (source.ModifyClassicDomain != null) {
+            this.ModifyClassicDomain = new Boolean(source.ModifyClassicDomain);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
+        this.setParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);
 
     }
 }

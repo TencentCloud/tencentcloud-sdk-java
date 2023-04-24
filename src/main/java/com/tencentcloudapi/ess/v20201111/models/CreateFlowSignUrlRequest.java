@@ -37,18 +37,18 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     private FlowCreateApprover [] FlowApproverInfos;
 
     /**
-    * 机构信息，暂未开放
-    */
-    @SerializedName("Organization")
-    @Expose
-    private OrganizationInfo Organization;
-
-    /**
     * 用户信息，此结构体UserId必填
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 机构信息，暂未开放
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
 
     /**
      * Get 流程编号 
@@ -83,22 +83,6 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 机构信息，暂未开放 
-     * @return Organization 机构信息，暂未开放
-     */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
-    }
-
-    /**
-     * Set 机构信息，暂未开放
-     * @param Organization 机构信息，暂未开放
-     */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
-    }
-
-    /**
      * Get 用户信息，此结构体UserId必填 
      * @return Operator 用户信息，此结构体UserId必填
      */
@@ -112,6 +96,22 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 机构信息，暂未开放 
+     * @return Organization 机构信息，暂未开放
+     */
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 机构信息，暂未开放
+     * @param Organization 机构信息，暂未开放
+     */
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     public CreateFlowSignUrlRequest() {
@@ -131,11 +131,11 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
                 this.FlowApproverInfos[i] = new FlowCreateApprover(source.FlowApproverInfos[i]);
             }
         }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
         }
     }
 
@@ -146,8 +146,8 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }
 }

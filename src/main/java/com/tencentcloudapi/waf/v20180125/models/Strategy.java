@@ -24,6 +24,7 @@ public class Strategy extends AbstractModel{
 
     /**
     * 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Field")
     @Expose
@@ -31,6 +32,7 @@ public class Strategy extends AbstractModel{
 
     /**
     * 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareFunc")
     @Expose
@@ -38,6 +40,7 @@ public class Strategy extends AbstractModel{
 
     /**
     * 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
@@ -45,14 +48,17 @@ public class Strategy extends AbstractModel{
 
     /**
     * 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arg")
     @Expose
     private String Arg;
 
     /**
-     * Get 匹配字段 
+     * Get 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Field 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getField() {
         return this.Field;
@@ -60,15 +66,19 @@ public class Strategy extends AbstractModel{
 
     /**
      * Set 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Field 匹配字段
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 逻辑符号 
+     * Get 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompareFunc 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareFunc() {
         return this.CompareFunc;
@@ -76,15 +86,19 @@ public class Strategy extends AbstractModel{
 
     /**
      * Set 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareFunc 逻辑符号
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareFunc(String CompareFunc) {
         this.CompareFunc = CompareFunc;
     }
 
     /**
-     * Get 匹配内容 
+     * Get 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -92,15 +106,19 @@ public class Strategy extends AbstractModel{
 
     /**
      * Set 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 匹配内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get 匹配参数 
+     * Get 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Arg 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArg() {
         return this.Arg;
@@ -108,7 +126,9 @@ public class Strategy extends AbstractModel{
 
     /**
      * Set 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Arg 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArg(String Arg) {
         this.Arg = Arg;

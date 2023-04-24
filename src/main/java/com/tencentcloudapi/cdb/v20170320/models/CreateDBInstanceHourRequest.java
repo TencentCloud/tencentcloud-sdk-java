@@ -93,7 +93,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String InstanceRole;
 
     /**
-    * 主实例的可用区信息，购买灾备、RO实例时必填。
+    * 主实例地域信息，购买灾备、RO实例时，该字段必填。
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -442,16 +442,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 主实例的可用区信息，购买灾备、RO实例时必填。 
-     * @return MasterRegion 主实例的可用区信息，购买灾备、RO实例时必填。
+     * Get 主实例地域信息，购买灾备、RO实例时，该字段必填。 
+     * @return MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set 主实例的可用区信息，购买灾备、RO实例时必填。
-     * @param MasterRegion 主实例的可用区信息，购买灾备、RO实例时必填。
+     * Set 主实例地域信息，购买灾备、RO实例时，该字段必填。
+     * @param MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;

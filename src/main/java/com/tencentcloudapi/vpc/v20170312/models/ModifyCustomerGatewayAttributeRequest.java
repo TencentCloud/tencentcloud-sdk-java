@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCustomerGatewayAttributeRequest extends AbstractModel{
 
     /**
-    * 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+    * 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
     */
     @SerializedName("CustomerGatewayId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyCustomerGatewayAttributeRequest extends AbstractModel{
     private String CustomerGatewayName;
 
     /**
-     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。 
-     * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。 
+     * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
-     * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
+     * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/api/215/17516)接口查询对端网关。
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;

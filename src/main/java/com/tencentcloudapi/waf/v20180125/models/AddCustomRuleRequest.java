@@ -37,7 +37,7 @@ public class AddCustomRuleRequest extends AbstractModel{
     private String SortId;
 
     /**
-    * 过期时间
+    * 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -125,16 +125,16 @@ public class AddCustomRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期 
+     * @return ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
+     * @param ExpireTime 过期时间，单位为秒级时间戳，例如1677254399表示过期时间为2023-02-24 23:59:59. 0表示永不过期
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

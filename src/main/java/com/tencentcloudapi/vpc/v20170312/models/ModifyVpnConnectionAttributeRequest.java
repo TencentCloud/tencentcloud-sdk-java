@@ -44,7 +44,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     private String PreShareKey;
 
     /**
-    * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+    * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
     */
     @SerializedName("SecurityPolicyDatabases")
     @Expose
@@ -65,21 +65,21 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-    * 是否启用通道健康检查
+    * 是否启用通道健康检查，默认为False。
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 本端通道探测ip
+    * 本端通道探测IP。
     */
     @SerializedName("HealthCheckLocalIp")
     @Expose
     private String HealthCheckLocalIp;
 
     /**
-    * 对端通道探测ip
+    * 对端通道探测IP。
     */
     @SerializedName("HealthCheckRemoteIp")
     @Expose
@@ -112,6 +112,13 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     @SerializedName("DpdAction")
     @Expose
     private String DpdAction;
+
+    /**
+    * 对端网关ID，4.0及以上网关下的通道支持更新。
+    */
+    @SerializedName("CustomerGatewayId")
+    @Expose
+    private String CustomerGatewayId;
 
     /**
      * Get VPN通道实例ID。形如：vpnx-f49l6u0z。 
@@ -162,16 +169,16 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。 
-     * @return SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Get SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。 
+     * @return SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabases() {
         return this.SecurityPolicyDatabases;
     }
 
     /**
-     * Set SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
-     * @param SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Set SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * @param SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段，172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
      */
     public void setSecurityPolicyDatabases(SecurityPolicyDatabase [] SecurityPolicyDatabases) {
         this.SecurityPolicyDatabases = SecurityPolicyDatabases;
@@ -210,48 +217,48 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否启用通道健康检查 
-     * @return EnableHealthCheck 是否启用通道健康检查
+     * Get 是否启用通道健康检查，默认为False。 
+     * @return EnableHealthCheck 是否启用通道健康检查，默认为False。
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否启用通道健康检查
-     * @param EnableHealthCheck 是否启用通道健康检查
+     * Set 是否启用通道健康检查，默认为False。
+     * @param EnableHealthCheck 是否启用通道健康检查，默认为False。
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 本端通道探测ip 
-     * @return HealthCheckLocalIp 本端通道探测ip
+     * Get 本端通道探测IP。 
+     * @return HealthCheckLocalIp 本端通道探测IP。
      */
     public String getHealthCheckLocalIp() {
         return this.HealthCheckLocalIp;
     }
 
     /**
-     * Set 本端通道探测ip
-     * @param HealthCheckLocalIp 本端通道探测ip
+     * Set 本端通道探测IP。
+     * @param HealthCheckLocalIp 本端通道探测IP。
      */
     public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
         this.HealthCheckLocalIp = HealthCheckLocalIp;
     }
 
     /**
-     * Get 对端通道探测ip 
-     * @return HealthCheckRemoteIp 对端通道探测ip
+     * Get 对端通道探测IP。 
+     * @return HealthCheckRemoteIp 对端通道探测IP。
      */
     public String getHealthCheckRemoteIp() {
         return this.HealthCheckRemoteIp;
     }
 
     /**
-     * Set 对端通道探测ip
-     * @param HealthCheckRemoteIp 对端通道探测ip
+     * Set 对端通道探测IP。
+     * @param HealthCheckRemoteIp 对端通道探测IP。
      */
     public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
@@ -321,6 +328,22 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         this.DpdAction = DpdAction;
     }
 
+    /**
+     * Get 对端网关ID，4.0及以上网关下的通道支持更新。 
+     * @return CustomerGatewayId 对端网关ID，4.0及以上网关下的通道支持更新。
+     */
+    public String getCustomerGatewayId() {
+        return this.CustomerGatewayId;
+    }
+
+    /**
+     * Set 对端网关ID，4.0及以上网关下的通道支持更新。
+     * @param CustomerGatewayId 对端网关ID，4.0及以上网关下的通道支持更新。
+     */
+    public void setCustomerGatewayId(String CustomerGatewayId) {
+        this.CustomerGatewayId = CustomerGatewayId;
+    }
+
     public ModifyVpnConnectionAttributeRequest() {
     }
 
@@ -371,6 +394,9 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         if (source.DpdAction != null) {
             this.DpdAction = new String(source.DpdAction);
         }
+        if (source.CustomerGatewayId != null) {
+            this.CustomerGatewayId = new String(source.CustomerGatewayId);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
         this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
+        this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
 
     }
 }

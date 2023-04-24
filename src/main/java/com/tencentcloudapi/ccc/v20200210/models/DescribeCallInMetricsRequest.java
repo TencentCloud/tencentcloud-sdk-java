@@ -44,6 +44,13 @@ public class DescribeCallInMetricsRequest extends AbstractModel{
     private Boolean EnabledNumber;
 
     /**
+    * 筛选技能组列表
+    */
+    @SerializedName("GroupIdList")
+    @Expose
+    private Long [] GroupIdList;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -91,6 +98,22 @@ public class DescribeCallInMetricsRequest extends AbstractModel{
         this.EnabledNumber = EnabledNumber;
     }
 
+    /**
+     * Get 筛选技能组列表 
+     * @return GroupIdList 筛选技能组列表
+     */
+    public Long [] getGroupIdList() {
+        return this.GroupIdList;
+    }
+
+    /**
+     * Set 筛选技能组列表
+     * @param GroupIdList 筛选技能组列表
+     */
+    public void setGroupIdList(Long [] GroupIdList) {
+        this.GroupIdList = GroupIdList;
+    }
+
     public DescribeCallInMetricsRequest() {
     }
 
@@ -108,6 +131,12 @@ public class DescribeCallInMetricsRequest extends AbstractModel{
         if (source.EnabledNumber != null) {
             this.EnabledNumber = new Boolean(source.EnabledNumber);
         }
+        if (source.GroupIdList != null) {
+            this.GroupIdList = new Long[source.GroupIdList.length];
+            for (int i = 0; i < source.GroupIdList.length; i++) {
+                this.GroupIdList[i] = new Long(source.GroupIdList[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class DescribeCallInMetricsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "EnabledSkillGroup", this.EnabledSkillGroup);
         this.setParamSimple(map, prefix + "EnabledNumber", this.EnabledNumber);
+        this.setParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
 
     }
 }

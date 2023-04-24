@@ -51,6 +51,18 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
     private String SubtitleFormat;
 
     /**
+    * 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+    */
+    @SerializedName("SrcLanguage")
+    @Expose
+    private String SrcLanguage;
+
+    /**
      * Get 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li> 
@@ -126,6 +138,42 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         this.SubtitleFormat = SubtitleFormat;
     }
 
+    /**
+     * Get 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。 
+     * @return SrcLanguage 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+     */
+    public String getSrcLanguage() {
+        return this.SrcLanguage;
+    }
+
+    /**
+     * Set 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+     * @param SrcLanguage 媒体源语言，取值范围：
+<li>zh：中文普通话；</li>
+<li>en：英语；</li>
+<li>ja：日语；</li>
+<li>zh-ca：粤语。</li>
+<font color=red>注意：</font> 填空字符串，或者不填该参数，则自动识别（效果较难保证，推荐填写原始媒体对应的语言，以提高识别的准确率）。
+     */
+    public void setSrcLanguage(String SrcLanguage) {
+        this.SrcLanguage = SrcLanguage;
+    }
+
     public AsrFullTextConfigureInfo() {
     }
 
@@ -146,6 +194,9 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
+        if (source.SrcLanguage != null) {
+            this.SrcLanguage = new String(source.SrcLanguage);
+        }
     }
 
 
@@ -156,6 +207,7 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+        this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
 
     }
 }

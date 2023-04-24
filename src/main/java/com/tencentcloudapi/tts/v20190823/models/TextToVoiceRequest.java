@@ -149,7 +149,7 @@ public class TextToVoiceRequest extends AbstractModel{
     private String EmotionCategory;
 
     /**
-    * 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+    * 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
     */
     @SerializedName("EmotionIntensity")
     @Expose
@@ -504,16 +504,16 @@ public class TextToVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效； 
-     * @return EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     * Get 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效； 
+     * @return EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
      */
     public Long getEmotionIntensity() {
         return this.EmotionIntensity;
     }
 
     /**
-     * Set 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
-     * @param EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100，不填写为默认值；只有EmotionCategory不为空时生效；
+     * Set 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
+     * @param EmotionIntensity 控制合成音频情感程度，取值范围为[50,200],默认为100；只有EmotionCategory不为空时生效；
      */
     public void setEmotionIntensity(Long EmotionIntensity) {
         this.EmotionIntensity = EmotionIntensity;

@@ -30,7 +30,7 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     private String VpnGatewayId;
 
     /**
-    * 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+    * 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
     */
     @SerializedName("CustomerGatewayId")
     @Expose
@@ -87,21 +87,21 @@ CCN VPN 形的通道 可以不传VPCID
     private Tag [] Tags;
 
     /**
-    * 是否支持隧道内健康检查
+    * 是否支持隧道内健康检查，默认为False。
     */
     @SerializedName("EnableHealthCheck")
     @Expose
     private Boolean EnableHealthCheck;
 
     /**
-    * 健康检查本端地址
+    * 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
     */
     @SerializedName("HealthCheckLocalIp")
     @Expose
     private String HealthCheckLocalIp;
 
     /**
-    * 健康检查对端地址
+    * 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
     */
     @SerializedName("HealthCheckRemoteIp")
     @Expose
@@ -159,16 +159,16 @@ CCN VPN 形的通道 可以不传VPCID
     }
 
     /**
-     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。 
-     * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Get 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。 
+     * @return CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
-     * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Set 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
+     * @param CustomerGatewayId 对端网关ID。例如：cgw-2wqq41m9，可通过[DescribeCustomerGateways](https://cloud.tencent.com/document/product/215/17516)接口查询对端网关。
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
@@ -291,48 +291,48 @@ CCN VPN 形的通道 可以不传VPCID
     }
 
     /**
-     * Get 是否支持隧道内健康检查 
-     * @return EnableHealthCheck 是否支持隧道内健康检查
+     * Get 是否支持隧道内健康检查，默认为False。 
+     * @return EnableHealthCheck 是否支持隧道内健康检查，默认为False。
      */
     public Boolean getEnableHealthCheck() {
         return this.EnableHealthCheck;
     }
 
     /**
-     * Set 是否支持隧道内健康检查
-     * @param EnableHealthCheck 是否支持隧道内健康检查
+     * Set 是否支持隧道内健康检查，默认为False。
+     * @param EnableHealthCheck 是否支持隧道内健康检查，默认为False。
      */
     public void setEnableHealthCheck(Boolean EnableHealthCheck) {
         this.EnableHealthCheck = EnableHealthCheck;
     }
 
     /**
-     * Get 健康检查本端地址 
-     * @return HealthCheckLocalIp 健康检查本端地址
+     * Get 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。 
+     * @return HealthCheckLocalIp 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public String getHealthCheckLocalIp() {
         return this.HealthCheckLocalIp;
     }
 
     /**
-     * Set 健康检查本端地址
-     * @param HealthCheckLocalIp 健康检查本端地址
+     * Set 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * @param HealthCheckLocalIp 健康检查本端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
         this.HealthCheckLocalIp = HealthCheckLocalIp;
     }
 
     /**
-     * Get 健康检查对端地址 
-     * @return HealthCheckRemoteIp 健康检查对端地址
+     * Get 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。 
+     * @return HealthCheckRemoteIp 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public String getHealthCheckRemoteIp() {
         return this.HealthCheckRemoteIp;
     }
 
     /**
-     * Set 健康检查对端地址
-     * @param HealthCheckRemoteIp 健康检查对端地址
+     * Set 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
+     * @param HealthCheckRemoteIp 健康检查对端地址，默认值为随机在169.254.128.0/17分配一个IP。
      */
     public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;

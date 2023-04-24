@@ -93,6 +93,14 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel{
     private Strategy [] Strategies;
 
     /**
+    * 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
      * Get 动作类型 
      * @return ActionType 动作类型
      */
@@ -252,6 +260,26 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel{
         this.Strategies = Strategies;
     }
 
+    /**
+     * Get 事件id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -293,6 +321,9 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel{
                 this.Strategies[i] = new Strategy(source.Strategies[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -310,6 +341,7 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "SortId", this.SortId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

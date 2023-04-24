@@ -58,6 +58,13 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     private Long BotCount;
 
     /**
+    * api资产总数
+    */
+    @SerializedName("ApiAssetsCount")
+    @Expose
+    private Long ApiAssetsCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get api资产总数 
+     * @return ApiAssetsCount api资产总数
+     */
+    public Long getApiAssetsCount() {
+        return this.ApiAssetsCount;
+    }
+
+    /**
+     * Set api资产总数
+     * @param ApiAssetsCount api资产总数
+     */
+    public void setApiAssetsCount(Long ApiAssetsCount) {
+        this.ApiAssetsCount = ApiAssetsCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -183,6 +206,9 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         if (source.BotCount != null) {
             this.BotCount = new Long(source.BotCount);
         }
+        if (source.ApiAssetsCount != null) {
+            this.ApiAssetsCount = new Long(source.ApiAssetsCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -198,6 +224,7 @@ public class DescribeAttackOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ACLCount", this.ACLCount);
         this.setParamSimple(map, prefix + "CCCount", this.CCCount);
         this.setParamSimple(map, prefix + "BotCount", this.BotCount);
+        this.setParamSimple(map, prefix + "ApiAssetsCount", this.ApiAssetsCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

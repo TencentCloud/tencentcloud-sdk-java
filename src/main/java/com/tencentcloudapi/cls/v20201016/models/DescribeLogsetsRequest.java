@@ -23,35 +23,25 @@ import java.util.HashMap;
 public class DescribeLogsetsRequest extends AbstractModel{
 
     /**
-    * <br><li> logsetName
+    * logsetName
+- 按照【日志集名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【日志集名称】进行过滤。
-类型：String
+logsetId
+- 按照【日志集ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+tagKey
+- 按照【标签键】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> logsetId
-
-按照【日志集ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> tagKey
-
-按照【标签键】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> tag:tagKey
-
-按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
-类型：String
-
-必选：否
-
+tag:tagKey
+- 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
     */
@@ -74,66 +64,46 @@ public class DescribeLogsetsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get <br><li> logsetName
+     * Get logsetName
+- 按照【日志集名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【日志集名称】进行过滤。
-类型：String
+logsetId
+- 按照【日志集ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+tagKey
+- 按照【标签键】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> logsetId
-
-按照【日志集ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> tagKey
-
-按照【标签键】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> tag:tagKey
-
-按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
-类型：String
-
-必选：否
-
+tag:tagKey
+- 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters <br><li> logsetName
+     * @return Filters logsetName
+- 按照【日志集名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【日志集名称】进行过滤。
-类型：String
+logsetId
+- 按照【日志集ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+tagKey
+- 按照【标签键】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> logsetId
-
-按照【日志集ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> tagKey
-
-按照【标签键】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> tag:tagKey
-
-按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
-类型：String
-
-必选：否
-
+tag:tagKey
+- 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -142,66 +112,46 @@ public class DescribeLogsetsRequest extends AbstractModel{
     }
 
     /**
-     * Set <br><li> logsetName
+     * Set logsetName
+- 按照【日志集名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【日志集名称】进行过滤。
-类型：String
+logsetId
+- 按照【日志集ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+tagKey
+- 按照【标签键】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> logsetId
-
-按照【日志集ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> tagKey
-
-按照【标签键】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> tag:tagKey
-
-按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
-类型：String
-
-必选：否
-
+tag:tagKey
+- 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters <br><li> logsetName
+     * @param Filters logsetName
+- 按照【日志集名称】进行过滤。
+- 类型：String
+- 必选：否
 
-按照【日志集名称】进行过滤。
-类型：String
+logsetId
+- 按照【日志集ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
+tagKey
+- 按照【标签键】进行过滤。
+- 类型：String
+- 必选：否
 
-<br><li> logsetId
-
-按照【日志集ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> tagKey
-
-按照【标签键】进行过滤。
-
-类型：String
-
-必选：否
-
-<br><li> tag:tagKey
-
-按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
-类型：String
-
-必选：否
-
+tag:tagKey
+- 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */

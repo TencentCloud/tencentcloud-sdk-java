@@ -33,6 +33,7 @@ public class OpenAuditServiceRequest extends AbstractModel{
     * 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -46,14 +47,24 @@ public class OpenAuditServiceRequest extends AbstractModel{
     * 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
     */
     @SerializedName("HighLogExpireDay")
     @Expose
     private Long HighLogExpireDay;
+
+    /**
+    * 审计规则。同RuleTemplateIds都不填是全审计。
+    */
+    @SerializedName("AuditRuleFilters")
+    @Expose
+    private AuditRuleFilters [] AuditRuleFilters;
+
+    /**
+    * 规则模版ID。同AuditRuleFilters都不填是全审计。
+    */
+    @SerializedName("RuleTemplateIds")
+    @Expose
+    private String [] RuleTemplateIds;
 
     /**
      * Get CDB实例ID 
@@ -75,6 +86,7 @@ public class OpenAuditServiceRequest extends AbstractModel{
      * Get 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -82,6 +94,7 @@ public class OpenAuditServiceRequest extends AbstractModel{
      * @return LogExpireDay 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -95,6 +108,7 @@ public class OpenAuditServiceRequest extends AbstractModel{
      * Set 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -102,6 +116,7 @@ public class OpenAuditServiceRequest extends AbstractModel{
      * @param LogExpireDay 审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
+90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
@@ -114,18 +129,10 @@ public class OpenAuditServiceRequest extends AbstractModel{
     /**
      * Get 高频审计日志保存时长。支持值包括：
 7 - 一周
-30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年； 
+30 - 一个月； 
      * @return HighLogExpireDay 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
      */
     public Long getHighLogExpireDay() {
         return this.HighLogExpireDay;
@@ -135,20 +142,44 @@ public class OpenAuditServiceRequest extends AbstractModel{
      * Set 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
      * @param HighLogExpireDay 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-180 - 六个月；
-365 - 一年；
-1095 - 三年；
-1825 - 五年；
      */
     public void setHighLogExpireDay(Long HighLogExpireDay) {
         this.HighLogExpireDay = HighLogExpireDay;
+    }
+
+    /**
+     * Get 审计规则。同RuleTemplateIds都不填是全审计。 
+     * @return AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     */
+    public AuditRuleFilters [] getAuditRuleFilters() {
+        return this.AuditRuleFilters;
+    }
+
+    /**
+     * Set 审计规则。同RuleTemplateIds都不填是全审计。
+     * @param AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     */
+    public void setAuditRuleFilters(AuditRuleFilters [] AuditRuleFilters) {
+        this.AuditRuleFilters = AuditRuleFilters;
+    }
+
+    /**
+     * Get 规则模版ID。同AuditRuleFilters都不填是全审计。 
+     * @return RuleTemplateIds 规则模版ID。同AuditRuleFilters都不填是全审计。
+     */
+    public String [] getRuleTemplateIds() {
+        return this.RuleTemplateIds;
+    }
+
+    /**
+     * Set 规则模版ID。同AuditRuleFilters都不填是全审计。
+     * @param RuleTemplateIds 规则模版ID。同AuditRuleFilters都不填是全审计。
+     */
+    public void setRuleTemplateIds(String [] RuleTemplateIds) {
+        this.RuleTemplateIds = RuleTemplateIds;
     }
 
     public OpenAuditServiceRequest() {
@@ -168,6 +199,18 @@ public class OpenAuditServiceRequest extends AbstractModel{
         if (source.HighLogExpireDay != null) {
             this.HighLogExpireDay = new Long(source.HighLogExpireDay);
         }
+        if (source.AuditRuleFilters != null) {
+            this.AuditRuleFilters = new AuditRuleFilters[source.AuditRuleFilters.length];
+            for (int i = 0; i < source.AuditRuleFilters.length; i++) {
+                this.AuditRuleFilters[i] = new AuditRuleFilters(source.AuditRuleFilters[i]);
+            }
+        }
+        if (source.RuleTemplateIds != null) {
+            this.RuleTemplateIds = new String[source.RuleTemplateIds.length];
+            for (int i = 0; i < source.RuleTemplateIds.length; i++) {
+                this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
+            }
+        }
     }
 
 
@@ -178,6 +221,8 @@ public class OpenAuditServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
         this.setParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
+        this.setParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
+        this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
 
     }
 }

@@ -108,6 +108,14 @@ public class TriggerInfo extends AbstractModel{
     private String TriggerAttribute;
 
     /**
+    * 客户自定义触发器描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 使能开关 
      * @return Enable 使能开关
      */
@@ -303,6 +311,26 @@ public class TriggerInfo extends AbstractModel{
         this.TriggerAttribute = TriggerAttribute;
     }
 
+    /**
+     * Get 客户自定义触发器描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 客户自定义触发器描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 客户自定义触发器描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 客户自定义触发器描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public TriggerInfo() {
     }
 
@@ -347,6 +375,9 @@ public class TriggerInfo extends AbstractModel{
         if (source.TriggerAttribute != null) {
             this.TriggerAttribute = new String(source.TriggerAttribute);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -366,6 +397,7 @@ public class TriggerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

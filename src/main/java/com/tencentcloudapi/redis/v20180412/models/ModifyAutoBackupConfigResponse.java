@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigResponse extends AbstractModel{
 
     /**
-    * 自动备份类型： 1 “定时回档”
+    * 自动备份类型。目前仅能配置为：1 ，指定时备份。
     */
     @SerializedName("AutoBackupType")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String [] WeekDays;
 
     /**
-    * 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+    * 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
     */
     @SerializedName("TimePeriod")
     @Expose
@@ -58,16 +58,16 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 自动备份类型： 1 “定时回档” 
-     * @return AutoBackupType 自动备份类型： 1 “定时回档”
+     * Get 自动备份类型。目前仅能配置为：1 ，指定时备份。 
+     * @return AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set 自动备份类型： 1 “定时回档”
-     * @param AutoBackupType 自动备份类型： 1 “定时回档”
+     * Set 自动备份类型。目前仅能配置为：1 ，指定时备份。
+     * @param AutoBackupType 自动备份类型。目前仅能配置为：1 ，指定时备份。
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
@@ -90,16 +90,16 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。 
-     * @return TimePeriod 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+     * Get 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。 
+     * @return TimePeriod 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
-     * @param TimePeriod 自动备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+     * Set 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
+     * @param TimePeriod 自动定时备份时间段。格式如：00:00-01:00, 01:00-02:00...... 23:00-00:00。
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;

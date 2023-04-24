@@ -87,6 +87,14 @@ public class FlowBrief extends AbstractModel{
     private String FlowMessage;
 
     /**
+    *  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
      * Get 流程的编号 
      * @return FlowId 流程的编号
      */
@@ -258,6 +266,26 @@ public class FlowBrief extends AbstractModel{
         this.FlowMessage = FlowMessage;
     }
 
+    /**
+     * Get  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator  合同发起人userId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
     public FlowBrief() {
     }
 
@@ -287,6 +315,9 @@ public class FlowBrief extends AbstractModel{
         if (source.FlowMessage != null) {
             this.FlowMessage = new String(source.FlowMessage);
         }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
     }
 
 
@@ -301,6 +332,7 @@ public class FlowBrief extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowStatus", this.FlowStatus);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "FlowMessage", this.FlowMessage);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
 
     }
 }

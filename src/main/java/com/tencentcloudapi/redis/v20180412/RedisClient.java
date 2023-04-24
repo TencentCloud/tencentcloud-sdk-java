@@ -1379,7 +1379,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *设置自动备份配置
+     *本接口（ModifyAutoBackupConfig）用于设置自动备份的配置。
      * @param req ModifyAutoBackupConfigRequest
      * @return ModifyAutoBackupConfigResponse
      * @throws TencentCloudSDKException

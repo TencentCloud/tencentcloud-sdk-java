@@ -479,6 +479,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupDownloadRestriction）用于查询备份文件下载限制。
+     * @param req DescribeBackupDownloadRestrictionRequest
+     * @return DescribeBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadRestriction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeBackupDownloadURL) 用于获取备份下载链接。
      * @param req DescribeBackupDownloadURLRequest
      * @return DescribeBackupDownloadURLResponse
@@ -1259,6 +1279,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyBackupDownloadRestriction）用于修改备份文件下载限制。
+     * @param req ModifyBackupDownloadRestrictionRequest
+     * @return ModifyBackupDownloadRestrictionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupDownloadRestriction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (ModifyBackupPlan) 用于实例备份计划的修改，默认是在每天的凌晨开始全量备份，备份保留时长是7天。可以根据此接口指定时间进行实例的备份。
      * @param req ModifyBackupPlanRequest
      * @return ModifyBackupPlanResponse
@@ -1291,6 +1331,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBaseBackupExpireTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *支持实例的计费类型转换（目前仅支持按量计费转包年包月）
+     * @param req ModifyDBInstanceChargeTypeRequest
+     * @return ModifyDBInstanceChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceChargeTypeResponse ModifyDBInstanceChargeType(ModifyDBInstanceChargeTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceChargeTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceChargeTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceChargeType");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

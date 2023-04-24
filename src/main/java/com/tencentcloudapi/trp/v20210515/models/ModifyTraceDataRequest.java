@@ -58,6 +58,27 @@ public class ModifyTraceDataRequest extends AbstractModel{
     private String PhaseName;
 
     /**
+    * 环节数据
+    */
+    @SerializedName("PhaseData")
+    @Expose
+    private PhaseData PhaseData;
+
+    /**
+    * 溯源状态 0: 无效, 1: 有效
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 排序
+    */
+    @SerializedName("Rank")
+    @Expose
+    private Long Rank;
+
+    /**
     * [无效] 类型
     */
     @SerializedName("Type")
@@ -70,13 +91,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
     @SerializedName("Code")
     @Expose
     private String Code;
-
-    /**
-    * [无效] 排序
-    */
-    @SerializedName("Rank")
-    @Expose
-    private Long Rank;
 
     /**
     * [无效] 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
@@ -126,20 +140,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
     @SerializedName("CorpId")
     @Expose
     private Long CorpId;
-
-    /**
-    * 溯源状态 0: 无效, 1: 有效
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * 环节数据
-    */
-    @SerializedName("PhaseData")
-    @Expose
-    private PhaseData PhaseData;
 
     /**
      * Get 溯源ID 
@@ -222,6 +222,54 @@ public class ModifyTraceDataRequest extends AbstractModel{
     }
 
     /**
+     * Get 环节数据 
+     * @return PhaseData 环节数据
+     */
+    public PhaseData getPhaseData() {
+        return this.PhaseData;
+    }
+
+    /**
+     * Set 环节数据
+     * @param PhaseData 环节数据
+     */
+    public void setPhaseData(PhaseData PhaseData) {
+        this.PhaseData = PhaseData;
+    }
+
+    /**
+     * Get 溯源状态 0: 无效, 1: 有效 
+     * @return Status 溯源状态 0: 无效, 1: 有效
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 溯源状态 0: 无效, 1: 有效
+     * @param Status 溯源状态 0: 无效, 1: 有效
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 排序 
+     * @return Rank 排序
+     */
+    public Long getRank() {
+        return this.Rank;
+    }
+
+    /**
+     * Set 排序
+     * @param Rank 排序
+     */
+    public void setRank(Long Rank) {
+        this.Rank = Rank;
+    }
+
+    /**
      * Get [无效] 类型 
      * @return Type [无效] 类型
      */
@@ -251,22 +299,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
      */
     public void setCode(String Code) {
         this.Code = Code;
-    }
-
-    /**
-     * Get [无效] 排序 
-     * @return Rank [无效] 排序
-     */
-    public Long getRank() {
-        return this.Rank;
-    }
-
-    /**
-     * Set [无效] 排序
-     * @param Rank [无效] 排序
-     */
-    public void setRank(Long Rank) {
-        this.Rank = Rank;
     }
 
     /**
@@ -381,38 +413,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
         this.CorpId = CorpId;
     }
 
-    /**
-     * Get 溯源状态 0: 无效, 1: 有效 
-     * @return Status 溯源状态 0: 无效, 1: 有效
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 溯源状态 0: 无效, 1: 有效
-     * @param Status 溯源状态 0: 无效, 1: 有效
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get 环节数据 
-     * @return PhaseData 环节数据
-     */
-    public PhaseData getPhaseData() {
-        return this.PhaseData;
-    }
-
-    /**
-     * Set 环节数据
-     * @param PhaseData 环节数据
-     */
-    public void setPhaseData(PhaseData PhaseData) {
-        this.PhaseData = PhaseData;
-    }
-
     public ModifyTraceDataRequest() {
     }
 
@@ -439,14 +439,20 @@ public class ModifyTraceDataRequest extends AbstractModel{
         if (source.PhaseName != null) {
             this.PhaseName = new String(source.PhaseName);
         }
+        if (source.PhaseData != null) {
+            this.PhaseData = new PhaseData(source.PhaseData);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Rank != null) {
+            this.Rank = new Long(source.Rank);
+        }
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
         if (source.Code != null) {
             this.Code = new String(source.Code);
-        }
-        if (source.Rank != null) {
-            this.Rank = new Long(source.Rank);
         }
         if (source.Phase != null) {
             this.Phase = new Long(source.Phase);
@@ -469,12 +475,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.PhaseData != null) {
-            this.PhaseData = new PhaseData(source.PhaseData);
-        }
     }
 
 
@@ -487,9 +487,11 @@ public class ModifyTraceDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
         this.setParamSimple(map, prefix + "PhaseName", this.PhaseName);
+        this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Rank", this.Rank);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Code", this.Code);
-        this.setParamSimple(map, prefix + "Rank", this.Rank);
         this.setParamSimple(map, prefix + "Phase", this.Phase);
         this.setParamSimple(map, prefix + "TraceTime", this.TraceTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
@@ -497,8 +499,6 @@ public class ModifyTraceDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChainTime", this.ChainTime);
         this.setParamObj(map, prefix + "ChainData.", this.ChainData);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
 
     }
 }

@@ -23,27 +23,20 @@ import java.util.HashMap;
 public class DescribeConfigsRequest extends AbstractModel{
 
     /**
-    * <br><li> configName
+    * configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
     */
@@ -66,50 +59,36 @@ public class DescribeConfigsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get <br><li> configName
+     * Get configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters <br><li> configName
+     * @return Filters configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */
@@ -118,50 +97,36 @@ public class DescribeConfigsRequest extends AbstractModel{
     }
 
     /**
-     * Set <br><li> configName
+     * Set configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters <br><li> configName
+     * @param Filters configName
+- 按照【采集配置名称】进行模糊匹配过滤。
+- 类型：String
+- 必选：否
 
-按照【采集配置名称】进行模糊匹配过滤。
-类型：String
+configId
+- 按照【采集配置ID】进行过滤。
+- 类型：String
+- 必选：否
 
-必选：否
-
-<br><li> configId
-
-按照【采集配置ID】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> topicId
-
-按照【日志主题】进行过滤。
-
-类型：String
-
-必选：否
+topicId
+- 按照【日志主题】进行过滤。
+- 类型：String
+- 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
      */

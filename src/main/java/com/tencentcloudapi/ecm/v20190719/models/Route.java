@@ -86,6 +86,13 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private Long RouteId;
 
     /**
+    * 路由表实例ID，例如：rtb-azd4dt1c。
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
      * Get 目的IPv4网段 
      * @return DestinationCidrBlock 目的IPv4网段
      */
@@ -241,6 +248,22 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.RouteId = RouteId;
     }
 
+    /**
+     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
+     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set 路由表实例ID，例如：rtb-azd4dt1c。
+     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
     public Route() {
     }
 
@@ -273,6 +296,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         if (source.RouteId != null) {
             this.RouteId = new Long(source.RouteId);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
     }
 
 
@@ -288,6 +314,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 
     }
 }

@@ -37,6 +37,20 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel{
     private String [] StaffList;
 
     /**
+    * 筛选技能组ID列表
+    */
+    @SerializedName("GroupIdList")
+    @Expose
+    private Long [] GroupIdList;
+
+    /**
+    * 筛选坐席状态列表
+    */
+    @SerializedName("StatusList")
+    @Expose
+    private String [] StatusList;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -68,6 +82,38 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel{
         this.StaffList = StaffList;
     }
 
+    /**
+     * Get 筛选技能组ID列表 
+     * @return GroupIdList 筛选技能组ID列表
+     */
+    public Long [] getGroupIdList() {
+        return this.GroupIdList;
+    }
+
+    /**
+     * Set 筛选技能组ID列表
+     * @param GroupIdList 筛选技能组ID列表
+     */
+    public void setGroupIdList(Long [] GroupIdList) {
+        this.GroupIdList = GroupIdList;
+    }
+
+    /**
+     * Get 筛选坐席状态列表 
+     * @return StatusList 筛选坐席状态列表
+     */
+    public String [] getStatusList() {
+        return this.StatusList;
+    }
+
+    /**
+     * Set 筛选坐席状态列表
+     * @param StatusList 筛选坐席状态列表
+     */
+    public void setStatusList(String [] StatusList) {
+        this.StatusList = StatusList;
+    }
+
     public DescribeStaffStatusMetricsRequest() {
     }
 
@@ -85,6 +131,18 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel{
                 this.StaffList[i] = new String(source.StaffList[i]);
             }
         }
+        if (source.GroupIdList != null) {
+            this.GroupIdList = new Long[source.GroupIdList.length];
+            for (int i = 0; i < source.GroupIdList.length; i++) {
+                this.GroupIdList[i] = new Long(source.GroupIdList[i]);
+            }
+        }
+        if (source.StatusList != null) {
+            this.StatusList = new String[source.StatusList.length];
+            for (int i = 0; i < source.StatusList.length; i++) {
+                this.StatusList[i] = new String(source.StatusList[i]);
+            }
+        }
     }
 
 
@@ -94,6 +152,8 @@ public class DescribeStaffStatusMetricsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArraySimple(map, prefix + "StaffList.", this.StaffList);
+        this.setParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
+        this.setParamArraySimple(map, prefix + "StatusList.", this.StatusList);
 
     }
 }

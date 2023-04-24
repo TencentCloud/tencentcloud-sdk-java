@@ -100,6 +100,14 @@ public class FlowDetailInfo extends AbstractModel{
     private FlowApproverDetail [] CcInfos;
 
     /**
+    * 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Creator")
+    @Expose
+    private String Creator;
+
+    /**
      * Get 合同(流程)的Id 
      * @return FlowId 合同(流程)的Id
      */
@@ -299,6 +307,26 @@ public class FlowDetailInfo extends AbstractModel{
         this.CcInfos = CcInfos;
     }
 
+    /**
+     * Get 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Creator 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreator() {
+        return this.Creator;
+    }
+
+    /**
+     * Set 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Creator 合同发起人UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreator(String Creator) {
+        this.Creator = Creator;
+    }
+
     public FlowDetailInfo() {
     }
 
@@ -340,6 +368,9 @@ public class FlowDetailInfo extends AbstractModel{
                 this.CcInfos[i] = new FlowApproverDetail(source.CcInfos[i]);
             }
         }
+        if (source.Creator != null) {
+            this.Creator = new String(source.Creator);
+        }
     }
 
 
@@ -356,6 +387,7 @@ public class FlowDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "Creator", this.Creator);
 
     }
 }
