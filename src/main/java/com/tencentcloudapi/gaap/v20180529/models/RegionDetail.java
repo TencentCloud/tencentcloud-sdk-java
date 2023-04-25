@@ -76,6 +76,14 @@ public class RegionDetail extends AbstractModel{
     private Long FeatureBitmap;
 
     /**
+    * 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportFeature")
+    @Expose
+    private SupportFeature SupportFeature;
+
+    /**
      * Get 区域ID 
      * @return RegionId 区域ID
      */
@@ -215,6 +223,26 @@ public class RegionDetail extends AbstractModel{
         this.FeatureBitmap = FeatureBitmap;
     }
 
+    /**
+     * Get 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportFeature 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SupportFeature getSupportFeature() {
+        return this.SupportFeature;
+    }
+
+    /**
+     * Set 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportFeature 接入区域支持的能力
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportFeature(SupportFeature SupportFeature) {
+        this.SupportFeature = SupportFeature;
+    }
+
     public RegionDetail() {
     }
 
@@ -241,6 +269,9 @@ public class RegionDetail extends AbstractModel{
         if (source.FeatureBitmap != null) {
             this.FeatureBitmap = new Long(source.FeatureBitmap);
         }
+        if (source.SupportFeature != null) {
+            this.SupportFeature = new SupportFeature(source.SupportFeature);
+        }
     }
 
 
@@ -254,6 +285,7 @@ public class RegionDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
         this.setParamSimple(map, prefix + "IDCType", this.IDCType);
         this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
+        this.setParamObj(map, prefix + "SupportFeature.", this.SupportFeature);
 
     }
 }

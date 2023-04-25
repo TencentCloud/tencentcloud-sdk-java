@@ -123,6 +123,30 @@ public class RocketMQVipInstance extends AbstractModel{
     private String SpecName;
 
     /**
+    * 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxRetention")
+    @Expose
+    private Long MaxRetention;
+
+    /**
+    * 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinRetention")
+    @Expose
+    private Long MinRetention;
+
+    /**
+    * 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Retention")
+    @Expose
+    private Long Retention;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -354,6 +378,66 @@ public class RocketMQVipInstance extends AbstractModel{
         this.SpecName = SpecName;
     }
 
+    /**
+     * Get 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxRetention 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxRetention() {
+        return this.MaxRetention;
+    }
+
+    /**
+     * Set 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxRetention 最大可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxRetention(Long MaxRetention) {
+        this.MaxRetention = MaxRetention;
+    }
+
+    /**
+     * Get 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinRetention 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinRetention() {
+        return this.MinRetention;
+    }
+
+    /**
+     * Set 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinRetention 最小可设置消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinRetention(Long MinRetention) {
+        this.MinRetention = MinRetention;
+    }
+
+    /**
+     * Get 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Retention 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRetention() {
+        return this.Retention;
+    }
+
+    /**
+     * Set 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Retention 实例消息保留时间，小时为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRetention(Long Retention) {
+        this.Retention = Retention;
+    }
+
     public RocketMQVipInstance() {
     }
 
@@ -404,6 +488,15 @@ public class RocketMQVipInstance extends AbstractModel{
         if (source.SpecName != null) {
             this.SpecName = new String(source.SpecName);
         }
+        if (source.MaxRetention != null) {
+            this.MaxRetention = new Long(source.MaxRetention);
+        }
+        if (source.MinRetention != null) {
+            this.MinRetention = new Long(source.MinRetention);
+        }
+        if (source.Retention != null) {
+            this.Retention = new Long(source.Retention);
+        }
     }
 
 
@@ -425,6 +518,9 @@ public class RocketMQVipInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "MaxRetention", this.MaxRetention);
+        this.setParamSimple(map, prefix + "MinRetention", this.MinRetention);
+        this.setParamSimple(map, prefix + "Retention", this.Retention);
 
     }
 }

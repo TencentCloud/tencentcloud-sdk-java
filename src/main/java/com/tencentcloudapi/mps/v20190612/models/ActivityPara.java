@@ -24,6 +24,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频转码任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TranscodeTask")
     @Expose
@@ -31,6 +32,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频转动图任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnimatedGraphicTask")
     @Expose
@@ -38,6 +40,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频按时间点截图任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
@@ -45,6 +48,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频采样截图任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleSnapshotTask")
     @Expose
@@ -52,6 +56,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频截雪碧图任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageSpriteTask")
     @Expose
@@ -59,6 +64,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 转自适应码流任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
@@ -66,6 +72,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频内容审核类型任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -73,6 +80,7 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频内容分析类型任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiAnalysisTask")
     @Expose
@@ -80,14 +88,17 @@ public class ActivityPara extends AbstractModel{
 
     /**
     * 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-     * Get 视频转码任务 
+     * Get 视频转码任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 视频转码任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTaskInput getTranscodeTask() {
         return this.TranscodeTask;
@@ -95,15 +106,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频转码任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TranscodeTask 视频转码任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTranscodeTask(TranscodeTaskInput TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get 视频转动图任务 
+     * Get 视频转动图任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AnimatedGraphicTask 视频转动图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnimatedGraphicTaskInput getAnimatedGraphicTask() {
         return this.AnimatedGraphicTask;
@@ -111,15 +126,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频转动图任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTask 视频转动图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnimatedGraphicTask(AnimatedGraphicTaskInput AnimatedGraphicTask) {
         this.AnimatedGraphicTask = AnimatedGraphicTask;
     }
 
     /**
-     * Get 视频按时间点截图任务 
+     * Get 视频按时间点截图任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SnapshotByTimeOffsetTask 视频按时间点截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SnapshotByTimeOffsetTaskInput getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
@@ -127,15 +146,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频按时间点截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotByTimeOffsetTask 视频按时间点截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTaskInput SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get 视频采样截图任务 
+     * Get 视频采样截图任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SampleSnapshotTask 视频采样截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SampleSnapshotTaskInput getSampleSnapshotTask() {
         return this.SampleSnapshotTask;
@@ -143,15 +166,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频采样截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleSnapshotTask 视频采样截图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleSnapshotTask(SampleSnapshotTaskInput SampleSnapshotTask) {
         this.SampleSnapshotTask = SampleSnapshotTask;
     }
 
     /**
-     * Get 视频截雪碧图任务 
+     * Get 视频截雪碧图任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageSpriteTask 视频截雪碧图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageSpriteTaskInput getImageSpriteTask() {
         return this.ImageSpriteTask;
@@ -159,15 +186,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频截雪碧图任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageSpriteTask 视频截雪碧图任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageSpriteTask(ImageSpriteTaskInput ImageSpriteTask) {
         this.ImageSpriteTask = ImageSpriteTask;
     }
 
     /**
-     * Get 转自适应码流任务 
+     * Get 转自适应码流任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdaptiveDynamicStreamingTask 转自适应码流任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdaptiveDynamicStreamingTaskInput getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
@@ -175,15 +206,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 转自适应码流任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AdaptiveDynamicStreamingTask 转自适应码流任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdaptiveDynamicStreamingTask(AdaptiveDynamicStreamingTaskInput AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Get 视频内容审核类型任务 
+     * Get 视频内容审核类型任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiContentReviewTask 视频内容审核类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
@@ -191,15 +226,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频内容审核类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiContentReviewTask 视频内容审核类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get 视频内容分析类型任务 
+     * Get 视频内容分析类型任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiAnalysisTask 视频内容分析类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
@@ -207,15 +246,19 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频内容分析类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTask 视频内容分析类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get 视频内容识别类型任务 
+     * Get 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AiRecognitionTask 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
@@ -223,7 +266,9 @@ public class ActivityPara extends AbstractModel{
 
     /**
      * Set 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTask 视频内容识别类型任务
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;

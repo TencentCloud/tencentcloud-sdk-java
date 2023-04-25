@@ -337,6 +337,14 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private Long [] KeywordIndexes;
 
     /**
+    * 填写提示的内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Placeholder")
+    @Expose
+    private String Placeholder;
+
+    /**
      * Get 控件编号
 
 CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；否则以ComponentName填充
@@ -1304,6 +1312,26 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         this.KeywordIndexes = KeywordIndexes;
     }
 
+    /**
+     * Get 填写提示的内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Placeholder 填写提示的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPlaceholder() {
+        return this.Placeholder;
+    }
+
+    /**
+     * Set 填写提示的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Placeholder 填写提示的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPlaceholder(String Placeholder) {
+        this.Placeholder = Placeholder;
+    }
+
     public Component() {
     }
 
@@ -1387,6 +1415,9 @@ SIGN_PAGING_SEAL - 可以指定印章ID
                 this.KeywordIndexes[i] = new Long(source.KeywordIndexes[i]);
             }
         }
+        if (source.Placeholder != null) {
+            this.Placeholder = new String(source.Placeholder);
+        }
     }
 
 
@@ -1418,6 +1449,7 @@ SIGN_PAGING_SEAL - 可以指定印章ID
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
+        this.setParamSimple(map, prefix + "Placeholder", this.Placeholder);
 
     }
 }

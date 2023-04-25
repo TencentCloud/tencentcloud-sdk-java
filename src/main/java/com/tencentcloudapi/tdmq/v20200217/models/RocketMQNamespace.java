@@ -30,7 +30,7 @@ public class RocketMQNamespace extends AbstractModel{
     private String NamespaceId;
 
     /**
-    * 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+    * 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天
     */
     @SerializedName("Ttl")
     @Expose
@@ -68,6 +68,14 @@ public class RocketMQNamespace extends AbstractModel{
     private String VpcEndpoint;
 
     /**
+    * 内部接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternalEndpoint")
+    @Expose
+    private String InternalEndpoint;
+
+    /**
      * Get 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_” 
      * @return NamespaceId 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
      */
@@ -84,16 +92,16 @@ public class RocketMQNamespace extends AbstractModel{
     }
 
     /**
-     * Get 未消费消息的保留时间，以毫秒单位，范围60秒到15天 
-     * @return Ttl 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+     * Get 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天 
+     * @return Ttl 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set 未消费消息的保留时间，以毫秒单位，范围60秒到15天
-     * @param Ttl 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+     * Set 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天
+     * @param Ttl 已废弃，未消费消息的保留时间，以毫秒单位，范围60秒到15天
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
@@ -175,6 +183,26 @@ public class RocketMQNamespace extends AbstractModel{
         this.VpcEndpoint = VpcEndpoint;
     }
 
+    /**
+     * Get 内部接入点地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternalEndpoint 内部接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInternalEndpoint() {
+        return this.InternalEndpoint;
+    }
+
+    /**
+     * Set 内部接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternalEndpoint 内部接入点地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternalEndpoint(String InternalEndpoint) {
+        this.InternalEndpoint = InternalEndpoint;
+    }
+
     public RocketMQNamespace() {
     }
 
@@ -201,6 +229,9 @@ public class RocketMQNamespace extends AbstractModel{
         if (source.VpcEndpoint != null) {
             this.VpcEndpoint = new String(source.VpcEndpoint);
         }
+        if (source.InternalEndpoint != null) {
+            this.InternalEndpoint = new String(source.InternalEndpoint);
+        }
     }
 
 
@@ -214,6 +245,7 @@ public class RocketMQNamespace extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
         this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
+        this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
 
     }
 }

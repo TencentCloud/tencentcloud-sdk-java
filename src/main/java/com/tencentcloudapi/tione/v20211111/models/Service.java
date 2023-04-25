@@ -84,7 +84,7 @@ public class Service extends AbstractModel{
     private String ChargeType;
 
     /**
-    * 后付费资源组id
+    * 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -246,7 +246,7 @@ Waiting 就绪中
     private String CreateFailedReason;
 
     /**
-    * 预付费服务对应的资源组名字
+    * 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -410,9 +410,9 @@ Waiting 就绪中
     }
 
     /**
-     * Get 后付费资源组id
+     * Get 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 后付费资源组id
+     * @return ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -420,9 +420,9 @@ Waiting 就绪中
     }
 
     /**
-     * Set 后付费资源组id
+     * Set 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 后付费资源组id
+     * @param ResourceGroupId 包年包月服务的资源组id，按量计费的服务为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -830,9 +830,9 @@ Waiting 就绪中
     }
 
     /**
-     * Get 预付费服务对应的资源组名字
+     * Get 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费服务对应的资源组名字
+     * @return ResourceGroupName 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -840,9 +840,9 @@ Waiting 就绪中
     }
 
     /**
-     * Set 预付费服务对应的资源组名字
+     * Set 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费服务对应的资源组名字
+     * @param ResourceGroupName 包年包月服务对应的资源组名字
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {

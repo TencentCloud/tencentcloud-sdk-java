@@ -45,7 +45,7 @@ Disabled：已禁用。
     */
     @SerializedName("Status")
     @Expose
-    private String [] Status;
+    private String Status;
 
     /**
     * 编排绑定的触发规则。
@@ -149,7 +149,7 @@ Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getStatus() {
+    public String getStatus() {
         return this.Status;
     }
 
@@ -163,7 +163,7 @@ Enabled：已启用，
 Disabled：已禁用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setStatus(String [] Status) {
+    public void setStatus(String Status) {
         this.Status = Status;
     }
 
@@ -322,10 +322,7 @@ Disabled：已禁用。
             this.ScheduleName = new String(source.ScheduleName);
         }
         if (source.Status != null) {
-            this.Status = new String[source.Status.length];
-            for (int i = 0; i < source.Status.length; i++) {
-                this.Status[i] = new String(source.Status[i]);
-            }
+            this.Status = new String(source.Status);
         }
         if (source.Trigger != null) {
             this.Trigger = new WorkflowTrigger(source.Trigger);
@@ -360,7 +357,7 @@ Disabled：已禁用。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
-        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Trigger.", this.Trigger);
         this.setParamArrayObj(map, prefix + "Activities.", this.Activities);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

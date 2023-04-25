@@ -39,13 +39,6 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
     * 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
     */
     @SerializedName("Limit")
@@ -53,18 +46,25 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
-    */
-    @SerializedName("Order")
-    @Expose
-    private String Order;
-
-    /**
     * 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
+
+    /**
+    * 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
 
     /**
      * Get 要查询快照的ID列表。参数不支持同时指定`SnapshotIds`和`Filters`。 
@@ -107,22 +107,6 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。 
-     * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
-     * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
      * Get 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。 
      * @return Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](/document/product/362/15633)中的相关小节。
      */
@@ -139,22 +123,6 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     }
 
     /**
-     * Get 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。 
-     * @return Order 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
-     */
-    public String getOrder() {
-        return this.Order;
-    }
-
-    /**
-     * Set 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
-     * @param Order 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
-     */
-    public void setOrder(String Order) {
-        this.Order = Order;
-    }
-
-    /**
      * Get 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。 
      * @return OrderField 快照列表排序的依据字段。取值范围：<br><li>CREATE_TIME：依据快照的创建时间排序<br>默认按创建时间排序。
      */
@@ -168,6 +136,38 @@ public class DescribeSnapshotsRequest extends AbstractModel{
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。 
+     * @return Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+     * @param Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考API[简介](/document/product/362/15633)中的相关小节。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。 
+     * @return Order 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
+     * @param Order 输出云盘列表的排列顺序。取值范围：<br><li>ASC：升序排列<br><li>DESC：降序排列。
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
     }
 
     public DescribeSnapshotsRequest() {
@@ -190,17 +190,17 @@ public class DescribeSnapshotsRequest extends AbstractModel{
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.Order != null) {
-            this.Order = new String(source.Order);
-        }
         if (source.OrderField != null) {
             this.OrderField = new String(source.OrderField);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
         }
     }
 
@@ -211,10 +211,10 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

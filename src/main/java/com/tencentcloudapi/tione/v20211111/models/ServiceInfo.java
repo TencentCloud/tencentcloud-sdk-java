@@ -190,6 +190,47 @@ HYBRID_PAID:
     private Pod [] PodInfos;
 
     /**
+    * 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleStrategy")
+    @Expose
+    private String ScaleStrategy;
+
+    /**
+    * 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CronScaleJobs")
+    @Expose
+    private CronScaleJob [] CronScaleJobs;
+
+    /**
+    * 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleMode")
+    @Expose
+    private String ScaleMode;
+
+    /**
+    * 服务限速限流相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceLimit")
+    @Expose
+    private ServiceLimit ServiceLimit;
+
+    /**
+    * 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduledAction")
+    @Expose
+    private String ScheduledAction;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -617,6 +658,110 @@ HYBRID_PAID:
         this.PodInfos = PodInfos;
     }
 
+    /**
+     * Get 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleStrategy 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScaleStrategy() {
+        return this.ScaleStrategy;
+    }
+
+    /**
+     * Set 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleStrategy 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleStrategy(String ScaleStrategy) {
+        this.ScaleStrategy = ScaleStrategy;
+    }
+
+    /**
+     * Get 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CronScaleJobs 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CronScaleJob [] getCronScaleJobs() {
+        return this.CronScaleJobs;
+    }
+
+    /**
+     * Set 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CronScaleJobs 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCronScaleJobs(CronScaleJob [] CronScaleJobs) {
+        this.CronScaleJobs = CronScaleJobs;
+    }
+
+    /**
+     * Get 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleMode 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScaleMode() {
+        return this.ScaleMode;
+    }
+
+    /**
+     * Set 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleMode 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleMode(String ScaleMode) {
+        this.ScaleMode = ScaleMode;
+    }
+
+    /**
+     * Get 服务限速限流相关配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceLimit 服务限速限流相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceLimit getServiceLimit() {
+        return this.ServiceLimit;
+    }
+
+    /**
+     * Set 服务限速限流相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceLimit 服务限速限流相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceLimit(ServiceLimit ServiceLimit) {
+        this.ServiceLimit = ServiceLimit;
+    }
+
+    /**
+     * Get 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduledAction() {
+        return this.ScheduledAction;
+    }
+
+    /**
+     * Set 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduledAction(String ScheduledAction) {
+        this.ScheduledAction = ScheduledAction;
+    }
+
     public ServiceInfo() {
     }
 
@@ -694,6 +839,24 @@ HYBRID_PAID:
                 this.PodInfos[i] = new Pod(source.PodInfos[i]);
             }
         }
+        if (source.ScaleStrategy != null) {
+            this.ScaleStrategy = new String(source.ScaleStrategy);
+        }
+        if (source.CronScaleJobs != null) {
+            this.CronScaleJobs = new CronScaleJob[source.CronScaleJobs.length];
+            for (int i = 0; i < source.CronScaleJobs.length; i++) {
+                this.CronScaleJobs[i] = new CronScaleJob(source.CronScaleJobs[i]);
+            }
+        }
+        if (source.ScaleMode != null) {
+            this.ScaleMode = new String(source.ScaleMode);
+        }
+        if (source.ServiceLimit != null) {
+            this.ServiceLimit = new ServiceLimit(source.ServiceLimit);
+        }
+        if (source.ScheduledAction != null) {
+            this.ScheduledAction = new String(source.ScheduledAction);
+        }
     }
 
 
@@ -721,6 +884,11 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
         this.setParamObj(map, prefix + "Pods.", this.Pods);
         this.setParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
+        this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
+        this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
+        this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
+        this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
+        this.setParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
 
     }
 }

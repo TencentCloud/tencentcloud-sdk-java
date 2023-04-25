@@ -137,6 +137,22 @@ public class RocketMQClusterInfo extends AbstractModel{
     private String HttpVpcEndpoint;
 
     /**
+    * TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InternalEndpoint")
+    @Expose
+    private String InternalEndpoint;
+
+    /**
+    * HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HttpInternalEndpoint")
+    @Expose
+    private String HttpInternalEndpoint;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -412,6 +428,46 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.HttpVpcEndpoint = HttpVpcEndpoint;
     }
 
+    /**
+     * Get TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InternalEndpoint TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInternalEndpoint() {
+        return this.InternalEndpoint;
+    }
+
+    /**
+     * Set TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InternalEndpoint TCP内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInternalEndpoint(String InternalEndpoint) {
+        this.InternalEndpoint = InternalEndpoint;
+    }
+
+    /**
+     * Get HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HttpInternalEndpoint HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHttpInternalEndpoint() {
+        return this.HttpInternalEndpoint;
+    }
+
+    /**
+     * Set HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpInternalEndpoint HTTP协议内部接入地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHttpInternalEndpoint(String HttpInternalEndpoint) {
+        this.HttpInternalEndpoint = HttpInternalEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -468,6 +524,12 @@ public class RocketMQClusterInfo extends AbstractModel{
         if (source.HttpVpcEndpoint != null) {
             this.HttpVpcEndpoint = new String(source.HttpVpcEndpoint);
         }
+        if (source.InternalEndpoint != null) {
+            this.InternalEndpoint = new String(source.InternalEndpoint);
+        }
+        if (source.HttpInternalEndpoint != null) {
+            this.HttpInternalEndpoint = new String(source.HttpInternalEndpoint);
+        }
     }
 
 
@@ -490,6 +552,8 @@ public class RocketMQClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
         this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
+        this.setParamSimple(map, prefix + "InternalEndpoint", this.InternalEndpoint);
+        this.setParamSimple(map, prefix + "HttpInternalEndpoint", this.HttpInternalEndpoint);
 
     }
 }

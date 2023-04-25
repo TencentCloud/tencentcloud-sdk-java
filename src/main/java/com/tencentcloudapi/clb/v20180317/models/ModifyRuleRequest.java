@@ -80,14 +80,14 @@ public class ModifyRuleRequest extends AbstractModel{
     private String ForwardType;
 
     /**
-    * TRPC被调服务器路由，ForwardType为TRPC时必填。
+    * TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC调用服务接口，ForwardType为TRPC时必填。
+    * TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -226,32 +226,32 @@ public class ModifyRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get TRPC被调服务器路由，ForwardType为TRPC时必填。 
-     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。
+     * Get TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。 
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC被调服务器路由，ForwardType为TRPC时必填。
-     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。
+     * Set TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时必填。目前暂未对外开放。
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC调用服务接口，ForwardType为TRPC时必填。 
-     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。
+     * Get TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。 
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC调用服务接口，ForwardType为TRPC时必填。
-     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。
+     * Set TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时必填。目前暂未对外开放。
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

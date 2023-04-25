@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextTranslateBatchResponse extends AbstractModel{
 
     /**
-    * 源语言，详见入参Target
+    * 源语言，详见入参Source
     */
     @SerializedName("Source")
     @Expose
@@ -51,16 +51,16 @@ public class TextTranslateBatchResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 源语言，详见入参Target 
-     * @return Source 源语言，详见入参Target
+     * Get 源语言，详见入参Source 
+     * @return Source 源语言，详见入参Source
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 源语言，详见入参Target
-     * @param Source 源语言，详见入参Target
+     * Set 源语言，详见入参Source
+     * @param Source 源语言，详见入参Source
      */
     public void setSource(String Source) {
         this.Source = Source;

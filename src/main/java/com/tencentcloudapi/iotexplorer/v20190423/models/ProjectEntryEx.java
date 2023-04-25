@@ -103,6 +103,14 @@ public class ProjectEntryEx extends AbstractModel{
     private Long DeviceCount;
 
     /**
+    * 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableOpenState")
+    @Expose
+    private Long EnableOpenState;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -290,6 +298,26 @@ public class ProjectEntryEx extends AbstractModel{
         this.DeviceCount = DeviceCount;
     }
 
+    /**
+     * Get 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableOpenState 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableOpenState() {
+        return this.EnableOpenState;
+    }
+
+    /**
+     * Set 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableOpenState 是否开通物联使能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableOpenState(Long EnableOpenState) {
+        this.EnableOpenState = EnableOpenState;
+    }
+
     public ProjectEntryEx() {
     }
 
@@ -331,6 +359,9 @@ public class ProjectEntryEx extends AbstractModel{
         if (source.DeviceCount != null) {
             this.DeviceCount = new Long(source.DeviceCount);
         }
+        if (source.EnableOpenState != null) {
+            this.EnableOpenState = new Long(source.EnableOpenState);
+        }
     }
 
 
@@ -349,6 +380,7 @@ public class ProjectEntryEx extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ApplicationCount", this.ApplicationCount);
         this.setParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
+        this.setParamSimple(map, prefix + "EnableOpenState", this.EnableOpenState);
 
     }
 }

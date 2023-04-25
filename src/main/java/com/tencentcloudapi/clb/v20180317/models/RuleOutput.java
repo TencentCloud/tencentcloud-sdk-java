@@ -156,7 +156,7 @@ public class RuleOutput extends AbstractModel{
     private String WafDomainId;
 
     /**
-    * TRPC被调服务器路由，ForwardType为TRPC时有效
+    * TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrpcCallee")
@@ -164,7 +164,7 @@ public class RuleOutput extends AbstractModel{
     private String TrpcCallee;
 
     /**
-    * TRPC调用服务接口，ForwardType为TRPC时有效
+    * TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrpcFunc")
@@ -512,9 +512,9 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
-     * Get TRPC被调服务器路由，ForwardType为TRPC时有效
+     * Get TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+     * @return TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrpcCallee() {
@@ -522,9 +522,9 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
-     * Set TRPC被调服务器路由，ForwardType为TRPC时有效
+     * Set TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效
+     * @param TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrpcCallee(String TrpcCallee) {
@@ -532,9 +532,9 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
-     * Get TRPC调用服务接口，ForwardType为TRPC时有效
+     * Get TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+     * @return TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrpcFunc() {
@@ -542,9 +542,9 @@ public class RuleOutput extends AbstractModel{
     }
 
     /**
-     * Set TRPC调用服务接口，ForwardType为TRPC时有效
+     * Set TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效
+     * @param TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrpcFunc(String TrpcFunc) {

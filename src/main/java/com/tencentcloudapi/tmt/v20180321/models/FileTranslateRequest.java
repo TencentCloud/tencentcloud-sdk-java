@@ -83,7 +83,7 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     private Long SourceType;
 
     /**
-    * 需要翻译文件url
+    * 需要翻译文件url，文件需小于100MB。
     */
     @SerializedName("Url")
     @Expose
@@ -97,7 +97,7 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     private String BasicDocumentType;
 
     /**
-    * 回调url
+    * 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -303,16 +303,16 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     }
 
     /**
-     * Get 需要翻译文件url 
-     * @return Url 需要翻译文件url
+     * Get 需要翻译文件url，文件需小于100MB。 
+     * @return Url 需要翻译文件url，文件需小于100MB。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 需要翻译文件url
-     * @param Url 需要翻译文件url
+     * Set 需要翻译文件url，文件需小于100MB。
+     * @param Url 需要翻译文件url，文件需小于100MB。
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -335,16 +335,16 @@ lo（老挝语）：zh（简体中文）、zh-HK（繁体中文）、 zh-TW（�
     }
 
     /**
-     * Get 回调url 
-     * @return CallbackUrl 回调url
+     * Get 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。 
+     * @return CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调url
-     * @param CallbackUrl 回调url
+     * Set 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
+     * @param CallbackUrl 回调url，文件大于10MB，建议采用回调方式；回调时，所有内容会放入 Body 中。
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;

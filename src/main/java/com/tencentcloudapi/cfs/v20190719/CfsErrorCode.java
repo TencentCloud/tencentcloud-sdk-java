@@ -96,6 +96,9 @@ public enum CfsErrorCode {
     // 规则IP错误。
      INVALIDPARAMETERVALUE_INVALIDAUTHCLIENTIP("InvalidParameterValue.InvalidAuthClientIp"),
      
+    // 扩容策略参数无效
+     INVALIDPARAMETERVALUE_INVALIDAUTOSCALEUPPARAMS("InvalidParameterValue.InvalidAutoScaleUpParams"),
+     
     // 用于保证请求幂等性的字符串错误。
      INVALIDPARAMETERVALUE_INVALIDCLIENTTOKEN("InvalidParameterValue.InvalidClientToken"),
      
@@ -323,6 +326,9 @@ public enum CfsErrorCode {
      
     // 权限组不存在。
      RESOURCENOTFOUND_PGROUPNOTFOUND("ResourceNotFound.PgroupNotFound"),
+     
+    // 资源不存在：资源ID 不存在。
+     RESOURCENOTFOUND_RESOURCEPACKAGENOTFOUND("ResourceNotFound.ResourcePackageNotFound"),
      
     // 权限规则不存在。
      RESOURCENOTFOUND_RULENOTFOUND("ResourceNotFound.RuleNotFound"),

@@ -623,6 +623,26 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *用来设置文件系统扩容策略
+     * @param req ModifyFileSystemAutoScaleUpRuleRequest
+     * @return ModifyFileSystemAutoScaleUpRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(ModifyFileSystemAutoScaleUpRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFileSystemAutoScaleUpRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFileSystemAutoScaleUpRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于对turbo 文件系统扩容使用
      * @param req ScaleUpFileSystemRequest
      * @return ScaleUpFileSystemResponse
