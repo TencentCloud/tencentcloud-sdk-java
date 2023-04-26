@@ -325,6 +325,14 @@ public class Disk extends AbstractModel{
     private String ErrorPrompt;
 
     /**
+    * 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BurstPerformance")
+    @Expose
+    private Boolean BurstPerformance;
+
+    /**
      * Get 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。<br><li>false：销毁实例时不销毁云盘。
@@ -1040,6 +1048,26 @@ public class Disk extends AbstractModel{
         this.ErrorPrompt = ErrorPrompt;
     }
 
+    /**
+     * Get 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BurstPerformance 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getBurstPerformance() {
+        return this.BurstPerformance;
+    }
+
+    /**
+     * Set 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BurstPerformance 云盘是否开启性能突发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBurstPerformance(Boolean BurstPerformance) {
+        this.BurstPerformance = BurstPerformance;
+    }
+
     public Disk() {
     }
 
@@ -1180,6 +1208,9 @@ public class Disk extends AbstractModel{
         if (source.ErrorPrompt != null) {
             this.ErrorPrompt = new String(source.ErrorPrompt);
         }
+        if (source.BurstPerformance != null) {
+            this.BurstPerformance = new Boolean(source.BurstPerformance);
+        }
     }
 
 
@@ -1228,6 +1259,7 @@ public class Disk extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
         this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
+        this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
 
     }
 }

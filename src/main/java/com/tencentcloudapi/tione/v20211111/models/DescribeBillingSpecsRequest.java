@@ -30,7 +30,7 @@ public class DescribeBillingSpecsRequest extends AbstractModel{
     private String TaskType;
 
     /**
-    * 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+    * 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
     */
     @SerializedName("ChargeType")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeBillingSpecsRequest extends AbstractModel{
     }
 
     /**
-     * Get 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月 
-     * @return ChargeType 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+     * Get 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月 
+     * @return ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
-     * @param ChargeType 付费模式：POSTPAID_BY_HOUR按量付费、PREPAID包年包月
+     * Set 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
+     * @param ChargeType 付费模式：POSTPAID_BY_HOUR按量计费、PREPAID包年包月
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;

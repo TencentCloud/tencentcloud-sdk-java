@@ -32,7 +32,7 @@ public class ClientIpCountry extends AbstractModel{
     private String Switch;
 
     /**
-    * 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+    * 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
     */
     @SerializedName("HeaderName")
@@ -64,9 +64,9 @@ public class ClientIpCountry extends AbstractModel{
     }
 
     /**
-     * Get 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * Get 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。 
-     * @return HeaderName 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * @return HeaderName 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
      */
     public String getHeaderName() {
@@ -74,9 +74,9 @@ public class ClientIpCountry extends AbstractModel{
     }
 
     /**
-     * Set 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * Set 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
-     * @param HeaderName 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+     * @param HeaderName 存放客户端 IP 所属地域信息的请求头名称，当 Switch=on 时有效。
 为空则使用默认值：EO-Client-IPCountry。
      */
     public void setHeaderName(String HeaderName) {

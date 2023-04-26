@@ -891,7 +891,7 @@ public class IotvideoindustryClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDevicesList) 用于获取设备列表，支持模糊搜索
+     *本接口(DescribeDeviceList) 用于获取设备列表，支持模糊搜索
      * @param req DescribeDeviceListRequest
      * @return DescribeDeviceListResponse
      * @throws TencentCloudSDKException

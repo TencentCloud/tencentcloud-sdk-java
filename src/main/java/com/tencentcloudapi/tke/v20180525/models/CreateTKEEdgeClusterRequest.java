@@ -121,6 +121,13 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
     private String RegistryPrefix;
 
     /**
+    * 集群绑定的云标签
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get k8s版本号 
      * @return K8SVersion k8s版本号
      */
@@ -344,6 +351,22 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.RegistryPrefix = RegistryPrefix;
     }
 
+    /**
+     * Get 集群绑定的云标签 
+     * @return TagSpecification 集群绑定的云标签
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 集群绑定的云标签
+     * @param TagSpecification 集群绑定的云标签
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateTKEEdgeClusterRequest() {
     }
 
@@ -394,6 +417,9 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         if (source.RegistryPrefix != null) {
             this.RegistryPrefix = new String(source.RegistryPrefix);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
         this.setParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

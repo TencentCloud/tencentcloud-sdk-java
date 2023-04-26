@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class CreateApplicationProxyRequest extends AbstractModel{
 
     /**
-    * 站点ID。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+    * 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
     */
     @SerializedName("ProxyName")
     @Expose
@@ -82,8 +82,8 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     private Long SessionPersistTime;
 
     /**
-    * Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+    * Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
     */
     @SerializedName("Ipv6")
     @Expose
@@ -98,36 +98,43 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+    * 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。 
-     * @return ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * Get 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。 
+     * @return ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
-     * @param ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * Set 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
+     * @param ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -250,20 +257,20 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Ipv6访问配置。
-不填写表示关闭Ipv6访问。 
-     * @return Ipv6 Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+     * Get Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。 
+     * @return Ipv6 Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Ipv6访问配置。
-不填写表示关闭Ipv6访问。
-     * @param Ipv6 Ipv6访问配置。
-不填写表示关闭Ipv6访问。
+     * Set Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
+     * @param Ipv6 Ipv6 访问配置。
+不填写表示关闭 Ipv6 访问。
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
@@ -287,6 +294,22 @@ public class CreateApplicationProxyRequest extends AbstractModel{
      */
     public void setApplicationProxyRules(ApplicationProxyRule [] ApplicationProxyRules) {
         this.ApplicationProxyRules = ApplicationProxyRules;
+    }
+
+    /**
+     * Get 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。 
+     * @return AccelerateMainland 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+     * @param AccelerateMainland 中国大陆加速优化配置。不填写表示关闭中国大陆加速优化。
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
     }
 
     public CreateApplicationProxyRequest() {
@@ -327,6 +350,9 @@ public class CreateApplicationProxyRequest extends AbstractModel{
                 this.ApplicationProxyRules[i] = new ApplicationProxyRule(source.ApplicationProxyRules[i]);
             }
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -343,6 +369,7 @@ public class CreateApplicationProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

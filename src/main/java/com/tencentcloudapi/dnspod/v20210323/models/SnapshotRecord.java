@@ -73,6 +73,22 @@ public class SnapshotRecord extends AbstractModel{
     private String MX;
 
     /**
+    * 权重
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Weight")
+    @Expose
+    private String Weight;
+
+    /**
+    * 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get 子域名 
      * @return SubDomain 子域名
      */
@@ -188,6 +204,46 @@ public class SnapshotRecord extends AbstractModel{
         this.MX = MX;
     }
 
+    /**
+     * Get 权重
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWeight() {
+        return this.Weight;
+    }
+
+    /**
+     * Set 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeight(String Weight) {
+        this.Weight = Weight;
+    }
+
+    /**
+     * Get 失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Reason 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Reason 失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public SnapshotRecord() {
     }
 
@@ -217,6 +273,12 @@ public class SnapshotRecord extends AbstractModel{
         if (source.MX != null) {
             this.MX = new String(source.MX);
         }
+        if (source.Weight != null) {
+            this.Weight = new String(source.Weight);
+        }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -231,6 +293,8 @@ public class SnapshotRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "TTL", this.TTL);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "MX", this.MX);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

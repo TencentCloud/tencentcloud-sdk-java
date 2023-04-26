@@ -43,7 +43,7 @@ public class Https extends AbstractModel{
     private String OcspStapling;
 
     /**
-    * Tls版本设置，取值有：
+    * Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
@@ -148,13 +148,13 @@ public class Https extends AbstractModel{
     }
 
     /**
-     * Get Tls版本设置，取值有：
+     * Get Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TlsVersion Tls版本设置，取值有：
+     * @return TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
@@ -166,13 +166,13 @@ public class Https extends AbstractModel{
     }
 
     /**
-     * Set Tls版本设置，取值有：
+     * Set Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>
 <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TlsVersion Tls版本设置，取值有：
+     * @param TlsVersion Tls 版本设置，取值有：
 <li>TLSv1：TLSv1版本；</li>
 <li>TLSV1.1：TLSv1.1版本；</li>
 <li>TLSV1.2：TLSv1.2版本；</li>

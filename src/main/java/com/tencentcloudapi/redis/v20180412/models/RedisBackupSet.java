@@ -30,7 +30,7 @@ public class RedisBackupSet extends AbstractModel{
     private String StartTime;
 
     /**
-    * 备份ID。
+    * 备份任务ID。
     */
     @SerializedName("BackupId")
     @Expose
@@ -38,9 +38,8 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
     * 备份类型。
-
-- 1：用户发起的手动备份。
-- 0：凌晨系统发起的备份。
+- 1：凌晨系统发起的备份。
+- 0：用户发起的手动备份。
     */
     @SerializedName("BackupType")
     @Expose
@@ -48,7 +47,6 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
     * 备份状态。 
-
 - 1：备份被其它流程锁定。
 - 2：备份正常，没有被任何流程锁定。
 - -1：备份已过期。
@@ -68,7 +66,6 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
     * 备份是否被锁定。
-
 - 0：未被锁定。
 - 1：已被锁定。
     */
@@ -159,16 +156,16 @@ public class RedisBackupSet extends AbstractModel{
     }
 
     /**
-     * Get 备份ID。 
-     * @return BackupId 备份ID。
+     * Get 备份任务ID。 
+     * @return BackupId 备份任务ID。
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set 备份ID。
-     * @param BackupId 备份ID。
+     * Set 备份任务ID。
+     * @param BackupId 备份任务ID。
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;
@@ -176,13 +173,11 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Get 备份类型。
-
-- 1：用户发起的手动备份。
-- 0：凌晨系统发起的备份。 
+- 1：凌晨系统发起的备份。
+- 0：用户发起的手动备份。 
      * @return BackupType 备份类型。
-
-- 1：用户发起的手动备份。
-- 0：凌晨系统发起的备份。
+- 1：凌晨系统发起的备份。
+- 0：用户发起的手动备份。
      */
     public String getBackupType() {
         return this.BackupType;
@@ -190,13 +185,11 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Set 备份类型。
-
-- 1：用户发起的手动备份。
-- 0：凌晨系统发起的备份。
+- 1：凌晨系统发起的备份。
+- 0：用户发起的手动备份。
      * @param BackupType 备份类型。
-
-- 1：用户发起的手动备份。
-- 0：凌晨系统发起的备份。
+- 1：凌晨系统发起的备份。
+- 0：用户发起的手动备份。
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -204,14 +197,12 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Get 备份状态。 
-
 - 1：备份被其它流程锁定。
 - 2：备份正常，没有被任何流程锁定。
 - -1：备份已过期。
 - 3：备份正在被导出。
 - 4：备份导出成功。 
      * @return Status 备份状态。 
-
 - 1：备份被其它流程锁定。
 - 2：备份正常，没有被任何流程锁定。
 - -1：备份已过期。
@@ -224,14 +215,12 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Set 备份状态。 
-
 - 1：备份被其它流程锁定。
 - 2：备份正常，没有被任何流程锁定。
 - -1：备份已过期。
 - 3：备份正在被导出。
 - 4：备份导出成功。
      * @param Status 备份状态。 
-
 - 1：备份被其它流程锁定。
 - 2：备份正常，没有被任何流程锁定。
 - -1：备份已过期。
@@ -260,11 +249,9 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Get 备份是否被锁定。
-
 - 0：未被锁定。
 - 1：已被锁定。 
      * @return Locked 备份是否被锁定。
-
 - 0：未被锁定。
 - 1：已被锁定。
      */
@@ -274,11 +261,9 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Set 备份是否被锁定。
-
 - 0：未被锁定。
 - 1：已被锁定。
      * @param Locked 备份是否被锁定。
-
 - 0：未被锁定。
 - 1：已被锁定。
      */

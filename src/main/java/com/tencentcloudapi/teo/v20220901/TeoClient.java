@@ -299,6 +299,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *创建安全 IP 组
+     * @param req CreateSecurityIPGroupRequest
+     * @return CreateSecurityIPGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSecurityIPGroupResponse CreateSecurityIPGroup(CreateSecurityIPGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSecurityIPGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSecurityIPGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSecurityIPGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对用户指定的域名进行一次站点拨测
      * @param req CreateSpeedTestingRequest
      * @return CreateSpeedTestingResponse
@@ -451,6 +471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
+     * @param req DeleteSecurityIPGroupRequest
+     * @return DeleteSecurityIPGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(DeleteSecurityIPGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSecurityIPGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSecurityIPGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSecurityIPGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1631,6 +1671,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRulePriorityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRulePriority");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改安全 IP 组。
+     * @param req ModifySecurityIPGroupRequest
+     * @return ModifySecurityIPGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySecurityIPGroupResponse ModifySecurityIPGroup(ModifySecurityIPGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySecurityIPGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySecurityIPGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySecurityIPGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

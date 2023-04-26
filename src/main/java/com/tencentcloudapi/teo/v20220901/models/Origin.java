@@ -50,7 +50,7 @@ public class Origin extends AbstractModel{
     private String OriginPullProtocol;
 
     /**
-    * 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+    * 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -132,11 +132,11 @@ public class Origin extends AbstractModel{
     }
 
     /**
-     * Get 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * Get 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosPrivateAccess 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * @return CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -146,11 +146,11 @@ public class Origin extends AbstractModel{
     }
 
     /**
-     * Set 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * Set 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosPrivateAccess 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+     * @param CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
 注意：此字段可能返回 null，表示取不到有效值。

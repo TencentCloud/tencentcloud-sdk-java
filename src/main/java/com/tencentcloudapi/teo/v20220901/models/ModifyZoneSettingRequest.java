@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyZoneSettingRequest extends AbstractModel{
 
     /**
-    * 待变更的站点ID。
+    * 待变更的站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -62,7 +62,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private OfflineCache OfflineCache;
 
     /**
-    * Quic访问配置。
+    * Quic 访问配置。
 不填写表示保持原有配置。
     */
     @SerializedName("Quic")
@@ -70,7 +70,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private Quic Quic;
 
     /**
-    * Post请求传输配置。
+    * Post 请求传输配置。
 不填写表示保持原有配置。
     */
     @SerializedName("PostMaxSize")
@@ -86,7 +86,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private Compression Compression;
 
     /**
-    * Http2回源配置。
+    * Http2 回源配置。
 不填写表示保持原有配置。
     */
     @SerializedName("UpstreamHttp2")
@@ -94,7 +94,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private UpstreamHttp2 UpstreamHttp2;
 
     /**
-    * 访问协议强制Https跳转配置。
+    * 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
     */
     @SerializedName("ForceRedirect")
@@ -102,7 +102,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ForceRedirect ForceRedirect;
 
     /**
-    * Https加速配置。
+    * Https 加速配置。
 不填写表示保持原有配置。
     */
     @SerializedName("Https")
@@ -126,7 +126,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private SmartRouting SmartRouting;
 
     /**
-    * WebSocket配置。
+    * WebSocket 配置。
 不填写表示保持原有配置。
     */
     @SerializedName("WebSocket")
@@ -134,7 +134,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private WebSocket WebSocket;
 
     /**
-    * 客户端IP回源请求头配置。
+    * 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
     */
     @SerializedName("ClientIpHeader")
@@ -150,7 +150,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private CachePrefresh CachePrefresh;
 
     /**
-    * Ipv6访问配置。
+    * Ipv6 访问配置。
 不填写表示保持原有配置。
     */
     @SerializedName("Ipv6")
@@ -158,7 +158,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private Ipv6 Ipv6;
 
     /**
-    * 回源时是否携带客户端IP所属地域信息的配置。
+    * 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
     */
     @SerializedName("ClientIpCountry")
@@ -166,7 +166,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ClientIpCountry ClientIpCountry;
 
     /**
-    * Grpc协议支持配置。
+    * Grpc 协议支持配置。
 不填写表示保持原有配置。
     */
     @SerializedName("Grpc")
@@ -174,16 +174,24 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private Grpc Grpc;
 
     /**
-     * Get 待变更的站点ID。 
-     * @return ZoneId 待变更的站点ID。
+    * 图片优化配置。
+不填写表示关闭。
+    */
+    @SerializedName("ImageOptimize")
+    @Expose
+    private ImageOptimize ImageOptimize;
+
+    /**
+     * Get 待变更的站点 ID。 
+     * @return ZoneId 待变更的站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 待变更的站点ID。
-     * @param ZoneId 待变更的站点ID。
+     * Set 待变更的站点 ID。
+     * @param ZoneId 待变更的站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -270,9 +278,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Quic访问配置。
+     * Get Quic 访问配置。
 不填写表示保持原有配置。 
-     * @return Quic Quic访问配置。
+     * @return Quic Quic 访问配置。
 不填写表示保持原有配置。
      */
     public Quic getQuic() {
@@ -280,9 +288,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Quic访问配置。
+     * Set Quic 访问配置。
 不填写表示保持原有配置。
-     * @param Quic Quic访问配置。
+     * @param Quic Quic 访问配置。
 不填写表示保持原有配置。
      */
     public void setQuic(Quic Quic) {
@@ -290,9 +298,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Post请求传输配置。
+     * Get Post 请求传输配置。
 不填写表示保持原有配置。 
-     * @return PostMaxSize Post请求传输配置。
+     * @return PostMaxSize Post 请求传输配置。
 不填写表示保持原有配置。
      */
     public PostMaxSize getPostMaxSize() {
@@ -300,9 +308,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Post请求传输配置。
+     * Set Post 请求传输配置。
 不填写表示保持原有配置。
-     * @param PostMaxSize Post请求传输配置。
+     * @param PostMaxSize Post 请求传输配置。
 不填写表示保持原有配置。
      */
     public void setPostMaxSize(PostMaxSize PostMaxSize) {
@@ -330,9 +338,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Http2回源配置。
+     * Get Http2 回源配置。
 不填写表示保持原有配置。 
-     * @return UpstreamHttp2 Http2回源配置。
+     * @return UpstreamHttp2 Http2 回源配置。
 不填写表示保持原有配置。
      */
     public UpstreamHttp2 getUpstreamHttp2() {
@@ -340,9 +348,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Http2回源配置。
+     * Set Http2 回源配置。
 不填写表示保持原有配置。
-     * @param UpstreamHttp2 Http2回源配置。
+     * @param UpstreamHttp2 Http2 回源配置。
 不填写表示保持原有配置。
      */
     public void setUpstreamHttp2(UpstreamHttp2 UpstreamHttp2) {
@@ -350,9 +358,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 访问协议强制Https跳转配置。
+     * Get 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。 
-     * @return ForceRedirect 访问协议强制Https跳转配置。
+     * @return ForceRedirect 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
      */
     public ForceRedirect getForceRedirect() {
@@ -360,9 +368,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set 访问协议强制Https跳转配置。
+     * Set 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
-     * @param ForceRedirect 访问协议强制Https跳转配置。
+     * @param ForceRedirect 访问协议强制 Https 跳转配置。
 不填写表示保持原有配置。
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
@@ -370,9 +378,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Https加速配置。
+     * Get Https 加速配置。
 不填写表示保持原有配置。 
-     * @return Https Https加速配置。
+     * @return Https Https 加速配置。
 不填写表示保持原有配置。
      */
     public Https getHttps() {
@@ -380,9 +388,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Https加速配置。
+     * Set Https 加速配置。
 不填写表示保持原有配置。
-     * @param Https Https加速配置。
+     * @param Https Https 加速配置。
 不填写表示保持原有配置。
      */
     public void setHttps(Https Https) {
@@ -430,9 +438,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get WebSocket配置。
+     * Get WebSocket 配置。
 不填写表示保持原有配置。 
-     * @return WebSocket WebSocket配置。
+     * @return WebSocket WebSocket 配置。
 不填写表示保持原有配置。
      */
     public WebSocket getWebSocket() {
@@ -440,9 +448,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set WebSocket配置。
+     * Set WebSocket 配置。
 不填写表示保持原有配置。
-     * @param WebSocket WebSocket配置。
+     * @param WebSocket WebSocket 配置。
 不填写表示保持原有配置。
      */
     public void setWebSocket(WebSocket WebSocket) {
@@ -450,9 +458,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 客户端IP回源请求头配置。
+     * Get 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。 
-     * @return ClientIpHeader 客户端IP回源请求头配置。
+     * @return ClientIpHeader 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
      */
     public ClientIpHeader getClientIpHeader() {
@@ -460,9 +468,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set 客户端IP回源请求头配置。
+     * Set 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
-     * @param ClientIpHeader 客户端IP回源请求头配置。
+     * @param ClientIpHeader 客户端 IP 回源请求头配置。
 不填写表示保持原有配置。
      */
     public void setClientIpHeader(ClientIpHeader ClientIpHeader) {
@@ -490,9 +498,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Ipv6访问配置。
+     * Get Ipv6 访问配置。
 不填写表示保持原有配置。 
-     * @return Ipv6 Ipv6访问配置。
+     * @return Ipv6 Ipv6 访问配置。
 不填写表示保持原有配置。
      */
     public Ipv6 getIpv6() {
@@ -500,9 +508,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Ipv6访问配置。
+     * Set Ipv6 访问配置。
 不填写表示保持原有配置。
-     * @param Ipv6 Ipv6访问配置。
+     * @param Ipv6 Ipv6 访问配置。
 不填写表示保持原有配置。
      */
     public void setIpv6(Ipv6 Ipv6) {
@@ -510,9 +518,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 回源时是否携带客户端IP所属地域信息的配置。
+     * Get 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。 
-     * @return ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+     * @return ClientIpCountry 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
      */
     public ClientIpCountry getClientIpCountry() {
@@ -520,9 +528,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set 回源时是否携带客户端IP所属地域信息的配置。
+     * Set 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
-     * @param ClientIpCountry 回源时是否携带客户端IP所属地域信息的配置。
+     * @param ClientIpCountry 回源时是否携带客户端 IP 所属地域信息的配置。
 不填写表示保持原有配置。
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
@@ -530,9 +538,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get Grpc协议支持配置。
+     * Get Grpc 协议支持配置。
 不填写表示保持原有配置。 
-     * @return Grpc Grpc协议支持配置。
+     * @return Grpc Grpc 协议支持配置。
 不填写表示保持原有配置。
      */
     public Grpc getGrpc() {
@@ -540,13 +548,33 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Set Grpc协议支持配置。
+     * Set Grpc 协议支持配置。
 不填写表示保持原有配置。
-     * @param Grpc Grpc协议支持配置。
+     * @param Grpc Grpc 协议支持配置。
 不填写表示保持原有配置。
      */
     public void setGrpc(Grpc Grpc) {
         this.Grpc = Grpc;
+    }
+
+    /**
+     * Get 图片优化配置。
+不填写表示关闭。 
+     * @return ImageOptimize 图片优化配置。
+不填写表示关闭。
+     */
+    public ImageOptimize getImageOptimize() {
+        return this.ImageOptimize;
+    }
+
+    /**
+     * Set 图片优化配置。
+不填写表示关闭。
+     * @param ImageOptimize 图片优化配置。
+不填写表示关闭。
+     */
+    public void setImageOptimize(ImageOptimize ImageOptimize) {
+        this.ImageOptimize = ImageOptimize;
     }
 
     public ModifyZoneSettingRequest() {
@@ -614,6 +642,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.Grpc != null) {
             this.Grpc = new Grpc(source.Grpc);
         }
+        if (source.ImageOptimize != null) {
+            this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
+        }
     }
 
 
@@ -640,6 +671,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
+        this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
 
     }
 }

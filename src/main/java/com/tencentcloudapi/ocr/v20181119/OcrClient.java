@@ -1413,7 +1413,7 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *菲律宾SSSID识别
+     *菲律宾SSSID/UMID识别
      * @param req RecognizePhilippinesSssIDOCRRequest
      * @return RecognizePhilippinesSssIDOCRResponse
      * @throws TencentCloudSDKException

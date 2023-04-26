@@ -32,7 +32,7 @@ public class Hsts extends AbstractModel{
     private String Switch;
 
     /**
-    * MaxAge数值。单位为秒，最大值为1天。
+    * MaxAge 数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxAge")
@@ -84,9 +84,9 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Get MaxAge数值。单位为秒，最大值为1天。
+     * Get MaxAge 数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxAge MaxAge数值。单位为秒，最大值为1天。
+     * @return MaxAge MaxAge 数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxAge() {
@@ -94,9 +94,9 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Set MaxAge数值。单位为秒，最大值为1天。
+     * Set MaxAge 数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxAge MaxAge数值。单位为秒，最大值为1天。
+     * @param MaxAge MaxAge 数值。单位为秒，最大值为1天。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxAge(Long MaxAge) {

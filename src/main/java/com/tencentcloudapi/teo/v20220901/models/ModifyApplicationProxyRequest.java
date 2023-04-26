@@ -23,22 +23,22 @@ import java.util.HashMap;
 public class ModifyApplicationProxyRequest extends AbstractModel{
 
     /**
-    * 站点ID。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 代理ID。
+    * 代理 ID。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+    * 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
     */
     @SerializedName("ProxyName")
     @Expose
@@ -62,59 +62,66 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
     private String ProxyType;
 
     /**
-    * Ipv6访问配置，不填写保持原有配置。
+    * Ipv6 访问配置，不填写保持原有配置。
     */
     @SerializedName("Ipv6")
     @Expose
     private Ipv6 Ipv6;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+    * 中国大陆加速优化配置。 不填写表示保持原有配置。
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 代理ID。 
-     * @return ProxyId 代理ID。
+     * Get 代理 ID。 
+     * @return ProxyId 代理 ID。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 代理ID。
-     * @param ProxyId 代理ID。
+     * Set 代理 ID。
+     * @param ProxyId 代理 ID。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。 
-     * @return ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * Get 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。 
+     * @return ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
-     * @param ProxyName 当ProxyType=hostname时，表示域名或子域名；
-当ProxyType=instance时，表示代理名称。
+     * Set 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
+     * @param ProxyName 当 ProxyType=hostname 时，表示域名或子域名；
+当 ProxyType=instance 时，表示代理名称。
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -165,19 +172,35 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Ipv6访问配置，不填写保持原有配置。 
-     * @return Ipv6 Ipv6访问配置，不填写保持原有配置。
+     * Get Ipv6 访问配置，不填写保持原有配置。 
+     * @return Ipv6 Ipv6 访问配置，不填写保持原有配置。
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set Ipv6访问配置，不填写保持原有配置。
-     * @param Ipv6 Ipv6访问配置，不填写保持原有配置。
+     * Set Ipv6 访问配置，不填写保持原有配置。
+     * @param Ipv6 Ipv6 访问配置，不填写保持原有配置。
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
+    }
+
+    /**
+     * Get 中国大陆加速优化配置。 不填写表示保持原有配置。 
+     * @return AccelerateMainland 中国大陆加速优化配置。 不填写表示保持原有配置。
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set 中国大陆加速优化配置。 不填写表示保持原有配置。
+     * @param AccelerateMainland 中国大陆加速优化配置。 不填写表示保持原有配置。
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
     }
 
     public ModifyApplicationProxyRequest() {
@@ -206,6 +229,9 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
         if (source.Ipv6 != null) {
             this.Ipv6 = new Ipv6(source.Ipv6);
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class ModifyApplicationProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

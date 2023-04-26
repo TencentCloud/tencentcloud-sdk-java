@@ -80,6 +80,13 @@ public class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel{
     private String GridDaemon;
 
     /**
+    * 公网访问kins集群
+    */
+    @SerializedName("UnitCluster")
+    @Expose
+    private String UnitCluster;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -219,6 +226,22 @@ public class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel{
     }
 
     /**
+     * Get 公网访问kins集群 
+     * @return UnitCluster 公网访问kins集群
+     */
+    public String getUnitCluster() {
+        return this.UnitCluster;
+    }
+
+    /**
+     * Set 公网访问kins集群
+     * @param UnitCluster 公网访问kins集群
+     */
+    public void setUnitCluster(String UnitCluster) {
+        this.UnitCluster = UnitCluster;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -269,6 +292,9 @@ public class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel{
         if (source.GridDaemon != null) {
             this.GridDaemon = new String(source.GridDaemon);
         }
+        if (source.UnitCluster != null) {
+            this.UnitCluster = new String(source.UnitCluster);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -287,6 +313,7 @@ public class DescribeTKEEdgeClusterCredentialResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "HealthRegion", this.HealthRegion);
         this.setParamSimple(map, prefix + "Health", this.Health);
         this.setParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
+        this.setParamSimple(map, prefix + "UnitCluster", this.UnitCluster);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -100,6 +100,13 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private Long ResourcePackageNum;
 
     /**
+    * 实例类型 1:原web相关类型 2:app端类型
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 片区Id，(至少大于0) 
      * @return AreaId 片区Id，(至少大于0)
      */
@@ -275,6 +282,22 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.ResourcePackageNum = ResourcePackageNum;
     }
 
+    /**
+     * Get 实例类型 1:原web相关类型 2:app端类型 
+     * @return InstanceType 实例类型 1:原web相关类型 2:app端类型
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型 1:原web相关类型 2:app端类型
+     * @param InstanceType 实例类型 1:原web相关类型 2:app端类型
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -319,6 +342,9 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.ResourcePackageNum != null) {
             this.ResourcePackageNum = new Long(source.ResourcePackageNum);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
         this.setParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
         this.setParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

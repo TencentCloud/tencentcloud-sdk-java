@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PostMaxSize extends AbstractModel{
 
     /**
-    * 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+    * 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
     */
@@ -40,10 +40,10 @@ public class PostMaxSize extends AbstractModel{
     private Long MaxSize;
 
     /**
-     * Get 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * Get 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li> 
-     * @return Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * @return Switch 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
      */
@@ -52,10 +52,10 @@ public class PostMaxSize extends AbstractModel{
     }
 
     /**
-     * Set 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * Set 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
-     * @param Switch 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+     * @param Switch 是否开启 POST 请求上传文件限制，平台默认为限制为32MB，取值有：
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
      */

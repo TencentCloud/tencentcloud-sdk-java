@@ -32,7 +32,7 @@ public class ClientIpHeader extends AbstractModel{
     private String Switch;
 
     /**
-    * 回源时，存放客户端IP的请求头名称。
+    * 回源时，存放客户端 IP 的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -65,10 +65,10 @@ public class ClientIpHeader extends AbstractModel{
     }
 
     /**
-     * Get 回源时，存放客户端IP的请求头名称。
+     * Get 回源时，存放客户端 IP 的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HeaderName 回源时，存放客户端IP的请求头名称。
+     * @return HeaderName 回源时，存放客户端 IP 的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -77,10 +77,10 @@ public class ClientIpHeader extends AbstractModel{
     }
 
     /**
-     * Set 回源时，存放客户端IP的请求头名称。
+     * Set 回源时，存放客户端 IP 的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HeaderName 回源时，存放客户端IP的请求头名称。
+     * @param HeaderName 回源时，存放客户端 IP 的请求头名称。
 为空则使用默认值：X-Forwarded-IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */

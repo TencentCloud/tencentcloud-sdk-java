@@ -241,6 +241,46 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *通过计算句子间的语义相似性，帮助您快速找到文本中重复或相似的句子，用于文本聚类、相似问题检索等应用场景。
+     * @param req EvaluateSentenceSimilarityRequest
+     * @return EvaluateSentenceSimilarityResponse
+     * @throws TencentCloudSDKException
+     */
+    public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EvaluateSentenceSimilarityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EvaluateSentenceSimilarity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *评估两个词语在语义空间的相似程度，为您的场景应用提供有力支持，如关键词过滤、热门话题挖掘等。（目前仅支持中文）
+     * @param req EvaluateWordSimilarityRequest
+     * @return EvaluateWordSimilarityResponse
+     * @throws TencentCloudSDKException
+     */
+    public EvaluateWordSimilarityResponse EvaluateWordSimilarity(EvaluateWordSimilarityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EvaluateWordSimilarityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EvaluateWordSimilarity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据用户输入的命题关键词自动生成一副春联，包括上联、下联和横批。（如需开通请联系商务）
      * @param req GenerateCoupletRequest
      * @return GenerateCoupletResponse
@@ -253,6 +293,26 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GenerateCoupletResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GenerateCouplet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提取文本中的关键信息，生成简洁明了的关键句子，便于用户快速获取核心观点。
+     * @param req GenerateKeywordSentenceRequest
+     * @return GenerateKeywordSentenceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateKeywordSentenceResponse GenerateKeywordSentence(GenerateKeywordSentenceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateKeywordSentenceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateKeywordSentence");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -329,6 +389,46 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *通过精准地对文本进行分词、词性标注、命名实体识别等功能，助您更好地理解文本内容，挖掘出潜在的价值信息。
+     * @param req ParseWordsRequest
+     * @return ParseWordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseWordsResponse ParseWords(ParseWordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseWordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseWordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ParseWords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *基于大数据和深度学习技术，可以快速地找到与给定词语高度相似的其他词语，有助于提高搜索和推荐的准确性。（目前仅支持中文）
+     * @param req RetrieveSimilarWordsRequest
+     * @return RetrieveSimilarWordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetrieveSimilarWordsResponse RetrieveSimilarWords(RetrieveSimilarWordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RetrieveSimilarWordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RetrieveSimilarWords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询指定自定义词库中的词条是否存在。
      * @param req SearchWordItemsRequest
      * @return SearchWordItemsResponse
@@ -341,6 +441,26 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchWordItemsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchWordItems");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能识别并纠正句子中的语法、拼写、用词等错误，确保文本的准确性和可读性。
+     * @param req SentenceCorrectionRequest
+     * @return SentenceCorrectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SentenceCorrectionResponse SentenceCorrection(SentenceCorrectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SentenceCorrectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SentenceCorrectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SentenceCorrection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -483,6 +603,26 @@ public class NlpClient extends AbstractClient{
     }
 
     /**
+     *运用先进的自然语言处理技术，对原始文本进行优化润色，提升文本的通顺性、表达力和语言质量。
+     * @param req TextEmbellishRequest
+     * @return TextEmbellishResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextEmbellishResponse TextEmbellish(TextEmbellishRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextEmbellishResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextEmbellishResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TextEmbellish");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *句子相似度接口能够基于深度学习技术来计算一个源句子和多个目标句子的相似度，相似度分值越大的两个句子在语义上越相似。目前仅支持短文本（不超过500字符）的相似度计算，长文本的相似度计算也即将推出。
 
 鉴于句子相似度是一个应用非常广泛的功能，腾讯云自然语言处理团队在Bert等领先的深度神经网络模型的基础上，专门针对文本相似任务进行了优化，并持续迭代更新。基于句子相似度，可以轻松实现诸如文本去重、相似推荐等功能。
@@ -523,6 +663,26 @@ public class NlpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityProResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TextSimilarityPro");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过自动补全文本片段，帮助用户快速生成高质量、连贯的完整文本，提高创作效率。
+     * @param req TextWritingRequest
+     * @return TextWritingResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextWritingResponse TextWriting(TextWritingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TextWritingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TextWritingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TextWriting");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

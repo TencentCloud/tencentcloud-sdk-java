@@ -44,6 +44,13 @@ public class RollbackSnapshotRequest extends AbstractModel{
     private Long DomainId;
 
     /**
+    * 指定需要回滚的记录
+    */
+    @SerializedName("RecordList")
+    @Expose
+    private SnapshotRecord [] RecordList;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -91,6 +98,22 @@ public class RollbackSnapshotRequest extends AbstractModel{
         this.DomainId = DomainId;
     }
 
+    /**
+     * Get 指定需要回滚的记录 
+     * @return RecordList 指定需要回滚的记录
+     */
+    public SnapshotRecord [] getRecordList() {
+        return this.RecordList;
+    }
+
+    /**
+     * Set 指定需要回滚的记录
+     * @param RecordList 指定需要回滚的记录
+     */
+    public void setRecordList(SnapshotRecord [] RecordList) {
+        this.RecordList = RecordList;
+    }
+
     public RollbackSnapshotRequest() {
     }
 
@@ -108,6 +131,12 @@ public class RollbackSnapshotRequest extends AbstractModel{
         if (source.DomainId != null) {
             this.DomainId = new Long(source.DomainId);
         }
+        if (source.RecordList != null) {
+            this.RecordList = new SnapshotRecord[source.RecordList.length];
+            for (int i = 0; i < source.RecordList.length; i++) {
+                this.RecordList[i] = new SnapshotRecord(source.RecordList[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class RollbackSnapshotRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamArrayObj(map, prefix + "RecordList.", this.RecordList);
 
     }
 }

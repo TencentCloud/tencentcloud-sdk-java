@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Ipv6 extends AbstractModel{
 
     /**
-    * Ipv6访问功能配置，取值有：
+    * Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
     */
@@ -32,10 +32,10 @@ public class Ipv6 extends AbstractModel{
     private String Switch;
 
     /**
-     * Get Ipv6访问功能配置，取值有：
+     * Get Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li> 
-     * @return Switch Ipv6访问功能配置，取值有：
+     * @return Switch Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
      */
@@ -44,10 +44,10 @@ public class Ipv6 extends AbstractModel{
     }
 
     /**
-     * Set Ipv6访问功能配置，取值有：
+     * Set Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
-     * @param Switch Ipv6访问功能配置，取值有：
+     * @param Switch Ipv6 访问功能配置，取值有：
 <li>on：开启Ipv6访问功能；</li>
 <li>off：关闭Ipv6访问功能。</li>
      */

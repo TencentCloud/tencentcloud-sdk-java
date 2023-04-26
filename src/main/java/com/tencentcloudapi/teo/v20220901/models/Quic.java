@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Quic extends AbstractModel{
 
     /**
-    * 是否开启Quic配置，取值有：
+    * 是否开启 Quic 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
     */
@@ -32,10 +32,10 @@ public class Quic extends AbstractModel{
     private String Switch;
 
     /**
-     * Get 是否开启Quic配置，取值有：
+     * Get 是否开启 Quic 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
-     * @return Switch 是否开启Quic配置，取值有：
+     * @return Switch 是否开启 Quic 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */
@@ -44,10 +44,10 @@ public class Quic extends AbstractModel{
     }
 
     /**
-     * Set 是否开启Quic配置，取值有：
+     * Set 是否开启 Quic 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param Switch 是否开启Quic配置，取值有：
+     * @param Switch 是否开启 Quic 配置，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */

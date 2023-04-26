@@ -71,6 +71,14 @@ public class RecordPlanItem extends AbstractModel{
     private DeviceItem [] Devices;
 
     /**
+    * 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordStorageTime")
+    @Expose
+    private Long RecordStorageTime;
+
+    /**
      * Get 计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 计划ID
@@ -190,6 +198,26 @@ public class RecordPlanItem extends AbstractModel{
         this.Devices = Devices;
     }
 
+    /**
+     * Get 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordStorageTime 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRecordStorageTime() {
+        return this.RecordStorageTime;
+    }
+
+    /**
+     * Set 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordStorageTime 录像存储天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordStorageTime(Long RecordStorageTime) {
+        this.RecordStorageTime = RecordStorageTime;
+    }
+
     public RecordPlanItem() {
     }
 
@@ -219,6 +247,9 @@ public class RecordPlanItem extends AbstractModel{
                 this.Devices[i] = new DeviceItem(source.Devices[i]);
             }
         }
+        if (source.RecordStorageTime != null) {
+            this.RecordStorageTime = new Long(source.RecordStorageTime);
+        }
     }
 
 
@@ -232,6 +263,7 @@ public class RecordPlanItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TimeTemplateName", this.TimeTemplateName);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArrayObj(map, prefix + "Devices.", this.Devices);
+        this.setParamSimple(map, prefix + "RecordStorageTime", this.RecordStorageTime);
 
     }
 }

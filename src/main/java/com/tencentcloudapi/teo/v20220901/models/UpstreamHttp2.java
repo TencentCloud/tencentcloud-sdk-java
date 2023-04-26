@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpstreamHttp2 extends AbstractModel{
 
     /**
-    * http2回源配置开关，取值有：
+    * http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
     */
@@ -32,10 +32,10 @@ public class UpstreamHttp2 extends AbstractModel{
     private String Switch;
 
     /**
-     * Get http2回源配置开关，取值有：
+     * Get http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li> 
-     * @return Switch http2回源配置开关，取值有：
+     * @return Switch http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */
@@ -44,10 +44,10 @@ public class UpstreamHttp2 extends AbstractModel{
     }
 
     /**
-     * Set http2回源配置开关，取值有：
+     * Set http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-     * @param Switch http2回源配置开关，取值有：
+     * @param Switch http2 回源配置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
      */

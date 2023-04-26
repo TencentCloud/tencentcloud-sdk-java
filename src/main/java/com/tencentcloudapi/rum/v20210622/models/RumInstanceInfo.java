@@ -107,6 +107,14 @@ public class RumInstanceInfo extends AbstractModel{
     private String CreatedAt;
 
     /**
+    * 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=已删除) 
      * @return InstanceStatus 实例状态(1=创建中，2=运行中，3=异常，4=重启中，5=停止中，6=已停止，7=已删除)
      */
@@ -298,6 +306,26 @@ public class RumInstanceInfo extends AbstractModel{
         this.CreatedAt = CreatedAt;
     }
 
+    /**
+     * Get 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceType 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceType 实例类型 1:原web相关类型 2:app端类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public RumInstanceInfo() {
     }
 
@@ -345,6 +373,9 @@ public class RumInstanceInfo extends AbstractModel{
         if (source.CreatedAt != null) {
             this.CreatedAt = new String(source.CreatedAt);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -364,6 +395,7 @@ public class RumInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataRetentionDays", this.DataRetentionDays);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

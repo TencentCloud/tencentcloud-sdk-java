@@ -4503,6 +4503,26 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（GenerateVpnConnectionDefaultHealthCheckIp）用于获取一对VPN通道健康检查地址。
+     * @param req GenerateVpnConnectionDefaultHealthCheckIpRequest
+     * @return GenerateVpnConnectionDefaultHealthCheckIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateVpnConnectionDefaultHealthCheckIpResponse GenerateVpnConnectionDefaultHealthCheckIp(GenerateVpnConnectionDefaultHealthCheckIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateVpnConnectionDefaultHealthCheckIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateVpnConnectionDefaultHealthCheckIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（GetCcnRegionBandwidthLimits）用于查询云联网相关地域带宽信息，其中预付费模式的云联网仅支持地域间限速，后付费模式的云联网支持地域间限速和地域出口限速。
      * @param req GetCcnRegionBandwidthLimitsRequest
      * @return GetCcnRegionBandwidthLimitsResponse

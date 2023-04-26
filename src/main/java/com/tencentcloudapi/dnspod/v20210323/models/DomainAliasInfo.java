@@ -37,6 +37,13 @@ public class DomainAliasInfo extends AbstractModel{
     private String DomainAlias;
 
     /**
+    * 别名状态：1-DNS不正确；2-正常；3-封禁。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 域名别名ID 
      * @return Id 域名别名ID
      */
@@ -68,6 +75,22 @@ public class DomainAliasInfo extends AbstractModel{
         this.DomainAlias = DomainAlias;
     }
 
+    /**
+     * Get 别名状态：1-DNS不正确；2-正常；3-封禁。 
+     * @return Status 别名状态：1-DNS不正确；2-正常；3-封禁。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 别名状态：1-DNS不正确；2-正常；3-封禁。
+     * @param Status 别名状态：1-DNS不正确；2-正常；3-封禁。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public DomainAliasInfo() {
     }
 
@@ -82,6 +105,9 @@ public class DomainAliasInfo extends AbstractModel{
         if (source.DomainAlias != null) {
             this.DomainAlias = new String(source.DomainAlias);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DomainAliasInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "DomainAlias", this.DomainAlias);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -43,7 +43,7 @@ public class CacheKey extends AbstractModel{
     private String IgnoreCase;
 
     /**
-    * CacheKey中包含请求参数。
+    * CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryString")
@@ -107,9 +107,9 @@ public class CacheKey extends AbstractModel{
     }
 
     /**
-     * Get CacheKey中包含请求参数。
+     * Get CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QueryString CacheKey中包含请求参数。
+     * @return QueryString CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QueryString getQueryString() {
@@ -117,9 +117,9 @@ public class CacheKey extends AbstractModel{
     }
 
     /**
-     * Set CacheKey中包含请求参数。
+     * Set CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QueryString CacheKey中包含请求参数。
+     * @param QueryString CacheKey 中包含请求参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryString(QueryString QueryString) {

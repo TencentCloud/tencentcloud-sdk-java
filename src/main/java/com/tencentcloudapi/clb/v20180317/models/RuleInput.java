@@ -66,7 +66,7 @@ public class RuleInput extends AbstractModel{
     private String Scheduler;
 
     /**
-    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+    * 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
     */
     @SerializedName("ForwardType")
     @Expose
@@ -229,16 +229,16 @@ public class RuleInput extends AbstractModel{
     }
 
     /**
-     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC 
-     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+     * Get 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。 
+     * @return ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
-     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC
+     * Set 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
+     * @param ForwardType 负载均衡与后端服务之间的转发协议，目前支持 HTTP/HTTPS/TRPC，TRPC暂未对外开放。
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
