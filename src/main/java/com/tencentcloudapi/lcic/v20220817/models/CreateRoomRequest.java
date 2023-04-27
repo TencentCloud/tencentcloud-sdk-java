@@ -156,6 +156,13 @@ video 纯视频
     private String GroupId;
 
     /**
+    * 打开学生麦克风/摄像头的授权开关
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -483,6 +490,22 @@ video 纯视频
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 打开学生麦克风/摄像头的授权开关 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set 打开学生麦克风/摄像头的授权开关
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -545,6 +568,9 @@ video 纯视频
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -569,6 +595,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

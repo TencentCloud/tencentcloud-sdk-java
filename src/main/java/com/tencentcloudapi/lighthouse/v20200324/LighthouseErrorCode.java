@@ -3,6 +3,9 @@ public enum LighthouseErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 该地域尚未开放，请选择其他地域。
+     AUTHFAILURE_INVALIDREGION("AuthFailure.InvalidRegion"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
@@ -33,6 +36,9 @@ public enum LighthouseErrorCode {
     // 查询流量包失败。
      FAILEDOPERATION_DESCRIBEINSTANCESTRAFFICPACKAGESFAILED("FailedOperation.DescribeInstancesTrafficPackagesFailed"),
      
+    // 查询资源返回了不符合要求内容。
+     FAILEDOPERATION_DESCRIBERESOURCESRETURNABLEERROR("FailedOperation.DescribeResourcesReturnableError"),
+     
     // 销毁资源失败，请稍后重新操作。
      FAILEDOPERATION_DESTROYRESOURCESFAILED("FailedOperation.DestroyResourcesFailed"),
      
@@ -44,6 +50,9 @@ public enum LighthouseErrorCode {
      
     // 对实例的操作失败。
      FAILEDOPERATION_INSTANCEOPERATIONFAILED("FailedOperation.InstanceOperationFailed"),
+     
+    // 命令无法找到。
+     FAILEDOPERATION_INVALIDCOMMANDNOTFOUND("FailedOperation.InvalidCommandNotFound"),
      
     // 退还资源失败。
      FAILEDOPERATION_ISOLATERESOURCESFAILED("FailedOperation.IsolateResourcesFailed"),
@@ -62,6 +71,9 @@ public enum LighthouseErrorCode {
      
     // 快照操作失败。
      FAILEDOPERATION_SNAPSHOTOPERATIONFAILED("FailedOperation.SnapshotOperationFailed"),
+     
+    // 调用计费网关服务失败，请稍后重新操作操作。
+     FAILEDOPERATION_TRADECALLBILLINGGATEWAYFAILED("FailedOperation.TradeCallBillingGatewayFailed"),
      
     // 计费询价失败。
      FAILEDOPERATION_TRADEGETPRICEFAILED("FailedOperation.TradeGetPriceFailed"),
@@ -126,6 +138,9 @@ public enum LighthouseErrorCode {
     // 产品未定义的套餐 ID。
      INVALIDPARAMETER_BUNDLEIDNOTFOUND("InvalidParameter.BundleIdNotFound"),
      
+    // 参数冲突。
+     INVALIDPARAMETER_CONFLICT("InvalidParameter.Conflict"),
+     
     // 参数非法，Filter 参数中的 Values 取值数量超过允许的最大数量。
      INVALIDPARAMETER_FILTERVALUELIMITEXCEEDED("InvalidParameter.FilterValueLimitExceeded"),
      
@@ -153,6 +168,9 @@ public enum LighthouseErrorCode {
     // 参数非法，Filter 参数中有不支持的 Name。
      INVALIDPARAMETER_INVALIDFILTERNOTSUPPORTEDNAME("InvalidParameter.InvalidFilterNotSupportedName"),
      
+    // 必须要指定一个要修改的属性。
+     INVALIDPARAMETER_MUSTSPECIFYONEATTRIBUTETOMODIFY("InvalidParameter.MustSpecifyOneAttributeToModify"),
+     
     // 参数非法，每次只能修改一个属性。
      INVALIDPARAMETER_ONLYALLOWMODIFYONEATTRIBUTE("InvalidParameter.OnlyAllowModifyOneAttribute"),
      
@@ -177,8 +195,14 @@ public enum LighthouseErrorCode {
     // 云联网实例ID格式非法。
      INVALIDPARAMETERVALUE_CCNIDMALFORMED("InvalidParameterValue.CcnIdMalformed"),
      
+    // 客户令牌长度超出限制。
+     INVALIDPARAMETERVALUE_CLIENTTOKENTOOLONG("InvalidParameterValue.ClientTokenTooLong"),
+     
     // 参数值非法，云硬盘备份点 ID 格式非法。
      INVALIDPARAMETERVALUE_DISKBACKUPIDMALFORMED("InvalidParameterValue.DiskBackupIdMalformed"),
+     
+    // 指定的云盘备份点名称不可大于最大长度。
+     INVALIDPARAMETERVALUE_DISKBACKUPNAMETOOLONG("InvalidParameterValue.DiskBackupNameTooLong"),
      
     // 磁盘名称长度超出限制。
      INVALIDPARAMETERVALUE_DISKNAMETOOLONG("InvalidParameterValue.DiskNameTooLong"),
@@ -303,6 +327,9 @@ public enum LighthouseErrorCode {
     // 实例挂载数据盘配额不足，无法挂载磁盘。
      LIMITEXCEEDED_ATTACHDATADISKQUOTALIMITEXCEEDED("LimitExceeded.AttachDataDiskQuotaLimitExceeded"),
      
+    // 配额不足，当前自定义镜像配额不允许创建新的自定义镜像。
+     LIMITEXCEEDED_BLUEPRINTQUOTALIMITEXCEEDED("LimitExceeded.BlueprintQuotaLimitExceeded"),
+     
     // 超过磁盘备份点配额限制。
      LIMITEXCEEDED_DISKBACKUPQUOTALIMITEXCEEDED("LimitExceeded.DiskBackupQuotaLimitExceeded"),
      
@@ -350,6 +377,9 @@ public enum LighthouseErrorCode {
      
     // 禁止对实例进行操作，实例最近一次的操作尚在进行中。
      OPERATIONDENIED_INSTANCEOPERATIONINPROGRESS("OperationDenied.InstanceOperationInProgress"),
+     
+    // 禁止创建快照。
+     OPERATIONDENIED_OPERATIONDENIEDCREATESNAPSHOT("OperationDenied.OperationDeniedCreateSnapshot"),
      
     // 使用存储型套餐的实例不支持创建快照。
      OPERATIONDENIED_OPERATIONDENIEDCREATESNAPSHOTFORSTORAGEBUNDLE("OperationDenied.OperationDeniedCreateSnapshotForStorageBundle"),

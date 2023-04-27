@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountQuotaResponse extends AbstractModel{
+public class DescribeUnitRulesV2Response extends AbstractModel{
 
     /**
-    * 用户appid
+    * 分页列表信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AppId")
+    @SerializedName("Result")
     @Expose
-    private Long AppId;
-
-    /**
-    * 配额数据
-    */
-    @SerializedName("AccountQuotaOverview")
-    @Expose
-    private AccountQuotaOverview AccountQuotaOverview;
+    private TsfPageUnitRuleV2 Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户appid 
-     * @return AppId 用户appid
+     * Get 分页列表信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 分页列表信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getAppId() {
-        return this.AppId;
+    public TsfPageUnitRuleV2 getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 用户appid
-     * @param AppId 用户appid
+     * Set 分页列表信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 分页列表信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
-    }
-
-    /**
-     * Get 配额数据 
-     * @return AccountQuotaOverview 配额数据
-     */
-    public AccountQuotaOverview getAccountQuotaOverview() {
-        return this.AccountQuotaOverview;
-    }
-
-    /**
-     * Set 配额数据
-     * @param AccountQuotaOverview 配额数据
-     */
-    public void setAccountQuotaOverview(AccountQuotaOverview AccountQuotaOverview) {
-        this.AccountQuotaOverview = AccountQuotaOverview;
+    public void setResult(TsfPageUnitRuleV2 Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,19 +73,16 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAccountQuotaResponse() {
+    public DescribeUnitRulesV2Response() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAccountQuotaResponse(DescribeAccountQuotaResponse source) {
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
-        }
-        if (source.AccountQuotaOverview != null) {
-            this.AccountQuotaOverview = new AccountQuotaOverview(source.AccountQuotaOverview);
+    public DescribeUnitRulesV2Response(DescribeUnitRulesV2Response source) {
+        if (source.Result != null) {
+            this.Result = new TsfPageUnitRuleV2(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +94,7 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamObj(map, prefix + "AccountQuotaOverview.", this.AccountQuotaOverview);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

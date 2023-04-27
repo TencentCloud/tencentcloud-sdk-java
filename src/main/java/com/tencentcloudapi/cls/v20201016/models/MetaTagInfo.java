@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceTagInfo extends AbstractModel{
+public class MetaTagInfo extends AbstractModel{
 
     /**
-    * 标签键。
+    * 元数据key
     */
-    @SerializedName("TagKey")
+    @SerializedName("Key")
     @Expose
-    private String TagKey;
+    private String Key;
 
     /**
-    * 标签值。
+    * 元数据value
     */
-    @SerializedName("TagValue")
+    @SerializedName("Value")
     @Expose
-    private String TagValue;
+    private String Value;
 
     /**
-     * Get 标签键。 
-     * @return TagKey 标签键。
+     * Get 元数据key 
+     * @return Key 元数据key
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public String getKey() {
+        return this.Key;
     }
 
     /**
-     * Set 标签键。
-     * @param TagKey 标签键。
+     * Set 元数据key
+     * @param Key 元数据key
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
+    public void setKey(String Key) {
+        this.Key = Key;
     }
 
     /**
-     * Get 标签值。 
-     * @return TagValue 标签值。
+     * Get 元数据value 
+     * @return Value 元数据value
      */
-    public String getTagValue() {
-        return this.TagValue;
+    public String getValue() {
+        return this.Value;
     }
 
     /**
-     * Set 标签值。
-     * @param TagValue 标签值。
+     * Set 元数据value
+     * @param Value 元数据value
      */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
+    public void setValue(String Value) {
+        this.Value = Value;
     }
 
-    public InstanceTagInfo() {
+    public MetaTagInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InstanceTagInfo(InstanceTagInfo source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
+    public MetaTagInfo(MetaTagInfo source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
         }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -89,8 +89,8 @@ public class InstanceTagInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "Key", this.Key);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

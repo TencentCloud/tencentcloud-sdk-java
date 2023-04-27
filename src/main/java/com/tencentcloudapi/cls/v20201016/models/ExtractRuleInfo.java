@@ -148,6 +148,28 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private String ParseProtocol;
 
     /**
+    * 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+    */
+    @SerializedName("MetadataType")
+    @Expose
+    private Long MetadataType;
+
+    /**
+    * 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PathRegex")
+    @Expose
+    private String PathRegex;
+
+    /**
+    * 用户自定义元数据信息，MetadataType为2时必填
+    */
+    @SerializedName("MetaTags")
+    @Expose
+    private MetaTagInfo [] MetaTags;
+
+    /**
      * Get 时间字段的key名字，time_key和time_format必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeKey 时间字段的key名字，time_key和time_format必须成对出现
@@ -467,6 +489,58 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
         this.ParseProtocol = ParseProtocol;
     }
 
+    /**
+     * Get 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径， 
+     * @return MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     */
+    public Long getMetadataType() {
+        return this.MetadataType;
+    }
+
+    /**
+     * Set 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     * @param MetadataType 元数据类型，0: 不使用元数据信息，1:使用机器组元数据，2:使用用户自定义元数据，3:使用采集配置路径，
+     */
+    public void setMetadataType(Long MetadataType) {
+        this.MetadataType = MetadataType;
+    }
+
+    /**
+     * Get 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PathRegex 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPathRegex() {
+        return this.PathRegex;
+    }
+
+    /**
+     * Set 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PathRegex 采集配置路径正则表达式，MetadataType为1时必填
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPathRegex(String PathRegex) {
+        this.PathRegex = PathRegex;
+    }
+
+    /**
+     * Get 用户自定义元数据信息，MetadataType为2时必填 
+     * @return MetaTags 用户自定义元数据信息，MetadataType为2时必填
+     */
+    public MetaTagInfo [] getMetaTags() {
+        return this.MetaTags;
+    }
+
+    /**
+     * Set 用户自定义元数据信息，MetadataType为2时必填
+     * @param MetaTags 用户自定义元数据信息，MetadataType为2时必填
+     */
+    public void setMetaTags(MetaTagInfo [] MetaTags) {
+        this.MetaTags = MetaTags;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -526,6 +600,18 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
         if (source.ParseProtocol != null) {
             this.ParseProtocol = new String(source.ParseProtocol);
         }
+        if (source.MetadataType != null) {
+            this.MetadataType = new Long(source.MetadataType);
+        }
+        if (source.PathRegex != null) {
+            this.PathRegex = new String(source.PathRegex);
+        }
+        if (source.MetaTags != null) {
+            this.MetaTags = new MetaTagInfo[source.MetaTags.length];
+            for (int i = 0; i < source.MetaTags.length; i++) {
+                this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
+            }
+        }
     }
 
 
@@ -548,6 +634,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
+        this.setParamSimple(map, prefix + "MetadataType", this.MetadataType);
+        this.setParamSimple(map, prefix + "PathRegex", this.PathRegex);
+        this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }
 }

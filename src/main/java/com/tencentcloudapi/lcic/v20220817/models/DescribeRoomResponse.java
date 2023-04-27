@@ -144,6 +144,13 @@ video 纯视频
     private String GroupId;
 
     /**
+    * 打开学生麦克风/摄像头的授权开关
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -455,6 +462,22 @@ video 纯视频
     }
 
     /**
+     * Get 打开学生麦克风/摄像头的授权开关 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set 打开学生麦克风/摄像头的授权开关
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -526,6 +549,9 @@ video 纯视频
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -551,6 +577,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

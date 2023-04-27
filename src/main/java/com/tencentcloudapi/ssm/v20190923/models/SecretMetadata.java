@@ -146,6 +146,30 @@ public class SecretMetadata extends AbstractModel{
     private Long TargetUin;
 
     /**
+    * 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RotationFrequency")
+    @Expose
+    private Long RotationFrequency;
+
+    /**
+    * 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceID")
+    @Expose
+    private String ResourceID;
+
+    /**
+    * 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RotationBeginTime")
+    @Expose
+    private String RotationBeginTime;
+
+    /**
      * Get 凭据名称 
      * @return SecretName 凭据名称
      */
@@ -445,6 +469,66 @@ public class SecretMetadata extends AbstractModel{
         this.TargetUin = TargetUin;
     }
 
+    /**
+     * Get 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRotationFrequency() {
+        return this.RotationFrequency;
+    }
+
+    /**
+     * Set 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRotationFrequency(Long RotationFrequency) {
+        this.RotationFrequency = RotationFrequency;
+    }
+
+    /**
+     * Get 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceID 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceID() {
+        return this.ResourceID;
+    }
+
+    /**
+     * Set 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceID 云产品凭据对应的云产品实例 ID 号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceID(String ResourceID) {
+        this.ResourceID = ResourceID;
+    }
+
+    /**
+     * Get 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RotationBeginTime 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRotationBeginTime() {
+        return this.RotationBeginTime;
+    }
+
+    /**
+     * Set 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RotationBeginTime 用户指定的轮转开始时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRotationBeginTime(String RotationBeginTime) {
+        this.RotationBeginTime = RotationBeginTime;
+    }
+
     public SecretMetadata() {
     }
 
@@ -504,6 +588,15 @@ public class SecretMetadata extends AbstractModel{
         if (source.TargetUin != null) {
             this.TargetUin = new Long(source.TargetUin);
         }
+        if (source.RotationFrequency != null) {
+            this.RotationFrequency = new Long(source.RotationFrequency);
+        }
+        if (source.ResourceID != null) {
+            this.ResourceID = new String(source.ResourceID);
+        }
+        if (source.RotationBeginTime != null) {
+            this.RotationBeginTime = new String(source.RotationBeginTime);
+        }
     }
 
 
@@ -527,6 +620,9 @@ public class SecretMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
+        this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+        this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
+        this.setParamSimple(map, prefix + "RotationBeginTime", this.RotationBeginTime);
 
     }
 }

@@ -79,7 +79,7 @@ public class CreateRecTaskRequest extends AbstractModel{
 
     /**
     * 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
+注：此功能结果仅供参考，请根据您的需要谨慎使用。
     */
     @SerializedName("SpeakerNumber")
     @Expose
@@ -353,9 +353,9 @@ public class CreateRecTaskRequest extends AbstractModel{
 
     /**
      * Get 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
-注：话者分离目前是beta版本，请根据您的需要谨慎使用 
+注：此功能结果仅供参考，请根据您的需要谨慎使用。 
      * @return SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
+注：此功能结果仅供参考，请根据您的需要谨慎使用。
      */
     public Long getSpeakerNumber() {
         return this.SpeakerNumber;
@@ -363,9 +363,9 @@ public class CreateRecTaskRequest extends AbstractModel{
 
     /**
      * Set 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
+注：此功能结果仅供参考，请根据您的需要谨慎使用。
      * @param SpeakerNumber 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
-注：话者分离目前是beta版本，请根据您的需要谨慎使用
+注：此功能结果仅供参考，请根据您的需要谨慎使用。
      */
     public void setSpeakerNumber(Long SpeakerNumber) {
         this.SpeakerNumber = SpeakerNumber;

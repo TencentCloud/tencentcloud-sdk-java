@@ -135,6 +135,13 @@ public class RoomInfo extends AbstractModel{
     private String GroupId;
 
     /**
+    * 打开学生麦克风/摄像头的授权开关
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -390,6 +397,22 @@ public class RoomInfo extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 打开学生麦克风/摄像头的授权开关 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set 打开学生麦克风/摄像头的授权开关
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public RoomInfo() {
     }
 
@@ -449,6 +472,9 @@ public class RoomInfo extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class RoomInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

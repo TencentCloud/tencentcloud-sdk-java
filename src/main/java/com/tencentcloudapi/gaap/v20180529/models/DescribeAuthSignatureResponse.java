@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.gaap.v20180529.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountQuotaResponse extends AbstractModel{
-
-    /**
-    * 用户appid
-    */
-    @SerializedName("AppId")
-    @Expose
-    private Long AppId;
-
-    /**
-    * 配额数据
-    */
-    @SerializedName("AccountQuotaOverview")
-    @Expose
-    private AccountQuotaOverview AccountQuotaOverview;
+public class DescribeAuthSignatureResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 用户appid 
-     * @return AppId 用户appid
-     */
-    public Long getAppId() {
-        return this.AppId;
-    }
-
-    /**
-     * Set 用户appid
-     * @param AppId 用户appid
-     */
-    public void setAppId(Long AppId) {
-        this.AppId = AppId;
-    }
-
-    /**
-     * Get 配额数据 
-     * @return AccountQuotaOverview 配额数据
-     */
-    public AccountQuotaOverview getAccountQuotaOverview() {
-        return this.AccountQuotaOverview;
-    }
-
-    /**
-     * Set 配额数据
-     * @param AccountQuotaOverview 配额数据
-     */
-    public void setAccountQuotaOverview(AccountQuotaOverview AccountQuotaOverview) {
-        this.AccountQuotaOverview = AccountQuotaOverview;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,20 +45,14 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAccountQuotaResponse() {
+    public DescribeAuthSignatureResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAccountQuotaResponse(DescribeAccountQuotaResponse source) {
-        if (source.AppId != null) {
-            this.AppId = new Long(source.AppId);
-        }
-        if (source.AccountQuotaOverview != null) {
-            this.AccountQuotaOverview = new AccountQuotaOverview(source.AccountQuotaOverview);
-        }
+    public DescribeAuthSignatureResponse(DescribeAuthSignatureResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -115,8 +63,6 @@ public class DescribeAccountQuotaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamObj(map, prefix + "AccountQuotaOverview.", this.AccountQuotaOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

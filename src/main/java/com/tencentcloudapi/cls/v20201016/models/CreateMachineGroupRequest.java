@@ -72,6 +72,13 @@ public class CreateMachineGroupRequest extends AbstractModel{
     private Boolean ServiceLogging;
 
     /**
+    * 机器组元数据信息列表
+    */
+    @SerializedName("MetaTags")
+    @Expose
+    private MetaTagInfo [] MetaTags;
+
+    /**
      * Get 机器组名字，不能重复 
      * @return GroupName 机器组名字，不能重复
      */
@@ -183,6 +190,22 @@ public class CreateMachineGroupRequest extends AbstractModel{
         this.ServiceLogging = ServiceLogging;
     }
 
+    /**
+     * Get 机器组元数据信息列表 
+     * @return MetaTags 机器组元数据信息列表
+     */
+    public MetaTagInfo [] getMetaTags() {
+        return this.MetaTags;
+    }
+
+    /**
+     * Set 机器组元数据信息列表
+     * @param MetaTags 机器组元数据信息列表
+     */
+    public void setMetaTags(MetaTagInfo [] MetaTags) {
+        this.MetaTags = MetaTags;
+    }
+
     public CreateMachineGroupRequest() {
     }
 
@@ -215,6 +238,12 @@ public class CreateMachineGroupRequest extends AbstractModel{
         if (source.ServiceLogging != null) {
             this.ServiceLogging = new Boolean(source.ServiceLogging);
         }
+        if (source.MetaTags != null) {
+            this.MetaTags = new MetaTagInfo[source.MetaTags.length];
+            for (int i = 0; i < source.MetaTags.length; i++) {
+                this.MetaTags[i] = new MetaTagInfo(source.MetaTags[i]);
+            }
+        }
     }
 
 
@@ -229,6 +258,7 @@ public class CreateMachineGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateStartTime", this.UpdateStartTime);
         this.setParamSimple(map, prefix + "UpdateEndTime", this.UpdateEndTime);
         this.setParamSimple(map, prefix + "ServiceLogging", this.ServiceLogging);
+        this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
 
     }
 }

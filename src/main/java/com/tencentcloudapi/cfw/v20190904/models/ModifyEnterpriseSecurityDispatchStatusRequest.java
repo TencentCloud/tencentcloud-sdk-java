@@ -23,23 +23,43 @@ import java.util.HashMap;
 public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel{
 
     /**
-    * 状态，0：立即下发，1：停止下发
+    * 0：打开立即下发开关；
+
+1：关闭立即下发开关；
+
+2：关闭立即下发开关下，触发开始下发
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 状态，0：立即下发，1：停止下发 
-     * @return Status 状态，0：立即下发，1：停止下发
+     * Get 0：打开立即下发开关；
+
+1：关闭立即下发开关；
+
+2：关闭立即下发开关下，触发开始下发 
+     * @return Status 0：打开立即下发开关；
+
+1：关闭立即下发开关；
+
+2：关闭立即下发开关下，触发开始下发
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态，0：立即下发，1：停止下发
-     * @param Status 状态，0：立即下发，1：停止下发
+     * Set 0：打开立即下发开关；
+
+1：关闭立即下发开关；
+
+2：关闭立即下发开关下，触发开始下发
+     * @param Status 0：打开立即下发开关；
+
+1：关闭立即下发开关；
+
+2：关闭立即下发开关下，触发开始下发
      */
     public void setStatus(Long Status) {
         this.Status = Status;

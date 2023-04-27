@@ -295,6 +295,22 @@ public class SparkJobInfo extends AbstractModel{
     private String SessionId;
 
     /**
+    * spark_emr_livy
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineClusterType")
+    @Expose
+    private String DataEngineClusterType;
+
+    /**
+    * Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineImageVersion")
+    @Expose
+    private String DataEngineImageVersion;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -938,6 +954,46 @@ public class SparkJobInfo extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get spark_emr_livy
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineClusterType spark_emr_livy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataEngineClusterType() {
+        return this.DataEngineClusterType;
+    }
+
+    /**
+     * Set spark_emr_livy
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineClusterType spark_emr_livy
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineClusterType(String DataEngineClusterType) {
+        this.DataEngineClusterType = DataEngineClusterType;
+    }
+
+    /**
+     * Get Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineImageVersion Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataEngineImageVersion() {
+        return this.DataEngineImageVersion;
+    }
+
+    /**
+     * Set Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineImageVersion Spark 3.2-EMR
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineImageVersion(String DataEngineImageVersion) {
+        this.DataEngineImageVersion = DataEngineImageVersion;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1057,6 +1113,12 @@ public class SparkJobInfo extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.DataEngineClusterType != null) {
+            this.DataEngineClusterType = new String(source.DataEngineClusterType);
+        }
+        if (source.DataEngineImageVersion != null) {
+            this.DataEngineImageVersion = new String(source.DataEngineImageVersion);
+        }
     }
 
 
@@ -1101,6 +1163,8 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
+        this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
 
     }
 }

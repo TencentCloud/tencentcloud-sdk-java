@@ -139,6 +139,13 @@ coteaching 双师
     private String GroupId;
 
     /**
+    * 打开学生麦克风/摄像头的授权开关
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get 房间ID。 
      * @return RoomId 房间ID。
      */
@@ -434,6 +441,22 @@ coteaching 双师
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 打开学生麦克风/摄像头的授权开关 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set 打开学生麦克风/摄像头的授权开关
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public ModifyRoomRequest() {
     }
 
@@ -487,6 +510,9 @@ coteaching 双师
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -508,6 +534,7 @@ coteaching 双师
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

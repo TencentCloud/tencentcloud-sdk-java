@@ -113,6 +113,22 @@ public class RoomItem extends AbstractModel{
     private String RecordUrl;
 
     /**
+    * 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxMicNumber")
+    @Expose
+    private Long MaxMicNumber;
+
+    /**
+    * 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableDirectControl")
+    @Expose
+    private Long EnableDirectControl;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -340,6 +356,46 @@ public class RoomItem extends AbstractModel{
         this.RecordUrl = RecordUrl;
     }
 
+    /**
+     * Get 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxMicNumber() {
+        return this.MaxMicNumber;
+    }
+
+    /**
+     * Set 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxMicNumber 最高房间内人数（包括老师），0表示不限制，默认为0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxMicNumber(Long MaxMicNumber) {
+        this.MaxMicNumber = MaxMicNumber;
+    }
+
+    /**
+     * Get 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableDirectControl() {
+        return this.EnableDirectControl;
+    }
+
+    /**
+     * Set 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关 
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableDirectControl(Long EnableDirectControl) {
+        this.EnableDirectControl = EnableDirectControl;
+    }
+
     public RoomItem() {
     }
 
@@ -381,6 +437,12 @@ public class RoomItem extends AbstractModel{
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
+        if (source.MaxMicNumber != null) {
+            this.MaxMicNumber = new Long(source.MaxMicNumber);
+        }
+        if (source.EnableDirectControl != null) {
+            this.EnableDirectControl = new Long(source.EnableDirectControl);
+        }
     }
 
 
@@ -399,6 +461,8 @@ public class RoomItem extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxRTCMember", this.MaxRTCMember);
         this.setParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        this.setParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
+        this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
 
     }
 }

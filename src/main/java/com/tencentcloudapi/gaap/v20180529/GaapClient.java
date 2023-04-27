@@ -801,6 +801,26 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *为了防止在下单、询价、后付费开通等过程中确保来源合法以及订单参数没有被篡改过，各个业务方使用下单、询价等场景需调用计费签名接口获取签名，获取签名的请求需带上签名以验证身份，本接口可以获取计费签名。
+     * @param req DescribeAuthSignatureRequest
+     * @return DescribeAuthSignatureResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthSignatureResponse DescribeAuthSignature(DescribeAuthSignatureRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuthSignatureResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuthSignature");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
      * @param req DescribeBlackHeaderRequest
      * @return DescribeBlackHeaderResponse

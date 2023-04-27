@@ -1199,7 +1199,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *获取spark应用列表
+     *获取spark应用列表。
      * @param req DescribeSparkAppJobsRequest
      * @return DescribeSparkAppJobsResponse
      * @throws TencentCloudSDKException

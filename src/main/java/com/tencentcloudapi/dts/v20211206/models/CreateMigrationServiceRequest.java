@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateMigrationServiceRequest extends AbstractModel{
 
     /**
-    * 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+    * 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
     */
     @SerializedName("SrcDatabaseType")
     @Expose
     private String SrcDatabaseType;
 
     /**
-    * 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+    * 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -79,32 +79,32 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
-     * Get 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 
-     * @return SrcDatabaseType 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * Get 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql 
+     * @return SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public String getSrcDatabaseType() {
         return this.SrcDatabaseType;
     }
 
     /**
-     * Set 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
-     * @param SrcDatabaseType 源实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * Set 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @param SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
     }
 
     /**
-     * Get 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb 
-     * @return DstDatabaseType 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * Get 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql 
+     * @return DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
-     * @param DstDatabaseType 目标实例数据库类型，mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb
+     * Set 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @param DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;

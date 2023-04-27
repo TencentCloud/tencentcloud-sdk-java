@@ -37,14 +37,14 @@ public class CreateRocketMQNamespaceRequest extends AbstractModel{
     private String NamespaceId;
 
     /**
-    * 未消费消息的保留时间，以毫秒为单位，60秒-15天
+    * 已废弃
     */
     @SerializedName("Ttl")
     @Expose
     private Long Ttl;
 
     /**
-    * 消息持久化后保留的时间，以毫秒为单位
+    * 已废弃
     */
     @SerializedName("RetentionTime")
     @Expose
@@ -90,32 +90,32 @@ public class CreateRocketMQNamespaceRequest extends AbstractModel{
     }
 
     /**
-     * Get 未消费消息的保留时间，以毫秒为单位，60秒-15天 
-     * @return Ttl 未消费消息的保留时间，以毫秒为单位，60秒-15天
+     * Get 已废弃 
+     * @return Ttl 已废弃
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set 未消费消息的保留时间，以毫秒为单位，60秒-15天
-     * @param Ttl 未消费消息的保留时间，以毫秒为单位，60秒-15天
+     * Set 已废弃
+     * @param Ttl 已废弃
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;
     }
 
     /**
-     * Get 消息持久化后保留的时间，以毫秒为单位 
-     * @return RetentionTime 消息持久化后保留的时间，以毫秒为单位
+     * Get 已废弃 
+     * @return RetentionTime 已废弃
      */
     public Long getRetentionTime() {
         return this.RetentionTime;
     }
 
     /**
-     * Set 消息持久化后保留的时间，以毫秒为单位
-     * @param RetentionTime 消息持久化后保留的时间，以毫秒为单位
+     * Set 已废弃
+     * @param RetentionTime 已废弃
      */
     public void setRetentionTime(Long RetentionTime) {
         this.RetentionTime = RetentionTime;

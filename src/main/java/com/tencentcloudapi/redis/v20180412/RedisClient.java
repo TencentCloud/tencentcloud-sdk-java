@@ -1319,7 +1319,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *模拟故障
+     *本接口（KillMasterGroup）模拟故障。
      * @param req KillMasterGroupRequest
      * @return KillMasterGroupResponse
      * @throws TencentCloudSDKException

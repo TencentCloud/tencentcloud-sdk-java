@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class InstanceNode extends AbstractModel{
 
     /**
-    * Id
+    * 实例 ID。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 节点详细信息
+    * 节点详细信息。
     */
     @SerializedName("InstanceClusterNode")
     @Expose
     private InstanceClusterNode [] InstanceClusterNode;
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get 实例 ID。 
+     * @return Id 实例 ID。
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set 实例 ID。
+     * @param Id 实例 ID。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 节点详细信息 
-     * @return InstanceClusterNode 节点详细信息
+     * Get 节点详细信息。 
+     * @return InstanceClusterNode 节点详细信息。
      */
     public InstanceClusterNode [] getInstanceClusterNode() {
         return this.InstanceClusterNode;
     }
 
     /**
-     * Set 节点详细信息
-     * @param InstanceClusterNode 节点详细信息
+     * Set 节点详细信息。
+     * @param InstanceClusterNode 节点详细信息。
      */
     public void setInstanceClusterNode(InstanceClusterNode [] InstanceClusterNode) {
         this.InstanceClusterNode = InstanceClusterNode;

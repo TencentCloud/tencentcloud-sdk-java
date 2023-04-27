@@ -45,7 +45,7 @@ public class DescribeTKEEdgeClustersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+    * 过滤条件,当前只支持按照ClusterName和云标签进行过滤
     */
     @SerializedName("Filters")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeTKEEdgeClustersRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件,当前只支持按照单个条件ClusterName进行过滤 
-     * @return Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Get 过滤条件,当前只支持按照ClusterName和云标签进行过滤 
+     * @return Filters 过滤条件,当前只支持按照ClusterName和云标签进行过滤
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件,当前只支持按照单个条件ClusterName进行过滤
-     * @param Filters 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+     * Set 过滤条件,当前只支持按照ClusterName和云标签进行过滤
+     * @param Filters 过滤条件,当前只支持按照ClusterName和云标签进行过滤
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

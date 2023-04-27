@@ -3041,6 +3041,26 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *查询单元化规则列表V2
+     * @param req DescribeUnitRulesV2Request
+     * @return DescribeUnitRulesV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnitRulesV2Response DescribeUnitRulesV2(DescribeUnitRulesV2Request req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUnitRulesV2Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUnitRulesV2Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUnitRulesV2");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
 COS相关文档请查阅：https://cloud.tencent.com/document/product/436
      * @param req DescribeUploadInfoRequest
