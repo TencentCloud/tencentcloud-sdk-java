@@ -58,6 +58,14 @@ public class BotQPS extends AbstractModel{
     private Long MaxBotQPS;
 
     /**
+    * 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 资源id 
      * @return ResourceIds 资源id
      */
@@ -137,6 +145,26 @@ public class BotQPS extends AbstractModel{
         this.MaxBotQPS = MaxBotQPS;
     }
 
+    /**
+     * Get 续费标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public BotQPS() {
     }
 
@@ -160,6 +188,9 @@ public class BotQPS extends AbstractModel{
         if (source.MaxBotQPS != null) {
             this.MaxBotQPS = new Long(source.MaxBotQPS);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class BotQPS extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "MaxBotQPS", this.MaxBotQPS);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

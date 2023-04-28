@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeDatabaseInfoListRequest extends AbstractModel{
 
     /**
+    * 过滤参数
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 如果是hive这里写rpc，如果是其他类型不传
     */
     @SerializedName("ConnectionType")
     @Expose
     private String ConnectionType;
+
+    /**
+     * Get 过滤参数 
+     * @return Filters 过滤参数
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数
+     * @param Filters 过滤参数
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
 
     /**
      * Get 如果是hive这里写rpc，如果是其他类型不传 
@@ -53,6 +76,12 @@ public class DescribeDatabaseInfoListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDatabaseInfoListRequest(DescribeDatabaseInfoListRequest source) {
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.ConnectionType != null) {
             this.ConnectionType = new String(source.ConnectionType);
         }
@@ -63,6 +92,7 @@ public class DescribeDatabaseInfoListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
 
     }

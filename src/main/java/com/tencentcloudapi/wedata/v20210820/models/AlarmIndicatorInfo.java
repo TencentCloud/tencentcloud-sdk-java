@@ -71,6 +71,14 @@ public class AlarmIndicatorInfo extends AbstractModel{
     private Long Operator;
 
     /**
+    * 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmIndicatorUnit")
+    @Expose
+    private String AlarmIndicatorUnit;
+
+    /**
      * Get 指标id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 指标id
@@ -190,6 +198,26 @@ public class AlarmIndicatorInfo extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmIndicatorUnit 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmIndicatorUnit() {
+        return this.AlarmIndicatorUnit;
+    }
+
+    /**
+     * Set 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmIndicatorUnit 告警指标阈值单位：ms(毫秒)、s(秒)、min(分钟)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmIndicatorUnit(String AlarmIndicatorUnit) {
+        this.AlarmIndicatorUnit = AlarmIndicatorUnit;
+    }
+
     public AlarmIndicatorInfo() {
     }
 
@@ -216,6 +244,9 @@ public class AlarmIndicatorInfo extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new Long(source.Operator);
         }
+        if (source.AlarmIndicatorUnit != null) {
+            this.AlarmIndicatorUnit = new String(source.AlarmIndicatorUnit);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class AlarmIndicatorInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "AlarmIndicatorUnit", this.AlarmIndicatorUnit);
 
     }
 }

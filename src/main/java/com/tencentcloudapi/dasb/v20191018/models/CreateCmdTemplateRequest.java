@@ -37,6 +37,15 @@ public class CreateCmdTemplateRequest extends AbstractModel{
     private String CmdList;
 
     /**
+    * 标识cmdlist字段前端是否为base64加密传值.
+0:表示非base64加密
+1:表示是base64加密
+    */
+    @SerializedName("Encoding")
+    @Expose
+    private Long Encoding;
+
+    /**
      * Get 模板名，最大长度32字符，不能包含空白字符 
      * @return Name 模板名，最大长度32字符，不能包含空白字符
      */
@@ -68,6 +77,30 @@ public class CreateCmdTemplateRequest extends AbstractModel{
         this.CmdList = CmdList;
     }
 
+    /**
+     * Get 标识cmdlist字段前端是否为base64加密传值.
+0:表示非base64加密
+1:表示是base64加密 
+     * @return Encoding 标识cmdlist字段前端是否为base64加密传值.
+0:表示非base64加密
+1:表示是base64加密
+     */
+    public Long getEncoding() {
+        return this.Encoding;
+    }
+
+    /**
+     * Set 标识cmdlist字段前端是否为base64加密传值.
+0:表示非base64加密
+1:表示是base64加密
+     * @param Encoding 标识cmdlist字段前端是否为base64加密传值.
+0:表示非base64加密
+1:表示是base64加密
+     */
+    public void setEncoding(Long Encoding) {
+        this.Encoding = Encoding;
+    }
+
     public CreateCmdTemplateRequest() {
     }
 
@@ -82,6 +115,9 @@ public class CreateCmdTemplateRequest extends AbstractModel{
         if (source.CmdList != null) {
             this.CmdList = new String(source.CmdList);
         }
+        if (source.Encoding != null) {
+            this.Encoding = new Long(source.Encoding);
+        }
     }
 
 
@@ -91,6 +127,7 @@ public class CreateCmdTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CmdList", this.CmdList);
+        this.setParamSimple(map, prefix + "Encoding", this.Encoding);
 
     }
 }

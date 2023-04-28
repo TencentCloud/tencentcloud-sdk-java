@@ -51,14 +51,14 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel{
     private Long RuleType;
 
     /**
-    * 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+    * 排序类型：desc降序，asc正序
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序类型：desc降序，asc正序
+    * 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
     */
     @SerializedName("By")
     @Expose
@@ -136,32 +136,32 @@ public class DescribeBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数 
-     * @return Order 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+     * Get 排序类型：desc降序，asc正序 
+     * @return Order 排序类型：desc降序，asc正序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
-     * @param Order 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+     * Set 排序类型：desc降序，asc正序
+     * @param Order 排序类型：desc降序，asc正序
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序类型：desc降序，asc正序 
-     * @return By 排序类型：desc降序，asc正序
+     * Get 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数 
+     * @return By 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序类型：desc降序，asc正序
-     * @param By 排序类型：desc降序，asc正序
+     * Set 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
+     * @param By 排序列：EndTime结束时间，StartTime开始时间，MatchTimes命中次数
      */
     public void setBy(String By) {
         this.By = By;

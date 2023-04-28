@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
 
     /**
-    * 无
+    * 要查看的实时任务的任务Id
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,30 @@ public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-     * Get 无 
-     * @return TaskId 无
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 结束时间
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+     * Get 要查看的实时任务的任务Id 
+     * @return TaskId 要查看的实时任务的任务Id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 无
-     * @param TaskId 无
+     * Set 要查看的实时任务的任务Id
+     * @param TaskId 要查看的实时任务的任务Id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -68,6 +82,38 @@ public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 
+     * @return EndTime 结束时间
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间
+     * @param EndTime 结束时间
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeRealTimeTaskMetricOverviewRequest() {
     }
 
@@ -82,6 +128,12 @@ public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class DescribeRealTimeTaskMetricOverviewRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

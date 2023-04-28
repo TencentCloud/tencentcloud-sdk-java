@@ -87,6 +87,14 @@ public class BotPkg extends AbstractModel{
     private String Type;
 
     /**
+    * 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 资源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceIds 资源id
@@ -246,6 +254,26 @@ public class BotPkg extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 续费标志	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public BotPkg() {
     }
 
@@ -278,6 +306,9 @@ public class BotPkg extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class BotPkg extends AbstractModel{
         this.setParamSimple(map, prefix + "InquireNum", this.InquireNum);
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

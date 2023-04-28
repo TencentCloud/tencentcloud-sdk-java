@@ -37,6 +37,14 @@ public class SearchCommandBySidRequest extends AbstractModel{
     private String Cmd;
 
     /**
+    * Cmd字段是前端传值是否进行base64.
+0:否，1：是
+    */
+    @SerializedName("Encoding")
+    @Expose
+    private Long Encoding;
+
+    /**
     * 偏移量
     */
     @SerializedName("Offset")
@@ -87,6 +95,26 @@ public class SearchCommandBySidRequest extends AbstractModel{
      */
     public void setCmd(String Cmd) {
         this.Cmd = Cmd;
+    }
+
+    /**
+     * Get Cmd字段是前端传值是否进行base64.
+0:否，1：是 
+     * @return Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public Long getEncoding() {
+        return this.Encoding;
+    }
+
+    /**
+     * Set Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     * @param Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public void setEncoding(Long Encoding) {
+        this.Encoding = Encoding;
     }
 
     /**
@@ -151,6 +179,9 @@ public class SearchCommandBySidRequest extends AbstractModel{
         if (source.Cmd != null) {
             this.Cmd = new String(source.Cmd);
         }
+        if (source.Encoding != null) {
+            this.Encoding = new Long(source.Encoding);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -172,6 +203,7 @@ public class SearchCommandBySidRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Sid", this.Sid);
         this.setParamSimple(map, prefix + "Cmd", this.Cmd);
+        this.setParamSimple(map, prefix + "Encoding", this.Encoding);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "AuditAction.", this.AuditAction);

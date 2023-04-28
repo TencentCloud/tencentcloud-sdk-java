@@ -30,6 +30,13 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel{
     private String Md5;
 
     /**
+    * 媒体文件的 Sha1 值。
+    */
+    @SerializedName("Sha1")
+    @Expose
+    private String Sha1;
+
+    /**
      * Get 媒体文件的 Md5 值。 
      * @return Md5 媒体文件的 Md5 值。
      */
@@ -45,6 +52,22 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel{
         this.Md5 = Md5;
     }
 
+    /**
+     * Get 媒体文件的 Sha1 值。 
+     * @return Sha1 媒体文件的 Sha1 值。
+     */
+    public String getSha1() {
+        return this.Sha1;
+    }
+
+    /**
+     * Set 媒体文件的 Sha1 值。
+     * @param Sha1 媒体文件的 Sha1 值。
+     */
+    public void setSha1(String Sha1) {
+        this.Sha1 = Sha1;
+    }
+
     public DescribeFileAttributesTaskOutput() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel{
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
+        if (source.Sha1 != null) {
+            this.Sha1 = new String(source.Sha1);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeFileAttributesTaskOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Md5", this.Md5);
+        this.setParamSimple(map, prefix + "Sha1", this.Sha1);
 
     }
 }

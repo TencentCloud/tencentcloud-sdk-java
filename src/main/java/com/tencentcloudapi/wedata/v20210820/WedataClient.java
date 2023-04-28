@@ -1937,6 +1937,26 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *任务运维列表组合条件查询
+     * @param req DescribeOperateTasksRequest
+     * @return DescribeOperateTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperateTasksResponse DescribeOperateTasks(DescribeOperateTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOperateTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOperateTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOperateTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询全量函数
      * @param req DescribeOrganizationalFunctionsRequest
      * @return DescribeOrganizationalFunctionsResponse

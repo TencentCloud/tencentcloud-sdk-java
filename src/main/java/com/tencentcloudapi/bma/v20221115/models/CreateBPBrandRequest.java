@@ -37,6 +37,13 @@ public class CreateBPBrandRequest extends AbstractModel{
     private String CompanyName;
 
     /**
+    * 品牌logo
+    */
+    @SerializedName("BrandLogo")
+    @Expose
+    private String BrandLogo;
+
+    /**
     * 联系电话
     */
     @SerializedName("Phone")
@@ -143,6 +150,22 @@ public class CreateBPBrandRequest extends AbstractModel{
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
+    }
+
+    /**
+     * Get 品牌logo 
+     * @return BrandLogo 品牌logo
+     */
+    public String getBrandLogo() {
+        return this.BrandLogo;
+    }
+
+    /**
+     * Set 品牌logo
+     * @param BrandLogo 品牌logo
+     */
+    public void setBrandLogo(String BrandLogo) {
+        this.BrandLogo = BrandLogo;
     }
 
     /**
@@ -335,6 +358,9 @@ public class CreateBPBrandRequest extends AbstractModel{
         if (source.CompanyName != null) {
             this.CompanyName = new String(source.CompanyName);
         }
+        if (source.BrandLogo != null) {
+            this.BrandLogo = new String(source.BrandLogo);
+        }
         if (source.Phone != null) {
             this.Phone = new String(source.Phone);
         }
@@ -401,6 +427,7 @@ public class CreateBPBrandRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BrandName", this.BrandName);
         this.setParamSimple(map, prefix + "CompanyName", this.CompanyName);
+        this.setParamSimple(map, prefix + "BrandLogo", this.BrandLogo);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "License", this.License);
         this.setParamSimple(map, prefix + "Authorization", this.Authorization);

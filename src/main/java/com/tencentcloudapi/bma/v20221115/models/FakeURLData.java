@@ -191,6 +191,14 @@ public class FakeURLData extends AbstractModel{
     private String Snapshot;
 
     /**
+    * 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccountStatus")
+    @Expose
+    private Long AccountStatus;
+
+    /**
      * Get 仿冒网址id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FakeURLId 仿冒网址id
@@ -610,6 +618,26 @@ public class FakeURLData extends AbstractModel{
         this.Snapshot = Snapshot;
     }
 
+    /**
+     * Get 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccountStatus 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAccountStatus() {
+        return this.AccountStatus;
+    }
+
+    /**
+     * Set 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccountStatus 账户资源状态：0-不可用 1-可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccountStatus(Long AccountStatus) {
+        this.AccountStatus = AccountStatus;
+    }
+
     public FakeURLData() {
     }
 
@@ -681,6 +709,9 @@ public class FakeURLData extends AbstractModel{
         if (source.Snapshot != null) {
             this.Snapshot = new String(source.Snapshot);
         }
+        if (source.AccountStatus != null) {
+            this.AccountStatus = new Long(source.AccountStatus);
+        }
     }
 
 
@@ -709,6 +740,7 @@ public class FakeURLData extends AbstractModel{
         this.setParamSimple(map, prefix + "InsertTime", this.InsertTime);
         this.setParamSimple(map, prefix + "CertificationStatus", this.CertificationStatus);
         this.setParamSimple(map, prefix + "Snapshot", this.Snapshot);
+        this.setParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
 
     }
 }

@@ -880,6 +880,86 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *本接口使用后量子密码算法密钥，解密密文，并得到明文数据。
+     * @param req PostQuantumCryptoDecryptRequest
+     * @return PostQuantumCryptoDecryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public PostQuantumCryptoDecryptResponse PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoDecryptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PostQuantumCryptoDecrypt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口使用后量子密码算法密钥，可加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作。
+     * @param req PostQuantumCryptoEncryptRequest
+     * @return PostQuantumCryptoEncryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public PostQuantumCryptoEncryptResponse PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoEncryptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PostQuantumCryptoEncrypt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用后量子密码算法签名验签密钥进行签名。
+     * @param req PostQuantumCryptoSignRequest
+     * @return PostQuantumCryptoSignResponse
+     * @throws TencentCloudSDKException
+     */
+    public PostQuantumCryptoSignResponse PostQuantumCryptoSign(PostQuantumCryptoSignRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoSignResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PostQuantumCryptoSign");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *使用后量子密码算法密钥对签名进行验证。
+     * @param req PostQuantumCryptoVerifyRequest
+     * @return PostQuantumCryptoVerifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoVerifyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PostQuantumCryptoVerify");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用指定CMK对密文重新加密。
      * @param req ReEncryptRequest
      * @return ReEncryptResponse

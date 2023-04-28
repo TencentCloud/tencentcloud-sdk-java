@@ -255,6 +255,14 @@ public class DataSourceInfo extends AbstractModel{
     private String BizParamsString;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifiedTime")
+    @Expose
+    private Long ModifiedTime;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -834,6 +842,26 @@ public class DataSourceInfo extends AbstractModel{
         this.BizParamsString = BizParamsString;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifiedTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModifiedTime() {
+        return this.ModifiedTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifiedTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifiedTime(Long ModifiedTime) {
+        this.ModifiedTime = ModifiedTime;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -929,6 +957,9 @@ public class DataSourceInfo extends AbstractModel{
         if (source.BizParamsString != null) {
             this.BizParamsString = new String(source.BizParamsString);
         }
+        if (source.ModifiedTime != null) {
+            this.ModifiedTime = new Long(source.ModifiedTime);
+        }
     }
 
 
@@ -965,6 +996,7 @@ public class DataSourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ParamsString", this.ParamsString);
         this.setParamSimple(map, prefix + "BizParamsString", this.BizParamsString);
+        this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
 
     }
 }

@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileUrlsResponse extends AbstractModel{
+public class PostQuantumCryptoSignResponse extends AbstractModel{
 
     /**
-    * 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+    * 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。
     */
-    @SerializedName("FileUrls")
+    @SerializedName("Signature")
     @Expose
-    private FileUrl [] FileUrls;
-
-    /**
-    * URL数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private String Signature;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeFileUrlsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。 
-     * @return FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+     * Get 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。 
+     * @return Signature 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。
      */
-    public FileUrl [] getFileUrls() {
-        return this.FileUrls;
+    public String getSignature() {
+        return this.Signature;
     }
 
     /**
-     * Set 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
-     * @param FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+     * Set 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。
+     * @param Signature 签名值，Base64编码。可使用 PostQuantumCryptoVerify接口对签名值进行验证。
      */
-    public void setFileUrls(FileUrl [] FileUrls) {
-        this.FileUrls = FileUrls;
-    }
-
-    /**
-     * Get URL数量 
-     * @return TotalCount URL数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set URL数量
-     * @param TotalCount URL数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setSignature(String Signature) {
+        this.Signature = Signature;
     }
 
     /**
@@ -96,22 +68,16 @@ public class DescribeFileUrlsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFileUrlsResponse() {
+    public PostQuantumCryptoSignResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFileUrlsResponse(DescribeFileUrlsResponse source) {
-        if (source.FileUrls != null) {
-            this.FileUrls = new FileUrl[source.FileUrls.length];
-            for (int i = 0; i < source.FileUrls.length; i++) {
-                this.FileUrls[i] = new FileUrl(source.FileUrls[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public PostQuantumCryptoSignResponse(PostQuantumCryptoSignResponse source) {
+        if (source.Signature != null) {
+            this.Signature = new String(source.Signature);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ public class DescribeFileUrlsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FileUrls.", this.FileUrls);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Signature", this.Signature);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

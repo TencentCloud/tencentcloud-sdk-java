@@ -172,6 +172,14 @@ FAILED:已失败
     private String FailReason;
 
     /**
+    * 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FundingAccountSubType")
+    @Expose
+    private String FundingAccountSubType;
+
+    /**
      * Get 收入类型
 LABOR:劳务所得
 OCCASION:偶然所得 
@@ -539,6 +547,26 @@ FAILED:已失败
         this.FailReason = FailReason;
     }
 
+    /**
+     * Get 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FundingAccountSubType 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFundingAccountSubType() {
+        return this.FundingAccountSubType;
+    }
+
+    /**
+     * Set 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FundingAccountSubType 资金账户字类型: WECHATPAY_ACCOUNT 微信零钱, BANK_ACCOUNT 银行卡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFundingAccountSubType(String FundingAccountSubType) {
+        this.FundingAccountSubType = FundingAccountSubType;
+    }
+
     public PaymentOrderResult() {
     }
 
@@ -604,6 +632,9 @@ FAILED:已失败
         if (source.FailReason != null) {
             this.FailReason = new String(source.FailReason);
         }
+        if (source.FundingAccountSubType != null) {
+            this.FundingAccountSubType = new String(source.FundingAccountSubType);
+        }
     }
 
 
@@ -630,6 +661,7 @@ FAILED:已失败
         this.setParamSimple(map, prefix + "AdditionalTaxSum", this.AdditionalTaxSum);
         this.setParamSimple(map, prefix + "AdditionalTaxItem", this.AdditionalTaxItem);
         this.setParamSimple(map, prefix + "FailReason", this.FailReason);
+        this.setParamSimple(map, prefix + "FundingAccountSubType", this.FundingAccountSubType);
 
     }
 }

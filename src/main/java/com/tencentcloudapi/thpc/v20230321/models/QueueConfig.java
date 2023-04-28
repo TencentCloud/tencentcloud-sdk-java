@@ -30,14 +30,14 @@ public class QueueConfig extends AbstractModel{
     private String QueueName;
 
     /**
-    * 队列中弹性节点数量最小值。取值范围0～200。
+    * 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * 队列中弹性节点数量最大值。取值范围0～200。
+    * 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
     */
     @SerializedName("MaxSize")
     @Expose
@@ -109,32 +109,32 @@ public class QueueConfig extends AbstractModel{
     }
 
     /**
-     * Get 队列中弹性节点数量最小值。取值范围0～200。 
-     * @return MinSize 队列中弹性节点数量最小值。取值范围0～200。
+     * Get 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。 
+     * @return MinSize 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set 队列中弹性节点数量最小值。取值范围0～200。
-     * @param MinSize 队列中弹性节点数量最小值。取值范围0～200。
+     * Set 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
+     * @param MinSize 队列中弹性节点数量最小值。默认值：0。取值范围：0～200。
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get 队列中弹性节点数量最大值。取值范围0～200。 
-     * @return MaxSize 队列中弹性节点数量最大值。取值范围0～200。
+     * Get 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。 
+     * @return MaxSize 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 队列中弹性节点数量最大值。取值范围0～200。
-     * @param MaxSize 队列中弹性节点数量最大值。取值范围0～200。
+     * Set 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
+     * @param MaxSize 队列中弹性节点数量最大值。默认值：10。取值范围：0～200。
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

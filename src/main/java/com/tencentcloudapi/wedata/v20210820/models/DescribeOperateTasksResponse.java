@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileUrlsResponse extends AbstractModel{
+public class DescribeOperateTasksResponse extends AbstractModel{
 
     /**
-    * 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+    * 任务列表信息
     */
-    @SerializedName("FileUrls")
+    @SerializedName("Data")
     @Expose
-    private FileUrl [] FileUrls;
-
-    /**
-    * URL数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private TaskInfoPage Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +37,19 @@ public class DescribeFileUrlsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。 
-     * @return FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+     * Get 任务列表信息 
+     * @return Data 任务列表信息
      */
-    public FileUrl [] getFileUrls() {
-        return this.FileUrls;
+    public TaskInfoPage getData() {
+        return this.Data;
     }
 
     /**
-     * Set 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
-     * @param FileUrls 文件URL信息；
-链接不是永久链接，有效期5分钟后链接失效。
+     * Set 任务列表信息
+     * @param Data 任务列表信息
      */
-    public void setFileUrls(FileUrl [] FileUrls) {
-        this.FileUrls = FileUrls;
-    }
-
-    /**
-     * Get URL数量 
-     * @return TotalCount URL数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set URL数量
-     * @param TotalCount URL数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setData(TaskInfoPage Data) {
+        this.Data = Data;
     }
 
     /**
@@ -96,22 +68,16 @@ public class DescribeFileUrlsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFileUrlsResponse() {
+    public DescribeOperateTasksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFileUrlsResponse(DescribeFileUrlsResponse source) {
-        if (source.FileUrls != null) {
-            this.FileUrls = new FileUrl[source.FileUrls.length];
-            for (int i = 0; i < source.FileUrls.length; i++) {
-                this.FileUrls[i] = new FileUrl(source.FileUrls[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeOperateTasksResponse(DescribeOperateTasksResponse source) {
+        if (source.Data != null) {
+            this.Data = new TaskInfoPage(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ public class DescribeFileUrlsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FileUrls.", this.FileUrls);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

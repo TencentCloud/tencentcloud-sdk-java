@@ -26,7 +26,8 @@ public class DescribePayTypeRequest extends AbstractModel{
     * 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
     */
     @SerializedName("Area")
     @Expose
@@ -40,14 +41,26 @@ overseas：境外计费方式查询
     private String Product;
 
     /**
+    * 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland 
+global：全球计费方式查询
+未填充时，默认为 mainland 
      * @return Area 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
      */
     public String getArea() {
         return this.Area;
@@ -57,11 +70,13 @@ overseas：境外计费方式查询
      * Set 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
      * @param Area 指定服务地域查询
 mainland：境内计费方式查询
 overseas：境外计费方式查询
-未填充时默认为 mainland
+global：全球计费方式查询
+未填充时，默认为 mainland
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -83,6 +98,34 @@ overseas：境外计费方式查询
         this.Product = Product;
     }
 
+    /**
+     * Get 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux 
+     * @return Type 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+     * @param Type 指定资源包查询
+flux：流量包
+https：HTTPS请求包
+未填充时，默认为 flux
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribePayTypeRequest() {
     }
 
@@ -97,6 +140,9 @@ overseas：境外计费方式查询
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -106,6 +152,7 @@ overseas：境外计费方式查询
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

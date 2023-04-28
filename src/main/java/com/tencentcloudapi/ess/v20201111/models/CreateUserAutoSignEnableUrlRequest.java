@@ -52,7 +52,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private String UrlType;
 
     /**
-    * 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+    * 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
     */
     @SerializedName("NotifyType")
     @Expose
@@ -134,16 +134,16 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     }
 
     /**
-     * Get 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。 
-     * @return NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+     * Get 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。 
+     * @return NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
-     * @param NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短息通知。
+     * Set 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+     * @param NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

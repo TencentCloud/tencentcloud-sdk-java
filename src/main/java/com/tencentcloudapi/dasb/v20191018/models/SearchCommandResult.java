@@ -100,6 +100,70 @@ public class SearchCommandResult extends AbstractModel{
     private Long TimeOffset;
 
     /**
+    * 账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Account")
+    @Expose
+    private String Account;
+
+    /**
+    * source ip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FromIp")
+    @Expose
+    private String FromIp;
+
+    /**
+    * 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessTime")
+    @Expose
+    private String SessTime;
+
+    /**
+    * 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfirmTime")
+    @Expose
+    private String ConfirmTime;
+
+    /**
+    * 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserDepartmentId")
+    @Expose
+    private String UserDepartmentId;
+
+    /**
+    * 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserDepartmentName")
+    @Expose
+    private String UserDepartmentName;
+
+    /**
+    * 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceDepartmentId")
+    @Expose
+    private String DeviceDepartmentId;
+
+    /**
+    * 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceDepartmentName")
+    @Expose
+    private String DeviceDepartmentName;
+
+    /**
      * Get 命令输入的时间 
      * @return Time 命令输入的时间
      */
@@ -275,6 +339,166 @@ public class SearchCommandResult extends AbstractModel{
         this.TimeOffset = TimeOffset;
     }
 
+    /**
+     * Get 账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Account 账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccount() {
+        return this.Account;
+    }
+
+    /**
+     * Set 账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Account 账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccount(String Account) {
+        this.Account = Account;
+    }
+
+    /**
+     * Get source ip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FromIp source ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFromIp() {
+        return this.FromIp;
+    }
+
+    /**
+     * Set source ip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FromIp source ip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFromIp(String FromIp) {
+        this.FromIp = FromIp;
+    }
+
+    /**
+     * Get 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessTime 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessTime() {
+        return this.SessTime;
+    }
+
+    /**
+     * Set 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessTime 该命令所属会话的会话开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessTime(String SessTime) {
+        this.SessTime = SessTime;
+    }
+
+    /**
+     * Get 复核时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfirmTime 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfirmTime() {
+        return this.ConfirmTime;
+    }
+
+    /**
+     * Set 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfirmTime 复核时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfirmTime(String ConfirmTime) {
+        this.ConfirmTime = ConfirmTime;
+    }
+
+    /**
+     * Get 部门id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserDepartmentId 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserDepartmentId() {
+        return this.UserDepartmentId;
+    }
+
+    /**
+     * Set 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserDepartmentId 部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserDepartmentId(String UserDepartmentId) {
+        this.UserDepartmentId = UserDepartmentId;
+    }
+
+    /**
+     * Get 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserDepartmentName 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserDepartmentName() {
+        return this.UserDepartmentName;
+    }
+
+    /**
+     * Set 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserDepartmentName 用户部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserDepartmentName(String UserDepartmentName) {
+        this.UserDepartmentName = UserDepartmentName;
+    }
+
+    /**
+     * Get 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceDepartmentId 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceDepartmentId() {
+        return this.DeviceDepartmentId;
+    }
+
+    /**
+     * Set 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceDepartmentId 设备部门id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceDepartmentId(String DeviceDepartmentId) {
+        this.DeviceDepartmentId = DeviceDepartmentId;
+    }
+
+    /**
+     * Get 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceDepartmentName 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceDepartmentName() {
+        return this.DeviceDepartmentName;
+    }
+
+    /**
+     * Set 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceDepartmentName 设备部门名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceDepartmentName(String DeviceDepartmentName) {
+        this.DeviceDepartmentName = DeviceDepartmentName;
+    }
+
     public SearchCommandResult() {
     }
 
@@ -316,6 +540,30 @@ public class SearchCommandResult extends AbstractModel{
         if (source.TimeOffset != null) {
             this.TimeOffset = new Long(source.TimeOffset);
         }
+        if (source.Account != null) {
+            this.Account = new String(source.Account);
+        }
+        if (source.FromIp != null) {
+            this.FromIp = new String(source.FromIp);
+        }
+        if (source.SessTime != null) {
+            this.SessTime = new String(source.SessTime);
+        }
+        if (source.ConfirmTime != null) {
+            this.ConfirmTime = new String(source.ConfirmTime);
+        }
+        if (source.UserDepartmentId != null) {
+            this.UserDepartmentId = new String(source.UserDepartmentId);
+        }
+        if (source.UserDepartmentName != null) {
+            this.UserDepartmentName = new String(source.UserDepartmentName);
+        }
+        if (source.DeviceDepartmentId != null) {
+            this.DeviceDepartmentId = new String(source.DeviceDepartmentId);
+        }
+        if (source.DeviceDepartmentName != null) {
+            this.DeviceDepartmentName = new String(source.DeviceDepartmentName);
+        }
     }
 
 
@@ -334,6 +582,14 @@ public class SearchCommandResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Sid", this.Sid);
         this.setParamSimple(map, prefix + "TimeOffset", this.TimeOffset);
+        this.setParamSimple(map, prefix + "Account", this.Account);
+        this.setParamSimple(map, prefix + "FromIp", this.FromIp);
+        this.setParamSimple(map, prefix + "SessTime", this.SessTime);
+        this.setParamSimple(map, prefix + "ConfirmTime", this.ConfirmTime);
+        this.setParamSimple(map, prefix + "UserDepartmentId", this.UserDepartmentId);
+        this.setParamSimple(map, prefix + "UserDepartmentName", this.UserDepartmentName);
+        this.setParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
+        this.setParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
 
     }
 }

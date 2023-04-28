@@ -79,6 +79,14 @@ public class FraudPkg extends AbstractModel{
     private Long UsedNum;
 
     /**
+    * 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 资源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResourceIds 资源id
@@ -218,6 +226,26 @@ public class FraudPkg extends AbstractModel{
         this.UsedNum = UsedNum;
     }
 
+    /**
+     * Get 续费标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public FraudPkg() {
     }
 
@@ -247,6 +275,9 @@ public class FraudPkg extends AbstractModel{
         if (source.UsedNum != null) {
             this.UsedNum = new Long(source.UsedNum);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class FraudPkg extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "InquireNum", this.InquireNum);
         this.setParamSimple(map, prefix + "UsedNum", this.UsedNum);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

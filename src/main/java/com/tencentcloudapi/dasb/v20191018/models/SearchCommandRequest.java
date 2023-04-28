@@ -86,6 +86,14 @@ public class SearchCommandRequest extends AbstractModel{
     private String Cmd;
 
     /**
+    * Cmd字段是前端传值是否进行base64.
+0:否，1：是
+    */
+    @SerializedName("Encoding")
+    @Expose
+    private Long Encoding;
+
+    /**
     * 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
     */
     @SerializedName("AuditAction")
@@ -251,6 +259,26 @@ public class SearchCommandRequest extends AbstractModel{
     }
 
     /**
+     * Get Cmd字段是前端传值是否进行base64.
+0:否，1：是 
+     * @return Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public Long getEncoding() {
+        return this.Encoding;
+    }
+
+    /**
+     * Set Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     * @param Encoding Cmd字段是前端传值是否进行base64.
+0:否，1：是
+     */
+    public void setEncoding(Long Encoding) {
+        this.Encoding = Encoding;
+    }
+
+    /**
      * Get 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断 
      * @return AuditAction 根据拦截状态进行过滤：1 - 已执行，2 - 被阻断
      */
@@ -333,6 +361,9 @@ public class SearchCommandRequest extends AbstractModel{
         if (source.Cmd != null) {
             this.Cmd = new String(source.Cmd);
         }
+        if (source.Encoding != null) {
+            this.Encoding = new Long(source.Encoding);
+        }
         if (source.AuditAction != null) {
             this.AuditAction = new Long[source.AuditAction.length];
             for (int i = 0; i < source.AuditAction.length; i++) {
@@ -361,6 +392,7 @@ public class SearchCommandRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
         this.setParamSimple(map, prefix + "Cmd", this.Cmd);
+        this.setParamSimple(map, prefix + "Encoding", this.Encoding);
         this.setParamArraySimple(map, prefix + "AuditAction.", this.AuditAction);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

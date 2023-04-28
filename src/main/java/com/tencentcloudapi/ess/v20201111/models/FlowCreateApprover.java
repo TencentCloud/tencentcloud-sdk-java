@@ -92,14 +92,14 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String NotifyType;
 
     /**
-    * 签署前置条件：是否需要阅读全文，默认为不需要
+    * 合同强制需要阅读全文，无需传此参数
     */
     @SerializedName("IsFullText")
     @Expose
     private Boolean IsFullText;
 
     /**
-    * 签署前置条件：阅读时长限制，单位秒，默认为不需要
+    * 合同的强制预览时间：3~300s，未指定则按合同页数计算
     */
     @SerializedName("PreReadTime")
     @Expose
@@ -316,32 +316,32 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署前置条件：是否需要阅读全文，默认为不需要 
-     * @return IsFullText 签署前置条件：是否需要阅读全文，默认为不需要
+     * Get 合同强制需要阅读全文，无需传此参数 
+     * @return IsFullText 合同强制需要阅读全文，无需传此参数
      */
     public Boolean getIsFullText() {
         return this.IsFullText;
     }
 
     /**
-     * Set 签署前置条件：是否需要阅读全文，默认为不需要
-     * @param IsFullText 签署前置条件：是否需要阅读全文，默认为不需要
+     * Set 合同强制需要阅读全文，无需传此参数
+     * @param IsFullText 合同强制需要阅读全文，无需传此参数
      */
     public void setIsFullText(Boolean IsFullText) {
         this.IsFullText = IsFullText;
     }
 
     /**
-     * Get 签署前置条件：阅读时长限制，单位秒，默认为不需要 
-     * @return PreReadTime 签署前置条件：阅读时长限制，单位秒，默认为不需要
+     * Get 合同的强制预览时间：3~300s，未指定则按合同页数计算 
+     * @return PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      */
     public Long getPreReadTime() {
         return this.PreReadTime;
     }
 
     /**
-     * Set 签署前置条件：阅读时长限制，单位秒，默认为不需要
-     * @param PreReadTime 签署前置条件：阅读时长限制，单位秒，默认为不需要
+     * Set 合同的强制预览时间：3~300s，未指定则按合同页数计算
+     * @param PreReadTime 合同的强制预览时间：3~300s，未指定则按合同页数计算
      */
     public void setPreReadTime(Long PreReadTime) {
         this.PreReadTime = PreReadTime;

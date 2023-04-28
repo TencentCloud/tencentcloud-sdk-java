@@ -163,6 +163,13 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
     private Long AddDeleteFiles;
 
     /**
+    * 下游节点数据源ID
+    */
+    @SerializedName("TargetDatasourceId")
+    @Expose
+    private String TargetDatasourceId;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -482,6 +489,22 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.AddDeleteFiles = AddDeleteFiles;
     }
 
+    /**
+     * Get 下游节点数据源ID 
+     * @return TargetDatasourceId 下游节点数据源ID
+     */
+    public String getTargetDatasourceId() {
+        return this.TargetDatasourceId;
+    }
+
+    /**
+     * Set 下游节点数据源ID
+     * @param TargetDatasourceId 下游节点数据源ID
+     */
+    public void setTargetDatasourceId(String TargetDatasourceId) {
+        this.TargetDatasourceId = TargetDatasourceId;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -559,6 +582,9 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         if (source.AddDeleteFiles != null) {
             this.AddDeleteFiles = new Long(source.AddDeleteFiles);
         }
+        if (source.TargetDatasourceId != null) {
+            this.TargetDatasourceId = new String(source.TargetDatasourceId);
+        }
     }
 
 
@@ -586,6 +612,7 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AddEqualityDeletes", this.AddEqualityDeletes);
         this.setParamSimple(map, prefix + "AddPositionDeletes", this.AddPositionDeletes);
         this.setParamSimple(map, prefix + "AddDeleteFiles", this.AddDeleteFiles);
+        this.setParamSimple(map, prefix + "TargetDatasourceId", this.TargetDatasourceId);
 
     }
 }

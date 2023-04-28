@@ -51,6 +51,14 @@ public class SearchSessionCommandRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Cmd字段前端是否做base64加密
+0：否，1：是
+    */
+    @SerializedName("Encoding")
+    @Expose
+    private Long Encoding;
+
+    /**
     * 结束时间
     */
     @SerializedName("EndTime")
@@ -122,6 +130,26 @@ public class SearchSessionCommandRequest extends AbstractModel{
     }
 
     /**
+     * Get Cmd字段前端是否做base64加密
+0：否，1：是 
+     * @return Encoding Cmd字段前端是否做base64加密
+0：否，1：是
+     */
+    public Long getEncoding() {
+        return this.Encoding;
+    }
+
+    /**
+     * Set Cmd字段前端是否做base64加密
+0：否，1：是
+     * @param Encoding Cmd字段前端是否做base64加密
+0：否，1：是
+     */
+    public void setEncoding(Long Encoding) {
+        this.Encoding = Encoding;
+    }
+
+    /**
      * Get 结束时间 
      * @return EndTime 结束时间
      */
@@ -157,6 +185,9 @@ public class SearchSessionCommandRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Encoding != null) {
+            this.Encoding = new Long(source.Encoding);
+        }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
@@ -171,6 +202,7 @@ public class SearchSessionCommandRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Encoding", this.Encoding);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }

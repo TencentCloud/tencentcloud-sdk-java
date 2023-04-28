@@ -171,11 +171,17 @@ public class Zone extends AbstractModel{
     * 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFake")
     @Expose
     private Long IsFake;
+
+    /**
+    * 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+    */
+    @SerializedName("LockStatus")
+    @Expose
+    private String LockStatus;
 
     /**
      * Get 站点ID。 
@@ -544,12 +550,10 @@ public class Zone extends AbstractModel{
     /**
      * Get 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
-<li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li> 1：伪站点。</li> 
      * @return IsFake 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsFake() {
         return this.IsFake;
@@ -559,14 +563,28 @@ public class Zone extends AbstractModel{
      * Set 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFake 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFake(Long IsFake) {
         this.IsFake = IsFake;
+    }
+
+    /**
+     * Get 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li> 
+     * @return LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     */
+    public String getLockStatus() {
+        return this.LockStatus;
+    }
+
+    /**
+     * Set 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     * @param LockStatus 锁定状态，取值有：<li> enable：正常，允许进行修改操作；</li><li> disable：锁定中，不允许进行修改操作。</li>
+     */
+    public void setLockStatus(String LockStatus) {
+        this.LockStatus = LockStatus;
     }
 
     public Zone() {
@@ -649,6 +667,9 @@ public class Zone extends AbstractModel{
         if (source.IsFake != null) {
             this.IsFake = new Long(source.IsFake);
         }
+        if (source.LockStatus != null) {
+            this.LockStatus = new String(source.LockStatus);
+        }
     }
 
 
@@ -675,6 +696,7 @@ public class Zone extends AbstractModel{
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
         this.setParamSimple(map, prefix + "IsFake", this.IsFake);
+        this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
 
     }
 }

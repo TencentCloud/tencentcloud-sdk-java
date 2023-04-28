@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class WafThreatenIntelligenceDetails extends AbstractModel{
 
     /**
-    * 封禁模组启用状态
-    */
-    @SerializedName("DefenseStatus")
-    @Expose
-    private Long DefenseStatus;
-
-    /**
     * 封禁属性标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -38,27 +31,18 @@ public class WafThreatenIntelligenceDetails extends AbstractModel{
     private String [] Tags;
 
     /**
+    * 封禁模组启用状态
+    */
+    @SerializedName("DefenseStatus")
+    @Expose
+    private Long DefenseStatus;
+
+    /**
     * 最后更新时间
     */
     @SerializedName("LastUpdateTime")
     @Expose
     private String LastUpdateTime;
-
-    /**
-     * Get 封禁模组启用状态 
-     * @return DefenseStatus 封禁模组启用状态
-     */
-    public Long getDefenseStatus() {
-        return this.DefenseStatus;
-    }
-
-    /**
-     * Set 封禁模组启用状态
-     * @param DefenseStatus 封禁模组启用状态
-     */
-    public void setDefenseStatus(Long DefenseStatus) {
-        this.DefenseStatus = DefenseStatus;
-    }
 
     /**
      * Get 封禁属性标签
@@ -78,6 +62,22 @@ public class WafThreatenIntelligenceDetails extends AbstractModel{
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get 封禁模组启用状态 
+     * @return DefenseStatus 封禁模组启用状态
+     */
+    public Long getDefenseStatus() {
+        return this.DefenseStatus;
+    }
+
+    /**
+     * Set 封禁模组启用状态
+     * @param DefenseStatus 封禁模组启用状态
+     */
+    public void setDefenseStatus(Long DefenseStatus) {
+        this.DefenseStatus = DefenseStatus;
     }
 
     /**
@@ -104,14 +104,14 @@ public class WafThreatenIntelligenceDetails extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public WafThreatenIntelligenceDetails(WafThreatenIntelligenceDetails source) {
-        if (source.DefenseStatus != null) {
-            this.DefenseStatus = new Long(source.DefenseStatus);
-        }
         if (source.Tags != null) {
             this.Tags = new String[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new String(source.Tags[i]);
             }
+        }
+        if (source.DefenseStatus != null) {
+            this.DefenseStatus = new Long(source.DefenseStatus);
         }
         if (source.LastUpdateTime != null) {
             this.LastUpdateTime = new String(source.LastUpdateTime);
@@ -123,8 +123,8 @@ public class WafThreatenIntelligenceDetails extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DefenseStatus", this.DefenseStatus);
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
 
     }

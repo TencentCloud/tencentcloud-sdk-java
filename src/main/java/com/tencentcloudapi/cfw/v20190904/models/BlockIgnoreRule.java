@@ -143,6 +143,14 @@ public class BlockIgnoreRule extends AbstractModel{
     private String Country;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get 域名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Domain 域名
@@ -442,6 +450,26 @@ public class BlockIgnoreRule extends AbstractModel{
         this.Country = Country;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Comment 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Comment 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
     public BlockIgnoreRule() {
     }
 
@@ -495,6 +523,9 @@ public class BlockIgnoreRule extends AbstractModel{
         if (source.Country != null) {
             this.Country = new String(source.Country);
         }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
     }
 
 
@@ -517,6 +548,7 @@ public class BlockIgnoreRule extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqueId", this.UniqueId);
         this.setParamSimple(map, prefix + "MatchTimes", this.MatchTimes);
         this.setParamSimple(map, prefix + "Country", this.Country);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }
