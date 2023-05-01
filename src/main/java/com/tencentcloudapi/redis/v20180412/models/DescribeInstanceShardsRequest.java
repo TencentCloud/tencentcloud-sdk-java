@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class DescribeInstanceShardsRequest extends AbstractModel{
 
     /**
-    * 实例ID
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 是否过滤掉从节信息
+    * 是否过滤掉从节信息。
+- true；过滤从节点。
+- false：不过滤。
     */
     @SerializedName("FilterSlave")
     @Expose
     private Boolean FilterSlave;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 是否过滤掉从节信息 
-     * @return FilterSlave 是否过滤掉从节信息
+     * Get 是否过滤掉从节信息。
+- true；过滤从节点。
+- false：不过滤。 
+     * @return FilterSlave 是否过滤掉从节信息。
+- true；过滤从节点。
+- false：不过滤。
      */
     public Boolean getFilterSlave() {
         return this.FilterSlave;
     }
 
     /**
-     * Set 是否过滤掉从节信息
-     * @param FilterSlave 是否过滤掉从节信息
+     * Set 是否过滤掉从节信息。
+- true；过滤从节点。
+- false：不过滤。
+     * @param FilterSlave 是否过滤掉从节信息。
+- true；过滤从节点。
+- false：不过滤。
      */
     public void setFilterSlave(Boolean FilterSlave) {
         this.FilterSlave = FilterSlave;

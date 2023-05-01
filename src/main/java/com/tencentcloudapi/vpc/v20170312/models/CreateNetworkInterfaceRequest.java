@@ -58,6 +58,13 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     private Long SecondaryPrivateIpAddressCount;
 
     /**
+    * IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
     * 指定绑定的安全组，例如：['sg-1dd51d']。
     */
     @SerializedName("SecurityGroupIds")
@@ -166,6 +173,22 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
+     * Get IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。 
+     * @return QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
+    /**
      * Get 指定绑定的安全组，例如：['sg-1dd51d']。 
      * @return SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
      */
@@ -252,6 +275,9 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
         if (source.SecondaryPrivateIpAddressCount != null) {
             this.SecondaryPrivateIpAddressCount = new Long(source.SecondaryPrivateIpAddressCount);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
         if (source.SecurityGroupIds != null) {
             this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
             for (int i = 0; i < source.SecurityGroupIds.length; i++) {
@@ -285,6 +311,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

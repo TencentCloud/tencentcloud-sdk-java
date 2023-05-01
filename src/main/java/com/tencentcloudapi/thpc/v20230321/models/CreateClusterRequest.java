@@ -161,6 +161,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private String AutoScalingType;
 
     /**
+    * 节点初始化脚本信息列表。
+    */
+    @SerializedName("InitNodeScripts")
+    @Expose
+    private NodeScript [] InitNodeScripts;
+
+    /**
      * Get 集群中实例所在的位置。 
      * @return Placement 集群中实例所在的位置。
      */
@@ -484,6 +491,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.AutoScalingType = AutoScalingType;
     }
 
+    /**
+     * Get 节点初始化脚本信息列表。 
+     * @return InitNodeScripts 节点初始化脚本信息列表。
+     */
+    public NodeScript [] getInitNodeScripts() {
+        return this.InitNodeScripts;
+    }
+
+    /**
+     * Set 节点初始化脚本信息列表。
+     * @param InitNodeScripts 节点初始化脚本信息列表。
+     */
+    public void setInitNodeScripts(NodeScript [] InitNodeScripts) {
+        this.InitNodeScripts = InitNodeScripts;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -555,6 +578,12 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.AutoScalingType != null) {
             this.AutoScalingType = new String(source.AutoScalingType);
         }
+        if (source.InitNodeScripts != null) {
+            this.InitNodeScripts = new NodeScript[source.InitNodeScripts.length];
+            for (int i = 0; i < source.InitNodeScripts.length; i++) {
+                this.InitNodeScripts[i] = new NodeScript(source.InitNodeScripts[i]);
+            }
+        }
     }
 
 
@@ -581,6 +610,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
+        this.setParamArrayObj(map, prefix + "InitNodeScripts.", this.InitNodeScripts);
 
     }
 }

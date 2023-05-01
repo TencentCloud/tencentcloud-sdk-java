@@ -76,6 +76,13 @@ AVAILABLE：可用的
     private String State;
 
     /**
+    * IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * Get 内网IP地址。 
      * @return PrivateIpAddress 内网IP地址。
      */
@@ -203,6 +210,22 @@ AVAILABLE：可用的
         this.State = State;
     }
 
+    /**
+     * Get IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。 
+     * @return QosLevel IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param QosLevel IP服务质量等级，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
     public PrivateIpAddressSpecification() {
     }
 
@@ -232,6 +255,9 @@ AVAILABLE：可用的
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -246,6 +272,7 @@ AVAILABLE：可用的
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

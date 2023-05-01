@@ -44,6 +44,13 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
     private Long SecondaryPrivateIpAddressCount;
 
     /**
+    * IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
      * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
      */
@@ -91,6 +98,22 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
     }
 
+    /**
+     * Get IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。 
+     * @return QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     * @param QosLevel IP服务质量等级，和SecondaryPrivateIpAddressCount配合使用，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
     public AssignPrivateIpAddressesRequest() {
     }
 
@@ -111,6 +134,9 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
         if (source.SecondaryPrivateIpAddressCount != null) {
             this.SecondaryPrivateIpAddressCount = new Long(source.SecondaryPrivateIpAddressCount);
         }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamSimple(map, prefix + "SecondaryPrivateIpAddressCount", this.SecondaryPrivateIpAddressCount);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

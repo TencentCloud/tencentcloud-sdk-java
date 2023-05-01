@@ -219,6 +219,26 @@ public class CpdpClient extends AbstractClient{
     }
 
     /**
+     *微工卡开通预核身接口
+     * @param req ApplyFlexWechatPreAuthRequest
+     * @return ApplyFlexWechatPreAuthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyFlexWechatPreAuthResponse ApplyFlexWechatPreAuth(ApplyFlexWechatPreAuthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyFlexWechatPreAuthResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyFlexWechatPreAuthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyFlexWechatPreAuth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *云企付-申请单笔交易回单
      * @param req ApplyOpenBankOrderDetailReceiptRequest
      * @return ApplyOpenBankOrderDetailReceiptResponse
@@ -2741,6 +2761,26 @@ public class CpdpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryFlexSettlementOrderListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryFlexSettlementOrderList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询微工卡核身结果
+     * @param req QueryFlexWechatAuthResultRequest
+     * @return QueryFlexWechatAuthResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFlexWechatAuthResultResponse QueryFlexWechatAuthResult(QueryFlexWechatAuthResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFlexWechatAuthResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFlexWechatAuthResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFlexWechatAuthResult");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

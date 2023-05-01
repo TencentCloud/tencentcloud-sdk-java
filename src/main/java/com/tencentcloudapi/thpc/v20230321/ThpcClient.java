@@ -326,6 +326,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+     * @param req ModifyInitNodeScriptsRequest
+     * @return ModifyInitNodeScriptsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInitNodeScriptsResponse ModifyInitNodeScripts(ModifyInitNodeScriptsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInitNodeScriptsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInitNodeScriptsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInitNodeScripts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
      * @param req SetAutoScalingConfigurationRequest
      * @return SetAutoScalingConfigurationResponse

@@ -13,28 +13,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.cpdp.v20190820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceShardsResponse extends AbstractModel{
+public class ApplyFlexWechatPreAuthResponse extends AbstractModel{
 
     /**
-    * 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
+    * 错误码。SUCCESS为成功，其他为失败
     */
-    @SerializedName("InstanceShards")
+    @SerializedName("ErrCode")
     @Expose
-    private InstanceClusterShard [] InstanceShards;
+    private String ErrCode;
 
     /**
-    * 实例分片节点数量。
+    * 错误信息
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ErrMessage")
     @Expose
-    private Long TotalCount;
+    private String ErrMessage;
+
+    /**
+    * 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Result")
+    @Expose
+    private WechatPreAuthResult Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +52,55 @@ public class DescribeInstanceShardsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。 
-     * @return InstanceShards 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
+     * Get 错误码。SUCCESS为成功，其他为失败 
+     * @return ErrCode 错误码。SUCCESS为成功，其他为失败
      */
-    public InstanceClusterShard [] getInstanceShards() {
-        return this.InstanceShards;
+    public String getErrCode() {
+        return this.ErrCode;
     }
 
     /**
-     * Set 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
-     * @param InstanceShards 实例分片列表信息，包括：节点信息、节点ID、Key数量、使用容量、容量倾斜率等信息。
+     * Set 错误码。SUCCESS为成功，其他为失败
+     * @param ErrCode 错误码。SUCCESS为成功，其他为失败
      */
-    public void setInstanceShards(InstanceClusterShard [] InstanceShards) {
-        this.InstanceShards = InstanceShards;
+    public void setErrCode(String ErrCode) {
+        this.ErrCode = ErrCode;
     }
 
     /**
-     * Get 实例分片节点数量。 
-     * @return TotalCount 实例分片节点数量。
+     * Get 错误信息 
+     * @return ErrMessage 错误信息
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getErrMessage() {
+        return this.ErrMessage;
     }
 
     /**
-     * Set 实例分片节点数量。
-     * @param TotalCount 实例分片节点数量。
+     * Set 错误信息
+     * @param ErrMessage 错误信息
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setErrMessage(String ErrMessage) {
+        this.ErrMessage = ErrMessage;
+    }
+
+    /**
+     * Get 返回结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Result 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WechatPreAuthResult getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Result 返回结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResult(WechatPreAuthResult Result) {
+        this.Result = Result;
     }
 
     /**
@@ -91,22 +119,22 @@ public class DescribeInstanceShardsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceShardsResponse() {
+    public ApplyFlexWechatPreAuthResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceShardsResponse(DescribeInstanceShardsResponse source) {
-        if (source.InstanceShards != null) {
-            this.InstanceShards = new InstanceClusterShard[source.InstanceShards.length];
-            for (int i = 0; i < source.InstanceShards.length; i++) {
-                this.InstanceShards[i] = new InstanceClusterShard(source.InstanceShards[i]);
-            }
+    public ApplyFlexWechatPreAuthResponse(ApplyFlexWechatPreAuthResponse source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new String(source.ErrCode);
         }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+        if (source.ErrMessage != null) {
+            this.ErrMessage = new String(source.ErrMessage);
+        }
+        if (source.Result != null) {
+            this.Result = new WechatPreAuthResult(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +146,9 @@ public class DescribeInstanceShardsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InstanceShards.", this.InstanceShards);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,28 +23,29 @@ import java.util.HashMap;
 public class DescribeSlowLogRequest extends AbstractModel{
 
     /**
-    * 实例Id。
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间。
+    * 预查询慢日志的起始时间。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间。
+    * 预查询慢日志的结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 慢查询平均执行时间阈值（单位：毫秒）。
+    * 慢查询平均执行时间阈值，单位：毫秒。
     */
     @SerializedName("MinQueryTime")
     @Expose
@@ -58,7 +59,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 慢查询条数的偏移量，取Limit整数倍。
+    * 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
@@ -72,64 +73,68 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private String Role;
 
     /**
-     * Get 实例Id。 
-     * @return InstanceId 实例Id。
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id。
-     * @param InstanceId 实例Id。
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间。 
-     * @return BeginTime 开始时间。
+     * Get 预查询慢日志的起始时间。 
+     * @return BeginTime 预查询慢日志的起始时间。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间。
-     * @param BeginTime 开始时间。
+     * Set 预查询慢日志的起始时间。
+     * @param BeginTime 预查询慢日志的起始时间。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间。 
-     * @return EndTime 结束时间。
+     * Get 预查询慢日志的结束时间。 
+     * @return EndTime 预查询慢日志的结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间。
-     * @param EndTime 结束时间。
+     * Set 预查询慢日志的结束时间。
+     * @param EndTime 预查询慢日志的结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 慢查询平均执行时间阈值（单位：毫秒）。 
-     * @return MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
+     * Get 慢查询平均执行时间阈值，单位：毫秒。 
+     * @return MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询平均执行时间阈值（单位：毫秒）。
-     * @param MinQueryTime 慢查询平均执行时间阈值（单位：毫秒）。
+     * Set 慢查询平均执行时间阈值，单位：毫秒。
+     * @param MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
@@ -152,16 +157,16 @@ public class DescribeSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 慢查询条数的偏移量，取Limit整数倍。 
-     * @return Offset 慢查询条数的偏移量，取Limit整数倍。
+     * Get 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 慢查询条数的偏移量，取Limit整数倍。
-     * @param Offset 慢查询条数的偏移量，取Limit整数倍。
+     * Set 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

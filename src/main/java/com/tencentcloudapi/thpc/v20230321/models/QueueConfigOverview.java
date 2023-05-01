@@ -65,6 +65,14 @@ public class QueueConfigOverview extends AbstractModel{
     private ExpansionNodeConfigOverview [] ExpansionNodeConfigs;
 
     /**
+    * 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DesiredIdleNodeCapacity")
+    @Expose
+    private Long DesiredIdleNodeCapacity;
+
+    /**
      * Get 队列名称。 
      * @return QueueName 队列名称。
      */
@@ -160,6 +168,26 @@ public class QueueConfigOverview extends AbstractModel{
         this.ExpansionNodeConfigs = ExpansionNodeConfigs;
     }
 
+    /**
+     * Get 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDesiredIdleNodeCapacity() {
+        return this.DesiredIdleNodeCapacity;
+    }
+
+    /**
+     * Set 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDesiredIdleNodeCapacity(Long DesiredIdleNodeCapacity) {
+        this.DesiredIdleNodeCapacity = DesiredIdleNodeCapacity;
+    }
+
     public QueueConfigOverview() {
     }
 
@@ -189,6 +217,9 @@ public class QueueConfigOverview extends AbstractModel{
                 this.ExpansionNodeConfigs[i] = new ExpansionNodeConfigOverview(source.ExpansionNodeConfigs[i]);
             }
         }
+        if (source.DesiredIdleNodeCapacity != null) {
+            this.DesiredIdleNodeCapacity = new Long(source.DesiredIdleNodeCapacity);
+        }
     }
 
 
@@ -202,6 +233,7 @@ public class QueueConfigOverview extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAutoExpansion", this.EnableAutoExpansion);
         this.setParamSimple(map, prefix + "EnableAutoShrink", this.EnableAutoShrink);
         this.setParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
+        this.setParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
 
     }
 }

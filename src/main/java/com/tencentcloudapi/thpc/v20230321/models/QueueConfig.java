@@ -93,6 +93,13 @@ public class QueueConfig extends AbstractModel{
     private ExpansionNodeConfig [] ExpansionNodeConfigs;
 
     /**
+    * 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+    */
+    @SerializedName("DesiredIdleNodeCapacity")
+    @Expose
+    private Long DesiredIdleNodeCapacity;
+
+    /**
      * Get 队列名称。 
      * @return QueueName 队列名称。
      */
@@ -252,6 +259,22 @@ public class QueueConfig extends AbstractModel{
         this.ExpansionNodeConfigs = ExpansionNodeConfigs;
     }
 
+    /**
+     * Get 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。 
+     * @return DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+     */
+    public Long getDesiredIdleNodeCapacity() {
+        return this.DesiredIdleNodeCapacity;
+    }
+
+    /**
+     * Set 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+     * @param DesiredIdleNodeCapacity 队列中期望的空闲节点数量（包含弹性节点和静态节点）。默认值：0。队列中，处于空闲状态的节点小于此值，集群会扩容弹性节点；处于空闲状态的节点大于此值，集群会缩容弹性节点。
+     */
+    public void setDesiredIdleNodeCapacity(Long DesiredIdleNodeCapacity) {
+        this.DesiredIdleNodeCapacity = DesiredIdleNodeCapacity;
+    }
+
     public QueueConfig() {
     }
 
@@ -296,6 +319,9 @@ public class QueueConfig extends AbstractModel{
                 this.ExpansionNodeConfigs[i] = new ExpansionNodeConfig(source.ExpansionNodeConfigs[i]);
             }
         }
+        if (source.DesiredIdleNodeCapacity != null) {
+            this.DesiredIdleNodeCapacity = new Long(source.DesiredIdleNodeCapacity);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class QueueConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "ExpansionNodeConfigs.", this.ExpansionNodeConfigs);
+        this.setParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
 
     }
 }
