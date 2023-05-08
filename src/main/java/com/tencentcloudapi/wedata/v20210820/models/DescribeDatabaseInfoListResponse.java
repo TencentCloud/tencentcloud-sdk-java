@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeDatabaseInfoListResponse extends AbstractModel{
 
     /**
+    * 数据库列表
+    */
+    @SerializedName("DatabaseInfo")
+    @Expose
+    private DatabaseInfo [] DatabaseInfo;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 数据库列表 
+     * @return DatabaseInfo 数据库列表
+     */
+    public DatabaseInfo [] getDatabaseInfo() {
+        return this.DatabaseInfo;
+    }
+
+    /**
+     * Set 数据库列表
+     * @param DatabaseInfo 数据库列表
+     */
+    public void setDatabaseInfo(DatabaseInfo [] DatabaseInfo) {
+        this.DatabaseInfo = DatabaseInfo;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,12 @@ public class DescribeDatabaseInfoListResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDatabaseInfoListResponse(DescribeDatabaseInfoListResponse source) {
+        if (source.DatabaseInfo != null) {
+            this.DatabaseInfo = new DatabaseInfo[source.DatabaseInfo.length];
+            for (int i = 0; i < source.DatabaseInfo.length; i++) {
+                this.DatabaseInfo[i] = new DatabaseInfo(source.DatabaseInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class DescribeDatabaseInfoListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "DatabaseInfo.", this.DatabaseInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

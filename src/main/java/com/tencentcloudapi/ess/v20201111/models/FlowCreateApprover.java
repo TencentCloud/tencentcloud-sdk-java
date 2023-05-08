@@ -148,6 +148,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private ApproverOption ApproverOption;
 
     /**
+    * 签署完前端跳转的url，暂未使用
+    */
+    @SerializedName("JumpUrl")
+    @Expose
+    private String JumpUrl;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -443,6 +450,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.ApproverOption = ApproverOption;
     }
 
+    /**
+     * Get 签署完前端跳转的url，暂未使用 
+     * @return JumpUrl 签署完前端跳转的url，暂未使用
+     */
+    public String getJumpUrl() {
+        return this.JumpUrl;
+    }
+
+    /**
+     * Set 签署完前端跳转的url，暂未使用
+     * @param JumpUrl 签署完前端跳转的url，暂未使用
+     */
+    public void setJumpUrl(String JumpUrl) {
+        this.JumpUrl = JumpUrl;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -505,6 +528,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.ApproverOption != null) {
             this.ApproverOption = new ApproverOption(source.ApproverOption);
         }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
     }
 
 
@@ -529,6 +555,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
         this.setParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
+        this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
 
     }
 }

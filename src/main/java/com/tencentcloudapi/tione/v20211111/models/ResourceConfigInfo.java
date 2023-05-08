@@ -113,6 +113,14 @@ TI.GN7.20XLARGE320.POST: 80C32
     private String InstanceTypeAlias;
 
     /**
+    * RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RDMAConfig")
+    @Expose
+    private RDMAConfig RDMAConfig;
+
+    /**
      * Get 角色，eg：PS、WORKER、DRIVER、EXECUTOR 
      * @return Role 角色，eg：PS、WORKER、DRIVER、EXECUTOR
      */
@@ -376,6 +384,26 @@ TI.GN7.20XLARGE320.POST: 80C32
         this.InstanceTypeAlias = InstanceTypeAlias;
     }
 
+    /**
+     * Get RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RDMAConfig RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RDMAConfig getRDMAConfig() {
+        return this.RDMAConfig;
+    }
+
+    /**
+     * Set RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RDMAConfig RDMA配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRDMAConfig(RDMAConfig RDMAConfig) {
+        this.RDMAConfig = RDMAConfig;
+    }
+
     public ResourceConfigInfo() {
     }
 
@@ -408,6 +436,9 @@ TI.GN7.20XLARGE320.POST: 80C32
         if (source.InstanceTypeAlias != null) {
             this.InstanceTypeAlias = new String(source.InstanceTypeAlias);
         }
+        if (source.RDMAConfig != null) {
+            this.RDMAConfig = new RDMAConfig(source.RDMAConfig);
+        }
     }
 
 
@@ -423,6 +454,7 @@ TI.GN7.20XLARGE320.POST: 80C32
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
         this.setParamSimple(map, prefix + "InstanceTypeAlias", this.InstanceTypeAlias);
+        this.setParamObj(map, prefix + "RDMAConfig.", this.RDMAConfig);
 
     }
 }

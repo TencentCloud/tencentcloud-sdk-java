@@ -39,7 +39,7 @@ public enum ImsErrorCode {
     // 图片分辨率太低。
      INVALIDPARAMETERVALUE_IMAGESIZETOOSMALL("InvalidParameterValue.ImageSizeTooSmall"),
      
-    // FileContent和FileUrl为空。
+    // FileContent和FileUrl为空或base64编码错误。
      INVALIDPARAMETERVALUE_INVALIDCONTENT("InvalidParameterValue.InvalidContent"),
      
     // DataId格式错误。

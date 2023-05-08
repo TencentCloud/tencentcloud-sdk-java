@@ -44,6 +44,13 @@ public class DeleteSqlFiltersRequest extends AbstractModel{
     private Long [] FilterIds;
 
     /**
+    * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -91,6 +98,22 @@ public class DeleteSqlFiltersRequest extends AbstractModel{
         this.FilterIds = FilterIds;
     }
 
+    /**
+     * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。 
+     * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     * @param Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DeleteSqlFiltersRequest() {
     }
 
@@ -111,6 +134,9 @@ public class DeleteSqlFiltersRequest extends AbstractModel{
                 this.FilterIds[i] = new Long(source.FilterIds[i]);
             }
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class DeleteSqlFiltersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SessionToken", this.SessionToken);
         this.setParamArraySimple(map, prefix + "FilterIds.", this.FilterIds);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

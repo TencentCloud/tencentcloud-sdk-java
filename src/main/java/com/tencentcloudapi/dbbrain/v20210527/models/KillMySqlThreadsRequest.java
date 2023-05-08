@@ -58,6 +58,13 @@ public class KillMySqlThreadsRequest extends AbstractModel{
     private String Product;
 
     /**
+    * 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+    */
+    @SerializedName("RecordHistory")
+    @Expose
+    private Boolean RecordHistory;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -137,6 +144,22 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    /**
+     * Get 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。 
+     * @return RecordHistory 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     */
+    public Boolean getRecordHistory() {
+        return this.RecordHistory;
+    }
+
+    /**
+     * Set 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     * @param RecordHistory 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     */
+    public void setRecordHistory(Boolean RecordHistory) {
+        this.RecordHistory = RecordHistory;
+    }
+
     public KillMySqlThreadsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.RecordHistory != null) {
+            this.RecordHistory = new Boolean(source.RecordHistory);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class KillMySqlThreadsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Threads.", this.Threads);
         this.setParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "RecordHistory", this.RecordHistory);
 
     }
 }

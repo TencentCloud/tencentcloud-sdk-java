@@ -70,7 +70,10 @@ public enum WafErrorCode {
      UNKNOWNPARAMETER("UnknownParameter"),
      
     // 操作不支持。
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // InvalidRequest
+     UNSUPPORTEDOPERATION_INVALIDREQUEST("UnsupportedOperation.InvalidRequest");
      
     private String value;
     private WafErrorCode (String value){

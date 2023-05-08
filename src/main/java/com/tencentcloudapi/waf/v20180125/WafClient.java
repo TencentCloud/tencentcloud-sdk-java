@@ -220,8 +220,6 @@ public class WafClient extends AbstractClient{
 
     /**
      *删除域名规则白名单
-
-
      * @param req DeleteDomainWhiteRulesRequest
      * @return DeleteDomainWhiteRulesResponse
      * @throws TencentCloudSDKException

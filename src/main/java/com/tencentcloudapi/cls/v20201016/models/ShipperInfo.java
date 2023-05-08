@@ -125,6 +125,51 @@ public class ShipperInfo extends AbstractModel{
     private Long FilenameMode;
 
     /**
+    * 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private Long StartTime;
+
+    /**
+    * 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private Long EndTime;
+
+    /**
+    * 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Float Progress;
+
+    /**
+    * 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemainTime")
+    @Expose
+    private Long RemainTime;
+
+    /**
+    * 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HistoryStatus")
+    @Expose
+    private Long HistoryStatus;
+
+    /**
      * Get 投递规则ID 
      * @return ShipperId 投递规则ID
      */
@@ -364,6 +409,126 @@ public class ShipperInfo extends AbstractModel{
         this.FilenameMode = FilenameMode;
     }
 
+    /**
+     * Get 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 投递数据范围的开始时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(Long StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 投递数据范围的结束时间点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(Long EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Progress 历史数据投递的进度（仅当用户选择的数据内中历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgress(Float Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
+     * Get 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRemainTime() {
+        return this.RemainTime;
+    }
+
+    /**
+     * Set 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemainTime 历史数据全部投递完成剩余的时间（仅当用户选择的数据中有历史数据时才有效）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemainTime(Long RemainTime) {
+        this.RemainTime = RemainTime;
+    }
+
+    /**
+     * Get 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HistoryStatus 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHistoryStatus() {
+        return this.HistoryStatus;
+    }
+
+    /**
+     * Set 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HistoryStatus 历史任务状态：
+0：实时任务
+1：任务准备中
+2：任务运行中
+3：任务运行异常
+4：任务运行结束
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHistoryStatus(Long HistoryStatus) {
+        this.HistoryStatus = HistoryStatus;
+    }
+
     public ShipperInfo() {
     }
 
@@ -417,6 +582,21 @@ public class ShipperInfo extends AbstractModel{
         if (source.FilenameMode != null) {
             this.FilenameMode = new Long(source.FilenameMode);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new Long(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new Long(source.EndTime);
+        }
+        if (source.Progress != null) {
+            this.Progress = new Float(source.Progress);
+        }
+        if (source.RemainTime != null) {
+            this.RemainTime = new Long(source.RemainTime);
+        }
+        if (source.HistoryStatus != null) {
+            this.HistoryStatus = new Long(source.HistoryStatus);
+        }
     }
 
 
@@ -438,6 +618,11 @@ public class ShipperInfo extends AbstractModel{
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "RemainTime", this.RemainTime);
+        this.setParamSimple(map, prefix + "HistoryStatus", this.HistoryStatus);
 
     }
 }

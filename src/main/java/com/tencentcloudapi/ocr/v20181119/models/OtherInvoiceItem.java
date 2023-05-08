@@ -13,51 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteScanInstancesRequest extends AbstractModel{
+public class OtherInvoiceItem extends AbstractModel{
 
     /**
-    * 删除一个或多个扫描的app，最大支持20个
+    * 票面key值
     */
-    @SerializedName("AppSids")
+    @SerializedName("Name")
     @Expose
-    private String [] AppSids;
+    private String Name;
 
     /**
-     * Get 删除一个或多个扫描的app，最大支持20个 
-     * @return AppSids 删除一个或多个扫描的app，最大支持20个
+    * 票面value值
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get 票面key值 
+     * @return Name 票面key值
      */
-    public String [] getAppSids() {
-        return this.AppSids;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 删除一个或多个扫描的app，最大支持20个
-     * @param AppSids 删除一个或多个扫描的app，最大支持20个
+     * Set 票面key值
+     * @param Name 票面key值
      */
-    public void setAppSids(String [] AppSids) {
-        this.AppSids = AppSids;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public DeleteScanInstancesRequest() {
+    /**
+     * Get 票面value值 
+     * @return Value 票面value值
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set 票面value值
+     * @param Value 票面value值
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    public OtherInvoiceItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteScanInstancesRequest(DeleteScanInstancesRequest source) {
-        if (source.AppSids != null) {
-            this.AppSids = new String[source.AppSids.length];
-            for (int i = 0; i < source.AppSids.length; i++) {
-                this.AppSids[i] = new String(source.AppSids[i]);
-            }
+    public OtherInvoiceItem(OtherInvoiceItem source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
     }
 
@@ -66,7 +89,8 @@ public class DeleteScanInstancesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "AppSids.", this.AppSids);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

@@ -371,6 +371,54 @@ public class AssetDetail extends AbstractModel{
     private Long AssetVulNum;
 
     /**
+    * 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetEventNum")
+    @Expose
+    private Long AssetEventNum;
+
+    /**
+    * cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetCspmRiskNum")
+    @Expose
+    private Long AssetCspmRiskNum;
+
+    /**
+    * 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SsaAssetDeleteTime")
+    @Expose
+    private String SsaAssetDeleteTime;
+
+    /**
+    * 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetRegionName")
+    @Expose
+    private String AssetRegionName;
+
+    /**
+    * vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetVpcid")
+    @Expose
+    private String AssetVpcid;
+
+    /**
      * Get 资产类型 
      * @return AssetType 资产类型
      */
@@ -1222,6 +1270,126 @@ public class AssetDetail extends AbstractModel{
         this.AssetVulNum = AssetVulNum;
     }
 
+    /**
+     * Get 资产事件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetEventNum 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssetEventNum() {
+        return this.AssetEventNum;
+    }
+
+    /**
+     * Set 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetEventNum 资产事件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetEventNum(Long AssetEventNum) {
+        this.AssetEventNum = AssetEventNum;
+    }
+
+    /**
+     * Get cspm风险
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetCspmRiskNum cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssetCspmRiskNum() {
+        return this.AssetCspmRiskNum;
+    }
+
+    /**
+     * Set cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetCspmRiskNum cspm风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetCspmRiskNum(Long AssetCspmRiskNum) {
+        this.AssetCspmRiskNum = AssetCspmRiskNum;
+    }
+
+    /**
+     * Get 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SsaAssetDeleteTime 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSsaAssetDeleteTime() {
+        return this.SsaAssetDeleteTime;
+    }
+
+    /**
+     * Set 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SsaAssetDeleteTime 资产删除时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSsaAssetDeleteTime(String SsaAssetDeleteTime) {
+        this.SsaAssetDeleteTime = SsaAssetDeleteTime;
+    }
+
+    /**
+     * Get 费用类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChargeType 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeType 费用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetRegionName 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetRegionName() {
+        return this.AssetRegionName;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetRegionName 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetRegionName(String AssetRegionName) {
+        this.AssetRegionName = AssetRegionName;
+    }
+
+    /**
+     * Get vpc信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetVpcid vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetVpcid() {
+        return this.AssetVpcid;
+    }
+
+    /**
+     * Set vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetVpcid vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetVpcid(String AssetVpcid) {
+        this.AssetVpcid = AssetVpcid;
+    }
+
     public AssetDetail() {
     }
 
@@ -1386,6 +1554,24 @@ public class AssetDetail extends AbstractModel{
         if (source.AssetVulNum != null) {
             this.AssetVulNum = new Long(source.AssetVulNum);
         }
+        if (source.AssetEventNum != null) {
+            this.AssetEventNum = new Long(source.AssetEventNum);
+        }
+        if (source.AssetCspmRiskNum != null) {
+            this.AssetCspmRiskNum = new Long(source.AssetCspmRiskNum);
+        }
+        if (source.SsaAssetDeleteTime != null) {
+            this.SsaAssetDeleteTime = new String(source.SsaAssetDeleteTime);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
+        if (source.AssetRegionName != null) {
+            this.AssetRegionName = new String(source.AssetRegionName);
+        }
+        if (source.AssetVpcid != null) {
+            this.AssetVpcid = new String(source.AssetVpcid);
+        }
     }
 
 
@@ -1438,6 +1624,12 @@ public class AssetDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RDPRisk", this.RDPRisk);
         this.setParamSimple(map, prefix + "EventRisk", this.EventRisk);
         this.setParamSimple(map, prefix + "AssetVulNum", this.AssetVulNum);
+        this.setParamSimple(map, prefix + "AssetEventNum", this.AssetEventNum);
+        this.setParamSimple(map, prefix + "AssetCspmRiskNum", this.AssetCspmRiskNum);
+        this.setParamSimple(map, prefix + "SsaAssetDeleteTime", this.SsaAssetDeleteTime);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "AssetRegionName", this.AssetRegionName);
+        this.setParamSimple(map, prefix + "AssetVpcid", this.AssetVpcid);
 
     }
 }

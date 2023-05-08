@@ -37,7 +37,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String UserIp;
 
     /**
-    * 客户端session信息，从SDK请求中获得
+    * 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
     */
     @SerializedName("ClientSession")
     @Expose
@@ -51,6 +51,24 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     @SerializedName("RunMode")
     @Expose
     private String RunMode;
+
+    /**
+    * 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+    */
+    @SerializedName("HostUserId")
+    @Expose
+    private String HostUserId;
+
+    /**
+    * 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
      * Get 唯一用户身份标识，由业务方自定义，平台不予理解。（可根据业务需要决定使用用户的唯一身份标识或是使用时间戳随机生成；在用户重连时应保持UserId不变） 
@@ -85,16 +103,16 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     }
 
     /**
-     * Get 客户端session信息，从SDK请求中获得 
-     * @return ClientSession 客户端session信息，从SDK请求中获得
+     * Get 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空 
+     * @return ClientSession 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
      */
     public String getClientSession() {
         return this.ClientSession;
     }
 
     /**
-     * Set 客户端session信息，从SDK请求中获得
-     * @param ClientSession 客户端session信息，从SDK请求中获得
+     * Set 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
+     * @param ClientSession 客户端session信息，从SDK请求中获得。特殊的，当 RunMode 参数为 RunWithoutClient 时，该字段可以为空
      */
     public void setClientSession(String ClientSession) {
         this.ClientSession = ClientSession;
@@ -124,6 +142,54 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
         this.RunMode = RunMode;
     }
 
+    /**
+     * Get 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。 
+     * @return HostUserId 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+     */
+    public String getHostUserId() {
+        return this.HostUserId;
+    }
+
+    /**
+     * Set 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+     * @param HostUserId 【多人互动】房主用户ID，在多人互动模式下为必填字段。
+如果该用户是房主，HostUserId需要和UserId保持一致；
+如果该用户非房主，HostUserId需要填写房主的HostUserId。
+     */
+    public void setHostUserId(String HostUserId) {
+        this.HostUserId = HostUserId;
+    }
+
+    /**
+     * Get 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作） 
+     * @return Role 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+     * @param Role 【多人互动】角色。
+Player：玩家（可通过键鼠等操作应用）
+Viewer：观察者（只能观看，无法操作）
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
     public CreateSessionRequest() {
     }
 
@@ -144,6 +210,12 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
         if (source.RunMode != null) {
             this.RunMode = new String(source.RunMode);
         }
+        if (source.HostUserId != null) {
+            this.HostUserId = new String(source.HostUserId);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -155,6 +227,8 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "ClientSession", this.ClientSession);
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
+        this.setParamSimple(map, prefix + "HostUserId", this.HostUserId);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

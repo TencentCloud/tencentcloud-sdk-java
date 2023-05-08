@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultsResponse extends AbstractModel{
+public class GetModelInfoResponse extends AbstractModel{
 
     /**
-    * 批量扫描的app结果集
+    * 模型信息
     */
-    @SerializedName("ScanSet")
+    @SerializedName("Data")
     @Expose
-    private ScanSetInfo [] ScanSet;
-
-    /**
-    * 批量扫描结果的个数
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private Model Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeScanResultsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量扫描的app结果集 
-     * @return ScanSet 批量扫描的app结果集
+     * Get 模型信息 
+     * @return Data 模型信息
      */
-    public ScanSetInfo [] getScanSet() {
-        return this.ScanSet;
+    public Model getData() {
+        return this.Data;
     }
 
     /**
-     * Set 批量扫描的app结果集
-     * @param ScanSet 批量扫描的app结果集
+     * Set 模型信息
+     * @param Data 模型信息
      */
-    public void setScanSet(ScanSetInfo [] ScanSet) {
-        this.ScanSet = ScanSet;
-    }
-
-    /**
-     * Get 批量扫描结果的个数 
-     * @return TotalCount 批量扫描结果的个数
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 批量扫描结果的个数
-     * @param TotalCount 批量扫描结果的个数
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setData(Model Data) {
+        this.Data = Data;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeScanResultsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeScanResultsResponse() {
+    public GetModelInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeScanResultsResponse(DescribeScanResultsResponse source) {
-        if (source.ScanSet != null) {
-            this.ScanSet = new ScanSetInfo[source.ScanSet.length];
-            for (int i = 0; i < source.ScanSet.length; i++) {
-                this.ScanSet[i] = new ScanSetInfo(source.ScanSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public GetModelInfoResponse(GetModelInfoResponse source) {
+        if (source.Data != null) {
+            this.Data = new Model(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeScanResultsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ScanSet.", this.ScanSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

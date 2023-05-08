@@ -30,7 +30,7 @@ public class Tag extends AbstractModel{
     private Long Fid;
 
     /**
-    * 标签名称
+    * 标签名称字段
     */
     @SerializedName("Fname")
     @Expose
@@ -53,16 +53,16 @@ public class Tag extends AbstractModel{
     }
 
     /**
-     * Get 标签名称 
-     * @return Fname 标签名称
+     * Get 标签名称字段 
+     * @return Fname 标签名称字段
      */
     public String getFname() {
         return this.Fname;
     }
 
     /**
-     * Set 标签名称
-     * @param Fname 标签名称
+     * Set 标签名称字段
+     * @param Fname 标签名称字段
      */
     public void setFname(String Fname) {
         this.Fname = Fname;

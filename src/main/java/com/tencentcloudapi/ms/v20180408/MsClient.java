@@ -99,28 +99,6 @@ public class MsClient extends AbstractClient{
     }
 
     /**
-     *由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-
-用户通过该接口批量提交应用进行应用扫描，扫描后需通过DescribeScanResults接口查询扫描结果
-     * @param req CreateScanInstancesRequest
-     * @return CreateScanInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateScanInstancesResponse CreateScanInstances(CreateScanInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateScanInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateScanInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateScanInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
      * @param req CreateShieldInstanceRequest
      * @return CreateShieldInstanceResponse
@@ -153,28 +131,6 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateShieldPlanInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateShieldPlanInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-
-删除一个或者多个app扫描信息
-     * @param req DeleteScanInstancesRequest
-     * @return DeleteScanInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteScanInstancesResponse DeleteScanInstances(DeleteScanInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteScanInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteScanInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteScanInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -235,51 +191,6 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeResourceInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-
-本接口用于查看app列表。
-可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。
-     * @param req DescribeScanInstancesRequest
-     * @return DescribeScanInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScanInstancesResponse DescribeScanInstances(DescribeScanInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScanInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScanInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScanInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *由于该产品是线上免费使用产品，无企业版用户，升级迭代成本高及人力安排等原因，安全测评产品不再接入新用户，故下线。
-
-用户通过CreateScanInstances接口提交应用进行风险批量扫描后，用此接口批量获取风险详细信息,包含漏洞信息，广告信息，插件信息和病毒信息
-     * @param req DescribeScanResultsRequest
-     * @return DescribeScanResultsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeScanResultsResponse DescribeScanResults(DescribeScanResultsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeScanResultsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeScanResultsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeScanResults");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

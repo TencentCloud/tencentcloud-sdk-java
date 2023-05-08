@@ -86,6 +86,38 @@ public class ProtectDirInfo extends AbstractModel{
     private Long AutoRestoreSwitchStatus;
 
     /**
+    * 首次开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FirstProtectTime")
+    @Expose
+    private String FirstProtectTime;
+
+    /**
+    * 最近开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestProtectTime")
+    @Expose
+    private String LatestProtectTime;
+
+    /**
+    * 防护文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectFileType")
+    @Expose
+    private String ProtectFileType;
+
+    /**
+    * 防护文件总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectFilesCount")
+    @Expose
+    private Long ProtectFilesCount;
+
+    /**
      * Get 网站名称 
      * @return DirName 网站名称
      */
@@ -229,6 +261,86 @@ public class ProtectDirInfo extends AbstractModel{
         this.AutoRestoreSwitchStatus = AutoRestoreSwitchStatus;
     }
 
+    /**
+     * Get 首次开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FirstProtectTime 首次开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFirstProtectTime() {
+        return this.FirstProtectTime;
+    }
+
+    /**
+     * Set 首次开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FirstProtectTime 首次开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFirstProtectTime(String FirstProtectTime) {
+        this.FirstProtectTime = FirstProtectTime;
+    }
+
+    /**
+     * Get 最近开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestProtectTime 最近开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestProtectTime() {
+        return this.LatestProtectTime;
+    }
+
+    /**
+     * Set 最近开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestProtectTime 最近开启防护时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestProtectTime(String LatestProtectTime) {
+        this.LatestProtectTime = LatestProtectTime;
+    }
+
+    /**
+     * Get 防护文件类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectFileType 防护文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtectFileType() {
+        return this.ProtectFileType;
+    }
+
+    /**
+     * Set 防护文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectFileType 防护文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectFileType(String ProtectFileType) {
+        this.ProtectFileType = ProtectFileType;
+    }
+
+    /**
+     * Get 防护文件总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectFilesCount 防护文件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProtectFilesCount() {
+        return this.ProtectFilesCount;
+    }
+
+    /**
+     * Set 防护文件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectFilesCount 防护文件总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectFilesCount(Long ProtectFilesCount) {
+        this.ProtectFilesCount = ProtectFilesCount;
+    }
+
     public ProtectDirInfo() {
     }
 
@@ -264,6 +376,18 @@ public class ProtectDirInfo extends AbstractModel{
         if (source.AutoRestoreSwitchStatus != null) {
             this.AutoRestoreSwitchStatus = new Long(source.AutoRestoreSwitchStatus);
         }
+        if (source.FirstProtectTime != null) {
+            this.FirstProtectTime = new String(source.FirstProtectTime);
+        }
+        if (source.LatestProtectTime != null) {
+            this.LatestProtectTime = new String(source.LatestProtectTime);
+        }
+        if (source.ProtectFileType != null) {
+            this.ProtectFileType = new String(source.ProtectFileType);
+        }
+        if (source.ProtectFilesCount != null) {
+            this.ProtectFilesCount = new Long(source.ProtectFilesCount);
+        }
     }
 
 
@@ -280,6 +404,10 @@ public class ProtectDirInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProtectStatus", this.ProtectStatus);
         this.setParamSimple(map, prefix + "ProtectException", this.ProtectException);
         this.setParamSimple(map, prefix + "AutoRestoreSwitchStatus", this.AutoRestoreSwitchStatus);
+        this.setParamSimple(map, prefix + "FirstProtectTime", this.FirstProtectTime);
+        this.setParamSimple(map, prefix + "LatestProtectTime", this.LatestProtectTime);
+        this.setParamSimple(map, prefix + "ProtectFileType", this.ProtectFileType);
+        this.setParamSimple(map, prefix + "ProtectFilesCount", this.ProtectFilesCount);
 
     }
 }

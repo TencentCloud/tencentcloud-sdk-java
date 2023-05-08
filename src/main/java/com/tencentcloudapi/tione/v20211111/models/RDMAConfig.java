@@ -13,51 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanPermissionList extends AbstractModel{
+public class RDMAConfig extends AbstractModel{
 
     /**
-    * 系统权限信息
+    * 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("PermissionList")
+    @SerializedName("Enable")
     @Expose
-    private ScanPermissionInfo [] PermissionList;
+    private Boolean Enable;
 
     /**
-     * Get 系统权限信息 
-     * @return PermissionList 系统权限信息
+     * Get 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Enable 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ScanPermissionInfo [] getPermissionList() {
-        return this.PermissionList;
+    public Boolean getEnable() {
+        return this.Enable;
     }
 
     /**
-     * Set 系统权限信息
-     * @param PermissionList 系统权限信息
+     * Set 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Enable 是否开启RDMA
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPermissionList(ScanPermissionInfo [] PermissionList) {
-        this.PermissionList = PermissionList;
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
     }
 
-    public ScanPermissionList() {
+    public RDMAConfig() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanPermissionList(ScanPermissionList source) {
-        if (source.PermissionList != null) {
-            this.PermissionList = new ScanPermissionInfo[source.PermissionList.length];
-            for (int i = 0; i < source.PermissionList.length; i++) {
-                this.PermissionList[i] = new ScanPermissionInfo(source.PermissionList[i]);
-            }
+    public RDMAConfig(RDMAConfig source) {
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
         }
     }
 
@@ -66,7 +68,7 @@ public class ScanPermissionList extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "PermissionList.", this.PermissionList);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
 
     }
 }

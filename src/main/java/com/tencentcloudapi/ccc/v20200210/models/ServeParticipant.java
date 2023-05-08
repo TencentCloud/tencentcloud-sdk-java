@@ -87,6 +87,14 @@ public class ServeParticipant extends AbstractModel{
     private String TransferFrom;
 
     /**
+    * 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransferFromType")
+    @Expose
+    private String TransferFromType;
+
+    /**
     * 转接去向坐席信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -319,6 +327,26 @@ public class ServeParticipant extends AbstractModel{
     }
 
     /**
+     * Get 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransferFromType 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransferFromType() {
+        return this.TransferFromType;
+    }
+
+    /**
+     * Set 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransferFromType 转接来源参与者类型，取值与 Type 一致
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransferFromType(String TransferFromType) {
+        this.TransferFromType = TransferFromType;
+    }
+
+    /**
      * Get 转接去向坐席信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TransferTo 转接去向坐席信息
@@ -530,6 +558,9 @@ public class ServeParticipant extends AbstractModel{
         if (source.TransferFrom != null) {
             this.TransferFrom = new String(source.TransferFrom);
         }
+        if (source.TransferFromType != null) {
+            this.TransferFromType = new String(source.TransferFromType);
+        }
         if (source.TransferTo != null) {
             this.TransferTo = new String(source.TransferTo);
         }
@@ -572,6 +603,7 @@ public class ServeParticipant extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "TransferFrom", this.TransferFrom);
+        this.setParamSimple(map, prefix + "TransferFromType", this.TransferFromType);
         this.setParamSimple(map, prefix + "TransferTo", this.TransferTo);
         this.setParamSimple(map, prefix + "TransferToType", this.TransferToType);
         this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);

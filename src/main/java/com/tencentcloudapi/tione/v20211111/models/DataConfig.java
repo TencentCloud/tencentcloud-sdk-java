@@ -70,6 +70,14 @@ public class DataConfig extends AbstractModel{
     private HDFSConfig HDFSSource;
 
     /**
+    * 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GooseFSSource")
+    @Expose
+    private GooseFS GooseFSSource;
+
+    /**
      * Get 映射路径 
      * @return MappingPath 映射路径
      */
@@ -185,6 +193,26 @@ public class DataConfig extends AbstractModel{
         this.HDFSSource = HDFSSource;
     }
 
+    /**
+     * Get 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GooseFSSource 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GooseFS getGooseFSSource() {
+        return this.GooseFSSource;
+    }
+
+    /**
+     * Set 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GooseFSSource 配饰GooseFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGooseFSSource(GooseFS GooseFSSource) {
+        this.GooseFSSource = GooseFSSource;
+    }
+
     public DataConfig() {
     }
 
@@ -211,6 +239,9 @@ public class DataConfig extends AbstractModel{
         if (source.HDFSSource != null) {
             this.HDFSSource = new HDFSConfig(source.HDFSSource);
         }
+        if (source.GooseFSSource != null) {
+            this.GooseFSSource = new GooseFS(source.GooseFSSource);
+        }
     }
 
 
@@ -224,6 +255,7 @@ public class DataConfig extends AbstractModel{
         this.setParamObj(map, prefix + "COSSource.", this.COSSource);
         this.setParamObj(map, prefix + "CFSSource.", this.CFSSource);
         this.setParamObj(map, prefix + "HDFSSource.", this.HDFSSource);
+        this.setParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
 
     }
 }

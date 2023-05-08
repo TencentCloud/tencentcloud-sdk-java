@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class FlowApproverUrlInfo extends AbstractModel{
 
     /**
-    * 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
     */
     @SerializedName("SignUrl")
     @Expose
     private String SignUrl;
-
-    /**
-    * 签署人手机号
-    */
-    @SerializedName("Mobile")
-    @Expose
-    private String Mobile;
-
-    /**
-    * 签署人姓名
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
 
     /**
     * 签署人类型 PERSON-个人
@@ -51,35 +37,57 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String ApproverType;
 
     /**
-     * Get 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。 
-     * @return SignUrl 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署人姓名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 签署人手机号
+    */
+    @SerializedName("Mobile")
+    @Expose
+    private String Mobile;
+
+    /**
+    * 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LongUrl")
+    @Expose
+    private String LongUrl;
+
+    /**
+     * Get 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。 
+     * @return SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
-     * @param SignUrl 签署链接，注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Set 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
     }
 
     /**
-     * Get 签署人手机号 
-     * @return Mobile 签署人手机号
+     * Get 签署人类型 PERSON-个人 
+     * @return ApproverType 签署人类型 PERSON-个人
      */
-    public String getMobile() {
-        return this.Mobile;
+    public String getApproverType() {
+        return this.ApproverType;
     }
 
     /**
-     * Set 签署人手机号
-     * @param Mobile 签署人手机号
+     * Set 签署人类型 PERSON-个人
+     * @param ApproverType 签署人类型 PERSON-个人
      */
-    public void setMobile(String Mobile) {
-        this.Mobile = Mobile;
+    public void setApproverType(String ApproverType) {
+        this.ApproverType = ApproverType;
     }
 
     /**
@@ -99,19 +107,39 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署人类型 PERSON-个人 
-     * @return ApproverType 签署人类型 PERSON-个人
+     * Get 签署人手机号 
+     * @return Mobile 签署人手机号
      */
-    public String getApproverType() {
-        return this.ApproverType;
+    public String getMobile() {
+        return this.Mobile;
     }
 
     /**
-     * Set 签署人类型 PERSON-个人
-     * @param ApproverType 签署人类型 PERSON-个人
+     * Set 签署人手机号
+     * @param Mobile 签署人手机号
      */
-    public void setApproverType(String ApproverType) {
-        this.ApproverType = ApproverType;
+    public void setMobile(String Mobile) {
+        this.Mobile = Mobile;
+    }
+
+    /**
+     * Get 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLongUrl() {
+        return this.LongUrl;
+    }
+
+    /**
+     * Set 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLongUrl(String LongUrl) {
+        this.LongUrl = LongUrl;
     }
 
     public FlowApproverUrlInfo() {
@@ -125,14 +153,17 @@ public class FlowApproverUrlInfo extends AbstractModel{
         if (source.SignUrl != null) {
             this.SignUrl = new String(source.SignUrl);
         }
-        if (source.Mobile != null) {
-            this.Mobile = new String(source.Mobile);
+        if (source.ApproverType != null) {
+            this.ApproverType = new String(source.ApproverType);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
-        if (source.ApproverType != null) {
-            this.ApproverType = new String(source.ApproverType);
+        if (source.Mobile != null) {
+            this.Mobile = new String(source.Mobile);
+        }
+        if (source.LongUrl != null) {
+            this.LongUrl = new String(source.LongUrl);
         }
     }
 
@@ -142,9 +173,10 @@ public class FlowApproverUrlInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SignUrl", this.SignUrl);
-        this.setParamSimple(map, prefix + "Mobile", this.Mobile);
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "LongUrl", this.LongUrl);
 
     }
 }

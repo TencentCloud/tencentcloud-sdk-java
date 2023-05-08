@@ -37,6 +37,22 @@ public class DeviceUser extends AbstractModel{
     private Long Role;
 
     /**
+    * 家庭ID，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FamilyId")
+    @Expose
+    private String FamilyId;
+
+    /**
+    * 家庭名称，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FamilyName")
+    @Expose
+    private String FamilyName;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -68,6 +84,46 @@ public class DeviceUser extends AbstractModel{
         this.Role = Role;
     }
 
+    /**
+     * Get 家庭ID，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FamilyId 家庭ID，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFamilyId() {
+        return this.FamilyId;
+    }
+
+    /**
+     * Set 家庭ID，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FamilyId 家庭ID，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFamilyId(String FamilyId) {
+        this.FamilyId = FamilyId;
+    }
+
+    /**
+     * Get 家庭名称，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FamilyName 家庭名称，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFamilyName() {
+        return this.FamilyName;
+    }
+
+    /**
+     * Set 家庭名称，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FamilyName 家庭名称，所有者带该参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFamilyName(String FamilyName) {
+        this.FamilyName = FamilyName;
+    }
+
     public DeviceUser() {
     }
 
@@ -82,6 +138,12 @@ public class DeviceUser extends AbstractModel{
         if (source.Role != null) {
             this.Role = new Long(source.Role);
         }
+        if (source.FamilyId != null) {
+            this.FamilyId = new String(source.FamilyId);
+        }
+        if (source.FamilyName != null) {
+            this.FamilyName = new String(source.FamilyName);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class DeviceUser extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "FamilyId", this.FamilyId);
+        this.setParamSimple(map, prefix + "FamilyName", this.FamilyName);
 
     }
 }

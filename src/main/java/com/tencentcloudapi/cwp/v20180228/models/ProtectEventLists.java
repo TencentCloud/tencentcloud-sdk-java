@@ -94,6 +94,14 @@ public class ProtectEventLists extends AbstractModel{
     private MachineExtraInfo MachineExtraInfo;
 
     /**
+    * 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
      * Get 服务器名称 
      * @return HostName 服务器名称
      */
@@ -257,6 +265,26 @@ public class ProtectEventLists extends AbstractModel{
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
+    /**
+     * Get 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Quuid 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Quuid 机器实例uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
+
     public ProtectEventLists() {
     }
 
@@ -295,6 +323,9 @@ public class ProtectEventLists extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class ProtectEventLists extends AbstractModel{
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
 
     }
 }

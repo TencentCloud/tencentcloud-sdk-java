@@ -122,6 +122,13 @@ public class LoginWhiteCombinedInfo extends AbstractModel{
     private String Uuid;
 
     /**
+    * 登陆地
+    */
+    @SerializedName("Locations")
+    @Expose
+    private String Locations;
+
+    /**
      * Get 白名单地域
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Places 白名单地域
@@ -349,6 +356,22 @@ public class LoginWhiteCombinedInfo extends AbstractModel{
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 登陆地 
+     * @return Locations 登陆地
+     */
+    public String getLocations() {
+        return this.Locations;
+    }
+
+    /**
+     * Set 登陆地
+     * @param Locations 登陆地
+     */
+    public void setLocations(String Locations) {
+        this.Locations = Locations;
+    }
+
     public LoginWhiteCombinedInfo() {
     }
 
@@ -402,6 +425,9 @@ public class LoginWhiteCombinedInfo extends AbstractModel{
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.Locations != null) {
+            this.Locations = new String(source.Locations);
+        }
     }
 
 
@@ -423,6 +449,7 @@ public class LoginWhiteCombinedInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Locations", this.Locations);
 
     }
 }

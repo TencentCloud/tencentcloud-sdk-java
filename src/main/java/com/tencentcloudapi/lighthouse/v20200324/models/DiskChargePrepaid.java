@@ -30,7 +30,13 @@ public class DiskChargePrepaid extends AbstractModel{
     private Long Period;
 
     /**
-    * 续费标识。
+    * 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -60,16 +66,40 @@ public class DiskChargePrepaid extends AbstractModel{
     }
 
     /**
-     * Get 续费标识。 
-     * @return RenewFlag 续费标识。
+     * Get 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。 
+     * @return RenewFlag 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标识。
-     * @param RenewFlag 续费标识。
+     * Set 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
+     * @param RenewFlag 自动续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。
+NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。
+DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云盘到期后将按月自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;

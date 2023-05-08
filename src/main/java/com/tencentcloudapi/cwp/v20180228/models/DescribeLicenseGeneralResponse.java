@@ -142,6 +142,13 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     private Boolean AutoRepurchaseRenewSwitch;
 
     /**
+    * 已销毁订单数
+    */
+    @SerializedName("DestroyOrderNum")
+    @Expose
+    private Long DestroyOrderNum;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -421,6 +428,22 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
     }
 
     /**
+     * Get 已销毁订单数 
+     * @return DestroyOrderNum 已销毁订单数
+     */
+    public Long getDestroyOrderNum() {
+        return this.DestroyOrderNum;
+    }
+
+    /**
+     * Set 已销毁订单数
+     * @param DestroyOrderNum 已销毁订单数
+     */
+    public void setDestroyOrderNum(Long DestroyOrderNum) {
+        this.DestroyOrderNum = DestroyOrderNum;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -495,6 +518,9 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
         if (source.AutoRepurchaseRenewSwitch != null) {
             this.AutoRepurchaseRenewSwitch = new Boolean(source.AutoRepurchaseRenewSwitch);
         }
+        if (source.DestroyOrderNum != null) {
+            this.DestroyOrderNum = new Long(source.DestroyOrderNum);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -522,6 +548,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AvailableLHLicenseCnt", this.AvailableLHLicenseCnt);
         this.setParamSimple(map, prefix + "AutoRepurchaseSwitch", this.AutoRepurchaseSwitch);
         this.setParamSimple(map, prefix + "AutoRepurchaseRenewSwitch", this.AutoRepurchaseRenewSwitch);
+        this.setParamSimple(map, prefix + "DestroyOrderNum", this.DestroyOrderNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

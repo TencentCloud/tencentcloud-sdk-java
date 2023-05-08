@@ -44,6 +44,13 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
     * 机构信息，暂未开放
     */
     @SerializedName("Organization")
@@ -99,6 +106,22 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     }
 
     /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
+    /**
      * Get 机构信息，暂未开放 
      * @return Organization 机构信息，暂未开放
      */
@@ -134,6 +157,9 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
         }
@@ -147,6 +173,7 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }

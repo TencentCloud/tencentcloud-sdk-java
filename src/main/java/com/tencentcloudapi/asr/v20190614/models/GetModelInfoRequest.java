@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.asr.v20190614.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanSensitiveList extends AbstractModel{
+public class GetModelInfoRequest extends AbstractModel{
 
     /**
-    * 敏感词列表
+    * 模型id
     */
-    @SerializedName("SensitiveList")
+    @SerializedName("ModelId")
     @Expose
-    private ScanSensitiveInfo [] SensitiveList;
+    private String ModelId;
 
     /**
-     * Get 敏感词列表 
-     * @return SensitiveList 敏感词列表
+     * Get 模型id 
+     * @return ModelId 模型id
      */
-    public ScanSensitiveInfo [] getSensitiveList() {
-        return this.SensitiveList;
+    public String getModelId() {
+        return this.ModelId;
     }
 
     /**
-     * Set 敏感词列表
-     * @param SensitiveList 敏感词列表
+     * Set 模型id
+     * @param ModelId 模型id
      */
-    public void setSensitiveList(ScanSensitiveInfo [] SensitiveList) {
-        this.SensitiveList = SensitiveList;
+    public void setModelId(String ModelId) {
+        this.ModelId = ModelId;
     }
 
-    public ScanSensitiveList() {
+    public GetModelInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanSensitiveList(ScanSensitiveList source) {
-        if (source.SensitiveList != null) {
-            this.SensitiveList = new ScanSensitiveInfo[source.SensitiveList.length];
-            for (int i = 0; i < source.SensitiveList.length; i++) {
-                this.SensitiveList[i] = new ScanSensitiveInfo(source.SensitiveList[i]);
-            }
+    public GetModelInfoRequest(GetModelInfoRequest source) {
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
         }
     }
 
@@ -66,7 +63,7 @@ public class ScanSensitiveList extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SensitiveList.", this.SensitiveList);
+        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
 
     }
 }

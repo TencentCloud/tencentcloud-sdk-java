@@ -104,6 +104,22 @@ public class Metric extends AbstractModel{
     private Long ProductId;
 
     /**
+    * 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Operators")
+    @Expose
+    private Operator [] Operators;
+
+    /**
+    * 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Periods")
+    @Expose
+    private Long [] Periods;
+
+    /**
      * Get 告警策略类型 
      * @return Namespace 告警策略类型
      */
@@ -295,6 +311,46 @@ public class Metric extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Operators 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Operator [] getOperators() {
+        return this.Operators;
+    }
+
+    /**
+     * Set 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Operators 匹配运算符
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperators(Operator [] Operators) {
+        this.Operators = Operators;
+    }
+
+    /**
+     * Get 指标触发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Periods 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getPeriods() {
+        return this.Periods;
+    }
+
+    /**
+     * Set 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Periods 指标触发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPeriods(Long [] Periods) {
+        this.Periods = Periods;
+    }
+
     public Metric() {
     }
 
@@ -339,6 +395,18 @@ public class Metric extends AbstractModel{
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.Operators != null) {
+            this.Operators = new Operator[source.Operators.length];
+            for (int i = 0; i < source.Operators.length; i++) {
+                this.Operators[i] = new Operator(source.Operators[i]);
+            }
+        }
+        if (source.Periods != null) {
+            this.Periods = new Long[source.Periods.length];
+            for (int i = 0; i < source.Periods.length; i++) {
+                this.Periods[i] = new Long(source.Periods[i]);
+            }
+        }
     }
 
 
@@ -357,6 +425,8 @@ public class Metric extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamArrayObj(map, prefix + "Operators.", this.Operators);
+        this.setParamArraySimple(map, prefix + "Periods.", this.Periods);
 
     }
 }

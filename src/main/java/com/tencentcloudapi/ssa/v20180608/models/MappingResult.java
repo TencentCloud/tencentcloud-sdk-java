@@ -167,6 +167,22 @@ public class MappingResult extends AbstractModel{
     private SecurityStatus [] SecurityStatus;
 
     /**
+    * 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisposalRecommendation")
+    @Expose
+    private Long DisposalRecommendation;
+
+    /**
+    * 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MappingType")
+    @Expose
+    private String MappingType;
+
+    /**
      * Get 资产名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetName 资产名称
@@ -526,6 +542,46 @@ public class MappingResult extends AbstractModel{
         this.SecurityStatus = SecurityStatus;
     }
 
+    /**
+     * Get 处置建议
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisposalRecommendation 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDisposalRecommendation() {
+        return this.DisposalRecommendation;
+    }
+
+    /**
+     * Set 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisposalRecommendation 处置建议
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisposalRecommendation(Long DisposalRecommendation) {
+        this.DisposalRecommendation = DisposalRecommendation;
+    }
+
+    /**
+     * Get 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MappingType 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMappingType() {
+        return this.MappingType;
+    }
+
+    /**
+     * Set 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MappingType 测绘类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMappingType(String MappingType) {
+        this.MappingType = MappingType;
+    }
+
     public MappingResult() {
     }
 
@@ -591,6 +647,12 @@ public class MappingResult extends AbstractModel{
                 this.SecurityStatus[i] = new SecurityStatus(source.SecurityStatus[i]);
             }
         }
+        if (source.DisposalRecommendation != null) {
+            this.DisposalRecommendation = new Long(source.DisposalRecommendation);
+        }
+        if (source.MappingType != null) {
+            this.MappingType = new String(source.MappingType);
+        }
     }
 
 
@@ -616,6 +678,8 @@ public class MappingResult extends AbstractModel{
         this.setParamSimple(map, prefix + "MappingStatus", this.MappingStatus);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "SecurityStatus.", this.SecurityStatus);
+        this.setParamSimple(map, prefix + "DisposalRecommendation", this.DisposalRecommendation);
+        this.setParamSimple(map, prefix + "MappingType", this.MappingType);
 
     }
 }

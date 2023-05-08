@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanPermissionInfo extends AbstractModel{
+public class GooseFS extends AbstractModel{
 
     /**
-    * 系统权限
+    * goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Permission")
+    @SerializedName("Id")
     @Expose
-    private String Permission;
+    private String Id;
 
     /**
-     * Get 系统权限 
-     * @return Permission 系统权限
+     * Get goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getPermission() {
-        return this.Permission;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set 系统权限
-     * @param Permission 系统权限
+     * Set goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id goosefs实例id
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setPermission(String Permission) {
-        this.Permission = Permission;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
-    public ScanPermissionInfo() {
+    public GooseFS() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanPermissionInfo(ScanPermissionInfo source) {
-        if (source.Permission != null) {
-            this.Permission = new String(source.Permission);
+    public GooseFS(GooseFS source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
         }
     }
 
@@ -63,7 +68,7 @@ public class ScanPermissionInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Permission", this.Permission);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

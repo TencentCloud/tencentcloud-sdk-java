@@ -345,6 +345,26 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *通过自学习模型id获取自学习模型详细信息
+     * @param req GetModelInfoRequest
+     * @return GetModelInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetModelInfoResponse GetModelInfo(GetModelInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetModelInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetModelInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetModelInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
      * @param req ModifyCustomizationRequest
      * @return ModifyCustomizationResponse

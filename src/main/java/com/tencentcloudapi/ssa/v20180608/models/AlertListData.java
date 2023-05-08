@@ -39,6 +39,14 @@ public class AlertListData extends AbstractModel{
     private AlertType [] AlertList;
 
     /**
+    * 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Aggregations")
+    @Expose
+    private AlertListAggregations Aggregations;
+
+    /**
      * Get 总数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Total 总数
@@ -78,6 +86,26 @@ public class AlertListData extends AbstractModel{
         this.AlertList = AlertList;
     }
 
+    /**
+     * Get 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Aggregations 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AlertListAggregations getAggregations() {
+        return this.Aggregations;
+    }
+
+    /**
+     * Set 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Aggregations 聚合参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAggregations(AlertListAggregations Aggregations) {
+        this.Aggregations = Aggregations;
+    }
+
     public AlertListData() {
     }
 
@@ -95,6 +123,9 @@ public class AlertListData extends AbstractModel{
                 this.AlertList[i] = new AlertType(source.AlertList[i]);
             }
         }
+        if (source.Aggregations != null) {
+            this.Aggregations = new AlertListAggregations(source.Aggregations);
+        }
     }
 
 
@@ -104,6 +135,7 @@ public class AlertListData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "AlertList.", this.AlertList);
+        this.setParamObj(map, prefix + "Aggregations.", this.Aggregations);
 
     }
 }

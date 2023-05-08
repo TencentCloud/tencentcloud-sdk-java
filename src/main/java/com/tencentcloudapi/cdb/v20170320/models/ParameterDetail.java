@@ -100,6 +100,14 @@ public class ParameterDetail extends AbstractModel{
     private String MinFunc;
 
     /**
+    * 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNotSupportEdit")
+    @Expose
+    private Boolean IsNotSupportEdit;
+
+    /**
      * Get 参数名称 
      * @return Name 参数名称
      */
@@ -275,6 +283,26 @@ public class ParameterDetail extends AbstractModel{
         this.MinFunc = MinFunc;
     }
 
+    /**
+     * Get 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNotSupportEdit 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsNotSupportEdit() {
+        return this.IsNotSupportEdit;
+    }
+
+    /**
+     * Set 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNotSupportEdit 参数是否不支持修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNotSupportEdit(Boolean IsNotSupportEdit) {
+        this.IsNotSupportEdit = IsNotSupportEdit;
+    }
+
     public ParameterDetail() {
     }
 
@@ -319,6 +347,9 @@ public class ParameterDetail extends AbstractModel{
         if (source.MinFunc != null) {
             this.MinFunc = new String(source.MinFunc);
         }
+        if (source.IsNotSupportEdit != null) {
+            this.IsNotSupportEdit = new Boolean(source.IsNotSupportEdit);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class ParameterDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
         this.setParamSimple(map, prefix + "MinFunc", this.MinFunc);
+        this.setParamSimple(map, prefix + "IsNotSupportEdit", this.IsNotSupportEdit);
 
     }
 }

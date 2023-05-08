@@ -191,6 +191,14 @@ public class ZoneSetting extends AbstractModel{
     private ImageOptimize ImageOptimize;
 
     /**
+    * 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -610,6 +618,26 @@ public class ZoneSetting extends AbstractModel{
         this.ImageOptimize = ImageOptimize;
     }
 
+    /**
+     * Get 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccelerateMainland 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccelerateMainland 中国大陆加速优化配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
+    }
+
     public ZoneSetting() {
     }
 
@@ -681,6 +709,9 @@ public class ZoneSetting extends AbstractModel{
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -709,6 +740,7 @@ public class ZoneSetting extends AbstractModel{
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

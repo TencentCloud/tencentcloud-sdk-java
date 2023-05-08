@@ -223,6 +223,62 @@ public class AlertType extends AbstractModel{
     private String VictimAssetSub;
 
     /**
+    * 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VictimAssetVpc")
+    @Expose
+    private String VictimAssetVpc;
+
+    /**
+    * 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Timestamp")
+    @Expose
+    private String Timestamp;
+
+    /**
+    * 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetGroupName")
+    @Expose
+    private String [] AssetGroupName;
+
+    /**
+    * 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetProjectName")
+    @Expose
+    private String AssetProjectName;
+
+    /**
+    * 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VictimAssetContent")
+    @Expose
+    private String [] VictimAssetContent;
+
+    /**
+    * 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WrongReportStatus")
+    @Expose
+    private Long WrongReportStatus;
+
+    /**
+    * 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WrongReportConditionId")
+    @Expose
+    private Long WrongReportConditionId;
+
+    /**
      * Get 标准时间格式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AlertTime 标准时间格式
@@ -722,6 +778,146 @@ public class AlertType extends AbstractModel{
         this.VictimAssetSub = VictimAssetSub;
     }
 
+    /**
+     * Get 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VictimAssetVpc 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVictimAssetVpc() {
+        return this.VictimAssetVpc;
+    }
+
+    /**
+     * Set 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VictimAssetVpc 资产vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVictimAssetVpc(String VictimAssetVpc) {
+        this.VictimAssetVpc = VictimAssetVpc;
+    }
+
+    /**
+     * Get 时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTimestamp() {
+        return this.Timestamp;
+    }
+
+    /**
+     * Set 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Timestamp 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimestamp(String Timestamp) {
+        this.Timestamp = Timestamp;
+    }
+
+    /**
+     * Get 资产组名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetGroupName 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAssetGroupName() {
+        return this.AssetGroupName;
+    }
+
+    /**
+     * Set 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetGroupName 资产组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetGroupName(String [] AssetGroupName) {
+        this.AssetGroupName = AssetGroupName;
+    }
+
+    /**
+     * Get 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetProjectName 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetProjectName() {
+        return this.AssetProjectName;
+    }
+
+    /**
+     * Set 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetProjectName 资产项目名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetProjectName(String AssetProjectName) {
+        this.AssetProjectName = AssetProjectName;
+    }
+
+    /**
+     * Get 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VictimAssetContent 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getVictimAssetContent() {
+        return this.VictimAssetContent;
+    }
+
+    /**
+     * Set 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VictimAssetContent 失陷资产内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVictimAssetContent(String [] VictimAssetContent) {
+        this.VictimAssetContent = VictimAssetContent;
+    }
+
+    /**
+     * Get 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WrongReportStatus 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWrongReportStatus() {
+        return this.WrongReportStatus;
+    }
+
+    /**
+     * Set 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WrongReportStatus 错误报告状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWrongReportStatus(Long WrongReportStatus) {
+        this.WrongReportStatus = WrongReportStatus;
+    }
+
+    /**
+     * Get 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WrongReportConditionId 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWrongReportConditionId() {
+        return this.WrongReportConditionId;
+    }
+
+    /**
+     * Set 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WrongReportConditionId 错误报告Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWrongReportConditionId(Long WrongReportConditionId) {
+        this.WrongReportConditionId = WrongReportConditionId;
+    }
+
     public AlertType() {
     }
 
@@ -814,6 +1010,33 @@ public class AlertType extends AbstractModel{
         if (source.VictimAssetSub != null) {
             this.VictimAssetSub = new String(source.VictimAssetSub);
         }
+        if (source.VictimAssetVpc != null) {
+            this.VictimAssetVpc = new String(source.VictimAssetVpc);
+        }
+        if (source.Timestamp != null) {
+            this.Timestamp = new String(source.Timestamp);
+        }
+        if (source.AssetGroupName != null) {
+            this.AssetGroupName = new String[source.AssetGroupName.length];
+            for (int i = 0; i < source.AssetGroupName.length; i++) {
+                this.AssetGroupName[i] = new String(source.AssetGroupName[i]);
+            }
+        }
+        if (source.AssetProjectName != null) {
+            this.AssetProjectName = new String(source.AssetProjectName);
+        }
+        if (source.VictimAssetContent != null) {
+            this.VictimAssetContent = new String[source.VictimAssetContent.length];
+            for (int i = 0; i < source.VictimAssetContent.length; i++) {
+                this.VictimAssetContent[i] = new String(source.VictimAssetContent[i]);
+            }
+        }
+        if (source.WrongReportStatus != null) {
+            this.WrongReportStatus = new Long(source.WrongReportStatus);
+        }
+        if (source.WrongReportConditionId != null) {
+            this.WrongReportConditionId = new Long(source.WrongReportConditionId);
+        }
     }
 
 
@@ -846,6 +1069,13 @@ public class AlertType extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AssetPublicIp.", this.AssetPublicIp);
         this.setParamSimple(map, prefix + "AttackTactic", this.AttackTactic);
         this.setParamSimple(map, prefix + "VictimAssetSub", this.VictimAssetSub);
+        this.setParamSimple(map, prefix + "VictimAssetVpc", this.VictimAssetVpc);
+        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamArraySimple(map, prefix + "AssetGroupName.", this.AssetGroupName);
+        this.setParamSimple(map, prefix + "AssetProjectName", this.AssetProjectName);
+        this.setParamArraySimple(map, prefix + "VictimAssetContent.", this.VictimAssetContent);
+        this.setParamSimple(map, prefix + "WrongReportStatus", this.WrongReportStatus);
+        this.setParamSimple(map, prefix + "WrongReportConditionId", this.WrongReportConditionId);
 
     }
 }

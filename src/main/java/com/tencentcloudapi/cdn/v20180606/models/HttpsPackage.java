@@ -157,6 +157,14 @@ global：全球
     private Long ExtensionMode;
 
     /**
+    * HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoExtension")
+    @Expose
+    private Boolean AutoExtension;
+
+    /**
      * Get HTTPS请求包 Id 
      * @return Id HTTPS请求包 Id
      */
@@ -476,6 +484,26 @@ global：全球
         this.ExtensionMode = ExtensionMode;
     }
 
+    /**
+     * Get HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoExtension HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoExtension() {
+        return this.AutoExtension;
+    }
+
+    /**
+     * Set HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoExtension HTTPS请求包是否自动续订
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoExtension(Boolean AutoExtension) {
+        this.AutoExtension = AutoExtension;
+    }
+
     public HttpsPackage() {
     }
 
@@ -538,6 +566,9 @@ global：全球
         if (source.ExtensionMode != null) {
             this.ExtensionMode = new Long(source.ExtensionMode);
         }
+        if (source.AutoExtension != null) {
+            this.AutoExtension = new Boolean(source.AutoExtension);
+        }
     }
 
 
@@ -563,6 +594,7 @@ global：全球
         this.setParamSimple(map, prefix + "ContractExtension", this.ContractExtension);
         this.setParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
         this.setParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
+        this.setParamSimple(map, prefix + "AutoExtension", this.AutoExtension);
 
     }
 }

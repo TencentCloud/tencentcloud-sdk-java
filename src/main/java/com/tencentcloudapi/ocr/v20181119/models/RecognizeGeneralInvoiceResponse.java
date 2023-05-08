@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ms.v20180408.models;
+package com.tencentcloudapi.ocr.v20181119.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanInstancesResponse extends AbstractModel{
+public class RecognizeGeneralInvoiceResponse extends AbstractModel{
 
     /**
-    * 符合要求的app数量
+    * 混贴票据识别结果，具体内容请点击左侧链接。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("MixedInvoiceItems")
     @Expose
-    private Long TotalCount;
+    private InvoiceItem [] MixedInvoiceItems;
 
     /**
-    * 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
+    * PDF文件总页码
     */
-    @SerializedName("ScanSet")
+    @SerializedName("TotalPDFCount")
     @Expose
-    private AppScanSet [] ScanSet;
+    private Long TotalPDFCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeScanInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合要求的app数量 
-     * @return TotalCount 符合要求的app数量
+     * Get 混贴票据识别结果，具体内容请点击左侧链接。 
+     * @return MixedInvoiceItems 混贴票据识别结果，具体内容请点击左侧链接。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public InvoiceItem [] getMixedInvoiceItems() {
+        return this.MixedInvoiceItems;
     }
 
     /**
-     * Set 符合要求的app数量
-     * @param TotalCount 符合要求的app数量
+     * Set 混贴票据识别结果，具体内容请点击左侧链接。
+     * @param MixedInvoiceItems 混贴票据识别结果，具体内容请点击左侧链接。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setMixedInvoiceItems(InvoiceItem [] MixedInvoiceItems) {
+        this.MixedInvoiceItems = MixedInvoiceItems;
     }
 
     /**
-     * Get 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。 
-     * @return ScanSet 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
+     * Get PDF文件总页码 
+     * @return TotalPDFCount PDF文件总页码
      */
-    public AppScanSet [] getScanSet() {
-        return this.ScanSet;
+    public Long getTotalPDFCount() {
+        return this.TotalPDFCount;
     }
 
     /**
-     * Set 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
-     * @param ScanSet 一个关于app详细信息的结构体，主要包括app的基本信息和扫描状态信息。
+     * Set PDF文件总页码
+     * @param TotalPDFCount PDF文件总页码
      */
-    public void setScanSet(AppScanSet [] ScanSet) {
-        this.ScanSet = ScanSet;
+    public void setTotalPDFCount(Long TotalPDFCount) {
+        this.TotalPDFCount = TotalPDFCount;
     }
 
     /**
@@ -91,22 +91,22 @@ public class DescribeScanInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeScanInstancesResponse() {
+    public RecognizeGeneralInvoiceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeScanInstancesResponse(DescribeScanInstancesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.ScanSet != null) {
-            this.ScanSet = new AppScanSet[source.ScanSet.length];
-            for (int i = 0; i < source.ScanSet.length; i++) {
-                this.ScanSet[i] = new AppScanSet(source.ScanSet[i]);
+    public RecognizeGeneralInvoiceResponse(RecognizeGeneralInvoiceResponse source) {
+        if (source.MixedInvoiceItems != null) {
+            this.MixedInvoiceItems = new InvoiceItem[source.MixedInvoiceItems.length];
+            for (int i = 0; i < source.MixedInvoiceItems.length; i++) {
+                this.MixedInvoiceItems[i] = new InvoiceItem(source.MixedInvoiceItems[i]);
             }
+        }
+        if (source.TotalPDFCount != null) {
+            this.TotalPDFCount = new Long(source.TotalPDFCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +118,8 @@ public class DescribeScanInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "ScanSet.", this.ScanSet);
+        this.setParamArrayObj(map, prefix + "MixedInvoiceItems.", this.MixedInvoiceItems);
+        this.setParamSimple(map, prefix + "TotalPDFCount", this.TotalPDFCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

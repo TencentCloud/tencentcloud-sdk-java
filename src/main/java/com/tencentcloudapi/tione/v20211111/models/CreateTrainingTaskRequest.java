@@ -30,7 +30,8 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+    * 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
     */
     @SerializedName("ChargeType")
     @Expose
@@ -193,16 +194,20 @@ public class CreateTrainingTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费 
-     * @return ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * Get 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费 
+     * @return ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
-     * @param ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * Set 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
+     * @param ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
+POSTPAID_BY_HOUR 按量计费
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;

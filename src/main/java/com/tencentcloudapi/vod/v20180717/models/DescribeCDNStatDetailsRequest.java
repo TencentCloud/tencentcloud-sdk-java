@@ -27,6 +27,7 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
     */
     @SerializedName("Metric")
     @Expose
@@ -147,11 +148,13 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
      * Get 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
-<li>Requests：请求数。</li> 
+<li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li> 
      * @return Metric 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
      */
     public String getMetric() {
         return this.Metric;
@@ -162,10 +165,12 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
      * @param Metric 查询指标，取值有：
 <li>Traffic：流量，单位为 Byte。</li>
 <li>Bandwidth：带宽，单位为 Bps。</li>
 <li>Requests：请求数。</li>
+<li>QUICRequests：QUIC 请求数。</li>
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
