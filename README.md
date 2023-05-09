@@ -321,28 +321,6 @@ Log logger = LogFactory.getLog("TestLog");
 logger.info("hello world");
 ```
 
-# 旧版 SDK
-我们推荐您使用新版 SDK，如果需要旧版 SDK，请在您的 Maven pom.xml 添加以下依赖项即可：
-```xml
-<dependency>
-<groupId>com.qcloud</groupId>
-<artifactId>qcloud-java-sdk</artifactId>
-<version>2.0.6</version>
-</dependency>
-```
-
-# 其他问题
-
-## 版本升级
-
-请注意，从 3.0.x 版本升级到 3.1.x 版本有兼容性问题，对于 Integer 字段的使用修改为了 Long 类型，需要重新编译项目。
-
-## 证书问题
-
-证书问题通常是客户端环境配置错误导致的。SDK 没有对证书进行操作，依赖的是 Java 运行环境本身的处理。出现证书问题后，可以使用`-Djavax.net.debug=ssl`开启详细日志辅助判断。
-
-有用户报告使用 IBM JDK 1.8 出现证书报错：`javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure`，使用 Oracle JDK 后问题消失。
-
 # Common Client
 
 从 3.1.303 版本开始腾讯云 Java SDK 支持使用泛用性的 API 调用方式(Common Client)进行请求。您只需要安装  Common 包，即可向任何产品发起调用。
@@ -425,11 +403,25 @@ Credential cred = new DefaultCredentialsProvider().getCredentials();
 
 凭证管理详细使用请参阅示例：[使用凭证提供链](./examples/common/credential_manager/CredentialManager.java)
 
-
-
 # 自定义 SSLSocketFactory 和 X509TrustManager
 ```java
 ClientProfile cpf = new ClientProfile();
 cpf.getHttpProfile().setSslSocketFactory(new MySSLSocketFactoryImpl());
 cpf.getHttpProfile().setX509TrustManager(new MyX509TrustManagerImpl());
 ```
+
+# 其他问题
+
+## 版本升级
+
+请注意，从 3.0.x 版本升级到 3.1.x 版本有兼容性问题，对于 Integer 字段的使用修改为了 Long 类型，需要重新编译项目。
+
+## 证书问题
+
+证书问题通常是客户端环境配置错误导致的。SDK 没有对证书进行操作，依赖的是 Java 运行环境本身的处理。出现证书问题后，可以使用`-Djavax.net.debug=ssl`开启详细日志辅助判断。
+
+有用户报告使用 IBM JDK 1.8 出现证书报错：`javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure`，使用 Oracle JDK 后问题消失。
+
+## kotlin 问题
+
+部分用户可能使用时遇到报错：`java.lang.NoSuchMethodError: kotlin.collections.ArraysKt.copyInto`。这是因为 kotlin 运行环境版本较低导致，可尝试升级 kotlin 版本解决。
