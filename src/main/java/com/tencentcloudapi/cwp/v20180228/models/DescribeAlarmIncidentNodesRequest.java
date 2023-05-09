@@ -44,6 +44,13 @@ public class DescribeAlarmIncidentNodesRequest extends AbstractModel{
     private Long AlarmTime;
 
     /**
+    * 告警来源表ID
+    */
+    @SerializedName("TableId")
+    @Expose
+    private Long TableId;
+
+    /**
      * Get 机器uuid 
      * @return Uuid 机器uuid
      */
@@ -91,6 +98,22 @@ public class DescribeAlarmIncidentNodesRequest extends AbstractModel{
         this.AlarmTime = AlarmTime;
     }
 
+    /**
+     * Get 告警来源表ID 
+     * @return TableId 告警来源表ID
+     */
+    public Long getTableId() {
+        return this.TableId;
+    }
+
+    /**
+     * Set 告警来源表ID
+     * @param TableId 告警来源表ID
+     */
+    public void setTableId(Long TableId) {
+        this.TableId = TableId;
+    }
+
     public DescribeAlarmIncidentNodesRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeAlarmIncidentNodesRequest extends AbstractModel{
         if (source.AlarmTime != null) {
             this.AlarmTime = new Long(source.AlarmTime);
         }
+        if (source.TableId != null) {
+            this.TableId = new Long(source.TableId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeAlarmIncidentNodesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "AlarmVid", this.AlarmVid);
         this.setParamSimple(map, prefix + "AlarmTime", this.AlarmTime);
+        this.setParamSimple(map, prefix + "TableId", this.TableId);
 
     }
 }

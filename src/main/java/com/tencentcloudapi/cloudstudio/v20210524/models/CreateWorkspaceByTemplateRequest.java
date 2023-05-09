@@ -37,6 +37,13 @@ public class CreateWorkspaceByTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
+    * 工作空间名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 用户所属组 
      * @return CloudStudioSessionTeam 用户所属组
      */
@@ -68,6 +75,22 @@ public class CreateWorkspaceByTemplateRequest extends AbstractModel{
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get 工作空间名称 
+     * @return Name 工作空间名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 工作空间名称
+     * @param Name 工作空间名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public CreateWorkspaceByTemplateRequest() {
     }
 
@@ -82,6 +105,9 @@ public class CreateWorkspaceByTemplateRequest extends AbstractModel{
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CreateWorkspaceByTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CloudStudioSessionTeam", this.CloudStudioSessionTeam);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

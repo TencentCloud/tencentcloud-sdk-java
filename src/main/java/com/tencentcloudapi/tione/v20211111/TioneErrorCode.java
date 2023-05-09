@@ -87,6 +87,9 @@ public enum TioneErrorCode {
     // 标签操作失败。
      FAILEDOPERATION_EXECTAGFAIL("FailedOperation.ExecTagFail"),
      
+    // 余额不足冻结失败。
+     FAILEDOPERATION_FREEZEBILLFAILED("FailedOperation.FreezeBillFailed"),
+     
     // 白名单免费配额不足。
      FAILEDOPERATION_INSUFFICIENTWHITELISTQUOTA("FailedOperation.InsufficientWhitelistQuota"),
      

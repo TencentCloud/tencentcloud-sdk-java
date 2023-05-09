@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TaskInfoDetail extends AbstractModel{
 
     /**
-    * 任务Id
+    * 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
@@ -31,7 +31,7 @@ public class TaskInfoDetail extends AbstractModel{
     private Long TaskId;
 
     /**
-    * 开始时间
+    * 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
@@ -39,7 +39,26 @@ public class TaskInfoDetail extends AbstractModel{
     private String StartTime;
 
     /**
-    * 任务类型
+    * 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskType")
@@ -47,7 +66,7 @@ public class TaskInfoDetail extends AbstractModel{
     private String TaskType;
 
     /**
-    * 实例名称
+    * 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -55,7 +74,7 @@ public class TaskInfoDetail extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 实例Id
+    * 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -63,7 +82,7 @@ public class TaskInfoDetail extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 项目Id
+    * 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
@@ -71,7 +90,7 @@ public class TaskInfoDetail extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 任务进度
+    * 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
@@ -79,7 +98,7 @@ public class TaskInfoDetail extends AbstractModel{
     private Float Progress;
 
     /**
-    * 结束时间
+    * 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -87,7 +106,12 @@ public class TaskInfoDetail extends AbstractModel{
     private String EndTime;
 
     /**
-    * 任务状态
+    * 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -95,9 +119,9 @@ public class TaskInfoDetail extends AbstractModel{
     private Long Result;
 
     /**
-     * Get 任务Id
+     * Get 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskId 任务Id
+     * @return TaskId 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
@@ -105,9 +129,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 任务Id
+     * Set 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskId 任务Id
+     * @param TaskId 任务 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
@@ -115,9 +139,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 开始时间
+     * Get 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartTime 开始时间
+     * @return StartTime 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
@@ -125,9 +149,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 开始时间
+     * Set 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartTime 开始时间
+     * @param StartTime 任务开始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
@@ -135,9 +159,47 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 任务类型
+     * Get 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskType 任务类型
+     * @return TaskType 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskType() {
@@ -145,9 +207,47 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 任务类型
+     * Set 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskType 任务类型
+     * @param TaskType 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskType(String TaskType) {
@@ -155,9 +255,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 实例名称
+     * Get 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 实例名称
+     * @return InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -165,9 +265,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 实例名称
+     * Set 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 实例名称
+     * @param InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -175,9 +275,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 实例Id
+     * Get 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例Id
+     * @return InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -185,9 +285,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 实例Id
+     * Set 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例Id
+     * @param InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -195,9 +295,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 项目Id
+     * Get 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProjectId 项目Id
+     * @return ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
@@ -205,9 +305,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 项目Id
+     * Set 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProjectId 项目Id
+     * @param ProjectId 项目 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
@@ -215,9 +315,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 任务进度
+     * Get 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Progress 任务进度
+     * @return Progress 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
@@ -225,9 +325,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 任务进度
+     * Set 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Progress 任务进度
+     * @param Progress 任务进度。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {
@@ -235,9 +335,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 结束时间
+     * Get 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 结束时间
+     * @return EndTime 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -245,9 +345,9 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 结束时间
+     * Set 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 结束时间
+     * @param EndTime 任务执行结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -255,9 +355,19 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 任务状态
+     * Get 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 任务状态
+     * @return Result 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResult() {
@@ -265,9 +375,19 @@ public class TaskInfoDetail extends AbstractModel{
     }
 
     /**
-     * Set 任务状态
+     * Set 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 任务状态
+     * @param Result 任务执行状态。
+
+0：任务初始化。
+1：执行中。
+2：完成。
+4：失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Long Result) {

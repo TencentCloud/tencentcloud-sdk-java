@@ -286,6 +286,26 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
+     * @param req DescribeInitNodeScriptsRequest
+     * @return DescribeInitNodeScriptsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInitNodeScriptsResponse DescribeInitNodeScripts(DescribeInitNodeScriptsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInitNodeScriptsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInitNodeScriptsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInitNodeScripts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
      * @param req DescribeNodesRequest
      * @return DescribeNodesResponse

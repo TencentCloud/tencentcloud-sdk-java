@@ -39,6 +39,14 @@ public class WorkspaceInfo extends AbstractModel{
     private String SpaceKey;
 
     /**
+    * 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 工作空间ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkspaceId 工作空间ID
@@ -78,6 +86,26 @@ public class WorkspaceInfo extends AbstractModel{
         this.SpaceKey = SpaceKey;
     }
 
+    /**
+     * Get 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 工作空间名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public WorkspaceInfo() {
     }
 
@@ -92,6 +120,9 @@ public class WorkspaceInfo extends AbstractModel{
         if (source.SpaceKey != null) {
             this.SpaceKey = new String(source.SpaceKey);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class WorkspaceInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WorkspaceId", this.WorkspaceId);
         this.setParamSimple(map, prefix + "SpaceKey", this.SpaceKey);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

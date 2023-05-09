@@ -93,7 +93,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private String [] User;
 
     /**
-    * ip
+    * IP
     */
     @SerializedName("Ip")
     @Expose
@@ -267,16 +267,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get ip 
-     * @return Ip ip
+     * Get IP 
+     * @return Ip IP
      */
     public String [] getIp() {
         return this.Ip;
     }
 
     /**
-     * Set ip
-     * @param Ip ip
+     * Set IP
+     * @param Ip IP
      */
     public void setIp(String [] Ip) {
         this.Ip = Ip;

@@ -159,7 +159,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *该接口仅支持多AZ实例副本组提主和单AZ副本提主
+     *本接口（ChangeReplicaToMaster）适用于实例副本组提主或副本提主。
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse
      * @throws TencentCloudSDKException
@@ -1119,7 +1119,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询任务列表信息
+     *本接口（DescribeTaskList）用于查询指定实例的任务列表信息。
      * @param req DescribeTaskListRequest
      * @return DescribeTaskListResponse
      * @throws TencentCloudSDKException

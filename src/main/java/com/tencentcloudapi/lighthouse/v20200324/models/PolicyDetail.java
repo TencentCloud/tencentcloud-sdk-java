@@ -27,21 +27,21 @@ public class PolicyDetail extends AbstractModel{
     */
     @SerializedName("UserDiscount")
     @Expose
-    private Long UserDiscount;
+    private Float UserDiscount;
 
     /**
     * 公共折扣。
     */
     @SerializedName("CommonDiscount")
     @Expose
-    private Long CommonDiscount;
+    private Float CommonDiscount;
 
     /**
     * 最终折扣。
     */
     @SerializedName("FinalDiscount")
     @Expose
-    private Long FinalDiscount;
+    private Float FinalDiscount;
 
     /**
     * 活动折扣。取值为null，表示无有效值，即没有折扣。
@@ -64,7 +64,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Get 用户折扣。 
      * @return UserDiscount 用户折扣。
      */
-    public Long getUserDiscount() {
+    public Float getUserDiscount() {
         return this.UserDiscount;
     }
 
@@ -72,7 +72,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Set 用户折扣。
      * @param UserDiscount 用户折扣。
      */
-    public void setUserDiscount(Long UserDiscount) {
+    public void setUserDiscount(Float UserDiscount) {
         this.UserDiscount = UserDiscount;
     }
 
@@ -80,7 +80,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Get 公共折扣。 
      * @return CommonDiscount 公共折扣。
      */
-    public Long getCommonDiscount() {
+    public Float getCommonDiscount() {
         return this.CommonDiscount;
     }
 
@@ -88,7 +88,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Set 公共折扣。
      * @param CommonDiscount 公共折扣。
      */
-    public void setCommonDiscount(Long CommonDiscount) {
+    public void setCommonDiscount(Float CommonDiscount) {
         this.CommonDiscount = CommonDiscount;
     }
 
@@ -96,7 +96,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Get 最终折扣。 
      * @return FinalDiscount 最终折扣。
      */
-    public Long getFinalDiscount() {
+    public Float getFinalDiscount() {
         return this.FinalDiscount;
     }
 
@@ -104,7 +104,7 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      * Set 最终折扣。
      * @param FinalDiscount 最终折扣。
      */
-    public void setFinalDiscount(Long FinalDiscount) {
+    public void setFinalDiscount(Float FinalDiscount) {
         this.FinalDiscount = FinalDiscount;
     }
 
@@ -161,13 +161,13 @@ user：用户折扣; common：官网折扣; activity：活动折扣。 取值为
      */
     public PolicyDetail(PolicyDetail source) {
         if (source.UserDiscount != null) {
-            this.UserDiscount = new Long(source.UserDiscount);
+            this.UserDiscount = new Float(source.UserDiscount);
         }
         if (source.CommonDiscount != null) {
-            this.CommonDiscount = new Long(source.CommonDiscount);
+            this.CommonDiscount = new Float(source.CommonDiscount);
         }
         if (source.FinalDiscount != null) {
-            this.FinalDiscount = new Long(source.FinalDiscount);
+            this.FinalDiscount = new Float(source.FinalDiscount);
         }
         if (source.ActivityDiscount != null) {
             this.ActivityDiscount = new Float(source.ActivityDiscount);

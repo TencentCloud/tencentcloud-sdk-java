@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDeveloperResponse extends AbstractModel{
 
     /**
-    * 服务商ID
+    * 开发商ID
     */
     @SerializedName("DeveloperId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDeveloperResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 服务商ID 
-     * @return DeveloperId 服务商ID
+     * Get 开发商ID 
+     * @return DeveloperId 开发商ID
      */
     public String getDeveloperId() {
         return this.DeveloperId;
     }
 
     /**
-     * Set 服务商ID
-     * @param DeveloperId 服务商ID
+     * Set 开发商ID
+     * @param DeveloperId 开发商ID
      */
     public void setDeveloperId(String DeveloperId) {
         this.DeveloperId = DeveloperId;

@@ -158,7 +158,7 @@ public class TrainingTaskSetItem extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (for后付费)
+    * 计费金额信息，eg：2.00元/小时 (按量计费)
     */
     @SerializedName("BillingInfo")
     @Expose
@@ -528,16 +528,16 @@ public class TrainingTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (for后付费) 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Get 计费金额信息，eg：2.00元/小时 (按量计费) 
+     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
      */
     public String getBillingInfo() {
         return this.BillingInfo;
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (for后付费)
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Set 计费金额信息，eg：2.00元/小时 (按量计费)
+     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (按量计费)
      */
     public void setBillingInfo(String BillingInfo) {
         this.BillingInfo = BillingInfo;

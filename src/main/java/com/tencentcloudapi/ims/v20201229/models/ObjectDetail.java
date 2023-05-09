@@ -65,6 +65,14 @@ public class ObjectDetail extends AbstractModel{
     private String SubLabel;
 
     /**
+    * 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectId")
+    @Expose
+    private String ObjectId;
+
+    /**
      * Get 该参数用于返回识别对象的ID以方便识别和区分。 
      * @return Id 该参数用于返回识别对象的ID以方便识别和区分。
      */
@@ -160,6 +168,26 @@ public class ObjectDetail extends AbstractModel{
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectId 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getObjectId() {
+        return this.ObjectId;
+    }
+
+    /**
+     * Set 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectId 该参数用于返回命中的人脸id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectId(String ObjectId) {
+        this.ObjectId = ObjectId;
+    }
+
     public ObjectDetail() {
     }
 
@@ -186,6 +214,9 @@ public class ObjectDetail extends AbstractModel{
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.ObjectId != null) {
+            this.ObjectId = new String(source.ObjectId);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class ObjectDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamSimple(map, prefix + "ObjectId", this.ObjectId);
 
     }
 }

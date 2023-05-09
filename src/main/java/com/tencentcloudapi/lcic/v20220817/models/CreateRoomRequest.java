@@ -135,7 +135,7 @@ video 纯视频
     private Long RTCAudienceNumber;
 
     /**
-    * 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+    * 观看类型，互动直播（默认）。
     */
     @SerializedName("AudienceType")
     @Expose
@@ -156,7 +156,9 @@ video 纯视频
     private String GroupId;
 
     /**
-    * 打开学生麦克风/摄像头的授权开关
+    * 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
     */
     @SerializedName("EnableDirectControl")
     @Expose
@@ -443,16 +445,16 @@ video 纯视频
     }
 
     /**
-     * Get 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型 
-     * @return AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     * Get 观看类型，互动直播（默认）。 
+     * @return AudienceType 观看类型，互动直播（默认）。
      */
     public Long getAudienceType() {
         return this.AudienceType;
     }
 
     /**
-     * Set 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
-     * @param AudienceType 观看类型。0未知，1互动，2cdn或直播。 目前仅支持互动类型
+     * Set 观看类型，互动直播（默认）。
+     * @param AudienceType 观看类型，互动直播（默认）。
      */
     public void setAudienceType(Long AudienceType) {
         this.AudienceType = AudienceType;
@@ -491,16 +493,24 @@ video 纯视频
     }
 
     /**
-     * Get 打开学生麦克风/摄像头的授权开关 
-     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Get 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意） 
+     * @return EnableDirectControl 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
      */
     public Long getEnableDirectControl() {
         return this.EnableDirectControl;
     }
 
     /**
-     * Set 打开学生麦克风/摄像头的授权开关
-     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Set 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
+     * @param EnableDirectControl 是否允许老师/助教直接控制学生的摄像头/麦克风。可以有以下取值：
+0 不允许直接控制（需同意，默认值）
+1 允许直接控制（无需同意）
      */
     public void setEnableDirectControl(Long EnableDirectControl) {
         this.EnableDirectControl = EnableDirectControl;

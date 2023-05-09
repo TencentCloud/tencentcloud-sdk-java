@@ -103,6 +103,14 @@ public class NetAddr extends AbstractModel{
     private String WanStatus;
 
     /**
+    * 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private String InstanceGroupId;
+
+    /**
      * Get 内网ip
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vip 内网ip
@@ -302,6 +310,26 @@ public class NetAddr extends AbstractModel{
         this.WanStatus = WanStatus;
     }
 
+    /**
+     * Get 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceGroupId 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceGroupId 实例组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceGroupId(String InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
     public NetAddr() {
     }
 
@@ -340,6 +368,9 @@ public class NetAddr extends AbstractModel{
         if (source.WanStatus != null) {
             this.WanStatus = new String(source.WanStatus);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new String(source.InstanceGroupId);
+        }
     }
 
 
@@ -357,6 +388,7 @@ public class NetAddr extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "WanIP", this.WanIP);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }

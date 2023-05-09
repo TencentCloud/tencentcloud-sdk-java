@@ -23,276 +23,391 @@ import java.util.HashMap;
 public class DescribeTaskListRequest extends AbstractModel{
 
     /**
-    * 实例Id
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * 实例名称。
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 分页大小,默认20，上限不大于100
+    * 每页输出的任务列表大小。默认为 20，最多输出100条。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍（自动向下取整）
+    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 项目Id
+    * 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 任务类型
+    * 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
     */
     @SerializedName("TaskTypes")
     @Expose
     private String [] TaskTypes;
 
     /**
-    * 起始时间
+    * 任务执行的起始时间。格式如：2021-12-30 00:00:00。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 终止时间
+    * 任务运行的终止时间。格式如：2021-12-30 20:59:35
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 任务状态
+    * 该参数为内部使用，请忽略。
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long [] TaskStatus;
 
     /**
-    * 任务状态
+    * 任务执行状态。
+- 0：任务初始化。
+- 1：执行中。
+- 2：完成。
+- 4：失败。
     */
     @SerializedName("Result")
     @Expose
     private Long [] Result;
 
     /**
-    * 操作者Uin，该字段已废弃，使用OperateUin代替
+    * 该字段已废弃，使用OperateUin代替，请忽略。
     */
     @SerializedName("OperatorUin")
     @Expose
     private Long [] OperatorUin;
 
     /**
-    * 操作者Uin
+    * 操作者账号 ID，UIN。
     */
     @SerializedName("OperateUin")
     @Expose
     private String [] OperateUin;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get 实例名称。 
+     * @return InstanceName 实例名称。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set 实例名称。
+     * @param InstanceName 实例名称。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 分页大小,默认20，上限不大于100 
-     * @return Limit 分页大小,默认20，上限不大于100
+     * Get 每页输出的任务列表大小。默认为 20，最多输出100条。 
+     * @return Limit 每页输出的任务列表大小。默认为 20，最多输出100条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小,默认20，上限不大于100
-     * @param Limit 分页大小,默认20，上限不大于100
+     * Set 每页输出的任务列表大小。默认为 20，最多输出100条。
+     * @param Limit 每页输出的任务列表大小。默认为 20，最多输出100条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍（自动向下取整） 
-     * @return Offset 偏移量，取Limit整数倍（自动向下取整）
+     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍（自动向下取整）
-     * @param Offset 偏移量，取Limit整数倍（自动向下取整）
+     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 项目Id 
-     * @return ProjectIds 项目Id
+     * Get 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。 
+     * @return ProjectIds 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectIds 项目Id
+     * Set 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
+     * @param ProjectIds 项目 ID。登录 [Redis 控制台](https://console.cloud.tencent.com/redis)，在右上角的账号信息下拉菜单中，选择**项目管理**，即可获取对应的项目 ID。
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskTypes 任务类型
+     * Get 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。 
+     * @return TaskTypes 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
      */
     public String [] getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskTypes 任务类型
+     * Set 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
+     * @param TaskTypes 任务类型。
+- FLOW_CREATE：创建实例。
+- FLOW_MODIFYCONNECTIONCONFIG：调整带宽连接数。
+- FLOW_MODIFYINSTANCEPASSWORDFREE：免密变更流程。
+- FLOW_CLEARNETWORK：VPC退还中。
+- FLOW_SETPWD：设置访问密码。
+- FLOW_EXPORSHR：扩缩容流程。
+- FLOW_UpgradeArch：实例架构升级流程。
+- FLOW_MODIFYINSTANCEPARAMS：修改实例参数。
+- FLOW_MODIFYINSTACEREADONLY：只读变更流程。
+- FLOW_CLOSE：关闭实例。
+- FLOW_DELETE：删除实例。
+- FLOW_OPEN_WAN：开启外网。
+- FLOW_CLEAN：清空实例。      
+- FLOW_MODIFYINSTANCEACCOUNT：修改实例账号。
+- FLOW_ENABLEINSTANCE_REPLICATE：开启副本只读。
+- FLOW_DISABLEINSTANCE_REPLICATE: 关闭副本只读。
+- FLOW_SWITCHINSTANCEVIP：交换实例 VIP。
+- FLOW_CHANGE_REPLICA_TO_MSTER：副本节点升主节点。
+- FLOW_BACKUPINSTANCE：备份实例。
      */
     public void setTaskTypes(String [] TaskTypes) {
         this.TaskTypes = TaskTypes;
     }
 
     /**
-     * Get 起始时间 
-     * @return BeginTime 起始时间
+     * Get 任务执行的起始时间。格式如：2021-12-30 00:00:00。 
+     * @return BeginTime 任务执行的起始时间。格式如：2021-12-30 00:00:00。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 起始时间
-     * @param BeginTime 起始时间
+     * Set 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+     * @param BeginTime 任务执行的起始时间。格式如：2021-12-30 00:00:00。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 终止时间 
-     * @return EndTime 终止时间
+     * Get 任务运行的终止时间。格式如：2021-12-30 20:59:35 
+     * @return EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 终止时间
-     * @param EndTime 终止时间
+     * Set 任务运行的终止时间。格式如：2021-12-30 20:59:35
+     * @param EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 任务状态 
-     * @return TaskStatus 任务状态
+     * Get 该参数为内部使用，请忽略。 
+     * @return TaskStatus 该参数为内部使用，请忽略。
      */
     public Long [] getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 任务状态
-     * @param TaskStatus 任务状态
+     * Set 该参数为内部使用，请忽略。
+     * @param TaskStatus 该参数为内部使用，请忽略。
      */
     public void setTaskStatus(Long [] TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 任务状态 
-     * @return Result 任务状态
+     * Get 任务执行状态。
+- 0：任务初始化。
+- 1：执行中。
+- 2：完成。
+- 4：失败。 
+     * @return Result 任务执行状态。
+- 0：任务初始化。
+- 1：执行中。
+- 2：完成。
+- 4：失败。
      */
     public Long [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set 任务状态
-     * @param Result 任务状态
+     * Set 任务执行状态。
+- 0：任务初始化。
+- 1：执行中。
+- 2：完成。
+- 4：失败。
+     * @param Result 任务执行状态。
+- 0：任务初始化。
+- 1：执行中。
+- 2：完成。
+- 4：失败。
      */
     public void setResult(Long [] Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 操作者Uin，该字段已废弃，使用OperateUin代替 
-     * @return OperatorUin 操作者Uin，该字段已废弃，使用OperateUin代替
+     * Get 该字段已废弃，使用OperateUin代替，请忽略。 
+     * @return OperatorUin 该字段已废弃，使用OperateUin代替，请忽略。
      */
     public Long [] getOperatorUin() {
         return this.OperatorUin;
     }
 
     /**
-     * Set 操作者Uin，该字段已废弃，使用OperateUin代替
-     * @param OperatorUin 操作者Uin，该字段已废弃，使用OperateUin代替
+     * Set 该字段已废弃，使用OperateUin代替，请忽略。
+     * @param OperatorUin 该字段已废弃，使用OperateUin代替，请忽略。
      */
     public void setOperatorUin(Long [] OperatorUin) {
         this.OperatorUin = OperatorUin;
     }
 
     /**
-     * Get 操作者Uin 
-     * @return OperateUin 操作者Uin
+     * Get 操作者账号 ID，UIN。 
+     * @return OperateUin 操作者账号 ID，UIN。
      */
     public String [] getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者Uin
-     * @param OperateUin 操作者Uin
+     * Set 操作者账号 ID，UIN。
+     * @param OperateUin 操作者账号 ID，UIN。
      */
     public void setOperateUin(String [] OperateUin) {
         this.OperateUin = OperateUin;

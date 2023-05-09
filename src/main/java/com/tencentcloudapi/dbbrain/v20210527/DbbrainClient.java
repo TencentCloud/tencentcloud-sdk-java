@@ -779,7 +779,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *获取指定时间内某个sql模版的慢日志明细
+     *获取指定时间内某个sql模板的慢日志明细
      * @param req DescribeSlowLogsRequest
      * @return DescribeSlowLogsResponse
      * @throws TencentCloudSDKException

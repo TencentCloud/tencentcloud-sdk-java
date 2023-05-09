@@ -194,6 +194,26 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateDisks)用于创建一个或多个云硬盘。
+     * @param req CreateDisksRequest
+     * @return CreateDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
 
 
