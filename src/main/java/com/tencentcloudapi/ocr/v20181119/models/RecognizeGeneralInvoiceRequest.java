@@ -58,8 +58,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
     */
     @SerializedName("Types")
     @Expose
@@ -175,8 +178,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别） 
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。 
      * @return Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -191,8 +197,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
      */
     public Long [] getTypes() {
         return this.Types;
@@ -213,8 +222,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
      * @param Types 需要识别的票据类型列表，为空或不填表示识别全部类型。
 0：出租车发票
 1：定额发票
@@ -229,8 +241,11 @@ public class RecognizeGeneralInvoiceRequest extends AbstractModel{
 13：过路过桥费发票
 15：非税发票
 16：全电发票
-----------------------
--1：其他发票,（只传入此类型时，图片均采用其他票类型进行识别）
+-1：其他发票
+
+默认为空，识别所有类型发票。
+当传入单个类型时，图片均采用该票类型进行处理。
+暂不支持多个参数进行局部控制。
      */
     public void setTypes(Long [] Types) {
         this.Types = Types;

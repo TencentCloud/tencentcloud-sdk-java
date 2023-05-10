@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceNodeInfoResponse extends AbstractModel{
 
     /**
-    * proxy节点数量
+    * Proxy节点数量。
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * proxy节点信息
+    * Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proxy")
@@ -38,14 +38,14 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     private ProxyNodes [] Proxy;
 
     /**
-    * redis节点数量
+    * Redis节点数量。
     */
     @SerializedName("RedisCount")
     @Expose
     private Long RedisCount;
 
     /**
-    * redis节点信息
+    * Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Redis")
@@ -53,14 +53,14 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     private RedisNodes [] Redis;
 
     /**
-    * tendis节点数量
+    * 该参数不再使用，请忽略。
     */
     @SerializedName("TendisCount")
     @Expose
     private Long TendisCount;
 
     /**
-    * tendis节点信息
+    * 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tendis")
@@ -75,25 +75,25 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get proxy节点数量 
-     * @return ProxyCount proxy节点数量
+     * Get Proxy节点数量。 
+     * @return ProxyCount Proxy节点数量。
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set proxy节点数量
-     * @param ProxyCount proxy节点数量
+     * Set Proxy节点数量。
+     * @param ProxyCount Proxy节点数量。
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get proxy节点信息
+     * Get Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Proxy proxy节点信息
+     * @return Proxy Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyNodes [] getProxy() {
@@ -101,9 +101,9 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set proxy节点信息
+     * Set Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Proxy proxy节点信息
+     * @param Proxy Proxy节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxy(ProxyNodes [] Proxy) {
@@ -111,25 +111,25 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get redis节点数量 
-     * @return RedisCount redis节点数量
+     * Get Redis节点数量。 
+     * @return RedisCount Redis节点数量。
      */
     public Long getRedisCount() {
         return this.RedisCount;
     }
 
     /**
-     * Set redis节点数量
-     * @param RedisCount redis节点数量
+     * Set Redis节点数量。
+     * @param RedisCount Redis节点数量。
      */
     public void setRedisCount(Long RedisCount) {
         this.RedisCount = RedisCount;
     }
 
     /**
-     * Get redis节点信息
+     * Get Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Redis redis节点信息
+     * @return Redis Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RedisNodes [] getRedis() {
@@ -137,9 +137,9 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set redis节点信息
+     * Set Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Redis redis节点信息
+     * @param Redis Redis节点信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedis(RedisNodes [] Redis) {
@@ -147,25 +147,25 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get tendis节点数量 
-     * @return TendisCount tendis节点数量
+     * Get 该参数不再使用，请忽略。 
+     * @return TendisCount 该参数不再使用，请忽略。
      */
     public Long getTendisCount() {
         return this.TendisCount;
     }
 
     /**
-     * Set tendis节点数量
-     * @param TendisCount tendis节点数量
+     * Set 该参数不再使用，请忽略。
+     * @param TendisCount 该参数不再使用，请忽略。
      */
     public void setTendisCount(Long TendisCount) {
         this.TendisCount = TendisCount;
     }
 
     /**
-     * Get tendis节点信息
+     * Get 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tendis tendis节点信息
+     * @return Tendis 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TendisNodes [] getTendis() {
@@ -173,9 +173,9 @@ public class DescribeInstanceNodeInfoResponse extends AbstractModel{
     }
 
     /**
-     * Set tendis节点信息
+     * Set 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tendis tendis节点信息
+     * @param Tendis 该参数不再使用，请忽略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTendis(TendisNodes [] Tendis) {

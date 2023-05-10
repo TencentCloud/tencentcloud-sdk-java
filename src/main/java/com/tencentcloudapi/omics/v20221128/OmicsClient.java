@@ -39,6 +39,66 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *创建组学平台计算环境。
+     * @param req CreateEnvironmentRequest
+     * @return CreateEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEnvironmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEnvironmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEnvironment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除环境。
+     * @param req DeleteEnvironmentRequest
+     * @return DeleteEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnvironmentResponse DeleteEnvironment(DeleteEnvironmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEnvironmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEnvironment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询环境列表。
+     * @param req DescribeEnvironmentsRequest
+     * @return DescribeEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironments");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询任务批次列表。
      * @param req DescribeRunGroupsRequest
      * @return DescribeRunGroupsResponse

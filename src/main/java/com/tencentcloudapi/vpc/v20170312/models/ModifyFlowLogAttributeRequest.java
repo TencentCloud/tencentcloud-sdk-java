@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyFlowLogAttributeRequest extends AbstractModel{
 
     /**
-    * 流日志唯一ID
+    * 流日志唯一ID。
     */
     @SerializedName("FlowLogId")
     @Expose
@@ -37,30 +37,30 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * 流日志实例名字
+    * 流日志实例名字。
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * 流日志实例描述
+    * 流日志实例描述。
     */
     @SerializedName("FlowLogDescription")
     @Expose
     private String FlowLogDescription;
 
     /**
-     * Get 流日志唯一ID 
-     * @return FlowLogId 流日志唯一ID
+     * Get 流日志唯一ID。 
+     * @return FlowLogId 流日志唯一ID。
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set 流日志唯一ID
-     * @param FlowLogId 流日志唯一ID
+     * Set 流日志唯一ID。
+     * @param FlowLogId 流日志唯一ID。
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
@@ -83,32 +83,32 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 流日志实例名字 
-     * @return FlowLogName 流日志实例名字
+     * Get 流日志实例名字。 
+     * @return FlowLogName 流日志实例名字。
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set 流日志实例名字
-     * @param FlowLogName 流日志实例名字
+     * Set 流日志实例名字。
+     * @param FlowLogName 流日志实例名字。
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get 流日志实例描述 
-     * @return FlowLogDescription 流日志实例描述
+     * Get 流日志实例描述。 
+     * @return FlowLogDescription 流日志实例描述。
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set 流日志实例描述
-     * @param FlowLogDescription 流日志实例描述
+     * Set 流日志实例描述。
+     * @param FlowLogDescription 流日志实例描述。
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;

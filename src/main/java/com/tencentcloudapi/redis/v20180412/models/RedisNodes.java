@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class RedisNodes extends AbstractModel{
 
     /**
-    * 节点ID
+    * 节点 ID。
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 节点角色
+    * 节点角色。
     */
     @SerializedName("NodeRole")
     @Expose
     private String NodeRole;
 
     /**
-    * 分片ID
+    * 分片 ID。
     */
     @SerializedName("ClusterId")
     @Expose
     private Long ClusterId;
 
     /**
-    * 可用区ID
+    * 可用区 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-     * Get 节点ID 
-     * @return NodeId 节点ID
+     * Get 节点 ID。 
+     * @return NodeId 节点 ID。
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点ID
-     * @param NodeId 节点ID
+     * Set 节点 ID。
+     * @param NodeId 节点 ID。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 节点角色 
-     * @return NodeRole 节点角色
+     * Get 节点角色。 
+     * @return NodeRole 节点角色。
      */
     public String getNodeRole() {
         return this.NodeRole;
     }
 
     /**
-     * Set 节点角色
-     * @param NodeRole 节点角色
+     * Set 节点角色。
+     * @param NodeRole 节点角色。
      */
     public void setNodeRole(String NodeRole) {
         this.NodeRole = NodeRole;
     }
 
     /**
-     * Get 分片ID 
-     * @return ClusterId 分片ID
+     * Get 分片 ID。 
+     * @return ClusterId 分片 ID。
      */
     public Long getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 分片ID
-     * @param ClusterId 分片ID
+     * Set 分片 ID。
+     * @param ClusterId 分片 ID。
      */
     public void setClusterId(Long ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 可用区ID 
-     * @return ZoneId 可用区ID
+     * Get 可用区 ID。 
+     * @return ZoneId 可用区 ID。
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区ID
-     * @param ZoneId 可用区ID
+     * Set 可用区 ID。
+     * @param ZoneId 可用区 ID。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

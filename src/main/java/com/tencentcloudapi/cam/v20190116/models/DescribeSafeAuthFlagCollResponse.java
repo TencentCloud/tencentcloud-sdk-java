@@ -44,6 +44,14 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel{
     private OffsiteFlag OffsiteFlag;
 
     /**
+    * 是否提示信任设备1 ：提示 0: 不提示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PromptTrust")
+    @Expose
+    private Long PromptTrust;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +107,26 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否提示信任设备1 ：提示 0: 不提示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PromptTrust 是否提示信任设备1 ：提示 0: 不提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPromptTrust() {
+        return this.PromptTrust;
+    }
+
+    /**
+     * Set 是否提示信任设备1 ：提示 0: 不提示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptTrust 是否提示信任设备1 ：提示 0: 不提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPromptTrust(Long PromptTrust) {
+        this.PromptTrust = PromptTrust;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +159,9 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel{
         if (source.OffsiteFlag != null) {
             this.OffsiteFlag = new OffsiteFlag(source.OffsiteFlag);
         }
+        if (source.PromptTrust != null) {
+            this.PromptTrust = new Long(source.PromptTrust);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +175,7 @@ public class DescribeSafeAuthFlagCollResponse extends AbstractModel{
         this.setParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
         this.setParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
         this.setParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+        this.setParamSimple(map, prefix + "PromptTrust", this.PromptTrust);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,92 +23,112 @@ import java.util.HashMap;
 public class RenewDiskChargePrepaid extends AbstractModel{
 
     /**
-    * 新购周期。
+    * 续费周期。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 续费标识。
+    * 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 周期单位. 默认值: "m"。
+    * 周期单位。取值范围：“m”(月)。默认值: "m"。
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * 当前实例到期时间。
+    * 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
     */
     @SerializedName("CurInstanceDeadline")
     @Expose
     private String CurInstanceDeadline;
 
     /**
-     * Get 新购周期。 
-     * @return Period 新购周期。
+     * Get 续费周期。 
+     * @return Period 续费周期。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 新购周期。
-     * @param Period 新购周期。
+     * Set 续费周期。
+     * @param Period 续费周期。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 续费标识。 
-     * @return RenewFlag 续费标识。
+     * Get 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。 
+     * @return RenewFlag 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 续费标识。
-     * @param RenewFlag 续费标识。
+     * Set 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
+     * @param RenewFlag 续费标识。取值范围：
+
+NOTIFY_AND_AUTO_RENEW：通知过期且自动续费。 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费，用户需要手动续费。 DISABLE_NOTIFY_AND_AUTO_RENEW：不自动续费，且不通知。
+
+默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，云硬盘到期后将按月自动续费。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 周期单位. 默认值: "m"。 
-     * @return TimeUnit 周期单位. 默认值: "m"。
+     * Get 周期单位。取值范围：“m”(月)。默认值: "m"。 
+     * @return TimeUnit 周期单位。取值范围：“m”(月)。默认值: "m"。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set 周期单位. 默认值: "m"。
-     * @param TimeUnit 周期单位. 默认值: "m"。
+     * Set 周期单位。取值范围：“m”(月)。默认值: "m"。
+     * @param TimeUnit 周期单位。取值范围：“m”(月)。默认值: "m"。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 当前实例到期时间。 
-     * @return CurInstanceDeadline 当前实例到期时间。
+     * Get 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。 
+     * @return CurInstanceDeadline 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
      */
     public String getCurInstanceDeadline() {
         return this.CurInstanceDeadline;
     }
 
     /**
-     * Set 当前实例到期时间。
-     * @param CurInstanceDeadline 当前实例到期时间。
+     * Set 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
+     * @param CurInstanceDeadline 当前实例到期时间。如“2018-01-01 00:00:00”。指定该参数即可对齐云硬盘所挂载的实例到期时间。该参数与Period必须指定其一，且不支持同时指定。
      */
     public void setCurInstanceDeadline(String CurInstanceDeadline) {
         this.CurInstanceDeadline = CurInstanceDeadline;

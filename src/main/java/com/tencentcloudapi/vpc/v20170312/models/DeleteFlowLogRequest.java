@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteFlowLogRequest extends AbstractModel{
 
     /**
-    * 流日志唯一ID
+    * 流日志唯一ID。
     */
     @SerializedName("FlowLogId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteFlowLogRequest extends AbstractModel{
     private String VpcId;
 
     /**
-     * Get 流日志唯一ID 
-     * @return FlowLogId 流日志唯一ID
+     * Get 流日志唯一ID。 
+     * @return FlowLogId 流日志唯一ID。
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set 流日志唯一ID
-     * @param FlowLogId 流日志唯一ID
+     * Set 流日志唯一ID。
+     * @param FlowLogId 流日志唯一ID。
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;

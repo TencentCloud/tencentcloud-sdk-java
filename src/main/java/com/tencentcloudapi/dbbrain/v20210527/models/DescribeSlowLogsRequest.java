@@ -37,7 +37,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * sql模版的md5值
+    * sql模板的md5值
     */
     @SerializedName("Md5")
     @Expose
@@ -139,16 +139,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get sql模版的md5值 
-     * @return Md5 sql模版的md5值
+     * Get sql模板的md5值 
+     * @return Md5 sql模板的md5值
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set sql模版的md5值
-     * @param Md5 sql模版的md5值
+     * Set sql模板的md5值
+     * @param Md5 sql模板的md5值
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;

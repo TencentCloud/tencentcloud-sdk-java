@@ -759,7 +759,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例节点信息
+     *本接口（DescribeInstanceNodeInfo）用于查询实例节点信息。
      * @param req DescribeInstanceNodeInfoRequest
      * @return DescribeInstanceNodeInfoResponse
      * @throws TencentCloudSDKException

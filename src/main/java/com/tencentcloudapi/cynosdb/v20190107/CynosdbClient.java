@@ -1359,6 +1359,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *开通只读实例独有访问接入组
+     * @param req OpenReadOnlyInstanceExclusiveAccessRequest
+     * @return OpenReadOnlyInstanceExclusiveAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccess(OpenReadOnlyInstanceExclusiveAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenReadOnlyInstanceExclusiveAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenReadOnlyInstanceExclusiveAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *暂停serverless集群
      * @param req PauseServerlessRequest
      * @return PauseServerlessResponse

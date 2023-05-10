@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeFlowLogRequest extends AbstractModel{
 
     /**
-    * 私用网络ID或者统一ID，建议使用统一ID
+    * 私用网络ID或者统一ID，建议使用统一ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 流日志唯一ID
+    * 流日志唯一ID。
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-     * Get 私用网络ID或者统一ID，建议使用统一ID 
-     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID
+     * Get 私用网络ID或者统一ID，建议使用统一ID。 
+     * @return VpcId 私用网络ID或者统一ID，建议使用统一ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私用网络ID或者统一ID，建议使用统一ID
-     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID
+     * Set 私用网络ID或者统一ID，建议使用统一ID。
+     * @param VpcId 私用网络ID或者统一ID，建议使用统一ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 流日志唯一ID 
-     * @return FlowLogId 流日志唯一ID
+     * Get 流日志唯一ID。 
+     * @return FlowLogId 流日志唯一ID。
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set 流日志唯一ID
-     * @param FlowLogId 流日志唯一ID
+     * Set 流日志唯一ID。
+     * @param FlowLogId 流日志唯一ID。
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;

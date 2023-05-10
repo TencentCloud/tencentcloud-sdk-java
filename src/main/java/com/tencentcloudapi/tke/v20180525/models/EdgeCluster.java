@@ -141,6 +141,14 @@ public class EdgeCluster extends AbstractModel{
     private String EdgeVersion;
 
     /**
+    * 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification TagSpecification;
+
+    /**
      * Get 集群Id 
      * @return ClusterId 集群Id
      */
@@ -420,6 +428,26 @@ public class EdgeCluster extends AbstractModel{
         this.EdgeVersion = EdgeVersion;
     }
 
+    /**
+     * Get 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSpecification 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagSpecification getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSpecification 集群绑定的云标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSpecification(TagSpecification TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public EdgeCluster() {
     }
 
@@ -476,6 +504,9 @@ public class EdgeCluster extends AbstractModel{
         if (source.EdgeVersion != null) {
             this.EdgeVersion = new String(source.EdgeVersion);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification(source.TagSpecification);
+        }
     }
 
 
@@ -499,6 +530,7 @@ public class EdgeCluster extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+        this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

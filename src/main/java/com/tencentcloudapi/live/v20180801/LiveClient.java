@@ -1868,6 +1868,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *P2P流数据查询接口，用来获取流量、卡播和起播信息。
+     * @param req DescribeLiveXP2PDetailInfoListRequest
+     * @return DescribeLiveXP2PDetailInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveXP2PDetailInfoListResponse DescribeLiveXP2PDetailInfoList(DescribeLiveXP2PDetailInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveXP2PDetailInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量获取日志URL。
      * @param req DescribeLogDownloadListRequest
      * @return DescribeLogDownloadListResponse

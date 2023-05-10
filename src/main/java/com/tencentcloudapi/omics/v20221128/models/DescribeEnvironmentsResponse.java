@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogResponse extends AbstractModel{
+public class DescribeEnvironmentsResponse extends AbstractModel{
 
     /**
-    * 流日志信息。
+    * 符合条件的数量。
     */
-    @SerializedName("FlowLog")
+    @SerializedName("TotalCount")
     @Expose
-    private FlowLog [] FlowLog;
+    private Long TotalCount;
+
+    /**
+    * 环境详情列表。
+    */
+    @SerializedName("Environments")
+    @Expose
+    private Environment [] Environments;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeFlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流日志信息。 
-     * @return FlowLog 流日志信息。
+     * Get 符合条件的数量。 
+     * @return TotalCount 符合条件的数量。
      */
-    public FlowLog [] getFlowLog() {
-        return this.FlowLog;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 流日志信息。
-     * @param FlowLog 流日志信息。
+     * Set 符合条件的数量。
+     * @param TotalCount 符合条件的数量。
      */
-    public void setFlowLog(FlowLog [] FlowLog) {
-        this.FlowLog = FlowLog;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 环境详情列表。 
+     * @return Environments 环境详情列表。
+     */
+    public Environment [] getEnvironments() {
+        return this.Environments;
+    }
+
+    /**
+     * Set 环境详情列表。
+     * @param Environments 环境详情列表。
+     */
+    public void setEnvironments(Environment [] Environments) {
+        this.Environments = Environments;
     }
 
     /**
@@ -68,18 +91,21 @@ public class DescribeFlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowLogResponse() {
+    public DescribeEnvironmentsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowLogResponse(DescribeFlowLogResponse source) {
-        if (source.FlowLog != null) {
-            this.FlowLog = new FlowLog[source.FlowLog.length];
-            for (int i = 0; i < source.FlowLog.length; i++) {
-                this.FlowLog[i] = new FlowLog(source.FlowLog[i]);
+    public DescribeEnvironmentsResponse(DescribeEnvironmentsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Environments != null) {
+            this.Environments = new Environment[source.Environments.length];
+            for (int i = 0; i < source.Environments.length; i++) {
+                this.Environments[i] = new Environment(source.Environments[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +118,8 @@ public class DescribeFlowLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Environments.", this.Environments);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

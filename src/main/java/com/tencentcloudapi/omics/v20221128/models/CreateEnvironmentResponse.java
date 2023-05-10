@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogResponse extends AbstractModel{
+public class CreateEnvironmentResponse extends AbstractModel{
 
     /**
-    * 流日志信息。
+    * 环境ID。
     */
-    @SerializedName("FlowLog")
+    @SerializedName("EnvironmentId")
     @Expose
-    private FlowLog [] FlowLog;
+    private String EnvironmentId;
+
+    /**
+    * 工作流UUID。
+    */
+    @SerializedName("WorkflowUuid")
+    @Expose
+    private String WorkflowUuid;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class DescribeFlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流日志信息。 
-     * @return FlowLog 流日志信息。
+     * Get 环境ID。 
+     * @return EnvironmentId 环境ID。
      */
-    public FlowLog [] getFlowLog() {
-        return this.FlowLog;
+    public String getEnvironmentId() {
+        return this.EnvironmentId;
     }
 
     /**
-     * Set 流日志信息。
-     * @param FlowLog 流日志信息。
+     * Set 环境ID。
+     * @param EnvironmentId 环境ID。
      */
-    public void setFlowLog(FlowLog [] FlowLog) {
-        this.FlowLog = FlowLog;
+    public void setEnvironmentId(String EnvironmentId) {
+        this.EnvironmentId = EnvironmentId;
+    }
+
+    /**
+     * Get 工作流UUID。 
+     * @return WorkflowUuid 工作流UUID。
+     */
+    public String getWorkflowUuid() {
+        return this.WorkflowUuid;
+    }
+
+    /**
+     * Set 工作流UUID。
+     * @param WorkflowUuid 工作流UUID。
+     */
+    public void setWorkflowUuid(String WorkflowUuid) {
+        this.WorkflowUuid = WorkflowUuid;
     }
 
     /**
@@ -68,19 +91,19 @@ public class DescribeFlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowLogResponse() {
+    public CreateEnvironmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowLogResponse(DescribeFlowLogResponse source) {
-        if (source.FlowLog != null) {
-            this.FlowLog = new FlowLog[source.FlowLog.length];
-            for (int i = 0; i < source.FlowLog.length; i++) {
-                this.FlowLog[i] = new FlowLog(source.FlowLog[i]);
-            }
+    public CreateEnvironmentResponse(CreateEnvironmentResponse source) {
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
+        if (source.WorkflowUuid != null) {
+            this.WorkflowUuid = new String(source.WorkflowUuid);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +115,8 @@ public class DescribeFlowLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);
+        this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "WorkflowUuid", this.WorkflowUuid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogResponse extends AbstractModel{
+public class DescribeLiveXP2PDetailInfoListResponse extends AbstractModel{
 
     /**
-    * 流日志信息。
+    * P2P流统计信息。
     */
-    @SerializedName("FlowLog")
+    @SerializedName("DataInfoList")
     @Expose
-    private FlowLog [] FlowLog;
+    private XP2PDetailInfo [] DataInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeFlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流日志信息。 
-     * @return FlowLog 流日志信息。
+     * Get P2P流统计信息。 
+     * @return DataInfoList P2P流统计信息。
      */
-    public FlowLog [] getFlowLog() {
-        return this.FlowLog;
+    public XP2PDetailInfo [] getDataInfoList() {
+        return this.DataInfoList;
     }
 
     /**
-     * Set 流日志信息。
-     * @param FlowLog 流日志信息。
+     * Set P2P流统计信息。
+     * @param DataInfoList P2P流统计信息。
      */
-    public void setFlowLog(FlowLog [] FlowLog) {
-        this.FlowLog = FlowLog;
+    public void setDataInfoList(XP2PDetailInfo [] DataInfoList) {
+        this.DataInfoList = DataInfoList;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DescribeFlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowLogResponse() {
+    public DescribeLiveXP2PDetailInfoListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowLogResponse(DescribeFlowLogResponse source) {
-        if (source.FlowLog != null) {
-            this.FlowLog = new FlowLog[source.FlowLog.length];
-            for (int i = 0; i < source.FlowLog.length; i++) {
-                this.FlowLog[i] = new FlowLog(source.FlowLog[i]);
+    public DescribeLiveXP2PDetailInfoListResponse(DescribeLiveXP2PDetailInfoListResponse source) {
+        if (source.DataInfoList != null) {
+            this.DataInfoList = new XP2PDetailInfo[source.DataInfoList.length];
+            for (int i = 0; i < source.DataInfoList.length; i++) {
+                this.DataInfoList[i] = new XP2PDetailInfo(source.DataInfoList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +92,7 @@ public class DescribeFlowLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);
+        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

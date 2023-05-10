@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.omics.v20221128.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowLogResponse extends AbstractModel{
+public class DeleteEnvironmentResponse extends AbstractModel{
 
     /**
-    * 流日志信息。
+    * 工作流UUID。
     */
-    @SerializedName("FlowLog")
+    @SerializedName("WorkflowUuid")
     @Expose
-    private FlowLog [] FlowLog;
+    private String WorkflowUuid;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class DescribeFlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 流日志信息。 
-     * @return FlowLog 流日志信息。
+     * Get 工作流UUID。 
+     * @return WorkflowUuid 工作流UUID。
      */
-    public FlowLog [] getFlowLog() {
-        return this.FlowLog;
+    public String getWorkflowUuid() {
+        return this.WorkflowUuid;
     }
 
     /**
-     * Set 流日志信息。
-     * @param FlowLog 流日志信息。
+     * Set 工作流UUID。
+     * @param WorkflowUuid 工作流UUID。
      */
-    public void setFlowLog(FlowLog [] FlowLog) {
-        this.FlowLog = FlowLog;
+    public void setWorkflowUuid(String WorkflowUuid) {
+        this.WorkflowUuid = WorkflowUuid;
     }
 
     /**
@@ -68,19 +68,16 @@ public class DescribeFlowLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowLogResponse() {
+    public DeleteEnvironmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowLogResponse(DescribeFlowLogResponse source) {
-        if (source.FlowLog != null) {
-            this.FlowLog = new FlowLog[source.FlowLog.length];
-            for (int i = 0; i < source.FlowLog.length; i++) {
-                this.FlowLog[i] = new FlowLog(source.FlowLog[i]);
-            }
+    public DeleteEnvironmentResponse(DeleteEnvironmentResponse source) {
+        if (source.WorkflowUuid != null) {
+            this.WorkflowUuid = new String(source.WorkflowUuid);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class DescribeFlowLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FlowLog.", this.FlowLog);
+        this.setParamSimple(map, prefix + "WorkflowUuid", this.WorkflowUuid);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

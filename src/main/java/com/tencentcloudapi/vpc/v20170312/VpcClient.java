@@ -1732,7 +1732,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteFlowLog）用于删除流日志
+     *本接口（DeleteFlowLog）用于删除流日志。
      * @param req DeleteFlowLogRequest
      * @return DeleteFlowLogResponse
      * @throws TencentCloudSDKException
@@ -2791,7 +2791,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeFlowLog）用于查询流日志实例信息
+     *本接口（DescribeFlowLog）用于查询流日志实例信息。
      * @param req DescribeFlowLogRequest
      * @return DescribeFlowLogResponse
      * @throws TencentCloudSDKException
@@ -5021,7 +5021,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口（ModifyFlowLogAttribute）用于修改流日志属性
+     *本接口（ModifyFlowLogAttribute）用于修改流日志属性。
      * @param req ModifyFlowLogAttributeRequest
      * @return ModifyFlowLogAttributeResponse
      * @throws TencentCloudSDKException
