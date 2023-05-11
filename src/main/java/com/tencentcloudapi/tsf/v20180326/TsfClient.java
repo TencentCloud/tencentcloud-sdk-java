@@ -939,6 +939,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *批量删除API
+     * @param req DeleteGatewayApiRequest
+     * @return DeleteGatewayApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGatewayApiResponse DeleteGatewayApi(DeleteGatewayApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGatewayApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGatewayApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGatewayApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除容器部署组
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse

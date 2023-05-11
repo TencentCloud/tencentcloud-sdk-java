@@ -699,6 +699,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询实例错误日志列表
+     * @param req DescribeInstanceErrorLogsRequest
+     * @return DescribeInstanceErrorLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceErrorLogsResponse DescribeInstanceErrorLogs(DescribeInstanceErrorLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceErrorLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceErrorLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceErrorLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口（DescribeInstanceSlowQueries）用于查询实例慢查询日志。
      * @param req DescribeInstanceSlowQueriesRequest
      * @return DescribeInstanceSlowQueriesResponse
@@ -911,6 +931,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口（ExportInstanceErrorLogs）用于导出实例错误日志。
+     * @param req ExportInstanceErrorLogsRequest
+     * @return ExportInstanceErrorLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportInstanceErrorLogsResponse ExportInstanceErrorLogs(ExportInstanceErrorLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportInstanceErrorLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportInstanceErrorLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportInstanceErrorLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

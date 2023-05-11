@@ -79,6 +79,13 @@ public class KibanaView extends AbstractModel{
     private String Zone;
 
     /**
+    * ts-0noqayxu-az6-hot-03222010-0
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
+
+    /**
      * Get Kibana节点IP 
      * @return Ip Kibana节点IP
      */
@@ -206,6 +213,22 @@ public class KibanaView extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get ts-0noqayxu-az6-hot-03222010-0 
+     * @return NodeId ts-0noqayxu-az6-hot-03222010-0
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set ts-0noqayxu-az6-hot-03222010-0
+     * @param NodeId ts-0noqayxu-az6-hot-03222010-0
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
+    }
+
     public KibanaView() {
     }
 
@@ -238,6 +261,9 @@ public class KibanaView extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class KibanaView extends AbstractModel{
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "CpuUsage", this.CpuUsage);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

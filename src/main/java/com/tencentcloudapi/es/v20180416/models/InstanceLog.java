@@ -51,6 +51,13 @@ public class InstanceLog extends AbstractModel{
     private String Message;
 
     /**
+    * 集群节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
      * Get 日志时间 
      * @return Time 日志时间
      */
@@ -114,6 +121,22 @@ public class InstanceLog extends AbstractModel{
         this.Message = Message;
     }
 
+    /**
+     * Get 集群节点ID 
+     * @return NodeID 集群节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 集群节点ID
+     * @param NodeID 集群节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
     public InstanceLog() {
     }
 
@@ -134,6 +157,9 @@ public class InstanceLog extends AbstractModel{
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class InstanceLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
 
     }
 }

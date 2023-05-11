@@ -38,6 +38,14 @@ public class JsonInfo extends AbstractModel{
     private String [] MetaFields;
 
     /**
+    * 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JsonType")
+    @Expose
+    private Long JsonType;
+
+    /**
      * Get 启用标志 
      * @return EnableTag 启用标志
      */
@@ -73,6 +81,26 @@ public class JsonInfo extends AbstractModel{
         this.MetaFields = MetaFields;
     }
 
+    /**
+     * Get 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JsonType 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getJsonType() {
+        return this.JsonType;
+    }
+
+    /**
+     * Set 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JsonType 投递Json格式，0：字符串方式投递；1:以结构化方式投递
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJsonType(Long JsonType) {
+        this.JsonType = JsonType;
+    }
+
     public JsonInfo() {
     }
 
@@ -90,6 +118,9 @@ public class JsonInfo extends AbstractModel{
                 this.MetaFields[i] = new String(source.MetaFields[i]);
             }
         }
+        if (source.JsonType != null) {
+            this.JsonType = new Long(source.JsonType);
+        }
     }
 
 
@@ -99,6 +130,7 @@ public class JsonInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableTag", this.EnableTag);
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+        this.setParamSimple(map, prefix + "JsonType", this.JsonType);
 
     }
 }

@@ -30,7 +30,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * 游戏ID
+    * 【已废弃】只在TrylockWorker时生效
     */
     @SerializedName("GameId")
     @Expose
@@ -167,16 +167,16 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     }
 
     /**
-     * Get 游戏ID 
-     * @return GameId 游戏ID
+     * Get 【已废弃】只在TrylockWorker时生效 
+     * @return GameId 【已废弃】只在TrylockWorker时生效
      */
     public String getGameId() {
         return this.GameId;
     }
 
     /**
-     * Set 游戏ID
-     * @param GameId 游戏ID
+     * Set 【已废弃】只在TrylockWorker时生效
+     * @param GameId 【已废弃】只在TrylockWorker时生效
      */
     public void setGameId(String GameId) {
         this.GameId = GameId;

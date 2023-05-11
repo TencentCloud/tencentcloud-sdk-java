@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cbs.v20170312.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDisksResponse extends AbstractModel{
+public class ExportInstanceErrorLogsResponse extends AbstractModel{
 
     /**
-    * 创建的云硬盘ID列表。
+    * 错误日志导出内容
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("DiskIdSet")
+    @SerializedName("ErrorLogItems")
     @Expose
-    private String [] DiskIdSet;
+    private ErrorLogItemExport [] ErrorLogItems;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +38,23 @@ public class CreateDisksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 创建的云硬盘ID列表。
+     * Get 错误日志导出内容
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskIdSet 创建的云硬盘ID列表。
+     * @return ErrorLogItems 错误日志导出内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getDiskIdSet() {
-        return this.DiskIdSet;
+    public ErrorLogItemExport [] getErrorLogItems() {
+        return this.ErrorLogItems;
     }
 
     /**
-     * Set 创建的云硬盘ID列表。
+     * Set 错误日志导出内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskIdSet 创建的云硬盘ID列表。
+     * @param ErrorLogItems 错误日志导出内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDiskIdSet(String [] DiskIdSet) {
-        this.DiskIdSet = DiskIdSet;
+    public void setErrorLogItems(ErrorLogItemExport [] ErrorLogItems) {
+        this.ErrorLogItems = ErrorLogItems;
     }
 
     /**
@@ -73,18 +73,18 @@ public class CreateDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateDisksResponse() {
+    public ExportInstanceErrorLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDisksResponse(CreateDisksResponse source) {
-        if (source.DiskIdSet != null) {
-            this.DiskIdSet = new String[source.DiskIdSet.length];
-            for (int i = 0; i < source.DiskIdSet.length; i++) {
-                this.DiskIdSet[i] = new String(source.DiskIdSet[i]);
+    public ExportInstanceErrorLogsResponse(ExportInstanceErrorLogsResponse source) {
+        if (source.ErrorLogItems != null) {
+            this.ErrorLogItems = new ErrorLogItemExport[source.ErrorLogItems.length];
+            for (int i = 0; i < source.ErrorLogItems.length; i++) {
+                this.ErrorLogItems[i] = new ErrorLogItemExport(source.ErrorLogItems[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +97,7 @@ public class CreateDisksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIdSet.", this.DiskIdSet);
+        this.setParamArrayObj(map, prefix + "ErrorLogItems.", this.ErrorLogItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

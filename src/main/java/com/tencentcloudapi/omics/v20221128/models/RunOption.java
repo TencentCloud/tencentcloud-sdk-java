@@ -46,6 +46,22 @@ public class RunOption extends AbstractModel{
     private Boolean UseErrorOnHold;
 
     /**
+    * 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinalWorkflowOutputsDir")
+    @Expose
+    private String FinalWorkflowOutputsDir;
+
+    /**
+    * 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseRelativeOutputPaths")
+    @Expose
+    private Boolean UseRelativeOutputPaths;
+
+    /**
      * Get 运行失败模式，取值范围：
 - ContinueWhilePossible
 - NoNewCalls 
@@ -101,6 +117,46 @@ public class RunOption extends AbstractModel{
         this.UseErrorOnHold = UseErrorOnHold;
     }
 
+    /**
+     * Get 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinalWorkflowOutputsDir 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFinalWorkflowOutputsDir() {
+        return this.FinalWorkflowOutputsDir;
+    }
+
+    /**
+     * Set 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinalWorkflowOutputsDir 输出归档COS路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinalWorkflowOutputsDir(String FinalWorkflowOutputsDir) {
+        this.FinalWorkflowOutputsDir = FinalWorkflowOutputsDir;
+    }
+
+    /**
+     * Get 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseRelativeOutputPaths 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseRelativeOutputPaths() {
+        return this.UseRelativeOutputPaths;
+    }
+
+    /**
+     * Set 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseRelativeOutputPaths 是否使用相对目录归档输出。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseRelativeOutputPaths(Boolean UseRelativeOutputPaths) {
+        this.UseRelativeOutputPaths = UseRelativeOutputPaths;
+    }
+
     public RunOption() {
     }
 
@@ -118,6 +174,12 @@ public class RunOption extends AbstractModel{
         if (source.UseErrorOnHold != null) {
             this.UseErrorOnHold = new Boolean(source.UseErrorOnHold);
         }
+        if (source.FinalWorkflowOutputsDir != null) {
+            this.FinalWorkflowOutputsDir = new String(source.FinalWorkflowOutputsDir);
+        }
+        if (source.UseRelativeOutputPaths != null) {
+            this.UseRelativeOutputPaths = new Boolean(source.UseRelativeOutputPaths);
+        }
     }
 
 
@@ -128,6 +190,8 @@ public class RunOption extends AbstractModel{
         this.setParamSimple(map, prefix + "FailureMode", this.FailureMode);
         this.setParamSimple(map, prefix + "UseCallCache", this.UseCallCache);
         this.setParamSimple(map, prefix + "UseErrorOnHold", this.UseErrorOnHold);
+        this.setParamSimple(map, prefix + "FinalWorkflowOutputsDir", this.FinalWorkflowOutputsDir);
+        this.setParamSimple(map, prefix + "UseRelativeOutputPaths", this.UseRelativeOutputPaths);
 
     }
 }

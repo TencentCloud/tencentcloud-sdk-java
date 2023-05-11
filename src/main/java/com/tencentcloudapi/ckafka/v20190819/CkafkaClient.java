@@ -1099,6 +1099,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *查询任务状态
+     * @param req DescribeTaskStatusRequest
+     * @return DescribeTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
      * @param req DescribeTopicRequest

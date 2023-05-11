@@ -30,7 +30,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
 非电话场景：
 • 16k_zh：中文通用；
-• 16k_zh-PY 中英粤;
+• 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
 • 16k_ca：粤语；
@@ -41,6 +41,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
+• 16k_pt：葡萄牙语；
+• 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
     */
     @SerializedName("EngSerViceType")
@@ -160,6 +162,14 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long ReinforceHotword;
 
     /**
+    * 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
+“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+    */
+    @SerializedName("HotwordList")
+    @Expose
+    private String HotwordList;
+
+    /**
      * Get 引擎模型类型。
 电话场景：
 • 8k_zh：中文电话通用；
@@ -167,7 +177,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
 非电话场景：
 • 16k_zh：中文通用；
-• 16k_zh-PY 中英粤;
+• 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
 • 16k_ca：粤语；
@@ -178,6 +188,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
+• 16k_pt：葡萄牙语；
+• 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）； 
      * @return EngSerViceType 引擎模型类型。
 电话场景：
@@ -186,7 +198,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
 非电话场景：
 • 16k_zh：中文通用；
-• 16k_zh-PY 中英粤;
+• 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
 • 16k_ca：粤语；
@@ -197,6 +209,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
+• 16k_pt：葡萄牙语；
+• 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public String getEngSerViceType() {
@@ -211,7 +225,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
 非电话场景：
 • 16k_zh：中文通用；
-• 16k_zh-PY 中英粤;
+• 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
 • 16k_ca：粤语；
@@ -222,6 +236,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
+• 16k_pt：葡萄牙语；
+• 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      * @param EngSerViceType 引擎模型类型。
 电话场景：
@@ -230,7 +246,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 
 非电话场景：
 • 16k_zh：中文通用；
-• 16k_zh-PY 中英粤;
+• 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
 • 16k_ca：粤语；
@@ -241,6 +257,8 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_id：印度尼西亚语；
 • 16k_fil：菲律宾语；
 • 16k_th：泰语；
+• 16k_pt：葡萄牙语；
+• 16k_tr：土耳其语；
 • 16k_zh_dialect：多方言，支持23种方言（上海话、四川话、武汉话、贵阳话、昆明话、西安话、郑州话、太原话、兰州话、银川话、西宁话、南京话、合肥话、南昌话、长沙话、苏州话、杭州话、济南话、天津话、石家庄话、黑龙江话、吉林话、辽宁话）；
      */
     public void setEngSerViceType(String EngSerViceType) {
@@ -503,6 +521,26 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.ReinforceHotword = ReinforceHotword;
     }
 
+    /**
+     * Get 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
+“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据 
+     * @return HotwordList 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
+“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+     */
+    public String getHotwordList() {
+        return this.HotwordList;
+    }
+
+    /**
+     * Set 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
+“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+     * @param HotwordList 临时热词：用于提升识别准确率，临时热词规则：“热词|权重”，热词不超过30个字符（最多10个汉字），权重1-10，最多传入128个热词。举例："腾讯云|10,语音识别|5,ASR|10"。
+“临时热词”和“热词id”的区别：热词id需要先在控制台或通过接口创建热词表，得到热词表id后才可以使用热词功能，本字段可以在每次请求时直接传入热词使用，但每次请求后云端不会保留相关的热词数据，需要客户自行维护相关数据
+     */
+    public void setHotwordList(String HotwordList) {
+        this.HotwordList = HotwordList;
+    }
+
     public SentenceRecognitionRequest() {
     }
 
@@ -562,6 +600,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
         if (source.ReinforceHotword != null) {
             this.ReinforceHotword = new Long(source.ReinforceHotword);
         }
+        if (source.HotwordList != null) {
+            this.HotwordList = new String(source.HotwordList);
+        }
     }
 
 
@@ -586,6 +627,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HotwordId", this.HotwordId);
         this.setParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
         this.setParamSimple(map, prefix + "ReinforceHotword", this.ReinforceHotword);
+        this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
 
     }
 }

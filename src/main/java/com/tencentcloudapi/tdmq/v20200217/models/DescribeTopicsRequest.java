@@ -30,6 +30,13 @@ public class DescribeTopicsRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
+    * Pulsar 集群的ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
     * 主题名模糊匹配。
     */
     @SerializedName("TopicName")
@@ -60,13 +67,6 @@ public class DescribeTopicsRequest extends AbstractModel{
     @SerializedName("TopicType")
     @Expose
     private Long TopicType;
-
-    /**
-    * Pulsar 集群的ID
-    */
-    @SerializedName("ClusterId")
-    @Expose
-    private String ClusterId;
 
     /**
     * * TopicName
@@ -101,6 +101,22 @@ public class DescribeTopicsRequest extends AbstractModel{
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
+    }
+
+    /**
+     * Get Pulsar 集群的ID 
+     * @return ClusterId Pulsar 集群的ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Pulsar 集群的ID
+     * @param ClusterId Pulsar 集群的ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -184,22 +200,6 @@ public class DescribeTopicsRequest extends AbstractModel{
     }
 
     /**
-     * Get Pulsar 集群的ID 
-     * @return ClusterId Pulsar 集群的ID
-     */
-    public String getClusterId() {
-        return this.ClusterId;
-    }
-
-    /**
-     * Set Pulsar 集群的ID
-     * @param ClusterId Pulsar 集群的ID
-     */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
-    }
-
-    /**
      * Get * TopicName
 按照主题名字查询，精确查询。
 类型：String
@@ -262,6 +262,9 @@ public class DescribeTopicsRequest extends AbstractModel{
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
@@ -273,9 +276,6 @@ public class DescribeTopicsRequest extends AbstractModel{
         }
         if (source.TopicType != null) {
             this.TopicType = new Long(source.TopicType);
-        }
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -294,11 +294,11 @@ public class DescribeTopicsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
 

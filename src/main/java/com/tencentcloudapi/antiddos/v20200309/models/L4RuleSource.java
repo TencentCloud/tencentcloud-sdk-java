@@ -30,7 +30,7 @@ public class L4RuleSource extends AbstractModel{
     private String Source;
 
     /**
-    * 权重值，取值[0,100]
+    * 权重值，取值[0,100]，暂不支持
     */
     @SerializedName("Weight")
     @Expose
@@ -69,16 +69,16 @@ public class L4RuleSource extends AbstractModel{
     }
 
     /**
-     * Get 权重值，取值[0,100] 
-     * @return Weight 权重值，取值[0,100]
+     * Get 权重值，取值[0,100]，暂不支持 
+     * @return Weight 权重值，取值[0,100]，暂不支持
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重值，取值[0,100]
-     * @param Weight 权重值，取值[0,100]
+     * Set 权重值，取值[0,100]，暂不支持
+     * @param Weight 权重值，取值[0,100]，暂不支持
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
