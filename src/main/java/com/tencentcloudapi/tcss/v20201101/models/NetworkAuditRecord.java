@@ -87,6 +87,14 @@ public class NetworkAuditRecord extends AbstractModel{
     private String Uin;
 
     /**
+    * 策略id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private Long PolicyId;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -234,6 +242,26 @@ public class NetworkAuditRecord extends AbstractModel{
         this.Uin = Uin;
     }
 
+    /**
+     * Get 策略id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyId 策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set 策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyId 策略id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyId(Long PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
     public NetworkAuditRecord() {
     }
 
@@ -269,6 +297,9 @@ public class NetworkAuditRecord extends AbstractModel{
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new Long(source.PolicyId);
+        }
     }
 
 
@@ -285,6 +316,7 @@ public class NetworkAuditRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "OperationTime", this.OperationTime);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

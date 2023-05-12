@@ -63,6 +63,13 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
     private String By;
 
     /**
+    * 是否热点漏洞
+    */
+    @SerializedName("HotspotAttack")
+    @Expose
+    private Boolean HotspotAttack;
+
+    /**
      * Get 返回数量，最大值为100。 
      * @return Limit 返回数量，最大值为100。
      */
@@ -162,6 +169,22 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
         this.By = By;
     }
 
+    /**
+     * Get 是否热点漏洞 
+     * @return HotspotAttack 是否热点漏洞
+     */
+    public Boolean getHotspotAttack() {
+        return this.HotspotAttack;
+    }
+
+    /**
+     * Set 是否热点漏洞
+     * @param HotspotAttack 是否热点漏洞
+     */
+    public void setHotspotAttack(Boolean HotspotAttack) {
+        this.HotspotAttack = HotspotAttack;
+    }
+
     public DescribeEmergencyVulListRequest() {
     }
 
@@ -188,6 +211,9 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.HotspotAttack != null) {
+            this.HotspotAttack = new Boolean(source.HotspotAttack);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeEmergencyVulListRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamSimple(map, prefix + "HotspotAttack", this.HotspotAttack);
 
     }
 }

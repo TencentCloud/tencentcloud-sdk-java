@@ -58,6 +58,27 @@ public class SecurityGroupLimitSet extends AbstractModel{
     private Long InstanceSecurityGroupLimit;
 
     /**
+    * 安全组展开后的规则数限制
+    */
+    @SerializedName("SecurityGroupExtendedPolicyLimit")
+    @Expose
+    private Long SecurityGroupExtendedPolicyLimit;
+
+    /**
+    * 被引用的安全组关联CVM、ENI的实例配额
+    */
+    @SerializedName("SecurityGroupReferedCvmAndEniLimit")
+    @Expose
+    private Long SecurityGroupReferedCvmAndEniLimit;
+
+    /**
+    * 被引用的安全组关联数据库、LB等服务实例配额
+    */
+    @SerializedName("SecurityGroupReferedSvcLimit")
+    @Expose
+    private Long SecurityGroupReferedSvcLimit;
+
+    /**
      * Get 每个项目每个地域可创建安全组数 
      * @return SecurityGroupLimit 每个项目每个地域可创建安全组数
      */
@@ -137,6 +158,54 @@ public class SecurityGroupLimitSet extends AbstractModel{
         this.InstanceSecurityGroupLimit = InstanceSecurityGroupLimit;
     }
 
+    /**
+     * Get 安全组展开后的规则数限制 
+     * @return SecurityGroupExtendedPolicyLimit 安全组展开后的规则数限制
+     */
+    public Long getSecurityGroupExtendedPolicyLimit() {
+        return this.SecurityGroupExtendedPolicyLimit;
+    }
+
+    /**
+     * Set 安全组展开后的规则数限制
+     * @param SecurityGroupExtendedPolicyLimit 安全组展开后的规则数限制
+     */
+    public void setSecurityGroupExtendedPolicyLimit(Long SecurityGroupExtendedPolicyLimit) {
+        this.SecurityGroupExtendedPolicyLimit = SecurityGroupExtendedPolicyLimit;
+    }
+
+    /**
+     * Get 被引用的安全组关联CVM、ENI的实例配额 
+     * @return SecurityGroupReferedCvmAndEniLimit 被引用的安全组关联CVM、ENI的实例配额
+     */
+    public Long getSecurityGroupReferedCvmAndEniLimit() {
+        return this.SecurityGroupReferedCvmAndEniLimit;
+    }
+
+    /**
+     * Set 被引用的安全组关联CVM、ENI的实例配额
+     * @param SecurityGroupReferedCvmAndEniLimit 被引用的安全组关联CVM、ENI的实例配额
+     */
+    public void setSecurityGroupReferedCvmAndEniLimit(Long SecurityGroupReferedCvmAndEniLimit) {
+        this.SecurityGroupReferedCvmAndEniLimit = SecurityGroupReferedCvmAndEniLimit;
+    }
+
+    /**
+     * Get 被引用的安全组关联数据库、LB等服务实例配额 
+     * @return SecurityGroupReferedSvcLimit 被引用的安全组关联数据库、LB等服务实例配额
+     */
+    public Long getSecurityGroupReferedSvcLimit() {
+        return this.SecurityGroupReferedSvcLimit;
+    }
+
+    /**
+     * Set 被引用的安全组关联数据库、LB等服务实例配额
+     * @param SecurityGroupReferedSvcLimit 被引用的安全组关联数据库、LB等服务实例配额
+     */
+    public void setSecurityGroupReferedSvcLimit(Long SecurityGroupReferedSvcLimit) {
+        this.SecurityGroupReferedSvcLimit = SecurityGroupReferedSvcLimit;
+    }
+
     public SecurityGroupLimitSet() {
     }
 
@@ -160,6 +229,15 @@ public class SecurityGroupLimitSet extends AbstractModel{
         if (source.InstanceSecurityGroupLimit != null) {
             this.InstanceSecurityGroupLimit = new Long(source.InstanceSecurityGroupLimit);
         }
+        if (source.SecurityGroupExtendedPolicyLimit != null) {
+            this.SecurityGroupExtendedPolicyLimit = new Long(source.SecurityGroupExtendedPolicyLimit);
+        }
+        if (source.SecurityGroupReferedCvmAndEniLimit != null) {
+            this.SecurityGroupReferedCvmAndEniLimit = new Long(source.SecurityGroupReferedCvmAndEniLimit);
+        }
+        if (source.SecurityGroupReferedSvcLimit != null) {
+            this.SecurityGroupReferedSvcLimit = new Long(source.SecurityGroupReferedSvcLimit);
+        }
     }
 
 
@@ -172,6 +250,9 @@ public class SecurityGroupLimitSet extends AbstractModel{
         this.setParamSimple(map, prefix + "ReferedSecurityGroupLimit", this.ReferedSecurityGroupLimit);
         this.setParamSimple(map, prefix + "SecurityGroupInstanceLimit", this.SecurityGroupInstanceLimit);
         this.setParamSimple(map, prefix + "InstanceSecurityGroupLimit", this.InstanceSecurityGroupLimit);
+        this.setParamSimple(map, prefix + "SecurityGroupExtendedPolicyLimit", this.SecurityGroupExtendedPolicyLimit);
+        this.setParamSimple(map, prefix + "SecurityGroupReferedCvmAndEniLimit", this.SecurityGroupReferedCvmAndEniLimit);
+        this.setParamSimple(map, prefix + "SecurityGroupReferedSvcLimit", this.SecurityGroupReferedSvcLimit);
 
     }
 }

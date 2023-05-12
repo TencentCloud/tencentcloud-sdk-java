@@ -30,14 +30,14 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
-    * 安全组生效内网地址。
+    * 实例内网IPv4地址。
     */
     @SerializedName("VIP")
     @Expose
     private String VIP;
 
     /**
-    * 安全组生效内网端口。
+    * 内网端口。
     */
     @SerializedName("VPort")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
-     * Get 安全组生效内网地址。 
-     * @return VIP 安全组生效内网地址。
+     * Get 实例内网IPv4地址。 
+     * @return VIP 实例内网IPv4地址。
      */
     public String getVIP() {
         return this.VIP;
     }
 
     /**
-     * Set 安全组生效内网地址。
-     * @param VIP 安全组生效内网地址。
+     * Set 实例内网IPv4地址。
+     * @param VIP 实例内网IPv4地址。
      */
     public void setVIP(String VIP) {
         this.VIP = VIP;
     }
 
     /**
-     * Get 安全组生效内网端口。 
-     * @return VPort 安全组生效内网端口。
+     * Get 内网端口。 
+     * @return VPort 内网端口。
      */
     public String getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set 安全组生效内网端口。
-     * @param VPort 安全组生效内网端口。
+     * Set 内网端口。
+     * @param VPort 内网端口。
      */
     public void setVPort(String VPort) {
         this.VPort = VPort;

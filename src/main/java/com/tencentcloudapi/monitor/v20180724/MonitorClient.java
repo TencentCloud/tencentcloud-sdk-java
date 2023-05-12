@@ -1187,6 +1187,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取prom实例中集群详细的关联状态
+     * @param req DescribeClusterAgentCreatingProgressRequest
+     * @return DescribeClusterAgentCreatingProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAgentCreatingProgressResponse DescribeClusterAgentCreatingProgress(DescribeClusterAgentCreatingProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterAgentCreatingProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterAgentCreatingProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterAgentCreatingProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取条件模板列表
      * @param req DescribeConditionsTemplateListRequest
      * @return DescribeConditionsTemplateListResponse

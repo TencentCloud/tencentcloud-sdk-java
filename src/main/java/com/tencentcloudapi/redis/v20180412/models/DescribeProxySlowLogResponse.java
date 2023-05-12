@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeProxySlowLogResponse extends AbstractModel{
 
     /**
-    * 慢查询总数
+    * 慢查询总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 慢查询详情
+    * 慢查询详情。
     */
     @SerializedName("InstanceProxySlowLogDetail")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeProxySlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 慢查询总数 
-     * @return TotalCount 慢查询总数
+     * Get 慢查询总数。 
+     * @return TotalCount 慢查询总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 慢查询总数
-     * @param TotalCount 慢查询总数
+     * Set 慢查询总数。
+     * @param TotalCount 慢查询总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 慢查询详情 
-     * @return InstanceProxySlowLogDetail 慢查询详情
+     * Get 慢查询详情。 
+     * @return InstanceProxySlowLogDetail 慢查询详情。
      */
     public InstanceProxySlowlogDetail [] getInstanceProxySlowLogDetail() {
         return this.InstanceProxySlowLogDetail;
     }
 
     /**
-     * Set 慢查询详情
-     * @param InstanceProxySlowLogDetail 慢查询详情
+     * Set 慢查询详情。
+     * @param InstanceProxySlowLogDetail 慢查询详情。
      */
     public void setInstanceProxySlowLogDetail(InstanceProxySlowlogDetail [] InstanceProxySlowLogDetail) {
         this.InstanceProxySlowLogDetail = InstanceProxySlowLogDetail;

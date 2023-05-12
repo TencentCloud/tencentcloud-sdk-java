@@ -23,184 +23,204 @@ import java.util.HashMap;
 public class InstanceEnumParam extends AbstractModel{
 
     /**
-    * 参数名
+    * 参数名称。
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * 参数类型：enum
+    * 参数类型，例如：Enum。
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * 修改后是否需要重启：true，false
+    * 参数值修改后是否需要重启。
+- true：需要。
+- false：不需要。
     */
     @SerializedName("NeedRestart")
     @Expose
     private String NeedRestart;
 
     /**
-    * 参数默认值
+    * 参数默认值。
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * 当前运行参数值
+    * 参数当前运行值。
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * 参数说明
+    * 参数说明。
     */
     @SerializedName("Tips")
     @Expose
     private String Tips;
 
     /**
-    * 参数可取值
+    * 参数可取的值。
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * 参数状态, 1: 修改中， 2：修改完成
+    * 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 参数名 
-     * @return ParamName 参数名
+     * Get 参数名称。 
+     * @return ParamName 参数名称。
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set 参数名
-     * @param ParamName 参数名
+     * Set 参数名称。
+     * @param ParamName 参数名称。
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get 参数类型：enum 
-     * @return ValueType 参数类型：enum
+     * Get 参数类型，例如：Enum。 
+     * @return ValueType 参数类型，例如：Enum。
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set 参数类型：enum
-     * @param ValueType 参数类型：enum
+     * Set 参数类型，例如：Enum。
+     * @param ValueType 参数类型，例如：Enum。
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get 修改后是否需要重启：true，false 
-     * @return NeedRestart 修改后是否需要重启：true，false
+     * Get 参数值修改后是否需要重启。
+- true：需要。
+- false：不需要。 
+     * @return NeedRestart 参数值修改后是否需要重启。
+- true：需要。
+- false：不需要。
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set 修改后是否需要重启：true，false
-     * @param NeedRestart 修改后是否需要重启：true，false
+     * Set 参数值修改后是否需要重启。
+- true：需要。
+- false：不需要。
+     * @param NeedRestart 参数值修改后是否需要重启。
+- true：需要。
+- false：不需要。
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get 参数默认值 
-     * @return DefaultValue 参数默认值
+     * Get 参数默认值。 
+     * @return DefaultValue 参数默认值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set 参数默认值
-     * @param DefaultValue 参数默认值
+     * Set 参数默认值。
+     * @param DefaultValue 参数默认值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get 当前运行参数值 
-     * @return CurrentValue 当前运行参数值
+     * Get 参数当前运行值。 
+     * @return CurrentValue 参数当前运行值。
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set 当前运行参数值
-     * @param CurrentValue 当前运行参数值
+     * Set 参数当前运行值。
+     * @param CurrentValue 参数当前运行值。
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get 参数说明 
-     * @return Tips 参数说明
+     * Get 参数说明。 
+     * @return Tips 参数说明。
      */
     public String getTips() {
         return this.Tips;
     }
 
     /**
-     * Set 参数说明
-     * @param Tips 参数说明
+     * Set 参数说明。
+     * @param Tips 参数说明。
      */
     public void setTips(String Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get 参数可取值 
-     * @return EnumValue 参数可取值
+     * Get 参数可取的值。 
+     * @return EnumValue 参数可取的值。
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set 参数可取值
-     * @param EnumValue 参数可取值
+     * Set 参数可取的值。
+     * @param EnumValue 参数可取的值。
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get 参数状态, 1: 修改中， 2：修改完成 
-     * @return Status 参数状态, 1: 修改中， 2：修改完成
+     * Get 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。 
+     * @return Status 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 参数状态, 1: 修改中， 2：修改完成
-     * @param Status 参数状态, 1: 修改中， 2：修改完成
+     * Set 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
+     * @param Status 参数修改状态。
+- 1: 修改中。
+- 2：修改完成。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

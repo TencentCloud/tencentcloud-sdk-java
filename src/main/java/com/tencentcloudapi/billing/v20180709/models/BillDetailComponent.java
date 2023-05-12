@@ -93,7 +93,7 @@ public class BillDetailComponent extends AbstractModel{
     private String Cost;
 
     /**
-    * 折扣率
+    * 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
     */
     @SerializedName("Discount")
     @Expose
@@ -151,7 +151,7 @@ public class BillDetailComponent extends AbstractModel{
     private String ComponentCode;
 
     /**
-    * 合同价
+    * 组件单价
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContractPrice")
@@ -175,7 +175,7 @@ public class BillDetailComponent extends AbstractModel{
     private String RiTimeSpan;
 
     /**
-    * 按组件原价的口径换算的预留实例抵扣金额
+    * 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithRI")
@@ -183,7 +183,7 @@ public class BillDetailComponent extends AbstractModel{
     private String OriginalCostWithRI;
 
     /**
-    * 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+    * 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeductionRate")
@@ -191,7 +191,7 @@ public class BillDetailComponent extends AbstractModel{
     private String SPDeductionRate;
 
     /**
-    * 节省计划抵扣的SP包面值
+    * 节省计划抵扣金额，节省计划抵扣的SP包面值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeduction")
@@ -199,7 +199,7 @@ public class BillDetailComponent extends AbstractModel{
     private String SPDeduction;
 
     /**
-    * 按组件原价的口径换算的节省计划抵扣金额
+    * 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithSP")
@@ -207,7 +207,7 @@ public class BillDetailComponent extends AbstractModel{
     private String OriginalCostWithSP;
 
     /**
-    * 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+    * 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlendedDiscount")
@@ -375,16 +375,16 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 折扣率 
-     * @return Discount 折扣率
+     * Get 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示） 
+     * @return Discount 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣率
-     * @param Discount 折扣率
+     * Set 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+     * @param Discount 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
@@ -511,9 +511,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 合同价
+     * Get 组件单价
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContractPrice 合同价
+     * @return ContractPrice 组件单价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContractPrice() {
@@ -521,9 +521,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 合同价
+     * Set 组件单价
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContractPrice 合同价
+     * @param ContractPrice 组件单价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContractPrice(String ContractPrice) {
@@ -571,9 +571,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 按组件原价的口径换算的预留实例抵扣金额
+     * Get 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     * @return OriginalCostWithRI 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithRI() {
@@ -581,9 +581,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 按组件原价的口径换算的预留实例抵扣金额
+     * Set 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     * @param OriginalCostWithRI 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
@@ -591,9 +591,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * Get 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SPDeductionRate 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * @return SPDeductionRate 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeductionRate() {
@@ -601,9 +601,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * Set 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SPDeductionRate 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * @param SPDeductionRate 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeductionRate(String SPDeductionRate) {
@@ -611,9 +611,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 节省计划抵扣的SP包面值
+     * Get 节省计划抵扣金额，节省计划抵扣的SP包面值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SPDeduction 节省计划抵扣的SP包面值
+     * @return SPDeduction 节省计划抵扣金额，节省计划抵扣的SP包面值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeduction() {
@@ -621,9 +621,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 节省计划抵扣的SP包面值
+     * Set 节省计划抵扣金额，节省计划抵扣的SP包面值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SPDeduction 节省计划抵扣的SP包面值
+     * @param SPDeduction 节省计划抵扣金额，节省计划抵扣的SP包面值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeduction(String SPDeduction) {
@@ -631,9 +631,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 按组件原价的口径换算的节省计划抵扣金额
+     * Get 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     * @return OriginalCostWithSP 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithSP() {
@@ -641,9 +641,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 按组件原价的口径换算的节省计划抵扣金额
+     * Set 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     * @param OriginalCostWithSP 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
@@ -651,9 +651,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+     * Get 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BlendedDiscount 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+     * @return BlendedDiscount 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBlendedDiscount() {
@@ -661,9 +661,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+     * Set 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlendedDiscount 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+     * @param BlendedDiscount 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlendedDiscount(String BlendedDiscount) {

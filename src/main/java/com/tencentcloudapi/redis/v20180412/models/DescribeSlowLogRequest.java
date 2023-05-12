@@ -52,7 +52,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private Long MinQueryTime;
 
     /**
-    * 每个页面展示的慢查询条数，默认值为20。
+    * 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
     */
     @SerializedName("Limit")
     @Expose
@@ -141,16 +141,16 @@ public class DescribeSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 每个页面展示的慢查询条数，默认值为20。 
-     * @return Limit 每个页面展示的慢查询条数，默认值为20。
+     * Get 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。 
+     * @return Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每个页面展示的慢查询条数，默认值为20。
-     * @param Limit 每个页面展示的慢查询条数，默认值为20。
+     * Set 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+     * @param Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

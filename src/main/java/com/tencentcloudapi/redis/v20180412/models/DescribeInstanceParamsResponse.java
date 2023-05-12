@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeInstanceParamsResponse extends AbstractModel{
 
     /**
-    * 实例参数个数
+    * 参数列表总数量。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例枚举类型参数
+    * 实例枚举类型参数。
     */
     @SerializedName("InstanceEnumParam")
     @Expose
     private InstanceEnumParam [] InstanceEnumParam;
 
     /**
-    * 实例整型参数
+    * 实例整型参数。
     */
     @SerializedName("InstanceIntegerParam")
     @Expose
     private InstanceIntegerParam [] InstanceIntegerParam;
 
     /**
-    * 实例字符型参数
+    * 实例字符型参数。
     */
     @SerializedName("InstanceTextParam")
     @Expose
     private InstanceTextParam [] InstanceTextParam;
 
     /**
-    * 实例多选项型参数
+    * 实例多选项型参数。
     */
     @SerializedName("InstanceMultiParam")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例参数个数 
-     * @return TotalCount 实例参数个数
+     * Get 参数列表总数量。 
+     * @return TotalCount 参数列表总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例参数个数
-     * @param TotalCount 实例参数个数
+     * Set 参数列表总数量。
+     * @param TotalCount 参数列表总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例枚举类型参数 
-     * @return InstanceEnumParam 实例枚举类型参数
+     * Get 实例枚举类型参数。 
+     * @return InstanceEnumParam 实例枚举类型参数。
      */
     public InstanceEnumParam [] getInstanceEnumParam() {
         return this.InstanceEnumParam;
     }
 
     /**
-     * Set 实例枚举类型参数
-     * @param InstanceEnumParam 实例枚举类型参数
+     * Set 实例枚举类型参数。
+     * @param InstanceEnumParam 实例枚举类型参数。
      */
     public void setInstanceEnumParam(InstanceEnumParam [] InstanceEnumParam) {
         this.InstanceEnumParam = InstanceEnumParam;
     }
 
     /**
-     * Get 实例整型参数 
-     * @return InstanceIntegerParam 实例整型参数
+     * Get 实例整型参数。 
+     * @return InstanceIntegerParam 实例整型参数。
      */
     public InstanceIntegerParam [] getInstanceIntegerParam() {
         return this.InstanceIntegerParam;
     }
 
     /**
-     * Set 实例整型参数
-     * @param InstanceIntegerParam 实例整型参数
+     * Set 实例整型参数。
+     * @param InstanceIntegerParam 实例整型参数。
      */
     public void setInstanceIntegerParam(InstanceIntegerParam [] InstanceIntegerParam) {
         this.InstanceIntegerParam = InstanceIntegerParam;
     }
 
     /**
-     * Get 实例字符型参数 
-     * @return InstanceTextParam 实例字符型参数
+     * Get 实例字符型参数。 
+     * @return InstanceTextParam 实例字符型参数。
      */
     public InstanceTextParam [] getInstanceTextParam() {
         return this.InstanceTextParam;
     }
 
     /**
-     * Set 实例字符型参数
-     * @param InstanceTextParam 实例字符型参数
+     * Set 实例字符型参数。
+     * @param InstanceTextParam 实例字符型参数。
      */
     public void setInstanceTextParam(InstanceTextParam [] InstanceTextParam) {
         this.InstanceTextParam = InstanceTextParam;
     }
 
     /**
-     * Get 实例多选项型参数 
-     * @return InstanceMultiParam 实例多选项型参数
+     * Get 实例多选项型参数。 
+     * @return InstanceMultiParam 实例多选项型参数。
      */
     public InstanceMultiParam [] getInstanceMultiParam() {
         return this.InstanceMultiParam;
     }
 
     /**
-     * Set 实例多选项型参数
-     * @param InstanceMultiParam 实例多选项型参数
+     * Set 实例多选项型参数。
+     * @param InstanceMultiParam 实例多选项型参数。
      */
     public void setInstanceMultiParam(InstanceMultiParam [] InstanceMultiParam) {
         this.InstanceMultiParam = InstanceMultiParam;

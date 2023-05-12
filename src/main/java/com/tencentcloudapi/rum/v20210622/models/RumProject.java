@@ -140,6 +140,14 @@ public class RumProject extends AbstractModel{
     private Long ProjectStatus;
 
     /**
+    * 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPoint")
+    @Expose
+    private String AccessPoint;
+
+    /**
      * Get 项目名 
      * @return Name 项目名
      */
@@ -415,6 +423,26 @@ public class RumProject extends AbstractModel{
         this.ProjectStatus = ProjectStatus;
     }
 
+    /**
+     * Get 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPoint 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessPoint() {
+        return this.AccessPoint;
+    }
+
+    /**
+     * Set 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPoint 日志接入点，用户忽略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPoint(String AccessPoint) {
+        this.AccessPoint = AccessPoint;
+    }
+
     public RumProject() {
     }
 
@@ -471,6 +499,9 @@ public class RumProject extends AbstractModel{
         if (source.ProjectStatus != null) {
             this.ProjectStatus = new Long(source.ProjectStatus);
         }
+        if (source.AccessPoint != null) {
+            this.AccessPoint = new String(source.AccessPoint);
+        }
     }
 
 
@@ -494,6 +525,7 @@ public class RumProject extends AbstractModel{
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "IsStar", this.IsStar);
         this.setParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
+        this.setParamSimple(map, prefix + "AccessPoint", this.AccessPoint);
 
     }
 }

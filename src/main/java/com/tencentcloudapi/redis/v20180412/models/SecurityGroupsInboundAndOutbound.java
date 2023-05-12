@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class SecurityGroupsInboundAndOutbound extends AbstractModel{
 
     /**
-    * 执行动作
+    * 标识出入数据库的IP与端口是否被允许。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * IP地址
+    * 出入数据库的IP地址
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 端口号
+    * 端口号。
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 协议类型
+    * 协议类型。
     */
     @SerializedName("Proto")
     @Expose
     private String Proto;
 
     /**
-     * Get 执行动作 
-     * @return Action 执行动作
+     * Get 标识出入数据库的IP与端口是否被允许。 
+     * @return Action 标识出入数据库的IP与端口是否被允许。
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 执行动作
-     * @param Action 执行动作
+     * Set 标识出入数据库的IP与端口是否被允许。
+     * @param Action 标识出入数据库的IP与端口是否被允许。
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get IP地址 
-     * @return Ip IP地址
+     * Get 出入数据库的IP地址 
+     * @return Ip 出入数据库的IP地址
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP地址
-     * @param Ip IP地址
+     * Set 出入数据库的IP地址
+     * @param Ip 出入数据库的IP地址
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 端口号 
-     * @return Port 端口号
+     * Get 端口号。 
+     * @return Port 端口号。
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口号
-     * @param Port 端口号
+     * Set 端口号。
+     * @param Port 端口号。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议类型 
-     * @return Proto 协议类型
+     * Get 协议类型。 
+     * @return Proto 协议类型。
      */
     public String getProto() {
         return this.Proto;
     }
 
     /**
-     * Set 协议类型
-     * @param Proto 协议类型
+     * Set 协议类型。
+     * @param Proto 协议类型。
      */
     public void setProto(String Proto) {
         this.Proto = Proto;

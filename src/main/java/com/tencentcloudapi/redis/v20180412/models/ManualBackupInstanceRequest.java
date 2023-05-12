@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class ManualBackupInstanceRequest extends AbstractModel{
 
     /**
-    * 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 备份的备注信息
+    * 手动备份任务的备注信息。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 保存天数。0代表指定默认保留时间
+    * 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
     */
     @SerializedName("StorageDays")
     @Expose
     private Long StorageDays;
 
     /**
-     * Get 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。 
-     * @return InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
-     * @param InstanceId 待操作的实例ID，可通过 DescribeInstance接口返回值中的 InstanceId 获取。
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 备份的备注信息 
-     * @return Remark 备份的备注信息
+     * Get 手动备份任务的备注信息。 
+     * @return Remark 手动备份任务的备注信息。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备份的备注信息
-     * @param Remark 备份的备注信息
+     * Set 手动备份任务的备注信息。
+     * @param Remark 手动备份任务的备注信息。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 保存天数。0代表指定默认保留时间 
-     * @return StorageDays 保存天数。0代表指定默认保留时间
+     * Get 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。 
+     * @return StorageDays 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
      */
     public Long getStorageDays() {
         return this.StorageDays;
     }
 
     /**
-     * Set 保存天数。0代表指定默认保留时间
-     * @param StorageDays 保存天数。0代表指定默认保留时间
+     * Set 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
+     * @param StorageDays 备份数据的保存天数。
+- 单位：天；默认值为7天；取值范围：[0.1825]。如果超过 7天，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+- 如果不配置该参数，默认与自动备份的保留时间一致。
+- 如果未设置自动备份，默认为7天。
      */
     public void setStorageDays(Long StorageDays) {
         this.StorageDays = StorageDays;

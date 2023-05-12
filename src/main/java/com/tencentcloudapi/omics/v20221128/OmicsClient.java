@@ -139,6 +139,46 @@ public class OmicsClient extends AbstractClient{
     }
 
     /**
+     *查询表格。
+     * @param req DescribeTablesRequest
+     * @return DescribeTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTablesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询表格行数据。
+     * @param req DescribeTablesRowsRequest
+     * @return DescribeTablesRowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablesRowsResponse DescribeTablesRows(DescribeTablesRowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTablesRowsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTablesRowsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTablesRows");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询作业详情。
      * @param req GetRunCallsRequest
      * @return GetRunCallsResponse
@@ -191,6 +231,26 @@ public class OmicsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImportTableFileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ImportTableFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重试任务。
+     * @param req RetryRunsRequest
+     * @return RetryRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryRunsResponse RetryRuns(RetryRunsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RetryRunsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RetryRunsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RetryRuns");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

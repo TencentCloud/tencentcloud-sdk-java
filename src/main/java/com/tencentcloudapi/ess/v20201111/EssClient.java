@@ -123,6 +123,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *生成子客编辑企业信息二维码
+     * @param req CreateChannelSubOrganizationModifyQrCodeRequest
+     * @return CreateChannelSubOrganizationModifyQrCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelSubOrganizationModifyQrCodeResponse CreateChannelSubOrganizationModifyQrCode(CreateChannelSubOrganizationModifyQrCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateChannelSubOrganizationModifyQrCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
      * @param req CreateConvertTaskApiRequest
      * @return CreateConvertTaskApiResponse

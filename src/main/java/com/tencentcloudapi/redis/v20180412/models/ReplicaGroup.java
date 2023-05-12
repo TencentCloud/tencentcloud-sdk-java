@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ReplicaGroup extends AbstractModel{
 
     /**
-    * 节点组ID
+    * 节点组 ID。
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * 节点组的名称，主节点为空
+    * 节点组的名称，主节点为空。
     */
     @SerializedName("GroupName")
     @Expose
@@ -58,32 +58,32 @@ public class ReplicaGroup extends AbstractModel{
     private RedisNode [] RedisNodes;
 
     /**
-     * Get 节点组ID 
-     * @return GroupId 节点组ID
+     * Get 节点组 ID。 
+     * @return GroupId 节点组 ID。
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 节点组ID
-     * @param GroupId 节点组ID
+     * Set 节点组 ID。
+     * @param GroupId 节点组 ID。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 节点组的名称，主节点为空 
-     * @return GroupName 节点组的名称，主节点为空
+     * Get 节点组的名称，主节点为空。 
+     * @return GroupName 节点组的名称，主节点为空。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 节点组的名称，主节点为空
-     * @param GroupName 节点组的名称，主节点为空
+     * Set 节点组的名称，主节点为空。
+     * @param GroupName 节点组的名称，主节点为空。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

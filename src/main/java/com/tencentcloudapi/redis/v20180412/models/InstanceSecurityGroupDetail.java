@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class InstanceSecurityGroupDetail extends AbstractModel{
 
     /**
-    * 实例Id
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 安全组信息
+    * 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。
     */
     @SerializedName("SecurityGroupDetails")
     @Expose
     private SecurityGroupDetail [] SecurityGroupDetails;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 安全组信息 
-     * @return SecurityGroupDetails 安全组信息
+     * Get 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。 
+     * @return SecurityGroupDetails 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。
      */
     public SecurityGroupDetail [] getSecurityGroupDetails() {
         return this.SecurityGroupDetails;
     }
 
     /**
-     * Set 安全组信息
-     * @param SecurityGroupDetails 安全组信息
+     * Set 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。
+     * @param SecurityGroupDetails 安全组信息，包括：安全组 ID、安全组名称、安全组出入站规则。
      */
     public void setSecurityGroupDetails(SecurityGroupDetail [] SecurityGroupDetails) {
         this.SecurityGroupDetails = SecurityGroupDetails;

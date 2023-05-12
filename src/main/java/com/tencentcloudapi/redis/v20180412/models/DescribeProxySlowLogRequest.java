@@ -23,138 +23,143 @@ import java.util.HashMap;
 public class DescribeProxySlowLogRequest extends AbstractModel{
 
     /**
-    * 实例Id
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间
+    * 慢查询的开始时间。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间
+    * 慢查询的结束时间。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 慢查询阈值（单位：毫秒）
+    * 慢查询阈值，单位：毫秒。
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * 页面大小
+    * 分页大小。默认为 20，取值范围[20,1000]。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 偏移量，取Limit整数倍。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+ 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间 
-     * @return BeginTime 开始时间
+     * Get 慢查询的开始时间。 
+     * @return BeginTime 慢查询的开始时间。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间
-     * @param BeginTime 开始时间
+     * Set 慢查询的开始时间。
+     * @param BeginTime 慢查询的开始时间。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 慢查询的结束时间。 
+     * @return EndTime 慢查询的结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 慢查询的结束时间。
+     * @param EndTime 慢查询的结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 慢查询阈值（单位：毫秒） 
-     * @return MinQueryTime 慢查询阈值（单位：毫秒）
+     * Get 慢查询阈值，单位：毫秒。 
+     * @return MinQueryTime 慢查询阈值，单位：毫秒。
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set 慢查询阈值（单位：毫秒）
-     * @param MinQueryTime 慢查询阈值（单位：毫秒）
+     * Set 慢查询阈值，单位：毫秒。
+     * @param MinQueryTime 慢查询阈值，单位：毫秒。
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get 页面大小 
-     * @return Limit 页面大小
+     * Get 分页大小。默认为 20，取值范围[20,1000]。 
+     * @return Limit 分页大小。默认为 20，取值范围[20,1000]。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面大小
-     * @param Limit 页面大小
+     * Set 分页大小。默认为 20，取值范围[20,1000]。
+     * @param Limit 分页大小。默认为 20，取值范围[20,1000]。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 偏移量，取Limit整数倍。 
+     * @return Offset 偏移量，取Limit整数倍。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 偏移量，取Limit整数倍。
+     * @param Offset 偏移量，取Limit整数倍。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

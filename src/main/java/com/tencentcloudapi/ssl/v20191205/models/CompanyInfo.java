@@ -72,6 +72,22 @@ public class CompanyInfo extends AbstractModel{
     private String CompanyPhone;
 
     /**
+    * 类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdType")
+    @Expose
+    private String IdType;
+
+    /**
+    * ID号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IdNumber")
+    @Expose
+    private String IdNumber;
+
+    /**
      * Get 公司名称 
      * @return CompanyName 公司名称
      */
@@ -183,6 +199,46 @@ public class CompanyInfo extends AbstractModel{
         this.CompanyPhone = CompanyPhone;
     }
 
+    /**
+     * Get 类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdType() {
+        return this.IdType;
+    }
+
+    /**
+     * Set 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdType 类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdType(String IdType) {
+        this.IdType = IdType;
+    }
+
+    /**
+     * Get ID号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IdNumber ID号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIdNumber() {
+        return this.IdNumber;
+    }
+
+    /**
+     * Set ID号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IdNumber ID号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIdNumber(String IdNumber) {
+        this.IdNumber = IdNumber;
+    }
+
     public CompanyInfo() {
     }
 
@@ -212,6 +268,12 @@ public class CompanyInfo extends AbstractModel{
         if (source.CompanyPhone != null) {
             this.CompanyPhone = new String(source.CompanyPhone);
         }
+        if (source.IdType != null) {
+            this.IdType = new String(source.IdType);
+        }
+        if (source.IdNumber != null) {
+            this.IdNumber = new String(source.IdNumber);
+        }
     }
 
 
@@ -226,6 +288,8 @@ public class CompanyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CompanyCity", this.CompanyCity);
         this.setParamSimple(map, prefix + "CompanyAddress", this.CompanyAddress);
         this.setParamSimple(map, prefix + "CompanyPhone", this.CompanyPhone);
+        this.setParamSimple(map, prefix + "IdType", this.IdType);
+        this.setParamSimple(map, prefix + "IdNumber", this.IdNumber);
 
     }
 }

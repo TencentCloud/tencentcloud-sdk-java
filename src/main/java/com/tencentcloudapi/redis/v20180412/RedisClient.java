@@ -499,7 +499,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+     *本接口（DescribeDBSecurityGroups）用于查询实例的安全组详情。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -519,7 +519,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查看实例子账号信息
+     *本接口（DescribeInstanceAccount）用于查看实例子账号信息。
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
      * @throws TencentCloudSDKException
@@ -799,7 +799,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例参数列表
+     *本接口（DescribeInstanceParams）用于查询实例参数列表。
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
      * @throws TencentCloudSDKException
@@ -819,7 +819,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例安全组信息
+     *本接口（DescribeInstanceSecurityGroup）用于查询实例安全组信息。
      * @param req DescribeInstanceSecurityGroupRequest
      * @return DescribeInstanceSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -859,7 +859,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询Redis节点详细信息
+     *本接口（DescribeInstanceZoneInfo）用于查询 Redis 节点详细信息。
      * @param req DescribeInstanceZoneInfoRequest
      * @return DescribeInstanceZoneInfoResponse
      * @throws TencentCloudSDKException
@@ -1339,7 +1339,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *手动备份Redis实例
+     *本接口（ManualBackupInstance）用于手动备份Redis实例。
      * @param req ManualBackupInstanceRequest
      * @return ManualBackupInstanceResponse
      * @throws TencentCloudSDKException

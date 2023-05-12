@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class RedisNode extends AbstractModel{
 
     /**
-    * 节点key的个数
+    * Redis 节点上 Key 的个数。
     */
     @SerializedName("Keys")
     @Expose
     private Long Keys;
 
     /**
-    * 节点slot分布
+    * Redis 节点 Slot 分布范围。例如：0-5460。
     */
     @SerializedName("Slot")
     @Expose
     private String Slot;
 
     /**
-    * 节点的序列ID
+    * 节点的序列 ID。
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
-    * 节点的状态
+    * 节点的状态。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 节点角色
+    * 节点角色。
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-     * Get 节点key的个数 
-     * @return Keys 节点key的个数
+     * Get Redis 节点上 Key 的个数。 
+     * @return Keys Redis 节点上 Key 的个数。
      */
     public Long getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set 节点key的个数
-     * @param Keys 节点key的个数
+     * Set Redis 节点上 Key 的个数。
+     * @param Keys Redis 节点上 Key 的个数。
      */
     public void setKeys(Long Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get 节点slot分布 
-     * @return Slot 节点slot分布
+     * Get Redis 节点 Slot 分布范围。例如：0-5460。 
+     * @return Slot Redis 节点 Slot 分布范围。例如：0-5460。
      */
     public String getSlot() {
         return this.Slot;
     }
 
     /**
-     * Set 节点slot分布
-     * @param Slot 节点slot分布
+     * Set Redis 节点 Slot 分布范围。例如：0-5460。
+     * @param Slot Redis 节点 Slot 分布范围。例如：0-5460。
      */
     public void setSlot(String Slot) {
         this.Slot = Slot;
     }
 
     /**
-     * Get 节点的序列ID 
-     * @return NodeId 节点的序列ID
+     * Get 节点的序列 ID。 
+     * @return NodeId 节点的序列 ID。
      */
     public String getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 节点的序列ID
-     * @param NodeId 节点的序列ID
+     * Set 节点的序列 ID。
+     * @param NodeId 节点的序列 ID。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 节点的状态 
-     * @return Status 节点的状态
+     * Get 节点的状态。 
+     * @return Status 节点的状态。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 节点的状态
-     * @param Status 节点的状态
+     * Set 节点的状态。
+     * @param Status 节点的状态。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 节点角色 
-     * @return Role 节点角色
+     * Get 节点角色。 
+     * @return Role 节点角色。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 节点角色
-     * @param Role 节点角色
+     * Set 节点角色。
+     * @param Role 节点角色。
      */
     public void setRole(String Role) {
         this.Role = Role;

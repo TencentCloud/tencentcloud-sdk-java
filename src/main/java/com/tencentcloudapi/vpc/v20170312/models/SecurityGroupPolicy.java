@@ -52,7 +52,7 @@ public class SecurityGroupPolicy extends AbstractModel{
     private ServiceTemplateSpecification ServiceTemplate;
 
     /**
-    * 网段或IP(互斥)。
+    * 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -169,16 +169,16 @@ public class SecurityGroupPolicy extends AbstractModel{
     }
 
     /**
-     * Get 网段或IP(互斥)。 
-     * @return CidrBlock 网段或IP(互斥)。
+     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。 
+     * @return CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 网段或IP(互斥)。
-     * @param CidrBlock 网段或IP(互斥)。
+     * Set 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @param CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

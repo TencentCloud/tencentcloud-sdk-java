@@ -65,6 +65,14 @@ public class DeviceInfo extends AbstractModel{
     private Long ExpireTime;
 
     /**
+    * 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogLevel")
+    @Expose
+    private Long LogLevel;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -160,6 +168,26 @@ public class DeviceInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogLevel 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLogLevel() {
+        return this.LogLevel;
+    }
+
+    /**
+     * Set 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogLevel 设备的sdk日志等级，0：关闭，1：错误，2：告警，3：信息，4：调试
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogLevel(Long LogLevel) {
+        this.LogLevel = LogLevel;
+    }
+
     public DeviceInfo() {
     }
 
@@ -186,6 +214,9 @@ public class DeviceInfo extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.LogLevel != null) {
+            this.LogLevel = new Long(source.LogLevel);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class DeviceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DevicePsk", this.DevicePsk);
         this.setParamSimple(map, prefix + "EnableState", this.EnableState);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
 
     }
 }

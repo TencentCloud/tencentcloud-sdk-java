@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceZoneInfoResponse extends AbstractModel{
 
     /**
-    * 实例节点组的个数
+    * 实例节点组的个数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 实例节点组列表
+    * 实例节点组列表。
     */
     @SerializedName("ReplicaGroups")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceZoneInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 实例节点组的个数 
-     * @return TotalCount 实例节点组的个数
+     * Get 实例节点组的个数。 
+     * @return TotalCount 实例节点组的个数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 实例节点组的个数
-     * @param TotalCount 实例节点组的个数
+     * Set 实例节点组的个数。
+     * @param TotalCount 实例节点组的个数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 实例节点组列表 
-     * @return ReplicaGroups 实例节点组列表
+     * Get 实例节点组列表。 
+     * @return ReplicaGroups 实例节点组列表。
      */
     public ReplicaGroup [] getReplicaGroups() {
         return this.ReplicaGroups;
     }
 
     /**
-     * Set 实例节点组列表
-     * @param ReplicaGroups 实例节点组列表
+     * Set 实例节点组列表。
+     * @param ReplicaGroups 实例节点组列表。
      */
     public void setReplicaGroups(ReplicaGroup [] ReplicaGroups) {
         this.ReplicaGroups = ReplicaGroups;

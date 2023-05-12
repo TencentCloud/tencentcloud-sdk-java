@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceAccountResponse extends AbstractModel{
 
     /**
-    * 账号详细信息
+    * 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Accounts")
@@ -31,7 +31,7 @@ public class DescribeInstanceAccountResponse extends AbstractModel{
     private Account [] Accounts;
 
     /**
-    * 账号个数
+    * 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -46,9 +46,9 @@ public class DescribeInstanceAccountResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 账号详细信息
+     * Get 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Accounts 账号详细信息
+     * @return Accounts 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Account [] getAccounts() {
@@ -56,9 +56,9 @@ public class DescribeInstanceAccountResponse extends AbstractModel{
     }
 
     /**
-     * Set 账号详细信息
+     * Set 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Accounts 账号详细信息
+     * @param Accounts 账号详细信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccounts(Account [] Accounts) {
@@ -66,9 +66,9 @@ public class DescribeInstanceAccountResponse extends AbstractModel{
     }
 
     /**
-     * Get 账号个数
+     * Get 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 账号个数
+     * @return TotalCount 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -76,9 +76,9 @@ public class DescribeInstanceAccountResponse extends AbstractModel{
     }
 
     /**
-     * Set 账号个数
+     * Set 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 账号个数
+     * @param TotalCount 账号个数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Account extends AbstractModel{
 
     /**
-    * 实例ID
+    * 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -31,7 +31,7 @@ public class Account extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 账号名称（如果是主账号，名称为root）
+    * 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
@@ -39,7 +39,7 @@ public class Account extends AbstractModel{
     private String AccountName;
 
     /**
-    * 账号描述信息
+    * 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
@@ -47,7 +47,10 @@ public class Account extends AbstractModel{
     private String Remark;
 
     /**
-    * 读写策略：r-只读，w-只写，rw-读写
+    * 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Privilege")
@@ -55,7 +58,9 @@ public class Account extends AbstractModel{
     private String Privilege;
 
     /**
-    * 路由策略：master-主节点，replication-从节点
+    * 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadonlyPolicy")
@@ -63,7 +68,10 @@ public class Account extends AbstractModel{
     private String [] ReadonlyPolicy;
 
     /**
-    * 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+    * 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -71,9 +79,9 @@ public class Account extends AbstractModel{
     private Long Status;
 
     /**
-     * Get 实例ID
+     * Get 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例ID
+     * @return InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -81,9 +89,9 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 实例ID
+     * Set 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例ID
+     * @param InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -91,9 +99,9 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Get 账号名称（如果是主账号，名称为root）
+     * Get 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountName 账号名称（如果是主账号，名称为root）
+     * @return AccountName 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountName() {
@@ -101,9 +109,9 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 账号名称（如果是主账号，名称为root）
+     * Set 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountName 账号名称（如果是主账号，名称为root）
+     * @param AccountName 账号名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String AccountName) {
@@ -111,9 +119,9 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Get 账号描述信息
+     * Get 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Remark 账号描述信息
+     * @return Remark 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
@@ -121,9 +129,9 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 账号描述信息
+     * Set 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Remark 账号描述信息
+     * @param Remark 账号描述信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
@@ -131,9 +139,15 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Get 读写策略：r-只读，w-只写，rw-读写
+     * Get 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Privilege 读写策略：r-只读，w-只写，rw-读写
+     * @return Privilege 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivilege() {
@@ -141,9 +155,15 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 读写策略：r-只读，w-只写，rw-读写
+     * Set 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Privilege 读写策略：r-只读，w-只写，rw-读写
+     * @param Privilege 读写权限策略。
+- r：只读。
+- w：只写。
+- rw：读写。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivilege(String Privilege) {
@@ -151,9 +171,13 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Get 路由策略：master-主节点，replication-从节点
+     * Get 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadonlyPolicy 路由策略：master-主节点，replication-从节点
+     * @return ReadonlyPolicy 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReadonlyPolicy() {
@@ -161,9 +185,13 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 路由策略：master-主节点，replication-从节点
+     * Set 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadonlyPolicy 路由策略：master-主节点，replication-从节点
+     * @param ReadonlyPolicy 只读路由策略。
+- master：主节点。
+- replication：从节点。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
@@ -171,9 +199,15 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Get 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * Get 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * @return Status 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -181,9 +215,15 @@ public class Account extends AbstractModel{
     }
 
     /**
-     * Set 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * Set 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 子账号状态：1-账号变更中，2-账号有效，-4-账号已删除
+     * @param Status 子账号状态.
+- 1：账号变更中。
+- 2：账号有效。
+- 4：账号已删除。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

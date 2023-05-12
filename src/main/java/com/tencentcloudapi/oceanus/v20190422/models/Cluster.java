@@ -286,6 +286,14 @@ public class Cluster extends AbstractModel{
     private Long IsNeedManageNode;
 
     /**
+    * session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterSessions")
+    @Expose
+    private ClusterSession [] ClusterSessions;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -917,6 +925,26 @@ public class Cluster extends AbstractModel{
         this.IsNeedManageNode = IsNeedManageNode;
     }
 
+    /**
+     * Get session集群信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterSessions session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterSession [] getClusterSessions() {
+        return this.ClusterSessions;
+    }
+
+    /**
+     * Set session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterSessions session集群信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterSessions(ClusterSession [] ClusterSessions) {
+        this.ClusterSessions = ClusterSessions;
+    }
+
     public Cluster() {
     }
 
@@ -1039,6 +1067,12 @@ public class Cluster extends AbstractModel{
         if (source.IsNeedManageNode != null) {
             this.IsNeedManageNode = new Long(source.IsNeedManageNode);
         }
+        if (source.ClusterSessions != null) {
+            this.ClusterSessions = new ClusterSession[source.ClusterSessions.length];
+            for (int i = 0; i < source.ClusterSessions.length; i++) {
+                this.ClusterSessions[i] = new ClusterSession(source.ClusterSessions[i]);
+            }
+        }
     }
 
 
@@ -1081,6 +1115,7 @@ public class Cluster extends AbstractModel{
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
+        this.setParamArrayObj(map, prefix + "ClusterSessions.", this.ClusterSessions);
 
     }
 }

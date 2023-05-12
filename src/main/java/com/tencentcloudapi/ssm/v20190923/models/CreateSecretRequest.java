@@ -30,7 +30,7 @@ public class CreateSecretRequest extends AbstractModel{
     private String SecretName;
 
     /**
-    * 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+    * 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
     */
     @SerializedName("VersionId")
     @Expose
@@ -51,6 +51,13 @@ public class CreateSecretRequest extends AbstractModel{
     private String KmsKeyId;
 
     /**
+    * 凭据类型，默认为自定义凭据。
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
+
+    /**
     * 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
     */
     @SerializedName("SecretBinary")
@@ -63,6 +70,13 @@ public class CreateSecretRequest extends AbstractModel{
     @SerializedName("SecretString")
     @Expose
     private String SecretString;
+
+    /**
+    * JSON 格式字符串，用于指定特定凭据类型的额外配置。
+    */
+    @SerializedName("AdditionalConfig")
+    @Expose
+    private String AdditionalConfig;
 
     /**
     * 标签列表
@@ -88,16 +102,16 @@ public class CreateSecretRequest extends AbstractModel{
     }
 
     /**
-     * Get 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。 
-     * @return VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+     * Get 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。 
+     * @return VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
      */
     public String getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
-     * @param VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。
+     * Set 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
+     * @param VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
      */
     public void setVersionId(String VersionId) {
         this.VersionId = VersionId;
@@ -136,6 +150,22 @@ public class CreateSecretRequest extends AbstractModel{
     }
 
     /**
+     * Get 凭据类型，默认为自定义凭据。 
+     * @return SecretType 凭据类型，默认为自定义凭据。
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 凭据类型，默认为自定义凭据。
+     * @param SecretType 凭据类型，默认为自定义凭据。
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
      * Get 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。 
      * @return SecretBinary 二进制凭据信息base64编码后的明文。SecretBinary 和 SecretString 必须且只能设置一个，最大支持4096字节。
      */
@@ -165,6 +195,22 @@ public class CreateSecretRequest extends AbstractModel{
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;
+    }
+
+    /**
+     * Get JSON 格式字符串，用于指定特定凭据类型的额外配置。 
+     * @return AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。
+     */
+    public String getAdditionalConfig() {
+        return this.AdditionalConfig;
+    }
+
+    /**
+     * Set JSON 格式字符串，用于指定特定凭据类型的额外配置。
+     * @param AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。
+     */
+    public void setAdditionalConfig(String AdditionalConfig) {
+        this.AdditionalConfig = AdditionalConfig;
     }
 
     /**
@@ -203,11 +249,17 @@ public class CreateSecretRequest extends AbstractModel{
         if (source.KmsKeyId != null) {
             this.KmsKeyId = new String(source.KmsKeyId);
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
         if (source.SecretBinary != null) {
             this.SecretBinary = new String(source.SecretBinary);
         }
         if (source.SecretString != null) {
             this.SecretString = new String(source.SecretString);
+        }
+        if (source.AdditionalConfig != null) {
+            this.AdditionalConfig = new String(source.AdditionalConfig);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -226,8 +278,10 @@ public class CreateSecretRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "SecretBinary", this.SecretBinary);
         this.setParamSimple(map, prefix + "SecretString", this.SecretString);
+        this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

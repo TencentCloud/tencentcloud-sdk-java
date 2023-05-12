@@ -127,6 +127,30 @@ public class EmergencyVul extends AbstractModel{
     private Long DefenseAttackCount;
 
     /**
+    * 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Method")
+    @Expose
+    private Long Method;
+
+    /**
+    * 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackLevel")
+    @Expose
+    private Long AttackLevel;
+
+    /**
+    * 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefenseState")
+    @Expose
+    private Boolean DefenseState;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -374,6 +398,66 @@ public class EmergencyVul extends AbstractModel{
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
+    /**
+     * Get 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Method 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Method 检测规则 0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMethod(Long Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttackLevel() {
+        return this.AttackLevel;
+    }
+
+    /**
+     * Set 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackLevel(Long AttackLevel) {
+        this.AttackLevel = AttackLevel;
+    }
+
+    /**
+     * Get 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefenseState 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDefenseState() {
+        return this.DefenseState;
+    }
+
+    /**
+     * Set 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefenseState 是否有漏洞主机开启漏洞防御
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefenseState(Boolean DefenseState) {
+        this.DefenseState = DefenseState;
+    }
+
     public EmergencyVul() {
     }
 
@@ -424,6 +508,15 @@ public class EmergencyVul extends AbstractModel{
         if (source.DefenseAttackCount != null) {
             this.DefenseAttackCount = new Long(source.DefenseAttackCount);
         }
+        if (source.Method != null) {
+            this.Method = new Long(source.Method);
+        }
+        if (source.AttackLevel != null) {
+            this.AttackLevel = new Long(source.AttackLevel);
+        }
+        if (source.DefenseState != null) {
+            this.DefenseState = new Boolean(source.DefenseState);
+        }
     }
 
 
@@ -445,6 +538,9 @@ public class EmergencyVul extends AbstractModel{
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
         this.setParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
         this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
+        this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+        this.setParamSimple(map, prefix + "DefenseState", this.DefenseState);
 
     }
 }

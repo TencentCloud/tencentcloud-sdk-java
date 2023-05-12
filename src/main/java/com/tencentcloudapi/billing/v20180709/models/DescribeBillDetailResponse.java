@@ -30,12 +30,20 @@ public class DescribeBillDetailResponse extends AbstractModel{
     private BillDetail [] DetailSet;
 
     /**
-    * 总记录数
+    * 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
+
+    /**
+    * 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Context")
+    @Expose
+    private String Context;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -61,9 +69,9 @@ public class DescribeBillDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get 总记录数
+     * Get 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 总记录数
+     * @return Total 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -71,13 +79,33 @@ public class DescribeBillDetailResponse extends AbstractModel{
     }
 
     /**
-     * Set 总记录数
+     * Set 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 总记录数
+     * @param Total 总记录数，24小时缓存一次，可能比实际总记录数少
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
+    }
+
+    /**
+     * Get 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContext() {
+        return this.Context;
+    }
+
+    /**
+     * Set 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Context 本次请求的上下文信息，可用于下一次请求的请求参数中，加快查询速度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContext(String Context) {
+        this.Context = Context;
     }
 
     /**
@@ -113,6 +141,9 @@ public class DescribeBillDetailResponse extends AbstractModel{
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.Context != null) {
+            this.Context = new String(source.Context);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +156,7 @@ public class DescribeBillDetailResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DetailSet.", this.DetailSet);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

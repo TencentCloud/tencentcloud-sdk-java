@@ -24,6 +24,7 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
     * 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -31,6 +32,7 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
     * 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Egress")
     @Expose
@@ -38,14 +40,17 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
     * 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ingress")
     @Expose
     private SecurityGroupPolicy [] Ingress;
 
     /**
-     * Get 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。 
+     * Get 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -53,15 +58,19 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
      * Set 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 出站规则。 
+     * Get 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Egress 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroupPolicy [] getEgress() {
         return this.Egress;
@@ -69,15 +78,19 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
      * Set 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Egress 出站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEgress(SecurityGroupPolicy [] Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get 入站规则。 
+     * Get 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ingress 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroupPolicy [] getIngress() {
         return this.Ingress;
@@ -85,7 +98,9 @@ public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
      * Set 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ingress 入站规则。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngress(SecurityGroupPolicy [] Ingress) {
         this.Ingress = Ingress;

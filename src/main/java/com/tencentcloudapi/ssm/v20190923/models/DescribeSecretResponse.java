@@ -144,6 +144,14 @@ public class DescribeSecretResponse extends AbstractModel{
     private Long TargetUin;
 
     /**
+    * 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdditionalConfig")
+    @Expose
+    private String AdditionalConfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -443,6 +451,26 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
+     * Get 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdditionalConfig 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAdditionalConfig() {
+        return this.AdditionalConfig;
+    }
+
+    /**
+     * Set 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdditionalConfig 凭据额外配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdditionalConfig(String AdditionalConfig) {
+        this.AdditionalConfig = AdditionalConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -517,6 +545,9 @@ public class DescribeSecretResponse extends AbstractModel{
         if (source.TargetUin != null) {
             this.TargetUin = new Long(source.TargetUin);
         }
+        if (source.AdditionalConfig != null) {
+            this.AdditionalConfig = new String(source.AdditionalConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -543,6 +574,7 @@ public class DescribeSecretResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
+        this.setParamSimple(map, prefix + "AdditionalConfig", this.AdditionalConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccelerationDomainsRequest extends AbstractModel{
 
     /**
-    * 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+    * 加速域名所属站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -85,16 +85,16 @@ public class DescribeAccelerationDomainsRequest extends AbstractModel{
     private String Order;
 
     /**
-     * Get 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。 
-     * @return ZoneId 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+     * Get 加速域名所属站点ID。 
+     * @return ZoneId 加速域名所属站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
-     * @param ZoneId 加速域名所属站点ID。不填写该参数默认返回所有站点下的加速域名。
+     * Set 加速域名所属站点ID。
+     * @param ZoneId 加速域名所属站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
