@@ -107,6 +107,13 @@ public class Trigger extends AbstractModel{
     private String Qualifier;
 
     /**
+    * 触发器描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 触发器最后修改时间 
      * @return ModTime 触发器最后修改时间
      */
@@ -298,6 +305,22 @@ public class Trigger extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    /**
+     * Get 触发器描述 
+     * @return Description 触发器描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 触发器描述
+     * @param Description 触发器描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public Trigger() {
     }
 
@@ -342,6 +365,9 @@ public class Trigger extends AbstractModel{
         if (source.Qualifier != null) {
             this.Qualifier = new String(source.Qualifier);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

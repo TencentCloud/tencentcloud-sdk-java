@@ -30,6 +30,13 @@ public class ListRuntimesMCRequest extends AbstractModel{
     private Long RuntimeClass;
 
     /**
+    * 计划类型：0-pro 1-lite
+    */
+    @SerializedName("PlanType")
+    @Expose
+    private Long PlanType;
+
+    /**
      * Get 环境运行类型：0:运行时类型、1:api类型 
      * @return RuntimeClass 环境运行类型：0:运行时类型、1:api类型
      */
@@ -45,6 +52,22 @@ public class ListRuntimesMCRequest extends AbstractModel{
         this.RuntimeClass = RuntimeClass;
     }
 
+    /**
+     * Get 计划类型：0-pro 1-lite 
+     * @return PlanType 计划类型：0-pro 1-lite
+     */
+    public Long getPlanType() {
+        return this.PlanType;
+    }
+
+    /**
+     * Set 计划类型：0-pro 1-lite
+     * @param PlanType 计划类型：0-pro 1-lite
+     */
+    public void setPlanType(Long PlanType) {
+        this.PlanType = PlanType;
+    }
+
     public ListRuntimesMCRequest() {
     }
 
@@ -56,6 +79,9 @@ public class ListRuntimesMCRequest extends AbstractModel{
         if (source.RuntimeClass != null) {
             this.RuntimeClass = new Long(source.RuntimeClass);
         }
+        if (source.PlanType != null) {
+            this.PlanType = new Long(source.PlanType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ListRuntimesMCRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuntimeClass", this.RuntimeClass);
+        this.setParamSimple(map, prefix + "PlanType", this.PlanType);
 
     }
 }

@@ -199,6 +199,30 @@ public class VulInfoList extends AbstractModel{
     private Long VulCategory;
 
     /**
+    * 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttackLevel")
+    @Expose
+    private Long AttackLevel;
+
+    /**
+    * 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FixNoNeedRestart")
+    @Expose
+    private Boolean FixNoNeedRestart;
+
+    /**
+    * 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Method")
+    @Expose
+    private Long Method;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -626,6 +650,66 @@ public class VulInfoList extends AbstractModel{
         this.VulCategory = VulCategory;
     }
 
+    /**
+     * Get 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAttackLevel() {
+        return this.AttackLevel;
+    }
+
+    /**
+     * Set 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttackLevel 攻击热度级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttackLevel(Long AttackLevel) {
+        this.AttackLevel = AttackLevel;
+    }
+
+    /**
+     * Get 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FixNoNeedRestart 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getFixNoNeedRestart() {
+        return this.FixNoNeedRestart;
+    }
+
+    /**
+     * Set 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FixNoNeedRestart 漏洞修复后是否需要重启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFixNoNeedRestart(Boolean FixNoNeedRestart) {
+        this.FixNoNeedRestart = FixNoNeedRestart;
+    }
+
+    /**
+     * Get 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Method 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Method 检测方式0 - 版本比对, 1 - POC验证
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMethod(Long Method) {
+        this.Method = Method;
+    }
+
     public VulInfoList() {
     }
 
@@ -703,6 +787,15 @@ public class VulInfoList extends AbstractModel{
         if (source.VulCategory != null) {
             this.VulCategory = new Long(source.VulCategory);
         }
+        if (source.AttackLevel != null) {
+            this.AttackLevel = new Long(source.AttackLevel);
+        }
+        if (source.FixNoNeedRestart != null) {
+            this.FixNoNeedRestart = new Boolean(source.FixNoNeedRestart);
+        }
+        if (source.Method != null) {
+            this.Method = new Long(source.Method);
+        }
     }
 
 
@@ -733,6 +826,9 @@ public class VulInfoList extends AbstractModel{
         this.setParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
         this.setParamSimple(map, prefix + "FirstAppearTime", this.FirstAppearTime);
         this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
+        this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
+        this.setParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
+        this.setParamSimple(map, prefix + "Method", this.Method);
 
     }
 }

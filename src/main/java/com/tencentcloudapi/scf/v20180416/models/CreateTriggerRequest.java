@@ -79,6 +79,13 @@ public class CreateTriggerRequest extends AbstractModel{
     private String CustomArgument;
 
     /**
+    * 触发器描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 新建触发器绑定的函数名称 
      * @return FunctionName 新建触发器绑定的函数名称
      */
@@ -206,6 +213,22 @@ public class CreateTriggerRequest extends AbstractModel{
         this.CustomArgument = CustomArgument;
     }
 
+    /**
+     * Get 触发器描述 
+     * @return Description 触发器描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 触发器描述
+     * @param Description 触发器描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateTriggerRequest() {
     }
 
@@ -238,6 +261,9 @@ public class CreateTriggerRequest extends AbstractModel{
         if (source.CustomArgument != null) {
             this.CustomArgument = new String(source.CustomArgument);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class CreateTriggerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

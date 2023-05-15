@@ -30,7 +30,7 @@ public class CreateBatchTaskRequest extends AbstractModel{
     private String BatchTaskName;
 
     /**
-    * 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+    * 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
     */
     @SerializedName("ChargeType")
     @Expose
@@ -72,7 +72,7 @@ public class CreateBatchTaskRequest extends AbstractModel{
     private CronInfo CronInfo;
 
     /**
-    * 预付费专用资源组
+    * 包年包月资源组ID
     */
     @SerializedName("ResourceGroupId")
     @Expose
@@ -172,16 +172,16 @@ public class CreateBatchTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费 
-     * @return ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * Get 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费 
+     * @return ChargeType 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
-     * @param ChargeType 计费模式，eg：PREPAID预付费，即包年包月；POSTPAID_BY_HOUR按小时后付费
+     * Set 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
+     * @param ChargeType 计费模式，eg：PREPAID 包年包月；POSTPAID_BY_HOUR 按量计费
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -268,16 +268,16 @@ public class CreateBatchTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 预付费专用资源组 
-     * @return ResourceGroupId 预付费专用资源组
+     * Get 包年包月资源组ID 
+     * @return ResourceGroupId 包年包月资源组ID
      */
     public String getResourceGroupId() {
         return this.ResourceGroupId;
     }
 
     /**
-     * Set 预付费专用资源组
-     * @param ResourceGroupId 预付费专用资源组
+     * Set 包年包月资源组ID
+     * @param ResourceGroupId 包年包月资源组ID
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;

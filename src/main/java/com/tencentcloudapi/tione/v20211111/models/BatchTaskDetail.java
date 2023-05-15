@@ -65,7 +65,7 @@ public class BatchTaskDetail extends AbstractModel{
     private String ChargeType;
 
     /**
-    * 预付费专用资源组id
+    * 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -73,7 +73,7 @@ public class BatchTaskDetail extends AbstractModel{
     private String ResourceGroupId;
 
     /**
-    * 预付费专用资源组名称
+    * 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -266,6 +266,14 @@ public class BatchTaskDetail extends AbstractModel{
     private String [] PodList;
 
     /**
+    * 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelInferenceCodeInfo")
+    @Expose
+    private CosPathInfo ModelInferenceCodeInfo;
+
+    /**
      * Get 跑批任务ID 
      * @return BatchTaskId 跑批任务ID
      */
@@ -362,9 +370,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 预付费专用资源组id
+     * Get 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费专用资源组id
+     * @return ResourceGroupId 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -372,9 +380,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Set 预付费专用资源组id
+     * Set 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费专用资源组id
+     * @param ResourceGroupId 包年包月资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -382,9 +390,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 预付费专用资源组名称
+     * Get 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费专用资源组名称
+     * @return ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -392,9 +400,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Set 预付费专用资源组名称
+     * Set 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费专用资源组名称
+     * @param ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -853,6 +861,26 @@ public class BatchTaskDetail extends AbstractModel{
         this.PodList = PodList;
     }
 
+    /**
+     * Get 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelInferenceCodeInfo 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CosPathInfo getModelInferenceCodeInfo() {
+        return this.ModelInferenceCodeInfo;
+    }
+
+    /**
+     * Set 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelInferenceCodeInfo 模型推理代码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelInferenceCodeInfo(CosPathInfo ModelInferenceCodeInfo) {
+        this.ModelInferenceCodeInfo = ModelInferenceCodeInfo;
+    }
+
     public BatchTaskDetail() {
     }
 
@@ -969,6 +997,9 @@ public class BatchTaskDetail extends AbstractModel{
                 this.PodList[i] = new String(source.PodList[i]);
             }
         }
+        if (source.ModelInferenceCodeInfo != null) {
+            this.ModelInferenceCodeInfo = new CosPathInfo(source.ModelInferenceCodeInfo);
+        }
     }
 
 
@@ -1008,6 +1039,7 @@ public class BatchTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "FailureReason", this.FailureReason);
         this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
         this.setParamArraySimple(map, prefix + "PodList.", this.PodList);
+        this.setParamObj(map, prefix + "ModelInferenceCodeInfo.", this.ModelInferenceCodeInfo);
 
     }
 }

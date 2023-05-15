@@ -86,6 +86,13 @@ public class BaseFlowInfo extends AbstractModel{
     private String UserData;
 
     /**
+    * 抄送人信息
+    */
+    @SerializedName("CcInfos")
+    @Expose
+    private CcInfo [] CcInfos;
+
+    /**
      * Get 合同流程名称 
      * @return FlowName 合同流程名称
      */
@@ -229,6 +236,22 @@ public class BaseFlowInfo extends AbstractModel{
         this.UserData = UserData;
     }
 
+    /**
+     * Get 抄送人信息 
+     * @return CcInfos 抄送人信息
+     */
+    public CcInfo [] getCcInfos() {
+        return this.CcInfos;
+    }
+
+    /**
+     * Set 抄送人信息
+     * @param CcInfos 抄送人信息
+     */
+    public void setCcInfos(CcInfo [] CcInfos) {
+        this.CcInfos = CcInfos;
+    }
+
     public BaseFlowInfo() {
     }
 
@@ -267,6 +290,12 @@ public class BaseFlowInfo extends AbstractModel{
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.CcInfos != null) {
+            this.CcInfos = new CcInfo[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
+            }
+        }
     }
 
 
@@ -283,6 +312,7 @@ public class BaseFlowInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
 
     }
 }

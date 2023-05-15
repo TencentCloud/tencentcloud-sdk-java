@@ -85,6 +85,14 @@ public class DatasourceBaseInfo extends AbstractModel{
     private String ClusterId;
 
     /**
+    * 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseNames 若数据源列表为绑定数据库，则为db名称
@@ -236,6 +244,26 @@ public class DatasourceBaseInfo extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 数据源版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public DatasourceBaseInfo() {
     }
 
@@ -271,6 +299,9 @@ public class DatasourceBaseInfo extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -286,6 +317,7 @@ public class DatasourceBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

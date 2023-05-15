@@ -39,7 +39,7 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
     * 音频采样率：
 
-16000：16k（默认）
+16000：16k
     */
     @SerializedName("SampleRate")
     @Expose
@@ -59,7 +59,7 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
     * 语言类型：
 
-1-中文（默认）
+1-中文
     */
     @SerializedName("VoiceLanguage")
     @Expose
@@ -122,10 +122,10 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
      * Get 音频采样率：
 
-16000：16k（默认） 
+16000：16k 
      * @return SampleRate 音频采样率：
 
-16000：16k（默认）
+16000：16k
      */
     public Long getSampleRate() {
         return this.SampleRate;
@@ -134,10 +134,10 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
      * Set 音频采样率：
 
-16000：16k（默认）
+16000：16k
      * @param SampleRate 音频采样率：
 
-16000：16k（默认）
+16000：16k
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
@@ -178,10 +178,10 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
      * Get 语言类型：
 
-1-中文（默认） 
+1-中文 
      * @return VoiceLanguage 语言类型：
 
-1-中文（默认）
+1-中文
      */
     public Long getVoiceLanguage() {
         return this.VoiceLanguage;
@@ -190,10 +190,10 @@ public class CreateVRSTaskRequest extends AbstractModel{
     /**
      * Set 语言类型：
 
-1-中文（默认）
+1-中文
      * @param VoiceLanguage 语言类型：
 
-1-中文（默认）
+1-中文
      */
     public void setVoiceLanguage(Long VoiceLanguage) {
         this.VoiceLanguage = VoiceLanguage;

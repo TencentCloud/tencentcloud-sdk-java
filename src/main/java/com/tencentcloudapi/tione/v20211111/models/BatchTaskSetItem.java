@@ -66,7 +66,7 @@ public class BatchTaskSetItem extends AbstractModel{
     private String ChargeStatus;
 
     /**
-    * 预付费专用资源组
+    * 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -142,7 +142,7 @@ public class BatchTaskSetItem extends AbstractModel{
     private DataConfig [] Outputs;
 
     /**
-    * 预付费专用资源组名称
+    * 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupName")
@@ -157,7 +157,7 @@ public class BatchTaskSetItem extends AbstractModel{
     private String FailureReason;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (for后付费)
+    * 计费金额信息，eg：2.00元/小时 (for 按量计费)
     */
     @SerializedName("BillingInfo")
     @Expose
@@ -264,9 +264,9 @@ public class BatchTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 预付费专用资源组
+     * Get 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 预付费专用资源组
+     * @return ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -274,9 +274,9 @@ public class BatchTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Set 预付费专用资源组
+     * Set 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 预付费专用资源组
+     * @param ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -448,9 +448,9 @@ public class BatchTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 预付费专用资源组名称
+     * Get 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 预付费专用资源组名称
+     * @return ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupName() {
@@ -458,9 +458,9 @@ public class BatchTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Set 预付费专用资源组名称
+     * Set 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 预付费专用资源组名称
+     * @param ResourceGroupName 包年包月资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupName(String ResourceGroupName) {
@@ -484,16 +484,16 @@ public class BatchTaskSetItem extends AbstractModel{
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (for后付费) 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Get 计费金额信息，eg：2.00元/小时 (for 按量计费) 
+     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
      */
     public String getBillingInfo() {
         return this.BillingInfo;
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (for后付费)
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Set 计费金额信息，eg：2.00元/小时 (for 按量计费)
+     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
      */
     public void setBillingInfo(String BillingInfo) {
         this.BillingInfo = BillingInfo;

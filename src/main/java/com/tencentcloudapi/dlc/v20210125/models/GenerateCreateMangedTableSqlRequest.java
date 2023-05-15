@@ -51,6 +51,13 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
     private Property [] Properties;
 
     /**
+    * V2 upsert表 upsert键
+    */
+    @SerializedName("UpsertKeys")
+    @Expose
+    private String [] UpsertKeys;
+
+    /**
      * Get 表基本信息 
      * @return TableBaseInfo 表基本信息
      */
@@ -114,6 +121,22 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
         this.Properties = Properties;
     }
 
+    /**
+     * Get V2 upsert表 upsert键 
+     * @return UpsertKeys V2 upsert表 upsert键
+     */
+    public String [] getUpsertKeys() {
+        return this.UpsertKeys;
+    }
+
+    /**
+     * Set V2 upsert表 upsert键
+     * @param UpsertKeys V2 upsert表 upsert键
+     */
+    public void setUpsertKeys(String [] UpsertKeys) {
+        this.UpsertKeys = UpsertKeys;
+    }
+
     public GenerateCreateMangedTableSqlRequest() {
     }
 
@@ -143,6 +166,12 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.UpsertKeys != null) {
+            this.UpsertKeys = new String[source.UpsertKeys.length];
+            for (int i = 0; i < source.UpsertKeys.length; i++) {
+                this.UpsertKeys[i] = new String(source.UpsertKeys[i]);
+            }
+        }
     }
 
 
@@ -154,6 +183,7 @@ public class GenerateCreateMangedTableSqlRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
 
     }
 }

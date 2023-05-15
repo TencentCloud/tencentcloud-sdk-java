@@ -93,6 +93,14 @@ public class TableBaseInfo extends AbstractModel{
     private DataGovernPolicy GovernPolicy;
 
     /**
+    * 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbGovernPolicyIsDisable")
+    @Expose
+    private String DbGovernPolicyIsDisable;
+
+    /**
      * Get 该数据表所属数据库名字 
      * @return DatabaseName 该数据表所属数据库名字
      */
@@ -264,6 +272,26 @@ public class TableBaseInfo extends AbstractModel{
         this.GovernPolicy = GovernPolicy;
     }
 
+    /**
+     * Get 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbGovernPolicyIsDisable() {
+        return this.DbGovernPolicyIsDisable;
+    }
+
+    /**
+     * Set 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbGovernPolicyIsDisable(String DbGovernPolicyIsDisable) {
+        this.DbGovernPolicyIsDisable = DbGovernPolicyIsDisable;
+    }
+
     public TableBaseInfo() {
     }
 
@@ -299,6 +327,9 @@ public class TableBaseInfo extends AbstractModel{
         if (source.GovernPolicy != null) {
             this.GovernPolicy = new DataGovernPolicy(source.GovernPolicy);
         }
+        if (source.DbGovernPolicyIsDisable != null) {
+            this.DbGovernPolicyIsDisable = new String(source.DbGovernPolicyIsDisable);
+        }
     }
 
 
@@ -315,6 +346,7 @@ public class TableBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         this.setParamObj(map, prefix + "GovernPolicy.", this.GovernPolicy);
+        this.setParamSimple(map, prefix + "DbGovernPolicyIsDisable", this.DbGovernPolicyIsDisable);
 
     }
 }
