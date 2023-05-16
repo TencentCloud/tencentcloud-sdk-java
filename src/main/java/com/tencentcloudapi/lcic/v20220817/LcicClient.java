@@ -881,6 +881,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *从房间里面踢出用户
+     * @param req KickUserFromRoomRequest
+     * @return KickUserFromRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public KickUserFromRoomResponse KickUserFromRoom(KickUserFromRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KickUserFromRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KickUserFromRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KickUserFromRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *使用源账号登录，源账号为注册时填入的originId
      * @param req LoginOriginIdRequest
      * @return LoginOriginIdResponse

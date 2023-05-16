@@ -192,6 +192,46 @@ public class SecurityGroupListData extends AbstractModel{
     private Long ProtocolPortType;
 
     /**
+    * Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetGroupNameIn")
+    @Expose
+    private String AssetGroupNameIn;
+
+    /**
+    * 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetGroupNameOut")
+    @Expose
+    private String AssetGroupNameOut;
+
+    /**
+    * 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParameterName")
+    @Expose
+    private String ParameterName;
+
+    /**
      * Get 执行顺序 
      * @return OrderIndex 执行顺序
      */
@@ -591,6 +631,106 @@ public class SecurityGroupListData extends AbstractModel{
         this.ProtocolPortType = ProtocolPortType;
     }
 
+    /**
+     * Get Uuid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uuid Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uuid Uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetGroupNameIn 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetGroupNameIn() {
+        return this.AssetGroupNameIn;
+    }
+
+    /**
+     * Set 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetGroupNameIn 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetGroupNameIn(String AssetGroupNameIn) {
+        this.AssetGroupNameIn = AssetGroupNameIn;
+    }
+
+    /**
+     * Get 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetGroupNameOut 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssetGroupNameOut() {
+        return this.AssetGroupNameOut;
+    }
+
+    /**
+     * Set 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetGroupNameOut 资产分组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetGroupNameOut(String AssetGroupNameOut) {
+        this.AssetGroupNameOut = AssetGroupNameOut;
+    }
+
+    /**
+     * Get 模板名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParameterName 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getParameterName() {
+        return this.ParameterName;
+    }
+
+    /**
+     * Set 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParameterName 模板名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParameterName(String ParameterName) {
+        this.ParameterName = ParameterName;
+    }
+
     public SecurityGroupListData() {
     }
 
@@ -671,6 +811,21 @@ public class SecurityGroupListData extends AbstractModel{
         if (source.ProtocolPortType != null) {
             this.ProtocolPortType = new Long(source.ProtocolPortType);
         }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.AssetGroupNameIn != null) {
+            this.AssetGroupNameIn = new String(source.AssetGroupNameIn);
+        }
+        if (source.AssetGroupNameOut != null) {
+            this.AssetGroupNameOut = new String(source.AssetGroupNameOut);
+        }
+        if (source.ParameterName != null) {
+            this.ParameterName = new String(source.ParameterName);
+        }
     }
 
 
@@ -701,6 +856,11 @@ public class SecurityGroupListData extends AbstractModel{
         this.setParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
         this.setParamSimple(map, prefix + "ProtocolPortType", this.ProtocolPortType);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "AssetGroupNameIn", this.AssetGroupNameIn);
+        this.setParamSimple(map, prefix + "AssetGroupNameOut", this.AssetGroupNameOut);
+        this.setParamSimple(map, prefix + "ParameterName", this.ParameterName);
 
     }
 }

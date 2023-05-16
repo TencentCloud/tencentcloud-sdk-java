@@ -180,6 +180,22 @@ public class Task extends AbstractModel{
     private TagWithDescribe [] Tags;
 
     /**
+    * 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPlanId")
+    @Expose
+    private Long TaskPlanId;
+
+    /**
+    * 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPlanTitle")
+    @Expose
+    private String TaskPlanTitle;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -555,6 +571,46 @@ public class Task extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPlanId 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskPlanId() {
+        return this.TaskPlanId;
+    }
+
+    /**
+     * Set 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPlanId 关联的演练计划ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPlanId(Long TaskPlanId) {
+        this.TaskPlanId = TaskPlanId;
+    }
+
+    /**
+     * Get 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPlanTitle 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskPlanTitle() {
+        return this.TaskPlanTitle;
+    }
+
+    /**
+     * Set 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPlanTitle 关联的演练计划名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPlanTitle(String TaskPlanTitle) {
+        this.TaskPlanTitle = TaskPlanTitle;
+    }
+
     public Task() {
     }
 
@@ -635,6 +691,12 @@ public class Task extends AbstractModel{
                 this.Tags[i] = new TagWithDescribe(source.Tags[i]);
             }
         }
+        if (source.TaskPlanId != null) {
+            this.TaskPlanId = new Long(source.TaskPlanId);
+        }
+        if (source.TaskPlanTitle != null) {
+            this.TaskPlanTitle = new String(source.TaskPlanTitle);
+        }
     }
 
 
@@ -663,6 +725,8 @@ public class Task extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TaskMonitors.", this.TaskMonitors);
         this.setParamObj(map, prefix + "TaskPolicy.", this.TaskPolicy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TaskPlanId", this.TaskPlanId);
+        this.setParamSimple(map, prefix + "TaskPlanTitle", this.TaskPlanTitle);
 
     }
 }

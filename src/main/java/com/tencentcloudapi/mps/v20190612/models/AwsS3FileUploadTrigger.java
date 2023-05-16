@@ -30,7 +30,9 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     private String S3Bucket;
 
     /**
-    * 绑定的桶所在 AWS 区域。
+    * 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
     */
     @SerializedName("S3Region")
     @Expose
@@ -92,16 +94,24 @@ public class AwsS3FileUploadTrigger extends AbstractModel{
     }
 
     /**
-     * Get 绑定的桶所在 AWS 区域。 
-     * @return S3Region 绑定的桶所在 AWS 区域。
+     * Get 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3 
+     * @return S3Region 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set 绑定的桶所在 AWS 区域。
-     * @param S3Region 绑定的桶所在 AWS 区域。
+     * Set 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
+     * @param S3Region 绑定的桶所在 AWS 区域，目前支持：  
+us-east-1  
+eu-west-3
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;

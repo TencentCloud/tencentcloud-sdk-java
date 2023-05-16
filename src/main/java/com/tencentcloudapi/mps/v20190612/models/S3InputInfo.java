@@ -30,7 +30,10 @@ public class S3InputInfo extends AbstractModel{
     private String S3Bucket;
 
     /**
-    * S3 bucket 对应的区域。
+    * S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
     */
     @SerializedName("S3Region")
     @Expose
@@ -74,16 +77,28 @@ public class S3InputInfo extends AbstractModel{
     }
 
     /**
-     * Get S3 bucket 对应的区域。 
-     * @return S3Region S3 bucket 对应的区域。
+     * Get S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+ 
+     * @return S3Region S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
      */
     public String getS3Region() {
         return this.S3Region;
     }
 
     /**
-     * Set S3 bucket 对应的区域。
-     * @param S3Region S3 bucket 对应的区域。
+     * Set S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
+     * @param S3Region S3 bucket 对应的区域，目前支持：  
+us-east-1  
+eu-west-3
+
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;

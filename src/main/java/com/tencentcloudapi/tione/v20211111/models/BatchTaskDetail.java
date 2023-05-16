@@ -65,7 +65,7 @@ public class BatchTaskDetail extends AbstractModel{
     private String ChargeType;
 
     /**
-    * 包年包月资源组id
+    * 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceGroupId")
@@ -250,7 +250,7 @@ public class BatchTaskDetail extends AbstractModel{
     private String FailureReason;
 
     /**
-    * 计费金额信息，eg：2.00元/小时 (for后付费)
+    * 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingInfo")
@@ -370,9 +370,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 包年包月资源组id
+     * Get 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupId 包年包月资源组id
+     * @return ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceGroupId() {
@@ -380,9 +380,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Set 包年包月资源组id
+     * Set 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupId 包年包月资源组id
+     * @param ResourceGroupId 包年包月资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceGroupId(String ResourceGroupId) {
@@ -822,9 +822,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Get 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Get 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @return BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingInfo() {
@@ -832,9 +832,9 @@ public class BatchTaskDetail extends AbstractModel{
     }
 
     /**
-     * Set 计费金额信息，eg：2.00元/小时 (for后付费)
+     * Set 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for后付费)
+     * @param BillingInfo 计费金额信息，eg：2.00元/小时 (for 按量计费)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingInfo(String BillingInfo) {

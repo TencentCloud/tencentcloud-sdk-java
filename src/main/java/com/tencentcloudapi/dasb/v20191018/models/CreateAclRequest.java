@@ -142,7 +142,7 @@ public class CreateAclRequest extends AbstractModel{
     private Long [] CmdTemplateIdSet;
 
     /**
-    * 关联高危DB模版ID
+    * 关联高危DB模板ID
     */
     @SerializedName("ACTemplateIdSet")
     @Expose
@@ -479,16 +479,16 @@ public class CreateAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 关联高危DB模版ID 
-     * @return ACTemplateIdSet 关联高危DB模版ID
+     * Get 关联高危DB模板ID 
+     * @return ACTemplateIdSet 关联高危DB模板ID
      */
     public String [] getACTemplateIdSet() {
         return this.ACTemplateIdSet;
     }
 
     /**
-     * Set 关联高危DB模版ID
-     * @param ACTemplateIdSet 关联高危DB模版ID
+     * Set 关联高危DB模板ID
+     * @param ACTemplateIdSet 关联高危DB模板ID
      */
     public void setACTemplateIdSet(String [] ACTemplateIdSet) {
         this.ACTemplateIdSet = ACTemplateIdSet;

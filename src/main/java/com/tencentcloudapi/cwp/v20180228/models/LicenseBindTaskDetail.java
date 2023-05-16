@@ -44,6 +44,21 @@ public class LicenseBindTaskDetail extends AbstractModel{
     private Long Status;
 
     /**
+    * 修复建议
+    */
+    @SerializedName("FixMessage")
+    @Expose
+    private String FixMessage;
+
+    /**
+    * 机器额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
      * Get 云服务器UUID 
      * @return Quuid 云服务器UUID
      */
@@ -91,6 +106,42 @@ public class LicenseBindTaskDetail extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 修复建议 
+     * @return FixMessage 修复建议
+     */
+    public String getFixMessage() {
+        return this.FixMessage;
+    }
+
+    /**
+     * Set 修复建议
+     * @param FixMessage 修复建议
+     */
+    public void setFixMessage(String FixMessage) {
+        this.FixMessage = FixMessage;
+    }
+
+    /**
+     * Get 机器额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineExtraInfo 机器额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 机器额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineExtraInfo 机器额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
     public LicenseBindTaskDetail() {
     }
 
@@ -108,6 +159,12 @@ public class LicenseBindTaskDetail extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.FixMessage != null) {
+            this.FixMessage = new String(source.FixMessage);
+        }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
     }
 
 
@@ -118,6 +175,8 @@ public class LicenseBindTaskDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FixMessage", this.FixMessage);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 
     }
 }

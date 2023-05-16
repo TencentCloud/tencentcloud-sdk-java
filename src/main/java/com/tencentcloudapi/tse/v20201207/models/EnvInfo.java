@@ -121,6 +121,14 @@ public class EnvInfo extends AbstractModel{
     private Long ClientBandWidth;
 
     /**
+    * 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableConfigIntranet")
+    @Expose
+    private Boolean EnableConfigIntranet;
+
+    /**
      * Get 环境名称 
      * @return EnvName 环境名称
      */
@@ -344,6 +352,26 @@ public class EnvInfo extends AbstractModel{
         this.ClientBandWidth = ClientBandWidth;
     }
 
+    /**
+     * Get 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableConfigIntranet 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableConfigIntranet() {
+        return this.EnableConfigIntranet;
+    }
+
+    /**
+     * Set 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableConfigIntranet 客户端内网开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableConfigIntranet(Boolean EnableConfigIntranet) {
+        this.EnableConfigIntranet = EnableConfigIntranet;
+    }
+
     public EnvInfo() {
     }
 
@@ -397,6 +425,9 @@ public class EnvInfo extends AbstractModel{
         if (source.ClientBandWidth != null) {
             this.ClientBandWidth = new Long(source.ClientBandWidth);
         }
+        if (source.EnableConfigIntranet != null) {
+            this.EnableConfigIntranet = new Boolean(source.EnableConfigIntranet);
+        }
     }
 
 
@@ -418,6 +449,7 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
         this.setParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
         this.setParamSimple(map, prefix + "ClientBandWidth", this.ClientBandWidth);
+        this.setParamSimple(map, prefix + "EnableConfigIntranet", this.EnableConfigIntranet);
 
     }
 }

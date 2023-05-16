@@ -1117,7 +1117,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateRoutes)用于创建路由策略。
+     *本接口（CreateRoutes）用于创建路由策略。
 * 向指定路由表批量新增路由策略。
      * @param req CreateRoutesRequest
      * @return CreateRoutesResponse
@@ -3610,6 +3610,27 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTrafficPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
+如被ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
+     * @param req DescribeUsedIpAddressRequest
+     * @return DescribeUsedIpAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsedIpAddressResponse DescribeUsedIpAddress(DescribeUsedIpAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsedIpAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsedIpAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsedIpAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

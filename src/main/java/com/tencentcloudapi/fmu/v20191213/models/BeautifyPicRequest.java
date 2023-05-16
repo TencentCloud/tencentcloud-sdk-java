@@ -49,7 +49,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private Long Whitening;
 
     /**
-    * 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+    * 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
     */
     @SerializedName("Smoothing")
     @Expose
@@ -145,16 +145,16 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     }
 
     /**
-     * Get 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。 
-     * @return Smoothing 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+     * Get 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。 
+     * @return Smoothing 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
      */
     public Long getSmoothing() {
         return this.Smoothing;
     }
 
     /**
-     * Set 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
-     * @param Smoothing 磨皮程度，取值范围[0,100]。0不磨皮，100代表最高程度。默认值10。
+     * Set 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
+     * @param Smoothing 磨皮程度，取值范围[0,30]。0不磨皮，30代表最高程度。默认值10。
      */
     public void setSmoothing(Long Smoothing) {
         this.Smoothing = Smoothing;

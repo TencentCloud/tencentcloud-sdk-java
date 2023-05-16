@@ -30,7 +30,7 @@ public class Price extends AbstractModel{
     private ItemPrice InstancePrice;
 
     /**
-    * 网络价格。
+    * 带宽价格。
     */
     @SerializedName("BandwidthPrice")
     @Expose
@@ -53,16 +53,16 @@ public class Price extends AbstractModel{
     }
 
     /**
-     * Get 网络价格。 
-     * @return BandwidthPrice 网络价格。
+     * Get 带宽价格。 
+     * @return BandwidthPrice 带宽价格。
      */
     public ItemPrice getBandwidthPrice() {
         return this.BandwidthPrice;
     }
 
     /**
-     * Set 网络价格。
-     * @param BandwidthPrice 网络价格。
+     * Set 带宽价格。
+     * @param BandwidthPrice 带宽价格。
      */
     public void setBandwidthPrice(ItemPrice BandwidthPrice) {
         this.BandwidthPrice = BandwidthPrice;

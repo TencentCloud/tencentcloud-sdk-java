@@ -79,6 +79,14 @@ public class HyperParameter extends AbstractModel{
     private String MinBlockSizeTf;
 
     /**
+    * Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PipelineArgs")
+    @Expose
+    private String PipelineArgs;
+
+    /**
      * Get 最大nnz数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxNNZ 最大nnz数
@@ -218,6 +226,26 @@ public class HyperParameter extends AbstractModel{
         this.MinBlockSizeTf = MinBlockSizeTf;
     }
 
+    /**
+     * Get Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PipelineArgs Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPipelineArgs() {
+        return this.PipelineArgs;
+    }
+
+    /**
+     * Set Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PipelineArgs Stable Diffusion 模型优化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPipelineArgs(String PipelineArgs) {
+        this.PipelineArgs = PipelineArgs;
+    }
+
     public HyperParameter() {
     }
 
@@ -247,6 +275,9 @@ public class HyperParameter extends AbstractModel{
         if (source.MinBlockSizeTf != null) {
             this.MinBlockSizeTf = new String(source.MinBlockSizeTf);
         }
+        if (source.PipelineArgs != null) {
+            this.PipelineArgs = new String(source.PipelineArgs);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class HyperParameter extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableDistributed", this.EnableDistributed);
         this.setParamSimple(map, prefix + "MinBlockSizePt", this.MinBlockSizePt);
         this.setParamSimple(map, prefix + "MinBlockSizeTf", this.MinBlockSizeTf);
+        this.setParamSimple(map, prefix + "PipelineArgs", this.PipelineArgs);
 
     }
 }

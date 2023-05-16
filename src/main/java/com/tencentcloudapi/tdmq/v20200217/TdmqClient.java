@@ -1571,6 +1571,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *rocketmq消息详情
+     * @param req DescribeRocketMQMsgRequest
+     * @return DescribeRocketMQMsgResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQMsgResponse DescribeRocketMQMsg(DescribeRocketMQMsgRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQMsgResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取RocketMQ命名空间列表
      * @param req DescribeRocketMQNamespacesRequest
      * @return DescribeRocketMQNamespacesResponse
