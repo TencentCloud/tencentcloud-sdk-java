@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StatusCodeCache extends AbstractModel{
 
     /**
-    * 状态码缓存过期配置开关
+    * 状态码缓存过期配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -41,11 +41,11 @@ off：关闭
     private StatusCodeCacheRule [] CacheRules;
 
     /**
-     * Get 状态码缓存过期配置开关
+     * Get 状态码缓存过期配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 状态码缓存过期配置开关
+     * @return Switch 状态码缓存过期配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,11 +55,11 @@ off：关闭
     }
 
     /**
-     * Set 状态码缓存过期配置开关
+     * Set 状态码缓存过期配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 状态码缓存过期配置开关
+     * @param Switch 状态码缓存过期配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

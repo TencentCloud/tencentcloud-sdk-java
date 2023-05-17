@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class SecurityConfig extends AbstractModel{
 
     /**
-    * on|off
+    * scdn 安全配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get scdn 安全配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch scdn 安全配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set scdn 安全配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch scdn 安全配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

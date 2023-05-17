@@ -2144,6 +2144,26 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *删除共享带宽包（仅非活动状态的流量包可删除）。
+     * @param req DeleteTrafficPackagesRequest
+     * @return DeleteTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrafficPackagesResponse DeleteTrafficPackages(DeleteTrafficPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTrafficPackagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTrafficPackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTrafficPackages");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteVpc）用于删除私有网络。
 * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
 * 删除私有网络是不可逆的操作，请谨慎处理。
@@ -3508,6 +3528,26 @@ public class VpcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotPoliciesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
+     * @param req DescribeSubnetResourceDashboardRequest
+     * @return DescribeSubnetResourceDashboardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubnetResourceDashboardResponse DescribeSubnetResourceDashboard(DescribeSubnetResourceDashboardRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubnetResourceDashboardResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubnetResourceDashboardResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubnetResourceDashboard");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

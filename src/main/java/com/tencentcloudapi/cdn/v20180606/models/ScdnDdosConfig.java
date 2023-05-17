@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class ScdnDdosConfig extends AbstractModel{
 
     /**
-    * on|off
+    * Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get Scdn ddos配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Scdn ddos配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

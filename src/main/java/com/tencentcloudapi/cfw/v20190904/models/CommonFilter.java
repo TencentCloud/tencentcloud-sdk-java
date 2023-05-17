@@ -30,17 +30,15 @@ public class CommonFilter extends AbstractModel{
     private String Name;
 
     /**
-    * 检索的值
+    * 检索的值，各检索值间为OR关系
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-    * 枚举类型，代表name与values之间的匹配关系
+    * 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -53,18 +51,10 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
     */
     @SerializedName("OperatorType")
@@ -88,26 +78,24 @@ enum FilterOperatorType {
     }
 
     /**
-     * Get 检索的值 
-     * @return Values 检索的值
+     * Get 检索的值，各检索值间为OR关系 
+     * @return Values 检索的值，各检索值间为OR关系
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 检索的值
-     * @param Values 检索的值
+     * Set 检索的值，各检索值间为OR关系
+     * @param Values 检索的值，各检索值间为OR关系
      */
     public void setValues(String [] Values) {
         this.Values = Values;
     }
 
     /**
-     * Get 枚举类型，代表name与values之间的匹配关系
+     * Get 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -120,23 +108,13 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 } 
-     * @return OperatorType 枚举类型，代表name与values之间的匹配关系
+     * @return OperatorType 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -149,18 +127,10 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public Long getOperatorType() {
@@ -168,10 +138,8 @@ enum FilterOperatorType {
     }
 
     /**
-     * Set 枚举类型，代表name与values之间的匹配关系
+     * Set 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -184,23 +152,13 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
-     * @param OperatorType 枚举类型，代表name与values之间的匹配关系
+     * @param OperatorType 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
-    //INVALID
-    FILTER_OPERATOR_TYPE_INVALID = 0;
     //等于
     FILTER_OPERATOR_TYPE_EQUAL = 1;
     //大于
@@ -213,18 +171,10 @@ enum FilterOperatorType {
     FILTER_OPERATOR_TYPE_LESS_EQ = 5;
     //不等于
     FILTER_OPERATOR_TYPE_NO_EQ = 6;
-    //in，数组中包含
-    FILTER_OPERATOR_TYPE_IN = 7;
     //not in
     FILTER_OPERATOR_TYPE_NOT_IN = 8;
     //模糊匹配
     FILTER_OPERATOR_TYPE_FUZZINESS = 9;
-    //存在
-    FILTER_OPERATOR_TYPE_EXIST = 10;
-    //不存在
-    FILTER_OPERATOR_TYPE_NOT_EXIST = 11;
-    //正则
-    FILTER_OPERATOR_TYPE_REGULAR = 12;
 }
      */
     public void setOperatorType(Long OperatorType) {

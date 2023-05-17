@@ -23,16 +23,19 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeTotalInfoRequest extends AbstractModel{
 
     /**
-    * 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+    * 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+    * 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,40 +60,52 @@ Oversea：则查询国际/港澳台（境外）数据，
     private String MainlandOrOversea;
 
     /**
-     * Get 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。 
-     * @return StartTime 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
+     * @return StartTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
-     * @param StartTime 开始时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * Set 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param StartTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。 
-     * @return EndTime 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * Get 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return EndTime 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
-     * @param EndTime 结束时间，北京时间。
-格式：yyyy-mm-dd HH:MM:SS。
+     * Set 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param EndTime 结束时间，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

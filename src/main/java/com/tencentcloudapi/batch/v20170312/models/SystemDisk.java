@@ -46,6 +46,7 @@ public class SystemDisk extends AbstractModel{
 
     /**
     * 所属的独享集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -104,8 +105,10 @@ public class SystemDisk extends AbstractModel{
     }
 
     /**
-     * Get 所属的独享集群ID。 
+     * Get 所属的独享集群ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CdcId 所属的独享集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -113,7 +116,9 @@ public class SystemDisk extends AbstractModel{
 
     /**
      * Set 所属的独享集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId 所属的独享集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

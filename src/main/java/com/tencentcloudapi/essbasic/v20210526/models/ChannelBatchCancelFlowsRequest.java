@@ -37,7 +37,7 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 撤销理由
+    * 撤销理由,不超过200个字符
     */
     @SerializedName("CancelMessage")
     @Expose
@@ -94,16 +94,16 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
     }
 
     /**
-     * Get 撤销理由 
-     * @return CancelMessage 撤销理由
+     * Get 撤销理由,不超过200个字符 
+     * @return CancelMessage 撤销理由,不超过200个字符
      */
     public String getCancelMessage() {
         return this.CancelMessage;
     }
 
     /**
-     * Set 撤销理由
-     * @param CancelMessage 撤销理由
+     * Set 撤销理由,不超过200个字符
+     * @param CancelMessage 撤销理由,不超过200个字符
      */
     public void setCancelMessage(String CancelMessage) {
         this.CancelMessage = CancelMessage;

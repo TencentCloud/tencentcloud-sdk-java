@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ScdnWafConfig extends AbstractModel{
 
     /**
-    * on|off
+    * Scdn waf配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -46,7 +48,9 @@ public class ScdnWafConfig extends AbstractModel{
     private ScdnErrorPage ErrorPage;
 
     /**
-    * webshell拦截开关，on|off，默认off
+    * webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebShellSwitch")
@@ -70,7 +74,9 @@ public class ScdnWafConfig extends AbstractModel{
     private Long Level;
 
     /**
-    * waf子规则开关
+    * waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubRuleSwitch")
@@ -78,16 +84,24 @@ public class ScdnWafConfig extends AbstractModel{
     private WafSubRuleStatus [] SubRuleSwitch;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get Scdn waf配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Scdn waf配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set Scdn waf配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Scdn waf配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -134,9 +148,13 @@ public class ScdnWafConfig extends AbstractModel{
     }
 
     /**
-     * Get webshell拦截开关，on|off，默认off
+     * Get webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebShellSwitch webshell拦截开关，on|off，默认off
+     * @return WebShellSwitch webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebShellSwitch() {
@@ -144,9 +162,13 @@ public class ScdnWafConfig extends AbstractModel{
     }
 
     /**
-     * Set webshell拦截开关，on|off，默认off
+     * Set webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebShellSwitch webshell拦截开关，on|off，默认off
+     * @param WebShellSwitch webshell拦截配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebShellSwitch(String WebShellSwitch) {
@@ -194,9 +216,13 @@ public class ScdnWafConfig extends AbstractModel{
     }
 
     /**
-     * Get waf子规则开关
+     * Get waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubRuleSwitch waf子规则开关
+     * @return SubRuleSwitch waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public WafSubRuleStatus [] getSubRuleSwitch() {
@@ -204,9 +230,13 @@ public class ScdnWafConfig extends AbstractModel{
     }
 
     /**
-     * Set waf子规则开关
+     * Set waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubRuleSwitch waf子规则开关
+     * @param SubRuleSwitch waf子规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubRuleSwitch(WafSubRuleStatus [] SubRuleSwitch) {

@@ -37,6 +37,14 @@ public class EditMediaTaskOutput extends AbstractModel{
     private String Path;
 
     /**
+    * 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
      * Get 编辑后文件的目标存储。 
      * @return OutputStorage 编辑后文件的目标存储。
      */
@@ -68,6 +76,26 @@ public class EditMediaTaskOutput extends AbstractModel{
         this.Path = Path;
     }
 
+    /**
+     * Get 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaData 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaData 编辑后的视频文件元信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
     public EditMediaTaskOutput() {
     }
 
@@ -82,6 +110,9 @@ public class EditMediaTaskOutput extends AbstractModel{
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class EditMediaTaskOutput extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }

@@ -37,6 +37,7 @@ public class Origin extends AbstractModel{
 domain：域名类型
 domainv6：域名解析V6类型
 cos：对象存储源站
+third_party: 第三方存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
@@ -157,7 +158,12 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     private AdvanceHttps AdvanceHttps;
 
     /**
-    * 对象存储回源厂商
+    * 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
+aws_s3: AWS S3
+ali_oss: 阿里云 OSS
+hw_obs: 华为 OBS
+qiniu_kodo: 七牛云 kodo
+others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存储，如腾讯云金融专区COS
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginCompany")
@@ -194,6 +200,7 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
 domain：域名类型
 domainv6：域名解析V6类型
 cos：对象存储源站
+third_party: 第三方存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
@@ -218,6 +225,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 domain：域名类型
 domainv6：域名解析V6类型
 cos：对象存储源站
+third_party: 第三方存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
@@ -248,6 +256,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 domain：域名类型
 domainv6：域名解析V6类型
 cos：对象存储源站
+third_party: 第三方存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
@@ -272,6 +281,7 @@ IPv6 功能目前尚未全量，需要先申请试用
 domain：域名类型
 domainv6：域名解析V6类型
 cos：对象存储源站
+third_party: 第三方存储源站
 ip：IP 列表作为源站
 ipv6：源站列表为一个单独的 IPv6 地址
 ip_ipv6：源站列表为多个 IPv4 地址和IPv6 地址
@@ -557,9 +567,19 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     }
 
     /**
-     * Get 对象存储回源厂商
+     * Get 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
+aws_s3: AWS S3
+ali_oss: 阿里云 OSS
+hw_obs: 华为 OBS
+qiniu_kodo: 七牛云 kodo
+others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存储，如腾讯云金融专区COS
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginCompany 对象存储回源厂商
+     * @return OriginCompany 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
+aws_s3: AWS S3
+ali_oss: 阿里云 OSS
+hw_obs: 华为 OBS
+qiniu_kodo: 七牛云 kodo
+others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存储，如腾讯云金融专区COS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginCompany() {
@@ -567,9 +587,19 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     }
 
     /**
-     * Set 对象存储回源厂商
+     * Set 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
+aws_s3: AWS S3
+ali_oss: 阿里云 OSS
+hw_obs: 华为 OBS
+qiniu_kodo: 七牛云 kodo
+others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存储，如腾讯云金融专区COS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginCompany 对象存储回源厂商
+     * @param OriginCompany 对象存储回源厂商，当源站类型为第三方存储源站(third_party)时必填，可选值包括以下:
+aws_s3: AWS S3
+ali_oss: 阿里云 OSS
+hw_obs: 华为 OBS
+qiniu_kodo: 七牛云 kodo
+others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存储，如腾讯云金融专区COS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginCompany(String OriginCompany) {

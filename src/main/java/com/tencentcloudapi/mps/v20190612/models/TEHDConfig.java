@@ -24,7 +24,8 @@ public class TEHDConfig extends AbstractModel{
 
     /**
     * 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
+<li>TEHD-100：极速高清-100（视频极速高清）。</li>
+<li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不启用极速高清。
     */
     @SerializedName("Type")
@@ -41,10 +42,12 @@ public class TEHDConfig extends AbstractModel{
 
     /**
      * Get 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
+<li>TEHD-100：极速高清-100（视频极速高清）。</li>
+<li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不启用极速高清。 
      * @return Type 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
+<li>TEHD-100：极速高清-100（视频极速高清）。</li>
+<li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不启用极速高清。
      */
     public String getType() {
@@ -53,10 +56,12 @@ public class TEHDConfig extends AbstractModel{
 
     /**
      * Set 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
+<li>TEHD-100：极速高清-100（视频极速高清）。</li>
+<li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不启用极速高清。
      * @param Type 极速高清类型，可选值：
-<li>TEHD-100：极速高清-100。</li>
+<li>TEHD-100：极速高清-100（视频极速高清）。</li>
+<li>TEHD-200：极速高清-200（音频极速高清）。</li>
 不填代表不启用极速高清。
      */
     public void setType(String Type) {

@@ -79,7 +79,7 @@ public class CreateSessionRequest extends AbstractModel{
     private Long SetNo;
 
     /**
-    * 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+    * 【已废弃】
     */
     @SerializedName("Bitrate")
     @Expose
@@ -279,16 +279,16 @@ RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运�
     }
 
     /**
-     * Get 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效) 
-     * @return Bitrate 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Get 【已废弃】 
+     * @return Bitrate 【已废弃】
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
-     * @param Bitrate 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+     * Set 【已废弃】
+     * @param Bitrate 【已废弃】
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

@@ -93,6 +93,20 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
     private Variable [] Variables;
 
     /**
+    * UUI
+    */
+    @SerializedName("UUI")
+    @Expose
+    private String UUI;
+
+    /**
+    * 被叫属性
+    */
+    @SerializedName("CalleeAttributes")
+    @Expose
+    private CalleeAttribute [] CalleeAttributes;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -252,6 +266,38 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
         this.Variables = Variables;
     }
 
+    /**
+     * Get UUI 
+     * @return UUI UUI
+     */
+    public String getUUI() {
+        return this.UUI;
+    }
+
+    /**
+     * Set UUI
+     * @param UUI UUI
+     */
+    public void setUUI(String UUI) {
+        this.UUI = UUI;
+    }
+
+    /**
+     * Get 被叫属性 
+     * @return CalleeAttributes 被叫属性
+     */
+    public CalleeAttribute [] getCalleeAttributes() {
+        return this.CalleeAttributes;
+    }
+
+    /**
+     * Set 被叫属性
+     * @param CalleeAttributes 被叫属性
+     */
+    public void setCalleeAttributes(CalleeAttribute [] CalleeAttributes) {
+        this.CalleeAttributes = CalleeAttributes;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -299,6 +345,15 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
                 this.Variables[i] = new Variable(source.Variables[i]);
             }
         }
+        if (source.UUI != null) {
+            this.UUI = new String(source.UUI);
+        }
+        if (source.CalleeAttributes != null) {
+            this.CalleeAttributes = new CalleeAttribute[source.CalleeAttributes.length];
+            for (int i = 0; i < source.CalleeAttributes.length; i++) {
+                this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
+            }
+        }
     }
 
 
@@ -316,6 +371,8 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotAfter", this.NotAfter);
         this.setParamSimple(map, prefix + "Tries", this.Tries);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "UUI", this.UUI);
+        this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
 
     }
 }

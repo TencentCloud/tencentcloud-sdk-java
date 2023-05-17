@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class WafSubRuleStatus extends AbstractModel{
 
     /**
-    * 子规则状态，on|off
+    * Waf子规则开关状态配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -37,16 +39,24 @@ public class WafSubRuleStatus extends AbstractModel{
     private Long [] SubIds;
 
     /**
-     * Get 子规则状态，on|off 
-     * @return Switch 子规则状态，on|off
+     * Get Waf子规则开关状态配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Waf子规则开关状态配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 子规则状态，on|off
-     * @param Switch 子规则状态，on|off
+     * Set Waf子规则开关状态配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Waf子规则开关状态配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

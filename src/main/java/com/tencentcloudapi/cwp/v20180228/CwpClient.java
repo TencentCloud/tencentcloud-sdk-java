@@ -2722,6 +2722,46 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *获取日志存储配置
+     * @param req DescribeLogStorageConfigRequest
+     * @return DescribeLogStorageConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogStorageConfigResponse DescribeLogStorageConfig(DescribeLogStorageConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogStorageConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogStorageConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogStorageConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取日志存储量记录
+     * @param req DescribeLogStorageRecordRequest
+     * @return DescribeLogStorageRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogStorageRecordResponse DescribeLogStorageRecord(DescribeLogStorageRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogStorageRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogStorageRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogStorageRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取日志检索容量使用统计
      * @param req DescribeLogStorageStatisticRequest
      * @return DescribeLogStorageStatisticResponse
@@ -4996,6 +5036,26 @@ public class CwpClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyLicenseUnBindsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLicenseUnBinds");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改日志存储配置
+     * @param req ModifyLogStorageConfigRequest
+     * @return ModifyLogStorageConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLogStorageConfigResponse ModifyLogStorageConfig(ModifyLogStorageConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLogStorageConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLogStorageConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLogStorageConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

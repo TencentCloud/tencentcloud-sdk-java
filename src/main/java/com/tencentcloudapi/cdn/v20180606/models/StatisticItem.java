@@ -63,7 +63,9 @@ public class StatisticItem extends AbstractModel{
     private Long AlertPercentage;
 
     /**
-    * 提醒开关 on/off
+    * 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlertSwitch")
@@ -87,7 +89,9 @@ public class StatisticItem extends AbstractModel{
     private Long Cycle;
 
     /**
-    * 是否开启该选项，on/off
+    * 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -195,9 +199,13 @@ public class StatisticItem extends AbstractModel{
     }
 
     /**
-     * Get 提醒开关 on/off
+     * Get 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertSwitch 提醒开关 on/off
+     * @return AlertSwitch 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlertSwitch() {
@@ -205,9 +213,13 @@ public class StatisticItem extends AbstractModel{
     }
 
     /**
-     * Set 提醒开关 on/off
+     * Set 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertSwitch 提醒开关 on/off
+     * @param AlertSwitch 累计用量封顶告警配置，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlertSwitch(String AlertSwitch) {
@@ -255,9 +267,13 @@ public class StatisticItem extends AbstractModel{
     }
 
     /**
-     * Get 是否开启该选项，on/off
+     * Get 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 是否开启该选项，on/off
+     * @return Switch 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -265,9 +281,13 @@ public class StatisticItem extends AbstractModel{
     }
 
     /**
-     * Set 是否开启该选项，on/off
+     * Set 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 是否开启该选项，on/off
+     * @param Switch 累计用量封顶配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

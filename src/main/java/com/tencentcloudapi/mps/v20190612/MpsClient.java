@@ -1105,7 +1105,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询3天之内提交的任务）。
+     *通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
      * @throws TencentCloudSDKException

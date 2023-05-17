@@ -86,7 +86,9 @@ public class AdvancedCCRules extends AbstractModel{
     private ScdnSevenLayerRules [] Configure;
 
     /**
-    * 是否开启改规则 on 开启，off关闭
+    * 自定义cc规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -250,9 +252,13 @@ public class AdvancedCCRules extends AbstractModel{
     }
 
     /**
-     * Get 是否开启改规则 on 开启，off关闭
+     * Get 自定义cc规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 是否开启改规则 on 开启，off关闭
+     * @return Switch 自定义cc规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -260,9 +266,13 @@ public class AdvancedCCRules extends AbstractModel{
     }
 
     /**
-     * Set 是否开启改规则 on 开启，off关闭
+     * Set 自定义cc规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 是否开启改规则 on 开启，off关闭
+     * @param Switch 自定义cc规则配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

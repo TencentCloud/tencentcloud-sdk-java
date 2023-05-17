@@ -65,6 +65,15 @@ public class AlarmTarget extends AbstractModel{
     private String LogsetId;
 
     /**
+    * 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get 日志主题ID。 
      * @return TopicId 日志主题ID。
      */
@@ -160,6 +169,30 @@ public class AlarmTarget extends AbstractModel{
         this.LogsetId = LogsetId;
     }
 
+    /**
+     * Get 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a> 
+     * @return SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     * @param SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public AlarmTarget() {
     }
 
@@ -186,6 +219,9 @@ public class AlarmTarget extends AbstractModel{
         if (source.LogsetId != null) {
             this.LogsetId = new String(source.LogsetId);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -199,6 +235,7 @@ public class AlarmTarget extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

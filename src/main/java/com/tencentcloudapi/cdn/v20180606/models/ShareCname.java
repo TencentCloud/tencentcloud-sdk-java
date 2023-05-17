@@ -23,9 +23,10 @@ import java.util.HashMap;
 public class ShareCname extends AbstractModel{
 
     /**
-    * ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+    * ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +41,28 @@ public class ShareCname extends AbstractModel{
     private String Cname;
 
     /**
-     * Get ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+     * Get ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
+ 
+     * @return Switch ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白. 
-     * @return Switch ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
-
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+     * Set ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
-     * @param Switch ShareCname 配置开关, 开关为off时，域名使用默认CNAME，若需要使用共享CNAME，将开关置为on.
+     * @param Switch ShareCname 配置开关, 取值有：
+on：开启，使用共享CNAME
+off：关闭，使用默认CNAME
 
-* ShareCname 为内测功能,如需使用,请联系腾讯云工程师开白.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

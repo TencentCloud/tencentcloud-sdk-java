@@ -66,6 +66,22 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel{
     private MediaSnapshotByTimeOffsetItem Output;
 
     /**
+    * 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -165,6 +181,46 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel{
         this.Output = Output;
     }
 
+    /**
+     * Get 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public MediaProcessTaskSnapshotByTimeOffsetResult() {
     }
 
@@ -191,6 +247,12 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel{
         if (source.Output != null) {
             this.Output = new MediaSnapshotByTimeOffsetItem(source.Output);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -204,6 +266,8 @@ public class MediaProcessTaskSnapshotByTimeOffsetResult extends AbstractModel{
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

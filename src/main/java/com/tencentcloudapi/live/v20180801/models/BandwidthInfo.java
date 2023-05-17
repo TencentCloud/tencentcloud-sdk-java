@@ -24,7 +24,9 @@ public class BandwidthInfo extends AbstractModel{
 
     /**
     * 返回格式：
-yyyy-mm-dd HH:MM:SS
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 根据粒度会有不同程度的缩减。
     */
     @SerializedName("Time")
@@ -40,10 +42,14 @@ yyyy-mm-dd HH:MM:SS
 
     /**
      * Get 返回格式：
-yyyy-mm-dd HH:MM:SS
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 根据粒度会有不同程度的缩减。 
      * @return Time 返回格式：
-yyyy-mm-dd HH:MM:SS
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 根据粒度会有不同程度的缩减。
      */
     public String getTime() {
@@ -52,10 +58,14 @@ yyyy-mm-dd HH:MM:SS
 
     /**
      * Set 返回格式：
-yyyy-mm-dd HH:MM:SS
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 根据粒度会有不同程度的缩减。
      * @param Time 返回格式：
-yyyy-mm-dd HH:MM:SS
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
 根据粒度会有不同程度的缩减。
      */
     public void setTime(String Time) {

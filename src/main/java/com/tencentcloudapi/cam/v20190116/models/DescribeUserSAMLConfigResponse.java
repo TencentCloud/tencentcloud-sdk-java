@@ -37,6 +37,13 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 辅助域名
+    */
+    @SerializedName("AuxiliaryDomain")
+    @Expose
+    private String AuxiliaryDomain;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get 辅助域名 
+     * @return AuxiliaryDomain 辅助域名
+     */
+    public String getAuxiliaryDomain() {
+        return this.AuxiliaryDomain;
+    }
+
+    /**
+     * Set 辅助域名
+     * @param AuxiliaryDomain 辅助域名
+     */
+    public void setAuxiliaryDomain(String AuxiliaryDomain) {
+        this.AuxiliaryDomain = AuxiliaryDomain;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,9 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.AuxiliaryDomain != null) {
+            this.AuxiliaryDomain = new String(source.AuxiliaryDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SAMLMetadata", this.SAMLMetadata);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "AuxiliaryDomain", this.AuxiliaryDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

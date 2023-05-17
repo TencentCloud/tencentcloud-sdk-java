@@ -30,6 +30,13 @@ public class CreateUserSAMLConfigRequest extends AbstractModel{
     private String SAMLMetadataDocument;
 
     /**
+    * 辅助域名
+    */
+    @SerializedName("AuxiliaryDomain")
+    @Expose
+    private String AuxiliaryDomain;
+
+    /**
      * Get SAML元数据文档，需要base64 encode 
      * @return SAMLMetadataDocument SAML元数据文档，需要base64 encode
      */
@@ -45,6 +52,22 @@ public class CreateUserSAMLConfigRequest extends AbstractModel{
         this.SAMLMetadataDocument = SAMLMetadataDocument;
     }
 
+    /**
+     * Get 辅助域名 
+     * @return AuxiliaryDomain 辅助域名
+     */
+    public String getAuxiliaryDomain() {
+        return this.AuxiliaryDomain;
+    }
+
+    /**
+     * Set 辅助域名
+     * @param AuxiliaryDomain 辅助域名
+     */
+    public void setAuxiliaryDomain(String AuxiliaryDomain) {
+        this.AuxiliaryDomain = AuxiliaryDomain;
+    }
+
     public CreateUserSAMLConfigRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CreateUserSAMLConfigRequest extends AbstractModel{
         if (source.SAMLMetadataDocument != null) {
             this.SAMLMetadataDocument = new String(source.SAMLMetadataDocument);
         }
+        if (source.AuxiliaryDomain != null) {
+            this.AuxiliaryDomain = new String(source.AuxiliaryDomain);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CreateUserSAMLConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SAMLMetadataDocument", this.SAMLMetadataDocument);
+        this.setParamSimple(map, prefix + "AuxiliaryDomain", this.AuxiliaryDomain);
 
     }
 }

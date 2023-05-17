@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class SchemeKey extends AbstractModel{
 
     /**
-    * on | off 是否使用scheme作为cache key的一部分
+    * scheme作为cache key配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -31,9 +33,13 @@ public class SchemeKey extends AbstractModel{
     private String Switch;
 
     /**
-     * Get on | off 是否使用scheme作为cache key的一部分
+     * Get scheme作为cache key配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch on | off 是否使用scheme作为cache key的一部分
+     * @return Switch scheme作为cache key配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -41,9 +47,13 @@ public class SchemeKey extends AbstractModel{
     }
 
     /**
-     * Set on | off 是否使用scheme作为cache key的一部分
+     * Set scheme作为cache key配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch on | off 是否使用scheme作为cache key的一部分
+     * @param Switch scheme作为cache key配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

@@ -33,7 +33,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -57,7 +57,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+    * 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
     */
     @SerializedName("VoiceFormat")
     @Expose
@@ -180,7 +180,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -201,7 +201,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -228,7 +228,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -249,7 +249,7 @@ public class SentenceRecognitionRequest extends AbstractModel{
 • 16k_zh-PY：中英粤;
 • 16k_zh_medical：中文医疗；
 • 16k_en：英语；
-• 16k_ca：粤语；
+• 16k_yue：粤语；
 • 16k_ja：日语；
 • 16k_ko：韩语；
 • 16k_vi：越南语；
@@ -282,16 +282,16 @@ public class SentenceRecognitionRequest extends AbstractModel{
     }
 
     /**
-     * Get 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。 
-     * @return VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+     * Get 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。 
+     * @return VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
      */
     public String getVoiceFormat() {
         return this.VoiceFormat;
     }
 
     /**
-     * Set 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
-     * @param VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac。
+     * Set 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
+     * @param VoiceFormat 识别音频的音频格式，支持wav、pcm、ogg-opus、speex、silk、mp3、m4a、aac、amr。
      */
     public void setVoiceFormat(String VoiceFormat) {
         this.VoiceFormat = VoiceFormat;

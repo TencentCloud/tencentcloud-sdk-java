@@ -23,8 +23,10 @@ import java.util.HashMap;
 public class TranscodeTotalInfo extends AbstractModel{
 
     /**
-    * 时间点，北京时间，
-示例：2019-03-01 00:00:00。
+    * 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
     */
     @SerializedName("Time")
     @Expose
@@ -58,20 +60,28 @@ topspeed_H265 =》极速高清-H265。
     private String Resolution;
 
     /**
-     * Get 时间点，北京时间，
-示例：2019-03-01 00:00:00。 
-     * @return Time 时间点，北京时间，
-示例：2019-03-01 00:00:00。
+     * Get 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return Time 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 时间点，北京时间，
-示例：2019-03-01 00:00:00。
-     * @param Time 时间点，北京时间，
-示例：2019-03-01 00:00:00。
+     * Set 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param Time 时间点，
+使用UTC格式时间，
+例如：2019-01-08T10:00:00Z。
+注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
      */
     public void setTime(String Time) {
         this.Time = Time;

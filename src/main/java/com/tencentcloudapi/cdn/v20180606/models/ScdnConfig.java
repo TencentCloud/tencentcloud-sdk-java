@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ScdnConfig extends AbstractModel{
 
     /**
-    * on | off
+    * scdn cc配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -54,16 +56,24 @@ public class ScdnConfig extends AbstractModel{
     private AdvancedCCRules [] GlobalAdvancedRules;
 
     /**
-     * Get on | off 
-     * @return Switch on | off
+     * Get scdn cc配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch scdn cc配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on | off
-     * @param Switch on | off
+     * Set scdn cc配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch scdn cc配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

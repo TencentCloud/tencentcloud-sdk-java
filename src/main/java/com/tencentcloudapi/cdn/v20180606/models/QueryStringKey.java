@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class QueryStringKey extends AbstractModel{
 
     /**
-    * on | off CacheKey是否由QueryString组成
+    * CacheKey是否由QueryString组成配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -39,7 +41,11 @@ public class QueryStringKey extends AbstractModel{
     private String Reorder;
 
     /**
-    * includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+    * 使用/排除部分url参数，取值有：
+includeAll：包含所有
+excludeAll：排除所有
+includeCustom：自定义包含
+excludeCustom：自定义排除
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
@@ -55,9 +61,13 @@ public class QueryStringKey extends AbstractModel{
     private String Value;
 
     /**
-     * Get on | off CacheKey是否由QueryString组成
+     * Get CacheKey是否由QueryString组成配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch on | off CacheKey是否由QueryString组成
+     * @return Switch CacheKey是否由QueryString组成配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -65,9 +75,13 @@ public class QueryStringKey extends AbstractModel{
     }
 
     /**
-     * Set on | off CacheKey是否由QueryString组成
+     * Set CacheKey是否由QueryString组成配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch on | off CacheKey是否由QueryString组成
+     * @param Switch CacheKey是否由QueryString组成配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
@@ -95,9 +109,17 @@ public class QueryStringKey extends AbstractModel{
     }
 
     /**
-     * Get includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * Get 使用/排除部分url参数，取值有：
+includeAll：包含所有
+excludeAll：排除所有
+includeCustom：自定义包含
+excludeCustom：自定义排除
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Action includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * @return Action 使用/排除部分url参数，取值有：
+includeAll：包含所有
+excludeAll：排除所有
+includeCustom：自定义包含
+excludeCustom：自定义排除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
@@ -105,9 +127,17 @@ public class QueryStringKey extends AbstractModel{
     }
 
     /**
-     * Set includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * Set 使用/排除部分url参数，取值有：
+includeAll：包含所有
+excludeAll：排除所有
+includeCustom：自定义包含
+excludeCustom：自定义排除
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Action includeAll | excludeAll | includeCustom | excludeCustom 使用/排除部分url参数
+     * @param Action 使用/排除部分url参数，取值有：
+includeAll：包含所有
+excludeAll：排除所有
+includeCustom：自定义包含
+excludeCustom：自定义排除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {

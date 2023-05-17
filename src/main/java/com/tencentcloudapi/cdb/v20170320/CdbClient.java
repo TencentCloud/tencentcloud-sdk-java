@@ -860,6 +860,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupDecryptionKey)用于查询备份文件解密密钥。
+     * @param req DescribeBackupDecryptionKeyRequest
+     * @return DescribeBackupDecryptionKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKey(DescribeBackupDecryptionKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDecryptionKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDecryptionKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDecryptionKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用户查询当前地域用户设置的默认备份下载来源限制。
      * @param req DescribeBackupDownloadRestrictionRequest
      * @return DescribeBackupDownloadRestrictionResponse

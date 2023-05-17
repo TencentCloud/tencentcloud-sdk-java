@@ -23,9 +23,10 @@ import java.util.HashMap;
 public class WebSocket extends AbstractModel{
 
     /**
-    * WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+    * WebSocket 超时配置开关，取值有：
+on：开启，可以调整超时时间
+off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
 
-* WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +41,28 @@ public class WebSocket extends AbstractModel{
     private Long Timeout;
 
     /**
-     * Get WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * Get WebSocket 超时配置开关，取值有：
+on：开启，可以调整超时时间
+off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
+ 
+     * @return Switch WebSocket 超时配置开关，取值有：
+on：开启，可以调整超时时间
+off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
 
-* WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置. 
-     * @return Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
-
-* WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * Set WebSocket 超时配置开关，取值有：
+on：开启，可以调整超时时间
+off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
 
-* WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
-     * @param Switch WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+     * @param Switch WebSocket 超时配置开关，取值有：
+on：开启，可以调整超时时间
+off：关闭，平台仍支持WebSocket连接，此时超时时间默认为15秒
 
-* WebSocket 为ECDN产品功能，如需使用请通过ECDN域名配置.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

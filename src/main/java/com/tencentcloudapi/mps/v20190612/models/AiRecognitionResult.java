@@ -82,7 +82,8 @@ public class AiRecognitionResult extends AbstractModel{
 
     /**
     * 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransTextTask")
@@ -251,10 +252,12 @@ public class AiRecognitionResult extends AbstractModel{
 
     /**
      * Get 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TransTextTask 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AiRecognitionTaskTransTextResult getTransTextTask() {
@@ -263,10 +266,12 @@ public class AiRecognitionResult extends AbstractModel{
 
     /**
      * Set 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TransTextTask 翻译结果，当 Type 为
- TransTextRecognition 时有效。
+
+TransTextRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransTextTask(AiRecognitionTaskTransTextResult TransTextTask) {

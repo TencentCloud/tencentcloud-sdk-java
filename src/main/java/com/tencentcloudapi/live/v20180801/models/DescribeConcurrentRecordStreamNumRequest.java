@@ -31,7 +31,9 @@ NormalLive：普通直播。
     private String LiveType;
 
     /**
-    * 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+    * 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
     */
     @SerializedName("StartTime")
@@ -39,7 +41,9 @@ NormalLive：普通直播。
     private String StartTime;
 
     /**
-    * 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+    * 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
     */
     @SerializedName("EndTime")
@@ -81,9 +85,13 @@ NormalLive：普通直播。
     }
 
     /**
-     * Get 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Get 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。 
-     * @return StartTime 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @return StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
      */
     public String getStartTime() {
@@ -91,9 +99,13 @@ NormalLive：普通直播。
     }
 
     /**
-     * Set 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Set 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
-     * @param StartTime 起始时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @param StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 可以查询最近180天的数据。
      */
     public void setStartTime(String StartTime) {
@@ -101,9 +113,13 @@ NormalLive：普通直播。
     }
 
     /**
-     * Get 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Get 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。 
-     * @return EndTime 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @return EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
      */
     public String getEndTime() {
@@ -111,9 +127,13 @@ NormalLive：普通直播。
     }
 
     /**
-     * Set 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * Set 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
-     * @param EndTime 结束时间，格式：yyyy-mm-dd HH:MM:SS。
+     * @param EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 时间跨度最大支持31天。
      */
     public void setEndTime(String EndTime) {

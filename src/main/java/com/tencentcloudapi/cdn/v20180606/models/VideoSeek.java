@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VideoSeek extends AbstractModel{
 
     /**
-    * 视频拖拽开关
+    * 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -32,10 +32,10 @@ off：关闭
     private String Switch;
 
     /**
-     * Get 视频拖拽开关
+     * Get 视频拖拽配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 视频拖拽开关
+     * @return Switch 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -44,10 +44,10 @@ off：关闭
     }
 
     /**
-     * Set 视频拖拽开关
+     * Set 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 视频拖拽开关
+     * @param Switch 视频拖拽配置开关，取值有：
 on：开启
 off：关闭
      */

@@ -58,6 +58,14 @@ public class ParamTemplateInfo extends AbstractModel{
     private String TemplateType;
 
     /**
+    * 参数模板引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 参数模板ID 
      * @return TemplateId 参数模板ID
      */
@@ -137,6 +145,26 @@ public class ParamTemplateInfo extends AbstractModel{
         this.TemplateType = TemplateType;
     }
 
+    /**
+     * Get 参数模板引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 参数模板引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 参数模板引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 参数模板引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public ParamTemplateInfo() {
     }
 
@@ -160,6 +188,9 @@ public class ParamTemplateInfo extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ParamTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

@@ -52,6 +52,22 @@ public class MediaAudioStreamItem extends AbstractModel{
     private Long Channel;
 
     /**
+    * 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Codecs")
+    @Expose
+    private String Codecs;
+
+    /**
+    * 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Loudness")
+    @Expose
+    private Float Loudness;
+
+    /**
      * Get 音频流的码率，单位：bps。 
      * @return Bitrate 音频流的码率，单位：bps。
      */
@@ -119,6 +135,46 @@ public class MediaAudioStreamItem extends AbstractModel{
         this.Channel = Channel;
     }
 
+    /**
+     * Get 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Codecs 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodecs() {
+        return this.Codecs;
+    }
+
+    /**
+     * Set 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Codecs 音频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodecs(String Codecs) {
+        this.Codecs = Codecs;
+    }
+
+    /**
+     * Get 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Loudness 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getLoudness() {
+        return this.Loudness;
+    }
+
+    /**
+     * Set 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Loudness 音频响度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoudness(Float Loudness) {
+        this.Loudness = Loudness;
+    }
+
     public MediaAudioStreamItem() {
     }
 
@@ -139,6 +195,12 @@ public class MediaAudioStreamItem extends AbstractModel{
         if (source.Channel != null) {
             this.Channel = new Long(source.Channel);
         }
+        if (source.Codecs != null) {
+            this.Codecs = new String(source.Codecs);
+        }
+        if (source.Loudness != null) {
+            this.Loudness = new Float(source.Loudness);
+        }
     }
 
 
@@ -150,6 +212,8 @@ public class MediaAudioStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "Codecs", this.Codecs);
+        this.setParamSimple(map, prefix + "Loudness", this.Loudness);
 
     }
 }

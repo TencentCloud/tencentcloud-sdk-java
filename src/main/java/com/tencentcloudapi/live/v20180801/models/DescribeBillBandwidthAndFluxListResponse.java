@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
 
     /**
-    * 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
     */
     @SerializedName("PeakBandwidthTime")
     @Expose
@@ -37,7 +39,9 @@ public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
     private Float PeakBandwidth;
 
     /**
-    * 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+    * 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
     */
     @SerializedName("P95PeakBandwidthTime")
     @Expose
@@ -72,16 +76,24 @@ public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return PeakBandwidthTime 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
+     * @return PeakBandwidthTime 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public String getPeakBandwidthTime() {
         return this.PeakBandwidthTime;
     }
 
     /**
-     * Set 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param PeakBandwidthTime 峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param PeakBandwidthTime 峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public void setPeakBandwidthTime(String PeakBandwidthTime) {
         this.PeakBandwidthTime = PeakBandwidthTime;
@@ -104,16 +116,24 @@ public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
     }
 
     /**
-     * Get 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。 
-     * @return P95PeakBandwidthTime 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Get 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
+     * @return P95PeakBandwidthTime 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public String getP95PeakBandwidthTime() {
         return this.P95PeakBandwidthTime;
     }
 
     /**
-     * Set 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
-     * @param P95PeakBandwidthTime 95峰值带宽所在时间点，格式为yyyy-mm-dd HH:MM:SS。
+     * Set 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param P95PeakBandwidthTime 95峰值带宽所在时间点，接口返回支持两种时间格式(与接口请求传递的时间格式一致)：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public void setP95PeakBandwidthTime(String P95PeakBandwidthTime) {
         this.P95PeakBandwidthTime = P95PeakBandwidthTime;

@@ -116,6 +116,13 @@ true为启用，false为不启用
     private String ServiceTemplateId;
 
     /**
+    * 规则的uuid
+    */
+    @SerializedName("RuleUuid")
+    @Expose
+    private Long RuleUuid;
+
+    /**
      * Get 分页查询时，显示的当前页的页码。
 
 默认值为1。 
@@ -367,6 +374,22 @@ true为启用，false为不启用
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
+    /**
+     * Get 规则的uuid 
+     * @return RuleUuid 规则的uuid
+     */
+    public Long getRuleUuid() {
+        return this.RuleUuid;
+    }
+
+    /**
+     * Set 规则的uuid
+     * @param RuleUuid 规则的uuid
+     */
+    public void setRuleUuid(Long RuleUuid) {
+        this.RuleUuid = RuleUuid;
+    }
+
     public DescribeEnterpriseSecurityGroupRuleRequest() {
     }
 
@@ -405,6 +428,9 @@ true为启用，false为不启用
         if (source.ServiceTemplateId != null) {
             this.ServiceTemplateId = new String(source.ServiceTemplateId);
         }
+        if (source.RuleUuid != null) {
+            this.RuleUuid = new Long(source.RuleUuid);
+        }
     }
 
 
@@ -422,6 +448,7 @@ true为启用，false为不启用
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+        this.setParamSimple(map, prefix + "RuleUuid", this.RuleUuid);
 
     }
 }

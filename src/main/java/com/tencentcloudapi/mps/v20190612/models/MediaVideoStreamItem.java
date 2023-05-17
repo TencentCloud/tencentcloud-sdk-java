@@ -90,6 +90,14 @@ public class MediaVideoStreamItem extends AbstractModel{
     private String HdrType;
 
     /**
+    * 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Codecs")
+    @Expose
+    private String Codecs;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -249,6 +257,26 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.HdrType = HdrType;
     }
 
+    /**
+     * Get 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Codecs 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodecs() {
+        return this.Codecs;
+    }
+
+    /**
+     * Set 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Codecs 视频Codecs。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodecs(String Codecs) {
+        this.Codecs = Codecs;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -284,6 +312,9 @@ public class MediaVideoStreamItem extends AbstractModel{
         if (source.HdrType != null) {
             this.HdrType = new String(source.HdrType);
         }
+        if (source.Codecs != null) {
+            this.Codecs = new String(source.Codecs);
+        }
     }
 
 
@@ -300,6 +331,7 @@ public class MediaVideoStreamItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
         this.setParamSimple(map, prefix + "HdrType", this.HdrType);
+        this.setParamSimple(map, prefix + "Codecs", this.Codecs);
 
     }
 }

@@ -51,7 +51,7 @@ public class DescribeTaskListRequest extends AbstractModel{
     private String [] TaskTag;
 
     /**
-    * 状态
+    * 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get 状态 
-     * @return TaskStatus 状态
+     * Get 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束) 
+     * @return TaskStatus 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set 状态
-     * @param TaskStatus 状态
+     * Set 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
+     * @param TaskStatus 任务状态(1001 -- 未开始 1002 -- 进行中 1003 -- 暂停中 1004 -- 任务结束)
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;

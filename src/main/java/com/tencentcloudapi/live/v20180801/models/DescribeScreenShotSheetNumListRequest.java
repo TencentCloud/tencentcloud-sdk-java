@@ -23,14 +23,19 @@ import java.util.HashMap;
 public class DescribeScreenShotSheetNumListRequest extends AbstractModel{
 
     /**
-    * utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+    * 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+    * 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持查询最近1年的数据。
     */
     @SerializedName("EndTime")
     @Expose
@@ -58,32 +63,52 @@ public class DescribeScreenShotSheetNumListRequest extends AbstractModel{
     private String Granularity;
 
     /**
-     * Get utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ 
-     * @return StartTime utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+     * Get 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。 
+     * @return StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
-     * @param StartTime utc起始时间，格式为yyyy-mm-ddTHH:MM:SSZ
+     * Set 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+     * @param StartTime 起始时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。 
-     * @return EndTime utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+     * Get 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持查询最近1年的数据。 
+     * @return EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持查询最近1年的数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
-     * @param EndTime utc结束时间，格式为yyyy-mm-ddTHH:MM:SSZ，支持查询最近1年数据。
+     * Set 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持查询最近1年的数据。
+     * @param EndTime 结束时间点，接口查询支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
+支持查询最近1年的数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

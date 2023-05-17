@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Seo extends AbstractModel{
 
     /**
-    * SEO 配置开关
+    * SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -33,11 +33,11 @@ off：关闭
     private String Switch;
 
     /**
-     * Get SEO 配置开关
+     * Get SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch SEO 配置开关
+     * @return Switch SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -47,11 +47,11 @@ off：关闭
     }
 
     /**
-     * Set SEO 配置开关
+     * Set SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch SEO 配置开关
+     * @param Switch SEO 搜索引擎优化配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

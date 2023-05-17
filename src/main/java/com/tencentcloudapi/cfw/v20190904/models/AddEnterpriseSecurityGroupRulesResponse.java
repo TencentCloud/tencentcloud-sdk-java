@@ -30,6 +30,14 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * 规则uuid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rules")
+    @Expose
+    private SecurityGroupSimplifyRule [] Rules;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel{
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 规则uuid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rules 规则uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityGroupSimplifyRule [] getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 规则uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rules 规则uuid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRules(SecurityGroupSimplifyRule [] Rules) {
+        this.Rules = Rules;
     }
 
     /**
@@ -79,6 +107,12 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Rules != null) {
+            this.Rules = new SecurityGroupSimplifyRule[source.Rules.length];
+            for (int i = 0; i < source.Rules.length; i++) {
+                this.Rules[i] = new SecurityGroupSimplifyRule(source.Rules[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +124,7 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

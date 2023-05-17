@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class TpgAdapter extends AbstractModel{
 
     /**
-    * 开关，"on/off"
+    * 图片优化-TpgAdapter配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -31,9 +33,13 @@ public class TpgAdapter extends AbstractModel{
     private String Switch;
 
     /**
-     * Get 开关，"on/off"
+     * Get 图片优化-TpgAdapter配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 开关，"on/off"
+     * @return Switch 图片优化-TpgAdapter配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -41,9 +47,13 @@ public class TpgAdapter extends AbstractModel{
     }
 
     /**
-     * Set 开关，"on/off"
+     * Set 图片优化-TpgAdapter配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 开关，"on/off"
+     * @param Switch 图片优化-TpgAdapter配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class UserAgentFilter extends AbstractModel{
 
     /**
-    * 开关，on或off
+    * UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -39,9 +41,13 @@ public class UserAgentFilter extends AbstractModel{
     private UserAgentFilterRule [] FilterRules;
 
     /**
-     * Get 开关，on或off
+     * Get UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 开关，on或off
+     * @return Switch UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +55,13 @@ public class UserAgentFilter extends AbstractModel{
     }
 
     /**
-     * Set 开关，on或off
+     * Set UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 开关，on或off
+     * @param Switch UserAgent黑白名单配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {
