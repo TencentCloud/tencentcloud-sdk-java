@@ -72,6 +72,13 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel{
     private Long [] Id;
 
     /**
+    * 是否扫描最新版本
+    */
+    @SerializedName("Latest")
+    @Expose
+    private Boolean Latest;
+
+    /**
      * Get 定时扫描周期 
      * @return ScanPeriod 定时扫描周期
      */
@@ -183,6 +190,22 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    /**
+     * Get 是否扫描最新版本 
+     * @return Latest 是否扫描最新版本
+     */
+    public Boolean getLatest() {
+        return this.Latest;
+    }
+
+    /**
+     * Set 是否扫描最新版本
+     * @param Latest 是否扫描最新版本
+     */
+    public void setLatest(Boolean Latest) {
+        this.Latest = Latest;
+    }
+
     public UpdateImageRegistryTimingScanTaskRequest() {
     }
 
@@ -221,6 +244,9 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel{
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.Latest != null) {
+            this.Latest = new Boolean(source.Latest);
+        }
     }
 
 
@@ -235,6 +261,7 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "Latest", this.Latest);
 
     }
 }

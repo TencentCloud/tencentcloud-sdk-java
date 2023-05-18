@@ -121,6 +121,13 @@ public class CreateBPBrandRequest extends AbstractModel{
     private String [] ProtectMiniPrograms;
 
     /**
+    * 请求来源：0-反钓鱼 2-反假冒
+    */
+    @SerializedName("APISource")
+    @Expose
+    private Long APISource;
+
+    /**
      * Get 品牌名称 
      * @return BrandName 品牌名称
      */
@@ -344,6 +351,22 @@ public class CreateBPBrandRequest extends AbstractModel{
         this.ProtectMiniPrograms = ProtectMiniPrograms;
     }
 
+    /**
+     * Get 请求来源：0-反钓鱼 2-反假冒 
+     * @return APISource 请求来源：0-反钓鱼 2-反假冒
+     */
+    public Long getAPISource() {
+        return this.APISource;
+    }
+
+    /**
+     * Set 请求来源：0-反钓鱼 2-反假冒
+     * @param APISource 请求来源：0-反钓鱼 2-反假冒
+     */
+    public void setAPISource(Long APISource) {
+        this.APISource = APISource;
+    }
+
     public CreateBPBrandRequest() {
     }
 
@@ -418,6 +441,9 @@ public class CreateBPBrandRequest extends AbstractModel{
                 this.ProtectMiniPrograms[i] = new String(source.ProtectMiniPrograms[i]);
             }
         }
+        if (source.APISource != null) {
+            this.APISource = new Long(source.APISource);
+        }
     }
 
 
@@ -439,6 +465,7 @@ public class CreateBPBrandRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ProtectAPPs.", this.ProtectAPPs);
         this.setParamArraySimple(map, prefix + "ProtectOfficialAccounts.", this.ProtectOfficialAccounts);
         this.setParamArraySimple(map, prefix + "ProtectMiniPrograms.", this.ProtectMiniPrograms);
+        this.setParamSimple(map, prefix + "APISource", this.APISource);
 
     }
 }

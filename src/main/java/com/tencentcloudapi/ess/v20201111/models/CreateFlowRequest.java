@@ -136,6 +136,13 @@ false：有序签
     private CcInfo [] CcInfos;
 
     /**
+    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    */
+    @SerializedName("AutoSignScene")
+    @Expose
+    private String AutoSignScene;
+
+    /**
      * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
      * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
      */
@@ -407,6 +414,22 @@ false：有序签
         this.CcInfos = CcInfos;
     }
 
+    /**
+     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public String getAutoSignScene() {
+        return this.AutoSignScene;
+    }
+
+    /**
+     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public void setAutoSignScene(String AutoSignScene) {
+        this.AutoSignScene = AutoSignScene;
+    }
+
     public CreateFlowRequest() {
     }
 
@@ -466,6 +489,9 @@ false：有序签
                 this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
             }
         }
+        if (source.AutoSignScene != null) {
+            this.AutoSignScene = new String(source.AutoSignScene);
+        }
     }
 
 
@@ -488,6 +514,7 @@ false：有序签
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
 
     }
 }

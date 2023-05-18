@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel{
 
     /**
-    * referer 黑白名单配置开关
+    * referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -40,10 +40,10 @@ off：关闭
     private RefererRule [] RefererRules;
 
     /**
-     * Get referer 黑白名单配置开关
+     * Get referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch referer 黑白名单配置开关
+     * @return Switch referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set referer 黑白名单配置开关
+     * Set referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch referer 黑白名单配置开关
+     * @param Switch referer 黑白名单配置开关，取值有：
 on：开启
 off：关闭
      */

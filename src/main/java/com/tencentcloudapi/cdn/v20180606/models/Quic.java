@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class Quic extends AbstractModel{
 
     /**
-    * 是否启动Quic配置
+    * Quic功能配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get 是否启动Quic配置 
-     * @return Switch 是否启动Quic配置
+     * Get Quic功能配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Quic功能配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 是否启动Quic配置
-     * @param Switch 是否启动Quic配置
+     * Set Quic功能配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Quic功能配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

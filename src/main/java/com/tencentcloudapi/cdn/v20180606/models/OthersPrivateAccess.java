@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class OthersPrivateAccess extends AbstractModel{
 
     /**
-    * 开关， on/off。
+    * 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -62,16 +64,24 @@ public class OthersPrivateAccess extends AbstractModel{
     private String Bucket;
 
     /**
-     * Get 开关， on/off。 
-     * @return Switch 开关， on/off。
+     * Get 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关， on/off。
-     * @param Switch 开关， on/off。
+     * Set 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 其他厂商对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

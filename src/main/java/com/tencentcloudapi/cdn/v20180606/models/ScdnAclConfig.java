@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ScdnAclConfig extends AbstractModel{
 
     /**
-    * 是否开启，on | off
+    * SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -54,16 +56,24 @@ public class ScdnAclConfig extends AbstractModel{
     private AdvancedScdnAclGroup [] AdvancedScriptData;
 
     /**
-     * Get 是否开启，on | off 
-     * @return Switch 是否开启，on | off
+     * Get SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 是否开启，on | off
-     * @param Switch 是否开启，on | off
+     * Set SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch SCDN访问控制配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

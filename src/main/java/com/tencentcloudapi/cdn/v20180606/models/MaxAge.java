@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MaxAge extends AbstractModel{
 
     /**
-    * 浏览器缓存配置开关
+    * 浏览器缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -49,11 +49,11 @@ off：关闭
     private MaxAgeCodeRule MaxAgeCodeRule;
 
     /**
-     * Get 浏览器缓存配置开关
+     * Get 浏览器缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 浏览器缓存配置开关
+     * @return Switch 浏览器缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -63,11 +63,11 @@ off：关闭
     }
 
     /**
-     * Set 浏览器缓存配置开关
+     * Set 浏览器缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 浏览器缓存配置开关
+     * @param Switch 浏览器缓存配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

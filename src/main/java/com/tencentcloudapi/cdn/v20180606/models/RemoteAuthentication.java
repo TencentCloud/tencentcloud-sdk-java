@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class RemoteAuthentication extends AbstractModel{
 
     /**
-    * 远程鉴权开关；
-on : 开启;
-off: 关闭；
+    * 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -49,13 +49,13 @@ off: 关闭；
     private String Server;
 
     /**
-     * Get 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * Get 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * @return Switch 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -63,13 +63,13 @@ off: 关闭；
     }
 
     /**
-     * Set 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * Set 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 远程鉴权开关；
-on : 开启;
-off: 关闭；
+     * @param Switch 远程鉴权配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

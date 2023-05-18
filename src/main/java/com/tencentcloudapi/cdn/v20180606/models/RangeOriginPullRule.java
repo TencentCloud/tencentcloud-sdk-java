@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class RangeOriginPullRule extends AbstractModel{
 
     /**
-    * 分片回源配置开关
+    * 分片回源配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -52,16 +54,24 @@ path 时填充绝对路径，如 /xxx/test.html
     private String [] RulePaths;
 
     /**
-     * Get 分片回源配置开关 
-     * @return Switch 分片回源配置开关
+     * Get 分片回源配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 分片回源配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 分片回源配置开关
-     * @param Switch 分片回源配置开关
+     * Set 分片回源配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 分片回源配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

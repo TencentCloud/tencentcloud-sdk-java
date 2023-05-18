@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OriginPullOptimization extends AbstractModel{
 
     /**
-    * 跨国回源优化配置开关
+    * 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -42,10 +42,10 @@ CNToOV：境内回源境外
     private String OptimizationType;
 
     /**
-     * Get 跨国回源优化配置开关
+     * Get 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 跨国回源优化配置开关
+     * @return Switch 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -54,10 +54,10 @@ off：关闭
     }
 
     /**
-     * Set 跨国回源优化配置开关
+     * Set 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 跨国回源优化配置开关
+     * @param Switch 跨国回源优化配置开关，取值有：
 on：开启
 off：关闭
      */

@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class OriginCombine extends AbstractModel{
 
     /**
-    * on|off 是否开启合并回源
+    * 合并回源配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get on|off 是否开启合并回源 
-     * @return Switch on|off 是否开启合并回源
+     * Get 合并回源配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 合并回源配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off 是否开启合并回源
-     * @param Switch on|off 是否开启合并回源
+     * Set 合并回源配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 合并回源配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

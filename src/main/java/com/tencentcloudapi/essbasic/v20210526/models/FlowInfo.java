@@ -79,7 +79,7 @@ public class FlowInfo extends AbstractModel{
     private String FlowDescription;
 
     /**
-    *  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    *  第三方应用平台的业务信息，最大长度1000个字符。
     */
     @SerializedName("CustomerData")
     @Expose
@@ -115,6 +115,13 @@ public class FlowInfo extends AbstractModel{
     @SerializedName("CcNotifyType")
     @Expose
     private Long CcNotifyType;
+
+    /**
+    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    */
+    @SerializedName("AutoSignScene")
+    @Expose
+    private String AutoSignScene;
 
     /**
      * Get 合同名字，最大长度200个字符 
@@ -245,16 +252,16 @@ public class FlowInfo extends AbstractModel{
     }
 
     /**
-     * Get  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
-     * @return CustomerData  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Get  第三方应用平台的业务信息，最大长度1000个字符。 
+     * @return CustomerData  第三方应用平台的业务信息，最大长度1000个字符。
      */
     public String getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-     * @param CustomerData  第三方应用平台的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Set  第三方应用平台的业务信息，最大长度1000个字符。
+     * @param CustomerData  第三方应用平台的业务信息，最大长度1000个字符。
      */
     public void setCustomerData(String CustomerData) {
         this.CustomerData = CustomerData;
@@ -336,6 +343,22 @@ public class FlowInfo extends AbstractModel{
         this.CcNotifyType = CcNotifyType;
     }
 
+    /**
+     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public String getAutoSignScene() {
+        return this.AutoSignScene;
+    }
+
+    /**
+     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public void setAutoSignScene(String AutoSignScene) {
+        this.AutoSignScene = AutoSignScene;
+    }
+
     public FlowInfo() {
     }
 
@@ -392,6 +415,9 @@ public class FlowInfo extends AbstractModel{
         if (source.CcNotifyType != null) {
             this.CcNotifyType = new Long(source.CcNotifyType);
         }
+        if (source.AutoSignScene != null) {
+            this.AutoSignScene = new String(source.AutoSignScene);
+        }
     }
 
 
@@ -412,6 +438,7 @@ public class FlowInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
+        this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
 
     }
 }

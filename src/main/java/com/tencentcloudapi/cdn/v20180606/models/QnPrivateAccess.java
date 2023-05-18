@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class QnPrivateAccess extends AbstractModel{
 
     /**
-    * 开关 on/off
+    * 七牛元对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -45,16 +47,24 @@ public class QnPrivateAccess extends AbstractModel{
     private String SecretKey;
 
     /**
-     * Get 开关 on/off 
-     * @return Switch 开关 on/off
+     * Get 七牛元对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 七牛元对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关 on/off
-     * @param Switch 开关 on/off
+     * Set 七牛元对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 七牛元对象存储回源鉴权配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

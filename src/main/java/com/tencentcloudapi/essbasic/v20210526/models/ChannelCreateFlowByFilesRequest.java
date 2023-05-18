@@ -100,7 +100,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel{
     private String CustomShowMap;
 
     /**
-    * 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    * 业务信息，最大长度1000个字符。
     */
     @SerializedName("CustomerData")
     @Expose
@@ -150,6 +150,13 @@ MobileCheck：手机号验证
     @SerializedName("CcNotifyType")
     @Expose
     private Long CcNotifyType;
+
+    /**
+    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    */
+    @SerializedName("AutoSignScene")
+    @Expose
+    private String AutoSignScene;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -328,16 +335,16 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
-     * @return CustomerData 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Get 业务信息，最大长度1000个字符。 
+     * @return CustomerData 业务信息，最大长度1000个字符。
      */
     public String getCustomerData() {
         return this.CustomerData;
     }
 
     /**
-     * Set 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
-     * @param CustomerData 业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * Set 业务信息，最大长度1000个字符。
+     * @param CustomerData 业务信息，最大长度1000个字符。
      */
     public void setCustomerData(String CustomerData) {
         this.CustomerData = CustomerData;
@@ -451,6 +458,22 @@ MobileCheck：手机号验证
         this.CcNotifyType = CcNotifyType;
     }
 
+    /**
+     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public String getAutoSignScene() {
+        return this.AutoSignScene;
+    }
+
+    /**
+     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public void setAutoSignScene(String AutoSignScene) {
+        this.AutoSignScene = AutoSignScene;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -525,6 +548,9 @@ MobileCheck：手机号验证
         if (source.CcNotifyType != null) {
             this.CcNotifyType = new Long(source.CcNotifyType);
         }
+        if (source.AutoSignScene != null) {
+            this.AutoSignScene = new String(source.AutoSignScene);
+        }
     }
 
 
@@ -550,6 +576,7 @@ MobileCheck：手机号验证
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
+        this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
 
     }
 }

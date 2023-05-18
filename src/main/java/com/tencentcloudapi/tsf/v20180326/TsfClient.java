@@ -739,6 +739,26 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *批量创建单元化命名空间
+     * @param req CreateUnitNamespacesRequest
+     * @return CreateUnitNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUnitNamespacesResponse CreateUnitNamespaces(CreateUnitNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUnitNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUnitNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUnitNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建单元化规则
      * @param req CreateUnitRuleRequest
      * @return CreateUnitRuleResponse

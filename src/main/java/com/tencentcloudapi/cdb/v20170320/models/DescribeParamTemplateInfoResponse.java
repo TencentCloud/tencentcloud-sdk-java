@@ -72,6 +72,14 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String TemplateType;
 
     /**
+    * 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -191,6 +199,26 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -238,6 +266,9 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -255,6 +286,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -76,6 +76,14 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     private Long [] Id;
 
     /**
+    * 是否扫描最新版本镜像
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Latest")
+    @Expose
+    private Boolean Latest;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -211,6 +219,26 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否扫描最新版本镜像
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Latest 是否扫描最新版本镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLatest() {
+        return this.Latest;
+    }
+
+    /**
+     * Set 是否扫描最新版本镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Latest 是否扫描最新版本镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatest(Boolean Latest) {
+        this.Latest = Latest;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -264,6 +292,9 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.Latest != null) {
+            this.Latest = new Boolean(source.Latest);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -281,6 +312,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "Latest", this.Latest);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

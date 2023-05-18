@@ -170,6 +170,13 @@ MobileCheck：手机号验证
     private Long CcNotifyType;
 
     /**
+    * 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+    */
+    @SerializedName("AutoSignScene")
+    @Expose
+    private String AutoSignScene;
+
+    /**
      * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同 
      * @return Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId 代发合同
      */
@@ -529,6 +536,22 @@ MobileCheck：手机号验证
         this.CcNotifyType = CcNotifyType;
     }
 
+    /**
+     * Get 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN 
+     * @return AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public String getAutoSignScene() {
+        return this.AutoSignScene;
+    }
+
+    /**
+     * Set 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     * @param AutoSignScene 个人自动签场景。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
+     */
+    public void setAutoSignScene(String AutoSignScene) {
+        this.AutoSignScene = AutoSignScene;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -606,6 +629,9 @@ MobileCheck：手机号验证
         if (source.CcNotifyType != null) {
             this.CcNotifyType = new Long(source.CcNotifyType);
         }
+        if (source.AutoSignScene != null) {
+            this.AutoSignScene = new String(source.AutoSignScene);
+        }
     }
 
 
@@ -632,6 +658,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
+        this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
 
     }
 }

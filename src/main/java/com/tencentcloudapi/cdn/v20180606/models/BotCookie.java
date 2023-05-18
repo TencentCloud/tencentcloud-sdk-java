@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class BotCookie extends AbstractModel{
 
     /**
-    * on|off
+    * Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -67,16 +69,24 @@ public class BotCookie extends AbstractModel{
     private String UpdateTime;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Bot cookie策略配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

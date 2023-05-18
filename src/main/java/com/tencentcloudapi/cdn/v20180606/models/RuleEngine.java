@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RuleEngine extends AbstractModel{
 
     /**
-    * 规则引擎配置开关
+    * 规则引擎配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -40,10 +40,10 @@ off：关闭
     private String Content;
 
     /**
-     * Get 规则引擎配置开关
+     * Get 规则引擎配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 规则引擎配置开关
+     * @return Switch 规则引擎配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set 规则引擎配置开关
+     * Set 规则引擎配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 规则引擎配置开关
+     * @param Switch 规则引擎配置开关，取值有：
 on：开启
 off：关闭
      */

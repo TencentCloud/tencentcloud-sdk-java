@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResponseHeaderCache extends AbstractModel{
 
     /**
-    * 源站头部缓存开关
+    * 源站头部缓存配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -32,10 +32,10 @@ off：关闭
     private String Switch;
 
     /**
-     * Get 源站头部缓存开关
+     * Get 源站头部缓存配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 源站头部缓存开关
+     * @return Switch 源站头部缓存配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -44,10 +44,10 @@ off：关闭
     }
 
     /**
-     * Set 源站头部缓存开关
+     * Set 源站头部缓存配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 源站头部缓存开关
+     * @param Switch 源站头部缓存配置开关，取值有：
 on：开启
 off：关闭
      */

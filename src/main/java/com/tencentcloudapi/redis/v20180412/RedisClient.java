@@ -399,7 +399,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *获取备份配置
+     *本接口（DescribeAutoBackupConfig）用于获取自动备份配置规则。
      * @param req DescribeAutoBackupConfigRequest
      * @return DescribeAutoBackupConfigResponse
      * @throws TencentCloudSDKException

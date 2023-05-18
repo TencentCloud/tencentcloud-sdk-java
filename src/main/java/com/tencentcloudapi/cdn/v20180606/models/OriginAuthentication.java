@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class OriginAuthentication extends AbstractModel{
 
     /**
-    * 鉴权开关，on或off
+    * 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -39,9 +42,15 @@ public class OriginAuthentication extends AbstractModel{
     private OriginAuthenticationTypeA TypeA;
 
     /**
-     * Get 鉴权开关，on或off
+     * Get 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 鉴权开关，on或off
+     * @return Switch 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +58,15 @@ public class OriginAuthentication extends AbstractModel{
     }
 
     /**
-     * Set 鉴权开关，on或off
+     * Set 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 鉴权开关，on或off
+     * @param Switch 回源鉴权高级配置开关，取值有：
+on：开启
+off：关闭
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

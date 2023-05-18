@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IpFreqLimit extends AbstractModel{
 
     /**
-    * IP 限频配置开关
+    * IP 限频配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -41,10 +41,10 @@ off：关闭
     private Long Qps;
 
     /**
-     * Get IP 限频配置开关
+     * Get IP 限频配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch IP 限频配置开关
+     * @return Switch IP 限频配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -53,10 +53,10 @@ off：关闭
     }
 
     /**
-     * Set IP 限频配置开关
+     * Set IP 限频配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch IP 限频配置开关
+     * @param Switch IP 限频配置开关，取值有：
 on：开启
 off：关闭
      */

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class RedirectConfig extends AbstractModel{
 
     /**
-    * 配置开关
+    * 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -44,16 +46,24 @@ public class RedirectConfig extends AbstractModel{
     private String FollowRedirectBackupHost;
 
     /**
-     * Get 配置开关 
-     * @return Switch 配置开关
+     * Get 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 配置开关
-     * @param Switch 配置开关
+     * Set 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 自定义回源302 follow请求host配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

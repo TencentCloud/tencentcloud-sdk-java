@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeAutoBackupConfigResponse extends AbstractModel{
 
     /**
-    * 备份类型。自动备份类型： 1 “定时回档”
+    * 该参数因兼容性问题暂时保留，请忽略。
     */
     @SerializedName("AutoBackupType")
     @Expose
     private Long AutoBackupType;
 
     /**
-    * Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+    * 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * 时间段。
+    * 备份任务发起时间段。
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * 全量备份文件保存天数
+    * 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
     */
     @SerializedName("BackupStorageDays")
     @Expose
     private Long BackupStorageDays;
 
     /**
-    * tendis binlog备份文件保存天数
+    * 该参数不再使用，请忽略。
     */
     @SerializedName("BinlogStorageDays")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeAutoBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 备份类型。自动备份类型： 1 “定时回档” 
-     * @return AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
+     * Get 该参数因兼容性问题暂时保留，请忽略。 
+     * @return AutoBackupType 该参数因兼容性问题暂时保留，请忽略。
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set 备份类型。自动备份类型： 1 “定时回档”
-     * @param AutoBackupType 备份类型。自动备份类型： 1 “定时回档”
+     * Set 该参数因兼容性问题暂时保留，请忽略。
+     * @param AutoBackupType 该参数因兼容性问题暂时保留，请忽略。
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
     }
 
     /**
-     * Get Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。 
-     * @return WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Get 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。 
+     * @return WeekDays 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
-     * @param WeekDays Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * Set 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
+     * @param WeekDays 备份周期，默认为每天自动备份，Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday。
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get 时间段。 
-     * @return TimePeriod 时间段。
+     * Get 备份任务发起时间段。 
+     * @return TimePeriod 备份任务发起时间段。
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set 时间段。
-     * @param TimePeriod 时间段。
+     * Set 备份任务发起时间段。
+     * @param TimePeriod 备份任务发起时间段。
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get 全量备份文件保存天数 
-     * @return BackupStorageDays 全量备份文件保存天数
+     * Get 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。 
+     * @return BackupStorageDays 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     public Long getBackupStorageDays() {
         return this.BackupStorageDays;
     }
 
     /**
-     * Set 全量备份文件保存天数
-     * @param BackupStorageDays 全量备份文件保存天数
+     * Set 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
+     * @param BackupStorageDays 全量备份文件保存天数。默认为7天。如需保存更多天数，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请。
      */
     public void setBackupStorageDays(Long BackupStorageDays) {
         this.BackupStorageDays = BackupStorageDays;
     }
 
     /**
-     * Get tendis binlog备份文件保存天数 
-     * @return BinlogStorageDays tendis binlog备份文件保存天数
+     * Get 该参数不再使用，请忽略。 
+     * @return BinlogStorageDays 该参数不再使用，请忽略。
      */
     public Long getBinlogStorageDays() {
         return this.BinlogStorageDays;
     }
 
     /**
-     * Set tendis binlog备份文件保存天数
-     * @param BinlogStorageDays tendis binlog备份文件保存天数
+     * Set 该参数不再使用，请忽略。
+     * @param BinlogStorageDays 该参数不再使用，请忽略。
      */
     public void setBinlogStorageDays(Long BinlogStorageDays) {
         this.BinlogStorageDays = BinlogStorageDays;

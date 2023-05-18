@@ -38,7 +38,7 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
     * 备份类型。
-- 1：凌晨系统发起的备份。
+- 1：凌晨系统发起的自动备份。
 - 0：用户发起的手动备份。
     */
     @SerializedName("BackupType")
@@ -173,10 +173,10 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Get 备份类型。
-- 1：凌晨系统发起的备份。
+- 1：凌晨系统发起的自动备份。
 - 0：用户发起的手动备份。 
      * @return BackupType 备份类型。
-- 1：凌晨系统发起的备份。
+- 1：凌晨系统发起的自动备份。
 - 0：用户发起的手动备份。
      */
     public String getBackupType() {
@@ -185,10 +185,10 @@ public class RedisBackupSet extends AbstractModel{
 
     /**
      * Set 备份类型。
-- 1：凌晨系统发起的备份。
+- 1：凌晨系统发起的自动备份。
 - 0：用户发起的手动备份。
      * @param BackupType 备份类型。
-- 1：凌晨系统发起的备份。
+- 1：凌晨系统发起的自动备份。
 - 0：用户发起的手动备份。
      */
     public void setBackupType(String BackupType) {

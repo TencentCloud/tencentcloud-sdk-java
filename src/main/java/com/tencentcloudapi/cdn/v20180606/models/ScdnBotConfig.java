@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ScdnBotConfig extends AbstractModel{
 
     /**
-    * on|off
+    * Scdn bot配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -46,16 +48,24 @@ public class ScdnBotConfig extends AbstractModel{
     private BotJavaScript [] BotJavaScript;
 
     /**
-     * Get on|off 
-     * @return Switch on|off
+     * Get Scdn bot配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch Scdn bot配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on|off
-     * @param Switch on|off
+     * Set Scdn bot配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch Scdn bot配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

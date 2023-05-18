@@ -164,6 +164,13 @@ public class ApplicationProxy extends AbstractModel{
     private ApplicationProxyRule [] ApplicationProxyRules;
 
     /**
+    * 中国大陆加速优化配置。
+    */
+    @SerializedName("AccelerateMainland")
+    @Expose
+    private AccelerateMainland AccelerateMainland;
+
+    /**
      * Get 站点ID。 
      * @return ZoneId 站点ID。
      */
@@ -523,6 +530,22 @@ public class ApplicationProxy extends AbstractModel{
         this.ApplicationProxyRules = ApplicationProxyRules;
     }
 
+    /**
+     * Get 中国大陆加速优化配置。 
+     * @return AccelerateMainland 中国大陆加速优化配置。
+     */
+    public AccelerateMainland getAccelerateMainland() {
+        return this.AccelerateMainland;
+    }
+
+    /**
+     * Set 中国大陆加速优化配置。
+     * @param AccelerateMainland 中国大陆加速优化配置。
+     */
+    public void setAccelerateMainland(AccelerateMainland AccelerateMainland) {
+        this.AccelerateMainland = AccelerateMainland;
+    }
+
     public ApplicationProxy() {
     }
 
@@ -588,6 +611,9 @@ public class ApplicationProxy extends AbstractModel{
                 this.ApplicationProxyRules[i] = new ApplicationProxyRule(source.ApplicationProxyRules[i]);
             }
         }
+        if (source.AccelerateMainland != null) {
+            this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
+        }
     }
 
 
@@ -612,6 +638,7 @@ public class ApplicationProxy extends AbstractModel{
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "ApplicationProxyRules.", this.ApplicationProxyRules);
+        this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
 
     }
 }

@@ -72,6 +72,14 @@ GZJGZY: 公证机构执业证。
     private String ImgUrl;
 
     /**
+    * 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginImgUrl")
+    @Expose
+    private String OriginImgUrl;
+
+    /**
     * 联系人证件号码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -256,6 +264,26 @@ GZJGZY: 公证机构执业证。
     }
 
     /**
+     * Get 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginImgUrl 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginImgUrl() {
+        return this.OriginImgUrl;
+    }
+
+    /**
+     * Set 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginImgUrl 原始照片地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginImgUrl(String OriginImgUrl) {
+        this.OriginImgUrl = OriginImgUrl;
+    }
+
+    /**
      * Get 联系人证件号码。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RegistrantCertificateCode 联系人证件号码。
@@ -332,6 +360,9 @@ GZJGZY: 公证机构执业证。
         if (source.ImgUrl != null) {
             this.ImgUrl = new String(source.ImgUrl);
         }
+        if (source.OriginImgUrl != null) {
+            this.OriginImgUrl = new String(source.OriginImgUrl);
+        }
         if (source.RegistrantCertificateCode != null) {
             this.RegistrantCertificateCode = new String(source.RegistrantCertificateCode);
         }
@@ -351,6 +382,7 @@ GZJGZY: 公证机构执业证。
         this.setParamSimple(map, prefix + "CertificateCode", this.CertificateCode);
         this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);
         this.setParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+        this.setParamSimple(map, prefix + "OriginImgUrl", this.OriginImgUrl);
         this.setParamSimple(map, prefix + "RegistrantCertificateCode", this.RegistrantCertificateCode);
         this.setParamSimple(map, prefix + "RegistrantCertificateType", this.RegistrantCertificateType);
         this.setParamSimple(map, prefix + "RegistrantImgUrl", this.RegistrantImgUrl);
