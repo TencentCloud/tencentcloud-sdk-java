@@ -220,6 +220,97 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
     private String IsolateTime;
 
     /**
+    * 节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 节点名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * 节点子网ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * 节点子网名称
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * 节点子网网段
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * pod名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * pod状态
+    */
+    @SerializedName("PodStatus")
+    @Expose
+    private String PodStatus;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 超级节点唯一id
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 外网ip
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -691,6 +782,214 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 节点ID 
+     * @return NodeID 节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点ID
+     * @param NodeID 节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 节点名称 
+     * @return NodeName 节点名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点名称
+     * @param NodeName 节点名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get 节点子网ID 
+     * @return NodeSubNetID 节点子网ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set 节点子网ID
+     * @param NodeSubNetID 节点子网ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get 节点子网名称 
+     * @return NodeSubNetName 节点子网名称
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set 节点子网名称
+     * @param NodeSubNetName 节点子网名称
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get 节点子网网段 
+     * @return NodeSubNetCIDR 节点子网网段
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set 节点子网网段
+     * @param NodeSubNetCIDR 节点子网网段
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get pod名称 
+     * @return PodName pod名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod名称
+     * @param PodName pod名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get pod状态 
+     * @return PodStatus pod状态
+     */
+    public String getPodStatus() {
+        return this.PodStatus;
+    }
+
+    /**
+     * Set pod状态
+     * @param PodStatus pod状态
+     */
+    public void setPodStatus(String PodStatus) {
+        this.PodStatus = PodStatus;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return ClusterID 集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterID 集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点 
+     * @return NodeType 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点
+     * @param NodeType 节点类型:NORMAL: 普通节点(默认值) SUPER: 超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 超级节点唯一id 
+     * @return NodeUniqueID 超级节点唯一id
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一id
+     * @param NodeUniqueID 超级节点唯一id
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 外网ip 
+     * @return PublicIP 外网ip
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 外网ip
+     * @param PublicIP 外网ip
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -798,6 +1097,45 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodStatus != null) {
+            this.PodStatus = new String(source.PodStatus);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -835,6 +1173,19 @@ public class DescribeAssetContainerDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
         this.setParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodStatus", this.PodStatus);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

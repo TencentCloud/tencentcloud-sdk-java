@@ -23,23 +23,38 @@ import java.util.HashMap;
 public class HttpsBilling extends AbstractModel{
 
     /**
-    * HTTPS服务，缺省时默认开启【会产生计费】
+    * HTTPS服务配置开关，取值有：
+on：开启，缺省时默认开启【会产生计费】
+off：关闭，拦截https请求
+
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get HTTPS服务，缺省时默认开启【会产生计费】 
-     * @return Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * Get HTTPS服务配置开关，取值有：
+on：开启，缺省时默认开启【会产生计费】
+off：关闭，拦截https请求
+ 
+     * @return Switch HTTPS服务配置开关，取值有：
+on：开启，缺省时默认开启【会产生计费】
+off：关闭，拦截https请求
+
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set HTTPS服务，缺省时默认开启【会产生计费】
-     * @param Switch HTTPS服务，缺省时默认开启【会产生计费】
+     * Set HTTPS服务配置开关，取值有：
+on：开启，缺省时默认开启【会产生计费】
+off：关闭，拦截https请求
+
+     * @param Switch HTTPS服务配置开关，取值有：
+on：开启，缺省时默认开启【会产生计费】
+off：关闭，拦截https请求
+
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

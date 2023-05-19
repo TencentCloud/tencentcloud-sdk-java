@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Authentication extends AbstractModel{
 
     /**
-    * 防盗链配置开关
+    * 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
@@ -65,11 +65,11 @@ off：关闭
     private AuthenticationTypeD TypeD;
 
     /**
-     * Get 防盗链配置开关
+     * Get 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null 
-     * @return Switch 防盗链配置开关
+     * @return Switch 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
@@ -79,11 +79,11 @@ off：关闭
     }
 
     /**
-     * Set 防盗链配置开关
+     * Set 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null
-     * @param Switch 防盗链配置开关
+     * @param Switch 防盗链配置开关，取值有：
 on：开启
 off：关闭
 开启时必须且只配置一种模式，其余模式需要设置为 null

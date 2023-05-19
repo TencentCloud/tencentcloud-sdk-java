@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class CacheTagKey extends AbstractModel{
 
     /**
-    * 是否使用CacheTag作为CacheKey的一部分
+    * 使用CacheTag作为CacheKey的一部分配置开关，取值有
+on：开启，使用CacheTag作为CacheKey的一部分
+off：关闭，不使用CacheTag作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -39,9 +41,13 @@ public class CacheTagKey extends AbstractModel{
     private String Value;
 
     /**
-     * Get 是否使用CacheTag作为CacheKey的一部分
+     * Get 使用CacheTag作为CacheKey的一部分配置开关，取值有
+on：开启，使用CacheTag作为CacheKey的一部分
+off：关闭，不使用CacheTag作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 是否使用CacheTag作为CacheKey的一部分
+     * @return Switch 使用CacheTag作为CacheKey的一部分配置开关，取值有
+on：开启，使用CacheTag作为CacheKey的一部分
+off：关闭，不使用CacheTag作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +55,13 @@ public class CacheTagKey extends AbstractModel{
     }
 
     /**
-     * Set 是否使用CacheTag作为CacheKey的一部分
+     * Set 使用CacheTag作为CacheKey的一部分配置开关，取值有
+on：开启，使用CacheTag作为CacheKey的一部分
+off：关闭，不使用CacheTag作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 是否使用CacheTag作为CacheKey的一部分
+     * @param Switch 使用CacheTag作为CacheKey的一部分配置开关，取值有
+on：开启，使用CacheTag作为CacheKey的一部分
+off：关闭，不使用CacheTag作为CacheKey的一部分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

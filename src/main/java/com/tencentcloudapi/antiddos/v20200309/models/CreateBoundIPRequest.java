@@ -58,6 +58,13 @@ public class CreateBoundIPRequest extends AbstractModel{
     private String CopyPolicy;
 
     /**
+    * 如果该资源实例为域名化资产则，该参数必填
+    */
+    @SerializedName("FilterRegion")
+    @Expose
+    private String FilterRegion;
+
+    /**
      * Get 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包） 
      * @return Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
      */
@@ -137,6 +144,22 @@ public class CreateBoundIPRequest extends AbstractModel{
         this.CopyPolicy = CopyPolicy;
     }
 
+    /**
+     * Get 如果该资源实例为域名化资产则，该参数必填 
+     * @return FilterRegion 如果该资源实例为域名化资产则，该参数必填
+     */
+    public String getFilterRegion() {
+        return this.FilterRegion;
+    }
+
+    /**
+     * Set 如果该资源实例为域名化资产则，该参数必填
+     * @param FilterRegion 如果该资源实例为域名化资产则，该参数必填
+     */
+    public void setFilterRegion(String FilterRegion) {
+        this.FilterRegion = FilterRegion;
+    }
+
     public CreateBoundIPRequest() {
     }
 
@@ -166,6 +189,9 @@ public class CreateBoundIPRequest extends AbstractModel{
         if (source.CopyPolicy != null) {
             this.CopyPolicy = new String(source.CopyPolicy);
         }
+        if (source.FilterRegion != null) {
+            this.FilterRegion = new String(source.FilterRegion);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class CreateBoundIPRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "BoundDevList.", this.BoundDevList);
         this.setParamArrayObj(map, prefix + "UnBoundDevList.", this.UnBoundDevList);
         this.setParamSimple(map, prefix + "CopyPolicy", this.CopyPolicy);
+        this.setParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
 
     }
 }

@@ -73,6 +73,20 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel{
     private Long Progress;
 
     /**
+    * 智能按帧标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 智能按帧标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
      * @return Status 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。
      */
@@ -188,6 +202,38 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel{
         this.Progress = Progress;
     }
 
+    /**
+     * Get 智能按帧标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return BeginProcessTime 智能按帧标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 智能按帧标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param BeginProcessTime 智能按帧标签任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get 智能按帧标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return FinishTime 智能按帧标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 智能按帧标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param FinishTime 智能按帧标签任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public AiAnalysisTaskFrameTagResult() {
     }
 
@@ -217,6 +263,12 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel{
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -231,6 +283,8 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel{
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

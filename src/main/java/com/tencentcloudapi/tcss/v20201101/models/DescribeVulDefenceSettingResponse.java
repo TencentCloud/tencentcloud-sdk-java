@@ -75,6 +75,41 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel{
     private Long SupportDefenseVulCount;
 
     /**
+    * 普通节点个数
+    */
+    @SerializedName("HostNodeCount")
+    @Expose
+    private Long HostNodeCount;
+
+    /**
+    * 超级节点范围
+    */
+    @SerializedName("SuperScope")
+    @Expose
+    private Long SuperScope;
+
+    /**
+    * 超级节点个数
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
+
+    /**
+    * 超级节点Id列表
+    */
+    @SerializedName("SuperNodeIds")
+    @Expose
+    private String [] SuperNodeIds;
+
+    /**
+    * 开通容器安全的超级结点总数
+    */
+    @SerializedName("NodeTotalCount")
+    @Expose
+    private Long NodeTotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -206,6 +241,86 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel{
     }
 
     /**
+     * Get 普通节点个数 
+     * @return HostNodeCount 普通节点个数
+     */
+    public Long getHostNodeCount() {
+        return this.HostNodeCount;
+    }
+
+    /**
+     * Set 普通节点个数
+     * @param HostNodeCount 普通节点个数
+     */
+    public void setHostNodeCount(Long HostNodeCount) {
+        this.HostNodeCount = HostNodeCount;
+    }
+
+    /**
+     * Get 超级节点范围 
+     * @return SuperScope 超级节点范围
+     */
+    public Long getSuperScope() {
+        return this.SuperScope;
+    }
+
+    /**
+     * Set 超级节点范围
+     * @param SuperScope 超级节点范围
+     */
+    public void setSuperScope(Long SuperScope) {
+        this.SuperScope = SuperScope;
+    }
+
+    /**
+     * Get 超级节点个数 
+     * @return SuperNodeCount 超级节点个数
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set 超级节点个数
+     * @param SuperNodeCount 超级节点个数
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
+    }
+
+    /**
+     * Get 超级节点Id列表 
+     * @return SuperNodeIds 超级节点Id列表
+     */
+    public String [] getSuperNodeIds() {
+        return this.SuperNodeIds;
+    }
+
+    /**
+     * Set 超级节点Id列表
+     * @param SuperNodeIds 超级节点Id列表
+     */
+    public void setSuperNodeIds(String [] SuperNodeIds) {
+        this.SuperNodeIds = SuperNodeIds;
+    }
+
+    /**
+     * Get 开通容器安全的超级结点总数 
+     * @return NodeTotalCount 开通容器安全的超级结点总数
+     */
+    public Long getNodeTotalCount() {
+        return this.NodeTotalCount;
+    }
+
+    /**
+     * Set 开通容器安全的超级结点总数
+     * @param NodeTotalCount 开通容器安全的超级结点总数
+     */
+    public void setNodeTotalCount(Long NodeTotalCount) {
+        this.NodeTotalCount = NodeTotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -253,6 +368,24 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel{
         if (source.SupportDefenseVulCount != null) {
             this.SupportDefenseVulCount = new Long(source.SupportDefenseVulCount);
         }
+        if (source.HostNodeCount != null) {
+            this.HostNodeCount = new Long(source.HostNodeCount);
+        }
+        if (source.SuperScope != null) {
+            this.SuperScope = new Long(source.SuperScope);
+        }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
+        if (source.SuperNodeIds != null) {
+            this.SuperNodeIds = new String[source.SuperNodeIds.length];
+            for (int i = 0; i < source.SuperNodeIds.length; i++) {
+                this.SuperNodeIds[i] = new String(source.SuperNodeIds[i]);
+            }
+        }
+        if (source.NodeTotalCount != null) {
+            this.NodeTotalCount = new Long(source.NodeTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -270,6 +403,11 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
         this.setParamSimple(map, prefix + "HostTotalCount", this.HostTotalCount);
         this.setParamSimple(map, prefix + "SupportDefenseVulCount", this.SupportDefenseVulCount);
+        this.setParamSimple(map, prefix + "HostNodeCount", this.HostNodeCount);
+        this.setParamSimple(map, prefix + "SuperScope", this.SuperScope);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
+        this.setParamArraySimple(map, prefix + "SuperNodeIds.", this.SuperNodeIds);
+        this.setParamSimple(map, prefix + "NodeTotalCount", this.NodeTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

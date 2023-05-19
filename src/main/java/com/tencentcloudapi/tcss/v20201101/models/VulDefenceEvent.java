@@ -181,7 +181,7 @@ public class VulDefenceEvent extends AbstractModel{
     private String ContainerIsolateOperationSrc;
 
     /**
-    * 主机QUUID
+    * 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QUUID")
@@ -197,12 +197,54 @@ public class VulDefenceEvent extends AbstractModel{
     private String HostIP;
 
     /**
-    * 主机名称
+    * 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
+
+    /**
+    * 节点类型[NORMAL:普通节点|SUPER:超级节点]
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 外网IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * 超级节点唯一ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 超级节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
      * Get 漏洞CVEID 
@@ -609,9 +651,9 @@ public class VulDefenceEvent extends AbstractModel{
     }
 
     /**
-     * Get 主机QUUID
+     * Get 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QUUID 主机QUUID
+     * @return QUUID 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQUUID() {
@@ -619,9 +661,9 @@ public class VulDefenceEvent extends AbstractModel{
     }
 
     /**
-     * Set 主机QUUID
+     * Set 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QUUID 主机QUUID
+     * @param QUUID 主机QUUID/超级节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQUUID(String QUUID) {
@@ -649,9 +691,9 @@ public class VulDefenceEvent extends AbstractModel{
     }
 
     /**
-     * Get 主机名称
+     * Get 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostName 主机名称
+     * @return HostName 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
@@ -659,13 +701,109 @@ public class VulDefenceEvent extends AbstractModel{
     }
 
     /**
-     * Set 主机名称
+     * Set 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostName 主机名称
+     * @param HostName 主机名称/超级节点名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
+    }
+
+    /**
+     * Get 节点类型[NORMAL:普通节点|SUPER:超级节点] 
+     * @return NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 外网IP 
+     * @return PublicIP 外网IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 外网IP
+     * @param PublicIP 外网IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get 超级节点唯一ID 
+     * @return NodeUniqueID 超级节点唯一ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一ID
+     * @param NodeUniqueID 超级节点唯一ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 超级节点ID 
+     * @return NodeID 超级节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 超级节点ID
+     * @param NodeID 超级节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 集群ID 
+     * @return ClusterID 集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterID 集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public VulDefenceEvent() {
@@ -742,6 +880,24 @@ public class VulDefenceEvent extends AbstractModel{
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -771,6 +927,12 @@ public class VulDefenceEvent extends AbstractModel{
         this.setParamSimple(map, prefix + "QUUID", this.QUUID);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

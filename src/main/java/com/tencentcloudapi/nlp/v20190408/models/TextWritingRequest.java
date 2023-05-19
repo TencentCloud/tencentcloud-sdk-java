@@ -30,7 +30,7 @@ public class TextWritingRequest extends AbstractModel{
     private String Text;
 
     /**
-    * 待续写文本的语言类型，支持语言列表
+    * 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
     */
@@ -47,7 +47,7 @@ en：英文
     private Long Number;
 
     /**
-    * 指定续写领域，支持领域列表
+    * 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
@@ -57,7 +57,7 @@ academic：学术领域，仅支持英文补全
     private String Domain;
 
     /**
-    * 指定续写风格，支持风格列表
+    * 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
@@ -85,10 +85,10 @@ urban_officialdom：职场
     }
 
     /**
-     * Get 待续写文本的语言类型，支持语言列表
+     * Get 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文 
-     * @return SourceLang 待续写文本的语言类型，支持语言列表
+     * @return SourceLang 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -97,10 +97,10 @@ en：英文
     }
 
     /**
-     * Set 待续写文本的语言类型，支持语言列表
+     * Set 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
-     * @param SourceLang 待续写文本的语言类型，支持语言列表
+     * @param SourceLang 待续写文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -129,11 +129,11 @@ en：英文
     }
 
     /**
-     * Get 指定续写领域，支持领域列表
+     * Get 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。 
-     * @return Domain 指定续写领域，支持领域列表
+     * @return Domain 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
@@ -143,11 +143,11 @@ academic：学术领域，仅支持英文补全
     }
 
     /**
-     * Set 指定续写领域，支持领域列表
+     * Set 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
-     * @param Domain 指定续写领域，支持领域列表
+     * @param Domain 指定续写领域，支持领域如下：
 general：通用领域，支持中英文补全
 academic：学术领域，仅支持英文补全
 默认为general（通用领域）。
@@ -157,13 +157,13 @@ academic：学术领域，仅支持英文补全
     }
 
     /**
-     * Get 指定续写风格，支持风格列表
+     * Get 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
 urban_officialdom：职场
 默认为xuanhuan_wuxia（武侠）。 
-     * @return Style 指定续写风格，支持风格列表
+     * @return Style 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
@@ -175,13 +175,13 @@ urban_officialdom：职场
     }
 
     /**
-     * Set 指定续写风格，支持风格列表
+     * Set 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠
 urban_officialdom：职场
 默认为xuanhuan_wuxia（武侠）。
-     * @param Style 指定续写风格，支持风格列表
+     * @param Style 指定续写风格，支持风格如下：
 science_fiction：科幻
 military_history：军事
 xuanhuan_wuxia：武侠

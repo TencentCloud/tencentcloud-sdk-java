@@ -30,11 +30,18 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel{
     private String SslVpnServerId;
 
     /**
-    * name
+    * SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
     */
     @SerializedName("SslVpnClientName")
     @Expose
     private String SslVpnClientName;
+
+    /**
+    * SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+    */
+    @SerializedName("SslVpnClientNames")
+    @Expose
+    private String [] SslVpnClientNames;
 
     /**
      * Get SSL-VPN-SERVER 实例ID。 
@@ -53,19 +60,35 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel{
     }
 
     /**
-     * Get name 
-     * @return SslVpnClientName name
+     * Get SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。 
+     * @return SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
      */
     public String getSslVpnClientName() {
         return this.SslVpnClientName;
     }
 
     /**
-     * Set name
-     * @param SslVpnClientName name
+     * Set SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
+     * @param SslVpnClientName SSL-VPN-CLIENT实例Name。不可和SslVpnClientNames同时使用。
      */
     public void setSslVpnClientName(String SslVpnClientName) {
         this.SslVpnClientName = SslVpnClientName;
+    }
+
+    /**
+     * Get SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。 
+     * @return SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     */
+    public String [] getSslVpnClientNames() {
+        return this.SslVpnClientNames;
+    }
+
+    /**
+     * Set SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     * @param SslVpnClientNames SSL-VPN-CLIENT实例Name数字。批量创建时使用。不可和SslVpnClientName同时使用。
+     */
+    public void setSslVpnClientNames(String [] SslVpnClientNames) {
+        this.SslVpnClientNames = SslVpnClientNames;
     }
 
     public CreateVpnGatewaySslClientRequest() {
@@ -82,6 +105,12 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel{
         if (source.SslVpnClientName != null) {
             this.SslVpnClientName = new String(source.SslVpnClientName);
         }
+        if (source.SslVpnClientNames != null) {
+            this.SslVpnClientNames = new String[source.SslVpnClientNames.length];
+            for (int i = 0; i < source.SslVpnClientNames.length; i++) {
+                this.SslVpnClientNames[i] = new String(source.SslVpnClientNames[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SslVpnServerId", this.SslVpnServerId);
         this.setParamSimple(map, prefix + "SslVpnClientName", this.SslVpnClientName);
+        this.setParamArraySimple(map, prefix + "SslVpnClientNames.", this.SslVpnClientNames);
 
     }
 }

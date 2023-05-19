@@ -23,8 +23,9 @@ import java.util.HashMap;
 public class CacheConfig extends AbstractModel{
 
     /**
-    * on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+    * 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("HeuristicCacheTimeSwitch")
     @Expose
@@ -38,20 +39,24 @@ off 代表关闭自定义启发式缓存时间
     private Long HeuristicCacheTime;
 
     /**
-     * Get on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间 
-     * @return HeuristicCacheTimeSwitch on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+     * Get 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭 
+     * @return HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getHeuristicCacheTimeSwitch() {
         return this.HeuristicCacheTimeSwitch;
     }
 
     /**
-     * Set on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
-     * @param HeuristicCacheTimeSwitch on 代表开启自定义启发式缓存时间
-off 代表关闭自定义启发式缓存时间
+     * Set 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
+     * @param HeuristicCacheTimeSwitch 启发式自定义时间缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setHeuristicCacheTimeSwitch(String HeuristicCacheTimeSwitch) {
         this.HeuristicCacheTimeSwitch = HeuristicCacheTimeSwitch;

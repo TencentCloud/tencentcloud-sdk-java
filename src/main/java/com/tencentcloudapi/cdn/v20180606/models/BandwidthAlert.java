@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BandwidthAlert extends AbstractModel{
 
     /**
-    * 用量封顶配置开关
+    * 用量封顶配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -57,7 +57,7 @@ RETURN_404：全部请求返回 404
     private String LastTriggerTime;
 
     /**
-    * 用量封顶提醒开关
+    * 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -101,10 +101,10 @@ off：关闭
     private StatisticItem [] StatisticItems;
 
     /**
-     * Get 用量封顶配置开关
+     * Get 用量封顶配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 用量封顶配置开关
+     * @return Switch 用量封顶配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -113,10 +113,10 @@ off：关闭
     }
 
     /**
-     * Set 用量封顶配置开关
+     * Set 用量封顶配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 用量封顶配置开关
+     * @param Switch 用量封顶配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -189,11 +189,11 @@ RETURN_404：全部请求返回 404
     }
 
     /**
-     * Get 用量封顶提醒开关
+     * Get 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlertSwitch 用量封顶提醒开关
+     * @return AlertSwitch 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -203,11 +203,11 @@ off：关闭
     }
 
     /**
-     * Set 用量封顶提醒开关
+     * Set 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlertSwitch 用量封顶提醒开关
+     * @param AlertSwitch 用量封顶提醒配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

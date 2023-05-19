@@ -66,11 +66,25 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel{
     private AiRecognitionTaskAsrFullTextResultOutput Output;
 
     /**
-    * 任务进度，取值范围 [0-100] 。
+    * 语音全文识别任务进度，取值范围 [0-100] 。
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
+
+    /**
+    * 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
 
     /**
      * Get 任务状态，有 PROCESSING，SUCCESS 和 FAIL 三种。 
@@ -173,19 +187,51 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel{
     }
 
     /**
-     * Get 任务进度，取值范围 [0-100] 。 
-     * @return Progress 任务进度，取值范围 [0-100] 。
+     * Get 语音全文识别任务进度，取值范围 [0-100] 。 
+     * @return Progress 语音全文识别任务进度，取值范围 [0-100] 。
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 任务进度，取值范围 [0-100] 。
-     * @param Progress 任务进度，取值范围 [0-100] 。
+     * Set 语音全文识别任务进度，取值范围 [0-100] 。
+     * @param Progress 语音全文识别任务进度，取值范围 [0-100] 。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
+    }
+
+    /**
+     * Get 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return BeginProcessTime 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param BeginProcessTime 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return FinishTime 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param FinishTime 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
     }
 
     public AiRecognitionTaskAsrFullTextResult() {
@@ -217,6 +263,12 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel{
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -231,6 +283,8 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel{
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class AccessControl extends AbstractModel{
 
     /**
-    * on | off 是否启用请求头部及请求url访问控制
+    * 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -46,16 +48,24 @@ public class AccessControl extends AbstractModel{
     private Long ReturnCode;
 
     /**
-     * Get on | off 是否启用请求头部及请求url访问控制 
-     * @return Switch on | off 是否启用请求头部及请求url访问控制
+     * Get 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on | off 是否启用请求头部及请求url访问控制
-     * @param Switch on | off 是否启用请求头部及请求url访问控制
+     * Set 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 启用请求头部及请求url访问控制开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

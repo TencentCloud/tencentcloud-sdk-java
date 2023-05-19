@@ -407,6 +407,14 @@ public class CVMAssetVO extends AbstractModel{
     private String Os;
 
     /**
+    * 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskExposure")
+    @Expose
+    private Long RiskExposure;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1366,6 +1374,26 @@ public class CVMAssetVO extends AbstractModel{
         this.Os = Os;
     }
 
+    /**
+     * Get 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskExposure 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskExposure() {
+        return this.RiskExposure;
+    }
+
+    /**
+     * Set 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskExposure 风险服务暴露
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskExposure(Long RiskExposure) {
+        this.RiskExposure = RiskExposure;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -1521,6 +1549,9 @@ public class CVMAssetVO extends AbstractModel{
         if (source.Os != null) {
             this.Os = new String(source.Os);
         }
+        if (source.RiskExposure != null) {
+            this.RiskExposure = new Long(source.RiskExposure);
+        }
     }
 
 
@@ -1576,6 +1607,7 @@ public class CVMAssetVO extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
         this.setParamSimple(map, prefix + "Os", this.Os);
+        this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
 
     }
 }

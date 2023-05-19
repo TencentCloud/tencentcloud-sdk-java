@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel{
 
     /**
-    * IP 黑白名单配置开关
+    * IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
     */
@@ -68,10 +68,10 @@ blacklist：黑名单
     private Long ReturnCode;
 
     /**
-     * Get IP 黑白名单配置开关
+     * Get IP 黑白名单配置开关，取值有
 on：开启
 off：关闭 
-     * @return Switch IP 黑白名单配置开关
+     * @return Switch IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
      */
@@ -80,10 +80,10 @@ off：关闭
     }
 
     /**
-     * Set IP 黑白名单配置开关
+     * Set IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
-     * @param Switch IP 黑白名单配置开关
+     * @param Switch IP 黑白名单配置开关，取值有
 on：开启
 off：关闭
      */

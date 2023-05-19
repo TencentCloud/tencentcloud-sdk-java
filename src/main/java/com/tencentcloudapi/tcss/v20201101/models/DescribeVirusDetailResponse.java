@@ -199,14 +199,6 @@ public class DescribeVirusDetailResponse extends AbstractModel{
     private Long SourceType;
 
     /**
-    * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PodName")
-    @Expose
-    private String PodName;
-
-    /**
     * 标签
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -261,6 +253,14 @@ public class DescribeVirusDetailResponse extends AbstractModel{
     @SerializedName("EventType")
     @Expose
     private String EventType;
+
+    /**
+    * 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
 
     /**
     * DEAL_NONE:文件待处理
@@ -432,6 +432,76 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     @SerializedName("FileModifyTime")
     @Expose
     private String FileModifyTime;
+
+    /**
+    * 节点子网ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * 节点子网名称
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * 节点子网网段
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * 集群id
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * pod状态
+    */
+    @SerializedName("PodStatus")
+    @Expose
+    private String PodStatus;
+
+    /**
+    * 节点唯一ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -881,26 +951,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PodName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPodName() {
-        return this.PodName;
-    }
-
-    /**
-     * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PodName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPodName(String PodName) {
-        this.PodName = PodName;
-    }
-
-    /**
      * Get 标签
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tags 标签
@@ -1038,6 +1088,26 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
+    }
+
+    /**
+     * Get 集群名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodName 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodName 集群名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
     }
 
     /**
@@ -1497,6 +1567,166 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     }
 
     /**
+     * Get 节点子网ID 
+     * @return NodeSubNetID 节点子网ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set 节点子网ID
+     * @param NodeSubNetID 节点子网ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get 节点子网名称 
+     * @return NodeSubNetName 节点子网名称
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set 节点子网名称
+     * @param NodeSubNetName 节点子网名称
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get 节点子网网段 
+     * @return NodeSubNetCIDR 节点子网网段
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set 节点子网网段
+     * @param NodeSubNetCIDR 节点子网网段
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get 集群id 
+     * @return ClusterID 集群id
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterID 集群id
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get pod状态 
+     * @return PodStatus pod状态
+     */
+    public String getPodStatus() {
+        return this.PodStatus;
+    }
+
+    /**
+     * Set pod状态
+     * @param PodStatus pod状态
+     */
+    public void setPodStatus(String PodStatus) {
+        this.PodStatus = PodStatus;
+    }
+
+    /**
+     * Get 节点唯一ID 
+     * @return NodeUniqueID 节点唯一ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 节点唯一ID
+     * @param NodeUniqueID 节点唯一ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 节点ID 
+     * @return NodeID 节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点ID
+     * @param NodeID 节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1586,9 +1816,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.SourceType != null) {
             this.SourceType = new Long(source.SourceType);
         }
-        if (source.PodName != null) {
-            this.PodName = new String(source.PodName);
-        }
         if (source.Tags != null) {
             this.Tags = new String[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -1612,6 +1839,9 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         }
         if (source.EventType != null) {
             this.EventType = new String(source.EventType);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -1673,6 +1903,36 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         if (source.FileModifyTime != null) {
             this.FileModifyTime = new String(source.FileModifyTime);
         }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodStatus != null) {
+            this.PodStatus = new String(source.PodStatus);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1705,7 +1965,6 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "ProcessStartAccount", this.ProcessStartAccount);
         this.setParamSimple(map, prefix + "ProcessFileAuthority", this.ProcessFileAuthority);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
-        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
         this.setParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
@@ -1713,6 +1972,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileMd5", this.FileMd5);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SubStatus", this.SubStatus);
         this.setParamSimple(map, prefix + "HostIP", this.HostIP);
@@ -1732,6 +1992,16 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
         this.setParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
         this.setParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodStatus", this.PodStatus);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

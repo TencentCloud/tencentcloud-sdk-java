@@ -541,6 +541,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *日志审计日志查询
+     * @param req DescribeLogsRequest
+     * @return DescribeLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询NAT访问控制列表
      * @param req DescribeNatAcRuleRequest
      * @return DescribeNatAcRuleResponse

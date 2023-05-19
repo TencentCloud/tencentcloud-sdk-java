@@ -217,6 +217,83 @@ VALIDATION: 参数非法
     private String [] CheckPlatform;
 
     /**
+    * 节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 节点名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * pod(实例)的名字
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * 节点所属集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 节点外网IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * 节点内网IP
+    */
+    @SerializedName("InnerIP")
+    @Expose
+    private String InnerIP;
+
+    /**
+    * 节点唯一ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 普通节点ID
+    */
+    @SerializedName("HostID")
+    @Expose
+    private String HostID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 文件名称 
      * @return FileName 文件名称
      */
@@ -740,6 +817,182 @@ VALIDATION: 参数非法
         this.CheckPlatform = CheckPlatform;
     }
 
+    /**
+     * Get 节点ID 
+     * @return NodeID 节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点ID
+     * @param NodeID 节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 节点名称 
+     * @return NodeName 节点名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点名称
+     * @param NodeName 节点名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get pod(实例)的名字 
+     * @return PodName pod(实例)的名字
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod(实例)的名字
+     * @param PodName pod(实例)的名字
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get 节点所属集群ID 
+     * @return ClusterID 节点所属集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 节点所属集群ID
+     * @param ClusterID 节点所属集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 节点外网IP 
+     * @return PublicIP 节点外网IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 节点外网IP
+     * @param PublicIP 节点外网IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get 节点内网IP 
+     * @return InnerIP 节点内网IP
+     */
+    public String getInnerIP() {
+        return this.InnerIP;
+    }
+
+    /**
+     * Set 节点内网IP
+     * @param InnerIP 节点内网IP
+     */
+    public void setInnerIP(String InnerIP) {
+        this.InnerIP = InnerIP;
+    }
+
+    /**
+     * Get 节点唯一ID 
+     * @return NodeUniqueID 节点唯一ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 节点唯一ID
+     * @param NodeUniqueID 节点唯一ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 普通节点ID 
+     * @return HostID 普通节点ID
+     */
+    public String getHostID() {
+        return this.HostID;
+    }
+
+    /**
+     * Set 普通节点ID
+     * @param HostID 普通节点ID
+     */
+    public void setHostID(String HostID) {
+        this.HostID = HostID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public VirusInfo() {
     }
 
@@ -814,6 +1067,39 @@ VALIDATION: 参数非法
                 this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
             }
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.InnerIP != null) {
+            this.InnerIP = new String(source.InnerIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.HostID != null) {
+            this.HostID = new String(source.HostID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -842,6 +1128,17 @@ VALIDATION: 参数非法
         this.setParamSimple(map, prefix + "MD5", this.MD5);
         this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "InnerIP", this.InnerIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "HostID", this.HostID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

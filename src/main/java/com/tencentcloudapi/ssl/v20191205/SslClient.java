@@ -199,6 +199,66 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *证书部署到云资源实例列表
+     * @param req DeployCertificateInstanceRequest
+     * @return DeployCertificateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployCertificateInstanceResponse DeployCertificateInstance(DeployCertificateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployCertificateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployCertificateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeployCertificateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云资源部署重试部署记录
+     * @param req DeployCertificateRecordRetryRequest
+     * @return DeployCertificateRecordRetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployCertificateRecordRetryResponse DeployCertificateRecordRetry(DeployCertificateRecordRetryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployCertificateRecordRetryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployCertificateRecordRetryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeployCertificateRecordRetry");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云资源部署一键回滚
+     * @param req DeployCertificateRecordRollbackRequest
+     * @return DeployCertificateRecordRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployCertificateRecordRollbackResponse DeployCertificateRecordRollback(DeployCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeployCertificateRecordRollbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeployCertificateRecordRollbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeployCertificateRecordRollback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeCertificate）用于获取证书信息。
      * @param req DescribeCertificateRequest
      * @return DescribeCertificateResponse
@@ -311,6 +371,306 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeployedResourcesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDeployedResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书apiGateway云资源部署实例列表
+     * @param req DescribeHostApiGatewayInstanceListRequest
+     * @return DescribeHostApiGatewayInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostApiGatewayInstanceListResponse DescribeHostApiGatewayInstanceList(DescribeHostApiGatewayInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostApiGatewayInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostApiGatewayInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostApiGatewayInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书cdn云资源部署实例列表
+     * @param req DescribeHostCdnInstanceListRequest
+     * @return DescribeHostCdnInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostCdnInstanceListResponse DescribeHostCdnInstanceList(DescribeHostCdnInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostCdnInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostCdnInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostCdnInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书clb云资源部署实例列表
+     * @param req DescribeHostClbInstanceListRequest
+     * @return DescribeHostClbInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostClbInstanceListResponse DescribeHostClbInstanceList(DescribeHostClbInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostClbInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostClbInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostClbInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书cos云资源部署实例列表
+     * @param req DescribeHostCosInstanceListRequest
+     * @return DescribeHostCosInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostCosInstanceListResponse DescribeHostCosInstanceList(DescribeHostCosInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostCosInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostCosInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostCosInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书ddos云资源部署实例列表
+     * @param req DescribeHostDdosInstanceListRequest
+     * @return DescribeHostDdosInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostDdosInstanceListResponse DescribeHostDdosInstanceList(DescribeHostDdosInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostDdosInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostDdosInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostDdosInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书云资源部署记录列表
+     * @param req DescribeHostDeployRecordRequest
+     * @return DescribeHostDeployRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostDeployRecordResponse DescribeHostDeployRecord(DescribeHostDeployRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostDeployRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostDeployRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostDeployRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书云资源部署记录详情列表
+     * @param req DescribeHostDeployRecordDetailRequest
+     * @return DescribeHostDeployRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostDeployRecordDetailResponse DescribeHostDeployRecordDetail(DescribeHostDeployRecordDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostDeployRecordDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostDeployRecordDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostDeployRecordDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书Lighthouse云资源部署实例列表
+     * @param req DescribeHostLighthouseInstanceListRequest
+     * @return DescribeHostLighthouseInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostLighthouseInstanceListResponse DescribeHostLighthouseInstanceList(DescribeHostLighthouseInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostLighthouseInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostLighthouseInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostLighthouseInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书live云资源部署实例列表
+     * @param req DescribeHostLiveInstanceListRequest
+     * @return DescribeHostLiveInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostLiveInstanceListResponse DescribeHostLiveInstanceList(DescribeHostLiveInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostLiveInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostLiveInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostLiveInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书EdgeOne云资源部署实例列表
+     * @param req DescribeHostTeoInstanceListRequest
+     * @return DescribeHostTeoInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostTeoInstanceListResponse DescribeHostTeoInstanceList(DescribeHostTeoInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostTeoInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostTeoInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostTeoInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书tke云资源部署实例列表
+     * @param req DescribeHostTkeInstanceListRequest
+     * @return DescribeHostTkeInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostTkeInstanceListResponse DescribeHostTkeInstanceList(DescribeHostTkeInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostTkeInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostTkeInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostTkeInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书云资源更新记录列表
+     * @param req DescribeHostUpdateRecordRequest
+     * @return DescribeHostUpdateRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUpdateRecordResponse DescribeHostUpdateRecord(DescribeHostUpdateRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostUpdateRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostUpdateRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostUpdateRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书云资源更新记录详情列表
+     * @param req DescribeHostUpdateRecordDetailRequest
+     * @return DescribeHostUpdateRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetail(DescribeHostUpdateRecordDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostUpdateRecordDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostUpdateRecordDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostUpdateRecordDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书Vod云资源部署实例列表
+     * @param req DescribeHostVodInstanceListRequest
+     * @return DescribeHostVodInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostVodInstanceListResponse DescribeHostVodInstanceList(DescribeHostVodInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostVodInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostVodInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostVodInstanceList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询证书waf云资源部署实例列表
+     * @param req DescribeHostWafInstanceListRequest
+     * @return DescribeHostWafInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostWafInstanceListResponse DescribeHostWafInstanceList(DescribeHostWafInstanceListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostWafInstanceListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostWafInstanceListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostWafInstanceList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -551,6 +911,66 @@ public class SslClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SubmitCertificateInformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SubmitCertificateInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *一键更新旧证书资源
+     * @param req UpdateCertificateInstanceRequest
+     * @return UpdateCertificateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateInstanceResponse UpdateCertificateInstance(UpdateCertificateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCertificateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCertificateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCertificateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云资源更新重试部署记录
+     * @param req UpdateCertificateRecordRetryRequest
+     * @return UpdateCertificateRecordRetryResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateRecordRetryResponse UpdateCertificateRecordRetry(UpdateCertificateRecordRetryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCertificateRecordRetryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCertificateRecordRetryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCertificateRecordRetry");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *云资源更新一键回滚
+     * @param req UpdateCertificateRecordRollbackRequest
+     * @return UpdateCertificateRecordRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCertificateRecordRollbackResponse UpdateCertificateRecordRollback(UpdateCertificateRecordRollbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCertificateRecordRollbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCertificateRecordRollbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCertificateRecordRollback");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

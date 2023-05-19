@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeVulDefencePluginRequest extends AbstractModel{
 
     /**
-    * 主机HostID即quuid
+    * 主机HostID或超级节点UniqueId
     */
     @SerializedName("HostID")
     @Expose
@@ -45,23 +45,25 @@ public class DescribeVulDefencePluginRequest extends AbstractModel{
 
     /**
     * 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
     */
     @SerializedName("Filters")
     @Expose
     private RunTimeFilters [] Filters;
 
     /**
-     * Get 主机HostID即quuid 
-     * @return HostID 主机HostID即quuid
+     * Get 主机HostID或超级节点UniqueId 
+     * @return HostID 主机HostID或超级节点UniqueId
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set 主机HostID即quuid
-     * @param HostID 主机HostID即quuid
+     * Set 主机HostID或超级节点UniqueId
+     * @param HostID 主机HostID或超级节点UniqueId
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
@@ -101,9 +103,13 @@ public class DescribeVulDefencePluginRequest extends AbstractModel{
 
     /**
      * Get 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li> 
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li> 
      * @return Filters 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
@@ -111,9 +117,13 @@ public class DescribeVulDefencePluginRequest extends AbstractModel{
 
     /**
      * Set 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
      * @param Filters 过滤条件。
-<li>Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT</li>
+<li>
+Status- String - 是否必填：否 -插件运行状态：注入中:INJECTING，注入成功：SUCCESS，注入失败：FAIL，插件超时：TIMEOUT，插件退出：QUIT
+</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

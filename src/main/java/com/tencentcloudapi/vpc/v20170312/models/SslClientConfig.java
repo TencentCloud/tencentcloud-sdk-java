@@ -51,6 +51,13 @@ public class SslClientConfig extends AbstractModel{
     private String SslVpnCert;
 
     /**
+    * SSL-VPN-CLIENT 实例ID。
+    */
+    @SerializedName("SslVpnClientId")
+    @Expose
+    private String SslVpnClientId;
+
+    /**
      * Get 客户端配置 
      * @return SslVpnClientConfiguration 客户端配置
      */
@@ -114,6 +121,22 @@ public class SslClientConfig extends AbstractModel{
         this.SslVpnCert = SslVpnCert;
     }
 
+    /**
+     * Get SSL-VPN-CLIENT 实例ID。 
+     * @return SslVpnClientId SSL-VPN-CLIENT 实例ID。
+     */
+    public String getSslVpnClientId() {
+        return this.SslVpnClientId;
+    }
+
+    /**
+     * Set SSL-VPN-CLIENT 实例ID。
+     * @param SslVpnClientId SSL-VPN-CLIENT 实例ID。
+     */
+    public void setSslVpnClientId(String SslVpnClientId) {
+        this.SslVpnClientId = SslVpnClientId;
+    }
+
     public SslClientConfig() {
     }
 
@@ -134,6 +157,9 @@ public class SslClientConfig extends AbstractModel{
         if (source.SslVpnCert != null) {
             this.SslVpnCert = new String(source.SslVpnCert);
         }
+        if (source.SslVpnClientId != null) {
+            this.SslVpnClientId = new String(source.SslVpnClientId);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class SslClientConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "SslVpnRootCert", this.SslVpnRootCert);
         this.setParamSimple(map, prefix + "SslVpnKey", this.SslVpnKey);
         this.setParamSimple(map, prefix + "SslVpnCert", this.SslVpnCert);
+        this.setParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
 
     }
 }

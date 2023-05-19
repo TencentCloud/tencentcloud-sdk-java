@@ -79,6 +79,13 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
     private String Cname;
 
     /**
+    * 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+    */
+    @SerializedName("Export")
+    @Expose
+    private Boolean Export;
+
+    /**
      * Get 大禹子产品代号（bgpip表示高防IP） 
      * @return Business 大禹子产品代号（bgpip表示高防IP）
      */
@@ -206,6 +213,22 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
         this.Cname = Cname;
     }
 
+    /**
+     * Get 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则 
+     * @return Export 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+     */
+    public Boolean getExport() {
+        return this.Export;
+    }
+
+    /**
+     * Set 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+     * @param Export 默认为false，当为true时，将不对各个规则做策略检查，直接导出所有规则
+     */
+    public void setExport(Boolean Export) {
+        this.Export = Export;
+    }
+
     public DescribeNewL7RulesRequest() {
     }
 
@@ -244,6 +267,9 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
         if (source.Cname != null) {
             this.Cname = new String(source.Cname);
         }
+        if (source.Export != null) {
+            this.Export = new Boolean(source.Export);
+        }
     }
 
 
@@ -259,6 +285,7 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArraySimple(map, prefix + "ProtocolList.", this.ProtocolList);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "Export", this.Export);
 
     }
 }

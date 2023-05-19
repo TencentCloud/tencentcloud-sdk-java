@@ -200,6 +200,69 @@ public class RiskSyscallEventInfo extends AbstractModel{
     private String ContainerStatus;
 
     /**
+    * 节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 集群I'D
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * 节点唯一id
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 节点公网ip
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * 节点id
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * uuid
+    */
+    @SerializedName("HostID")
+    @Expose
+    private String HostID;
+
+    /**
+    * 节点内网ip
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 进程名称 
      * @return ProcessName 进程名称
      */
@@ -643,6 +706,150 @@ public class RiskSyscallEventInfo extends AbstractModel{
         this.ContainerStatus = ContainerStatus;
     }
 
+    /**
+     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 集群I'D 
+     * @return ClusterID 集群I'D
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群I'D
+     * @param ClusterID 集群I'D
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get 节点唯一id 
+     * @return NodeUniqueID 节点唯一id
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 节点唯一id
+     * @param NodeUniqueID 节点唯一id
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 节点公网ip 
+     * @return PublicIP 节点公网ip
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 节点公网ip
+     * @param PublicIP 节点公网ip
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get 节点id 
+     * @return NodeID 节点id
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点id
+     * @param NodeID 节点id
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get uuid 
+     * @return HostID uuid
+     */
+    public String getHostID() {
+        return this.HostID;
+    }
+
+    /**
+     * Set uuid
+     * @param HostID uuid
+     */
+    public void setHostID(String HostID) {
+        this.HostID = HostID;
+    }
+
+    /**
+     * Get 节点内网ip 
+     * @return HostIP 节点内网ip
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set 节点内网ip
+     * @param HostIP 节点内网ip
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public RiskSyscallEventInfo() {
     }
 
@@ -717,6 +924,33 @@ public class RiskSyscallEventInfo extends AbstractModel{
         if (source.ContainerStatus != null) {
             this.ContainerStatus = new String(source.ContainerStatus);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.HostID != null) {
+            this.HostID = new String(source.HostID);
+        }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -746,6 +980,15 @@ public class RiskSyscallEventInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "HostID", this.HostID);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

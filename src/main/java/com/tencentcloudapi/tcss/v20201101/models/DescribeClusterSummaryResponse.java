@@ -100,6 +100,13 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     private Long NotImportedClusterCount;
 
     /**
+    * eks集群数量
+    */
+    @SerializedName("ServerlessClusterCount")
+    @Expose
+    private Long ServerlessClusterCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -283,6 +290,22 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get eks集群数量 
+     * @return ServerlessClusterCount eks集群数量
+     */
+    public Long getServerlessClusterCount() {
+        return this.ServerlessClusterCount;
+    }
+
+    /**
+     * Set eks集群数量
+     * @param ServerlessClusterCount eks集群数量
+     */
+    public void setServerlessClusterCount(Long ServerlessClusterCount) {
+        this.ServerlessClusterCount = ServerlessClusterCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -339,6 +362,9 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         if (source.NotImportedClusterCount != null) {
             this.NotImportedClusterCount = new Long(source.NotImportedClusterCount);
         }
+        if (source.ServerlessClusterCount != null) {
+            this.ServerlessClusterCount = new Long(source.ServerlessClusterCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -360,6 +386,7 @@ public class DescribeClusterSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
         this.setParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
         this.setParamSimple(map, prefix + "NotImportedClusterCount", this.NotImportedClusterCount);
+        this.setParamSimple(map, prefix + "ServerlessClusterCount", this.ServerlessClusterCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

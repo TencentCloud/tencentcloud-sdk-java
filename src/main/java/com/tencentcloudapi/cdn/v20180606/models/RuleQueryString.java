@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class RuleQueryString extends AbstractModel{
 
     /**
-    * on | off CacheKey是否由QueryString组成
+    * 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -47,9 +50,15 @@ public class RuleQueryString extends AbstractModel{
     private String Value;
 
     /**
-     * Get on | off CacheKey是否由QueryString组成
+     * Get 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch on | off CacheKey是否由QueryString组成
+     * @return Switch 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -57,9 +66,15 @@ public class RuleQueryString extends AbstractModel{
     }
 
     /**
-     * Set on | off CacheKey是否由QueryString组成
+     * Set 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch on | off CacheKey是否由QueryString组成
+     * @param Switch 路径保留参数配置开关，取值有：
+on：开启，CacheKey由QueryString组成
+off：关闭，CacheKey不由QueryString组成
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

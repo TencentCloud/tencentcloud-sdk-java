@@ -25,7 +25,11 @@ public class DescribeVulDefenceHostRequest extends AbstractModel{
     /**
     * 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -62,10 +66,18 @@ public class DescribeVulDefenceHostRequest extends AbstractModel{
     /**
      * Get 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li> 
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li> 
      * @return Filters 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
      */
     public RunTimeFilters [] getFilters() {
         return this.Filters;
@@ -74,10 +86,18 @@ public class DescribeVulDefenceHostRequest extends AbstractModel{
     /**
      * Set 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
      * @param Filters 过滤条件。
 <li>Status- String - 是否必填：否 - 插件状态，正常：SUCCESS，异常：FAIL， NO_DEFENCE:未防御</li>
-<li>KeyWords- string - 是否必填：否 - 主机名称/IP。</li>
+<li>HostName- String - 是否必填：否 - 主机名称/超级节点名称</li>
+<li>HostIP- String - 是否必填：否 - 主机IP</li>
+<li>NodeType- String - 是否必填：否 - 节点类型</li>
+<li>HostName- String - 是否必填：否 - 超级节点名称</li>
+<li>NodeSubNetCIDR- String - 是否必填：否 - 超级节点CIDR</li>
      */
     public void setFilters(RunTimeFilters [] Filters) {
         this.Filters = Filters;

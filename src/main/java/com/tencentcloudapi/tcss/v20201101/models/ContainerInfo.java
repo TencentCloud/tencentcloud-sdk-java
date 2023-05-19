@@ -171,6 +171,55 @@ public class ContainerInfo extends AbstractModel{
     private String IsolateTime;
 
     /**
+    * 超级节点id
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * podip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * pod名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 超级节点唯一id
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 所属Pod的CPU
+    */
+    @SerializedName("PodCpu")
+    @Expose
+    private Long PodCpu;
+
+    /**
+    * 所属Pod的内存
+    */
+    @SerializedName("PodMem")
+    @Expose
+    private Long PodMem;
+
+    /**
      * Get 容器id 
      * @return ContainerID 容器id
      */
@@ -522,6 +571,118 @@ public class ContainerInfo extends AbstractModel{
         this.IsolateTime = IsolateTime;
     }
 
+    /**
+     * Get 超级节点id 
+     * @return NodeID 超级节点id
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 超级节点id
+     * @param NodeID 超级节点id
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get podip 
+     * @return PodIP podip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set podip
+     * @param PodIP podip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get pod名称 
+     * @return PodName pod名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod名称
+     * @param PodName pod名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get 节点类型:节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型:节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 超级节点唯一id 
+     * @return NodeUniqueID 超级节点唯一id
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一id
+     * @param NodeUniqueID 超级节点唯一id
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 所属Pod的CPU 
+     * @return PodCpu 所属Pod的CPU
+     */
+    public Long getPodCpu() {
+        return this.PodCpu;
+    }
+
+    /**
+     * Set 所属Pod的CPU
+     * @param PodCpu 所属Pod的CPU
+     */
+    public void setPodCpu(Long PodCpu) {
+        this.PodCpu = PodCpu;
+    }
+
+    /**
+     * Get 所属Pod的内存 
+     * @return PodMem 所属Pod的内存
+     */
+    public Long getPodMem() {
+        return this.PodMem;
+    }
+
+    /**
+     * Set 所属Pod的内存
+     * @param PodMem 所属Pod的内存
+     */
+    public void setPodMem(Long PodMem) {
+        this.PodMem = PodMem;
+    }
+
     public ContainerInfo() {
     }
 
@@ -590,6 +751,27 @@ public class ContainerInfo extends AbstractModel{
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PodCpu != null) {
+            this.PodCpu = new Long(source.PodCpu);
+        }
+        if (source.PodMem != null) {
+            this.PodMem = new Long(source.PodMem);
+        }
     }
 
 
@@ -617,6 +799,13 @@ public class ContainerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
         this.setParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PodCpu", this.PodCpu);
+        this.setParamSimple(map, prefix + "PodMem", this.PodMem);
 
     }
 }

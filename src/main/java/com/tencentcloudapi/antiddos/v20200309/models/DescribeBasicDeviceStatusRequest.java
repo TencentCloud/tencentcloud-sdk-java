@@ -30,6 +30,20 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel{
     private String [] IpList;
 
     /**
+    * 域名化资源传id
+    */
+    @SerializedName("IdList")
+    @Expose
+    private String [] IdList;
+
+    /**
+    * 地域名称
+    */
+    @SerializedName("FilterRegion")
+    @Expose
+    private Long FilterRegion;
+
+    /**
      * Get IP 资源列表 
      * @return IpList IP 资源列表
      */
@@ -43,6 +57,38 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel{
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
+    }
+
+    /**
+     * Get 域名化资源传id 
+     * @return IdList 域名化资源传id
+     */
+    public String [] getIdList() {
+        return this.IdList;
+    }
+
+    /**
+     * Set 域名化资源传id
+     * @param IdList 域名化资源传id
+     */
+    public void setIdList(String [] IdList) {
+        this.IdList = IdList;
+    }
+
+    /**
+     * Get 地域名称 
+     * @return FilterRegion 地域名称
+     */
+    public Long getFilterRegion() {
+        return this.FilterRegion;
+    }
+
+    /**
+     * Set 地域名称
+     * @param FilterRegion 地域名称
+     */
+    public void setFilterRegion(Long FilterRegion) {
+        this.FilterRegion = FilterRegion;
     }
 
     public DescribeBasicDeviceStatusRequest() {
@@ -59,6 +105,15 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel{
                 this.IpList[i] = new String(source.IpList[i]);
             }
         }
+        if (source.IdList != null) {
+            this.IdList = new String[source.IdList.length];
+            for (int i = 0; i < source.IdList.length; i++) {
+                this.IdList[i] = new String(source.IdList[i]);
+            }
+        }
+        if (source.FilterRegion != null) {
+            this.FilterRegion = new Long(source.FilterRegion);
+        }
     }
 
 
@@ -67,6 +122,8 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
+        this.setParamArraySimple(map, prefix + "IdList.", this.IdList);
+        this.setParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
 
     }
 }

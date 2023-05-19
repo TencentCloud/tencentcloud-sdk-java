@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DownloadVpnGatewaySslClientCertResponse extends AbstractModel{
 
     /**
-    * 无
+    * SSL-VPN 客户端配置。
     */
     @SerializedName("SslClientConfigsSet")
     @Expose
     private String SslClientConfigsSet;
 
     /**
-    * SSL-VPN client配置
+    * SSL-VPN 客户端配置。
     */
     @SerializedName("SslClientConfig")
     @Expose
     private SslClientConfig [] SslClientConfig;
 
     /**
-    * 是否鉴权成功 只有传入SamlToken 才生效
+    * 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
     */
     @SerializedName("Authenticated")
     @Expose
@@ -51,48 +51,48 @@ public class DownloadVpnGatewaySslClientCertResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return SslClientConfigsSet 无
+     * Get SSL-VPN 客户端配置。 
+     * @return SslClientConfigsSet SSL-VPN 客户端配置。
      */
     public String getSslClientConfigsSet() {
         return this.SslClientConfigsSet;
     }
 
     /**
-     * Set 无
-     * @param SslClientConfigsSet 无
+     * Set SSL-VPN 客户端配置。
+     * @param SslClientConfigsSet SSL-VPN 客户端配置。
      */
     public void setSslClientConfigsSet(String SslClientConfigsSet) {
         this.SslClientConfigsSet = SslClientConfigsSet;
     }
 
     /**
-     * Get SSL-VPN client配置 
-     * @return SslClientConfig SSL-VPN client配置
+     * Get SSL-VPN 客户端配置。 
+     * @return SslClientConfig SSL-VPN 客户端配置。
      */
     public SslClientConfig [] getSslClientConfig() {
         return this.SslClientConfig;
     }
 
     /**
-     * Set SSL-VPN client配置
-     * @param SslClientConfig SSL-VPN client配置
+     * Set SSL-VPN 客户端配置。
+     * @param SslClientConfig SSL-VPN 客户端配置。
      */
     public void setSslClientConfig(SslClientConfig [] SslClientConfig) {
         this.SslClientConfig = SslClientConfig;
     }
 
     /**
-     * Get 是否鉴权成功 只有传入SamlToken 才生效 
-     * @return Authenticated 是否鉴权成功 只有传入SamlToken 才生效
+     * Get 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。 
+     * @return Authenticated 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
      */
     public Long getAuthenticated() {
         return this.Authenticated;
     }
 
     /**
-     * Set 是否鉴权成功 只有传入SamlToken 才生效
-     * @param Authenticated 是否鉴权成功 只有传入SamlToken 才生效
+     * Set 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
+     * @param Authenticated 是否鉴权成功 只有传入SamlToken 才生效，1为成功，0为失败。
      */
     public void setAuthenticated(Long Authenticated) {
         this.Authenticated = Authenticated;

@@ -79,6 +79,48 @@ public class VulAffectedContainerInfo extends AbstractModel{
     private String PublicIP;
 
     /**
+    * 集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 节点类型[NORMAL:普通节点|SUPER:超级节点]
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 超级节点唯一ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 超级节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 超级节点名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get 内网IP 
      * @return HostIP 内网IP
      */
@@ -206,6 +248,102 @@ public class VulAffectedContainerInfo extends AbstractModel{
         this.PublicIP = PublicIP;
     }
 
+    /**
+     * Get 集群ID 
+     * @return ClusterID 集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterID 集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 节点类型[NORMAL:普通节点|SUPER:超级节点] 
+     * @return NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 超级节点唯一ID 
+     * @return NodeUniqueID 超级节点唯一ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一ID
+     * @param NodeUniqueID 超级节点唯一ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 超级节点ID 
+     * @return NodeID 超级节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 超级节点ID
+     * @param NodeID 超级节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 超级节点名称 
+     * @return NodeName 超级节点名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 超级节点名称
+     * @param NodeName 超级节点名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public VulAffectedContainerInfo() {
     }
 
@@ -238,6 +376,24 @@ public class VulAffectedContainerInfo extends AbstractModel{
         if (source.PublicIP != null) {
             this.PublicIP = new String(source.PublicIP);
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -253,6 +409,12 @@ public class VulAffectedContainerInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "HostID", this.HostID);
         this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

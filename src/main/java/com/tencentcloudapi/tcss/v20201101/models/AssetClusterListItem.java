@@ -55,12 +55,34 @@ CSR_DEL:已经删除
 
     /**
     * 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
+
+    /**
+    * 集群版本
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
+    * 内存量
+    */
+    @SerializedName("MemLimit")
+    @Expose
+    private Long MemLimit;
+
+    /**
+    * cpu
+    */
+    @SerializedName("CpuLimit")
+    @Expose
+    private Long CpuLimit;
 
     /**
      * Get 集群ID 
@@ -140,11 +162,13 @@ CSR_DEL:已经删除
 
     /**
      * Get 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群 
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群; 
      * @return ClusterType 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -152,14 +176,64 @@ CT_USER_CREATE: 用户自建集群
 
     /**
      * Set 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
      * @param ClusterType 集群类型:
-CT_TKE: TKE集群
-CT_USER_CREATE: 用户自建集群
+CT_TKE:TKE集群;
+CT_USER_CREATE:用户自建集群;
+CT_TKE_SERVERLESS:TKE Serverless集群;
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 集群版本 
+     * @return ClusterVersion 集群版本
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set 集群版本
+     * @param ClusterVersion 集群版本
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
+     * Get 内存量 
+     * @return MemLimit 内存量
+     */
+    public Long getMemLimit() {
+        return this.MemLimit;
+    }
+
+    /**
+     * Set 内存量
+     * @param MemLimit 内存量
+     */
+    public void setMemLimit(Long MemLimit) {
+        this.MemLimit = MemLimit;
+    }
+
+    /**
+     * Get cpu 
+     * @return CpuLimit cpu
+     */
+    public Long getCpuLimit() {
+        return this.CpuLimit;
+    }
+
+    /**
+     * Set cpu
+     * @param CpuLimit cpu
+     */
+    public void setCpuLimit(Long CpuLimit) {
+        this.CpuLimit = CpuLimit;
     }
 
     public AssetClusterListItem() {
@@ -185,6 +259,15 @@ CT_USER_CREATE: 用户自建集群
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.MemLimit != null) {
+            this.MemLimit = new Long(source.MemLimit);
+        }
+        if (source.CpuLimit != null) {
+            this.CpuLimit = new Long(source.CpuLimit);
+        }
     }
 
 
@@ -197,6 +280,9 @@ CT_USER_CREATE: 用户自建集群
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BindRuleName", this.BindRuleName);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+        this.setParamSimple(map, prefix + "MemLimit", this.MemLimit);
+        this.setParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
 
     }
 }

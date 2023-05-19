@@ -2306,7 +2306,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *删除SSL-VPN-CLIENT
+     *本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
      * @param req DeleteVpnGatewaySslClientRequest
      * @return DeleteVpnGatewaySslClientResponse
      * @throws TencentCloudSDKException
@@ -4402,7 +4402,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *下载SSL-VPN-CLIENT 客户端证书
+     *本接口（DownloadVpnGatewaySslClientCert）用于下载SSL-VPN-CLIENT 客户端证书。
      * @param req DownloadVpnGatewaySslClientCertRequest
      * @return DownloadVpnGatewaySslClientCertResponse
      * @throws TencentCloudSDKException
@@ -4544,7 +4544,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *启用SSL-VPN-CLIENT 证书
+     *本接口（EnableVpnGatewaySslClientCert）用于启用SSL-VPN-CLIENT 证书。
      * @param req EnableVpnGatewaySslClientCertRequest
      * @return EnableVpnGatewaySslClientCertResponse
      * @throws TencentCloudSDKException

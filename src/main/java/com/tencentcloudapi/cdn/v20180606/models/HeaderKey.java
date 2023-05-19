@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class HeaderKey extends AbstractModel{
 
     /**
-    * 是否组成Cachekey
+    * 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Switch")
@@ -39,9 +41,13 @@ public class HeaderKey extends AbstractModel{
     private String Value;
 
     /**
-     * Get 是否组成Cachekey
+     * Get 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 是否组成Cachekey
+     * @return Switch 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitch() {
@@ -49,9 +55,13 @@ public class HeaderKey extends AbstractModel{
     }
 
     /**
-     * Set 是否组成Cachekey
+     * Set 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 是否组成Cachekey
+     * @param Switch 组成Cachekey配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitch(String Switch) {

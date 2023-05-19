@@ -121,6 +121,41 @@ public class PortInfo extends AbstractModel{
     private String PublicIp;
 
     /**
+    * 节点id
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * podip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * pod名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * 节点类型
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 超级节点唯一id
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
      * Get 类型 
      * @return Type 类型
      */
@@ -344,6 +379,86 @@ public class PortInfo extends AbstractModel{
         this.PublicIp = PublicIp;
     }
 
+    /**
+     * Get 节点id 
+     * @return NodeID 节点id
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点id
+     * @param NodeID 节点id
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get podip 
+     * @return PodIP podip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set podip
+     * @param PodIP podip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get pod名称 
+     * @return PodName pod名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod名称
+     * @param PodName pod名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get 节点类型 
+     * @return NodeType 节点类型
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型
+     * @param NodeType 节点类型
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 超级节点唯一id 
+     * @return NodeUniqueID 超级节点唯一id
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一id
+     * @param NodeUniqueID 超级节点唯一id
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
     public PortInfo() {
     }
 
@@ -394,6 +509,21 @@ public class PortInfo extends AbstractModel{
         if (source.PublicIp != null) {
             this.PublicIp = new String(source.PublicIp);
         }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
     }
 
 
@@ -415,6 +545,11 @@ public class PortInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RunAs", this.RunAs);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
 
     }
 }

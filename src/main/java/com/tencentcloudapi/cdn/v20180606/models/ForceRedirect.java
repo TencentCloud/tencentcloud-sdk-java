@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ForceRedirect extends AbstractModel{
 
     /**
-    * 访问强制跳转配置开关
+    * 访问强制跳转配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,11 +60,11 @@ https：强制 https 跳转
     private String CarryHeaders;
 
     /**
-     * Get 访问强制跳转配置开关
+     * Get 访问强制跳转配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 访问强制跳转配置开关
+     * @return Switch 访问强制跳转配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -74,11 +74,11 @@ off：关闭
     }
 
     /**
-     * Set 访问强制跳转配置开关
+     * Set 访问强制跳转配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 访问强制跳转配置开关
+     * @param Switch 访问强制跳转配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

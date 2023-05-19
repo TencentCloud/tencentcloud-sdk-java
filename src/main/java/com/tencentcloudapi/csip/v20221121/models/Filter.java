@@ -37,14 +37,14 @@ public class Filter extends AbstractModel{
     private Long Offset;
 
     /**
-    * 需排序的字段
+    * 排序采用升序还是降序 升:asc 降 desc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序采用升序还是降序 升:asc 降 desc
+    * 需排序的字段
     */
     @SerializedName("By")
     @Expose
@@ -104,32 +104,32 @@ public class Filter extends AbstractModel{
     }
 
     /**
-     * Get 需排序的字段 
-     * @return Order 需排序的字段
+     * Get 排序采用升序还是降序 升:asc 降 desc 
+     * @return Order 排序采用升序还是降序 升:asc 降 desc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 需排序的字段
-     * @param Order 需排序的字段
+     * Set 排序采用升序还是降序 升:asc 降 desc
+     * @param Order 排序采用升序还是降序 升:asc 降 desc
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序采用升序还是降序 升:asc 降 desc 
-     * @return By 排序采用升序还是降序 升:asc 降 desc
+     * Get 需排序的字段 
+     * @return By 需排序的字段
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序采用升序还是降序 升:asc 降 desc
-     * @param By 排序采用升序还是降序 升:asc 降 desc
+     * Set 需排序的字段
+     * @param By 需排序的字段
      */
     public void setBy(String By) {
         this.By = By;

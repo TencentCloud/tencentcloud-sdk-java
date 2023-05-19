@@ -47,6 +47,16 @@ k8sApi: k8s_api
     private String [] UnBindList;
 
     /**
+    * 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
      * Get 日志类型
 bash日志: container_bash
 容器启动: container_launch
@@ -106,6 +116,34 @@ k8sApi: k8s_api
         this.UnBindList = UnBindList;
     }
 
+    /**
+     * Get 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+ 
+     * @return NodeType 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+     * @param NodeType 节点类型:
+NORMAL: 普通节点(默认值)
+SUPER: 超级节点
+
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
     public ModifySecLogJoinObjectsRequest() {
     }
 
@@ -129,6 +167,9 @@ k8sApi: k8s_api
                 this.UnBindList[i] = new String(source.UnBindList[i]);
             }
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
     }
 
 
@@ -139,6 +180,7 @@ k8sApi: k8s_api
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamArraySimple(map, prefix + "BindList.", this.BindList);
         this.setParamArraySimple(map, prefix + "UnBindList.", this.UnBindList);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
 
     }
 }

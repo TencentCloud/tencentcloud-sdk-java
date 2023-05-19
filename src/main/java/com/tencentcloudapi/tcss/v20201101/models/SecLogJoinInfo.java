@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class SecLogJoinInfo extends AbstractModel{
 
     /**
-    * 已接入数量
+    * 已接入普通主机数量
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
+
+    /**
+    * 已接入超级节点数量
+    */
+    @SerializedName("SuperNodeCount")
+    @Expose
+    private Long SuperNodeCount;
 
     /**
     * 是否已接入(true:已接入 false:未接入)
@@ -48,19 +55,35 @@ k8sApi: "k8s_api"
     private String LogType;
 
     /**
-     * Get 已接入数量 
-     * @return Count 已接入数量
+     * Get 已接入普通主机数量 
+     * @return Count 已接入普通主机数量
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set 已接入数量
-     * @param Count 已接入数量
+     * Set 已接入普通主机数量
+     * @param Count 已接入普通主机数量
      */
     public void setCount(Long Count) {
         this.Count = Count;
+    }
+
+    /**
+     * Get 已接入超级节点数量 
+     * @return SuperNodeCount 已接入超级节点数量
+     */
+    public Long getSuperNodeCount() {
+        return this.SuperNodeCount;
+    }
+
+    /**
+     * Set 已接入超级节点数量
+     * @param SuperNodeCount 已接入超级节点数量
+     */
+    public void setSuperNodeCount(Long SuperNodeCount) {
+        this.SuperNodeCount = SuperNodeCount;
     }
 
     /**
@@ -122,6 +145,9 @@ k8sApi: "k8s_api"
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.SuperNodeCount != null) {
+            this.SuperNodeCount = new Long(source.SuperNodeCount);
+        }
         if (source.IsJoined != null) {
             this.IsJoined = new Boolean(source.IsJoined);
         }
@@ -136,6 +162,7 @@ k8sApi: "k8s_api"
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "SuperNodeCount", this.SuperNodeCount);
         this.setParamSimple(map, prefix + "IsJoined", this.IsJoined);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
 

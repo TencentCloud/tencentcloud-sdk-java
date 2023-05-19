@@ -30,7 +30,7 @@ public class TextEmbellishRequest extends AbstractModel{
     private String Text;
 
     /**
-    * 待润色文本的语言类型，支持语言列表
+    * 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
     */
@@ -47,7 +47,7 @@ en：英文
     private Long Number;
 
     /**
-    * 控制润色类型，类型列表
+    * 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
@@ -76,10 +76,10 @@ a2m：从古文改写为现代文
     }
 
     /**
-     * Get 待润色文本的语言类型，支持语言列表
+     * Get 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文 
-     * @return SourceLang 待润色文本的语言类型，支持语言列表
+     * @return SourceLang 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -88,10 +88,10 @@ en：英文
     }
 
     /**
-     * Set 待润色文本的语言类型，支持语言列表
+     * Set 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
-     * @param SourceLang 待润色文本的语言类型，支持语言列表
+     * @param SourceLang 待润色文本的语言类型，支持语言如下：
 zh：中文
 en：英文
      */
@@ -120,14 +120,14 @@ en：英文
     }
 
     /**
-     * Get 控制润色类型，类型列表
+     * Get 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
 m2a：从现代文改写为古文
 a2m：从古文改写为现代文
 默认为both。 
-     * @return Style 控制润色类型，类型列表
+     * @return Style 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
@@ -140,14 +140,14 @@ a2m：从古文改写为现代文
     }
 
     /**
-     * Set 控制润色类型，类型列表
+     * Set 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写
 m2a：从现代文改写为古文
 a2m：从古文改写为现代文
 默认为both。
-     * @param Style 控制润色类型，类型列表
+     * @param Style 控制润色类型，类型如下：
 both：同时返回改写和扩写
 expansion：扩写
 rewriting：改写

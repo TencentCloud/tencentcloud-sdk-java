@@ -58,6 +58,14 @@ public class BoundIpInfo extends AbstractModel{
     private Long IspCode;
 
     /**
+    * 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -137,6 +145,26 @@ public class BoundIpInfo extends AbstractModel{
         this.IspCode = IspCode;
     }
 
+    /**
+     * Get 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名化资产对应的域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public BoundIpInfo() {
     }
 
@@ -160,6 +188,9 @@ public class BoundIpInfo extends AbstractModel{
         if (source.IspCode != null) {
             this.IspCode = new Long(source.IspCode);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class BoundIpInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "IspCode", this.IspCode);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

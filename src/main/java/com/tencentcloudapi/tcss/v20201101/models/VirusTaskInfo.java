@@ -51,14 +51,14 @@ public class VirusTaskInfo extends AbstractModel{
     private String ImageId;
 
     /**
-    * 主机名称
+    * 节点名
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * 主机ip
+    * 节点内网ip
     */
     @SerializedName("HostIp")
     @Expose
@@ -127,6 +127,27 @@ SEND_CANCEL_SUCCESSED:下发成功
     private String ErrorMsg;
 
     /**
+    * 节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 节点外网IP
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * 节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
      * Get 容器名称 
      * @return ContainerName 容器名称
      */
@@ -191,32 +212,32 @@ SEND_CANCEL_SUCCESSED:下发成功
     }
 
     /**
-     * Get 主机名称 
-     * @return HostName 主机名称
+     * Get 节点名 
+     * @return HostName 节点名
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 主机名称
-     * @param HostName 主机名称
+     * Set 节点名
+     * @param HostName 节点名
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机ip 
-     * @return HostIp 主机ip
+     * Get 节点内网ip 
+     * @return HostIp 节点内网ip
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set 主机ip
-     * @param HostIp 主机ip
+     * Set 节点内网ip
+     * @param HostIp 节点内网ip
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
@@ -398,6 +419,54 @@ SEND_CANCEL_SUCCESSED:下发成功
         this.ErrorMsg = ErrorMsg;
     }
 
+    /**
+     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 节点外网IP 
+     * @return PublicIP 节点外网IP
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 节点外网IP
+     * @param PublicIP 节点外网IP
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get 节点ID 
+     * @return NodeID 节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点ID
+     * @param NodeID 节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
     public VirusTaskInfo() {
     }
 
@@ -442,6 +511,15 @@ SEND_CANCEL_SUCCESSED:下发成功
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
     }
 
 
@@ -461,6 +539,9 @@ SEND_CANCEL_SUCCESSED:下发成功
         this.setParamSimple(map, prefix + "RiskCnt", this.RiskCnt);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
 
     }
 }

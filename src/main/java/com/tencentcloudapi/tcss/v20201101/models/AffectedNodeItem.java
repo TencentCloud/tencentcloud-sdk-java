@@ -86,6 +86,13 @@ public class AffectedNodeItem extends AbstractModel{
     private String VerifyInfo;
 
     /**
+    * 节点名称
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -229,6 +236,22 @@ public class AffectedNodeItem extends AbstractModel{
         this.VerifyInfo = VerifyInfo;
     }
 
+    /**
+     * Get 节点名称 
+     * @return NodeName 节点名称
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set 节点名称
+     * @param NodeName 节点名称
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public AffectedNodeItem() {
     }
 
@@ -264,6 +287,9 @@ public class AffectedNodeItem extends AbstractModel{
         if (source.VerifyInfo != null) {
             this.VerifyInfo = new String(source.VerifyInfo);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class AffectedNodeItem extends AbstractModel{
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

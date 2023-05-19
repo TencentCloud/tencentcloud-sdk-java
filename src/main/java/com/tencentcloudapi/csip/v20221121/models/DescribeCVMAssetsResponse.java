@@ -103,6 +103,14 @@ public class DescribeCVMAssetsResponse extends AbstractModel{
     private FilterDataObject [] ZoneList;
 
     /**
+    * os列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OsList")
+    @Expose
+    private FilterDataObject [] OsList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -310,6 +318,26 @@ public class DescribeCVMAssetsResponse extends AbstractModel{
     }
 
     /**
+     * Get os列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OsList os列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getOsList() {
+        return this.OsList;
+    }
+
+    /**
+     * Set os列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OsList os列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOsList(FilterDataObject [] OsList) {
+        this.OsList = OsList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -390,6 +418,12 @@ public class DescribeCVMAssetsResponse extends AbstractModel{
                 this.ZoneList[i] = new FilterDataObject(source.ZoneList[i]);
             }
         }
+        if (source.OsList != null) {
+            this.OsList = new FilterDataObject[source.OsList.length];
+            for (int i = 0; i < source.OsList.length; i++) {
+                this.OsList[i] = new FilterDataObject(source.OsList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -410,6 +444,7 @@ public class DescribeCVMAssetsResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "IpTypeList.", this.IpTypeList);
         this.setParamArrayObj(map, prefix + "AppIdList.", this.AppIdList);
         this.setParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
+        this.setParamArrayObj(map, prefix + "OsList.", this.OsList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

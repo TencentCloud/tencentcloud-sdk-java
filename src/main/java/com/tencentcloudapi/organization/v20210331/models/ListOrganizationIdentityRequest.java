@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListOrganizationIdentityRequest extends AbstractModel{
 
     /**
-    * 偏移量。
+    * 偏移量。取值是limit的整数倍。默认值 : 0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 限制数目。最大50
+    * 限制数目。取值范围：1~50。默认值：10。
     */
     @SerializedName("Limit")
     @Expose
@@ -51,32 +51,39 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
     private Long IdentityId;
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+    * 身份类型。取值范围 1-预设, 2-自定义
+    */
+    @SerializedName("IdentityType")
+    @Expose
+    private Long IdentityType;
+
+    /**
+     * Get 偏移量。取值是limit的整数倍。默认值 : 0。 
+     * @return Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param Offset 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 限制数目。最大50 
-     * @return Limit 限制数目。最大50
+     * Get 限制数目。取值范围：1~50。默认值：10。 
+     * @return Limit 限制数目。取值范围：1~50。默认值：10。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 限制数目。最大50
-     * @param Limit 限制数目。最大50
+     * Set 限制数目。取值范围：1~50。默认值：10。
+     * @param Limit 限制数目。取值范围：1~50。默认值：10。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -114,6 +121,22 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         this.IdentityId = IdentityId;
     }
 
+    /**
+     * Get 身份类型。取值范围 1-预设, 2-自定义 
+     * @return IdentityType 身份类型。取值范围 1-预设, 2-自定义
+     */
+    public Long getIdentityType() {
+        return this.IdentityType;
+    }
+
+    /**
+     * Set 身份类型。取值范围 1-预设, 2-自定义
+     * @param IdentityType 身份类型。取值范围 1-预设, 2-自定义
+     */
+    public void setIdentityType(Long IdentityType) {
+        this.IdentityType = IdentityType;
+    }
+
     public ListOrganizationIdentityRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         if (source.IdentityId != null) {
             this.IdentityId = new Long(source.IdentityId);
         }
+        if (source.IdentityType != null) {
+            this.IdentityType = new Long(source.IdentityType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ListOrganizationIdentityRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "IdentityId", this.IdentityId);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
 
     }
 }

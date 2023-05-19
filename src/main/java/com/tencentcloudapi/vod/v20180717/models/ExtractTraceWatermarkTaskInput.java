@@ -30,6 +30,13 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel{
     private String Url;
 
     /**
+    * 媒体文件 ID。Url 对应的原始媒体文件 ID。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
      * Get 需要提取水印的媒体 URL。 
      * @return Url 需要提取水印的媒体 URL。
      */
@@ -45,6 +52,22 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get 媒体文件 ID。Url 对应的原始媒体文件 ID。 
+     * @return FileId 媒体文件 ID。Url 对应的原始媒体文件 ID。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 媒体文件 ID。Url 对应的原始媒体文件 ID。
+     * @param FileId 媒体文件 ID。Url 对应的原始媒体文件 ID。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public ExtractTraceWatermarkTaskInput() {
     }
 
@@ -56,6 +79,9 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ExtractTraceWatermarkTaskInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

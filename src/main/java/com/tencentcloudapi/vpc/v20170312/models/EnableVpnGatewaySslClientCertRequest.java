@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class EnableVpnGatewaySslClientCertRequest extends AbstractModel{
 
     /**
-    * SSL-VPN-CLIENT 实例ID。
+    * SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
     */
     @SerializedName("SslVpnClientId")
     @Expose
     private String SslVpnClientId;
 
     /**
-     * Get SSL-VPN-CLIENT 实例ID。 
-     * @return SslVpnClientId SSL-VPN-CLIENT 实例ID。
+    * SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。
+    */
+    @SerializedName("SslVpnClientIds")
+    @Expose
+    private String [] SslVpnClientIds;
+
+    /**
+     * Get SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。 
+     * @return SslVpnClientId SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
      */
     public String getSslVpnClientId() {
         return this.SslVpnClientId;
     }
 
     /**
-     * Set SSL-VPN-CLIENT 实例ID。
-     * @param SslVpnClientId SSL-VPN-CLIENT 实例ID。
+     * Set SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
+     * @param SslVpnClientId SSL-VPN-CLIENT 实例ID。不可和SslVpnClientIds同时使用。
      */
     public void setSslVpnClientId(String SslVpnClientId) {
         this.SslVpnClientId = SslVpnClientId;
+    }
+
+    /**
+     * Get SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。 
+     * @return SslVpnClientIds SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。
+     */
+    public String [] getSslVpnClientIds() {
+        return this.SslVpnClientIds;
+    }
+
+    /**
+     * Set SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。
+     * @param SslVpnClientIds SSL-VPN-CLIENT 实例ID列表。批量启用时使用。不可和SslVpnClientId同时使用。
+     */
+    public void setSslVpnClientIds(String [] SslVpnClientIds) {
+        this.SslVpnClientIds = SslVpnClientIds;
     }
 
     public EnableVpnGatewaySslClientCertRequest() {
@@ -56,6 +79,12 @@ public class EnableVpnGatewaySslClientCertRequest extends AbstractModel{
         if (source.SslVpnClientId != null) {
             this.SslVpnClientId = new String(source.SslVpnClientId);
         }
+        if (source.SslVpnClientIds != null) {
+            this.SslVpnClientIds = new String[source.SslVpnClientIds.length];
+            for (int i = 0; i < source.SslVpnClientIds.length; i++) {
+                this.SslVpnClientIds[i] = new String(source.SslVpnClientIds[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class EnableVpnGatewaySslClientCertRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+        this.setParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
 
     }
 }

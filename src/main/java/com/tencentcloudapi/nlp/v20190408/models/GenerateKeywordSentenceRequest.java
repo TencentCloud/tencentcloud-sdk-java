@@ -38,7 +38,7 @@ public class GenerateKeywordSentenceRequest extends AbstractModel{
     private Long Number;
 
     /**
-    * 指定生成句子的领域，支持领域列表
+    * 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
@@ -84,11 +84,11 @@ academic：学术领域，仅支持英文
     }
 
     /**
-     * Get 指定生成句子的领域，支持领域列表
+     * Get 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。 
-     * @return Domain 指定生成句子的领域，支持领域列表
+     * @return Domain 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
@@ -98,11 +98,11 @@ academic：学术领域，仅支持英文
     }
 
     /**
-     * Set 指定生成句子的领域，支持领域列表
+     * Set 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。
-     * @param Domain 指定生成句子的领域，支持领域列表
+     * @param Domain 指定生成句子的领域，支持领域如下：
 general：通用领域，支持中英文
 academic：学术领域，仅支持英文
 默认为general（通用领域）。

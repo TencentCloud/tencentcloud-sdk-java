@@ -103,6 +103,14 @@ public class TextVehicleBack extends AbstractModel{
     private String TotalQuasiMass;
 
     /**
+    * 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubPageCode")
+    @Expose
+    private String SubPageCode;
+
+    /**
      * Get 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlateNo 号牌号码
@@ -302,6 +310,26 @@ public class TextVehicleBack extends AbstractModel{
         this.TotalQuasiMass = TotalQuasiMass;
     }
 
+    /**
+     * Get 副页编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubPageCode 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubPageCode() {
+        return this.SubPageCode;
+    }
+
+    /**
+     * Set 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubPageCode 副页编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubPageCode(String SubPageCode) {
+        this.SubPageCode = SubPageCode;
+    }
+
     public TextVehicleBack() {
     }
 
@@ -340,6 +368,9 @@ public class TextVehicleBack extends AbstractModel{
         if (source.TotalQuasiMass != null) {
             this.TotalQuasiMass = new String(source.TotalQuasiMass);
         }
+        if (source.SubPageCode != null) {
+            this.SubPageCode = new String(source.SubPageCode);
+        }
     }
 
 
@@ -357,6 +388,7 @@ public class TextVehicleBack extends AbstractModel{
         this.setParamSimple(map, prefix + "Marks", this.Marks);
         this.setParamSimple(map, prefix + "Record", this.Record);
         this.setParamSimple(map, prefix + "TotalQuasiMass", this.TotalQuasiMass);
+        this.setParamSimple(map, prefix + "SubPageCode", this.SubPageCode);
 
     }
 }

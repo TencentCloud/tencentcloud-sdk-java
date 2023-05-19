@@ -33,6 +33,14 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
     private KeyValue [] Data;
 
     /**
+    * 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CLBData")
+    @Expose
+    private KeyValue [] CLBData;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -68,6 +76,26 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CLBData 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyValue [] getCLBData() {
+        return this.CLBData;
+    }
+
+    /**
+     * Set 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CLBData 域名化资产的名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCLBData(KeyValue [] CLBData) {
+        this.CLBData = CLBData;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -97,6 +125,12 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
                 this.Data[i] = new KeyValue(source.Data[i]);
             }
         }
+        if (source.CLBData != null) {
+            this.CLBData = new KeyValue[source.CLBData.length];
+            for (int i = 0; i < source.CLBData.length; i++) {
+                this.CLBData[i] = new KeyValue(source.CLBData[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -108,6 +142,7 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "CLBData.", this.CLBData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

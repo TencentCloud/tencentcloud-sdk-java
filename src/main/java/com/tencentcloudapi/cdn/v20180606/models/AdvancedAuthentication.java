@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class AdvancedAuthentication extends AbstractModel{
 
     /**
-    * 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+    * 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
     */
     @SerializedName("Switch")
     @Expose
@@ -78,16 +81,28 @@ public class AdvancedAuthentication extends AbstractModel{
     private AdvancedAuthenticationTypeF TypeF;
 
     /**
-     * Get 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。 
-     * @return Switch 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+     * Get 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null 
+     * @return Switch 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
-     * @param Switch 防盗链配置开关，on或off，开启时必须且只能配置一种模式，其余模式为null。
+     * Set 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
+     * @param Switch 防盗链配置开关，取值有：
+on：开启
+off：关闭
+开启时必须且只配置一种模式，其余模式需要设置为 null
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

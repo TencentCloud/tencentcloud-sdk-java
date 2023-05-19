@@ -163,6 +163,20 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
     private Long HostUnInstallCnt;
 
     /**
+    * 超级节点个数
+    */
+    @SerializedName("SuperNodeCnt")
+    @Expose
+    private Long SuperNodeCnt;
+
+    /**
+    * 超级节点运行个数
+    */
+    @SerializedName("SuperNodeRunningCnt")
+    @Expose
+    private Long SuperNodeRunningCnt;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -490,6 +504,38 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 超级节点个数 
+     * @return SuperNodeCnt 超级节点个数
+     */
+    public Long getSuperNodeCnt() {
+        return this.SuperNodeCnt;
+    }
+
+    /**
+     * Set 超级节点个数
+     * @param SuperNodeCnt 超级节点个数
+     */
+    public void setSuperNodeCnt(Long SuperNodeCnt) {
+        this.SuperNodeCnt = SuperNodeCnt;
+    }
+
+    /**
+     * Get 超级节点运行个数 
+     * @return SuperNodeRunningCnt 超级节点运行个数
+     */
+    public Long getSuperNodeRunningCnt() {
+        return this.SuperNodeRunningCnt;
+    }
+
+    /**
+     * Set 超级节点运行个数
+     * @param SuperNodeRunningCnt 超级节点运行个数
+     */
+    public void setSuperNodeRunningCnt(Long SuperNodeRunningCnt) {
+        this.SuperNodeRunningCnt = SuperNodeRunningCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -573,6 +619,12 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
         if (source.HostUnInstallCnt != null) {
             this.HostUnInstallCnt = new Long(source.HostUnInstallCnt);
         }
+        if (source.SuperNodeCnt != null) {
+            this.SuperNodeCnt = new Long(source.SuperNodeCnt);
+        }
+        if (source.SuperNodeRunningCnt != null) {
+            this.SuperNodeRunningCnt = new Long(source.SuperNodeRunningCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -603,6 +655,8 @@ public class DescribeAssetSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "LatestImageScanTime", this.LatestImageScanTime);
         this.setParamSimple(map, prefix + "ImageUnsafeCnt", this.ImageUnsafeCnt);
         this.setParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
+        this.setParamSimple(map, prefix + "SuperNodeCnt", this.SuperNodeCnt);
+        this.setParamSimple(map, prefix + "SuperNodeRunningCnt", this.SuperNodeRunningCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

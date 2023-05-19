@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Compression extends AbstractModel{
 
     /**
-    * 智能压缩配置开关
+    * 智能压缩配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -40,10 +40,10 @@ off：关闭
     private CompressionRule [] CompressionRules;
 
     /**
-     * Get 智能压缩配置开关
+     * Get 智能压缩配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 智能压缩配置开关
+     * @return Switch 智能压缩配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set 智能压缩配置开关
+     * Set 智能压缩配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 智能压缩配置开关
+     * @param Switch 智能压缩配置开关，取值有：
 on：开启
 off：关闭
      */

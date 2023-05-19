@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DownstreamCapping extends AbstractModel{
 
     /**
-    * 下行速度配置开关
+    * 下行速度配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -40,10 +40,10 @@ off：关闭
     private CappingRule [] CappingRules;
 
     /**
-     * Get 下行速度配置开关
+     * Get 下行速度配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 下行速度配置开关
+     * @return Switch 下行速度配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set 下行速度配置开关
+     * Set 下行速度配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 下行速度配置开关
+     * @param Switch 下行速度配置开关，取值有：
 on：开启
 off：关闭
      */

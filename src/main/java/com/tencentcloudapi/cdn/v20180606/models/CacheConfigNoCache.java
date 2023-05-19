@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel{
 
     /**
-    * 不缓存配置开关
+    * 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,11 +44,11 @@ off：关闭
     private String Revalidate;
 
     /**
-     * Get 不缓存配置开关
+     * Get 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch 不缓存配置开关
+     * @return Switch 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -58,11 +58,11 @@ off：关闭
     }
 
     /**
-     * Set 不缓存配置开关
+     * Set 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch 不缓存配置开关
+     * @param Switch 路径缓存不缓存配置配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FollowRedirect extends AbstractModel{
 
     /**
-    * 回源跟随开关
+    * 回源跟随配置开关，取值有：
 on：开启
 off：关闭
     */
@@ -40,10 +40,10 @@ off：关闭
     private RedirectConfig RedirectConfig;
 
     /**
-     * Get 回源跟随开关
+     * Get 回源跟随配置开关，取值有：
 on：开启
 off：关闭 
-     * @return Switch 回源跟随开关
+     * @return Switch 回源跟随配置开关，取值有：
 on：开启
 off：关闭
      */
@@ -52,10 +52,10 @@ off：关闭
     }
 
     /**
-     * Set 回源跟随开关
+     * Set 回源跟随配置开关，取值有：
 on：开启
 off：关闭
-     * @param Switch 回源跟随开关
+     * @param Switch 回源跟随配置开关，取值有：
 on：开启
 off：关闭
      */

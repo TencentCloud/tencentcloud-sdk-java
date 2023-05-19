@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Https extends AbstractModel{
 
     /**
-    * https 配置开关
+    * https 配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -120,11 +120,11 @@ failed：部署失败
     private String [] TlsVersion;
 
     /**
-     * Get https 配置开关
+     * Get https 配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Switch https 配置开关
+     * @return Switch https 配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
@@ -134,11 +134,11 @@ off：关闭
     }
 
     /**
-     * Set https 配置开关
+     * Set https 配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Switch https 配置开关
+     * @param Switch https 配置开关，取值有：
 on：开启
 off：关闭
 注意：此字段可能返回 null，表示取不到有效值。

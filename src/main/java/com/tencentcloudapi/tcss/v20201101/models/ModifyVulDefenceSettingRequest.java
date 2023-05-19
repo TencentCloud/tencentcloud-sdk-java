@@ -30,18 +30,32 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel{
     private Long IsEnabled;
 
     /**
-    * 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填
+    * 漏洞防御主机范围:0：自选 1: 全部主机
     */
     @SerializedName("Scope")
     @Expose
     private Long Scope;
 
     /**
-    * 自选漏洞防御主机,Scope为0时必填
+    * 自选漏洞防御主机
     */
     @SerializedName("HostIDs")
     @Expose
     private String [] HostIDs;
+
+    /**
+    * 漏洞防御超级节点范围:0：自选 1: 全部
+    */
+    @SerializedName("SuperScope")
+    @Expose
+    private Long SuperScope;
+
+    /**
+    * 超级节点Id列表
+    */
+    @SerializedName("NodeIds")
+    @Expose
+    private String [] NodeIds;
 
     /**
      * Get 是否开启:0: 关闭 1:开启 
@@ -60,35 +74,67 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填 
-     * @return Scope 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填
+     * Get 漏洞防御主机范围:0：自选 1: 全部主机 
+     * @return Scope 漏洞防御主机范围:0：自选 1: 全部主机
      */
     public Long getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填
-     * @param Scope 漏洞防御主机范围:0：自选 1: 全部主机。IsEnabled为1时必填
+     * Set 漏洞防御主机范围:0：自选 1: 全部主机
+     * @param Scope 漏洞防御主机范围:0：自选 1: 全部主机
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 自选漏洞防御主机,Scope为0时必填 
-     * @return HostIDs 自选漏洞防御主机,Scope为0时必填
+     * Get 自选漏洞防御主机 
+     * @return HostIDs 自选漏洞防御主机
      */
     public String [] getHostIDs() {
         return this.HostIDs;
     }
 
     /**
-     * Set 自选漏洞防御主机,Scope为0时必填
-     * @param HostIDs 自选漏洞防御主机,Scope为0时必填
+     * Set 自选漏洞防御主机
+     * @param HostIDs 自选漏洞防御主机
      */
     public void setHostIDs(String [] HostIDs) {
         this.HostIDs = HostIDs;
+    }
+
+    /**
+     * Get 漏洞防御超级节点范围:0：自选 1: 全部 
+     * @return SuperScope 漏洞防御超级节点范围:0：自选 1: 全部
+     */
+    public Long getSuperScope() {
+        return this.SuperScope;
+    }
+
+    /**
+     * Set 漏洞防御超级节点范围:0：自选 1: 全部
+     * @param SuperScope 漏洞防御超级节点范围:0：自选 1: 全部
+     */
+    public void setSuperScope(Long SuperScope) {
+        this.SuperScope = SuperScope;
+    }
+
+    /**
+     * Get 超级节点Id列表 
+     * @return NodeIds 超级节点Id列表
+     */
+    public String [] getNodeIds() {
+        return this.NodeIds;
+    }
+
+    /**
+     * Set 超级节点Id列表
+     * @param NodeIds 超级节点Id列表
+     */
+    public void setNodeIds(String [] NodeIds) {
+        this.NodeIds = NodeIds;
     }
 
     public ModifyVulDefenceSettingRequest() {
@@ -111,6 +157,15 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel{
                 this.HostIDs[i] = new String(source.HostIDs[i]);
             }
         }
+        if (source.SuperScope != null) {
+            this.SuperScope = new Long(source.SuperScope);
+        }
+        if (source.NodeIds != null) {
+            this.NodeIds = new String[source.NodeIds.length];
+            for (int i = 0; i < source.NodeIds.length; i++) {
+                this.NodeIds[i] = new String(source.NodeIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +176,8 @@ public class ModifyVulDefenceSettingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamArraySimple(map, prefix + "HostIDs.", this.HostIDs);
+        this.setParamSimple(map, prefix + "SuperScope", this.SuperScope);
+        this.setParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
 
     }
 }

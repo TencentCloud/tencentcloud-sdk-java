@@ -24,12 +24,13 @@ public class EscapeEventInfo extends AbstractModel{
 
     /**
     * 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
     */
     @SerializedName("EventType")
     @Expose
@@ -207,20 +208,78 @@ MountNamespace逃逸、
     private String ContainerStatus;
 
     /**
+    * 节点所属集群ID
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 节点类型：NORMAL普通节点、SUPER超级节点
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * 节点唯一id
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 节点公网ip
+    */
+    @SerializedName("PublicIP")
+    @Expose
+    private String PublicIP;
+
+    /**
+    * 节点id
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * 节点内网ip
+    */
+    @SerializedName("HostIP")
+    @Expose
+    private String HostIP;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸 
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸 
      * @return EventType 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      */
     public String getEventType() {
         return this.EventType;
@@ -228,19 +287,21 @@ MountNamespace逃逸、
 
     /**
      * Set 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      * @param EventType 事件类型
-   ESCAPE_HOST_ACESS_FILE:宿主机文件访问逃逸
-   ESCAPE_MOUNT_NAMESPACE:MountNamespace逃逸
-   ESCAPE_PRIVILEDGE:程序提权逃逸
-   ESCAPE_PRIVILEDGE_CONTAINER_START:特权容器启动逃逸
-   ESCAPE_MOUNT_SENSITIVE_PTAH:敏感路径挂载
-   ESCAPE_SYSCALL:Syscall逃逸
+   ESCAPE_CGROUPS：利用cgroup机制逃逸
+   ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+   ESCAPE_DOCKER_API：访问Docker API接口逃逸
+   ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+   MOUNT_SENSITIVE_PTAH：敏感路径挂载
+   PRIVILEGE_CONTAINER_START：特权容器
+   PRIVILEGE：程序提权逃逸
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -690,6 +751,134 @@ MountNamespace逃逸、
         this.ContainerStatus = ContainerStatus;
     }
 
+    /**
+     * Get 节点所属集群ID 
+     * @return ClusterID 节点所属集群ID
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 节点所属集群ID
+     * @param ClusterID 节点所属集群ID
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 节点类型：NORMAL普通节点、SUPER超级节点 
+     * @return NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型：NORMAL普通节点、SUPER超级节点
+     * @param NodeType 节点类型：NORMAL普通节点、SUPER超级节点
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get 节点唯一id 
+     * @return NodeUniqueID 节点唯一id
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 节点唯一id
+     * @param NodeUniqueID 节点唯一id
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 节点公网ip 
+     * @return PublicIP 节点公网ip
+     */
+    public String getPublicIP() {
+        return this.PublicIP;
+    }
+
+    /**
+     * Set 节点公网ip
+     * @param PublicIP 节点公网ip
+     */
+    public void setPublicIP(String PublicIP) {
+        this.PublicIP = PublicIP;
+    }
+
+    /**
+     * Get 节点id 
+     * @return NodeID 节点id
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 节点id
+     * @param NodeID 节点id
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get 节点内网ip 
+     * @return HostIP 节点内网ip
+     */
+    public String getHostIP() {
+        return this.HostIP;
+    }
+
+    /**
+     * Set 节点内网ip
+     * @param HostIP 节点内网ip
+     */
+    public void setHostIP(String HostIP) {
+        this.HostIP = HostIP;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public EscapeEventInfo() {
     }
 
@@ -761,6 +950,30 @@ MountNamespace逃逸、
         if (source.ContainerStatus != null) {
             this.ContainerStatus = new String(source.ContainerStatus);
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.PublicIP != null) {
+            this.PublicIP = new String(source.PublicIP);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.HostIP != null) {
+            this.HostIP = new String(source.HostIP);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -789,6 +1002,14 @@ MountNamespace逃逸、
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "HostIP", this.HostIP);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

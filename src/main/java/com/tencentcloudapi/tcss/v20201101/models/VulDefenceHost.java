@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VulDefenceHost extends AbstractModel{
 
     /**
-    * 主机名称
+    * 主机名称/超级节点名称
     */
     @SerializedName("HostName")
     @Expose
@@ -37,7 +37,7 @@ public class VulDefenceHost extends AbstractModel{
     private String HostIP;
 
     /**
-    * 主机QUUID
+    * 主机QUUID/超级节点ID
     */
     @SerializedName("HostID")
     @Expose
@@ -72,16 +72,72 @@ public class VulDefenceHost extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * Get 主机名称 
-     * @return HostName 主机名称
+    * 节点类型[NORMAL:普通节点|SUPER:超级节点]
+    */
+    @SerializedName("NodeType")
+    @Expose
+    private String NodeType;
+
+    /**
+    * 超级节点子网名称
+    */
+    @SerializedName("NodeSubNetName")
+    @Expose
+    private String NodeSubNetName;
+
+    /**
+    * 超级节点子网网段
+    */
+    @SerializedName("NodeSubNetCIDR")
+    @Expose
+    private String NodeSubNetCIDR;
+
+    /**
+    * 超级节点子网ID
+    */
+    @SerializedName("NodeSubNetID")
+    @Expose
+    private String NodeSubNetID;
+
+    /**
+    * 超级节点唯一ID
+    */
+    @SerializedName("NodeUniqueID")
+    @Expose
+    private String NodeUniqueID;
+
+    /**
+    * 超级节点ID
+    */
+    @SerializedName("NodeID")
+    @Expose
+    private String NodeID;
+
+    /**
+    * Pod Ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
+    * Pod 名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+     * Get 主机名称/超级节点名称 
+     * @return HostName 主机名称/超级节点名称
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 主机名称
-     * @param HostName 主机名称
+     * Set 主机名称/超级节点名称
+     * @param HostName 主机名称/超级节点名称
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
@@ -104,16 +160,16 @@ public class VulDefenceHost extends AbstractModel{
     }
 
     /**
-     * Get 主机QUUID 
-     * @return HostID 主机QUUID
+     * Get 主机QUUID/超级节点ID 
+     * @return HostID 主机QUUID/超级节点ID
      */
     public String getHostID() {
         return this.HostID;
     }
 
     /**
-     * Set 主机QUUID
-     * @param HostID 主机QUUID
+     * Set 主机QUUID/超级节点ID
+     * @param HostID 主机QUUID/超级节点ID
      */
     public void setHostID(String HostID) {
         this.HostID = HostID;
@@ -183,6 +239,134 @@ public class VulDefenceHost extends AbstractModel{
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 节点类型[NORMAL:普通节点|SUPER:超级节点] 
+     * @return NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public String getNodeType() {
+        return this.NodeType;
+    }
+
+    /**
+     * Set 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     * @param NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
+     */
+    public void setNodeType(String NodeType) {
+        this.NodeType = NodeType;
+    }
+
+    /**
+     * Get 超级节点子网名称 
+     * @return NodeSubNetName 超级节点子网名称
+     */
+    public String getNodeSubNetName() {
+        return this.NodeSubNetName;
+    }
+
+    /**
+     * Set 超级节点子网名称
+     * @param NodeSubNetName 超级节点子网名称
+     */
+    public void setNodeSubNetName(String NodeSubNetName) {
+        this.NodeSubNetName = NodeSubNetName;
+    }
+
+    /**
+     * Get 超级节点子网网段 
+     * @return NodeSubNetCIDR 超级节点子网网段
+     */
+    public String getNodeSubNetCIDR() {
+        return this.NodeSubNetCIDR;
+    }
+
+    /**
+     * Set 超级节点子网网段
+     * @param NodeSubNetCIDR 超级节点子网网段
+     */
+    public void setNodeSubNetCIDR(String NodeSubNetCIDR) {
+        this.NodeSubNetCIDR = NodeSubNetCIDR;
+    }
+
+    /**
+     * Get 超级节点子网ID 
+     * @return NodeSubNetID 超级节点子网ID
+     */
+    public String getNodeSubNetID() {
+        return this.NodeSubNetID;
+    }
+
+    /**
+     * Set 超级节点子网ID
+     * @param NodeSubNetID 超级节点子网ID
+     */
+    public void setNodeSubNetID(String NodeSubNetID) {
+        this.NodeSubNetID = NodeSubNetID;
+    }
+
+    /**
+     * Get 超级节点唯一ID 
+     * @return NodeUniqueID 超级节点唯一ID
+     */
+    public String getNodeUniqueID() {
+        return this.NodeUniqueID;
+    }
+
+    /**
+     * Set 超级节点唯一ID
+     * @param NodeUniqueID 超级节点唯一ID
+     */
+    public void setNodeUniqueID(String NodeUniqueID) {
+        this.NodeUniqueID = NodeUniqueID;
+    }
+
+    /**
+     * Get 超级节点ID 
+     * @return NodeID 超级节点ID
+     */
+    public String getNodeID() {
+        return this.NodeID;
+    }
+
+    /**
+     * Set 超级节点ID
+     * @param NodeID 超级节点ID
+     */
+    public void setNodeID(String NodeID) {
+        this.NodeID = NodeID;
+    }
+
+    /**
+     * Get Pod Ip 
+     * @return PodIP Pod Ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set Pod Ip
+     * @param PodIP Pod Ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
+    /**
+     * Get Pod 名称 
+     * @return PodName Pod 名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set Pod 名称
+     * @param PodName Pod 名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
     public VulDefenceHost() {
     }
 
@@ -212,6 +396,30 @@ public class VulDefenceHost extends AbstractModel{
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.NodeType != null) {
+            this.NodeType = new String(source.NodeType);
+        }
+        if (source.NodeSubNetName != null) {
+            this.NodeSubNetName = new String(source.NodeSubNetName);
+        }
+        if (source.NodeSubNetCIDR != null) {
+            this.NodeSubNetCIDR = new String(source.NodeSubNetCIDR);
+        }
+        if (source.NodeSubNetID != null) {
+            this.NodeSubNetID = new String(source.NodeSubNetID);
+        }
+        if (source.NodeUniqueID != null) {
+            this.NodeUniqueID = new String(source.NodeUniqueID);
+        }
+        if (source.NodeID != null) {
+            this.NodeID = new String(source.NodeID);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
     }
 
 
@@ -226,6 +434,14 @@ public class VulDefenceHost extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIP", this.PublicIP);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeSubNetName", this.NodeSubNetName);
+        this.setParamSimple(map, prefix + "NodeSubNetCIDR", this.NodeSubNetCIDR);
+        this.setParamSimple(map, prefix + "NodeSubNetID", this.NodeSubNetID);
+        this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
+        this.setParamSimple(map, prefix + "NodeID", this.NodeID);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
 
     }
 }

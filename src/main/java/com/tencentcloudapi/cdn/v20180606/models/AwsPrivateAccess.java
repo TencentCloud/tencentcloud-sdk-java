@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class AwsPrivateAccess extends AbstractModel{
 
     /**
-    * 开关，on/off。
+    * s3源站回源鉴权配置项开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -62,16 +64,24 @@ public class AwsPrivateAccess extends AbstractModel{
     private String Bucket;
 
     /**
-     * Get 开关，on/off。 
-     * @return Switch 开关，on/off。
+     * Get s3源站回源鉴权配置项开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch s3源站回源鉴权配置项开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 开关，on/off。
-     * @param Switch 开关，on/off。
+     * Set s3源站回源鉴权配置项开关，取值有：
+on：开启
+off：关闭
+     * @param Switch s3源站回源鉴权配置项开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

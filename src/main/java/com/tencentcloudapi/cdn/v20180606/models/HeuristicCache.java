@@ -23,8 +23,9 @@ import java.util.HashMap;
 public class HeuristicCache extends AbstractModel{
 
     /**
-    * on 代表开启启发式缓存
-off 代表关闭启发式缓存
+    * 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
     */
     @SerializedName("Switch")
     @Expose
@@ -38,20 +39,24 @@ off 代表关闭启发式缓存
     private CacheConfig CacheConfig;
 
     /**
-     * Get on 代表开启启发式缓存
-off 代表关闭启发式缓存 
-     * @return Switch on 代表开启启发式缓存
-off 代表关闭启发式缓存
+     * Get 启发式缓存配置开关，取值有：
+on：开启
+off：关闭 
+     * @return Switch 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set on 代表开启启发式缓存
-off 代表关闭启发式缓存
-     * @param Switch on 代表开启启发式缓存
-off 代表关闭启发式缓存
+     * Set 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
+     * @param Switch 启发式缓存配置开关，取值有：
+on：开启
+off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
