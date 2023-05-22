@@ -94,6 +94,13 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String PushExceptionNotifyUrl;
 
     /**
+    * 音频审核回调 URL。
+    */
+    @SerializedName("AudioAuditNotifyUrl")
+    @Expose
+    private String AudioAuditNotifyUrl;
+
+    /**
      * Get DescribeLiveCallbackTemplates接口返回的模板 ID。 
      * @return TemplateId DescribeLiveCallbackTemplates接口返回的模板 ID。
      */
@@ -257,6 +264,22 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
     }
 
+    /**
+     * Get 音频审核回调 URL。 
+     * @return AudioAuditNotifyUrl 音频审核回调 URL。
+     */
+    public String getAudioAuditNotifyUrl() {
+        return this.AudioAuditNotifyUrl;
+    }
+
+    /**
+     * Set 音频审核回调 URL。
+     * @param AudioAuditNotifyUrl 音频审核回调 URL。
+     */
+    public void setAudioAuditNotifyUrl(String AudioAuditNotifyUrl) {
+        this.AudioAuditNotifyUrl = AudioAuditNotifyUrl;
+    }
+
     public ModifyLiveCallbackTemplateRequest() {
     }
 
@@ -295,6 +318,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         if (source.PushExceptionNotifyUrl != null) {
             this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
         }
+        if (source.AudioAuditNotifyUrl != null) {
+            this.AudioAuditNotifyUrl = new String(source.AudioAuditNotifyUrl);
+        }
     }
 
 
@@ -312,6 +338,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
+        this.setParamSimple(map, prefix + "AudioAuditNotifyUrl", this.AudioAuditNotifyUrl);
 
     }
 }

@@ -79,7 +79,7 @@ public class StepInfo extends AbstractModel{
     private StepTip [] Warnings;
 
     /**
-    * 当前步骤进度，范围为[0-100]
+    * 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
@@ -227,9 +227,9 @@ public class StepInfo extends AbstractModel{
     }
 
     /**
-     * Get 当前步骤进度，范围为[0-100]
+     * Get 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Progress 当前步骤进度，范围为[0-100]
+     * @return Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
@@ -237,9 +237,9 @@ public class StepInfo extends AbstractModel{
     }
 
     /**
-     * Set 当前步骤进度，范围为[0-100]
+     * Set 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Progress 当前步骤进度，范围为[0-100]
+     * @param Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {

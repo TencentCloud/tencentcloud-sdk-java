@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Objects extends AbstractModel{
 
     /**
-    * 迁移对象类型 Partial(部分对象)，默认为Partial
+    * 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -39,7 +39,7 @@ public class Objects extends AbstractModel{
     private Database [] Databases;
 
     /**
-    * 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+    * 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdvancedObjects")
@@ -55,9 +55,9 @@ public class Objects extends AbstractModel{
     private OnlineDDL OnlineDDL;
 
     /**
-     * Get 迁移对象类型 Partial(部分对象)，默认为Partial
+     * Get 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 迁移对象类型 Partial(部分对象)，默认为Partial
+     * @return Mode 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -65,9 +65,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Set 迁移对象类型 Partial(部分对象)，默认为Partial
+     * Set 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 迁移对象类型 Partial(部分对象)，默认为Partial
+     * @param Mode 迁移对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
@@ -95,9 +95,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Get 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+     * Get 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AdvancedObjects 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+     * @return AdvancedObjects 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAdvancedObjects() {
@@ -105,9 +105,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Set 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+     * Set 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AdvancedObjects 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即Options.InitType字段值为Structure或Full
+     * @param AdvancedObjects 高级对象类型，如function、procedure，当需要同步高级对象时，初始化类型必须包含结构初始化类型，即任务的Options.InitType字段值为Structure或Full
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdvancedObjects(String [] AdvancedObjects) {

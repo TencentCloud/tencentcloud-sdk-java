@@ -100,6 +100,13 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 值班列表
+    */
+    @SerializedName("OnCallFormIDs")
+    @Expose
+    private String [] OnCallFormIDs;
+
+    /**
      * Get 模块名，这里填“monitor” 
      * @return Module 模块名，这里填“monitor”
      */
@@ -275,6 +282,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 值班列表 
+     * @return OnCallFormIDs 值班列表
+     */
+    public String [] getOnCallFormIDs() {
+        return this.OnCallFormIDs;
+    }
+
+    /**
+     * Set 值班列表
+     * @param OnCallFormIDs 值班列表
+     */
+    public void setOnCallFormIDs(String [] OnCallFormIDs) {
+        this.OnCallFormIDs = OnCallFormIDs;
+    }
+
     public DescribeAlarmNoticesRequest() {
     }
 
@@ -328,6 +351,12 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.OnCallFormIDs != null) {
+            this.OnCallFormIDs = new String[source.OnCallFormIDs.length];
+            for (int i = 0; i < source.OnCallFormIDs.length; i++) {
+                this.OnCallFormIDs[i] = new String(source.OnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -346,6 +375,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
 
     }
 }

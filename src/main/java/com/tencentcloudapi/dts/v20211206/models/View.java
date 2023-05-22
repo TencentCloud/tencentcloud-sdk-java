@@ -31,7 +31,7 @@ public class View extends AbstractModel{
     private String ViewName;
 
     /**
-    * 新view名
+    * 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewViewName")
@@ -59,9 +59,9 @@ public class View extends AbstractModel{
     }
 
     /**
-     * Get 新view名
+     * Get 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NewViewName 新view名
+     * @return NewViewName 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewViewName() {
@@ -69,9 +69,9 @@ public class View extends AbstractModel{
     }
 
     /**
-     * Set 新view名
+     * Set 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NewViewName 新view名
+     * @param NewViewName 预留字段、目前暂时不支持view的重命名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewViewName(String NewViewName) {

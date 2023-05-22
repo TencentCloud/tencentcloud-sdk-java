@@ -122,7 +122,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long [] ProjectIds;
 
     /**
-    * 通知模版的id列表，可查询通知模版列表获取。
+    * 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
     */
     @SerializedName("NoticeIds")
@@ -179,14 +179,14 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] OneClickPolicyType;
 
     /**
-    * 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+    * 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
     */
     @SerializedName("NotBindAll")
     @Expose
     private Long NotBindAll;
 
     /**
-    * 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+    * 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
     */
     @SerializedName("NotInstanceGroup")
     @Expose
@@ -198,6 +198,20 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * prom实例id，自定义指标策略时会用到
+    */
+    @SerializedName("PromInsId")
+    @Expose
+    private String PromInsId;
+
+    /**
+    * 根据排班表搜索
+    */
+    @SerializedName("ReceiverOnCallFormIDs")
+    @Expose
+    private String [] ReceiverOnCallFormIDs;
 
     /**
      * Get 固定值，为"monitor" 
@@ -440,9 +454,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 通知模版的id列表，可查询通知模版列表获取。
+     * Get 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。 
-     * @return NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+     * @return NoticeIds 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      */
     public String [] getNoticeIds() {
@@ -450,9 +464,9 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Set 通知模版的id列表，可查询通知模版列表获取。
+     * Set 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
-     * @param NoticeIds 通知模版的id列表，可查询通知模版列表获取。
+     * @param NoticeIds 通知模板的id列表，可查询通知模板列表获取。
 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
      */
     public void setNoticeIds(String [] NoticeIds) {
@@ -572,32 +586,32 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤 
-     * @return NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     * Get 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤 
+     * @return NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
      */
     public Long getNotBindAll() {
         return this.NotBindAll;
     }
 
     /**
-     * Set 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
-     * @param NotBindAll 根据全部对象过滤，1代表需要过滤掉全部对象，0则无需过滤
+     * Set 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
+     * @param NotBindAll 返回结果过滤掉绑定全部对象的策略，1代表需要过滤，0则无需过滤
      */
     public void setNotBindAll(Long NotBindAll) {
         this.NotBindAll = NotBindAll;
     }
 
     /**
-     * Get 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤 
-     * @return NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * Get 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤 
+     * @return NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
      */
     public Long getNotInstanceGroup() {
         return this.NotInstanceGroup;
     }
 
     /**
-     * Set 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
-     * @param NotInstanceGroup 根据实例对象过滤，1代表需要过滤掉有实例对象，0则无需过滤
+     * Set 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
+     * @param NotInstanceGroup 返回结果过滤掉关联实例为实例分组的策略，1代表需要过滤，0则无需过滤
      */
     public void setNotInstanceGroup(Long NotInstanceGroup) {
         this.NotInstanceGroup = NotInstanceGroup;
@@ -617,6 +631,38 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get prom实例id，自定义指标策略时会用到 
+     * @return PromInsId prom实例id，自定义指标策略时会用到
+     */
+    public String getPromInsId() {
+        return this.PromInsId;
+    }
+
+    /**
+     * Set prom实例id，自定义指标策略时会用到
+     * @param PromInsId prom实例id，自定义指标策略时会用到
+     */
+    public void setPromInsId(String PromInsId) {
+        this.PromInsId = PromInsId;
+    }
+
+    /**
+     * Get 根据排班表搜索 
+     * @return ReceiverOnCallFormIDs 根据排班表搜索
+     */
+    public String [] getReceiverOnCallFormIDs() {
+        return this.ReceiverOnCallFormIDs;
+    }
+
+    /**
+     * Set 根据排班表搜索
+     * @param ReceiverOnCallFormIDs 根据排班表搜索
+     */
+    public void setReceiverOnCallFormIDs(String [] ReceiverOnCallFormIDs) {
+        this.ReceiverOnCallFormIDs = ReceiverOnCallFormIDs;
     }
 
     public DescribeAlarmPoliciesRequest() {
@@ -735,6 +781,15 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PromInsId != null) {
+            this.PromInsId = new String(source.PromInsId);
+        }
+        if (source.ReceiverOnCallFormIDs != null) {
+            this.ReceiverOnCallFormIDs = new String[source.ReceiverOnCallFormIDs.length];
+            for (int i = 0; i < source.ReceiverOnCallFormIDs.length; i++) {
+                this.ReceiverOnCallFormIDs[i] = new String(source.ReceiverOnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -766,6 +821,8 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
         this.setParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PromInsId", this.PromInsId);
+        this.setParamArraySimple(map, prefix + "ReceiverOnCallFormIDs.", this.ReceiverOnCallFormIDs);
 
     }
 }

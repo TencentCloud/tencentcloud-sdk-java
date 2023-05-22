@@ -23,11 +23,25 @@ import java.util.HashMap;
 public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
-    * 是否开通
+    * 是否已开通自动签
     */
     @SerializedName("IsOpen")
     @Expose
     private Boolean IsOpen;
+
+    /**
+    * 自动签许可生效时间。当且仅当已开通自动签时有值。
+    */
+    @SerializedName("LicenseFrom")
+    @Expose
+    private Long LicenseFrom;
+
+    /**
+    * 自动签许可到期时间。当且仅当已开通自动签时有值。
+    */
+    @SerializedName("LicenseTo")
+    @Expose
+    private Long LicenseTo;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +51,51 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否开通 
-     * @return IsOpen 是否开通
+     * Get 是否已开通自动签 
+     * @return IsOpen 是否已开通自动签
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 是否开通
-     * @param IsOpen 是否开通
+     * Set 是否已开通自动签
+     * @param IsOpen 是否已开通自动签
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get 自动签许可生效时间。当且仅当已开通自动签时有值。 
+     * @return LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     */
+    public Long getLicenseFrom() {
+        return this.LicenseFrom;
+    }
+
+    /**
+     * Set 自动签许可生效时间。当且仅当已开通自动签时有值。
+     * @param LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+     */
+    public void setLicenseFrom(Long LicenseFrom) {
+        this.LicenseFrom = LicenseFrom;
+    }
+
+    /**
+     * Get 自动签许可到期时间。当且仅当已开通自动签时有值。 
+     * @return LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     */
+    public Long getLicenseTo() {
+        return this.LicenseTo;
+    }
+
+    /**
+     * Set 自动签许可到期时间。当且仅当已开通自动签时有值。
+     * @param LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+     */
+    public void setLicenseTo(Long LicenseTo) {
+        this.LicenseTo = LicenseTo;
     }
 
     /**
@@ -79,6 +125,12 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
         if (source.IsOpen != null) {
             this.IsOpen = new Boolean(source.IsOpen);
         }
+        if (source.LicenseFrom != null) {
+            this.LicenseFrom = new Long(source.LicenseFrom);
+        }
+        if (source.LicenseTo != null) {
+            this.LicenseTo = new Long(source.LicenseTo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +142,8 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "LicenseFrom", this.LicenseFrom);
+        this.setParamSimple(map, prefix + "LicenseTo", this.LicenseTo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

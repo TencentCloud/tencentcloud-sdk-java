@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.csxg.v20230303.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TableName extends AbstractModel{
+public class Describe5GAPNsRequest extends AbstractModel{
 
-    /**
-    * 表名
-    */
-    @SerializedName("TableName")
-    @Expose
-    private String TableName;
-
-    /**
-     * Get 表名 
-     * @return TableName 表名
-     */
-    public String getTableName() {
-        return this.TableName;
-    }
-
-    /**
-     * Set 表名
-     * @param TableName 表名
-     */
-    public void setTableName(String TableName) {
-        this.TableName = TableName;
-    }
-
-    public TableName() {
+    public Describe5GAPNsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TableName(TableName source) {
-        if (source.TableName != null) {
-            this.TableName = new String(source.TableName);
-        }
+    public Describe5GAPNsRequest(Describe5GAPNsRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class TableName extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TableName", this.TableName);
 
     }
 }

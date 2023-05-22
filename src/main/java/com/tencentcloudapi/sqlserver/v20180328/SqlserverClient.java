@@ -259,6 +259,46 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateCloudDBInstances）用于创建高可用实例(虚拟机版本)。
+     * @param req CreateCloudDBInstancesRequest
+     * @return CreateCloudDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudDBInstancesResponse CreateCloudDBInstances(CreateCloudDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateCloudReadOnlyDBInstances）用于添加只读副本实例(虚拟机版本)。
+     * @param req CreateCloudReadOnlyDBInstancesRequest
+     * @return CreateCloudReadOnlyDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudReadOnlyDBInstancesResponse CreateCloudReadOnlyDBInstances(CreateCloudReadOnlyDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudReadOnlyDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloudReadOnlyDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CreateDB）用于创建数据库。
      * @param req CreateDBRequest
      * @return CreateDBResponse

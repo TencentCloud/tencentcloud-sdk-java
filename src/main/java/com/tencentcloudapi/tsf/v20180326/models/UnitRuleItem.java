@@ -91,6 +91,30 @@ public class UnitRuleItem extends AbstractModel{
     private UnitRuleTag [] UnitRuleTagList;
 
     /**
+    * 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ItemIndex")
+    @Expose
+    private Long ItemIndex;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedTime")
+    @Expose
+    private String UpdatedTime;
+
+    /**
      * Get 逻辑关系：AND/OR 
      * @return Relationship 逻辑关系：AND/OR
      */
@@ -254,6 +278,66 @@ public class UnitRuleItem extends AbstractModel{
         this.UnitRuleTagList = UnitRuleTagList;
     }
 
+    /**
+     * Get 项目id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemIndex 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getItemIndex() {
+        return this.ItemIndex;
+    }
+
+    /**
+     * Set 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ItemIndex 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItemIndex(Long ItemIndex) {
+        this.ItemIndex = ItemIndex;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdatedTime() {
+        return this.UpdatedTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedTime(String UpdatedTime) {
+        this.UpdatedTime = UpdatedTime;
+    }
+
     public UnitRuleItem() {
     }
 
@@ -292,6 +376,15 @@ public class UnitRuleItem extends AbstractModel{
                 this.UnitRuleTagList[i] = new UnitRuleTag(source.UnitRuleTagList[i]);
             }
         }
+        if (source.ItemIndex != null) {
+            this.ItemIndex = new Long(source.ItemIndex);
+        }
+        if (source.CreatedTime != null) {
+            this.CreatedTime = new String(source.CreatedTime);
+        }
+        if (source.UpdatedTime != null) {
+            this.UpdatedTime = new String(source.UpdatedTime);
+        }
     }
 
 
@@ -308,6 +401,9 @@ public class UnitRuleItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "UnitRuleTagList.", this.UnitRuleTagList);
+        this.setParamSimple(map, prefix + "ItemIndex", this.ItemIndex);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
 
     }
 }

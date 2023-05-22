@@ -70,7 +70,7 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     private String IdCardType;
 
     /**
-    * 手机号码
+    * 手机号码；当需要开通自动签时，该参数必传
     */
     @SerializedName("Mobile")
     @Expose
@@ -200,16 +200,16 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     }
 
     /**
-     * Get 手机号码 
-     * @return Mobile 手机号码
+     * Get 手机号码；当需要开通自动签时，该参数必传 
+     * @return Mobile 手机号码；当需要开通自动签时，该参数必传
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 手机号码
-     * @param Mobile 手机号码
+     * Set 手机号码；当需要开通自动签时，该参数必传
+     * @param Mobile 手机号码；当需要开通自动签时，该参数必传
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

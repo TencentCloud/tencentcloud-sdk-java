@@ -127,6 +127,14 @@ public class UserNotice extends AbstractModel{
     private Long [] Weekday;
 
     /**
+    * 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OnCallFormIDs")
+    @Expose
+    private String [] OnCallFormIDs;
+
+    /**
      * Get 接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReceiverType 接收者类型 USER=用户 GROUP=用户组
@@ -386,6 +394,26 @@ public class UserNotice extends AbstractModel{
         this.Weekday = Weekday;
     }
 
+    /**
+     * Get 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OnCallFormIDs 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOnCallFormIDs() {
+        return this.OnCallFormIDs;
+    }
+
+    /**
+     * Set 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OnCallFormIDs 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOnCallFormIDs(String [] OnCallFormIDs) {
+        this.OnCallFormIDs = OnCallFormIDs;
+    }
+
     public UserNotice() {
     }
 
@@ -448,6 +476,12 @@ public class UserNotice extends AbstractModel{
                 this.Weekday[i] = new Long(source.Weekday[i]);
             }
         }
+        if (source.OnCallFormIDs != null) {
+            this.OnCallFormIDs = new String[source.OnCallFormIDs.length];
+            for (int i = 0; i < source.OnCallFormIDs.length; i++) {
+                this.OnCallFormIDs[i] = new String(source.OnCallFormIDs[i]);
+            }
+        }
     }
 
 
@@ -468,6 +502,7 @@ public class UserNotice extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
         this.setParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
         this.setParamArraySimple(map, prefix + "Weekday.", this.Weekday);
+        this.setParamArraySimple(map, prefix + "OnCallFormIDs.", this.OnCallFormIDs);
 
     }
 }

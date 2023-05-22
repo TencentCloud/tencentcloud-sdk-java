@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ConditionsTemp extends AbstractModel{
 
     /**
-    * 模版名称
+    * 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
@@ -47,9 +47,9 @@ public class ConditionsTemp extends AbstractModel{
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-     * Get 模版名称
+     * Get 模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TemplateName 模版名称
+     * @return TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
@@ -57,9 +57,9 @@ public class ConditionsTemp extends AbstractModel{
     }
 
     /**
-     * Set 模版名称
+     * Set 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TemplateName 模版名称
+     * @param TemplateName 模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
