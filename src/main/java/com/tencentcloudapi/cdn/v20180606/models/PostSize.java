@@ -23,9 +23,10 @@ import java.util.HashMap;
 public class PostSize extends AbstractModel{
 
     /**
-    * 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+    * POST请求上传文件流式传输最大限制配置开关，取值有：
+on：开启，平台默认为32MB
+off：关闭
+
     */
     @SerializedName("Switch")
     @Expose
@@ -39,24 +40,28 @@ public class PostSize extends AbstractModel{
     private Long MaxSize;
 
     /**
-     * Get 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。 
-     * @return Switch 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+     * Get POST请求上传文件流式传输最大限制配置开关，取值有：
+on：开启，平台默认为32MB
+off：关闭
+ 
+     * @return Switch POST请求上传文件流式传输最大限制配置开关，取值有：
+on：开启，平台默认为32MB
+off：关闭
+
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
-     * @param Switch 是调整POST请求限制，平台默认为32MB。
-关闭：off，
-开启：on。
+     * Set POST请求上传文件流式传输最大限制配置开关，取值有：
+on：开启，平台默认为32MB
+off：关闭
+
+     * @param Switch POST请求上传文件流式传输最大限制配置开关，取值有：
+on：开启，平台默认为32MB
+off：关闭
+
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

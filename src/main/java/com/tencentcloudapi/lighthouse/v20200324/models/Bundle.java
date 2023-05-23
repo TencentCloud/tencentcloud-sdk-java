@@ -39,21 +39,21 @@ public class Bundle extends AbstractModel{
     /**
     * 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
     */
     @SerializedName("SystemDiskType")
     @Expose
     private String SystemDiskType;
 
     /**
-    * 系统盘大小。
+    * 系统盘大小。单位GB。
     */
     @SerializedName("SystemDiskSize")
     @Expose
     private Long SystemDiskSize;
 
     /**
-    * 每月网络流量，单位 Gb。
+    * 每月网络流量，单位 GB。
     */
     @SerializedName("MonthlyTraffic")
     @Expose
@@ -178,10 +178,10 @@ public class Bundle extends AbstractModel{
     /**
      * Get 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li> 
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li> 
      * @return SystemDiskType 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      */
     public String getSystemDiskType() {
         return this.SystemDiskType;
@@ -190,42 +190,42 @@ public class Bundle extends AbstractModel{
     /**
      * Set 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      * @param SystemDiskType 系统盘类型。
 取值范围： 
-<li> LOCAL_BASIC：本地硬盘</li><li> LOCAL_SSD：本地 SSD 硬盘</li><li> CLOUD_BASIC：普通云硬盘</li><li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
+<li> CLOUD_SSD：SSD 云硬盘</li><li> CLOUD_PREMIUM：高性能云硬盘</li>
      */
     public void setSystemDiskType(String SystemDiskType) {
         this.SystemDiskType = SystemDiskType;
     }
 
     /**
-     * Get 系统盘大小。 
-     * @return SystemDiskSize 系统盘大小。
+     * Get 系统盘大小。单位GB。 
+     * @return SystemDiskSize 系统盘大小。单位GB。
      */
     public Long getSystemDiskSize() {
         return this.SystemDiskSize;
     }
 
     /**
-     * Set 系统盘大小。
-     * @param SystemDiskSize 系统盘大小。
+     * Set 系统盘大小。单位GB。
+     * @param SystemDiskSize 系统盘大小。单位GB。
      */
     public void setSystemDiskSize(Long SystemDiskSize) {
         this.SystemDiskSize = SystemDiskSize;
     }
 
     /**
-     * Get 每月网络流量，单位 Gb。 
-     * @return MonthlyTraffic 每月网络流量，单位 Gb。
+     * Get 每月网络流量，单位 GB。 
+     * @return MonthlyTraffic 每月网络流量，单位 GB。
      */
     public Long getMonthlyTraffic() {
         return this.MonthlyTraffic;
     }
 
     /**
-     * Set 每月网络流量，单位 Gb。
-     * @param MonthlyTraffic 每月网络流量，单位 Gb。
+     * Set 每月网络流量，单位 GB。
+     * @param MonthlyTraffic 每月网络流量，单位 GB。
      */
     public void setMonthlyTraffic(Long MonthlyTraffic) {
         this.MonthlyTraffic = MonthlyTraffic;

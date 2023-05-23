@@ -380,7 +380,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本就口（DescribeSecurityGroup）用于查询实例绑定的安全组。
+     *本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse
      * @throws TencentCloudSDKException

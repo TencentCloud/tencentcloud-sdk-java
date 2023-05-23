@@ -135,6 +135,13 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DiskBackupQuota;
 
     /**
+    * 创建云盘时是否开启性能突发
+    */
+    @SerializedName("BurstPerformance")
+    @Expose
+    private Boolean BurstPerformance;
+
+    /**
      * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。 
      * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目。若不指定项目，将在默认项目下进行创建。
      */
@@ -390,6 +397,22 @@ public class CreateDisksRequest extends AbstractModel{
         this.DiskBackupQuota = DiskBackupQuota;
     }
 
+    /**
+     * Get 创建云盘时是否开启性能突发 
+     * @return BurstPerformance 创建云盘时是否开启性能突发
+     */
+    public Boolean getBurstPerformance() {
+        return this.BurstPerformance;
+    }
+
+    /**
+     * Set 创建云盘时是否开启性能突发
+     * @param BurstPerformance 创建云盘时是否开启性能突发
+     */
+    public void setBurstPerformance(Boolean BurstPerformance) {
+        this.BurstPerformance = BurstPerformance;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -449,6 +472,9 @@ public class CreateDisksRequest extends AbstractModel{
         if (source.DiskBackupQuota != null) {
             this.DiskBackupQuota = new Long(source.DiskBackupQuota);
         }
+        if (source.BurstPerformance != null) {
+            this.BurstPerformance = new Boolean(source.BurstPerformance);
+        }
     }
 
 
@@ -472,6 +498,7 @@ public class CreateDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
         this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
+        this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
 
     }
 }

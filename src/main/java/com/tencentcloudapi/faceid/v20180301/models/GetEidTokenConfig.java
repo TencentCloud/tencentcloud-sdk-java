@@ -71,6 +71,13 @@ public class GetEidTokenConfig extends AbstractModel{
     private Boolean IntentionRecognition;
 
     /**
+    * 是否支持港澳台居住证识别
+    */
+    @SerializedName("IsSupportHMTResidentPermitOCR")
+    @Expose
+    private Boolean IsSupportHMTResidentPermitOCR;
+
+    /**
      * Get 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -190,6 +197,22 @@ public class GetEidTokenConfig extends AbstractModel{
         this.IntentionRecognition = IntentionRecognition;
     }
 
+    /**
+     * Get 是否支持港澳台居住证识别 
+     * @return IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别
+     */
+    public Boolean getIsSupportHMTResidentPermitOCR() {
+        return this.IsSupportHMTResidentPermitOCR;
+    }
+
+    /**
+     * Set 是否支持港澳台居住证识别
+     * @param IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别
+     */
+    public void setIsSupportHMTResidentPermitOCR(Boolean IsSupportHMTResidentPermitOCR) {
+        this.IsSupportHMTResidentPermitOCR = IsSupportHMTResidentPermitOCR;
+    }
+
     public GetEidTokenConfig() {
     }
 
@@ -219,6 +242,9 @@ public class GetEidTokenConfig extends AbstractModel{
         if (source.IntentionRecognition != null) {
             this.IntentionRecognition = new Boolean(source.IntentionRecognition);
         }
+        if (source.IsSupportHMTResidentPermitOCR != null) {
+            this.IsSupportHMTResidentPermitOCR = new Boolean(source.IsSupportHMTResidentPermitOCR);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class GetEidTokenConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
+        this.setParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
 
     }
 }

@@ -1454,4 +1454,24 @@ public class MariadbClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口(UpgradeDedicatedDBInstance)用于扩容独享云数据库实例。
+     * @param req UpgradeDedicatedDBInstanceRequest
+     * @return UpgradeDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstance(UpgradeDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

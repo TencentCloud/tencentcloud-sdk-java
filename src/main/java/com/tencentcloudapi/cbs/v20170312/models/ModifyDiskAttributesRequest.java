@@ -65,6 +65,13 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
     private String DiskType;
 
     /**
+    * 开启/关闭云盘性能突发功能
+    */
+    @SerializedName("BurstPerformanceOperation")
+    @Expose
+    private String BurstPerformanceOperation;
+
+    /**
      * Get 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。 
      * @return DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
      */
@@ -160,6 +167,22 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
         this.DiskType = DiskType;
     }
 
+    /**
+     * Get 开启/关闭云盘性能突发功能 
+     * @return BurstPerformanceOperation 开启/关闭云盘性能突发功能
+     */
+    public String getBurstPerformanceOperation() {
+        return this.BurstPerformanceOperation;
+    }
+
+    /**
+     * Set 开启/关闭云盘性能突发功能
+     * @param BurstPerformanceOperation 开启/关闭云盘性能突发功能
+     */
+    public void setBurstPerformanceOperation(String BurstPerformanceOperation) {
+        this.BurstPerformanceOperation = BurstPerformanceOperation;
+    }
+
     public ModifyDiskAttributesRequest() {
     }
 
@@ -189,6 +212,9 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.BurstPerformanceOperation != null) {
+            this.BurstPerformanceOperation = new String(source.BurstPerformanceOperation);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class ModifyDiskAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "BurstPerformanceOperation", this.BurstPerformanceOperation);
 
     }
 }

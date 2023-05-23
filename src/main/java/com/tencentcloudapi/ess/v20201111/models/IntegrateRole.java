@@ -39,7 +39,7 @@ public class IntegrateRole extends AbstractModel{
     private String RoleName;
 
     /**
-    * 角色类型：1-系统角色，2-自定义角色
+    * 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoleStatus")
@@ -103,9 +103,9 @@ public class IntegrateRole extends AbstractModel{
     }
 
     /**
-     * Get 角色类型：1-系统角色，2-自定义角色
+     * Get 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RoleStatus 角色类型：1-系统角色，2-自定义角色
+     * @return RoleStatus 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoleStatus() {
@@ -113,9 +113,9 @@ public class IntegrateRole extends AbstractModel{
     }
 
     /**
-     * Set 角色类型：1-系统角色，2-自定义角色
+     * Set 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoleStatus 角色类型：1-系统角色，2-自定义角色
+     * @param RoleStatus 角色状态，1-启用，2-禁用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoleStatus(Long RoleStatus) {

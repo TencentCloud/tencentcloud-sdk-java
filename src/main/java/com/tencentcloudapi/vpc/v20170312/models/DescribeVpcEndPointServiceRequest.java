@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeVpcEndPointServiceRequest extends AbstractModel{
 
     /**
-    * 过滤条件。
+    * 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
@@ -48,19 +48,19 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 终端节点服务ID。
+    * 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
     */
     @SerializedName("EndPointServiceIds")
     @Expose
     private String [] EndPointServiceIds;
 
     /**
-     * Get 过滤条件。
+     * Get 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
 <li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li> 
-     * @return Filters 过滤条件。
+     * @return Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
@@ -71,12 +71,12 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件。
+     * Set 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
 <li>service-type - String - （过滤条件）后端PAAS服务类型，CLB,CDB,CRS，不填默认查询类型为CLB。</li>
-     * @param Filters 过滤条件。
+     * @param Filters 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
 <li>service-instance-id - String - （过滤条件）后端服务的唯一ID，比如lb-xxx。</li>
@@ -119,16 +119,16 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 终端节点服务ID。 
-     * @return EndPointServiceIds 终端节点服务ID。
+     * Get 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。 
+     * @return EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
      */
     public String [] getEndPointServiceIds() {
         return this.EndPointServiceIds;
     }
 
     /**
-     * Set 终端节点服务ID。
-     * @param EndPointServiceIds 终端节点服务ID。
+     * Set 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
+     * @param EndPointServiceIds 终端节点服务ID。不支持同时传入参数 EndPointServiceIds and Filters。
      */
     public void setEndPointServiceIds(String [] EndPointServiceIds) {
         this.EndPointServiceIds = EndPointServiceIds;

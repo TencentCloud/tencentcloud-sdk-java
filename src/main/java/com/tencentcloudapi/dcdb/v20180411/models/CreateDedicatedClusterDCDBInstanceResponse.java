@@ -13,63 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdn.v20180606.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HttpsBilling extends AbstractModel{
+public class CreateDedicatedClusterDCDBInstanceResponse extends AbstractModel{
 
     /**
-    * HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("Switch")
+    @SerializedName("RequestId")
     @Expose
-    private String Switch;
+    private String RequestId;
 
     /**
-     * Get HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
- 
-     * @return Switch HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getSwitch() {
-        return this.Switch;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
-     * @param Switch HTTPS服务配置开关，取值有：
-on：开启，缺省时默认开启，会产生计费
-off：关闭，拦截https请求
-
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setSwitch(String Switch) {
-        this.Switch = Switch;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public HttpsBilling() {
+    public CreateDedicatedClusterDCDBInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HttpsBilling(HttpsBilling source) {
-        if (source.Switch != null) {
-            this.Switch = new String(source.Switch);
+    public CreateDedicatedClusterDCDBInstanceResponse(CreateDedicatedClusterDCDBInstanceResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -78,7 +63,7 @@ off：关闭，拦截https请求
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

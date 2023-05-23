@@ -144,6 +144,13 @@ public class HostInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * 集群id
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -423,6 +430,22 @@ public class HostInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 集群id 
+     * @return ClusterID 集群id
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterID 集群id
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
     public HostInfo() {
     }
 
@@ -485,6 +508,9 @@ public class HostInfo extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
     }
 
 
@@ -509,6 +535,7 @@ public class HostInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionID", this.RegionID);
         this.setParamObj(map, prefix + "Project.", this.Project);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
 
     }
 }

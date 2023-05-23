@@ -30,6 +30,14 @@ public class Key extends AbstractModel{
     private String AutoName;
 
     /**
+    * 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigName")
+    @Expose
+    private String ConfigName;
+
+    /**
      * Get 自动识别的字段名称 
      * @return AutoName 自动识别的字段名称
      */
@@ -45,6 +53,26 @@ public class Key extends AbstractModel{
         this.AutoName = AutoName;
     }
 
+    /**
+     * Get 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigName 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigName() {
+        return this.ConfigName;
+    }
+
+    /**
+     * Set 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigName 定义的字段名称（传key的名称）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigName(String ConfigName) {
+        this.ConfigName = ConfigName;
+    }
+
     public Key() {
     }
 
@@ -56,6 +84,9 @@ public class Key extends AbstractModel{
         if (source.AutoName != null) {
             this.AutoName = new String(source.AutoName);
         }
+        if (source.ConfigName != null) {
+            this.ConfigName = new String(source.ConfigName);
+        }
     }
 
 
@@ -64,6 +95,7 @@ public class Key extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoName", this.AutoName);
+        this.setParamSimple(map, prefix + "ConfigName", this.ConfigName);
 
     }
 }

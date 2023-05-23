@@ -200,6 +200,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *创建独享集群DCDB实例
+     * @param req CreateDedicatedClusterDCDBInstanceRequest
+     * @return CreateDedicatedClusterDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDedicatedClusterDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建DCDB后付费实例
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse
@@ -293,6 +313,26 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
+     * @param req DescribeDBEncryptAttributesRequest
+     * @return DescribeDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBEncryptAttributes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -762,7 +802,9 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeSqlLogs）用于获取实例SQL日志。
+     *已废弃接口
+
+本接口（DescribeSqlLogs）用于获取实例SQL日志。
      * @param req DescribeSqlLogsRequest
      * @return DescribeSqlLogsResponse
      * @throws TencentCloudSDKException
@@ -1347,6 +1389,26 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeDCDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+     * @param req UpgradeDedicatedDCDBInstanceRequest
+     * @return UpgradeDedicatedDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDedicatedDCDBInstanceResponse UpgradeDedicatedDCDBInstance(UpgradeDedicatedDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDedicatedDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDedicatedDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

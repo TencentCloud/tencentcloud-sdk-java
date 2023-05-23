@@ -58,7 +58,7 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大为200。
+    * 返回数量，默认为20，最大为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 返回数量，默认为20，最大为200。 
-     * @return Limit 返回数量，默认为20，最大为200。
+     * Get 返回数量，默认为20，最大为100。 
+     * @return Limit 返回数量，默认为20，最大为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大为200。
-     * @param Limit 返回数量，默认为20，最大为200。
+     * Set 返回数量，默认为20，最大为100。
+     * @param Limit 返回数量，默认为20，最大为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

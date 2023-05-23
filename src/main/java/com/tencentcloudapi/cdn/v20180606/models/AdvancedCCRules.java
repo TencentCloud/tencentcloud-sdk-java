@@ -46,7 +46,9 @@ public class AdvancedCCRules extends AbstractModel{
     private Long FrequencyLimit;
 
     /**
-    * IP 惩罚开关，可选on|off
+    * IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PunishmentSwitch")
@@ -152,9 +154,13 @@ off：关闭
     }
 
     /**
-     * Get IP 惩罚开关，可选on|off
+     * Get IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PunishmentSwitch IP 惩罚开关，可选on|off
+     * @return PunishmentSwitch IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPunishmentSwitch() {
@@ -162,9 +168,13 @@ off：关闭
     }
 
     /**
-     * Set IP 惩罚开关，可选on|off
+     * Set IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PunishmentSwitch IP 惩罚开关，可选on|off
+     * @param PunishmentSwitch IP 惩罚配置开关，取值有：
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPunishmentSwitch(String PunishmentSwitch) {
