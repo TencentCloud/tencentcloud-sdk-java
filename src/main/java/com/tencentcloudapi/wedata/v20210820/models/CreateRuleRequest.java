@@ -184,6 +184,13 @@ public class CreateRuleRequest extends AbstractModel{
     private String TargetObjectValue;
 
     /**
+    * 该规则支持的执行引擎列表
+    */
+    @SerializedName("SourceEngineTypes")
+    @Expose
+    private Long [] SourceEngineTypes;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -551,6 +558,22 @@ public class CreateRuleRequest extends AbstractModel{
         this.TargetObjectValue = TargetObjectValue;
     }
 
+    /**
+     * Get 该规则支持的执行引擎列表 
+     * @return SourceEngineTypes 该规则支持的执行引擎列表
+     */
+    public Long [] getSourceEngineTypes() {
+        return this.SourceEngineTypes;
+    }
+
+    /**
+     * Set 该规则支持的执行引擎列表
+     * @param SourceEngineTypes 该规则支持的执行引擎列表
+     */
+    public void setSourceEngineTypes(Long [] SourceEngineTypes) {
+        this.SourceEngineTypes = SourceEngineTypes;
+    }
+
     public CreateRuleRequest() {
     }
 
@@ -628,6 +651,12 @@ public class CreateRuleRequest extends AbstractModel{
         if (source.TargetObjectValue != null) {
             this.TargetObjectValue = new String(source.TargetObjectValue);
         }
+        if (source.SourceEngineTypes != null) {
+            this.SourceEngineTypes = new Long[source.SourceEngineTypes.length];
+            for (int i = 0; i < source.SourceEngineTypes.length; i++) {
+                this.SourceEngineTypes[i] = new Long(source.SourceEngineTypes[i]);
+            }
+        }
     }
 
 
@@ -658,6 +687,7 @@ public class CreateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RelConditionExpr", this.RelConditionExpr);
         this.setParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
         this.setParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
+        this.setParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
 
     }
 }

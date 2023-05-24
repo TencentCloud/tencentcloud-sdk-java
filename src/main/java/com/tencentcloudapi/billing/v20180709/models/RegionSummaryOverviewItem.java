@@ -31,18 +31,11 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     private String RegionId;
 
     /**
-    * 地域名称
+    * 地域名称：资源所属地域，例如华南地区（广州）
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
-
-    /**
-    * 实际花费
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
 
     /**
     * 费用所占百分比，两位小数
@@ -52,25 +45,39 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * 现金金额
+    * 优惠后总价
+    */
+    @SerializedName("RealTotalCost")
+    @Expose
+    private String RealTotalCost;
+
+    /**
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金金额
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 代金券金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
+
+    /**
+    * 分成金账户支出：通过分成金账户支付的金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * 账单月份，格式2019-08
@@ -85,13 +92,6 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
-
-    /**
-    * 分成金金额
-    */
-    @SerializedName("TransferPayAmount")
-    @Expose
-    private String TransferPayAmount;
 
     /**
      * Get 地域ID
@@ -114,35 +114,19 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 地域名称 
-     * @return RegionName 地域名称
+     * Get 地域名称：资源所属地域，例如华南地区（广州） 
+     * @return RegionName 地域名称：资源所属地域，例如华南地区（广州）
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域名称
-     * @param RegionName 地域名称
+     * Set 地域名称：资源所属地域，例如华南地区（广州）
+     * @param RegionName 地域名称：资源所属地域，例如华南地区（广州）
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
-    }
-
-    /**
-     * Get 实际花费 
-     * @return RealTotalCost 实际花费
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set 实际花费
-     * @param RealTotalCost 实际花费
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -162,51 +146,83 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 现金金额 
-     * @return CashPayAmount 现金金额
+     * Get 优惠后总价 
+     * @return RealTotalCost 优惠后总价
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set 优惠后总价
+     * @param RealTotalCost 优惠后总价
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金金额
-     * @param CashPayAmount 现金金额
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金金额 
-     * @return IncentivePayAmount 赠送金金额
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金金额
-     * @param IncentivePayAmount 赠送金金额
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券金额 
-     * @return VoucherPayAmount 代金券金额
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券金额
-     * @param VoucherPayAmount 代金券金额
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get 分成金账户支出：通过分成金账户支付的金额 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -241,22 +257,6 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
-    /**
-     * Get 分成金金额 
-     * @return TransferPayAmount 分成金金额
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set 分成金金额
-     * @param TransferPayAmount 分成金金额
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
-    }
-
     public RegionSummaryOverviewItem() {
     }
 
@@ -271,11 +271,11 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -286,14 +286,14 @@ public class RegionSummaryOverviewItem extends AbstractModel{
         if (source.VoucherPayAmount != null) {
             this.VoucherPayAmount = new String(source.VoucherPayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
-        }
-        if (source.TransferPayAmount != null) {
-            this.TransferPayAmount = new String(source.TransferPayAmount);
         }
     }
 
@@ -304,14 +304,14 @@ public class RegionSummaryOverviewItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
-        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

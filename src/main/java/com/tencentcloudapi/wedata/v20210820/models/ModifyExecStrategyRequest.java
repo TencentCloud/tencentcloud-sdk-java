@@ -140,6 +140,13 @@ MONTH_CYCLE:M
     private String TableId;
 
     /**
+    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    */
+    @SerializedName("ExecEngineType")
+    @Expose
+    private String ExecEngineType;
+
+    /**
      * Get 规则组ID 
      * @return RuleGroupId 规则组ID
      */
@@ -415,6 +422,22 @@ MONTH_CYCLE:M
         this.TableId = TableId;
     }
 
+    /**
+     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
+     * @return ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public String getExecEngineType() {
+        return this.ExecEngineType;
+    }
+
+    /**
+     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public void setExecEngineType(String ExecEngineType) {
+        this.ExecEngineType = ExecEngineType;
+    }
+
     public ModifyExecStrategyRequest() {
     }
 
@@ -474,6 +497,9 @@ MONTH_CYCLE:M
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
         }
+        if (source.ExecEngineType != null) {
+            this.ExecEngineType = new String(source.ExecEngineType);
+        }
     }
 
 
@@ -497,6 +523,7 @@ MONTH_CYCLE:M
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
 
     }
 }

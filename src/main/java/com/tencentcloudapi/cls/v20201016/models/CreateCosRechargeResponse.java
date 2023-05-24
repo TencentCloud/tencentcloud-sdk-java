@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateCosRechargeResponse extends AbstractModel{
 
     /**
+    * cos_recharge记录id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get cos_recharge记录id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id cos_recharge记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set cos_recharge记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id cos_recharge记录id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +81,9 @@ public class CreateCosRechargeResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateCosRechargeResponse(CreateCosRechargeResponse source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class CreateCosRechargeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

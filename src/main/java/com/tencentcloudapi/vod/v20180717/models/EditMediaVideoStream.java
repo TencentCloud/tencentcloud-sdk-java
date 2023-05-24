@@ -57,6 +57,15 @@ public class EditMediaVideoStream extends AbstractModel{
     private Long Height;
 
     /**
+    * 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
      * Get 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -156,6 +165,30 @@ public class EditMediaVideoStream extends AbstractModel{
         this.Height = Height;
     }
 
+    /**
+     * Get 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。 
+     * @return Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+     * @param Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+当取值为0，将自动为视频设置帧率。
+默认值为 0。
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
+
     public EditMediaVideoStream() {
     }
 
@@ -173,6 +206,9 @@ public class EditMediaVideoStream extends AbstractModel{
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
     }
 
 
@@ -183,6 +219,7 @@ public class EditMediaVideoStream extends AbstractModel{
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
 
     }
 }

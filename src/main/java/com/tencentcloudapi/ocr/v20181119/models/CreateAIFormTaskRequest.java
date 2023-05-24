@@ -44,6 +44,13 @@ public class CreateAIFormTaskRequest extends AbstractModel{
     private String SecondNotes;
 
     /**
+    * 文件类型
+    */
+    @SerializedName("FileType")
+    @Expose
+    private Long FileType;
+
+    /**
      * Get 多个文件的URL列表 
      * @return FileList 多个文件的URL列表
      */
@@ -91,6 +98,22 @@ public class CreateAIFormTaskRequest extends AbstractModel{
         this.SecondNotes = SecondNotes;
     }
 
+    /**
+     * Get 文件类型 
+     * @return FileType 文件类型
+     */
+    public Long getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型
+     * @param FileType 文件类型
+     */
+    public void setFileType(Long FileType) {
+        this.FileType = FileType;
+    }
+
     public CreateAIFormTaskRequest() {
     }
 
@@ -111,6 +134,9 @@ public class CreateAIFormTaskRequest extends AbstractModel{
         if (source.SecondNotes != null) {
             this.SecondNotes = new String(source.SecondNotes);
         }
+        if (source.FileType != null) {
+            this.FileType = new Long(source.FileType);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class CreateAIFormTaskRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileList.", this.FileList);
         this.setParamSimple(map, prefix + "FirstNotes", this.FirstNotes);
         this.setParamSimple(map, prefix + "SecondNotes", this.SecondNotes);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
 
     }
 }

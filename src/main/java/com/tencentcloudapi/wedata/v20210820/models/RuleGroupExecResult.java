@@ -135,6 +135,14 @@ public class RuleGroupExecResult extends AbstractModel{
     private String ExecDetail;
 
     /**
+    * 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupExecId 规则组执行ID
@@ -414,6 +422,26 @@ public class RuleGroupExecResult extends AbstractModel{
         this.ExecDetail = ExecDetail;
     }
 
+    /**
+     * Get 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 实际执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public RuleGroupExecResult() {
     }
 
@@ -464,6 +492,9 @@ public class RuleGroupExecResult extends AbstractModel{
         if (source.ExecDetail != null) {
             this.ExecDetail = new String(source.ExecDetail);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -485,6 +516,7 @@ public class RuleGroupExecResult extends AbstractModel{
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

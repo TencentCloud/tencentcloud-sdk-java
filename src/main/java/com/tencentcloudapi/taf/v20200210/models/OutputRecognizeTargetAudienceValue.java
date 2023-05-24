@@ -47,6 +47,22 @@ public class OutputRecognizeTargetAudienceValue extends AbstractModel{
     private Float Score;
 
     /**
+    * 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelType")
+    @Expose
+    private Long ModelType;
+
+    /**
+    * 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uid")
+    @Expose
+    private String Uid;
+
+    /**
      * Get 模型ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelId 模型ID
@@ -106,6 +122,46 @@ public class OutputRecognizeTargetAudienceValue extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 模型类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelType 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getModelType() {
+        return this.ModelType;
+    }
+
+    /**
+     * Set 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelType 模型类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelType(Long ModelType) {
+        this.ModelType = ModelType;
+    }
+
+    /**
+     * Get 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uid 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uid 入参Uid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUid(String Uid) {
+        this.Uid = Uid;
+    }
+
     public OutputRecognizeTargetAudienceValue() {
     }
 
@@ -123,6 +179,12 @@ public class OutputRecognizeTargetAudienceValue extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Float(source.Score);
         }
+        if (source.ModelType != null) {
+            this.ModelType = new Long(source.ModelType);
+        }
+        if (source.Uid != null) {
+            this.Uid = new String(source.Uid);
+        }
     }
 
 
@@ -133,6 +195,8 @@ public class OutputRecognizeTargetAudienceValue extends AbstractModel{
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "IsFound", this.IsFound);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
 
     }
 }

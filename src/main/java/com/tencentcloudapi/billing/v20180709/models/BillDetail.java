@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class BillDetail extends AbstractModel{
 
     /**
-    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+    * 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品名称：云产品子类，如云服务器CVM-标准型S1
+    * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式：包年包月和按量计费
+    * 计费模式：资源的计费模式，区分为包年包月和按量计费
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 项目:资源所属项目
+    * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 区域：资源所属地域，如华南地区（广州）
+    * 地域：资源所属地域，如华南地区（广州）
     */
     @SerializedName("RegionName")
     @Expose
@@ -65,56 +65,56 @@ public class BillDetail extends AbstractModel{
     private String ZoneName;
 
     /**
-    * 资源实例ID
+    * 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 实例名称
+    * 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 交易类型
+    * 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * 订单ID
+    * 订单ID：包年包月计费模式下订购的订单号
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 交易ID
+    * 交易ID：结算扣费单号
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 扣费时间
+    * 扣费时间：结算扣费时间
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * 开始使用时间
+    * 开始使用时间：产品服务开始使用时间
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * 结束使用时间
+    * 结束使用时间：产品服务结束使用时间
     */
     @SerializedName("FeeEndTime")
     @Expose
@@ -128,28 +128,28 @@ public class BillDetail extends AbstractModel{
     private BillDetailComponent [] ComponentSet;
 
     /**
-    * 支付者UIN
+    * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 使用者UIN
+    * 使用者UIN：实际使用资源的账号 ID
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 操作者UIN
+    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * Tag 信息
+    * 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -157,7 +157,7 @@ public class BillDetail extends AbstractModel{
     private BillTagInfo [] Tags;
 
     /**
-    * 产品名称代码
+    * 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
@@ -165,7 +165,7 @@ public class BillDetail extends AbstractModel{
     private String BusinessCode;
 
     /**
-    * 子产品名称代码
+    * 子产品编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
@@ -173,7 +173,7 @@ public class BillDetail extends AbstractModel{
     private String ProductCode;
 
     /**
-    * 交易类型代码
+    * 交易类型编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
@@ -181,7 +181,7 @@ public class BillDetail extends AbstractModel{
     private String ActionType;
 
     /**
-    * 区域ID
+    * 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
@@ -189,7 +189,7 @@ public class BillDetail extends AbstractModel{
     private String RegionId;
 
     /**
-    * 项目ID:资源所属项目ID
+    * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -204,80 +204,80 @@ public class BillDetail extends AbstractModel{
     private String [] PriceInfo;
 
     /**
-     * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
-     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
+     * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
-     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Set 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+     * @param BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 子产品名称：云产品子类，如云服务器CVM-标准型S1 
-     * @return ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1 
+     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称：云产品子类，如云服务器CVM-标准型S1
-     * @param ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1
+     * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式：包年包月和按量计费 
-     * @return PayModeName 计费模式：包年包月和按量计费
+     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
+     * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式：包年包月和按量计费
-     * @param PayModeName 计费模式：包年包月和按量计费
+     * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 项目:资源所属项目 
-     * @return ProjectName 项目:资源所属项目
+     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
+     * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目:资源所属项目
-     * @param ProjectName 项目:资源所属项目
+     * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 区域：资源所属地域，如华南地区（广州） 
-     * @return RegionName 区域：资源所属地域，如华南地区（广州）
+     * Get 地域：资源所属地域，如华南地区（广州） 
+     * @return RegionName 地域：资源所属地域，如华南地区（广州）
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 区域：资源所属地域，如华南地区（广州）
-     * @param RegionName 区域：资源所属地域，如华南地区（广州）
+     * Set 地域：资源所属地域，如华南地区（广州）
+     * @param RegionName 地域：资源所属地域，如华南地区（广州）
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -300,128 +300,128 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 资源实例ID 
-     * @return ResourceId 资源实例ID
+     * Get 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID 
+     * @return ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源实例ID
-     * @param ResourceId 资源实例ID
+     * Set 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
+     * @param ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return ResourceName 实例名称
+     * Get 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空 
+     * @return ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 实例名称
-     * @param ResourceName 实例名称
+     * Set 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+     * @param ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 交易类型 
-     * @return ActionTypeName 交易类型
+     * Get 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型 
+     * @return ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set 交易类型
-     * @param ActionTypeName 交易类型
+     * Set 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
+     * @param ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get 订单ID 
-     * @return OrderId 订单ID
+     * Get 订单ID：包年包月计费模式下订购的订单号 
+     * @return OrderId 订单ID：包年包月计费模式下订购的订单号
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单ID
-     * @param OrderId 订单ID
+     * Set 订单ID：包年包月计费模式下订购的订单号
+     * @param OrderId 订单ID：包年包月计费模式下订购的订单号
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 交易ID 
-     * @return BillId 交易ID
+     * Get 交易ID：结算扣费单号 
+     * @return BillId 交易ID：结算扣费单号
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 交易ID
-     * @param BillId 交易ID
+     * Set 交易ID：结算扣费单号
+     * @param BillId 交易ID：结算扣费单号
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 扣费时间 
-     * @return PayTime 扣费时间
+     * Get 扣费时间：结算扣费时间 
+     * @return PayTime 扣费时间：结算扣费时间
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set 扣费时间
-     * @param PayTime 扣费时间
+     * Set 扣费时间：结算扣费时间
+     * @param PayTime 扣费时间：结算扣费时间
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 开始使用时间 
-     * @return FeeBeginTime 开始使用时间
+     * Get 开始使用时间：产品服务开始使用时间 
+     * @return FeeBeginTime 开始使用时间：产品服务开始使用时间
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set 开始使用时间
-     * @param FeeBeginTime 开始使用时间
+     * Set 开始使用时间：产品服务开始使用时间
+     * @param FeeBeginTime 开始使用时间：产品服务开始使用时间
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 结束使用时间 
-     * @return FeeEndTime 结束使用时间
+     * Get 结束使用时间：产品服务结束使用时间 
+     * @return FeeEndTime 结束使用时间：产品服务结束使用时间
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set 结束使用时间
-     * @param FeeEndTime 结束使用时间
+     * Set 结束使用时间：产品服务结束使用时间
+     * @param FeeEndTime 结束使用时间：产品服务结束使用时间
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
@@ -444,57 +444,57 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 支付者UIN 
-     * @return PayerUin 支付者UIN
+     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
+     * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 支付者UIN
-     * @param PayerUin 支付者UIN
+     * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 使用者UIN 
-     * @return OwnerUin 使用者UIN
+     * Get 使用者UIN：实际使用资源的账号 ID 
+     * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 使用者UIN
-     * @param OwnerUin 使用者UIN
+     * Set 使用者UIN：实际使用资源的账号 ID
+     * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者UIN 
-     * @return OperateUin 操作者UIN
+     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
+     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者UIN
-     * @param OperateUin 操作者UIN
+     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get Tag 信息
+     * Get 标签信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags Tag 信息
+     * @return Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTagInfo [] getTags() {
@@ -502,9 +502,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set Tag 信息
+     * Set 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags Tag 信息
+     * @param Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(BillTagInfo [] Tags) {
@@ -512,9 +512,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 产品名称代码
+     * Get 产品编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessCode 产品名称代码
+     * @return BusinessCode 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
@@ -522,9 +522,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 产品名称代码
+     * Set 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessCode 产品名称代码
+     * @param BusinessCode 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
@@ -532,9 +532,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 子产品名称代码
+     * Get 子产品编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProductCode 子产品名称代码
+     * @return ProductCode 子产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
@@ -542,9 +542,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 子产品名称代码
+     * Set 子产品编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProductCode 子产品名称代码
+     * @param ProductCode 子产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
@@ -552,9 +552,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 交易类型代码
+     * Get 交易类型编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActionType 交易类型代码
+     * @return ActionType 交易类型编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
@@ -562,9 +562,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 交易类型代码
+     * Set 交易类型编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActionType 交易类型代码
+     * @param ActionType 交易类型编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
@@ -572,9 +572,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 区域ID
+     * Get 地域ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionId 区域ID
+     * @return RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
@@ -582,9 +582,9 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Set 区域ID
+     * Set 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionId 区域ID
+     * @param RegionId 地域ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
@@ -592,16 +592,16 @@ public class BillDetail extends AbstractModel{
     }
 
     /**
-     * Get 项目ID:资源所属项目ID 
-     * @return ProjectId 项目ID:资源所属项目ID
+     * Get 项目ID 
+     * @return ProjectId 项目ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID:资源所属项目ID
-     * @param ProjectId 项目ID:资源所属项目ID
+     * Set 项目ID
+     * @param ProjectId 项目ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

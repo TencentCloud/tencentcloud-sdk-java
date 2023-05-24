@@ -24,6 +24,7 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
 
     /**
     * 数据是否准备好，0未准备好，1准备好
+Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
     */
     @SerializedName("Ready")
     @Expose
@@ -53,8 +54,10 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 数据是否准备好，0未准备好，1准备好 
+     * Get 数据是否准备好，0未准备好，1准备好
+Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试 
      * @return Ready 数据是否准备好，0未准备好，1准备好
+Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
      */
     public Long getReady() {
         return this.Ready;
@@ -62,7 +65,9 @@ public class DescribeBillSummaryByTagResponse extends AbstractModel{
 
     /**
      * Set 数据是否准备好，0未准备好，1准备好
+Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
      * @param Ready 数据是否准备好，0未准备好，1准备好
+Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;

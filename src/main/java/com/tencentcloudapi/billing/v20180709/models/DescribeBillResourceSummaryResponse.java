@@ -30,7 +30,7 @@ public class DescribeBillResourceSummaryResponse extends AbstractModel{
     private BillResourceSummary [] ResourceSummarySet;
 
     /**
-    * 资源汇总列表总数
+    * 资源汇总列表总数，入参NeedRecordNum为0时不返回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -61,9 +61,9 @@ public class DescribeBillResourceSummaryResponse extends AbstractModel{
     }
 
     /**
-     * Get 资源汇总列表总数
+     * Get 资源汇总列表总数，入参NeedRecordNum为0时不返回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total 资源汇总列表总数
+     * @return Total 资源汇总列表总数，入参NeedRecordNum为0时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -71,9 +71,9 @@ public class DescribeBillResourceSummaryResponse extends AbstractModel{
     }
 
     /**
-     * Set 资源汇总列表总数
+     * Set 资源汇总列表总数，入参NeedRecordNum为0时不返回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total 资源汇总列表总数
+     * @param Total 资源汇总列表总数，入参NeedRecordNum为0时不返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {

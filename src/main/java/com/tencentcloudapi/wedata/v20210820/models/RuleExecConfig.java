@@ -39,6 +39,14 @@ public class RuleExecConfig extends AbstractModel{
     private String ExecutorGroupId;
 
     /**
+    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 计算队列名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QueueName 计算队列名称
@@ -78,6 +86,26 @@ public class RuleExecConfig extends AbstractModel{
         this.ExecutorGroupId = ExecutorGroupId;
     }
 
+    /**
+     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public RuleExecConfig() {
     }
 
@@ -92,6 +120,9 @@ public class RuleExecConfig extends AbstractModel{
         if (source.ExecutorGroupId != null) {
             this.ExecutorGroupId = new String(source.ExecutorGroupId);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class RuleExecConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

@@ -1525,7 +1525,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *创建 Server端
+     *本接口（CreateVpnGatewaySslServer）用于创建SSL-VPN Server端。
      * @param req CreateVpnGatewaySslServerRequest
      * @return CreateVpnGatewaySslServerResponse
      * @throws TencentCloudSDKException

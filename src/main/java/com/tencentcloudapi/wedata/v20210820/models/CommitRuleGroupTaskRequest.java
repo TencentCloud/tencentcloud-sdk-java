@@ -58,6 +58,13 @@ public class CommitRuleGroupTaskRequest extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 规则组ID 
      * @return RuleGroupId 规则组ID
      */
@@ -137,6 +144,22 @@ public class CommitRuleGroupTaskRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
+     * @return EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public CommitRuleGroupTaskRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CommitRuleGroupTaskRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CommitRuleGroupTaskRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ExecRuleConfig.", this.ExecRuleConfig);
         this.setParamObj(map, prefix + "ExecConfig.", this.ExecConfig);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

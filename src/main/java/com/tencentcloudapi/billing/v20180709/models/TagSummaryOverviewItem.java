@@ -31,14 +31,6 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String TagValue;
 
     /**
-    * 实际花费
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
-
-    /**
     * 费用所占百分比，两位小数
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -47,15 +39,15 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+    * 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCost")
+    @SerializedName("RealTotalCost")
     @Expose
-    private String TotalCost;
+    private String RealTotalCost;
 
     /**
-    * 现金金额
+    * 现金账户支出：通过现金账户支付的金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CashPayAmount")
@@ -63,7 +55,7 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String CashPayAmount;
 
     /**
-    * 赠送金金额
+    * 赠送账户支出：使用赠送金支付的金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncentivePayAmount")
@@ -71,7 +63,7 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-    * 代金券金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherPayAmount")
@@ -79,12 +71,20 @@ public class TagSummaryOverviewItem extends AbstractModel{
     private String VoucherPayAmount;
 
     /**
-    * 分成金金额
+    * 分成金账户支出：通过分成金账户支付的金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
+
+    /**
+    * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
 
     /**
      * Get 标签值
@@ -104,26 +104,6 @@ public class TagSummaryOverviewItem extends AbstractModel{
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
-    }
-
-    /**
-     * Get 实际花费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealTotalCost 实际花费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set 实际花费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealTotalCost 实际花费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -147,6 +127,106 @@ public class TagSummaryOverviewItem extends AbstractModel{
     }
 
     /**
+     * Get 优惠后总价
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealTotalCost 优惠后总价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set 优惠后总价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealTotalCost 优惠后总价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get 现金账户支出：通过现金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCashPayAmount() {
+        return this.CashPayAmount;
+    }
+
+    /**
+     * Set 现金账户支出：通过现金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCashPayAmount(String CashPayAmount) {
+        this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
+     * Get 赠送账户支出：使用赠送金支付的金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIncentivePayAmount() {
+        return this.IncentivePayAmount;
+    }
+
+    /**
+     * Set 赠送账户支出：使用赠送金支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIncentivePayAmount(String IncentivePayAmount) {
+        this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVoucherPayAmount() {
+        return this.VoucherPayAmount;
+    }
+
+    /**
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoucherPayAmount(String VoucherPayAmount) {
+        this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
      * Get 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
@@ -166,86 +246,6 @@ public class TagSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
-    /**
-     * Get 现金金额
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CashPayAmount 现金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getCashPayAmount() {
-        return this.CashPayAmount;
-    }
-
-    /**
-     * Set 现金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CashPayAmount 现金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCashPayAmount(String CashPayAmount) {
-        this.CashPayAmount = CashPayAmount;
-    }
-
-    /**
-     * Get 赠送金金额
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IncentivePayAmount 赠送金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getIncentivePayAmount() {
-        return this.IncentivePayAmount;
-    }
-
-    /**
-     * Set 赠送金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IncentivePayAmount 赠送金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setIncentivePayAmount(String IncentivePayAmount) {
-        this.IncentivePayAmount = IncentivePayAmount;
-    }
-
-    /**
-     * Get 代金券金额
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoucherPayAmount 代金券金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getVoucherPayAmount() {
-        return this.VoucherPayAmount;
-    }
-
-    /**
-     * Set 代金券金额
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoucherPayAmount 代金券金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVoucherPayAmount(String VoucherPayAmount) {
-        this.VoucherPayAmount = VoucherPayAmount;
-    }
-
-    /**
-     * Get 分成金金额
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TransferPayAmount 分成金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set 分成金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TransferPayAmount 分成金金额
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
-    }
-
     public TagSummaryOverviewItem() {
     }
 
@@ -257,14 +257,11 @@ public class TagSummaryOverviewItem extends AbstractModel{
         if (source.TagValue != null) {
             this.TagValue = new String(source.TagValue);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -278,6 +275,9 @@ public class TagSummaryOverviewItem extends AbstractModel{
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
     }
 
 
@@ -286,13 +286,13 @@ public class TagSummaryOverviewItem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TagValue", this.TagValue);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

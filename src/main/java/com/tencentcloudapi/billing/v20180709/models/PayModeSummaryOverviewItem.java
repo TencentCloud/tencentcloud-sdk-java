@@ -23,25 +23,18 @@ import java.util.HashMap;
 public class PayModeSummaryOverviewItem extends AbstractModel{
 
     /**
-    * 付费模式
+    * 计费模式编码
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * 付费模式名称
+    * 计费模式：区分为包年包月和按量计费
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
-
-    /**
-    * 实际花费
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
 
     /**
     * 费用所占百分比，两位小数
@@ -51,32 +44,39 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+    * 优惠后总价
     */
-    @SerializedName("Detail")
+    @SerializedName("RealTotalCost")
     @Expose
-    private ActionSummaryOverviewItem [] Detail;
+    private String RealTotalCost;
 
     /**
-    * 现金金额
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金金额
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 代金券金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
+
+    /**
+    * 分成金账户支出：通过分成金账户支付的金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
@@ -86,58 +86,42 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
-    * 分成金金额
+    * 按交易类型汇总消费详情
     */
-    @SerializedName("TransferPayAmount")
+    @SerializedName("Detail")
     @Expose
-    private String TransferPayAmount;
+    private ActionSummaryOverviewItem [] Detail;
 
     /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
+     * Get 计费模式编码 
+     * @return PayMode 计费模式编码
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式
-     * @param PayMode 付费模式
+     * Set 计费模式编码
+     * @param PayMode 计费模式编码
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 付费模式名称 
-     * @return PayModeName 付费模式名称
+     * Get 计费模式：区分为包年包月和按量计费 
+     * @return PayModeName 计费模式：区分为包年包月和按量计费
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 付费模式名称
-     * @param PayModeName 付费模式名称
+     * Set 计费模式：区分为包年包月和按量计费
+     * @param PayModeName 计费模式：区分为包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
-    }
-
-    /**
-     * Get 实际花费 
-     * @return RealTotalCost 实际花费
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set 实际花费
-     * @param RealTotalCost 实际花费
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -157,67 +141,83 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情 
-     * @return Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * Get 优惠后总价 
+     * @return RealTotalCost 优惠后总价
      */
-    public ActionSummaryOverviewItem [] getDetail() {
-        return this.Detail;
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
     }
 
     /**
-     * Set 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
-     * @param Detail 按交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型汇总消费详情
+     * Set 优惠后总价
+     * @param RealTotalCost 优惠后总价
      */
-    public void setDetail(ActionSummaryOverviewItem [] Detail) {
-        this.Detail = Detail;
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 现金金额 
-     * @return CashPayAmount 现金金额
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金金额
-     * @param CashPayAmount 现金金额
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金金额 
-     * @return IncentivePayAmount 赠送金金额
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金金额
-     * @param IncentivePayAmount 赠送金金额
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券金额 
-     * @return VoucherPayAmount 代金券金额
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券金额
-     * @param VoucherPayAmount 代金券金额
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get 分成金账户支出：通过分成金账户支付的金额 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -237,19 +237,19 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 分成金金额 
-     * @return TransferPayAmount 分成金金额
+     * Get 按交易类型汇总消费详情 
+     * @return Detail 按交易类型汇总消费详情
      */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
+    public ActionSummaryOverviewItem [] getDetail() {
+        return this.Detail;
     }
 
     /**
-     * Set 分成金金额
-     * @param TransferPayAmount 分成金金额
+     * Set 按交易类型汇总消费详情
+     * @param Detail 按交易类型汇总消费详情
      */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
+    public void setDetail(ActionSummaryOverviewItem [] Detail) {
+        this.Detail = Detail;
     }
 
     public PayModeSummaryOverviewItem() {
@@ -266,17 +266,11 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
         if (source.PayModeName != null) {
             this.PayModeName = new String(source.PayModeName);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
-        if (source.Detail != null) {
-            this.Detail = new ActionSummaryOverviewItem[source.Detail.length];
-            for (int i = 0; i < source.Detail.length; i++) {
-                this.Detail[i] = new ActionSummaryOverviewItem(source.Detail[i]);
-            }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -287,11 +281,17 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
         if (source.VoucherPayAmount != null) {
             this.VoucherPayAmount = new String(source.VoucherPayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
-        if (source.TransferPayAmount != null) {
-            this.TransferPayAmount = new String(source.TransferPayAmount);
+        if (source.Detail != null) {
+            this.Detail = new ActionSummaryOverviewItem[source.Detail.length];
+            for (int i = 0; i < source.Detail.length; i++) {
+                this.Detail[i] = new ActionSummaryOverviewItem(source.Detail[i]);
+            }
         }
     }
 
@@ -302,14 +302,14 @@ public class PayModeSummaryOverviewItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayModeName", this.PayModeName);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
-        this.setParamArrayObj(map, prefix + "Detail.", this.Detail);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamArrayObj(map, prefix + "Detail.", this.Detail);
 
     }
 }

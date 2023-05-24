@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BusinessSummaryOverviewItem extends AbstractModel{
 
     /**
-    * 产品名称代码
+    * 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
@@ -31,18 +31,11 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String BusinessCode;
 
     /**
-    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+    * 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
-
-    /**
-    * 实际花费
-    */
-    @SerializedName("RealTotalCost")
-    @Expose
-    private String RealTotalCost;
 
     /**
     * 费用所占百分比，两位小数
@@ -52,25 +45,39 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String RealTotalCostRatio;
 
     /**
-    * 现金金额
+    * 优惠后总价
+    */
+    @SerializedName("RealTotalCost")
+    @Expose
+    private String RealTotalCost;
+
+    /**
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送金金额
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 代金券金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
+
+    /**
+    * 分成金账户支出：通过分成金账户支付的金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * 账单月份，格式2019-08
@@ -87,16 +94,9 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
-    * 分成金金额
-    */
-    @SerializedName("TransferPayAmount")
-    @Expose
-    private String TransferPayAmount;
-
-    /**
-     * Get 产品名称代码
+     * Get 产品编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BusinessCode 产品名称代码
+     * @return BusinessCode 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
@@ -104,9 +104,9 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Set 产品名称代码
+     * Set 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BusinessCode 产品名称代码
+     * @param BusinessCode 产品编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
@@ -114,35 +114,19 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
-     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
+     * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
-     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Set 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+     * @param BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
-    }
-
-    /**
-     * Get 实际花费 
-     * @return RealTotalCost 实际花费
-     */
-    public String getRealTotalCost() {
-        return this.RealTotalCost;
-    }
-
-    /**
-     * Set 实际花费
-     * @param RealTotalCost 实际花费
-     */
-    public void setRealTotalCost(String RealTotalCost) {
-        this.RealTotalCost = RealTotalCost;
     }
 
     /**
@@ -162,51 +146,83 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     }
 
     /**
-     * Get 现金金额 
-     * @return CashPayAmount 现金金额
+     * Get 优惠后总价 
+     * @return RealTotalCost 优惠后总价
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set 优惠后总价
+     * @param RealTotalCost 优惠后总价
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金金额
-     * @param CashPayAmount 现金金额
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送金金额 
-     * @return IncentivePayAmount 赠送金金额
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金金额
-     * @param IncentivePayAmount 赠送金金额
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 代金券金额 
-     * @return VoucherPayAmount 代金券金额
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券金额
-     * @param VoucherPayAmount 代金券金额
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get 分成金账户支出：通过分成金账户支付的金额 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -241,22 +257,6 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
-    /**
-     * Get 分成金金额 
-     * @return TransferPayAmount 分成金金额
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set 分成金金额
-     * @param TransferPayAmount 分成金金额
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
-    }
-
     public BusinessSummaryOverviewItem() {
     }
 
@@ -271,11 +271,11 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         if (source.BusinessCodeName != null) {
             this.BusinessCodeName = new String(source.BusinessCodeName);
         }
-        if (source.RealTotalCost != null) {
-            this.RealTotalCost = new String(source.RealTotalCost);
-        }
         if (source.RealTotalCostRatio != null) {
             this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
         }
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
@@ -286,14 +286,14 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
         if (source.VoucherPayAmount != null) {
             this.VoucherPayAmount = new String(source.VoucherPayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
-        }
-        if (source.TransferPayAmount != null) {
-            this.TransferPayAmount = new String(source.TransferPayAmount);
         }
     }
 
@@ -304,14 +304,14 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
-        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
-        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

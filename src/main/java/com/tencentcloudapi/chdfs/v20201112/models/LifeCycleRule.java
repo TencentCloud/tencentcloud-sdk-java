@@ -65,6 +65,20 @@ public class LifeCycleRule extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 生命周期规则当前路径具体存储量
+    */
+    @SerializedName("Summary")
+    @Expose
+    private Summary Summary;
+
+    /**
+    * Summary更新时间
+    */
+    @SerializedName("LastSummaryTime")
+    @Expose
+    private String LastSummaryTime;
+
+    /**
      * Get 生命周期规则ID 
      * @return LifeCycleRuleId 生命周期规则ID
      */
@@ -160,6 +174,38 @@ public class LifeCycleRule extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 生命周期规则当前路径具体存储量 
+     * @return Summary 生命周期规则当前路径具体存储量
+     */
+    public Summary getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set 生命周期规则当前路径具体存储量
+     * @param Summary 生命周期规则当前路径具体存储量
+     */
+    public void setSummary(Summary Summary) {
+        this.Summary = Summary;
+    }
+
+    /**
+     * Get Summary更新时间 
+     * @return LastSummaryTime Summary更新时间
+     */
+    public String getLastSummaryTime() {
+        return this.LastSummaryTime;
+    }
+
+    /**
+     * Set Summary更新时间
+     * @param LastSummaryTime Summary更新时间
+     */
+    public void setLastSummaryTime(String LastSummaryTime) {
+        this.LastSummaryTime = LastSummaryTime;
+    }
+
     public LifeCycleRule() {
     }
 
@@ -189,6 +235,12 @@ public class LifeCycleRule extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Summary != null) {
+            this.Summary = new Summary(source.Summary);
+        }
+        if (source.LastSummaryTime != null) {
+            this.LastSummaryTime = new String(source.LastSummaryTime);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class LifeCycleRule extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Transitions.", this.Transitions);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamObj(map, prefix + "Summary.", this.Summary);
+        this.setParamSimple(map, prefix + "LastSummaryTime", this.LastSummaryTime);
 
     }
 }

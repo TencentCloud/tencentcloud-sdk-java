@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SummaryTotal extends AbstractModel{
 
     /**
-    * 总数
+    * 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
@@ -39,9 +39,9 @@ public class SummaryTotal extends AbstractModel{
     private String TotalCost;
 
     /**
-     * Get 总数
+     * Get 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RealTotalCost 总数
+     * @return RealTotalCost 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
@@ -49,9 +49,9 @@ public class SummaryTotal extends AbstractModel{
     }
 
     /**
-     * Set 总数
+     * Set 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RealTotalCost 总数
+     * @param RealTotalCost 优惠后总价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {

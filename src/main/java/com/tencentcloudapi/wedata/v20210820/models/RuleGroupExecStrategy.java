@@ -119,6 +119,22 @@ public class RuleGroupExecStrategy extends AbstractModel{
     private String TaskAction;
 
     /**
+    * 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecEngineType")
+    @Expose
+    private String ExecEngineType;
+
+    /**
+    * 执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecPlan")
+    @Expose
+    private String ExecPlan;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -358,6 +374,46 @@ public class RuleGroupExecStrategy extends AbstractModel{
         this.TaskAction = TaskAction;
     }
 
+    /**
+     * Get 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecEngineType() {
+        return this.ExecEngineType;
+    }
+
+    /**
+     * Set 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecEngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecEngineType(String ExecEngineType) {
+        this.ExecEngineType = ExecEngineType;
+    }
+
+    /**
+     * Get 执行计划
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecPlan 执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecPlan() {
+        return this.ExecPlan;
+    }
+
+    /**
+     * Set 执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecPlan 执行计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecPlan(String ExecPlan) {
+        this.ExecPlan = ExecPlan;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -405,6 +461,12 @@ public class RuleGroupExecStrategy extends AbstractModel{
         if (source.TaskAction != null) {
             this.TaskAction = new String(source.TaskAction);
         }
+        if (source.ExecEngineType != null) {
+            this.ExecEngineType = new String(source.ExecEngineType);
+        }
+        if (source.ExecPlan != null) {
+            this.ExecPlan = new String(source.ExecPlan);
+        }
     }
 
 
@@ -424,6 +486,8 @@ public class RuleGroupExecStrategy extends AbstractModel{
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
         this.setParamSimple(map, prefix + "CycleStep", this.CycleStep);
         this.setParamSimple(map, prefix + "TaskAction", this.TaskAction);
+        this.setParamSimple(map, prefix + "ExecEngineType", this.ExecEngineType);
+        this.setParamSimple(map, prefix + "ExecPlan", this.ExecPlan);
 
     }
 }

@@ -51,7 +51,7 @@ public class DescribeCrossBorderFlowMonitorRequest extends AbstractModel{
     private String CcnUin;
 
     /**
-    * 时间粒度。
+    * 时间粒度。单位为:秒，如60为60s的时间粒度
     */
     @SerializedName("Period")
     @Expose
@@ -136,16 +136,16 @@ public class DescribeCrossBorderFlowMonitorRequest extends AbstractModel{
     }
 
     /**
-     * Get 时间粒度。 
-     * @return Period 时间粒度。
+     * Get 时间粒度。单位为:秒，如60为60s的时间粒度 
+     * @return Period 时间粒度。单位为:秒，如60为60s的时间粒度
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 时间粒度。
-     * @param Period 时间粒度。
+     * Set 时间粒度。单位为:秒，如60为60s的时间粒度
+     * @param Period 时间粒度。单位为:秒，如60为60s的时间粒度
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

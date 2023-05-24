@@ -295,6 +295,14 @@ public class Rule extends AbstractModel{
     private String TargetObjectValue;
 
     /**
+    * 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceEngineTypes")
+    @Expose
+    private Long [] SourceEngineTypes;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -974,6 +982,26 @@ public class Rule extends AbstractModel{
         this.TargetObjectValue = TargetObjectValue;
     }
 
+    /**
+     * Get 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceEngineTypes 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getSourceEngineTypes() {
+        return this.SourceEngineTypes;
+    }
+
+    /**
+     * Set 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceEngineTypes 源端对应的引擎类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceEngineTypes(Long [] SourceEngineTypes) {
+        this.SourceEngineTypes = SourceEngineTypes;
+    }
+
     public Rule() {
     }
 
@@ -1084,6 +1112,12 @@ public class Rule extends AbstractModel{
         if (source.TargetObjectValue != null) {
             this.TargetObjectValue = new String(source.TargetObjectValue);
         }
+        if (source.SourceEngineTypes != null) {
+            this.SourceEngineTypes = new Long[source.SourceEngineTypes.length];
+            for (int i = 0; i < source.SourceEngineTypes.length; i++) {
+                this.SourceEngineTypes[i] = new Long(source.SourceEngineTypes[i]);
+            }
+        }
     }
 
 
@@ -1125,6 +1159,7 @@ public class Rule extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
         this.setParamSimple(map, prefix + "TargetObjectDataTypeName", this.TargetObjectDataTypeName);
         this.setParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
+        this.setParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
 
     }
 }

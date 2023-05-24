@@ -23,127 +23,126 @@ import java.util.HashMap;
 public class BillResourceSummary extends AbstractModel{
 
     /**
-    * 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+    * 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-    * 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+    * 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * 计费模式：包年包月和按量计费
+    * 计费模式：资源的计费模式，区分为包年包月和按量计费
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-    * 项目
+    * 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-    * 地域
+    * 地域：资源所属地域，如华南地区（广州）
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * 可用区
+    * 可用区：资源所属可用区，如广州三区
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 资源实例ID
+    * 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源实例名称
+    * 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
     */
     @SerializedName("ResourceName")
     @Expose
     private String ResourceName;
 
     /**
-    * 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+    * 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-    * 订单ID
+    * 订单ID：包年包月计费模式下订购的订单号
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 扣费时间
+    * 扣费时间：结算扣费时间
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * 开始使用时间
+    * 开始使用时间：产品服务开始使用时间
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * 结束使用时间
+    * 结束使用时间：产品服务结束使用时间
     */
     @SerializedName("FeeEndTime")
     @Expose
     private String FeeEndTime;
 
     /**
-    * 配置描述
+    * 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现
     */
     @SerializedName("ConfigDesc")
     @Expose
     private String ConfigDesc;
 
     /**
-    * 扩展字段1
+    * 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现
     */
     @SerializedName("ExtendField1")
     @Expose
     private String ExtendField1;
 
     /**
-    * 扩展字段2
+    * 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现
     */
     @SerializedName("ExtendField2")
     @Expose
     private String ExtendField2;
 
     /**
-    * 原价，单位为元
+    * 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-    * 折扣率
-当聚合之后折扣不唯一或者合同价的情况下，返回“-”
+    * 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
     */
     @SerializedName("Discount")
     @Expose
@@ -157,56 +156,64 @@ public class BillResourceSummary extends AbstractModel{
     private String ReduceType;
 
     /**
-    * 优惠后总价，单位为元
+    * 优惠后总价
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 代金券支付金额，单位为元
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 现金账户支付金额，单位为元
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送账户支付金额，单位为元
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 扩展字段3
+    * 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
+    * 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
     */
     @SerializedName("ExtendField3")
     @Expose
     private String ExtendField3;
 
     /**
-    * 扩展字段4
+    * 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
     */
     @SerializedName("ExtendField4")
     @Expose
     private String ExtendField4;
 
     /**
-    * 扩展字段5
+    * 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
     */
     @SerializedName("ExtendField5")
     @Expose
     private String ExtendField5;
 
     /**
-    * Tag 信息
+    * 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
@@ -214,370 +221,358 @@ public class BillResourceSummary extends AbstractModel{
     private BillTagInfo [] Tags;
 
     /**
-    * 付款方uin
+    * 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * 资源所有者uin,无值则返回"-"
+    * 使用者UIN：实际使用资源的账号 ID
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 操作者uin,无值则返回"-"
+    * 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 产品名称代码
+    * 产品编码
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 子产品名称代码
+    * 子产品编码
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 区域ID
+    * 地域ID
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+    * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 按组件原价的口径换算的预留实例抵扣金额
+    * 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
     */
     @SerializedName("OriginalCostWithRI")
     @Expose
     private String OriginalCostWithRI;
 
     /**
-    * 节省计划抵扣的SP包面值
+    * 节省计划抵扣金额（已废弃）
     */
     @SerializedName("SPDeduction")
     @Expose
     private String SPDeduction;
 
     /**
-    * 按组件原价的口径换算的节省计划抵扣金额
+    * 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
     */
     @SerializedName("OriginalCostWithSP")
     @Expose
     private String OriginalCostWithSP;
 
     /**
-     * Get 产品名称：云产品大类，如云服务器CVM、云数据库MySQL 
-     * @return BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
+     * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
-     * @param BusinessCodeName 产品名称：云产品大类，如云服务器CVM、云数据库MySQL
+     * Set 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
+     * @param BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;
     }
 
     /**
-     * Get 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-" 
-     * @return ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * Get 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1 
+     * @return ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
-     * @param ProductCodeName 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+     * Set 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
+     * @param ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get 计费模式：包年包月和按量计费 
-     * @return PayModeName 计费模式：包年包月和按量计费
+     * Get 计费模式：资源的计费模式，区分为包年包月和按量计费 
+     * @return PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set 计费模式：包年包月和按量计费
-     * @param PayModeName 计费模式：包年包月和按量计费
+     * Set 计费模式：资源的计费模式，区分为包年包月和按量计费
+     * @param PayModeName 计费模式：资源的计费模式，区分为包年包月和按量计费
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;
     }
 
     /**
-     * Get 项目 
-     * @return ProjectName 项目
+     * Get 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目 
+     * @return ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set 项目
-     * @param ProjectName 项目
+     * Set 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
+     * @param ProjectName 项目名称：资源归属的项目，用户在控制台给资源自主分配项目，未分配则是默认项目
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;
     }
 
     /**
-     * Get 地域 
-     * @return RegionName 地域
+     * Get 地域：资源所属地域，如华南地区（广州） 
+     * @return RegionName 地域：资源所属地域，如华南地区（广州）
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set 地域
-     * @param RegionName 地域
+     * Set 地域：资源所属地域，如华南地区（广州）
+     * @param RegionName 地域：资源所属地域，如华南地区（广州）
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 可用区 
-     * @return ZoneName 可用区
+     * Get 可用区：资源所属可用区，如广州三区 
+     * @return ZoneName 可用区：资源所属可用区，如广州三区
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区
-     * @param ZoneName 可用区
+     * Set 可用区：资源所属可用区，如广州三区
+     * @param ZoneName 可用区：资源所属可用区，如广州三区
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 资源实例ID 
-     * @return ResourceId 资源实例ID
+     * Get 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	 
+     * @return ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源实例ID
-     * @param ResourceId 资源实例ID
+     * Set 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	
+     * @param ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID	
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源实例名称 
-     * @return ResourceName 资源实例名称
+     * Get 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空 
+     * @return ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      */
     public String getResourceName() {
         return this.ResourceName;
     }
 
     /**
-     * Set 资源实例名称
-     * @param ResourceName 资源实例名称
+     * Set 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
+     * @param ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型 
-     * @return ActionTypeName 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * Get 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型 
+     * @return ActionTypeName 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
-     * @param ActionTypeName 交易类型：包年包月新购/续费/升降配/退款、按量计费扣费、调账补偿/扣费等类型
+     * Set 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型
+     * @param ActionTypeName 交易类型：如包年包月新购、包年包月续费、按量计费扣费等类型
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
     }
 
     /**
-     * Get 订单ID 
-     * @return OrderId 订单ID
+     * Get 订单ID：包年包月计费模式下订购的订单号 
+     * @return OrderId 订单ID：包年包月计费模式下订购的订单号
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单ID
-     * @param OrderId 订单ID
+     * Set 订单ID：包年包月计费模式下订购的订单号
+     * @param OrderId 订单ID：包年包月计费模式下订购的订单号
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 扣费时间 
-     * @return PayTime 扣费时间
+     * Get 扣费时间：结算扣费时间 
+     * @return PayTime 扣费时间：结算扣费时间
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set 扣费时间
-     * @param PayTime 扣费时间
+     * Set 扣费时间：结算扣费时间
+     * @param PayTime 扣费时间：结算扣费时间
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get 开始使用时间 
-     * @return FeeBeginTime 开始使用时间
+     * Get 开始使用时间：产品服务开始使用时间 
+     * @return FeeBeginTime 开始使用时间：产品服务开始使用时间
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set 开始使用时间
-     * @param FeeBeginTime 开始使用时间
+     * Set 开始使用时间：产品服务开始使用时间
+     * @param FeeBeginTime 开始使用时间：产品服务开始使用时间
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get 结束使用时间 
-     * @return FeeEndTime 结束使用时间
+     * Get 结束使用时间：产品服务结束使用时间 
+     * @return FeeEndTime 结束使用时间：产品服务结束使用时间
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set 结束使用时间
-     * @param FeeEndTime 结束使用时间
+     * Set 结束使用时间：产品服务结束使用时间
+     * @param FeeEndTime 结束使用时间：产品服务结束使用时间
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get 配置描述 
-     * @return ConfigDesc 配置描述
+     * Get 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现 
+     * @return ConfigDesc 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现
      */
     public String getConfigDesc() {
         return this.ConfigDesc;
     }
 
     /**
-     * Set 配置描述
-     * @param ConfigDesc 配置描述
+     * Set 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现
+     * @param ConfigDesc 配置描述：该资源下的计费项名称和用量合并展示，仅在资源账单体现
      */
     public void setConfigDesc(String ConfigDesc) {
         this.ConfigDesc = ConfigDesc;
     }
 
     /**
-     * Get 扩展字段1 
-     * @return ExtendField1 扩展字段1
+     * Get 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现 
+     * @return ExtendField1 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现
      */
     public String getExtendField1() {
         return this.ExtendField1;
     }
 
     /**
-     * Set 扩展字段1
-     * @param ExtendField1 扩展字段1
+     * Set 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现
+     * @param ExtendField1 扩展字段1：产品对应的扩展属性信息，仅在资源账单体现
      */
     public void setExtendField1(String ExtendField1) {
         this.ExtendField1 = ExtendField1;
     }
 
     /**
-     * Get 扩展字段2 
-     * @return ExtendField2 扩展字段2
+     * Get 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现 
+     * @return ExtendField2 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现
      */
     public String getExtendField2() {
         return this.ExtendField2;
     }
 
     /**
-     * Set 扩展字段2
-     * @param ExtendField2 扩展字段2
+     * Set 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现
+     * @param ExtendField2 扩展字段2：产品对应的扩展属性信息，仅在资源账单体现
      */
     public void setExtendField2(String ExtendField2) {
         this.ExtendField2 = ExtendField2;
     }
 
     /**
-     * Get 原价，单位为元 
-     * @return TotalCost 原价，单位为元
+     * Get 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示） 
+     * @return TotalCost 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set 原价，单位为元
-     * @param TotalCost 原价，单位为元
+     * Set 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
+     * @param TotalCost 原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 折扣率
-当聚合之后折扣不唯一或者合同价的情况下，返回“-” 
-     * @return Discount 折扣率
-当聚合之后折扣不唯一或者合同价的情况下，返回“-”
+     * Get 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示） 
+     * @return Discount 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣率
-当聚合之后折扣不唯一或者合同价的情况下，返回“-”
-     * @param Discount 折扣率
-当聚合之后折扣不唯一或者合同价的情况下，返回“-”
+     * Set 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+     * @param Discount 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
@@ -600,121 +595,141 @@ rp=Resource Pack
     }
 
     /**
-     * Get 优惠后总价，单位为元 
-     * @return RealTotalCost 优惠后总价，单位为元
+     * Get 优惠后总价 
+     * @return RealTotalCost 优惠后总价
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 优惠后总价，单位为元
-     * @param RealTotalCost 优惠后总价，单位为元
+     * Set 优惠后总价
+     * @param RealTotalCost 优惠后总价
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 代金券支付金额，单位为元 
-     * @return VoucherPayAmount 代金券支付金额，单位为元
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券支付金额，单位为元
-     * @param VoucherPayAmount 代金券支付金额，单位为元
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 现金账户支付金额，单位为元 
-     * @return CashPayAmount 现金账户支付金额，单位为元
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金账户支付金额，单位为元
-     * @param CashPayAmount 现金账户支付金额，单位为元
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送账户支付金额，单位为元 
-     * @return IncentivePayAmount 赠送账户支付金额，单位为元
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送账户支付金额，单位为元
-     * @param IncentivePayAmount 赠送账户支付金额，单位为元
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 扩展字段3 
-     * @return ExtendField3 扩展字段3
+     * Get 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
+     * Get 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现 
+     * @return ExtendField3 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
      */
     public String getExtendField3() {
         return this.ExtendField3;
     }
 
     /**
-     * Set 扩展字段3
-     * @param ExtendField3 扩展字段3
+     * Set 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
+     * @param ExtendField3 扩展字段3：产品对应的扩展属性信息，仅在资源账单体现
      */
     public void setExtendField3(String ExtendField3) {
         this.ExtendField3 = ExtendField3;
     }
 
     /**
-     * Get 扩展字段4 
-     * @return ExtendField4 扩展字段4
+     * Get 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现 
+     * @return ExtendField4 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
      */
     public String getExtendField4() {
         return this.ExtendField4;
     }
 
     /**
-     * Set 扩展字段4
-     * @param ExtendField4 扩展字段4
+     * Set 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
+     * @param ExtendField4 扩展字段4：产品对应的扩展属性信息，仅在资源账单体现
      */
     public void setExtendField4(String ExtendField4) {
         this.ExtendField4 = ExtendField4;
     }
 
     /**
-     * Get 扩展字段5 
-     * @return ExtendField5 扩展字段5
+     * Get 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现 
+     * @return ExtendField5 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
      */
     public String getExtendField5() {
         return this.ExtendField5;
     }
 
     /**
-     * Set 扩展字段5
-     * @param ExtendField5 扩展字段5
+     * Set 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
+     * @param ExtendField5 扩展字段5：产品对应的扩展属性信息，仅在资源账单体现
      */
     public void setExtendField5(String ExtendField5) {
         this.ExtendField5 = ExtendField5;
     }
 
     /**
-     * Get Tag 信息
+     * Get 标签信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags Tag 信息
+     * @return Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public BillTagInfo [] getTags() {
@@ -722,9 +737,9 @@ rp=Resource Pack
     }
 
     /**
-     * Set Tag 信息
+     * Set 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags Tag 信息
+     * @param Tags 标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(BillTagInfo [] Tags) {
@@ -732,192 +747,160 @@ rp=Resource Pack
     }
 
     /**
-     * Get 付款方uin 
-     * @return PayerUin 付款方uin
+     * Get 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识 
+     * @return PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 付款方uin
-     * @param PayerUin 付款方uin
+     * Set 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
+     * @param PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get 资源所有者uin,无值则返回"-" 
-     * @return OwnerUin 资源所有者uin,无值则返回"-"
+     * Get 使用者UIN：实际使用资源的账号 ID 
+     * @return OwnerUin 使用者UIN：实际使用资源的账号 ID
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 资源所有者uin,无值则返回"-"
-     * @param OwnerUin 资源所有者uin,无值则返回"-"
+     * Set 使用者UIN：实际使用资源的账号 ID
+     * @param OwnerUin 使用者UIN：实际使用资源的账号 ID
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get 操作者uin,无值则返回"-" 
-     * @return OperateUin 操作者uin,无值则返回"-"
+     * Get 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ） 
+     * @return OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 操作者uin,无值则返回"-"
-     * @param OperateUin 操作者uin,无值则返回"-"
+     * Set 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
+     * @param OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get 产品名称代码 
-     * @return BusinessCode 产品名称代码
+     * Get 产品编码 
+     * @return BusinessCode 产品编码
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 产品名称代码
-     * @param BusinessCode 产品名称代码
+     * Set 产品编码
+     * @param BusinessCode 产品编码
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 子产品名称代码 
-     * @return ProductCode 子产品名称代码
+     * Get 子产品编码 
+     * @return ProductCode 子产品编码
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 子产品名称代码
-     * @param ProductCode 子产品名称代码
+     * Set 子产品编码
+     * @param ProductCode 子产品编码
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 区域ID 
-     * @return RegionId 区域ID
+     * Get 地域ID 
+     * @return RegionId 地域ID
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 区域ID
-     * @param RegionId 区域ID
+     * Set 地域ID
+     * @param RegionId 地域ID
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack 
-     * @return InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示 
+     * @return InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
-     * @param InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
-
-ri=Standard RI
-
-svp=Savings Plan
-
-si=Spot Instances
-
-rp=Resource Pack
+     * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
+     * @param InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 按组件原价的口径换算的预留实例抵扣金额 
-     * @return OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     * Get 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	 
+     * @return OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
      */
     public String getOriginalCostWithRI() {
         return this.OriginalCostWithRI;
     }
 
     /**
-     * Set 按组件原价的口径换算的预留实例抵扣金额
-     * @param OriginalCostWithRI 按组件原价的口径换算的预留实例抵扣金额
+     * Set 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
+     * @param OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额	
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
         this.OriginalCostWithRI = OriginalCostWithRI;
     }
 
     /**
-     * Get 节省计划抵扣的SP包面值 
-     * @return SPDeduction 节省计划抵扣的SP包面值
+     * Get 节省计划抵扣金额（已废弃） 
+     * @return SPDeduction 节省计划抵扣金额（已废弃）
      */
     public String getSPDeduction() {
         return this.SPDeduction;
     }
 
     /**
-     * Set 节省计划抵扣的SP包面值
-     * @param SPDeduction 节省计划抵扣的SP包面值
+     * Set 节省计划抵扣金额（已废弃）
+     * @param SPDeduction 节省计划抵扣金额（已废弃）
      */
     public void setSPDeduction(String SPDeduction) {
         this.SPDeduction = SPDeduction;
     }
 
     /**
-     * Get 按组件原价的口径换算的节省计划抵扣金额 
-     * @return OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     * Get 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	 
+     * @return OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
      */
     public String getOriginalCostWithSP() {
         return this.OriginalCostWithSP;
     }
 
     /**
-     * Set 按组件原价的口径换算的节省计划抵扣金额
-     * @param OriginalCostWithSP 按组件原价的口径换算的节省计划抵扣金额
+     * Set 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
+     * @param OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率	
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
         this.OriginalCostWithSP = OriginalCostWithSP;
@@ -1000,6 +983,9 @@ rp=Resource Pack
         if (source.IncentivePayAmount != null) {
             this.IncentivePayAmount = new String(source.IncentivePayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.ExtendField3 != null) {
             this.ExtendField3 = new String(source.ExtendField3);
         }
@@ -1075,6 +1061,7 @@ rp=Resource Pack
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "ExtendField3", this.ExtendField3);
         this.setParamSimple(map, prefix + "ExtendField4", this.ExtendField4);
         this.setParamSimple(map, prefix + "ExtendField5", this.ExtendField5);

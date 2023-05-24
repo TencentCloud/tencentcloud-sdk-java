@@ -23,77 +23,77 @@ import java.util.HashMap;
 public class BillDetailComponent extends AbstractModel{
 
     /**
-    * 组件类型:资源组件类型的名称，如内存、硬盘等
+    * 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
     */
     @SerializedName("ComponentCodeName")
     @Expose
     private String ComponentCodeName;
 
     /**
-    * 组件名称:资源组件的名称，如云数据库MySQL-内存等
+    * 组件名称：用户购买的产品或服务，所包含的具体组件
     */
     @SerializedName("ItemCodeName")
     @Expose
     private String ItemCodeName;
 
     /**
-    * 组件刊例价:资源组件的原始价格，保持原始粒度
+    * 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示）
     */
     @SerializedName("SinglePrice")
     @Expose
     private String SinglePrice;
 
     /**
-    * 组件指定价
+    * 组件指定价（已废弃）
     */
     @SerializedName("SpecifiedPrice")
     @Expose
     private String SpecifiedPrice;
 
     /**
-    * 价格单位
+    * 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
     */
     @SerializedName("PriceUnit")
     @Expose
     private String PriceUnit;
 
     /**
-    * 组件用量
+    * 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
     */
     @SerializedName("UsedAmount")
     @Expose
     private String UsedAmount;
 
     /**
-    * 组件用量单位
+    * 组件用量单位：组件用量对应的单位
     */
     @SerializedName("UsedAmountUnit")
     @Expose
     private String UsedAmountUnit;
 
     /**
-    * 使用时长
+    * 使用时长：资源使用的时长
     */
     @SerializedName("TimeSpan")
     @Expose
     private String TimeSpan;
 
     /**
-    * 时长单位
+    * 时长单位：资源使用时长的单位
     */
     @SerializedName("TimeUnitName")
     @Expose
     private String TimeUnitName;
 
     /**
-    * 组件原价
+    * 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
     */
     @SerializedName("Cost")
     @Expose
     private String Cost;
 
     /**
-    * 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+    * 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
     */
     @SerializedName("Discount")
     @Expose
@@ -107,35 +107,43 @@ public class BillDetailComponent extends AbstractModel{
     private String ReduceType;
 
     /**
-    * 优惠后总价
+    * 优惠后总价：优惠后总价=（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
     */
     @SerializedName("RealCost")
     @Expose
     private String RealCost;
 
     /**
-    * 代金券支付金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 现金支付金额
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * 赠送账户支付金额
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 组件类型代码
+    * 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
+    * 组件类型编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCode")
@@ -143,7 +151,7 @@ public class BillDetailComponent extends AbstractModel{
     private String ItemCode;
 
     /**
-    * 组件名称代码
+    * 组件名称编码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
@@ -151,7 +159,7 @@ public class BillDetailComponent extends AbstractModel{
     private String ComponentCode;
 
     /**
-    * 组件单价
+    * 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContractPrice")
@@ -159,7 +167,7 @@ public class BillDetailComponent extends AbstractModel{
     private String ContractPrice;
 
     /**
-    * 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+    * 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -167,7 +175,7 @@ public class BillDetailComponent extends AbstractModel{
     private String InstanceType;
 
     /**
-    * 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+    * 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiTimeSpan")
@@ -175,7 +183,7 @@ public class BillDetailComponent extends AbstractModel{
     private String RiTimeSpan;
 
     /**
-    * 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
+    * 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithRI")
@@ -183,7 +191,7 @@ public class BillDetailComponent extends AbstractModel{
     private String OriginalCostWithRI;
 
     /**
-    * 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+    * 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeductionRate")
@@ -191,7 +199,7 @@ public class BillDetailComponent extends AbstractModel{
     private String SPDeductionRate;
 
     /**
-    * 节省计划抵扣金额，节省计划抵扣的SP包面值
+    * 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SPDeduction")
@@ -199,7 +207,7 @@ public class BillDetailComponent extends AbstractModel{
     private String SPDeduction;
 
     /**
-    * 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
+    * 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCostWithSP")
@@ -207,7 +215,7 @@ public class BillDetailComponent extends AbstractModel{
     private String OriginalCostWithSP;
 
     /**
-    * 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+    * 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlendedDiscount")
@@ -215,176 +223,176 @@ public class BillDetailComponent extends AbstractModel{
     private String BlendedDiscount;
 
     /**
-     * Get 组件类型:资源组件类型的名称，如内存、硬盘等 
-     * @return ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
+     * Get 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等 
+     * @return ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
      */
     public String getComponentCodeName() {
         return this.ComponentCodeName;
     }
 
     /**
-     * Set 组件类型:资源组件类型的名称，如内存、硬盘等
-     * @param ComponentCodeName 组件类型:资源组件类型的名称，如内存、硬盘等
+     * Set 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
+     * @param ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类，例如：云服务器 CVM 的组件：CPU、内存等
      */
     public void setComponentCodeName(String ComponentCodeName) {
         this.ComponentCodeName = ComponentCodeName;
     }
 
     /**
-     * Get 组件名称:资源组件的名称，如云数据库MySQL-内存等 
-     * @return ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * Get 组件名称：用户购买的产品或服务，所包含的具体组件 
+     * @return ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
      */
     public String getItemCodeName() {
         return this.ItemCodeName;
     }
 
     /**
-     * Set 组件名称:资源组件的名称，如云数据库MySQL-内存等
-     * @param ItemCodeName 组件名称:资源组件的名称，如云数据库MySQL-内存等
+     * Set 组件名称：用户购买的产品或服务，所包含的具体组件
+     * @param ItemCodeName 组件名称：用户购买的产品或服务，所包含的具体组件
      */
     public void setItemCodeName(String ItemCodeName) {
         this.ItemCodeName = ItemCodeName;
     }
 
     /**
-     * Get 组件刊例价:资源组件的原始价格，保持原始粒度 
-     * @return SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
+     * Get 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示） 
+     * @return SinglePrice 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示）
      */
     public String getSinglePrice() {
         return this.SinglePrice;
     }
 
     /**
-     * Set 组件刊例价:资源组件的原始价格，保持原始粒度
-     * @param SinglePrice 组件刊例价:资源组件的原始价格，保持原始粒度
+     * Set 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示）
+     * @param SinglePrice 组件刊例价：组件的官网原始单价（如果客户享受一口价/合同价则默认不展示）
      */
     public void setSinglePrice(String SinglePrice) {
         this.SinglePrice = SinglePrice;
     }
 
     /**
-     * Get 组件指定价 
-     * @return SpecifiedPrice 组件指定价
+     * Get 组件指定价（已废弃） 
+     * @return SpecifiedPrice 组件指定价（已废弃）
      */
     public String getSpecifiedPrice() {
         return this.SpecifiedPrice;
     }
 
     /**
-     * Set 组件指定价
-     * @param SpecifiedPrice 组件指定价
+     * Set 组件指定价（已废弃）
+     * @param SpecifiedPrice 组件指定价（已废弃）
      */
     public void setSpecifiedPrice(String SpecifiedPrice) {
         this.SpecifiedPrice = SpecifiedPrice;
     }
 
     /**
-     * Get 价格单位 
-     * @return PriceUnit 价格单位
+     * Get 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位 
+     * @return PriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
      */
     public String getPriceUnit() {
         return this.PriceUnit;
     }
 
     /**
-     * Set 价格单位
-     * @param PriceUnit 价格单位
+     * Set 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
+     * @param PriceUnit 组件价格单位：组件价格的单位，单位构成：元/用量单位/时长单位
      */
     public void setPriceUnit(String PriceUnit) {
         this.PriceUnit = PriceUnit;
     }
 
     /**
-     * Get 组件用量 
-     * @return UsedAmount 组件用量
+     * Get 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包 
+     * @return UsedAmount 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
      */
     public String getUsedAmount() {
         return this.UsedAmount;
     }
 
     /**
-     * Set 组件用量
-     * @param UsedAmount 组件用量
+     * Set 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
+     * @param UsedAmount 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
      */
     public void setUsedAmount(String UsedAmount) {
         this.UsedAmount = UsedAmount;
     }
 
     /**
-     * Get 组件用量单位 
-     * @return UsedAmountUnit 组件用量单位
+     * Get 组件用量单位：组件用量对应的单位 
+     * @return UsedAmountUnit 组件用量单位：组件用量对应的单位
      */
     public String getUsedAmountUnit() {
         return this.UsedAmountUnit;
     }
 
     /**
-     * Set 组件用量单位
-     * @param UsedAmountUnit 组件用量单位
+     * Set 组件用量单位：组件用量对应的单位
+     * @param UsedAmountUnit 组件用量单位：组件用量对应的单位
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
         this.UsedAmountUnit = UsedAmountUnit;
     }
 
     /**
-     * Get 使用时长 
-     * @return TimeSpan 使用时长
+     * Get 使用时长：资源使用的时长 
+     * @return TimeSpan 使用时长：资源使用的时长
      */
     public String getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 使用时长
-     * @param TimeSpan 使用时长
+     * Set 使用时长：资源使用的时长
+     * @param TimeSpan 使用时长：资源使用的时长
      */
     public void setTimeSpan(String TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 时长单位 
-     * @return TimeUnitName 时长单位
+     * Get 时长单位：资源使用时长的单位 
+     * @return TimeUnitName 时长单位：资源使用时长的单位
      */
     public String getTimeUnitName() {
         return this.TimeUnitName;
     }
 
     /**
-     * Set 时长单位
-     * @param TimeUnitName 时长单位
+     * Set 时长单位：资源使用时长的单位
+     * @param TimeUnitName 时长单位：资源使用时长的单位
      */
     public void setTimeUnitName(String TimeUnitName) {
         this.TimeUnitName = TimeUnitName;
     }
 
     /**
-     * Get 组件原价 
-     * @return Cost 组件原价
+     * Get 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示） 
+     * @return Cost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set 组件原价
-     * @param Cost 组件原价
+     * Set 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
+     * @param Cost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
      */
     public void setCost(String Cost) {
         this.Cost = Cost;
     }
 
     /**
-     * Get 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示） 
-     * @return Discount 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+     * Get 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示） 
+     * @return Discount 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
-     * @param Discount 折扣率，本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+     * Set 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
+     * @param Discount 折扣率：本资源享受的折扣率（如果客户享受一口价/合同价则默认不展示，退费场景也默认不展示）
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;
@@ -407,73 +415,93 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 优惠后总价 
-     * @return RealCost 优惠后总价
+     * Get 优惠后总价：优惠后总价=（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率 
+     * @return RealCost 优惠后总价：优惠后总价=（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
      */
     public String getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set 优惠后总价
-     * @param RealCost 优惠后总价
+     * Set 优惠后总价：优惠后总价=（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
+     * @param RealCost 优惠后总价：优惠后总价=（原价 - 预留实例抵扣原价 - 节省计划抵扣原价）* 折扣率
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get 代金券支付金额 
-     * @return VoucherPayAmount 代金券支付金额
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券支付金额
-     * @param VoucherPayAmount 代金券支付金额
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 现金支付金额 
-     * @return CashPayAmount 现金支付金额
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金支付金额
-     * @param CashPayAmount 现金支付金额
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get 赠送账户支付金额 
-     * @return IncentivePayAmount 赠送账户支付金额
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送账户支付金额
-     * @param IncentivePayAmount 赠送账户支付金额
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 组件类型代码
+     * Get 分成金账户支出：通过分成金账户支付的金额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ItemCode 组件类型代码
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
+     * Get 组件类型编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ItemCode 组件类型编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemCode() {
@@ -481,9 +509,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 组件类型代码
+     * Set 组件类型编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ItemCode 组件类型代码
+     * @param ItemCode 组件类型编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCode(String ItemCode) {
@@ -491,9 +519,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 组件名称代码
+     * Get 组件名称编码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComponentCode 组件名称代码
+     * @return ComponentCode 组件名称编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
@@ -501,9 +529,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 组件名称代码
+     * Set 组件名称编码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComponentCode 组件名称代码
+     * @param ComponentCode 组件名称编码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {
@@ -511,9 +539,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 组件单价
+     * Get 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ContractPrice 组件单价
+     * @return ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContractPrice() {
@@ -521,9 +549,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 组件单价
+     * Set 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ContractPrice 组件单价
+     * @param ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContractPrice(String ContractPrice) {
@@ -531,9 +559,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+     * Get 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+     * @return InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -541,9 +569,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+     * Set 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+     * @param InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -551,9 +579,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+     * Get 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiTimeSpan 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+     * @return RiTimeSpan 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiTimeSpan() {
@@ -561,9 +589,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+     * Set 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiTimeSpan 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+     * @param RiTimeSpan 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiTimeSpan(String RiTimeSpan) {
@@ -571,9 +599,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
+     * Get 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCostWithRI 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
+     * @return OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithRI() {
@@ -581,9 +609,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
+     * Set 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCostWithRI 预留实例抵扣组件原价，本产品或服务使用预留实例抵扣的组件原价金额
+     * @param OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithRI(String OriginalCostWithRI) {
@@ -591,9 +619,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * Get 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SPDeductionRate 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * @return SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeductionRate() {
@@ -601,9 +629,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * Set 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SPDeductionRate 节省计划抵扣率，节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+     * @param SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeductionRate(String SPDeductionRate) {
@@ -611,9 +639,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 节省计划抵扣金额，节省计划抵扣的SP包面值
+     * Get 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SPDeduction 节省计划抵扣金额，节省计划抵扣的SP包面值
+     * @return SPDeduction 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSPDeduction() {
@@ -621,9 +649,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 节省计划抵扣金额，节省计划抵扣的SP包面值
+     * Set 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SPDeduction 节省计划抵扣金额，节省计划抵扣的SP包面值
+     * @param SPDeduction 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSPDeduction(String SPDeduction) {
@@ -631,9 +659,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
+     * Get 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OriginalCostWithSP 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
+     * @return OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalCostWithSP() {
@@ -641,9 +669,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
+     * Set 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OriginalCostWithSP 节省计划抵扣组件原价，节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
+     * @param OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCostWithSP(String OriginalCostWithSP) {
@@ -651,9 +679,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+     * Get 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BlendedDiscount 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+     * @return BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBlendedDiscount() {
@@ -661,9 +689,9 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Set 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+     * Set 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlendedDiscount 混合折扣率，综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
+     * @param BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlendedDiscount(String BlendedDiscount) {
@@ -726,6 +754,9 @@ public class BillDetailComponent extends AbstractModel{
         if (source.IncentivePayAmount != null) {
             this.IncentivePayAmount = new String(source.IncentivePayAmount);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
         if (source.ItemCode != null) {
             this.ItemCode = new String(source.ItemCode);
         }
@@ -779,6 +810,7 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
         this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
         this.setParamSimple(map, prefix + "ContractPrice", this.ContractPrice);

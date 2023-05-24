@@ -114,6 +114,14 @@ public class SnapshotInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotType")
+    @Expose
+    private String SnapshotType;
+
+    /**
      * Get 创建快照时间 
      * @return CreationTime 创建快照时间
      */
@@ -321,6 +329,26 @@ public class SnapshotInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 快照类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotType 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapshotType() {
+        return this.SnapshotType;
+    }
+
+    /**
+     * Set 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotType 快照类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotType(String SnapshotType) {
+        this.SnapshotType = SnapshotType;
+    }
+
     public SnapshotInfo() {
     }
 
@@ -371,6 +399,9 @@ public class SnapshotInfo extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.SnapshotType != null) {
+            this.SnapshotType = new String(source.SnapshotType);
+        }
     }
 
 
@@ -391,6 +422,7 @@ public class SnapshotInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
 
     }
 }

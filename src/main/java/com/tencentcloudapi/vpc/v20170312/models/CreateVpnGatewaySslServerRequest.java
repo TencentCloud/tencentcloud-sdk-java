@@ -23,276 +23,276 @@ import java.util.HashMap;
 public class CreateVpnGatewaySslServerRequest extends AbstractModel{
 
     /**
-    * VPN实例ID
+    * VPN网关实例ID。
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * SSL_VPN_SERVER 实例名
+    * SSL-VPN-SERVER 实例名称，长度不超过60个字节。
     */
     @SerializedName("SslVpnServerName")
     @Expose
     private String SslVpnServerName;
 
     /**
-    * 本端地址网段
+    * 云端地址（CIDR）列表。
     */
     @SerializedName("LocalAddress")
     @Expose
     private String [] LocalAddress;
 
     /**
-    * 客户端地址网段
+    * 客户端地址网段。
     */
     @SerializedName("RemoteAddress")
     @Expose
     private String RemoteAddress;
 
     /**
-    * SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+    * SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
     */
     @SerializedName("SslVpnProtocol")
     @Expose
     private String SslVpnProtocol;
 
     /**
-    * SSL VPN服务端监听协议端口。默认1194。
+    * SSL VPN服务端监听协议端口，默认1194。
     */
     @SerializedName("SslVpnPort")
     @Expose
     private Long SslVpnPort;
 
     /**
-    * 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+    * 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
     */
     @SerializedName("IntegrityAlgorithm")
     @Expose
     private String IntegrityAlgorithm;
 
     /**
-    * 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+    * 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * 是否支持压缩。当前仅支持不支持压缩。默认False
+    * 是否支持压缩。当前仅支持不支持压缩，默认False。
     */
     @SerializedName("Compress")
     @Expose
     private Boolean Compress;
 
     /**
-    * 是否开启SSO认证
+    * 是否开启SSO认证。默认为False
     */
     @SerializedName("SsoEnabled")
     @Expose
     private Boolean SsoEnabled;
 
     /**
-    * 是否开启策略访问控制
+    * 是否开启策略访问控制。默认为False
     */
     @SerializedName("AccessPolicyEnabled")
     @Expose
     private Boolean AccessPolicyEnabled;
 
     /**
-    * SAML-DATA
+    * SAML-DATA，开启SSO时传。
     */
     @SerializedName("SamlData")
     @Expose
     private String SamlData;
 
     /**
-     * Get VPN实例ID 
-     * @return VpnGatewayId VPN实例ID
+     * Get VPN网关实例ID。 
+     * @return VpnGatewayId VPN网关实例ID。
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN实例ID
-     * @param VpnGatewayId VPN实例ID
+     * Set VPN网关实例ID。
+     * @param VpnGatewayId VPN网关实例ID。
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get SSL_VPN_SERVER 实例名 
-     * @return SslVpnServerName SSL_VPN_SERVER 实例名
+     * Get SSL-VPN-SERVER 实例名称，长度不超过60个字节。 
+     * @return SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
      */
     public String getSslVpnServerName() {
         return this.SslVpnServerName;
     }
 
     /**
-     * Set SSL_VPN_SERVER 实例名
-     * @param SslVpnServerName SSL_VPN_SERVER 实例名
+     * Set SSL-VPN-SERVER 实例名称，长度不超过60个字节。
+     * @param SslVpnServerName SSL-VPN-SERVER 实例名称，长度不超过60个字节。
      */
     public void setSslVpnServerName(String SslVpnServerName) {
         this.SslVpnServerName = SslVpnServerName;
     }
 
     /**
-     * Get 本端地址网段 
-     * @return LocalAddress 本端地址网段
+     * Get 云端地址（CIDR）列表。 
+     * @return LocalAddress 云端地址（CIDR）列表。
      */
     public String [] getLocalAddress() {
         return this.LocalAddress;
     }
 
     /**
-     * Set 本端地址网段
-     * @param LocalAddress 本端地址网段
+     * Set 云端地址（CIDR）列表。
+     * @param LocalAddress 云端地址（CIDR）列表。
      */
     public void setLocalAddress(String [] LocalAddress) {
         this.LocalAddress = LocalAddress;
     }
 
     /**
-     * Get 客户端地址网段 
-     * @return RemoteAddress 客户端地址网段
+     * Get 客户端地址网段。 
+     * @return RemoteAddress 客户端地址网段。
      */
     public String getRemoteAddress() {
         return this.RemoteAddress;
     }
 
     /**
-     * Set 客户端地址网段
-     * @param RemoteAddress 客户端地址网段
+     * Set 客户端地址网段。
+     * @param RemoteAddress 客户端地址网段。
      */
     public void setRemoteAddress(String RemoteAddress) {
         this.RemoteAddress = RemoteAddress;
     }
 
     /**
-     * Get SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP 
-     * @return SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+     * Get SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。 
+     * @return SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
      */
     public String getSslVpnProtocol() {
         return this.SslVpnProtocol;
     }
 
     /**
-     * Set SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
-     * @param SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
+     * Set SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
+     * @param SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
      */
     public void setSslVpnProtocol(String SslVpnProtocol) {
         this.SslVpnProtocol = SslVpnProtocol;
     }
 
     /**
-     * Get SSL VPN服务端监听协议端口。默认1194。 
-     * @return SslVpnPort SSL VPN服务端监听协议端口。默认1194。
+     * Get SSL VPN服务端监听协议端口，默认1194。 
+     * @return SslVpnPort SSL VPN服务端监听协议端口，默认1194。
      */
     public Long getSslVpnPort() {
         return this.SslVpnPort;
     }
 
     /**
-     * Set SSL VPN服务端监听协议端口。默认1194。
-     * @param SslVpnPort SSL VPN服务端监听协议端口。默认1194。
+     * Set SSL VPN服务端监听协议端口，默认1194。
+     * @param SslVpnPort SSL VPN服务端监听协议端口，默认1194。
      */
     public void setSslVpnPort(Long SslVpnPort) {
         this.SslVpnPort = SslVpnPort;
     }
 
     /**
-     * Get 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE 
-     * @return IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * Get 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。 
+     * @return IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
      */
     public String getIntegrityAlgorithm() {
         return this.IntegrityAlgorithm;
     }
 
     /**
-     * Set 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
-     * @param IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * Set 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
+     * @param IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'，默认NONE。
      */
     public void setIntegrityAlgorithm(String IntegrityAlgorithm) {
         this.IntegrityAlgorithm = IntegrityAlgorithm;
     }
 
     /**
-     * Get 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE 
-     * @return EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+     * Get 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。 
+     * @return EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
-     * @param EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+     * Set 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
+     * @param EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 'NONE'，默认NONE。
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get 是否支持压缩。当前仅支持不支持压缩。默认False 
-     * @return Compress 是否支持压缩。当前仅支持不支持压缩。默认False
+     * Get 是否支持压缩。当前仅支持不支持压缩，默认False。 
+     * @return Compress 是否支持压缩。当前仅支持不支持压缩，默认False。
      */
     public Boolean getCompress() {
         return this.Compress;
     }
 
     /**
-     * Set 是否支持压缩。当前仅支持不支持压缩。默认False
-     * @param Compress 是否支持压缩。当前仅支持不支持压缩。默认False
+     * Set 是否支持压缩。当前仅支持不支持压缩，默认False。
+     * @param Compress 是否支持压缩。当前仅支持不支持压缩，默认False。
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
     }
 
     /**
-     * Get 是否开启SSO认证 
-     * @return SsoEnabled 是否开启SSO认证
+     * Get 是否开启SSO认证。默认为False 
+     * @return SsoEnabled 是否开启SSO认证。默认为False
      */
     public Boolean getSsoEnabled() {
         return this.SsoEnabled;
     }
 
     /**
-     * Set 是否开启SSO认证
-     * @param SsoEnabled 是否开启SSO认证
+     * Set 是否开启SSO认证。默认为False
+     * @param SsoEnabled 是否开启SSO认证。默认为False
      */
     public void setSsoEnabled(Boolean SsoEnabled) {
         this.SsoEnabled = SsoEnabled;
     }
 
     /**
-     * Get 是否开启策略访问控制 
-     * @return AccessPolicyEnabled 是否开启策略访问控制
+     * Get 是否开启策略访问控制。默认为False 
+     * @return AccessPolicyEnabled 是否开启策略访问控制。默认为False
      */
     public Boolean getAccessPolicyEnabled() {
         return this.AccessPolicyEnabled;
     }
 
     /**
-     * Set 是否开启策略访问控制
-     * @param AccessPolicyEnabled 是否开启策略访问控制
+     * Set 是否开启策略访问控制。默认为False
+     * @param AccessPolicyEnabled 是否开启策略访问控制。默认为False
      */
     public void setAccessPolicyEnabled(Boolean AccessPolicyEnabled) {
         this.AccessPolicyEnabled = AccessPolicyEnabled;
     }
 
     /**
-     * Get SAML-DATA 
-     * @return SamlData SAML-DATA
+     * Get SAML-DATA，开启SSO时传。 
+     * @return SamlData SAML-DATA，开启SSO时传。
      */
     public String getSamlData() {
         return this.SamlData;
     }
 
     /**
-     * Set SAML-DATA
-     * @param SamlData SAML-DATA
+     * Set SAML-DATA，开启SSO时传。
+     * @param SamlData SAML-DATA，开启SSO时传。
      */
     public void setSamlData(String SamlData) {
         this.SamlData = SamlData;

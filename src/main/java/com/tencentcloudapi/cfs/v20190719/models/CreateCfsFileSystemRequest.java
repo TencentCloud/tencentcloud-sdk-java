@@ -30,14 +30,14 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
+    * 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
     */
     @SerializedName("NetInterface")
     @Expose
     private String NetInterface;
 
     /**
-    * 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+    * 权限组 ID
     */
     @SerializedName("PGroupId")
     @Expose
@@ -51,7 +51,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+    * 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
     */
     @SerializedName("StorageType")
     @Expose
@@ -137,32 +137,32 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。 
-     * @return NetInterface 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
+     * Get 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。 
+     * @return NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      */
     public String getNetInterface() {
         return this.NetInterface;
     }
 
     /**
-     * Set 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
-     * @param NetInterface 网络类型，可选值为 VPC，BASIC，CCN；其中 VPC 为私有网络，BASIC 为基础网络, CCN 为云联网，Turbo系列当前必须选择云联网。目前基础网络已逐渐淘汰，不推荐使用。
+     * Set 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
+     * @param NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      */
     public void setNetInterface(String NetInterface) {
         this.NetInterface = NetInterface;
     }
 
     /**
-     * Get 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic 
-     * @return PGroupId 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+     * Get 权限组 ID 
+     * @return PGroupId 权限组 ID
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
-     * @param PGroupId 权限组 ID，通用标准型和性能型必填，turbo系列请填写pgroupbasic
+     * Set 权限组 ID
+     * @param PGroupId 权限组 ID
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
@@ -185,16 +185,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。 
-     * @return StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * Get 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。 
+     * @return StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
-     * @param StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型标准型存储， HP为通用性能型存储， TB为turbo标准型， TP 为turbo性能型。
+     * Set 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+     * @param StorageType 文件系统存储类型，默认值为 SD ；其中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

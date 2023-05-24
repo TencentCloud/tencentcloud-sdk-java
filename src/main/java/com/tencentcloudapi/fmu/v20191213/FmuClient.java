@@ -39,7 +39,7 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *用户上传一张人脸图片，精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
+     *用户上传一张人脸图片（最多能处理一张图片中最大的五张人脸信息），精准定位五官，实现美肤、亮肤、祛痘等美颜功能。
      * @param req BeautifyPicRequest
      * @return BeautifyPicResponse
      * @throws TencentCloudSDKException

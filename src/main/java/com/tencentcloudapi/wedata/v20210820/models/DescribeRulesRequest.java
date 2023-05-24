@@ -37,6 +37,13 @@ public class DescribeRulesRequest extends AbstractModel{
     private Long RuleGroupId;
 
     /**
+    * 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -68,6 +75,22 @@ public class DescribeRulesRequest extends AbstractModel{
         this.RuleGroupId = RuleGroupId;
     }
 
+    /**
+     * Get 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎 
+     * @return EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     * @param EngineType 该规则运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public DescribeRulesRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeRulesRequest extends AbstractModel{
         if (source.RuleGroupId != null) {
             this.RuleGroupId = new Long(source.RuleGroupId);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeRulesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "RuleGroupId", this.RuleGroupId);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

@@ -23,32 +23,40 @@ import java.util.HashMap;
 public class BusinessSummaryTotal extends AbstractModel{
 
     /**
-    * 总花费
+    * 优惠后总价
+
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * 代金券金额
+    * 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * 赠送金金额
+    * 赠送账户支出：使用赠送金支付的金额
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * 现金金额
+    * 现金账户支出：通过现金账户支付的金额
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
+
+    /**
+    * 分成金账户支出：通过分成金账户支付的金额
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
 
     /**
     * 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
@@ -58,74 +66,87 @@ public class BusinessSummaryTotal extends AbstractModel{
     private String TotalCost;
 
     /**
-    * 分成金金额
-    */
-    @SerializedName("TransferPayAmount")
-    @Expose
-    private String TransferPayAmount;
+     * Get 优惠后总价
+ 
+     * @return RealTotalCost 优惠后总价
 
-    /**
-     * Get 总花费 
-     * @return RealTotalCost 总花费
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set 总花费
-     * @param RealTotalCost 总花费
+     * Set 优惠后总价
+
+     * @param RealTotalCost 优惠后总价
+
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get 代金券金额 
-     * @return VoucherPayAmount 代金券金额
+     * Get 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额 
+     * @return VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set 代金券金额
-     * @param VoucherPayAmount 代金券金额
+     * Set 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
+     * @param VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get 赠送金金额 
-     * @return IncentivePayAmount 赠送金金额
+     * Get 赠送账户支出：使用赠送金支付的金额 
+     * @return IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set 赠送金金额
-     * @param IncentivePayAmount 赠送金金额
+     * Set 赠送账户支出：使用赠送金支付的金额
+     * @param IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get 现金金额 
-     * @return CashPayAmount 现金金额
+     * Get 现金账户支出：通过现金账户支付的金额 
+     * @return CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set 现金金额
-     * @param CashPayAmount 现金金额
+     * Set 现金账户支出：通过现金账户支付的金额
+     * @param CashPayAmount 现金账户支出：通过现金账户支付的金额
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
+     * Get 分成金账户支出：通过分成金账户支付的金额 
+     * @return TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金账户支出：通过分成金账户支付的金额
+     * @param TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
@@ -142,22 +163,6 @@ public class BusinessSummaryTotal extends AbstractModel{
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
-    }
-
-    /**
-     * Get 分成金金额 
-     * @return TransferPayAmount 分成金金额
-     */
-    public String getTransferPayAmount() {
-        return this.TransferPayAmount;
-    }
-
-    /**
-     * Set 分成金金额
-     * @param TransferPayAmount 分成金金额
-     */
-    public void setTransferPayAmount(String TransferPayAmount) {
-        this.TransferPayAmount = TransferPayAmount;
     }
 
     public BusinessSummaryTotal() {
@@ -180,11 +185,11 @@ public class BusinessSummaryTotal extends AbstractModel{
         if (source.CashPayAmount != null) {
             this.CashPayAmount = new String(source.CashPayAmount);
         }
-        if (source.TotalCost != null) {
-            this.TotalCost = new String(source.TotalCost);
-        }
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
         }
     }
 
@@ -197,8 +202,8 @@ public class BusinessSummaryTotal extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
-        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }
