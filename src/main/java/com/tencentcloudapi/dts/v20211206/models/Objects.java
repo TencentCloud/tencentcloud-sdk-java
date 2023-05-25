@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Objects extends AbstractModel{
 
     /**
-    * 迁移对象类型 Partial(部分对象)
+    * 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
@@ -55,9 +55,9 @@ public class Objects extends AbstractModel{
     private OnlineDDL OnlineDDL;
 
     /**
-     * Get 迁移对象类型 Partial(部分对象)
+     * Get 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mode 迁移对象类型 Partial(部分对象)
+     * @return Mode 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
@@ -65,9 +65,9 @@ public class Objects extends AbstractModel{
     }
 
     /**
-     * Set 迁移对象类型 Partial(部分对象)
+     * Set 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mode 迁移对象类型 Partial(部分对象)
+     * @param Mode 同步对象类型 Partial(部分对象)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {

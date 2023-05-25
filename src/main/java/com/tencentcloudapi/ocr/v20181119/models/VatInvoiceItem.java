@@ -93,6 +93,55 @@ public class VatInvoiceItem extends AbstractModel{
     private String TaxClassifyCode;
 
     /**
+    * 运输工具类型
+    */
+    @SerializedName("VehicleType")
+    @Expose
+    private String VehicleType;
+
+    /**
+    * 运输工具牌号
+    */
+    @SerializedName("VehicleBrand")
+    @Expose
+    private String VehicleBrand;
+
+    /**
+    * 起始地
+    */
+    @SerializedName("DeparturePlace")
+    @Expose
+    private String DeparturePlace;
+
+    /**
+    * 到达地
+    */
+    @SerializedName("ArrivalPlace")
+    @Expose
+    private String ArrivalPlace;
+
+    /**
+    * 运输货物名称
+    */
+    @SerializedName("TransportItemsName")
+    @Expose
+    private String TransportItemsName;
+
+    /**
+    * 建筑服务发生地
+    */
+    @SerializedName("ConstructionPlace")
+    @Expose
+    private String ConstructionPlace;
+
+    /**
+    * 建筑项目名称
+    */
+    @SerializedName("ConstructionName")
+    @Expose
+    private String ConstructionName;
+
+    /**
      * Get 行号 
      * @return LineNo 行号
      */
@@ -252,6 +301,118 @@ public class VatInvoiceItem extends AbstractModel{
         this.TaxClassifyCode = TaxClassifyCode;
     }
 
+    /**
+     * Get 运输工具类型 
+     * @return VehicleType 运输工具类型
+     */
+    public String getVehicleType() {
+        return this.VehicleType;
+    }
+
+    /**
+     * Set 运输工具类型
+     * @param VehicleType 运输工具类型
+     */
+    public void setVehicleType(String VehicleType) {
+        this.VehicleType = VehicleType;
+    }
+
+    /**
+     * Get 运输工具牌号 
+     * @return VehicleBrand 运输工具牌号
+     */
+    public String getVehicleBrand() {
+        return this.VehicleBrand;
+    }
+
+    /**
+     * Set 运输工具牌号
+     * @param VehicleBrand 运输工具牌号
+     */
+    public void setVehicleBrand(String VehicleBrand) {
+        this.VehicleBrand = VehicleBrand;
+    }
+
+    /**
+     * Get 起始地 
+     * @return DeparturePlace 起始地
+     */
+    public String getDeparturePlace() {
+        return this.DeparturePlace;
+    }
+
+    /**
+     * Set 起始地
+     * @param DeparturePlace 起始地
+     */
+    public void setDeparturePlace(String DeparturePlace) {
+        this.DeparturePlace = DeparturePlace;
+    }
+
+    /**
+     * Get 到达地 
+     * @return ArrivalPlace 到达地
+     */
+    public String getArrivalPlace() {
+        return this.ArrivalPlace;
+    }
+
+    /**
+     * Set 到达地
+     * @param ArrivalPlace 到达地
+     */
+    public void setArrivalPlace(String ArrivalPlace) {
+        this.ArrivalPlace = ArrivalPlace;
+    }
+
+    /**
+     * Get 运输货物名称 
+     * @return TransportItemsName 运输货物名称
+     */
+    public String getTransportItemsName() {
+        return this.TransportItemsName;
+    }
+
+    /**
+     * Set 运输货物名称
+     * @param TransportItemsName 运输货物名称
+     */
+    public void setTransportItemsName(String TransportItemsName) {
+        this.TransportItemsName = TransportItemsName;
+    }
+
+    /**
+     * Get 建筑服务发生地 
+     * @return ConstructionPlace 建筑服务发生地
+     */
+    public String getConstructionPlace() {
+        return this.ConstructionPlace;
+    }
+
+    /**
+     * Set 建筑服务发生地
+     * @param ConstructionPlace 建筑服务发生地
+     */
+    public void setConstructionPlace(String ConstructionPlace) {
+        this.ConstructionPlace = ConstructionPlace;
+    }
+
+    /**
+     * Get 建筑项目名称 
+     * @return ConstructionName 建筑项目名称
+     */
+    public String getConstructionName() {
+        return this.ConstructionName;
+    }
+
+    /**
+     * Set 建筑项目名称
+     * @param ConstructionName 建筑项目名称
+     */
+    public void setConstructionName(String ConstructionName) {
+        this.ConstructionName = ConstructionName;
+    }
+
     public VatInvoiceItem() {
     }
 
@@ -290,6 +451,27 @@ public class VatInvoiceItem extends AbstractModel{
         if (source.TaxClassifyCode != null) {
             this.TaxClassifyCode = new String(source.TaxClassifyCode);
         }
+        if (source.VehicleType != null) {
+            this.VehicleType = new String(source.VehicleType);
+        }
+        if (source.VehicleBrand != null) {
+            this.VehicleBrand = new String(source.VehicleBrand);
+        }
+        if (source.DeparturePlace != null) {
+            this.DeparturePlace = new String(source.DeparturePlace);
+        }
+        if (source.ArrivalPlace != null) {
+            this.ArrivalPlace = new String(source.ArrivalPlace);
+        }
+        if (source.TransportItemsName != null) {
+            this.TransportItemsName = new String(source.TransportItemsName);
+        }
+        if (source.ConstructionPlace != null) {
+            this.ConstructionPlace = new String(source.ConstructionPlace);
+        }
+        if (source.ConstructionName != null) {
+            this.ConstructionName = new String(source.ConstructionName);
+        }
     }
 
 
@@ -307,6 +489,13 @@ public class VatInvoiceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
         this.setParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
         this.setParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+        this.setParamSimple(map, prefix + "VehicleType", this.VehicleType);
+        this.setParamSimple(map, prefix + "VehicleBrand", this.VehicleBrand);
+        this.setParamSimple(map, prefix + "DeparturePlace", this.DeparturePlace);
+        this.setParamSimple(map, prefix + "ArrivalPlace", this.ArrivalPlace);
+        this.setParamSimple(map, prefix + "TransportItemsName", this.TransportItemsName);
+        this.setParamSimple(map, prefix + "ConstructionPlace", this.ConstructionPlace);
+        this.setParamSimple(map, prefix + "ConstructionName", this.ConstructionName);
 
     }
 }

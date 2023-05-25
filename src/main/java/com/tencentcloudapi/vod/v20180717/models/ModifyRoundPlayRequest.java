@@ -66,6 +66,24 @@ public class ModifyRoundPlayRequest extends AbstractModel{
     private String Desc;
 
     /**
+    * 播放状态，可选值：
+<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
+
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
      * Get 轮播播单唯一标识。 
      * @return RoundPlayId 轮播播单唯一标识。
      */
@@ -165,6 +183,54 @@ public class ModifyRoundPlayRequest extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 播放状态，可选值：
+<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
+ 
+     * @return Status 播放状态，可选值：
+<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
+
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 播放状态，可选值：
+<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
+
+     * @param Status 播放状态，可选值：
+<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
+
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li> 
+     * @return PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+     * @param PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
     public ModifyRoundPlayRequest() {
     }
 
@@ -194,6 +260,12 @@ public class ModifyRoundPlayRequest extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
     }
 
 
@@ -207,6 +279,8 @@ public class ModifyRoundPlayRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
 
     }
 }

@@ -72,6 +72,13 @@ public class InstanceTypeConfig extends AbstractModel{
     private Long FPGA;
 
     /**
+    * 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+    */
+    @SerializedName("GpuCount")
+    @Expose
+    private Float GpuCount;
+
+    /**
      * Get 可用区。 
      * @return Zone 可用区。
      */
@@ -183,6 +190,22 @@ public class InstanceTypeConfig extends AbstractModel{
         this.FPGA = FPGA;
     }
 
+    /**
+     * Get 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。 
+     * @return GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     */
+    public Float getGpuCount() {
+        return this.GpuCount;
+    }
+
+    /**
+     * Set 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     * @param GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
+     */
+    public void setGpuCount(Float GpuCount) {
+        this.GpuCount = GpuCount;
+    }
+
     public InstanceTypeConfig() {
     }
 
@@ -212,6 +235,9 @@ public class InstanceTypeConfig extends AbstractModel{
         if (source.FPGA != null) {
             this.FPGA = new Long(source.FPGA);
         }
+        if (source.GpuCount != null) {
+            this.GpuCount = new Float(source.GpuCount);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class InstanceTypeConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "FPGA", this.FPGA);
+        this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
 
     }
 }

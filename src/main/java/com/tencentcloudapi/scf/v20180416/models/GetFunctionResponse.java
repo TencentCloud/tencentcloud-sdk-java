@@ -87,6 +87,7 @@ public class GetFunctionResponse extends AbstractModel{
 
     /**
     * 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Runtime")
     @Expose
@@ -492,8 +493,10 @@ public class GetFunctionResponse extends AbstractModel{
     }
 
     /**
-     * Get 函数的运行环境 
+     * Get 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Runtime 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntime() {
         return this.Runtime;
@@ -501,7 +504,9 @@ public class GetFunctionResponse extends AbstractModel{
 
     /**
      * Set 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Runtime 函数的运行环境
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

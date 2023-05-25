@@ -26,6 +26,7 @@ public class VatInvoiceOCRRequest extends AbstractModel{
     * 图片/PDF的 Base64 值。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
     */
     @SerializedName("ImageBase64")
@@ -36,6 +37,7 @@ public class VatInvoiceOCRRequest extends AbstractModel{
     * 图片/PDF的 Url 地址。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
     */
@@ -61,10 +63,12 @@ public class VatInvoiceOCRRequest extends AbstractModel{
      * Get 图片/PDF的 Base64 值。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片/PDF的 Base64 值。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public String getImageBase64() {
@@ -75,10 +79,12 @@ public class VatInvoiceOCRRequest extends AbstractModel{
      * Set 图片/PDF的 Base64 值。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param ImageBase64 图片/PDF的 Base64 值。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public void setImageBase64(String ImageBase64) {
@@ -89,11 +95,13 @@ public class VatInvoiceOCRRequest extends AbstractModel{
      * Get 图片/PDF的 Url 地址。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
      * @return ImageUrl 图片/PDF的 Url 地址。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
@@ -105,11 +113,13 @@ public class VatInvoiceOCRRequest extends AbstractModel{
      * Set 图片/PDF的 Url 地址。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param ImageUrl 图片/PDF的 Url 地址。
 支持的文件格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。
 支持的图片/PDF大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
+支持的图片像素：需介于20-10000px之间。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */

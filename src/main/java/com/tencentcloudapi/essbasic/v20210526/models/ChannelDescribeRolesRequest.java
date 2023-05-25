@@ -44,20 +44,20 @@ public class ChannelDescribeRolesRequest extends AbstractModel{
     private String Limit;
 
     /**
-    * 操作人信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
 Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 操作人信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
@@ -108,6 +108,30 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     }
 
     /**
+     * Get 查询的关键字段:
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
+Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色 
+     * @return Filters 查询的关键字段:
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
+Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 查询的关键字段:
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
+Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+     * @param Filters 查询的关键字段:
+Key:"RoleType",Values:["1"]查询系统角色，Values:["2"]查询自定义角色
+Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -121,30 +145,6 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
-    }
-
-    /**
-     * Get 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色 
-     * @return Filters 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-     * @param Filters 查询的关键字段:
-Key:"RoleType",Vales:["1"]查询系统角色，Values:["2]查询自定义角色
-Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
     }
 
     public ChannelDescribeRolesRequest() {
@@ -164,14 +164,14 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -183,8 +183,8 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

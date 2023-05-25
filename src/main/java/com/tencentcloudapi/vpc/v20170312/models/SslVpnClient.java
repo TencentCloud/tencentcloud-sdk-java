@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class SslVpnClient extends AbstractModel{
 
     /**
-    * VPC实例ID
+    * VPC实例ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * SSL-VPN-SERVER 实例ID
+    * SSL-VPN-SERVER 实例ID。
     */
     @SerializedName("SslVpnServerId")
     @Expose
     private String SslVpnServerId;
 
     /**
-    * 证书状态. 
+    * 证书状态。
 0:创建中
 1:正常
 2:已停用
@@ -49,28 +49,28 @@ public class SslVpnClient extends AbstractModel{
     private Long CertStatus;
 
     /**
-    * SSL-VPN-CLIENT 实例ID
+    * SSL-VPN-CLIENT 实例ID。
     */
     @SerializedName("SslVpnClientId")
     @Expose
     private String SslVpnClientId;
 
     /**
-    * 证书开始时间
+    * 证书开始时间。
     */
     @SerializedName("CertBeginTime")
     @Expose
     private String CertBeginTime;
 
     /**
-    * 证书到期时间
+    * 证书到期时间。
     */
     @SerializedName("CertEndTime")
     @Expose
     private String CertEndTime;
 
     /**
-    * CLIENT NAME
+    * CLIENT NAME。
     */
     @SerializedName("Name")
     @Expose
@@ -92,45 +92,45 @@ public class SslVpnClient extends AbstractModel{
     private String State;
 
     /**
-     * Get VPC实例ID 
-     * @return VpcId VPC实例ID
+     * Get VPC实例ID。 
+     * @return VpcId VPC实例ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID
-     * @param VpcId VPC实例ID
+     * Set VPC实例ID。
+     * @param VpcId VPC实例ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get SSL-VPN-SERVER 实例ID 
-     * @return SslVpnServerId SSL-VPN-SERVER 实例ID
+     * Get SSL-VPN-SERVER 实例ID。 
+     * @return SslVpnServerId SSL-VPN-SERVER 实例ID。
      */
     public String getSslVpnServerId() {
         return this.SslVpnServerId;
     }
 
     /**
-     * Set SSL-VPN-SERVER 实例ID
-     * @param SslVpnServerId SSL-VPN-SERVER 实例ID
+     * Set SSL-VPN-SERVER 实例ID。
+     * @param SslVpnServerId SSL-VPN-SERVER 实例ID。
      */
     public void setSslVpnServerId(String SslVpnServerId) {
         this.SslVpnServerId = SslVpnServerId;
     }
 
     /**
-     * Get 证书状态. 
+     * Get 证书状态。
 0:创建中
 1:正常
 2:已停用
 3.已过期
 4.创建出错 
-     * @return CertStatus 证书状态. 
+     * @return CertStatus 证书状态。
 0:创建中
 1:正常
 2:已停用
@@ -142,13 +142,13 @@ public class SslVpnClient extends AbstractModel{
     }
 
     /**
-     * Set 证书状态. 
+     * Set 证书状态。
 0:创建中
 1:正常
 2:已停用
 3.已过期
 4.创建出错
-     * @param CertStatus 证书状态. 
+     * @param CertStatus 证书状态。
 0:创建中
 1:正常
 2:已停用
@@ -160,64 +160,64 @@ public class SslVpnClient extends AbstractModel{
     }
 
     /**
-     * Get SSL-VPN-CLIENT 实例ID 
-     * @return SslVpnClientId SSL-VPN-CLIENT 实例ID
+     * Get SSL-VPN-CLIENT 实例ID。 
+     * @return SslVpnClientId SSL-VPN-CLIENT 实例ID。
      */
     public String getSslVpnClientId() {
         return this.SslVpnClientId;
     }
 
     /**
-     * Set SSL-VPN-CLIENT 实例ID
-     * @param SslVpnClientId SSL-VPN-CLIENT 实例ID
+     * Set SSL-VPN-CLIENT 实例ID。
+     * @param SslVpnClientId SSL-VPN-CLIENT 实例ID。
      */
     public void setSslVpnClientId(String SslVpnClientId) {
         this.SslVpnClientId = SslVpnClientId;
     }
 
     /**
-     * Get 证书开始时间 
-     * @return CertBeginTime 证书开始时间
+     * Get 证书开始时间。 
+     * @return CertBeginTime 证书开始时间。
      */
     public String getCertBeginTime() {
         return this.CertBeginTime;
     }
 
     /**
-     * Set 证书开始时间
-     * @param CertBeginTime 证书开始时间
+     * Set 证书开始时间。
+     * @param CertBeginTime 证书开始时间。
      */
     public void setCertBeginTime(String CertBeginTime) {
         this.CertBeginTime = CertBeginTime;
     }
 
     /**
-     * Get 证书到期时间 
-     * @return CertEndTime 证书到期时间
+     * Get 证书到期时间。 
+     * @return CertEndTime 证书到期时间。
      */
     public String getCertEndTime() {
         return this.CertEndTime;
     }
 
     /**
-     * Set 证书到期时间
-     * @param CertEndTime 证书到期时间
+     * Set 证书到期时间。
+     * @param CertEndTime 证书到期时间。
      */
     public void setCertEndTime(String CertEndTime) {
         this.CertEndTime = CertEndTime;
     }
 
     /**
-     * Get CLIENT NAME 
-     * @return Name CLIENT NAME
+     * Get CLIENT NAME。 
+     * @return Name CLIENT NAME。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set CLIENT NAME
-     * @param Name CLIENT NAME
+     * Set CLIENT NAME。
+     * @param Name CLIENT NAME。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -38,6 +38,7 @@ public class Function extends AbstractModel{
 
     /**
     * 运行时
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Runtime")
     @Expose
@@ -169,8 +170,10 @@ public class Function extends AbstractModel{
     }
 
     /**
-     * Get 运行时 
+     * Get 运行时
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Runtime 运行时
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntime() {
         return this.Runtime;
@@ -178,7 +181,9 @@ public class Function extends AbstractModel{
 
     /**
      * Set 运行时
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Runtime 运行时
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;

@@ -30,7 +30,7 @@ public class ModifyImageAttributeRequest extends AbstractModel{
     private String ImageId;
 
     /**
-    * 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+    * 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
     */
     @SerializedName("ImageName")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyImageAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。 
-     * @return ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * Get 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。 
+     * @return ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
-     * @param ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过20个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * Set 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
+     * @param ImageName 设置新的镜像名称；必须满足下列限制：<br> <li> 不得超过60个字符。<br> <li> 镜像名称不能与已有镜像重复。
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;

@@ -30,7 +30,7 @@ public class DescribeVpnGatewaySslClientsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * 符合条件的实例个数。
+    * SSL-VPN-CLIENT 实例列表。
     */
     @SerializedName("SslVpnClientSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeVpnGatewaySslClientsResponse extends AbstractModel{
     }
 
     /**
-     * Get 符合条件的实例个数。 
-     * @return SslVpnClientSet 符合条件的实例个数。
+     * Get SSL-VPN-CLIENT 实例列表。 
+     * @return SslVpnClientSet SSL-VPN-CLIENT 实例列表。
      */
     public SslVpnClient [] getSslVpnClientSet() {
         return this.SslVpnClientSet;
     }
 
     /**
-     * Set 符合条件的实例个数。
-     * @param SslVpnClientSet 符合条件的实例个数。
+     * Set SSL-VPN-CLIENT 实例列表。
+     * @param SslVpnClientSet SSL-VPN-CLIENT 实例列表。
      */
     public void setSslVpnClientSet(SslVpnClient [] SslVpnClientSet) {
         this.SslVpnClientSet = SslVpnClientSet;

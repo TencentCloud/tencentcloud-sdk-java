@@ -58,6 +58,33 @@ public class RoundPlayInfo extends AbstractModel{
     private String Desc;
 
     /**
+    * 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
+    * 轮播播放地址。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 轮播播单标识。 
      * @return RoundPlayId 轮播播单标识。
      */
@@ -137,6 +164,78 @@ public class RoundPlayInfo extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。 
+     * @return Status 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+     * @param Status 播放状态，可选值：
+<li>Enabled：启动状态；</li>
+<li>Disabled：停止状态。</li>
+默认值：Enabled。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。 
+     * @return PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     * @param PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
+    /**
+     * Get 轮播播放地址。 
+     * @return Url 轮播播放地址。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 轮播播放地址。
+     * @param Url 轮播播放地址。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public RoundPlayInfo() {
     }
 
@@ -163,6 +262,15 @@ public class RoundPlayInfo extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -175,6 +283,9 @@ public class RoundPlayInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

@@ -25,6 +25,7 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
     * 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
+图片支持的像素范围：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
     */
     @SerializedName("ImageBase64")
@@ -34,7 +35,9 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
     * 图片/PDF的 Url 地址。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+图片支持的像素范围：需介于20-10000px之间。
+图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定
+性可能受一定影响。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -50,9 +53,11 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
      * Get 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
+图片支持的像素范围：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
+图片支持的像素范围：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public String getImageBase64() {
@@ -62,9 +67,11 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
      * Set 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
+图片支持的像素范围：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param ImageBase64 图片/PDF的 Base64 值。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
+图片支持的像素范围：需介于20-10000px之间。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public void setImageBase64(String ImageBase64) {
@@ -74,10 +81,14 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
      * Get 图片/PDF的 Url 地址。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。 
+图片支持的像素范围：需介于20-10000px之间。
+图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定
+性可能受一定影响。 
      * @return ImageUrl 图片/PDF的 Url 地址。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+图片支持的像素范围：需介于20-10000px之间。
+图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定
+性可能受一定影响。
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -86,10 +97,14 @@ public class RecognizeTableAccurateOCRRequest extends AbstractModel{
     /**
      * Set 图片/PDF的 Url 地址。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+图片支持的像素范围：需介于20-10000px之间。
+图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定
+性可能受一定影响。
      * @param ImageUrl 图片/PDF的 Url 地址。
 要求图片/PDF经Base64编码后不超过 7M，分辨率建议600*800以上，支持PNG、JPG、JPEG、BMP、PDF格式。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+图片支持的像素范围：需介于20-10000px之间。
+图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定
+性可能受一定影响。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

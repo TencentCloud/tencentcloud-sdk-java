@@ -66,6 +66,13 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private String NotifyAddress;
 
     /**
+    * 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private Long ExpiredTime;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -165,6 +172,22 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.NotifyAddress = NotifyAddress;
     }
 
+    /**
+     * Get 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。 
+     * @return ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     */
+    public Long getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     * @param ExpiredTime 链接的过期时间，格式为Unix时间戳，不能早于当前时间，且最大为30天。如果不传，默认有效期为7天。
+     */
+    public void setExpiredTime(Long ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
     public CreateUserAutoSignEnableUrlRequest() {
     }
 
@@ -191,6 +214,9 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         if (source.NotifyAddress != null) {
             this.NotifyAddress = new String(source.NotifyAddress);
         }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
+        }
     }
 
 
@@ -204,6 +230,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.setParamSimple(map, prefix + "UrlType", this.UrlType);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

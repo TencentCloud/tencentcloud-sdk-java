@@ -63,6 +63,21 @@ public class RechargeLiveVipRequest extends AbstractModel{
     private Long VipDays;
 
     /**
+    * 充值分类。取值有：room_card-包月房卡; 其他-保留。
+    */
+    @SerializedName("GiveType")
+    @Expose
+    private String GiveType;
+
+    /**
+    * 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+    */
+    @SerializedName("PlayScene")
+    @Expose
+    private String PlayScene;
+
+    /**
      * Get 应用名称。 
      * @return AppName 应用名称。
      */
@@ -162,6 +177,42 @@ public class RechargeLiveVipRequest extends AbstractModel{
         this.VipDays = VipDays;
     }
 
+    /**
+     * Get 充值分类。取值有：room_card-包月房卡; 其他-保留。 
+     * @return GiveType 充值分类。取值有：room_card-包月房卡; 其他-保留。
+     */
+    public String getGiveType() {
+        return this.GiveType;
+    }
+
+    /**
+     * Set 充值分类。取值有：room_card-包月房卡; 其他-保留。
+     * @param GiveType 充值分类。取值有：room_card-包月房卡; 其他-保留。
+     */
+    public void setGiveType(String GiveType) {
+        this.GiveType = GiveType;
+    }
+
+    /**
+     * Get 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li> 
+     * @return PlayScene 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public String getPlayScene() {
+        return this.PlayScene;
+    }
+
+    /**
+     * Set 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+     * @param PlayScene 播放场景。默认为Live
+<li>Live：直播</li><li>Chat：语聊</li>
+     */
+    public void setPlayScene(String PlayScene) {
+        this.PlayScene = PlayScene;
+    }
+
     public RechargeLiveVipRequest() {
     }
 
@@ -185,6 +236,12 @@ public class RechargeLiveVipRequest extends AbstractModel{
         if (source.VipDays != null) {
             this.VipDays = new Long(source.VipDays);
         }
+        if (source.GiveType != null) {
+            this.GiveType = new String(source.GiveType);
+        }
+        if (source.PlayScene != null) {
+            this.PlayScene = new String(source.PlayScene);
+        }
     }
 
 
@@ -197,6 +254,8 @@ public class RechargeLiveVipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TradeSerialNo", this.TradeSerialNo);
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "VipDays", this.VipDays);
+        this.setParamSimple(map, prefix + "GiveType", this.GiveType);
+        this.setParamSimple(map, prefix + "PlayScene", this.PlayScene);
 
     }
 }

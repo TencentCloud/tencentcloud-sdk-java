@@ -30,7 +30,7 @@ public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractMo
     private String QrCodeUrl;
 
     /**
-    * 二维码失效时间 unix 时间戳 精确到秒
+    * 二维码失效时间 UNIX 时间戳 精确到秒
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -60,16 +60,16 @@ public class CreateChannelSubOrganizationModifyQrCodeResponse extends AbstractMo
     }
 
     /**
-     * Get 二维码失效时间 unix 时间戳 精确到秒 
-     * @return ExpiredTime 二维码失效时间 unix 时间戳 精确到秒
+     * Get 二维码失效时间 UNIX 时间戳 精确到秒 
+     * @return ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 二维码失效时间 unix 时间戳 精确到秒
-     * @param ExpiredTime 二维码失效时间 unix 时间戳 精确到秒
+     * Set 二维码失效时间 UNIX 时间戳 精确到秒
+     * @param ExpiredTime 二维码失效时间 UNIX 时间戳 精确到秒
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

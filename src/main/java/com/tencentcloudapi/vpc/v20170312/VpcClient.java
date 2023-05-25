@@ -3972,7 +3972,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *查询SSL-VPN-CLIENT 列表
+     *本接口（DescribeVpnGatewaySslClients）用于查询SSL-VPN-CLIENT 列表。
      * @param req DescribeVpnGatewaySslClientsRequest
      * @return DescribeVpnGatewaySslClientsResponse
      * @throws TencentCloudSDKException

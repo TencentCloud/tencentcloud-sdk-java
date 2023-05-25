@@ -30,21 +30,21 @@ public class GetFlowStatisticResponse extends AbstractModel{
     private NetDetails [] NetDetails;
 
     /**
-    * 查找时间段流量使用最大值（单位：bit）
+    * 查找时间段流量使用最大值（单位：byte）
     */
     @SerializedName("MaxValue")
     @Expose
     private Float MaxValue;
 
     /**
-    * 查找时间段流量使用平均值（单位：bit）
+    * 查找时间段流量使用平均值（单位：byte）
     */
     @SerializedName("AvgValue")
     @Expose
     private Float AvgValue;
 
     /**
-    * 查找时间段流量使用总量（单位：bit）
+    * 查找时间段流量使用总量（单位：byte）
     */
     @SerializedName("TotalValue")
     @Expose
@@ -74,48 +74,48 @@ public class GetFlowStatisticResponse extends AbstractModel{
     }
 
     /**
-     * Get 查找时间段流量使用最大值（单位：bit） 
-     * @return MaxValue 查找时间段流量使用最大值（单位：bit）
+     * Get 查找时间段流量使用最大值（单位：byte） 
+     * @return MaxValue 查找时间段流量使用最大值（单位：byte）
      */
     public Float getMaxValue() {
         return this.MaxValue;
     }
 
     /**
-     * Set 查找时间段流量使用最大值（单位：bit）
-     * @param MaxValue 查找时间段流量使用最大值（单位：bit）
+     * Set 查找时间段流量使用最大值（单位：byte）
+     * @param MaxValue 查找时间段流量使用最大值（单位：byte）
      */
     public void setMaxValue(Float MaxValue) {
         this.MaxValue = MaxValue;
     }
 
     /**
-     * Get 查找时间段流量使用平均值（单位：bit） 
-     * @return AvgValue 查找时间段流量使用平均值（单位：bit）
+     * Get 查找时间段流量使用平均值（单位：byte） 
+     * @return AvgValue 查找时间段流量使用平均值（单位：byte）
      */
     public Float getAvgValue() {
         return this.AvgValue;
     }
 
     /**
-     * Set 查找时间段流量使用平均值（单位：bit）
-     * @param AvgValue 查找时间段流量使用平均值（单位：bit）
+     * Set 查找时间段流量使用平均值（单位：byte）
+     * @param AvgValue 查找时间段流量使用平均值（单位：byte）
      */
     public void setAvgValue(Float AvgValue) {
         this.AvgValue = AvgValue;
     }
 
     /**
-     * Get 查找时间段流量使用总量（单位：bit） 
-     * @return TotalValue 查找时间段流量使用总量（单位：bit）
+     * Get 查找时间段流量使用总量（单位：byte） 
+     * @return TotalValue 查找时间段流量使用总量（单位：byte）
      */
     public Float getTotalValue() {
         return this.TotalValue;
     }
 
     /**
-     * Set 查找时间段流量使用总量（单位：bit）
-     * @param TotalValue 查找时间段流量使用总量（单位：bit）
+     * Set 查找时间段流量使用总量（单位：byte）
+     * @param TotalValue 查找时间段流量使用总量（单位：byte）
      */
     public void setTotalValue(Float TotalValue) {
         this.TotalValue = TotalValue;

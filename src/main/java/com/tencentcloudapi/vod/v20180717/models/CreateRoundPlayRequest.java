@@ -59,6 +59,16 @@ public class CreateRoundPlayRequest extends AbstractModel{
     private String Desc;
 
     /**
+    * 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+    */
+    @SerializedName("PlayBackMode")
+    @Expose
+    private String PlayBackMode;
+
+    /**
      * Get 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
      * @return StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
@@ -142,6 +152,34 @@ public class CreateRoundPlayRequest extends AbstractModel{
         this.Desc = Desc;
     }
 
+    /**
+     * Get 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。 
+     * @return PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     */
+    public String getPlayBackMode() {
+        return this.PlayBackMode;
+    }
+
+    /**
+     * Set 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     * @param PlayBackMode 播放模式，可选值：
+<li>Loop：循环播放播单；</li>
+<li>Linear：单次播放，播单播放完停止播放。</li>
+默认值：Loop。
+     */
+    public void setPlayBackMode(String PlayBackMode) {
+        this.PlayBackMode = PlayBackMode;
+    }
+
     public CreateRoundPlayRequest() {
     }
 
@@ -168,6 +206,9 @@ public class CreateRoundPlayRequest extends AbstractModel{
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.PlayBackMode != null) {
+            this.PlayBackMode = new String(source.PlayBackMode);
+        }
     }
 
 
@@ -180,6 +221,7 @@ public class CreateRoundPlayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
 
     }
 }

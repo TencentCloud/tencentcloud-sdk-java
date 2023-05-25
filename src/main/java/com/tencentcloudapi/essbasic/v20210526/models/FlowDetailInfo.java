@@ -102,6 +102,13 @@ RELIEVED 解除
     private FlowApproverDetail [] CcInfos;
 
     /**
+    * 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+    */
+    @SerializedName("NeedCreateReview")
+    @Expose
+    private Boolean NeedCreateReview;
+
+    /**
      * Get 合同(流程)的Id 
      * @return FlowId 合同(流程)的Id
      */
@@ -297,6 +304,22 @@ RELIEVED 解除
         this.CcInfos = CcInfos;
     }
 
+    /**
+     * Get 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程 
+     * @return NeedCreateReview 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     */
+    public Boolean getNeedCreateReview() {
+        return this.NeedCreateReview;
+    }
+
+    /**
+     * Set 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     * @param NeedCreateReview 是否需要发起前审批，当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程
+     */
+    public void setNeedCreateReview(Boolean NeedCreateReview) {
+        this.NeedCreateReview = NeedCreateReview;
+    }
+
     public FlowDetailInfo() {
     }
 
@@ -341,6 +364,9 @@ RELIEVED 解除
                 this.CcInfos[i] = new FlowApproverDetail(source.CcInfos[i]);
             }
         }
+        if (source.NeedCreateReview != null) {
+            this.NeedCreateReview = new Boolean(source.NeedCreateReview);
+        }
     }
 
 
@@ -358,6 +384,7 @@ RELIEVED 解除
         this.setParamSimple(map, prefix + "CustomData", this.CustomData);
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
 
     }
 }

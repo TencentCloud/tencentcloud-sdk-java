@@ -93,6 +93,13 @@ public class BaseFlowInfo extends AbstractModel{
     private CcInfo [] CcInfos;
 
     /**
+    * 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+    */
+    @SerializedName("NeedCreateReview")
+    @Expose
+    private Boolean NeedCreateReview;
+
+    /**
      * Get 合同流程名称 
      * @return FlowName 合同流程名称
      */
@@ -252,6 +259,22 @@ public class BaseFlowInfo extends AbstractModel{
         this.CcInfos = CcInfos;
     }
 
+    /**
+     * Get 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同 
+     * @return NeedCreateReview 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     */
+    public Boolean getNeedCreateReview() {
+        return this.NeedCreateReview;
+    }
+
+    /**
+     * Set 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * @param NeedCreateReview 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     */
+    public void setNeedCreateReview(Boolean NeedCreateReview) {
+        this.NeedCreateReview = NeedCreateReview;
+    }
+
     public BaseFlowInfo() {
     }
 
@@ -296,6 +319,9 @@ public class BaseFlowInfo extends AbstractModel{
                 this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
             }
         }
+        if (source.NeedCreateReview != null) {
+            this.NeedCreateReview = new Boolean(source.NeedCreateReview);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class BaseFlowInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
 
     }
 }
