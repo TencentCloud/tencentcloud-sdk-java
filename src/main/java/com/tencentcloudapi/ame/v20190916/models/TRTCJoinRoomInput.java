@@ -68,6 +68,16 @@ public class TRTCJoinRoomInput extends AbstractModel{
     private String Role;
 
     /**
+    * TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+    */
+    @SerializedName("RoomIdType")
+    @Expose
+    private String RoomIdType;
+
+    /**
      * Get 签名。 
      * @return Sign 签名。
      */
@@ -175,6 +185,34 @@ public class TRTCJoinRoomInput extends AbstractModel{
         this.Role = Role;
     }
 
+    /**
+     * Get TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。 
+     * @return RoomIdType TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+     */
+    public String getRoomIdType() {
+        return this.RoomIdType;
+    }
+
+    /**
+     * Set TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+     * @param RoomIdType TRTC房间号的类型：
+<li>Integer：数字类型</li>
+<li> String：字符串类型</li>
+默认为：Integer 。
+     */
+    public void setRoomIdType(String RoomIdType) {
+        this.RoomIdType = RoomIdType;
+    }
+
     public TRTCJoinRoomInput() {
     }
 
@@ -201,6 +239,9 @@ public class TRTCJoinRoomInput extends AbstractModel{
         if (source.Role != null) {
             this.Role = new String(source.Role);
         }
+        if (source.RoomIdType != null) {
+            this.RoomIdType = new String(source.RoomIdType);
+        }
     }
 
 
@@ -214,6 +255,7 @@ public class TRTCJoinRoomInput extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "PrivateMapKey", this.PrivateMapKey);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
 
     }
 }

@@ -58,6 +58,14 @@ public class AccessPolicy extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * Remark
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 目的CIDR 
      * @return TargetCidr 目的CIDR
      */
@@ -137,6 +145,26 @@ public class AccessPolicy extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Remark
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark Remark
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remark
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark Remark
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public AccessPolicy() {
     }
 
@@ -163,6 +191,9 @@ public class AccessPolicy extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -175,6 +206,7 @@ public class AccessPolicy extends AbstractModel{
         this.setParamSimple(map, prefix + "ForAllClient", this.ForAllClient);
         this.setParamArraySimple(map, prefix + "UserGroupIds.", this.UserGroupIds);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

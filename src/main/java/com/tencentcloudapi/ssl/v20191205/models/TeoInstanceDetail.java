@@ -37,6 +37,21 @@ public class TeoInstanceDetail extends AbstractModel{
     private String CertId;
 
     /**
+    * 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * 域名状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 域名 
      * @return Host 域名
      */
@@ -68,6 +83,42 @@ public class TeoInstanceDetail extends AbstractModel{
         this.CertId = CertId;
     }
 
+    /**
+     * Get 区域ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId 区域ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get 域名状态 
+     * @return Status 域名状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 域名状态
+     * @param Status 域名状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public TeoInstanceDetail() {
     }
 
@@ -82,6 +133,12 @@ public class TeoInstanceDetail extends AbstractModel{
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -91,6 +148,8 @@ public class TeoInstanceDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

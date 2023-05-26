@@ -30,6 +30,22 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
     private String DealName;
 
     /**
+    * 流程ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
+    * 实例ID集合
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceIdSet")
+    @Expose
+    private String [] InstanceIdSet;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +66,46 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
+    }
+
+    /**
+     * Get 流程ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowId 流程ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 流程ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowId 流程ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 实例ID集合
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceIdSet 实例ID集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getInstanceIdSet() {
+        return this.InstanceIdSet;
+    }
+
+    /**
+     * Set 实例ID集合
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceIdSet 实例ID集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceIdSet(String [] InstanceIdSet) {
+        this.InstanceIdSet = InstanceIdSet;
     }
 
     /**
@@ -79,6 +135,15 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
         if (source.DealName != null) {
             this.DealName = new String(source.DealName);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +155,8 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

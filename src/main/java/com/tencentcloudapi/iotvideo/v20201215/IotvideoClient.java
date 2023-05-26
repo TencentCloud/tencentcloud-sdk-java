@@ -139,7 +139,7 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
-     *判断是否开启的转发的权限
+     *判断是否开启转发的权限
      * @param req CheckForwardAuthRequest
      * @return CheckForwardAuthResponse
      * @throws TencentCloudSDKException

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
 
     /**
-    * 偏移量
+    * 偏移量。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求对象个数
+    * 请求对象个数。
     */
     @SerializedName("Limit")
     @Expose
@@ -45,11 +45,11 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
 
     /**
     * 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID，形如：vpns-xxx。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -63,32 +63,32 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
     private Boolean IsVpnPortal;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。 
+     * @return Offset 偏移量。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。
+     * @param Offset 偏移量。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求对象个数 
-     * @return Limit 请求对象个数
+     * Get 请求对象个数。 
+     * @return Limit 请求对象个数。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求对象个数
-     * @param Limit 请求对象个数
+     * Set 请求对象个数。
+     * @param Limit 请求对象个数。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -112,17 +112,17 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
 
     /**
      * Get 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li> 
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID，形如：vpns-xxx。</li> 
      * @return Filters 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID，形如：vpns-xxx。</li>
      */
     public FilterObject [] getFilters() {
         return this.Filters;
@@ -130,17 +130,17 @@ public class DescribeVpnGatewaySslServersRequest extends AbstractModel{
 
     /**
      * Set 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID，形如：vpns-xxx。</li>
      * @param Filters 过滤条件，参数不支持同时指定SslVpnServerIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+<li>vpn-gateway-id - String - （过滤条件）VPN实例ID，形如：vpngw-5aluhh9t。</li>
 <li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
 <li>ssl-vpn-server-name - String - （过滤条件）SSL-VPN-SERVER实例名称。</li>
-<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID形如：vpngwSslServer-123456。</li>
+<li>ssl-vpn-server-id - String - （过滤条件）SSL-VPN-SERVER实例ID，形如：vpns-xxx。</li>
      */
     public void setFilters(FilterObject [] Filters) {
         this.Filters = Filters;

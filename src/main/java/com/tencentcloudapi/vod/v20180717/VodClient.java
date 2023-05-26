@@ -278,6 +278,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *创建音画质重生模板。
+     * @param req CreateEnhanceMediaTemplateRequest
+     * @return CreateEnhanceMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEnhanceMediaTemplateResponse CreateEnhanceMediaTemplate(CreateEnhanceMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEnhanceMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEnhanceMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEnhanceMediaTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建片头片尾模板。
      * @param req CreateHeadTailTemplateRequest
      * @return CreateHeadTailTemplateResponse
@@ -741,6 +761,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteContentReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除音画质重生模板。
+     * @param req DeleteEnhanceMediaTemplateRequest
+     * @return DeleteEnhanceMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEnhanceMediaTemplateResponse DeleteEnhanceMediaTemplate(DeleteEnhanceMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEnhanceMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEnhanceMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEnhanceMediaTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1398,6 +1438,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDrmKeyProviderInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取音画质重生模板列表。
+     * @param req DescribeEnhanceMediaTemplatesRequest
+     * @return DescribeEnhanceMediaTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnhanceMediaTemplatesResponse DescribeEnhanceMediaTemplates(DescribeEnhanceMediaTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnhanceMediaTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnhanceMediaTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnhanceMediaTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2108,6 +2168,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *使用模板发起音画质重生。
+     * @param req EnhanceMediaByTemplateRequest
+     * @return EnhanceMediaByTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnhanceMediaByTemplateResponse EnhanceMediaByTemplate(EnhanceMediaByTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnhanceMediaByTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnhanceMediaByTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnhanceMediaByTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse
@@ -2368,6 +2448,26 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDefaultStorageRegionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDefaultStorageRegion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改音画质重生模板。
+     * @param req ModifyEnhanceMediaTemplateRequest
+     * @return ModifyEnhanceMediaTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEnhanceMediaTemplateResponse ModifyEnhanceMediaTemplate(ModifyEnhanceMediaTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEnhanceMediaTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEnhanceMediaTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEnhanceMediaTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

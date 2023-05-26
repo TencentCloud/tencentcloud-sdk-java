@@ -95,6 +95,14 @@ public class FlowBrief extends AbstractModel{
     private String Creator;
 
     /**
+    * 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
      * Get 流程的编号 
      * @return FlowId 流程的编号
      */
@@ -286,6 +294,26 @@ public class FlowBrief extends AbstractModel{
         this.Creator = Creator;
     }
 
+    /**
+     * Get 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deadline 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deadline 合同过期时间，时间戳，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public FlowBrief() {
     }
 
@@ -318,6 +346,9 @@ public class FlowBrief extends AbstractModel{
         if (source.Creator != null) {
             this.Creator = new String(source.Creator);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
     }
 
 
@@ -333,6 +364,7 @@ public class FlowBrief extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "FlowMessage", this.FlowMessage);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

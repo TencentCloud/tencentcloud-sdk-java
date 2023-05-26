@@ -673,7 +673,7 @@ public class CvmClient extends AbstractClient{
     /**
      *本接口 (DescribeInstanceTypeConfigs) 用于查询实例机型配置。
 
-* 可以根据`zone`、`instance-family`来查询实例机型配置。过滤条件详见过滤器[`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter)。
+* 可以根据`zone`、`instance-family`、`instance-type`来查询实例机型配置。过滤条件详见过滤器[`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter)。
 * 如果参数为空，返回指定地域的所有实例机型配置。
      * @param req DescribeInstanceTypeConfigsRequest
      * @return DescribeInstanceTypeConfigsResponse
