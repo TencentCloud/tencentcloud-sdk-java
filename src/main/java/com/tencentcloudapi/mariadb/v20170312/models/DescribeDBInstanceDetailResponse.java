@@ -427,6 +427,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     private Long RsAccessStrategy;
 
     /**
+    * 尚未回收的网络资源
+    */
+    @SerializedName("ReservedNetResources")
+    @Expose
+    private ReservedNetResource [] ReservedNetResources;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1390,6 +1397,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 尚未回收的网络资源 
+     * @return ReservedNetResources 尚未回收的网络资源
+     */
+    public ReservedNetResource [] getReservedNetResources() {
+        return this.ReservedNetResources;
+    }
+
+    /**
+     * Set 尚未回收的网络资源
+     * @param ReservedNetResources 尚未回收的网络资源
+     */
+    public void setReservedNetResources(ReservedNetResource [] ReservedNetResources) {
+        this.ReservedNetResources = ReservedNetResources;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1587,6 +1610,12 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
         if (source.RsAccessStrategy != null) {
             this.RsAccessStrategy = new Long(source.RsAccessStrategy);
         }
+        if (source.ReservedNetResources != null) {
+            this.ReservedNetResources = new ReservedNetResource[source.ReservedNetResources.length];
+            for (int i = 0; i < source.ReservedNetResources.length; i++) {
+                this.ReservedNetResources[i] = new ReservedNetResource(source.ReservedNetResources[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1652,6 +1681,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
+        this.setParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

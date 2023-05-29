@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateGroupRequest extends AbstractModel{
 
     /**
-    * 图库ID，不可重复，仅支持字母、数字和下划线。
+    * 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。
     */
     @SerializedName("GroupId")
     @Expose
@@ -74,16 +74,16 @@ GroupType不支持修改，若不确定适用的服务类型，建议先对不�
     private Long GroupType;
 
     /**
-     * Get 图库ID，不可重复，仅支持字母、数字和下划线。 
-     * @return GroupId 图库ID，不可重复，仅支持字母、数字和下划线。
+     * Get 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。 
+     * @return GroupId 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 图库ID，不可重复，仅支持字母、数字和下划线。
-     * @param GroupId 图库ID，不可重复，仅支持字母、数字和下划线。
+     * Set 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。
+     * @param GroupId 图库ID，不可重复，仅支持字母、数字和下划线。图库数量单个用户上限为30。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

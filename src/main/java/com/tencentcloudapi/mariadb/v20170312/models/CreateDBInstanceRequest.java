@@ -131,7 +131,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 是否支持IPv6
+    * 是否支持IPv6，0:不支持，1:支持
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -418,16 +418,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否支持IPv6 
-     * @return Ipv6Flag 是否支持IPv6
+     * Get 是否支持IPv6，0:不支持，1:支持 
+     * @return Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set 是否支持IPv6
-     * @param Ipv6Flag 是否支持IPv6
+     * Set 是否支持IPv6，0:不支持，1:支持
+     * @param Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;

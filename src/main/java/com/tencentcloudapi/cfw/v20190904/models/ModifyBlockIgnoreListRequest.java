@@ -30,7 +30,7 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     private Long RuleType;
 
     /**
-    * IP、Domain二选一，不能同时为空
+    * IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
     */
     @SerializedName("IOC")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyBlockIgnoreListRequest extends AbstractModel{
     }
 
     /**
-     * Get IP、Domain二选一，不能同时为空 
-     * @return IOC IP、Domain二选一，不能同时为空
+     * Get IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空 
+     * @return IOC IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
      */
     public IocListData [] getIOC() {
         return this.IOC;
     }
 
     /**
-     * Set IP、Domain二选一，不能同时为空
-     * @param IOC IP、Domain二选一，不能同时为空
+     * Set IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
+     * @param IOC IP、Domain二选一（注：封禁列表，只能填写IP），不能同时为空
      */
     public void setIOC(IocListData [] IOC) {
         this.IOC = IOC;

@@ -39,7 +39,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *解隔离DCDB后付费实例
+     *解隔离TDSQL按量计费实例
      * @param req ActiveHourDCDBInstanceRequest
      * @return ActiveHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateDCDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
+     *本接口（CreateDCDBInstance）用于创建包年包月的TDSQL实例，可通过传入实例规格、数据库版本号、购买时长等信息创建云数据库实例。
      * @param req CreateDCDBInstanceRequest
      * @return CreateDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -200,7 +200,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *创建独享集群DCDB实例
+     *创建TDSQL独享集群实例
      * @param req CreateDedicatedClusterDCDBInstanceRequest
      * @return CreateDedicatedClusterDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -220,7 +220,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *创建DCDB后付费实例
+     *创建TDSQL按量计费实例
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -232,6 +232,26 @@ public class DcdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateHourDCDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *回档TDSQL实例
+     * @param req CreateTmpDCDBInstanceRequest
+     * @return CreateTmpDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTmpDCDBInstanceResponse CreateTmpDCDBInstance(CreateTmpDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTmpDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTmpDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTmpDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -441,7 +461,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDCDBInstanceDetail）用于获取DCDB实例详情
+     *本接口（DescribeDCDBInstanceDetail）用于获取TDSQL实例详情
      * @param req DescribeDCDBInstanceDetailRequest
      * @return DescribeDCDBInstanceDetailResponse
      * @throws TencentCloudSDKException
@@ -844,7 +864,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DestroyDCDBInstance)用于销毁已隔离的包年包月实例。
+     *本接口(DestroyDCDBInstance)用于销毁已隔离的TDSQL包年包月实例。
      * @param req DestroyDCDBInstanceRequest
      * @return DestroyDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -864,7 +884,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DestroyHourDCDBInstance）用于销毁按量计费实例。
+     *本接口（DestroyHourDCDBInstance）用于TDSQL销毁按量计费实例。
      * @param req DestroyHourDCDBInstanceRequest
      * @return DestroyHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -985,7 +1005,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *隔离DCDB后付费实例
+     *隔离TDSQL按量计费实例
      * @param req IsolateHourDCDBInstanceRequest
      * @return IsolateHourDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -1397,7 +1417,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpgradeDedicatedDCDBInstance）用于升级独享DCDB实例
+     *本接口（UpgradeDedicatedDCDBInstance）用于升级TDSQL独享集群实例
      * @param req UpgradeDedicatedDCDBInstanceRequest
      * @return UpgradeDedicatedDCDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -1417,7 +1437,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（UpgradeHourDCDBInstance）用于升级后付费分布式数据库实例。
+     *本接口（UpgradeHourDCDBInstance）用于升级分布式数据库TDSQL按量计费实例。
      * @param req UpgradeHourDCDBInstanceRequest
      * @return UpgradeHourDCDBInstanceResponse
      * @throws TencentCloudSDKException

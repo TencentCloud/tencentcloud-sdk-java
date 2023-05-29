@@ -321,6 +321,9 @@ public enum DcdbErrorCode {
     // 请求过于频繁。
      LIMITEXCEEDED_TOOFREQUENTLYCALLED("LimitExceeded.TooFrequentlyCalled"),
      
+    // 临时实例已经存在了。
+     RESOURCEINUSE_TEMPINSTANCEEXIST("ResourceInUse.TempInstanceExist"),
+     
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      

@@ -98,7 +98,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String ClusterType;
 
     /**
-    * 私有网络ID，如果不设置该参数，则默认选择基础网络。
+    * 私有网络ID。如果不设置该参数，则默认选择基础网络。
     */
     @SerializedName("VpcId")
     @Expose
@@ -112,9 +112,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+    * 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
     */
     @SerializedName("Password")
     @Expose
@@ -426,16 +424,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 私有网络ID，如果不设置该参数，则默认选择基础网络。 
-     * @return VpcId 私有网络ID，如果不设置该参数，则默认选择基础网络。
+     * Get 私有网络ID。如果不设置该参数，则默认选择基础网络。 
+     * @return VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID，如果不设置该参数，则默认选择基础网络。
-     * @param VpcId 私有网络ID，如果不设置该参数，则默认选择基础网络。
+     * Set 私有网络ID。如果不设置该参数，则默认选择基础网络。
+     * @param VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -458,24 +456,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。 
-     * @return Password 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * Get 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。 
+     * @return Password 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
-     * @param Password 实例密码。
-- 不设置该参数，则默认密码格式为：实例ID+@+主账户uin。例如：实例 ID 为cmgo-higv73ed，UIN 为100000001，则默认密码为：cmgo-higv73ed@100000001。 
-- 自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * Set 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
+     * @param Password 实例密码。自定义密码长度为8-32个字符，至少包含字母、数字和字符（!@#%^*()_）中的两种。
      */
     public void setPassword(String Password) {
         this.Password = Password;

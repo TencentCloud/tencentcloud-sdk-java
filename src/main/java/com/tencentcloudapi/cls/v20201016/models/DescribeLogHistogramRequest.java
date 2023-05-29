@@ -58,6 +58,15 @@ public class DescribeLogHistogramRequest extends AbstractModel{
     private Long Interval;
 
     /**
+    * 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
      * Get 要查询的日志的起始时间，Unix时间戳，单位ms 
      * @return From 要查询的日志的起始时间，Unix时间戳，单位ms
      */
@@ -137,6 +146,30 @@ public class DescribeLogHistogramRequest extends AbstractModel{
         this.Interval = Interval;
     }
 
+    /**
+     * Get 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a> 
+     * @return SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     * @param SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
     public DescribeLogHistogramRequest() {
     }
 
@@ -160,6 +193,9 @@ public class DescribeLogHistogramRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new Long(source.Interval);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
     }
 
 
@@ -172,6 +208,7 @@ public class DescribeLogHistogramRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
 
     }
 }

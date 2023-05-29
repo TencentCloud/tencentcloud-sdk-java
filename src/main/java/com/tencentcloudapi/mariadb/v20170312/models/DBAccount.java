@@ -80,6 +80,13 @@ public class DBAccount extends AbstractModel{
     private Long SlaveConst;
 
     /**
+    * 用户最大连接数，0代表无限制
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -211,6 +218,22 @@ public class DBAccount extends AbstractModel{
         this.SlaveConst = SlaveConst;
     }
 
+    /**
+     * Get 用户最大连接数，0代表无限制 
+     * @return MaxUserConnections 用户最大连接数，0代表无限制
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set 用户最大连接数，0代表无限制
+     * @param MaxUserConnections 用户最大连接数，0代表无限制
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public DBAccount() {
     }
 
@@ -243,6 +266,9 @@ public class DBAccount extends AbstractModel{
         if (source.SlaveConst != null) {
             this.SlaveConst = new Long(source.SlaveConst);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -258,6 +284,7 @@ public class DBAccount extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

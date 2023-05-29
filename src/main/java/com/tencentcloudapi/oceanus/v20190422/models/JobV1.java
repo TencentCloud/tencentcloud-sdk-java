@@ -271,6 +271,14 @@ public class JobV1 extends AbstractModel{
     private String WorkSpaceName;
 
     /**
+    * 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -890,6 +898,26 @@ public class JobV1 extends AbstractModel{
         this.WorkSpaceName = WorkSpaceName;
     }
 
+    /**
+     * Get 作业标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 作业标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public JobV1() {
     }
 
@@ -991,6 +1019,12 @@ public class JobV1 extends AbstractModel{
         if (source.WorkSpaceName != null) {
             this.WorkSpaceName = new String(source.WorkSpaceName);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -1029,6 +1063,7 @@ public class JobV1 extends AbstractModel{
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

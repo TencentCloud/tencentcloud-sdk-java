@@ -86,6 +86,13 @@ public class CreateJobRequest extends AbstractModel{
     private String WorkSpaceId;
 
     /**
+    * 作业标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名 
      * @return Name 作业名称，允许输入长度小于等于50个字符的中文、英文、数字、-（横线）、_（下划线）、.（点），且符号必须半角字符。注意作业名不能和现有作业同名
      */
@@ -229,6 +236,22 @@ public class CreateJobRequest extends AbstractModel{
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 作业标签 
+     * @return Tags 作业标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 作业标签
+     * @param Tags 作业标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateJobRequest() {
     }
 
@@ -264,6 +287,12 @@ public class CreateJobRequest extends AbstractModel{
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class CreateJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

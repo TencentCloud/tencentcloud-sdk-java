@@ -132,7 +132,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 是否支持IPv6
+    * 是否支持IPv6，0:不支持，1:支持
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -167,7 +167,7 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     private String DcnInstanceId;
 
     /**
-    * 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+    * 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -437,16 +437,16 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否支持IPv6 
-     * @return Ipv6Flag 是否支持IPv6
+     * Get 是否支持IPv6，0:不支持，1:支持 
+     * @return Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set 是否支持IPv6
-     * @param Ipv6Flag 是否支持IPv6
+     * Set 是否支持IPv6，0:不支持，1:支持
+     * @param Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
@@ -517,16 +517,16 @@ public class CreateDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0 
-     * @return AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * Get 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0 
+     * @return AutoRenewFlag 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-     * @param AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+     * Set 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
+     * @param AutoRenewFlag 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

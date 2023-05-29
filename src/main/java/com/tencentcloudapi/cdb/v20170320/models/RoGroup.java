@@ -72,7 +72,7 @@ public class RoGroup extends AbstractModel{
     private String WeightMode;
 
     /**
-    * 权重值。
+    * 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
     */
     @SerializedName("Weight")
     @Expose
@@ -252,16 +252,16 @@ public class RoGroup extends AbstractModel{
     }
 
     /**
-     * Get 权重值。 
-     * @return Weight 权重值。
+     * Get 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。 
+     * @return Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 权重值。
-     * @param Weight 权重值。
+     * Set 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
+     * @param Weight 该字段已经废弃，无意义。查看只读实例的权重，请查看 RoInstances 字段里的 Weight 值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

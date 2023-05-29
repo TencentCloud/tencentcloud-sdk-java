@@ -30,7 +30,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 角色Id
+    * 角色Id（非超管或法人角色Id）
     */
     @SerializedName("RoleId")
     @Expose
@@ -67,16 +67,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 角色Id 
-     * @return RoleId 角色Id
+     * Get 角色Id（非超管或法人角色Id） 
+     * @return RoleId 角色Id（非超管或法人角色Id）
      */
     public String getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set 角色Id
-     * @param RoleId 角色Id
+     * Set 角色Id（非超管或法人角色Id）
+     * @param RoleId 角色Id（非超管或法人角色Id）
      */
     public void setRoleId(String RoleId) {
         this.RoleId = RoleId;

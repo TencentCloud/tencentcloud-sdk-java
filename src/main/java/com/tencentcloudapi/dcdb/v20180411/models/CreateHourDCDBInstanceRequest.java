@@ -118,7 +118,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 是否支持IPv6
+    * 是否支持IPv6，0:不支持，1:支持
     */
     @SerializedName("Ipv6Flag")
     @Expose
@@ -160,7 +160,7 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     private String RollbackInstanceId;
 
     /**
-    * 回档时间
+    * 回档时间，例如“2021-11-22 00:00:00”
     */
     @SerializedName("RollbackTime")
     @Expose
@@ -398,16 +398,16 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否支持IPv6 
-     * @return Ipv6Flag 是否支持IPv6
+     * Get 是否支持IPv6，0:不支持，1:支持 
+     * @return Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public Long getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
     /**
-     * Set 是否支持IPv6
-     * @param Ipv6Flag 是否支持IPv6
+     * Set 是否支持IPv6，0:不支持，1:支持
+     * @param Ipv6Flag 是否支持IPv6，0:不支持，1:支持
      */
     public void setIpv6Flag(Long Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
@@ -494,16 +494,16 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 回档时间 
-     * @return RollbackTime 回档时间
+     * Get 回档时间，例如“2021-11-22 00:00:00” 
+     * @return RollbackTime 回档时间，例如“2021-11-22 00:00:00”
      */
     public String getRollbackTime() {
         return this.RollbackTime;
     }
 
     /**
-     * Set 回档时间
-     * @param RollbackTime 回档时间
+     * Set 回档时间，例如“2021-11-22 00:00:00”
+     * @param RollbackTime 回档时间，例如“2021-11-22 00:00:00”
      */
     public void setRollbackTime(String RollbackTime) {
         this.RollbackTime = RollbackTime;

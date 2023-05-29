@@ -319,7 +319,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateParamTemplate）用于创建参数模版
+     *本接口（CreateParamTemplate）用于创建参数模板
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -439,7 +439,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DeleteParamTemplate）用于删除用户创建的参数模版。
+     *本接口（DeleteParamTemplate）用于删除用户创建的参数模板。
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -1039,7 +1039,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeParamTemplateDetail）用于查询用户参数模版详情
+     *本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情
      * @param req DescribeParamTemplateDetailRequest
      * @return DescribeParamTemplateDetailResponse
      * @throws TencentCloudSDKException
@@ -1719,7 +1719,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyParamTemplate）用于修改用户参数模版。
+     *本接口（ModifyParamTemplate）用于修改用户参数模板。
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException

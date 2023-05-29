@@ -39,7 +39,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *解隔离后付费实例
+     *解隔离MariaDB按量计费实例
      * @param req ActivateHourDBInstanceRequest
      * @return ActivateHourDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateDBInstance）用于创建包年包月的云数据库实例，可通过传入实例规格、数据库版本号、购买时长和数量等信息创建云数据库实例。
+     *本接口（CreateDBInstance）用于创建包年包月的MariaDB云数据库实例，可通过传入实例规格、数据库版本号、购买时长和数量等信息创建云数据库实例。
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -200,7 +200,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *创建独享集群Mariadb实例
+     *创建Mariadb独享集群实例
      * @param req CreateDedicatedClusterDBInstanceRequest
      * @return CreateDedicatedClusterDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -220,7 +220,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *创建后付费实例
+     *创建MariaDB按量计费实例
      * @param req CreateHourDBInstanceRequest
      * @return CreateHourDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -822,7 +822,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DestroyHourDBInstance）用于销毁按量计费实例。
+     *本接口（DestroyHourDBInstance）用于销毁MariaDB按量计费实例。
      * @param req DestroyHourDBInstanceRequest
      * @return DestroyHourDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -923,7 +923,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *本接口(IsolateDBInstance)用于隔离云数据库实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
+     *本接口(IsolateDBInstance)用于隔离云数据库MariaDB实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -963,7 +963,7 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *隔离后付费实例
+     *隔离MariaDB按量计费实例
      * @param req IsolateHourDBInstanceRequest
      * @return IsolateHourDBInstanceResponse
      * @throws TencentCloudSDKException

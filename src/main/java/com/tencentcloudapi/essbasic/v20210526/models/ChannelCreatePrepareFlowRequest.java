@@ -65,7 +65,7 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     private CreateFlowOption FlowOption;
 
     /**
-    * 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+    * 通过flowid快速获得之前成功通过页面发起的合同生成链接
     */
     @SerializedName("FlowId")
     @Expose
@@ -189,16 +189,16 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL 
-     * @return FlowId 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * Get 通过flowid快速获得之前成功通过页面发起的合同生成链接 
+     * @return FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
-     * @param FlowId 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * Set 通过flowid快速获得之前成功通过页面发起的合同生成链接
+     * @param FlowId 通过flowid快速获得之前成功通过页面发起的合同生成链接
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

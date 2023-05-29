@@ -239,6 +239,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
+     * @param req CancelSparkSessionBatchSQLRequest
+     * @return CancelSparkSessionBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(CancelSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelSparkSessionBatchSQL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（CancelTask），用于取消任务执行
      * @param req CancelTaskRequest
      * @return CancelTaskResponse
@@ -551,6 +571,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSparkAppTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateSparkAppTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（CreateSparkSessionBatchSQL）用于提交Spark SQL批任务。
+     * @param req CreateSparkSessionBatchSQLRequest
+     * @return CreateSparkSessionBatchSQLResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(CreateSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSparkSessionBatchSQL");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1231,6 +1271,26 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSparkAppTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSparkAppTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（DescribeSparkSessionBatchSqlLog）用于获取SparkSQL批任务日志
+     * @param req DescribeSparkSessionBatchSqlLogRequest
+     * @return DescribeSparkSessionBatchSqlLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSparkSessionBatchSqlLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

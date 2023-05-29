@@ -69,6 +69,14 @@ public class TreeResourceItem extends AbstractModel{
     private String FolderId;
 
     /**
+    * 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefJobStatusCountSet")
+    @Expose
+    private RefJobStatusCountItem [] RefJobStatusCountSet;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -180,6 +188,26 @@ public class TreeResourceItem extends AbstractModel{
         this.FolderId = FolderId;
     }
 
+    /**
+     * Get 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RefJobStatusCountItem [] getRefJobStatusCountSet() {
+        return this.RefJobStatusCountSet;
+    }
+
+    /**
+     * Set 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefJobStatusCountSet 分状态统计关联作业数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefJobStatusCountSet(RefJobStatusCountItem [] RefJobStatusCountSet) {
+        this.RefJobStatusCountSet = RefJobStatusCountSet;
+    }
+
     public TreeResourceItem() {
     }
 
@@ -206,6 +234,12 @@ public class TreeResourceItem extends AbstractModel{
         if (source.FolderId != null) {
             this.FolderId = new String(source.FolderId);
         }
+        if (source.RefJobStatusCountSet != null) {
+            this.RefJobStatusCountSet = new RefJobStatusCountItem[source.RefJobStatusCountSet.length];
+            for (int i = 0; i < source.RefJobStatusCountSet.length; i++) {
+                this.RefJobStatusCountSet[i] = new RefJobStatusCountItem(source.RefJobStatusCountSet[i]);
+            }
+        }
     }
 
 
@@ -219,6 +253,7 @@ public class TreeResourceItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FolderId", this.FolderId);
+        this.setParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
 
     }
 }

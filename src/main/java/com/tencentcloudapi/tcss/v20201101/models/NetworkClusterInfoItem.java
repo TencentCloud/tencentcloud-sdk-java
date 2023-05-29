@@ -108,6 +108,14 @@ public class NetworkClusterInfoItem extends AbstractModel{
     private String NetworkPolicyPluginError;
 
     /**
+    * 容器网络插件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterNetworkSettings")
+    @Expose
+    private String ClusterNetworkSettings;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -303,6 +311,26 @@ public class NetworkClusterInfoItem extends AbstractModel{
         this.NetworkPolicyPluginError = NetworkPolicyPluginError;
     }
 
+    /**
+     * Get 容器网络插件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterNetworkSettings 容器网络插件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterNetworkSettings() {
+        return this.ClusterNetworkSettings;
+    }
+
+    /**
+     * Set 容器网络插件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterNetworkSettings 容器网络插件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterNetworkSettings(String ClusterNetworkSettings) {
+        this.ClusterNetworkSettings = ClusterNetworkSettings;
+    }
+
     public NetworkClusterInfoItem() {
     }
 
@@ -347,6 +375,9 @@ public class NetworkClusterInfoItem extends AbstractModel{
         if (source.NetworkPolicyPluginError != null) {
             this.NetworkPolicyPluginError = new String(source.NetworkPolicyPluginError);
         }
+        if (source.ClusterNetworkSettings != null) {
+            this.ClusterNetworkSettings = new String(source.ClusterNetworkSettings);
+        }
     }
 
 
@@ -366,6 +397,7 @@ public class NetworkClusterInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableRuleCount", this.EnableRuleCount);
         this.setParamSimple(map, prefix + "NetworkPolicyPluginStatus", this.NetworkPolicyPluginStatus);
         this.setParamSimple(map, prefix + "NetworkPolicyPluginError", this.NetworkPolicyPluginError);
+        this.setParamSimple(map, prefix + "ClusterNetworkSettings", this.ClusterNetworkSettings);
 
     }
 }
