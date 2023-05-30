@@ -37,8 +37,14 @@ public class HttpConnection {
 
   private OkHttpClient client;
 
+  // https://stackoverflow.com/questions/31423154/performance-of-a-singleton-instance-okhttpclient
+  // https://github.com/square/okhttp/issues/3372
+  // Creating dispatcher and connectionPool is expensive.
+  // Share them between OkHttpClients by singleton's Builder.
+  private static final OkHttpClient clientSingleton = new OkHttpClient();
+
   public HttpConnection(Integer connTimeout, Integer readTimeout, Integer writeTimeout) {
-    this.client = new OkHttpClient.Builder()
+    this.client = clientSingleton.newBuilder()
             .connectTimeout(connTimeout, TimeUnit.SECONDS)
             .readTimeout(readTimeout, TimeUnit.SECONDS)
             .writeTimeout(writeTimeout, TimeUnit.SECONDS)
