@@ -87,6 +87,20 @@ public class WatermarkInfo extends AbstractModel{
     private Long Height;
 
     /**
+    * 背景水印宽。
+    */
+    @SerializedName("BackgroundWidth")
+    @Expose
+    private Long BackgroundWidth;
+
+    /**
+    * 背景水印高。
+    */
+    @SerializedName("BackgroundHeight")
+    @Expose
+    private Long BackgroundHeight;
+
+    /**
      * Get 水印 ID。 
      * @return WatermarkId 水印 ID。
      */
@@ -234,6 +248,38 @@ public class WatermarkInfo extends AbstractModel{
         this.Height = Height;
     }
 
+    /**
+     * Get 背景水印宽。 
+     * @return BackgroundWidth 背景水印宽。
+     */
+    public Long getBackgroundWidth() {
+        return this.BackgroundWidth;
+    }
+
+    /**
+     * Set 背景水印宽。
+     * @param BackgroundWidth 背景水印宽。
+     */
+    public void setBackgroundWidth(Long BackgroundWidth) {
+        this.BackgroundWidth = BackgroundWidth;
+    }
+
+    /**
+     * Get 背景水印高。 
+     * @return BackgroundHeight 背景水印高。
+     */
+    public Long getBackgroundHeight() {
+        return this.BackgroundHeight;
+    }
+
+    /**
+     * Set 背景水印高。
+     * @param BackgroundHeight 背景水印高。
+     */
+    public void setBackgroundHeight(Long BackgroundHeight) {
+        this.BackgroundHeight = BackgroundHeight;
+    }
+
     public WatermarkInfo() {
     }
 
@@ -269,6 +315,12 @@ public class WatermarkInfo extends AbstractModel{
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.BackgroundWidth != null) {
+            this.BackgroundWidth = new Long(source.BackgroundWidth);
+        }
+        if (source.BackgroundHeight != null) {
+            this.BackgroundHeight = new Long(source.BackgroundHeight);
+        }
     }
 
 
@@ -285,6 +337,8 @@ public class WatermarkInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "BackgroundWidth", this.BackgroundWidth);
+        this.setParamSimple(map, prefix + "BackgroundHeight", this.BackgroundHeight);
 
     }
 }

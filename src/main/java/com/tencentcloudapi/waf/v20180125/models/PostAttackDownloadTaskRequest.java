@@ -65,6 +65,13 @@ public class PostAttackDownloadTaskRequest extends AbstractModel{
     private String Sort;
 
     /**
+    * 下载的日志条数
+    */
+    @SerializedName("Count")
+    @Expose
+    private Long Count;
+
+    /**
      * Get 查询的域名，所有域名使用all 
      * @return Domain 查询的域名，所有域名使用all
      */
@@ -160,6 +167,22 @@ public class PostAttackDownloadTaskRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    /**
+     * Get 下载的日志条数 
+     * @return Count 下载的日志条数
+     */
+    public Long getCount() {
+        return this.Count;
+    }
+
+    /**
+     * Set 下载的日志条数
+     * @param Count 下载的日志条数
+     */
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
     public PostAttackDownloadTaskRequest() {
     }
 
@@ -186,6 +209,9 @@ public class PostAttackDownloadTaskRequest extends AbstractModel{
         if (source.Sort != null) {
             this.Sort = new String(source.Sort);
         }
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class PostAttackDownloadTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QueryString", this.QueryString);
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Count", this.Count);
 
     }
 }

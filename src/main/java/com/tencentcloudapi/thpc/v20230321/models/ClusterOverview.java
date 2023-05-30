@@ -107,6 +107,13 @@ public class ClusterOverview extends AbstractModel{
     private Long LoginNodeCount;
 
     /**
+    * 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+    */
+    @SerializedName("AutoScalingType")
+    @Expose
+    private String AutoScalingType;
+
+    /**
     * 集群所属私有网络ID。
     */
     @SerializedName("VpcId")
@@ -306,6 +313,22 @@ public class ClusterOverview extends AbstractModel{
     }
 
     /**
+     * Get 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。 
+     * @return AutoScalingType 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     */
+    public String getAutoScalingType() {
+        return this.AutoScalingType;
+    }
+
+    /**
+     * Set 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     * @param AutoScalingType 弹性伸缩类型。<br><li>THPC_AS：集群自动扩缩容由THPC产品内部实现。<br><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。
+     */
+    public void setAutoScalingType(String AutoScalingType) {
+        this.AutoScalingType = AutoScalingType;
+    }
+
+    /**
      * Get 集群所属私有网络ID。 
      * @return VpcId 集群所属私有网络ID。
      */
@@ -374,6 +397,9 @@ public class ClusterOverview extends AbstractModel{
         if (source.LoginNodeCount != null) {
             this.LoginNodeCount = new Long(source.LoginNodeCount);
         }
+        if (source.AutoScalingType != null) {
+            this.AutoScalingType = new String(source.AutoScalingType);
+        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
@@ -396,6 +422,7 @@ public class ClusterOverview extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ManagerNodeSet.", this.ManagerNodeSet);
         this.setParamArrayObj(map, prefix + "LoginNodeSet.", this.LoginNodeSet);
         this.setParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
+        this.setParamSimple(map, prefix + "AutoScalingType", this.AutoScalingType);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }

@@ -51,6 +51,30 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel{
     private Float Confidence;
 
     /**
+    * 识别开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 识别结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SteadyState")
+    @Expose
+    private Boolean SteadyState;
+
+    /**
      * Get 识别文本。 
      * @return Text 识别文本。
      */
@@ -114,6 +138,66 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel{
         this.Confidence = Confidence;
     }
 
+    /**
+     * Get 识别开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 识别开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 识别开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 识别开始UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 识别结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 识别结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 识别结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 识别结束UTC时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SteadyState 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSteadyState() {
+        return this.SteadyState;
+    }
+
+    /**
+     * Set 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SteadyState 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSteadyState(Boolean SteadyState) {
+        this.SteadyState = SteadyState;
+    }
+
     public LiveStreamAsrFullTextRecognitionResult() {
     }
 
@@ -134,6 +218,15 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel{
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.SteadyState != null) {
+            this.SteadyState = new Boolean(source.SteadyState);
+        }
     }
 
 
@@ -145,6 +238,9 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel{
         this.setParamSimple(map, prefix + "StartPtsTime", this.StartPtsTime);
         this.setParamSimple(map, prefix + "EndPtsTime", this.EndPtsTime);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SteadyState", this.SteadyState);
 
     }
 }

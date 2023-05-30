@@ -64,6 +64,22 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
     private LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo;
 
     /**
+    * 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiAnalysisResultInfo")
+    @Expose
+    private LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo;
+
+    /**
+    * 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AiQualityControlResultInfo")
+    @Expose
+    private LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo;
+
+    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -189,6 +205,46 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
     }
 
     /**
+     * Get 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiAnalysisResultInfo 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveStreamAiAnalysisResultInfo getAiAnalysisResultInfo() {
+        return this.AiAnalysisResultInfo;
+    }
+
+    /**
+     * Set 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiAnalysisResultInfo 内容分析结果，当 NotificationType 为 AiAnalysisResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiAnalysisResultInfo(LiveStreamAiAnalysisResultInfo AiAnalysisResultInfo) {
+        this.AiAnalysisResultInfo = AiAnalysisResultInfo;
+    }
+
+    /**
+     * Get 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AiQualityControlResultInfo 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LiveStreamAiQualityControlResultInfo getAiQualityControlResultInfo() {
+        return this.AiQualityControlResultInfo;
+    }
+
+    /**
+     * Set 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiQualityControlResultInfo 媒体质检结果，当 NotificationType 为 AiQualityControlResult 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAiQualityControlResultInfo(LiveStreamAiQualityControlResultInfo AiQualityControlResultInfo) {
+        this.AiQualityControlResultInfo = AiQualityControlResultInfo;
+    }
+
+    /**
      * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长50个字符，不带或者带空字符串表示不做去重。
      */
@@ -259,6 +315,12 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
         if (source.AiRecognitionResultInfo != null) {
             this.AiRecognitionResultInfo = new LiveStreamAiRecognitionResultInfo(source.AiRecognitionResultInfo);
         }
+        if (source.AiAnalysisResultInfo != null) {
+            this.AiAnalysisResultInfo = new LiveStreamAiAnalysisResultInfo(source.AiAnalysisResultInfo);
+        }
+        if (source.AiQualityControlResultInfo != null) {
+            this.AiQualityControlResultInfo = new LiveStreamAiQualityControlResultInfo(source.AiQualityControlResultInfo);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -280,6 +342,8 @@ public class ParseLiveStreamProcessNotificationResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ProcessEofInfo.", this.ProcessEofInfo);
         this.setParamObj(map, prefix + "AiReviewResultInfo.", this.AiReviewResultInfo);
         this.setParamObj(map, prefix + "AiRecognitionResultInfo.", this.AiRecognitionResultInfo);
+        this.setParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
+        this.setParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

@@ -61,7 +61,6 @@ Gpu=100表示使用了“一张”gpu卡, 但此处的“一张”卡有可能�
     * 创建或更新时无需填写，仅展示需要关注
 后付费非整卡实例对应的实际的Gpu卡资源, 表示gpu资源对应实际的gpu卡个数.
 RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealGpu")
     @Expose
@@ -69,7 +68,6 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
 
     /**
     * 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealGpuDetailSet")
     @Expose
@@ -170,12 +168,10 @@ Gpu=100表示使用了“一张”gpu卡, 但此处的“一张”卡有可能�
     /**
      * Get 创建或更新时无需填写，仅展示需要关注
 后付费非整卡实例对应的实际的Gpu卡资源, 表示gpu资源对应实际的gpu卡个数.
-RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个.
-注意：此字段可能返回 null，表示取不到有效值。 
+RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个. 
      * @return RealGpu 创建或更新时无需填写，仅展示需要关注
 后付费非整卡实例对应的实际的Gpu卡资源, 表示gpu资源对应实际的gpu卡个数.
 RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealGpu() {
         return this.RealGpu;
@@ -185,21 +181,17 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
      * Set 创建或更新时无需填写，仅展示需要关注
 后付费非整卡实例对应的实际的Gpu卡资源, 表示gpu资源对应实际的gpu卡个数.
 RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealGpu 创建或更新时无需填写，仅展示需要关注
 后付费非整卡实例对应的实际的Gpu卡资源, 表示gpu资源对应实际的gpu卡个数.
 RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有可能代表带有1/4卡的实例4个, 或者带有1/2卡的实例2个, 或者带有1卡的实力1个.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealGpu(Long RealGpu) {
         this.RealGpu = RealGpu;
     }
 
     /**
-     * Get 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。 
      * @return RealGpuDetailSet 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GpuDetail [] getRealGpuDetailSet() {
         return this.RealGpuDetailSet;
@@ -207,9 +199,7 @@ RealGpu=100表示实际使用了一张gpu卡, 对应实际的实例机型, 有�
 
     /**
      * Set 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealGpuDetailSet 创建或更新时无需填写，仅展示需要关注。详细的GPU使用信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealGpuDetailSet(GpuDetail [] RealGpuDetailSet) {
         this.RealGpuDetailSet = RealGpuDetailSet;

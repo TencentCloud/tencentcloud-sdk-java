@@ -76,6 +76,20 @@ URL中禁止包含的字符：
     private Long Height;
 
     /**
+    * 背景水印宽度。默认宽度1920。
+    */
+    @SerializedName("BackgroundWidth")
+    @Expose
+    private Long BackgroundWidth;
+
+    /**
+    * 背景水印高度。默认高度1080。
+    */
+    @SerializedName("BackgroundHeight")
+    @Expose
+    private Long BackgroundHeight;
+
+    /**
      * Get 水印 ID。
 在添加水印接口 [AddLiveWatermark](/document/product/267/30154) 调用返回值中获取水印 ID。 
      * @return WatermarkId 水印 ID。
@@ -203,6 +217,38 @@ URL中禁止包含的字符：
         this.Height = Height;
     }
 
+    /**
+     * Get 背景水印宽度。默认宽度1920。 
+     * @return BackgroundWidth 背景水印宽度。默认宽度1920。
+     */
+    public Long getBackgroundWidth() {
+        return this.BackgroundWidth;
+    }
+
+    /**
+     * Set 背景水印宽度。默认宽度1920。
+     * @param BackgroundWidth 背景水印宽度。默认宽度1920。
+     */
+    public void setBackgroundWidth(Long BackgroundWidth) {
+        this.BackgroundWidth = BackgroundWidth;
+    }
+
+    /**
+     * Get 背景水印高度。默认高度1080。 
+     * @return BackgroundHeight 背景水印高度。默认高度1080。
+     */
+    public Long getBackgroundHeight() {
+        return this.BackgroundHeight;
+    }
+
+    /**
+     * Set 背景水印高度。默认高度1080。
+     * @param BackgroundHeight 背景水印高度。默认高度1080。
+     */
+    public void setBackgroundHeight(Long BackgroundHeight) {
+        this.BackgroundHeight = BackgroundHeight;
+    }
+
     public UpdateLiveWatermarkRequest() {
     }
 
@@ -232,6 +278,12 @@ URL中禁止包含的字符：
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.BackgroundWidth != null) {
+            this.BackgroundWidth = new Long(source.BackgroundWidth);
+        }
+        if (source.BackgroundHeight != null) {
+            this.BackgroundHeight = new Long(source.BackgroundHeight);
+        }
     }
 
 
@@ -246,6 +298,8 @@ URL中禁止包含的字符：
         this.setParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "BackgroundWidth", this.BackgroundWidth);
+        this.setParamSimple(map, prefix + "BackgroundHeight", this.BackgroundHeight);
 
     }
 }

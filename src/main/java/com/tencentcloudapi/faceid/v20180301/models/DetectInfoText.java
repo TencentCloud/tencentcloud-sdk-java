@@ -47,6 +47,17 @@ public class DetectInfoText extends AbstractModel{
     private String IdCard;
 
     /**
+    * 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseIDType")
+    @Expose
+    private Long UseIDType;
+
+    /**
     * 本次验证使用的姓名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -314,6 +325,38 @@ public class DetectInfoText extends AbstractModel{
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
+    }
+
+    /**
+     * Get 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseIDType 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUseIDType() {
+        return this.UseIDType;
+    }
+
+    /**
+     * Set 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseIDType 用户认证时使用的证件号码类型：
+0：二代身份证的证件号码
+1：港澳台居住证的证件号码
+2：其他（核验使用的证件号码非合法身份号码）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseIDType(Long UseIDType) {
+        this.UseIDType = UseIDType;
     }
 
     /**
@@ -873,6 +916,9 @@ public class DetectInfoText extends AbstractModel{
         if (source.IdCard != null) {
             this.IdCard = new String(source.IdCard);
         }
+        if (source.UseIDType != null) {
+            this.UseIDType = new Long(source.UseIDType);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -964,6 +1010,7 @@ public class DetectInfoText extends AbstractModel{
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
         this.setParamSimple(map, prefix + "IdCard", this.IdCard);
+        this.setParamSimple(map, prefix + "UseIDType", this.UseIDType);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "OcrNation", this.OcrNation);
         this.setParamSimple(map, prefix + "OcrAddress", this.OcrAddress);

@@ -58,6 +58,13 @@ public class QPSPackageNew extends AbstractModel{
     private String Region;
 
     /**
+    * 计费项
+    */
+    @SerializedName("BillingItem")
+    @Expose
+    private String BillingItem;
+
+    /**
      * Get 资源ID 
      * @return ResourceIds 资源ID
      */
@@ -137,6 +144,22 @@ public class QPSPackageNew extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get 计费项 
+     * @return BillingItem 计费项
+     */
+    public String getBillingItem() {
+        return this.BillingItem;
+    }
+
+    /**
+     * Set 计费项
+     * @param BillingItem 计费项
+     */
+    public void setBillingItem(String BillingItem) {
+        this.BillingItem = BillingItem;
+    }
+
     public QPSPackageNew() {
     }
 
@@ -160,6 +183,9 @@ public class QPSPackageNew extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.BillingItem != null) {
+            this.BillingItem = new String(source.BillingItem);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class QPSPackageNew extends AbstractModel{
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
 
     }
 }

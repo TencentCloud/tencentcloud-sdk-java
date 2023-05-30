@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchAccessLogRequest extends AbstractModel{
 
     /**
-    * 客户要查询的日志主题ID，每个客户都有对应的一个主题
+    * 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
     */
     @SerializedName("TopicId")
     @Expose
@@ -58,7 +58,8 @@ public class SearchAccessLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
     */
     @SerializedName("Context")
     @Expose
@@ -72,16 +73,23 @@ public class SearchAccessLogRequest extends AbstractModel{
     private String Sort;
 
     /**
-     * Get 客户要查询的日志主题ID，每个客户都有对应的一个主题 
-     * @return TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
+    * 第几页，从0开始。新版本接口字段
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
+     * Get 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串 
+     * @return TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 客户要查询的日志主题ID，每个客户都有对应的一个主题
-     * @param TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * Set 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
+     * @param TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题，新版本此字段填空字符串
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -152,16 +160,20 @@ public class SearchAccessLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容 
-     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填 
+     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
-     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
+     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
+新版本此字段填空填
      */
     public void setContext(String Context) {
         this.Context = Context;
@@ -181,6 +193,22 @@ public class SearchAccessLogRequest extends AbstractModel{
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
+    }
+
+    /**
+     * Get 第几页，从0开始。新版本接口字段 
+     * @return Page 第几页，从0开始。新版本接口字段
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 第几页，从0开始。新版本接口字段
+     * @param Page 第几页，从0开始。新版本接口字段
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
     }
 
     public SearchAccessLogRequest() {
@@ -212,6 +240,9 @@ public class SearchAccessLogRequest extends AbstractModel{
         if (source.Sort != null) {
             this.Sort = new String(source.Sort);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class SearchAccessLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

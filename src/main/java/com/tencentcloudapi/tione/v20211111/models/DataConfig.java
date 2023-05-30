@@ -70,12 +70,20 @@ public class DataConfig extends AbstractModel{
     private HDFSConfig HDFSSource;
 
     /**
-    * 配饰GooseFS的数据
+    * 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GooseFSSource")
     @Expose
     private GooseFS GooseFSSource;
+
+    /**
+    * 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CFSTurboSource")
+    @Expose
+    private CFSTurbo CFSTurboSource;
 
     /**
      * Get 映射路径 
@@ -194,9 +202,9 @@ public class DataConfig extends AbstractModel{
     }
 
     /**
-     * Get 配饰GooseFS的数据
+     * Get 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GooseFSSource 配饰GooseFS的数据
+     * @return GooseFSSource 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GooseFS getGooseFSSource() {
@@ -204,13 +212,33 @@ public class DataConfig extends AbstractModel{
     }
 
     /**
-     * Set 配饰GooseFS的数据
+     * Set 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GooseFSSource 配饰GooseFS的数据
+     * @param GooseFSSource 配置GooseFS的数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGooseFSSource(GooseFS GooseFSSource) {
         this.GooseFSSource = GooseFSSource;
+    }
+
+    /**
+     * Get 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CFSTurboSource 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CFSTurbo getCFSTurboSource() {
+        return this.CFSTurboSource;
+    }
+
+    /**
+     * Set 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CFSTurboSource 配置TurboFS的数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCFSTurboSource(CFSTurbo CFSTurboSource) {
+        this.CFSTurboSource = CFSTurboSource;
     }
 
     public DataConfig() {
@@ -242,6 +270,9 @@ public class DataConfig extends AbstractModel{
         if (source.GooseFSSource != null) {
             this.GooseFSSource = new GooseFS(source.GooseFSSource);
         }
+        if (source.CFSTurboSource != null) {
+            this.CFSTurboSource = new CFSTurbo(source.CFSTurboSource);
+        }
     }
 
 
@@ -256,6 +287,7 @@ public class DataConfig extends AbstractModel{
         this.setParamObj(map, prefix + "CFSSource.", this.CFSSource);
         this.setParamObj(map, prefix + "HDFSSource.", this.HDFSSource);
         this.setParamObj(map, prefix + "GooseFSSource.", this.GooseFSSource);
+        this.setParamObj(map, prefix + "CFSTurboSource.", this.CFSTurboSource);
 
     }
 }

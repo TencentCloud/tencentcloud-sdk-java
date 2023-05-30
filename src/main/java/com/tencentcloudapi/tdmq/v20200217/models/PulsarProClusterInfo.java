@@ -80,6 +80,14 @@ public class PulsarProClusterInfo extends AbstractModel{
     private Long MaxStorage;
 
     /**
+    * 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanEditRoute")
+    @Expose
+    private Boolean CanEditRoute;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -211,6 +219,26 @@ public class PulsarProClusterInfo extends AbstractModel{
         this.MaxStorage = MaxStorage;
     }
 
+    /**
+     * Get 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanEditRoute() {
+        return this.CanEditRoute;
+    }
+
+    /**
+     * Set 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanEditRoute 是否可以修改路由
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanEditRoute(Boolean CanEditRoute) {
+        this.CanEditRoute = CanEditRoute;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -246,6 +274,9 @@ public class PulsarProClusterInfo extends AbstractModel{
         if (source.MaxStorage != null) {
             this.MaxStorage = new Long(source.MaxStorage);
         }
+        if (source.CanEditRoute != null) {
+            this.CanEditRoute = new Boolean(source.CanEditRoute);
+        }
     }
 
 
@@ -261,6 +292,7 @@ public class PulsarProClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "NodeDistribution.", this.NodeDistribution);
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
+        this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
 
     }
 }

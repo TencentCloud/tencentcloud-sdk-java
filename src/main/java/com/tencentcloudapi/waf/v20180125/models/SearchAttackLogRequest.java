@@ -72,6 +72,13 @@ public class SearchAttackLogRequest extends AbstractModel{
     private String Sort;
 
     /**
+    * 第几页，从0开始
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 查询的域名，所有域名使用all 
      * @return Domain 查询的域名，所有域名使用all
      */
@@ -183,6 +190,22 @@ public class SearchAttackLogRequest extends AbstractModel{
         this.Sort = Sort;
     }
 
+    /**
+     * Get 第几页，从0开始 
+     * @return Page 第几页，从0开始
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 第几页，从0开始
+     * @param Page 第几页，从0开始
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public SearchAttackLogRequest() {
     }
 
@@ -212,6 +235,9 @@ public class SearchAttackLogRequest extends AbstractModel{
         if (source.Sort != null) {
             this.Sort = new String(source.Sort);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class SearchAttackLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QueryString", this.QueryString);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }
