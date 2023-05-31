@@ -30,21 +30,21 @@ public class ApproverRestriction extends AbstractModel{
     private String Name;
 
     /**
-    * 指定签署人手机号
+    * 指定签署人手机号，11位数字
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 指定签署人证件类型
+    * 指定签署人证件类型，ID_CARD-身份证
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 指定签署人证件号码
+    * 指定签署人证件号码，字母大写
     */
     @SerializedName("IdCardNumber")
     @Expose
@@ -67,48 +67,48 @@ public class ApproverRestriction extends AbstractModel{
     }
 
     /**
-     * Get 指定签署人手机号 
-     * @return Mobile 指定签署人手机号
+     * Get 指定签署人手机号，11位数字 
+     * @return Mobile 指定签署人手机号，11位数字
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 指定签署人手机号
-     * @param Mobile 指定签署人手机号
+     * Set 指定签署人手机号，11位数字
+     * @param Mobile 指定签署人手机号，11位数字
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 指定签署人证件类型 
-     * @return IdCardType 指定签署人证件类型
+     * Get 指定签署人证件类型，ID_CARD-身份证 
+     * @return IdCardType 指定签署人证件类型，ID_CARD-身份证
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 指定签署人证件类型
-     * @param IdCardType 指定签署人证件类型
+     * Set 指定签署人证件类型，ID_CARD-身份证
+     * @param IdCardType 指定签署人证件类型，ID_CARD-身份证
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 指定签署人证件号码 
-     * @return IdCardNumber 指定签署人证件号码
+     * Get 指定签署人证件号码，字母大写 
+     * @return IdCardNumber 指定签署人证件号码，字母大写
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 指定签署人证件号码
-     * @param IdCardNumber 指定签署人证件号码
+     * Set 指定签署人证件号码，字母大写
+     * @param IdCardNumber 指定签署人证件号码，字母大写
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;

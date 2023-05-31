@@ -51,6 +51,20 @@ public class TaskInfoPage extends AbstractModel{
     private Long TotalPage;
 
     /**
+    * 页数
+    */
+    @SerializedName("PageCount")
+    @Expose
+    private Long PageCount;
+
+    /**
+    * 总条数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
      * Get 页号 
      * @return PageNumber 页号
      */
@@ -114,6 +128,38 @@ public class TaskInfoPage extends AbstractModel{
         this.TotalPage = TotalPage;
     }
 
+    /**
+     * Get 页数 
+     * @return PageCount 页数
+     */
+    public Long getPageCount() {
+        return this.PageCount;
+    }
+
+    /**
+     * Set 页数
+     * @param PageCount 页数
+     */
+    public void setPageCount(Long PageCount) {
+        this.PageCount = PageCount;
+    }
+
+    /**
+     * Get 总条数 
+     * @return TotalCount 总条数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总条数
+     * @param TotalCount 总条数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
     public TaskInfoPage() {
     }
 
@@ -137,6 +183,12 @@ public class TaskInfoPage extends AbstractModel{
         if (source.TotalPage != null) {
             this.TotalPage = new Long(source.TotalPage);
         }
+        if (source.PageCount != null) {
+            this.PageCount = new Long(source.PageCount);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
     }
 
 
@@ -148,6 +200,8 @@ public class TaskInfoPage extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "TotalPage", this.TotalPage);
+        this.setParamSimple(map, prefix + "PageCount", this.PageCount);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

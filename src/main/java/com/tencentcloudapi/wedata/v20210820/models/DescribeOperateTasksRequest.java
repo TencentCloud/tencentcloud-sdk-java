@@ -128,6 +128,41 @@ public class DescribeOperateTasksRequest extends AbstractModel{
     private String ProductNameList;
 
     /**
+    * 数据源id或（仅针对离线同步任务）来源数据源id
+    */
+    @SerializedName("SourceServiceId")
+    @Expose
+    private String SourceServiceId;
+
+    /**
+    * 数据源类型或（仅针对离线同步任务）来源数据源类型
+    */
+    @SerializedName("SourceServiceType")
+    @Expose
+    private String SourceServiceType;
+
+    /**
+    * （仅针对离线同步任务）目标数据源id
+    */
+    @SerializedName("TargetServiceId")
+    @Expose
+    private String TargetServiceId;
+
+    /**
+    * （仅针对离线同步任务）目标数据源类型
+    */
+    @SerializedName("TargetServiceType")
+    @Expose
+    private String TargetServiceType;
+
+    /**
+    * 告警类型，多个类型以逗号分隔
+    */
+    @SerializedName("AlarmType")
+    @Expose
+    private String AlarmType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -367,6 +402,86 @@ public class DescribeOperateTasksRequest extends AbstractModel{
         this.ProductNameList = ProductNameList;
     }
 
+    /**
+     * Get 数据源id或（仅针对离线同步任务）来源数据源id 
+     * @return SourceServiceId 数据源id或（仅针对离线同步任务）来源数据源id
+     */
+    public String getSourceServiceId() {
+        return this.SourceServiceId;
+    }
+
+    /**
+     * Set 数据源id或（仅针对离线同步任务）来源数据源id
+     * @param SourceServiceId 数据源id或（仅针对离线同步任务）来源数据源id
+     */
+    public void setSourceServiceId(String SourceServiceId) {
+        this.SourceServiceId = SourceServiceId;
+    }
+
+    /**
+     * Get 数据源类型或（仅针对离线同步任务）来源数据源类型 
+     * @return SourceServiceType 数据源类型或（仅针对离线同步任务）来源数据源类型
+     */
+    public String getSourceServiceType() {
+        return this.SourceServiceType;
+    }
+
+    /**
+     * Set 数据源类型或（仅针对离线同步任务）来源数据源类型
+     * @param SourceServiceType 数据源类型或（仅针对离线同步任务）来源数据源类型
+     */
+    public void setSourceServiceType(String SourceServiceType) {
+        this.SourceServiceType = SourceServiceType;
+    }
+
+    /**
+     * Get （仅针对离线同步任务）目标数据源id 
+     * @return TargetServiceId （仅针对离线同步任务）目标数据源id
+     */
+    public String getTargetServiceId() {
+        return this.TargetServiceId;
+    }
+
+    /**
+     * Set （仅针对离线同步任务）目标数据源id
+     * @param TargetServiceId （仅针对离线同步任务）目标数据源id
+     */
+    public void setTargetServiceId(String TargetServiceId) {
+        this.TargetServiceId = TargetServiceId;
+    }
+
+    /**
+     * Get （仅针对离线同步任务）目标数据源类型 
+     * @return TargetServiceType （仅针对离线同步任务）目标数据源类型
+     */
+    public String getTargetServiceType() {
+        return this.TargetServiceType;
+    }
+
+    /**
+     * Set （仅针对离线同步任务）目标数据源类型
+     * @param TargetServiceType （仅针对离线同步任务）目标数据源类型
+     */
+    public void setTargetServiceType(String TargetServiceType) {
+        this.TargetServiceType = TargetServiceType;
+    }
+
+    /**
+     * Get 告警类型，多个类型以逗号分隔 
+     * @return AlarmType 告警类型，多个类型以逗号分隔
+     */
+    public String getAlarmType() {
+        return this.AlarmType;
+    }
+
+    /**
+     * Set 告警类型，多个类型以逗号分隔
+     * @param AlarmType 告警类型，多个类型以逗号分隔
+     */
+    public void setAlarmType(String AlarmType) {
+        this.AlarmType = AlarmType;
+    }
+
     public DescribeOperateTasksRequest() {
     }
 
@@ -420,6 +535,21 @@ public class DescribeOperateTasksRequest extends AbstractModel{
         if (source.ProductNameList != null) {
             this.ProductNameList = new String(source.ProductNameList);
         }
+        if (source.SourceServiceId != null) {
+            this.SourceServiceId = new String(source.SourceServiceId);
+        }
+        if (source.SourceServiceType != null) {
+            this.SourceServiceType = new String(source.SourceServiceType);
+        }
+        if (source.TargetServiceId != null) {
+            this.TargetServiceId = new String(source.TargetServiceId);
+        }
+        if (source.TargetServiceType != null) {
+            this.TargetServiceType = new String(source.TargetServiceType);
+        }
+        if (source.AlarmType != null) {
+            this.AlarmType = new String(source.AlarmType);
+        }
     }
 
 
@@ -442,6 +572,11 @@ public class DescribeOperateTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusList", this.StatusList);
         this.setParamSimple(map, prefix + "TaskCycleUnitList", this.TaskCycleUnitList);
         this.setParamSimple(map, prefix + "ProductNameList", this.ProductNameList);
+        this.setParamSimple(map, prefix + "SourceServiceId", this.SourceServiceId);
+        this.setParamSimple(map, prefix + "SourceServiceType", this.SourceServiceType);
+        this.setParamSimple(map, prefix + "TargetServiceId", this.TargetServiceId);
+        this.setParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
+        this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
 
     }
 }

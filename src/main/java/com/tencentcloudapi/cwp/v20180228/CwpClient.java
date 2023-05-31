@@ -3402,7 +3402,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
+     *下线
+
+更新或者插入用户告警设置(该接口废弃,请调用 ModifyWarningSetting )
      * @param req DescribeSaveOrUpdateWarningsRequest
      * @return DescribeSaveOrUpdateWarningsResponse
      * @throws TencentCloudSDKException

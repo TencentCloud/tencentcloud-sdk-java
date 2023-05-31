@@ -163,6 +163,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private String NodeType;
 
     /**
+    * 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 集群中实例所在的位置。 
      * @return Placement 集群中实例所在的位置。
      */
@@ -494,6 +501,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.NodeType = NodeType;
     }
 
+    /**
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。 
+     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public AddNodesRequest() {
     }
 
@@ -565,6 +588,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -591,6 +617,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

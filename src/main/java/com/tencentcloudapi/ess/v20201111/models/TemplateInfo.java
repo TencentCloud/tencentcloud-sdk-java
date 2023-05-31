@@ -121,6 +121,16 @@ public class TemplateInfo extends AbstractModel{
     private Recipient Promoter;
 
     /**
+    * 模板类型
+取值：
+1  静默签,
+3  普通模板
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private Long TemplateType;
+
+    /**
     * 模板可用状态，取值：1启用（默认），2停用
     */
     @SerializedName("Available")
@@ -383,6 +393,34 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
+     * Get 模板类型
+取值：
+1  静默签,
+3  普通模板 
+     * @return TemplateType 模板类型
+取值：
+1  静默签,
+3  普通模板
+     */
+    public Long getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set 模板类型
+取值：
+1  静默签,
+3  普通模板
+     * @param TemplateType 模板类型
+取值：
+1  静默签,
+3  普通模板
+     */
+    public void setTemplateType(Long TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
+    /**
      * Get 模板可用状态，取值：1启用（默认），2停用 
      * @return Available 模板可用状态，取值：1启用（默认），2停用
      */
@@ -545,6 +583,9 @@ public class TemplateInfo extends AbstractModel{
         if (source.Promoter != null) {
             this.Promoter = new Recipient(source.Promoter);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new Long(source.TemplateType);
+        }
         if (source.Available != null) {
             this.Available = new Long(source.Available);
         }
@@ -581,6 +622,7 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamObj(map, prefix + "Promoter.", this.Promoter);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
         this.setParamSimple(map, prefix + "Available", this.Available);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);

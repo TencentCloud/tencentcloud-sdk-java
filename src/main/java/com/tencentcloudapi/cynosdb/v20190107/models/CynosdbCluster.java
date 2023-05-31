@@ -362,6 +362,14 @@ pause
     private Ability Ability;
 
     /**
+    * 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourcePackages")
+    @Expose
+    private ResourcePackage [] ResourcePackages;
+
+    /**
      * Get 集群状态， 可选值如下:
 creating: 创建中
 running:运行中
@@ -1213,6 +1221,26 @@ pause
         this.Ability = Ability;
     }
 
+    /**
+     * Get 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourcePackage [] getResourcePackages() {
+        return this.ResourcePackages;
+    }
+
+    /**
+     * Set 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourcePackages(ResourcePackage [] ResourcePackages) {
+        this.ResourcePackages = ResourcePackages;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -1359,6 +1387,12 @@ pause
         if (source.Ability != null) {
             this.Ability = new Ability(source.Ability);
         }
+        if (source.ResourcePackages != null) {
+            this.ResourcePackages = new ResourcePackage[source.ResourcePackages.length];
+            for (int i = 0; i < source.ResourcePackages.length; i++) {
+                this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
+            }
+        }
     }
 
 
@@ -1408,6 +1442,7 @@ pause
         this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamObj(map, prefix + "Ability.", this.Ability);
+        this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
 
     }
 }

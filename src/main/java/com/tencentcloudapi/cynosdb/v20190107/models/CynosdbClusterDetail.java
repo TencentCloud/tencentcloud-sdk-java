@@ -44,6 +44,21 @@ public class CynosdbClusterDetail extends AbstractModel{
     private String Region;
 
     /**
+    * 可用区
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
     * 状态
     */
     @SerializedName("Status")
@@ -56,6 +71,57 @@ public class CynosdbClusterDetail extends AbstractModel{
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
+
+    /**
+    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
+    * 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
+
+    /**
+    * 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxStorageSize")
+    @Expose
+    private Long MaxStorageSize;
+
+    /**
+    * 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MinStorageSize")
+    @Expose
+    private Long MinStorageSize;
+
+    /**
+    * 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
 
     /**
     * VPC名称
@@ -107,6 +173,14 @@ public class CynosdbClusterDetail extends AbstractModel{
     private String DbType;
 
     /**
+    * 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
     * 数据库版本
     */
     @SerializedName("DbVersion")
@@ -114,39 +188,19 @@ public class CynosdbClusterDetail extends AbstractModel{
     private String DbVersion;
 
     /**
+    * 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StorageLimit")
+    @Expose
+    private Long StorageLimit;
+
+    /**
     * 使用容量
     */
     @SerializedName("UsedStorage")
     @Expose
     private Long UsedStorage;
-
-    /**
-    * 读写分离Vport
-    */
-    @SerializedName("RoAddr")
-    @Expose
-    private Addr [] RoAddr;
-
-    /**
-    * 实例信息
-    */
-    @SerializedName("InstanceSet")
-    @Expose
-    private ClusterInstanceDetail [] InstanceSet;
-
-    /**
-    * 付费模式
-    */
-    @SerializedName("PayMode")
-    @Expose
-    private Long PayMode;
-
-    /**
-    * 到期时间
-    */
-    @SerializedName("PeriodEndTime")
-    @Expose
-    private String PeriodEndTime;
 
     /**
     * vip地址
@@ -163,116 +217,11 @@ public class CynosdbClusterDetail extends AbstractModel{
     private Long Vport;
 
     /**
-    * 项目id
+    * 读写分离Vport
     */
-    @SerializedName("ProjectID")
+    @SerializedName("RoAddr")
     @Expose
-    private Long ProjectID;
-
-    /**
-    * 可用区
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
-    * 实例绑定的tag数组信息
-    */
-    @SerializedName("ResourceTags")
-    @Expose
-    private Tag [] ResourceTags;
-
-    /**
-    * 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-    */
-    @SerializedName("ServerlessStatus")
-    @Expose
-    private String ServerlessStatus;
-
-    /**
-    * binlog开关，可选值：ON, OFF
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LogBin")
-    @Expose
-    private String LogBin;
-
-    /**
-    * pitr类型，可选值：normal, redo_pitr
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PitrType")
-    @Expose
-    private String PitrType;
-
-    /**
-    * 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PhysicalZone")
-    @Expose
-    private String PhysicalZone;
-
-    /**
-    * 存储Id
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StorageId")
-    @Expose
-    private String StorageId;
-
-    /**
-    * 存储大小，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Storage")
-    @Expose
-    private Long Storage;
-
-    /**
-    * 最大存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxStorageSize")
-    @Expose
-    private Long MaxStorageSize;
-
-    /**
-    * 最小存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MinStorageSize")
-    @Expose
-    private Long MinStorageSize;
-
-    /**
-    * 存储付费类型，1为包年包月，0为按量计费
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StoragePayMode")
-    @Expose
-    private Long StoragePayMode;
-
-    /**
-    * 数据库类型，normal，serverless
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("DbMode")
-    @Expose
-    private String DbMode;
-
-    /**
-    * 存储空间上限
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StorageLimit")
-    @Expose
-    private Long StorageLimit;
+    private Addr [] RoAddr;
 
     /**
     * 集群支持的功能
@@ -339,6 +288,41 @@ pausing
     private String [] SlaveZones;
 
     /**
+    * 实例信息
+    */
+    @SerializedName("InstanceSet")
+    @Expose
+    private ClusterInstanceDetail [] InstanceSet;
+
+    /**
+    * 付费模式
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * 到期时间
+    */
+    @SerializedName("PeriodEndTime")
+    @Expose
+    private String PeriodEndTime;
+
+    /**
+    * 项目id
+    */
+    @SerializedName("ProjectID")
+    @Expose
+    private Long ProjectID;
+
+    /**
+    * 实例绑定的tag数组信息
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
     * Proxy状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -347,12 +331,28 @@ pausing
     private String ProxyStatus;
 
     /**
+    * binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogBin")
+    @Expose
+    private String LogBin;
+
+    /**
     * 是否跳过交易
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSkipTrade")
     @Expose
     private String IsSkipTrade;
+
+    /**
+    * pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PitrType")
+    @Expose
+    private String PitrType;
 
     /**
     * 是否打开密码复杂度
@@ -369,6 +369,14 @@ pausing
     @SerializedName("NetworkStatus")
     @Expose
     private String NetworkStatus;
+
+    /**
+    * 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourcePackages")
+    @Expose
+    private ResourcePackage [] ResourcePackages;
 
     /**
      * Get 集群ID 
@@ -419,6 +427,42 @@ pausing
     }
 
     /**
+     * Get 可用区 
+     * @return Zone 可用区
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区
+     * @param Zone 可用区
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhysicalZone 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhysicalZone 物理可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
      * Get 状态 
      * @return Status 状态
      */
@@ -448,6 +492,138 @@ pausing
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing 
+     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
+resume
+resuming
+pause
+pausing
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
+    /**
+     * Get 存储Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageId 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageId 存储Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    /**
+     * Get 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Storage 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Storage 存储大小，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxStorageSize 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxStorageSize() {
+        return this.MaxStorageSize;
+    }
+
+    /**
+     * Set 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxStorageSize 最大存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxStorageSize(Long MaxStorageSize) {
+        this.MaxStorageSize = MaxStorageSize;
+    }
+
+    /**
+     * Get 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MinStorageSize 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMinStorageSize() {
+        return this.MinStorageSize;
+    }
+
+    /**
+     * Set 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MinStorageSize 最小存储规格，单位为G
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMinStorageSize(Long MinStorageSize) {
+        this.MinStorageSize = MinStorageSize;
+    }
+
+    /**
+     * Get 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StoragePayMode 存储付费类型，1为包年包月，0为按量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
     }
 
     /**
@@ -563,6 +739,26 @@ pausing
     }
 
     /**
+     * Get 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbMode 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbMode 数据库类型，normal，serverless
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
      * Get 数据库版本 
      * @return DbVersion 数据库版本
      */
@@ -579,6 +775,26 @@ pausing
     }
 
     /**
+     * Get 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StorageLimit 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStorageLimit() {
+        return this.StorageLimit;
+    }
+
+    /**
+     * Set 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StorageLimit 存储空间上限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStorageLimit(Long StorageLimit) {
+        this.StorageLimit = StorageLimit;
+    }
+
+    /**
      * Get 使用容量 
      * @return UsedStorage 使用容量
      */
@@ -592,70 +808,6 @@ pausing
      */
     public void setUsedStorage(Long UsedStorage) {
         this.UsedStorage = UsedStorage;
-    }
-
-    /**
-     * Get 读写分离Vport 
-     * @return RoAddr 读写分离Vport
-     */
-    public Addr [] getRoAddr() {
-        return this.RoAddr;
-    }
-
-    /**
-     * Set 读写分离Vport
-     * @param RoAddr 读写分离Vport
-     */
-    public void setRoAddr(Addr [] RoAddr) {
-        this.RoAddr = RoAddr;
-    }
-
-    /**
-     * Get 实例信息 
-     * @return InstanceSet 实例信息
-     */
-    public ClusterInstanceDetail [] getInstanceSet() {
-        return this.InstanceSet;
-    }
-
-    /**
-     * Set 实例信息
-     * @param InstanceSet 实例信息
-     */
-    public void setInstanceSet(ClusterInstanceDetail [] InstanceSet) {
-        this.InstanceSet = InstanceSet;
-    }
-
-    /**
-     * Get 付费模式 
-     * @return PayMode 付费模式
-     */
-    public Long getPayMode() {
-        return this.PayMode;
-    }
-
-    /**
-     * Set 付费模式
-     * @param PayMode 付费模式
-     */
-    public void setPayMode(Long PayMode) {
-        this.PayMode = PayMode;
-    }
-
-    /**
-     * Get 到期时间 
-     * @return PeriodEndTime 到期时间
-     */
-    public String getPeriodEndTime() {
-        return this.PeriodEndTime;
-    }
-
-    /**
-     * Set 到期时间
-     * @param PeriodEndTime 到期时间
-     */
-    public void setPeriodEndTime(String PeriodEndTime) {
-        this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
@@ -691,283 +843,19 @@ pausing
     }
 
     /**
-     * Get 项目id 
-     * @return ProjectID 项目id
+     * Get 读写分离Vport 
+     * @return RoAddr 读写分离Vport
      */
-    public Long getProjectID() {
-        return this.ProjectID;
+    public Addr [] getRoAddr() {
+        return this.RoAddr;
     }
 
     /**
-     * Set 项目id
-     * @param ProjectID 项目id
+     * Set 读写分离Vport
+     * @param RoAddr 读写分离Vport
      */
-    public void setProjectID(Long ProjectID) {
-        this.ProjectID = ProjectID;
-    }
-
-    /**
-     * Get 可用区 
-     * @return Zone 可用区
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set 可用区
-     * @param Zone 可用区
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
-     * Get 实例绑定的tag数组信息 
-     * @return ResourceTags 实例绑定的tag数组信息
-     */
-    public Tag [] getResourceTags() {
-        return this.ResourceTags;
-    }
-
-    /**
-     * Set 实例绑定的tag数组信息
-     * @param ResourceTags 实例绑定的tag数组信息
-     */
-    public void setResourceTags(Tag [] ResourceTags) {
-        this.ResourceTags = ResourceTags;
-    }
-
-    /**
-     * Get 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing 
-     * @return ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-     */
-    public String getServerlessStatus() {
-        return this.ServerlessStatus;
-    }
-
-    /**
-     * Set 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-     * @param ServerlessStatus 当Db类型为SERVERLESS时，serverless集群状态，可选值:
-resume
-resuming
-pause
-pausing
-     */
-    public void setServerlessStatus(String ServerlessStatus) {
-        this.ServerlessStatus = ServerlessStatus;
-    }
-
-    /**
-     * Get binlog开关，可选值：ON, OFF
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogBin binlog开关，可选值：ON, OFF
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLogBin() {
-        return this.LogBin;
-    }
-
-    /**
-     * Set binlog开关，可选值：ON, OFF
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogBin binlog开关，可选值：ON, OFF
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLogBin(String LogBin) {
-        this.LogBin = LogBin;
-    }
-
-    /**
-     * Get pitr类型，可选值：normal, redo_pitr
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PitrType pitr类型，可选值：normal, redo_pitr
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPitrType() {
-        return this.PitrType;
-    }
-
-    /**
-     * Set pitr类型，可选值：normal, redo_pitr
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PitrType pitr类型，可选值：normal, redo_pitr
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPitrType(String PitrType) {
-        this.PitrType = PitrType;
-    }
-
-    /**
-     * Get 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PhysicalZone 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPhysicalZone() {
-        return this.PhysicalZone;
-    }
-
-    /**
-     * Set 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PhysicalZone 物理可用区
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPhysicalZone(String PhysicalZone) {
-        this.PhysicalZone = PhysicalZone;
-    }
-
-    /**
-     * Get 存储Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageId 存储Id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getStorageId() {
-        return this.StorageId;
-    }
-
-    /**
-     * Set 存储Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageId 存储Id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStorageId(String StorageId) {
-        this.StorageId = StorageId;
-    }
-
-    /**
-     * Get 存储大小，单位为G
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Storage 存储大小，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getStorage() {
-        return this.Storage;
-    }
-
-    /**
-     * Set 存储大小，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Storage 存储大小，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStorage(Long Storage) {
-        this.Storage = Storage;
-    }
-
-    /**
-     * Get 最大存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxStorageSize 最大存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMaxStorageSize() {
-        return this.MaxStorageSize;
-    }
-
-    /**
-     * Set 最大存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxStorageSize 最大存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxStorageSize(Long MaxStorageSize) {
-        this.MaxStorageSize = MaxStorageSize;
-    }
-
-    /**
-     * Get 最小存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinStorageSize 最小存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMinStorageSize() {
-        return this.MinStorageSize;
-    }
-
-    /**
-     * Set 最小存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinStorageSize 最小存储规格，单位为G
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMinStorageSize(Long MinStorageSize) {
-        this.MinStorageSize = MinStorageSize;
-    }
-
-    /**
-     * Get 存储付费类型，1为包年包月，0为按量计费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StoragePayMode 存储付费类型，1为包年包月，0为按量计费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getStoragePayMode() {
-        return this.StoragePayMode;
-    }
-
-    /**
-     * Set 存储付费类型，1为包年包月，0为按量计费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StoragePayMode 存储付费类型，1为包年包月，0为按量计费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStoragePayMode(Long StoragePayMode) {
-        this.StoragePayMode = StoragePayMode;
-    }
-
-    /**
-     * Get 数据库类型，normal，serverless
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DbMode 数据库类型，normal，serverless
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getDbMode() {
-        return this.DbMode;
-    }
-
-    /**
-     * Set 数据库类型，normal，serverless
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DbMode 数据库类型，normal，serverless
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setDbMode(String DbMode) {
-        this.DbMode = DbMode;
-    }
-
-    /**
-     * Get 存储空间上限
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StorageLimit 存储空间上限
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getStorageLimit() {
-        return this.StorageLimit;
-    }
-
-    /**
-     * Set 存储空间上限
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StorageLimit 存储空间上限
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStorageLimit(Long StorageLimit) {
-        this.StorageLimit = StorageLimit;
+    public void setRoAddr(Addr [] RoAddr) {
+        this.RoAddr = RoAddr;
     }
 
     /**
@@ -1131,6 +1019,86 @@ pausing
     }
 
     /**
+     * Get 实例信息 
+     * @return InstanceSet 实例信息
+     */
+    public ClusterInstanceDetail [] getInstanceSet() {
+        return this.InstanceSet;
+    }
+
+    /**
+     * Set 实例信息
+     * @param InstanceSet 实例信息
+     */
+    public void setInstanceSet(ClusterInstanceDetail [] InstanceSet) {
+        this.InstanceSet = InstanceSet;
+    }
+
+    /**
+     * Get 付费模式 
+     * @return PayMode 付费模式
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式
+     * @param PayMode 付费模式
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 到期时间 
+     * @return PeriodEndTime 到期时间
+     */
+    public String getPeriodEndTime() {
+        return this.PeriodEndTime;
+    }
+
+    /**
+     * Set 到期时间
+     * @param PeriodEndTime 到期时间
+     */
+    public void setPeriodEndTime(String PeriodEndTime) {
+        this.PeriodEndTime = PeriodEndTime;
+    }
+
+    /**
+     * Get 项目id 
+     * @return ProjectID 项目id
+     */
+    public Long getProjectID() {
+        return this.ProjectID;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectID 项目id
+     */
+    public void setProjectID(Long ProjectID) {
+        this.ProjectID = ProjectID;
+    }
+
+    /**
+     * Get 实例绑定的tag数组信息 
+     * @return ResourceTags 实例绑定的tag数组信息
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 实例绑定的tag数组信息
+     * @param ResourceTags 实例绑定的tag数组信息
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Get Proxy状态
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProxyStatus Proxy状态
@@ -1151,6 +1119,26 @@ pausing
     }
 
     /**
+     * Get binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogBin binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogBin() {
+        return this.LogBin;
+    }
+
+    /**
+     * Set binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogBin binlog开关，可选值：ON, OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogBin(String LogBin) {
+        this.LogBin = LogBin;
+    }
+
+    /**
      * Get 是否跳过交易
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsSkipTrade 是否跳过交易
@@ -1168,6 +1156,26 @@ pausing
      */
     public void setIsSkipTrade(String IsSkipTrade) {
         this.IsSkipTrade = IsSkipTrade;
+    }
+
+    /**
+     * Get pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PitrType pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPitrType() {
+        return this.PitrType;
+    }
+
+    /**
+     * Set pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PitrType pitr类型，可选值：normal, redo_pitr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPitrType(String PitrType) {
+        this.PitrType = PitrType;
     }
 
     /**
@@ -1210,6 +1218,26 @@ pausing
         this.NetworkStatus = NetworkStatus;
     }
 
+    /**
+     * Get 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourcePackages 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResourcePackage [] getResourcePackages() {
+        return this.ResourcePackages;
+    }
+
+    /**
+     * Set 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourcePackages 集群绑定的资源包信息	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourcePackages(ResourcePackage [] ResourcePackages) {
+        this.ResourcePackages = ResourcePackages;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1227,11 +1255,35 @@ pausing
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.MaxStorageSize != null) {
+            this.MaxStorageSize = new Long(source.MaxStorageSize);
+        }
+        if (source.MinStorageSize != null) {
+            this.MinStorageSize = new Long(source.MinStorageSize);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
         }
         if (source.VpcName != null) {
             this.VpcName = new String(source.VpcName);
@@ -1254,29 +1306,17 @@ pausing
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
         if (source.DbVersion != null) {
             this.DbVersion = new String(source.DbVersion);
         }
+        if (source.StorageLimit != null) {
+            this.StorageLimit = new Long(source.StorageLimit);
+        }
         if (source.UsedStorage != null) {
             this.UsedStorage = new Long(source.UsedStorage);
-        }
-        if (source.RoAddr != null) {
-            this.RoAddr = new Addr[source.RoAddr.length];
-            for (int i = 0; i < source.RoAddr.length; i++) {
-                this.RoAddr[i] = new Addr(source.RoAddr[i]);
-            }
-        }
-        if (source.InstanceSet != null) {
-            this.InstanceSet = new ClusterInstanceDetail[source.InstanceSet.length];
-            for (int i = 0; i < source.InstanceSet.length; i++) {
-                this.InstanceSet[i] = new ClusterInstanceDetail(source.InstanceSet[i]);
-            }
-        }
-        if (source.PayMode != null) {
-            this.PayMode = new Long(source.PayMode);
-        }
-        if (source.PeriodEndTime != null) {
-            this.PeriodEndTime = new String(source.PeriodEndTime);
         }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
@@ -1284,50 +1324,11 @@ pausing
         if (source.Vport != null) {
             this.Vport = new Long(source.Vport);
         }
-        if (source.ProjectID != null) {
-            this.ProjectID = new Long(source.ProjectID);
-        }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
-        if (source.ResourceTags != null) {
-            this.ResourceTags = new Tag[source.ResourceTags.length];
-            for (int i = 0; i < source.ResourceTags.length; i++) {
-                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+        if (source.RoAddr != null) {
+            this.RoAddr = new Addr[source.RoAddr.length];
+            for (int i = 0; i < source.RoAddr.length; i++) {
+                this.RoAddr[i] = new Addr(source.RoAddr[i]);
             }
-        }
-        if (source.ServerlessStatus != null) {
-            this.ServerlessStatus = new String(source.ServerlessStatus);
-        }
-        if (source.LogBin != null) {
-            this.LogBin = new String(source.LogBin);
-        }
-        if (source.PitrType != null) {
-            this.PitrType = new String(source.PitrType);
-        }
-        if (source.PhysicalZone != null) {
-            this.PhysicalZone = new String(source.PhysicalZone);
-        }
-        if (source.StorageId != null) {
-            this.StorageId = new String(source.StorageId);
-        }
-        if (source.Storage != null) {
-            this.Storage = new Long(source.Storage);
-        }
-        if (source.MaxStorageSize != null) {
-            this.MaxStorageSize = new Long(source.MaxStorageSize);
-        }
-        if (source.MinStorageSize != null) {
-            this.MinStorageSize = new Long(source.MinStorageSize);
-        }
-        if (source.StoragePayMode != null) {
-            this.StoragePayMode = new Long(source.StoragePayMode);
-        }
-        if (source.DbMode != null) {
-            this.DbMode = new String(source.DbMode);
-        }
-        if (source.StorageLimit != null) {
-            this.StorageLimit = new Long(source.StorageLimit);
         }
         if (source.Ability != null) {
             this.Ability = new Ability(source.Ability);
@@ -1359,17 +1360,50 @@ pausing
                 this.SlaveZones[i] = new String(source.SlaveZones[i]);
             }
         }
+        if (source.InstanceSet != null) {
+            this.InstanceSet = new ClusterInstanceDetail[source.InstanceSet.length];
+            for (int i = 0; i < source.InstanceSet.length; i++) {
+                this.InstanceSet[i] = new ClusterInstanceDetail(source.InstanceSet[i]);
+            }
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.PeriodEndTime != null) {
+            this.PeriodEndTime = new String(source.PeriodEndTime);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
         if (source.ProxyStatus != null) {
             this.ProxyStatus = new String(source.ProxyStatus);
         }
+        if (source.LogBin != null) {
+            this.LogBin = new String(source.LogBin);
+        }
         if (source.IsSkipTrade != null) {
             this.IsSkipTrade = new String(source.IsSkipTrade);
+        }
+        if (source.PitrType != null) {
+            this.PitrType = new String(source.PitrType);
         }
         if (source.IsOpenPasswordComplexity != null) {
             this.IsOpenPasswordComplexity = new String(source.IsOpenPasswordComplexity);
         }
         if (source.NetworkStatus != null) {
             this.NetworkStatus = new String(source.NetworkStatus);
+        }
+        if (source.ResourcePackages != null) {
+            this.ResourcePackages = new ResourcePackage[source.ResourcePackages.length];
+            for (int i = 0; i < source.ResourcePackages.length; i++) {
+                this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
+            }
         }
     }
 
@@ -1381,8 +1415,16 @@ pausing
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
@@ -1390,28 +1432,13 @@ pausing
         this.setParamSimple(map, prefix + "Charset", this.Charset);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "UsedStorage", this.UsedStorage);
-        this.setParamArrayObj(map, prefix + "RoAddr.", this.RoAddr);
-        this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
-        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
-        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
-        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-        this.setParamSimple(map, prefix + "LogBin", this.LogBin);
-        this.setParamSimple(map, prefix + "PitrType", this.PitrType);
-        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
-        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
-        this.setParamSimple(map, prefix + "Storage", this.Storage);
-        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
-        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
-        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
-        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
-        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+        this.setParamArrayObj(map, prefix + "RoAddr.", this.RoAddr);
         this.setParamObj(map, prefix + "Ability.", this.Ability);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
@@ -1420,10 +1447,18 @@ pausing
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
         this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+        this.setParamSimple(map, prefix + "LogBin", this.LogBin);
         this.setParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+        this.setParamSimple(map, prefix + "PitrType", this.PitrType);
         this.setParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
         this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
+        this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
 
     }
 }

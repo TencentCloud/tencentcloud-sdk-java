@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Component extends AbstractModel{
 
     /**
-    * 如果是Component控件类型，则可选的字段为：
+    * 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -34,7 +34,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -50,7 +50,7 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     private String ComponentType;
 
     /**
-    * 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+    * 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
     */
     @SerializedName("FileIndex")
     @Expose
@@ -92,14 +92,14 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     private Float ComponentPosY;
 
     /**
-    * GenerateMode==KEYWORD 指定关键字
+    * 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
     */
     @SerializedName("ComponentId")
     @Expose
     private String ComponentId;
 
     /**
-    * GenerateMode==FIELD 指定表单域名称
+    * 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
     */
     @SerializedName("ComponentName")
     @Expose
@@ -152,7 +152,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
     private String ComponentExtra;
 
     /**
-    * 是否是表单域类型，默认不存在
+    * 是否是表单域类型，默认不false-不是
     */
     @SerializedName("IsFormType")
     @Expose
@@ -257,7 +257,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Long ComponentDateFontSize;
 
     /**
-    * 平台模板控件 id 标识
+    * 第三方应用集成平台模板控件 id 标识
     */
     @SerializedName("ChannelComponentId")
     @Expose
@@ -278,7 +278,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Float OffsetY;
 
     /**
-    * //子客控件来源。0-平台指定；1-用户自定义
+    * 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
     */
     @SerializedName("ChannelComponentSource")
     @Expose
@@ -314,7 +314,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Long [] KeywordIndexes;
 
     /**
-     * Get 如果是Component控件类型，则可选的字段为：
+     * Get 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -325,7 +325,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -335,7 +335,7 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件 
-     * @return ComponentType 如果是Component控件类型，则可选的字段为：
+     * @return ComponentType 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -346,7 +346,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -362,7 +362,7 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Set 如果是Component控件类型，则可选的字段为：
+     * Set 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -373,7 +373,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -383,7 +383,7 @@ SIGN_OPINION - 签署意见控件，用户需要根据配置的签署意见内�
 SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
 
 表单域的控件不能作为印章和签名控件
-     * @param ComponentType 如果是Component控件类型，则可选的字段为：
+     * @param ComponentType 如果是Component填写控件类型，则可选的字段为：
 TEXT - 普通文本控件，输入文本字符串；
 MULTI_LINE_TEXT - 多行文本控件，输入文本字符串；
 CHECK_BOX - 勾选框控件，若选中填写ComponentValue 填写 true或者 false 字符串；
@@ -394,7 +394,7 @@ SELECTOR - 选择器控件，ComponentValue填写选择的字符串内容；
 DATE - 日期控件；默认是格式化为xxxx年xx月xx日字符串；
 DISTRICT - 省市区行政区控件，ComponentValue填写省市区行政区字符串内容；
 
-如果是SignComponent控件类型，则可选的字段为
+如果是SignComponent签署控件类型，则可选的字段为
 SIGN_SEAL - 签署印章控件；
 SIGN_DATE - 签署日期控件；
 SIGN_SIGNATURE - 用户签名控件；
@@ -410,16 +410,16 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Get 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N） 
-     * @return FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+     * Get 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0 
+     * @return FileIndex 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
      */
     public Long getFileIndex() {
         return this.FileIndex;
     }
 
     /**
-     * Set 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
-     * @param FileIndex 控件所属文件的序号（模板中的resourceId排列序号，取值为：0-N）
+     * Set 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+     * @param FileIndex 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
      */
     public void setFileIndex(Long FileIndex) {
         this.FileIndex = FileIndex;
@@ -506,32 +506,32 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Get GenerateMode==KEYWORD 指定关键字 
-     * @return ComponentId GenerateMode==KEYWORD 指定关键字
+     * Get 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字 
+     * @return ComponentId 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
      */
     public String getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * Set GenerateMode==KEYWORD 指定关键字
-     * @param ComponentId GenerateMode==KEYWORD 指定关键字
+     * Set 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+     * @param ComponentId 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get GenerateMode==FIELD 指定表单域名称 
-     * @return ComponentName GenerateMode==FIELD 指定表单域名称
+     * Get 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称 
+     * @return ComponentName 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set GenerateMode==FIELD 指定表单域名称
-     * @param ComponentName GenerateMode==FIELD 指定表单域名称
+     * Set 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+     * @param ComponentName 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
@@ -686,16 +686,16 @@ ComponentType为SIGN_DATE时，支持以下参数：
     }
 
     /**
-     * Get 是否是表单域类型，默认不存在 
-     * @return IsFormType 是否是表单域类型，默认不存在
+     * Get 是否是表单域类型，默认不false-不是 
+     * @return IsFormType 是否是表单域类型，默认不false-不是
      */
     public Boolean getIsFormType() {
         return this.IsFormType;
     }
 
     /**
-     * Set 是否是表单域类型，默认不存在
-     * @param IsFormType 是否是表单域类型，默认不存在
+     * Set 是否是表单域类型，默认不false-不是
+     * @param IsFormType 是否是表单域类型，默认不false-不是
      */
     public void setIsFormType(Boolean IsFormType) {
         this.IsFormType = IsFormType;
@@ -1058,16 +1058,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 平台模板控件 id 标识 
-     * @return ChannelComponentId 平台模板控件 id 标识
+     * Get 第三方应用集成平台模板控件 id 标识 
+     * @return ChannelComponentId 第三方应用集成平台模板控件 id 标识
      */
     public String getChannelComponentId() {
         return this.ChannelComponentId;
     }
 
     /**
-     * Set 平台模板控件 id 标识
-     * @param ChannelComponentId 平台模板控件 id 标识
+     * Set 第三方应用集成平台模板控件 id 标识
+     * @param ChannelComponentId 第三方应用集成平台模板控件 id 标识
      */
     public void setChannelComponentId(String ChannelComponentId) {
         this.ChannelComponentId = ChannelComponentId;
@@ -1106,16 +1106,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get //子客控件来源。0-平台指定；1-用户自定义 
-     * @return ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
+     * Get 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义 
+     * @return ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
      */
     public Long getChannelComponentSource() {
         return this.ChannelComponentSource;
     }
 
     /**
-     * Set //子客控件来源。0-平台指定；1-用户自定义
-     * @param ChannelComponentSource //子客控件来源。0-平台指定；1-用户自定义
+     * Set 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+     * @param ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
      */
     public void setChannelComponentSource(Long ChannelComponentSource) {
         this.ChannelComponentSource = ChannelComponentSource;

@@ -34,42 +34,42 @@ public class ApproverInfo extends AbstractModel{
     private Long ApproverType;
 
     /**
-    * 本环节需要操作人的名字
+    * 签署人的姓名
     */
     @SerializedName("ApproverName")
     @Expose
     private String ApproverName;
 
     /**
-    * 本环节需要操作人的手机号
+    * 签署人的手机号，11位数字
     */
     @SerializedName("ApproverMobile")
     @Expose
     private String ApproverMobile;
 
     /**
-    * 本环节操作人签署控件配置
+    * 签署人的签署控件列表
     */
     @SerializedName("SignComponents")
     @Expose
     private Component [] SignComponents;
 
     /**
-    * 如果是企业,则为企业的名字
+    * 如果签署方是企业签署方，则为企业名
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * 身份证号
+    * 签署人的身份证号
     */
     @SerializedName("ApproverIdCardNumber")
     @Expose
     private String ApproverIdCardNumber;
 
     /**
-    * 证件类型 
+    * 签署人的身份证件类型 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -79,21 +79,21 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String ApproverIdCardType;
 
     /**
-    * sms--短信，none--不通知
+    * 签署通知类型：sms--短信，none--不通知
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-    * 1--收款人、2--开具人、3--见证人
+    * 签署人角色类型：1--收款人、2--开具人、3--见证人
     */
     @SerializedName("ApproverRole")
     @Expose
     private Long ApproverRole;
 
     /**
-    * 签署意愿确认渠道,WEIXINAPP:人脸识别
+    * 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
     */
     @SerializedName("VerifyChannel")
     @Expose
@@ -114,7 +114,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String UserId;
 
     /**
-    * 签署人用户来源,企微侧用户请传入：WEWORKAPP
+    * 签署人用户来源，企微侧用户请传入：WEWORKAPP
     */
     @SerializedName("ApproverSource")
     @Expose
@@ -185,91 +185,91 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 本环节需要操作人的名字 
-     * @return ApproverName 本环节需要操作人的名字
+     * Get 签署人的姓名 
+     * @return ApproverName 签署人的姓名
      */
     public String getApproverName() {
         return this.ApproverName;
     }
 
     /**
-     * Set 本环节需要操作人的名字
-     * @param ApproverName 本环节需要操作人的名字
+     * Set 签署人的姓名
+     * @param ApproverName 签署人的姓名
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 本环节需要操作人的手机号 
-     * @return ApproverMobile 本环节需要操作人的手机号
+     * Get 签署人的手机号，11位数字 
+     * @return ApproverMobile 签署人的手机号，11位数字
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
     }
 
     /**
-     * Set 本环节需要操作人的手机号
-     * @param ApproverMobile 本环节需要操作人的手机号
+     * Set 签署人的手机号，11位数字
+     * @param ApproverMobile 签署人的手机号，11位数字
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;
     }
 
     /**
-     * Get 本环节操作人签署控件配置 
-     * @return SignComponents 本环节操作人签署控件配置
+     * Get 签署人的签署控件列表 
+     * @return SignComponents 签署人的签署控件列表
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 本环节操作人签署控件配置
-     * @param SignComponents 本环节操作人签署控件配置
+     * Set 签署人的签署控件列表
+     * @param SignComponents 签署人的签署控件列表
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
     }
 
     /**
-     * Get 如果是企业,则为企业的名字 
-     * @return OrganizationName 如果是企业,则为企业的名字
+     * Get 如果签署方是企业签署方，则为企业名 
+     * @return OrganizationName 如果签署方是企业签署方，则为企业名
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 如果是企业,则为企业的名字
-     * @param OrganizationName 如果是企业,则为企业的名字
+     * Set 如果签署方是企业签署方，则为企业名
+     * @param OrganizationName 如果签署方是企业签署方，则为企业名
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 身份证号 
-     * @return ApproverIdCardNumber 身份证号
+     * Get 签署人的身份证号 
+     * @return ApproverIdCardNumber 签署人的身份证号
      */
     public String getApproverIdCardNumber() {
         return this.ApproverIdCardNumber;
     }
 
     /**
-     * Set 身份证号
-     * @param ApproverIdCardNumber 身份证号
+     * Set 签署人的身份证号
+     * @param ApproverIdCardNumber 签署人的身份证号
      */
     public void setApproverIdCardNumber(String ApproverIdCardNumber) {
         this.ApproverIdCardNumber = ApproverIdCardNumber;
     }
 
     /**
-     * Get 证件类型 
+     * Get 签署人的身份证件类型 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证) 
-     * @return ApproverIdCardType 证件类型 
+     * @return ApproverIdCardType 签署人的身份证件类型 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -279,11 +279,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Set 证件类型 
+     * Set 签署人的身份证件类型 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
-     * @param ApproverIdCardType 证件类型 
+     * @param ApproverIdCardType 签署人的身份证件类型 
 ID_CARD 身份证
 HONGKONG_AND_MACAO 港澳居民来往内地通行证
 HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -293,48 +293,48 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get sms--短信，none--不通知 
-     * @return NotifyType sms--短信，none--不通知
+     * Get 签署通知类型：sms--短信，none--不通知 
+     * @return NotifyType 签署通知类型：sms--短信，none--不通知
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set sms--短信，none--不通知
-     * @param NotifyType sms--短信，none--不通知
+     * Set 签署通知类型：sms--短信，none--不通知
+     * @param NotifyType 签署通知类型：sms--短信，none--不通知
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get 1--收款人、2--开具人、3--见证人 
-     * @return ApproverRole 1--收款人、2--开具人、3--见证人
+     * Get 签署人角色类型：1--收款人、2--开具人、3--见证人 
+     * @return ApproverRole 签署人角色类型：1--收款人、2--开具人、3--见证人
      */
     public Long getApproverRole() {
         return this.ApproverRole;
     }
 
     /**
-     * Set 1--收款人、2--开具人、3--见证人
-     * @param ApproverRole 1--收款人、2--开具人、3--见证人
+     * Set 签署人角色类型：1--收款人、2--开具人、3--见证人
+     * @param ApproverRole 签署人角色类型：1--收款人、2--开具人、3--见证人
      */
     public void setApproverRole(Long ApproverRole) {
         this.ApproverRole = ApproverRole;
     }
 
     /**
-     * Get 签署意愿确认渠道,WEIXINAPP:人脸识别 
-     * @return VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * Get 签署意愿确认渠道，默认为WEIXINAPP:人脸识别 
+     * @return VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
      */
     public String [] getVerifyChannel() {
         return this.VerifyChannel;
     }
 
     /**
-     * Set 签署意愿确认渠道,WEIXINAPP:人脸识别
-     * @param VerifyChannel 签署意愿确认渠道,WEIXINAPP:人脸识别
+     * Set 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * @param VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
      */
     public void setVerifyChannel(String [] VerifyChannel) {
         this.VerifyChannel = VerifyChannel;
@@ -373,16 +373,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署人用户来源,企微侧用户请传入：WEWORKAPP 
-     * @return ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * Get 签署人用户来源，企微侧用户请传入：WEWORKAPP 
+     * @return ApproverSource 签署人用户来源，企微侧用户请传入：WEWORKAPP
      */
     public String getApproverSource() {
         return this.ApproverSource;
     }
 
     /**
-     * Set 签署人用户来源,企微侧用户请传入：WEWORKAPP
-     * @param ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * Set 签署人用户来源，企微侧用户请传入：WEWORKAPP
+     * @param ApproverSource 签署人用户来源，企微侧用户请传入：WEWORKAPP
      */
     public void setApproverSource(String ApproverSource) {
         this.ApproverSource = ApproverSource;

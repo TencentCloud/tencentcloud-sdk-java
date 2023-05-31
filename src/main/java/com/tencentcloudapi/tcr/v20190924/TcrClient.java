@@ -904,6 +904,8 @@ public class TcrClient extends AbstractClient{
 
     /**
      *删除实例公网访问白名单策略
+
+注意：当PolicyIndex和CidrBlock同时存在时，CidrBlock优先级更高
      * @param req DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
      * @throws TencentCloudSDKException

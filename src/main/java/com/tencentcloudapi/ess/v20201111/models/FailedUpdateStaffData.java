@@ -51,7 +51,7 @@ public class FailedUpdateStaffData extends AbstractModel{
     private String UserId;
 
     /**
-    * 用户OpenId
+    * 员工在第三方平台的openId
     */
     @SerializedName("OpenId")
     @Expose
@@ -122,16 +122,16 @@ public class FailedUpdateStaffData extends AbstractModel{
     }
 
     /**
-     * Get 用户OpenId 
-     * @return OpenId 用户OpenId
+     * Get 员工在第三方平台的openId 
+     * @return OpenId 员工在第三方平台的openId
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set 用户OpenId
-     * @param OpenId 用户OpenId
+     * Set 员工在第三方平台的openId
+     * @param OpenId 员工在第三方平台的openId
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

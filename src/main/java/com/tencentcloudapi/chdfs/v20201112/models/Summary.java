@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Summary extends AbstractModel{
 
     /**
-    * 总存储量（单位byte）
+    * 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapacityUsed")
@@ -31,7 +31,7 @@ public class Summary extends AbstractModel{
     private Long CapacityUsed;
 
     /**
-    * 标准存储量（单位byte）
+    * 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StandardCapacityUsed")
@@ -39,7 +39,7 @@ public class Summary extends AbstractModel{
     private Long StandardCapacityUsed;
 
     /**
-    * 低频存储量（单位byte）
+    * 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DegradeCapacityUsed")
@@ -47,7 +47,7 @@ public class Summary extends AbstractModel{
     private Long DegradeCapacityUsed;
 
     /**
-    * 归档存储量（单位byte）
+    * 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ArchiveCapacityUsed")
@@ -55,7 +55,7 @@ public class Summary extends AbstractModel{
     private Long ArchiveCapacityUsed;
 
     /**
-    * 深度归档存储量（单位byte）
+    * 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeepArchiveCapacityUsed")
@@ -63,7 +63,7 @@ public class Summary extends AbstractModel{
     private Long DeepArchiveCapacityUsed;
 
     /**
-    * 智能分层存储量（单位byte）
+    * 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntelligentCapacityUsed")
@@ -71,9 +71,9 @@ public class Summary extends AbstractModel{
     private Long IntelligentCapacityUsed;
 
     /**
-     * Get 总存储量（单位byte）
+     * Get 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CapacityUsed 总存储量（单位byte）
+     * @return CapacityUsed 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacityUsed() {
@@ -81,9 +81,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 总存储量（单位byte）
+     * Set 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CapacityUsed 总存储量（单位byte）
+     * @param CapacityUsed 已使用容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacityUsed(Long CapacityUsed) {
@@ -91,9 +91,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Get 标准存储量（单位byte）
+     * Get 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StandardCapacityUsed 标准存储量（单位byte）
+     * @return StandardCapacityUsed 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStandardCapacityUsed() {
@@ -101,9 +101,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 标准存储量（单位byte）
+     * Set 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StandardCapacityUsed 标准存储量（单位byte）
+     * @param StandardCapacityUsed 已使用COS标准存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStandardCapacityUsed(Long StandardCapacityUsed) {
@@ -111,9 +111,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Get 低频存储量（单位byte）
+     * Get 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DegradeCapacityUsed 低频存储量（单位byte）
+     * @return DegradeCapacityUsed 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDegradeCapacityUsed() {
@@ -121,9 +121,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 低频存储量（单位byte）
+     * Set 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DegradeCapacityUsed 低频存储量（单位byte）
+     * @param DegradeCapacityUsed 已使用COS低频存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDegradeCapacityUsed(Long DegradeCapacityUsed) {
@@ -131,9 +131,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Get 归档存储量（单位byte）
+     * Get 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ArchiveCapacityUsed 归档存储量（单位byte）
+     * @return ArchiveCapacityUsed 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getArchiveCapacityUsed() {
@@ -141,9 +141,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 归档存储量（单位byte）
+     * Set 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ArchiveCapacityUsed 归档存储量（单位byte）
+     * @param ArchiveCapacityUsed 已使用COS归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchiveCapacityUsed(Long ArchiveCapacityUsed) {
@@ -151,9 +151,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Get 深度归档存储量（单位byte）
+     * Get 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeepArchiveCapacityUsed 深度归档存储量（单位byte）
+     * @return DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeepArchiveCapacityUsed() {
@@ -161,9 +161,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 深度归档存储量（单位byte）
+     * Set 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeepArchiveCapacityUsed 深度归档存储量（单位byte）
+     * @param DeepArchiveCapacityUsed 已使用COS深度归档存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeepArchiveCapacityUsed(Long DeepArchiveCapacityUsed) {
@@ -171,9 +171,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Get 智能分层存储量（单位byte）
+     * Get 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntelligentCapacityUsed 智能分层存储量（单位byte）
+     * @return IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntelligentCapacityUsed() {
@@ -181,9 +181,9 @@ public class Summary extends AbstractModel{
     }
 
     /**
-     * Set 智能分层存储量（单位byte）
+     * Set 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntelligentCapacityUsed 智能分层存储量（单位byte）
+     * @param IntelligentCapacityUsed 已使用COS智能分层存储容量（byte）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntelligentCapacityUsed(Long IntelligentCapacityUsed) {

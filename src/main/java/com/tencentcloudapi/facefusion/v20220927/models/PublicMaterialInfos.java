@@ -65,6 +65,14 @@ public class PublicMaterialInfos extends AbstractModel{
     private String MaterialName;
 
     /**
+    * 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuditResult")
+    @Expose
+    private String AuditResult;
+
+    /**
      * Get 素材Id 
      * @return MaterialId 素材Id
      */
@@ -160,6 +168,26 @@ public class PublicMaterialInfos extends AbstractModel{
         this.MaterialName = MaterialName;
     }
 
+    /**
+     * Get 审核原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuditResult 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAuditResult() {
+        return this.AuditResult;
+    }
+
+    /**
+     * Set 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuditResult 审核原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuditResult(String AuditResult) {
+        this.AuditResult = AuditResult;
+    }
+
     public PublicMaterialInfos() {
     }
 
@@ -189,6 +217,9 @@ public class PublicMaterialInfos extends AbstractModel{
         if (source.MaterialName != null) {
             this.MaterialName = new String(source.MaterialName);
         }
+        if (source.AuditResult != null) {
+            this.AuditResult = new String(source.AuditResult);
+        }
     }
 
 
@@ -202,6 +233,7 @@ public class PublicMaterialInfos extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "MaterialFaceList.", this.MaterialFaceList);
         this.setParamSimple(map, prefix + "MaterialName", this.MaterialName);
+        this.setParamSimple(map, prefix + "AuditResult", this.AuditResult);
 
     }
 }

@@ -101,6 +101,27 @@ public class AssetSystemPackageInfo extends AbstractModel{
     private Long IsNew;
 
     /**
+    * 附加信息
+    */
+    @SerializedName("MachineExtraInfo")
+    @Expose
+    private MachineExtraInfo MachineExtraInfo;
+
+    /**
+    * 主机Id
+    */
+    @SerializedName("Quuid")
+    @Expose
+    private String Quuid;
+
+    /**
+    * Agent Id
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
      * Get 数据库名 
      * @return Name 数据库名
      */
@@ -280,6 +301,54 @@ public class AssetSystemPackageInfo extends AbstractModel{
         this.IsNew = IsNew;
     }
 
+    /**
+     * Get 附加信息 
+     * @return MachineExtraInfo 附加信息
+     */
+    public MachineExtraInfo getMachineExtraInfo() {
+        return this.MachineExtraInfo;
+    }
+
+    /**
+     * Set 附加信息
+     * @param MachineExtraInfo 附加信息
+     */
+    public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
+        this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get 主机Id 
+     * @return Quuid 主机Id
+     */
+    public String getQuuid() {
+        return this.Quuid;
+    }
+
+    /**
+     * Set 主机Id
+     * @param Quuid 主机Id
+     */
+    public void setQuuid(String Quuid) {
+        this.Quuid = Quuid;
+    }
+
+    /**
+     * Get Agent Id 
+     * @return Uuid Agent Id
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set Agent Id
+     * @param Uuid Agent Id
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
     public AssetSystemPackageInfo() {
     }
 
@@ -321,6 +390,15 @@ public class AssetSystemPackageInfo extends AbstractModel{
         if (source.IsNew != null) {
             this.IsNew = new Long(source.IsNew);
         }
+        if (source.MachineExtraInfo != null) {
+            this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
+        }
+        if (source.Quuid != null) {
+            this.Quuid = new String(source.Quuid);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
     }
 
 
@@ -339,6 +417,9 @@ public class AssetSystemPackageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
+        this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Quuid", this.Quuid);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
 
     }
 }

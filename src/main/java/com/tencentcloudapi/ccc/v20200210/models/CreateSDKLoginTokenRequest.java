@@ -30,7 +30,7 @@ public class CreateSDKLoginTokenRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 坐席账号。
+    * 座席账号。
     */
     @SerializedName("SeatUserId")
     @Expose
@@ -53,16 +53,16 @@ public class CreateSDKLoginTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 坐席账号。 
-     * @return SeatUserId 坐席账号。
+     * Get 座席账号。 
+     * @return SeatUserId 座席账号。
      */
     public String getSeatUserId() {
         return this.SeatUserId;
     }
 
     /**
-     * Set 坐席账号。
-     * @param SeatUserId 坐席账号。
+     * Set 座席账号。
+     * @param SeatUserId 座席账号。
      */
     public void setSeatUserId(String SeatUserId) {
         this.SeatUserId = SeatUserId;

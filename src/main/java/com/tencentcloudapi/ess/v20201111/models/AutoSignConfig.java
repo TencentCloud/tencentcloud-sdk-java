@@ -30,28 +30,28 @@ public class AutoSignConfig extends AbstractModel{
     private UserThreeFactor UserInfo;
 
     /**
-    * 回调链接
+    * 接受自动签开启的回调地址。需要保证post返回200
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 是否回调证书信息
+    * 是否回调证书信息，默认false-不需要
     */
     @SerializedName("CertInfoCallback")
     @Expose
     private Boolean CertInfoCallback;
 
     /**
-    * 是否支持用户自定义签名印章
+    * 是否支持用户自定义签名印章，默认false-不需要
     */
     @SerializedName("UserDefineSeal")
     @Expose
     private Boolean UserDefineSeal;
 
     /**
-    * 是否需要回调的时候返回印章(签名) 图片的 base64
+    * 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
     */
     @SerializedName("SealImgCallback")
     @Expose
@@ -81,64 +81,64 @@ public class AutoSignConfig extends AbstractModel{
     }
 
     /**
-     * Get 回调链接 
-     * @return CallbackUrl 回调链接
+     * Get 接受自动签开启的回调地址。需要保证post返回200 
+     * @return CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调链接
-     * @param CallbackUrl 回调链接
+     * Set 接受自动签开启的回调地址。需要保证post返回200
+     * @param CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 是否回调证书信息 
-     * @return CertInfoCallback 是否回调证书信息
+     * Get 是否回调证书信息，默认false-不需要 
+     * @return CertInfoCallback 是否回调证书信息，默认false-不需要
      */
     public Boolean getCertInfoCallback() {
         return this.CertInfoCallback;
     }
 
     /**
-     * Set 是否回调证书信息
-     * @param CertInfoCallback 是否回调证书信息
+     * Set 是否回调证书信息，默认false-不需要
+     * @param CertInfoCallback 是否回调证书信息，默认false-不需要
      */
     public void setCertInfoCallback(Boolean CertInfoCallback) {
         this.CertInfoCallback = CertInfoCallback;
     }
 
     /**
-     * Get 是否支持用户自定义签名印章 
-     * @return UserDefineSeal 是否支持用户自定义签名印章
+     * Get 是否支持用户自定义签名印章，默认false-不需要 
+     * @return UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
      */
     public Boolean getUserDefineSeal() {
         return this.UserDefineSeal;
     }
 
     /**
-     * Set 是否支持用户自定义签名印章
-     * @param UserDefineSeal 是否支持用户自定义签名印章
+     * Set 是否支持用户自定义签名印章，默认false-不需要
+     * @param UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
      */
     public void setUserDefineSeal(Boolean UserDefineSeal) {
         this.UserDefineSeal = UserDefineSeal;
     }
 
     /**
-     * Get 是否需要回调的时候返回印章(签名) 图片的 base64 
-     * @return SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+     * Get 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要 
+     * @return SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
      */
     public Boolean getSealImgCallback() {
         return this.SealImgCallback;
     }
 
     /**
-     * Set 是否需要回调的时候返回印章(签名) 图片的 base64
-     * @param SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+     * Set 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+     * @param SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
      */
     public void setSealImgCallback(Boolean SealImgCallback) {
         this.SealImgCallback = SealImgCallback;

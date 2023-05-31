@@ -75,6 +75,13 @@ public class ComputeNode extends AbstractModel{
     private String InstanceName;
 
     /**
+    * 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。 
      * @return InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
      */
@@ -198,6 +205,22 @@ public class ComputeNode extends AbstractModel{
         this.InstanceName = InstanceName;
     }
 
+    /**
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。 
+     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public ComputeNode() {
     }
 
@@ -230,6 +253,9 @@ public class ComputeNode extends AbstractModel{
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -244,6 +270,7 @@ public class ComputeNode extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

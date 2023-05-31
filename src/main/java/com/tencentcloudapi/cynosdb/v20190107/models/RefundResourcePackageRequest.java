@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthorizedUser extends AbstractModel{
+public class RefundResourcePackageRequest extends AbstractModel{
 
     /**
-    * 电子签系统中的用户id
+    * 资源包唯一ID
     */
-    @SerializedName("UserId")
+    @SerializedName("PackageId")
     @Expose
-    private String UserId;
+    private String PackageId;
 
     /**
-     * Get 电子签系统中的用户id 
-     * @return UserId 电子签系统中的用户id
+     * Get 资源包唯一ID 
+     * @return PackageId 资源包唯一ID
      */
-    public String getUserId() {
-        return this.UserId;
+    public String getPackageId() {
+        return this.PackageId;
     }
 
     /**
-     * Set 电子签系统中的用户id
-     * @param UserId 电子签系统中的用户id
+     * Set 资源包唯一ID
+     * @param PackageId 资源包唯一ID
      */
-    public void setUserId(String UserId) {
-        this.UserId = UserId;
+    public void setPackageId(String PackageId) {
+        this.PackageId = PackageId;
     }
 
-    public AuthorizedUser() {
+    public RefundResourcePackageRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuthorizedUser(AuthorizedUser source) {
-        if (source.UserId != null) {
-            this.UserId = new String(source.UserId);
+    public RefundResourcePackageRequest(RefundResourcePackageRequest source) {
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
         }
     }
 
@@ -63,7 +63,7 @@ public class AuthorizedUser extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "PackageId", this.PackageId);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePreparedPersonalEsignRequest extends AbstractModel{
 
     /**
-    * 个人用户名称
+    * 个人用户姓名
     */
     @SerializedName("UserName")
     @Expose
@@ -37,18 +37,18 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel{
     private String IdCardNumber;
 
     /**
-    * 印章图片的base64
-    */
-    @SerializedName("SealImage")
-    @Expose
-    private String SealImage;
-
-    /**
     * 印章名称
     */
     @SerializedName("SealName")
     @Expose
     private String SealName;
+
+    /**
+    * 印章图片的base64，最大不超过 8M
+    */
+    @SerializedName("SealImage")
+    @Expose
+    private String SealImage;
 
     /**
     * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
@@ -70,6 +70,13 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     private String IdCardType;
 
     /**
+    * 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+    */
+    @SerializedName("SealImageCompress")
+    @Expose
+    private Boolean SealImageCompress;
+
+    /**
     * 手机号码；当需要开通自动签时，该参数必传
     */
     @SerializedName("Mobile")
@@ -84,16 +91,38 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     private Boolean EnableAutoSign;
 
     /**
-     * Get 个人用户名称 
-     * @return UserName 个人用户名称
+    * 印章颜色（参数ProcessSeal=true时生效）
+默认值：BLACK黑色
+取值: 
+BLACK 黑色,
+RED 红色,
+BLUE 蓝色。
+    */
+    @SerializedName("SealColor")
+    @Expose
+    private String SealColor;
+
+    /**
+    * 是否处理印章
+默认不做印章处理。
+取值：false：不做任何处理；
+true：做透明化处理和颜色增强。
+    */
+    @SerializedName("ProcessSeal")
+    @Expose
+    private Boolean ProcessSeal;
+
+    /**
+     * Get 个人用户姓名 
+     * @return UserName 个人用户姓名
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 个人用户名称
-     * @param UserName 个人用户名称
+     * Set 个人用户姓名
+     * @param UserName 个人用户姓名
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -116,22 +145,6 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     }
 
     /**
-     * Get 印章图片的base64 
-     * @return SealImage 印章图片的base64
-     */
-    public String getSealImage() {
-        return this.SealImage;
-    }
-
-    /**
-     * Set 印章图片的base64
-     * @param SealImage 印章图片的base64
-     */
-    public void setSealImage(String SealImage) {
-        this.SealImage = SealImage;
-    }
-
-    /**
      * Get 印章名称 
      * @return SealName 印章名称
      */
@@ -145,6 +158,22 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
+    }
+
+    /**
+     * Get 印章图片的base64，最大不超过 8M 
+     * @return SealImage 印章图片的base64，最大不超过 8M
+     */
+    public String getSealImage() {
+        return this.SealImage;
+    }
+
+    /**
+     * Set 印章图片的base64，最大不超过 8M
+     * @param SealImage 印章图片的base64，最大不超过 8M
+     */
+    public void setSealImage(String SealImage) {
+        this.SealImage = SealImage;
     }
 
     /**
@@ -200,6 +229,22 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     }
 
     /**
+     * Get 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。 
+     * @return SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     */
+    public Boolean getSealImageCompress() {
+        return this.SealImageCompress;
+    }
+
+    /**
+     * Set 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     * @param SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
+     */
+    public void setSealImageCompress(Boolean SealImageCompress) {
+        this.SealImageCompress = SealImageCompress;
+    }
+
+    /**
      * Get 手机号码；当需要开通自动签时，该参数必传 
      * @return Mobile 手机号码；当需要开通自动签时，该参数必传
      */
@@ -231,6 +276,70 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
         this.EnableAutoSign = EnableAutoSign;
     }
 
+    /**
+     * Get 印章颜色（参数ProcessSeal=true时生效）
+默认值：BLACK黑色
+取值: 
+BLACK 黑色,
+RED 红色,
+BLUE 蓝色。 
+     * @return SealColor 印章颜色（参数ProcessSeal=true时生效）
+默认值：BLACK黑色
+取值: 
+BLACK 黑色,
+RED 红色,
+BLUE 蓝色。
+     */
+    public String getSealColor() {
+        return this.SealColor;
+    }
+
+    /**
+     * Set 印章颜色（参数ProcessSeal=true时生效）
+默认值：BLACK黑色
+取值: 
+BLACK 黑色,
+RED 红色,
+BLUE 蓝色。
+     * @param SealColor 印章颜色（参数ProcessSeal=true时生效）
+默认值：BLACK黑色
+取值: 
+BLACK 黑色,
+RED 红色,
+BLUE 蓝色。
+     */
+    public void setSealColor(String SealColor) {
+        this.SealColor = SealColor;
+    }
+
+    /**
+     * Get 是否处理印章
+默认不做印章处理。
+取值：false：不做任何处理；
+true：做透明化处理和颜色增强。 
+     * @return ProcessSeal 是否处理印章
+默认不做印章处理。
+取值：false：不做任何处理；
+true：做透明化处理和颜色增强。
+     */
+    public Boolean getProcessSeal() {
+        return this.ProcessSeal;
+    }
+
+    /**
+     * Set 是否处理印章
+默认不做印章处理。
+取值：false：不做任何处理；
+true：做透明化处理和颜色增强。
+     * @param ProcessSeal 是否处理印章
+默认不做印章处理。
+取值：false：不做任何处理；
+true：做透明化处理和颜色增强。
+     */
+    public void setProcessSeal(Boolean ProcessSeal) {
+        this.ProcessSeal = ProcessSeal;
+    }
+
     public CreatePreparedPersonalEsignRequest() {
     }
 
@@ -245,11 +354,11 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
         if (source.IdCardNumber != null) {
             this.IdCardNumber = new String(source.IdCardNumber);
         }
-        if (source.SealImage != null) {
-            this.SealImage = new String(source.SealImage);
-        }
         if (source.SealName != null) {
             this.SealName = new String(source.SealName);
+        }
+        if (source.SealImage != null) {
+            this.SealImage = new String(source.SealImage);
         }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
@@ -257,11 +366,20 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
         }
+        if (source.SealImageCompress != null) {
+            this.SealImageCompress = new Boolean(source.SealImageCompress);
+        }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
         if (source.EnableAutoSign != null) {
             this.EnableAutoSign = new Boolean(source.EnableAutoSign);
+        }
+        if (source.SealColor != null) {
+            this.SealColor = new String(source.SealColor);
+        }
+        if (source.ProcessSeal != null) {
+            this.ProcessSeal = new Boolean(source.ProcessSeal);
         }
     }
 
@@ -272,12 +390,15 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
-        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamSimple(map, prefix + "SealName", this.SealName);
+        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+        this.setParamSimple(map, prefix + "SealColor", this.SealColor);
+        this.setParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
 
     }
 }

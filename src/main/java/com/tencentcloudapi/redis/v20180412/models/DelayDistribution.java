@@ -23,20 +23,20 @@ import java.util.HashMap;
 public class DelayDistribution extends AbstractModel{
 
     /**
-    * 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
+    * 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
     */
     @SerializedName("Ladder")
     @Expose
     private Long Ladder;
 
     /**
-    * 延时处于当前分布阶梯的命令数量，个。
+    * 延时处于当前分布阶梯的命令数量，单位：个。
     */
     @SerializedName("Size")
     @Expose
@@ -50,56 +50,56 @@ public class DelayDistribution extends AbstractModel{
     private Long Updatetime;
 
     /**
-     * Get 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。 
-     * @return Ladder 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
+     * Get 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。 
+     * @return Ladder 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
      */
     public Long getLadder() {
         return this.Ladder;
     }
 
     /**
-     * Set 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
-     * @param Ladder 分布阶梯，延时和Ladder值的对应关系：
-[0ms,1ms]: 1；
-[1ms,5ms]: 5；
-[5ms,10ms]: 10；
-[10ms,50ms]: 50；
-[50ms,200ms]: 200；
-[200ms,∞]: -1。
+     * Set 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
+     * @param Ladder 指延时分布阶梯，其与延时区间的对应关系如下所示。
+- 1：[0ms,1ms]。
+- 5： [1ms,5ms]。
+- 10： [5ms,10ms]。
+- 50： [10ms,50ms]。
+- 200：[50ms,200ms]。
+- -1： [200ms,∞]。
      */
     public void setLadder(Long Ladder) {
         this.Ladder = Ladder;
     }
 
     /**
-     * Get 延时处于当前分布阶梯的命令数量，个。 
-     * @return Size 延时处于当前分布阶梯的命令数量，个。
+     * Get 延时处于当前分布阶梯的命令数量，单位：个。 
+     * @return Size 延时处于当前分布阶梯的命令数量，单位：个。
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 延时处于当前分布阶梯的命令数量，个。
-     * @param Size 延时处于当前分布阶梯的命令数量，个。
+     * Set 延时处于当前分布阶梯的命令数量，单位：个。
+     * @param Size 延时处于当前分布阶梯的命令数量，单位：个。
      */
     public void setSize(Long Size) {
         this.Size = Size;

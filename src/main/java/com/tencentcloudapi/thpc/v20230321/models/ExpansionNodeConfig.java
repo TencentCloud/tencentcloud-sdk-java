@@ -59,6 +59,13 @@ public class ExpansionNodeConfig extends AbstractModel{
     private VirtualPrivateCloud VirtualPrivateCloud;
 
     /**
+    * 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get 扩容实例所在的位置。 
      * @return Placement 扩容实例所在的位置。
      */
@@ -142,6 +149,22 @@ public class ExpansionNodeConfig extends AbstractModel{
         this.VirtualPrivateCloud = VirtualPrivateCloud;
     }
 
+    /**
+     * Get 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。 
+     * @return ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     * @param ProjectId 实例所属项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。不填为默认项目。
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public ExpansionNodeConfig() {
     }
 
@@ -165,6 +188,9 @@ public class ExpansionNodeConfig extends AbstractModel{
         if (source.VirtualPrivateCloud != null) {
             this.VirtualPrivateCloud = new VirtualPrivateCloud(source.VirtualPrivateCloud);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -177,6 +203,7 @@ public class ExpansionNodeConfig extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

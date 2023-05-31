@@ -178,7 +178,7 @@ baseline/main/high。
 
     /**
     * DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
     */
     @SerializedName("DRMType")
     @Expose
@@ -186,7 +186,7 @@ baseline/main/high。
 
     /**
     * DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
     */
     @SerializedName("DRMTracks")
     @Expose
@@ -582,9 +582,9 @@ baseline/main/high。
 
     /**
      * Get DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。 
+不传递或者为空字符串，清空之前的DRM配置。 
      * @return DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public String getDRMType() {
         return this.DRMType;
@@ -592,9 +592,9 @@ baseline/main/high。
 
     /**
      * Set DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      * @param DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public void setDRMType(String DRMType) {
         this.DRMType = DRMType;
@@ -602,9 +602,9 @@ baseline/main/high。
 
     /**
      * Get DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。 
+不传递或者为空字符串，清空之前的DRM配置。 
      * @return DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public String getDRMTracks() {
         return this.DRMTracks;
@@ -612,9 +612,9 @@ baseline/main/high。
 
     /**
      * Set DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      * @param DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
-不传递或着为空字符串，清空之前的DRM配置。
+不传递或者为空字符串，清空之前的DRM配置。
      */
     public void setDRMTracks(String DRMTracks) {
         this.DRMTracks = DRMTracks;

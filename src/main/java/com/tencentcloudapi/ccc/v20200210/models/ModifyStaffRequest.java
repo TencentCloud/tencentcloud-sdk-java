@@ -30,28 +30,28 @@ public class ModifyStaffRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 坐席账户
+    * 座席账户
     */
     @SerializedName("Email")
     @Expose
     private String Email;
 
     /**
-    * 坐席名称
+    * 座席名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 坐席手机号（带0086前缀,示例：008618011111111）
+    * 座席手机号（带0086前缀,示例：008618011111111）
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 坐席昵称
+    * 座席昵称
     */
     @SerializedName("Nick")
     @Expose
@@ -95,64 +95,64 @@ public class ModifyStaffRequest extends AbstractModel{
     }
 
     /**
-     * Get 坐席账户 
-     * @return Email 坐席账户
+     * Get 座席账户 
+     * @return Email 座席账户
      */
     public String getEmail() {
         return this.Email;
     }
 
     /**
-     * Set 坐席账户
-     * @param Email 坐席账户
+     * Set 座席账户
+     * @param Email 座席账户
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 坐席名称 
-     * @return Name 坐席名称
+     * Get 座席名称 
+     * @return Name 座席名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 坐席名称
-     * @param Name 坐席名称
+     * Set 座席名称
+     * @param Name 座席名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 坐席手机号（带0086前缀,示例：008618011111111） 
-     * @return Phone 坐席手机号（带0086前缀,示例：008618011111111）
+     * Get 座席手机号（带0086前缀,示例：008618011111111） 
+     * @return Phone 座席手机号（带0086前缀,示例：008618011111111）
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 坐席手机号（带0086前缀,示例：008618011111111）
-     * @param Phone 坐席手机号（带0086前缀,示例：008618011111111）
+     * Set 座席手机号（带0086前缀,示例：008618011111111）
+     * @param Phone 座席手机号（带0086前缀,示例：008618011111111）
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 坐席昵称 
-     * @return Nick 坐席昵称
+     * Get 座席昵称 
+     * @return Nick 座席昵称
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set 坐席昵称
-     * @param Nick 坐席昵称
+     * Set 座席昵称
+     * @param Nick 座席昵称
      */
     public void setNick(String Nick) {
         this.Nick = Nick;

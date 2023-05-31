@@ -44,6 +44,13 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
     private String PolicyVersion;
 
     /**
+    * 网段或IP(互斥)
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
      * Get 实例Id 
      * @return RegistryId 实例Id
      */
@@ -91,6 +98,22 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         this.PolicyVersion = PolicyVersion;
     }
 
+    /**
+     * Get 网段或IP(互斥) 
+     * @return CidrBlock 网段或IP(互斥)
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set 网段或IP(互斥)
+     * @param CidrBlock 网段或IP(互斥)
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
     public DeleteSecurityPolicyRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         if (source.PolicyVersion != null) {
             this.PolicyVersion = new String(source.PolicyVersion);
         }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DeleteSecurityPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "PolicyIndex", this.PolicyIndex);
         this.setParamSimple(map, prefix + "PolicyVersion", this.PolicyVersion);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }
