@@ -20,23 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTextSampleResponse extends AbstractModel{
+public class DescribeLibSamplesResponse extends AbstractModel{
 
     /**
-    * 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+    * 词记录数
     */
-    @SerializedName("ErrMsg")
+    @SerializedName("TotalCount")
     @Expose
-    private String ErrMsg;
+    private Long TotalCount;
 
     /**
-    * 任务状态
-1：已完成
-2：处理中
+    * 词详情
     */
-    @SerializedName("Progress")
+    @SerializedName("Infos")
     @Expose
-    private Long Progress;
+    private UserKeywordInfo [] Infos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +44,35 @@ public class CreateTextSampleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码 
-     * @return ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     * Get 词记录数 
+     * @return TotalCount 词记录数
      */
-    public String getErrMsg() {
-        return this.ErrMsg;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
-     * @param ErrMsg 操作样本失败时返回的错误信息示例：  "样本1":错误码，"样本2":错误码
+     * Set 词记录数
+     * @param TotalCount 词记录数
      */
-    public void setErrMsg(String ErrMsg) {
-        this.ErrMsg = ErrMsg;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务状态
-1：已完成
-2：处理中 
-     * @return Progress 任务状态
-1：已完成
-2：处理中
+     * Get 词详情 
+     * @return Infos 词详情
      */
-    public Long getProgress() {
-        return this.Progress;
+    public UserKeywordInfo [] getInfos() {
+        return this.Infos;
     }
 
     /**
-     * Set 任务状态
-1：已完成
-2：处理中
-     * @param Progress 任务状态
-1：已完成
-2：处理中
+     * Set 词详情
+     * @param Infos 词详情
      */
-    public void setProgress(Long Progress) {
-        this.Progress = Progress;
+    public void setInfos(UserKeywordInfo [] Infos) {
+        this.Infos = Infos;
     }
 
     /**
@@ -101,19 +91,22 @@ public class CreateTextSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateTextSampleResponse() {
+    public DescribeLibSamplesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTextSampleResponse(CreateTextSampleResponse source) {
-        if (source.ErrMsg != null) {
-            this.ErrMsg = new String(source.ErrMsg);
+    public DescribeLibSamplesResponse(DescribeLibSamplesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Progress != null) {
-            this.Progress = new Long(source.Progress);
+        if (source.Infos != null) {
+            this.Infos = new UserKeywordInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new UserKeywordInfo(source.Infos[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +118,8 @@ public class CreateTextSampleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
-        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

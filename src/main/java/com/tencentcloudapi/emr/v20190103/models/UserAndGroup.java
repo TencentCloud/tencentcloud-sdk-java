@@ -13,87 +13,84 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cms.v20190321.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OCRDetect extends AbstractModel{
+public class UserAndGroup extends AbstractModel{
 
     /**
-    * 识别到的详细信息
+    * 用户名
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Item")
+    @SerializedName("UserName")
     @Expose
-    private OCRItem [] Item;
+    private String UserName;
 
     /**
-    * 识别到的文本信息
+    * 用户组
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TextInfo")
+    @SerializedName("UserGroup")
     @Expose
-    private String TextInfo;
+    private String UserGroup;
 
     /**
-     * Get 识别到的详细信息
+     * Get 用户名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Item 识别到的详细信息
+     * @return UserName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public OCRItem [] getItem() {
-        return this.Item;
+    public String getUserName() {
+        return this.UserName;
     }
 
     /**
-     * Set 识别到的详细信息
+     * Set 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Item 识别到的详细信息
+     * @param UserName 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setItem(OCRItem [] Item) {
-        this.Item = Item;
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
 
     /**
-     * Get 识别到的文本信息
+     * Get 用户组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TextInfo 识别到的文本信息
+     * @return UserGroup 用户组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTextInfo() {
-        return this.TextInfo;
+    public String getUserGroup() {
+        return this.UserGroup;
     }
 
     /**
-     * Set 识别到的文本信息
+     * Set 用户组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TextInfo 识别到的文本信息
+     * @param UserGroup 用户组
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTextInfo(String TextInfo) {
-        this.TextInfo = TextInfo;
+    public void setUserGroup(String UserGroup) {
+        this.UserGroup = UserGroup;
     }
 
-    public OCRDetect() {
+    public UserAndGroup() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OCRDetect(OCRDetect source) {
-        if (source.Item != null) {
-            this.Item = new OCRItem[source.Item.length];
-            for (int i = 0; i < source.Item.length; i++) {
-                this.Item[i] = new OCRItem(source.Item[i]);
-            }
+    public UserAndGroup(UserAndGroup source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
         }
-        if (source.TextInfo != null) {
-            this.TextInfo = new String(source.TextInfo);
+        if (source.UserGroup != null) {
+            this.UserGroup = new String(source.UserGroup);
         }
     }
 
@@ -102,8 +99,8 @@ public class OCRDetect extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Item.", this.Item);
-        this.setParamSimple(map, prefix + "TextInfo", this.TextInfo);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "UserGroup", this.UserGroup);
 
     }
 }

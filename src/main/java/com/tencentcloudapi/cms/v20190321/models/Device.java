@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class Device extends AbstractModel{
 
     /**
-    * 设备指纹ID
-    */
-    @SerializedName("DeviceId")
-    @Expose
-    private String DeviceId;
-
-    /**
-    * IOS设备，Identifier For Advertising（广告标识符）
-    */
-    @SerializedName("IDFA")
-    @Expose
-    private String IDFA;
-
-    /**
     * IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
     */
     @SerializedName("IDFV")
@@ -44,11 +30,11 @@ public class Device extends AbstractModel{
     private String IDFV;
 
     /**
-    * 设备序列号
+    * 设备指纹Token
     */
-    @SerializedName("IMEI")
+    @SerializedName("TokenId")
     @Expose
-    private String IMEI;
+    private String TokenId;
 
     /**
     * 用户IP
@@ -65,43 +51,25 @@ public class Device extends AbstractModel{
     private String Mac;
 
     /**
-    * 设备指纹Token
+    * IOS设备，Identifier For Advertising（广告标识符）
     */
-    @SerializedName("TokenId")
+    @SerializedName("IDFA")
     @Expose
-    private String TokenId;
+    private String IDFA;
 
     /**
-     * Get 设备指纹ID 
-     * @return DeviceId 设备指纹ID
-     */
-    public String getDeviceId() {
-        return this.DeviceId;
-    }
+    * 设备指纹ID
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
 
     /**
-     * Set 设备指纹ID
-     * @param DeviceId 设备指纹ID
-     */
-    public void setDeviceId(String DeviceId) {
-        this.DeviceId = DeviceId;
-    }
-
-    /**
-     * Get IOS设备，Identifier For Advertising（广告标识符） 
-     * @return IDFA IOS设备，Identifier For Advertising（广告标识符）
-     */
-    public String getIDFA() {
-        return this.IDFA;
-    }
-
-    /**
-     * Set IOS设备，Identifier For Advertising（广告标识符）
-     * @param IDFA IOS设备，Identifier For Advertising（广告标识符）
-     */
-    public void setIDFA(String IDFA) {
-        this.IDFA = IDFA;
-    }
+    * 设备序列号
+    */
+    @SerializedName("IMEI")
+    @Expose
+    private String IMEI;
 
     /**
      * Get IOS设备，IDFV - Identifier For Vendor（应用开发商标识符） 
@@ -120,19 +88,19 @@ public class Device extends AbstractModel{
     }
 
     /**
-     * Get 设备序列号 
-     * @return IMEI 设备序列号
+     * Get 设备指纹Token 
+     * @return TokenId 设备指纹Token
      */
-    public String getIMEI() {
-        return this.IMEI;
+    public String getTokenId() {
+        return this.TokenId;
     }
 
     /**
-     * Set 设备序列号
-     * @param IMEI 设备序列号
+     * Set 设备指纹Token
+     * @param TokenId 设备指纹Token
      */
-    public void setIMEI(String IMEI) {
-        this.IMEI = IMEI;
+    public void setTokenId(String TokenId) {
+        this.TokenId = TokenId;
     }
 
     /**
@@ -168,19 +136,51 @@ public class Device extends AbstractModel{
     }
 
     /**
-     * Get 设备指纹Token 
-     * @return TokenId 设备指纹Token
+     * Get IOS设备，Identifier For Advertising（广告标识符） 
+     * @return IDFA IOS设备，Identifier For Advertising（广告标识符）
      */
-    public String getTokenId() {
-        return this.TokenId;
+    public String getIDFA() {
+        return this.IDFA;
     }
 
     /**
-     * Set 设备指纹Token
-     * @param TokenId 设备指纹Token
+     * Set IOS设备，Identifier For Advertising（广告标识符）
+     * @param IDFA IOS设备，Identifier For Advertising（广告标识符）
      */
-    public void setTokenId(String TokenId) {
-        this.TokenId = TokenId;
+    public void setIDFA(String IDFA) {
+        this.IDFA = IDFA;
+    }
+
+    /**
+     * Get 设备指纹ID 
+     * @return DeviceId 设备指纹ID
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 设备指纹ID
+     * @param DeviceId 设备指纹ID
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
+    /**
+     * Get 设备序列号 
+     * @return IMEI 设备序列号
+     */
+    public String getIMEI() {
+        return this.IMEI;
+    }
+
+    /**
+     * Set 设备序列号
+     * @param IMEI 设备序列号
+     */
+    public void setIMEI(String IMEI) {
+        this.IMEI = IMEI;
     }
 
     public Device() {
@@ -191,17 +191,11 @@ public class Device extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Device(Device source) {
-        if (source.DeviceId != null) {
-            this.DeviceId = new String(source.DeviceId);
-        }
-        if (source.IDFA != null) {
-            this.IDFA = new String(source.IDFA);
-        }
         if (source.IDFV != null) {
             this.IDFV = new String(source.IDFV);
         }
-        if (source.IMEI != null) {
-            this.IMEI = new String(source.IMEI);
+        if (source.TokenId != null) {
+            this.TokenId = new String(source.TokenId);
         }
         if (source.IP != null) {
             this.IP = new String(source.IP);
@@ -209,8 +203,14 @@ public class Device extends AbstractModel{
         if (source.Mac != null) {
             this.Mac = new String(source.Mac);
         }
-        if (source.TokenId != null) {
-            this.TokenId = new String(source.TokenId);
+        if (source.IDFA != null) {
+            this.IDFA = new String(source.IDFA);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
+        if (source.IMEI != null) {
+            this.IMEI = new String(source.IMEI);
         }
     }
 
@@ -219,13 +219,13 @@ public class Device extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
-        this.setParamSimple(map, prefix + "IDFA", this.IDFA);
         this.setParamSimple(map, prefix + "IDFV", this.IDFV);
-        this.setParamSimple(map, prefix + "IMEI", this.IMEI);
+        this.setParamSimple(map, prefix + "TokenId", this.TokenId);
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Mac", this.Mac);
-        this.setParamSimple(map, prefix + "TokenId", this.TokenId);
+        this.setParamSimple(map, prefix + "IDFA", this.IDFA);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "IMEI", this.IMEI);
 
     }
 }

@@ -23,30 +23,26 @@ import java.util.HashMap;
 public class ImageTerrorDetect extends AbstractModel{
 
     /**
-    * 恶意类型
-100：正常
-24001：暴恐
-    */
-    @SerializedName("EvilType")
-    @Expose
-    private Long EvilType;
-
-    /**
-    * 处置判定 0：正常 1：可疑
-    */
-    @SerializedName("HitFlag")
-    @Expose
-    private Long HitFlag;
-
-    /**
     * 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
 
     /**
+    * 恶意类型
+100：正常
+24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EvilType")
+    @Expose
+    private Long EvilType;
+
+    /**
     * 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -54,18 +50,49 @@ public class ImageTerrorDetect extends AbstractModel{
 
     /**
     * 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
+    * 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HitFlag")
+    @Expose
+    private Long HitFlag;
+
+    /**
+     * Get 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Keywords 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Keywords 关键词明细
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
      * Get 恶意类型
 100：正常
-24001：暴恐 
+24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EvilType 恶意类型
 100：正常
 24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -75,49 +102,21 @@ public class ImageTerrorDetect extends AbstractModel{
      * Set 恶意类型
 100：正常
 24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilType 恶意类型
 100：正常
 24001：暴恐
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
     }
 
     /**
-     * Get 处置判定 0：正常 1：可疑 
-     * @return HitFlag 处置判定 0：正常 1：可疑
-     */
-    public Long getHitFlag() {
-        return this.HitFlag;
-    }
-
-    /**
-     * Set 处置判定 0：正常 1：可疑
-     * @param HitFlag 处置判定 0：正常 1：可疑
-     */
-    public void setHitFlag(Long HitFlag) {
-        this.HitFlag = HitFlag;
-    }
-
-    /**
-     * Get 关键词明细 
-     * @return Keywords 关键词明细
-     */
-    public String [] getKeywords() {
-        return this.Keywords;
-    }
-
-    /**
-     * Set 关键词明细
-     * @param Keywords 关键词明细
-     */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
-    }
-
-    /**
-     * Get 暴恐标签：返回暴恐特征中文描述 
+     * Get 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabels() {
         return this.Labels;
@@ -125,15 +124,19 @@ public class ImageTerrorDetect extends AbstractModel{
 
     /**
      * Set 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 暴恐标签：返回暴恐特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 暴恐分：分值范围0--100，分数越高暴恐倾向越明显 
+     * Get 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Score 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -141,10 +144,32 @@ public class ImageTerrorDetect extends AbstractModel{
 
     /**
      * Set 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 暴恐分：分值范围0--100，分数越高暴恐倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
+    }
+
+    /**
+     * Get 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHitFlag() {
+        return this.HitFlag;
+    }
+
+    /**
+     * Set 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHitFlag(Long HitFlag) {
+        this.HitFlag = HitFlag;
     }
 
     public ImageTerrorDetect() {
@@ -155,17 +180,14 @@ public class ImageTerrorDetect extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageTerrorDetect(ImageTerrorDetect source) {
-        if (source.EvilType != null) {
-            this.EvilType = new Long(source.EvilType);
-        }
-        if (source.HitFlag != null) {
-            this.HitFlag = new Long(source.HitFlag);
-        }
         if (source.Keywords != null) {
             this.Keywords = new String[source.Keywords.length];
             for (int i = 0; i < source.Keywords.length; i++) {
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
         }
         if (source.Labels != null) {
             this.Labels = new String[source.Labels.length];
@@ -176,6 +198,9 @@ public class ImageTerrorDetect extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Long(source.Score);
         }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
     }
 
 
@@ -183,11 +208,11 @@ public class ImageTerrorDetect extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
 
     }
 }

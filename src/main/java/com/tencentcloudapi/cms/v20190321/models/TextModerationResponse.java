@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class TextModerationResponse extends AbstractModel{
 
     /**
-    * 识别结果
-    */
-    @SerializedName("Data")
-    @Expose
-    private TextData Data;
-
-    /**
     * 业务返回码
     */
     @SerializedName("BusinessCode")
@@ -37,27 +30,19 @@ public class TextModerationResponse extends AbstractModel{
     private Long BusinessCode;
 
     /**
+    * 识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private TextData Data;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 识别结果 
-     * @return Data 识别结果
-     */
-    public TextData getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set 识别结果
-     * @param Data 识别结果
-     */
-    public void setData(TextData Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get 业务返回码 
@@ -73,6 +58,26 @@ public class TextModerationResponse extends AbstractModel{
      */
     public void setBusinessCode(Long BusinessCode) {
         this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get 识别结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextData getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 识别结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(TextData Data) {
+        this.Data = Data;
     }
 
     /**
@@ -99,11 +104,11 @@ public class TextModerationResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TextModerationResponse(TextModerationResponse source) {
-        if (source.Data != null) {
-            this.Data = new TextData(source.Data);
-        }
         if (source.BusinessCode != null) {
             this.BusinessCode = new Long(source.BusinessCode);
+        }
+        if (source.Data != null) {
+            this.Data = new TextData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +120,8 @@ public class TextModerationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

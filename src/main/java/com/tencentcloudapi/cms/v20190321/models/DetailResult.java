@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DetailResult extends AbstractModel{
 
     /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 该标签下命中的关键词
     */
-    @SerializedName("EvilLabel")
+    @SerializedName("Keywords")
     @Expose
-    private String EvilLabel;
+    private String [] Keywords;
 
     /**
     * 恶意类型
@@ -44,13 +44,6 @@ public class DetailResult extends AbstractModel{
     private Long EvilType;
 
     /**
-    * 该标签下命中的关键词
-    */
-    @SerializedName("Keywords")
-    @Expose
-    private String [] Keywords;
-
-    /**
     * 该标签模型命中的分值
     */
     @SerializedName("Score")
@@ -58,19 +51,26 @@ public class DetailResult extends AbstractModel{
     private Long Score;
 
     /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    */
+    @SerializedName("EvilLabel")
+    @Expose
+    private String EvilLabel;
+
+    /**
+     * Get 该标签下命中的关键词 
+     * @return Keywords 该标签下命中的关键词
      */
-    public String getEvilLabel() {
-        return this.EvilLabel;
+    public String [] getKeywords() {
+        return this.Keywords;
     }
 
     /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * Set 该标签下命中的关键词
+     * @param Keywords 该标签下命中的关键词
      */
-    public void setEvilLabel(String EvilLabel) {
-        this.EvilLabel = EvilLabel;
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     /**
@@ -118,22 +118,6 @@ public class DetailResult extends AbstractModel{
     }
 
     /**
-     * Get 该标签下命中的关键词 
-     * @return Keywords 该标签下命中的关键词
-     */
-    public String [] getKeywords() {
-        return this.Keywords;
-    }
-
-    /**
-     * Set 该标签下命中的关键词
-     * @param Keywords 该标签下命中的关键词
-     */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
-    }
-
-    /**
      * Get 该标签模型命中的分值 
      * @return Score 该标签模型命中的分值
      */
@@ -149,6 +133,22 @@ public class DetailResult extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
+     * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public String getEvilLabel() {
+        return this.EvilLabel;
+    }
+
+    /**
+     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public void setEvilLabel(String EvilLabel) {
+        this.EvilLabel = EvilLabel;
+    }
+
     public DetailResult() {
     }
 
@@ -157,20 +157,20 @@ public class DetailResult extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DetailResult(DetailResult source) {
-        if (source.EvilLabel != null) {
-            this.EvilLabel = new String(source.EvilLabel);
-        }
-        if (source.EvilType != null) {
-            this.EvilType = new Long(source.EvilType);
-        }
         if (source.Keywords != null) {
             this.Keywords = new String[source.Keywords.length];
             for (int i = 0; i < source.Keywords.length; i++) {
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
         }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
+        }
         if (source.Score != null) {
             this.Score = new Long(source.Score);
+        }
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
         }
     }
 
@@ -179,10 +179,10 @@ public class DetailResult extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
-        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
 
     }
 }

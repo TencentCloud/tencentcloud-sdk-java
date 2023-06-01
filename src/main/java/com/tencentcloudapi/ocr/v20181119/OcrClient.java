@@ -1601,6 +1601,26 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *菲律宾UMID识别
+     * @param req RecognizePhilippinesUMIDOCRRequest
+     * @return RecognizePhilippinesUMIDOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecognizePhilippinesUMIDOCR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
 
 默认接口请求频率限制：20次/秒。
@@ -1669,6 +1689,8 @@ public class OcrClient extends AbstractClient{
     /**
      *本接口支持泰国身份证识别，识别字段包括泰文姓名、英文姓名、地址、出生日期、身份证号码、首次领用日期、签发日期等字段。
 本接口暂未完全对外开放，如需咨询，请[联系商务](https://cloud.tencent.com/about/connect)
+
+默认接口请求频率限制：10次/秒
      * @param req RecognizeThaiIDCardOCRRequest
      * @return RecognizeThaiIDCardOCRResponse
      * @throws TencentCloudSDKException

@@ -30,18 +30,18 @@ public class RiskDetails extends AbstractModel{
     private String [] Keywords;
 
     /**
-    * 风险类别，RiskAccount，RiskIP, RiskIMEI
-    */
-    @SerializedName("Label")
-    @Expose
-    private String Label;
-
-    /**
     * 预留字段，暂时不用
     */
     @SerializedName("Lable")
     @Expose
     private String Lable;
+
+    /**
+    * 风险类别，RiskAccount，RiskIP, RiskIMEI
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
 
     /**
     * 风险等级，1:疑似，2：恶意
@@ -67,22 +67,6 @@ public class RiskDetails extends AbstractModel{
     }
 
     /**
-     * Get 风险类别，RiskAccount，RiskIP, RiskIMEI 
-     * @return Label 风险类别，RiskAccount，RiskIP, RiskIMEI
-     */
-    public String getLabel() {
-        return this.Label;
-    }
-
-    /**
-     * Set 风险类别，RiskAccount，RiskIP, RiskIMEI
-     * @param Label 风险类别，RiskAccount，RiskIP, RiskIMEI
-     */
-    public void setLabel(String Label) {
-        this.Label = Label;
-    }
-
-    /**
      * Get 预留字段，暂时不用 
      * @return Lable 预留字段，暂时不用
      */
@@ -96,6 +80,22 @@ public class RiskDetails extends AbstractModel{
      */
     public void setLable(String Lable) {
         this.Lable = Lable;
+    }
+
+    /**
+     * Get 风险类别，RiskAccount，RiskIP, RiskIMEI 
+     * @return Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 风险类别，RiskAccount，RiskIP, RiskIMEI
+     * @param Label 风险类别，RiskAccount，RiskIP, RiskIMEI
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
     }
 
     /**
@@ -128,11 +128,11 @@ public class RiskDetails extends AbstractModel{
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
         }
-        if (source.Label != null) {
-            this.Label = new String(source.Label);
-        }
         if (source.Lable != null) {
             this.Lable = new String(source.Lable);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
         }
         if (source.Level != null) {
             this.Level = new Long(source.Level);
@@ -145,8 +145,8 @@ public class RiskDetails extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Lable", this.Lable);
+        this.setParamSimple(map, prefix + "Label", this.Label);
         this.setParamSimple(map, prefix + "Level", this.Level);
 
     }

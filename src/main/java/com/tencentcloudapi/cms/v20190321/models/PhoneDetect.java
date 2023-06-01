@@ -26,20 +26,15 @@ public class PhoneDetect extends AbstractModel{
     * 恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvilType")
     @Expose
     private Long EvilType;
 
     /**
-    * 处置判定 0：正常 1：可疑
-    */
-    @SerializedName("HitFlag")
-    @Expose
-    private Long HitFlag;
-
-    /**
     * 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -47,18 +42,29 @@ public class PhoneDetect extends AbstractModel{
 
     /**
     * 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
+    * 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HitFlag")
+    @Expose
+    private Long HitFlag;
+
+    /**
      * Get 恶意类型
 100：正常
-21000：综合 
+21000：综合
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EvilType 恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -68,33 +74,21 @@ public class PhoneDetect extends AbstractModel{
      * Set 恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilType 恶意类型
 100：正常
 21000：综合
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
     }
 
     /**
-     * Get 处置判定 0：正常 1：可疑 
-     * @return HitFlag 处置判定 0：正常 1：可疑
-     */
-    public Long getHitFlag() {
-        return this.HitFlag;
-    }
-
-    /**
-     * Set 处置判定 0：正常 1：可疑
-     * @param HitFlag 处置判定 0：正常 1：可疑
-     */
-    public void setHitFlag(Long HitFlag) {
-        this.HitFlag = HitFlag;
-    }
-
-    /**
-     * Get 特征中文描述 
+     * Get 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Labels 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabels() {
         return this.Labels;
@@ -102,15 +96,19 @@ public class PhoneDetect extends AbstractModel{
 
     /**
      * Set 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 特征中文描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 分值范围 0-100，分数越高倾向越明显 
+     * Get 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Score 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -118,10 +116,32 @@ public class PhoneDetect extends AbstractModel{
 
     /**
      * Set 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 分值范围 0-100，分数越高倾向越明显
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;
+    }
+
+    /**
+     * Get 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHitFlag() {
+        return this.HitFlag;
+    }
+
+    /**
+     * Set 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HitFlag 处置判定 0：正常 1：可疑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHitFlag(Long HitFlag) {
+        this.HitFlag = HitFlag;
     }
 
     public PhoneDetect() {
@@ -135,9 +155,6 @@ public class PhoneDetect extends AbstractModel{
         if (source.EvilType != null) {
             this.EvilType = new Long(source.EvilType);
         }
-        if (source.HitFlag != null) {
-            this.HitFlag = new Long(source.HitFlag);
-        }
         if (source.Labels != null) {
             this.Labels = new String[source.Labels.length];
             for (int i = 0; i < source.Labels.length; i++) {
@@ -147,6 +164,9 @@ public class PhoneDetect extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Long(source.Score);
         }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
     }
 
 
@@ -155,9 +175,9 @@ public class PhoneDetect extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
 
     }
 }

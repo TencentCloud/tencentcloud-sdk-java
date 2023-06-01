@@ -23,38 +23,26 @@ import java.util.HashMap;
 public class CodeDetect extends AbstractModel{
 
     /**
-    * 从图片中检测到的二维码，可能为多个
-    */
-    @SerializedName("ModerationDetail")
-    @Expose
-    private CodeDetail [] ModerationDetail;
-
-    /**
     * 检测是否成功，0：成功，-1：出错
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModerationCode")
     @Expose
     private Long ModerationCode;
 
     /**
-     * Get 从图片中检测到的二维码，可能为多个 
-     * @return ModerationDetail 从图片中检测到的二维码，可能为多个
-     */
-    public CodeDetail [] getModerationDetail() {
-        return this.ModerationDetail;
-    }
+    * 从图片中检测到的二维码，可能为多个
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModerationDetail")
+    @Expose
+    private CodeDetail [] ModerationDetail;
 
     /**
-     * Set 从图片中检测到的二维码，可能为多个
-     * @param ModerationDetail 从图片中检测到的二维码，可能为多个
-     */
-    public void setModerationDetail(CodeDetail [] ModerationDetail) {
-        this.ModerationDetail = ModerationDetail;
-    }
-
-    /**
-     * Get 检测是否成功，0：成功，-1：出错 
+     * Get 检测是否成功，0：成功，-1：出错
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModerationCode 检测是否成功，0：成功，-1：出错
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModerationCode() {
         return this.ModerationCode;
@@ -62,10 +50,32 @@ public class CodeDetect extends AbstractModel{
 
     /**
      * Set 检测是否成功，0：成功，-1：出错
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ModerationCode 检测是否成功，0：成功，-1：出错
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModerationCode(Long ModerationCode) {
         this.ModerationCode = ModerationCode;
+    }
+
+    /**
+     * Get 从图片中检测到的二维码，可能为多个
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModerationDetail 从图片中检测到的二维码，可能为多个
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CodeDetail [] getModerationDetail() {
+        return this.ModerationDetail;
+    }
+
+    /**
+     * Set 从图片中检测到的二维码，可能为多个
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModerationDetail 从图片中检测到的二维码，可能为多个
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModerationDetail(CodeDetail [] ModerationDetail) {
+        this.ModerationDetail = ModerationDetail;
     }
 
     public CodeDetect() {
@@ -76,14 +86,14 @@ public class CodeDetect extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CodeDetect(CodeDetect source) {
+        if (source.ModerationCode != null) {
+            this.ModerationCode = new Long(source.ModerationCode);
+        }
         if (source.ModerationDetail != null) {
             this.ModerationDetail = new CodeDetail[source.ModerationDetail.length];
             for (int i = 0; i < source.ModerationDetail.length; i++) {
                 this.ModerationDetail[i] = new CodeDetail(source.ModerationDetail[i]);
             }
-        }
-        if (source.ModerationCode != null) {
-            this.ModerationCode = new Long(source.ModerationCode);
         }
     }
 
@@ -92,8 +102,8 @@ public class CodeDetect extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ModerationDetail.", this.ModerationDetail);
         this.setParamSimple(map, prefix + "ModerationCode", this.ModerationCode);
+        this.setParamArrayObj(map, prefix + "ModerationDetail.", this.ModerationDetail);
 
     }
 }

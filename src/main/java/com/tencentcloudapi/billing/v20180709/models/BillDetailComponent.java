@@ -273,7 +273,9 @@ public class BillDetailComponent extends AbstractModel{
     /**
      * Get 组件指定价（已废弃） 
      * @return SpecifiedPrice 组件指定价（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public String getSpecifiedPrice() {
         return this.SpecifiedPrice;
     }
@@ -281,7 +283,9 @@ public class BillDetailComponent extends AbstractModel{
     /**
      * Set 组件指定价（已废弃）
      * @param SpecifiedPrice 组件指定价（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setSpecifiedPrice(String SpecifiedPrice) {
         this.SpecifiedPrice = SpecifiedPrice;
     }
@@ -643,7 +647,9 @@ public class BillDetailComponent extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SPDeduction 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSPDeduction() {
         return this.SPDeduction;
     }
@@ -653,7 +659,9 @@ public class BillDetailComponent extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SPDeduction 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSPDeduction(String SPDeduction) {
         this.SPDeduction = SPDeduction;
     }

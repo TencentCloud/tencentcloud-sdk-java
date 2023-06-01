@@ -1045,6 +1045,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *修改账号的一些配置，比如 max_user_connections
+     * @param req ModifyAccountConfigRequest
+     * @return ModifyAccountConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountConfigResponse ModifyAccountConfig(ModifyAccountConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyAccountDescription）用于修改云数据库账号备注。
 注意：相同用户名，不同Host是不同的账号。
      * @param req ModifyAccountDescriptionRequest

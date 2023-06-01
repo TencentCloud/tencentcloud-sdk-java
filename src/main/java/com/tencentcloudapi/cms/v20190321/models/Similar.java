@@ -44,6 +44,7 @@ public class Similar extends AbstractModel{
 
     /**
     * 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SeedUrl")
     @Expose
@@ -106,8 +107,10 @@ public class Similar extends AbstractModel{
     }
 
     /**
-     * Get 返回的种子url 
+     * Get 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SeedUrl 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSeedUrl() {
         return this.SeedUrl;
@@ -115,7 +118,9 @@ public class Similar extends AbstractModel{
 
     /**
      * Set 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SeedUrl 返回的种子url
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSeedUrl(String SeedUrl) {
         this.SeedUrl = SeedUrl;

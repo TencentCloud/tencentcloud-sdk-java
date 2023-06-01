@@ -20,67 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ManualReviewData extends AbstractModel{
+public class Filters extends AbstractModel{
 
     /**
-    * 人审内容批次号
+    * 查询字段
     */
-    @SerializedName("BatchId")
+    @SerializedName("Name")
     @Expose
-    private String BatchId;
+    private String Name;
 
     /**
-    * 人审内容ID
+    * 查询值
     */
-    @SerializedName("ContentId")
+    @SerializedName("Values")
     @Expose
-    private String ContentId;
+    private String [] Values;
 
     /**
-     * Get 人审内容批次号 
-     * @return BatchId 人审内容批次号
+     * Get 查询字段 
+     * @return Name 查询字段
      */
-    public String getBatchId() {
-        return this.BatchId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 人审内容批次号
-     * @param BatchId 人审内容批次号
+     * Set 查询字段
+     * @param Name 查询字段
      */
-    public void setBatchId(String BatchId) {
-        this.BatchId = BatchId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 人审内容ID 
-     * @return ContentId 人审内容ID
+     * Get 查询值 
+     * @return Values 查询值
      */
-    public String getContentId() {
-        return this.ContentId;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 人审内容ID
-     * @param ContentId 人审内容ID
+     * Set 查询值
+     * @param Values 查询值
      */
-    public void setContentId(String ContentId) {
-        this.ContentId = ContentId;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
-    public ManualReviewData() {
+    public Filters() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ManualReviewData(ManualReviewData source) {
-        if (source.BatchId != null) {
-            this.BatchId = new String(source.BatchId);
+    public Filters(Filters source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.ContentId != null) {
-            this.ContentId = new String(source.ContentId);
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
         }
     }
 
@@ -89,8 +92,8 @@ public class ManualReviewData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BatchId", this.BatchId);
-        this.setParamSimple(map, prefix + "ContentId", this.ContentId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

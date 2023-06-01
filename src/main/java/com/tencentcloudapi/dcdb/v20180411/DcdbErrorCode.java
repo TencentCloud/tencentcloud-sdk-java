@@ -42,6 +42,9 @@ public enum DcdbErrorCode {
     // 修改账号权限失败。
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
      
+    // 修改账号配置失败。
+     FAILEDOPERATION_MODIFYUSERCONFIGFAILED("FailedOperation.ModifyUserConfigFailed"),
+     
     // 消息队列操作失败。
      FAILEDOPERATION_MSGQUEUEOPERATIONFAILED("FailedOperation.MsgQueueOperationFailed"),
      

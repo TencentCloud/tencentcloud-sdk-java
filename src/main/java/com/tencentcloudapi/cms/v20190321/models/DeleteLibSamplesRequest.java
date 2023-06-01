@@ -20,67 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Filter extends AbstractModel{
+public class DeleteLibSamplesRequest extends AbstractModel{
 
     /**
-    * 需要过滤的字段
+    * 关键词ID
     */
-    @SerializedName("Name")
+    @SerializedName("SampleIDs")
     @Expose
-    private String Name;
+    private String [] SampleIDs;
 
     /**
-    * 需要过滤字段的值
+    * 词库ID
     */
-    @SerializedName("Value")
+    @SerializedName("LibID")
     @Expose
-    private String Value;
+    private String LibID;
 
     /**
-     * Get 需要过滤的字段 
-     * @return Name 需要过滤的字段
+     * Get 关键词ID 
+     * @return SampleIDs 关键词ID
      */
-    public String getName() {
-        return this.Name;
+    public String [] getSampleIDs() {
+        return this.SampleIDs;
     }
 
     /**
-     * Set 需要过滤的字段
-     * @param Name 需要过滤的字段
+     * Set 关键词ID
+     * @param SampleIDs 关键词ID
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setSampleIDs(String [] SampleIDs) {
+        this.SampleIDs = SampleIDs;
     }
 
     /**
-     * Get 需要过滤字段的值 
-     * @return Value 需要过滤字段的值
+     * Get 词库ID 
+     * @return LibID 词库ID
      */
-    public String getValue() {
-        return this.Value;
+    public String getLibID() {
+        return this.LibID;
     }
 
     /**
-     * Set 需要过滤字段的值
-     * @param Value 需要过滤字段的值
+     * Set 词库ID
+     * @param LibID 词库ID
      */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setLibID(String LibID) {
+        this.LibID = LibID;
     }
 
-    public Filter() {
+    public DeleteLibSamplesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Filter(Filter source) {
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+    public DeleteLibSamplesRequest(DeleteLibSamplesRequest source) {
+        if (source.SampleIDs != null) {
+            this.SampleIDs = new String[source.SampleIDs.length];
+            for (int i = 0; i < source.SampleIDs.length; i++) {
+                this.SampleIDs[i] = new String(source.SampleIDs[i]);
+            }
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+        if (source.LibID != null) {
+            this.LibID = new String(source.LibID);
         }
     }
 
@@ -89,8 +92,8 @@ public class Filter extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
+        this.setParamSimple(map, prefix + "LibID", this.LibID);
 
     }
 }

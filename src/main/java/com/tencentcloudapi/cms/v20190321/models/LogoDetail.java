@@ -24,14 +24,17 @@ public class LogoDetail extends AbstractModel{
 
     /**
     * 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppLogoDetail")
     @Expose
     private Logo [] AppLogoDetail;
 
     /**
-     * Get 命中的Applogo详情 
+     * Get 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppLogoDetail 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Logo [] getAppLogoDetail() {
         return this.AppLogoDetail;
@@ -39,7 +42,9 @@ public class LogoDetail extends AbstractModel{
 
     /**
      * Set 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AppLogoDetail 命中的Applogo详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppLogoDetail(Logo [] AppLogoDetail) {
         this.AppLogoDetail = AppLogoDetail;

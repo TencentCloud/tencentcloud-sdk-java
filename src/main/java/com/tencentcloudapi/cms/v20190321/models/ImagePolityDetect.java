@@ -39,13 +39,6 @@ public class ImagePolityDetect extends AbstractModel{
     private Long HitFlag;
 
     /**
-    * 命中的logo标签信息
-    */
-    @SerializedName("PolityLogoDetail")
-    @Expose
-    private Logo [] PolityLogoDetail;
-
-    /**
     * 命中的人脸名称
     */
     @SerializedName("FaceNames")
@@ -53,14 +46,16 @@ public class ImagePolityDetect extends AbstractModel{
     private String [] FaceNames;
 
     /**
-    * 关键词明细
+    * 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Keywords")
+    @SerializedName("PolityLogoDetail")
     @Expose
-    private String [] Keywords;
+    private Logo [] PolityLogoDetail;
 
     /**
     * 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolityItems")
     @Expose
@@ -72,6 +67,13 @@ public class ImagePolityDetect extends AbstractModel{
     @SerializedName("Score")
     @Expose
     private Long Score;
+
+    /**
+    * 关键词明细
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
 
     /**
      * Get 恶意类型
@@ -114,22 +116,6 @@ public class ImagePolityDetect extends AbstractModel{
     }
 
     /**
-     * Get 命中的logo标签信息 
-     * @return PolityLogoDetail 命中的logo标签信息
-     */
-    public Logo [] getPolityLogoDetail() {
-        return this.PolityLogoDetail;
-    }
-
-    /**
-     * Set 命中的logo标签信息
-     * @param PolityLogoDetail 命中的logo标签信息
-     */
-    public void setPolityLogoDetail(Logo [] PolityLogoDetail) {
-        this.PolityLogoDetail = PolityLogoDetail;
-    }
-
-    /**
      * Get 命中的人脸名称 
      * @return FaceNames 命中的人脸名称
      */
@@ -146,24 +132,30 @@ public class ImagePolityDetect extends AbstractModel{
     }
 
     /**
-     * Get 关键词明细 
-     * @return Keywords 关键词明细
+     * Get 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolityLogoDetail 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getKeywords() {
-        return this.Keywords;
+    public Logo [] getPolityLogoDetail() {
+        return this.PolityLogoDetail;
     }
 
     /**
-     * Set 关键词明细
-     * @param Keywords 关键词明细
+     * Set 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolityLogoDetail 命中的logo标签信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
+    public void setPolityLogoDetail(Logo [] PolityLogoDetail) {
+        this.PolityLogoDetail = PolityLogoDetail;
     }
 
     /**
-     * Get 命中的政治物品名称 
+     * Get 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolityItems 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPolityItems() {
         return this.PolityItems;
@@ -171,7 +163,9 @@ public class ImagePolityDetect extends AbstractModel{
 
     /**
      * Set 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PolityItems 命中的政治物品名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolityItems(String [] PolityItems) {
         this.PolityItems = PolityItems;
@@ -193,6 +187,22 @@ public class ImagePolityDetect extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 关键词明细 
+     * @return Keywords 关键词明细
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 关键词明细
+     * @param Keywords 关键词明细
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
     public ImagePolityDetect() {
     }
 
@@ -207,22 +217,16 @@ public class ImagePolityDetect extends AbstractModel{
         if (source.HitFlag != null) {
             this.HitFlag = new Long(source.HitFlag);
         }
-        if (source.PolityLogoDetail != null) {
-            this.PolityLogoDetail = new Logo[source.PolityLogoDetail.length];
-            for (int i = 0; i < source.PolityLogoDetail.length; i++) {
-                this.PolityLogoDetail[i] = new Logo(source.PolityLogoDetail[i]);
-            }
-        }
         if (source.FaceNames != null) {
             this.FaceNames = new String[source.FaceNames.length];
             for (int i = 0; i < source.FaceNames.length; i++) {
                 this.FaceNames[i] = new String(source.FaceNames[i]);
             }
         }
-        if (source.Keywords != null) {
-            this.Keywords = new String[source.Keywords.length];
-            for (int i = 0; i < source.Keywords.length; i++) {
-                this.Keywords[i] = new String(source.Keywords[i]);
+        if (source.PolityLogoDetail != null) {
+            this.PolityLogoDetail = new Logo[source.PolityLogoDetail.length];
+            for (int i = 0; i < source.PolityLogoDetail.length; i++) {
+                this.PolityLogoDetail[i] = new Logo(source.PolityLogoDetail[i]);
             }
         }
         if (source.PolityItems != null) {
@@ -234,6 +238,12 @@ public class ImagePolityDetect extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Long(source.Score);
         }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
+        }
     }
 
 
@@ -243,11 +253,11 @@ public class ImagePolityDetect extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
-        this.setParamArrayObj(map, prefix + "PolityLogoDetail.", this.PolityLogoDetail);
         this.setParamArraySimple(map, prefix + "FaceNames.", this.FaceNames);
-        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamArrayObj(map, prefix + "PolityLogoDetail.", this.PolityLogoDetail);
         this.setParamArraySimple(map, prefix + "PolityItems.", this.PolityItems);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
 
     }
 }

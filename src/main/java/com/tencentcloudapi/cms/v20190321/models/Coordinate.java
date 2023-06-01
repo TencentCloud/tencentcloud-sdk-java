@@ -23,84 +23,42 @@ import java.util.HashMap;
 public class Coordinate extends AbstractModel{
 
     /**
-    * 左上角横坐标
-    */
-    @SerializedName("Cx")
-    @Expose
-    private Long Cx;
-
-    /**
-    * 左上角纵坐标
-    */
-    @SerializedName("Cy")
-    @Expose
-    private Long Cy;
-
-    /**
-    * 高度
-    */
-    @SerializedName("Height")
-    @Expose
-    private Long Height;
-
-    /**
     * 宽度
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-     * Get 左上角横坐标 
-     * @return Cx 左上角横坐标
-     */
-    public Long getCx() {
-        return this.Cx;
-    }
+    * 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cy")
+    @Expose
+    private Long Cy;
 
     /**
-     * Set 左上角横坐标
-     * @param Cx 左上角横坐标
-     */
-    public void setCx(Long Cx) {
-        this.Cx = Cx;
-    }
+    * 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cx")
+    @Expose
+    private Long Cx;
 
     /**
-     * Get 左上角纵坐标 
-     * @return Cy 左上角纵坐标
-     */
-    public Long getCy() {
-        return this.Cy;
-    }
+    * 高度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
 
     /**
-     * Set 左上角纵坐标
-     * @param Cy 左上角纵坐标
-     */
-    public void setCy(Long Cy) {
-        this.Cy = Cy;
-    }
-
-    /**
-     * Get 高度 
-     * @return Height 高度
-     */
-    public Long getHeight() {
-        return this.Height;
-    }
-
-    /**
-     * Set 高度
-     * @param Height 高度
-     */
-    public void setHeight(Long Height) {
-        this.Height = Height;
-    }
-
-    /**
-     * Get 宽度 
+     * Get 宽度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -108,10 +66,72 @@ public class Coordinate extends AbstractModel{
 
     /**
      * Set 宽度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
+    }
+
+    /**
+     * Get 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cy 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCy() {
+        return this.Cy;
+    }
+
+    /**
+     * Set 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cy 左上角纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCy(Long Cy) {
+        this.Cy = Cy;
+    }
+
+    /**
+     * Get 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cx 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCx() {
+        return this.Cx;
+    }
+
+    /**
+     * Set 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cx 左上角横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCx(Long Cx) {
+        this.Cx = Cx;
+    }
+
+    /**
+     * Get 高度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
     }
 
     public Coordinate() {
@@ -122,17 +142,17 @@ public class Coordinate extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Coordinate(Coordinate source) {
-        if (source.Cx != null) {
-            this.Cx = new Long(source.Cx);
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
         }
         if (source.Cy != null) {
             this.Cy = new Long(source.Cy);
         }
+        if (source.Cx != null) {
+            this.Cx = new Long(source.Cx);
+        }
         if (source.Height != null) {
             this.Height = new Long(source.Height);
-        }
-        if (source.Width != null) {
-            this.Width = new Long(source.Width);
         }
     }
 
@@ -141,10 +161,10 @@ public class Coordinate extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Cx", this.Cx);
-        this.setParamSimple(map, prefix + "Cy", this.Cy);
-        this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Cy", this.Cy);
+        this.setParamSimple(map, prefix + "Cx", this.Cx);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

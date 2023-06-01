@@ -20,108 +20,108 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Logo extends AbstractModel{
+public class InvalidSample extends AbstractModel{
 
     /**
-    * logo图标置信度
+    * 关键词
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Confidence")
+    @SerializedName("Content")
     @Expose
-    private Float Confidence;
+    private String Content;
 
     /**
-    * logo图标坐标信息
+    * 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RrectF")
+    @SerializedName("InvalidCode")
     @Expose
-    private RrectF RrectF;
+    private Long InvalidCode;
 
     /**
-    * logo图标名称
+    * 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Name")
+    @SerializedName("InvalidMessage")
     @Expose
-    private String Name;
+    private String InvalidMessage;
 
     /**
-     * Get logo图标置信度
+     * Get 关键词
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Confidence logo图标置信度
+     * @return Content 关键词
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Float getConfidence() {
-        return this.Confidence;
+    public String getContent() {
+        return this.Content;
     }
 
     /**
-     * Set logo图标置信度
+     * Set 关键词
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Confidence logo图标置信度
+     * @param Content 关键词
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setConfidence(Float Confidence) {
-        this.Confidence = Confidence;
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
     /**
-     * Get logo图标坐标信息
+     * Get 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RrectF logo图标坐标信息
+     * @return InvalidCode 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public RrectF getRrectF() {
-        return this.RrectF;
+    public Long getInvalidCode() {
+        return this.InvalidCode;
     }
 
     /**
-     * Set logo图标坐标信息
+     * Set 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RrectF logo图标坐标信息
+     * @param InvalidCode 无效代码:1-标签不存在;2-词过长;3-词类型不匹配;4-备注超长
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRrectF(RrectF RrectF) {
-        this.RrectF = RrectF;
+    public void setInvalidCode(Long InvalidCode) {
+        this.InvalidCode = InvalidCode;
     }
 
     /**
-     * Get logo图标名称
+     * Get 无效描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name logo图标名称
+     * @return InvalidMessage 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getName() {
-        return this.Name;
+    public String getInvalidMessage() {
+        return this.InvalidMessage;
     }
 
     /**
-     * Set logo图标名称
+     * Set 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name logo图标名称
+     * @param InvalidMessage 无效描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setInvalidMessage(String InvalidMessage) {
+        this.InvalidMessage = InvalidMessage;
     }
 
-    public Logo() {
+    public InvalidSample() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Logo(Logo source) {
-        if (source.Confidence != null) {
-            this.Confidence = new Float(source.Confidence);
+    public InvalidSample(InvalidSample source) {
+        if (source.Content != null) {
+            this.Content = new String(source.Content);
         }
-        if (source.RrectF != null) {
-            this.RrectF = new RrectF(source.RrectF);
+        if (source.InvalidCode != null) {
+            this.InvalidCode = new Long(source.InvalidCode);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.InvalidMessage != null) {
+            this.InvalidMessage = new String(source.InvalidMessage);
         }
     }
 
@@ -130,9 +130,9 @@ public class Logo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
-        this.setParamObj(map, prefix + "RrectF.", this.RrectF);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "InvalidCode", this.InvalidCode);
+        this.setParamSimple(map, prefix + "InvalidMessage", this.InvalidMessage);
 
     }
 }

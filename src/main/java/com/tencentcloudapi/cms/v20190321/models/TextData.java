@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class TextData extends AbstractModel{
 
     /**
-    * 是否恶意 0：正常 1：可疑
-    */
-    @SerializedName("EvilFlag")
-    @Expose
-    private Long EvilFlag;
-
-    /**
     * 恶意类型
 100：正常
 20001：政治
@@ -44,32 +37,32 @@ public class TextData extends AbstractModel{
     private Long EvilType;
 
     /**
-    * 消息类公共相关参数
+    * 是否恶意 0：正常 1：可疑
     */
-    @SerializedName("Common")
+    @SerializedName("EvilFlag")
     @Expose
-    private TextOutputComm Common;
+    private Long EvilFlag;
 
     /**
-    * 返回的自定义词库结果
+    * 和请求中的DataId一致，原样返回
     */
-    @SerializedName("CustomResult")
+    @SerializedName("DataId")
     @Expose
-    private CustomResult [] CustomResult;
+    private String DataId;
 
     /**
-    * 返回的详细结果
+    * 输出的其他信息，不同客户内容不同
     */
-    @SerializedName("DetailResult")
+    @SerializedName("Extra")
     @Expose
-    private DetailResult [] DetailResult;
+    private String Extra;
 
     /**
-    * 消息类ID信息
+    * 最终使用的BizType
     */
-    @SerializedName("ID")
+    @SerializedName("BizType")
     @Expose
-    private TextOutputID ID;
+    private Long BizType;
 
     /**
     * 消息类输出结果
@@ -86,39 +79,11 @@ public class TextData extends AbstractModel{
     private RiskDetails [] RiskDetails;
 
     /**
-    * 最终使用的BizType
+    * 消息类ID信息
     */
-    @SerializedName("BizType")
+    @SerializedName("ID")
     @Expose
-    private Long BizType;
-
-    /**
-    * 和请求中的DataId一致，原样返回
-    */
-    @SerializedName("DataId")
-    @Expose
-    private String DataId;
-
-    /**
-    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-    */
-    @SerializedName("EvilLabel")
-    @Expose
-    private String EvilLabel;
-
-    /**
-    * 输出的其他信息，不同客户内容不同
-    */
-    @SerializedName("Extra")
-    @Expose
-    private String Extra;
-
-    /**
-    * 命中的关键词
-    */
-    @SerializedName("Keywords")
-    @Expose
-    private String [] Keywords;
+    private TextOutputID ID;
 
     /**
     * 命中的模型分值
@@ -128,6 +93,13 @@ public class TextData extends AbstractModel{
     private Long Score;
 
     /**
+    * 消息类公共相关参数
+    */
+    @SerializedName("Common")
+    @Expose
+    private TextOutputComm Common;
+
+    /**
     * 建议值,Block：打击,Review：待复审,Normal：正常
     */
     @SerializedName("Suggestion")
@@ -135,20 +107,32 @@ public class TextData extends AbstractModel{
     private String Suggestion;
 
     /**
-     * Get 是否恶意 0：正常 1：可疑 
-     * @return EvilFlag 是否恶意 0：正常 1：可疑
-     */
-    public Long getEvilFlag() {
-        return this.EvilFlag;
-    }
+    * 命中的关键词
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
 
     /**
-     * Set 是否恶意 0：正常 1：可疑
-     * @param EvilFlag 是否恶意 0：正常 1：可疑
-     */
-    public void setEvilFlag(Long EvilFlag) {
-        this.EvilFlag = EvilFlag;
-    }
+    * 返回的详细结果
+    */
+    @SerializedName("DetailResult")
+    @Expose
+    private DetailResult [] DetailResult;
+
+    /**
+    * 返回的自定义词库结果
+    */
+    @SerializedName("CustomResult")
+    @Expose
+    private CustomResult [] CustomResult;
+
+    /**
+    * 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+    */
+    @SerializedName("EvilLabel")
+    @Expose
+    private String EvilLabel;
 
     /**
      * Get 恶意类型
@@ -195,67 +179,67 @@ public class TextData extends AbstractModel{
     }
 
     /**
-     * Get 消息类公共相关参数 
-     * @return Common 消息类公共相关参数
+     * Get 是否恶意 0：正常 1：可疑 
+     * @return EvilFlag 是否恶意 0：正常 1：可疑
      */
-    public TextOutputComm getCommon() {
-        return this.Common;
+    public Long getEvilFlag() {
+        return this.EvilFlag;
     }
 
     /**
-     * Set 消息类公共相关参数
-     * @param Common 消息类公共相关参数
+     * Set 是否恶意 0：正常 1：可疑
+     * @param EvilFlag 是否恶意 0：正常 1：可疑
      */
-    public void setCommon(TextOutputComm Common) {
-        this.Common = Common;
+    public void setEvilFlag(Long EvilFlag) {
+        this.EvilFlag = EvilFlag;
     }
 
     /**
-     * Get 返回的自定义词库结果 
-     * @return CustomResult 返回的自定义词库结果
+     * Get 和请求中的DataId一致，原样返回 
+     * @return DataId 和请求中的DataId一致，原样返回
      */
-    public CustomResult [] getCustomResult() {
-        return this.CustomResult;
+    public String getDataId() {
+        return this.DataId;
     }
 
     /**
-     * Set 返回的自定义词库结果
-     * @param CustomResult 返回的自定义词库结果
+     * Set 和请求中的DataId一致，原样返回
+     * @param DataId 和请求中的DataId一致，原样返回
      */
-    public void setCustomResult(CustomResult [] CustomResult) {
-        this.CustomResult = CustomResult;
+    public void setDataId(String DataId) {
+        this.DataId = DataId;
     }
 
     /**
-     * Get 返回的详细结果 
-     * @return DetailResult 返回的详细结果
+     * Get 输出的其他信息，不同客户内容不同 
+     * @return Extra 输出的其他信息，不同客户内容不同
      */
-    public DetailResult [] getDetailResult() {
-        return this.DetailResult;
+    public String getExtra() {
+        return this.Extra;
     }
 
     /**
-     * Set 返回的详细结果
-     * @param DetailResult 返回的详细结果
+     * Set 输出的其他信息，不同客户内容不同
+     * @param Extra 输出的其他信息，不同客户内容不同
      */
-    public void setDetailResult(DetailResult [] DetailResult) {
-        this.DetailResult = DetailResult;
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
     }
 
     /**
-     * Get 消息类ID信息 
-     * @return ID 消息类ID信息
+     * Get 最终使用的BizType 
+     * @return BizType 最终使用的BizType
      */
-    public TextOutputID getID() {
-        return this.ID;
+    public Long getBizType() {
+        return this.BizType;
     }
 
     /**
-     * Set 消息类ID信息
-     * @param ID 消息类ID信息
+     * Set 最终使用的BizType
+     * @param BizType 最终使用的BizType
      */
-    public void setID(TextOutputID ID) {
-        this.ID = ID;
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
     }
 
     /**
@@ -291,83 +275,19 @@ public class TextData extends AbstractModel{
     }
 
     /**
-     * Get 最终使用的BizType 
-     * @return BizType 最终使用的BizType
+     * Get 消息类ID信息 
+     * @return ID 消息类ID信息
      */
-    public Long getBizType() {
-        return this.BizType;
+    public TextOutputID getID() {
+        return this.ID;
     }
 
     /**
-     * Set 最终使用的BizType
-     * @param BizType 最终使用的BizType
+     * Set 消息类ID信息
+     * @param ID 消息类ID信息
      */
-    public void setBizType(Long BizType) {
-        this.BizType = BizType;
-    }
-
-    /**
-     * Get 和请求中的DataId一致，原样返回 
-     * @return DataId 和请求中的DataId一致，原样返回
-     */
-    public String getDataId() {
-        return this.DataId;
-    }
-
-    /**
-     * Set 和请求中的DataId一致，原样返回
-     * @param DataId 和请求中的DataId一致，原样返回
-     */
-    public void setDataId(String DataId) {
-        this.DataId = DataId;
-    }
-
-    /**
-     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
-     * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     */
-    public String getEvilLabel() {
-        return this.EvilLabel;
-    }
-
-    /**
-     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     * @param EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
-     */
-    public void setEvilLabel(String EvilLabel) {
-        this.EvilLabel = EvilLabel;
-    }
-
-    /**
-     * Get 输出的其他信息，不同客户内容不同 
-     * @return Extra 输出的其他信息，不同客户内容不同
-     */
-    public String getExtra() {
-        return this.Extra;
-    }
-
-    /**
-     * Set 输出的其他信息，不同客户内容不同
-     * @param Extra 输出的其他信息，不同客户内容不同
-     */
-    public void setExtra(String Extra) {
-        this.Extra = Extra;
-    }
-
-    /**
-     * Get 命中的关键词 
-     * @return Keywords 命中的关键词
-     */
-    public String [] getKeywords() {
-        return this.Keywords;
-    }
-
-    /**
-     * Set 命中的关键词
-     * @param Keywords 命中的关键词
-     */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
+    public void setID(TextOutputID ID) {
+        this.ID = ID;
     }
 
     /**
@@ -387,6 +307,22 @@ public class TextData extends AbstractModel{
     }
 
     /**
+     * Get 消息类公共相关参数 
+     * @return Common 消息类公共相关参数
+     */
+    public TextOutputComm getCommon() {
+        return this.Common;
+    }
+
+    /**
+     * Set 消息类公共相关参数
+     * @param Common 消息类公共相关参数
+     */
+    public void setCommon(TextOutputComm Common) {
+        this.Common = Common;
+    }
+
+    /**
      * Get 建议值,Block：打击,Review：待复审,Normal：正常 
      * @return Suggestion 建议值,Block：打击,Review：待复审,Normal：正常
      */
@@ -402,6 +338,70 @@ public class TextData extends AbstractModel{
         this.Suggestion = Suggestion;
     }
 
+    /**
+     * Get 命中的关键词 
+     * @return Keywords 命中的关键词
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 命中的关键词
+     * @param Keywords 命中的关键词
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
+
+    /**
+     * Get 返回的详细结果 
+     * @return DetailResult 返回的详细结果
+     */
+    public DetailResult [] getDetailResult() {
+        return this.DetailResult;
+    }
+
+    /**
+     * Set 返回的详细结果
+     * @param DetailResult 返回的详细结果
+     */
+    public void setDetailResult(DetailResult [] DetailResult) {
+        this.DetailResult = DetailResult;
+    }
+
+    /**
+     * Get 返回的自定义词库结果 
+     * @return CustomResult 返回的自定义词库结果
+     */
+    public CustomResult [] getCustomResult() {
+        return this.CustomResult;
+    }
+
+    /**
+     * Set 返回的自定义词库结果
+     * @param CustomResult 返回的自定义词库结果
+     */
+    public void setCustomResult(CustomResult [] CustomResult) {
+        this.CustomResult = CustomResult;
+    }
+
+    /**
+     * Get 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词 
+     * @return EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public String getEvilLabel() {
+        return this.EvilLabel;
+    }
+
+    /**
+     * Set 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     * @param EvilLabel 恶意标签，Normal：正常，Polity：涉政，Porn：色情，Illegal：违法，Abuse：谩骂，Terror：暴恐，Ad：广告，Custom：自定义关键词
+     */
+    public void setEvilLabel(String EvilLabel) {
+        this.EvilLabel = EvilLabel;
+    }
+
     public TextData() {
     }
 
@@ -410,29 +410,20 @@ public class TextData extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TextData(TextData source) {
-        if (source.EvilFlag != null) {
-            this.EvilFlag = new Long(source.EvilFlag);
-        }
         if (source.EvilType != null) {
             this.EvilType = new Long(source.EvilType);
         }
-        if (source.Common != null) {
-            this.Common = new TextOutputComm(source.Common);
+        if (source.EvilFlag != null) {
+            this.EvilFlag = new Long(source.EvilFlag);
         }
-        if (source.CustomResult != null) {
-            this.CustomResult = new CustomResult[source.CustomResult.length];
-            for (int i = 0; i < source.CustomResult.length; i++) {
-                this.CustomResult[i] = new CustomResult(source.CustomResult[i]);
-            }
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
         }
-        if (source.DetailResult != null) {
-            this.DetailResult = new DetailResult[source.DetailResult.length];
-            for (int i = 0; i < source.DetailResult.length; i++) {
-                this.DetailResult[i] = new DetailResult(source.DetailResult[i]);
-            }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
         }
-        if (source.ID != null) {
-            this.ID = new TextOutputID(source.ID);
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
         }
         if (source.Res != null) {
             this.Res = new TextOutputRes(source.Res);
@@ -443,17 +434,17 @@ public class TextData extends AbstractModel{
                 this.RiskDetails[i] = new RiskDetails(source.RiskDetails[i]);
             }
         }
-        if (source.BizType != null) {
-            this.BizType = new Long(source.BizType);
+        if (source.ID != null) {
+            this.ID = new TextOutputID(source.ID);
         }
-        if (source.DataId != null) {
-            this.DataId = new String(source.DataId);
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
         }
-        if (source.EvilLabel != null) {
-            this.EvilLabel = new String(source.EvilLabel);
+        if (source.Common != null) {
+            this.Common = new TextOutputComm(source.Common);
         }
-        if (source.Extra != null) {
-            this.Extra = new String(source.Extra);
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
         }
         if (source.Keywords != null) {
             this.Keywords = new String[source.Keywords.length];
@@ -461,11 +452,20 @@ public class TextData extends AbstractModel{
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
         }
-        if (source.Score != null) {
-            this.Score = new Long(source.Score);
+        if (source.DetailResult != null) {
+            this.DetailResult = new DetailResult[source.DetailResult.length];
+            for (int i = 0; i < source.DetailResult.length; i++) {
+                this.DetailResult[i] = new DetailResult(source.DetailResult[i]);
+            }
         }
-        if (source.Suggestion != null) {
-            this.Suggestion = new String(source.Suggestion);
+        if (source.CustomResult != null) {
+            this.CustomResult = new CustomResult[source.CustomResult.length];
+            for (int i = 0; i < source.CustomResult.length; i++) {
+                this.CustomResult[i] = new CustomResult(source.CustomResult[i]);
+            }
+        }
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
         }
     }
 
@@ -474,21 +474,21 @@ public class TextData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamObj(map, prefix + "Common.", this.Common);
-        this.setParamArrayObj(map, prefix + "CustomResult.", this.CustomResult);
-        this.setParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
-        this.setParamObj(map, prefix + "ID.", this.ID);
+        this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
+        this.setParamSimple(map, prefix + "DataId", this.DataId);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamObj(map, prefix + "Res.", this.Res);
         this.setParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
-        this.setParamSimple(map, prefix + "BizType", this.BizType);
-        this.setParamSimple(map, prefix + "DataId", this.DataId);
-        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
-        this.setParamSimple(map, prefix + "Extra", this.Extra);
-        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamObj(map, prefix + "ID.", this.ID);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamObj(map, prefix + "Common.", this.Common);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamArrayObj(map, prefix + "DetailResult.", this.DetailResult);
+        this.setParamArrayObj(map, prefix + "CustomResult.", this.CustomResult);
+        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
 
     }
 }

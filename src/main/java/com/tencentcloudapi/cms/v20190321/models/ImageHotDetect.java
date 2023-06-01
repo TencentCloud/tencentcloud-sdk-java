@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class ImageHotDetect extends AbstractModel{
 
     /**
+    * 关键词明细
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
     * 恶意类型
 100：正常
 20103：性感
@@ -30,20 +37,6 @@ public class ImageHotDetect extends AbstractModel{
     @SerializedName("EvilType")
     @Expose
     private Long EvilType;
-
-    /**
-    * 处置判定 0：正常 1：可疑
-    */
-    @SerializedName("HitFlag")
-    @Expose
-    private Long HitFlag;
-
-    /**
-    * 关键词明细
-    */
-    @SerializedName("Keywords")
-    @Expose
-    private String [] Keywords;
 
     /**
     * 性感标签：性感特征中文描述
@@ -58,6 +51,29 @@ public class ImageHotDetect extends AbstractModel{
     @SerializedName("Score")
     @Expose
     private Long Score;
+
+    /**
+    * 处置判定 0：正常 1：可疑
+    */
+    @SerializedName("HitFlag")
+    @Expose
+    private Long HitFlag;
+
+    /**
+     * Get 关键词明细 
+     * @return Keywords 关键词明细
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 关键词明细
+     * @param Keywords 关键词明细
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
+    }
 
     /**
      * Get 恶意类型
@@ -81,38 +97,6 @@ public class ImageHotDetect extends AbstractModel{
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
-    }
-
-    /**
-     * Get 处置判定 0：正常 1：可疑 
-     * @return HitFlag 处置判定 0：正常 1：可疑
-     */
-    public Long getHitFlag() {
-        return this.HitFlag;
-    }
-
-    /**
-     * Set 处置判定 0：正常 1：可疑
-     * @param HitFlag 处置判定 0：正常 1：可疑
-     */
-    public void setHitFlag(Long HitFlag) {
-        this.HitFlag = HitFlag;
-    }
-
-    /**
-     * Get 关键词明细 
-     * @return Keywords 关键词明细
-     */
-    public String [] getKeywords() {
-        return this.Keywords;
-    }
-
-    /**
-     * Set 关键词明细
-     * @param Keywords 关键词明细
-     */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
     }
 
     /**
@@ -147,6 +131,22 @@ public class ImageHotDetect extends AbstractModel{
         this.Score = Score;
     }
 
+    /**
+     * Get 处置判定 0：正常 1：可疑 
+     * @return HitFlag 处置判定 0：正常 1：可疑
+     */
+    public Long getHitFlag() {
+        return this.HitFlag;
+    }
+
+    /**
+     * Set 处置判定 0：正常 1：可疑
+     * @param HitFlag 处置判定 0：正常 1：可疑
+     */
+    public void setHitFlag(Long HitFlag) {
+        this.HitFlag = HitFlag;
+    }
+
     public ImageHotDetect() {
     }
 
@@ -155,17 +155,14 @@ public class ImageHotDetect extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageHotDetect(ImageHotDetect source) {
-        if (source.EvilType != null) {
-            this.EvilType = new Long(source.EvilType);
-        }
-        if (source.HitFlag != null) {
-            this.HitFlag = new Long(source.HitFlag);
-        }
         if (source.Keywords != null) {
             this.Keywords = new String[source.Keywords.length];
             for (int i = 0; i < source.Keywords.length; i++) {
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
+        }
+        if (source.EvilType != null) {
+            this.EvilType = new Long(source.EvilType);
         }
         if (source.Labels != null) {
             this.Labels = new String[source.Labels.length];
@@ -176,6 +173,9 @@ public class ImageHotDetect extends AbstractModel{
         if (source.Score != null) {
             this.Score = new Long(source.Score);
         }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
     }
 
 
@@ -183,11 +183,11 @@ public class ImageHotDetect extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamSimple(map, prefix + "EvilType", this.EvilType);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "Score", this.Score);
+        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
 
     }
 }

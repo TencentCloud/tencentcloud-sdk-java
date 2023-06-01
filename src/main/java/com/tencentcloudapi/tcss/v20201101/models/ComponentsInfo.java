@@ -75,7 +75,9 @@ public class ComponentsInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Component 组件名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getComponent() {
         return this.Component;
     }
@@ -85,7 +87,9 @@ public class ComponentsInfo extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Component 组件名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setComponent(String Component) {
         this.Component = Component;
     }

@@ -266,7 +266,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Get 触发器最小资源ID 
      * @return ResourceId 触发器最小资源ID
+     * @deprecated
      */
+    @Deprecated
     public String getResourceId() {
         return this.ResourceId;
     }
@@ -274,7 +276,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Set 触发器最小资源ID
      * @param ResourceId 触发器最小资源ID
+     * @deprecated
      */
+    @Deprecated
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
@@ -282,7 +286,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Get 触发器和云函数绑定状态 
      * @return BindStatus 触发器和云函数绑定状态
+     * @deprecated
      */
+    @Deprecated
     public String getBindStatus() {
         return this.BindStatus;
     }
@@ -290,7 +296,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Set 触发器和云函数绑定状态
      * @param BindStatus 触发器和云函数绑定状态
+     * @deprecated
      */
+    @Deprecated
     public void setBindStatus(String BindStatus) {
         this.BindStatus = BindStatus;
     }
@@ -298,7 +306,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Get 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建 
      * @return TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     * @deprecated
      */
+    @Deprecated
     public String getTriggerAttribute() {
         return this.TriggerAttribute;
     }
@@ -306,7 +316,9 @@ public class TriggerInfo extends AbstractModel{
     /**
      * Set 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
      * @param TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
+     * @deprecated
      */
+    @Deprecated
     public void setTriggerAttribute(String TriggerAttribute) {
         this.TriggerAttribute = TriggerAttribute;
     }

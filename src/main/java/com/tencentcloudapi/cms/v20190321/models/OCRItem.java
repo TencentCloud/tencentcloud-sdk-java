@@ -24,49 +24,57 @@ public class OCRItem extends AbstractModel{
 
     /**
     * 检测到的文本坐标信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextPosition")
     @Expose
     private Coordinate TextPosition;
 
     /**
-    * 文本命中具体标签
-    */
-    @SerializedName("EvilLabel")
-    @Expose
-    private String EvilLabel;
-
-    /**
     * 文本命中恶意违规类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvilType")
     @Expose
     private Long EvilType;
 
     /**
-    * 文本命中违规的关键词
-    */
-    @SerializedName("Keywords")
-    @Expose
-    private String [] Keywords;
-
-    /**
-    * 文本涉嫌违规分值
-    */
-    @SerializedName("Rate")
-    @Expose
-    private Long Rate;
-
-    /**
     * 检测到的文本信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextContent")
     @Expose
     private String TextContent;
 
     /**
-     * Get 检测到的文本坐标信息 
+    * 文本涉嫌违规分值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rate")
+    @Expose
+    private Long Rate;
+
+    /**
+    * 文本命中具体标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EvilLabel")
+    @Expose
+    private String EvilLabel;
+
+    /**
+    * 文本命中违规的关键词
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
+
+    /**
+     * Get 检测到的文本坐标信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextPosition 检测到的文本坐标信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coordinate getTextPosition() {
         return this.TextPosition;
@@ -74,31 +82,19 @@ public class OCRItem extends AbstractModel{
 
     /**
      * Set 检测到的文本坐标信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TextPosition 检测到的文本坐标信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextPosition(Coordinate TextPosition) {
         this.TextPosition = TextPosition;
     }
 
     /**
-     * Get 文本命中具体标签 
-     * @return EvilLabel 文本命中具体标签
-     */
-    public String getEvilLabel() {
-        return this.EvilLabel;
-    }
-
-    /**
-     * Set 文本命中具体标签
-     * @param EvilLabel 文本命中具体标签
-     */
-    public void setEvilLabel(String EvilLabel) {
-        this.EvilLabel = EvilLabel;
-    }
-
-    /**
-     * Get 文本命中恶意违规类型 
+     * Get 文本命中恶意违规类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EvilType 文本命中恶意违规类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEvilType() {
         return this.EvilType;
@@ -106,47 +102,19 @@ public class OCRItem extends AbstractModel{
 
     /**
      * Set 文本命中恶意违规类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EvilType 文本命中恶意违规类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvilType(Long EvilType) {
         this.EvilType = EvilType;
     }
 
     /**
-     * Get 文本命中违规的关键词 
-     * @return Keywords 文本命中违规的关键词
-     */
-    public String [] getKeywords() {
-        return this.Keywords;
-    }
-
-    /**
-     * Set 文本命中违规的关键词
-     * @param Keywords 文本命中违规的关键词
-     */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
-    }
-
-    /**
-     * Get 文本涉嫌违规分值 
-     * @return Rate 文本涉嫌违规分值
-     */
-    public Long getRate() {
-        return this.Rate;
-    }
-
-    /**
-     * Set 文本涉嫌违规分值
-     * @param Rate 文本涉嫌违规分值
-     */
-    public void setRate(Long Rate) {
-        this.Rate = Rate;
-    }
-
-    /**
-     * Get 检测到的文本信息 
+     * Get 检测到的文本信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextContent 检测到的文本信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextContent() {
         return this.TextContent;
@@ -154,10 +122,72 @@ public class OCRItem extends AbstractModel{
 
     /**
      * Set 检测到的文本信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TextContent 检测到的文本信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
+    }
+
+    /**
+     * Get 文本涉嫌违规分值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rate 文本涉嫌违规分值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRate() {
+        return this.Rate;
+    }
+
+    /**
+     * Set 文本涉嫌违规分值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rate 文本涉嫌违规分值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRate(Long Rate) {
+        this.Rate = Rate;
+    }
+
+    /**
+     * Get 文本命中具体标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EvilLabel 文本命中具体标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEvilLabel() {
+        return this.EvilLabel;
+    }
+
+    /**
+     * Set 文本命中具体标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EvilLabel 文本命中具体标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEvilLabel(String EvilLabel) {
+        this.EvilLabel = EvilLabel;
+    }
+
+    /**
+     * Get 文本命中违规的关键词
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Keywords 文本命中违规的关键词
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 文本命中违规的关键词
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Keywords 文本命中违规的关键词
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     public OCRItem() {
@@ -171,23 +201,23 @@ public class OCRItem extends AbstractModel{
         if (source.TextPosition != null) {
             this.TextPosition = new Coordinate(source.TextPosition);
         }
-        if (source.EvilLabel != null) {
-            this.EvilLabel = new String(source.EvilLabel);
-        }
         if (source.EvilType != null) {
             this.EvilType = new Long(source.EvilType);
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long(source.Rate);
+        }
+        if (source.EvilLabel != null) {
+            this.EvilLabel = new String(source.EvilLabel);
         }
         if (source.Keywords != null) {
             this.Keywords = new String[source.Keywords.length];
             for (int i = 0; i < source.Keywords.length; i++) {
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
-        }
-        if (source.Rate != null) {
-            this.Rate = new Long(source.Rate);
-        }
-        if (source.TextContent != null) {
-            this.TextContent = new String(source.TextContent);
         }
     }
 
@@ -197,11 +227,11 @@ public class OCRItem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TextPosition.", this.TextPosition);
-        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-        this.setParamSimple(map, prefix + "Rate", this.Rate);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
+        this.setParamSimple(map, prefix + "Rate", this.Rate);
+        this.setParamSimple(map, prefix + "EvilLabel", this.EvilLabel);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
 
     }
 }

@@ -24,6 +24,7 @@ public class CodePosition extends AbstractModel{
 
     /**
     * 二维码边界点X轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FloatX")
     @Expose
@@ -31,14 +32,17 @@ public class CodePosition extends AbstractModel{
 
     /**
     * 二维码边界点Y轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FloatY")
     @Expose
     private Float FloatY;
 
     /**
-     * Get 二维码边界点X轴坐标 
+     * Get 二维码边界点X轴坐标
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FloatX 二维码边界点X轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFloatX() {
         return this.FloatX;
@@ -46,15 +50,19 @@ public class CodePosition extends AbstractModel{
 
     /**
      * Set 二维码边界点X轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FloatX 二维码边界点X轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFloatX(Float FloatX) {
         this.FloatX = FloatX;
     }
 
     /**
-     * Get 二维码边界点Y轴坐标 
+     * Get 二维码边界点Y轴坐标
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FloatY 二维码边界点Y轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFloatY() {
         return this.FloatY;
@@ -62,7 +70,9 @@ public class CodePosition extends AbstractModel{
 
     /**
      * Set 二维码边界点Y轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FloatY 二维码边界点Y轴坐标
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFloatY(Float FloatY) {
         this.FloatY = FloatY;

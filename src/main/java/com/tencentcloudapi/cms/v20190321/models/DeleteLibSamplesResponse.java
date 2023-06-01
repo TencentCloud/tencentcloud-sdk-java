@@ -20,16 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteFileSampleResponse extends AbstractModel{
+public class DeleteLibSamplesResponse extends AbstractModel{
 
     /**
-    * 任务状态
-1：已完成
-2：处理中
+    * 删除成功的数量
     */
-    @SerializedName("Progress")
+    @SerializedName("Count")
     @Expose
-    private Long Progress;
+    private Long Count;
+
+    /**
+    * 每个关键词删除的结果
+    */
+    @SerializedName("Details")
+    @Expose
+    private DeleteSampleDetails [] Details;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -39,27 +44,35 @@ public class DeleteFileSampleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务状态
-1：已完成
-2：处理中 
-     * @return Progress 任务状态
-1：已完成
-2：处理中
+     * Get 删除成功的数量 
+     * @return Count 删除成功的数量
      */
-    public Long getProgress() {
-        return this.Progress;
+    public Long getCount() {
+        return this.Count;
     }
 
     /**
-     * Set 任务状态
-1：已完成
-2：处理中
-     * @param Progress 任务状态
-1：已完成
-2：处理中
+     * Set 删除成功的数量
+     * @param Count 删除成功的数量
      */
-    public void setProgress(Long Progress) {
-        this.Progress = Progress;
+    public void setCount(Long Count) {
+        this.Count = Count;
+    }
+
+    /**
+     * Get 每个关键词删除的结果 
+     * @return Details 每个关键词删除的结果
+     */
+    public DeleteSampleDetails [] getDetails() {
+        return this.Details;
+    }
+
+    /**
+     * Set 每个关键词删除的结果
+     * @param Details 每个关键词删除的结果
+     */
+    public void setDetails(DeleteSampleDetails [] Details) {
+        this.Details = Details;
     }
 
     /**
@@ -78,16 +91,22 @@ public class DeleteFileSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteFileSampleResponse() {
+    public DeleteLibSamplesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteFileSampleResponse(DeleteFileSampleResponse source) {
-        if (source.Progress != null) {
-            this.Progress = new Long(source.Progress);
+    public DeleteLibSamplesResponse(DeleteLibSamplesResponse source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
+        }
+        if (source.Details != null) {
+            this.Details = new DeleteSampleDetails[source.Details.length];
+            for (int i = 0; i < source.Details.length; i++) {
+                this.Details[i] = new DeleteSampleDetails(source.Details[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -99,7 +118,8 @@ public class DeleteFileSampleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamArrayObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

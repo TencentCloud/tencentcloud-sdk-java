@@ -20,21 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFileSampleResponse extends AbstractModel{
+public class DescribeKeywordsLibsResponse extends AbstractModel{
 
     /**
-    * 符合要求的样本的信息
-    */
-    @SerializedName("FileSampleSet")
-    @Expose
-    private FileSampleInfo [] FileSampleSet;
-
-    /**
-    * 符合要求的样本的数量
+    * 词库记录数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 词库详情
+    */
+    @SerializedName("Infos")
+    @Expose
+    private KeywordsLibInfo [] Infos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeFileSampleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合要求的样本的信息 
-     * @return FileSampleSet 符合要求的样本的信息
-     */
-    public FileSampleInfo [] getFileSampleSet() {
-        return this.FileSampleSet;
-    }
-
-    /**
-     * Set 符合要求的样本的信息
-     * @param FileSampleSet 符合要求的样本的信息
-     */
-    public void setFileSampleSet(FileSampleInfo [] FileSampleSet) {
-        this.FileSampleSet = FileSampleSet;
-    }
-
-    /**
-     * Get 符合要求的样本的数量 
-     * @return TotalCount 符合要求的样本的数量
+     * Get 词库记录数 
+     * @return TotalCount 词库记录数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合要求的样本的数量
-     * @param TotalCount 符合要求的样本的数量
+     * Set 词库记录数
+     * @param TotalCount 词库记录数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 词库详情 
+     * @return Infos 词库详情
+     */
+    public KeywordsLibInfo [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set 词库详情
+     * @param Infos 词库详情
+     */
+    public void setInfos(KeywordsLibInfo [] Infos) {
+        this.Infos = Infos;
     }
 
     /**
@@ -91,22 +91,22 @@ public class DescribeFileSampleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFileSampleResponse() {
+    public DescribeKeywordsLibsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFileSampleResponse(DescribeFileSampleResponse source) {
-        if (source.FileSampleSet != null) {
-            this.FileSampleSet = new FileSampleInfo[source.FileSampleSet.length];
-            for (int i = 0; i < source.FileSampleSet.length; i++) {
-                this.FileSampleSet[i] = new FileSampleInfo(source.FileSampleSet[i]);
-            }
-        }
+    public DescribeKeywordsLibsResponse(DescribeKeywordsLibsResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Infos != null) {
+            this.Infos = new KeywordsLibInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new KeywordsLibInfo(source.Infos[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +118,8 @@ public class DescribeFileSampleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "FileSampleSet.", this.FileSampleSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

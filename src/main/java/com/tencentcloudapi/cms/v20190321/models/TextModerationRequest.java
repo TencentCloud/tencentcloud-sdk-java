@@ -30,18 +30,11 @@ public class TextModerationRequest extends AbstractModel{
     private String Content;
 
     /**
-    * 设备相关信息
+    * 数据ID，英文字母、下划线、-组成，不超过64个字符
     */
-    @SerializedName("Device")
+    @SerializedName("DataId")
     @Expose
-    private Device Device;
-
-    /**
-    * 用户相关信息
-    */
-    @SerializedName("User")
-    @Expose
-    private User User;
+    private String DataId;
 
     /**
     * 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
@@ -51,11 +44,11 @@ public class TextModerationRequest extends AbstractModel{
     private Long BizType;
 
     /**
-    * 数据ID，英文字母、下划线、-组成，不超过64个字符
+    * 用户相关信息
     */
-    @SerializedName("DataId")
+    @SerializedName("User")
     @Expose
-    private String DataId;
+    private User User;
 
     /**
     * 业务应用ID
@@ -63,6 +56,13 @@ public class TextModerationRequest extends AbstractModel{
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
+
+    /**
+    * 设备相关信息
+    */
+    @SerializedName("Device")
+    @Expose
+    private Device Device;
 
     /**
      * Get 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。 
@@ -78,54 +78,6 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void setContent(String Content) {
         this.Content = Content;
-    }
-
-    /**
-     * Get 设备相关信息 
-     * @return Device 设备相关信息
-     */
-    public Device getDevice() {
-        return this.Device;
-    }
-
-    /**
-     * Set 设备相关信息
-     * @param Device 设备相关信息
-     */
-    public void setDevice(Device Device) {
-        this.Device = Device;
-    }
-
-    /**
-     * Get 用户相关信息 
-     * @return User 用户相关信息
-     */
-    public User getUser() {
-        return this.User;
-    }
-
-    /**
-     * Set 用户相关信息
-     * @param User 用户相关信息
-     */
-    public void setUser(User User) {
-        this.User = User;
-    }
-
-    /**
-     * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略 
-     * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
-     */
-    public Long getBizType() {
-        return this.BizType;
-    }
-
-    /**
-     * Set 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
-     * @param BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
-     */
-    public void setBizType(Long BizType) {
-        this.BizType = BizType;
     }
 
     /**
@@ -145,6 +97,38 @@ public class TextModerationRequest extends AbstractModel{
     }
 
     /**
+     * Get 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略 
+     * @return BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     * @param BizType 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
+    /**
+     * Get 用户相关信息 
+     * @return User 用户相关信息
+     */
+    public User getUser() {
+        return this.User;
+    }
+
+    /**
+     * Set 用户相关信息
+     * @param User 用户相关信息
+     */
+    public void setUser(User User) {
+        this.User = User;
+    }
+
+    /**
      * Get 业务应用ID 
      * @return SdkAppId 业务应用ID
      */
@@ -160,6 +144,22 @@ public class TextModerationRequest extends AbstractModel{
         this.SdkAppId = SdkAppId;
     }
 
+    /**
+     * Get 设备相关信息 
+     * @return Device 设备相关信息
+     */
+    public Device getDevice() {
+        return this.Device;
+    }
+
+    /**
+     * Set 设备相关信息
+     * @param Device 设备相关信息
+     */
+    public void setDevice(Device Device) {
+        this.Device = Device;
+    }
+
     public TextModerationRequest() {
     }
 
@@ -171,20 +171,20 @@ public class TextModerationRequest extends AbstractModel{
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
-        if (source.Device != null) {
-            this.Device = new Device(source.Device);
-        }
-        if (source.User != null) {
-            this.User = new User(source.User);
+        if (source.DataId != null) {
+            this.DataId = new String(source.DataId);
         }
         if (source.BizType != null) {
             this.BizType = new Long(source.BizType);
         }
-        if (source.DataId != null) {
-            this.DataId = new String(source.DataId);
+        if (source.User != null) {
+            this.User = new User(source.User);
         }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Device != null) {
+            this.Device = new Device(source.Device);
         }
     }
 
@@ -194,11 +194,11 @@ public class TextModerationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Content", this.Content);
-        this.setParamObj(map, prefix + "Device.", this.Device);
-        this.setParamObj(map, prefix + "User.", this.User);
-        this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "DataId", this.DataId);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
+        this.setParamObj(map, prefix + "User.", this.User);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamObj(map, prefix + "Device.", this.Device);
 
     }
 }

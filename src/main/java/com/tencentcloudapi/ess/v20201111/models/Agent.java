@@ -53,7 +53,9 @@ public class Agent extends AbstractModel{
     /**
      * Get 代理机构的应用编号,32位字符串，一般不用传 
      * @return AppId 代理机构的应用编号,32位字符串，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public String getAppId() {
         return this.AppId;
     }
@@ -61,7 +63,9 @@ public class Agent extends AbstractModel{
     /**
      * Set 代理机构的应用编号,32位字符串，一般不用传
      * @param AppId 代理机构的应用编号,32位字符串，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
@@ -69,7 +73,9 @@ public class Agent extends AbstractModel{
     /**
      * Get 被代理机构的应用号，一般不用传 
      * @return ProxyAppId 被代理机构的应用号，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public String getProxyAppId() {
         return this.ProxyAppId;
     }
@@ -77,7 +83,9 @@ public class Agent extends AbstractModel{
     /**
      * Set 被代理机构的应用号，一般不用传
      * @param ProxyAppId 被代理机构的应用号，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public void setProxyAppId(String ProxyAppId) {
         this.ProxyAppId = ProxyAppId;
     }
@@ -101,7 +109,9 @@ public class Agent extends AbstractModel{
     /**
      * Get 被代理机构的经办人，一般不用传 
      * @return ProxyOperator 被代理机构的经办人，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public String getProxyOperator() {
         return this.ProxyOperator;
     }
@@ -109,7 +119,9 @@ public class Agent extends AbstractModel{
     /**
      * Set 被代理机构的经办人，一般不用传
      * @param ProxyOperator 被代理机构的经办人，一般不用传
+     * @deprecated
      */
+    @Deprecated
     public void setProxyOperator(String ProxyOperator) {
         this.ProxyOperator = ProxyOperator;
     }

@@ -44,6 +44,20 @@ public class DescribeBinlogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+    */
+    @SerializedName("MinStartTime")
+    @Expose
+    private String MinStartTime;
+
+    /**
+    * binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+    */
+    @SerializedName("MaxStartTime")
+    @Expose
+    private String MaxStartTime;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -91,6 +105,38 @@ public class DescribeBinlogsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37 
+     * @return MinStartTime binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public String getMinStartTime() {
+        return this.MinStartTime;
+    }
+
+    /**
+     * Set binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     * @param MinStartTime binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public void setMinStartTime(String MinStartTime) {
+        this.MinStartTime = MinStartTime;
+    }
+
+    /**
+     * Get binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37 
+     * @return MaxStartTime binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public String getMaxStartTime() {
+        return this.MaxStartTime;
+    }
+
+    /**
+     * Set binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     * @param MaxStartTime binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     */
+    public void setMaxStartTime(String MaxStartTime) {
+        this.MaxStartTime = MaxStartTime;
+    }
+
     public DescribeBinlogsRequest() {
     }
 
@@ -108,6 +154,12 @@ public class DescribeBinlogsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.MinStartTime != null) {
+            this.MinStartTime = new String(source.MinStartTime);
+        }
+        if (source.MaxStartTime != null) {
+            this.MaxStartTime = new String(source.MaxStartTime);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class DescribeBinlogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "MinStartTime", this.MinStartTime);
+        this.setParamSimple(map, prefix + "MaxStartTime", this.MaxStartTime);
 
     }
 }

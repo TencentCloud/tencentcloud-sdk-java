@@ -300,7 +300,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Get 腾讯云项目 ID，废弃参数，填写0即可。 
      * @return ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
+     * @deprecated
      */
+    @Deprecated
     public Long getProjectId() {
         return this.ProjectId;
     }
@@ -308,7 +310,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Set 腾讯云项目 ID，废弃参数，填写0即可。
      * @param ProjectId 腾讯云项目 ID，废弃参数，填写0即可。
+     * @deprecated
      */
+    @Deprecated
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
@@ -316,7 +320,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Get 子服务类型。2： 一句话识别。 
      * @return SubServiceType 子服务类型。2： 一句话识别。
+     * @deprecated
      */
+    @Deprecated
     public Long getSubServiceType() {
         return this.SubServiceType;
     }
@@ -324,7 +330,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Set 子服务类型。2： 一句话识别。
      * @param SubServiceType 子服务类型。2： 一句话识别。
+     * @deprecated
      */
+    @Deprecated
     public void setSubServiceType(Long SubServiceType) {
         this.SubServiceType = SubServiceType;
     }
@@ -348,7 +356,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Get 废弃参数，填写任意字符串即可。 
      * @return UsrAudioKey 废弃参数，填写任意字符串即可。
+     * @deprecated
      */
+    @Deprecated
     public String getUsrAudioKey() {
         return this.UsrAudioKey;
     }
@@ -356,7 +366,9 @@ public class SentenceRecognitionRequest extends AbstractModel{
     /**
      * Set 废弃参数，填写任意字符串即可。
      * @param UsrAudioKey 废弃参数，填写任意字符串即可。
+     * @deprecated
      */
+    @Deprecated
     public void setUsrAudioKey(String UsrAudioKey) {
         this.UsrAudioKey = UsrAudioKey;
     }

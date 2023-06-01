@@ -37,6 +37,27 @@ public class DeleteUserManagerUserListRequest extends AbstractModel{
     private String [] UserNameList;
 
     /**
+    * tke/eks集群id，容器集群传
+    */
+    @SerializedName("TkeClusterId")
+    @Expose
+    private String TkeClusterId;
+
+    /**
+    * 默认空，容器版传"native"
+    */
+    @SerializedName("DisplayStrategy")
+    @Expose
+    private String DisplayStrategy;
+
+    /**
+    * 用户组
+    */
+    @SerializedName("UserGroupList")
+    @Expose
+    private UserAndGroup [] UserGroupList;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -68,6 +89,54 @@ public class DeleteUserManagerUserListRequest extends AbstractModel{
         this.UserNameList = UserNameList;
     }
 
+    /**
+     * Get tke/eks集群id，容器集群传 
+     * @return TkeClusterId tke/eks集群id，容器集群传
+     */
+    public String getTkeClusterId() {
+        return this.TkeClusterId;
+    }
+
+    /**
+     * Set tke/eks集群id，容器集群传
+     * @param TkeClusterId tke/eks集群id，容器集群传
+     */
+    public void setTkeClusterId(String TkeClusterId) {
+        this.TkeClusterId = TkeClusterId;
+    }
+
+    /**
+     * Get 默认空，容器版传"native" 
+     * @return DisplayStrategy 默认空，容器版传"native"
+     */
+    public String getDisplayStrategy() {
+        return this.DisplayStrategy;
+    }
+
+    /**
+     * Set 默认空，容器版传"native"
+     * @param DisplayStrategy 默认空，容器版传"native"
+     */
+    public void setDisplayStrategy(String DisplayStrategy) {
+        this.DisplayStrategy = DisplayStrategy;
+    }
+
+    /**
+     * Get 用户组 
+     * @return UserGroupList 用户组
+     */
+    public UserAndGroup [] getUserGroupList() {
+        return this.UserGroupList;
+    }
+
+    /**
+     * Set 用户组
+     * @param UserGroupList 用户组
+     */
+    public void setUserGroupList(UserAndGroup [] UserGroupList) {
+        this.UserGroupList = UserGroupList;
+    }
+
     public DeleteUserManagerUserListRequest() {
     }
 
@@ -85,6 +154,18 @@ public class DeleteUserManagerUserListRequest extends AbstractModel{
                 this.UserNameList[i] = new String(source.UserNameList[i]);
             }
         }
+        if (source.TkeClusterId != null) {
+            this.TkeClusterId = new String(source.TkeClusterId);
+        }
+        if (source.DisplayStrategy != null) {
+            this.DisplayStrategy = new String(source.DisplayStrategy);
+        }
+        if (source.UserGroupList != null) {
+            this.UserGroupList = new UserAndGroup[source.UserGroupList.length];
+            for (int i = 0; i < source.UserGroupList.length; i++) {
+                this.UserGroupList[i] = new UserAndGroup(source.UserGroupList[i]);
+            }
+        }
     }
 
 
@@ -94,6 +175,9 @@ public class DeleteUserManagerUserListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "UserNameList.", this.UserNameList);
+        this.setParamSimple(map, prefix + "TkeClusterId", this.TkeClusterId);
+        this.setParamSimple(map, prefix + "DisplayStrategy", this.DisplayStrategy);
+        this.setParamArrayObj(map, prefix + "UserGroupList.", this.UserGroupList);
 
     }
 }

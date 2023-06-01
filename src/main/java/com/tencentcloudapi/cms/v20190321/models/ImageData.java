@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ImageData extends AbstractModel{
 
     /**
-    * 是否恶意 0：正常 1：可疑
-    */
-    @SerializedName("EvilFlag")
-    @Expose
-    private Long EvilFlag;
-
-    /**
     * 恶意类型
 100：正常 
 20001：政治
@@ -44,90 +37,91 @@ public class ImageData extends AbstractModel{
     private Long EvilType;
 
     /**
-    * 图片二维码详情
-    */
-    @SerializedName("CodeDetect")
-    @Expose
-    private CodeDetect CodeDetect;
-
-    /**
     * 图片性感详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HotDetect")
     @Expose
     private ImageHotDetect HotDetect;
 
     /**
-    * 图片违法详情
+    * 是否恶意 0：正常 1：可疑
     */
-    @SerializedName("IllegalDetect")
+    @SerializedName("EvilFlag")
     @Expose
-    private ImageIllegalDetect IllegalDetect;
+    private Long EvilFlag;
 
     /**
-    * logo详情
+    * 图片二维码详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("LogoDetect")
+    @SerializedName("CodeDetect")
     @Expose
-    private LogoDetail LogoDetect;
-
-    /**
-    * 图片OCR详情
-    */
-    @SerializedName("OCRDetect")
-    @Expose
-    private OCRDetect OCRDetect;
-
-    /**
-    * 手机检测详情
-    */
-    @SerializedName("PhoneDetect")
-    @Expose
-    private PhoneDetect PhoneDetect;
+    private CodeDetect CodeDetect;
 
     /**
     * 图片涉政详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolityDetect")
     @Expose
     private ImagePolityDetect PolityDetect;
 
     /**
+    * 图片违法详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IllegalDetect")
+    @Expose
+    private ImageIllegalDetect IllegalDetect;
+
+    /**
     * 图片涉黄详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PornDetect")
     @Expose
     private ImagePornDetect PornDetect;
 
     /**
-    * 图片相似度详情
-    */
-    @SerializedName("Similar")
-    @Expose
-    private Similar Similar;
-
-    /**
     * 图片暴恐详情
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TerrorDetect")
     @Expose
     private ImageTerrorDetect TerrorDetect;
 
     /**
-     * Get 是否恶意 0：正常 1：可疑 
-     * @return EvilFlag 是否恶意 0：正常 1：可疑
-     */
-    public Long getEvilFlag() {
-        return this.EvilFlag;
-    }
+    * 图片OCR详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OCRDetect")
+    @Expose
+    private OCRDetect OCRDetect;
 
     /**
-     * Set 是否恶意 0：正常 1：可疑
-     * @param EvilFlag 是否恶意 0：正常 1：可疑
-     */
-    public void setEvilFlag(Long EvilFlag) {
-        this.EvilFlag = EvilFlag;
-    }
+    * logo详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogoDetect")
+    @Expose
+    private LogoDetail LogoDetect;
+
+    /**
+    * 图片相似度详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Similar")
+    @Expose
+    private Similar Similar;
+
+    /**
+    * 手机检测详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhoneDetect")
+    @Expose
+    private PhoneDetect PhoneDetect;
 
     /**
      * Get 恶意类型
@@ -174,24 +168,10 @@ public class ImageData extends AbstractModel{
     }
 
     /**
-     * Get 图片二维码详情 
-     * @return CodeDetect 图片二维码详情
-     */
-    public CodeDetect getCodeDetect() {
-        return this.CodeDetect;
-    }
-
-    /**
-     * Set 图片二维码详情
-     * @param CodeDetect 图片二维码详情
-     */
-    public void setCodeDetect(CodeDetect CodeDetect) {
-        this.CodeDetect = CodeDetect;
-    }
-
-    /**
-     * Get 图片性感详情 
+     * Get 图片性感详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return HotDetect 图片性感详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageHotDetect getHotDetect() {
         return this.HotDetect;
@@ -199,79 +179,55 @@ public class ImageData extends AbstractModel{
 
     /**
      * Set 图片性感详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param HotDetect 图片性感详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHotDetect(ImageHotDetect HotDetect) {
         this.HotDetect = HotDetect;
     }
 
     /**
-     * Get 图片违法详情 
-     * @return IllegalDetect 图片违法详情
+     * Get 是否恶意 0：正常 1：可疑 
+     * @return EvilFlag 是否恶意 0：正常 1：可疑
      */
-    public ImageIllegalDetect getIllegalDetect() {
-        return this.IllegalDetect;
+    public Long getEvilFlag() {
+        return this.EvilFlag;
     }
 
     /**
-     * Set 图片违法详情
-     * @param IllegalDetect 图片违法详情
+     * Set 是否恶意 0：正常 1：可疑
+     * @param EvilFlag 是否恶意 0：正常 1：可疑
      */
-    public void setIllegalDetect(ImageIllegalDetect IllegalDetect) {
-        this.IllegalDetect = IllegalDetect;
+    public void setEvilFlag(Long EvilFlag) {
+        this.EvilFlag = EvilFlag;
     }
 
     /**
-     * Get logo详情 
-     * @return LogoDetect logo详情
+     * Get 图片二维码详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeDetect 图片二维码详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public LogoDetail getLogoDetect() {
-        return this.LogoDetect;
+    public CodeDetect getCodeDetect() {
+        return this.CodeDetect;
     }
 
     /**
-     * Set logo详情
-     * @param LogoDetect logo详情
+     * Set 图片二维码详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeDetect 图片二维码详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLogoDetect(LogoDetail LogoDetect) {
-        this.LogoDetect = LogoDetect;
+    public void setCodeDetect(CodeDetect CodeDetect) {
+        this.CodeDetect = CodeDetect;
     }
 
     /**
-     * Get 图片OCR详情 
-     * @return OCRDetect 图片OCR详情
-     */
-    public OCRDetect getOCRDetect() {
-        return this.OCRDetect;
-    }
-
-    /**
-     * Set 图片OCR详情
-     * @param OCRDetect 图片OCR详情
-     */
-    public void setOCRDetect(OCRDetect OCRDetect) {
-        this.OCRDetect = OCRDetect;
-    }
-
-    /**
-     * Get 手机检测详情 
-     * @return PhoneDetect 手机检测详情
-     */
-    public PhoneDetect getPhoneDetect() {
-        return this.PhoneDetect;
-    }
-
-    /**
-     * Set 手机检测详情
-     * @param PhoneDetect 手机检测详情
-     */
-    public void setPhoneDetect(PhoneDetect PhoneDetect) {
-        this.PhoneDetect = PhoneDetect;
-    }
-
-    /**
-     * Get 图片涉政详情 
+     * Get 图片涉政详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolityDetect 图片涉政详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImagePolityDetect getPolityDetect() {
         return this.PolityDetect;
@@ -279,15 +235,39 @@ public class ImageData extends AbstractModel{
 
     /**
      * Set 图片涉政详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PolityDetect 图片涉政详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolityDetect(ImagePolityDetect PolityDetect) {
         this.PolityDetect = PolityDetect;
     }
 
     /**
-     * Get 图片涉黄详情 
+     * Get 图片违法详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IllegalDetect 图片违法详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageIllegalDetect getIllegalDetect() {
+        return this.IllegalDetect;
+    }
+
+    /**
+     * Set 图片违法详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IllegalDetect 图片违法详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIllegalDetect(ImageIllegalDetect IllegalDetect) {
+        this.IllegalDetect = IllegalDetect;
+    }
+
+    /**
+     * Get 图片涉黄详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PornDetect 图片涉黄详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImagePornDetect getPornDetect() {
         return this.PornDetect;
@@ -295,31 +275,19 @@ public class ImageData extends AbstractModel{
 
     /**
      * Set 图片涉黄详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PornDetect 图片涉黄详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPornDetect(ImagePornDetect PornDetect) {
         this.PornDetect = PornDetect;
     }
 
     /**
-     * Get 图片相似度详情 
-     * @return Similar 图片相似度详情
-     */
-    public Similar getSimilar() {
-        return this.Similar;
-    }
-
-    /**
-     * Set 图片相似度详情
-     * @param Similar 图片相似度详情
-     */
-    public void setSimilar(Similar Similar) {
-        this.Similar = Similar;
-    }
-
-    /**
-     * Get 图片暴恐详情 
+     * Get 图片暴恐详情
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TerrorDetect 图片暴恐详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageTerrorDetect getTerrorDetect() {
         return this.TerrorDetect;
@@ -327,10 +295,92 @@ public class ImageData extends AbstractModel{
 
     /**
      * Set 图片暴恐详情
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TerrorDetect 图片暴恐详情
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTerrorDetect(ImageTerrorDetect TerrorDetect) {
         this.TerrorDetect = TerrorDetect;
+    }
+
+    /**
+     * Get 图片OCR详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OCRDetect 图片OCR详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OCRDetect getOCRDetect() {
+        return this.OCRDetect;
+    }
+
+    /**
+     * Set 图片OCR详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OCRDetect 图片OCR详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOCRDetect(OCRDetect OCRDetect) {
+        this.OCRDetect = OCRDetect;
+    }
+
+    /**
+     * Get logo详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogoDetect logo详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LogoDetail getLogoDetect() {
+        return this.LogoDetect;
+    }
+
+    /**
+     * Set logo详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogoDetect logo详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogoDetect(LogoDetail LogoDetect) {
+        this.LogoDetect = LogoDetect;
+    }
+
+    /**
+     * Get 图片相似度详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Similar 图片相似度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Similar getSimilar() {
+        return this.Similar;
+    }
+
+    /**
+     * Set 图片相似度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Similar 图片相似度详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSimilar(Similar Similar) {
+        this.Similar = Similar;
+    }
+
+    /**
+     * Get 手机检测详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhoneDetect 手机检测详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PhoneDetect getPhoneDetect() {
+        return this.PhoneDetect;
+    }
+
+    /**
+     * Set 手机检测详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhoneDetect 手机检测详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhoneDetect(PhoneDetect PhoneDetect) {
+        this.PhoneDetect = PhoneDetect;
     }
 
     public ImageData() {
@@ -341,41 +391,41 @@ public class ImageData extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageData(ImageData source) {
-        if (source.EvilFlag != null) {
-            this.EvilFlag = new Long(source.EvilFlag);
-        }
         if (source.EvilType != null) {
             this.EvilType = new Long(source.EvilType);
-        }
-        if (source.CodeDetect != null) {
-            this.CodeDetect = new CodeDetect(source.CodeDetect);
         }
         if (source.HotDetect != null) {
             this.HotDetect = new ImageHotDetect(source.HotDetect);
         }
-        if (source.IllegalDetect != null) {
-            this.IllegalDetect = new ImageIllegalDetect(source.IllegalDetect);
+        if (source.EvilFlag != null) {
+            this.EvilFlag = new Long(source.EvilFlag);
         }
-        if (source.LogoDetect != null) {
-            this.LogoDetect = new LogoDetail(source.LogoDetect);
-        }
-        if (source.OCRDetect != null) {
-            this.OCRDetect = new OCRDetect(source.OCRDetect);
-        }
-        if (source.PhoneDetect != null) {
-            this.PhoneDetect = new PhoneDetect(source.PhoneDetect);
+        if (source.CodeDetect != null) {
+            this.CodeDetect = new CodeDetect(source.CodeDetect);
         }
         if (source.PolityDetect != null) {
             this.PolityDetect = new ImagePolityDetect(source.PolityDetect);
         }
+        if (source.IllegalDetect != null) {
+            this.IllegalDetect = new ImageIllegalDetect(source.IllegalDetect);
+        }
         if (source.PornDetect != null) {
             this.PornDetect = new ImagePornDetect(source.PornDetect);
+        }
+        if (source.TerrorDetect != null) {
+            this.TerrorDetect = new ImageTerrorDetect(source.TerrorDetect);
+        }
+        if (source.OCRDetect != null) {
+            this.OCRDetect = new OCRDetect(source.OCRDetect);
+        }
+        if (source.LogoDetect != null) {
+            this.LogoDetect = new LogoDetail(source.LogoDetect);
         }
         if (source.Similar != null) {
             this.Similar = new Similar(source.Similar);
         }
-        if (source.TerrorDetect != null) {
-            this.TerrorDetect = new ImageTerrorDetect(source.TerrorDetect);
+        if (source.PhoneDetect != null) {
+            this.PhoneDetect = new PhoneDetect(source.PhoneDetect);
         }
     }
 
@@ -384,18 +434,18 @@ public class ImageData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
         this.setParamSimple(map, prefix + "EvilType", this.EvilType);
-        this.setParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
         this.setParamObj(map, prefix + "HotDetect.", this.HotDetect);
-        this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
-        this.setParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
-        this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
-        this.setParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
+        this.setParamSimple(map, prefix + "EvilFlag", this.EvilFlag);
+        this.setParamObj(map, prefix + "CodeDetect.", this.CodeDetect);
         this.setParamObj(map, prefix + "PolityDetect.", this.PolityDetect);
+        this.setParamObj(map, prefix + "IllegalDetect.", this.IllegalDetect);
         this.setParamObj(map, prefix + "PornDetect.", this.PornDetect);
-        this.setParamObj(map, prefix + "Similar.", this.Similar);
         this.setParamObj(map, prefix + "TerrorDetect.", this.TerrorDetect);
+        this.setParamObj(map, prefix + "OCRDetect.", this.OCRDetect);
+        this.setParamObj(map, prefix + "LogoDetect.", this.LogoDetect);
+        this.setParamObj(map, prefix + "Similar.", this.Similar);
+        this.setParamObj(map, prefix + "PhoneDetect.", this.PhoneDetect);
 
     }
 }

@@ -30,18 +30,18 @@ public class CustomResult extends AbstractModel{
     private String [] Keywords;
 
     /**
-    * 自定义库id
-    */
-    @SerializedName("LibId")
-    @Expose
-    private String LibId;
-
-    /**
     * 自定义词库名称
     */
     @SerializedName("LibName")
     @Expose
     private String LibName;
+
+    /**
+    * 自定义库id
+    */
+    @SerializedName("LibId")
+    @Expose
+    private String LibId;
 
     /**
     * 命中的自定义关键词的类型
@@ -67,22 +67,6 @@ public class CustomResult extends AbstractModel{
     }
 
     /**
-     * Get 自定义库id 
-     * @return LibId 自定义库id
-     */
-    public String getLibId() {
-        return this.LibId;
-    }
-
-    /**
-     * Set 自定义库id
-     * @param LibId 自定义库id
-     */
-    public void setLibId(String LibId) {
-        this.LibId = LibId;
-    }
-
-    /**
      * Get 自定义词库名称 
      * @return LibName 自定义词库名称
      */
@@ -96,6 +80,22 @@ public class CustomResult extends AbstractModel{
      */
     public void setLibName(String LibName) {
         this.LibName = LibName;
+    }
+
+    /**
+     * Get 自定义库id 
+     * @return LibId 自定义库id
+     */
+    public String getLibId() {
+        return this.LibId;
+    }
+
+    /**
+     * Set 自定义库id
+     * @param LibId 自定义库id
+     */
+    public void setLibId(String LibId) {
+        this.LibId = LibId;
     }
 
     /**
@@ -128,11 +128,11 @@ public class CustomResult extends AbstractModel{
                 this.Keywords[i] = new String(source.Keywords[i]);
             }
         }
-        if (source.LibId != null) {
-            this.LibId = new String(source.LibId);
-        }
         if (source.LibName != null) {
             this.LibName = new String(source.LibName);
+        }
+        if (source.LibId != null) {
+            this.LibId = new String(source.LibId);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -145,8 +145,8 @@ public class CustomResult extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
-        this.setParamSimple(map, prefix + "LibId", this.LibId);
         this.setParamSimple(map, prefix + "LibName", this.LibName);
+        this.setParamSimple(map, prefix + "LibId", this.LibId);
         this.setParamSimple(map, prefix + "Type", this.Type);
 
     }

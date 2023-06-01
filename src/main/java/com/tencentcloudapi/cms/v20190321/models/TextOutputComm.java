@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class TextOutputComm extends AbstractModel{
 
     /**
-    * 接入业务的唯一ID
-    */
-    @SerializedName("AppID")
-    @Expose
-    private Long AppID;
-
-    /**
     * 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口
     */
     @SerializedName("BUCtrlID")
@@ -44,27 +37,18 @@ public class TextOutputComm extends AbstractModel{
     private Long SendTime;
 
     /**
+    * 接入业务的唯一ID
+    */
+    @SerializedName("AppID")
+    @Expose
+    private Long AppID;
+
+    /**
     * 请求字段里的Common.Uin
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
-
-    /**
-     * Get 接入业务的唯一ID 
-     * @return AppID 接入业务的唯一ID
-     */
-    public Long getAppID() {
-        return this.AppID;
-    }
-
-    /**
-     * Set 接入业务的唯一ID
-     * @param AppID 接入业务的唯一ID
-     */
-    public void setAppID(Long AppID) {
-        this.AppID = AppID;
-    }
 
     /**
      * Get 接口唯一ID，旁路调用接口返回有该字段，标识唯一接口 
@@ -99,6 +83,22 @@ public class TextOutputComm extends AbstractModel{
     }
 
     /**
+     * Get 接入业务的唯一ID 
+     * @return AppID 接入业务的唯一ID
+     */
+    public Long getAppID() {
+        return this.AppID;
+    }
+
+    /**
+     * Set 接入业务的唯一ID
+     * @param AppID 接入业务的唯一ID
+     */
+    public void setAppID(Long AppID) {
+        this.AppID = AppID;
+    }
+
+    /**
      * Get 请求字段里的Common.Uin 
      * @return Uin 请求字段里的Common.Uin
      */
@@ -122,14 +122,14 @@ public class TextOutputComm extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TextOutputComm(TextOutputComm source) {
-        if (source.AppID != null) {
-            this.AppID = new Long(source.AppID);
-        }
         if (source.BUCtrlID != null) {
             this.BUCtrlID = new Long(source.BUCtrlID);
         }
         if (source.SendTime != null) {
             this.SendTime = new Long(source.SendTime);
+        }
+        if (source.AppID != null) {
+            this.AppID = new Long(source.AppID);
         }
         if (source.Uin != null) {
             this.Uin = new Long(source.Uin);
@@ -141,9 +141,9 @@ public class TextOutputComm extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "BUCtrlID", this.BUCtrlID);
         this.setParamSimple(map, prefix + "SendTime", this.SendTime);
+        this.setParamSimple(map, prefix + "AppID", this.AppID);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }

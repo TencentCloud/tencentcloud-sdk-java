@@ -39,20 +39,18 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
-     *本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-通过该接口可以将图片新增到样本库。
-     * @param req CreateFileSampleRequest
-     * @return CreateFileSampleResponse
+     *创建关键词接口
+     * @param req CreateKeywordsSamplesRequest
+     * @return CreateKeywordsSamplesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateFileSampleResponse CreateFileSample(CreateFileSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateFileSampleResponse> rsp = null;
+    public CreateKeywordsSamplesResponse CreateKeywordsSamples(CreateKeywordsSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKeywordsSamplesResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateFileSampleResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateKeywordsSamplesResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateFileSample");
+                rspStr = this.internalRequest(req, "CreateKeywordsSamples");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -61,20 +59,18 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
-     *本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-通过该接口可以将文本新增到样本库。
-     * @param req CreateTextSampleRequest
-     * @return CreateTextSampleResponse
+     *删除关键词接口
+     * @param req DeleteLibSamplesRequest
+     * @return DeleteLibSamplesResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTextSampleResponse CreateTextSample(CreateTextSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTextSampleResponse> rsp = null;
+    public DeleteLibSamplesResponse DeleteLibSamples(DeleteLibSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLibSamplesResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTextSampleResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteLibSamplesResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateTextSample");
+                rspStr = this.internalRequest(req, "DeleteLibSamples");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -83,20 +79,18 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
-     *本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-删除图片样本库，支持批量删除，一次提交不超过20个。
-     * @param req DeleteFileSampleRequest
-     * @return DeleteFileSampleResponse
+     *获取用户词库列表
+     * @param req DescribeKeywordsLibsRequest
+     * @return DescribeKeywordsLibsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteFileSampleResponse DeleteFileSample(DeleteFileSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteFileSampleResponse> rsp = null;
+    public DescribeKeywordsLibsResponse DescribeKeywordsLibs(DescribeKeywordsLibsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKeywordsLibsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteFileSampleResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeKeywordsLibsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteFileSample");
+                rspStr = this.internalRequest(req, "DescribeKeywordsLibs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -105,64 +99,18 @@ public class CmsClient extends AbstractClient{
     }
 
     /**
-     *本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-删除文本样本库，暂时只支持单个删除。
-     * @param req DeleteTextSampleRequest
-     * @return DeleteTextSampleResponse
+     *获取关键词接口
+     * @param req DescribeLibSamplesRequest
+     * @return DescribeLibSamplesResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteTextSampleResponse DeleteTextSample(DeleteTextSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteTextSampleResponse> rsp = null;
+    public DescribeLibSamplesResponse DescribeLibSamples(DescribeLibSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLibSamplesResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteTextSampleResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeLibSamplesResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteTextSample");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本文档适用于图片内容安全、视频内容安全自定义识别库的管理。
-<br>
-查询图片样本库，支持批量查询。
-     * @param req DescribeFileSampleRequest
-     * @return DescribeFileSampleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFileSampleResponse DescribeFileSample(DescribeFileSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFileSampleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFileSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFileSample");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *本文档适用于文本内容安全、音频内容安全自定义识别库的管理。
-<br>
-支持批量查询文本样本库。
-     * @param req DescribeTextSampleRequest
-     * @return DescribeTextSampleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTextSampleResponse DescribeTextSample(DescribeTextSampleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTextSampleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTextSampleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTextSample");
+                rspStr = this.internalRequest(req, "DescribeLibSamples");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -183,26 +131,6 @@ public class CmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ImageModeration");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *人工审核对外接口
-     * @param req ManualReviewRequest
-     * @return ManualReviewResponse
-     * @throws TencentCloudSDKException
-     */
-    public ManualReviewResponse ManualReview(ManualReviewRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ManualReviewResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ManualReviewResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ManualReview");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

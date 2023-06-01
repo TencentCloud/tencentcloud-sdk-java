@@ -877,7 +877,9 @@ public class BillResourceSummary extends AbstractModel{
     /**
      * Get 节省计划抵扣金额（已废弃） 
      * @return SPDeduction 节省计划抵扣金额（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public String getSPDeduction() {
         return this.SPDeduction;
     }
@@ -885,7 +887,9 @@ public class BillResourceSummary extends AbstractModel{
     /**
      * Set 节省计划抵扣金额（已废弃）
      * @param SPDeduction 节省计划抵扣金额（已废弃）
+     * @deprecated
      */
+    @Deprecated
     public void setSPDeduction(String SPDeduction) {
         this.SPDeduction = SPDeduction;
     }

@@ -30,6 +30,13 @@ public class TextOutputRes extends AbstractModel{
     private String Operator;
 
     /**
+    * 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+    */
+    @SerializedName("ResultType")
+    @Expose
+    private Long ResultType;
+
+    /**
     * 恶意操作码，
 删除（1）， 通过（2）， 先审后发（100012）
     */
@@ -45,13 +52,6 @@ public class TextOutputRes extends AbstractModel{
     private String ResultMsg;
 
     /**
-    * 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-    */
-    @SerializedName("ResultType")
-    @Expose
-    private Long ResultType;
-
-    /**
      * Get 操作人,信安处理人企业微信ID 
      * @return Operator 操作人,信安处理人企业微信ID
      */
@@ -65,6 +65,22 @@ public class TextOutputRes extends AbstractModel{
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000） 
+     * @return ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+     */
+    public Long getResultType() {
+        return this.ResultType;
+    }
+
+    /**
+     * Set 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+     * @param ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
+     */
+    public void setResultType(Long ResultType) {
+        this.ResultType = ResultType;
     }
 
     /**
@@ -103,22 +119,6 @@ public class TextOutputRes extends AbstractModel{
         this.ResultMsg = ResultMsg;
     }
 
-    /**
-     * Get 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000） 
-     * @return ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-     */
-    public Long getResultType() {
-        return this.ResultType;
-    }
-
-    /**
-     * Set 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-     * @param ResultType 恶意类型，广告（10001）， 政治（20001）， 色情（20002）， 社会事件（20004）， 暴力（20011）， 低俗（20012）， 违法犯罪（20006）， 欺诈（20008）， 版权（20013）， 谣言（20104）， 其他（21000）
-     */
-    public void setResultType(Long ResultType) {
-        this.ResultType = ResultType;
-    }
-
     public TextOutputRes() {
     }
 
@@ -130,14 +130,14 @@ public class TextOutputRes extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
+        if (source.ResultType != null) {
+            this.ResultType = new Long(source.ResultType);
+        }
         if (source.ResultCode != null) {
             this.ResultCode = new Long(source.ResultCode);
         }
         if (source.ResultMsg != null) {
             this.ResultMsg = new String(source.ResultMsg);
-        }
-        if (source.ResultType != null) {
-            this.ResultType = new Long(source.ResultType);
         }
     }
 
@@ -147,9 +147,9 @@ public class TextOutputRes extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "ResultType", this.ResultType);
         this.setParamSimple(map, prefix + "ResultCode", this.ResultCode);
         this.setParamSimple(map, prefix + "ResultMsg", this.ResultMsg);
-        this.setParamSimple(map, prefix + "ResultType", this.ResultType);
 
     }
 }

@@ -23,107 +23,50 @@ import java.util.HashMap;
 public class RrectF extends AbstractModel{
 
     /**
-    * logo横坐标
-    */
-    @SerializedName("Cx")
-    @Expose
-    private Float Cx;
-
-    /**
-    * logo纵坐标
-    */
-    @SerializedName("Cy")
-    @Expose
-    private Float Cy;
-
-    /**
-    * logo图标高度
-    */
-    @SerializedName("Height")
-    @Expose
-    private Float Height;
-
-    /**
-    * logo图标中心旋转度
-    */
-    @SerializedName("Rotate")
-    @Expose
-    private Float Rotate;
-
-    /**
     * logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
     private Float Width;
 
     /**
-     * Get logo横坐标 
-     * @return Cx logo横坐标
-     */
-    public Float getCx() {
-        return this.Cx;
-    }
+    * logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cy")
+    @Expose
+    private Float Cy;
 
     /**
-     * Set logo横坐标
-     * @param Cx logo横坐标
-     */
-    public void setCx(Float Cx) {
-        this.Cx = Cx;
-    }
+    * logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Cx")
+    @Expose
+    private Float Cx;
 
     /**
-     * Get logo纵坐标 
-     * @return Cy logo纵坐标
-     */
-    public Float getCy() {
-        return this.Cy;
-    }
+    * logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rotate")
+    @Expose
+    private Float Rotate;
 
     /**
-     * Set logo纵坐标
-     * @param Cy logo纵坐标
-     */
-    public void setCy(Float Cy) {
-        this.Cy = Cy;
-    }
+    * logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Float Height;
 
     /**
-     * Get logo图标高度 
-     * @return Height logo图标高度
-     */
-    public Float getHeight() {
-        return this.Height;
-    }
-
-    /**
-     * Set logo图标高度
-     * @param Height logo图标高度
-     */
-    public void setHeight(Float Height) {
-        this.Height = Height;
-    }
-
-    /**
-     * Get logo图标中心旋转度 
-     * @return Rotate logo图标中心旋转度
-     */
-    public Float getRotate() {
-        return this.Rotate;
-    }
-
-    /**
-     * Set logo图标中心旋转度
-     * @param Rotate logo图标中心旋转度
-     */
-    public void setRotate(Float Rotate) {
-        this.Rotate = Rotate;
-    }
-
-    /**
-     * Get logo图标宽度 
+     * Get logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Width logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getWidth() {
         return this.Width;
@@ -131,10 +74,92 @@ public class RrectF extends AbstractModel{
 
     /**
      * Set logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Width logo图标宽度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Float Width) {
         this.Width = Width;
+    }
+
+    /**
+     * Get logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cy logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCy() {
+        return this.Cy;
+    }
+
+    /**
+     * Set logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cy logo纵坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCy(Float Cy) {
+        this.Cy = Cy;
+    }
+
+    /**
+     * Get logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Cx logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCx() {
+        return this.Cx;
+    }
+
+    /**
+     * Set logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Cx logo横坐标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCx(Float Cx) {
+        this.Cx = Cx;
+    }
+
+    /**
+     * Get logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rotate logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getRotate() {
+        return this.Rotate;
+    }
+
+    /**
+     * Set logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rotate logo图标中心旋转度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRotate(Float Rotate) {
+        this.Rotate = Rotate;
+    }
+
+    /**
+     * Get logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Height logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Height logo图标高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeight(Float Height) {
+        this.Height = Height;
     }
 
     public RrectF() {
@@ -145,20 +170,20 @@ public class RrectF extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RrectF(RrectF source) {
-        if (source.Cx != null) {
-            this.Cx = new Float(source.Cx);
+        if (source.Width != null) {
+            this.Width = new Float(source.Width);
         }
         if (source.Cy != null) {
             this.Cy = new Float(source.Cy);
         }
-        if (source.Height != null) {
-            this.Height = new Float(source.Height);
+        if (source.Cx != null) {
+            this.Cx = new Float(source.Cx);
         }
         if (source.Rotate != null) {
             this.Rotate = new Float(source.Rotate);
         }
-        if (source.Width != null) {
-            this.Width = new Float(source.Width);
+        if (source.Height != null) {
+            this.Height = new Float(source.Height);
         }
     }
 
@@ -167,11 +192,11 @@ public class RrectF extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Cx", this.Cx);
-        this.setParamSimple(map, prefix + "Cy", this.Cy);
-        this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamSimple(map, prefix + "Rotate", this.Rotate);
         this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Cy", this.Cy);
+        this.setParamSimple(map, prefix + "Cx", this.Cx);
+        this.setParamSimple(map, prefix + "Rotate", this.Rotate);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

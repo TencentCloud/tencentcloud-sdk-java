@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ImageModerationRequest extends AbstractModel{
 
     /**
-    * 文件内容 Base64,与FileUrl必须二填一
+    * 文件地址
     */
-    @SerializedName("FileContent")
+    @SerializedName("FileUrl")
     @Expose
-    private String FileContent;
+    private String FileUrl;
 
     /**
     * 文件MD5值
@@ -37,26 +37,26 @@ public class ImageModerationRequest extends AbstractModel{
     private String FileMD5;
 
     /**
-    * 文件地址
+    * 文件内容 Base64,与FileUrl必须二填一
     */
-    @SerializedName("FileUrl")
+    @SerializedName("FileContent")
     @Expose
-    private String FileUrl;
+    private String FileContent;
 
     /**
-     * Get 文件内容 Base64,与FileUrl必须二填一 
-     * @return FileContent 文件内容 Base64,与FileUrl必须二填一
+     * Get 文件地址 
+     * @return FileUrl 文件地址
      */
-    public String getFileContent() {
-        return this.FileContent;
+    public String getFileUrl() {
+        return this.FileUrl;
     }
 
     /**
-     * Set 文件内容 Base64,与FileUrl必须二填一
-     * @param FileContent 文件内容 Base64,与FileUrl必须二填一
+     * Set 文件地址
+     * @param FileUrl 文件地址
      */
-    public void setFileContent(String FileContent) {
-        this.FileContent = FileContent;
+    public void setFileUrl(String FileUrl) {
+        this.FileUrl = FileUrl;
     }
 
     /**
@@ -76,19 +76,19 @@ public class ImageModerationRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件地址 
-     * @return FileUrl 文件地址
+     * Get 文件内容 Base64,与FileUrl必须二填一 
+     * @return FileContent 文件内容 Base64,与FileUrl必须二填一
      */
-    public String getFileUrl() {
-        return this.FileUrl;
+    public String getFileContent() {
+        return this.FileContent;
     }
 
     /**
-     * Set 文件地址
-     * @param FileUrl 文件地址
+     * Set 文件内容 Base64,与FileUrl必须二填一
+     * @param FileContent 文件内容 Base64,与FileUrl必须二填一
      */
-    public void setFileUrl(String FileUrl) {
-        this.FileUrl = FileUrl;
+    public void setFileContent(String FileContent) {
+        this.FileContent = FileContent;
     }
 
     public ImageModerationRequest() {
@@ -99,14 +99,14 @@ public class ImageModerationRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ImageModerationRequest(ImageModerationRequest source) {
-        if (source.FileContent != null) {
-            this.FileContent = new String(source.FileContent);
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
         }
         if (source.FileMD5 != null) {
             this.FileMD5 = new String(source.FileMD5);
         }
-        if (source.FileUrl != null) {
-            this.FileUrl = new String(source.FileUrl);
+        if (source.FileContent != null) {
+            this.FileContent = new String(source.FileContent);
         }
     }
 
@@ -115,9 +115,9 @@ public class ImageModerationRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileContent", this.FileContent);
-        this.setParamSimple(map, prefix + "FileMD5", this.FileMD5);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
+        this.setParamSimple(map, prefix + "FileMD5", this.FileMD5);
+        this.setParamSimple(map, prefix + "FileContent", this.FileContent);
 
     }
 }
