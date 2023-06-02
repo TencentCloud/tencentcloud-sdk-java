@@ -37,7 +37,7 @@ public class Caller extends AbstractModel{
     private String OrganizationId;
 
     /**
-    * 经办人的用户ID
+    * 经办人的用户ID，同UserId
     */
     @SerializedName("OperatorId")
     @Expose
@@ -53,7 +53,9 @@ public class Caller extends AbstractModel{
     /**
      * Get 应用号 
      * @return ApplicationId 应用号
+     * @deprecated
      */
+    @Deprecated
     public String getApplicationId() {
         return this.ApplicationId;
     }
@@ -61,7 +63,9 @@ public class Caller extends AbstractModel{
     /**
      * Set 应用号
      * @param ApplicationId 应用号
+     * @deprecated
      */
+    @Deprecated
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
@@ -69,7 +73,9 @@ public class Caller extends AbstractModel{
     /**
      * Get 主机构ID 
      * @return OrganizationId 主机构ID
+     * @deprecated
      */
+    @Deprecated
     public String getOrganizationId() {
         return this.OrganizationId;
     }
@@ -77,22 +83,24 @@ public class Caller extends AbstractModel{
     /**
      * Set 主机构ID
      * @param OrganizationId 主机构ID
+     * @deprecated
      */
+    @Deprecated
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 经办人的用户ID 
-     * @return OperatorId 经办人的用户ID
+     * Get 经办人的用户ID，同UserId 
+     * @return OperatorId 经办人的用户ID，同UserId
      */
     public String getOperatorId() {
         return this.OperatorId;
     }
 
     /**
-     * Set 经办人的用户ID
-     * @param OperatorId 经办人的用户ID
+     * Set 经办人的用户ID，同UserId
+     * @param OperatorId 经办人的用户ID，同UserId
      */
     public void setOperatorId(String OperatorId) {
         this.OperatorId = OperatorId;
@@ -101,7 +109,9 @@ public class Caller extends AbstractModel{
     /**
      * Get 下属机构ID 
      * @return SubOrganizationId 下属机构ID
+     * @deprecated
      */
+    @Deprecated
     public String getSubOrganizationId() {
         return this.SubOrganizationId;
     }
@@ -109,7 +119,9 @@ public class Caller extends AbstractModel{
     /**
      * Set 下属机构ID
      * @param SubOrganizationId 下属机构ID
+     * @deprecated
      */
+    @Deprecated
     public void setSubOrganizationId(String SubOrganizationId) {
         this.SubOrganizationId = SubOrganizationId;
     }

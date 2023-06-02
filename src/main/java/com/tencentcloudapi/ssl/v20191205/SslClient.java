@@ -159,6 +159,26 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *使用权益点创建证书
+     * @param req CreateCertificateByPackageRequest
+     * @return CreateCertificateByPackageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCertificateByPackageResponse CreateCertificateByPackage(CreateCertificateByPackageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCertificateByPackageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCertificateByPackageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCertificateByPackage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DeleteCertificate）用于删除证书。
      * @param req DeleteCertificateRequest
      * @return DeleteCertificateResponse

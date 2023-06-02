@@ -5402,6 +5402,26 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *查询漏洞影响的仓库镜像列表
+     * @param req DescribeVulRegistryImageListRequest
+     * @return DescribeVulRegistryImageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRegistryImageListResponse DescribeVulRegistryImageList(DescribeVulRegistryImageListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVulRegistryImageListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVulRegistryImageListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVulRegistryImageList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *统计漏洞扫描页已授权和未扫描镜像数
      * @param req DescribeVulScanAuthorizedImageSummaryRequest
      * @return DescribeVulScanAuthorizedImageSummaryResponse

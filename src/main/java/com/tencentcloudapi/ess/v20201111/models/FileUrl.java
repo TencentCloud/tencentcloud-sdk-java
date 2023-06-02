@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class FileUrl extends AbstractModel{
 
     /**
-    * 下载文件的URL
+    * 下载文件的URL，有效期为输入的UrlTtl，默认5分钟
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 下载文件的附加信息
+    * 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Option")
@@ -38,25 +38,25 @@ public class FileUrl extends AbstractModel{
     private String Option;
 
     /**
-     * Get 下载文件的URL 
-     * @return Url 下载文件的URL
+     * Get 下载文件的URL，有效期为输入的UrlTtl，默认5分钟 
+     * @return Url 下载文件的URL，有效期为输入的UrlTtl，默认5分钟
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 下载文件的URL
-     * @param Url 下载文件的URL
+     * Set 下载文件的URL，有效期为输入的UrlTtl，默认5分钟
+     * @param Url 下载文件的URL，有效期为输入的UrlTtl，默认5分钟
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 下载文件的附加信息
+     * Get 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Option 下载文件的附加信息
+     * @return Option 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOption() {
@@ -64,9 +64,9 @@ public class FileUrl extends AbstractModel{
     }
 
     /**
-     * Set 下载文件的附加信息
+     * Set 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Option 下载文件的附加信息
+     * @param Option 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOption(String Option) {

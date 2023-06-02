@@ -27,7 +27,7 @@ public class FlowCreateApprover extends AbstractModel{
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
     */
     @SerializedName("ApproverType")
     @Expose
@@ -71,7 +71,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String ApproverIdCardNumber;
 
     /**
-    * 签署方经办人在模板中的角色ID
+    * 签署方经办人在模板中的参与方ID
     */
     @SerializedName("RecipientId")
     @Expose
@@ -159,12 +159,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。 
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。 
      * @return ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
      */
     public Long getApproverType() {
         return this.ApproverType;
@@ -175,12 +175,12 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
      * @param ApproverType 参与者类型：
 0：企业
 1：个人
 3：企业静默签署
-注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
+注：类型为3（企业静默签署）时，会默认完成该签署方的签署。静默签署仅进行盖章操作，不能是手写签名。
      */
     public void setApproverType(Long ApproverType) {
         this.ApproverType = ApproverType;
@@ -275,16 +275,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人在模板中的角色ID 
-     * @return RecipientId 签署方经办人在模板中的角色ID
+     * Get 签署方经办人在模板中的参与方ID 
+     * @return RecipientId 签署方经办人在模板中的参与方ID
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署方经办人在模板中的角色ID
-     * @param RecipientId 签署方经办人在模板中的角色ID
+     * Set 签署方经办人在模板中的参与方ID
+     * @param RecipientId 签署方经办人在模板中的参与方ID
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -453,7 +453,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     /**
      * Get 签署完前端跳转的url，暂未使用 
      * @return JumpUrl 签署完前端跳转的url，暂未使用
+     * @deprecated
      */
+    @Deprecated
     public String getJumpUrl() {
         return this.JumpUrl;
     }
@@ -461,7 +463,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     /**
      * Set 签署完前端跳转的url，暂未使用
      * @param JumpUrl 签署完前端跳转的url，暂未使用
+     * @deprecated
      */
+    @Deprecated
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;
     }

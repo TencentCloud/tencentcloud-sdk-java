@@ -96,7 +96,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String ZoneId;
 
     /**
-    * 仅适用于公网负载均衡。负载均衡的网络计费模式。
+    * 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -141,7 +141,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
     * 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
     */
     @SerializedName("SlaType")
@@ -197,6 +197,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
+
+    /**
+    * 创建域名化负载均衡。
+    */
+    @SerializedName("DynamicVip")
+    @Expose
+    private Boolean DynamicVip;
 
     /**
      * Get 负载均衡实例的网络类型：
@@ -371,16 +378,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 仅适用于公网负载均衡。负载均衡的网络计费模式。 
-     * @return InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
+     * Get 仅对内网属性的性能容量型实例和公网属性的所有实例生效。 
+     * @return InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set 仅适用于公网负载均衡。负载均衡的网络计费模式。
-     * @param InternetAccessible 仅适用于公网负载均衡。负载均衡的网络计费模式。
+     * Set 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
+     * @param InternetAccessible 仅对内网属性的性能容量型实例和公网属性的所有实例生效。
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -473,11 +480,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * Get 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul> 
      * @return SlaType 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      */
     public String getSlaType() {
@@ -487,11 +494,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     /**
      * Set 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      * @param SlaType 创建性能容量型实例。
 <ul><li>若需要创建性能容量型实例，则此参数必填，且取值为：SLA，表示创建按量计费模式下的默认规格的性能容量型实例。
-<ul><li>当您开通了普通规格的性能容量型时，SLA对应超强型1规格。普通规格的性能容量型正在内测中，请提交 [内测申请](https://cloud.tencent.com/apply/p/hf45esx99lf)。</li>
+<ul><li>默认为普通规格的性能容量型实例，SLA对应超强型1规格。
 <li>当您开通了超大型规格的性能容量型时，SLA对应超强型4规格。超大型规格的性能容量型正在内测中，请提交 [工单申请](https://console.cloud.tencent.com/workorder/category)。</li></ul></li><li>若需要创建共享型实例，则无需填写此参数。</li></ul>
      */
     public void setSlaType(String SlaType) {
@@ -614,6 +621,22 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    /**
+     * Get 创建域名化负载均衡。 
+     * @return DynamicVip 创建域名化负载均衡。
+     */
+    public Boolean getDynamicVip() {
+        return this.DynamicVip;
+    }
+
+    /**
+     * Set 创建域名化负载均衡。
+     * @param DynamicVip 创建域名化负载均衡。
+     */
+    public void setDynamicVip(Boolean DynamicVip) {
+        this.DynamicVip = DynamicVip;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -700,6 +723,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
         }
+        if (source.DynamicVip != null) {
+            this.DynamicVip = new Boolean(source.DynamicVip);
+        }
     }
 
 
@@ -731,6 +757,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
 
     }
 }

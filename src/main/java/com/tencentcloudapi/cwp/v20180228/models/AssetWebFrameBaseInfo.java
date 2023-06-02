@@ -109,7 +109,6 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -136,6 +135,13 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
+
+    /**
+    * 应用路径
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
 
     /**
      * Get 主机内网IP 
@@ -334,10 +340,8 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -345,9 +349,7 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -403,6 +405,22 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
+    }
+
+    /**
+     * Get 应用路径 
+     * @return Path 应用路径
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 应用路径
+     * @param Path 应用路径
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
     public AssetWebFrameBaseInfo() {
@@ -464,6 +482,9 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
         if (source.MachineExtraInfo != null) {
             this.MachineExtraInfo = new MachineExtraInfo(source.MachineExtraInfo);
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
     }
 
 
@@ -487,6 +508,7 @@ public class AssetWebFrameBaseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstTime", this.FirstTime);
         this.setParamSimple(map, prefix + "IsNew", this.IsNew);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
+        this.setParamSimple(map, prefix + "Path", this.Path);
 
     }
 }

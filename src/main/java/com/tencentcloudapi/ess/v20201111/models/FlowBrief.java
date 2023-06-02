@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FlowBrief extends AbstractModel{
 
     /**
-    * 流程的编号
+    * 流程的编号ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -37,7 +37,7 @@ public class FlowBrief extends AbstractModel{
     private String FlowName;
 
     /**
-    * 流程的描述
+    * 流程的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowDescription")
@@ -53,17 +53,18 @@ public class FlowBrief extends AbstractModel{
 
     /**
     * 流程状态
-- `0`  还没有发起
-- `1`  未签署
-- `2`  部分签署
-- `3`  已退回
-- `4`  完成签署
-- `5`  已过期
-- `6`  已取消
-- `7`  还没有预发起
-- `8`  等待填写
-- `9`  部分填写
-- `10`  拒填
+- 0 还没有发起
+- 1 待签署
+- 2 部分签署
+- 3 已拒签
+- 4 已签署
+- 5 已过期
+- 6 已撤销
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+- 21 已解除
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowStatus")
@@ -71,7 +72,7 @@ public class FlowBrief extends AbstractModel{
     private Long FlowStatus;
 
     /**
-    * 流程创建的时间戳
+    * 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedOn")
@@ -103,16 +104,16 @@ public class FlowBrief extends AbstractModel{
     private Long Deadline;
 
     /**
-     * Get 流程的编号 
-     * @return FlowId 流程的编号
+     * Get 流程的编号ID 
+     * @return FlowId 流程的编号ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 流程的编号
-     * @param FlowId 流程的编号
+     * Set 流程的编号ID
+     * @param FlowId 流程的编号ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
@@ -135,9 +136,9 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Get 流程的描述
+     * Get 流程的描述信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowDescription 流程的描述
+     * @return FlowDescription 流程的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowDescription() {
@@ -145,9 +146,9 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Set 流程的描述
+     * Set 流程的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowDescription 流程的描述
+     * @param FlowDescription 流程的描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowDescription(String FlowDescription) {
@@ -172,30 +173,32 @@ public class FlowBrief extends AbstractModel{
 
     /**
      * Get 流程状态
-- `0`  还没有发起
-- `1`  未签署
-- `2`  部分签署
-- `3`  已退回
-- `4`  完成签署
-- `5`  已过期
-- `6`  已取消
-- `7`  还没有预发起
-- `8`  等待填写
-- `9`  部分填写
-- `10`  拒填
+- 0 还没有发起
+- 1 待签署
+- 2 部分签署
+- 3 已拒签
+- 4 已签署
+- 5 已过期
+- 6 已撤销
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+- 21 已解除
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlowStatus 流程状态
-- `0`  还没有发起
-- `1`  未签署
-- `2`  部分签署
-- `3`  已退回
-- `4`  完成签署
-- `5`  已过期
-- `6`  已取消
-- `7`  还没有预发起
-- `8`  等待填写
-- `9`  部分填写
-- `10`  拒填
+- 0 还没有发起
+- 1 待签署
+- 2 部分签署
+- 3 已拒签
+- 4 已签署
+- 5 已过期
+- 6 已撤销
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+- 21 已解除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowStatus() {
@@ -204,30 +207,32 @@ public class FlowBrief extends AbstractModel{
 
     /**
      * Set 流程状态
-- `0`  还没有发起
-- `1`  未签署
-- `2`  部分签署
-- `3`  已退回
-- `4`  完成签署
-- `5`  已过期
-- `6`  已取消
-- `7`  还没有预发起
-- `8`  等待填写
-- `9`  部分填写
-- `10`  拒填
+- 0 还没有发起
+- 1 待签署
+- 2 部分签署
+- 3 已拒签
+- 4 已签署
+- 5 已过期
+- 6 已撤销
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+- 21 已解除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowStatus 流程状态
-- `0`  还没有发起
-- `1`  未签署
-- `2`  部分签署
-- `3`  已退回
-- `4`  完成签署
-- `5`  已过期
-- `6`  已取消
-- `7`  还没有预发起
-- `8`  等待填写
-- `9`  部分填写
-- `10`  拒填
+- 0 还没有发起
+- 1 待签署
+- 2 部分签署
+- 3 已拒签
+- 4 已签署
+- 5 已过期
+- 6 已撤销
+- 7 还没有预发起
+- 8 等待填写
+- 9 部分填写
+- 10 拒填
+- 21 已解除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowStatus(Long FlowStatus) {
@@ -235,9 +240,9 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Get 流程创建的时间戳
+     * Get 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedOn 流程创建的时间戳
+     * @return CreatedOn 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreatedOn() {
@@ -245,9 +250,9 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Set 流程创建的时间戳
+     * Set 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedOn 流程创建的时间戳
+     * @param CreatedOn 流程创建的时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedOn(Long CreatedOn) {

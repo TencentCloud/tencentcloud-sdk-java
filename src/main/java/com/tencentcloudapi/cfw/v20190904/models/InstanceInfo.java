@@ -123,6 +123,14 @@ public class InstanceInfo extends AbstractModel{
     private String [] ResourcePath;
 
     /**
+    * 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Server")
+    @Expose
+    private String [] Server;
+
+    /**
      * Get appid信息 
      * @return AppId appid信息
      */
@@ -354,6 +362,26 @@ public class InstanceInfo extends AbstractModel{
         this.ResourcePath = ResourcePath;
     }
 
+    /**
+     * Get 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Server 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getServer() {
+        return this.Server;
+    }
+
+    /**
+     * Set 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Server 扫描结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServer(String [] Server) {
+        this.Server = Server;
+    }
+
     public InstanceInfo() {
     }
 
@@ -407,6 +435,12 @@ public class InstanceInfo extends AbstractModel{
                 this.ResourcePath[i] = new String(source.ResourcePath[i]);
             }
         }
+        if (source.Server != null) {
+            this.Server = new String[source.Server.length];
+            for (int i = 0; i < source.Server.length; i++) {
+                this.Server[i] = new String(source.Server[i]);
+            }
+        }
     }
 
 
@@ -428,6 +462,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "LeakNum", this.LeakNum);
         this.setParamSimple(map, prefix + "InsSource", this.InsSource);
         this.setParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
+        this.setParamArraySimple(map, prefix + "Server.", this.Server);
 
     }
 }

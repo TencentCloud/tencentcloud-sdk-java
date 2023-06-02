@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FillApproverInfo extends AbstractModel{
 
     /**
-    * 签署人签署Id
+    * 对应模板中的参与方ID
     */
     @SerializedName("RecipientId")
     @Expose
@@ -38,7 +38,7 @@ WEWORKAPP: 企业微信
     private String ApproverSource;
 
     /**
-    * 企业自定义账号Id
+    * 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
     */
     @SerializedName("CustomUserId")
@@ -46,16 +46,16 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
     private String CustomUserId;
 
     /**
-     * Get 签署人签署Id 
-     * @return RecipientId 签署人签署Id
+     * Get 对应模板中的参与方ID 
+     * @return RecipientId 对应模板中的参与方ID
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署人签署Id
-     * @param RecipientId 签署人签署Id
+     * Set 对应模板中的参与方ID
+     * @param RecipientId 对应模板中的参与方ID
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -82,9 +82,9 @@ WEWORKAPP: 企业微信
     }
 
     /**
-     * Get 企业自定义账号Id
+     * Get 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid 
-     * @return CustomUserId 企业自定义账号Id
+     * @return CustomUserId 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
      */
     public String getCustomUserId() {
@@ -92,9 +92,9 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
     }
 
     /**
-     * Set 企业自定义账号Id
+     * Set 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
-     * @param CustomUserId 企业自定义账号Id
+     * @param CustomUserId 企业自定义账号ID
 WEWORKAPP场景下指企业自有应用获取企微明文的userid
      */
     public void setCustomUserId(String CustomUserId) {

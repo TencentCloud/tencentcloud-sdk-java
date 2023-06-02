@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FlowApproverDetail extends AbstractModel{
 
     /**
-    * 签署人信息
+    * 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveMessage")
@@ -31,38 +31,41 @@ public class FlowApproverDetail extends AbstractModel{
     private String ApproveMessage;
 
     /**
-    * 签署人名字
+    * 签署方姓名
     */
     @SerializedName("ApproveName")
     @Expose
     private String ApproveName;
 
     /**
-    * 签署人的状态
+    * 签署方的签署状态
 0：还没有发起
 1：流程中 没有开始处理
-2：待处理
-3：签署态
-4：拒绝态
-5：过期没人处理
-6：取消态
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
 7：还没有预发起
 8：待填写
 9：因为各种原因而终止
+10：填写完成
+15：已解除
+19：转他人处理
     */
     @SerializedName("ApproveStatus")
     @Expose
     private Long ApproveStatus;
 
     /**
-    * 模板配置时候的签署人id,与控件绑定
+    * 模板配置中的参与方ID,与控件绑定
     */
     @SerializedName("ReceiptId")
     @Expose
     private String ReceiptId;
 
     /**
-    * 客户自定义userId
+    * 客户自定义的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomUserId")
@@ -77,21 +80,21 @@ public class FlowApproverDetail extends AbstractModel{
     private String Mobile;
 
     /**
-    * 签署顺序
+    * 签署顺序，如果是有序签署，签署顺序从小到大
     */
     @SerializedName("SignOrder")
     @Expose
     private Long SignOrder;
 
     /**
-    * 签署人签署时间
+    * 签署人签署时间，时间戳，单位秒
     */
     @SerializedName("ApproveTime")
     @Expose
     private Long ApproveTime;
 
     /**
-    * 参与者类型
+    * 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproveType")
@@ -99,7 +102,7 @@ public class FlowApproverDetail extends AbstractModel{
     private String ApproveType;
 
     /**
-    * 签署人侧用户来源
+    * 签署方侧用户来源，如WEWORKAPP-企业微信等
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverSource")
@@ -107,7 +110,7 @@ public class FlowApproverDetail extends AbstractModel{
     private String ApproverSource;
 
     /**
-    * 客户自定义签署人标识
+    * 客户自定义签署方标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomApproverTag")
@@ -115,7 +118,7 @@ public class FlowApproverDetail extends AbstractModel{
     private String CustomApproverTag;
 
     /**
-    * 签署人企业Id
+    * 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationId")
@@ -123,7 +126,7 @@ public class FlowApproverDetail extends AbstractModel{
     private String OrganizationId;
 
     /**
-    * 签署人企业名称
+    * 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrganizationName")
@@ -131,9 +134,9 @@ public class FlowApproverDetail extends AbstractModel{
     private String OrganizationName;
 
     /**
-     * Get 签署人信息
+     * Get 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveMessage 签署人信息
+     * @return ApproveMessage 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveMessage() {
@@ -141,9 +144,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 签署人信息
+     * Set 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveMessage 签署人信息
+     * @param ApproveMessage 签署时的相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveMessage(String ApproveMessage) {
@@ -151,97 +154,109 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署人名字 
-     * @return ApproveName 签署人名字
+     * Get 签署方姓名 
+     * @return ApproveName 签署方姓名
      */
     public String getApproveName() {
         return this.ApproveName;
     }
 
     /**
-     * Set 签署人名字
-     * @param ApproveName 签署人名字
+     * Set 签署方姓名
+     * @param ApproveName 签署方姓名
      */
     public void setApproveName(String ApproveName) {
         this.ApproveName = ApproveName;
     }
 
     /**
-     * Get 签署人的状态
+     * Get 签署方的签署状态
 0：还没有发起
 1：流程中 没有开始处理
-2：待处理
-3：签署态
-4：拒绝态
-5：过期没人处理
-6：取消态
-7：还没有预发起
-8：待填写
-9：因为各种原因而终止 
-     * @return ApproveStatus 签署人的状态
-0：还没有发起
-1：流程中 没有开始处理
-2：待处理
-3：签署态
-4：拒绝态
-5：过期没人处理
-6：取消态
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
 7：还没有预发起
 8：待填写
 9：因为各种原因而终止
+10：填写完成
+15：已解除
+19：转他人处理 
+     * @return ApproveStatus 签署方的签署状态
+0：还没有发起
+1：流程中 没有开始处理
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+7：还没有预发起
+8：待填写
+9：因为各种原因而终止
+10：填写完成
+15：已解除
+19：转他人处理
      */
     public Long getApproveStatus() {
         return this.ApproveStatus;
     }
 
     /**
-     * Set 签署人的状态
+     * Set 签署方的签署状态
 0：还没有发起
 1：流程中 没有开始处理
-2：待处理
-3：签署态
-4：拒绝态
-5：过期没人处理
-6：取消态
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
 7：还没有预发起
 8：待填写
 9：因为各种原因而终止
-     * @param ApproveStatus 签署人的状态
+10：填写完成
+15：已解除
+19：转他人处理
+     * @param ApproveStatus 签署方的签署状态
 0：还没有发起
 1：流程中 没有开始处理
-2：待处理
-3：签署态
-4：拒绝态
-5：过期没人处理
-6：取消态
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
 7：还没有预发起
 8：待填写
 9：因为各种原因而终止
+10：填写完成
+15：已解除
+19：转他人处理
      */
     public void setApproveStatus(Long ApproveStatus) {
         this.ApproveStatus = ApproveStatus;
     }
 
     /**
-     * Get 模板配置时候的签署人id,与控件绑定 
-     * @return ReceiptId 模板配置时候的签署人id,与控件绑定
+     * Get 模板配置中的参与方ID,与控件绑定 
+     * @return ReceiptId 模板配置中的参与方ID,与控件绑定
      */
     public String getReceiptId() {
         return this.ReceiptId;
     }
 
     /**
-     * Set 模板配置时候的签署人id,与控件绑定
-     * @param ReceiptId 模板配置时候的签署人id,与控件绑定
+     * Set 模板配置中的参与方ID,与控件绑定
+     * @param ReceiptId 模板配置中的参与方ID,与控件绑定
      */
     public void setReceiptId(String ReceiptId) {
         this.ReceiptId = ReceiptId;
     }
 
     /**
-     * Get 客户自定义userId
+     * Get 客户自定义的用户ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomUserId 客户自定义userId
+     * @return CustomUserId 客户自定义的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomUserId() {
@@ -249,9 +264,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 客户自定义userId
+     * Set 客户自定义的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomUserId 客户自定义userId
+     * @param CustomUserId 客户自定义的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomUserId(String CustomUserId) {
@@ -275,41 +290,41 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署顺序 
-     * @return SignOrder 签署顺序
+     * Get 签署顺序，如果是有序签署，签署顺序从小到大 
+     * @return SignOrder 签署顺序，如果是有序签署，签署顺序从小到大
      */
     public Long getSignOrder() {
         return this.SignOrder;
     }
 
     /**
-     * Set 签署顺序
-     * @param SignOrder 签署顺序
+     * Set 签署顺序，如果是有序签署，签署顺序从小到大
+     * @param SignOrder 签署顺序，如果是有序签署，签署顺序从小到大
      */
     public void setSignOrder(Long SignOrder) {
         this.SignOrder = SignOrder;
     }
 
     /**
-     * Get 签署人签署时间 
-     * @return ApproveTime 签署人签署时间
+     * Get 签署人签署时间，时间戳，单位秒 
+     * @return ApproveTime 签署人签署时间，时间戳，单位秒
      */
     public Long getApproveTime() {
         return this.ApproveTime;
     }
 
     /**
-     * Set 签署人签署时间
-     * @param ApproveTime 签署人签署时间
+     * Set 签署人签署时间，时间戳，单位秒
+     * @param ApproveTime 签署人签署时间，时间戳，单位秒
      */
     public void setApproveTime(Long ApproveTime) {
         this.ApproveTime = ApproveTime;
     }
 
     /**
-     * Get 参与者类型
+     * Get 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproveType 参与者类型
+     * @return ApproveType 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproveType() {
@@ -317,9 +332,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 参与者类型
+     * Set 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproveType 参与者类型
+     * @param ApproveType 签署方类型，ORGANIZATION-企业员工，PERSON-个人，ENTERPRISESERVER-企业静默签
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproveType(String ApproveType) {
@@ -327,9 +342,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署人侧用户来源
+     * Get 签署方侧用户来源，如WEWORKAPP-企业微信等
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverSource 签署人侧用户来源
+     * @return ApproverSource 签署方侧用户来源，如WEWORKAPP-企业微信等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApproverSource() {
@@ -337,9 +352,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 签署人侧用户来源
+     * Set 签署方侧用户来源，如WEWORKAPP-企业微信等
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverSource 签署人侧用户来源
+     * @param ApproverSource 签署方侧用户来源，如WEWORKAPP-企业微信等
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverSource(String ApproverSource) {
@@ -347,9 +362,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 客户自定义签署人标识
+     * Get 客户自定义签署方标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CustomApproverTag 客户自定义签署人标识
+     * @return CustomApproverTag 客户自定义签署方标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomApproverTag() {
@@ -357,9 +372,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 客户自定义签署人标识
+     * Set 客户自定义签署方标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CustomApproverTag 客户自定义签署人标识
+     * @param CustomApproverTag 客户自定义签署方标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomApproverTag(String CustomApproverTag) {
@@ -367,9 +382,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署人企业Id
+     * Get 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationId 签署人企业Id
+     * @return OrganizationId 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationId() {
@@ -377,9 +392,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 签署人企业Id
+     * Set 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationId 签署人企业Id
+     * @param OrganizationId 签署方企业Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationId(String OrganizationId) {
@@ -387,9 +402,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Get 签署人企业名称
+     * Get 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrganizationName 签署人企业名称
+     * @return OrganizationName 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganizationName() {
@@ -397,9 +412,9 @@ public class FlowApproverDetail extends AbstractModel{
     }
 
     /**
-     * Set 签署人企业名称
+     * Set 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrganizationName 签署人企业名称
+     * @param OrganizationName 签署方企业名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganizationName(String OrganizationName) {

@@ -45,6 +45,14 @@ public class Resource extends AbstractModel{
     private ResourceAvailability [] AvailabilitySet;
 
     /**
+    * 运营商类型信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TypeSet")
+    @Expose
+    private TypeInfo [] TypeSet;
+
+    /**
      * Get 运营商内具体资源信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。 
      * @return Type 运营商内具体资源信息，如"CMCC", "CUCC", "CTCC", "BGP", "INTERNAL"。
      */
@@ -96,6 +104,26 @@ public class Resource extends AbstractModel{
         this.AvailabilitySet = AvailabilitySet;
     }
 
+    /**
+     * Get 运营商类型信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TypeSet 运营商类型信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TypeInfo [] getTypeSet() {
+        return this.TypeSet;
+    }
+
+    /**
+     * Set 运营商类型信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TypeSet 运营商类型信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTypeSet(TypeInfo [] TypeSet) {
+        this.TypeSet = TypeSet;
+    }
+
     public Resource() {
     }
 
@@ -119,6 +147,12 @@ public class Resource extends AbstractModel{
                 this.AvailabilitySet[i] = new ResourceAvailability(source.AvailabilitySet[i]);
             }
         }
+        if (source.TypeSet != null) {
+            this.TypeSet = new TypeInfo[source.TypeSet.length];
+            for (int i = 0; i < source.TypeSet.length; i++) {
+                this.TypeSet[i] = new TypeInfo(source.TypeSet[i]);
+            }
+        }
     }
 
 
@@ -129,6 +163,7 @@ public class Resource extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
+        this.setParamArrayObj(map, prefix + "TypeSet.", this.TypeSet);
 
     }
 }

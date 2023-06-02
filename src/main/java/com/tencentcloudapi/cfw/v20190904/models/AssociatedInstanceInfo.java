@@ -87,6 +87,22 @@ public class AssociatedInstanceInfo extends AbstractModel{
     private Long SecurityGroupCount;
 
     /**
+    * 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityGroupRuleCount")
+    @Expose
+    private Long SecurityGroupRuleCount;
+
+    /**
+    * 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdbId")
+    @Expose
+    private String CdbId;
+
+    /**
      * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
@@ -246,6 +262,46 @@ public class AssociatedInstanceInfo extends AbstractModel{
         this.SecurityGroupCount = SecurityGroupCount;
     }
 
+    /**
+     * Get 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityGroupRuleCount 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSecurityGroupRuleCount() {
+        return this.SecurityGroupRuleCount;
+    }
+
+    /**
+     * Set 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityGroupRuleCount 关联安全组规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityGroupRuleCount(Long SecurityGroupRuleCount) {
+        this.SecurityGroupRuleCount = SecurityGroupRuleCount;
+    }
+
+    /**
+     * Get 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdbId 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdbId() {
+        return this.CdbId;
+    }
+
+    /**
+     * Set 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdbId 关联数据库代理Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdbId(String CdbId) {
+        this.CdbId = CdbId;
+    }
+
     public AssociatedInstanceInfo() {
     }
 
@@ -278,6 +334,12 @@ public class AssociatedInstanceInfo extends AbstractModel{
         if (source.SecurityGroupCount != null) {
             this.SecurityGroupCount = new Long(source.SecurityGroupCount);
         }
+        if (source.SecurityGroupRuleCount != null) {
+            this.SecurityGroupRuleCount = new Long(source.SecurityGroupRuleCount);
+        }
+        if (source.CdbId != null) {
+            this.CdbId = new String(source.CdbId);
+        }
     }
 
 
@@ -293,6 +355,8 @@ public class AssociatedInstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "SecurityGroupCount", this.SecurityGroupCount);
+        this.setParamSimple(map, prefix + "SecurityGroupRuleCount", this.SecurityGroupRuleCount);
+        this.setParamSimple(map, prefix + "CdbId", this.CdbId);
 
     }
 }
