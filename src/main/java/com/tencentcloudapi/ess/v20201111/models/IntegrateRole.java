@@ -47,7 +47,7 @@ public class IntegrateRole extends AbstractModel{
     private Long RoleStatus;
 
     /**
-    * 是否是集团角色
+    * 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGroupRole")
@@ -123,9 +123,9 @@ public class IntegrateRole extends AbstractModel{
     }
 
     /**
-     * Get 是否是集团角色
+     * Get 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsGroupRole 是否是集团角色
+     * @return IsGroupRole 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsGroupRole() {
@@ -133,9 +133,9 @@ public class IntegrateRole extends AbstractModel{
     }
 
     /**
-     * Set 是否是集团角色
+     * Set 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsGroupRole 是否是集团角色
+     * @param IsGroupRole 是否是集团角色，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGroupRole(Boolean IsGroupRole) {

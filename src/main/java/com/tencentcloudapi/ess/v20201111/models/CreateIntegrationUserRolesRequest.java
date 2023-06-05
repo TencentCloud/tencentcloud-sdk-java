@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateIntegrationUserRolesRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 操作人信息，UserId必填
     */
     @SerializedName("Operator")
     @Expose
@@ -51,16 +51,16 @@ public class CreateIntegrationUserRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 操作人信息，UserId必填 
+     * @return Operator 操作人信息，UserId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 操作人信息，UserId必填
+     * @param Operator 操作人信息，UserId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

@@ -44,13 +44,6 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel{
     private String SealName;
 
     /**
-    * 印章图片的base64，最大不超过 8M
-    */
-    @SerializedName("SealImage")
-    @Expose
-    private String SealImage;
-
-    /**
     * 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
     */
     @SerializedName("Operator")
@@ -68,6 +61,15 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
+
+    /**
+    * 印章图片的base64
+注：已废弃
+请先通过UploadFiles接口上传文件，获取 FileId
+    */
+    @SerializedName("SealImage")
+    @Expose
+    private String SealImage;
 
     /**
     * 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
@@ -111,6 +113,15 @@ true：做透明化处理和颜色增强。
     @SerializedName("ProcessSeal")
     @Expose
     private Boolean ProcessSeal;
+
+    /**
+    * 印章图片文件 id
+取值：
+填写的FileId通过UploadFiles接口上传文件获取。
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
 
     /**
      * Get 个人用户姓名 
@@ -158,22 +169,6 @@ true：做透明化处理和颜色增强。
      */
     public void setSealName(String SealName) {
         this.SealName = SealName;
-    }
-
-    /**
-     * Get 印章图片的base64，最大不超过 8M 
-     * @return SealImage 印章图片的base64，最大不超过 8M
-     */
-    public String getSealImage() {
-        return this.SealImage;
-    }
-
-    /**
-     * Set 印章图片的base64，最大不超过 8M
-     * @param SealImage 印章图片的base64，最大不超过 8M
-     */
-    public void setSealImage(String SealImage) {
-        this.SealImage = SealImage;
     }
 
     /**
@@ -226,6 +221,30 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
+    }
+
+    /**
+     * Get 印章图片的base64
+注：已废弃
+请先通过UploadFiles接口上传文件，获取 FileId 
+     * @return SealImage 印章图片的base64
+注：已废弃
+请先通过UploadFiles接口上传文件，获取 FileId
+     */
+    public String getSealImage() {
+        return this.SealImage;
+    }
+
+    /**
+     * Set 印章图片的base64
+注：已废弃
+请先通过UploadFiles接口上传文件，获取 FileId
+     * @param SealImage 印章图片的base64
+注：已废弃
+请先通过UploadFiles接口上传文件，获取 FileId
+     */
+    public void setSealImage(String SealImage) {
+        this.SealImage = SealImage;
     }
 
     /**
@@ -340,6 +359,30 @@ true：做透明化处理和颜色增强。
         this.ProcessSeal = ProcessSeal;
     }
 
+    /**
+     * Get 印章图片文件 id
+取值：
+填写的FileId通过UploadFiles接口上传文件获取。 
+     * @return FileId 印章图片文件 id
+取值：
+填写的FileId通过UploadFiles接口上传文件获取。
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set 印章图片文件 id
+取值：
+填写的FileId通过UploadFiles接口上传文件获取。
+     * @param FileId 印章图片文件 id
+取值：
+填写的FileId通过UploadFiles接口上传文件获取。
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
     public CreatePreparedPersonalEsignRequest() {
     }
 
@@ -357,14 +400,14 @@ true：做透明化处理和颜色增强。
         if (source.SealName != null) {
             this.SealName = new String(source.SealName);
         }
-        if (source.SealImage != null) {
-            this.SealImage = new String(source.SealImage);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
         if (source.IdCardType != null) {
             this.IdCardType = new String(source.IdCardType);
+        }
+        if (source.SealImage != null) {
+            this.SealImage = new String(source.SealImage);
         }
         if (source.SealImageCompress != null) {
             this.SealImageCompress = new Boolean(source.SealImageCompress);
@@ -381,6 +424,9 @@ true：做透明化处理和颜色增强。
         if (source.ProcessSeal != null) {
             this.ProcessSeal = new Boolean(source.ProcessSeal);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
     }
 
 
@@ -391,14 +437,15 @@ true：做透明化处理和颜色增强。
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "SealName", this.SealName);
-        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
+        this.setParamSimple(map, prefix + "SealImage", this.SealImage);
         this.setParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
         this.setParamSimple(map, prefix + "SealColor", this.SealColor);
         this.setParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }
 }

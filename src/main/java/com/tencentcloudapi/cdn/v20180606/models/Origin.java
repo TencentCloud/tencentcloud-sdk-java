@@ -151,6 +151,14 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     private PathBasedOriginRule [] PathBasedOrigin;
 
     /**
+    * HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Sni")
+    @Expose
+    private OriginSni Sni;
+
+    /**
     * HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -552,6 +560,26 @@ ip_ipv6_domain：源站列表为多个 IPv4 地址IPv6 地址以及域名
     }
 
     /**
+     * Get HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Sni HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OriginSni getSni() {
+        return this.Sni;
+    }
+
+    /**
+     * Set HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Sni HTTPS回源SNI配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSni(OriginSni Sni) {
+        this.Sni = Sni;
+    }
+
+    /**
      * Get HTTPS回源高级配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdvanceHttps HTTPS回源高级配置
@@ -664,6 +692,9 @@ others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存�
                 this.PathBasedOrigin[i] = new PathBasedOriginRule(source.PathBasedOrigin[i]);
             }
         }
+        if (source.Sni != null) {
+            this.Sni = new OriginSni(source.Sni);
+        }
         if (source.AdvanceHttps != null) {
             this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
         }
@@ -688,6 +719,7 @@ others: 其它厂商对象存储,仅支持兼容以AWS签名算法的对象存�
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
         this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
+        this.setParamObj(map, prefix + "Sni.", this.Sni);
         this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
         this.setParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
 

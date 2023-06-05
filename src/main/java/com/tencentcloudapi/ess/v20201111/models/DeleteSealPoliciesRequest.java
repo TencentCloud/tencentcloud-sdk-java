@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteSealPoliciesRequest extends AbstractModel{
 
     /**
-    * 操作撤销的用户信息
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
@@ -35,13 +35,6 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
     @SerializedName("PolicyIds")
     @Expose
     private String [] PolicyIds;
-
-    /**
-    * 应用相关
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
 
     /**
     * 印章ID。这个参数跟上面的PolicyIds其中一个必填，另外一个可选填
@@ -58,16 +51,23 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
     private String [] UserIds;
 
     /**
-     * Get 操作撤销的用户信息 
-     * @return Operator 操作撤销的用户信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作撤销的用户信息
-     * @param Operator 操作撤销的用户信息
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -87,22 +87,6 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
      */
     public void setPolicyIds(String [] PolicyIds) {
         this.PolicyIds = PolicyIds;
-    }
-
-    /**
-     * Get 应用相关 
-     * @return Agent 应用相关
-     */
-    public Agent getAgent() {
-        return this.Agent;
-    }
-
-    /**
-     * Set 应用相关
-     * @param Agent 应用相关
-     */
-    public void setAgent(Agent Agent) {
-        this.Agent = Agent;
     }
 
     /**
@@ -137,6 +121,22 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
         this.UserIds = UserIds;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DeleteSealPoliciesRequest() {
     }
 
@@ -154,9 +154,6 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.SealId != null) {
             this.SealId = new String(source.SealId);
         }
@@ -165,6 +162,9 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
             for (int i = 0; i < source.UserIds.length; i++) {
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -175,9 +175,9 @@ public class DeleteSealPoliciesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
-        this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

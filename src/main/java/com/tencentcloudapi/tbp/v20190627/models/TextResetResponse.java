@@ -87,6 +87,14 @@ public class TextResetResponse extends AbstractModel{
     private String ResultType;
 
     /**
+    * 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseText")
+    @Expose
+    private String ResponseText;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -254,6 +262,26 @@ public class TextResetResponse extends AbstractModel{
     }
 
     /**
+     * Get 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseText 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResponseText() {
+        return this.ResponseText;
+    }
+
+    /**
+     * Set 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseText 机器人对话的应答文本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseText(String ResponseText) {
+        this.ResponseText = ResponseText;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -304,6 +332,9 @@ public class TextResetResponse extends AbstractModel{
         if (source.ResultType != null) {
             this.ResultType = new String(source.ResultType);
         }
+        if (source.ResponseText != null) {
+            this.ResponseText = new String(source.ResponseText);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -322,6 +353,7 @@ public class TextResetResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
         this.setParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
         this.setParamSimple(map, prefix + "ResultType", this.ResultType);
+        this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

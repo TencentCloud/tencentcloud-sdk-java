@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
-    * 用户信息
+    * 用户信息，其中UserId为必填参数
     */
     @SerializedName("Operator")
     @Expose
@@ -103,16 +103,16 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private ApproverRestriction ApproverRestrictions;
 
     /**
-     * Get 用户信息 
-     * @return Operator 用户信息
+     * Get 用户信息，其中UserId为必填参数 
+     * @return Operator 用户信息，其中UserId为必填参数
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 用户信息
-     * @param Operator 用户信息
+     * Set 用户信息，其中UserId为必填参数
+     * @param Operator 用户信息，其中UserId为必填参数
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -261,7 +261,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Get 应用信息 
      * @return Agent 应用信息
+     * @deprecated
      */
+    @Deprecated
     public Agent getAgent() {
         return this.Agent;
     }
@@ -269,7 +271,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Set 应用信息
      * @param Agent 应用信息
+     * @deprecated
      */
+    @Deprecated
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
@@ -277,7 +281,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Get 限制二维码用户条件（已弃用） 
      * @return ApproverRestrictions 限制二维码用户条件（已弃用）
+     * @deprecated
      */
+    @Deprecated
     public ApproverRestriction getApproverRestrictions() {
         return this.ApproverRestrictions;
     }
@@ -285,7 +291,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Set 限制二维码用户条件（已弃用）
      * @param ApproverRestrictions 限制二维码用户条件（已弃用）
+     * @deprecated
      */
+    @Deprecated
     public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
         this.ApproverRestrictions = ApproverRestrictions;
     }

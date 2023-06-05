@@ -60,7 +60,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Get 机构在平台的编号，内部字段，暂未开放 
      * @return OrganizationId 机构在平台的编号，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getOrganizationId() {
         return this.OrganizationId;
     }
@@ -68,7 +70,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Set 机构在平台的编号，内部字段，暂未开放
      * @param OrganizationId 机构在平台的编号，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
@@ -76,7 +80,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Get 用户渠道，内部字段，暂未开放 
      * @return Channel 用户渠道，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getChannel() {
         return this.Channel;
     }
@@ -84,7 +90,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Set 用户渠道，内部字段，暂未开放
      * @param Channel 用户渠道，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
@@ -92,7 +100,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Get 用户在渠道的机构编号，内部字段，暂未开放 
      * @return OrganizationOpenId 用户在渠道的机构编号，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
@@ -100,7 +110,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Set 用户在渠道的机构编号，内部字段，暂未开放
      * @param OrganizationOpenId 用户在渠道的机构编号，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
     }
@@ -108,7 +120,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Get 用户真实的IP，内部字段，暂未开放 
      * @return ClientIp 用户真实的IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getClientIp() {
         return this.ClientIp;
     }
@@ -116,7 +130,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Set 用户真实的IP，内部字段，暂未开放
      * @param ClientIp 用户真实的IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
@@ -124,7 +140,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Get 机构的代理IP，内部字段，暂未开放 
      * @return ProxyIp 机构的代理IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getProxyIp() {
         return this.ProxyIp;
     }
@@ -132,7 +150,9 @@ public class OrganizationInfo extends AbstractModel{
     /**
      * Set 机构的代理IP，内部字段，暂未开放
      * @param ProxyIp 机构的代理IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;
     }

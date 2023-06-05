@@ -30,11 +30,25 @@ public class CallbackInfo extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 回调加密token
+    * 回调加密key，已废弃
     */
     @SerializedName("Token")
     @Expose
     private String Token;
+
+    /**
+    * 回调加密key
+    */
+    @SerializedName("CallbackKey")
+    @Expose
+    private String CallbackKey;
+
+    /**
+    * 回调验签token
+    */
+    @SerializedName("CallbackToken")
+    @Expose
+    private String CallbackToken;
 
     /**
      * Get 回调url 
@@ -53,19 +67,55 @@ public class CallbackInfo extends AbstractModel{
     }
 
     /**
-     * Get 回调加密token 
-     * @return Token 回调加密token
+     * Get 回调加密key，已废弃 
+     * @return Token 回调加密key，已废弃
+     * @deprecated
      */
+    @Deprecated
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set 回调加密token
-     * @param Token 回调加密token
+     * Set 回调加密key，已废弃
+     * @param Token 回调加密key，已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setToken(String Token) {
         this.Token = Token;
+    }
+
+    /**
+     * Get 回调加密key 
+     * @return CallbackKey 回调加密key
+     */
+    public String getCallbackKey() {
+        return this.CallbackKey;
+    }
+
+    /**
+     * Set 回调加密key
+     * @param CallbackKey 回调加密key
+     */
+    public void setCallbackKey(String CallbackKey) {
+        this.CallbackKey = CallbackKey;
+    }
+
+    /**
+     * Get 回调验签token 
+     * @return CallbackToken 回调验签token
+     */
+    public String getCallbackToken() {
+        return this.CallbackToken;
+    }
+
+    /**
+     * Set 回调验签token
+     * @param CallbackToken 回调验签token
+     */
+    public void setCallbackToken(String CallbackToken) {
+        this.CallbackToken = CallbackToken;
     }
 
     public CallbackInfo() {
@@ -82,6 +132,12 @@ public class CallbackInfo extends AbstractModel{
         if (source.Token != null) {
             this.Token = new String(source.Token);
         }
+        if (source.CallbackKey != null) {
+            this.CallbackKey = new String(source.CallbackKey);
+        }
+        if (source.CallbackToken != null) {
+            this.CallbackToken = new String(source.CallbackToken);
+        }
     }
 
 
@@ -91,6 +147,8 @@ public class CallbackInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "CallbackToken", this.CallbackToken);
 
     }
 }

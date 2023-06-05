@@ -102,6 +102,14 @@ public class TableResponseInfo extends AbstractModel{
     private Long RecordCount;
 
     /**
+    * xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MapMaterializedViewName")
+    @Expose
+    private String MapMaterializedViewName;
+
+    /**
      * Get 数据表基本信息。 
      * @return TableBaseInfo 数据表基本信息。
      */
@@ -297,6 +305,26 @@ public class TableResponseInfo extends AbstractModel{
         this.RecordCount = RecordCount;
     }
 
+    /**
+     * Get xxxx
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MapMaterializedViewName xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMapMaterializedViewName() {
+        return this.MapMaterializedViewName;
+    }
+
+    /**
+     * Set xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MapMaterializedViewName xxxx
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMapMaterializedViewName(String MapMaterializedViewName) {
+        this.MapMaterializedViewName = MapMaterializedViewName;
+    }
+
     public TableResponseInfo() {
     }
 
@@ -344,6 +372,9 @@ public class TableResponseInfo extends AbstractModel{
         if (source.RecordCount != null) {
             this.RecordCount = new Long(source.RecordCount);
         }
+        if (source.MapMaterializedViewName != null) {
+            this.MapMaterializedViewName = new String(source.MapMaterializedViewName);
+        }
     }
 
 
@@ -361,6 +392,7 @@ public class TableResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InputFormat", this.InputFormat);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
+        this.setParamSimple(map, prefix + "MapMaterializedViewName", this.MapMaterializedViewName);
 
     }
 }

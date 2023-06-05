@@ -264,6 +264,46 @@ public class TaskResponseInfo extends AbstractModel{
     private String CmdArgs;
 
     /**
+    * 集群镜像大版本名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageVersion")
+    @Expose
+    private String ImageVersion;
+
+    /**
+    * driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DriverSize")
+    @Expose
+    private String DriverSize;
+
+    /**
+    * executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorSize")
+    @Expose
+    private String ExecutorSize;
+
+    /**
+    * 指定executor数量，最小值为1，最大值小于集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorNums")
+    @Expose
+    private Long ExecutorNums;
+
+    /**
+    * 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutorMaxNumbers")
+    @Expose
+    private Long ExecutorMaxNumbers;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -843,6 +883,106 @@ public class TaskResponseInfo extends AbstractModel{
         this.CmdArgs = CmdArgs;
     }
 
+    /**
+     * Get 集群镜像大版本名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageVersion 集群镜像大版本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageVersion() {
+        return this.ImageVersion;
+    }
+
+    /**
+     * Set 集群镜像大版本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageVersion 集群镜像大版本名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageVersion(String ImageVersion) {
+        this.ImageVersion = ImageVersion;
+    }
+
+    /**
+     * Get driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDriverSize() {
+        return this.DriverSize;
+    }
+
+    /**
+     * Set driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDriverSize(String DriverSize) {
+        this.DriverSize = DriverSize;
+    }
+
+    /**
+     * Get executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutorSize() {
+        return this.ExecutorSize;
+    }
+
+    /**
+     * Set executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorSize(String ExecutorSize) {
+        this.ExecutorSize = ExecutorSize;
+    }
+
+    /**
+     * Get 指定executor数量，最小值为1，最大值小于集群规格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecutorNums() {
+        return this.ExecutorNums;
+    }
+
+    /**
+     * Set 指定executor数量，最小值为1，最大值小于集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorNums(Long ExecutorNums) {
+        this.ExecutorNums = ExecutorNums;
+    }
+
+    /**
+     * Get 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExecutorMaxNumbers() {
+        return this.ExecutorMaxNumbers;
+    }
+
+    /**
+     * Set 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
+        this.ExecutorMaxNumbers = ExecutorMaxNumbers;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -947,6 +1087,21 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.CmdArgs != null) {
             this.CmdArgs = new String(source.CmdArgs);
         }
+        if (source.ImageVersion != null) {
+            this.ImageVersion = new String(source.ImageVersion);
+        }
+        if (source.DriverSize != null) {
+            this.DriverSize = new String(source.DriverSize);
+        }
+        if (source.ExecutorSize != null) {
+            this.ExecutorSize = new String(source.ExecutorSize);
+        }
+        if (source.ExecutorNums != null) {
+            this.ExecutorNums = new Long(source.ExecutorNums);
+        }
+        if (source.ExecutorMaxNumbers != null) {
+            this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
+        }
     }
 
 
@@ -986,6 +1141,11 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
         this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
         this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
+        this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
+        this.setParamSimple(map, prefix + "DriverSize", this.DriverSize);
+        this.setParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
+        this.setParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
+        this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
 
     }
 }

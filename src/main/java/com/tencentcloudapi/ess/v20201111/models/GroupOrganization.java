@@ -47,7 +47,7 @@ public class GroupOrganization extends AbstractModel{
     private String OrganizationId;
 
     /**
-    * 更新时间
+    * 更新时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -95,7 +95,7 @@ public class GroupOrganization extends AbstractModel{
     private String License;
 
     /**
-    * 企业许可证过期时间
+    * 企业许可证过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseExpireTime")
@@ -103,7 +103,7 @@ public class GroupOrganization extends AbstractModel{
     private Long LicenseExpireTime;
 
     /**
-    * 成员企业加入集团时间
+    * 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinTime")
@@ -111,7 +111,7 @@ public class GroupOrganization extends AbstractModel{
     private Long JoinTime;
 
     /**
-    * 是否可以使用审批流引擎
+    * 是否使用审批流引擎，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowEngineEnable")
@@ -179,9 +179,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 更新时间
+     * Get 更新时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 更新时间
+     * @return UpdateTime 更新时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateTime() {
@@ -189,9 +189,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 更新时间
+     * Set 更新时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 更新时间
+     * @param UpdateTime 更新时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -299,9 +299,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 企业许可证过期时间
+     * Get 企业许可证过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LicenseExpireTime 企业许可证过期时间
+     * @return LicenseExpireTime 企业许可证过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseExpireTime() {
@@ -309,9 +309,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 企业许可证过期时间
+     * Set 企业许可证过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LicenseExpireTime 企业许可证过期时间
+     * @param LicenseExpireTime 企业许可证过期时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseExpireTime(Long LicenseExpireTime) {
@@ -319,9 +319,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 成员企业加入集团时间
+     * Get 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return JoinTime 成员企业加入集团时间
+     * @return JoinTime 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJoinTime() {
@@ -329,9 +329,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 成员企业加入集团时间
+     * Set 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param JoinTime 成员企业加入集团时间
+     * @param JoinTime 成员企业加入集团时间，时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinTime(Long JoinTime) {
@@ -339,9 +339,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Get 是否可以使用审批流引擎
+     * Get 是否使用审批流引擎，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowEngineEnable 是否可以使用审批流引擎
+     * @return FlowEngineEnable 是否使用审批流引擎，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFlowEngineEnable() {
@@ -349,9 +349,9 @@ public class GroupOrganization extends AbstractModel{
     }
 
     /**
-     * Set 是否可以使用审批流引擎
+     * Set 是否使用审批流引擎，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowEngineEnable 是否可以使用审批流引擎
+     * @param FlowEngineEnable 是否使用审批流引擎，true-是，false-否
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowEngineEnable(Boolean FlowEngineEnable) {

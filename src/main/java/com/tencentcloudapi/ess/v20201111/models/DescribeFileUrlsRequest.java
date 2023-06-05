@@ -255,7 +255,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Get 暂不开放 
      * @return CcToken 暂不开放
+     * @deprecated
      */
+    @Deprecated
     public String getCcToken() {
         return this.CcToken;
     }
@@ -263,7 +265,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Set 暂不开放
      * @param CcToken 暂不开放
+     * @deprecated
      */
+    @Deprecated
     public void setCcToken(String CcToken) {
         this.CcToken = CcToken;
     }
@@ -271,7 +275,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Get 暂不开放 
      * @return Scene 暂不开放
+     * @deprecated
      */
+    @Deprecated
     public String getScene() {
         return this.Scene;
     }
@@ -279,7 +285,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Set 暂不开放
      * @param Scene 暂不开放
+     * @deprecated
      */
+    @Deprecated
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
@@ -287,7 +295,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Get 应用相关信息 
      * @return Agent 应用相关信息
+     * @deprecated
      */
+    @Deprecated
     public Agent getAgent() {
         return this.Agent;
     }
@@ -295,7 +305,9 @@ public class DescribeFileUrlsRequest extends AbstractModel{
     /**
      * Set 应用相关信息
      * @param Agent 应用相关信息
+     * @deprecated
      */
+    @Deprecated
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }

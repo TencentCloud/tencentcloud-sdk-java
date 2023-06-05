@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSchemeUrlResponse extends AbstractModel{
 
     /**
-    * 小程序链接地址
+    * 小程序链接地址，有效期5分钟
     */
     @SerializedName("SchemeUrl")
     @Expose
@@ -37,16 +37,16 @@ public class CreateSchemeUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 小程序链接地址 
-     * @return SchemeUrl 小程序链接地址
+     * Get 小程序链接地址，有效期5分钟 
+     * @return SchemeUrl 小程序链接地址，有效期5分钟
      */
     public String getSchemeUrl() {
         return this.SchemeUrl;
     }
 
     /**
-     * Set 小程序链接地址
-     * @param SchemeUrl 小程序链接地址
+     * Set 小程序链接地址，有效期5分钟
+     * @param SchemeUrl 小程序链接地址，有效期5分钟
      */
     public void setSchemeUrl(String SchemeUrl) {
         this.SchemeUrl = SchemeUrl;

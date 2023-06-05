@@ -44,7 +44,7 @@ public class TemplateInfo extends AbstractModel{
     private String Description;
 
     /**
-    * 模板关联的资源IDs
+    * 模板关联的资源ID列表
     */
     @SerializedName("DocumentResourceIds")
     @Expose
@@ -58,7 +58,7 @@ public class TemplateInfo extends AbstractModel{
     private FileInfo [] FileInfos;
 
     /**
-    * 附件关联的资源ID是
+    * 附件关联的资源ID
     */
     @SerializedName("AttachmentResourceIds")
     @Expose
@@ -100,14 +100,14 @@ public class TemplateInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * 模板的创建人
+    * 模板的创建人UserId
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 模板创建的时间戳（精确到秒）
+    * 模板创建的时间戳，单位秒
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -138,14 +138,14 @@ public class TemplateInfo extends AbstractModel{
     private Long Available;
 
     /**
-    * 模板创建组织id
+    * 创建模板的机构id
     */
     @SerializedName("OrganizationId")
     @Expose
     private String OrganizationId;
 
     /**
-    * 模板预览链接
+    * 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
@@ -217,16 +217,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板关联的资源IDs 
-     * @return DocumentResourceIds 模板关联的资源IDs
+     * Get 模板关联的资源ID列表 
+     * @return DocumentResourceIds 模板关联的资源ID列表
      */
     public String [] getDocumentResourceIds() {
         return this.DocumentResourceIds;
     }
 
     /**
-     * Set 模板关联的资源IDs
-     * @param DocumentResourceIds 模板关联的资源IDs
+     * Set 模板关联的资源ID列表
+     * @param DocumentResourceIds 模板关联的资源ID列表
      */
     public void setDocumentResourceIds(String [] DocumentResourceIds) {
         this.DocumentResourceIds = DocumentResourceIds;
@@ -249,16 +249,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 附件关联的资源ID是 
-     * @return AttachmentResourceIds 附件关联的资源ID是
+     * Get 附件关联的资源ID 
+     * @return AttachmentResourceIds 附件关联的资源ID
      */
     public String [] getAttachmentResourceIds() {
         return this.AttachmentResourceIds;
     }
 
     /**
-     * Set 附件关联的资源ID是
-     * @param AttachmentResourceIds 附件关联的资源ID是
+     * Set 附件关联的资源ID
+     * @param AttachmentResourceIds 附件关联的资源ID
      */
     public void setAttachmentResourceIds(String [] AttachmentResourceIds) {
         this.AttachmentResourceIds = AttachmentResourceIds;
@@ -345,32 +345,32 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板的创建人 
-     * @return Creator 模板的创建人
+     * Get 模板的创建人UserId 
+     * @return Creator 模板的创建人UserId
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 模板的创建人
-     * @param Creator 模板的创建人
+     * Set 模板的创建人UserId
+     * @param Creator 模板的创建人UserId
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 模板创建的时间戳（精确到秒） 
-     * @return CreatedOn 模板创建的时间戳（精确到秒）
+     * Get 模板创建的时间戳，单位秒 
+     * @return CreatedOn 模板创建的时间戳，单位秒
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 模板创建的时间戳（精确到秒）
-     * @param CreatedOn 模板创建的时间戳（精确到秒）
+     * Set 模板创建的时间戳，单位秒
+     * @param CreatedOn 模板创建的时间戳，单位秒
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
@@ -437,25 +437,25 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板创建组织id 
-     * @return OrganizationId 模板创建组织id
+     * Get 创建模板的机构id 
+     * @return OrganizationId 创建模板的机构id
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 模板创建组织id
-     * @param OrganizationId 模板创建组织id
+     * Set 创建模板的机构id
+     * @param OrganizationId 创建模板的机构id
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
     }
 
     /**
-     * Get 模板预览链接
+     * Get 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewUrl 模板预览链接
+     * @return PreviewUrl 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
@@ -463,9 +463,9 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 模板预览链接
+     * Set 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewUrl 模板预览链接
+     * @param PreviewUrl 模板预览链接，有效时间5分钟
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {

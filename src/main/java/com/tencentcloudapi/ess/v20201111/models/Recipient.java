@@ -65,7 +65,7 @@ public class Recipient extends AbstractModel{
     private Boolean RequireSign;
 
     /**
-    * 添加序列
+    * 添加序列，0～N
     */
     @SerializedName("RoutingOrder")
     @Expose
@@ -210,16 +210,16 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 添加序列 
-     * @return RoutingOrder 添加序列
+     * Get 添加序列，0～N 
+     * @return RoutingOrder 添加序列，0～N
      */
     public Long getRoutingOrder() {
         return this.RoutingOrder;
     }
 
     /**
-     * Set 添加序列
-     * @param RoutingOrder 添加序列
+     * Set 添加序列，0～N
+     * @param RoutingOrder 添加序列，0～N
      */
     public void setRoutingOrder(Long RoutingOrder) {
         this.RoutingOrder = RoutingOrder;

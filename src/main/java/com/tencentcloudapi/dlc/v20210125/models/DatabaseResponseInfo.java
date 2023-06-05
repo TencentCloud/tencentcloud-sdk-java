@@ -94,7 +94,7 @@ public class DatabaseResponseInfo extends AbstractModel{
     private DataGovernPolicy GovernPolicy;
 
     /**
-    * 数据库ID
+    * 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseId")
@@ -278,9 +278,9 @@ public class DatabaseResponseInfo extends AbstractModel{
     }
 
     /**
-     * Get 数据库ID
+     * Get 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DatabaseId 数据库ID
+     * @return DatabaseId 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabaseId() {
@@ -288,9 +288,9 @@ public class DatabaseResponseInfo extends AbstractModel{
     }
 
     /**
-     * Set 数据库ID
+     * Set 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DatabaseId 数据库ID
+     * @param DatabaseId 数据库ID（无效字段）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseId(String DatabaseId) {

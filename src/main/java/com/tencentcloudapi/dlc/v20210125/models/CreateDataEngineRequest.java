@@ -226,6 +226,13 @@ public class CreateDataEngineRequest extends AbstractModel{
     private Long ElasticLimit;
 
     /**
+    * spark作业集群session资源配置模板
+    */
+    @SerializedName("SessionResourceTemplate")
+    @Expose
+    private SessionResourceTemplate SessionResourceTemplate;
+
+    /**
      * Get 引擎类型spark/presto 
      * @return EngineType 引擎类型spark/presto
      */
@@ -689,6 +696,22 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.ElasticLimit = ElasticLimit;
     }
 
+    /**
+     * Get spark作业集群session资源配置模板 
+     * @return SessionResourceTemplate spark作业集群session资源配置模板
+     */
+    public SessionResourceTemplate getSessionResourceTemplate() {
+        return this.SessionResourceTemplate;
+    }
+
+    /**
+     * Set spark作业集群session资源配置模板
+     * @param SessionResourceTemplate spark作业集群session资源配置模板
+     */
+    public void setSessionResourceTemplate(SessionResourceTemplate SessionResourceTemplate) {
+        this.SessionResourceTemplate = SessionResourceTemplate;
+    }
+
     public CreateDataEngineRequest() {
     }
 
@@ -790,6 +813,9 @@ public class CreateDataEngineRequest extends AbstractModel{
         if (source.ElasticLimit != null) {
             this.ElasticLimit = new Long(source.ElasticLimit);
         }
+        if (source.SessionResourceTemplate != null) {
+            this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
+        }
     }
 
 
@@ -826,6 +852,7 @@ public class CreateDataEngineRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MainClusterName", this.MainClusterName);
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+        this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
 
     }
 }

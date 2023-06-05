@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePrepareFlowResponse extends AbstractModel{
 
     /**
-    * 快速发起预览链接
+    * 快速发起预览链接，有效期5分钟
     */
     @SerializedName("Url")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePrepareFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 快速发起预览链接 
-     * @return Url 快速发起预览链接
+     * Get 快速发起预览链接，有效期5分钟 
+     * @return Url 快速发起预览链接，有效期5分钟
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 快速发起预览链接
-     * @param Url 快速发起预览链接
+     * Set 快速发起预览链接，有效期5分钟
+     * @param Url 快速发起预览链接，有效期5分钟
      */
     public void setUrl(String Url) {
         this.Url = Url;

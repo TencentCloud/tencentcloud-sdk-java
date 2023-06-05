@@ -322,6 +322,54 @@ public class DataEngineInfo extends AbstractModel{
     private Long ElasticLimit;
 
     /**
+    * 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultHouse")
+    @Expose
+    private Boolean DefaultHouse;
+
+    /**
+    * 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxConcurrency")
+    @Expose
+    private Long MaxConcurrency;
+
+    /**
+    * 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TolerableQueueTime")
+    @Expose
+    private Long TolerableQueueTime;
+
+    /**
+    * 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserAppId")
+    @Expose
+    private Long UserAppId;
+
+    /**
+    * 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserUin")
+    @Expose
+    private String UserUin;
+
+    /**
+    * SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionResourceTemplate")
+    @Expose
+    private SessionResourceTemplate SessionResourceTemplate;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1049,6 +1097,126 @@ public class DataEngineInfo extends AbstractModel{
         this.ElasticLimit = ElasticLimit;
     }
 
+    /**
+     * Get 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultHouse 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDefaultHouse() {
+        return this.DefaultHouse;
+    }
+
+    /**
+     * Set 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultHouse 是否为默认引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultHouse(Boolean DefaultHouse) {
+        this.DefaultHouse = DefaultHouse;
+    }
+
+    /**
+     * Get 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxConcurrency 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxConcurrency() {
+        return this.MaxConcurrency;
+    }
+
+    /**
+     * Set 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxConcurrency 单个集群任务最大并发数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxConcurrency(Long MaxConcurrency) {
+        this.MaxConcurrency = MaxConcurrency;
+    }
+
+    /**
+     * Get 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TolerableQueueTime 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTolerableQueueTime() {
+        return this.TolerableQueueTime;
+    }
+
+    /**
+     * Set 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TolerableQueueTime 任务排队上限时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTolerableQueueTime(Long TolerableQueueTime) {
+        this.TolerableQueueTime = TolerableQueueTime;
+    }
+
+    /**
+     * Get 用户appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserAppId 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUserAppId() {
+        return this.UserAppId;
+    }
+
+    /**
+     * Set 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserAppId 用户appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserAppId(Long UserAppId) {
+        this.UserAppId = UserAppId;
+    }
+
+    /**
+     * Get 用户uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserUin 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserUin() {
+        return this.UserUin;
+    }
+
+    /**
+     * Set 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserUin 用户uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserUin(String UserUin) {
+        this.UserUin = UserUin;
+    }
+
+    /**
+     * Get SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionResourceTemplate SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SessionResourceTemplate getSessionResourceTemplate() {
+        return this.SessionResourceTemplate;
+    }
+
+    /**
+     * Set SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionResourceTemplate SessionResourceTemplate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionResourceTemplate(SessionResourceTemplate SessionResourceTemplate) {
+        this.SessionResourceTemplate = SessionResourceTemplate;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1183,6 +1351,24 @@ public class DataEngineInfo extends AbstractModel{
         if (source.ElasticLimit != null) {
             this.ElasticLimit = new Long(source.ElasticLimit);
         }
+        if (source.DefaultHouse != null) {
+            this.DefaultHouse = new Boolean(source.DefaultHouse);
+        }
+        if (source.MaxConcurrency != null) {
+            this.MaxConcurrency = new Long(source.MaxConcurrency);
+        }
+        if (source.TolerableQueueTime != null) {
+            this.TolerableQueueTime = new Long(source.TolerableQueueTime);
+        }
+        if (source.UserAppId != null) {
+            this.UserAppId = new Long(source.UserAppId);
+        }
+        if (source.UserUin != null) {
+            this.UserUin = new String(source.UserUin);
+        }
+        if (source.SessionResourceTemplate != null) {
+            this.SessionResourceTemplate = new SessionResourceTemplate(source.SessionResourceTemplate);
+        }
     }
 
 
@@ -1229,6 +1415,12 @@ public class DataEngineInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StartStandbyCluster", this.StartStandbyCluster);
         this.setParamSimple(map, prefix + "ElasticSwitch", this.ElasticSwitch);
         this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
+        this.setParamSimple(map, prefix + "DefaultHouse", this.DefaultHouse);
+        this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
+        this.setParamSimple(map, prefix + "TolerableQueueTime", this.TolerableQueueTime);
+        this.setParamSimple(map, prefix + "UserAppId", this.UserAppId);
+        this.setParamSimple(map, prefix + "UserUin", this.UserUin);
+        this.setParamObj(map, prefix + "SessionResourceTemplate.", this.SessionResourceTemplate);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RemindFlowRecords extends AbstractModel{
 
     /**
-    * 是否能够催办
+    * 是否能够催办，true-是，false-否
     */
     @SerializedName("CanRemind")
     @Expose
@@ -37,23 +37,23 @@ public class RemindFlowRecords extends AbstractModel{
     private String FlowId;
 
     /**
-    * 催办详情
+    * 催办详情信息
     */
     @SerializedName("RemindMessage")
     @Expose
     private String RemindMessage;
 
     /**
-     * Get 是否能够催办 
-     * @return CanRemind 是否能够催办
+     * Get 是否能够催办，true-是，false-否 
+     * @return CanRemind 是否能够催办，true-是，false-否
      */
     public Boolean getCanRemind() {
         return this.CanRemind;
     }
 
     /**
-     * Set 是否能够催办
-     * @param CanRemind 是否能够催办
+     * Set 是否能够催办，true-是，false-否
+     * @param CanRemind 是否能够催办，true-是，false-否
      */
     public void setCanRemind(Boolean CanRemind) {
         this.CanRemind = CanRemind;
@@ -76,16 +76,16 @@ public class RemindFlowRecords extends AbstractModel{
     }
 
     /**
-     * Get 催办详情 
-     * @return RemindMessage 催办详情
+     * Get 催办详情信息 
+     * @return RemindMessage 催办详情信息
      */
     public String getRemindMessage() {
         return this.RemindMessage;
     }
 
     /**
-     * Set 催办详情
-     * @param RemindMessage 催办详情
+     * Set 催办详情信息
+     * @param RemindMessage 催办详情信息
      */
     public void setRemindMessage(String RemindMessage) {
         this.RemindMessage = RemindMessage;

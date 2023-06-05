@@ -219,6 +219,13 @@ public class ModifySparkAppRequest extends AbstractModel{
     private String SessionId;
 
     /**
+    * 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
+
+    /**
      * Get spark应用名 
      * @return AppName spark应用名
      */
@@ -666,6 +673,22 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承 
+     * @return IsInherit 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
+     * @param IsInherit 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -758,6 +781,9 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -793,6 +819,7 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

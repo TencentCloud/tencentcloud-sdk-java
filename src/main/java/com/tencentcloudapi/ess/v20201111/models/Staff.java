@@ -83,14 +83,14 @@ public class Staff extends AbstractModel{
     private Boolean Verified;
 
     /**
-    * 员工创建时间戳
+    * 员工创建时间戳，单位秒
     */
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
 
     /**
-    * 员工实名时间戳
+    * 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifiedOn")
@@ -264,25 +264,25 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 员工创建时间戳 
-     * @return CreatedOn 员工创建时间戳
+     * Get 员工创建时间戳，单位秒 
+     * @return CreatedOn 员工创建时间戳，单位秒
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 员工创建时间戳
-     * @param CreatedOn 员工创建时间戳
+     * Set 员工创建时间戳，单位秒
+     * @param CreatedOn 员工创建时间戳，单位秒
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 员工实名时间戳
+     * Get 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VerifiedOn 员工实名时间戳
+     * @return VerifiedOn 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVerifiedOn() {
@@ -290,9 +290,9 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Set 员工实名时间戳
+     * Set 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VerifiedOn 员工实名时间戳
+     * @param VerifiedOn 员工实名时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifiedOn(Long VerifiedOn) {

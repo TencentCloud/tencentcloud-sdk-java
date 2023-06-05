@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteIntegrationRoleUsersRequest extends AbstractModel{
 
     /**
-    * 操作人
+    * 操作人信息，userId必填
     */
     @SerializedName("Operator")
     @Expose
@@ -44,23 +44,23 @@ public class DeleteIntegrationRoleUsersRequest extends AbstractModel{
     private UserInfo [] Users;
 
     /**
-    * 代理信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 操作人 
-     * @return Operator 操作人
+     * Get 操作人信息，userId必填 
+     * @return Operator 操作人信息，userId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人
-     * @param Operator 操作人
+     * Set 操作人信息，userId必填
+     * @param Operator 操作人信息，userId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -99,16 +99,16 @@ public class DeleteIntegrationRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 代理信息 
-     * @return Agent 代理信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理信息
-     * @param Agent 代理信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

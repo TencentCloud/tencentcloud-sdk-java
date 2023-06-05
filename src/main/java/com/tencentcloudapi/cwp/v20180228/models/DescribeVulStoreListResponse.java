@@ -13,28 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ess.v20201111.models;
+package com.tencentcloudapi.cwp.v20180228.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeFlowTemplatesResponse extends AbstractModel{
+public class DescribeVulStoreListResponse extends AbstractModel{
 
     /**
-    * 模板详情列表
+    * 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Templates")
+    @SerializedName("List")
     @Expose
-    private TemplateInfo [] Templates;
+    private VulStoreListInfo [] List;
 
     /**
-    * 查询到的总数
+    * 总数
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 今日剩余搜索此时
+    */
+    @SerializedName("Remaining")
+    @Expose
+    private Long Remaining;
+
+    /**
+    * 免费搜索次数
+    */
+    @SerializedName("FreeSearchTimes")
+    @Expose
+    private Long FreeSearchTimes;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +59,71 @@ public class DescribeFlowTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 模板详情列表 
-     * @return Templates 模板详情列表
+     * Get 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return List 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TemplateInfo [] getTemplates() {
-        return this.Templates;
+    public VulStoreListInfo [] getList() {
+        return this.List;
     }
 
     /**
-     * Set 模板详情列表
-     * @param Templates 模板详情列表
+     * Set 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param List 漏洞信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTemplates(TemplateInfo [] Templates) {
-        this.Templates = Templates;
+    public void setList(VulStoreListInfo [] List) {
+        this.List = List;
     }
 
     /**
-     * Get 查询到的总数 
-     * @return TotalCount 查询到的总数
+     * Get 总数 
+     * @return TotalCount 总数
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的总数
-     * @param TotalCount 查询到的总数
+     * Set 总数
+     * @param TotalCount 总数
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 今日剩余搜索此时 
+     * @return Remaining 今日剩余搜索此时
+     */
+    public Long getRemaining() {
+        return this.Remaining;
+    }
+
+    /**
+     * Set 今日剩余搜索此时
+     * @param Remaining 今日剩余搜索此时
+     */
+    public void setRemaining(Long Remaining) {
+        this.Remaining = Remaining;
+    }
+
+    /**
+     * Get 免费搜索次数 
+     * @return FreeSearchTimes 免费搜索次数
+     */
+    public Long getFreeSearchTimes() {
+        return this.FreeSearchTimes;
+    }
+
+    /**
+     * Set 免费搜索次数
+     * @param FreeSearchTimes 免费搜索次数
+     */
+    public void setFreeSearchTimes(Long FreeSearchTimes) {
+        this.FreeSearchTimes = FreeSearchTimes;
     }
 
     /**
@@ -91,22 +142,28 @@ public class DescribeFlowTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeFlowTemplatesResponse() {
+    public DescribeVulStoreListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeFlowTemplatesResponse(DescribeFlowTemplatesResponse source) {
-        if (source.Templates != null) {
-            this.Templates = new TemplateInfo[source.Templates.length];
-            for (int i = 0; i < source.Templates.length; i++) {
-                this.Templates[i] = new TemplateInfo(source.Templates[i]);
+    public DescribeVulStoreListResponse(DescribeVulStoreListResponse source) {
+        if (source.List != null) {
+            this.List = new VulStoreListInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new VulStoreListInfo(source.List[i]);
             }
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Remaining != null) {
+            this.Remaining = new Long(source.Remaining);
+        }
+        if (source.FreeSearchTimes != null) {
+            this.FreeSearchTimes = new Long(source.FreeSearchTimes);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +175,10 @@ public class DescribeFlowTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Templates.", this.Templates);
+        this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Remaining", this.Remaining);
+        this.setParamSimple(map, prefix + "FreeSearchTimes", this.FreeSearchTimes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

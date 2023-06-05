@@ -225,7 +225,9 @@ false：有序签
     /**
      * Get 暂未开放 
      * @return RelatedFlowId 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getRelatedFlowId() {
         return this.RelatedFlowId;
     }
@@ -233,7 +235,9 @@ false：有序签
     /**
      * Set 暂未开放
      * @param RelatedFlowId 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setRelatedFlowId(String RelatedFlowId) {
         this.RelatedFlowId = RelatedFlowId;
     }
@@ -365,7 +369,9 @@ false：有序签
     /**
      * Get 暂未开放 
      * @return CallbackUrl 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
@@ -373,7 +379,9 @@ false：有序签
     /**
      * Set 暂未开放
      * @param CallbackUrl 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }

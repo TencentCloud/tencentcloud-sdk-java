@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateChannelSubOrganizationModifyQrCodeRequest extends AbstractModel{
 
     /**
-    * 操作人
+    * 操作人信息，userId必填
     */
     @SerializedName("Operator")
     @Expose
@@ -37,16 +37,16 @@ public class CreateChannelSubOrganizationModifyQrCodeRequest extends AbstractMod
     private String ApplicationId;
 
     /**
-     * Get 操作人 
-     * @return Operator 操作人
+     * Get 操作人信息，userId必填 
+     * @return Operator 操作人信息，userId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人
-     * @param Operator 操作人
+     * Set 操作人信息，userId必填
+     * @param Operator 操作人信息，userId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

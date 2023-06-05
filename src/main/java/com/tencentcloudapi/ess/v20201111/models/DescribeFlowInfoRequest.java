@@ -30,7 +30,7 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
-    * 调用方用户信息
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 调用方用户信息 
-     * @return Operator 调用方用户信息
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息
-     * @param Operator 调用方用户信息
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

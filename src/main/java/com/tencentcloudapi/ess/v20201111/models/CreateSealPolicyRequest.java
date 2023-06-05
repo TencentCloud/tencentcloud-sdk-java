@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSealPolicyRequest extends AbstractModel{
 
     /**
-    * 授权发起人在平台信息，具体参考UserInfo结构体
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
@@ -51,20 +51,6 @@ public class CreateSealPolicyRequest extends AbstractModel{
     private Long Expired;
 
     /**
-    * 印章授权内容
-    */
-    @SerializedName("Policy")
-    @Expose
-    private String Policy;
-
-    /**
-    * 应用相关
-    */
-    @SerializedName("Agent")
-    @Expose
-    private Agent Agent;
-
-    /**
     * 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
     */
     @SerializedName("UserIds")
@@ -72,16 +58,30 @@ public class CreateSealPolicyRequest extends AbstractModel{
     private String [] UserIds;
 
     /**
-     * Get 授权发起人在平台信息，具体参考UserInfo结构体 
-     * @return Operator 授权发起人在平台信息，具体参考UserInfo结构体
+    * 印章授权内容
+    */
+    @SerializedName("Policy")
+    @Expose
+    private String Policy;
+
+    /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 授权发起人在平台信息，具体参考UserInfo结构体
-     * @param Operator 授权发起人在平台信息，具体参考UserInfo结构体
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -136,6 +136,22 @@ public class CreateSealPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用 
+     * @return UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+     * @param UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
+    /**
      * Get 印章授权内容 
      * @return Policy 印章授权内容
      */
@@ -152,35 +168,19 @@ public class CreateSealPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用相关 
-     * @return Agent 应用相关
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关
-     * @param Agent 应用相关
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
-    }
-
-    /**
-     * Get 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用 
-     * @return UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
-     */
-    public String [] getUserIds() {
-        return this.UserIds;
-    }
-
-    /**
-     * Set 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
-     * @param UserIds 需要授权的用户UserId集合。跟上面的SealId参数配合使用。选填，跟上面的Users同时起作用
-     */
-    public void setUserIds(String [] UserIds) {
-        this.UserIds = UserIds;
     }
 
     public CreateSealPolicyRequest() {
@@ -206,17 +206,17 @@ public class CreateSealPolicyRequest extends AbstractModel{
         if (source.Expired != null) {
             this.Expired = new Long(source.Expired);
         }
-        if (source.Policy != null) {
-            this.Policy = new String(source.Policy);
-        }
-        if (source.Agent != null) {
-            this.Agent = new Agent(source.Agent);
-        }
         if (source.UserIds != null) {
             this.UserIds = new String[source.UserIds.length];
             for (int i = 0; i < source.UserIds.length; i++) {
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
+        }
+        if (source.Policy != null) {
+            this.Policy = new String(source.Policy);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -229,9 +229,9 @@ public class CreateSealPolicyRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Users.", this.Users);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamSimple(map, prefix + "Expired", this.Expired);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
 
     }
 }

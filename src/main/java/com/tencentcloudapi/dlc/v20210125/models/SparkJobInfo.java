@@ -311,6 +311,14 @@ public class SparkJobInfo extends AbstractModel{
     private String DataEngineImageVersion;
 
     /**
+    * 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInherit")
+    @Expose
+    private Long IsInherit;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -994,6 +1002,26 @@ public class SparkJobInfo extends AbstractModel{
         this.DataEngineImageVersion = DataEngineImageVersion;
     }
 
+    /**
+     * Get 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsInherit() {
+        return this.IsInherit;
+    }
+
+    /**
+     * Set 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInherit 任务资源配置是否继承集群模板，0（默认）不继承，1：继承
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInherit(Long IsInherit) {
+        this.IsInherit = IsInherit;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1119,6 +1147,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.DataEngineImageVersion != null) {
             this.DataEngineImageVersion = new String(source.DataEngineImageVersion);
         }
+        if (source.IsInherit != null) {
+            this.IsInherit = new Long(source.IsInherit);
+        }
     }
 
 
@@ -1165,6 +1196,7 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
+        this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
 
     }
 }

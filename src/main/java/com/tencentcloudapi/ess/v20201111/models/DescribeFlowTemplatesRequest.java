@@ -37,6 +37,20 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
+    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
+    */
+    @SerializedName("ContentType")
+    @Expose
+    private Long ContentType;
+
+    /**
+    * 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 查询偏移位置，默认0
     */
     @SerializedName("Offset")
@@ -49,13 +63,6 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     @SerializedName("Limit")
     @Expose
     private Long Limit;
-
-    /**
-    * 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
     * 这个参数跟下面的IsChannel参数配合使用。
@@ -74,13 +81,6 @@ ApplicationId为空，查询所有应用下的模板列表
     @SerializedName("IsChannel")
     @Expose
     private Boolean IsChannel;
-
-    /**
-    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
-    */
-    @SerializedName("ContentType")
-    @Expose
-    private Long ContentType;
 
     /**
     * 暂未开放
@@ -129,6 +129,38 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
+     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
+     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     */
+    public Long getContentType() {
+        return this.ContentType;
+    }
+
+    /**
+     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     */
+    public void setContentType(Long ContentType) {
+        this.ContentType = ContentType;
+    }
+
+    /**
+     * Get 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤 
+     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get 查询偏移位置，默认0 
      * @return Offset 查询偏移位置，默认0
      */
@@ -158,22 +190,6 @@ ApplicationId为空，查询所有应用下的模板列表
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
-    }
-
-    /**
-     * Get 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤 
-     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
     }
 
     /**
@@ -225,25 +241,11 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
-     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
-     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     */
-    public Long getContentType() {
-        return this.ContentType;
-    }
-
-    /**
-     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     */
-    public void setContentType(Long ContentType) {
-        this.ContentType = ContentType;
-    }
-
-    /**
      * Get 暂未开放 
      * @return Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -251,7 +253,9 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * Set 暂未开放
      * @param Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
@@ -259,7 +263,9 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * Get 暂未开放 
      * @return GenerateSource 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public Long getGenerateSource() {
         return this.GenerateSource;
     }
@@ -267,7 +273,9 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * Set 暂未开放
      * @param GenerateSource 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setGenerateSource(Long GenerateSource) {
         this.GenerateSource = GenerateSource;
     }
@@ -286,11 +294,8 @@ ApplicationId为空，查询所有应用下的模板列表
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+        if (source.ContentType != null) {
+            this.ContentType = new Long(source.ContentType);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -298,14 +303,17 @@ ApplicationId为空，查询所有应用下的模板列表
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
         }
         if (source.IsChannel != null) {
             this.IsChannel = new Boolean(source.IsChannel);
-        }
-        if (source.ContentType != null) {
-            this.ContentType = new Long(source.ContentType);
         }
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
@@ -322,12 +330,12 @@ ApplicationId为空，查询所有应用下的模板列表
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "IsChannel", this.IsChannel);
-        this.setParamSimple(map, prefix + "ContentType", this.ContentType);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
 

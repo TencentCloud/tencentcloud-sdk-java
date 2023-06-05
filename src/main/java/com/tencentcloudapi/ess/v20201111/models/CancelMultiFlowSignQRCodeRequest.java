@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CancelMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
-    * 用户信息
+    * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
@@ -37,23 +37,23 @@ public class CancelMultiFlowSignQRCodeRequest extends AbstractModel{
     private String QrCodeId;
 
     /**
-    * 应用信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-     * Get 用户信息 
-     * @return Operator 用户信息
+     * Get 调用方用户信息，userId 必填 
+     * @return Operator 调用方用户信息，userId 必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 用户信息
-     * @param Operator 用户信息
+     * Set 调用方用户信息，userId 必填
+     * @param Operator 调用方用户信息，userId 必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
@@ -76,16 +76,16 @@ public class CancelMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用信息 
-     * @return Agent 应用信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用信息
-     * @param Agent 应用信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

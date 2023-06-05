@@ -131,7 +131,9 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Get 应用号信息 
      * @return Agent 应用号信息
+     * @deprecated
      */
+    @Deprecated
     public Agent getAgent() {
         return this.Agent;
     }
@@ -139,7 +141,9 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Set 应用号信息
      * @param Agent 应用号信息
+     * @deprecated
      */
+    @Deprecated
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
@@ -147,7 +151,9 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Get 暂未开放 
      * @return Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -155,7 +161,9 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Set 暂未开放
      * @param Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

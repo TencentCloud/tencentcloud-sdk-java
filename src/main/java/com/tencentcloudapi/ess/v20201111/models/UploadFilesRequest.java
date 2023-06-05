@@ -200,7 +200,9 @@ true--是，处理置白
     /**
      * Get 不再使用，上传文件链接数组，最多支持20个URL 
      * @return FileUrls 不再使用，上传文件链接数组，最多支持20个URL
+     * @deprecated
      */
+    @Deprecated
     public String getFileUrls() {
         return this.FileUrls;
     }
@@ -208,7 +210,9 @@ true--是，处理置白
     /**
      * Set 不再使用，上传文件链接数组，最多支持20个URL
      * @param FileUrls 不再使用，上传文件链接数组，最多支持20个URL
+     * @deprecated
      */
+    @Deprecated
     public void setFileUrls(String FileUrls) {
         this.FileUrls = FileUrls;
     }

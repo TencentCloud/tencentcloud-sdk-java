@@ -37,7 +37,7 @@ public class SignQrCode extends AbstractModel{
     private String QrCodeUrl;
 
     /**
-    * 二维码过期时间
+    * 二维码过期时间戳，单位秒
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -76,16 +76,16 @@ public class SignQrCode extends AbstractModel{
     }
 
     /**
-     * Get 二维码过期时间 
-     * @return ExpiredTime 二维码过期时间
+     * Get 二维码过期时间戳，单位秒 
+     * @return ExpiredTime 二维码过期时间戳，单位秒
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 二维码过期时间
-     * @param ExpiredTime 二维码过期时间
+     * Set 二维码过期时间戳，单位秒
+     * @param ExpiredTime 二维码过期时间戳，单位秒
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

@@ -76,7 +76,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 用户的来源渠道，一般不用传，特定场景根据接口说明传值 
      * @return Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
+    @Deprecated
     public String getChannel() {
         return this.Channel;
     }
@@ -84,7 +86,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 用户的来源渠道，一般不用传，特定场景根据接口说明传值
      * @param Channel 用户的来源渠道，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
+    @Deprecated
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
@@ -92,7 +96,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 用户在渠道的编号，一般不用传，特定场景根据接口说明传值 
      * @return OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
+    @Deprecated
     public String getOpenId() {
         return this.OpenId;
     }
@@ -100,7 +106,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
      * @param OpenId 用户在渠道的编号，一般不用传，特定场景根据接口说明传值
+     * @deprecated
      */
+    @Deprecated
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
     }
@@ -108,7 +116,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 用户真实IP，内部字段，暂未开放 
      * @return ClientIp 用户真实IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getClientIp() {
         return this.ClientIp;
     }
@@ -116,7 +126,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 用户真实IP，内部字段，暂未开放
      * @param ClientIp 用户真实IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
@@ -124,7 +136,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 用户代理IP，内部字段，暂未开放 
      * @return ProxyIp 用户代理IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public String getProxyIp() {
         return this.ProxyIp;
     }
@@ -132,7 +146,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 用户代理IP，内部字段，暂未开放
      * @param ProxyIp 用户代理IP，内部字段，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;
     }

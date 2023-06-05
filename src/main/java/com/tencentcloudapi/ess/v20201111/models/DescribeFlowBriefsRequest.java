@@ -30,14 +30,14 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 需要查询的流程ID列表，限制最大20个
+    * 需要查询的流程ID列表，限制最大100个
     */
     @SerializedName("FlowIds")
     @Expose
     private String [] FlowIds;
 
     /**
-    * 应用相关信息
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeFlowBriefsRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要查询的流程ID列表，限制最大20个 
-     * @return FlowIds 需要查询的流程ID列表，限制最大20个
+     * Get 需要查询的流程ID列表，限制最大100个 
+     * @return FlowIds 需要查询的流程ID列表，限制最大100个
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 需要查询的流程ID列表，限制最大20个
-     * @param FlowIds 需要查询的流程ID列表，限制最大20个
+     * Set 需要查询的流程ID列表，限制最大100个
+     * @param FlowIds 需要查询的流程ID列表，限制最大100个
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
     }
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
