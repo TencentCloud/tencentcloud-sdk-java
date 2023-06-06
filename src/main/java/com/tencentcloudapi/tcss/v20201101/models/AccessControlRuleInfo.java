@@ -30,7 +30,7 @@ public class AccessControlRuleInfo extends AbstractModel{
     private Boolean IsEnable;
 
     /**
-    * 生效惊现id，空数组代表全部镜像
+    * 生效镜像id，空数组代表全部镜像
     */
     @SerializedName("ImageIds")
     @Expose
@@ -89,16 +89,16 @@ public class AccessControlRuleInfo extends AbstractModel{
     }
 
     /**
-     * Get 生效惊现id，空数组代表全部镜像 
-     * @return ImageIds 生效惊现id，空数组代表全部镜像
+     * Get 生效镜像id，空数组代表全部镜像 
+     * @return ImageIds 生效镜像id，空数组代表全部镜像
      */
     public String [] getImageIds() {
         return this.ImageIds;
     }
 
     /**
-     * Set 生效惊现id，空数组代表全部镜像
-     * @param ImageIds 生效惊现id，空数组代表全部镜像
+     * Set 生效镜像id，空数组代表全部镜像
+     * @param ImageIds 生效镜像id，空数组代表全部镜像
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;

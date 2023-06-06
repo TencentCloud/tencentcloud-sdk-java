@@ -24,6 +24,7 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
     * 是否开启健康检查。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsHealthCheck")
     @Expose
@@ -31,6 +32,7 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
     * 健康检查阈值。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestVolumeThreshold")
     @Expose
@@ -38,6 +40,7 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
     * 窗口大小。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SleepWindowInMilliseconds")
     @Expose
@@ -45,14 +48,17 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
     * 阈值百分比。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorThresholdPercentage")
     @Expose
     private Long ErrorThresholdPercentage;
 
     /**
-     * Get 是否开启健康检查。 
+     * Get 是否开启健康检查。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsHealthCheck 是否开启健康检查。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsHealthCheck() {
         return this.IsHealthCheck;
@@ -60,15 +66,19 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
      * Set 是否开启健康检查。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsHealthCheck 是否开启健康检查。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsHealthCheck(Boolean IsHealthCheck) {
         this.IsHealthCheck = IsHealthCheck;
     }
 
     /**
-     * Get 健康检查阈值。 
+     * Get 健康检查阈值。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RequestVolumeThreshold 健康检查阈值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRequestVolumeThreshold() {
         return this.RequestVolumeThreshold;
@@ -76,15 +86,19 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
      * Set 健康检查阈值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RequestVolumeThreshold 健康检查阈值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestVolumeThreshold(Long RequestVolumeThreshold) {
         this.RequestVolumeThreshold = RequestVolumeThreshold;
     }
 
     /**
-     * Get 窗口大小。 
+     * Get 窗口大小。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SleepWindowInMilliseconds 窗口大小。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSleepWindowInMilliseconds() {
         return this.SleepWindowInMilliseconds;
@@ -92,15 +106,19 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
      * Set 窗口大小。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SleepWindowInMilliseconds 窗口大小。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSleepWindowInMilliseconds(Long SleepWindowInMilliseconds) {
         this.SleepWindowInMilliseconds = SleepWindowInMilliseconds;
     }
 
     /**
-     * Get 阈值百分比。 
+     * Get 阈值百分比。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ErrorThresholdPercentage 阈值百分比。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrorThresholdPercentage() {
         return this.ErrorThresholdPercentage;
@@ -108,7 +126,9 @@ public class HealthCheckConf extends AbstractModel{
 
     /**
      * Set 阈值百分比。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorThresholdPercentage 阈值百分比。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorThresholdPercentage(Long ErrorThresholdPercentage) {
         this.ErrorThresholdPercentage = ErrorThresholdPercentage;

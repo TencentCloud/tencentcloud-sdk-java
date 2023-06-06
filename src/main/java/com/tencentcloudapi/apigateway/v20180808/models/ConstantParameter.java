@@ -24,6 +24,7 @@ public class ConstantParameter extends AbstractModel{
 
     /**
     * 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -31,6 +32,7 @@ public class ConstantParameter extends AbstractModel{
 
     /**
     * 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -38,6 +40,7 @@ public class ConstantParameter extends AbstractModel{
 
     /**
     * 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -45,14 +48,17 @@ public class ConstantParameter extends AbstractModel{
 
     /**
     * 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-     * Get 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。 
+     * Get 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -60,15 +66,19 @@ public class ConstantParameter extends AbstractModel{
 
     /**
      * Set 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 常量参数名称。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。 
+     * Get 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Desc 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -76,15 +86,19 @@ public class ConstantParameter extends AbstractModel{
 
     /**
      * Set 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 常量参数描述。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。 
+     * Get 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Position 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPosition() {
         return this.Position;
@@ -92,15 +106,19 @@ public class ConstantParameter extends AbstractModel{
 
     /**
      * Set 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 常量参数位置。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。 
+     * Get 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DefaultValue 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultValue() {
         return this.DefaultValue;
@@ -108,7 +126,9 @@ public class ConstantParameter extends AbstractModel{
 
     /**
      * Set 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultValue 常量参数默认值。只有 ServiceType 是 HTTP 才会用到此参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;

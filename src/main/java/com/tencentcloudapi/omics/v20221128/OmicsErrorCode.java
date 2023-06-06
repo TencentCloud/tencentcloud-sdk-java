@@ -39,6 +39,9 @@ public enum OmicsErrorCode {
     // COS路径错误
      INVALIDPARAMETERVALUE_INVALIDCOSKEY("InvalidParameterValue.InvalidCosKey"),
      
+    // CSV文件格式错误
+     INVALIDPARAMETERVALUE_INVALIDCSVFORMAT("InvalidParameterValue.InvalidCsvFormat"),
+     
     // 描述错误
      INVALIDPARAMETERVALUE_INVALIDDESCRIPTION("InvalidParameterValue.InvalidDescription"),
      

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApisStatus extends AbstractModel{
+public class DescribeApisStatusResultInfo extends AbstractModel{
 
     /**
     * 符合条件的 API 接口数量。
@@ -28,13 +28,6 @@ public class ApisStatus extends AbstractModel{
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
-
-    /**
-    * API 接口列表。
-    */
-    @SerializedName("ApiIdStatusSet")
-    @Expose
-    private DesApisStatus [] ApiIdStatusSet;
 
     /**
      * Get 符合条件的 API 接口数量。 
@@ -52,38 +45,16 @@ public class ApisStatus extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
-    /**
-     * Get API 接口列表。 
-     * @return ApiIdStatusSet API 接口列表。
-     */
-    public DesApisStatus [] getApiIdStatusSet() {
-        return this.ApiIdStatusSet;
-    }
-
-    /**
-     * Set API 接口列表。
-     * @param ApiIdStatusSet API 接口列表。
-     */
-    public void setApiIdStatusSet(DesApisStatus [] ApiIdStatusSet) {
-        this.ApiIdStatusSet = ApiIdStatusSet;
-    }
-
-    public ApisStatus() {
+    public DescribeApisStatusResultInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApisStatus(ApisStatus source) {
+    public DescribeApisStatusResultInfo(DescribeApisStatusResultInfo source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.ApiIdStatusSet != null) {
-            this.ApiIdStatusSet = new DesApisStatus[source.ApiIdStatusSet.length];
-            for (int i = 0; i < source.ApiIdStatusSet.length; i++) {
-                this.ApiIdStatusSet[i] = new DesApisStatus(source.ApiIdStatusSet[i]);
-            }
         }
     }
 
@@ -93,7 +64,6 @@ public class ApisStatus extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "ApiIdStatusSet.", this.ApiIdStatusSet);
 
     }
 }

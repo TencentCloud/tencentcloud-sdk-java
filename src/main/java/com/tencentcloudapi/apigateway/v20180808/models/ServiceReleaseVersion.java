@@ -36,7 +36,7 @@ public class ServiceReleaseVersion extends AbstractModel{
     */
     @SerializedName("VersionList")
     @Expose
-    private ServiceReleaseHistoryInfo [] VersionList;
+    private DescribeServiceReleaseVersionResultVersionListInfo [] VersionList;
 
     /**
      * Get 发布版本总数量。
@@ -64,7 +64,7 @@ public class ServiceReleaseVersion extends AbstractModel{
      * @return VersionList 发布版本列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ServiceReleaseHistoryInfo [] getVersionList() {
+    public DescribeServiceReleaseVersionResultVersionListInfo [] getVersionList() {
         return this.VersionList;
     }
 
@@ -74,7 +74,7 @@ public class ServiceReleaseVersion extends AbstractModel{
      * @param VersionList 发布版本列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setVersionList(ServiceReleaseHistoryInfo [] VersionList) {
+    public void setVersionList(DescribeServiceReleaseVersionResultVersionListInfo [] VersionList) {
         this.VersionList = VersionList;
     }
 
@@ -90,9 +90,9 @@ public class ServiceReleaseVersion extends AbstractModel{
             this.TotalCount = new Long(source.TotalCount);
         }
         if (source.VersionList != null) {
-            this.VersionList = new ServiceReleaseHistoryInfo[source.VersionList.length];
+            this.VersionList = new DescribeServiceReleaseVersionResultVersionListInfo[source.VersionList.length];
             for (int i = 0; i < source.VersionList.length; i++) {
-                this.VersionList[i] = new ServiceReleaseHistoryInfo(source.VersionList[i]);
+                this.VersionList[i] = new DescribeServiceReleaseVersionResultVersionListInfo(source.VersionList[i]);
             }
         }
     }

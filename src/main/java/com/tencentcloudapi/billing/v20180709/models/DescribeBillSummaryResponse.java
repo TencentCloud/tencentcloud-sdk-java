@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.wedata.v20210820.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceLogResponse extends AbstractModel{
+public class DescribeBillSummaryResponse extends AbstractModel{
 
     /**
-    * 返回结果
+    * 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
     */
-    @SerializedName("Data")
+    @SerializedName("Ready")
     @Expose
-    private String Data;
+    private Long Ready;
 
     /**
-    * 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+    * 账单多维度汇总消费详情
     */
-    @SerializedName("InstanceLogInfo")
+    @SerializedName("SummaryDetail")
     @Expose
-    private IntegrationInstanceLog InstanceLogInfo;
+    private SummaryDetail [] SummaryDetail;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,39 +44,35 @@ public class DescribeInstanceLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回结果 
-     * @return Data 返回结果
+     * Get 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可） 
+     * @return Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
-    public String getData() {
-        return this.Data;
+    public Long getReady() {
+        return this.Ready;
     }
 
     /**
-     * Set 返回结果
-     * @param Data 返回结果
+     * Set 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * @param Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setReady(Long Ready) {
+        this.Ready = Ready;
     }
 
     /**
-     * Get 返回结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceLogInfo 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账单多维度汇总消费详情 
+     * @return SummaryDetail 账单多维度汇总消费详情
      */
-    public IntegrationInstanceLog getInstanceLogInfo() {
-        return this.InstanceLogInfo;
+    public SummaryDetail [] getSummaryDetail() {
+        return this.SummaryDetail;
     }
 
     /**
-     * Set 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceLogInfo 返回结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 账单多维度汇总消费详情
+     * @param SummaryDetail 账单多维度汇总消费详情
      */
-    public void setInstanceLogInfo(IntegrationInstanceLog InstanceLogInfo) {
-        this.InstanceLogInfo = InstanceLogInfo;
+    public void setSummaryDetail(SummaryDetail [] SummaryDetail) {
+        this.SummaryDetail = SummaryDetail;
     }
 
     /**
@@ -96,19 +91,22 @@ public class DescribeInstanceLogResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceLogResponse() {
+    public DescribeBillSummaryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceLogResponse(DescribeInstanceLogResponse source) {
-        if (source.Data != null) {
-            this.Data = new String(source.Data);
+    public DescribeBillSummaryResponse(DescribeBillSummaryResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
         }
-        if (source.InstanceLogInfo != null) {
-            this.InstanceLogInfo = new IntegrationInstanceLog(source.InstanceLogInfo);
+        if (source.SummaryDetail != null) {
+            this.SummaryDetail = new SummaryDetail[source.SummaryDetail.length];
+            for (int i = 0; i < source.SummaryDetail.length; i++) {
+                this.SummaryDetail[i] = new SummaryDetail(source.SummaryDetail[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +118,8 @@ public class DescribeInstanceLogResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Data", this.Data);
-        this.setParamObj(map, prefix + "InstanceLogInfo.", this.InstanceLogInfo);
+        this.setParamSimple(map, prefix + "Ready", this.Ready);
+        this.setParamArrayObj(map, prefix + "SummaryDetail.", this.SummaryDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

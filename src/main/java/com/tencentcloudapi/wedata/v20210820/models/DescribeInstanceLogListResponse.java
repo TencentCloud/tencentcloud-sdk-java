@@ -30,6 +30,14 @@ public class DescribeInstanceLogListResponse extends AbstractModel{
     private String Data;
 
     /**
+    * 日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceLogList")
+    @Expose
+    private InstanceLogList [] InstanceLogList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeInstanceLogListResponse extends AbstractModel{
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 日志列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceLogList 日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceLogList [] getInstanceLogList() {
+        return this.InstanceLogList;
+    }
+
+    /**
+     * Set 日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceLogList 日志列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceLogList(InstanceLogList [] InstanceLogList) {
+        this.InstanceLogList = InstanceLogList;
     }
 
     /**
@@ -79,6 +107,12 @@ public class DescribeInstanceLogListResponse extends AbstractModel{
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.InstanceLogList != null) {
+            this.InstanceLogList = new InstanceLogList[source.InstanceLogList.length];
+            for (int i = 0; i < source.InstanceLogList.length; i++) {
+                this.InstanceLogList[i] = new InstanceLogList(source.InstanceLogList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +124,7 @@ public class DescribeInstanceLogListResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamArrayObj(map, prefix + "InstanceLogList.", this.InstanceLogList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

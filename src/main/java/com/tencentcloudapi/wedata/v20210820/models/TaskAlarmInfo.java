@@ -191,6 +191,70 @@ public class TaskAlarmInfo extends AbstractModel{
     private String WeComHook;
 
     /**
+    * 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperatorUin")
+    @Expose
+    private String OperatorUin;
+
+    /**
+    * 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskCount")
+    @Expose
+    private Long TaskCount;
+
+    /**
+    * 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private Long MonitorType;
+
+    /**
+    * 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorObjectIds")
+    @Expose
+    private String [] MonitorObjectIds;
+
+    /**
+    * 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestAlarmInstanceId")
+    @Expose
+    private String LatestAlarmInstanceId;
+
+    /**
+    * 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestAlarmTime")
+    @Expose
+    private String LatestAlarmTime;
+
+    /**
+    * 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -598,6 +662,166 @@ public class TaskAlarmInfo extends AbstractModel{
         this.WeComHook = WeComHook;
     }
 
+    /**
+     * Get 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 最近操作时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperatorUin 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperatorUin() {
+        return this.OperatorUin;
+    }
+
+    /**
+     * Set 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorUin 最近操作人Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperatorUin(String OperatorUin) {
+        this.OperatorUin = OperatorUin;
+    }
+
+    /**
+     * Get 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskCount 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskCount() {
+        return this.TaskCount;
+    }
+
+    /**
+     * Set 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskCount 关联任务数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskCount(Long TaskCount) {
+        this.TaskCount = TaskCount;
+    }
+
+    /**
+     * Get 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorType 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorType 监控对象类型,1:所有任务,2:指定任务,3:指定责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorType(Long MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
+    /**
+     * Get 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorObjectIds 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getMonitorObjectIds() {
+        return this.MonitorObjectIds;
+    }
+
+    /**
+     * Set 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorObjectIds 监控对象列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorObjectIds(String [] MonitorObjectIds) {
+        this.MonitorObjectIds = MonitorObjectIds;
+    }
+
+    /**
+     * Get 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestAlarmInstanceId 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestAlarmInstanceId() {
+        return this.LatestAlarmInstanceId;
+    }
+
+    /**
+     * Set 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestAlarmInstanceId 最近一次告警的实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestAlarmInstanceId(String LatestAlarmInstanceId) {
+        this.LatestAlarmInstanceId = LatestAlarmInstanceId;
+    }
+
+    /**
+     * Get 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestAlarmTime 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestAlarmTime() {
+        return this.LatestAlarmTime;
+    }
+
+    /**
+     * Set 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestAlarmTime 最近一次告警时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestAlarmTime(String LatestAlarmTime) {
+        this.LatestAlarmTime = LatestAlarmTime;
+    }
+
+    /**
+     * Get 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 告警规则描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -675,6 +899,33 @@ public class TaskAlarmInfo extends AbstractModel{
         if (source.WeComHook != null) {
             this.WeComHook = new String(source.WeComHook);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.OperatorUin != null) {
+            this.OperatorUin = new String(source.OperatorUin);
+        }
+        if (source.TaskCount != null) {
+            this.TaskCount = new Long(source.TaskCount);
+        }
+        if (source.MonitorType != null) {
+            this.MonitorType = new Long(source.MonitorType);
+        }
+        if (source.MonitorObjectIds != null) {
+            this.MonitorObjectIds = new String[source.MonitorObjectIds.length];
+            for (int i = 0; i < source.MonitorObjectIds.length; i++) {
+                this.MonitorObjectIds[i] = new String(source.MonitorObjectIds[i]);
+            }
+        }
+        if (source.LatestAlarmInstanceId != null) {
+            this.LatestAlarmInstanceId = new String(source.LatestAlarmInstanceId);
+        }
+        if (source.LatestAlarmTime != null) {
+            this.LatestAlarmTime = new String(source.LatestAlarmTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -704,6 +955,14 @@ public class TaskAlarmInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AlarmIndicatorInfos.", this.AlarmIndicatorInfos);
         this.setParamSimple(map, prefix + "AlarmRecipientType", this.AlarmRecipientType);
         this.setParamSimple(map, prefix + "WeComHook", this.WeComHook);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "OperatorUin", this.OperatorUin);
+        this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
+        this.setParamArraySimple(map, prefix + "MonitorObjectIds.", this.MonitorObjectIds);
+        this.setParamSimple(map, prefix + "LatestAlarmInstanceId", this.LatestAlarmInstanceId);
+        this.setParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

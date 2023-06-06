@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTaskAlarmRegulationsResponse extends AbstractModel{
 
     /**
-    * 任务告警规则信息
+    * 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAlarmInfos")
@@ -46,9 +46,9 @@ public class DescribeTaskAlarmRegulationsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务告警规则信息
+     * Get 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskAlarmInfos 任务告警规则信息
+     * @return TaskAlarmInfos 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskAlarmInfo [] getTaskAlarmInfos() {
@@ -56,9 +56,9 @@ public class DescribeTaskAlarmRegulationsResponse extends AbstractModel{
     }
 
     /**
-     * Set 任务告警规则信息
+     * Set 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskAlarmInfos 任务告警规则信息
+     * @param TaskAlarmInfos 告警规则信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAlarmInfos(TaskAlarmInfo [] TaskAlarmInfos) {

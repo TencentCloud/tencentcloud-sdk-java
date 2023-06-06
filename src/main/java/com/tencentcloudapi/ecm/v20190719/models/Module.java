@@ -139,6 +139,13 @@ DELETEFAILED：删除失败。
     private DataDisk [] DataDisks;
 
     /**
+    * 是否禁止外网ip
+    */
+    @SerializedName("DisableWanIp")
+    @Expose
+    private Long DisableWanIp;
+
+    /**
      * Get 模块Id。 
      * @return ModuleId 模块Id。
      */
@@ -410,6 +417,22 @@ DELETEFAILED：删除失败。
         this.DataDisks = DataDisks;
     }
 
+    /**
+     * Get 是否禁止外网ip 
+     * @return DisableWanIp 是否禁止外网ip
+     */
+    public Long getDisableWanIp() {
+        return this.DisableWanIp;
+    }
+
+    /**
+     * Set 是否禁止外网ip
+     * @param DisableWanIp 是否禁止外网ip
+     */
+    public void setDisableWanIp(Long DisableWanIp) {
+        this.DisableWanIp = DisableWanIp;
+    }
+
     public Module() {
     }
 
@@ -475,6 +498,9 @@ DELETEFAILED：删除失败。
                 this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
             }
         }
+        if (source.DisableWanIp != null) {
+            this.DisableWanIp = new Long(source.DisableWanIp);
+        }
     }
 
 
@@ -498,6 +524,7 @@ DELETEFAILED：删除失败。
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "DisableWanIp", this.DisableWanIp);
 
     }
 }

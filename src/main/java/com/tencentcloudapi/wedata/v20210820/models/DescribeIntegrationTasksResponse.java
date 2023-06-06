@@ -31,6 +31,14 @@ public class DescribeIntegrationTasksResponse extends AbstractModel{
     private IntegrationTaskInfo [] TaskInfoSet;
 
     /**
+    * 任务总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ public class DescribeIntegrationTasksResponse extends AbstractModel{
      */
     public void setTaskInfoSet(IntegrationTaskInfo [] TaskInfoSet) {
         this.TaskInfoSet = TaskInfoSet;
+    }
+
+    /**
+     * Get 任务总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 任务总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 任务总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 任务总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -87,6 +115,9 @@ public class DescribeIntegrationTasksResponse extends AbstractModel{
                 this.TaskInfoSet[i] = new IntegrationTaskInfo(source.TaskInfoSet[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -98,6 +129,7 @@ public class DescribeIntegrationTasksResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskInfoSet.", this.TaskInfoSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

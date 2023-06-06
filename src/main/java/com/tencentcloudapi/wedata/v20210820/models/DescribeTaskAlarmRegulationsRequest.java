@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
 
     /**
-    * 任务ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
     * 项目ID
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
-
-    /**
-    * 任务类型(201代表实时任务，202代表离线任务)
-    */
-    @SerializedName("TaskType")
-    @Expose
-    private Long TaskType;
 
     /**
     * 当前页
@@ -72,20 +58,18 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
     private OrderField [] OrderFields;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
+    * 任务类型(201代表实时任务，202代表离线任务)
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
 
     /**
      * Get 项目ID 
@@ -101,22 +85,6 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 任务类型(201代表实时任务，202代表离线任务) 
-     * @return TaskType 任务类型(201代表实时任务，202代表离线任务)
-     */
-    public Long getTaskType() {
-        return this.TaskType;
-    }
-
-    /**
-     * Set 任务类型(201代表实时任务，202代表离线任务)
-     * @param TaskType 任务类型(201代表实时任务，202代表离线任务)
-     */
-    public void setTaskType(Long TaskType) {
-        this.TaskType = TaskType;
     }
 
     /**
@@ -183,6 +151,38 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
         this.OrderFields = OrderFields;
     }
 
+    /**
+     * Get 任务ID 
+     * @return TaskId 任务ID
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 任务类型(201代表实时任务，202代表离线任务) 
+     * @return TaskType 任务类型(201代表实时任务，202代表离线任务)
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型(201代表实时任务，202代表离线任务)
+     * @param TaskType 任务类型(201代表实时任务，202代表离线任务)
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public DescribeTaskAlarmRegulationsRequest() {
     }
 
@@ -191,14 +191,8 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTaskAlarmRegulationsRequest(DescribeTaskAlarmRegulationsRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
-        }
-        if (source.TaskType != null) {
-            this.TaskType = new Long(source.TaskType);
         }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
@@ -218,6 +212,12 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
                 this.OrderFields[i] = new OrderField(source.OrderFields[i]);
             }
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
     }
 
 
@@ -225,13 +225,13 @@ public class DescribeTaskAlarmRegulationsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

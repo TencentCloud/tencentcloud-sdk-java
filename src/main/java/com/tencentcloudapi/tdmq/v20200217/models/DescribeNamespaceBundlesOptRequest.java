@@ -65,6 +65,20 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 过滤的 bundle
+    */
+    @SerializedName("Bundle")
+    @Expose
+    private String Bundle;
+
+    /**
+    * bundle 所属的 broker ip 地址，支持模糊查询
+    */
+    @SerializedName("OwnerBroker")
+    @Expose
+    private String OwnerBroker;
+
+    /**
      * Get 物理集群名 
      * @return ClusterName 物理集群名
      */
@@ -160,6 +174,38 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 过滤的 bundle 
+     * @return Bundle 过滤的 bundle
+     */
+    public String getBundle() {
+        return this.Bundle;
+    }
+
+    /**
+     * Set 过滤的 bundle
+     * @param Bundle 过滤的 bundle
+     */
+    public void setBundle(String Bundle) {
+        this.Bundle = Bundle;
+    }
+
+    /**
+     * Get bundle 所属的 broker ip 地址，支持模糊查询 
+     * @return OwnerBroker bundle 所属的 broker ip 地址，支持模糊查询
+     */
+    public String getOwnerBroker() {
+        return this.OwnerBroker;
+    }
+
+    /**
+     * Set bundle 所属的 broker ip 地址，支持模糊查询
+     * @param OwnerBroker bundle 所属的 broker ip 地址，支持模糊查询
+     */
+    public void setOwnerBroker(String OwnerBroker) {
+        this.OwnerBroker = OwnerBroker;
+    }
+
     public DescribeNamespaceBundlesOptRequest() {
     }
 
@@ -186,6 +232,12 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Bundle != null) {
+            this.Bundle = new String(source.Bundle);
+        }
+        if (source.OwnerBroker != null) {
+            this.OwnerBroker = new String(source.OwnerBroker);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class DescribeNamespaceBundlesOptRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedMetrics", this.NeedMetrics);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Bundle", this.Bundle);
+        this.setParamSimple(map, prefix + "OwnerBroker", this.OwnerBroker);
 
     }
 }

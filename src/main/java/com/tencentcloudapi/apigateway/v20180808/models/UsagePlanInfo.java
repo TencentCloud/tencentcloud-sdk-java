@@ -47,14 +47,6 @@ public class UsagePlanInfo extends AbstractModel{
     private String UsagePlanDesc;
 
     /**
-    * 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("InitQuota")
-    @Expose
-    private Long InitQuota;
-
-    /**
     * 每秒请求限制数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -69,14 +61,6 @@ public class UsagePlanInfo extends AbstractModel{
     @SerializedName("MaxRequestNum")
     @Expose
     private Long MaxRequestNum;
-
-    /**
-    * 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("IsHide")
-    @Expose
-    private Long IsHide;
 
     /**
     * 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。格式为：YYYY-MM-DDThh:mm:ssZ。
@@ -187,26 +171,6 @@ public class UsagePlanInfo extends AbstractModel{
     }
 
     /**
-     * Get 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InitQuota 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getInitQuota() {
-        return this.InitQuota;
-    }
-
-    /**
-     * Set 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InitQuota 初始化调用次数。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setInitQuota(Long InitQuota) {
-        this.InitQuota = InitQuota;
-    }
-
-    /**
      * Get 每秒请求限制数。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxRequestNumPreSec 每秒请求限制数。
@@ -244,26 +208,6 @@ public class UsagePlanInfo extends AbstractModel{
      */
     public void setMaxRequestNum(Long MaxRequestNum) {
         this.MaxRequestNum = MaxRequestNum;
-    }
-
-    /**
-     * Get 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsHide 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getIsHide() {
-        return this.IsHide;
-    }
-
-    /**
-     * Set 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsHide 是否隐藏。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setIsHide(Long IsHide) {
-        this.IsHide = IsHide;
     }
 
     /**
@@ -403,17 +347,11 @@ public class UsagePlanInfo extends AbstractModel{
         if (source.UsagePlanDesc != null) {
             this.UsagePlanDesc = new String(source.UsagePlanDesc);
         }
-        if (source.InitQuota != null) {
-            this.InitQuota = new Long(source.InitQuota);
-        }
         if (source.MaxRequestNumPreSec != null) {
             this.MaxRequestNumPreSec = new Long(source.MaxRequestNumPreSec);
         }
         if (source.MaxRequestNum != null) {
             this.MaxRequestNum = new Long(source.MaxRequestNum);
-        }
-        if (source.IsHide != null) {
-            this.IsHide = new Long(source.IsHide);
         }
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
@@ -449,10 +387,8 @@ public class UsagePlanInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UsagePlanId", this.UsagePlanId);
         this.setParamSimple(map, prefix + "UsagePlanName", this.UsagePlanName);
         this.setParamSimple(map, prefix + "UsagePlanDesc", this.UsagePlanDesc);
-        this.setParamSimple(map, prefix + "InitQuota", this.InitQuota);
         this.setParamSimple(map, prefix + "MaxRequestNumPreSec", this.MaxRequestNumPreSec);
         this.setParamSimple(map, prefix + "MaxRequestNum", this.MaxRequestNum);
-        this.setParamSimple(map, prefix + "IsHide", this.IsHide);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "BindSecretIdTotalCount", this.BindSecretIdTotalCount);

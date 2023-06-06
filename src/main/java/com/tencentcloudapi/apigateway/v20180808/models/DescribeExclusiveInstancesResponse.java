@@ -27,7 +27,7 @@ public class DescribeExclusiveInstancesResponse extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private InstanceInfo Result;
+    private DescribeExclusiveInstancesResult Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeExclusiveInstancesResponse extends AbstractModel{
      * Get 独享实例列表查询结果 
      * @return Result 独享实例列表查询结果
      */
-    public InstanceInfo getResult() {
+    public DescribeExclusiveInstancesResult getResult() {
         return this.Result;
     }
 
@@ -48,7 +48,7 @@ public class DescribeExclusiveInstancesResponse extends AbstractModel{
      * Set 独享实例列表查询结果
      * @param Result 独享实例列表查询结果
      */
-    public void setResult(InstanceInfo Result) {
+    public void setResult(DescribeExclusiveInstancesResult Result) {
         this.Result = Result;
     }
 
@@ -77,7 +77,7 @@ public class DescribeExclusiveInstancesResponse extends AbstractModel{
      */
     public DescribeExclusiveInstancesResponse(DescribeExclusiveInstancesResponse source) {
         if (source.Result != null) {
-            this.Result = new InstanceInfo(source.Result);
+            this.Result = new DescribeExclusiveInstancesResult(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

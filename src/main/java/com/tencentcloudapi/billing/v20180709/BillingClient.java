@@ -122,6 +122,26 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
+     * @param req DescribeBillSummaryRequest
+     * @return DescribeBillSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillSummaryResponse DescribeBillSummary(DescribeBillSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取按计费模式汇总费用分布
      * @param req DescribeBillSummaryByPayModeRequest
      * @return DescribeBillSummaryByPayModeResponse

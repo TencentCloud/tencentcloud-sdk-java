@@ -53,6 +53,20 @@ public class SendEmailRequest extends AbstractModel{
     private String ReplyToAddresses;
 
     /**
+    * 抄送人邮箱地址，最多支持抄送20人。
+    */
+    @SerializedName("Cc")
+    @Expose
+    private String [] Cc;
+
+    /**
+    * 密送人邮箱地址，最多支持抄送20人。
+    */
+    @SerializedName("Bcc")
+    @Expose
+    private String [] Bcc;
+
+    /**
     * 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
     */
     @SerializedName("Template")
@@ -160,6 +174,38 @@ public class SendEmailRequest extends AbstractModel{
     }
 
     /**
+     * Get 抄送人邮箱地址，最多支持抄送20人。 
+     * @return Cc 抄送人邮箱地址，最多支持抄送20人。
+     */
+    public String [] getCc() {
+        return this.Cc;
+    }
+
+    /**
+     * Set 抄送人邮箱地址，最多支持抄送20人。
+     * @param Cc 抄送人邮箱地址，最多支持抄送20人。
+     */
+    public void setCc(String [] Cc) {
+        this.Cc = Cc;
+    }
+
+    /**
+     * Get 密送人邮箱地址，最多支持抄送20人。 
+     * @return Bcc 密送人邮箱地址，最多支持抄送20人。
+     */
+    public String [] getBcc() {
+        return this.Bcc;
+    }
+
+    /**
+     * Set 密送人邮箱地址，最多支持抄送20人。
+     * @param Bcc 密送人邮箱地址，最多支持抄送20人。
+     */
+    public void setBcc(String [] Bcc) {
+        this.Bcc = Bcc;
+    }
+
+    /**
      * Get 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项 
      * @return Template 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
      */
@@ -262,6 +308,18 @@ public class SendEmailRequest extends AbstractModel{
         if (source.ReplyToAddresses != null) {
             this.ReplyToAddresses = new String(source.ReplyToAddresses);
         }
+        if (source.Cc != null) {
+            this.Cc = new String[source.Cc.length];
+            for (int i = 0; i < source.Cc.length; i++) {
+                this.Cc[i] = new String(source.Cc[i]);
+            }
+        }
+        if (source.Bcc != null) {
+            this.Bcc = new String[source.Bcc.length];
+            for (int i = 0; i < source.Bcc.length; i++) {
+                this.Bcc[i] = new String(source.Bcc[i]);
+            }
+        }
         if (source.Template != null) {
             this.Template = new Template(source.Template);
         }
@@ -291,6 +349,8 @@ public class SendEmailRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
+        this.setParamArraySimple(map, prefix + "Cc.", this.Cc);
+        this.setParamArraySimple(map, prefix + "Bcc.", this.Bcc);
         this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);

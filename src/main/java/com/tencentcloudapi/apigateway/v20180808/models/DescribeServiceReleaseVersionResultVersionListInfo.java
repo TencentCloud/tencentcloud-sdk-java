@@ -20,72 +20,77 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateApiResponse extends AbstractModel{
+public class DescribeServiceReleaseVersionResultVersionListInfo extends AbstractModel{
 
     /**
-    * api信息
+    * 版本号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("VersionName")
     @Expose
-    private CreateApiResultInfo Result;
+    private String VersionName;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 版本描述。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("RequestId")
+    @SerializedName("VersionDesc")
     @Expose
-    private String RequestId;
+    private String VersionDesc;
 
     /**
-     * Get api信息
+     * Get 版本号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result api信息
+     * @return VersionName 版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public CreateApiResultInfo getResult() {
-        return this.Result;
+    public String getVersionName() {
+        return this.VersionName;
     }
 
     /**
-     * Set api信息
+     * Set 版本号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result api信息
+     * @param VersionName 版本号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(CreateApiResultInfo Result) {
-        this.Result = Result;
+    public void setVersionName(String VersionName) {
+        this.VersionName = VersionName;
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 版本描述。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionDesc 版本描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getVersionDesc() {
+        return this.VersionDesc;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 版本描述。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionDesc 版本描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setVersionDesc(String VersionDesc) {
+        this.VersionDesc = VersionDesc;
     }
 
-    public CreateApiResponse() {
+    public DescribeServiceReleaseVersionResultVersionListInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateApiResponse(CreateApiResponse source) {
-        if (source.Result != null) {
-            this.Result = new CreateApiResultInfo(source.Result);
+    public DescribeServiceReleaseVersionResultVersionListInfo(DescribeServiceReleaseVersionResultVersionListInfo source) {
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.VersionDesc != null) {
+            this.VersionDesc = new String(source.VersionDesc);
         }
     }
 
@@ -94,8 +99,8 @@ public class CreateApiResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "VersionName", this.VersionName);
+        this.setParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
 
     }
 }

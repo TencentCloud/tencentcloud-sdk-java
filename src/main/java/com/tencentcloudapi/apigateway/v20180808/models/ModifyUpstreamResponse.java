@@ -28,7 +28,7 @@ public class ModifyUpstreamResponse extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private UpstreamInfo Result;
+    private ModifyUpstreamResultInfo Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +43,7 @@ public class ModifyUpstreamResponse extends AbstractModel{
      * @return Result 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public UpstreamInfo getResult() {
+    public ModifyUpstreamResultInfo getResult() {
         return this.Result;
     }
 
@@ -53,7 +53,7 @@ public class ModifyUpstreamResponse extends AbstractModel{
      * @param Result 返回修改后的后端通道信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(UpstreamInfo Result) {
+    public void setResult(ModifyUpstreamResultInfo Result) {
         this.Result = Result;
     }
 
@@ -82,7 +82,7 @@ public class ModifyUpstreamResponse extends AbstractModel{
      */
     public ModifyUpstreamResponse(ModifyUpstreamResponse source) {
         if (source.Result != null) {
-            this.Result = new UpstreamInfo(source.Result);
+            this.Result = new ModifyUpstreamResultInfo(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

@@ -79,6 +79,13 @@ public class Node extends AbstractModel{
     private Long ISPNum;
 
     /**
+    * 节点是否支持LB
+    */
+    @SerializedName("LBSupported")
+    @Expose
+    private Boolean LBSupported;
+
+    /**
      * Get zone信息。 
      * @return ZoneInfo zone信息。
      */
@@ -206,6 +213,22 @@ public class Node extends AbstractModel{
         this.ISPNum = ISPNum;
     }
 
+    /**
+     * Get 节点是否支持LB 
+     * @return LBSupported 节点是否支持LB
+     */
+    public Boolean getLBSupported() {
+        return this.LBSupported;
+    }
+
+    /**
+     * Set 节点是否支持LB
+     * @param LBSupported 节点是否支持LB
+     */
+    public void setLBSupported(Boolean LBSupported) {
+        this.LBSupported = LBSupported;
+    }
+
     public Node() {
     }
 
@@ -241,6 +264,9 @@ public class Node extends AbstractModel{
         if (source.ISPNum != null) {
             this.ISPNum = new Long(source.ISPNum);
         }
+        if (source.LBSupported != null) {
+            this.LBSupported = new Boolean(source.LBSupported);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class Node extends AbstractModel{
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
         this.setParamArrayObj(map, prefix + "ISPSet.", this.ISPSet);
         this.setParamSimple(map, prefix + "ISPNum", this.ISPNum);
+        this.setParamSimple(map, prefix + "LBSupported", this.LBSupported);
 
     }
 }

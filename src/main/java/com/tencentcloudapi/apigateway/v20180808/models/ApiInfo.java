@@ -220,7 +220,7 @@ public class ApiInfo extends AbstractModel{
     */
     @SerializedName("ServiceParameters")
     @Expose
-    private ServiceParameter [] ServiceParameters;
+    private DescribeApiResultServiceParametersInfo [] ServiceParameters;
 
     /**
     * 常量参数。
@@ -916,7 +916,7 @@ public class ApiInfo extends AbstractModel{
      * @return ServiceParameters API的后端服务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ServiceParameter [] getServiceParameters() {
+    public DescribeApiResultServiceParametersInfo [] getServiceParameters() {
         return this.ServiceParameters;
     }
 
@@ -926,7 +926,7 @@ public class ApiInfo extends AbstractModel{
      * @param ServiceParameters API的后端服务参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setServiceParameters(ServiceParameter [] ServiceParameters) {
+    public void setServiceParameters(DescribeApiResultServiceParametersInfo [] ServiceParameters) {
         this.ServiceParameters = ServiceParameters;
     }
 
@@ -1537,9 +1537,9 @@ public class ApiInfo extends AbstractModel{
             this.ServiceConfig = new ServiceConfig(source.ServiceConfig);
         }
         if (source.ServiceParameters != null) {
-            this.ServiceParameters = new ServiceParameter[source.ServiceParameters.length];
+            this.ServiceParameters = new DescribeApiResultServiceParametersInfo[source.ServiceParameters.length];
             for (int i = 0; i < source.ServiceParameters.length; i++) {
-                this.ServiceParameters[i] = new ServiceParameter(source.ServiceParameters[i]);
+                this.ServiceParameters[i] = new DescribeApiResultServiceParametersInfo(source.ServiceParameters[i]);
             }
         }
         if (source.ConstantParameters != null) {

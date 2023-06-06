@@ -38,6 +38,7 @@ public class ApiIdStatus extends AbstractModel{
 
     /**
     * API描述
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiDesc")
     @Expose
@@ -192,8 +193,10 @@ public class ApiIdStatus extends AbstractModel{
     }
 
     /**
-     * Get API描述 
+     * Get API描述
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiDesc API描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiDesc() {
         return this.ApiDesc;
@@ -201,7 +204,9 @@ public class ApiIdStatus extends AbstractModel{
 
     /**
      * Set API描述
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiDesc API描述
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiDesc(String ApiDesc) {
         this.ApiDesc = ApiDesc;

@@ -37,14 +37,6 @@ public class EnvironmentStrategy extends AbstractModel{
     private Long Quota;
 
     /**
-    * 限流最大值
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MaxQuota")
-    @Expose
-    private Long MaxQuota;
-
-    /**
      * Get 环境名 
      * @return EnvironmentName 环境名
      */
@@ -76,26 +68,6 @@ public class EnvironmentStrategy extends AbstractModel{
         this.Quota = Quota;
     }
 
-    /**
-     * Get 限流最大值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxQuota 限流最大值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMaxQuota() {
-        return this.MaxQuota;
-    }
-
-    /**
-     * Set 限流最大值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxQuota 限流最大值
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMaxQuota(Long MaxQuota) {
-        this.MaxQuota = MaxQuota;
-    }
-
     public EnvironmentStrategy() {
     }
 
@@ -110,9 +82,6 @@ public class EnvironmentStrategy extends AbstractModel{
         if (source.Quota != null) {
             this.Quota = new Long(source.Quota);
         }
-        if (source.MaxQuota != null) {
-            this.MaxQuota = new Long(source.MaxQuota);
-        }
     }
 
 
@@ -122,7 +91,6 @@ public class EnvironmentStrategy extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
         this.setParamSimple(map, prefix + "Quota", this.Quota);
-        this.setParamSimple(map, prefix + "MaxQuota", this.MaxQuota);
 
     }
 }

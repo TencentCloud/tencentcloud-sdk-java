@@ -44,6 +44,21 @@ public class DiskInfo extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * 是否随实例删除。
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
+    * 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
      * Get 磁盘类型：LOCAL_BASIC 
      * @return DiskType 磁盘类型：LOCAL_BASIC
      */
@@ -91,6 +106,42 @@ public class DiskInfo extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get 是否随实例删除。 
+     * @return DeleteWithInstance 是否随实例删除。
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * Set 是否随实例删除。
+     * @param DeleteWithInstance 是否随实例删除。
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
+    /**
+     * Get 快照ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotId 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotId 快照ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
     public DiskInfo() {
     }
 
@@ -108,6 +159,12 @@ public class DiskInfo extends AbstractModel{
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
     }
 
 
@@ -118,6 +175,8 @@ public class DiskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
 
     }
 }

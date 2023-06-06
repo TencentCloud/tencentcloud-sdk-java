@@ -45,6 +45,7 @@ public class UsagePlan extends AbstractModel{
 
     /**
     * 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsagePlanDesc")
     @Expose
@@ -120,8 +121,10 @@ public class UsagePlan extends AbstractModel{
     }
 
     /**
-     * Get 使用计划描述。 
+     * Get 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UsagePlanDesc 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsagePlanDesc() {
         return this.UsagePlanDesc;
@@ -129,7 +132,9 @@ public class UsagePlan extends AbstractModel{
 
     /**
      * Set 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UsagePlanDesc 使用计划描述。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsagePlanDesc(String UsagePlanDesc) {
         this.UsagePlanDesc = UsagePlanDesc;

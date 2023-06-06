@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreateOrUpdateResourceRequest extends AbstractModel{
 
     /**
-    * 项目ID
+    * 项目ID，必填项
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 文件名
+    * 文件名，必填项
     */
     @SerializedName("Files")
     @Expose
     private String [] Files;
 
     /**
-    * 文件所属路径，资源管理根路径为 /datastudio/resouce
+    * 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
     */
     @SerializedName("FilePath")
     @Expose
@@ -65,55 +65,55 @@ public class CreateOrUpdateResourceRequest extends AbstractModel{
     private Boolean NewFile;
 
     /**
-    * 文件大小
+    * 必填项，文件大小，与 Files 字段对应
     */
     @SerializedName("FilesSize")
     @Expose
     private String [] FilesSize;
 
     /**
-     * Get 项目ID 
-     * @return ProjectId 项目ID
+     * Get 项目ID，必填项 
+     * @return ProjectId 项目ID，必填项
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID
-     * @param ProjectId 项目ID
+     * Set 项目ID，必填项
+     * @param ProjectId 项目ID，必填项
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 文件名 
-     * @return Files 文件名
+     * Get 文件名，必填项 
+     * @return Files 文件名，必填项
      */
     public String [] getFiles() {
         return this.Files;
     }
 
     /**
-     * Set 文件名
-     * @param Files 文件名
+     * Set 文件名，必填项
+     * @param Files 文件名，必填项
      */
     public void setFiles(String [] Files) {
         this.Files = Files;
     }
 
     /**
-     * Get 文件所属路径，资源管理根路径为 /datastudio/resouce 
-     * @return FilePath 文件所属路径，资源管理根路径为 /datastudio/resouce
+     * Get 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名 
+     * @return FilePath 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set 文件所属路径，资源管理根路径为 /datastudio/resouce
-     * @param FilePath 文件所属路径，资源管理根路径为 /datastudio/resouce
+     * Set 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
+     * @param FilePath 必填项，文件所属路径，资源管理根路径为 /datastudio/resource/项目ID/文件夹名
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
@@ -168,16 +168,16 @@ public class CreateOrUpdateResourceRequest extends AbstractModel{
     }
 
     /**
-     * Get 文件大小 
-     * @return FilesSize 文件大小
+     * Get 必填项，文件大小，与 Files 字段对应 
+     * @return FilesSize 必填项，文件大小，与 Files 字段对应
      */
     public String [] getFilesSize() {
         return this.FilesSize;
     }
 
     /**
-     * Set 文件大小
-     * @param FilesSize 文件大小
+     * Set 必填项，文件大小，与 Files 字段对应
+     * @param FilesSize 必填项，文件大小，与 Files 字段对应
      */
     public void setFilesSize(String [] FilesSize) {
         this.FilesSize = FilesSize;

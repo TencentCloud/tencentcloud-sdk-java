@@ -27,7 +27,7 @@ public class DescribeApisStatusResponse extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private ApisStatus Result;
+    private DescribeApisStatusResultInfo Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -40,7 +40,7 @@ public class DescribeApisStatusResponse extends AbstractModel{
      * Get API 详情列表。 
      * @return Result API 详情列表。
      */
-    public ApisStatus getResult() {
+    public DescribeApisStatusResultInfo getResult() {
         return this.Result;
     }
 
@@ -48,7 +48,7 @@ public class DescribeApisStatusResponse extends AbstractModel{
      * Set API 详情列表。
      * @param Result API 详情列表。
      */
-    public void setResult(ApisStatus Result) {
+    public void setResult(DescribeApisStatusResultInfo Result) {
         this.Result = Result;
     }
 
@@ -77,7 +77,7 @@ public class DescribeApisStatusResponse extends AbstractModel{
      */
     public DescribeApisStatusResponse(DescribeApisStatusResponse source) {
         if (source.Result != null) {
-            this.Result = new ApisStatus(source.Result);
+            this.Result = new DescribeApisStatusResultInfo(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

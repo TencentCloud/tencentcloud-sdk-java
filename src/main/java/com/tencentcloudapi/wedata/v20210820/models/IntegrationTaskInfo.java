@@ -252,6 +252,126 @@ public class IntegrationTaskInfo extends AbstractModel{
     private Boolean Submit;
 
     /**
+    * MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputDatasourceType")
+    @Expose
+    private String InputDatasourceType;
+
+    /**
+    * DLC
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OutputDatasourceType")
+    @Expose
+    private String OutputDatasourceType;
+
+    /**
+    * 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumRecordsIn")
+    @Expose
+    private Long NumRecordsIn;
+
+    /**
+    * 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumRecordsOut")
+    @Expose
+    private Long NumRecordsOut;
+
+    /**
+    * 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReaderDelay")
+    @Expose
+    private Float ReaderDelay;
+
+    /**
+    * 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumRestarts")
+    @Expose
+    private Long NumRestarts;
+
+    /**
+    * 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+    * 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastRunTime")
+    @Expose
+    private String LastRunTime;
+
+    /**
+    * 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StopTime")
+    @Expose
+    private String StopTime;
+
+    /**
+    * 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasVersion")
+    @Expose
+    private Boolean HasVersion;
+
+    /**
+    * 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Locked")
+    @Expose
+    private Boolean Locked;
+
+    /**
+    * 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Locker")
+    @Expose
+    private String Locker;
+
+    /**
+    * 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunningCu")
+    @Expose
+    private Float RunningCu;
+
+    /**
+    * 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskAlarmRegularList")
+    @Expose
+    private String [] TaskAlarmRegularList;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -819,6 +939,306 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.Submit = Submit;
     }
 
+    /**
+     * Get MYSQL
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputDatasourceType MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputDatasourceType() {
+        return this.InputDatasourceType;
+    }
+
+    /**
+     * Set MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputDatasourceType MYSQL
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputDatasourceType(String InputDatasourceType) {
+        this.InputDatasourceType = InputDatasourceType;
+    }
+
+    /**
+     * Get DLC
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OutputDatasourceType DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOutputDatasourceType() {
+        return this.OutputDatasourceType;
+    }
+
+    /**
+     * Set DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OutputDatasourceType DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOutputDatasourceType(String OutputDatasourceType) {
+        this.OutputDatasourceType = OutputDatasourceType;
+    }
+
+    /**
+     * Get 读取条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumRecordsIn 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumRecordsIn() {
+        return this.NumRecordsIn;
+    }
+
+    /**
+     * Set 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumRecordsIn 读取条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumRecordsIn(Long NumRecordsIn) {
+        this.NumRecordsIn = NumRecordsIn;
+    }
+
+    /**
+     * Get 写入条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumRecordsOut 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumRecordsOut() {
+        return this.NumRecordsOut;
+    }
+
+    /**
+     * Set 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumRecordsOut 写入条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumRecordsOut(Long NumRecordsOut) {
+        this.NumRecordsOut = NumRecordsOut;
+    }
+
+    /**
+     * Get 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReaderDelay 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getReaderDelay() {
+        return this.ReaderDelay;
+    }
+
+    /**
+     * Set 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReaderDelay 读取延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReaderDelay(Float ReaderDelay) {
+        this.ReaderDelay = ReaderDelay;
+    }
+
+    /**
+     * Get 重启次数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumRestarts 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumRestarts() {
+        return this.NumRestarts;
+    }
+
+    /**
+     * Set 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumRestarts 重启次数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumRestarts(Long NumRestarts) {
+        this.NumRestarts = NumRestarts;
+    }
+
+    /**
+     * Get 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 任务更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastRunTime 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastRunTime() {
+        return this.LastRunTime;
+    }
+
+    /**
+     * Set 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastRunTime 任务最后一次运行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastRunTime(String LastRunTime) {
+        this.LastRunTime = LastRunTime;
+    }
+
+    /**
+     * Get 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StopTime 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStopTime() {
+        return this.StopTime;
+    }
+
+    /**
+     * Set 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StopTime 任务停止时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStopTime(String StopTime) {
+        this.StopTime = StopTime;
+    }
+
+    /**
+     * Get 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasVersion 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasVersion() {
+        return this.HasVersion;
+    }
+
+    /**
+     * Set 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasVersion 作业是否已提交
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasVersion(Boolean HasVersion) {
+        this.HasVersion = HasVersion;
+    }
+
+    /**
+     * Get 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Locked 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLocked() {
+        return this.Locked;
+    }
+
+    /**
+     * Set 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Locked 任务是否被锁定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocked(Boolean Locked) {
+        this.Locked = Locked;
+    }
+
+    /**
+     * Get 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Locker 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocker() {
+        return this.Locker;
+    }
+
+    /**
+     * Set 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Locker 任务锁定人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocker(String Locker) {
+        this.Locker = Locker;
+    }
+
+    /**
+     * Get 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunningCu 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getRunningCu() {
+        return this.RunningCu;
+    }
+
+    /**
+     * Set 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunningCu 耗费资源量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunningCu(Float RunningCu) {
+        this.RunningCu = RunningCu;
+    }
+
+    /**
+     * Get 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskAlarmRegularList 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTaskAlarmRegularList() {
+        return this.TaskAlarmRegularList;
+    }
+
+    /**
+     * Set 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskAlarmRegularList 该任务关联的告警规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskAlarmRegularList(String [] TaskAlarmRegularList) {
+        this.TaskAlarmRegularList = TaskAlarmRegularList;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -932,6 +1352,54 @@ public class IntegrationTaskInfo extends AbstractModel{
         if (source.Submit != null) {
             this.Submit = new Boolean(source.Submit);
         }
+        if (source.InputDatasourceType != null) {
+            this.InputDatasourceType = new String(source.InputDatasourceType);
+        }
+        if (source.OutputDatasourceType != null) {
+            this.OutputDatasourceType = new String(source.OutputDatasourceType);
+        }
+        if (source.NumRecordsIn != null) {
+            this.NumRecordsIn = new Long(source.NumRecordsIn);
+        }
+        if (source.NumRecordsOut != null) {
+            this.NumRecordsOut = new Long(source.NumRecordsOut);
+        }
+        if (source.ReaderDelay != null) {
+            this.ReaderDelay = new Float(source.ReaderDelay);
+        }
+        if (source.NumRestarts != null) {
+            this.NumRestarts = new Long(source.NumRestarts);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.LastRunTime != null) {
+            this.LastRunTime = new String(source.LastRunTime);
+        }
+        if (source.StopTime != null) {
+            this.StopTime = new String(source.StopTime);
+        }
+        if (source.HasVersion != null) {
+            this.HasVersion = new Boolean(source.HasVersion);
+        }
+        if (source.Locked != null) {
+            this.Locked = new Boolean(source.Locked);
+        }
+        if (source.Locker != null) {
+            this.Locker = new String(source.Locker);
+        }
+        if (source.RunningCu != null) {
+            this.RunningCu = new Float(source.RunningCu);
+        }
+        if (source.TaskAlarmRegularList != null) {
+            this.TaskAlarmRegularList = new String[source.TaskAlarmRegularList.length];
+            for (int i = 0; i < source.TaskAlarmRegularList.length; i++) {
+                this.TaskAlarmRegularList[i] = new String(source.TaskAlarmRegularList[i]);
+            }
+        }
     }
 
 
@@ -968,6 +1436,21 @@ public class IntegrationTaskInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InLongManagerVersion", this.InLongManagerVersion);
         this.setParamArraySimple(map, prefix + "DataProxyUrl.", this.DataProxyUrl);
         this.setParamSimple(map, prefix + "Submit", this.Submit);
+        this.setParamSimple(map, prefix + "InputDatasourceType", this.InputDatasourceType);
+        this.setParamSimple(map, prefix + "OutputDatasourceType", this.OutputDatasourceType);
+        this.setParamSimple(map, prefix + "NumRecordsIn", this.NumRecordsIn);
+        this.setParamSimple(map, prefix + "NumRecordsOut", this.NumRecordsOut);
+        this.setParamSimple(map, prefix + "ReaderDelay", this.ReaderDelay);
+        this.setParamSimple(map, prefix + "NumRestarts", this.NumRestarts);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "LastRunTime", this.LastRunTime);
+        this.setParamSimple(map, prefix + "StopTime", this.StopTime);
+        this.setParamSimple(map, prefix + "HasVersion", this.HasVersion);
+        this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamSimple(map, prefix + "Locker", this.Locker);
+        this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
+        this.setParamArraySimple(map, prefix + "TaskAlarmRegularList.", this.TaskAlarmRegularList);
 
     }
 }

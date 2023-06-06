@@ -150,6 +150,14 @@ public class AlarmEventInfo extends AbstractModel{
     private Long Operator;
 
     /**
+    * 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegularId")
+    @Expose
+    private String RegularId;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -453,6 +461,26 @@ public class AlarmEventInfo extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegularId 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegularId() {
+        return this.RegularId;
+    }
+
+    /**
+     * Set 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegularId 告警规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegularId(String RegularId) {
+        this.RegularId = RegularId;
+    }
+
     public AlarmEventInfo() {
     }
 
@@ -512,6 +540,9 @@ public class AlarmEventInfo extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new Long(source.Operator);
         }
+        if (source.RegularId != null) {
+            this.RegularId = new String(source.RegularId);
+        }
     }
 
 
@@ -536,6 +567,7 @@ public class AlarmEventInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsSendSuccess", this.IsSendSuccess);
         this.setParamSimple(map, prefix + "MessageId", this.MessageId);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "RegularId", this.RegularId);
 
     }
 }

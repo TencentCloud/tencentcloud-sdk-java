@@ -114,6 +114,78 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
     private String ConsumptionTypeName;
 
     /**
+    * 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealCost")
+    @Expose
+    private String RealCost;
+
+    /**
+    * 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeeBeginTime")
+    @Expose
+    private String FeeBeginTime;
+
+    /**
+    * 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FeeEndTime")
+    @Expose
+    private String FeeEndTime;
+
+    /**
+    * 天数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DayDiff")
+    @Expose
+    private String DayDiff;
+
+    /**
+    * 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DailyTotalCost")
+    @Expose
+    private String DailyTotalCost;
+
+    /**
+    * 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderId")
+    @Expose
+    private String OrderId;
+
+    /**
+    * 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoucherPayAmount")
+    @Expose
+    private String VoucherPayAmount;
+
+    /**
+    * 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IncentivePayAmount")
+    @Expose
+    private String IncentivePayAmount;
+
+    /**
+    * 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -321,6 +393,186 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
         this.ConsumptionTypeName = ConsumptionTypeName;
     }
 
+    /**
+     * Get 折前价
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealCost 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRealCost() {
+        return this.RealCost;
+    }
+
+    /**
+     * Set 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealCost 折前价
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealCost(String RealCost) {
+        this.RealCost = RealCost;
+    }
+
+    /**
+     * Get 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeeBeginTime 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFeeBeginTime() {
+        return this.FeeBeginTime;
+    }
+
+    /**
+     * Set 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeeBeginTime 费用起始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeeBeginTime(String FeeBeginTime) {
+        this.FeeBeginTime = FeeBeginTime;
+    }
+
+    /**
+     * Get 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FeeEndTime 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFeeEndTime() {
+        return this.FeeEndTime;
+    }
+
+    /**
+     * Set 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FeeEndTime 费用结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFeeEndTime(String FeeEndTime) {
+        this.FeeEndTime = FeeEndTime;
+    }
+
+    /**
+     * Get 天数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DayDiff 天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDayDiff() {
+        return this.DayDiff;
+    }
+
+    /**
+     * Set 天数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DayDiff 天数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDayDiff(String DayDiff) {
+        this.DayDiff = DayDiff;
+    }
+
+    /**
+     * Get 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DailyTotalCost 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDailyTotalCost() {
+        return this.DailyTotalCost;
+    }
+
+    /**
+     * Set 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DailyTotalCost 每日消耗
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDailyTotalCost(String DailyTotalCost) {
+        this.DailyTotalCost = DailyTotalCost;
+    }
+
+    /**
+     * Get 订单号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderId() {
+        return this.OrderId;
+    }
+
+    /**
+     * Set 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderId 订单号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderId(String OrderId) {
+        this.OrderId = OrderId;
+    }
+
+    /**
+     * Get 代金券
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoucherPayAmount 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVoucherPayAmount() {
+        return this.VoucherPayAmount;
+    }
+
+    /**
+     * Set 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoucherPayAmount 代金券
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoucherPayAmount(String VoucherPayAmount) {
+        this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get 赠送金
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IncentivePayAmount 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIncentivePayAmount() {
+        return this.IncentivePayAmount;
+    }
+
+    /**
+     * Set 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IncentivePayAmount 赠送金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIncentivePayAmount(String IncentivePayAmount) {
+        this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * Get 分成金
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransferPayAmount 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransferPayAmount 分成金
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
     public ConsumptionResourceSummaryDataItem() {
     }
 
@@ -368,6 +620,33 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
         if (source.ConsumptionTypeName != null) {
             this.ConsumptionTypeName = new String(source.ConsumptionTypeName);
         }
+        if (source.RealCost != null) {
+            this.RealCost = new String(source.RealCost);
+        }
+        if (source.FeeBeginTime != null) {
+            this.FeeBeginTime = new String(source.FeeBeginTime);
+        }
+        if (source.FeeEndTime != null) {
+            this.FeeEndTime = new String(source.FeeEndTime);
+        }
+        if (source.DayDiff != null) {
+            this.DayDiff = new String(source.DayDiff);
+        }
+        if (source.DailyTotalCost != null) {
+            this.DailyTotalCost = new String(source.DailyTotalCost);
+        }
+        if (source.OrderId != null) {
+            this.OrderId = new String(source.OrderId);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
     }
 
 
@@ -388,6 +667,15 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel{
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
         this.setParamSimple(map, prefix + "ConsumptionTypeName", this.ConsumptionTypeName);
+        this.setParamSimple(map, prefix + "RealCost", this.RealCost);
+        this.setParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
+        this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
+        this.setParamSimple(map, prefix + "DayDiff", this.DayDiff);
+        this.setParamSimple(map, prefix + "DailyTotalCost", this.DailyTotalCost);
+        this.setParamSimple(map, prefix + "OrderId", this.OrderId);
+        this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

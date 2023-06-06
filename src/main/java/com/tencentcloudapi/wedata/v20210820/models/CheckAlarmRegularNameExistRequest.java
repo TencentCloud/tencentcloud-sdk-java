@@ -30,13 +30,6 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
     private String ProjectId;
 
     /**
-    * 任务ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
     * 规则名称
     */
     @SerializedName("AlarmRegularName")
@@ -44,11 +37,25 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
     private String AlarmRegularName;
 
     /**
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * 主键ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
+
+    /**
+    * 任务类型:201.实时,202.离线
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
 
     /**
      * Get 项目名称 
@@ -64,22 +71,6 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 任务ID
-     * @param TaskId 任务ID
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
     }
 
     /**
@@ -99,6 +90,26 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
     }
 
     /**
+     * Get 任务ID 
+     * @return TaskId 任务ID
+     * @deprecated
+     */
+    @Deprecated
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param TaskId 任务ID
+     * @deprecated
+     */
+    @Deprecated
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get 主键ID 
      * @return Id 主键ID
      */
@@ -114,6 +125,22 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
         this.Id = Id;
     }
 
+    /**
+     * Get 任务类型:201.实时,202.离线 
+     * @return TaskType 任务类型:201.实时,202.离线
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 任务类型:201.实时,202.离线
+     * @param TaskType 任务类型:201.实时,202.离线
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public CheckAlarmRegularNameExistRequest() {
     }
 
@@ -125,14 +152,17 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
-        }
         if (source.AlarmRegularName != null) {
             this.AlarmRegularName = new String(source.AlarmRegularName);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.Id != null) {
             this.Id = new String(source.Id);
+        }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
         }
     }
 
@@ -142,9 +172,10 @@ public class CheckAlarmRegularNameExistRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "AlarmRegularName", this.AlarmRegularName);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

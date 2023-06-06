@@ -37,14 +37,14 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 每次获取数据量
+    * 每次获取数据量，最大值为100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 偏移量,默认从0开始
     */
     @SerializedName("Offset")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeCostSummaryByProductRequest extends AbstractModel{
     }
 
     /**
-     * Get 每次获取数据量 
-     * @return Limit 每次获取数据量
+     * Get 每次获取数据量，最大值为100 
+     * @return Limit 每次获取数据量，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每次获取数据量
-     * @param Limit 每次获取数据量
+     * Set 每次获取数据量，最大值为100
+     * @param Limit 每次获取数据量，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量,默认从0开始 
+     * @return Offset 偏移量,默认从0开始
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量,默认从0开始
+     * @param Offset 偏移量,默认从0开始
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
