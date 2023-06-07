@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AuthFailMessage extends AbstractModel{
 
     /**
-    * 合作企业Id
+    * 第三方应用平台的子客企业OpenId
     */
     @SerializedName("ProxyOrganizationOpenId")
     @Expose
     private String ProxyOrganizationOpenId;
 
     /**
-    * 出错信息
+    * 错误信息
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 合作企业Id 
-     * @return ProxyOrganizationOpenId 合作企业Id
+     * Get 第三方应用平台的子客企业OpenId 
+     * @return ProxyOrganizationOpenId 第三方应用平台的子客企业OpenId
      */
     public String getProxyOrganizationOpenId() {
         return this.ProxyOrganizationOpenId;
     }
 
     /**
-     * Set 合作企业Id
-     * @param ProxyOrganizationOpenId 合作企业Id
+     * Set 第三方应用平台的子客企业OpenId
+     * @param ProxyOrganizationOpenId 第三方应用平台的子客企业OpenId
      */
     public void setProxyOrganizationOpenId(String ProxyOrganizationOpenId) {
         this.ProxyOrganizationOpenId = ProxyOrganizationOpenId;
     }
 
     /**
-     * Get 出错信息 
-     * @return Message 出错信息
+     * Get 错误信息 
+     * @return Message 错误信息
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 出错信息
-     * @param Message 出错信息
+     * Set 错误信息
+     * @param Message 错误信息
      */
     public void setMessage(String Message) {
         this.Message = Message;

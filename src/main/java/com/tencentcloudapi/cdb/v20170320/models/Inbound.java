@@ -58,6 +58,13 @@ public class Inbound extends AbstractModel{
     private String Dir;
 
     /**
+    * 地址模块
+    */
+    @SerializedName("AddressModule")
+    @Expose
+    private String AddressModule;
+
+    /**
     * 规则描述
     */
     @SerializedName("Desc")
@@ -145,6 +152,22 @@ public class Inbound extends AbstractModel{
     }
 
     /**
+     * Get 地址模块 
+     * @return AddressModule 地址模块
+     */
+    public String getAddressModule() {
+        return this.AddressModule;
+    }
+
+    /**
+     * Set 地址模块
+     * @param AddressModule 地址模块
+     */
+    public void setAddressModule(String AddressModule) {
+        this.AddressModule = AddressModule;
+    }
+
+    /**
      * Get 规则描述 
      * @return Desc 规则描述
      */
@@ -183,6 +206,9 @@ public class Inbound extends AbstractModel{
         if (source.Dir != null) {
             this.Dir = new String(source.Dir);
         }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
@@ -198,6 +224,7 @@ public class Inbound extends AbstractModel{
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Dir", this.Dir);
+        this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Staff extends AbstractModel{
 
     /**
-    * 员工在电子签平台的id
+    * 员工在电子签平台的用户ID
     */
     @SerializedName("UserId")
     @Expose
@@ -52,7 +52,7 @@ public class Staff extends AbstractModel{
     private String Email;
 
     /**
-    * 员工在第三方平台id
+    * 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
@@ -83,14 +83,14 @@ public class Staff extends AbstractModel{
     private Boolean Verified;
 
     /**
-    * 员工创建时间戳
+    * 员工创建时间戳，单位秒
     */
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
 
     /**
-    * 员工实名时间戳
+    * 员工实名时间戳，单位秒
     */
     @SerializedName("VerifiedOn")
     @Expose
@@ -104,16 +104,16 @@ public class Staff extends AbstractModel{
     private Long QuiteJob;
 
     /**
-     * Get 员工在电子签平台的id 
-     * @return UserId 员工在电子签平台的id
+     * Get 员工在电子签平台的用户ID 
+     * @return UserId 员工在电子签平台的用户ID
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 员工在电子签平台的id
-     * @param UserId 员工在电子签平台的id
+     * Set 员工在电子签平台的用户ID
+     * @param UserId 员工在电子签平台的用户ID
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -172,9 +172,9 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 员工在第三方平台id
+     * Get 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpenId 员工在第三方平台id
+     * @return OpenId 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
@@ -182,9 +182,9 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Set 员工在第三方平台id
+     * Set 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenId 员工在第三方平台id
+     * @param OpenId 员工在第三方应用平台的用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
@@ -248,32 +248,32 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 员工创建时间戳 
-     * @return CreatedOn 员工创建时间戳
+     * Get 员工创建时间戳，单位秒 
+     * @return CreatedOn 员工创建时间戳，单位秒
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 员工创建时间戳
-     * @param CreatedOn 员工创建时间戳
+     * Set 员工创建时间戳，单位秒
+     * @param CreatedOn 员工创建时间戳，单位秒
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 员工实名时间戳 
-     * @return VerifiedOn 员工实名时间戳
+     * Get 员工实名时间戳，单位秒 
+     * @return VerifiedOn 员工实名时间戳，单位秒
      */
     public Long getVerifiedOn() {
         return this.VerifiedOn;
     }
 
     /**
-     * Set 员工实名时间戳
-     * @param VerifiedOn 员工实名时间戳
+     * Set 员工实名时间戳，单位秒
+     * @param VerifiedOn 员工实名时间戳，单位秒
      */
     public void setVerifiedOn(Long VerifiedOn) {
         this.VerifiedOn = VerifiedOn;

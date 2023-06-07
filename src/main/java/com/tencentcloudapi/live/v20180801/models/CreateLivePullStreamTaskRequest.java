@@ -25,7 +25,7 @@ public class CreateLivePullStreamTaskRequest extends AbstractModel{
     /**
     * 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
     */
     @SerializedName("SourceType")
@@ -234,11 +234,11 @@ PullVodPushLive -点播。
     /**
      * Get 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。 
      * @return SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
      */
     public String getSourceType() {
@@ -248,11 +248,11 @@ PullPicPushLive -图片。
     /**
      * Set 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
      * @param SourceType 拉流源的类型：
 PullLivePushLive -直播，
-PullVodPushLive -点播。
+PullVodPushLive -点播，
 PullPicPushLive -图片。
      */
     public void setSourceType(String SourceType) {

@@ -13,74 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ckafka.v20190819.models;
+package com.tencentcloudapi.tcss.v20201101.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRouteRequest extends AbstractModel{
+public class ClusterCustomParameters extends AbstractModel{
 
     /**
-    * 实例唯一id
+    * 参数名
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Name")
     @Expose
-    private String InstanceId;
+    private String Name;
 
     /**
-    * 路由id
+    * 参数值
     */
-    @SerializedName("RouteId")
+    @SerializedName("Values")
     @Expose
-    private Long RouteId;
+    private String [] Values;
 
     /**
-     * Get 实例唯一id 
-     * @return InstanceId 实例唯一id
+     * Get 参数名 
+     * @return Name 参数名
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 实例唯一id
-     * @param InstanceId 实例唯一id
+     * Set 参数名
+     * @param Name 参数名
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get 路由id 
-     * @return RouteId 路由id
+     * Get 参数值 
+     * @return Values 参数值
      */
-    public Long getRouteId() {
-        return this.RouteId;
+    public String [] getValues() {
+        return this.Values;
     }
 
     /**
-     * Set 路由id
-     * @param RouteId 路由id
+     * Set 参数值
+     * @param Values 参数值
      */
-    public void setRouteId(Long RouteId) {
-        this.RouteId = RouteId;
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
-    public DescribeRouteRequest() {
+    public ClusterCustomParameters() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRouteRequest(DescribeRouteRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public ClusterCustomParameters(ClusterCustomParameters source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.RouteId != null) {
-            this.RouteId = new Long(source.RouteId);
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
         }
     }
 
@@ -89,8 +92,8 @@ public class DescribeRouteRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "RouteId", this.RouteId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

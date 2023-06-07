@@ -76,7 +76,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 内部参数，暂未开放使用 
      * @return Channel 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public String getChannel() {
         return this.Channel;
     }
@@ -84,7 +86,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 内部参数，暂未开放使用
      * @param Channel 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
@@ -92,7 +96,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 内部参数，暂未开放使用 
      * @return CustomUserId 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public String getCustomUserId() {
         return this.CustomUserId;
     }
@@ -100,7 +106,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 内部参数，暂未开放使用
      * @param CustomUserId 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public void setCustomUserId(String CustomUserId) {
         this.CustomUserId = CustomUserId;
     }
@@ -108,7 +116,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 内部参数，暂未开放使用 
      * @return ClientIp 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public String getClientIp() {
         return this.ClientIp;
     }
@@ -116,7 +126,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 内部参数，暂未开放使用
      * @param ClientIp 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
@@ -124,7 +136,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Get 内部参数，暂未开放使用 
      * @return ProxyIp 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public String getProxyIp() {
         return this.ProxyIp;
     }
@@ -132,7 +146,9 @@ public class UserInfo extends AbstractModel{
     /**
      * Set 内部参数，暂未开放使用
      * @param ProxyIp 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public void setProxyIp(String ProxyIp) {
         this.ProxyIp = ProxyIp;
     }

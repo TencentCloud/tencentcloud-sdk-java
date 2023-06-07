@@ -45,6 +45,15 @@ public class ReleasedApprover extends AbstractModel{
     private String RelievedApproverReceiptId;
 
     /**
+    * 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+    */
+    @SerializedName("ApproverType")
+    @Expose
+    private String ApproverType;
+
+    /**
      * Get 签署人姓名，最大长度50个字符
  
      * @return Name 签署人姓名，最大长度50个字符
@@ -96,6 +105,30 @@ public class ReleasedApprover extends AbstractModel{
         this.RelievedApproverReceiptId = RelievedApproverReceiptId;
     }
 
+    /**
+     * Get 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签 
+     * @return ApproverType 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+     */
+    public String getApproverType() {
+        return this.ApproverType;
+    }
+
+    /**
+     * Set 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+     * @param ApproverType 指定签署人类型，目前仅支持
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
+     */
+    public void setApproverType(String ApproverType) {
+        this.ApproverType = ApproverType;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -113,6 +146,9 @@ public class ReleasedApprover extends AbstractModel{
         if (source.RelievedApproverReceiptId != null) {
             this.RelievedApproverReceiptId = new String(source.RelievedApproverReceiptId);
         }
+        if (source.ApproverType != null) {
+            this.ApproverType = new String(source.ApproverType);
+        }
     }
 
 
@@ -123,6 +159,7 @@ public class ReleasedApprover extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "RelievedApproverReceiptId", this.RelievedApproverReceiptId);
+        this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Recipient extends AbstractModel{
 
     /**
-    * 签署人唯一标识
+    * 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
     */
     @SerializedName("RecipientId")
     @Expose
@@ -44,21 +44,21 @@ public class Recipient extends AbstractModel{
     private String Description;
 
     /**
-    * 签署方备注信息
+    * 签署方备注角色名
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * 是否需要校验
+    * 是否需要校验，true-是，false-否
     */
     @SerializedName("RequireValidation")
     @Expose
     private Boolean RequireValidation;
 
     /**
-    * 是否必须填写
+    * 是否必须填写，true-是，false-否
     */
     @SerializedName("RequireSign")
     @Expose
@@ -86,16 +86,16 @@ public class Recipient extends AbstractModel{
     private Boolean IsPromoter;
 
     /**
-     * Get 签署人唯一标识 
-     * @return RecipientId 签署人唯一标识
+     * Get 签署人唯一标识，在通过模板发起合同的时候对应签署方Id 
+     * @return RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署人唯一标识
-     * @param RecipientId 签署人唯一标识
+     * Set 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
+     * @param RecipientId 签署人唯一标识，在通过模板发起合同的时候对应签署方Id
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -134,48 +134,48 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 签署方备注信息 
-     * @return RoleName 签署方备注信息
+     * Get 签署方备注角色名 
+     * @return RoleName 签署方备注角色名
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set 签署方备注信息
-     * @param RoleName 签署方备注信息
+     * Set 签署方备注角色名
+     * @param RoleName 签署方备注角色名
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get 是否需要校验 
-     * @return RequireValidation 是否需要校验
+     * Get 是否需要校验，true-是，false-否 
+     * @return RequireValidation 是否需要校验，true-是，false-否
      */
     public Boolean getRequireValidation() {
         return this.RequireValidation;
     }
 
     /**
-     * Set 是否需要校验
-     * @param RequireValidation 是否需要校验
+     * Set 是否需要校验，true-是，false-否
+     * @param RequireValidation 是否需要校验，true-是，false-否
      */
     public void setRequireValidation(Boolean RequireValidation) {
         this.RequireValidation = RequireValidation;
     }
 
     /**
-     * Get 是否必须填写 
-     * @return RequireSign 是否必须填写
+     * Get 是否必须填写，true-是，false-否 
+     * @return RequireSign 是否必须填写，true-是，false-否
      */
     public Boolean getRequireSign() {
         return this.RequireSign;
     }
 
     /**
-     * Set 是否必须填写
-     * @param RequireSign 是否必须填写
+     * Set 是否必须填写，true-是，false-否
+     * @param RequireSign 是否必须填写，true-是，false-否
      */
     public void setRequireSign(Boolean RequireSign) {
         this.RequireSign = RequireSign;

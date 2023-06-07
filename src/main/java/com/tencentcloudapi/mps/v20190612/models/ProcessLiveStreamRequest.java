@@ -72,6 +72,13 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
+    * 视频内容质检类型任务参数。
+    */
+    @SerializedName("AiQualityControlTask")
+    @Expose
+    private AiQualityControlTaskInput AiQualityControlTask;
+
+    /**
     * 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
     */
     @SerializedName("SessionId")
@@ -198,6 +205,22 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     }
 
     /**
+     * Get 视频内容质检类型任务参数。 
+     * @return AiQualityControlTask 视频内容质检类型任务参数。
+     */
+    public AiQualityControlTaskInput getAiQualityControlTask() {
+        return this.AiQualityControlTask;
+    }
+
+    /**
+     * Set 视频内容质检类型任务参数。
+     * @param AiQualityControlTask 视频内容质检类型任务参数。
+     */
+    public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
+        this.AiQualityControlTask = AiQualityControlTask;
+    }
+
+    /**
      * Get 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
      * @return SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      */
@@ -258,6 +281,9 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         if (source.AiAnalysisTask != null) {
             this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
         }
+        if (source.AiQualityControlTask != null) {
+            this.AiQualityControlTask = new AiQualityControlTaskInput(source.AiQualityControlTask);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -278,6 +304,7 @@ public class ProcessLiveStreamRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+        this.setParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 

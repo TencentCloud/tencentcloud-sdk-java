@@ -44,7 +44,7 @@ public class BaseFlowInfo extends AbstractModel{
     private String FlowDescription;
 
     /**
-    * 合同流程截止时间，unix时间戳
+    * 合同流程截止时间，unix时间戳，单位秒
     */
     @SerializedName("Deadline")
     @Expose
@@ -58,7 +58,7 @@ public class BaseFlowInfo extends AbstractModel{
     private Boolean Unordered;
 
     /**
-    * 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+    * 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
     */
     @SerializedName("IntelligentStatus")
     @Expose
@@ -72,7 +72,7 @@ public class BaseFlowInfo extends AbstractModel{
     private FormField [] FormFields;
 
     /**
-    * 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+    * 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
     */
     @SerializedName("NeedSignReview")
     @Expose
@@ -148,16 +148,16 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同流程截止时间，unix时间戳 
-     * @return Deadline 合同流程截止时间，unix时间戳
+     * Get 合同流程截止时间，unix时间戳，单位秒 
+     * @return Deadline 合同流程截止时间，unix时间戳，单位秒
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 合同流程截止时间，unix时间戳
-     * @param Deadline 合同流程截止时间，unix时间戳
+     * Set 合同流程截止时间，unix时间戳，单位秒
+     * @param Deadline 合同流程截止时间，unix时间戳，单位秒
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
@@ -180,16 +180,16 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE") 
-     * @return IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * Get 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE") 
+     * @return IntelligentStatus 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
      */
     public String getIntelligentStatus() {
         return this.IntelligentStatus;
     }
 
     /**
-     * Set 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-     * @param IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * Set 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * @param IntelligentStatus 是否打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
      */
     public void setIntelligentStatus(String IntelligentStatus) {
         this.IntelligentStatus = IntelligentStatus;
@@ -212,16 +212,16 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批 
-     * @return NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+     * Get 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署 
+     * @return NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
     }
 
     /**
-     * Set 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
-     * @param NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批
+     * Set 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * @param NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;

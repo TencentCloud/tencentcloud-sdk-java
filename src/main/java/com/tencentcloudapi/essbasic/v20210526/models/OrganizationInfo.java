@@ -30,20 +30,6 @@ public class OrganizationInfo extends AbstractModel{
     private String OrganizationOpenId;
 
     /**
-    * 用户真实的IP
-    */
-    @SerializedName("ClientIp")
-    @Expose
-    private String ClientIp;
-
-    /**
-    * 机构的代理IP
-    */
-    @SerializedName("ProxyIp")
-    @Expose
-    private String ProxyIp;
-
-    /**
     * 机构在平台的编号
     */
     @SerializedName("OrganizationId")
@@ -56,6 +42,20 @@ public class OrganizationInfo extends AbstractModel{
     @SerializedName("Channel")
     @Expose
     private String Channel;
+
+    /**
+    * 用户真实的IP
+    */
+    @SerializedName("ClientIp")
+    @Expose
+    private String ClientIp;
+
+    /**
+    * 机构的代理IP
+    */
+    @SerializedName("ProxyIp")
+    @Expose
+    private String ProxyIp;
 
     /**
      * Get 用户在渠道的机构编号 
@@ -71,38 +71,6 @@ public class OrganizationInfo extends AbstractModel{
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;
-    }
-
-    /**
-     * Get 用户真实的IP 
-     * @return ClientIp 用户真实的IP
-     */
-    public String getClientIp() {
-        return this.ClientIp;
-    }
-
-    /**
-     * Set 用户真实的IP
-     * @param ClientIp 用户真实的IP
-     */
-    public void setClientIp(String ClientIp) {
-        this.ClientIp = ClientIp;
-    }
-
-    /**
-     * Get 机构的代理IP 
-     * @return ProxyIp 机构的代理IP
-     */
-    public String getProxyIp() {
-        return this.ProxyIp;
-    }
-
-    /**
-     * Set 机构的代理IP
-     * @param ProxyIp 机构的代理IP
-     */
-    public void setProxyIp(String ProxyIp) {
-        this.ProxyIp = ProxyIp;
     }
 
     /**
@@ -137,6 +105,46 @@ public class OrganizationInfo extends AbstractModel{
         this.Channel = Channel;
     }
 
+    /**
+     * Get 用户真实的IP 
+     * @return ClientIp 用户真实的IP
+     * @deprecated
+     */
+    @Deprecated
+    public String getClientIp() {
+        return this.ClientIp;
+    }
+
+    /**
+     * Set 用户真实的IP
+     * @param ClientIp 用户真实的IP
+     * @deprecated
+     */
+    @Deprecated
+    public void setClientIp(String ClientIp) {
+        this.ClientIp = ClientIp;
+    }
+
+    /**
+     * Get 机构的代理IP 
+     * @return ProxyIp 机构的代理IP
+     * @deprecated
+     */
+    @Deprecated
+    public String getProxyIp() {
+        return this.ProxyIp;
+    }
+
+    /**
+     * Set 机构的代理IP
+     * @param ProxyIp 机构的代理IP
+     * @deprecated
+     */
+    @Deprecated
+    public void setProxyIp(String ProxyIp) {
+        this.ProxyIp = ProxyIp;
+    }
+
     public OrganizationInfo() {
     }
 
@@ -148,17 +156,17 @@ public class OrganizationInfo extends AbstractModel{
         if (source.OrganizationOpenId != null) {
             this.OrganizationOpenId = new String(source.OrganizationOpenId);
         }
-        if (source.ClientIp != null) {
-            this.ClientIp = new String(source.ClientIp);
-        }
-        if (source.ProxyIp != null) {
-            this.ProxyIp = new String(source.ProxyIp);
-        }
         if (source.OrganizationId != null) {
             this.OrganizationId = new String(source.OrganizationId);
         }
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
+        }
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.ProxyIp != null) {
+            this.ProxyIp = new String(source.ProxyIp);
         }
     }
 
@@ -168,10 +176,10 @@ public class OrganizationInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
-        this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);
-        this.setParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
         this.setParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "ClientIp", this.ClientIp);
+        this.setParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
 
     }
 }

@@ -44,7 +44,7 @@ public class PdfVerifyResult extends AbstractModel{
     private String SignerName;
 
     /**
-    * 签署时间
+    * 签署时间戳，单位秒
     */
     @SerializedName("SignTime")
     @Expose
@@ -65,14 +65,14 @@ public class PdfVerifyResult extends AbstractModel{
     private String CertSn;
 
     /**
-    * 证书起始时间
+    * 证书起始时间戳，单位秒
     */
     @SerializedName("CertNotBefore")
     @Expose
     private Long CertNotBefore;
 
     /**
-    * 证书过期时间
+    * 证书过期时间戳，单位秒
     */
     @SerializedName("CertNotAfter")
     @Expose
@@ -86,35 +86,35 @@ public class PdfVerifyResult extends AbstractModel{
     private Long SignType;
 
     /**
-    * 签名域横坐标
+    * 签名域横坐标，单位px
     */
     @SerializedName("ComponentPosX")
     @Expose
     private Float ComponentPosX;
 
     /**
-    * 签名域纵坐标
+    * 签名域纵坐标，单位px
     */
     @SerializedName("ComponentPosY")
     @Expose
     private Float ComponentPosY;
 
     /**
-    * 签名域宽度
+    * 签名域宽度，单位px
     */
     @SerializedName("ComponentWidth")
     @Expose
     private Float ComponentWidth;
 
     /**
-    * 签名域高度
+    * 签名域高度，单位px
     */
     @SerializedName("ComponentHeight")
     @Expose
     private Float ComponentHeight;
 
     /**
-    * 签名域所在页码
+    * 签名域所在页码，1～N
     */
     @SerializedName("ComponentPage")
     @Expose
@@ -169,16 +169,16 @@ public class PdfVerifyResult extends AbstractModel{
     }
 
     /**
-     * Get 签署时间 
-     * @return SignTime 签署时间
+     * Get 签署时间戳，单位秒 
+     * @return SignTime 签署时间戳，单位秒
      */
     public Long getSignTime() {
         return this.SignTime;
     }
 
     /**
-     * Set 签署时间
-     * @param SignTime 签署时间
+     * Set 签署时间戳，单位秒
+     * @param SignTime 签署时间戳，单位秒
      */
     public void setSignTime(Long SignTime) {
         this.SignTime = SignTime;
@@ -217,32 +217,32 @@ public class PdfVerifyResult extends AbstractModel{
     }
 
     /**
-     * Get 证书起始时间 
-     * @return CertNotBefore 证书起始时间
+     * Get 证书起始时间戳，单位秒 
+     * @return CertNotBefore 证书起始时间戳，单位秒
      */
     public Long getCertNotBefore() {
         return this.CertNotBefore;
     }
 
     /**
-     * Set 证书起始时间
-     * @param CertNotBefore 证书起始时间
+     * Set 证书起始时间戳，单位秒
+     * @param CertNotBefore 证书起始时间戳，单位秒
      */
     public void setCertNotBefore(Long CertNotBefore) {
         this.CertNotBefore = CertNotBefore;
     }
 
     /**
-     * Get 证书过期时间 
-     * @return CertNotAfter 证书过期时间
+     * Get 证书过期时间戳，单位秒 
+     * @return CertNotAfter 证书过期时间戳，单位秒
      */
     public Long getCertNotAfter() {
         return this.CertNotAfter;
     }
 
     /**
-     * Set 证书过期时间
-     * @param CertNotAfter 证书过期时间
+     * Set 证书过期时间戳，单位秒
+     * @param CertNotAfter 证书过期时间戳，单位秒
      */
     public void setCertNotAfter(Long CertNotAfter) {
         this.CertNotAfter = CertNotAfter;
@@ -265,80 +265,80 @@ public class PdfVerifyResult extends AbstractModel{
     }
 
     /**
-     * Get 签名域横坐标 
-     * @return ComponentPosX 签名域横坐标
+     * Get 签名域横坐标，单位px 
+     * @return ComponentPosX 签名域横坐标，单位px
      */
     public Float getComponentPosX() {
         return this.ComponentPosX;
     }
 
     /**
-     * Set 签名域横坐标
-     * @param ComponentPosX 签名域横坐标
+     * Set 签名域横坐标，单位px
+     * @param ComponentPosX 签名域横坐标，单位px
      */
     public void setComponentPosX(Float ComponentPosX) {
         this.ComponentPosX = ComponentPosX;
     }
 
     /**
-     * Get 签名域纵坐标 
-     * @return ComponentPosY 签名域纵坐标
+     * Get 签名域纵坐标，单位px 
+     * @return ComponentPosY 签名域纵坐标，单位px
      */
     public Float getComponentPosY() {
         return this.ComponentPosY;
     }
 
     /**
-     * Set 签名域纵坐标
-     * @param ComponentPosY 签名域纵坐标
+     * Set 签名域纵坐标，单位px
+     * @param ComponentPosY 签名域纵坐标，单位px
      */
     public void setComponentPosY(Float ComponentPosY) {
         this.ComponentPosY = ComponentPosY;
     }
 
     /**
-     * Get 签名域宽度 
-     * @return ComponentWidth 签名域宽度
+     * Get 签名域宽度，单位px 
+     * @return ComponentWidth 签名域宽度，单位px
      */
     public Float getComponentWidth() {
         return this.ComponentWidth;
     }
 
     /**
-     * Set 签名域宽度
-     * @param ComponentWidth 签名域宽度
+     * Set 签名域宽度，单位px
+     * @param ComponentWidth 签名域宽度，单位px
      */
     public void setComponentWidth(Float ComponentWidth) {
         this.ComponentWidth = ComponentWidth;
     }
 
     /**
-     * Get 签名域高度 
-     * @return ComponentHeight 签名域高度
+     * Get 签名域高度，单位px 
+     * @return ComponentHeight 签名域高度，单位px
      */
     public Float getComponentHeight() {
         return this.ComponentHeight;
     }
 
     /**
-     * Set 签名域高度
-     * @param ComponentHeight 签名域高度
+     * Set 签名域高度，单位px
+     * @param ComponentHeight 签名域高度，单位px
      */
     public void setComponentHeight(Float ComponentHeight) {
         this.ComponentHeight = ComponentHeight;
     }
 
     /**
-     * Get 签名域所在页码 
-     * @return ComponentPage 签名域所在页码
+     * Get 签名域所在页码，1～N 
+     * @return ComponentPage 签名域所在页码，1～N
      */
     public Long getComponentPage() {
         return this.ComponentPage;
     }
 
     /**
-     * Set 签名域所在页码
-     * @param ComponentPage 签名域所在页码
+     * Set 签名域所在页码，1～N
+     * @param ComponentPage 签名域所在页码，1～N
      */
     public void setComponentPage(Long ComponentPage) {
         this.ComponentPage = ComponentPage;

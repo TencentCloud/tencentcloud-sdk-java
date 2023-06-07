@@ -102,7 +102,7 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     private String RecipientId;
 
     /**
-    * 签署截止时间，默认一年
+    * 签署截止时间戳，默认一年
     */
     @SerializedName("Deadline")
     @Expose
@@ -138,7 +138,7 @@ HANDWRITE -手写签名
     private Long PreReadTime;
 
     /**
-    * 签署完前端跳转的url，暂未使用
+    * 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
     */
     @SerializedName("JumpUrl")
     @Expose
@@ -371,16 +371,16 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     }
 
     /**
-     * Get 签署截止时间，默认一年 
-     * @return Deadline 签署截止时间，默认一年
+     * Get 签署截止时间戳，默认一年 
+     * @return Deadline 签署截止时间戳，默认一年
      */
     public Long getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set 签署截止时间，默认一年
-     * @param Deadline 签署截止时间，默认一年
+     * Set 签署截止时间戳，默认一年
+     * @param Deadline 签署截止时间戳，默认一年
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
@@ -389,7 +389,9 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     /**
      * Get 签署完回调url，最大长度1000个字符 
      * @return CallbackUrl 签署完回调url，最大长度1000个字符
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
@@ -397,7 +399,9 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     /**
      * Set 签署完回调url，最大长度1000个字符
      * @param CallbackUrl 签署完回调url，最大长度1000个字符
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
@@ -455,16 +459,16 @@ HANDWRITE -手写签名
     }
 
     /**
-     * Get 签署完前端跳转的url，暂未使用 
-     * @return JumpUrl 签署完前端跳转的url，暂未使用
+     * Get 签署完前端跳转的url，此字段的用法场景请联系客户经理确认 
+     * @return JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      */
     public String getJumpUrl() {
         return this.JumpUrl;
     }
 
     /**
-     * Set 签署完前端跳转的url，暂未使用
-     * @param JumpUrl 签署完前端跳转的url，暂未使用
+     * Set 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
+     * @param JumpUrl 签署完前端跳转的url，此字段的用法场景请联系客户经理确认
      */
     public void setJumpUrl(String JumpUrl) {
         this.JumpUrl = JumpUrl;

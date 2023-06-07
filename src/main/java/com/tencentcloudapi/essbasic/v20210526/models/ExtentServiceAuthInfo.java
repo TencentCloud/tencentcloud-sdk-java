@@ -28,7 +28,7 @@ public class ExtentServiceAuthInfo extends AbstractModel{
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
     */
     @SerializedName("Type")
     @Expose
@@ -51,7 +51,7 @@ DISABLE 关闭
     private String Status;
 
     /**
-    * 最近操作人openid（经办人openid）
+    * 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorOpenId")
@@ -59,7 +59,7 @@ DISABLE 关闭
     private String OperatorOpenId;
 
     /**
-    * 最近操作时间
+    * 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateOn")
@@ -72,13 +72,13 @@ DISABLE 关闭
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同  
+  DOWNLOAD_FLOW         授权平台企业下载合同  
      * @return Type 扩展服务类型
   AUTO_SIGN             企业静默签（自动签署）
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
      */
     public String getType() {
         return this.Type;
@@ -90,13 +90,13 @@ DISABLE 关闭
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
      * @param Type 扩展服务类型
   AUTO_SIGN             企业静默签（自动签署）
   OVERSEA_SIGN          企业与港澳台居民*签署合同
   MOBILE_CHECK_APPROVER 使用手机号验证签署方身份
   PAGING_SEAL           骑缝章
-  DOWNLOAD_FLOW         授权渠道下载合同 
+  DOWNLOAD_FLOW         授权平台企业下载合同 
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -143,9 +143,9 @@ DISABLE 关闭
     }
 
     /**
-     * Get 最近操作人openid（经办人openid）
+     * Get 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperatorOpenId 最近操作人openid（经办人openid）
+     * @return OperatorOpenId 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorOpenId() {
@@ -153,9 +153,9 @@ DISABLE 关闭
     }
 
     /**
-     * Set 最近操作人openid（经办人openid）
+     * Set 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperatorOpenId 最近操作人openid（经办人openid）
+     * @param OperatorOpenId 最近操作人第三方应用平台的用户openid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorOpenId(String OperatorOpenId) {
@@ -163,9 +163,9 @@ DISABLE 关闭
     }
 
     /**
-     * Get 最近操作时间
+     * Get 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateOn 最近操作时间
+     * @return OperateOn 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateOn() {
@@ -173,9 +173,9 @@ DISABLE 关闭
     }
 
     /**
-     * Set 最近操作时间
+     * Set 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateOn 最近操作时间
+     * @param OperateOn 最近操作时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateOn(Long OperateOn) {

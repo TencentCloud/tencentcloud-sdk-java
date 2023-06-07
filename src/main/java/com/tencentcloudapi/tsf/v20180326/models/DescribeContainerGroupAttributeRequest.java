@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.tsf.v20180326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthorizedUser extends AbstractModel{
+public class DescribeContainerGroupAttributeRequest extends AbstractModel{
 
     /**
-    * 第三方应用平台的用户openid
+    * 部署组ID
     */
-    @SerializedName("OpenId")
+    @SerializedName("GroupId")
     @Expose
-    private String OpenId;
+    private String GroupId;
 
     /**
-     * Get 第三方应用平台的用户openid 
-     * @return OpenId 第三方应用平台的用户openid
+     * Get 部署组ID 
+     * @return GroupId 部署组ID
      */
-    public String getOpenId() {
-        return this.OpenId;
+    public String getGroupId() {
+        return this.GroupId;
     }
 
     /**
-     * Set 第三方应用平台的用户openid
-     * @param OpenId 第三方应用平台的用户openid
+     * Set 部署组ID
+     * @param GroupId 部署组ID
      */
-    public void setOpenId(String OpenId) {
-        this.OpenId = OpenId;
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
-    public AuthorizedUser() {
+    public DescribeContainerGroupAttributeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuthorizedUser(AuthorizedUser source) {
-        if (source.OpenId != null) {
-            this.OpenId = new String(source.OpenId);
+    public DescribeContainerGroupAttributeRequest(DescribeContainerGroupAttributeRequest source) {
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
     }
 
@@ -63,7 +63,7 @@ public class AuthorizedUser extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

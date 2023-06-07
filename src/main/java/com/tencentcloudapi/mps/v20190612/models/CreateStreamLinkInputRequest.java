@@ -13,100 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RemindFlowRecords extends AbstractModel{
+public class CreateStreamLinkInputRequest extends AbstractModel{
 
     /**
-    * 是否能够催办，true-是，false-否
-    */
-    @SerializedName("CanRemind")
-    @Expose
-    private Boolean CanRemind;
-
-    /**
-    * 合同id
+    * 媒体传输流ID。
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * 催办详情信息
+    * 流的输入组。
     */
-    @SerializedName("RemindMessage")
+    @SerializedName("InputGroup")
     @Expose
-    private String RemindMessage;
+    private CreateInput [] InputGroup;
 
     /**
-     * Get 是否能够催办，true-是，false-否 
-     * @return CanRemind 是否能够催办，true-是，false-否
-     */
-    public Boolean getCanRemind() {
-        return this.CanRemind;
-    }
-
-    /**
-     * Set 是否能够催办，true-是，false-否
-     * @param CanRemind 是否能够催办，true-是，false-否
-     */
-    public void setCanRemind(Boolean CanRemind) {
-        this.CanRemind = CanRemind;
-    }
-
-    /**
-     * Get 合同id 
-     * @return FlowId 合同id
+     * Get 媒体传输流ID。 
+     * @return FlowId 媒体传输流ID。
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同id
-     * @param FlowId 合同id
+     * Set 媒体传输流ID。
+     * @param FlowId 媒体传输流ID。
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 催办详情信息 
-     * @return RemindMessage 催办详情信息
+     * Get 流的输入组。 
+     * @return InputGroup 流的输入组。
      */
-    public String getRemindMessage() {
-        return this.RemindMessage;
+    public CreateInput [] getInputGroup() {
+        return this.InputGroup;
     }
 
     /**
-     * Set 催办详情信息
-     * @param RemindMessage 催办详情信息
+     * Set 流的输入组。
+     * @param InputGroup 流的输入组。
      */
-    public void setRemindMessage(String RemindMessage) {
-        this.RemindMessage = RemindMessage;
+    public void setInputGroup(CreateInput [] InputGroup) {
+        this.InputGroup = InputGroup;
     }
 
-    public RemindFlowRecords() {
+    public CreateStreamLinkInputRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RemindFlowRecords(RemindFlowRecords source) {
-        if (source.CanRemind != null) {
-            this.CanRemind = new Boolean(source.CanRemind);
-        }
+    public CreateStreamLinkInputRequest(CreateStreamLinkInputRequest source) {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
-        if (source.RemindMessage != null) {
-            this.RemindMessage = new String(source.RemindMessage);
+        if (source.InputGroup != null) {
+            this.InputGroup = new CreateInput[source.InputGroup.length];
+            for (int i = 0; i < source.InputGroup.length; i++) {
+                this.InputGroup[i] = new CreateInput(source.InputGroup[i]);
+            }
         }
     }
 
@@ -115,9 +92,8 @@ public class RemindFlowRecords extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CanRemind", this.CanRemind);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "RemindMessage", this.RemindMessage);
+        this.setParamArrayObj(map, prefix + "InputGroup.", this.InputGroup);
 
     }
 }

@@ -39,6 +39,7 @@ public class ReleasedApprover extends AbstractModel{
     /**
     * 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
     */
     @SerializedName("ApproverType")
     @Expose
@@ -124,9 +125,11 @@ ORGANIZATION-企业
 
     /**
      * Get 签署人类型，目前仅支持
-ORGANIZATION-企业 
+ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签 
      * @return ApproverType 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      */
     public String getApproverType() {
         return this.ApproverType;
@@ -135,8 +138,10 @@ ORGANIZATION-企业
     /**
      * Set 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      * @param ApproverType 签署人类型，目前仅支持
 ORGANIZATION-企业
+ENTERPRISESERVER-企业静默签
      */
     public void setApproverType(String ApproverType) {
         this.ApproverType = ApproverType;

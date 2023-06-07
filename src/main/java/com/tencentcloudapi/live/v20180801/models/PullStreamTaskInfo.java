@@ -275,6 +275,14 @@ PullVodPushLive -点播。
     private Long VodLocalMode;
 
     /**
+    * 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RecordTemplateId")
+    @Expose
+    private String RecordTemplateId;
+
+    /**
      * Get 拉流任务Id。 
      * @return TaskId 拉流任务Id。
      */
@@ -958,6 +966,26 @@ PullVodPushLive -点播。
         this.VodLocalMode = VodLocalMode;
     }
 
+    /**
+     * Get 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RecordTemplateId 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecordTemplateId() {
+        return this.RecordTemplateId;
+    }
+
+    /**
+     * Set 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RecordTemplateId 录制模板 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecordTemplateId(String RecordTemplateId) {
+        this.RecordTemplateId = RecordTemplateId;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -1056,6 +1084,9 @@ PullVodPushLive -点播。
         if (source.VodLocalMode != null) {
             this.VodLocalMode = new Long(source.VodLocalMode);
         }
+        if (source.RecordTemplateId != null) {
+            this.RecordTemplateId = new String(source.RecordTemplateId);
+        }
     }
 
 
@@ -1090,6 +1121,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+        this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
 
     }
 }

@@ -31,7 +31,7 @@ public class SignUrlInfo extends AbstractModel{
     private String SignUrl;
 
     /**
-    * 合同过期时间
+    * 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deadline")
@@ -149,9 +149,9 @@ PERSON 自然人
     }
 
     /**
-     * Get 合同过期时间
+     * Get 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deadline 合同过期时间
+     * @return Deadline 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeadline() {
@@ -159,9 +159,9 @@ PERSON 自然人
     }
 
     /**
-     * Set 合同过期时间
+     * Set 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deadline 合同过期时间
+     * @param Deadline 合同过期时间戳，单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeadline(Long Deadline) {
@@ -213,7 +213,9 @@ PERSON 自然人
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomUserId 自定义用户编号
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getCustomUserId() {
         return this.CustomUserId;
     }
@@ -223,7 +225,9 @@ PERSON 自然人
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomUserId 自定义用户编号
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setCustomUserId(String CustomUserId) {
         this.CustomUserId = CustomUserId;
     }

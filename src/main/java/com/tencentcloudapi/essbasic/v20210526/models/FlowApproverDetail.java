@@ -104,7 +104,7 @@ RELIEVED 已经解除
     private String ApproveMessage;
 
     /**
-    * 签署人签署时间
+    * 签署人签署时间戳，单位秒
     */
     @SerializedName("ApproveTime")
     @Expose
@@ -335,16 +335,16 @@ RELIEVED 已经解除
     }
 
     /**
-     * Get 签署人签署时间 
-     * @return ApproveTime 签署人签署时间
+     * Get 签署人签署时间戳，单位秒 
+     * @return ApproveTime 签署人签署时间戳，单位秒
      */
     public Long getApproveTime() {
         return this.ApproveTime;
     }
 
     /**
-     * Set 签署人签署时间
-     * @param ApproveTime 签署人签署时间
+     * Set 签署人签署时间戳，单位秒
+     * @param ApproveTime 签署人签署时间戳，单位秒
      */
     public void setApproveTime(Long ApproveTime) {
         this.ApproveTime = ApproveTime;

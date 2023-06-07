@@ -58,6 +58,13 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel{
     private String ExpireDate;
 
     /**
+    * 集群自定义参数
+    */
+    @SerializedName("ClusterCustomParameters")
+    @Expose
+    private ClusterCustomParameters [] ClusterCustomParameters;
+
+    /**
      * Get 是否是腾讯云 
      * @return IsCloud 是否是腾讯云
      */
@@ -137,6 +144,22 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel{
         this.ExpireDate = ExpireDate;
     }
 
+    /**
+     * Get 集群自定义参数 
+     * @return ClusterCustomParameters 集群自定义参数
+     */
+    public ClusterCustomParameters [] getClusterCustomParameters() {
+        return this.ClusterCustomParameters;
+    }
+
+    /**
+     * Set 集群自定义参数
+     * @param ClusterCustomParameters 集群自定义参数
+     */
+    public void setClusterCustomParameters(ClusterCustomParameters [] ClusterCustomParameters) {
+        this.ClusterCustomParameters = ClusterCustomParameters;
+    }
+
     public DescribeAgentDaemonSetCmdRequest() {
     }
 
@@ -160,6 +183,12 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel{
         if (source.ExpireDate != null) {
             this.ExpireDate = new String(source.ExpireDate);
         }
+        if (source.ClusterCustomParameters != null) {
+            this.ClusterCustomParameters = new ClusterCustomParameters[source.ClusterCustomParameters.length];
+            for (int i = 0; i < source.ClusterCustomParameters.length; i++) {
+                this.ClusterCustomParameters[i] = new ClusterCustomParameters(source.ClusterCustomParameters[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class DescribeAgentDaemonSetCmdRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "ExpireDate", this.ExpireDate);
+        this.setParamArrayObj(map, prefix + "ClusterCustomParameters.", this.ClusterCustomParameters);
 
     }
 }

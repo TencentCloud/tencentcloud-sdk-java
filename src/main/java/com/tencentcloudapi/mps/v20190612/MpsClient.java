@@ -270,6 +270,26 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建媒体传输的输入配置。
+     * @param req CreateStreamLinkInputRequest
+     * @return CreateStreamLinkInputResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkInputResponse CreateStreamLinkInput(CreateStreamLinkInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLinkInputResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLinkInputResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStreamLinkInput");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建媒体传输流的输出信息。
      * @param req CreateStreamLinkOutputInfoRequest
      * @return CreateStreamLinkOutputInfoResponse

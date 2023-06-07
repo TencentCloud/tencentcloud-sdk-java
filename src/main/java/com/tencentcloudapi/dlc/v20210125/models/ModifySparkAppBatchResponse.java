@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuthorizedUser extends AbstractModel{
+public class ModifySparkAppBatchResponse extends AbstractModel{
 
     /**
-    * 第三方应用平台的用户openid
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("OpenId")
+    @SerializedName("RequestId")
     @Expose
-    private String OpenId;
+    private String RequestId;
 
     /**
-     * Get 第三方应用平台的用户openid 
-     * @return OpenId 第三方应用平台的用户openid
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getOpenId() {
-        return this.OpenId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 第三方应用平台的用户openid
-     * @param OpenId 第三方应用平台的用户openid
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setOpenId(String OpenId) {
-        this.OpenId = OpenId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public AuthorizedUser() {
+    public ModifySparkAppBatchResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuthorizedUser(AuthorizedUser source) {
-        if (source.OpenId != null) {
-            this.OpenId = new String(source.OpenId);
+    public ModifySparkAppBatchResponse(ModifySparkAppBatchResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class AuthorizedUser extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

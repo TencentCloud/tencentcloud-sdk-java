@@ -37,14 +37,14 @@ public class OccupiedSeal extends AbstractModel{
     private String SealName;
 
     /**
-    * 电子印章授权时间戳
+    * 电子印章授权时间戳，单位秒
     */
     @SerializedName("CreateOn")
     @Expose
     private Long CreateOn;
 
     /**
-    * 电子印章授权人
+    * 电子印章授权人，电子签的UserId
     */
     @SerializedName("Creator")
     @Expose
@@ -80,7 +80,7 @@ public class OccupiedSeal extends AbstractModel{
     private String Url;
 
     /**
-    * 印章类型
+    * 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
     */
     @SerializedName("SealType")
     @Expose
@@ -133,32 +133,32 @@ public class OccupiedSeal extends AbstractModel{
     }
 
     /**
-     * Get 电子印章授权时间戳 
-     * @return CreateOn 电子印章授权时间戳
+     * Get 电子印章授权时间戳，单位秒 
+     * @return CreateOn 电子印章授权时间戳，单位秒
      */
     public Long getCreateOn() {
         return this.CreateOn;
     }
 
     /**
-     * Set 电子印章授权时间戳
-     * @param CreateOn 电子印章授权时间戳
+     * Set 电子印章授权时间戳，单位秒
+     * @param CreateOn 电子印章授权时间戳，单位秒
      */
     public void setCreateOn(Long CreateOn) {
         this.CreateOn = CreateOn;
     }
 
     /**
-     * Get 电子印章授权人 
-     * @return Creator 电子印章授权人
+     * Get 电子印章授权人，电子签的UserId 
+     * @return Creator 电子印章授权人，电子签的UserId
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 电子印章授权人
-     * @param Creator 电子印章授权人
+     * Set 电子印章授权人，电子签的UserId
+     * @param Creator 电子印章授权人，电子签的UserId
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
@@ -233,16 +233,16 @@ public class OccupiedSeal extends AbstractModel{
     }
 
     /**
-     * Get 印章类型 
-     * @return SealType 印章类型
+     * Get 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章 
+     * @return SealType 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
      */
     public String getSealType() {
         return this.SealType;
     }
 
     /**
-     * Set 印章类型
-     * @param SealType 印章类型
+     * Set 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
+     * @param SealType 印章类型，OFFICIAL-企业公章，CONTRACT-合同专用章，LEGAL_PERSON_SEAL-法人章
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;

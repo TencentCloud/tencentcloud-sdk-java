@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CreateFlowOption extends AbstractModel{
 
     /**
-    * 是否允许修改合同信息
+    * 是否允许修改合同信息，true-是，false-否
     */
     @SerializedName("CanEditFlow")
     @Expose
     private Boolean CanEditFlow;
 
     /**
-     * Get 是否允许修改合同信息 
-     * @return CanEditFlow 是否允许修改合同信息
+     * Get 是否允许修改合同信息，true-是，false-否 
+     * @return CanEditFlow 是否允许修改合同信息，true-是，false-否
      */
     public Boolean getCanEditFlow() {
         return this.CanEditFlow;
     }
 
     /**
-     * Set 是否允许修改合同信息
-     * @param CanEditFlow 是否允许修改合同信息
+     * Set 是否允许修改合同信息，true-是，false-否
+     * @param CanEditFlow 是否允许修改合同信息，true-是，false-否
      */
     public void setCanEditFlow(Boolean CanEditFlow) {
         this.CanEditFlow = CanEditFlow;

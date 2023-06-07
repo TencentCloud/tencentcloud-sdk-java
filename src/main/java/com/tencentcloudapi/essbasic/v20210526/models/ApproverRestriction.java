@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ApproverRestriction extends AbstractModel{
 
     /**
-    * 指定签署人名字
+    * 指定签署人姓名
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 指定签署人手机号
+    * 指定签署人手机号，11位数字
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 指定签署人证件类型
+    * 指定签署人证件类型，ID_CARD-身份证，HONGKONG_AND_MACAO-港澳居民来往内地通行证，HONGKONG_MACAO_AND_TAIWAN-港澳台居民居住证
     */
     @SerializedName("IdCardType")
     @Expose
     private String IdCardType;
 
     /**
-    * 指定签署人证件号码
+    * 指定签署人证件号码，其中字母大写
     */
     @SerializedName("IdCardNumber")
     @Expose
     private String IdCardNumber;
 
     /**
-     * Get 指定签署人名字 
-     * @return Name 指定签署人名字
+     * Get 指定签署人姓名 
+     * @return Name 指定签署人姓名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 指定签署人名字
-     * @param Name 指定签署人名字
+     * Set 指定签署人姓名
+     * @param Name 指定签署人姓名
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 指定签署人手机号 
-     * @return Mobile 指定签署人手机号
+     * Get 指定签署人手机号，11位数字 
+     * @return Mobile 指定签署人手机号，11位数字
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set 指定签署人手机号
-     * @param Mobile 指定签署人手机号
+     * Set 指定签署人手机号，11位数字
+     * @param Mobile 指定签署人手机号，11位数字
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 指定签署人证件类型 
-     * @return IdCardType 指定签署人证件类型
+     * Get 指定签署人证件类型，ID_CARD-身份证，HONGKONG_AND_MACAO-港澳居民来往内地通行证，HONGKONG_MACAO_AND_TAIWAN-港澳台居民居住证 
+     * @return IdCardType 指定签署人证件类型，ID_CARD-身份证，HONGKONG_AND_MACAO-港澳居民来往内地通行证，HONGKONG_MACAO_AND_TAIWAN-港澳台居民居住证
      */
     public String getIdCardType() {
         return this.IdCardType;
     }
 
     /**
-     * Set 指定签署人证件类型
-     * @param IdCardType 指定签署人证件类型
+     * Set 指定签署人证件类型，ID_CARD-身份证，HONGKONG_AND_MACAO-港澳居民来往内地通行证，HONGKONG_MACAO_AND_TAIWAN-港澳台居民居住证
+     * @param IdCardType 指定签署人证件类型，ID_CARD-身份证，HONGKONG_AND_MACAO-港澳居民来往内地通行证，HONGKONG_MACAO_AND_TAIWAN-港澳台居民居住证
      */
     public void setIdCardType(String IdCardType) {
         this.IdCardType = IdCardType;
     }
 
     /**
-     * Get 指定签署人证件号码 
-     * @return IdCardNumber 指定签署人证件号码
+     * Get 指定签署人证件号码，其中字母大写 
+     * @return IdCardNumber 指定签署人证件号码，其中字母大写
      */
     public String getIdCardNumber() {
         return this.IdCardNumber;
     }
 
     /**
-     * Set 指定签署人证件号码
-     * @param IdCardNumber 指定签署人证件号码
+     * Set 指定签署人证件号码，其中字母大写
+     * @param IdCardNumber 指定签署人证件号码，其中字母大写
      */
     public void setIdCardNumber(String IdCardNumber) {
         this.IdCardNumber = IdCardNumber;

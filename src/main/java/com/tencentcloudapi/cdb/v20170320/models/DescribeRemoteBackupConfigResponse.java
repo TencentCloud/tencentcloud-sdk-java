@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRemoteBackupConfigResponse extends AbstractModel{
 
     /**
-    * 异地备份保留天时间，单位为天
+    * 异地备份保留时间，单位为天
     */
     @SerializedName("ExpireDays")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeRemoteBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异地备份保留天时间，单位为天 
-     * @return ExpireDays 异地备份保留天时间，单位为天
+     * Get 异地备份保留时间，单位为天 
+     * @return ExpireDays 异地备份保留时间，单位为天
      */
     public Long getExpireDays() {
         return this.ExpireDays;
     }
 
     /**
-     * Set 异地备份保留天时间，单位为天
-     * @param ExpireDays 异地备份保留天时间，单位为天
+     * Set 异地备份保留时间，单位为天
+     * @param ExpireDays 异地备份保留时间，单位为天
      */
     public void setExpireDays(Long ExpireDays) {
         this.ExpireDays = ExpireDays;

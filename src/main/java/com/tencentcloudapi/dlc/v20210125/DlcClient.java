@@ -1659,6 +1659,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifySparkAppBatch）用于批量修改Spark作业参数配置
+     * @param req ModifySparkAppBatchRequest
+     * @return ModifySparkAppBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySparkAppBatchResponse ModifySparkAppBatch(ModifySparkAppBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySparkAppBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySparkAppBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改用户信息
      * @param req ModifyUserRequest
      * @return ModifyUserResponse

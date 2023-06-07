@@ -101,21 +101,21 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String SpecificationsType;
 
     /**
-    * 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+    * 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+    * 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+    * 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("Partition")
     @Expose
@@ -330,48 +330,48 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算 
-     * @return DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     * Get 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
-     * @param DiskSize 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+     * Set 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+     * @param DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算 
-     * @return BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     * Get 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
-     * @param BandWidth 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+     * Set 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * @param BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算 
-     * @return Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     * Get 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
-     * @param Partition 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+     * Set 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+     * @param Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

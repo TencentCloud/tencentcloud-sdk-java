@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResponseCode extends AbstractModel{
 
     /**
-    * 如果成功则返回Success，失败则返回yunapi定义的错误码
+    * 如果成功则返回Success，失败则返回云api定义的错误码
     */
     @SerializedName("Code")
     @Expose
@@ -37,16 +37,16 @@ public class ResponseCode extends AbstractModel{
     private String Message;
 
     /**
-     * Get 如果成功则返回Success，失败则返回yunapi定义的错误码 
-     * @return Code 如果成功则返回Success，失败则返回yunapi定义的错误码
+     * Get 如果成功则返回Success，失败则返回云api定义的错误码 
+     * @return Code 如果成功则返回Success，失败则返回云api定义的错误码
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 如果成功则返回Success，失败则返回yunapi定义的错误码
-     * @param Code 如果成功则返回Success，失败则返回yunapi定义的错误码
+     * Set 如果成功则返回Success，失败则返回云api定义的错误码
+     * @param Code 如果成功则返回Success，失败则返回云api定义的错误码
      */
     public void setCode(String Code) {
         this.Code = Code;

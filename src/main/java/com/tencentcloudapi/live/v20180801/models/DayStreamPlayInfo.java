@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class DayStreamPlayInfo extends AbstractModel{
 
     /**
-    * 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+    * 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
     */
     @SerializedName("Time")
     @Expose
@@ -58,16 +61,28 @@ public class DayStreamPlayInfo extends AbstractModel{
     private Long Online;
 
     /**
-     * Get 数据时间点，格式：yyyy-mm-dd HH:MM:SS。 
-     * @return Time 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * Get 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。 
+     * @return Time 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
-     * @param Time 数据时间点，格式：yyyy-mm-dd HH:MM:SS。
+     * Set 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
+     * @param Time 数据时间点，接口返回支持两种时间格式：
+1）YYYY-MM-DDThh:mm:ssZ：UTC时间格式，详见IOS日期格式说明文档: https://cloud.tencent.com/document/product/266/11732#I
+2）yyyy-MM-dd HH:mm:ss：使用此格式时，默认代表北京时间。
+接口返回的时间格式和查询请求传入的时间格式一致。
      */
     public void setTime(String Time) {
         this.Time = Time;

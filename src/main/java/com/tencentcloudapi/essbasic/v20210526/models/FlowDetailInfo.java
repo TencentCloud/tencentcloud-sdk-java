@@ -67,14 +67,14 @@ RELIEVED 解除
     private String FlowMessage;
 
     /**
-    * 合同(流程)的创建时间戳
+    * 合同(流程)的创建时间戳，单位秒
     */
     @SerializedName("CreateOn")
     @Expose
     private Long CreateOn;
 
     /**
-    * 合同(流程)的签署截止时间戳
+    * 合同(流程)的签署截止时间戳，单位秒
     */
     @SerializedName("DeadLine")
     @Expose
@@ -225,32 +225,32 @@ RELIEVED 解除
     }
 
     /**
-     * Get 合同(流程)的创建时间戳 
-     * @return CreateOn 合同(流程)的创建时间戳
+     * Get 合同(流程)的创建时间戳，单位秒 
+     * @return CreateOn 合同(流程)的创建时间戳，单位秒
      */
     public Long getCreateOn() {
         return this.CreateOn;
     }
 
     /**
-     * Set 合同(流程)的创建时间戳
-     * @param CreateOn 合同(流程)的创建时间戳
+     * Set 合同(流程)的创建时间戳，单位秒
+     * @param CreateOn 合同(流程)的创建时间戳，单位秒
      */
     public void setCreateOn(Long CreateOn) {
         this.CreateOn = CreateOn;
     }
 
     /**
-     * Get 合同(流程)的签署截止时间戳 
-     * @return DeadLine 合同(流程)的签署截止时间戳
+     * Get 合同(流程)的签署截止时间戳，单位秒 
+     * @return DeadLine 合同(流程)的签署截止时间戳，单位秒
      */
     public Long getDeadLine() {
         return this.DeadLine;
     }
 
     /**
-     * Set 合同(流程)的签署截止时间戳
-     * @param DeadLine 合同(流程)的签署截止时间戳
+     * Set 合同(流程)的签署截止时间戳，单位秒
+     * @param DeadLine 合同(流程)的签署截止时间戳，单位秒
      */
     public void setDeadLine(Long DeadLine) {
         this.DeadLine = DeadLine;

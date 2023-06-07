@@ -51,7 +51,7 @@ public class PhoneNumBuyInfo extends AbstractModel{
     private Long BuyTime;
 
     /**
-    * 截至时间戳
+    * 截止时间戳
     */
     @SerializedName("EndTime")
     @Expose
@@ -129,16 +129,16 @@ public class PhoneNumBuyInfo extends AbstractModel{
     }
 
     /**
-     * Get 截至时间戳 
-     * @return EndTime 截至时间戳
+     * Get 截止时间戳 
+     * @return EndTime 截止时间戳
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 截至时间戳
-     * @param EndTime 截至时间戳
+     * Set 截止时间戳
+     * @param EndTime 截止时间戳
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

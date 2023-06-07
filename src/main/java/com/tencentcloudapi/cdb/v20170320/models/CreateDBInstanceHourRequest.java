@@ -170,7 +170,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+    * 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -212,7 +212,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long ParamTemplateId;
 
     /**
-    * 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+    * 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
     */
     @SerializedName("AlarmPolicyList")
     @Expose
@@ -618,16 +618,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。 
-     * @return InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+     * Get 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。 
+     * @return InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
-     * @param InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+     * Set 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
+     * @param InstanceName 实例名称。一次购买多个实例命名会用后缀数字区分，例instanceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -714,16 +714,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。 
-     * @return AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+     * Get 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。 
+     * @return AlarmPolicyList 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
      */
     public Long [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
-     * @param AlarmPolicyList 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
+     * Set 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
+     * @param AlarmPolicyList 告警策略id数组。腾讯云可观测平台DescribeAlarmPolicy接口返回的OriginId。
      */
     public void setAlarmPolicyList(Long [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;
