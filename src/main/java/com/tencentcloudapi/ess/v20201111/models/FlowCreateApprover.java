@@ -155,6 +155,15 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String JumpUrl;
 
     /**
+    * 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+    */
+    @SerializedName("SignId")
+    @Expose
+    private String SignId;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -470,6 +479,30 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.JumpUrl = JumpUrl;
     }
 
+    /**
+     * Get 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息 
+     * @return SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public String getSignId() {
+        return this.SignId;
+    }
+
+    /**
+     * Set 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     * @param SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public void setSignId(String SignId) {
+        this.SignId = SignId;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -535,6 +568,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.JumpUrl != null) {
             this.JumpUrl = new String(source.JumpUrl);
         }
+        if (source.SignId != null) {
+            this.SignId = new String(source.SignId);
+        }
     }
 
 
@@ -560,6 +596,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+        this.setParamSimple(map, prefix + "SignId", this.SignId);
 
     }
 }

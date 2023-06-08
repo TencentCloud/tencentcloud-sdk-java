@@ -78,7 +78,9 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
     /**
      * Get 操作者的信息，不用传 
      * @return Operator 操作者的信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -86,7 +88,9 @@ public class GetDownloadFlowUrlRequest extends AbstractModel{
     /**
      * Set 操作者的信息，不用传
      * @param Operator 操作者的信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

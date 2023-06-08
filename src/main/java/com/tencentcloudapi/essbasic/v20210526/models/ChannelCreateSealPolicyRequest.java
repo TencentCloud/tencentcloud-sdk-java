@@ -37,18 +37,11 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     private String SealId;
 
     /**
-    * 指定待授权的用户ID数组
+    * 指定待授权的用户ID数组,电子签的用户ID
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
-
-    /**
-    * 企业机构信息，不用传
-    */
-    @SerializedName("Organization")
-    @Expose
-    private OrganizationInfo Organization;
 
     /**
     * 操作人（用户）信息，不用传
@@ -56,6 +49,13 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 企业机构信息，不用传
+    */
+    @SerializedName("Organization")
+    @Expose
+    private OrganizationInfo Organization;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -90,41 +90,27 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定待授权的用户ID数组 
-     * @return UserIds 指定待授权的用户ID数组
+     * Get 指定待授权的用户ID数组,电子签的用户ID 
+     * @return UserIds 指定待授权的用户ID数组,电子签的用户ID
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 指定待授权的用户ID数组
-     * @param UserIds 指定待授权的用户ID数组
+     * Set 指定待授权的用户ID数组,电子签的用户ID
+     * @param UserIds 指定待授权的用户ID数组,电子签的用户ID
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
     }
 
     /**
-     * Get 企业机构信息，不用传 
-     * @return Organization 企业机构信息，不用传
-     */
-    public OrganizationInfo getOrganization() {
-        return this.Organization;
-    }
-
-    /**
-     * Set 企业机构信息，不用传
-     * @param Organization 企业机构信息，不用传
-     */
-    public void setOrganization(OrganizationInfo Organization) {
-        this.Organization = Organization;
-    }
-
-    /**
      * Get 操作人（用户）信息，不用传 
      * @return Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -132,9 +118,31 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     /**
      * Set 操作人（用户）信息，不用传
      * @param Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get 企业机构信息，不用传 
+     * @return Organization 企业机构信息，不用传
+     * @deprecated
+     */
+    @Deprecated
+    public OrganizationInfo getOrganization() {
+        return this.Organization;
+    }
+
+    /**
+     * Set 企业机构信息，不用传
+     * @param Organization 企业机构信息，不用传
+     * @deprecated
+     */
+    @Deprecated
+    public void setOrganization(OrganizationInfo Organization) {
+        this.Organization = Organization;
     }
 
     public ChannelCreateSealPolicyRequest() {
@@ -157,11 +165,11 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
-        if (source.Organization != null) {
-            this.Organization = new OrganizationInfo(source.Organization);
-        }
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.Organization != null) {
+            this.Organization = new OrganizationInfo(source.Organization);
         }
     }
 
@@ -173,8 +181,8 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
-        this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Organization.", this.Organization);
 
     }
 }

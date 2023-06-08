@@ -2260,6 +2260,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
 
     /**
      *发送单条消息
+不支持持久topic
      * @param req SendMessagesRequest
      * @return SendMessagesResponse
      * @throws TencentCloudSDKException

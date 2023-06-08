@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
 
     /**
-    * WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-    */
-    @SerializedName("EmbedType")
-    @Expose
-    private String EmbedType;
-
-    /**
     * 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。
     */
     @SerializedName("Agent")
@@ -37,11 +30,11 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 渠道操作者信息
+    * WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
     */
-    @SerializedName("Operator")
+    @SerializedName("EmbedType")
     @Expose
-    private UserInfo Operator;
+    private String EmbedType;
 
     /**
     * WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
@@ -58,20 +51,11 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
     private Boolean HiddenComponents;
 
     /**
-     * Get WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程 
-     * @return EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-     */
-    public String getEmbedType() {
-        return this.EmbedType;
-    }
-
-    /**
-     * Set WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-     * @param EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-     */
-    public void setEmbedType(String EmbedType) {
-        this.EmbedType = EmbedType;
-    }
+    * 渠道操作者信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 必填。 
@@ -90,19 +74,19 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道操作者信息 
-     * @return Operator 渠道操作者信息
+     * Get WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程 
+     * @return EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
      */
-    public UserInfo getOperator() {
-        return this.Operator;
+    public String getEmbedType() {
+        return this.EmbedType;
     }
 
     /**
-     * Set 渠道操作者信息
-     * @param Operator 渠道操作者信息
+     * Set WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
+     * @param EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
      */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
+    public void setEmbedType(String EmbedType) {
+        this.EmbedType = EmbedType;
     }
 
     /**
@@ -137,6 +121,26 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
         this.HiddenComponents = HiddenComponents;
     }
 
+    /**
+     * Get 渠道操作者信息 
+     * @return Operator 渠道操作者信息
+     * @deprecated
+     */
+    @Deprecated
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 渠道操作者信息
+     * @param Operator 渠道操作者信息
+     * @deprecated
+     */
+    @Deprecated
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
     public ChannelCreateEmbedWebUrlRequest() {
     }
 
@@ -145,20 +149,20 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ChannelCreateEmbedWebUrlRequest(ChannelCreateEmbedWebUrlRequest source) {
-        if (source.EmbedType != null) {
-            this.EmbedType = new String(source.EmbedType);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
+        if (source.EmbedType != null) {
+            this.EmbedType = new String(source.EmbedType);
         }
         if (source.BusinessId != null) {
             this.BusinessId = new String(source.BusinessId);
         }
         if (source.HiddenComponents != null) {
             this.HiddenComponents = new Boolean(source.HiddenComponents);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -167,11 +171,11 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EmbedType", this.EmbedType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "EmbedType", this.EmbedType);
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
         this.setParamSimple(map, prefix + "HiddenComponents", this.HiddenComponents);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

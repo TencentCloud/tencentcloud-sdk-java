@@ -94,6 +94,29 @@ public class TaskGroup extends AbstractModel{
     private Long TaskGroupMode;
 
     /**
+    * 不参演的实例列表
+    */
+    @SerializedName("TaskGroupDiscardInstanceList")
+    @Expose
+    private String [] TaskGroupDiscardInstanceList;
+
+    /**
+    * 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskGroupSelectedInstanceList")
+    @Expose
+    private String [] TaskGroupSelectedInstanceList;
+
+    /**
+    * 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskGroupInstancesExecuteRule")
+    @Expose
+    private TaskGroupInstancesExecuteRules [] TaskGroupInstancesExecuteRule;
+
+    /**
      * Get 任务动作ID 
      * @return TaskGroupId 任务动作ID
      */
@@ -257,6 +280,62 @@ public class TaskGroup extends AbstractModel{
         this.TaskGroupMode = TaskGroupMode;
     }
 
+    /**
+     * Get 不参演的实例列表 
+     * @return TaskGroupDiscardInstanceList 不参演的实例列表
+     */
+    public String [] getTaskGroupDiscardInstanceList() {
+        return this.TaskGroupDiscardInstanceList;
+    }
+
+    /**
+     * Set 不参演的实例列表
+     * @param TaskGroupDiscardInstanceList 不参演的实例列表
+     */
+    public void setTaskGroupDiscardInstanceList(String [] TaskGroupDiscardInstanceList) {
+        this.TaskGroupDiscardInstanceList = TaskGroupDiscardInstanceList;
+    }
+
+    /**
+     * Get 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskGroupSelectedInstanceList 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTaskGroupSelectedInstanceList() {
+        return this.TaskGroupSelectedInstanceList;
+    }
+
+    /**
+     * Set 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskGroupSelectedInstanceList 参演实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskGroupSelectedInstanceList(String [] TaskGroupSelectedInstanceList) {
+        this.TaskGroupSelectedInstanceList = TaskGroupSelectedInstanceList;
+    }
+
+    /**
+     * Get 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskGroupInstancesExecuteRule 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskGroupInstancesExecuteRules [] getTaskGroupInstancesExecuteRule() {
+        return this.TaskGroupInstancesExecuteRule;
+    }
+
+    /**
+     * Set 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskGroupInstancesExecuteRule 机器选取规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskGroupInstancesExecuteRule(TaskGroupInstancesExecuteRules [] TaskGroupInstancesExecuteRule) {
+        this.TaskGroupInstancesExecuteRule = TaskGroupInstancesExecuteRule;
+    }
+
     public TaskGroup() {
     }
 
@@ -301,6 +380,24 @@ public class TaskGroup extends AbstractModel{
         if (source.TaskGroupMode != null) {
             this.TaskGroupMode = new Long(source.TaskGroupMode);
         }
+        if (source.TaskGroupDiscardInstanceList != null) {
+            this.TaskGroupDiscardInstanceList = new String[source.TaskGroupDiscardInstanceList.length];
+            for (int i = 0; i < source.TaskGroupDiscardInstanceList.length; i++) {
+                this.TaskGroupDiscardInstanceList[i] = new String(source.TaskGroupDiscardInstanceList[i]);
+            }
+        }
+        if (source.TaskGroupSelectedInstanceList != null) {
+            this.TaskGroupSelectedInstanceList = new String[source.TaskGroupSelectedInstanceList.length];
+            for (int i = 0; i < source.TaskGroupSelectedInstanceList.length; i++) {
+                this.TaskGroupSelectedInstanceList[i] = new String(source.TaskGroupSelectedInstanceList[i]);
+            }
+        }
+        if (source.TaskGroupInstancesExecuteRule != null) {
+            this.TaskGroupInstancesExecuteRule = new TaskGroupInstancesExecuteRules[source.TaskGroupInstancesExecuteRule.length];
+            for (int i = 0; i < source.TaskGroupInstancesExecuteRule.length; i++) {
+                this.TaskGroupInstancesExecuteRule[i] = new TaskGroupInstancesExecuteRules(source.TaskGroupInstancesExecuteRule[i]);
+            }
+        }
     }
 
 
@@ -318,6 +415,9 @@ public class TaskGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TaskGroupActions.", this.TaskGroupActions);
         this.setParamArraySimple(map, prefix + "TaskGroupInstanceList.", this.TaskGroupInstanceList);
         this.setParamSimple(map, prefix + "TaskGroupMode", this.TaskGroupMode);
+        this.setParamArraySimple(map, prefix + "TaskGroupDiscardInstanceList.", this.TaskGroupDiscardInstanceList);
+        this.setParamArraySimple(map, prefix + "TaskGroupSelectedInstanceList.", this.TaskGroupSelectedInstanceList);
+        this.setParamArrayObj(map, prefix + "TaskGroupInstancesExecuteRule.", this.TaskGroupInstancesExecuteRule);
 
     }
 }

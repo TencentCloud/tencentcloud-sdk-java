@@ -37,7 +37,7 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     private String SealId;
 
     /**
-    * 指定用户ID数组
+    * 指定用户ID数组，电子签系统用户ID
     */
     @SerializedName("UserIds")
     @Expose
@@ -90,16 +90,16 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定用户ID数组 
-     * @return UserIds 指定用户ID数组
+     * Get 指定用户ID数组，电子签系统用户ID 
+     * @return UserIds 指定用户ID数组，电子签系统用户ID
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 指定用户ID数组
-     * @param UserIds 指定用户ID数组
+     * Set 指定用户ID数组，电子签系统用户ID
+     * @param UserIds 指定用户ID数组，电子签系统用户ID
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
@@ -108,7 +108,9 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     /**
      * Get 组织机构信息，不用传 
      * @return Organization 组织机构信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -116,7 +118,9 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     /**
      * Set 组织机构信息，不用传
      * @param Organization 组织机构信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
@@ -124,7 +128,9 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     /**
      * Get 操作人（用户）信息，不用传 
      * @return Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -132,7 +138,9 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     /**
      * Set 操作人（用户）信息，不用传
      * @param Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

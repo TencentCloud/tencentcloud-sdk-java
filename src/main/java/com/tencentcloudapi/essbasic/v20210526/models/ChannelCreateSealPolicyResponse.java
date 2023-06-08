@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelCreateSealPolicyResponse extends AbstractModel{
 
     /**
-    * 最终授权成功的用户ID数组。其他的跳过的是已经授权了的
+    * 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
     */
     @SerializedName("UserIds")
     @Expose
@@ -37,16 +37,16 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 最终授权成功的用户ID数组。其他的跳过的是已经授权了的 
-     * @return UserIds 最终授权成功的用户ID数组。其他的跳过的是已经授权了的
+     * Get 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的 
+     * @return UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 最终授权成功的用户ID数组。其他的跳过的是已经授权了的
-     * @param UserIds 最终授权成功的用户ID数组。其他的跳过的是已经授权了的
+     * Set 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
+     * @param UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

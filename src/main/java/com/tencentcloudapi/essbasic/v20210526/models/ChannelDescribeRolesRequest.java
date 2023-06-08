@@ -134,7 +134,9 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     /**
      * Get 操作人信息 
      * @return Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -142,7 +144,9 @@ Key:"RoleStatus",Values:["1"]查询启用角色，Values:["2"]查询禁用角色
     /**
      * Set 操作人信息
      * @param Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

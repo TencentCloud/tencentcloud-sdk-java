@@ -985,6 +985,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(IsolateDCDBInstance)用于隔离分布式数据库TDSQL实例（包年包月），隔离后不能通过IP和端口访问数据库。隔离的实例可在回收站中进行开机。若为欠费隔离，请尽快进行充值。
+     * @param req IsolateDCDBInstanceRequest
+     * @return IsolateDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDCDBInstanceResponse IsolateDCDBInstance(IsolateDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（IsolateDedicatedDBInstance）用于隔离独享云数据库实例。
      * @param req IsolateDedicatedDBInstanceRequest
      * @return IsolateDedicatedDBInstanceResponse

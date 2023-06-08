@@ -338,7 +338,9 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Get 暂未开放 
      * @return Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -346,7 +348,9 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     /**
      * Set 暂未开放
      * @param Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

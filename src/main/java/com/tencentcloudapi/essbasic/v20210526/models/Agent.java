@@ -124,7 +124,9 @@ public class Agent extends AbstractModel{
     /**
      * Get 内部参数，暂未开放使用 
      * @return ProxyOrganizationId 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public String getProxyOrganizationId() {
         return this.ProxyOrganizationId;
     }
@@ -132,7 +134,9 @@ public class Agent extends AbstractModel{
     /**
      * Set 内部参数，暂未开放使用
      * @param ProxyOrganizationId 内部参数，暂未开放使用
+     * @deprecated
      */
+    @Deprecated
     public void setProxyOrganizationId(String ProxyOrganizationId) {
         this.ProxyOrganizationId = ProxyOrganizationId;
     }

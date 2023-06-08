@@ -44,18 +44,18 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel{
     private String SealId;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 更新印章状态原因说明
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -106,22 +106,6 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 更新印章状态原因说明 
      * @return Reason 更新印章状态原因说明
      */
@@ -135,6 +119,26 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel{
      */
     public void setReason(String Reason) {
         this.Reason = Reason;
+    }
+
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     * @deprecated
+     */
+    @Deprecated
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     * @deprecated
+     */
+    @Deprecated
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelUpdateSealStatusRequest() {
@@ -154,11 +158,11 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel{
         if (source.SealId != null) {
             this.SealId = new String(source.SealId);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -170,8 +174,8 @@ public class ChannelUpdateSealStatusRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

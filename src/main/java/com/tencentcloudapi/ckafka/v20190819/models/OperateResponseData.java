@@ -31,6 +31,14 @@ public class OperateResponseData extends AbstractModel{
     private Long FlowId;
 
     /**
+    * RouteIdDto
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteDTO")
+    @Expose
+    private RouteDTO RouteDTO;
+
+    /**
      * Get FlowId11
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlowId FlowId11
@@ -50,6 +58,26 @@ public class OperateResponseData extends AbstractModel{
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get RouteIdDto
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteDTO RouteIdDto
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RouteDTO getRouteDTO() {
+        return this.RouteDTO;
+    }
+
+    /**
+     * Set RouteIdDto
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteDTO RouteIdDto
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteDTO(RouteDTO RouteDTO) {
+        this.RouteDTO = RouteDTO;
+    }
+
     public OperateResponseData() {
     }
 
@@ -61,6 +89,9 @@ public class OperateResponseData extends AbstractModel{
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.RouteDTO != null) {
+            this.RouteDTO = new RouteDTO(source.RouteDTO);
+        }
     }
 
 
@@ -69,6 +100,7 @@ public class OperateResponseData extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "RouteDTO.", this.RouteDTO);
 
     }
 }

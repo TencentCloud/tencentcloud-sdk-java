@@ -37,6 +37,13 @@ public class DescribeTrainingTaskPodsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * pod详细信息
+    */
+    @SerializedName("PodInfoList")
+    @Expose
+    private PodInfo PodInfoList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeTrainingTaskPodsResponse extends AbstractModel{
     }
 
     /**
+     * Get pod详细信息 
+     * @return PodInfoList pod详细信息
+     */
+    public PodInfo getPodInfoList() {
+        return this.PodInfoList;
+    }
+
+    /**
+     * Set pod详细信息
+     * @param PodInfoList pod详细信息
+     */
+    public void setPodInfoList(PodInfo PodInfoList) {
+        this.PodInfoList = PodInfoList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +131,9 @@ public class DescribeTrainingTaskPodsResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.PodInfoList != null) {
+            this.PodInfoList = new PodInfo(source.PodInfoList);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeTrainingTaskPodsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "PodNames.", this.PodNames);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "PodInfoList.", this.PodInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

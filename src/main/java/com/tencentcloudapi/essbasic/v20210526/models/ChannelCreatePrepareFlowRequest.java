@@ -223,7 +223,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Get 企业机构信息，不用传 
      * @return Organization 企业机构信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -231,7 +233,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Set 企业机构信息，不用传
      * @param Organization 企业机构信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }
@@ -239,7 +243,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Get 操作人（用户）信息，不用传 
      * @return Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -247,7 +253,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Set 操作人（用户）信息，不用传
      * @param Operator 操作人（用户）信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

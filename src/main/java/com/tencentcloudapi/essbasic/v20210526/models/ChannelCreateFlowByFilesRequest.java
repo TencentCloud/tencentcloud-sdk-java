@@ -131,13 +131,6 @@ MobileCheck：手机号验证
     private Long SignBeanTag;
 
     /**
-    * 操作者的信息，不用传
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 被抄送人信息列表
     */
     @SerializedName("CcInfos")
@@ -157,6 +150,13 @@ MobileCheck：手机号验证
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
+
+    /**
+    * 操作者的信息，不用传
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -411,22 +411,6 @@ MobileCheck：手机号验证
     }
 
     /**
-     * Get 操作者的信息，不用传 
-     * @return Operator 操作者的信息，不用传
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息，不用传
-     * @param Operator 操作者的信息，不用传
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 被抄送人信息列表 
      * @return CcInfos 被抄送人信息列表
      */
@@ -472,6 +456,26 @@ MobileCheck：手机号验证
      */
     public void setAutoSignScene(String AutoSignScene) {
         this.AutoSignScene = AutoSignScene;
+    }
+
+    /**
+     * Get 操作者的信息，不用传 
+     * @return Operator 操作者的信息，不用传
+     * @deprecated
+     */
+    @Deprecated
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息，不用传
+     * @param Operator 操作者的信息，不用传
+     * @deprecated
+     */
+    @Deprecated
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public ChannelCreateFlowByFilesRequest() {
@@ -536,9 +540,6 @@ MobileCheck：手机号验证
         if (source.SignBeanTag != null) {
             this.SignBeanTag = new Long(source.SignBeanTag);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.CcInfos != null) {
             this.CcInfos = new CcInfo[source.CcInfos.length];
             for (int i = 0; i < source.CcInfos.length; i++) {
@@ -550,6 +551,9 @@ MobileCheck：手机号验证
         }
         if (source.AutoSignScene != null) {
             this.AutoSignScene = new String(source.AutoSignScene);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -573,10 +577,10 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "ApproverVerifyType", this.ApproverVerifyType);
         this.setParamSimple(map, prefix + "SignBeanTag", this.SignBeanTag);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

@@ -85,7 +85,9 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
     /**
      * Get 操作者的信息，不用传 
      * @return Operator 操作者的信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -93,7 +95,9 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
     /**
      * Set 操作者的信息，不用传
      * @param Operator 操作者的信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
@@ -101,7 +105,9 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
     /**
      * Get 暂未开放 
      * @return Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -109,7 +115,9 @@ public class ChannelGetTaskResultApiRequest extends AbstractModel{
     /**
      * Set 暂未开放
      * @param Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

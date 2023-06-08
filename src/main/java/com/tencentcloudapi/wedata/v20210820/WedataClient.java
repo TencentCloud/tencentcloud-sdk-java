@@ -4006,4 +4006,24 @@ public class WedataClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *保存任务信息
+     * @param req UploadContentRequest
+     * @return UploadContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadContentResponse UploadContent(UploadContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UploadContentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UploadContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UploadContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

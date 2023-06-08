@@ -44,7 +44,7 @@ public class CommonFlowApprover extends AbstractModel{
     private String OrganizationId;
 
     /**
-    * 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+    * 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
     */
     @SerializedName("OrganizationOpenId")
     @Expose
@@ -170,16 +170,16 @@ public class CommonFlowApprover extends AbstractModel{
     }
 
     /**
-     * Get 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传 
-     * @return OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+     * Get 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传 
+     * @return OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
      */
     public String getOrganizationOpenId() {
         return this.OrganizationOpenId;
     }
 
     /**
-     * Set 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
-     * @param OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同毕传
+     * Set 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
+     * @param OrganizationOpenId 企业OpenId，第三方应用集成非静默签子客企业签署人发起合同必传
      */
     public void setOrganizationOpenId(String OrganizationOpenId) {
         this.OrganizationOpenId = OrganizationOpenId;

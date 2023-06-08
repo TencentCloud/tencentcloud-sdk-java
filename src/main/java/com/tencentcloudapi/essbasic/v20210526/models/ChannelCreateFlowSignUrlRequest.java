@@ -108,7 +108,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
     /**
      * Get 用户信息，暂未开放 
      * @return Operator 用户信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -116,7 +118,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
     /**
      * Set 用户信息，暂未开放
      * @param Operator 用户信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
@@ -124,7 +128,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
     /**
      * Get 机构信息，暂未开放 
      * @return Organization 机构信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -132,7 +138,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
     /**
      * Set 机构信息，暂未开放
      * @param Organization 机构信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

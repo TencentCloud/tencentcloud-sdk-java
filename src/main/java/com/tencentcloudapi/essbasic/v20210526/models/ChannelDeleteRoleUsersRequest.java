@@ -37,7 +37,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private String RoleId;
 
     /**
-    * 用户列表
+    * 用户列表，电子签系统的UserId
     */
     @SerializedName("UserIds")
     @Expose
@@ -83,16 +83,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户列表 
-     * @return UserIds 用户列表
+     * Get 用户列表，电子签系统的UserId 
+     * @return UserIds 用户列表，电子签系统的UserId
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 用户列表
-     * @param UserIds 用户列表
+     * Set 用户列表，电子签系统的UserId
+     * @param UserIds 用户列表，电子签系统的UserId
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
@@ -101,7 +101,9 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     /**
      * Get 操作人信息 
      * @return Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -109,7 +111,9 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     /**
      * Set 操作人信息
      * @param Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

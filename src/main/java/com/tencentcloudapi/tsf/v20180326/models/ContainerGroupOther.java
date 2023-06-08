@@ -93,7 +93,7 @@ public class ContainerGroupOther extends AbstractModel{
     */
     @SerializedName("HealthCheckSettings")
     @Expose
-    private HealthCheckSetting [] HealthCheckSettings;
+    private HealthCheckSettings HealthCheckSettings;
 
     /**
     * 服务配置信息是否匹配
@@ -261,7 +261,7 @@ public class ContainerGroupOther extends AbstractModel{
      * @return HealthCheckSettings 健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public HealthCheckSetting [] getHealthCheckSettings() {
+    public HealthCheckSettings getHealthCheckSettings() {
         return this.HealthCheckSettings;
     }
 
@@ -271,7 +271,7 @@ public class ContainerGroupOther extends AbstractModel{
      * @param HealthCheckSettings 健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setHealthCheckSettings(HealthCheckSetting [] HealthCheckSettings) {
+    public void setHealthCheckSettings(HealthCheckSettings HealthCheckSettings) {
         this.HealthCheckSettings = HealthCheckSettings;
     }
 
@@ -334,10 +334,7 @@ public class ContainerGroupOther extends AbstractModel{
             this.SubnetId = new String(source.SubnetId);
         }
         if (source.HealthCheckSettings != null) {
-            this.HealthCheckSettings = new HealthCheckSetting[source.HealthCheckSettings.length];
-            for (int i = 0; i < source.HealthCheckSettings.length; i++) {
-                this.HealthCheckSettings[i] = new HealthCheckSetting(source.HealthCheckSettings[i]);
-            }
+            this.HealthCheckSettings = new HealthCheckSettings(source.HealthCheckSettings);
         }
         if (source.IsNotEqualServiceConfig != null) {
             this.IsNotEqualServiceConfig = new Boolean(source.IsNotEqualServiceConfig);
@@ -358,7 +355,7 @@ public class ContainerGroupOther extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Envs.", this.Envs);
         this.setParamSimple(map, prefix + "NodePort", this.NodePort);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
-        this.setParamArrayObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+        this.setParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
         this.setParamSimple(map, prefix + "IsNotEqualServiceConfig", this.IsNotEqualServiceConfig);
 
     }

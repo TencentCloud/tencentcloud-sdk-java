@@ -59,6 +59,26 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建域名、ip相关信息
+     * @param req CreateDomainAndIpRequest
+     * @return CreateDomainAndIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainAndIpResponse CreateDomainAndIp(CreateDomainAndIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDomainAndIpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDomainAndIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDomainAndIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *cvm详情
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse

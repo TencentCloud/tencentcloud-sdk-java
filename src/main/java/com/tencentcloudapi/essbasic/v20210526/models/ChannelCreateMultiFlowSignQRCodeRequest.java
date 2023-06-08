@@ -238,7 +238,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Get 限制二维码用户条件（已弃用） 
      * @return ApproverRestrictions 限制二维码用户条件（已弃用）
+     * @deprecated
      */
+    @Deprecated
     public ApproverRestriction getApproverRestrictions() {
         return this.ApproverRestrictions;
     }
@@ -246,7 +248,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Set 限制二维码用户条件（已弃用）
      * @param ApproverRestrictions 限制二维码用户条件（已弃用）
+     * @deprecated
      */
+    @Deprecated
     public void setApproverRestrictions(ApproverRestriction ApproverRestrictions) {
         this.ApproverRestrictions = ApproverRestrictions;
     }
@@ -254,7 +258,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Get 暂未开放 
      * @return Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -262,7 +268,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     /**
      * Set 暂未开放
      * @param Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

@@ -30,7 +30,7 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 绑定角色的员工id列表
+    * 绑定角色的员工id列表，电子签的UserId
     */
     @SerializedName("UserIds")
     @Expose
@@ -67,16 +67,16 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定角色的员工id列表 
-     * @return UserIds 绑定角色的员工id列表
+     * Get 绑定角色的员工id列表，电子签的UserId 
+     * @return UserIds 绑定角色的员工id列表，电子签的UserId
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 绑定角色的员工id列表
-     * @param UserIds 绑定角色的员工id列表
+     * Set 绑定角色的员工id列表，电子签的UserId
+     * @param UserIds 绑定角色的员工id列表，电子签的UserId
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
@@ -101,7 +101,9 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     /**
      * Get 操作者信息 
      * @return Operator 操作者信息
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -109,7 +111,9 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     /**
      * Set 操作者信息
      * @param Operator 操作者信息
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

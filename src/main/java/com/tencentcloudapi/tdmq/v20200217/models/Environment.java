@@ -88,6 +88,14 @@ public class Environment extends AbstractModel{
     private RetentionPolicy RetentionPolicy;
 
     /**
+    * 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoSubscriptionCreation")
+    @Expose
+    private Boolean AutoSubscriptionCreation;
+
+    /**
      * Get 命名空间名称 
      * @return EnvironmentId 命名空间名称
      */
@@ -239,6 +247,26 @@ public class Environment extends AbstractModel{
         this.RetentionPolicy = RetentionPolicy;
     }
 
+    /**
+     * Get 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoSubscriptionCreation 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoSubscriptionCreation() {
+        return this.AutoSubscriptionCreation;
+    }
+
+    /**
+     * Set 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoSubscriptionCreation 是否自动创建订阅
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
+        this.AutoSubscriptionCreation = AutoSubscriptionCreation;
+    }
+
     public Environment() {
     }
 
@@ -274,6 +302,9 @@ public class Environment extends AbstractModel{
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
         }
+        if (source.AutoSubscriptionCreation != null) {
+            this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
+        }
     }
 
 
@@ -290,6 +321,7 @@ public class Environment extends AbstractModel{
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+        this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 
     }
 }

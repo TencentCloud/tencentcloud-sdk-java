@@ -64,7 +64,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
     */
     @SerializedName("NextHopDestination")
@@ -177,7 +177,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测； 
      * @return NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
@@ -185,7 +185,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      */
     public String getNextHopDestination() {
@@ -199,7 +199,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      * @param NextHopDestination 下一跳目的网关，取值与“下一跳类型”相关：
 下一跳类型为VPN，取值VPN网关ID，形如：vpngw-12345678；
@@ -207,7 +207,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为PEERCONNECTION，取值对等连接ID，形如：pcx-12345678；
 下一跳类型为NAT，取值Nat网关，形如：nat-12345678；
 下一跳类型为NORMAL_CVM，取值云服务器IPv4地址，形如：10.0.0.12；
-下一跳类型为CCN，取值云云联网ID，形如：ccn-12345678；
+下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测；
      */
     public void setNextHopDestination(String NextHopDestination) {

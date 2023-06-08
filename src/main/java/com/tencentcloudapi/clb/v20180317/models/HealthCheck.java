@@ -38,7 +38,8 @@ public class HealthCheck extends AbstractModel{
     private Long TimeOut;
 
     /**
-    * 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+    * 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntervalTime")
@@ -195,9 +196,11 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Get 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * Get 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * @return IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntervalTime() {
@@ -205,9 +208,11 @@ public class HealthCheck extends AbstractModel{
     }
 
     /**
-     * Set 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * Set 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntervalTime 健康检查探测间隔时间，默认值：5，可选值：5~300，单位：秒。
+     * @param IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
+说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntervalTime(Long IntervalTime) {

@@ -101,7 +101,9 @@ public class PrepareFlowsRequest extends AbstractModel{
     /**
      * Get 暂未开放 
      * @return Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -109,7 +111,9 @@ public class PrepareFlowsRequest extends AbstractModel{
     /**
      * Set 暂未开放
      * @param Operator 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }

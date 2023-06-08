@@ -131,7 +131,9 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Get 调用方用户信息，不用传 
      * @return Operator 调用方用户信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -139,7 +141,9 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Set 调用方用户信息，不用传
      * @param Operator 调用方用户信息，不用传
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
@@ -147,7 +151,9 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Get 暂未开放 
      * @return Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -155,7 +161,9 @@ public class ChannelCreateConvertTaskApiRequest extends AbstractModel{
     /**
      * Set 暂未开放
      * @param Organization 暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

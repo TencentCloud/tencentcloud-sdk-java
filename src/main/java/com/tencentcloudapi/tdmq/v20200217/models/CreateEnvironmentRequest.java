@@ -58,6 +58,13 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private RetentionPolicy RetentionPolicy;
 
     /**
+    * 是否开启自动创建订阅
+    */
+    @SerializedName("AutoSubscriptionCreation")
+    @Expose
+    private Boolean AutoSubscriptionCreation;
+
+    /**
      * Get 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。 
      * @return EnvironmentId 环境（命名空间）名称，不支持中字以及除了短线和下划线外的特殊字符且不超过16个字符。
      */
@@ -137,6 +144,22 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.RetentionPolicy = RetentionPolicy;
     }
 
+    /**
+     * Get 是否开启自动创建订阅 
+     * @return AutoSubscriptionCreation 是否开启自动创建订阅
+     */
+    public Boolean getAutoSubscriptionCreation() {
+        return this.AutoSubscriptionCreation;
+    }
+
+    /**
+     * Set 是否开启自动创建订阅
+     * @param AutoSubscriptionCreation 是否开启自动创建订阅
+     */
+    public void setAutoSubscriptionCreation(Boolean AutoSubscriptionCreation) {
+        this.AutoSubscriptionCreation = AutoSubscriptionCreation;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.RetentionPolicy != null) {
             this.RetentionPolicy = new RetentionPolicy(source.RetentionPolicy);
         }
+        if (source.AutoSubscriptionCreation != null) {
+            this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
+        this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
 
     }
 }

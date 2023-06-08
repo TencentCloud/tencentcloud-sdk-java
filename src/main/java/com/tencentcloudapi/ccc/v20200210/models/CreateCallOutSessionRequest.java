@@ -44,11 +44,18 @@ public class CreateCallOutSessionRequest extends AbstractModel{
     private String Callee;
 
     /**
-    * 主叫号码，须带 0086 前缀
+    * 主叫号码（废弃，使用Callers），须带 0086 前缀
     */
     @SerializedName("Caller")
     @Expose
     private String Caller;
+
+    /**
+    * 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
+    */
+    @SerializedName("Callers")
+    @Expose
+    private String [] Callers;
 
     /**
     * 是否强制使用手机外呼，当前只支持 true，若为 true 请确保已配置白名单
@@ -113,19 +120,35 @@ public class CreateCallOutSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get 主叫号码，须带 0086 前缀 
-     * @return Caller 主叫号码，须带 0086 前缀
+     * Get 主叫号码（废弃，使用Callers），须带 0086 前缀 
+     * @return Caller 主叫号码（废弃，使用Callers），须带 0086 前缀
      */
     public String getCaller() {
         return this.Caller;
     }
 
     /**
-     * Set 主叫号码，须带 0086 前缀
-     * @param Caller 主叫号码，须带 0086 前缀
+     * Set 主叫号码（废弃，使用Callers），须带 0086 前缀
+     * @param Caller 主叫号码（废弃，使用Callers），须带 0086 前缀
      */
     public void setCaller(String Caller) {
         this.Caller = Caller;
+    }
+
+    /**
+     * Get 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀 
+     * @return Callers 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
+     */
+    public String [] getCallers() {
+        return this.Callers;
+    }
+
+    /**
+     * Set 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
+     * @param Callers 指定主叫号码列表，如果前面的号码失败了会自动换成下一个号码，须带 0086 前缀
+     */
+    public void setCallers(String [] Callers) {
+        this.Callers = Callers;
     }
 
     /**
@@ -180,6 +203,12 @@ public class CreateCallOutSessionRequest extends AbstractModel{
         if (source.Caller != null) {
             this.Caller = new String(source.Caller);
         }
+        if (source.Callers != null) {
+            this.Callers = new String[source.Callers.length];
+            for (int i = 0; i < source.Callers.length; i++) {
+                this.Callers[i] = new String(source.Callers[i]);
+            }
+        }
         if (source.IsForceUseMobile != null) {
             this.IsForceUseMobile = new Boolean(source.IsForceUseMobile);
         }
@@ -197,6 +226,7 @@ public class CreateCallOutSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Callee", this.Callee);
         this.setParamSimple(map, prefix + "Caller", this.Caller);
+        this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamSimple(map, prefix + "IsForceUseMobile", this.IsForceUseMobile);
         this.setParamSimple(map, prefix + "Uui", this.Uui);
 

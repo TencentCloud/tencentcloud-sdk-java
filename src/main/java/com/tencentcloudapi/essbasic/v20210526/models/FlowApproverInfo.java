@@ -175,6 +175,15 @@ HANDWRITE -手写签名
     private Long [] ApproverSignTypes;
 
     /**
+    * 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+    */
+    @SerializedName("SignId")
+    @Expose
+    private String SignId;
+
+    /**
      * Get 签署人姓名，最大长度50个字符 
      * @return Name 签署人姓名，最大长度50个字符
      */
@@ -546,6 +555,30 @@ HANDWRITE -手写签名
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
+    /**
+     * Get 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息 
+     * @return SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public String getSignId() {
+        return this.SignId;
+    }
+
+    /**
+     * Set 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     * @param SignId 签署ID
+- 发起流程时系统自动补充
+- 创建签署链接时，可以通过查询详情接口获得签署人的SignId，然后可传入此值为该签署人创建签署链接，无需再传姓名、手机号、证件号等其他信息
+     */
+    public void setSignId(String SignId) {
+        this.SignId = SignId;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -626,6 +659,9 @@ HANDWRITE -手写签名
                 this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
             }
         }
+        if (source.SignId != null) {
+            this.SignId = new String(source.SignId);
+        }
     }
 
 
@@ -653,6 +689,7 @@ HANDWRITE -手写签名
         this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+        this.setParamSimple(map, prefix + "SignId", this.SignId);
 
     }
 }

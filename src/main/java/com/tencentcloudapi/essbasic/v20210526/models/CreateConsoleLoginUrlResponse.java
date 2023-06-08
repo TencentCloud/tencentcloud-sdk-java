@@ -35,7 +35,7 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     private String ConsoleUrl;
 
     /**
-    * 子客企业是否已开通腾讯电子签
+    * 子客企业是否已开通腾讯电子签，true-是，false-否
     */
     @SerializedName("IsActivated")
     @Expose
@@ -92,16 +92,16 @@ public class CreateConsoleLoginUrlResponse extends AbstractModel{
     }
 
     /**
-     * Get 子客企业是否已开通腾讯电子签 
-     * @return IsActivated 子客企业是否已开通腾讯电子签
+     * Get 子客企业是否已开通腾讯电子签，true-是，false-否 
+     * @return IsActivated 子客企业是否已开通腾讯电子签，true-是，false-否
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 子客企业是否已开通腾讯电子签
-     * @param IsActivated 子客企业是否已开通腾讯电子签
+     * Set 子客企业是否已开通腾讯电子签，true-是，false-否
+     * @param IsActivated 子客企业是否已开通腾讯电子签，true-是，false-否
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;

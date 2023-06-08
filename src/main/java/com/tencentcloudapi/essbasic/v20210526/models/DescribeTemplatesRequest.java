@@ -72,13 +72,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private String TemplateName;
 
     /**
-    * 操作者的信息
-    */
-    @SerializedName("Operator")
-    @Expose
-    private UserInfo Operator;
-
-    /**
     * 是否获取模板预览链接
     */
     @SerializedName("WithPreviewUrl")
@@ -93,11 +86,18 @@ public class DescribeTemplatesRequest extends AbstractModel{
     private Boolean WithPdfUrl;
 
     /**
-    * 模板ID
+    * 对应第三方应用平台企业的模板ID
     */
     @SerializedName("ChannelTemplateId")
     @Expose
     private String ChannelTemplateId;
+
+    /**
+    * 操作者的信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
 
     /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
@@ -212,22 +212,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者的信息 
-     * @return Operator 操作者的信息
-     */
-    public UserInfo getOperator() {
-        return this.Operator;
-    }
-
-    /**
-     * Set 操作者的信息
-     * @param Operator 操作者的信息
-     */
-    public void setOperator(UserInfo Operator) {
-        this.Operator = Operator;
-    }
-
-    /**
      * Get 是否获取模板预览链接 
      * @return WithPreviewUrl 是否获取模板预览链接
      */
@@ -260,19 +244,39 @@ public class DescribeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模板ID 
-     * @return ChannelTemplateId 模板ID
+     * Get 对应第三方应用平台企业的模板ID 
+     * @return ChannelTemplateId 对应第三方应用平台企业的模板ID
      */
     public String getChannelTemplateId() {
         return this.ChannelTemplateId;
     }
 
     /**
-     * Set 模板ID
-     * @param ChannelTemplateId 模板ID
+     * Set 对应第三方应用平台企业的模板ID
+     * @param ChannelTemplateId 对应第三方应用平台企业的模板ID
      */
     public void setChannelTemplateId(String ChannelTemplateId) {
         this.ChannelTemplateId = ChannelTemplateId;
+    }
+
+    /**
+     * Get 操作者的信息 
+     * @return Operator 操作者的信息
+     * @deprecated
+     */
+    @Deprecated
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作者的信息
+     * @param Operator 操作者的信息
+     * @deprecated
+     */
+    @Deprecated
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
     }
 
     public DescribeTemplatesRequest() {
@@ -304,9 +308,6 @@ public class DescribeTemplatesRequest extends AbstractModel{
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.WithPreviewUrl != null) {
             this.WithPreviewUrl = new Boolean(source.WithPreviewUrl);
         }
@@ -315,6 +316,9 @@ public class DescribeTemplatesRequest extends AbstractModel{
         }
         if (source.ChannelTemplateId != null) {
             this.ChannelTemplateId = new String(source.ChannelTemplateId);
+        }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
         }
     }
 
@@ -330,10 +334,10 @@ public class DescribeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
-        this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "WithPreviewUrl", this.WithPreviewUrl);
         this.setParamSimple(map, prefix + "WithPdfUrl", this.WithPdfUrl);
         this.setParamSimple(map, prefix + "ChannelTemplateId", this.ChannelTemplateId);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }
 }

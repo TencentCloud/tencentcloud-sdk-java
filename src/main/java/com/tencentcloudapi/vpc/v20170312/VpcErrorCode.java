@@ -180,6 +180,9 @@ public enum VpcErrorCode {
     // 缺少参数。
      INVALIDPARAMETERVALUE_EMPTY("InvalidParameterValue.Empty"),
      
+    // IPv6转换实例ID已经存在。
+     INVALIDPARAMETERVALUE_IPV6RULEIDEXISTED("InvalidParameterValue.IPv6RuleIdExisted"),
+     
     // IPv6规则没有更改。
      INVALIDPARAMETERVALUE_IPV6RULENOTCHANGE("InvalidParameterValue.IPv6RuleNotChange"),
      
