@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateSealPolicyResponse extends AbstractModel{
+public class CreateIntegrationDepartmentResponse extends AbstractModel{
 
     /**
-    * 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+    * 电子签部门ID
     */
-    @SerializedName("UserIds")
+    @SerializedName("DeptId")
     @Expose
-    private String [] UserIds;
+    private String DeptId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。 
-     * @return UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * Get 电子签部门ID 
+     * @return DeptId 电子签部门ID
      */
-    public String [] getUserIds() {
-        return this.UserIds;
+    public String getDeptId() {
+        return this.DeptId;
     }
 
     /**
-     * Set 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
-     * @param UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * Set 电子签部门ID
+     * @param DeptId 电子签部门ID
      */
-    public void setUserIds(String [] UserIds) {
-        this.UserIds = UserIds;
+    public void setDeptId(String DeptId) {
+        this.DeptId = DeptId;
     }
 
     /**
@@ -73,19 +68,16 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChannelCreateSealPolicyResponse() {
+    public CreateIntegrationDepartmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelCreateSealPolicyResponse(ChannelCreateSealPolicyResponse source) {
-        if (source.UserIds != null) {
-            this.UserIds = new String[source.UserIds.length];
-            for (int i = 0; i < source.UserIds.length; i++) {
-                this.UserIds[i] = new String(source.UserIds[i]);
-            }
+    public CreateIntegrationDepartmentResponse(CreateIntegrationDepartmentResponse source) {
+        if (source.DeptId != null) {
+            this.DeptId = new String(source.DeptId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +89,7 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamSimple(map, prefix + "DeptId", this.DeptId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

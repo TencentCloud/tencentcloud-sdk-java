@@ -38,6 +38,7 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
 
     /**
     * 指定待授权的用户ID数组,电子签的用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。
     */
     @SerializedName("UserIds")
     @Expose
@@ -90,8 +91,10 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定待授权的用户ID数组,电子签的用户ID 
+     * Get 指定待授权的用户ID数组,电子签的用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。 
      * @return UserIds 指定待授权的用户ID数组,电子签的用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -99,7 +102,9 @@ public class ChannelCreateSealPolicyRequest extends AbstractModel{
 
     /**
      * Set 指定待授权的用户ID数组,电子签的用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。
      * @param UserIds 指定待授权的用户ID数组,电子签的用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

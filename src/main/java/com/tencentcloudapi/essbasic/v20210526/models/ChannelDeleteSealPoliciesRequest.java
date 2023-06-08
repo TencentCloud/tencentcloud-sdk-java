@@ -38,6 +38,7 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
 
     /**
     * 指定用户ID数组，电子签系统用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
     */
     @SerializedName("UserIds")
     @Expose
@@ -90,8 +91,10 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定用户ID数组，电子签系统用户ID 
+     * Get 指定用户ID数组，电子签系统用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。 
      * @return UserIds 指定用户ID数组，电子签系统用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
      */
     public String [] getUserIds() {
         return this.UserIds;
@@ -99,7 +102,9 @@ public class ChannelDeleteSealPoliciesRequest extends AbstractModel{
 
     /**
      * Set 指定用户ID数组，电子签系统用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
      * @param UserIds 指定用户ID数组，电子签系统用户ID
+可以填写OpenId，系统会通过组织+渠道+OpenId查询得到UserId进行授权取消。
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;

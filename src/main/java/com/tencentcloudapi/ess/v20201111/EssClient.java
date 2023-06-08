@@ -347,6 +347,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过此接口，创建企业的部门，支持绑定客户系统部门ID。
+     * @param req CreateIntegrationDepartmentRequest
+     * @return CreateIntegrationDepartmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrationDepartmentResponse CreateIntegrationDepartment(CreateIntegrationDepartmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIntegrationDepartmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIntegrationDepartmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIntegrationDepartment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
      * @param req CreateIntegrationEmployeesRequest
      * @return CreateIntegrationEmployeesResponse
@@ -547,6 +567,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过此接口，删除企业的部门。
+     * @param req DeleteIntegrationDepartmentRequest
+     * @return DeleteIntegrationDepartmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIntegrationDepartmentResponse DeleteIntegrationDepartment(DeleteIntegrationDepartmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIntegrationDepartmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIntegrationDepartmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIntegrationDepartment");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *移除员工
      * @param req DeleteIntegrationEmployeesRequest
      * @return DeleteIntegrationEmployeesResponse
@@ -704,6 +744,26 @@ public class EssClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlowTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过此接口，查询企业的部门，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
+     * @param req DescribeIntegrationDepartmentsRequest
+     * @return DescribeIntegrationDepartmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(DescribeIntegrationDepartmentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIntegrationDepartmentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIntegrationDepartmentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIntegrationDepartments");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -908,6 +968,26 @@ callbackinfo包含： 回调地址和签名key
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationCallbackInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApplicationCallbackInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过此接口，更新企业的部门信息，支持更新部门名、客户系统部门ID、部门序列号。
+     * @param req ModifyIntegrationDepartmentRequest
+     * @return ModifyIntegrationDepartmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIntegrationDepartmentResponse ModifyIntegrationDepartment(ModifyIntegrationDepartmentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIntegrationDepartmentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIntegrationDepartmentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyIntegrationDepartment");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

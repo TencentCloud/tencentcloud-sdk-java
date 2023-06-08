@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelCreateSealPolicyResponse extends AbstractModel{
+public class DescribeIntegrationDepartmentsResponse extends AbstractModel{
 
     /**
-    * 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+    * 部门列表
     */
-    @SerializedName("UserIds")
+    @SerializedName("Departments")
     @Expose
-    private String [] UserIds;
+    private IntegrationDepartment [] Departments;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +37,19 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。 
-     * @return UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * Get 部门列表 
+     * @return Departments 部门列表
      */
-    public String [] getUserIds() {
-        return this.UserIds;
+    public IntegrationDepartment [] getDepartments() {
+        return this.Departments;
     }
 
     /**
-     * Set 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
-     * @param UserIds 最终授权成功的电子签系统用户ID数组。其他的跳过的是已经授权了的。
-请求参数填写OpenId时，返回授权成功的 Openid。
+     * Set 部门列表
+     * @param Departments 部门列表
      */
-    public void setUserIds(String [] UserIds) {
-        this.UserIds = UserIds;
+    public void setDepartments(IntegrationDepartment [] Departments) {
+        this.Departments = Departments;
     }
 
     /**
@@ -73,18 +68,18 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChannelCreateSealPolicyResponse() {
+    public DescribeIntegrationDepartmentsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelCreateSealPolicyResponse(ChannelCreateSealPolicyResponse source) {
-        if (source.UserIds != null) {
-            this.UserIds = new String[source.UserIds.length];
-            for (int i = 0; i < source.UserIds.length; i++) {
-                this.UserIds[i] = new String(source.UserIds[i]);
+    public DescribeIntegrationDepartmentsResponse(DescribeIntegrationDepartmentsResponse source) {
+        if (source.Departments != null) {
+            this.Departments = new IntegrationDepartment[source.Departments.length];
+            for (int i = 0; i < source.Departments.length; i++) {
+                this.Departments[i] = new IntegrationDepartment(source.Departments[i]);
             }
         }
         if (source.RequestId != null) {
@@ -97,7 +92,7 @@ public class ChannelCreateSealPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamArrayObj(map, prefix + "Departments.", this.Departments);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

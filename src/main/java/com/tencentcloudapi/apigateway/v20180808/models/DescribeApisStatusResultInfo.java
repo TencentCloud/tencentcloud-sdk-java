@@ -30,6 +30,13 @@ public class DescribeApisStatusResultInfo extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * API 接口列表。
+    */
+    @SerializedName("ApiIdStatusSet")
+    @Expose
+    private DescribeApisStatusResultApiIdStatusSetInfo [] ApiIdStatusSet;
+
+    /**
      * Get 符合条件的 API 接口数量。 
      * @return TotalCount 符合条件的 API 接口数量。
      */
@@ -45,6 +52,22 @@ public class DescribeApisStatusResultInfo extends AbstractModel{
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get API 接口列表。 
+     * @return ApiIdStatusSet API 接口列表。
+     */
+    public DescribeApisStatusResultApiIdStatusSetInfo [] getApiIdStatusSet() {
+        return this.ApiIdStatusSet;
+    }
+
+    /**
+     * Set API 接口列表。
+     * @param ApiIdStatusSet API 接口列表。
+     */
+    public void setApiIdStatusSet(DescribeApisStatusResultApiIdStatusSetInfo [] ApiIdStatusSet) {
+        this.ApiIdStatusSet = ApiIdStatusSet;
+    }
+
     public DescribeApisStatusResultInfo() {
     }
 
@@ -56,6 +79,12 @@ public class DescribeApisStatusResultInfo extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.ApiIdStatusSet != null) {
+            this.ApiIdStatusSet = new DescribeApisStatusResultApiIdStatusSetInfo[source.ApiIdStatusSet.length];
+            for (int i = 0; i < source.ApiIdStatusSet.length; i++) {
+                this.ApiIdStatusSet[i] = new DescribeApisStatusResultApiIdStatusSetInfo(source.ApiIdStatusSet[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DescribeApisStatusResultInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ApiIdStatusSet.", this.ApiIdStatusSet);
 
     }
 }
