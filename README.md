@@ -321,6 +321,27 @@ Log logger = LogFactory.getLog("TestLog");
 logger.info("hello world");
 ```
 
+## 地域容灾
+
+从 `3.1.775`开始，腾讯云 JAVA SDK 支持地域容灾功能：
+
+当请求满足以下条件时：
+
+1. 失败次数 >= 5 次
+2. 失败率 >= 75%
+
+SDK 会自动将您请求的地域设置为备选地域。
+
+相关设置如下：
+
+```java
+    // 设置备用请求地址，不需要指定服务，SDK 会自动在头部加上服务名(如cvm)
+    // 例如，设置为 ap-guangzhou.tencentcloudapi.com，则最终的请求为 cvm.ap-guangzhou.tencentcloudapi.com
+    clientProfile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");
+```
+
+此功能仅支持单个客户端的同步请求。
+
 # Common Client
 
 从 3.1.303 版本开始腾讯云 Java SDK 支持使用泛用性的 API 调用方式(Common Client)进行请求。您只需要安装  Common 包，即可向任何产品发起调用。

@@ -77,6 +77,9 @@ public abstract class AbstractClient {
   public Gson gson;
   private TCLog log;
   private HttpConnection httpConnection;
+
+  private CircuitBreaker regionBreaker;
+
   public AbstractClient(String endpoint, String version, Credential credential, String region) {
     this(endpoint, version, credential, region, new ClientProfile());
   }
@@ -105,6 +108,7 @@ public abstract class AbstractClient {
     this.httpConnection.addInterceptors(this.log);
     this.trySetProxy(this.httpConnection);
     this.trySetSSLSocketFactory(this.httpConnection);
+    this.trySetRegionBreaker();
     warmup();
   }
 
@@ -337,6 +341,13 @@ public abstract class AbstractClient {
     }
   }
 
+  private void trySetRegionBreaker(){
+    String ep = profile.getBackupEndpoint();
+    if(ep != null && !ep.isEmpty()){
+      this.regionBreaker = new CircuitBreaker();
+    }
+  }
+
   protected String internalRequest(AbstractModel request, String actionName)
       throws TencentCloudSDKException {
     Response okRsp = null;
@@ -359,6 +370,14 @@ public abstract class AbstractClient {
       if (reqMethod.equals(HttpProfile.REQ_GET)) {
         throw new TencentCloudSDKException(
             "WrongUsage: Cannot use get method with customized parameters.");
+      }
+    }
+
+    CircuitBreaker.Token breakerToken = null;
+    if (regionBreaker != null) {
+      breakerToken = regionBreaker.allow();
+      if (!breakerToken.allowed) {
+        endpoint = service + "." + profile.getBackupEndpoint();
       }
     }
 
@@ -394,7 +413,15 @@ public abstract class AbstractClient {
       log.info(msg);
       throw new TencentCloudSDKException(msg, "", e.getClass().getName());
     }
+
     if (errResp.response.error != null) {
+      if (breakerToken != null) {
+        JsonResponseErrModel error = errResp.response;
+        boolean regionOk = error.requestId != null
+                && !error.requestId.isEmpty()
+                && !error.error.code.equals("InternalError");
+        breakerToken.report(regionOk);
+      }
       throw new TencentCloudSDKException(
           errResp.response.error.message,
           errResp.response.requestId,
@@ -709,5 +736,13 @@ public abstract class AbstractClient {
       }
     } while (--retryTimes >= 0);
     return null;
+  }
+
+  public CircuitBreaker getRegionBreaker() {
+    return regionBreaker;
+  }
+
+  public void setRegionBreaker(CircuitBreaker regionBreaker) {
+    this.regionBreaker = regionBreaker;
   }
 }
