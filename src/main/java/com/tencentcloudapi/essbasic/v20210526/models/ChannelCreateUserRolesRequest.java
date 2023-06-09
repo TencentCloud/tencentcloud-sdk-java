@@ -30,18 +30,25 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 绑定角色的员工id列表，电子签的UserId
+    * 绑定角色的角色id列表
+    */
+    @SerializedName("RoleIds")
+    @Expose
+    private String [] RoleIds;
+
+    /**
+    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
     */
     @SerializedName("UserIds")
     @Expose
     private String [] UserIds;
 
     /**
-    * 绑定角色的角色id列表
+    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
     */
-    @SerializedName("RoleIds")
+    @SerializedName("OpenIds")
     @Expose
-    private String [] RoleIds;
+    private String [] OpenIds;
 
     /**
     * 操作者信息
@@ -67,22 +74,6 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
     }
 
     /**
-     * Get 绑定角色的员工id列表，电子签的UserId 
-     * @return UserIds 绑定角色的员工id列表，电子签的UserId
-     */
-    public String [] getUserIds() {
-        return this.UserIds;
-    }
-
-    /**
-     * Set 绑定角色的员工id列表，电子签的UserId
-     * @param UserIds 绑定角色的员工id列表，电子签的UserId
-     */
-    public void setUserIds(String [] UserIds) {
-        this.UserIds = UserIds;
-    }
-
-    /**
      * Get 绑定角色的角色id列表 
      * @return RoleIds 绑定角色的角色id列表
      */
@@ -96,6 +87,38 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
      */
     public void setRoleIds(String [] RoleIds) {
         this.RoleIds = RoleIds;
+    }
+
+    /**
+     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数 
+     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     */
+    public String [] getUserIds() {
+        return this.UserIds;
+    }
+
+    /**
+     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     */
+    public void setUserIds(String [] UserIds) {
+        this.UserIds = UserIds;
+    }
+
+    /**
+     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数 
+     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     */
+    public String [] getOpenIds() {
+        return this.OpenIds;
+    }
+
+    /**
+     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     */
+    public void setOpenIds(String [] OpenIds) {
+        this.OpenIds = OpenIds;
     }
 
     /**
@@ -129,16 +152,22 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.RoleIds != null) {
+            this.RoleIds = new String[source.RoleIds.length];
+            for (int i = 0; i < source.RoleIds.length; i++) {
+                this.RoleIds[i] = new String(source.RoleIds[i]);
+            }
+        }
         if (source.UserIds != null) {
             this.UserIds = new String[source.UserIds.length];
             for (int i = 0; i < source.UserIds.length; i++) {
                 this.UserIds[i] = new String(source.UserIds[i]);
             }
         }
-        if (source.RoleIds != null) {
-            this.RoleIds = new String[source.RoleIds.length];
-            for (int i = 0; i < source.RoleIds.length; i++) {
-                this.RoleIds[i] = new String(source.RoleIds[i]);
+        if (source.OpenIds != null) {
+            this.OpenIds = new String[source.OpenIds.length];
+            for (int i = 0; i < source.OpenIds.length; i++) {
+                this.OpenIds[i] = new String(source.OpenIds[i]);
             }
         }
         if (source.Operator != null) {
@@ -152,8 +181,9 @@ public class ChannelCreateUserRolesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
-        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "RoleIds.", this.RoleIds);
+        this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
+        this.setParamArraySimple(map, prefix + "OpenIds.", this.OpenIds);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
 
     }

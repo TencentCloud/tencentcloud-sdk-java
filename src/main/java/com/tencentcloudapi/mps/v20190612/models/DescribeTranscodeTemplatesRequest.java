@@ -48,7 +48,7 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     private String ContainerType;
 
     /**
-    * 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+    * （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
     */
@@ -73,9 +73,12 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     /**
     * 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
     */
     @SerializedName("TranscodeType")
     @Expose
@@ -146,10 +149,10 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * Get （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li> 
-     * @return TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * @return TEHDType （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
      */
@@ -158,10 +161,10 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Set 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * Set （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
-     * @param TEHDType 极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
+     * @param TEHDType （建议使用TranscodeType代替）极速高清过滤条件，用于过滤普通转码或极速高清转码模板，可选值：
 <li>Common：普通转码模板；</li>
 <li>TEHD：极速高清模板。</li>
      */
@@ -204,14 +207,20 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     /**
      * Get 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
-<li>Enhance：音视频增强模板。</li>
-默认空，不限制类型。 
-     * @return TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
-<li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+ 
+     * @return TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
+<li>Common：普通转码模板；</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
+<li>Enhance：音视频增强模板。</li>
+默认空，不限制类型。
+
      */
     public String getTranscodeType() {
         return this.TranscodeType;
@@ -220,14 +229,20 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     /**
      * Set 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
      * @param TranscodeType 模板类型（替换旧版本 TEHDType），可选值：
 <li>Common：普通转码模板；</li>
-<li>TEHD：极速高清模板。</li>
+<li>TEHD：视频极速高清，老的类型（建议使用 TEHD-100） 。</li>
+<li>TEHD-100：视频极速高清</li>
+<li>TEHD-200：音频极速高清</li>
 <li>Enhance：音视频增强模板。</li>
 默认空，不限制类型。
+
      */
     public void setTranscodeType(String TranscodeType) {
         this.TranscodeType = TranscodeType;

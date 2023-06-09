@@ -40,6 +40,13 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     private String SubtitleFormat;
 
     /**
+    * 视频源语言。
+    */
+    @SerializedName("SourceLanguage")
+    @Expose
+    private String SourceLanguage;
+
+    /**
      * Get 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li> 
@@ -83,6 +90,22 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         this.SubtitleFormat = SubtitleFormat;
     }
 
+    /**
+     * Get 视频源语言。 
+     * @return SourceLanguage 视频源语言。
+     */
+    public String getSourceLanguage() {
+        return this.SourceLanguage;
+    }
+
+    /**
+     * Set 视频源语言。
+     * @param SourceLanguage 视频源语言。
+     */
+    public void setSourceLanguage(String SourceLanguage) {
+        this.SourceLanguage = SourceLanguage;
+    }
+
     public AsrFullTextConfigureInfoForUpdate() {
     }
 
@@ -97,6 +120,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
+        if (source.SourceLanguage != null) {
+            this.SourceLanguage = new String(source.SourceLanguage);
+        }
     }
 
 
@@ -106,6 +132,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
+        this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
 
     }
 }

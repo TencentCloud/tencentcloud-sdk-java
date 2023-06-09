@@ -72,6 +72,20 @@ public class BindingPolicyTagRequest extends AbstractModel{
     private PolicyTag [] BatchTag;
 
     /**
+    * 是否同步eb
+    */
+    @SerializedName("EbEventFlag")
+    @Expose
+    private Long EbEventFlag;
+
+    /**
+    * 事件配置的告警
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
      * Get 固定取值 monitor 
      * @return Module 固定取值 monitor
      */
@@ -183,6 +197,38 @@ public class BindingPolicyTagRequest extends AbstractModel{
         this.BatchTag = BatchTag;
     }
 
+    /**
+     * Get 是否同步eb 
+     * @return EbEventFlag 是否同步eb
+     */
+    public Long getEbEventFlag() {
+        return this.EbEventFlag;
+    }
+
+    /**
+     * Set 是否同步eb
+     * @param EbEventFlag 是否同步eb
+     */
+    public void setEbEventFlag(Long EbEventFlag) {
+        this.EbEventFlag = EbEventFlag;
+    }
+
+    /**
+     * Get 事件配置的告警 
+     * @return EbSubject 事件配置的告警
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set 事件配置的告警
+     * @param EbSubject 事件配置的告警
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
     public BindingPolicyTagRequest() {
     }
 
@@ -215,6 +261,12 @@ public class BindingPolicyTagRequest extends AbstractModel{
                 this.BatchTag[i] = new PolicyTag(source.BatchTag[i]);
             }
         }
+        if (source.EbEventFlag != null) {
+            this.EbEventFlag = new Long(source.EbEventFlag);
+        }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
     }
 
 
@@ -229,6 +281,8 @@ public class BindingPolicyTagRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
+        this.setParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
 
     }
 }

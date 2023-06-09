@@ -72,6 +72,13 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
+    * 语音翻译控制参数。
+    */
+    @SerializedName("TranslateConfigure")
+    @Expose
+    private TranslateConfigureInfo TranslateConfigure;
+
+    /**
      * Get 视频内容识别模板名称，长度限制：64 个字符。 
      * @return Name 视频内容识别模板名称，长度限制：64 个字符。
      */
@@ -183,6 +190,22 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
+    /**
+     * Get 语音翻译控制参数。 
+     * @return TranslateConfigure 语音翻译控制参数。
+     */
+    public TranslateConfigureInfo getTranslateConfigure() {
+        return this.TranslateConfigure;
+    }
+
+    /**
+     * Set 语音翻译控制参数。
+     * @param TranslateConfigure 语音翻译控制参数。
+     */
+    public void setTranslateConfigure(TranslateConfigureInfo TranslateConfigure) {
+        this.TranslateConfigure = TranslateConfigure;
+    }
+
     public CreateAIRecognitionTemplateRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
         }
+        if (source.TranslateConfigure != null) {
+            this.TranslateConfigure = new TranslateConfigureInfo(source.TranslateConfigure);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "TranslateConfigure.", this.TranslateConfigure);
 
     }
 }

@@ -39,12 +39,20 @@ public class CreateInstancePreData extends AbstractModel{
     private String [] DealNames;
 
     /**
-    * 实例Id
+    * 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealNameInstanceIdMapping")
+    @Expose
+    private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
      * Get CreateInstancePre返回固定为0，不能作为CheckTaskStatus的查询条件。只是为了保证和后台数据结构对齐。
@@ -87,9 +95,9 @@ public class CreateInstancePreData extends AbstractModel{
     }
 
     /**
-     * Get 实例Id
+     * Get 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例Id
+     * @return InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -97,13 +105,33 @@ public class CreateInstancePreData extends AbstractModel{
     }
 
     /**
-     * Set 实例Id
+     * Set 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例Id
+     * @param InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealNameInstanceIdMapping 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DealInstanceDTO [] getDealNameInstanceIdMapping() {
+        return this.DealNameInstanceIdMapping;
+    }
+
+    /**
+     * Set 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealNameInstanceIdMapping 订单和购买实例对应映射列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
+        this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;
     }
 
     public CreateInstancePreData() {
@@ -126,6 +154,12 @@ public class CreateInstancePreData extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.DealNameInstanceIdMapping != null) {
+            this.DealNameInstanceIdMapping = new DealInstanceDTO[source.DealNameInstanceIdMapping.length];
+            for (int i = 0; i < source.DealNameInstanceIdMapping.length; i++) {
+                this.DealNameInstanceIdMapping[i] = new DealInstanceDTO(source.DealNameInstanceIdMapping[i]);
+            }
+        }
     }
 
 
@@ -136,6 +170,7 @@ public class CreateInstancePreData extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
 
     }
 }

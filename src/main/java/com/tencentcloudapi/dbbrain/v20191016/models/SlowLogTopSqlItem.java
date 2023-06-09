@@ -191,6 +191,13 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsExaminedAvg;
 
     /**
+    * SOL模板的MD5值
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get sql总锁等待时间 
      * @return LockTime sql总锁等待时间
      */
@@ -574,6 +581,22 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.RowsExaminedAvg = RowsExaminedAvg;
     }
 
+    /**
+     * Get SOL模板的MD5值 
+     * @return Md5 SOL模板的MD5值
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set SOL模板的MD5值
+     * @param Md5 SOL模板的MD5值
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public SlowLogTopSqlItem() {
     }
 
@@ -654,6 +677,9 @@ public class SlowLogTopSqlItem extends AbstractModel{
         if (source.RowsExaminedAvg != null) {
             this.RowsExaminedAvg = new Float(source.RowsExaminedAvg);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -685,6 +711,7 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
         this.setParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
         this.setParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

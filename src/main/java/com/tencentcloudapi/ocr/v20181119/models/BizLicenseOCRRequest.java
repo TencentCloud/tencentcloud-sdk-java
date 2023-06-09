@@ -44,6 +44,13 @@ public class BizLicenseOCRRequest extends AbstractModel{
     private String ImageUrl;
 
     /**
+    * 是否返回黑白复印件告警码，默认为false
+    */
+    @SerializedName("EnableCopyWarn")
+    @Expose
+    private Boolean EnableCopyWarn;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -103,6 +110,22 @@ public class BizLicenseOCRRequest extends AbstractModel{
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否返回黑白复印件告警码，默认为false 
+     * @return EnableCopyWarn 是否返回黑白复印件告警码，默认为false
+     */
+    public Boolean getEnableCopyWarn() {
+        return this.EnableCopyWarn;
+    }
+
+    /**
+     * Set 是否返回黑白复印件告警码，默认为false
+     * @param EnableCopyWarn 是否返回黑白复印件告警码，默认为false
+     */
+    public void setEnableCopyWarn(Boolean EnableCopyWarn) {
+        this.EnableCopyWarn = EnableCopyWarn;
+    }
+
     public BizLicenseOCRRequest() {
     }
 
@@ -117,6 +140,9 @@ public class BizLicenseOCRRequest extends AbstractModel{
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.EnableCopyWarn != null) {
+            this.EnableCopyWarn = new Boolean(source.EnableCopyWarn);
+        }
     }
 
 
@@ -126,6 +152,7 @@ public class BizLicenseOCRRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "EnableCopyWarn", this.EnableCopyWarn);
 
     }
 }

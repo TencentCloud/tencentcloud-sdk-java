@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DescribeReadOnlyGroupsRequest extends AbstractModel{
 
     /**
-    * 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+    * 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +60,24 @@ public class DescribeReadOnlyGroupsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-     * Get 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id 
-     * @return Filters 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+     * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。 
+     * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
-     * @param Filters 过滤条件，必须传入主实例ID进行过滤，否则返回值将为空，过滤参数为：db-master-instance-id
+     * Set 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
+     * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
+db-master-instance-id：按照主实例过滤，类型为string。
+read-only-group-id：按照只读组ID过滤，类型为string。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

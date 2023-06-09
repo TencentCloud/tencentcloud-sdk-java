@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeParamTemplateDetailResponse extends AbstractModel{
 
     /**
-    * 参数模版ID
+    * 参数模板ID
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 参数模版名称
+    * 参数模板名称
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 参数模版描述
+    * 参数模板描述
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -79,48 +79,48 @@ public class DescribeParamTemplateDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 参数模版ID 
-     * @return TemplateId 参数模版ID
+     * Get 参数模板ID 
+     * @return TemplateId 参数模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模版ID
-     * @param TemplateId 参数模版ID
+     * Set 参数模板ID
+     * @param TemplateId 参数模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 参数模版名称 
-     * @return TemplateName 参数模版名称
+     * Get 参数模板名称 
+     * @return TemplateName 参数模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 参数模版名称
-     * @param TemplateName 参数模版名称
+     * Set 参数模板名称
+     * @param TemplateName 参数模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 参数模版描述 
-     * @return TemplateDescription 参数模版描述
+     * Get 参数模板描述 
+     * @return TemplateDescription 参数模板描述
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set 参数模版描述
-     * @param TemplateDescription 参数模版描述
+     * Set 参数模板描述
+     * @param TemplateDescription 参数模板描述
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;

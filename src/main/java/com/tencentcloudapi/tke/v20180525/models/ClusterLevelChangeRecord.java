@@ -72,6 +72,13 @@ public class ClusterLevelChangeRecord extends AbstractModel{
     private String TriggerType;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
     * 开始时间
     */
     @SerializedName("StartedAt")
@@ -198,6 +205,22 @@ public class ClusterLevelChangeRecord extends AbstractModel{
     }
 
     /**
+     * Get 创建时间 
+     * @return CreatedAt 创建时间
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreatedAt 创建时间
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
      * Get 开始时间 
      * @return StartedAt 开始时间
      */
@@ -258,6 +281,9 @@ public class ClusterLevelChangeRecord extends AbstractModel{
         if (source.TriggerType != null) {
             this.TriggerType = new String(source.TriggerType);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
         if (source.StartedAt != null) {
             this.StartedAt = new String(source.StartedAt);
         }
@@ -278,6 +304,7 @@ public class ClusterLevelChangeRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "OldLevel", this.OldLevel);
         this.setParamSimple(map, prefix + "NewLevel", this.NewLevel);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "StartedAt", this.StartedAt);
         this.setParamSimple(map, prefix + "EndedAt", this.EndedAt);
 

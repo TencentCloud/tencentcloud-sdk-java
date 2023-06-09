@@ -37,7 +37,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private String RoleId;
 
     /**
-    * 用户列表，电子签系统的UserId
+    * 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
     */
     @SerializedName("UserIds")
     @Expose
@@ -49,6 +49,13 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+    */
+    @SerializedName("OpenIds")
+    @Expose
+    private String [] OpenIds;
 
     /**
      * Get 代理信息 
@@ -83,16 +90,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户列表，电子签系统的UserId 
-     * @return UserIds 用户列表，电子签系统的UserId
+     * Get 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数 
+     * @return UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
      */
     public String [] getUserIds() {
         return this.UserIds;
     }
 
     /**
-     * Set 用户列表，电子签系统的UserId
-     * @param UserIds 用户列表，电子签系统的UserId
+     * Set 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
+     * @param UserIds 电子签用户ID列表，与OpenIds参数二选一,优先UserIds参数
      */
     public void setUserIds(String [] UserIds) {
         this.UserIds = UserIds;
@@ -118,6 +125,22 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数 
+     * @return OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     */
+    public String [] getOpenIds() {
+        return this.OpenIds;
+    }
+
+    /**
+     * Set 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     * @param OpenIds 客户系统用户ID列表，与UserIds参数二选一,优先UserIds参数
+     */
+    public void setOpenIds(String [] OpenIds) {
+        this.OpenIds = OpenIds;
+    }
+
     public ChannelDeleteRoleUsersRequest() {
     }
 
@@ -141,6 +164,12 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.OpenIds != null) {
+            this.OpenIds = new String[source.OpenIds.length];
+            for (int i = 0; i < source.OpenIds.length; i++) {
+                this.OpenIds[i] = new String(source.OpenIds[i]);
+            }
+        }
     }
 
 
@@ -152,6 +181,7 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArraySimple(map, prefix + "OpenIds.", this.OpenIds);
 
     }
 }

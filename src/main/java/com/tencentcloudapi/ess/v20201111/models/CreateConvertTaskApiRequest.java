@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateConvertTaskApiRequest extends AbstractModel{
 
     /**
-    * 资源类型 取值范围doc,docx,html,xls,xlsx之一
+    * 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
     */
     @SerializedName("ResourceType")
     @Expose
@@ -65,16 +65,16 @@ public class CreateConvertTaskApiRequest extends AbstractModel{
     private OrganizationInfo Organization;
 
     /**
-     * Get 资源类型 取值范围doc,docx,html,xls,xlsx之一 
-     * @return ResourceType 资源类型 取值范围doc,docx,html,xls,xlsx之一
+     * Get 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型 
+     * @return ResourceType 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型 取值范围doc,docx,html,xls,xlsx之一
-     * @param ResourceType 资源类型 取值范围doc,docx,html,xls,xlsx之一
+     * Set 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
+     * @param ResourceType 资源类型 支持doc,docx,html,xls,xlsx,jpg,jpeg,png,bmp文件类型
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

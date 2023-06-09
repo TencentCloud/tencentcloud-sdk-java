@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeParamTemplateDetailRequest extends AbstractModel{
+public class DescribeOrganizationMemberEmailBindRequest extends AbstractModel{
 
     /**
-    * 参数模板ID
+    * 成员Uin
     */
-    @SerializedName("TemplateId")
+    @SerializedName("MemberUin")
     @Expose
-    private Long TemplateId;
+    private Long MemberUin;
 
     /**
-     * Get 参数模板ID 
-     * @return TemplateId 参数模板ID
+     * Get 成员Uin 
+     * @return MemberUin 成员Uin
      */
-    public Long getTemplateId() {
-        return this.TemplateId;
+    public Long getMemberUin() {
+        return this.MemberUin;
     }
 
     /**
-     * Set 参数模板ID
-     * @param TemplateId 参数模板ID
+     * Set 成员Uin
+     * @param MemberUin 成员Uin
      */
-    public void setTemplateId(Long TemplateId) {
-        this.TemplateId = TemplateId;
+    public void setMemberUin(Long MemberUin) {
+        this.MemberUin = MemberUin;
     }
 
-    public DescribeParamTemplateDetailRequest() {
+    public DescribeOrganizationMemberEmailBindRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeParamTemplateDetailRequest(DescribeParamTemplateDetailRequest source) {
-        if (source.TemplateId != null) {
-            this.TemplateId = new Long(source.TemplateId);
+    public DescribeOrganizationMemberEmailBindRequest(DescribeOrganizationMemberEmailBindRequest source) {
+        if (source.MemberUin != null) {
+            this.MemberUin = new Long(source.MemberUin);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeParamTemplateDetailRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
 
     }
 }

@@ -45,7 +45,7 @@ public class CreateInstancePreResp extends AbstractModel{
     private CreateInstancePreData Data;
 
     /**
-    * 删除是时间
+    * 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteRouteTimestamp")
@@ -105,21 +105,25 @@ public class CreateInstancePreResp extends AbstractModel{
     }
 
     /**
-     * Get 删除是时间
+     * Get 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeleteRouteTimestamp 删除是时间
+     * @return DeleteRouteTimestamp 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set 删除是时间
+     * Set 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeleteRouteTimestamp 删除是时间
+     * @param DeleteRouteTimestamp 删除时间。目前该参数字段已废弃，将会在未来被删除
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }

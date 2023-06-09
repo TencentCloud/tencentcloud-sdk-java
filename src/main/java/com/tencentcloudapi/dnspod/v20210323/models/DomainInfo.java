@@ -187,6 +187,62 @@ public class DomainInfo extends AbstractModel{
     private String OwnerNick;
 
     /**
+    * 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsGracePeriod")
+    @Expose
+    private String IsGracePeriod;
+
+    /**
+    * 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipBuffered")
+    @Expose
+    private String VipBuffered;
+
+    /**
+    * VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipStartAt")
+    @Expose
+    private String VipStartAt;
+
+    /**
+    * VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipEndAt")
+    @Expose
+    private String VipEndAt;
+
+    /**
+    * VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipAutoRenew")
+    @Expose
+    private String VipAutoRenew;
+
+    /**
+    * VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VipResourceId")
+    @Expose
+    private String VipResourceId;
+
+    /**
+    * 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSubDomain")
+    @Expose
+    private Boolean IsSubDomain;
+
+    /**
      * Get 域名ID 
      * @return DomainId 域名ID
      */
@@ -566,6 +622,146 @@ public class DomainInfo extends AbstractModel{
         this.OwnerNick = OwnerNick;
     }
 
+    /**
+     * Get 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsGracePeriod 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsGracePeriod() {
+        return this.IsGracePeriod;
+    }
+
+    /**
+     * Set 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsGracePeriod 是否在付费套餐宽限期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsGracePeriod(String IsGracePeriod) {
+        this.IsGracePeriod = IsGracePeriod;
+    }
+
+    /**
+     * Get 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipBuffered 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipBuffered() {
+        return this.VipBuffered;
+    }
+
+    /**
+     * Set 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipBuffered 是否在付费套餐缓冲期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipBuffered(String VipBuffered) {
+        this.VipBuffered = VipBuffered;
+    }
+
+    /**
+     * Get VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipStartAt VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipStartAt() {
+        return this.VipStartAt;
+    }
+
+    /**
+     * Set VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipStartAt VIP套餐有效期开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipStartAt(String VipStartAt) {
+        this.VipStartAt = VipStartAt;
+    }
+
+    /**
+     * Get VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipEndAt VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipEndAt() {
+        return this.VipEndAt;
+    }
+
+    /**
+     * Set VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipEndAt VIP套餐有效期结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipEndAt(String VipEndAt) {
+        this.VipEndAt = VipEndAt;
+    }
+
+    /**
+     * Get VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipAutoRenew VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipAutoRenew() {
+        return this.VipAutoRenew;
+    }
+
+    /**
+     * Set VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipAutoRenew VIP套餐自动续费标识。可能的值为：default-默认；no-不自动续费；yes-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipAutoRenew(String VipAutoRenew) {
+        this.VipAutoRenew = VipAutoRenew;
+    }
+
+    /**
+     * Get VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VipResourceId VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVipResourceId() {
+        return this.VipResourceId;
+    }
+
+    /**
+     * Set VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VipResourceId VIP套餐资源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVipResourceId(String VipResourceId) {
+        this.VipResourceId = VipResourceId;
+    }
+
+    /**
+     * Get 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSubDomain 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSubDomain() {
+        return this.IsSubDomain;
+    }
+
+    /**
+     * Set 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSubDomain 是否是子域名。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSubDomain(Boolean IsSubDomain) {
+        this.IsSubDomain = IsSubDomain;
+    }
+
     public DomainInfo() {
     }
 
@@ -649,6 +845,27 @@ public class DomainInfo extends AbstractModel{
         if (source.OwnerNick != null) {
             this.OwnerNick = new String(source.OwnerNick);
         }
+        if (source.IsGracePeriod != null) {
+            this.IsGracePeriod = new String(source.IsGracePeriod);
+        }
+        if (source.VipBuffered != null) {
+            this.VipBuffered = new String(source.VipBuffered);
+        }
+        if (source.VipStartAt != null) {
+            this.VipStartAt = new String(source.VipStartAt);
+        }
+        if (source.VipEndAt != null) {
+            this.VipEndAt = new String(source.VipEndAt);
+        }
+        if (source.VipAutoRenew != null) {
+            this.VipAutoRenew = new String(source.VipAutoRenew);
+        }
+        if (source.VipResourceId != null) {
+            this.VipResourceId = new String(source.VipResourceId);
+        }
+        if (source.IsSubDomain != null) {
+            this.IsSubDomain = new Boolean(source.IsSubDomain);
+        }
     }
 
 
@@ -679,6 +896,13 @@ public class DomainInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ActualNsList.", this.ActualNsList);
         this.setParamSimple(map, prefix + "RecordCount", this.RecordCount);
         this.setParamSimple(map, prefix + "OwnerNick", this.OwnerNick);
+        this.setParamSimple(map, prefix + "IsGracePeriod", this.IsGracePeriod);
+        this.setParamSimple(map, prefix + "VipBuffered", this.VipBuffered);
+        this.setParamSimple(map, prefix + "VipStartAt", this.VipStartAt);
+        this.setParamSimple(map, prefix + "VipEndAt", this.VipEndAt);
+        this.setParamSimple(map, prefix + "VipAutoRenew", this.VipAutoRenew);
+        this.setParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
+        this.setParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
 
     }
 }

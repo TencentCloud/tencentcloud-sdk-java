@@ -41,6 +41,7 @@ public class DescribeBaseBackupsRequest extends AbstractModel{
 db-instance-id：按照实例ID过滤，类型为string。
 db-instance-name：按照实例名过滤，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+base-backup-id：按照备份集ID过滤，类型为string。
     */
     @SerializedName("Filters")
     @Expose
@@ -110,11 +111,13 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      * Get 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
 db-instance-name：按照实例名过滤，类型为string。
-db-instance-ip：按照实例私有网络IP地址过滤，类型为string。 
+db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+base-backup-id：按照备份集ID过滤，类型为string。 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
 db-instance-name：按照实例名过滤，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+base-backup-id：按照备份集ID过滤，类型为string。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -125,10 +128,12 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
 db-instance-id：按照实例ID过滤，类型为string。
 db-instance-name：按照实例名过滤，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+base-backup-id：按照备份集ID过滤，类型为string。
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
 db-instance-name：按照实例名过滤，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
+base-backup-id：按照备份集ID过滤，类型为string。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

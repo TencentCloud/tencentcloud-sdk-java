@@ -379,6 +379,14 @@ pausing
     private ResourcePackage [] ResourcePackages;
 
     /**
+    * 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -1238,6 +1246,26 @@ pausing
         this.ResourcePackages = ResourcePackages;
     }
 
+    /**
+     * Get 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 自动续费标识，1为自动续费，0为到期不续
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1405,6 +1433,9 @@ pausing
                 this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
             }
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
     }
 
 
@@ -1459,6 +1490,7 @@ pausing
         this.setParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
         this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

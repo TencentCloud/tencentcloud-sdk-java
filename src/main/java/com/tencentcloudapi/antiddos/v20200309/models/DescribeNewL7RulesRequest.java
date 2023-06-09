@@ -51,7 +51,7 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
     private String Ip;
 
     /**
-    * 一页条数，填0表示不分页
+    * 一页条数，默认值100，最大值100，超过100最大返回100条
     */
     @SerializedName("Limit")
     @Expose
@@ -150,16 +150,16 @@ public class DescribeNewL7RulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 一页条数，填0表示不分页 
-     * @return Limit 一页条数，填0表示不分页
+     * Get 一页条数，默认值100，最大值100，超过100最大返回100条 
+     * @return Limit 一页条数，默认值100，最大值100，超过100最大返回100条
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 一页条数，填0表示不分页
-     * @param Limit 一页条数，填0表示不分页
+     * Set 一页条数，默认值100，最大值100，超过100最大返回100条
+     * @param Limit 一页条数，默认值100，最大值100，超过100最大返回100条
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

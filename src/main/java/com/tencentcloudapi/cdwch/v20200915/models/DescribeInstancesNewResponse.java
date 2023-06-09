@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.cdwch.v20200915.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBaseBackupResponse extends AbstractModel{
+public class DescribeInstancesNewResponse extends AbstractModel{
 
     /**
-    * 基础备份集ID
+    * 实例总数
     */
-    @SerializedName("BaseBackupId")
+    @SerializedName("TotalCount")
     @Expose
-    private String BaseBackupId;
+    private Long TotalCount;
+
+    /**
+    * 实例数组
+    */
+    @SerializedName("InstancesList")
+    @Expose
+    private InstanceInfo [] InstancesList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateBaseBackupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 基础备份集ID 
-     * @return BaseBackupId 基础备份集ID
+     * Get 实例总数 
+     * @return TotalCount 实例总数
      */
-    public String getBaseBackupId() {
-        return this.BaseBackupId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 基础备份集ID
-     * @param BaseBackupId 基础备份集ID
+     * Set 实例总数
+     * @param TotalCount 实例总数
      */
-    public void setBaseBackupId(String BaseBackupId) {
-        this.BaseBackupId = BaseBackupId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 实例数组 
+     * @return InstancesList 实例数组
+     */
+    public InstanceInfo [] getInstancesList() {
+        return this.InstancesList;
+    }
+
+    /**
+     * Set 实例数组
+     * @param InstancesList 实例数组
+     */
+    public void setInstancesList(InstanceInfo [] InstancesList) {
+        this.InstancesList = InstancesList;
     }
 
     /**
@@ -68,16 +91,22 @@ public class CreateBaseBackupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateBaseBackupResponse() {
+    public DescribeInstancesNewResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBaseBackupResponse(CreateBaseBackupResponse source) {
-        if (source.BaseBackupId != null) {
-            this.BaseBackupId = new String(source.BaseBackupId);
+    public DescribeInstancesNewResponse(DescribeInstancesNewResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.InstancesList != null) {
+            this.InstancesList = new InstanceInfo[source.InstancesList.length];
+            for (int i = 0; i < source.InstancesList.length; i++) {
+                this.InstancesList[i] = new InstanceInfo(source.InstancesList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class CreateBaseBackupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseBackupId", this.BaseBackupId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "InstancesList.", this.InstancesList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

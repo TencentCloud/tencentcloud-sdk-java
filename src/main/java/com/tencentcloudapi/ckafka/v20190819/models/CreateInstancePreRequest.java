@@ -150,6 +150,13 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long [] ZoneIds;
 
     /**
+    * 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+    */
+    @SerializedName("PublicNetworkMonthly")
+    @Expose
+    private Long PublicNetworkMonthly;
+
+    /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -441,6 +448,22 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.ZoneIds = ZoneIds;
     }
 
+    /**
+     * Get 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0 
+     * @return PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     */
+    public Long getPublicNetworkMonthly() {
+        return this.PublicNetworkMonthly;
+    }
+
+    /**
+     * Set 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     * @param PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     */
+    public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
+        this.PublicNetworkMonthly = PublicNetworkMonthly;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -509,6 +532,9 @@ public class CreateInstancePreRequest extends AbstractModel{
                 this.ZoneIds[i] = new Long(source.ZoneIds[i]);
             }
         }
+        if (source.PublicNetworkMonthly != null) {
+            this.PublicNetworkMonthly = new Long(source.PublicNetworkMonthly);
+        }
     }
 
 
@@ -534,6 +560,7 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
 
     }
 }

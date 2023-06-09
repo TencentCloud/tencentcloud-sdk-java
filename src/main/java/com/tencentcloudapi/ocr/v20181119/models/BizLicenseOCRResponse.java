@@ -94,9 +94,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
 
     /**
     * Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
     */
     @SerializedName("RecognizeWarnCode")
     @Expose
@@ -104,9 +102,7 @@ public class BizLicenseOCRResponse extends AbstractModel{
 
     /**
     * 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
     */
     @SerializedName("RecognizeWarnMsg")
     @Expose
@@ -295,13 +291,9 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Get Code 告警码列表和释义：
--20001 非营业执照
--9102 黑白复印件告警
-注：告警码可以同时存在多个 
+-9102 黑白复印件告警 
      * @return RecognizeWarnCode Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
      */
     public Long [] getRecognizeWarnCode() {
         return this.RecognizeWarnCode;
@@ -309,13 +301,9 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Set Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
      * @param RecognizeWarnCode Code 告警码列表和释义：
--20001 非营业执照
 -9102 黑白复印件告警
-注：告警码可以同时存在多个
      */
     public void setRecognizeWarnCode(Long [] RecognizeWarnCode) {
         this.RecognizeWarnCode = RecognizeWarnCode;
@@ -323,13 +311,9 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Get 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
-WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个 
+WARN_COPY_CARD 黑白复印件告警 
      * @return RecognizeWarnMsg 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
      */
     public String [] getRecognizeWarnMsg() {
         return this.RecognizeWarnMsg;
@@ -337,13 +321,9 @@ WARN_COPY_CARD 黑白复印件告警
 
     /**
      * Set 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
      * @param RecognizeWarnMsg 告警码说明：
-OCR_WARNING_TYPE_NOT_MATCH 非营业执照
 WARN_COPY_CARD 黑白复印件告警
-注：告警信息可以同时存在多个
      */
     public void setRecognizeWarnMsg(String [] RecognizeWarnMsg) {
         this.RecognizeWarnMsg = RecognizeWarnMsg;

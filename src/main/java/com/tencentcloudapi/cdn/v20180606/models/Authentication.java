@@ -33,6 +33,17 @@ off：关闭
     private String Switch;
 
     /**
+    * 鉴权算法，取值有：
+md5：按MD5算法取hash值
+sha256：按SHA-256算法取hash值
+默认为 md5
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuthAlgorithm")
+    @Expose
+    private String AuthAlgorithm;
+
+    /**
     * 时间戳防盗链模式 A 配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -90,6 +101,38 @@ off：关闭
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
+    }
+
+    /**
+     * Get 鉴权算法，取值有：
+md5：按MD5算法取hash值
+sha256：按SHA-256算法取hash值
+默认为 md5
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuthAlgorithm 鉴权算法，取值有：
+md5：按MD5算法取hash值
+sha256：按SHA-256算法取hash值
+默认为 md5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAuthAlgorithm() {
+        return this.AuthAlgorithm;
+    }
+
+    /**
+     * Set 鉴权算法，取值有：
+md5：按MD5算法取hash值
+sha256：按SHA-256算法取hash值
+默认为 md5
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuthAlgorithm 鉴权算法，取值有：
+md5：按MD5算法取hash值
+sha256：按SHA-256算法取hash值
+默认为 md5
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuthAlgorithm(String AuthAlgorithm) {
+        this.AuthAlgorithm = AuthAlgorithm;
     }
 
     /**
@@ -183,6 +226,9 @@ off：关闭
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.AuthAlgorithm != null) {
+            this.AuthAlgorithm = new String(source.AuthAlgorithm);
+        }
         if (source.TypeA != null) {
             this.TypeA = new AuthenticationTypeA(source.TypeA);
         }
@@ -203,6 +249,7 @@ off：关闭
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "AuthAlgorithm", this.AuthAlgorithm);
         this.setParamObj(map, prefix + "TypeA.", this.TypeA);
         this.setParamObj(map, prefix + "TypeB.", this.TypeB);
         this.setParamObj(map, prefix + "TypeC.", this.TypeC);
