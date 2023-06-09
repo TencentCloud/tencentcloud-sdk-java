@@ -419,6 +419,7 @@ public abstract class AbstractClient {
         JsonResponseErrModel error = errResp.response;
         boolean regionOk = error.requestId != null
                 && !error.requestId.isEmpty()
+                && error.error.code != null
                 && !error.error.code.equals("InternalError");
         breakerToken.report(regionOk);
       }
