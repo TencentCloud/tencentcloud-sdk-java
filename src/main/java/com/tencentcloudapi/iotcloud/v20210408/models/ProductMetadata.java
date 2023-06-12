@@ -30,6 +30,20 @@ public class ProductMetadata extends AbstractModel{
     private Long CreationDate;
 
     /**
+    * 创建者 Uin
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
+    * 账号 Uin
+    */
+    @SerializedName("UserId")
+    @Expose
+    private Long UserId;
+
+    /**
      * Get 产品创建时间 
      * @return CreationDate 产品创建时间
      */
@@ -45,6 +59,38 @@ public class ProductMetadata extends AbstractModel{
         this.CreationDate = CreationDate;
     }
 
+    /**
+     * Get 创建者 Uin 
+     * @return CreateUserId 创建者 Uin
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建者 Uin
+     * @param CreateUserId 创建者 Uin
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
+     * Get 账号 Uin 
+     * @return UserId 账号 Uin
+     */
+    public Long getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 账号 Uin
+     * @param UserId 账号 Uin
+     */
+    public void setUserId(Long UserId) {
+        this.UserId = UserId;
+    }
+
     public ProductMetadata() {
     }
 
@@ -56,6 +102,12 @@ public class ProductMetadata extends AbstractModel{
         if (source.CreationDate != null) {
             this.CreationDate = new Long(source.CreationDate);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
+        if (source.UserId != null) {
+            this.UserId = new Long(source.UserId);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class ProductMetadata extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreationDate", this.CreationDate);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

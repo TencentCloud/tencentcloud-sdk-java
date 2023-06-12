@@ -37,6 +37,14 @@ public class InstanceConfs extends AbstractModel{
     private String OverviewDisplay;
 
     /**
+    * redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyDelimiters")
+    @Expose
+    private String [] KeyDelimiters;
+
+    /**
      * Get 数据库巡检开关, Yes/No。 
      * @return DailyInspection 数据库巡检开关, Yes/No。
      */
@@ -68,6 +76,26 @@ public class InstanceConfs extends AbstractModel{
         this.OverviewDisplay = OverviewDisplay;
     }
 
+    /**
+     * Get redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyDelimiters redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getKeyDelimiters() {
+        return this.KeyDelimiters;
+    }
+
+    /**
+     * Set redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyDelimiters redis大key分析的自定义分割符，仅redis使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyDelimiters(String [] KeyDelimiters) {
+        this.KeyDelimiters = KeyDelimiters;
+    }
+
     public InstanceConfs() {
     }
 
@@ -82,6 +110,12 @@ public class InstanceConfs extends AbstractModel{
         if (source.OverviewDisplay != null) {
             this.OverviewDisplay = new String(source.OverviewDisplay);
         }
+        if (source.KeyDelimiters != null) {
+            this.KeyDelimiters = new String[source.KeyDelimiters.length];
+            for (int i = 0; i < source.KeyDelimiters.length; i++) {
+                this.KeyDelimiters[i] = new String(source.KeyDelimiters[i]);
+            }
+        }
     }
 
 
@@ -91,6 +125,7 @@ public class InstanceConfs extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
         this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
+        this.setParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
 
     }
 }

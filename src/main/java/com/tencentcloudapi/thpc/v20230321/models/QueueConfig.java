@@ -117,6 +117,13 @@ public class QueueConfig extends AbstractModel{
     private Long ScaleOutNodeThreshold;
 
     /**
+    * 每轮扩容最大节点个数。默认值：100。取值范围：1～100。
+    */
+    @SerializedName("MaxNodesPerCycle")
+    @Expose
+    private Long MaxNodesPerCycle;
+
+    /**
      * Get 队列名称。 
      * @return QueueName 队列名称。
      */
@@ -336,6 +343,22 @@ public class QueueConfig extends AbstractModel{
         this.ScaleOutNodeThreshold = ScaleOutNodeThreshold;
     }
 
+    /**
+     * Get 每轮扩容最大节点个数。默认值：100。取值范围：1～100。 
+     * @return MaxNodesPerCycle 每轮扩容最大节点个数。默认值：100。取值范围：1～100。
+     */
+    public Long getMaxNodesPerCycle() {
+        return this.MaxNodesPerCycle;
+    }
+
+    /**
+     * Set 每轮扩容最大节点个数。默认值：100。取值范围：1～100。
+     * @param MaxNodesPerCycle 每轮扩容最大节点个数。默认值：100。取值范围：1～100。
+     */
+    public void setMaxNodesPerCycle(Long MaxNodesPerCycle) {
+        this.MaxNodesPerCycle = MaxNodesPerCycle;
+    }
+
     public QueueConfig() {
     }
 
@@ -389,6 +412,9 @@ public class QueueConfig extends AbstractModel{
         if (source.ScaleOutNodeThreshold != null) {
             this.ScaleOutNodeThreshold = new Long(source.ScaleOutNodeThreshold);
         }
+        if (source.MaxNodesPerCycle != null) {
+            this.MaxNodesPerCycle = new Long(source.MaxNodesPerCycle);
+        }
     }
 
 
@@ -409,6 +435,7 @@ public class QueueConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredIdleNodeCapacity", this.DesiredIdleNodeCapacity);
         this.setParamSimple(map, prefix + "ScaleOutRatio", this.ScaleOutRatio);
         this.setParamSimple(map, prefix + "ScaleOutNodeThreshold", this.ScaleOutNodeThreshold);
+        this.setParamSimple(map, prefix + "MaxNodesPerCycle", this.MaxNodesPerCycle);
 
     }
 }

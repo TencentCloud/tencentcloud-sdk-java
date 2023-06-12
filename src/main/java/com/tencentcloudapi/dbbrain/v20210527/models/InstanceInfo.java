@@ -219,7 +219,7 @@ public class InstanceInfo extends AbstractModel{
     private String AuditRunningStatus;
 
     /**
-    * 内网vip
+    * 内网vip。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalVip")
@@ -227,7 +227,7 @@ public class InstanceInfo extends AbstractModel{
     private String InternalVip;
 
     /**
-    * 内网port
+    * 内网port。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalVport")
@@ -235,11 +235,27 @@ public class InstanceInfo extends AbstractModel{
     private Long InternalVport;
 
     /**
-    * 创建时间
+    * 创建时间。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
 
     /**
      * Get 实例ID。 
@@ -690,9 +706,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 内网vip
+     * Get 内网vip。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternalVip 内网vip
+     * @return InternalVip 内网vip。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternalVip() {
@@ -700,9 +716,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Set 内网vip
+     * Set 内网vip。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternalVip 内网vip
+     * @param InternalVip 内网vip。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalVip(String InternalVip) {
@@ -710,9 +726,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 内网port
+     * Get 内网port。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InternalVport 内网port
+     * @return InternalVport 内网port。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternalVport() {
@@ -720,9 +736,9 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Set 内网port
+     * Set 内网port。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InternalVport 内网port
+     * @param InternalVport 内网port。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalVport(Long InternalVport) {
@@ -730,19 +746,59 @@ public class InstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get 创建时间。 
+     * @return CreateTime 创建时间。
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set 创建时间。
+     * @param CreateTime 创建时间。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 所属集群ID（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterName 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterName 所属集群名称（仅对集群数据库产品该字段非空，如TDSQL-C）。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
     }
 
     public InstanceInfo() {
@@ -846,6 +902,12 @@ public class InstanceInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -884,6 +946,8 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InternalVip", this.InternalVip);
         this.setParamSimple(map, prefix + "InternalVport", this.InternalVport);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

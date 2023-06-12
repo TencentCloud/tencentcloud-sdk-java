@@ -44,14 +44,14 @@ public class DescribeResourceTagsByTagKeysRequest extends AbstractModel{
     private String ResourceRegion;
 
     /**
-    * 资源唯一标识
+    * 资源唯一标识ID的列表，列表容量不超过20
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * 资源标签键
+    * 资源标签键列表，列表容量不超过20
     */
     @SerializedName("TagKeys")
     @Expose
@@ -120,32 +120,32 @@ public class DescribeResourceTagsByTagKeysRequest extends AbstractModel{
     }
 
     /**
-     * Get 资源唯一标识 
-     * @return ResourceIds 资源唯一标识
+     * Get 资源唯一标识ID的列表，列表容量不超过20 
+     * @return ResourceIds 资源唯一标识ID的列表，列表容量不超过20
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set 资源唯一标识
-     * @param ResourceIds 资源唯一标识
+     * Set 资源唯一标识ID的列表，列表容量不超过20
+     * @param ResourceIds 资源唯一标识ID的列表，列表容量不超过20
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 资源标签键 
-     * @return TagKeys 资源标签键
+     * Get 资源标签键列表，列表容量不超过20 
+     * @return TagKeys 资源标签键列表，列表容量不超过20
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set 资源标签键
-     * @param TagKeys 资源标签键
+     * Set 资源标签键列表，列表容量不超过20
+     * @param TagKeys 资源标签键列表，列表容量不超过20
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

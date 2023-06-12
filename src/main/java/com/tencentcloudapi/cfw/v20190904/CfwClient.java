@@ -481,6 +481,26 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询新版安全组下发进度
+     * @param req DescribeEnterpriseSGRuleProgressRequest
+     * @return DescribeEnterpriseSGRuleProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnterpriseSGRuleProgressResponse DescribeEnterpriseSGRuleProgress(DescribeEnterpriseSGRuleProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnterpriseSGRuleProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnterpriseSGRuleProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询新企业安全组规则
      * @param req DescribeEnterpriseSecurityGroupRuleRequest
      * @return DescribeEnterpriseSecurityGroupRuleResponse

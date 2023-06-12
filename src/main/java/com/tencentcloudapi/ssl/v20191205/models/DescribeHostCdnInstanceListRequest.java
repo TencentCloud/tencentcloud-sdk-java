@@ -72,6 +72,13 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 是否异步
+    */
+    @SerializedName("AsyncCache")
+    @Expose
+    private Long AsyncCache;
+
+    /**
      * Get 待部署的证书ID 
      * @return CertificateId 待部署的证书ID
      */
@@ -183,6 +190,22 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否异步 
+     * @return AsyncCache 是否异步
+     */
+    public Long getAsyncCache() {
+        return this.AsyncCache;
+    }
+
+    /**
+     * Set 是否异步
+     * @param AsyncCache 是否异步
+     */
+    public void setAsyncCache(Long AsyncCache) {
+        this.AsyncCache = AsyncCache;
+    }
+
     public DescribeHostCdnInstanceListRequest() {
     }
 
@@ -215,6 +238,9 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.AsyncCache != null) {
+            this.AsyncCache = new Long(source.AsyncCache);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AsyncCache", this.AsyncCache);
 
     }
 }

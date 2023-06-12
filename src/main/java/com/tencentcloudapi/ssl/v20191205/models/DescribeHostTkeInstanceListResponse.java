@@ -55,6 +55,14 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel{
     private Long AsyncOffset;
 
     /**
+    * 当前缓存读取时间	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncCacheTime")
+    @Expose
+    private String AsyncCacheTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -142,6 +150,26 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前缓存读取时间	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncCacheTime 当前缓存读取时间	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsyncCacheTime() {
+        return this.AsyncCacheTime;
+    }
+
+    /**
+     * Set 当前缓存读取时间	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncCacheTime 当前缓存读取时间	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncCacheTime(String AsyncCacheTime) {
+        this.AsyncCacheTime = AsyncCacheTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -180,6 +208,9 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel{
         if (source.AsyncOffset != null) {
             this.AsyncOffset = new Long(source.AsyncOffset);
         }
+        if (source.AsyncCacheTime != null) {
+            this.AsyncCacheTime = new String(source.AsyncCacheTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -194,6 +225,7 @@ public class DescribeHostTkeInstanceListResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "AsyncTotalNum", this.AsyncTotalNum);
         this.setParamSimple(map, prefix + "AsyncOffset", this.AsyncOffset);
+        this.setParamSimple(map, prefix + "AsyncCacheTime", this.AsyncCacheTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

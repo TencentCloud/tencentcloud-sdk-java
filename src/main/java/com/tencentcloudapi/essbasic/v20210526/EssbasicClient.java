@@ -154,7 +154,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *上传了word、excel文件后，通过该接口发起文件转换任务，将word、excel文件转换为pdf文件。
+     *上传了word、excel、图片文件后，通过该接口发起文件转换任务，将word、excel、图片文件转换为pdf文件。
      * @param req ChannelCreateConvertTaskApiRequest
      * @return ChannelCreateConvertTaskApiResponse
      * @throws TencentCloudSDKException

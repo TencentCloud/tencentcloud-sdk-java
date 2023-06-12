@@ -39,6 +39,30 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncTotalNum")
+    @Expose
+    private Long AsyncTotalNum;
+
+    /**
+    * 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncOffset")
+    @Expose
+    private Long AsyncOffset;
+
+    /**
+    * 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncCacheTime")
+    @Expose
+    private String AsyncCacheTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -86,6 +110,66 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel{
     }
 
     /**
+     * Get 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncTotalNum 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAsyncTotalNum() {
+        return this.AsyncTotalNum;
+    }
+
+    /**
+     * Set 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncTotalNum 异步刷新总数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncTotalNum(Long AsyncTotalNum) {
+        this.AsyncTotalNum = AsyncTotalNum;
+    }
+
+    /**
+     * Get 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncOffset 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAsyncOffset() {
+        return this.AsyncOffset;
+    }
+
+    /**
+     * Set 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncOffset 异步刷新当前执行数	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncOffset(Long AsyncOffset) {
+        this.AsyncOffset = AsyncOffset;
+    }
+
+    /**
+     * Get 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncCacheTime 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsyncCacheTime() {
+        return this.AsyncCacheTime;
+    }
+
+    /**
+     * Set 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncCacheTime 当前缓存读取时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncCacheTime(String AsyncCacheTime) {
+        this.AsyncCacheTime = AsyncCacheTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -118,6 +202,15 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.AsyncTotalNum != null) {
+            this.AsyncTotalNum = new Long(source.AsyncTotalNum);
+        }
+        if (source.AsyncOffset != null) {
+            this.AsyncOffset = new Long(source.AsyncOffset);
+        }
+        if (source.AsyncCacheTime != null) {
+            this.AsyncCacheTime = new String(source.AsyncCacheTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -130,6 +223,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "AsyncTotalNum", this.AsyncTotalNum);
+        this.setParamSimple(map, prefix + "AsyncOffset", this.AsyncOffset);
+        this.setParamSimple(map, prefix + "AsyncCacheTime", this.AsyncCacheTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

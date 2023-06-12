@@ -114,7 +114,7 @@ public class CreateInstancePostRequest extends AbstractModel{
     private Long TopicNum;
 
     /**
-    * 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+    * 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
     */
     @SerializedName("ZoneId")
     @Expose
@@ -357,16 +357,16 @@ public class CreateInstancePostRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网 
-     * @return ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+     * Get 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id 
+     * @return ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
-     * @param ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在的子网
+     * Set 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
+     * @param ZoneId 实例所在的可用区。当创建多可用区实例时，该参数为创建的默认接入点所在子网的可用区 id
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;

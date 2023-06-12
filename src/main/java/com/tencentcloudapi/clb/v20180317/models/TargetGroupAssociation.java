@@ -30,18 +30,18 @@ public class TargetGroupAssociation extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * 监听器ID
-    */
-    @SerializedName("ListenerId")
-    @Expose
-    private String ListenerId;
-
-    /**
     * 目标组ID
     */
     @SerializedName("TargetGroupId")
     @Expose
     private String TargetGroupId;
+
+    /**
+    * 监听器ID
+    */
+    @SerializedName("ListenerId")
+    @Expose
+    private String ListenerId;
 
     /**
     * 转发规则ID
@@ -67,22 +67,6 @@ public class TargetGroupAssociation extends AbstractModel{
     }
 
     /**
-     * Get 监听器ID 
-     * @return ListenerId 监听器ID
-     */
-    public String getListenerId() {
-        return this.ListenerId;
-    }
-
-    /**
-     * Set 监听器ID
-     * @param ListenerId 监听器ID
-     */
-    public void setListenerId(String ListenerId) {
-        this.ListenerId = ListenerId;
-    }
-
-    /**
      * Get 目标组ID 
      * @return TargetGroupId 目标组ID
      */
@@ -96,6 +80,22 @@ public class TargetGroupAssociation extends AbstractModel{
      */
     public void setTargetGroupId(String TargetGroupId) {
         this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get 监听器ID 
+     * @return ListenerId 监听器ID
+     */
+    public String getListenerId() {
+        return this.ListenerId;
+    }
+
+    /**
+     * Set 监听器ID
+     * @param ListenerId 监听器ID
+     */
+    public void setListenerId(String ListenerId) {
+        this.ListenerId = ListenerId;
     }
 
     /**
@@ -125,11 +125,11 @@ public class TargetGroupAssociation extends AbstractModel{
         if (source.LoadBalancerId != null) {
             this.LoadBalancerId = new String(source.LoadBalancerId);
         }
-        if (source.ListenerId != null) {
-            this.ListenerId = new String(source.ListenerId);
-        }
         if (source.TargetGroupId != null) {
             this.TargetGroupId = new String(source.TargetGroupId);
+        }
+        if (source.ListenerId != null) {
+            this.ListenerId = new String(source.ListenerId);
         }
         if (source.LocationId != null) {
             this.LocationId = new String(source.LocationId);
@@ -142,8 +142,8 @@ public class TargetGroupAssociation extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
-        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
 
     }

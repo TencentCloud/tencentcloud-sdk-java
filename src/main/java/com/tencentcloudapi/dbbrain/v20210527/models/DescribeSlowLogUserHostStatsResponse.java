@@ -37,6 +37,20 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     private SlowLogHost [] Items;
 
     /**
+    * 各来源用户名的慢日志占比详情列表。
+    */
+    @SerializedName("UserNameItems")
+    @Expose
+    private SlowLogUser [] UserNameItems;
+
+    /**
+    * 来源用户数目。
+    */
+    @SerializedName("UserTotalCount")
+    @Expose
+    private Long UserTotalCount;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +90,38 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     }
 
     /**
+     * Get 各来源用户名的慢日志占比详情列表。 
+     * @return UserNameItems 各来源用户名的慢日志占比详情列表。
+     */
+    public SlowLogUser [] getUserNameItems() {
+        return this.UserNameItems;
+    }
+
+    /**
+     * Set 各来源用户名的慢日志占比详情列表。
+     * @param UserNameItems 各来源用户名的慢日志占比详情列表。
+     */
+    public void setUserNameItems(SlowLogUser [] UserNameItems) {
+        this.UserNameItems = UserNameItems;
+    }
+
+    /**
+     * Get 来源用户数目。 
+     * @return UserTotalCount 来源用户数目。
+     */
+    public Long getUserTotalCount() {
+        return this.UserTotalCount;
+    }
+
+    /**
+     * Set 来源用户数目。
+     * @param UserTotalCount 来源用户数目。
+     */
+    public void setUserTotalCount(Long UserTotalCount) {
+        this.UserTotalCount = UserTotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -108,6 +154,15 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
                 this.Items[i] = new SlowLogHost(source.Items[i]);
             }
         }
+        if (source.UserNameItems != null) {
+            this.UserNameItems = new SlowLogUser[source.UserNameItems.length];
+            for (int i = 0; i < source.UserNameItems.length; i++) {
+                this.UserNameItems[i] = new SlowLogUser(source.UserNameItems[i]);
+            }
+        }
+        if (source.UserTotalCount != null) {
+            this.UserTotalCount = new Long(source.UserTotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +175,8 @@ public class DescribeSlowLogUserHostStatsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "UserNameItems.", this.UserNameItems);
+        this.setParamSimple(map, prefix + "UserTotalCount", this.UserTotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

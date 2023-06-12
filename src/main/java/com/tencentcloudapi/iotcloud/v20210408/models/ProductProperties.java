@@ -101,7 +101,7 @@ public class ProductProperties extends AbstractModel{
     private Long RegisterType;
 
     /**
-    * 动态注册产品秘钥
+    * 动态注册产品密钥
     */
     @SerializedName("ProductSecret")
     @Expose
@@ -134,6 +134,20 @@ public class ProductProperties extends AbstractModel{
     @SerializedName("OriginUserId")
     @Expose
     private Long OriginUserId;
+
+    /**
+    * 设备限制
+    */
+    @SerializedName("DeviceLimit")
+    @Expose
+    private Long DeviceLimit;
+
+    /**
+    * 产品禁用状态
+    */
+    @SerializedName("ForbiddenStatus")
+    @Expose
+    private Long ForbiddenStatus;
 
     /**
      * Get 产品描述 
@@ -316,16 +330,16 @@ public class ProductProperties extends AbstractModel{
     }
 
     /**
-     * Get 动态注册产品秘钥 
-     * @return ProductSecret 动态注册产品秘钥
+     * Get 动态注册产品密钥 
+     * @return ProductSecret 动态注册产品密钥
      */
     public String getProductSecret() {
         return this.ProductSecret;
     }
 
     /**
-     * Set 动态注册产品秘钥
-     * @param ProductSecret 动态注册产品秘钥
+     * Set 动态注册产品密钥
+     * @param ProductSecret 动态注册产品密钥
      */
     public void setProductSecret(String ProductSecret) {
         this.ProductSecret = ProductSecret;
@@ -395,6 +409,38 @@ public class ProductProperties extends AbstractModel{
         this.OriginUserId = OriginUserId;
     }
 
+    /**
+     * Get 设备限制 
+     * @return DeviceLimit 设备限制
+     */
+    public Long getDeviceLimit() {
+        return this.DeviceLimit;
+    }
+
+    /**
+     * Set 设备限制
+     * @param DeviceLimit 设备限制
+     */
+    public void setDeviceLimit(Long DeviceLimit) {
+        this.DeviceLimit = DeviceLimit;
+    }
+
+    /**
+     * Get 产品禁用状态 
+     * @return ForbiddenStatus 产品禁用状态
+     */
+    public Long getForbiddenStatus() {
+        return this.ForbiddenStatus;
+    }
+
+    /**
+     * Set 产品禁用状态
+     * @param ForbiddenStatus 产品禁用状态
+     */
+    public void setForbiddenStatus(Long ForbiddenStatus) {
+        this.ForbiddenStatus = ForbiddenStatus;
+    }
+
     public ProductProperties() {
     }
 
@@ -451,6 +497,12 @@ public class ProductProperties extends AbstractModel{
         if (source.OriginUserId != null) {
             this.OriginUserId = new Long(source.OriginUserId);
         }
+        if (source.DeviceLimit != null) {
+            this.DeviceLimit = new Long(source.DeviceLimit);
+        }
+        if (source.ForbiddenStatus != null) {
+            this.ForbiddenStatus = new Long(source.ForbiddenStatus);
+        }
     }
 
 
@@ -474,6 +526,8 @@ public class ProductProperties extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginProductId", this.OriginProductId);
         this.setParamSimple(map, prefix + "PrivateCAName", this.PrivateCAName);
         this.setParamSimple(map, prefix + "OriginUserId", this.OriginUserId);
+        this.setParamSimple(map, prefix + "DeviceLimit", this.DeviceLimit);
+        this.setParamSimple(map, prefix + "ForbiddenStatus", this.ForbiddenStatus);
 
     }
 }

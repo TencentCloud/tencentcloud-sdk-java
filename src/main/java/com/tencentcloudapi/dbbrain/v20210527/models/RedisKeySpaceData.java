@@ -72,6 +72,20 @@ public class RedisKeySpaceData extends AbstractModel{
     private Long MaxElementSize;
 
     /**
+    * 平均元素长度。
+    */
+    @SerializedName("AveElementSize")
+    @Expose
+    private Long AveElementSize;
+
+    /**
+    * 所属分片序号。
+    */
+    @SerializedName("ShardId")
+    @Expose
+    private String ShardId;
+
+    /**
      * Get key名。 
      * @return Key key名。
      */
@@ -183,6 +197,38 @@ public class RedisKeySpaceData extends AbstractModel{
         this.MaxElementSize = MaxElementSize;
     }
 
+    /**
+     * Get 平均元素长度。 
+     * @return AveElementSize 平均元素长度。
+     */
+    public Long getAveElementSize() {
+        return this.AveElementSize;
+    }
+
+    /**
+     * Set 平均元素长度。
+     * @param AveElementSize 平均元素长度。
+     */
+    public void setAveElementSize(Long AveElementSize) {
+        this.AveElementSize = AveElementSize;
+    }
+
+    /**
+     * Get 所属分片序号。 
+     * @return ShardId 所属分片序号。
+     */
+    public String getShardId() {
+        return this.ShardId;
+    }
+
+    /**
+     * Set 所属分片序号。
+     * @param ShardId 所属分片序号。
+     */
+    public void setShardId(String ShardId) {
+        this.ShardId = ShardId;
+    }
+
     public RedisKeySpaceData() {
     }
 
@@ -212,6 +258,12 @@ public class RedisKeySpaceData extends AbstractModel{
         if (source.MaxElementSize != null) {
             this.MaxElementSize = new Long(source.MaxElementSize);
         }
+        if (source.AveElementSize != null) {
+            this.AveElementSize = new Long(source.AveElementSize);
+        }
+        if (source.ShardId != null) {
+            this.ShardId = new String(source.ShardId);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class RedisKeySpaceData extends AbstractModel{
         this.setParamSimple(map, prefix + "Length", this.Length);
         this.setParamSimple(map, prefix + "ItemCount", this.ItemCount);
         this.setParamSimple(map, prefix + "MaxElementSize", this.MaxElementSize);
+        this.setParamSimple(map, prefix + "AveElementSize", this.AveElementSize);
+        this.setParamSimple(map, prefix + "ShardId", this.ShardId);
 
     }
 }
