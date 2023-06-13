@@ -30,7 +30,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+    * 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -106,16 +106,16 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
     }
 
     /**
-     * Get 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * Get 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。 
+     * @return SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
-     * @param SpecCode 规格ID。该参数可以通过调用DescribeProductConfig接口的返回值中的SpecCode字段来获取。
+     * Set 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+     * @param SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;

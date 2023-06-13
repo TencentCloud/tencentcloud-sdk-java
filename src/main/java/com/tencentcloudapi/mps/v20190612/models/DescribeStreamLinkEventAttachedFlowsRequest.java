@@ -37,7 +37,7 @@ public class DescribeStreamLinkEventAttachedFlowsRequest extends AbstractModel{
     private Long PageNum;
 
     /**
-    * 每页大小，默认10。
+    * 每页大小，默认1000。
     */
     @SerializedName("PageSize")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeStreamLinkEventAttachedFlowsRequest extends AbstractModel{
     }
 
     /**
-     * Get 每页大小，默认10。 
-     * @return PageSize 每页大小，默认10。
+     * Get 每页大小，默认1000。 
+     * @return PageSize 每页大小，默认1000。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页大小，默认10。
-     * @param PageSize 每页大小，默认10。
+     * Set 每页大小，默认1000。
+     * @param PageSize 每页大小，默认1000。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

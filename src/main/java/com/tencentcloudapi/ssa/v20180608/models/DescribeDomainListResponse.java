@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.ssa.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsResponse extends AbstractModel{
+public class DescribeDomainListResponse extends AbstractModel{
 
     /**
-    * 查询到的日志数量，最大值为10000条。
+    * 无
     */
-    @SerializedName("TotalCount")
+    @SerializedName("Total")
     @Expose
-    private Long TotalCount;
+    private Long Total;
 
     /**
-    * 错误日志详细信息集合。
+    * 无
     */
-    @SerializedName("Details")
+    @SerializedName("DomainInfoCollection")
     @Expose
-    private ErrLogDetail [] Details;
+    private DomainInfo [] DomainInfoCollection;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的日志数量，最大值为10000条。 
-     * @return TotalCount 查询到的日志数量，最大值为10000条。
+     * Get 无 
+     * @return Total 无
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTotal() {
+        return this.Total;
     }
 
     /**
-     * Set 查询到的日志数量，最大值为10000条。
-     * @param TotalCount 查询到的日志数量，最大值为10000条。
+     * Set 无
+     * @param Total 无
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setTotal(Long Total) {
+        this.Total = Total;
     }
 
     /**
-     * Get 错误日志详细信息集合。 
-     * @return Details 错误日志详细信息集合。
+     * Get 无 
+     * @return DomainInfoCollection 无
      */
-    public ErrLogDetail [] getDetails() {
-        return this.Details;
+    public DomainInfo [] getDomainInfoCollection() {
+        return this.DomainInfoCollection;
     }
 
     /**
-     * Set 错误日志详细信息集合。
-     * @param Details 错误日志详细信息集合。
+     * Set 无
+     * @param DomainInfoCollection 无
      */
-    public void setDetails(ErrLogDetail [] Details) {
-        this.Details = Details;
+    public void setDomainInfoCollection(DomainInfo [] DomainInfoCollection) {
+        this.DomainInfoCollection = DomainInfoCollection;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBErrlogsResponse() {
+    public DescribeDomainListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBErrlogsResponse(DescribeDBErrlogsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public DescribeDomainListResponse(DescribeDomainListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
         }
-        if (source.Details != null) {
-            this.Details = new ErrLogDetail[source.Details.length];
-            for (int i = 0; i < source.Details.length; i++) {
-                this.Details[i] = new ErrLogDetail(source.Details[i]);
+        if (source.DomainInfoCollection != null) {
+            this.DomainInfoCollection = new DomainInfo[source.DomainInfoCollection.length];
+            for (int i = 0; i < source.DomainInfoCollection.length; i++) {
+                this.DomainInfoCollection[i] = new DomainInfo(source.DomainInfoCollection[i]);
             }
         }
         if (source.RequestId != null) {
@@ -118,8 +118,8 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "DomainInfoCollection.", this.DomainInfoCollection);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

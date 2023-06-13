@@ -37,6 +37,13 @@ public class UpdateRecordDetails extends AbstractModel{
     private UpdateRecordDetail [] List;
 
     /**
+    * 该部署资源总数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
      * Get 部署资源类型 
      * @return ResourceType 部署资源类型
      */
@@ -68,6 +75,22 @@ public class UpdateRecordDetails extends AbstractModel{
         this.List = List;
     }
 
+    /**
+     * Get 该部署资源总数 
+     * @return TotalCount 该部署资源总数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 该部署资源总数
+     * @param TotalCount 该部署资源总数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
     public UpdateRecordDetails() {
     }
 
@@ -85,6 +108,9 @@ public class UpdateRecordDetails extends AbstractModel{
                 this.List[i] = new UpdateRecordDetail(source.List[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class UpdateRecordDetails extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

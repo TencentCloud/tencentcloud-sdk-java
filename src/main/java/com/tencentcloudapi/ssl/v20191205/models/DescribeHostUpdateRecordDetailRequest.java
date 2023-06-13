@@ -30,6 +30,20 @@ public class DescribeHostUpdateRecordDetailRequest extends AbstractModel{
     private String DeployRecordId;
 
     /**
+    * 每页数量，默认10。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private String Limit;
+
+    /**
+    * 分页偏移量，从0开始。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private String Offset;
+
+    /**
      * Get 待部署的证书ID 
      * @return DeployRecordId 待部署的证书ID
      */
@@ -45,6 +59,38 @@ public class DescribeHostUpdateRecordDetailRequest extends AbstractModel{
         this.DeployRecordId = DeployRecordId;
     }
 
+    /**
+     * Get 每页数量，默认10。 
+     * @return Limit 每页数量，默认10。
+     */
+    public String getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页数量，默认10。
+     * @param Limit 每页数量，默认10。
+     */
+    public void setLimit(String Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页偏移量，从0开始。 
+     * @return Offset 分页偏移量，从0开始。
+     */
+    public String getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移量，从0开始。
+     * @param Offset 分页偏移量，从0开始。
+     */
+    public void setOffset(String Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeHostUpdateRecordDetailRequest() {
     }
 
@@ -56,6 +102,12 @@ public class DescribeHostUpdateRecordDetailRequest extends AbstractModel{
         if (source.DeployRecordId != null) {
             this.DeployRecordId = new String(source.DeployRecordId);
         }
+        if (source.Limit != null) {
+            this.Limit = new String(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new String(source.Offset);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DescribeHostUpdateRecordDetailRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DeployRecordId", this.DeployRecordId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

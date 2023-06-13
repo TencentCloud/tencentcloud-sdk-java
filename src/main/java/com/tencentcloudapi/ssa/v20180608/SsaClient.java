@@ -239,6 +239,26 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
+     *域名列表信息啊
+     * @param req DescribeDomainListRequest
+     * @return DescribeDomainListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainListResponse DescribeDomainList(DescribeDomainListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDomainList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取安全事件详情
      * @param req DescribeEventDetailRequest
      * @return DescribeEventDetailResponse

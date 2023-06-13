@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class DescribeDBErrlogsRequest extends AbstractModel{
 
     /**
-    * 实例ID，形如postgres-5bq3wfjd
+    * 实例ID。	
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+    * 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间，形如2018-01-01 00:00:00
+    * 查询结束时间，形如2018-01-01 00:00:00。	
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 数据库名字
+    * 数据库名字。
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 搜索关键字
+    * 搜索关键字。
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * 分页返回，每页返回的最大数量。取值为1-100
+    * 每页显示数量，取值范围为1-100。默认值为50。	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页返回，返回第几页的数据，从第0页开始计数
+    * 数据偏移量，从0开始。默认值为0。	
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 实例ID，形如postgres-5bq3wfjd 
-     * @return DBInstanceId 实例ID，形如postgres-5bq3wfjd
+     * Get 实例ID。	 
+     * @return DBInstanceId 实例ID。	
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set 实例ID，形如postgres-5bq3wfjd
-     * @param DBInstanceId 实例ID，形如postgres-5bq3wfjd
+     * Set 实例ID。	
+     * @param DBInstanceId 实例ID。	
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前 
-     * @return StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+     * Get 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	 
+     * @return StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
-     * @param StartTime 查询起始时间，形如2018-01-01 00:00:00，起始时间不得小于7天以前
+     * Set 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
+     * @param StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。	
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间，形如2018-01-01 00:00:00 
-     * @return EndTime 查询结束时间，形如2018-01-01 00:00:00
+     * Get 查询结束时间，形如2018-01-01 00:00:00。	 
+     * @return EndTime 查询结束时间，形如2018-01-01 00:00:00。	
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间，形如2018-01-01 00:00:00
-     * @param EndTime 查询结束时间，形如2018-01-01 00:00:00
+     * Set 查询结束时间，形如2018-01-01 00:00:00。	
+     * @param EndTime 查询结束时间，形如2018-01-01 00:00:00。	
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 数据库名字 
-     * @return DatabaseName 数据库名字
+     * Get 数据库名字。 
+     * @return DatabaseName 数据库名字。
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 数据库名字
-     * @param DatabaseName 数据库名字
+     * Set 数据库名字。
+     * @param DatabaseName 数据库名字。
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchKeys 搜索关键字
+     * Get 搜索关键字。 
+     * @return SearchKeys 搜索关键字。
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchKeys 搜索关键字
+     * Set 搜索关键字。
+     * @param SearchKeys 搜索关键字。
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get 分页返回，每页返回的最大数量。取值为1-100 
-     * @return Limit 分页返回，每页返回的最大数量。取值为1-100
+     * Get 每页显示数量，取值范围为1-100。默认值为50。	 
+     * @return Limit 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页返回，每页返回的最大数量。取值为1-100
-     * @param Limit 分页返回，每页返回的最大数量。取值为1-100
+     * Set 每页显示数量，取值范围为1-100。默认值为50。	
+     * @param Limit 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页返回，返回第几页的数据，从第0页开始计数 
-     * @return Offset 分页返回，返回第几页的数据，从第0页开始计数
+     * Get 数据偏移量，从0开始。默认值为0。	 
+     * @return Offset 数据偏移量，从0开始。默认值为0。	
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页返回，返回第几页的数据，从第0页开始计数
-     * @param Offset 分页返回，返回第几页的数据，从第0页开始计数
+     * Set 数据偏移量，从0开始。默认值为0。	
+     * @param Offset 数据偏移量，从0开始。默认值为0。	
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

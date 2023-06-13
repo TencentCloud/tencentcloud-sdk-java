@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FlowApproverUrlInfo extends AbstractModel{
 
     /**
-    * 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
     */
     @SerializedName("SignUrl")
     @Expose
@@ -51,7 +51,7 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String Mobile;
 
     /**
-    * 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+    * 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LongUrl")
@@ -59,16 +59,16 @@ public class FlowApproverUrlInfo extends AbstractModel{
     private String LongUrl;
 
     /**
-     * Get 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。 
-     * @return SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Get 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。 
+     * @return SignUrl 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      */
     public String getSignUrl() {
         return this.SignUrl;
     }
 
     /**
-     * Set 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
-     * @param SignUrl 签署链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Set 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param SignUrl 签署短链接，不支持小程序嵌入，只支持移动端浏览器打开。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
      */
     public void setSignUrl(String SignUrl) {
         this.SignUrl = SignUrl;
@@ -123,9 +123,9 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Get 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @return LongUrl 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLongUrl() {
@@ -133,9 +133,9 @@ public class FlowApproverUrlInfo extends AbstractModel{
     }
 
     /**
-     * Set 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * Set 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LongUrl 签署长链接。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
+     * @param LongUrl 签署长链接，支持小程序嵌入。注意该链接有效期为30分钟，同时需要注意保密，不要外泄给无关用户。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongUrl(String LongUrl) {

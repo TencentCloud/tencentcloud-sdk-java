@@ -79,7 +79,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
     * 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
     */
     @SerializedName("StartTime")
     @Expose
@@ -92,7 +92,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
     */
     @SerializedName("EndTime")
     @Expose
@@ -230,6 +230,13 @@ PullVodPushLive -点播。
     @SerializedName("VodLocalMode")
     @Expose
     private Long VodLocalMode;
+
+    /**
+    * 录制模板 ID。
+    */
+    @SerializedName("RecordTemplateId")
+    @Expose
+    private String RecordTemplateId;
 
     /**
      * Get 拉流源的类型：
@@ -387,11 +394,11 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
      * Get 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+注意：北京时间值为 UTC 时间值 + 8 小时。 
      * @return StartTime 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -401,11 +408,11 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
      * Set 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      * @param StartTime 开始时间。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -418,14 +425,14 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。 
+注意：北京时间值为 UTC 时间值 + 8 小时。 
      * @return EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -438,14 +445,14 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      * @param EndTime 结束时间，注意：
 1. 结束时间必须大于开始时间；
 2. 结束时间和开始时间必须大于当前时间；
 3. 结束时间 和 开始时间 间隔必须小于七天。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
+注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -827,6 +834,22 @@ PullVodPushLive -点播。
         this.VodLocalMode = VodLocalMode;
     }
 
+    /**
+     * Get 录制模板 ID。 
+     * @return RecordTemplateId 录制模板 ID。
+     */
+    public String getRecordTemplateId() {
+        return this.RecordTemplateId;
+    }
+
+    /**
+     * Set 录制模板 ID。
+     * @param RecordTemplateId 录制模板 ID。
+     */
+    public void setRecordTemplateId(String RecordTemplateId) {
+        this.RecordTemplateId = RecordTemplateId;
+    }
+
     public CreateLivePullStreamTaskRequest() {
     }
 
@@ -904,6 +927,9 @@ PullVodPushLive -点播。
         if (source.VodLocalMode != null) {
             this.VodLocalMode = new Long(source.VodLocalMode);
         }
+        if (source.RecordTemplateId != null) {
+            this.RecordTemplateId = new String(source.RecordTemplateId);
+        }
     }
 
 
@@ -931,6 +957,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
+        this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
 
     }
 }

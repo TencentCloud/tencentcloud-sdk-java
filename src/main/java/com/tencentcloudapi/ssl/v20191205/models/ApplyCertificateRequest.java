@@ -72,14 +72,14 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String ValidityPeriod;
 
     /**
-    * 加密算法，仅支持 RSA。
+    * 加密算法，支持 RSA及ECC。
     */
     @SerializedName("CsrEncryptAlgo")
     @Expose
     private String CsrEncryptAlgo;
 
     /**
-    * 密钥对参数，仅支持2048。
+    * 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
     */
     @SerializedName("CsrKeyParameter")
     @Expose
@@ -233,32 +233,32 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get 加密算法，仅支持 RSA。 
-     * @return CsrEncryptAlgo 加密算法，仅支持 RSA。
+     * Get 加密算法，支持 RSA及ECC。 
+     * @return CsrEncryptAlgo 加密算法，支持 RSA及ECC。
      */
     public String getCsrEncryptAlgo() {
         return this.CsrEncryptAlgo;
     }
 
     /**
-     * Set 加密算法，仅支持 RSA。
-     * @param CsrEncryptAlgo 加密算法，仅支持 RSA。
+     * Set 加密算法，支持 RSA及ECC。
+     * @param CsrEncryptAlgo 加密算法，支持 RSA及ECC。
      */
     public void setCsrEncryptAlgo(String CsrEncryptAlgo) {
         this.CsrEncryptAlgo = CsrEncryptAlgo;
     }
 
     /**
-     * Get 密钥对参数，仅支持2048。 
-     * @return CsrKeyParameter 密钥对参数，仅支持2048。
+     * Get 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1 
+     * @return CsrKeyParameter 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
      */
     public String getCsrKeyParameter() {
         return this.CsrKeyParameter;
     }
 
     /**
-     * Set 密钥对参数，仅支持2048。
-     * @param CsrKeyParameter 密钥对参数，仅支持2048。
+     * Set 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
+     * @param CsrKeyParameter 密钥对参数，RSA仅支持2048。ECC仅支持prime256v1
      */
     public void setCsrKeyParameter(String CsrKeyParameter) {
         this.CsrKeyParameter = CsrKeyParameter;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+    * 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -93,7 +93,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String DBVersion;
 
     /**
-    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -238,16 +238,16 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
     private String DBEngineConfig;
 
     /**
-     * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Get 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。 
+     * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
-     * @param SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Set 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+     * @param SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -398,16 +398,16 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
     }
 
     /**
-     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。 
-     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。 
+     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
-     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
+     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

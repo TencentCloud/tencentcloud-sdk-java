@@ -30,13 +30,6 @@ public class CreateSqlFilterRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-    */
-    @SerializedName("SessionToken")
-    @Expose
-    private String SessionToken;
-
-    /**
     * SQL类型，取值包括SELECT, UPDATE, DELETE, INSERT, REPLACE。
     */
     @SerializedName("SqlType")
@@ -65,6 +58,13 @@ public class CreateSqlFilterRequest extends AbstractModel{
     private Long Duration;
 
     /**
+    * 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+    */
+    @SerializedName("SessionToken")
+    @Expose
+    private String SessionToken;
+
+    /**
     * 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
     */
     @SerializedName("Product")
@@ -85,22 +85,6 @@ public class CreateSqlFilterRequest extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
-     * @return SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     */
-    public String getSessionToken() {
-        return this.SessionToken;
-    }
-
-    /**
-     * Set 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     * @param SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
-     */
-    public void setSessionToken(String SessionToken) {
-        this.SessionToken = SessionToken;
     }
 
     /**
@@ -168,6 +152,22 @@ public class CreateSqlFilterRequest extends AbstractModel{
     }
 
     /**
+     * Get 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。 
+     * @return SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     */
+    public String getSessionToken() {
+        return this.SessionToken;
+    }
+
+    /**
+     * Set 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     * @param SessionToken 通过VerifyUserAccount获取有效期为5分钟的会话token，使用后会自动延长token有效期至五分钟后。
+     */
+    public void setSessionToken(String SessionToken) {
+        this.SessionToken = SessionToken;
+    }
+
+    /**
      * Get 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。 
      * @return Product 服务产品类型，支持值："mysql" - 云数据库 MySQL；"cynosdb" - 云数据库 TDSQL-C for MySQL，默认为"mysql"。
      */
@@ -194,9 +194,6 @@ public class CreateSqlFilterRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.SessionToken != null) {
-            this.SessionToken = new String(source.SessionToken);
-        }
         if (source.SqlType != null) {
             this.SqlType = new String(source.SqlType);
         }
@@ -209,6 +206,9 @@ public class CreateSqlFilterRequest extends AbstractModel{
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
+        if (source.SessionToken != null) {
+            this.SessionToken = new String(source.SessionToken);
+        }
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
@@ -220,11 +220,11 @@ public class CreateSqlFilterRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "SessionToken", this.SessionToken);
         this.setParamSimple(map, prefix + "SqlType", this.SqlType);
         this.setParamSimple(map, prefix + "FilterKey", this.FilterKey);
         this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "SessionToken", this.SessionToken);
         this.setParamSimple(map, prefix + "Product", this.Product);
 
     }

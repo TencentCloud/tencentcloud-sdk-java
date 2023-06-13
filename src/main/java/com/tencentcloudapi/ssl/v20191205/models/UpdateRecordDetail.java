@@ -112,7 +112,7 @@ public class UpdateRecordDetail extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 部署监听器ID
+    * 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
@@ -120,7 +120,7 @@ public class UpdateRecordDetail extends AbstractModel{
     private String ListenerId;
 
     /**
-    * 部署监听器名称
+    * 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerName")
@@ -136,7 +136,7 @@ public class UpdateRecordDetail extends AbstractModel{
     private String Protocol;
 
     /**
-    * 是否开启SNI
+    * 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniSwitch")
@@ -144,12 +144,36 @@ public class UpdateRecordDetail extends AbstractModel{
     private Long SniSwitch;
 
     /**
-    * bucket名称
+    * bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
+
+    /**
+    * 端口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
+    * 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
 
     /**
      * Get 详情记录id 
@@ -364,9 +388,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Get 部署监听器ID
+     * Get 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ListenerId 部署监听器ID
+     * @return ListenerId 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
@@ -374,9 +398,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Set 部署监听器ID
+     * Set 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ListenerId 部署监听器ID
+     * @param ListenerId 部署监听器ID（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
@@ -384,9 +408,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Get 部署监听器名称
+     * Get 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ListenerName 部署监听器名称
+     * @return ListenerName 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerName() {
@@ -394,9 +418,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Set 部署监听器名称
+     * Set 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ListenerName 部署监听器名称
+     * @param ListenerName 部署监听器名称（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerName(String ListenerName) {
@@ -424,9 +448,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Get 是否开启SNI
+     * Get 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SniSwitch 是否开启SNI
+     * @return SniSwitch 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSniSwitch() {
@@ -434,9 +458,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Set 是否开启SNI
+     * Set 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SniSwitch 是否开启SNI
+     * @param SniSwitch 是否开启SNI（CLB专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniSwitch(Long SniSwitch) {
@@ -444,9 +468,9 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Get bucket名称
+     * Get bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bucket bucket名称
+     * @return Bucket bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
@@ -454,13 +478,73 @@ public class UpdateRecordDetail extends AbstractModel{
     }
 
     /**
-     * Set bucket名称
+     * Set bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bucket bucket名称
+     * @param Bucket bucket名称（COS专用）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
+    }
+
+    /**
+     * Get 端口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Port 端口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
+    /**
+     * Get 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Namespace 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Namespace 命名空间（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecretName secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecretName secret名称（TKE专用）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
     }
 
     public UpdateRecordDetail() {
@@ -525,6 +609,15 @@ public class UpdateRecordDetail extends AbstractModel{
         if (source.Bucket != null) {
             this.Bucket = new String(source.Bucket);
         }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
     }
 
 
@@ -549,6 +642,9 @@ public class UpdateRecordDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
 
     }
 }

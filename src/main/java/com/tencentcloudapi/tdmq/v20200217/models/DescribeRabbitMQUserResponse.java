@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.postgres.v20170312.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBErrlogsResponse extends AbstractModel{
+public class DescribeRabbitMQUserResponse extends AbstractModel{
 
     /**
-    * 查询到的日志数量，最大值为10000条。
+    * 返回的User数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 错误日志详细信息集合。
+    * 当前已创建的RabbitMQ用户列表
     */
-    @SerializedName("Details")
+    @SerializedName("RabbitMQUserList")
     @Expose
-    private ErrLogDetail [] Details;
+    private RabbitMQUser [] RabbitMQUserList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +44,35 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询到的日志数量，最大值为10000条。 
-     * @return TotalCount 查询到的日志数量，最大值为10000条。
+     * Get 返回的User数量 
+     * @return TotalCount 返回的User数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询到的日志数量，最大值为10000条。
-     * @param TotalCount 查询到的日志数量，最大值为10000条。
+     * Set 返回的User数量
+     * @param TotalCount 返回的User数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 错误日志详细信息集合。 
-     * @return Details 错误日志详细信息集合。
+     * Get 当前已创建的RabbitMQ用户列表 
+     * @return RabbitMQUserList 当前已创建的RabbitMQ用户列表
      */
-    public ErrLogDetail [] getDetails() {
-        return this.Details;
+    public RabbitMQUser [] getRabbitMQUserList() {
+        return this.RabbitMQUserList;
     }
 
     /**
-     * Set 错误日志详细信息集合。
-     * @param Details 错误日志详细信息集合。
+     * Set 当前已创建的RabbitMQ用户列表
+     * @param RabbitMQUserList 当前已创建的RabbitMQ用户列表
      */
-    public void setDetails(ErrLogDetail [] Details) {
-        this.Details = Details;
+    public void setRabbitMQUserList(RabbitMQUser [] RabbitMQUserList) {
+        this.RabbitMQUserList = RabbitMQUserList;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBErrlogsResponse() {
+    public DescribeRabbitMQUserResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBErrlogsResponse(DescribeDBErrlogsResponse source) {
+    public DescribeRabbitMQUserResponse(DescribeRabbitMQUserResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Details != null) {
-            this.Details = new ErrLogDetail[source.Details.length];
-            for (int i = 0; i < source.Details.length; i++) {
-                this.Details[i] = new ErrLogDetail(source.Details[i]);
+        if (source.RabbitMQUserList != null) {
+            this.RabbitMQUserList = new RabbitMQUser[source.RabbitMQUserList.length];
+            for (int i = 0; i < source.RabbitMQUserList.length; i++) {
+                this.RabbitMQUserList[i] = new RabbitMQUser(source.RabbitMQUserList[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +119,7 @@ public class DescribeDBErrlogsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Details.", this.Details);
+        this.setParamArrayObj(map, prefix + "RabbitMQUserList.", this.RabbitMQUserList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

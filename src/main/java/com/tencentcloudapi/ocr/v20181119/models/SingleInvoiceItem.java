@@ -199,6 +199,22 @@ public class SingleInvoiceItem extends AbstractModel{
     private TrainTicket TrainTicket;
 
     /**
+    * 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedicalOutpatientInvoice")
+    @Expose
+    private MedicalInvoice MedicalOutpatientInvoice;
+
+    /**
+    * 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MedicalHospitalizedInvoice")
+    @Expose
+    private MedicalInvoice MedicalHospitalizedInvoice;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -638,6 +654,46 @@ public class SingleInvoiceItem extends AbstractModel{
         this.TrainTicket = TrainTicket;
     }
 
+    /**
+     * Get 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedicalOutpatientInvoice 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MedicalInvoice getMedicalOutpatientInvoice() {
+        return this.MedicalOutpatientInvoice;
+    }
+
+    /**
+     * Set 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalOutpatientInvoice 医疗门诊收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedicalOutpatientInvoice(MedicalInvoice MedicalOutpatientInvoice) {
+        this.MedicalOutpatientInvoice = MedicalOutpatientInvoice;
+    }
+
+    /**
+     * Get 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MedicalHospitalizedInvoice 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MedicalInvoice getMedicalHospitalizedInvoice() {
+        return this.MedicalHospitalizedInvoice;
+    }
+
+    /**
+     * Set 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MedicalHospitalizedInvoice 医疗住院收费票据（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMedicalHospitalizedInvoice(MedicalInvoice MedicalHospitalizedInvoice) {
+        this.MedicalHospitalizedInvoice = MedicalHospitalizedInvoice;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -712,6 +768,12 @@ public class SingleInvoiceItem extends AbstractModel{
         if (source.TrainTicket != null) {
             this.TrainTicket = new TrainTicket(source.TrainTicket);
         }
+        if (source.MedicalOutpatientInvoice != null) {
+            this.MedicalOutpatientInvoice = new MedicalInvoice(source.MedicalOutpatientInvoice);
+        }
+        if (source.MedicalHospitalizedInvoice != null) {
+            this.MedicalHospitalizedInvoice = new MedicalInvoice(source.MedicalHospitalizedInvoice);
+        }
     }
 
 
@@ -741,6 +803,8 @@ public class SingleInvoiceItem extends AbstractModel{
         this.setParamObj(map, prefix + "NonTaxIncomeGeneralBill.", this.NonTaxIncomeGeneralBill);
         this.setParamObj(map, prefix + "NonTaxIncomeElectronicBill.", this.NonTaxIncomeElectronicBill);
         this.setParamObj(map, prefix + "TrainTicket.", this.TrainTicket);
+        this.setParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
+        this.setParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
 
     }
 }

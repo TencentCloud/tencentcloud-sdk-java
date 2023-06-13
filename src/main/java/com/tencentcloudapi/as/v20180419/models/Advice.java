@@ -44,6 +44,15 @@ public class Advice extends AbstractModel{
     private String Solution;
 
     /**
+    * 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
      * Get 问题描述。 
      * @return Problem 问题描述。
      */
@@ -91,6 +100,30 @@ public class Advice extends AbstractModel{
         this.Solution = Solution;
     }
 
+    /**
+     * Get 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br> 
+     * @return Level 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     * @param Level 伸缩建议警告级别。取值范围：<br>
+<li>WARNING：警告级别<br>
+<li>CRITICAL：严重级别<br>
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
     public Advice() {
     }
 
@@ -108,6 +141,9 @@ public class Advice extends AbstractModel{
         if (source.Solution != null) {
             this.Solution = new String(source.Solution);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
     }
 
 
@@ -118,6 +154,7 @@ public class Advice extends AbstractModel{
         this.setParamSimple(map, prefix + "Problem", this.Problem);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

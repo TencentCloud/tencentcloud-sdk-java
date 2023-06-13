@@ -296,6 +296,27 @@ public class VatInvoiceInfo extends AbstractModel{
     private String Receiptor;
 
     /**
+    * 是否有全电纸质票（0：没有，1：有）
+    */
+    @SerializedName("ElectronicFullMark")
+    @Expose
+    private Long ElectronicFullMark;
+
+    /**
+    * 全电号码
+    */
+    @SerializedName("ElectronicFullNumber")
+    @Expose
+    private String ElectronicFullNumber;
+
+    /**
+    * 发票联名
+    */
+    @SerializedName("FormName")
+    @Expose
+    private String FormName;
+
+    /**
      * Get 校验码 
      * @return CheckCode 校验码
      */
@@ -919,6 +940,54 @@ public class VatInvoiceInfo extends AbstractModel{
         this.Receiptor = Receiptor;
     }
 
+    /**
+     * Get 是否有全电纸质票（0：没有，1：有） 
+     * @return ElectronicFullMark 是否有全电纸质票（0：没有，1：有）
+     */
+    public Long getElectronicFullMark() {
+        return this.ElectronicFullMark;
+    }
+
+    /**
+     * Set 是否有全电纸质票（0：没有，1：有）
+     * @param ElectronicFullMark 是否有全电纸质票（0：没有，1：有）
+     */
+    public void setElectronicFullMark(Long ElectronicFullMark) {
+        this.ElectronicFullMark = ElectronicFullMark;
+    }
+
+    /**
+     * Get 全电号码 
+     * @return ElectronicFullNumber 全电号码
+     */
+    public String getElectronicFullNumber() {
+        return this.ElectronicFullNumber;
+    }
+
+    /**
+     * Set 全电号码
+     * @param ElectronicFullNumber 全电号码
+     */
+    public void setElectronicFullNumber(String ElectronicFullNumber) {
+        this.ElectronicFullNumber = ElectronicFullNumber;
+    }
+
+    /**
+     * Get 发票联名 
+     * @return FormName 发票联名
+     */
+    public String getFormName() {
+        return this.FormName;
+    }
+
+    /**
+     * Set 发票联名
+     * @param FormName 发票联名
+     */
+    public void setFormName(String FormName) {
+        this.FormName = FormName;
+    }
+
     public VatInvoiceInfo() {
     }
 
@@ -1047,6 +1116,15 @@ public class VatInvoiceInfo extends AbstractModel{
         if (source.Receiptor != null) {
             this.Receiptor = new String(source.Receiptor);
         }
+        if (source.ElectronicFullMark != null) {
+            this.ElectronicFullMark = new Long(source.ElectronicFullMark);
+        }
+        if (source.ElectronicFullNumber != null) {
+            this.ElectronicFullNumber = new String(source.ElectronicFullNumber);
+        }
+        if (source.FormName != null) {
+            this.FormName = new String(source.FormName);
+        }
     }
 
 
@@ -1093,6 +1171,9 @@ public class VatInvoiceInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VatInvoiceItemInfos.", this.VatInvoiceItemInfos);
         this.setParamSimple(map, prefix + "CodeConfirm", this.CodeConfirm);
         this.setParamSimple(map, prefix + "Receiptor", this.Receiptor);
+        this.setParamSimple(map, prefix + "ElectronicFullMark", this.ElectronicFullMark);
+        this.setParamSimple(map, prefix + "ElectronicFullNumber", this.ElectronicFullNumber);
+        this.setParamSimple(map, prefix + "FormName", this.FormName);
 
     }
 }

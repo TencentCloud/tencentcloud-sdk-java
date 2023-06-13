@@ -99,6 +99,9 @@ public enum ThpcErrorCode {
     // 弹性伸缩类型不支持此操作。
      UNSUPPORTEDOPERATION_AUTOSCALINGTYPE("UnsupportedOperation.AutoScalingType"),
      
+    // 集群资源正在处理其他请求。
+     UNSUPPORTEDOPERATION_CLUSTERACCEPTOTHERREQUEST("UnsupportedOperation.ClusterAcceptOtherRequest"),
+     
     // 该集群当前状态不支持该操作。
      UNSUPPORTEDOPERATION_CLUSTERSTATUSNOTSUPPORT("UnsupportedOperation.ClusterStatusNotSupport"),
      

@@ -759,6 +759,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除RabbitMQ的用户
+     * @param req DeleteRabbitMQUserRequest
+     * @return DeleteRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQUserResponse DeleteRabbitMQUser(DeleteRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除RabbitMQ的vhost
+     * @param req DeleteRabbitMQVirtualHostRequest
+     * @return DeleteRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(DeleteRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQVirtualHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除RocketMQ集群
      * @param req DeleteRocketMQClusterRequest
      * @return DeleteRocketMQClusterResponse
@@ -1471,6 +1511,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询RabbitMQ用户列表
+     * @param req DescribeRabbitMQUserRequest
+     * @return DescribeRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQUserResponse DescribeRabbitMQUser(DescribeRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取单个RabbitMQ专享实例信息
      * @param req DescribeRabbitMQVipInstanceRequest
      * @return DescribeRabbitMQVipInstanceResponse
@@ -1503,6 +1563,46 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRabbitMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询RabbitMQ vhost列表
+     * @param req DescribeRabbitMQVirtualHostRequest
+     * @return DescribeRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(DescribeRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVirtualHost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *RabbitMQ专享版查询虚拟主机列表
+     * @param req DescribeRabbitMQVirtualHostListRequest
+     * @return DescribeRabbitMQVirtualHostListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVirtualHostListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVirtualHostList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1937,6 +2037,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *修改RabbitMQ的用户
+     * @param req ModifyRabbitMQUserRequest
+     * @return ModifyRabbitMQUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQUserResponse ModifyRabbitMQUser(ModifyRabbitMQUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRabbitMQUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRabbitMQUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改RabbitMQ专享版实例
      * @param req ModifyRabbitMQVipInstanceRequest
      * @return ModifyRabbitMQVipInstanceResponse
@@ -1949,6 +2069,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQVipInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改RabbitMQ的vhost
+     * @param req ModifyRabbitMQVirtualHostRequest
+     * @return ModifyRabbitMQVirtualHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(ModifyRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRabbitMQVirtualHostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQVirtualHostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRabbitMQVirtualHost");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

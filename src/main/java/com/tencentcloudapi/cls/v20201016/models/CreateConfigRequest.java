@@ -72,6 +72,13 @@ public class CreateConfigRequest extends AbstractModel{
     private String UserDefineRule;
 
     /**
+    * 高级采集配置
+    */
+    @SerializedName("AdvancedConfig")
+    @Expose
+    private String AdvancedConfig;
+
+    /**
      * Get 采集配置名称 
      * @return Name 采集配置名称
      */
@@ -183,6 +190,22 @@ public class CreateConfigRequest extends AbstractModel{
         this.UserDefineRule = UserDefineRule;
     }
 
+    /**
+     * Get 高级采集配置 
+     * @return AdvancedConfig 高级采集配置
+     */
+    public String getAdvancedConfig() {
+        return this.AdvancedConfig;
+    }
+
+    /**
+     * Set 高级采集配置
+     * @param AdvancedConfig 高级采集配置
+     */
+    public void setAdvancedConfig(String AdvancedConfig) {
+        this.AdvancedConfig = AdvancedConfig;
+    }
+
     public CreateConfigRequest() {
     }
 
@@ -215,6 +238,9 @@ public class CreateConfigRequest extends AbstractModel{
         if (source.UserDefineRule != null) {
             this.UserDefineRule = new String(source.UserDefineRule);
         }
+        if (source.AdvancedConfig != null) {
+            this.AdvancedConfig = new String(source.AdvancedConfig);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class CreateConfigRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
         this.setParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
+        this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
 
     }
 }

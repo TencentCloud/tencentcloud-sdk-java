@@ -434,6 +434,13 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     private ReservedNetResource [] ReservedNetResources;
 
     /**
+    * 是否支持物理复制
+    */
+    @SerializedName("IsPhysicalReplicationSupported")
+    @Expose
+    private Boolean IsPhysicalReplicationSupported;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1413,6 +1420,22 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 是否支持物理复制 
+     * @return IsPhysicalReplicationSupported 是否支持物理复制
+     */
+    public Boolean getIsPhysicalReplicationSupported() {
+        return this.IsPhysicalReplicationSupported;
+    }
+
+    /**
+     * Set 是否支持物理复制
+     * @param IsPhysicalReplicationSupported 是否支持物理复制
+     */
+    public void setIsPhysicalReplicationSupported(Boolean IsPhysicalReplicationSupported) {
+        this.IsPhysicalReplicationSupported = IsPhysicalReplicationSupported;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1616,6 +1639,9 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
                 this.ReservedNetResources[i] = new ReservedNetResource(source.ReservedNetResources[i]);
             }
         }
+        if (source.IsPhysicalReplicationSupported != null) {
+            this.IsPhysicalReplicationSupported = new Boolean(source.IsPhysicalReplicationSupported);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1682,6 +1708,7 @@ public class DescribeDBInstanceDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamSimple(map, prefix + "RsAccessStrategy", this.RsAccessStrategy);
         this.setParamArrayObj(map, prefix + "ReservedNetResources.", this.ReservedNetResources);
+        this.setParamSimple(map, prefix + "IsPhysicalReplicationSupported", this.IsPhysicalReplicationSupported);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
