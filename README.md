@@ -323,9 +323,9 @@ logger.info("hello world");
 
 ## 地域容灾
 
-从 `3.1.775`开始，腾讯云 JAVA SDK 支持地域容灾功能：
+从 `3.1.778`开始，腾讯云 JAVA SDK 支持地域容灾功能：
 
-当请求满足以下条件时：
+默认当请求满足以下条件时：
 
 1. 失败次数 >= 5 次
 2. 失败率 >= 75%
@@ -338,6 +338,13 @@ SDK 会自动将您请求的地域设置为备选地域。
     // 设置备用请求地址，不需要指定服务，SDK 会自动在头部加上服务名(如cvm)
     // 例如，设置为 ap-guangzhou.tencentcloudapi.com，则最终的请求为 cvm.ap-guangzhou.tencentcloudapi.com
     clientProfile.setBackupEndpoint("ap-guangzhou.tencentcloudapi.com");
+
+    // 自定义断路器条件
+    CircuitBreaker.Setting setting = new CircuitBreaker.Setting();
+    setting.maxFailNum = 6;
+    setting.maxFailPercentage = 0.8f;
+    CircuitBreaker rb = new CircuitBreaker(setting);
+    client.setRegionBreaker(rb);
 ```
 
 此功能仅支持单个客户端的同步请求。
