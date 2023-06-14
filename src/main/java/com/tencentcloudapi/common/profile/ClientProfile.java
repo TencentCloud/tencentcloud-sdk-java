@@ -43,6 +43,8 @@ public class ClientProfile {
    */
   private Language language;
   private boolean debug;
+
+  private String backupEndpoint;
   
   public ClientProfile(String signMethod, HttpProfile httpProfile) {
     if (signMethod == null || signMethod.isEmpty()) {
@@ -109,5 +111,13 @@ public class ClientProfile {
 
   public void setDebug(boolean debug) {
     this.debug = debug;
+  }
+
+  public String getBackupEndpoint() {
+    return backupEndpoint;
+  }
+
+  public void setBackupEndpoint(String backupEndpoint) {
+    this.backupEndpoint = backupEndpoint;
   }
 }

@@ -72,17 +72,11 @@ public class HttpConnection {
     this.client = this.client.newBuilder().sslSocketFactory(sslSocketFactory, trustManager).build();
   }
 
-  public Response doRequest(Request request) throws TencentCloudSDKException {
-    Response response = null;
-    try {
-      response = this.client.newCall(request).execute();
-    } catch (IOException e) {
-      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
-    }
-    return response;
+  public Response doRequest(Request request) throws IOException {
+    return this.client.newCall(request).execute();
   }
 
-  public Response getRequest(String url) throws TencentCloudSDKException {
+  public Response getRequest(String url) throws TencentCloudSDKException, IOException {
     Request request = null;
     try {
       request = new Request.Builder().url(url).get().build();
@@ -93,7 +87,7 @@ public class HttpConnection {
     return this.doRequest(request);
   }
 
-  public Response getRequest(String url, Headers headers) throws TencentCloudSDKException {
+  public Response getRequest(String url, Headers headers) throws TencentCloudSDKException, IOException {
     Request request = null;
     try {
       request = new Request.Builder().url(url).headers(headers).get().build();
@@ -104,7 +98,7 @@ public class HttpConnection {
     return this.doRequest(request);
   }
 
-  public Response postRequest(String url, String body) throws TencentCloudSDKException {
+  public Response postRequest(String url, String body) throws TencentCloudSDKException, IOException {
     MediaType contentType = MediaType.parse("application/x-www-form-urlencoded");
     Request request = null;
     try {
@@ -117,7 +111,7 @@ public class HttpConnection {
   }
 
   public Response postRequest(String url, String body, Headers headers)
-      throws TencentCloudSDKException {
+          throws TencentCloudSDKException, IOException {
     MediaType contentType = MediaType.parse(headers.get("Content-Type"));
     Request request = null;
     try {
@@ -135,7 +129,7 @@ public class HttpConnection {
   }
 
   public Response postRequest(String url, byte[] body, Headers headers)
-      throws TencentCloudSDKException {
+          throws TencentCloudSDKException, IOException {
     MediaType contentType = MediaType.parse(headers.get("Content-Type"));
     Request request = null;
     try {
