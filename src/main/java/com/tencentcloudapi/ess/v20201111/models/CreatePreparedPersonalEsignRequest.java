@@ -230,7 +230,9 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
      * @return SealImage 印章图片的base64
 注：已废弃
 请先通过UploadFiles接口上传文件，获取 FileId
+     * @deprecated
      */
+    @Deprecated
     public String getSealImage() {
         return this.SealImage;
     }
@@ -242,7 +244,9 @@ HONGKONG_MACAO_AND_TAIWAN 中国台湾
      * @param SealImage 印章图片的base64
 注：已废弃
 请先通过UploadFiles接口上传文件，获取 FileId
+     * @deprecated
      */
+    @Deprecated
     public void setSealImage(String SealImage) {
         this.SealImage = SealImage;
     }

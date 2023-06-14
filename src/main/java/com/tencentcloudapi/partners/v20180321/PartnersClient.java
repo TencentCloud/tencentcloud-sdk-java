@@ -242,50 +242,6 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-
-【该接口已下线，请使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
-     * @param req DescribeAgentDealsCacheRequest
-     * @return DescribeAgentDealsCacheResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAgentDealsCacheResponse DescribeAgentDealsCache(DescribeAgentDealsCacheRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentDealsCacheResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentDealsCacheResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAgentDealsCache");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-
-【该接口已下线，请切换使用升级版本DescribeAgentPayDealsV2】可以查询代理商代付的所有订单
-     * @param req DescribeAgentPayDealsRequest
-     * @return DescribeAgentPayDealsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAgentPayDealsResponse DescribeAgentPayDeals(DescribeAgentPayDealsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentPayDealsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentPayDealsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAgentPayDeals");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *可以查询代理商代付的预付费订单
      * @param req DescribeAgentPayDealsV2Request
      * @return DescribeAgentPayDealsV2Response
@@ -306,28 +262,6 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
-     *已提供新接口并推动切换，改切口目前白名单限制所有访问，申请下线
-
-【该接口已下线，请切换使用升级版本DescribeAgentSelfPayDealsV2】可以查询代理商下指定客户的自付订单
-     * @param req DescribeAgentSelfPayDealsRequest
-     * @return DescribeAgentSelfPayDealsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAgentSelfPayDealsResponse DescribeAgentSelfPayDeals(DescribeAgentSelfPayDealsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAgentSelfPayDealsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAgentSelfPayDeals");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询代理商名下指定代客的自付订单（预付费）
      * @param req DescribeAgentSelfPayDealsV2Request
      * @return DescribeAgentSelfPayDealsV2Response
@@ -340,28 +274,6 @@ public class PartnersClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsV2Response>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAgentSelfPayDealsV2");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *已提供新接口并推进切换，白名单禁用控制访问观察后无反馈，可以下线
-
-【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
-     * @param req DescribeClientBalanceRequest
-     * @return DescribeClientBalanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeClientBalanceResponse DescribeClientBalance(DescribeClientBalanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeClientBalanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeClientBalance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

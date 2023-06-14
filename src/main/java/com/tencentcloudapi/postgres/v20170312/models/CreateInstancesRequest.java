@@ -238,6 +238,13 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
     private String DBEngineConfig;
 
     /**
+    * 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private String SyncMode;
+
+    /**
      * Get 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。 
      * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
      */
@@ -749,6 +756,22 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
         this.DBEngineConfig = DBEngineConfig;
     }
 
+    /**
+     * Get 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async 
+     * @return SyncMode 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+     */
+    public String getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+     * @param SyncMode 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+     */
+    public void setSyncMode(String SyncMode) {
+        this.SyncMode = SyncMode;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -856,6 +879,9 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
         if (source.DBEngineConfig != null) {
             this.DBEngineConfig = new String(source.DBEngineConfig);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new String(source.SyncMode);
+        }
     }
 
 
@@ -892,6 +918,7 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
         this.setParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
         this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

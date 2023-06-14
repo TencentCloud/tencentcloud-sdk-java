@@ -1895,28 +1895,6 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *产品下线了，对应的接口也要下线。
-
-更新Vhost
-     * @param req ModifyAMQPVHostRequest
-     * @return ModifyAMQPVHostResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAMQPVHostResponse ModifyAMQPVHost(ModifyAMQPVHostRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAMQPVHostResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAMQPVHostResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAMQPVHost");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *更新集群信息
      * @param req ModifyClusterRequest
      * @return ModifyClusterResponse

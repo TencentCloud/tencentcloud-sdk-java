@@ -239,7 +239,7 @@ public class SsaClient extends AbstractClient{
     }
 
     /**
-     *域名列表信息啊
+     *域名列表信息
      * @param req DescribeDomainListRequest
      * @return DescribeDomainListResponse
      * @throws TencentCloudSDKException

@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentDealsCacheResponse extends AbstractModel{
+public class DescribeOrganizationFinancialByMonthResponse extends AbstractModel{
 
     /**
-    * 订单数组
+    * 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("AgentDealSet")
+    @SerializedName("Items")
     @Expose
-    private AgentDealElem [] AgentDealSet;
-
-    /**
-    * 符合条件的订单总数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private OrgFinancialByMonth [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeAgentDealsCacheResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单数组 
-     * @return AgentDealSet 订单数组
+     * Get 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public AgentDealElem [] getAgentDealSet() {
-        return this.AgentDealSet;
+    public OrgFinancialByMonth [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 订单数组
-     * @param AgentDealSet 订单数组
+     * Set 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 产品消耗详情。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setAgentDealSet(AgentDealElem [] AgentDealSet) {
-        this.AgentDealSet = AgentDealSet;
-    }
-
-    /**
-     * Get 符合条件的订单总数量 
-     * @return TotalCount 符合条件的订单总数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的订单总数量
-     * @param TotalCount 符合条件的订单总数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setItems(OrgFinancialByMonth [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -91,22 +73,19 @@ public class DescribeAgentDealsCacheResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAgentDealsCacheResponse() {
+    public DescribeOrganizationFinancialByMonthResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAgentDealsCacheResponse(DescribeAgentDealsCacheResponse source) {
-        if (source.AgentDealSet != null) {
-            this.AgentDealSet = new AgentDealElem[source.AgentDealSet.length];
-            for (int i = 0; i < source.AgentDealSet.length; i++) {
-                this.AgentDealSet[i] = new AgentDealElem(source.AgentDealSet[i]);
+    public DescribeOrganizationFinancialByMonthResponse(DescribeOrganizationFinancialByMonthResponse source) {
+        if (source.Items != null) {
+            this.Items = new OrgFinancialByMonth[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new OrgFinancialByMonth(source.Items[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +97,7 @@ public class DescribeAgentDealsCacheResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AgentDealSet.", this.AgentDealSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

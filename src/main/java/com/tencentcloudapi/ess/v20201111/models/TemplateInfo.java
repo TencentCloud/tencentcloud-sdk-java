@@ -169,6 +169,22 @@ public class TemplateInfo extends AbstractModel{
     private Boolean Published;
 
     /**
+    * 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateSeals")
+    @Expose
+    private SealInfo [] TemplateSeals;
+
+    /**
+    * 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Seals")
+    @Expose
+    private SealInfo [] Seals;
+
+    /**
      * Get 模板ID 
      * @return TemplateId 模板ID
      */
@@ -512,6 +528,50 @@ public class TemplateInfo extends AbstractModel{
         this.Published = Published;
     }
 
+    /**
+     * Get 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateSeals 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SealInfo [] getTemplateSeals() {
+        return this.TemplateSeals;
+    }
+
+    /**
+     * Set 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateSeals 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateSeals(SealInfo [] TemplateSeals) {
+        this.TemplateSeals = TemplateSeals;
+    }
+
+    /**
+     * Get 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Seals 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public SealInfo [] getSeals() {
+        return this.Seals;
+    }
+
+    /**
+     * Set 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Seals 模板内部指定的印章列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
+     */
+    @Deprecated
+    public void setSeals(SealInfo [] Seals) {
+        this.Seals = Seals;
+    }
+
     public TemplateInfo() {
     }
 
@@ -601,6 +661,18 @@ public class TemplateInfo extends AbstractModel{
         if (source.Published != null) {
             this.Published = new Boolean(source.Published);
         }
+        if (source.TemplateSeals != null) {
+            this.TemplateSeals = new SealInfo[source.TemplateSeals.length];
+            for (int i = 0; i < source.TemplateSeals.length; i++) {
+                this.TemplateSeals[i] = new SealInfo(source.TemplateSeals[i]);
+            }
+        }
+        if (source.Seals != null) {
+            this.Seals = new SealInfo[source.Seals.length];
+            for (int i = 0; i < source.Seals.length; i++) {
+                this.Seals[i] = new SealInfo(source.Seals[i]);
+            }
+        }
     }
 
 
@@ -628,6 +700,8 @@ public class TemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
         this.setParamSimple(map, prefix + "TemplateVersion", this.TemplateVersion);
         this.setParamSimple(map, prefix + "Published", this.Published);
+        this.setParamArrayObj(map, prefix + "TemplateSeals.", this.TemplateSeals);
+        this.setParamArrayObj(map, prefix + "Seals.", this.Seals);
 
     }
 }

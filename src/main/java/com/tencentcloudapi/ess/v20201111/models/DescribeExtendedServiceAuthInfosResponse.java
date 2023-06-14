@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentSelfPayDealsResponse extends AbstractModel{
+public class DescribeExtendedServiceAuthInfosResponse extends AbstractModel{
 
     /**
-    * 订单数组
+    * 授权服务信息列表
     */
-    @SerializedName("AgentPayDealSet")
+    @SerializedName("AuthInfoList")
     @Expose
-    private AgentDealElem [] AgentPayDealSet;
-
-    /**
-    * 符合条件的订单总数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private ExtendAuthInfo [] AuthInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeAgentSelfPayDealsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 订单数组 
-     * @return AgentPayDealSet 订单数组
+     * Get 授权服务信息列表 
+     * @return AuthInfoList 授权服务信息列表
      */
-    public AgentDealElem [] getAgentPayDealSet() {
-        return this.AgentPayDealSet;
+    public ExtendAuthInfo [] getAuthInfoList() {
+        return this.AuthInfoList;
     }
 
     /**
-     * Set 订单数组
-     * @param AgentPayDealSet 订单数组
+     * Set 授权服务信息列表
+     * @param AuthInfoList 授权服务信息列表
      */
-    public void setAgentPayDealSet(AgentDealElem [] AgentPayDealSet) {
-        this.AgentPayDealSet = AgentPayDealSet;
-    }
-
-    /**
-     * Get 符合条件的订单总数量 
-     * @return TotalCount 符合条件的订单总数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的订单总数量
-     * @param TotalCount 符合条件的订单总数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setAuthInfoList(ExtendAuthInfo [] AuthInfoList) {
+        this.AuthInfoList = AuthInfoList;
     }
 
     /**
@@ -91,22 +68,19 @@ public class DescribeAgentSelfPayDealsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAgentSelfPayDealsResponse() {
+    public DescribeExtendedServiceAuthInfosResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAgentSelfPayDealsResponse(DescribeAgentSelfPayDealsResponse source) {
-        if (source.AgentPayDealSet != null) {
-            this.AgentPayDealSet = new AgentDealElem[source.AgentPayDealSet.length];
-            for (int i = 0; i < source.AgentPayDealSet.length; i++) {
-                this.AgentPayDealSet[i] = new AgentDealElem(source.AgentPayDealSet[i]);
+    public DescribeExtendedServiceAuthInfosResponse(DescribeExtendedServiceAuthInfosResponse source) {
+        if (source.AuthInfoList != null) {
+            this.AuthInfoList = new ExtendAuthInfo[source.AuthInfoList.length];
+            for (int i = 0; i < source.AuthInfoList.length; i++) {
+                this.AuthInfoList[i] = new ExtendAuthInfo(source.AuthInfoList[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +92,7 @@ public class DescribeAgentSelfPayDealsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AgentPayDealSet.", this.AgentPayDealSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "AuthInfoList.", this.AuthInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

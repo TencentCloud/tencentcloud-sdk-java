@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientBalanceRequest extends AbstractModel{
+public class SealInfo extends AbstractModel{
 
-    /**
-    * 客户(代客)账号ID
-    */
-    @SerializedName("ClientUin")
-    @Expose
-    private String ClientUin;
-
-    /**
-     * Get 客户(代客)账号ID 
-     * @return ClientUin 客户(代客)账号ID
-     */
-    public String getClientUin() {
-        return this.ClientUin;
-    }
-
-    /**
-     * Set 客户(代客)账号ID
-     * @param ClientUin 客户(代客)账号ID
-     */
-    public void setClientUin(String ClientUin) {
-        this.ClientUin = ClientUin;
-    }
-
-    public DescribeClientBalanceRequest() {
+    public SealInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClientBalanceRequest(DescribeClientBalanceRequest source) {
-        if (source.ClientUin != null) {
-            this.ClientUin = new String(source.ClientUin);
-        }
+    public SealInfo(SealInfo source) {
     }
 
 
@@ -63,7 +37,6 @@ public class DescribeClientBalanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
 
     }
 }

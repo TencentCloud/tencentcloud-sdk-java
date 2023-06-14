@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAgentPayDealsResponse extends AbstractModel{
-
-    /**
-    * 订单数组
-    */
-    @SerializedName("AgentPayDealSet")
-    @Expose
-    private AgentDealElem [] AgentPayDealSet;
-
-    /**
-    * 符合条件的订单总数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class DeleteEndPointResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeAgentPayDealsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 订单数组 
-     * @return AgentPayDealSet 订单数组
-     */
-    public AgentDealElem [] getAgentPayDealSet() {
-        return this.AgentPayDealSet;
-    }
-
-    /**
-     * Set 订单数组
-     * @param AgentPayDealSet 订单数组
-     */
-    public void setAgentPayDealSet(AgentDealElem [] AgentPayDealSet) {
-        this.AgentPayDealSet = AgentPayDealSet;
-    }
-
-    /**
-     * Get 符合条件的订单总数量 
-     * @return TotalCount 符合条件的订单总数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 符合条件的订单总数量
-     * @param TotalCount 符合条件的订单总数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,23 +45,14 @@ public class DescribeAgentPayDealsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAgentPayDealsResponse() {
+    public DeleteEndPointResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAgentPayDealsResponse(DescribeAgentPayDealsResponse source) {
-        if (source.AgentPayDealSet != null) {
-            this.AgentPayDealSet = new AgentDealElem[source.AgentPayDealSet.length];
-            for (int i = 0; i < source.AgentPayDealSet.length; i++) {
-                this.AgentPayDealSet[i] = new AgentDealElem(source.AgentPayDealSet[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public DeleteEndPointResponse(DeleteEndPointResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeAgentPayDealsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "AgentPayDealSet.", this.AgentPayDealSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

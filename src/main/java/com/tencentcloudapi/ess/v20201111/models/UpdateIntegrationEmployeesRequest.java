@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdateIntegrationEmployeesRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 操作人信息，userId必填
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 员工信息
+    * 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
     */
     @SerializedName("Employees")
     @Expose
@@ -44,32 +44,32 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 操作人信息，userId必填 
+     * @return Operator 操作人信息，userId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 操作人信息，userId必填
+     * @param Operator 操作人信息，userId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 员工信息 
-     * @return Employees 员工信息
+     * Get 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持 
+     * @return Employees 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 员工信息
-     * @param Employees 员工信息
+     * Set 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+     * @param Employees 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

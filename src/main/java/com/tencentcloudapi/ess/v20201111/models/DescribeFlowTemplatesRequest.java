@@ -65,9 +65,7 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+    * ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
     */
     @SerializedName("ApplicationId")
@@ -193,13 +191,9 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
-     * Get 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * Get ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表 
-     * @return ApplicationId 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * @return ApplicationId ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      */
     public String getApplicationId() {
@@ -207,13 +201,9 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
-     * Set 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * Set ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
-     * @param ApplicationId 这个参数跟下面的IsChannel参数配合使用。
-IsChannel=false时，ApplicationId参数不起任何作用。
-IsChannel=true时，ApplicationId为空，查询所有第三方应用集成平台企业模板列表；ApplicationId不为空，查询指定应用下的模板列表
+     * @param ApplicationId ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      */
     public void setApplicationId(String ApplicationId) {
@@ -225,7 +215,9 @@ ApplicationId为空，查询所有应用下的模板列表
 为true，查询第三方应用集成平台企业模板库管理列表 
      * @return IsChannel 默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIsChannel() {
         return this.IsChannel;
     }
@@ -235,7 +227,9 @@ ApplicationId为空，查询所有应用下的模板列表
 为true，查询第三方应用集成平台企业模板库管理列表
      * @param IsChannel 默认为false，查询SaaS模板库列表；
 为true，查询第三方应用集成平台企业模板库管理列表
+     * @deprecated
      */
+    @Deprecated
     public void setIsChannel(Boolean IsChannel) {
         this.IsChannel = IsChannel;
     }

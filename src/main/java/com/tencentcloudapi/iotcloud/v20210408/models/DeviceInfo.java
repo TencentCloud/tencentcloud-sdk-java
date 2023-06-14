@@ -200,6 +200,14 @@ public class DeviceInfo extends AbstractModel{
     private Long FirmwareUpdateTime;
 
     /**
+    * 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
      * Get 设备名 
      * @return DeviceName 设备名
      */
@@ -619,6 +627,26 @@ public class DeviceInfo extends AbstractModel{
         this.FirmwareUpdateTime = FirmwareUpdateTime;
     }
 
+    /**
+     * Get 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建者 Uin
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
     public DeviceInfo() {
     }
 
@@ -705,6 +733,9 @@ public class DeviceInfo extends AbstractModel{
         if (source.FirmwareUpdateTime != null) {
             this.FirmwareUpdateTime = new Long(source.FirmwareUpdateTime);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
     }
 
 
@@ -736,6 +767,7 @@ public class DeviceInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
 
     }
 }

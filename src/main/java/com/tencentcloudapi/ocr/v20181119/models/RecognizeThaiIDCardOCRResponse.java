@@ -58,14 +58,14 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
     private String Birthday;
 
     /**
-    * 首次领用日期
+    * 签发日期
     */
     @SerializedName("IssueDate")
     @Expose
     private String IssueDate;
 
     /**
-    * 签发日期
+    * 到期日期
     */
     @SerializedName("ExpirationDate")
     @Expose
@@ -173,32 +173,32 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 首次领用日期 
-     * @return IssueDate 首次领用日期
+     * Get 签发日期 
+     * @return IssueDate 签发日期
      */
     public String getIssueDate() {
         return this.IssueDate;
     }
 
     /**
-     * Set 首次领用日期
-     * @param IssueDate 首次领用日期
+     * Set 签发日期
+     * @param IssueDate 签发日期
      */
     public void setIssueDate(String IssueDate) {
         this.IssueDate = IssueDate;
     }
 
     /**
-     * Get 签发日期 
-     * @return ExpirationDate 签发日期
+     * Get 到期日期 
+     * @return ExpirationDate 到期日期
      */
     public String getExpirationDate() {
         return this.ExpirationDate;
     }
 
     /**
-     * Set 签发日期
-     * @param ExpirationDate 签发日期
+     * Set 到期日期
+     * @param ExpirationDate 到期日期
      */
     public void setExpirationDate(String ExpirationDate) {
         this.ExpirationDate = ExpirationDate;

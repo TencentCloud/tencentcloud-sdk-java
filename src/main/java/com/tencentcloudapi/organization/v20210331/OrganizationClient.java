@@ -240,6 +240,66 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *以成员维度获取组织财务信息
+     * @param req DescribeOrganizationFinancialByMemberRequest
+     * @return DescribeOrganizationFinancialByMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationFinancialByMemberResponse DescribeOrganizationFinancialByMember(DescribeOrganizationFinancialByMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationFinancialByMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationFinancialByMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationFinancialByMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *以月维度获取组织财务信息趋势
+     * @param req DescribeOrganizationFinancialByMonthRequest
+     * @return DescribeOrganizationFinancialByMonthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationFinancialByMonthResponse DescribeOrganizationFinancialByMonth(DescribeOrganizationFinancialByMonthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationFinancialByMonthResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationFinancialByMonthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationFinancialByMonth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *以产品维度获取组织财务信息
+     * @param req DescribeOrganizationFinancialByProductRequest
+     * @return DescribeOrganizationFinancialByProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationFinancialByProductResponse DescribeOrganizationFinancialByProduct(DescribeOrganizationFinancialByProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrganizationFinancialByProductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrganizationFinancialByProductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrganizationFinancialByProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取组织成员被绑定授权关系的子账号列表
      * @param req DescribeOrganizationMemberAuthAccountsRequest
      * @return DescribeOrganizationMemberAuthAccountsResponse

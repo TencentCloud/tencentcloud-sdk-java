@@ -65,7 +65,7 @@ public class ModifyShipperRequest extends AbstractModel{
     private Long Interval;
 
     /**
-    * 投递的文件的最大值，单位 MB，默认256，范围 100-256
+    * 投递的文件的最大值，单位 MB，默认256，范围 5-256
     */
     @SerializedName("MaxSize")
     @Expose
@@ -203,16 +203,16 @@ public class ModifyShipperRequest extends AbstractModel{
     }
 
     /**
-     * Get 投递的文件的最大值，单位 MB，默认256，范围 100-256 
-     * @return MaxSize 投递的文件的最大值，单位 MB，默认256，范围 100-256
+     * Get 投递的文件的最大值，单位 MB，默认256，范围 5-256 
+     * @return MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set 投递的文件的最大值，单位 MB，默认256，范围 100-256
-     * @param MaxSize 投递的文件的最大值，单位 MB，默认256，范围 100-256
+     * Set 投递的文件的最大值，单位 MB，默认256，范围 5-256
+     * @param MaxSize 投递的文件的最大值，单位 MB，默认256，范围 5-256
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

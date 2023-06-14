@@ -99,6 +99,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *删除终端节点
+     * @param req DeleteEndPointRequest
+     * @return DeleteEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEndPointResponse DeleteEndPoint(DeleteEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除私有域解析账号
      * @param req DeletePrivateDNSAccountRequest
      * @return DeletePrivateDNSAccountResponse

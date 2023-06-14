@@ -667,6 +667,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询企业扩展服务授权信息，目前支持查询：企业静默签，企业与港澳台居民签署合同，使用手机号验证签署方身份，骑缝章，批量签署能力是否已经开通
+     * @param req DescribeExtendedServiceAuthInfosRequest
+     * @return DescribeExtendedServiceAuthInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExtendedServiceAuthInfosResponse DescribeExtendedServiceAuthInfos(DescribeExtendedServiceAuthInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeExtendedServiceAuthInfosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeExtendedServiceAuthInfosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeExtendedServiceAuthInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文件下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
      * @param req DescribeFileUrlsRequest

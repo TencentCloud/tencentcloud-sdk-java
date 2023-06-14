@@ -23,70 +23,70 @@ import java.util.HashMap;
 public class DescribeDomainListRequest extends AbstractModel{
 
     /**
-    * -
+    * 起始，从0开始(只支持32位)
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * -
+    * limit,最大值200(只支持32位)
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * -
+    * 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
     */
     @SerializedName("AssetBasicType")
     @Expose
     private Long AssetBasicType;
 
     /**
-    * -
+    * 过滤条件
     */
     @SerializedName("Filter")
     @Expose
     private QueryFilterV3 [] Filter;
 
     /**
-    * -
+    * 排序
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * -
+    * 排序字段
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * -
+    * 导出字段
     */
     @SerializedName("Field")
     @Expose
     private String [] Field;
 
     /**
-    * -
+    * 时间范围(只支持32位)
     */
     @SerializedName("TimeRange")
     @Expose
     private Long TimeRange;
 
     /**
-    * -
+    * 逻辑字段(只支持32位)
     */
     @SerializedName("Logic")
     @Expose
     private Long Logic;
 
     /**
-    * -
+    * 聚合字段  
     */
     @SerializedName("GroupByField")
     @Expose
@@ -100,167 +100,167 @@ public class DescribeDomainListRequest extends AbstractModel{
     private String Task;
 
     /**
-    * -
+    * 0:cfw 1:vss 2.soc 3.waf 4.cwp
     */
     @SerializedName("RequestFrom")
     @Expose
     private Long RequestFrom;
 
     /**
-     * Get - 
-     * @return Offset -
+     * Get 起始，从0开始(只支持32位) 
+     * @return Offset 起始，从0开始(只支持32位)
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set -
-     * @param Offset -
+     * Set 起始，从0开始(只支持32位)
+     * @param Offset 起始，从0开始(只支持32位)
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get - 
-     * @return Limit -
+     * Get limit,最大值200(只支持32位) 
+     * @return Limit limit,最大值200(只支持32位)
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set -
-     * @param Limit -
+     * Set limit,最大值200(只支持32位)
+     * @param Limit limit,最大值200(只支持32位)
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get - 
-     * @return AssetBasicType -
+     * Get 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位) 
+     * @return AssetBasicType 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
      */
     public Long getAssetBasicType() {
         return this.AssetBasicType;
     }
 
     /**
-     * Set -
-     * @param AssetBasicType -
+     * Set 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
+     * @param AssetBasicType 资产大类，根据此字段时返回不同的子结构,AssetBasicType(只支持32位)
      */
     public void setAssetBasicType(Long AssetBasicType) {
         this.AssetBasicType = AssetBasicType;
     }
 
     /**
-     * Get - 
-     * @return Filter -
+     * Get 过滤条件 
+     * @return Filter 过滤条件
      */
     public QueryFilterV3 [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set -
-     * @param Filter -
+     * Set 过滤条件
+     * @param Filter 过滤条件
      */
     public void setFilter(QueryFilterV3 [] Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get - 
-     * @return Order -
+     * Get 排序 
+     * @return Order 排序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set -
-     * @param Order -
+     * Set 排序
+     * @param Order 排序
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get - 
-     * @return By -
+     * Get 排序字段 
+     * @return By 排序字段
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set -
-     * @param By -
+     * Set 排序字段
+     * @param By 排序字段
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get - 
-     * @return Field -
+     * Get 导出字段 
+     * @return Field 导出字段
      */
     public String [] getField() {
         return this.Field;
     }
 
     /**
-     * Set -
-     * @param Field -
+     * Set 导出字段
+     * @param Field 导出字段
      */
     public void setField(String [] Field) {
         this.Field = Field;
     }
 
     /**
-     * Get - 
-     * @return TimeRange -
+     * Get 时间范围(只支持32位) 
+     * @return TimeRange 时间范围(只支持32位)
      */
     public Long getTimeRange() {
         return this.TimeRange;
     }
 
     /**
-     * Set -
-     * @param TimeRange -
+     * Set 时间范围(只支持32位)
+     * @param TimeRange 时间范围(只支持32位)
      */
     public void setTimeRange(Long TimeRange) {
         this.TimeRange = TimeRange;
     }
 
     /**
-     * Get - 
-     * @return Logic -
+     * Get 逻辑字段(只支持32位) 
+     * @return Logic 逻辑字段(只支持32位)
      */
     public Long getLogic() {
         return this.Logic;
     }
 
     /**
-     * Set -
-     * @param Logic -
+     * Set 逻辑字段(只支持32位)
+     * @param Logic 逻辑字段(只支持32位)
      */
     public void setLogic(Long Logic) {
         this.Logic = Logic;
     }
 
     /**
-     * Get - 
-     * @return GroupByField -
+     * Get 聚合字段   
+     * @return GroupByField 聚合字段  
      */
     public String getGroupByField() {
         return this.GroupByField;
     }
 
     /**
-     * Set -
-     * @param GroupByField -
+     * Set 聚合字段  
+     * @param GroupByField 聚合字段  
      */
     public void setGroupByField(String GroupByField) {
         this.GroupByField = GroupByField;
@@ -283,16 +283,16 @@ public class DescribeDomainListRequest extends AbstractModel{
     }
 
     /**
-     * Get - 
-     * @return RequestFrom -
+     * Get 0:cfw 1:vss 2.soc 3.waf 4.cwp 
+     * @return RequestFrom 0:cfw 1:vss 2.soc 3.waf 4.cwp
      */
     public Long getRequestFrom() {
         return this.RequestFrom;
     }
 
     /**
-     * Set -
-     * @param RequestFrom -
+     * Set 0:cfw 1:vss 2.soc 3.waf 4.cwp
+     * @param RequestFrom 0:cfw 1:vss 2.soc 3.waf 4.cwp
      */
     public void setRequestFrom(Long RequestFrom) {
         this.RequestFrom = RequestFrom;

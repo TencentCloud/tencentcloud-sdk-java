@@ -2626,6 +2626,29 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *将正在运行的拉流转推任务进行重启。
+注意：
+1. 重启任务会造成推流中断。
+2. 点播源任务的重启，会根据VodRefreshType决定是续播还是从头开始播。
+     * @param req RestartLivePullStreamTaskRequest
+     * @return RestartLivePullStreamTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartLivePullStreamTaskResponse RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartLivePullStreamTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartLivePullStreamTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *取消直播流设置的延时配置，恢复实时直播画面。
      * @param req ResumeDelayLiveStreamRequest
      * @return ResumeDelayLiveStreamResponse

@@ -121,12 +121,109 @@ public class DomainInfo extends AbstractModel{
     private Long WeekPwdCount;
 
     /**
-    * -
+    * 资产归属
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetLocation")
     @Expose
     private String AssetLocation;
+
+    /**
+    * 网络风险
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkRisk")
+    @Expose
+    private Long NetworkRisk;
+
+    /**
+    * 网络攻击
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAttack")
+    @Expose
+    private Long NetworkAttack;
+
+    /**
+    * bot访问
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotVisit")
+    @Expose
+    private Long BotVisit;
+
+    /**
+    * 网络访问
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkAccess")
+    @Expose
+    private Long NetworkAccess;
+
+    /**
+    * 资产创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * waf状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WafStatus")
+    @Expose
+    private Long WafStatus;
+
+    /**
+    * 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastScanTime")
+    @Expose
+    private String LastScanTime;
+
+    /**
+    * 资产id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetId")
+    @Expose
+    private String [] AssetId;
+
+    /**
+    * 资产名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssetName")
+    @Expose
+    private String [] AssetName;
+
+    /**
+    * 类别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
+    * 是否核心资产
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsNotCore")
+    @Expose
+    private Long IsNotCore;
+
+    /**
+    * 是否云外资产
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCloud")
+    @Expose
+    private Long IsCloud;
 
     /**
      * Get 域名
@@ -365,9 +462,9 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get -
+     * Get 资产归属
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AssetLocation -
+     * @return AssetLocation 资产归属
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetLocation() {
@@ -375,13 +472,257 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Set -
+     * Set 资产归属
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AssetLocation -
+     * @param AssetLocation 资产归属
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetLocation(String AssetLocation) {
         this.AssetLocation = AssetLocation;
+    }
+
+    /**
+     * Get 网络风险
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkRisk 网络风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNetworkRisk() {
+        return this.NetworkRisk;
+    }
+
+    /**
+     * Set 网络风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkRisk 网络风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkRisk(Long NetworkRisk) {
+        this.NetworkRisk = NetworkRisk;
+    }
+
+    /**
+     * Get 网络攻击
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAttack 网络攻击
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNetworkAttack() {
+        return this.NetworkAttack;
+    }
+
+    /**
+     * Set 网络攻击
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAttack 网络攻击
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAttack(Long NetworkAttack) {
+        this.NetworkAttack = NetworkAttack;
+    }
+
+    /**
+     * Get bot访问
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotVisit bot访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotVisit() {
+        return this.BotVisit;
+    }
+
+    /**
+     * Set bot访问
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotVisit bot访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotVisit(Long BotVisit) {
+        this.BotVisit = BotVisit;
+    }
+
+    /**
+     * Get 网络访问
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkAccess 网络访问
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNetworkAccess() {
+        return this.NetworkAccess;
+    }
+
+    /**
+     * Set 网络访问
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkAccess 网络访问
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkAccess(Long NetworkAccess) {
+        this.NetworkAccess = NetworkAccess;
+    }
+
+    /**
+     * Get 资产创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 资产创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 资产创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 资产创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get waf状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WafStatus waf状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWafStatus() {
+        return this.WafStatus;
+    }
+
+    /**
+     * Set waf状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WafStatus waf状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWafStatus(Long WafStatus) {
+        this.WafStatus = WafStatus;
+    }
+
+    /**
+     * Get 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastScanTime 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastScanTime() {
+        return this.LastScanTime;
+    }
+
+    /**
+     * Set 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastScanTime 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastScanTime(String LastScanTime) {
+        this.LastScanTime = LastScanTime;
+    }
+
+    /**
+     * Get 资产id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetId 资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAssetId() {
+        return this.AssetId;
+    }
+
+    /**
+     * Set 资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetId 资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetId(String [] AssetId) {
+        this.AssetId = AssetId;
+    }
+
+    /**
+     * Get 资产名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssetName 资产名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAssetName() {
+        return this.AssetName;
+    }
+
+    /**
+     * Set 资产名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssetName 资产名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssetName(String [] AssetName) {
+        this.AssetName = AssetName;
+    }
+
+    /**
+     * Get 类别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceType 类别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set 类别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceType 类别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
+     * Get 是否核心资产
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsNotCore 是否核心资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsNotCore() {
+        return this.IsNotCore;
+    }
+
+    /**
+     * Set 是否核心资产
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsNotCore 是否核心资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsNotCore(Long IsNotCore) {
+        this.IsNotCore = IsNotCore;
+    }
+
+    /**
+     * Get 是否云外资产
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCloud 是否云外资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsCloud() {
+        return this.IsCloud;
+    }
+
+    /**
+     * Set 是否云外资产
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCloud 是否云外资产
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCloud(Long IsCloud) {
+        this.IsCloud = IsCloud;
     }
 
     public DomainInfo() {
@@ -443,6 +784,48 @@ public class DomainInfo extends AbstractModel{
         if (source.AssetLocation != null) {
             this.AssetLocation = new String(source.AssetLocation);
         }
+        if (source.NetworkRisk != null) {
+            this.NetworkRisk = new Long(source.NetworkRisk);
+        }
+        if (source.NetworkAttack != null) {
+            this.NetworkAttack = new Long(source.NetworkAttack);
+        }
+        if (source.BotVisit != null) {
+            this.BotVisit = new Long(source.BotVisit);
+        }
+        if (source.NetworkAccess != null) {
+            this.NetworkAccess = new Long(source.NetworkAccess);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.WafStatus != null) {
+            this.WafStatus = new Long(source.WafStatus);
+        }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+        if (source.AssetId != null) {
+            this.AssetId = new String[source.AssetId.length];
+            for (int i = 0; i < source.AssetId.length; i++) {
+                this.AssetId[i] = new String(source.AssetId[i]);
+            }
+        }
+        if (source.AssetName != null) {
+            this.AssetName = new String[source.AssetName.length];
+            for (int i = 0; i < source.AssetName.length; i++) {
+                this.AssetName[i] = new String(source.AssetName[i]);
+            }
+        }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
+        if (source.IsNotCore != null) {
+            this.IsNotCore = new Long(source.IsNotCore);
+        }
+        if (source.IsCloud != null) {
+            this.IsCloud = new Long(source.IsCloud);
+        }
     }
 
 
@@ -464,6 +847,18 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PortRisk", this.PortRisk);
         this.setParamSimple(map, prefix + "WeekPwdCount", this.WeekPwdCount);
         this.setParamSimple(map, prefix + "AssetLocation", this.AssetLocation);
+        this.setParamSimple(map, prefix + "NetworkRisk", this.NetworkRisk);
+        this.setParamSimple(map, prefix + "NetworkAttack", this.NetworkAttack);
+        this.setParamSimple(map, prefix + "BotVisit", this.BotVisit);
+        this.setParamSimple(map, prefix + "NetworkAccess", this.NetworkAccess);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "WafStatus", this.WafStatus);
+        this.setParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+        this.setParamArraySimple(map, prefix + "AssetId.", this.AssetId);
+        this.setParamArraySimple(map, prefix + "AssetName.", this.AssetName);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "IsNotCore", this.IsNotCore);
+        this.setParamSimple(map, prefix + "IsCloud", this.IsCloud);
 
     }
 }

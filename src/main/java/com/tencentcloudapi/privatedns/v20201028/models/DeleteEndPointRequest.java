@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAMQPVHostResponse extends AbstractModel{
+public class DeleteEndPointRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 终端节点ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("EndPointId")
     @Expose
-    private String RequestId;
+    private String EndPointId;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 终端节点ID 
+     * @return EndPointId 终端节点ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getEndPointId() {
+        return this.EndPointId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 终端节点ID
+     * @param EndPointId 终端节点ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setEndPointId(String EndPointId) {
+        this.EndPointId = EndPointId;
     }
 
-    public ModifyAMQPVHostResponse() {
+    public DeleteEndPointRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAMQPVHostResponse(ModifyAMQPVHostResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public DeleteEndPointRequest(DeleteEndPointRequest source) {
+        if (source.EndPointId != null) {
+            this.EndPointId = new String(source.EndPointId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ModifyAMQPVHostResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "EndPointId", this.EndPointId);
 
     }
 }

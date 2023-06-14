@@ -24,7 +24,7 @@ public class InvoiceItem extends AbstractModel{
 
     /**
     * 识别结果。
-OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
     */
@@ -83,14 +83,14 @@ FailedOperation.UnKnowError：表示识别失败；
     private Long Page;
 
     /**
-    * 发票详细类型，详见下方 SubType 返回值说明
+    * 发票详细类型，详见上方 SubType 返回值说明
     */
     @SerializedName("SubType")
     @Expose
     private String SubType;
 
     /**
-    * 发票类型描述，详见下方 TypeDescription  返回值说明
+    * 发票类型描述，详见上方 TypeDescription  返回值说明
     */
     @SerializedName("TypeDescription")
     @Expose
@@ -104,7 +104,7 @@ FailedOperation.UnKnowError：表示识别失败；
     private String CutImage;
 
     /**
-    * 发票详细类型描述，详见下方 SubType 返回值说明
+    * 发票详细类型描述，详见上方 SubType 返回值说明
     */
     @SerializedName("SubTypeDescription")
     @Expose
@@ -112,11 +112,11 @@ FailedOperation.UnKnowError：表示识别失败；
 
     /**
      * Get 识别结果。
-OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。 
      * @return Code 识别结果。
-OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      */
@@ -126,11 +126,11 @@ FailedOperation.UnKnowError：表示识别失败；
 
     /**
      * Set 识别结果。
-OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      * @param Code 识别结果。
-OK：表示识别成功；FailedOperation.UnsupportedInvioce：表示不支持识别；
+OK：表示识别成功；FailedOperation.UnsupportedInvoice：表示不支持识别；
 FailedOperation.UnKnowError：表示识别失败；
 其它错误码见各个票据接口的定义。
      */
@@ -279,32 +279,32 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 发票详细类型，详见下方 SubType 返回值说明 
-     * @return SubType 发票详细类型，详见下方 SubType 返回值说明
+     * Get 发票详细类型，详见上方 SubType 返回值说明 
+     * @return SubType 发票详细类型，详见上方 SubType 返回值说明
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set 发票详细类型，详见下方 SubType 返回值说明
-     * @param SubType 发票详细类型，详见下方 SubType 返回值说明
+     * Set 发票详细类型，详见上方 SubType 返回值说明
+     * @param SubType 发票详细类型，详见上方 SubType 返回值说明
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 发票类型描述，详见下方 TypeDescription  返回值说明 
-     * @return TypeDescription 发票类型描述，详见下方 TypeDescription  返回值说明
+     * Get 发票类型描述，详见上方 TypeDescription  返回值说明 
+     * @return TypeDescription 发票类型描述，详见上方 TypeDescription  返回值说明
      */
     public String getTypeDescription() {
         return this.TypeDescription;
     }
 
     /**
-     * Set 发票类型描述，详见下方 TypeDescription  返回值说明
-     * @param TypeDescription 发票类型描述，详见下方 TypeDescription  返回值说明
+     * Set 发票类型描述，详见上方 TypeDescription  返回值说明
+     * @param TypeDescription 发票类型描述，详见上方 TypeDescription  返回值说明
      */
     public void setTypeDescription(String TypeDescription) {
         this.TypeDescription = TypeDescription;
@@ -327,16 +327,16 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 发票详细类型描述，详见下方 SubType 返回值说明 
-     * @return SubTypeDescription 发票详细类型描述，详见下方 SubType 返回值说明
+     * Get 发票详细类型描述，详见上方 SubType 返回值说明 
+     * @return SubTypeDescription 发票详细类型描述，详见上方 SubType 返回值说明
      */
     public String getSubTypeDescription() {
         return this.SubTypeDescription;
     }
 
     /**
-     * Set 发票详细类型描述，详见下方 SubType 返回值说明
-     * @param SubTypeDescription 发票详细类型描述，详见下方 SubType 返回值说明
+     * Set 发票详细类型描述，详见上方 SubType 返回值说明
+     * @param SubTypeDescription 发票详细类型描述，详见上方 SubType 返回值说明
      */
     public void setSubTypeDescription(String SubTypeDescription) {
         this.SubTypeDescription = SubTypeDescription;

@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.partners.v20180321.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClientBalanceResponse extends AbstractModel{
-
-    /**
-    * 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
-    */
-    @SerializedName("Balance")
-    @Expose
-    private Long Balance;
-
-    /**
-    * 账户现金余额，单位分
-    */
-    @SerializedName("Cash")
-    @Expose
-    private Long Cash;
+public class RestartLivePullStreamTaskResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class DescribeClientBalanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】 
-     * @return Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
-     */
-    public Long getBalance() {
-        return this.Balance;
-    }
-
-    /**
-     * Set 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
-     * @param Balance 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
-     */
-    public void setBalance(Long Balance) {
-        this.Balance = Balance;
-    }
-
-    /**
-     * Get 账户现金余额，单位分 
-     * @return Cash 账户现金余额，单位分
-     */
-    public Long getCash() {
-        return this.Cash;
-    }
-
-    /**
-     * Set 账户现金余额，单位分
-     * @param Cash 账户现金余额，单位分
-     */
-    public void setCash(Long Cash) {
-        this.Cash = Cash;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,20 +45,14 @@ public class DescribeClientBalanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeClientBalanceResponse() {
+    public RestartLivePullStreamTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClientBalanceResponse(DescribeClientBalanceResponse source) {
-        if (source.Balance != null) {
-            this.Balance = new Long(source.Balance);
-        }
-        if (source.Cash != null) {
-            this.Cash = new Long(source.Cash);
-        }
+    public RestartLivePullStreamTaskResponse(RestartLivePullStreamTaskResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -115,8 +63,6 @@ public class DescribeClientBalanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Balance", this.Balance);
-        this.setParamSimple(map, prefix + "Cash", this.Cash);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

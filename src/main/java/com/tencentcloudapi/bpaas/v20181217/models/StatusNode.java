@@ -187,6 +187,22 @@ public class StatusNode extends AbstractModel{
     private String ParallelNodes;
 
     /**
+    * scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RejectedCloudFunctionMsg")
+    @Expose
+    private String RejectedCloudFunctionMsg;
+
+    /**
+    * 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrevNode")
+    @Expose
+    private String PrevNode;
+
+    /**
      * Get 节点id 
      * @return NodeId 节点id
      */
@@ -590,6 +606,46 @@ public class StatusNode extends AbstractModel{
         this.ParallelNodes = ParallelNodes;
     }
 
+    /**
+     * Get scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RejectedCloudFunctionMsg scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRejectedCloudFunctionMsg() {
+        return this.RejectedCloudFunctionMsg;
+    }
+
+    /**
+     * Set scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RejectedCloudFunctionMsg scf拒绝时返回信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRejectedCloudFunctionMsg(String RejectedCloudFunctionMsg) {
+        this.RejectedCloudFunctionMsg = RejectedCloudFunctionMsg;
+    }
+
+    /**
+     * Get 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrevNode 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPrevNode() {
+        return this.PrevNode;
+    }
+
+    /**
+     * Set 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrevNode 上一个节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrevNode(String PrevNode) {
+        this.PrevNode = PrevNode;
+    }
+
     public StatusNode() {
     }
 
@@ -664,6 +720,12 @@ public class StatusNode extends AbstractModel{
         if (source.ParallelNodes != null) {
             this.ParallelNodes = new String(source.ParallelNodes);
         }
+        if (source.RejectedCloudFunctionMsg != null) {
+            this.RejectedCloudFunctionMsg = new String(source.RejectedCloudFunctionMsg);
+        }
+        if (source.PrevNode != null) {
+            this.PrevNode = new String(source.PrevNode);
+        }
     }
 
 
@@ -692,6 +754,8 @@ public class StatusNode extends AbstractModel{
         this.setParamSimple(map, prefix + "CKafkaRegion", this.CKafkaRegion);
         this.setParamSimple(map, prefix + "ExternalUrl", this.ExternalUrl);
         this.setParamSimple(map, prefix + "ParallelNodes", this.ParallelNodes);
+        this.setParamSimple(map, prefix + "RejectedCloudFunctionMsg", this.RejectedCloudFunctionMsg);
+        this.setParamSimple(map, prefix + "PrevNode", this.PrevNode);
 
     }
 }

@@ -107,6 +107,14 @@ public class GetBpaasApproveDetailResponse extends AbstractModel{
     private String ApprovingNodeId;
 
     /**
+    * 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -318,6 +326,26 @@ public class GetBpaasApproveDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -380,6 +408,9 @@ public class GetBpaasApproveDetailResponse extends AbstractModel{
         if (source.ApprovingNodeId != null) {
             this.ApprovingNodeId = new String(source.ApprovingNodeId);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -401,6 +432,7 @@ public class GetBpaasApproveDetailResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Nodes.", this.Nodes);
         this.setParamSimple(map, prefix + "ApprovingNodeId", this.ApprovingNodeId);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -63,6 +63,14 @@ public class ServiceStatus extends AbstractModel{
     private StatusInfo RealTimeAsr;
 
     /**
+    * 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TextTranslate")
+    @Expose
+    private StatusInfo TextTranslate;
+
+    /**
      * Get 实时语音服务开关状态
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RealTimeSpeech 实时语音服务开关状态
@@ -162,6 +170,26 @@ public class ServiceStatus extends AbstractModel{
         this.RealTimeAsr = RealTimeAsr;
     }
 
+    /**
+     * Get 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TextTranslate 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StatusInfo getTextTranslate() {
+        return this.TextTranslate;
+    }
+
+    /**
+     * Set 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TextTranslate 文本翻译服务开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTextTranslate(StatusInfo TextTranslate) {
+        this.TextTranslate = TextTranslate;
+    }
+
     public ServiceStatus() {
     }
 
@@ -185,6 +213,9 @@ public class ServiceStatus extends AbstractModel{
         if (source.RealTimeAsr != null) {
             this.RealTimeAsr = new StatusInfo(source.RealTimeAsr);
         }
+        if (source.TextTranslate != null) {
+            this.TextTranslate = new StatusInfo(source.TextTranslate);
+        }
     }
 
 
@@ -197,6 +228,7 @@ public class ServiceStatus extends AbstractModel{
         this.setParamObj(map, prefix + "Porn.", this.Porn);
         this.setParamObj(map, prefix + "Live.", this.Live);
         this.setParamObj(map, prefix + "RealTimeAsr.", this.RealTimeAsr);
+        this.setParamObj(map, prefix + "TextTranslate.", this.TextTranslate);
 
     }
 }
