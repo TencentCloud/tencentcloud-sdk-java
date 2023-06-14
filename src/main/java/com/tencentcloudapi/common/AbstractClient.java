@@ -381,13 +381,21 @@ public abstract class AbstractClient {
       }
     }
 
-    if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
-      okRsp = doRequestWithTC3(endpoint, request, actionName);
-    } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
-      okRsp = doRequest(endpoint, request, actionName);
-    } else {
-      throw new TencentCloudSDKException(
-          "Signature method " + sm + " is invalid or not supported yet.");
+    try {
+      if (binaryParams.length > 0 || sm.equals(ClientProfile.SIGN_TC3_256)) {
+        okRsp = doRequestWithTC3(endpoint, request, actionName);
+      } else if (sm.equals(ClientProfile.SIGN_SHA1) || sm.equals(ClientProfile.SIGN_SHA256)) {
+        okRsp = doRequest(endpoint, request, actionName);
+      } else {
+        throw new TencentCloudSDKException(
+            "Signature method " + sm + " is invalid or not supported yet.");
+      }
+    } catch (TencentCloudSDKException e) {
+      if (breakerToken != null) {
+        // network failure
+        breakerToken.report(false);
+      }
+      throw e;
     }
 
     if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
