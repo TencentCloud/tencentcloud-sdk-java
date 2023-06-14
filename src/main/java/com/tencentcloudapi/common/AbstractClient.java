@@ -269,7 +269,12 @@ public abstract class AbstractClient {
     for (String key : headers.keySet()) {
       hb.add(key, headers.get(key));
     }
-    Response resp = this.httpConnection.postRequest(url, body, hb.build());
+    Response resp = null;
+    try {
+      resp = this.httpConnection.postRequest(url, body, hb.build());
+    } catch (IOException e) {
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
+    }
     if (resp.code() != AbstractClient.HTTP_RSP_OK) {
       String msg = "response code is " + resp.code() + ", not 200";
       log.info(msg);
@@ -390,12 +395,12 @@ public abstract class AbstractClient {
         throw new TencentCloudSDKException(
             "Signature method " + sm + " is invalid or not supported yet.");
       }
-    } catch (TencentCloudSDKException e) {
+    } catch (IOException e) {
+      // network failure, consider region failure
       if (breakerToken != null) {
-        // network failure
         breakerToken.report(false);
       }
-      throw e;
+      throw new TencentCloudSDKException(e.getClass().getName() + "-" + e.getMessage());
     }
 
     if (okRsp.code() != AbstractClient.HTTP_RSP_OK) {
@@ -441,7 +446,7 @@ public abstract class AbstractClient {
   }
 
   private Response doRequest(String endpoint, AbstractModel request, String action)
-      throws TencentCloudSDKException {
+      throws TencentCloudSDKException, IOException {
     HashMap<String, String> param = new HashMap<String, String>();
     request.toMap(param, "");
     String strParam = this.formatRequestData(action, param);
@@ -457,7 +462,7 @@ public abstract class AbstractClient {
   }
 
   private Response doRequestWithTC3(String endpoint, AbstractModel request, String action)
-      throws TencentCloudSDKException {
+      throws TencentCloudSDKException, IOException {
     String httpRequestMethod = this.profile.getHttpProfile().getReqMethod();
     if (httpRequestMethod == null) {
       throw new TencentCloudSDKException(
