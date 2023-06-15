@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIntegrationRolesRequest extends AbstractModel{
 
     /**
-    * 操作人信息
+    * 操作人信息，UserId必填
     */
     @SerializedName("Operator")
     @Expose
@@ -61,16 +61,16 @@ Key:"IsGroupRole"，Values:["0"],查询非集团角色，Values:["1"]表示查�
     private Long Offset;
 
     /**
-     * Get 操作人信息 
-     * @return Operator 操作人信息
+     * Get 操作人信息，UserId必填 
+     * @return Operator 操作人信息，UserId必填
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作人信息
-     * @param Operator 操作人信息
+     * Set 操作人信息，UserId必填
+     * @param Operator 操作人信息，UserId必填
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

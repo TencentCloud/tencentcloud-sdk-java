@@ -30,7 +30,8 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+    * 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
     */
     @SerializedName("Employees")
     @Expose
@@ -60,16 +61,20 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持 
-     * @return Employees 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+     * Get 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。 
+     * @return Employees 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
-     * @param Employees 待创建员工的信息，Mobile和DisplayName必填,OpenId和Email选填，其他字段暂不支持
+     * Set 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+     * @param Employees 待创建员工的信息，不超过20个。
+Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

@@ -3,6 +3,9 @@ public enum MsErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // CAM签名/鉴权错误。
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -80,6 +83,9 @@ public enum MsErrorCode {
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 鉴权失败。
+     UNAUTHORIZEDOPERATION_AUTHFAILED("UnauthorizedOperation.AuthFailed"),
      
     // 不是白名单用户。
      UNAUTHORIZEDOPERATION_NOTWHITEUSER("UnauthorizedOperation.NotWhiteUser"),

@@ -44,6 +44,7 @@ public class EventContent extends AbstractModel{
 <li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
@@ -201,6 +202,14 @@ public class EventContent extends AbstractModel{
     private ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent;
 
     /**
+    * 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtractCopyRightWatermarkCompleteEvent")
+    @Expose
+    private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent;
+
+    /**
     * 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -255,6 +264,7 @@ public class EventContent extends AbstractModel{
 <li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
@@ -276,6 +286,7 @@ public class EventContent extends AbstractModel{
 <li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
@@ -303,6 +314,7 @@ public class EventContent extends AbstractModel{
 <li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
@@ -324,6 +336,7 @@ public class EventContent extends AbstractModel{
 <li>RebuildMediaComplete：音画质重生完成事件。</li>
 <li>ReviewAudioVideoComplete：音视频审核完成；</li>
 <li>ExtractTraceWatermarkComplete：提取溯源水印完成；</li>
+<li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
@@ -697,6 +710,26 @@ public class EventContent extends AbstractModel{
     }
 
     /**
+     * Get 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtractCopyRightWatermarkCompleteEvent 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkCompleteEvent() {
+        return this.ExtractCopyRightWatermarkCompleteEvent;
+    }
+
+    /**
+     * Set 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractCopyRightWatermarkCompleteEvent 版权水印提取完成事件，当事件类型为 ExtractCopyRightWatermarkComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtractCopyRightWatermarkCompleteEvent(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkCompleteEvent) {
+        this.ExtractCopyRightWatermarkCompleteEvent = ExtractCopyRightWatermarkCompleteEvent;
+    }
+
+    /**
      * Get 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReviewAudioVideoCompleteEvent 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
@@ -824,6 +857,9 @@ public class EventContent extends AbstractModel{
         if (source.ExtractTraceWatermarkCompleteEvent != null) {
             this.ExtractTraceWatermarkCompleteEvent = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkCompleteEvent);
         }
+        if (source.ExtractCopyRightWatermarkCompleteEvent != null) {
+            this.ExtractCopyRightWatermarkCompleteEvent = new ExtractCopyRightWatermarkTask(source.ExtractCopyRightWatermarkCompleteEvent);
+        }
         if (source.ReviewAudioVideoCompleteEvent != null) {
             this.ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask(source.ReviewAudioVideoCompleteEvent);
         }
@@ -860,6 +896,7 @@ public class EventContent extends AbstractModel{
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
         this.setParamObj(map, prefix + "RebuildMediaCompleteEvent.", this.RebuildMediaCompleteEvent);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
+        this.setParamObj(map, prefix + "ExtractCopyRightWatermarkCompleteEvent.", this.ExtractCopyRightWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
         this.setParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
         this.setParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);

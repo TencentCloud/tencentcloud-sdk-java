@@ -152,6 +152,7 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
     /**
     * 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFormType")
     @Expose
@@ -264,6 +265,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
     * 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetX")
     @Expose
@@ -271,6 +273,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
     * 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffsetY")
     @Expose
@@ -681,8 +684,10 @@ ComponentType为SIGN_DATE时，支持以下参数：
     }
 
     /**
-     * Get 是否是表单域类型，默认不false-不是 
+     * Get 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsFormType 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFormType() {
         return this.IsFormType;
@@ -690,7 +695,9 @@ ComponentType为SIGN_DATE时，支持以下参数：
 
     /**
      * Set 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFormType 是否是表单域类型，默认不false-不是
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFormType(Boolean IsFormType) {
         this.IsFormType = IsFormType;
@@ -1069,8 +1076,10 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 指定关键字时横坐标偏移量，单位pt 
+     * Get 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OffsetX 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOffsetX() {
         return this.OffsetX;
@@ -1078,15 +1087,19 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
      * Set 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetX 指定关键字时横坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetX(Float OffsetX) {
         this.OffsetX = OffsetX;
     }
 
     /**
-     * Get 指定关键字时纵坐标偏移量，单位pt 
+     * Get 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return OffsetY 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOffsetY() {
         return this.OffsetY;
@@ -1094,7 +1107,9 @@ KEYWORD 关键字，使用ComponentId指定关键字
 
     /**
      * Set 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      * @param OffsetY 指定关键字时纵坐标偏移量，单位pt
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffsetY(Float OffsetY) {
         this.OffsetY = OffsetY;

@@ -37,14 +37,14 @@ public class ModifyRoomRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
+    * 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+    * 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
     */
     @SerializedName("EndTime")
     @Expose
@@ -178,32 +178,32 @@ coteaching 双师
     }
 
     /**
-     * Get 预定的房间开始时间，unix时间戳。直播开始后不允许修改。 
-     * @return StartTime 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
+     * Get 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。 
+     * @return StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
-     * @param StartTime 预定的房间开始时间，unix时间戳。直播开始后不允许修改。
+     * Set 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
+     * @param StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 预定的房间结束时间，unix时间戳。直播开始后不允许修改。 
-     * @return EndTime 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+     * Get 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。 
+     * @return EndTime 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
-     * @param EndTime 预定的房间结束时间，unix时间戳。直播开始后不允许修改。
+     * Set 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
+     * @param EndTime 预定的房间结束时间，unix时间戳（秒）。直播开始后不允许修改。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

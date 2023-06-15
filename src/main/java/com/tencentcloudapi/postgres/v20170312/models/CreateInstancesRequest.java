@@ -238,7 +238,10 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
     private String DBEngineConfig;
 
     /**
-    * 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+    * 主从同步方式，可取值： 
+1、Semi-sync：半同步
+2、Async：异步 
+当前只支持Semi-sync
     */
     @SerializedName("SyncMode")
     @Expose
@@ -757,16 +760,28 @@ serverCollationName：排序规则名称，可选参数，在初始化后不可�
     }
 
     /**
-     * Get 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async 
-     * @return SyncMode 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+     * Get 主从同步方式，可取值： 
+1、Semi-sync：半同步
+2、Async：异步 
+当前只支持Semi-sync 
+     * @return SyncMode 主从同步方式，可取值： 
+1、Semi-sync：半同步
+2、Async：异步 
+当前只支持Semi-sync
      */
     public String getSyncMode() {
         return this.SyncMode;
     }
 
     /**
-     * Set 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
-     * @param SyncMode 主从同步方式，取值： 1)Semi-sync：半同步 2)Async：异步 默认为Async
+     * Set 主从同步方式，可取值： 
+1、Semi-sync：半同步
+2、Async：异步 
+当前只支持Semi-sync
+     * @param SyncMode 主从同步方式，可取值： 
+1、Semi-sync：半同步
+2、Async：异步 
+当前只支持Semi-sync
      */
     public void setSyncMode(String SyncMode) {
         this.SyncMode = SyncMode;

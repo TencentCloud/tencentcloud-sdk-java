@@ -30,7 +30,9 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+    * 员工信息，不超过100个。
+根据UserId或OpenId更新员工，必填一个，优先UserId。
+可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
     */
     @SerializedName("Employees")
     @Expose
@@ -60,16 +62,24 @@ public class UpdateIntegrationEmployeesRequest extends AbstractModel{
     }
 
     /**
-     * Get 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持 
-     * @return Employees 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+     * Get 员工信息，不超过100个。
+根据UserId或OpenId更新员工，必填一个，优先UserId。
+可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持 
+     * @return Employees 员工信息，不超过100个。
+根据UserId或OpenId更新员工，必填一个，优先UserId。
+可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
      */
     public Staff [] getEmployees() {
         return this.Employees;
     }
 
     /**
-     * Set 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
-     * @param Employees 员工信息，OpenId和UserId必填一个,Email、DisplayName和Email选填，其他字段暂不支持
+     * Set 员工信息，不超过100个。
+根据UserId或OpenId更新员工，必填一个，优先UserId。
+可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
+     * @param Employees 员工信息，不超过100个。
+根据UserId或OpenId更新员工，必填一个，优先UserId。
+可更新Mobile、DisplayName、Email和Department.DepartmentId字段，其他字段暂不支持
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

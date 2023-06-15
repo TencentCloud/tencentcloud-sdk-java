@@ -165,6 +165,14 @@ public class NatGateway extends AbstractModel{
     private String RestrictState;
 
     /**
+    * NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatProductVersion")
+    @Expose
+    private Long NatProductVersion;
+
+    /**
      * Get NAT网关的ID。 
      * @return NatGatewayId NAT网关的ID。
      */
@@ -504,6 +512,26 @@ public class NatGateway extends AbstractModel{
         this.RestrictState = RestrictState;
     }
 
+    /**
+     * Get NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNatProductVersion() {
+        return this.NatProductVersion;
+    }
+
+    /**
+     * Set NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatProductVersion(Long NatProductVersion) {
+        this.NatProductVersion = NatProductVersion;
+    }
+
     public NatGateway() {
     }
 
@@ -587,6 +615,9 @@ public class NatGateway extends AbstractModel{
         if (source.RestrictState != null) {
             this.RestrictState = new String(source.RestrictState);
         }
+        if (source.NatProductVersion != null) {
+            this.NatProductVersion = new Long(source.NatProductVersion);
+        }
     }
 
 
@@ -613,6 +644,7 @@ public class NatGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
+        this.setParamSimple(map, prefix + "NatProductVersion", this.NatProductVersion);
 
     }
 }

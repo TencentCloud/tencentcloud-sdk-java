@@ -143,6 +143,13 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
     private String [] SecurityGroup;
 
     /**
+    * 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+    */
+    @SerializedName("ConnectionPoolType")
+    @Expose
+    private String ConnectionPoolType;
+
+    /**
      * Get 代理组ID 
      * @return ProxyGroupId 代理组ID
      */
@@ -418,6 +425,22 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
         this.SecurityGroup = SecurityGroup;
     }
 
+    /**
+     * Get 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。 
+     * @return ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     */
+    public String getConnectionPoolType() {
+        return this.ConnectionPoolType;
+    }
+
+    /**
+     * Set 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     * @param ConnectionPoolType 连接池类型。可选值 transaction（事务级别连接池），connection（会话级别连接池），ConnectionPool为true时生效。
+     */
+    public void setConnectionPoolType(String ConnectionPoolType) {
+        this.ConnectionPoolType = ConnectionPoolType;
+    }
+
     public CreateCdbProxyAddressRequest() {
     }
 
@@ -483,6 +506,9 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
                 this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
             }
         }
+        if (source.ConnectionPoolType != null) {
+            this.ConnectionPoolType = new String(source.ConnectionPoolType);
+        }
     }
 
 
@@ -507,6 +533,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
 
     }
 }

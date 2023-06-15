@@ -79,6 +79,13 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
     private String CosPrefix;
 
     /**
+    * 密钥TOCKEN信息
+    */
+    @SerializedName("CosToken")
+    @Expose
+    private String CosToken;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -184,7 +191,9 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
     /**
      * Get 密钥TOCKEN信息 
      * @return CosTocken 密钥TOCKEN信息
+     * @deprecated
      */
+    @Deprecated
     public String getCosTocken() {
         return this.CosTocken;
     }
@@ -192,7 +201,9 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
     /**
      * Set 密钥TOCKEN信息
      * @param CosTocken 密钥TOCKEN信息
+     * @deprecated
      */
+    @Deprecated
     public void setCosTocken(String CosTocken) {
         this.CosTocken = CosTocken;
     }
@@ -211,6 +222,22 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
      */
     public void setCosPrefix(String CosPrefix) {
         this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get 密钥TOCKEN信息 
+     * @return CosToken 密钥TOCKEN信息
+     */
+    public String getCosToken() {
+        return this.CosToken;
+    }
+
+    /**
+     * Set 密钥TOCKEN信息
+     * @param CosToken 密钥TOCKEN信息
+     */
+    public void setCosToken(String CosToken) {
+        this.CosToken = CosToken;
     }
 
     /**
@@ -261,6 +288,9 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
         if (source.CosPrefix != null) {
             this.CosPrefix = new String(source.CosPrefix);
         }
+        if (source.CosToken != null) {
+            this.CosToken = new String(source.CosToken);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +309,7 @@ public class CreateCosSecKeyInstanceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CosKey", this.CosKey);
         this.setParamSimple(map, prefix + "CosTocken", this.CosTocken);
         this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosToken", this.CosToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

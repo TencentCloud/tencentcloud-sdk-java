@@ -44,6 +44,13 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     private TraceWatermarkInput TraceWatermark;
 
     /**
+    * 版权水印。
+    */
+    @SerializedName("CopyRightWatermark")
+    @Expose
+    private CopyRightWatermarkInput CopyRightWatermark;
+
+    /**
     * 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
     */
     @SerializedName("SubtitleSet")
@@ -99,6 +106,22 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
     }
 
     /**
+     * Get 版权水印。 
+     * @return CopyRightWatermark 版权水印。
+     */
+    public CopyRightWatermarkInput getCopyRightWatermark() {
+        return this.CopyRightWatermark;
+    }
+
+    /**
+     * Set 版权水印。
+     * @param CopyRightWatermark 版权水印。
+     */
+    public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
+        this.CopyRightWatermark = CopyRightWatermark;
+    }
+
+    /**
      * Get 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。 
      * @return SubtitleSet 字幕列表，元素为字幕 ID，支持多个字幕，最大可支持16个。
      */
@@ -134,6 +157,9 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         if (source.TraceWatermark != null) {
             this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
         }
+        if (source.CopyRightWatermark != null) {
+            this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new String[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -150,6 +176,7 @@ public class AdaptiveDynamicStreamingTaskInput extends AbstractModel{
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
+        this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }

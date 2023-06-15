@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractModel{
 
     /**
-    * 专线网关ID。
+    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
     */
     @SerializedName("VpcId")
     @Expose
@@ -37,23 +37,23 @@ public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractMode
     private String NatGatewayId;
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * 专线网关ID。
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-     * Get 专线网关ID。 
-     * @return VpcId 专线网关ID。
+     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
+     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 专线网关ID。
-     * @param VpcId 专线网关ID。
+     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -76,16 +76,16 @@ public class AssociateDirectConnectGatewayNatGatewayRequest extends AbstractMode
     }
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return DirectConnectGatewayId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get 专线网关ID。 
+     * @return DirectConnectGatewayId 专线网关ID。
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param DirectConnectGatewayId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set 专线网关ID。
+     * @param DirectConnectGatewayId 专线网关ID。
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;

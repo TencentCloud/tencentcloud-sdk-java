@@ -54,6 +54,17 @@ public class CFSOption extends AbstractModel{
     private String StorageType;
 
     /**
+    * 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+    */
+    @SerializedName("MountOption")
+    @Expose
+    private String MountOption;
+
+    /**
      * Get 文件系统本地挂载路径。 
      * @return LocalPath 文件系统本地挂载路径。
      */
@@ -129,6 +140,38 @@ public class CFSOption extends AbstractModel{
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr 
+     * @return MountOption 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+     */
+    public String getMountOption() {
+        return this.MountOption;
+    }
+
+    /**
+     * Set 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+     * @param MountOption 文件系统挂载挂载命令参数选项。
+
+- NFS 3.0默认值：vers=3,nolock,proto=tcp,noresvport
+- NFS 4.0默认值：vers=4.0,noresvport
+- TURBO默认值：user_xattr
+     */
+    public void setMountOption(String MountOption) {
+        this.MountOption = MountOption;
+    }
+
     public CFSOption() {
     }
 
@@ -149,6 +192,9 @@ public class CFSOption extends AbstractModel{
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.MountOption != null) {
+            this.MountOption = new String(source.MountOption);
+        }
     }
 
 
@@ -160,6 +206,7 @@ public class CFSOption extends AbstractModel{
         this.setParamSimple(map, prefix + "RemotePath", this.RemotePath);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "MountOption", this.MountOption);
 
     }
 }

@@ -30,14 +30,14 @@ public class CreateRoomRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 预定的房间开始时间，unix时间戳。
+    * 预定的房间开始时间，unix时间戳（秒）。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 预定的房间结束时间，unix时间戳。
+    * 预定的房间结束时间，unix时间戳（秒）。
     */
     @SerializedName("EndTime")
     @Expose
@@ -181,32 +181,32 @@ video 纯视频
     }
 
     /**
-     * Get 预定的房间开始时间，unix时间戳。 
-     * @return StartTime 预定的房间开始时间，unix时间戳。
+     * Get 预定的房间开始时间，unix时间戳（秒）。 
+     * @return StartTime 预定的房间开始时间，unix时间戳（秒）。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 预定的房间开始时间，unix时间戳。
-     * @param StartTime 预定的房间开始时间，unix时间戳。
+     * Set 预定的房间开始时间，unix时间戳（秒）。
+     * @param StartTime 预定的房间开始时间，unix时间戳（秒）。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 预定的房间结束时间，unix时间戳。 
-     * @return EndTime 预定的房间结束时间，unix时间戳。
+     * Get 预定的房间结束时间，unix时间戳（秒）。 
+     * @return EndTime 预定的房间结束时间，unix时间戳（秒）。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 预定的房间结束时间，unix时间戳。
-     * @param EndTime 预定的房间结束时间，unix时间戳。
+     * Set 预定的房间结束时间，unix时间戳（秒）。
+     * @param EndTime 预定的房间结束时间，unix时间戳（秒）。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

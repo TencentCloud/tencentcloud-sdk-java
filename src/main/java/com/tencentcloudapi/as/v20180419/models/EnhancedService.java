@@ -85,7 +85,9 @@ public class EnhancedService extends AbstractModel{
     /**
      * Get 该参数已废弃，查询时会返回空值，请勿使用。 
      * @return AutomationService 该参数已废弃，查询时会返回空值，请勿使用。
+     * @deprecated
      */
+    @Deprecated
     public RunAutomationServiceEnabled [] getAutomationService() {
         return this.AutomationService;
     }
@@ -93,7 +95,9 @@ public class EnhancedService extends AbstractModel{
     /**
      * Set 该参数已废弃，查询时会返回空值，请勿使用。
      * @param AutomationService 该参数已废弃，查询时会返回空值，请勿使用。
+     * @deprecated
      */
+    @Deprecated
     public void setAutomationService(RunAutomationServiceEnabled [] AutomationService) {
         this.AutomationService = AutomationService;
     }

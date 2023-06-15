@@ -206,6 +206,46 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *创建直播垫片规则。
+     * @param req CreateLivePadRuleRequest
+     * @return CreateLivePadRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLivePadRuleResponse CreateLivePadRule(CreateLivePadRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLivePadRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLivePadRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLivePadRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建直播垫片模板。
+     * @param req CreateLivePadTemplateRequest
+     * @return CreateLivePadTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLivePadTemplateResponse CreateLivePadTemplate(CreateLivePadTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLivePadTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLivePadTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLivePadTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到指定的目标地址。
 注意：
 1. 默认支持任务数上限200个，如有特殊需求，可通过提单到售后进行评估增加上限。
@@ -345,6 +385,26 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateLiveSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来创建直播流监播任务。
+     * @param req CreateLiveStreamMonitorRequest
+     * @return CreateLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveStreamMonitorResponse CreateLiveStreamMonitor(CreateLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLiveStreamMonitor");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -596,6 +656,46 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *删除直播垫片规则。
+     * @param req DeleteLivePadRuleRequest
+     * @return DeleteLivePadRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLivePadRuleResponse DeleteLivePadRule(DeleteLivePadRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLivePadRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLivePadRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLivePadRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除直播垫片模板。
+     * @param req DeleteLivePadTemplateRequest
+     * @return DeleteLivePadTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLivePadTemplateResponse DeleteLivePadTemplate(DeleteLivePadTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLivePadTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLivePadTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLivePadTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除接口 CreateLivePullStreamTask 创建的拉流任务。
 注意：
 1. 入参中的 TaskId 为 CreateLivePullStreamTask 接口创建时返回的TaskId。
@@ -711,6 +811,26 @@ public class LiveClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来删除直播流监播任务。
+     * @param req DeleteLiveStreamMonitorRequest
+     * @return DeleteLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveStreamMonitorResponse DeleteLiveStreamMonitor(DeleteLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveStreamMonitor");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1344,6 +1464,66 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *获取直播垫片规则列表。
+     * @param req DescribeLivePadRulesRequest
+     * @return DescribeLivePadRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePadRulesResponse DescribeLivePadRules(DescribeLivePadRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePadRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePadRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLivePadRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取单个直播垫片模板
+     * @param req DescribeLivePadTemplateRequest
+     * @return DescribeLivePadTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePadTemplateResponse DescribeLivePadTemplate(DescribeLivePadTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePadTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePadTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLivePadTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取直播垫片模板。
+     * @param req DescribeLivePadTemplatesRequest
+     * @return DescribeLivePadTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePadTemplatesResponse DescribeLivePadTemplates(DescribeLivePadTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePadTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePadTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLivePadTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询播放鉴权key。
      * @param req DescribeLivePlayAuthKeyRequest
      * @return DescribeLivePlayAuthKeyResponse
@@ -1541,6 +1721,46 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamEventListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLiveStreamEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来查询某个特定监播任务的配置。
+     * @param req DescribeLiveStreamMonitorRequest
+     * @return DescribeLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamMonitorResponse DescribeLiveStreamMonitor(DescribeLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveStreamMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来查询直播流监播任务配置的列表信息。
+     * @param req DescribeLiveStreamMonitorListRequest
+     * @return DescribeLiveStreamMonitorListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamMonitorListResponse DescribeLiveStreamMonitorList(DescribeLiveStreamMonitorListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamMonitorListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamMonitorListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveStreamMonitorList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1899,6 +2119,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<DescribeLogDownloadListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLogDownloadList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用来查询监播场次7天内的智能识别、断流、低帧率等信息的汇总报告。
+     * @param req DescribeMonitorReportRequest
+     * @return DescribeMonitorReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMonitorReportResponse DescribeMonitorReport(DescribeMonitorReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMonitorReportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMonitorReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMonitorReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2424,6 +2664,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *修改直播垫片模板。
+     * @param req ModifyLivePadTemplateRequest
+     * @return ModifyLivePadTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLivePadTemplateResponse ModifyLivePadTemplate(ModifyLivePadTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLivePadTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLivePadTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLivePadTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改播放鉴权key
      * @param req ModifyLivePlayAuthKeyRequest
      * @return ModifyLivePlayAuthKeyResponse
@@ -2538,6 +2798,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来修改直播流监播任务的配置。
+     * @param req ModifyLiveStreamMonitorRequest
+     * @return ModifyLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitor(ModifyLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveStreamMonitor");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2689,6 +2969,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *该接口用来启动直播流监播任务。
+     * @param req StartLiveStreamMonitorRequest
+     * @return StartLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartLiveStreamMonitorResponse StartLiveStreamMonitor(StartLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartLiveStreamMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
      * @param req StopLiveRecordRequest
      * @return StopLiveRecordResponse
@@ -2701,6 +3001,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopLiveRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用来停止直播流监播任务。
+     * @param req StopLiveStreamMonitorRequest
+     * @return StopLiveStreamMonitorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLiveStreamMonitorResponse StopLiveStreamMonitor(StopLiveStreamMonitorRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopLiveStreamMonitorResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopLiveStreamMonitorResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopLiveStreamMonitor");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

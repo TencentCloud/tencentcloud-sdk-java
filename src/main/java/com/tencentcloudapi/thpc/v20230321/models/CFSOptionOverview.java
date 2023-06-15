@@ -54,6 +54,13 @@ public class CFSOptionOverview extends AbstractModel{
     private String StorageType;
 
     /**
+    * 文件系统挂载命令参数选项。
+    */
+    @SerializedName("MountOption")
+    @Expose
+    private String MountOption;
+
+    /**
      * Get 文件系统本地挂载路径。 
      * @return LocalPath 文件系统本地挂载路径。
      */
@@ -129,6 +136,22 @@ public class CFSOptionOverview extends AbstractModel{
         this.StorageType = StorageType;
     }
 
+    /**
+     * Get 文件系统挂载命令参数选项。 
+     * @return MountOption 文件系统挂载命令参数选项。
+     */
+    public String getMountOption() {
+        return this.MountOption;
+    }
+
+    /**
+     * Set 文件系统挂载命令参数选项。
+     * @param MountOption 文件系统挂载命令参数选项。
+     */
+    public void setMountOption(String MountOption) {
+        this.MountOption = MountOption;
+    }
+
     public CFSOptionOverview() {
     }
 
@@ -149,6 +172,9 @@ public class CFSOptionOverview extends AbstractModel{
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
         }
+        if (source.MountOption != null) {
+            this.MountOption = new String(source.MountOption);
+        }
     }
 
 
@@ -160,6 +186,7 @@ public class CFSOptionOverview extends AbstractModel{
         this.setParamSimple(map, prefix + "RemotePath", this.RemotePath);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamSimple(map, prefix + "MountOption", this.MountOption);
 
     }
 }

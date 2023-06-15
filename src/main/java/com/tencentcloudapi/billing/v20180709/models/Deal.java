@@ -30,7 +30,7 @@ public class Deal extends AbstractModel{
     private String OrderId;
 
     /**
-    * 订单状态
+    * 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
     */
     @SerializedName("Status")
     @Expose
@@ -240,16 +240,16 @@ postMoveIn 按量计费迁入资源
     }
 
     /**
-     * Get 订单状态 
-     * @return Status 订单状态
+     * Get 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中 
+     * @return Status 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 订单状态
-     * @param Status 订单状态
+     * Set 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
+     * @param Status 订单的状态 1：未支付 2：已支付3：发货中 4：已发货 5：发货失败 6：已退款 7：已关单 8：订单过期 9：订单已失效 10：产品已失效 11：代付拒绝 12：支付中
      */
     public void setStatus(Long Status) {
         this.Status = Status;

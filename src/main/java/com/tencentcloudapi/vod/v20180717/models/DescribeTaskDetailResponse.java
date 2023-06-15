@@ -36,7 +36,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -194,6 +195,14 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private ExtractTraceWatermarkTask ExtractTraceWatermarkTask;
 
     /**
+    * 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtractCopyRightWatermarkTask")
+    @Expose
+    private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask;
+
+    /**
     * 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -238,7 +247,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li> 
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li> 
      * @return TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -252,7 +262,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -272,7 +283,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
      * @param TaskType 任务类型，取值：
 <li>Procedure：视频处理任务；</li>
 <li>EditMedia：视频编辑任务；</li>
@@ -286,7 +298,8 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>DescribeFileAttributesTask：获取文件属性任务；</li>
 <li>RebuildMedia：音画质重生任务；</li>
 <li>ReviewAudioVideo：音视频审核任务；</li>
-<li>ExtractTraceWatermark：提取溯源水印任务。</li>
+<li>ExtractTraceWatermark：提取溯源水印任务；</li>
+<li>ExtractCopyRightWatermark：提取版权水印任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -669,6 +682,26 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     }
 
     /**
+     * Get 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() {
+        return this.ExtractCopyRightWatermarkTask;
+    }
+
+    /**
+     * Set 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractCopyRightWatermarkTask 提取版权水印任务信息，仅当 TaskType 为 ExtractCopyRightWatermark，该字段有值。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask) {
+        this.ExtractCopyRightWatermarkTask = ExtractCopyRightWatermarkTask;
+    }
+
+    /**
      * Get 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReviewAudioVideoTask 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
@@ -812,6 +845,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         if (source.ExtractTraceWatermarkTask != null) {
             this.ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkTask);
         }
+        if (source.ExtractCopyRightWatermarkTask != null) {
+            this.ExtractCopyRightWatermarkTask = new ExtractCopyRightWatermarkTask(source.ExtractCopyRightWatermarkTask);
+        }
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ReviewAudioVideoTask(source.ReviewAudioVideoTask);
         }
@@ -851,6 +887,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
         this.setParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
+        this.setParamObj(map, prefix + "ExtractCopyRightWatermarkTask.", this.ExtractCopyRightWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
         this.setParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);

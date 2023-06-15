@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SourceIpTranslationNatRule extends AbstractModel{
 
     /**
-    * 资源ID
+    * 资源ID，如果ResourceType为USERDEFINED，可以为空
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * 资源类型，目前包含SUBNET、NETWORKINTERFACE
+    * 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -90,25 +90,25 @@ public class SourceIpTranslationNatRule extends AbstractModel{
     private String CreatedTime;
 
     /**
-     * Get 资源ID 
-     * @return ResourceId 资源ID
+     * Get 资源ID，如果ResourceType为USERDEFINED，可以为空 
+     * @return ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID
-     * @param ResourceId 资源ID
+     * Set 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * @param ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * Get 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * @return ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
@@ -116,9 +116,9 @@ public class SourceIpTranslationNatRule extends AbstractModel{
     }
 
     /**
-     * Set 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * Set 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE
+     * @param ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {

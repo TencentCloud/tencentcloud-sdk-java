@@ -415,6 +415,14 @@ public class CVMAssetVO extends AbstractModel{
     private Long RiskExposure;
 
     /**
+    * 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BASAgentStatus")
+    @Expose
+    private Long BASAgentStatus;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1394,6 +1402,26 @@ public class CVMAssetVO extends AbstractModel{
         this.RiskExposure = RiskExposure;
     }
 
+    /**
+     * Get 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBASAgentStatus() {
+        return this.BASAgentStatus;
+    }
+
+    /**
+     * Set 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBASAgentStatus(Long BASAgentStatus) {
+        this.BASAgentStatus = BASAgentStatus;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -1552,6 +1580,9 @@ public class CVMAssetVO extends AbstractModel{
         if (source.RiskExposure != null) {
             this.RiskExposure = new Long(source.RiskExposure);
         }
+        if (source.BASAgentStatus != null) {
+            this.BASAgentStatus = new Long(source.BASAgentStatus);
+        }
     }
 
 
@@ -1608,6 +1639,7 @@ public class CVMAssetVO extends AbstractModel{
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "RiskExposure", this.RiskExposure);
+        this.setParamSimple(map, prefix + "BASAgentStatus", this.BASAgentStatus);
 
     }
 }

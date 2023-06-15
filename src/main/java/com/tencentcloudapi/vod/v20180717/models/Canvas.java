@@ -33,7 +33,7 @@ public class Canvas extends AbstractModel{
     private String Color;
 
     /**
-    * 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+    * 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
     */
     @SerializedName("Width")
@@ -41,7 +41,7 @@ public class Canvas extends AbstractModel{
     private Long Width;
 
     /**
-    * 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+    * 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
     */
     @SerializedName("Height")
@@ -77,9 +77,9 @@ public class Canvas extends AbstractModel{
     }
 
     /**
-     * Get 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * Get 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。 
-     * @return Width 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * @return Width 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
      */
     public Long getWidth() {
@@ -87,9 +87,9 @@ public class Canvas extends AbstractModel{
     }
 
     /**
-     * Set 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * Set 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
-     * @param Width 画布宽度，即输出视频的宽度，取值范围：0~ 4096，单位：px。
+     * @param Width 画布宽度，即输出视频的宽度，取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频宽度一致。
      */
     public void setWidth(Long Width) {
@@ -97,9 +97,9 @@ public class Canvas extends AbstractModel{
     }
 
     /**
-     * Get 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * Get 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。 
-     * @return Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * @return Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
     public Long getHeight() {
@@ -107,9 +107,9 @@ public class Canvas extends AbstractModel{
     }
 
     /**
-     * Set 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * Set 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
-     * @param Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 4096，单位：px。
+     * @param Height 画布高度，即输出视频的高度（或长边），取值范围：0~ 3840，单位：px。
 默认值：0，表示和第一个视频轨的第一个视频片段的视频高度一致。
      */
     public void setHeight(Long Height) {

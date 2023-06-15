@@ -103,11 +103,19 @@ public class MediaTranscodeItem extends AbstractModel{
     /**
     * 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
     */
     @SerializedName("DigitalWatermarkType")
     @Expose
     private String DigitalWatermarkType;
+
+    /**
+    * 版权信息。
+    */
+    @SerializedName("CopyRightWatermarkText")
+    @Expose
+    private String CopyRightWatermarkText;
 
     /**
      * Get 转码后的视频文件地址。 
@@ -292,9 +300,11 @@ public class MediaTranscodeItem extends AbstractModel{
     /**
      * Get 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li> 
      * @return DigitalWatermarkType 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      */
     public String getDigitalWatermarkType() {
@@ -304,13 +314,31 @@ public class MediaTranscodeItem extends AbstractModel{
     /**
      * Set 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      * @param DigitalWatermarkType 数字水印类型。可选值：
 <li>Trace 表示经过溯源水印处理；</li>
+<li>CopyRight 表示经过版权水印处理；</li>
 <li>None 表示没有经过数字水印处理。</li>
      */
     public void setDigitalWatermarkType(String DigitalWatermarkType) {
         this.DigitalWatermarkType = DigitalWatermarkType;
+    }
+
+    /**
+     * Get 版权信息。 
+     * @return CopyRightWatermarkText 版权信息。
+     */
+    public String getCopyRightWatermarkText() {
+        return this.CopyRightWatermarkText;
+    }
+
+    /**
+     * Set 版权信息。
+     * @param CopyRightWatermarkText 版权信息。
+     */
+    public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
+        this.CopyRightWatermarkText = CopyRightWatermarkText;
     }
 
     public MediaTranscodeItem() {
@@ -363,6 +391,9 @@ public class MediaTranscodeItem extends AbstractModel{
         if (source.DigitalWatermarkType != null) {
             this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
         }
+        if (source.CopyRightWatermarkText != null) {
+            this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
+        }
     }
 
 
@@ -382,6 +413,7 @@ public class MediaTranscodeItem extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+        this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
 
     }
 }

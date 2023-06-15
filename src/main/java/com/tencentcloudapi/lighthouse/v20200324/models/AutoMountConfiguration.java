@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AutoMountConfiguration extends AbstractModel{
 
     /**
-    * 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+    * 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,16 +44,16 @@ public class AutoMountConfiguration extends AbstractModel{
     private String FileSystemType;
 
     /**
-     * Get 待挂载的实例ID。指定的实例必须处于“运行中”状态。 
-     * @return InstanceId 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+     * Get 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。 
+     * @return InstanceId 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 待挂载的实例ID。指定的实例必须处于“运行中”状态。
-     * @param InstanceId 待挂载的实例ID。指定的实例必须处于“运行中”状态。
+     * Set 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
+     * @param InstanceId 待挂载的实例ID。指定的实例必须与指定的数据盘处于同一可用区，实例状态必须处于“运行中”状态，且实例必须支持[自动化助手](https://cloud.tencent.com/document/product/1340/50752)。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

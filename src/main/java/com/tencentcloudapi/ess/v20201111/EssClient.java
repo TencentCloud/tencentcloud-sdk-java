@@ -387,7 +387,7 @@ public class EssClient extends AbstractClient{
     }
 
     /**
-     *创建员工,如需在此接口提醒员工实名，入参Employees的OpenId不传
+     *创建员工,此接口会发送提醒员工实名的短信
      * @param req CreateIntegrationEmployeesRequest
      * @return CreateIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
@@ -1078,7 +1078,7 @@ callbackinfo包含： 回调地址和签名key
     }
 
     /**
-     *更新员工信息(姓名，手机号，邮件)，用户实名后无法更改姓名与手机号
+     *更新员工信息(姓名，手机号，邮件、部门)，用户实名后无法更改姓名与手机号
      * @param req UpdateIntegrationEmployeesRequest
      * @return UpdateIntegrationEmployeesResponse
      * @throws TencentCloudSDKException
