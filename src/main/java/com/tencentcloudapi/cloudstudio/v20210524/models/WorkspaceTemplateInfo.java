@@ -172,14 +172,6 @@ public class WorkspaceTemplateInfo extends AbstractModel{
     private String PluginFile;
 
     /**
-    * xxx
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PrebuildFile")
-    @Expose
-    private String PrebuildFile;
-
-    /**
     * 是否标记
     */
     @SerializedName("Marked")
@@ -623,26 +615,6 @@ public class WorkspaceTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get xxx
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrebuildFile xxx
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getPrebuildFile() {
-        return this.PrebuildFile;
-    }
-
-    /**
-     * Set xxx
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrebuildFile xxx
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPrebuildFile(String PrebuildFile) {
-        this.PrebuildFile = PrebuildFile;
-    }
-
-    /**
      * Get 是否标记 
      * @return Marked 是否标记
      */
@@ -887,9 +859,6 @@ public class WorkspaceTemplateInfo extends AbstractModel{
         if (source.PluginFile != null) {
             this.PluginFile = new String(source.PluginFile);
         }
-        if (source.PrebuildFile != null) {
-            this.PrebuildFile = new String(source.PrebuildFile);
-        }
         if (source.Marked != null) {
             this.Marked = new Boolean(source.Marked);
         }
@@ -946,7 +915,6 @@ public class WorkspaceTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UserVersionControlRefType", this.UserVersionControlRefType);
         this.setParamSimple(map, prefix + "DevFile", this.DevFile);
         this.setParamSimple(map, prefix + "PluginFile", this.PluginFile);
-        this.setParamSimple(map, prefix + "PrebuildFile", this.PrebuildFile);
         this.setParamSimple(map, prefix + "Marked", this.Marked);
         this.setParamSimple(map, prefix + "MarkAt", this.MarkAt);
         this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);

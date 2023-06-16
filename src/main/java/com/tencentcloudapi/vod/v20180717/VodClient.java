@@ -2208,6 +2208,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *提取版权水印信息。
+     * @param req ExtractCopyRightWatermarkRequest
+     * @return ExtractCopyRightWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(ExtractCopyRightWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExtractCopyRightWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExtractCopyRightWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExtractCopyRightWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *用于提取溯源水印。
      * @param req ExtractTraceWatermarkRequest
      * @return ExtractTraceWatermarkResponse

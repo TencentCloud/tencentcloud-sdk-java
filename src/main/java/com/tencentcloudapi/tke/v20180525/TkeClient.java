@@ -2139,6 +2139,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询etcd数据是否进行加密
+     * @param req DescribeEncryptionStatusRequest
+     * @return DescribeEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptionStatusResponse DescribeEncryptionStatus(DescribeEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询已经存在的节点，判断是否可以加入集群
      * @param req DescribeExistedInstancesRequest
      * @return DescribeExistedInstancesResponse
@@ -2839,6 +2859,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *关闭加密信息保护
+     * @param req DisableEncryptionProtectionRequest
+     * @return DisableEncryptionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableEncryptionProtectionResponse DisableEncryptionProtection(DisableEncryptionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableEncryptionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableEncryptionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *关闭事件持久化功能
      * @param req DisableEventPersistenceRequest
      * @return DisableEventPersistenceResponse
@@ -2931,6 +2971,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *开启加密数据保护
+     * @param req EnableEncryptionProtectionRequest
+     * @return EnableEncryptionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableEncryptionProtectionResponse EnableEncryptionProtection(EnableEncryptionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableEncryptionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableEncryptionProtection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

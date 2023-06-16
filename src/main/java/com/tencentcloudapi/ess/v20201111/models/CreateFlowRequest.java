@@ -58,19 +58,19 @@ public class CreateFlowRequest extends AbstractModel{
     private String ClientToken;
 
     /**
-    * 暂未开放
-    */
-    @SerializedName("RelatedFlowId")
-    @Expose
-    private String RelatedFlowId;
-
-    /**
     * 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后
     */
     @SerializedName("DeadLine")
     @Expose
     private Long DeadLine;
+
+    /**
+    * 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+    */
+    @SerializedName("RemindedOn")
+    @Expose
+    private Long RemindedOn;
 
     /**
     * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
@@ -114,13 +114,6 @@ false：有序签
     private Boolean NeedSignReview;
 
     /**
-    * 暂未开放
-    */
-    @SerializedName("CallbackUrl")
-    @Expose
-    private String CallbackUrl;
-
-    /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
@@ -141,6 +134,20 @@ false：有序签
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("RelatedFlowId")
+    @Expose
+    private String RelatedFlowId;
+
+    /**
+    * 暂未开放
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
 
     /**
      * Get 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。 
@@ -223,26 +230,6 @@ false：有序签
     }
 
     /**
-     * Get 暂未开放 
-     * @return RelatedFlowId 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public String getRelatedFlowId() {
-        return this.RelatedFlowId;
-    }
-
-    /**
-     * Set 暂未开放
-     * @param RelatedFlowId 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public void setRelatedFlowId(String RelatedFlowId) {
-        this.RelatedFlowId = RelatedFlowId;
-    }
-
-    /**
      * Get 签署流程的签署截止时间。
 值为unix时间戳,精确到秒,不传默认为当前时间一年后 
      * @return DeadLine 签署流程的签署截止时间。
@@ -260,6 +247,22 @@ false：有序签
      */
     public void setDeadLine(Long DeadLine) {
         this.DeadLine = DeadLine;
+    }
+
+    /**
+     * Get 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。 
+     * @return RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     */
+    public Long getRemindedOn() {
+        return this.RemindedOn;
+    }
+
+    /**
+     * Set 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     * @param RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     */
+    public void setRemindedOn(Long RemindedOn) {
+        this.RemindedOn = RemindedOn;
     }
 
     /**
@@ -367,26 +370,6 @@ false：有序签
     }
 
     /**
-     * Get 暂未开放 
-     * @return CallbackUrl 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public String getCallbackUrl() {
-        return this.CallbackUrl;
-    }
-
-    /**
-     * Set 暂未开放
-     * @param CallbackUrl 暂未开放
-     * @deprecated
-     */
-    @Deprecated
-    public void setCallbackUrl(String CallbackUrl) {
-        this.CallbackUrl = CallbackUrl;
-    }
-
-    /**
      * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
      * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
@@ -438,6 +421,46 @@ false：有序签
         this.AutoSignScene = AutoSignScene;
     }
 
+    /**
+     * Get 暂未开放 
+     * @return RelatedFlowId 暂未开放
+     * @deprecated
+     */
+    @Deprecated
+    public String getRelatedFlowId() {
+        return this.RelatedFlowId;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param RelatedFlowId 暂未开放
+     * @deprecated
+     */
+    @Deprecated
+    public void setRelatedFlowId(String RelatedFlowId) {
+        this.RelatedFlowId = RelatedFlowId;
+    }
+
+    /**
+     * Get 暂未开放 
+     * @return CallbackUrl 暂未开放
+     * @deprecated
+     */
+    @Deprecated
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 暂未开放
+     * @param CallbackUrl 暂未开放
+     * @deprecated
+     */
+    @Deprecated
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public CreateFlowRequest() {
     }
 
@@ -464,11 +487,11 @@ false：有序签
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
-        if (source.RelatedFlowId != null) {
-            this.RelatedFlowId = new String(source.RelatedFlowId);
-        }
         if (source.DeadLine != null) {
             this.DeadLine = new Long(source.DeadLine);
+        }
+        if (source.RemindedOn != null) {
+            this.RemindedOn = new Long(source.RemindedOn);
         }
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
@@ -485,9 +508,6 @@ false：有序签
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
-        if (source.CallbackUrl != null) {
-            this.CallbackUrl = new String(source.CallbackUrl);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -499,6 +519,12 @@ false：有序签
         }
         if (source.AutoSignScene != null) {
             this.AutoSignScene = new String(source.AutoSignScene);
+        }
+        if (source.RelatedFlowId != null) {
+            this.RelatedFlowId = new String(source.RelatedFlowId);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
         }
     }
 
@@ -512,17 +538,18 @@ false：有序签
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
-        this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
         this.setParamSimple(map, prefix + "DeadLine", this.DeadLine);
+        this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
-        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+        this.setParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

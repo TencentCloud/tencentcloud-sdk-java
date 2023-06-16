@@ -98,6 +98,13 @@ public class CreateFlowByFilesRequest extends AbstractModel{
     private Long Deadline;
 
     /**
+    * 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+    */
+    @SerializedName("RemindedOn")
+    @Expose
+    private Long RemindedOn;
+
+    /**
     * 发送类型：
 true：无序签
 false：有序签
@@ -357,6 +364,22 @@ MobileCheck：手机号验证
     }
 
     /**
+     * Get 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。 
+     * @return RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     */
+    public Long getRemindedOn() {
+        return this.RemindedOn;
+    }
+
+    /**
+     * Set 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     * @param RemindedOn 合同到期提醒时间戳，单位秒。设定该值后，可以提前进行到期通知，方便客户处理合同到期事务，如合同续签等。该值支持的范围是从发起时间起到往后的10年内。仅合同发起方企业的发起人可以编辑修改。
+     */
+    public void setRemindedOn(Long RemindedOn) {
+        this.RemindedOn = RemindedOn;
+    }
+
+    /**
      * Get 发送类型：
 true：无序签
 false：有序签
@@ -602,6 +625,9 @@ MobileCheck：手机号验证
         if (source.Deadline != null) {
             this.Deadline = new Long(source.Deadline);
         }
+        if (source.RemindedOn != null) {
+            this.RemindedOn = new Long(source.RemindedOn);
+        }
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
         }
@@ -649,6 +675,7 @@ MobileCheck：手机号验证
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "RemindedOn", this.RemindedOn);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
