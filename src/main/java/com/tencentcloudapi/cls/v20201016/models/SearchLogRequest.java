@@ -46,7 +46,8 @@ public class SearchLogRequest extends AbstractModel{
     private String Query;
 
     /**
-    * 要检索分析的日志主题ID
+    * - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
     */
     @SerializedName("TopicId")
     @Expose
@@ -113,6 +114,15 @@ public class SearchLogRequest extends AbstractModel{
     private Long SyntaxRule;
 
     /**
+    * - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+    */
+    @SerializedName("Topics")
+    @Expose
+    private MultiTopicSearchInformation [] Topics;
+
+    /**
      * Get 要检索分析的日志的起始时间，Unix时间戳（毫秒） 
      * @return From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      */
@@ -169,16 +179,20 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 要检索分析的日志主题ID 
-     * @return TopicId 要检索分析的日志主题ID
+     * Get - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。 
+     * @return TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 要检索分析的日志主题ID
-     * @param TopicId 要检索分析的日志主题ID
+     * Set - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
+     * @param TopicId - 要检索分析的日志主题ID，仅能指定一个日志主题。
+- 如需同时检索多个日志主题，请使用Topics参数。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -352,6 +366,30 @@ public class SearchLogRequest extends AbstractModel{
         this.SyntaxRule = SyntaxRule;
     }
 
+    /**
+     * Get - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。 
+     * @return Topics - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+     */
+    public MultiTopicSearchInformation [] getTopics() {
+        return this.Topics;
+    }
+
+    /**
+     * Set - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+     * @param Topics - 要检索分析的日志主题列表，最大支持20个日志主题。
+- 检索单个日志主题时请使用TopicId。
+- 不能同时使用TopicId和Topics。
+     */
+    public void setTopics(MultiTopicSearchInformation [] Topics) {
+        this.Topics = Topics;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -390,6 +428,12 @@ public class SearchLogRequest extends AbstractModel{
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.Topics != null) {
+            this.Topics = new MultiTopicSearchInformation[source.Topics.length];
+            for (int i = 0; i < source.Topics.length; i++) {
+                this.Topics[i] = new MultiTopicSearchInformation(source.Topics[i]);
+            }
+        }
     }
 
 
@@ -407,6 +451,7 @@ public class SearchLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
 
     }
 }

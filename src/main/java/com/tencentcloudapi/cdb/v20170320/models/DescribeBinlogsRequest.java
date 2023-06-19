@@ -44,14 +44,14 @@ public class DescribeBinlogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+    * binlog最早开始时间，时间格式：2016-03-17 02:10:37
     */
     @SerializedName("MinStartTime")
     @Expose
     private String MinStartTime;
 
     /**
-    * binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+    * binlog最晚开始时间，时间格式：2016-03-17 02:10:37
     */
     @SerializedName("MaxStartTime")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeBinlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37 
-     * @return MinStartTime binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     * Get binlog最早开始时间，时间格式：2016-03-17 02:10:37 
+     * @return MinStartTime binlog最早开始时间，时间格式：2016-03-17 02:10:37
      */
     public String getMinStartTime() {
         return this.MinStartTime;
     }
 
     /**
-     * Set binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
-     * @param MinStartTime binlog开始时间，筛选大于等于此值，时间格式：2016-03-17 02:10:37
+     * Set binlog最早开始时间，时间格式：2016-03-17 02:10:37
+     * @param MinStartTime binlog最早开始时间，时间格式：2016-03-17 02:10:37
      */
     public void setMinStartTime(String MinStartTime) {
         this.MinStartTime = MinStartTime;
     }
 
     /**
-     * Get binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37 
-     * @return MaxStartTime binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     * Get binlog最晚开始时间，时间格式：2016-03-17 02:10:37 
+     * @return MaxStartTime binlog最晚开始时间，时间格式：2016-03-17 02:10:37
      */
     public String getMaxStartTime() {
         return this.MaxStartTime;
     }
 
     /**
-     * Set binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
-     * @param MaxStartTime binlog开始时间，筛选小于等于此值，时间格式：2016-03-17 02:10:37
+     * Set binlog最晚开始时间，时间格式：2016-03-17 02:10:37
+     * @param MaxStartTime binlog最晚开始时间，时间格式：2016-03-17 02:10:37
      */
     public void setMaxStartTime(String MaxStartTime) {
         this.MaxStartTime = MaxStartTime;

@@ -459,6 +459,26 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *授权工作空间列表
+     * @param req DescribeWorkSpacesRequest
+     * @return DescribeWorkSpacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkSpacesResponse DescribeWorkSpaces(DescribeWorkSpacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkSpacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkSpacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkSpaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
 (2)	更新作业备注 

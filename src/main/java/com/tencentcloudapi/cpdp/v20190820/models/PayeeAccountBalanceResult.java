@@ -97,6 +97,54 @@ OCCASION:偶然所得
     private String SumSettlementAmount;
 
     /**
+    * 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaidIncomeTax")
+    @Expose
+    private String PaidIncomeTax;
+
+    /**
+    * 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InPayIncomeTax")
+    @Expose
+    private String InPayIncomeTax;
+
+    /**
+    * 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaidValueAddedTax")
+    @Expose
+    private String PaidValueAddedTax;
+
+    /**
+    * 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InPayValueAddedTax")
+    @Expose
+    private String InPayValueAddedTax;
+
+    /**
+    * 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PaidAttachTax")
+    @Expose
+    private String PaidAttachTax;
+
+    /**
+    * 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InPayAttachTax")
+    @Expose
+    private String InPayAttachTax;
+
+    /**
      * Get 账户ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccountId 账户ID
@@ -284,6 +332,126 @@ OCCASION:偶然所得
         this.SumSettlementAmount = SumSettlementAmount;
     }
 
+    /**
+     * Get 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaidIncomeTax 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaidIncomeTax() {
+        return this.PaidIncomeTax;
+    }
+
+    /**
+     * Set 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaidIncomeTax 已缴个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaidIncomeTax(String PaidIncomeTax) {
+        this.PaidIncomeTax = PaidIncomeTax;
+    }
+
+    /**
+     * Get 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InPayIncomeTax 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInPayIncomeTax() {
+        return this.InPayIncomeTax;
+    }
+
+    /**
+     * Set 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InPayIncomeTax 提现中个税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInPayIncomeTax(String InPayIncomeTax) {
+        this.InPayIncomeTax = InPayIncomeTax;
+    }
+
+    /**
+     * Get 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaidValueAddedTax 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaidValueAddedTax() {
+        return this.PaidValueAddedTax;
+    }
+
+    /**
+     * Set 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaidValueAddedTax 已缴增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaidValueAddedTax(String PaidValueAddedTax) {
+        this.PaidValueAddedTax = PaidValueAddedTax;
+    }
+
+    /**
+     * Get 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InPayValueAddedTax 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInPayValueAddedTax() {
+        return this.InPayValueAddedTax;
+    }
+
+    /**
+     * Set 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InPayValueAddedTax 提现中增值税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInPayValueAddedTax(String InPayValueAddedTax) {
+        this.InPayValueAddedTax = InPayValueAddedTax;
+    }
+
+    /**
+     * Get 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PaidAttachTax 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPaidAttachTax() {
+        return this.PaidAttachTax;
+    }
+
+    /**
+     * Set 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PaidAttachTax 已缴附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPaidAttachTax(String PaidAttachTax) {
+        this.PaidAttachTax = PaidAttachTax;
+    }
+
+    /**
+     * Get 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InPayAttachTax 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInPayAttachTax() {
+        return this.InPayAttachTax;
+    }
+
+    /**
+     * Set 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InPayAttachTax 提现中附加税
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInPayAttachTax(String InPayAttachTax) {
+        this.InPayAttachTax = InPayAttachTax;
+    }
+
     public PayeeAccountBalanceResult() {
     }
 
@@ -319,6 +487,24 @@ OCCASION:偶然所得
         if (source.SumSettlementAmount != null) {
             this.SumSettlementAmount = new String(source.SumSettlementAmount);
         }
+        if (source.PaidIncomeTax != null) {
+            this.PaidIncomeTax = new String(source.PaidIncomeTax);
+        }
+        if (source.InPayIncomeTax != null) {
+            this.InPayIncomeTax = new String(source.InPayIncomeTax);
+        }
+        if (source.PaidValueAddedTax != null) {
+            this.PaidValueAddedTax = new String(source.PaidValueAddedTax);
+        }
+        if (source.InPayValueAddedTax != null) {
+            this.InPayValueAddedTax = new String(source.InPayValueAddedTax);
+        }
+        if (source.PaidAttachTax != null) {
+            this.PaidAttachTax = new String(source.PaidAttachTax);
+        }
+        if (source.InPayAttachTax != null) {
+            this.InPayAttachTax = new String(source.InPayAttachTax);
+        }
     }
 
 
@@ -335,6 +521,12 @@ OCCASION:偶然所得
         this.setParamSimple(map, prefix + "PaidBalance", this.PaidBalance);
         this.setParamSimple(map, prefix + "InPayBalance", this.InPayBalance);
         this.setParamSimple(map, prefix + "SumSettlementAmount", this.SumSettlementAmount);
+        this.setParamSimple(map, prefix + "PaidIncomeTax", this.PaidIncomeTax);
+        this.setParamSimple(map, prefix + "InPayIncomeTax", this.InPayIncomeTax);
+        this.setParamSimple(map, prefix + "PaidValueAddedTax", this.PaidValueAddedTax);
+        this.setParamSimple(map, prefix + "InPayValueAddedTax", this.InPayValueAddedTax);
+        this.setParamSimple(map, prefix + "PaidAttachTax", this.PaidAttachTax);
+        this.setParamSimple(map, prefix + "InPayAttachTax", this.InPayAttachTax);
 
     }
 }

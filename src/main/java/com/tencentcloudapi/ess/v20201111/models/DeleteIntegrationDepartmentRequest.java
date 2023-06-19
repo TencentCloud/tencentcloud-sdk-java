@@ -37,7 +37,7 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     private String DeptId;
 
     /**
-    * 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。
+    * 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
     */
     @SerializedName("ReceiveDeptId")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteIntegrationDepartmentRequest extends AbstractModel{
     }
 
     /**
-     * Get 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。 
-     * @return ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。
+     * Get 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。 
+     * @return ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
      */
     public String getReceiveDeptId() {
         return this.ReceiveDeptId;
     }
 
     /**
-     * Set 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。
-     * @param ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模版数据，交接至该部门ID下，未填写交接至公司根部门。
+     * Set 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
+     * @param ReceiveDeptId 交接部门ID。待删除部门中的合同、印章和模板数据，交接至该部门ID下，未填写交接至公司根部门。
      */
     public void setReceiveDeptId(String ReceiveDeptId) {
         this.ReceiveDeptId = ReceiveDeptId;

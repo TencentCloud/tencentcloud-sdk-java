@@ -23,69 +23,104 @@ import java.util.HashMap;
 public class UpgradeInstanceVersionRequest extends AbstractModel{
 
     /**
-    * 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
+    * 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的**TypeId**，即实例要变更的目标类型。
+- Redis 4.0 及以上的版本，支持相同版本的实例从标准架构升级至集群架构，例如，支持 Redis 4.0 标准架构升级至 Redis 4.0 集群架构。
+- 不支持跨版本架构升级，例如，Redis 4.0 标准架构升级至 Redis 5.0 集群架构。
+- 不支持 Redis 2.8 版本升级架构。
+- 不支持从集群架构降级至标准架构。
+
     */
     @SerializedName("TargetInstanceType")
     @Expose
     private String TargetInstanceType;
 
     /**
-    * 切换模式：1-维护时间窗切换，2-立即切换
+    * 切换时间。
+- 1：维护时间窗切换。
+- 2：立即切换。
     */
     @SerializedName("SwitchOption")
     @Expose
     private Long SwitchOption;
 
     /**
-    * 实例ID
+    * 指定实例 ID。例如：crs-xjhsdj****，请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型 
-     * @return TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
+     * Get 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的**TypeId**，即实例要变更的目标类型。
+- Redis 4.0 及以上的版本，支持相同版本的实例从标准架构升级至集群架构，例如，支持 Redis 4.0 标准架构升级至 Redis 4.0 集群架构。
+- 不支持跨版本架构升级，例如，Redis 4.0 标准架构升级至 Redis 5.0 集群架构。
+- 不支持 Redis 2.8 版本升级架构。
+- 不支持从集群架构降级至标准架构。
+ 
+     * @return TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的**TypeId**，即实例要变更的目标类型。
+- Redis 4.0 及以上的版本，支持相同版本的实例从标准架构升级至集群架构，例如，支持 Redis 4.0 标准架构升级至 Redis 4.0 集群架构。
+- 不支持跨版本架构升级，例如，Redis 4.0 标准架构升级至 Redis 5.0 集群架构。
+- 不支持 Redis 2.8 版本升级架构。
+- 不支持从集群架构降级至标准架构。
+
      */
     public String getTargetInstanceType() {
         return this.TargetInstanceType;
     }
 
     /**
-     * Set 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
-     * @param TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的Type，即实例要变更的目标类型
+     * Set 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的**TypeId**，即实例要变更的目标类型。
+- Redis 4.0 及以上的版本，支持相同版本的实例从标准架构升级至集群架构，例如，支持 Redis 4.0 标准架构升级至 Redis 4.0 集群架构。
+- 不支持跨版本架构升级，例如，Redis 4.0 标准架构升级至 Redis 5.0 集群架构。
+- 不支持 Redis 2.8 版本升级架构。
+- 不支持从集群架构降级至标准架构。
+
+     * @param TargetInstanceType 目标实例类型，同 [CreateInstances](https://cloud.tencent.com/document/api/239/20026) 的**TypeId**，即实例要变更的目标类型。
+- Redis 4.0 及以上的版本，支持相同版本的实例从标准架构升级至集群架构，例如，支持 Redis 4.0 标准架构升级至 Redis 4.0 集群架构。
+- 不支持跨版本架构升级，例如，Redis 4.0 标准架构升级至 Redis 5.0 集群架构。
+- 不支持 Redis 2.8 版本升级架构。
+- 不支持从集群架构降级至标准架构。
+
      */
     public void setTargetInstanceType(String TargetInstanceType) {
         this.TargetInstanceType = TargetInstanceType;
     }
 
     /**
-     * Get 切换模式：1-维护时间窗切换，2-立即切换 
-     * @return SwitchOption 切换模式：1-维护时间窗切换，2-立即切换
+     * Get 切换时间。
+- 1：维护时间窗切换。
+- 2：立即切换。 
+     * @return SwitchOption 切换时间。
+- 1：维护时间窗切换。
+- 2：立即切换。
      */
     public Long getSwitchOption() {
         return this.SwitchOption;
     }
 
     /**
-     * Set 切换模式：1-维护时间窗切换，2-立即切换
-     * @param SwitchOption 切换模式：1-维护时间窗切换，2-立即切换
+     * Set 切换时间。
+- 1：维护时间窗切换。
+- 2：立即切换。
+     * @param SwitchOption 切换时间。
+- 1：维护时间窗切换。
+- 2：立即切换。
      */
     public void setSwitchOption(Long SwitchOption) {
         this.SwitchOption = SwitchOption;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定实例 ID。例如：crs-xjhsdj****，请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****，请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定实例 ID。例如：crs-xjhsdj****，请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****，请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

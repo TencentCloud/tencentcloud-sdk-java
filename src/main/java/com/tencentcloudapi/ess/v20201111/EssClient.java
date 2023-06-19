@@ -547,6 +547,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *创建电子印章
+     * @param req CreateSealRequest
+     * @return CreateSealResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSealResponse CreateSeal(CreateSealRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSealResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSealResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSeal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *对企业员工进行印章授权
      * @param req CreateSealPolicyRequest
      * @return CreateSealPolicyResponse
