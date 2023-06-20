@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class CreateSparkAppRequest extends AbstractModel{
 
     /**
-    * spark应用名
+    * spark作业名
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 1代表spark jar应用，2代表spark streaming应用
+    * spark作业类型，1代表spark jar作业，2代表spark streaming作业
     */
     @SerializedName("AppType")
     @Expose
     private Long AppType;
 
     /**
-    * 执行spark作业的数据引擎
+    * 执行spark作业的数据引擎名称
     */
     @SerializedName("DataEngine")
     @Expose
     private String DataEngine;
 
     /**
-    * spark应用的执行入口
+    * spark作业程序包文件路径
     */
     @SerializedName("AppFile")
     @Expose
     private String AppFile;
 
     /**
-    * 执行spark作业的角色ID
+    * 数据访问策略，CAM Role arn
     */
     @SerializedName("RoleArn")
     @Expose
     private Long RoleArn;
 
     /**
-    * spark作业driver资源规格大小, 可取small,medium,large,xlarge
+    * 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
     */
     @SerializedName("AppDriverSize")
     @Expose
     private String AppDriverSize;
 
     /**
-    * spark作业executor资源规格大小, 可取small,medium,large,xlarge
+    * 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
     */
     @SerializedName("AppExecutorSize")
     @Expose
@@ -86,14 +86,14 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String Eni;
 
     /**
-    * 是否本地上传，可去cos,lakefs
+    * spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocal")
     @Expose
     private String IsLocal;
 
     /**
-    * spark jar作业时的主类
+    * spark作业主类
     */
     @SerializedName("MainClass")
     @Expose
@@ -107,84 +107,84 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String AppConf;
 
     /**
-    * 是否本地上传，包含cos,lakefs
+    * spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalJars")
     @Expose
     private String IsLocalJars;
 
     /**
-    * spark jar作业依赖jars，以逗号分隔
+    * spark 作业依赖jar包（--jars），以逗号分隔
     */
     @SerializedName("AppJars")
     @Expose
     private String AppJars;
 
     /**
-    * 是否本地上传，包含cos,lakefs
+    * spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalFiles")
     @Expose
     private String IsLocalFiles;
 
     /**
-    * spark作业依赖资源，以逗号分隔
+    * spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔
     */
     @SerializedName("AppFiles")
     @Expose
     private String AppFiles;
 
     /**
-    * spark作业命令行参数
+    * spark作业程序入参，空格分割
     */
     @SerializedName("CmdArgs")
     @Expose
     private String CmdArgs;
 
     /**
-    * 只对spark流任务生效
+    * 最大重试次数，只对spark流任务生效
     */
     @SerializedName("MaxRetries")
     @Expose
     private Long MaxRetries;
 
     /**
-    * 数据源名
+    * 数据源名称
     */
     @SerializedName("DataSource")
     @Expose
     private String DataSource;
 
     /**
-    * pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    * pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalPythonFiles")
     @Expose
     private String IsLocalPythonFiles;
 
     /**
-    * pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+    * pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔
     */
     @SerializedName("AppPythonFiles")
     @Expose
     private String AppPythonFiles;
 
     /**
-    * archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+    * spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
     */
     @SerializedName("IsLocalArchives")
     @Expose
     private String IsLocalArchives;
 
     /**
-    * archives：依赖资源
+    * spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔
     */
     @SerializedName("AppArchives")
     @Expose
     private String AppArchives;
 
     /**
-    * Spark Image 版本
+    * Spark Image 版本号
     */
     @SerializedName("SparkImage")
     @Expose
@@ -219,112 +219,112 @@ public class CreateSparkAppRequest extends AbstractModel{
     private Long IsInherit;
 
     /**
-     * Get spark应用名 
-     * @return AppName spark应用名
+     * Get spark作业名 
+     * @return AppName spark作业名
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set spark应用名
-     * @param AppName spark应用名
+     * Set spark作业名
+     * @param AppName spark作业名
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 1代表spark jar应用，2代表spark streaming应用 
-     * @return AppType 1代表spark jar应用，2代表spark streaming应用
+     * Get spark作业类型，1代表spark jar作业，2代表spark streaming作业 
+     * @return AppType spark作业类型，1代表spark jar作业，2代表spark streaming作业
      */
     public Long getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 1代表spark jar应用，2代表spark streaming应用
-     * @param AppType 1代表spark jar应用，2代表spark streaming应用
+     * Set spark作业类型，1代表spark jar作业，2代表spark streaming作业
+     * @param AppType spark作业类型，1代表spark jar作业，2代表spark streaming作业
      */
     public void setAppType(Long AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get 执行spark作业的数据引擎 
-     * @return DataEngine 执行spark作业的数据引擎
+     * Get 执行spark作业的数据引擎名称 
+     * @return DataEngine 执行spark作业的数据引擎名称
      */
     public String getDataEngine() {
         return this.DataEngine;
     }
 
     /**
-     * Set 执行spark作业的数据引擎
-     * @param DataEngine 执行spark作业的数据引擎
+     * Set 执行spark作业的数据引擎名称
+     * @param DataEngine 执行spark作业的数据引擎名称
      */
     public void setDataEngine(String DataEngine) {
         this.DataEngine = DataEngine;
     }
 
     /**
-     * Get spark应用的执行入口 
-     * @return AppFile spark应用的执行入口
+     * Get spark作业程序包文件路径 
+     * @return AppFile spark作业程序包文件路径
      */
     public String getAppFile() {
         return this.AppFile;
     }
 
     /**
-     * Set spark应用的执行入口
-     * @param AppFile spark应用的执行入口
+     * Set spark作业程序包文件路径
+     * @param AppFile spark作业程序包文件路径
      */
     public void setAppFile(String AppFile) {
         this.AppFile = AppFile;
     }
 
     /**
-     * Get 执行spark作业的角色ID 
-     * @return RoleArn 执行spark作业的角色ID
+     * Get 数据访问策略，CAM Role arn 
+     * @return RoleArn 数据访问策略，CAM Role arn
      */
     public Long getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set 执行spark作业的角色ID
-     * @param RoleArn 执行spark作业的角色ID
+     * Set 数据访问策略，CAM Role arn
+     * @param RoleArn 数据访问策略，CAM Role arn
      */
     public void setRoleArn(Long RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get spark作业driver资源规格大小, 可取small,medium,large,xlarge 
-     * @return AppDriverSize spark作业driver资源规格大小, 可取small,medium,large,xlarge
+     * Get 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu） 
+     * @return AppDriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      */
     public String getAppDriverSize() {
         return this.AppDriverSize;
     }
 
     /**
-     * Set spark作业driver资源规格大小, 可取small,medium,large,xlarge
-     * @param AppDriverSize spark作业driver资源规格大小, 可取small,medium,large,xlarge
+     * Set 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
+     * @param AppDriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      */
     public void setAppDriverSize(String AppDriverSize) {
         this.AppDriverSize = AppDriverSize;
     }
 
     /**
-     * Get spark作业executor资源规格大小, 可取small,medium,large,xlarge 
-     * @return AppExecutorSize spark作业executor资源规格大小, 可取small,medium,large,xlarge
+     * Get 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu） 
+     * @return AppExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      */
     public String getAppExecutorSize() {
         return this.AppExecutorSize;
     }
 
     /**
-     * Set spark作业executor资源规格大小, 可取small,medium,large,xlarge
-     * @param AppExecutorSize spark作业executor资源规格大小, 可取small,medium,large,xlarge
+     * Set 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
+     * @param AppExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
      */
     public void setAppExecutorSize(String AppExecutorSize) {
         this.AppExecutorSize = AppExecutorSize;
@@ -363,32 +363,32 @@ public class CreateSparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否本地上传，可去cos,lakefs 
-     * @return IsLocal 是否本地上传，可去cos,lakefs
+     * Get spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocal spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocal() {
         return this.IsLocal;
     }
 
     /**
-     * Set 是否本地上传，可去cos,lakefs
-     * @param IsLocal 是否本地上传，可去cos,lakefs
+     * Set spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocal spark作业程序包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocal(String IsLocal) {
         this.IsLocal = IsLocal;
     }
 
     /**
-     * Get spark jar作业时的主类 
-     * @return MainClass spark jar作业时的主类
+     * Get spark作业主类 
+     * @return MainClass spark作业主类
      */
     public String getMainClass() {
         return this.MainClass;
     }
 
     /**
-     * Set spark jar作业时的主类
-     * @param MainClass spark jar作业时的主类
+     * Set spark作业主类
+     * @param MainClass spark作业主类
      */
     public void setMainClass(String MainClass) {
         this.MainClass = MainClass;
@@ -411,192 +411,192 @@ public class CreateSparkAppRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否本地上传，包含cos,lakefs 
-     * @return IsLocalJars 是否本地上传，包含cos,lakefs
+     * Get spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalJars spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalJars() {
         return this.IsLocalJars;
     }
 
     /**
-     * Set 是否本地上传，包含cos,lakefs
-     * @param IsLocalJars 是否本地上传，包含cos,lakefs
+     * Set spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalJars spark 作业依赖jar包是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalJars(String IsLocalJars) {
         this.IsLocalJars = IsLocalJars;
     }
 
     /**
-     * Get spark jar作业依赖jars，以逗号分隔 
-     * @return AppJars spark jar作业依赖jars，以逗号分隔
+     * Get spark 作业依赖jar包（--jars），以逗号分隔 
+     * @return AppJars spark 作业依赖jar包（--jars），以逗号分隔
      */
     public String getAppJars() {
         return this.AppJars;
     }
 
     /**
-     * Set spark jar作业依赖jars，以逗号分隔
-     * @param AppJars spark jar作业依赖jars，以逗号分隔
+     * Set spark 作业依赖jar包（--jars），以逗号分隔
+     * @param AppJars spark 作业依赖jar包（--jars），以逗号分隔
      */
     public void setAppJars(String AppJars) {
         this.AppJars = AppJars;
     }
 
     /**
-     * Get 是否本地上传，包含cos,lakefs 
-     * @return IsLocalFiles 是否本地上传，包含cos,lakefs
+     * Get spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalFiles spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalFiles() {
         return this.IsLocalFiles;
     }
 
     /**
-     * Set 是否本地上传，包含cos,lakefs
-     * @param IsLocalFiles 是否本地上传，包含cos,lakefs
+     * Set spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalFiles spark作业依赖文件资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalFiles(String IsLocalFiles) {
         this.IsLocalFiles = IsLocalFiles;
     }
 
     /**
-     * Get spark作业依赖资源，以逗号分隔 
-     * @return AppFiles spark作业依赖资源，以逗号分隔
+     * Get spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔 
+     * @return AppFiles spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔
      */
     public String getAppFiles() {
         return this.AppFiles;
     }
 
     /**
-     * Set spark作业依赖资源，以逗号分隔
-     * @param AppFiles spark作业依赖资源，以逗号分隔
+     * Set spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔
+     * @param AppFiles spark作业依赖文件资源（--files）（非jar、zip），以逗号分隔
      */
     public void setAppFiles(String AppFiles) {
         this.AppFiles = AppFiles;
     }
 
     /**
-     * Get spark作业命令行参数 
-     * @return CmdArgs spark作业命令行参数
+     * Get spark作业程序入参，空格分割 
+     * @return CmdArgs spark作业程序入参，空格分割
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set spark作业命令行参数
-     * @param CmdArgs spark作业命令行参数
+     * Set spark作业程序入参，空格分割
+     * @param CmdArgs spark作业程序入参，空格分割
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;
     }
 
     /**
-     * Get 只对spark流任务生效 
-     * @return MaxRetries 只对spark流任务生效
+     * Get 最大重试次数，只对spark流任务生效 
+     * @return MaxRetries 最大重试次数，只对spark流任务生效
      */
     public Long getMaxRetries() {
         return this.MaxRetries;
     }
 
     /**
-     * Set 只对spark流任务生效
-     * @param MaxRetries 只对spark流任务生效
+     * Set 最大重试次数，只对spark流任务生效
+     * @param MaxRetries 最大重试次数，只对spark流任务生效
      */
     public void setMaxRetries(Long MaxRetries) {
         this.MaxRetries = MaxRetries;
     }
 
     /**
-     * Get 数据源名 
-     * @return DataSource 数据源名
+     * Get 数据源名称 
+     * @return DataSource 数据源名称
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set 数据源名
-     * @param DataSource 数据源名
+     * Set 数据源名称
+     * @param DataSource 数据源名称
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;
     }
 
     /**
-     * Get pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
-     * @return IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Get pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalPythonFiles pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalPythonFiles() {
         return this.IsLocalPythonFiles;
     }
 
     /**
-     * Set pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
-     * @param IsLocalPythonFiles pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Set pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalPythonFiles pyspark：依赖上传方式，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalPythonFiles(String IsLocalPythonFiles) {
         this.IsLocalPythonFiles = IsLocalPythonFiles;
     }
 
     /**
-     * Get pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔 
-     * @return AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Get pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔 
+     * @return AppPythonFiles pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔
      */
     public String getAppPythonFiles() {
         return this.AppPythonFiles;
     }
 
     /**
-     * Set pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
-     * @param AppPythonFiles pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+     * Set pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔
+     * @param AppPythonFiles pyspark作业依赖python资源（--py-files），支持py/zip/egg等归档格式，多文件以逗号分隔
      */
     public void setAppPythonFiles(String AppPythonFiles) {
         this.AppPythonFiles = AppPythonFiles;
     }
 
     /**
-     * Get archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用） 
-     * @return IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Get spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用） 
+     * @return IsLocalArchives spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public String getIsLocalArchives() {
         return this.IsLocalArchives;
     }
 
     /**
-     * Set archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
-     * @param IsLocalArchives archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+     * Set spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
+     * @param IsLocalArchives spark作业依赖archives资源是否本地上传，cos：存放与cos，lakefs：本地上传（控制台使用，该方式不支持直接接口调用）
      */
     public void setIsLocalArchives(String IsLocalArchives) {
         this.IsLocalArchives = IsLocalArchives;
     }
 
     /**
-     * Get archives：依赖资源 
-     * @return AppArchives archives：依赖资源
+     * Get spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔 
+     * @return AppArchives spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔
      */
     public String getAppArchives() {
         return this.AppArchives;
     }
 
     /**
-     * Set archives：依赖资源
-     * @param AppArchives archives：依赖资源
+     * Set spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔
+     * @param AppArchives spark作业依赖archives资源（--archives），支持tar.gz/tgz/tar等归档格式，以逗号分隔
      */
     public void setAppArchives(String AppArchives) {
         this.AppArchives = AppArchives;
     }
 
     /**
-     * Get Spark Image 版本 
-     * @return SparkImage Spark Image 版本
+     * Get Spark Image 版本号 
+     * @return SparkImage Spark Image 版本号
      */
     public String getSparkImage() {
         return this.SparkImage;
     }
 
     /**
-     * Set Spark Image 版本
-     * @param SparkImage Spark Image 版本
+     * Set Spark Image 版本号
+     * @param SparkImage Spark Image 版本号
      */
     public void setSparkImage(String SparkImage) {
         this.SparkImage = SparkImage;

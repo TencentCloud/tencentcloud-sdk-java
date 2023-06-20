@@ -51,14 +51,14 @@ public class DescribeNotebookSessionsRequest extends AbstractModel{
     private Boolean Asc;
 
     /**
-    * 分页字段
+    * 分页参数，默认10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页字段
+    * 分页参数，默认0
     */
     @SerializedName("Offset")
     @Expose
@@ -129,32 +129,32 @@ public class DescribeNotebookSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页字段 
-     * @return Limit 分页字段
+     * Get 分页参数，默认10 
+     * @return Limit 分页参数，默认10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页字段
-     * @param Limit 分页字段
+     * Set 分页参数，默认10
+     * @param Limit 分页参数，默认10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页字段 
-     * @return Offset 分页字段
+     * Get 分页参数，默认0 
+     * @return Offset 分页参数，默认0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页字段
-     * @param Offset 分页字段
+     * Set 分页参数，默认0
+     * @param Offset 分页参数，默认0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -79,6 +79,26 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *创建风险中心扫描任务
+     * @param req CreateRiskCenterScanTaskRequest
+     * @return CreateRiskCenterScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(CreateRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRiskCenterScanTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRiskCenterScanTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRiskCenterScanTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *cvm详情
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse

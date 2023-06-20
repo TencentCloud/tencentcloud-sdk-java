@@ -739,6 +739,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除一个addon
+     * @param req DeleteAddonRequest
+     * @return DeleteAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAddonResponse DeleteAddon(DeleteAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAddonResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAddon");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除备份仓库
      * @param req DeleteBackupStorageLocationRequest
      * @return DeleteBackupStorageLocationResponse
@@ -1271,6 +1291,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTKEEdgeClusterResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取addon列表
+     * @param req DescribeAddonRequest
+     * @return DescribeAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddonResponse DescribeAddon(DescribeAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddonResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddon");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取一个addon的参数
+     * @param req DescribeAddonValuesRequest
+     * @return DescribeAddonValuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAddonValuesResponse DescribeAddonValues(DescribeAddonValuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAddonValuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAddonValues");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3159,6 +3219,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *为目标集群安装一个addon
+     * @param req InstallAddonRequest
+     * @return InstallAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallAddonResponse InstallAddon(InstallAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallAddonResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallAddon");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *在tke@edge集群的边缘节点上安装日志采集组件
      * @param req InstallEdgeLogAgentRequest
      * @return InstallEdgeLogAgentResponse
@@ -3811,6 +3891,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UninstallLogAgentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UninstallLogAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新一个addon的参数和版本
+     * @param req UpdateAddonRequest
+     * @return UpdateAddonResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAddonResponse UpdateAddon(UpdateAddonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAddonResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAddonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAddon");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

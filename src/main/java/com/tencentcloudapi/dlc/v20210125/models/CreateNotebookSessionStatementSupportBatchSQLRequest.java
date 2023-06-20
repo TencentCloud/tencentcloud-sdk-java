@@ -37,7 +37,7 @@ public class CreateNotebookSessionStatementSupportBatchSQLRequest extends Abstra
     private String Code;
 
     /**
-    * 类型，当前支持：spark、pyspark、sparkr、sql
+    * 类型，当前支持：sql
     */
     @SerializedName("Kind")
     @Expose
@@ -83,16 +83,16 @@ public class CreateNotebookSessionStatementSupportBatchSQLRequest extends Abstra
     }
 
     /**
-     * Get 类型，当前支持：spark、pyspark、sparkr、sql 
-     * @return Kind 类型，当前支持：spark、pyspark、sparkr、sql
+     * Get 类型，当前支持：sql 
+     * @return Kind 类型，当前支持：sql
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 类型，当前支持：spark、pyspark、sparkr、sql
-     * @param Kind 类型，当前支持：spark、pyspark、sparkr、sql
+     * Set 类型，当前支持：sql
+     * @param Kind 类型，当前支持：sql
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

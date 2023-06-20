@@ -77,7 +77,7 @@ task-kind - string （任务类型过滤）
     private String EndTime;
 
     /**
-    * 支持计算资源名字筛选
+    * 数据引擎名称，用于筛选
     */
     @SerializedName("DataEngineName")
     @Expose
@@ -216,16 +216,16 @@ task-kind - string （任务类型过滤）
     }
 
     /**
-     * Get 支持计算资源名字筛选 
-     * @return DataEngineName 支持计算资源名字筛选
+     * Get 数据引擎名称，用于筛选 
+     * @return DataEngineName 数据引擎名称，用于筛选
      */
     public String getDataEngineName() {
         return this.DataEngineName;
     }
 
     /**
-     * Set 支持计算资源名字筛选
-     * @param DataEngineName 支持计算资源名字筛选
+     * Set 数据引擎名称，用于筛选
+     * @param DataEngineName 数据引擎名称，用于筛选
      */
     public void setDataEngineName(String DataEngineName) {
         this.DataEngineName = DataEngineName;

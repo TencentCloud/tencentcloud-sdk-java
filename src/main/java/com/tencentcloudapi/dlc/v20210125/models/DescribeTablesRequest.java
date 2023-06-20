@@ -60,21 +60,21 @@ table-id - String - （过滤条件）table id形如：12342。
     private String DatasourceConnectionName;
 
     /**
-    * 起始时间：用于对更新时间的筛选
+    * 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 终止时间：用于对更新时间的筛选
+    * 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+    * 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
     */
     @SerializedName("Sort")
     @Expose
@@ -190,48 +190,48 @@ table-id - String - （过滤条件）table id形如：12342。
     }
 
     /**
-     * Get 起始时间：用于对更新时间的筛选 
-     * @return StartTime 起始时间：用于对更新时间的筛选
+     * Get 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS 
+     * @return StartTime 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间：用于对更新时间的筛选
-     * @param StartTime 起始时间：用于对更新时间的筛选
+     * Set 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+     * @param StartTime 起始时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 终止时间：用于对更新时间的筛选 
-     * @return EndTime 终止时间：用于对更新时间的筛选
+     * Get 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS 
+     * @return EndTime 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 终止时间：用于对更新时间的筛选
-     * @param EndTime 终止时间：用于对更新时间的筛选
+     * Set 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
+     * @param EndTime 终止时间：用于对更新时间的筛选，格式为yyyy-mm-dd HH:MM:SS
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序） 
-     * @return Sort 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+     * Get 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序） 
+     * @return Sort 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
-     * @param Sort 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
+     * Set 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
+     * @param Sort 排序字段，支持：CreateTime（创建时间）、UpdateTime（更新时间）、StorageSize（存储空间）、RecordCount（行数）、Name（表名称）（不传则默认按name升序）
      */
     public void setSort(String Sort) {
         this.Sort = Sort;

@@ -2418,6 +2418,26 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     }
 
     /**
+     *发送RocketMQ消息
+     * @param req SendRocketMQMessageRequest
+     * @return SendRocketMQMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendRocketMQMessageResponse SendRocketMQMessage(SendRocketMQMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendRocketMQMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendRocketMQMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *解绑cmq死信队列
      * @param req UnbindCmqDeadLetterRequest
      * @return UnbindCmqDeadLetterResponse

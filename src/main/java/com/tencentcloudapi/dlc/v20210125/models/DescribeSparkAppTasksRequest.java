@@ -51,14 +51,14 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     private String TaskId;
 
     /**
-    * 更新时间起始点
+    * 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 更新时间截止点
+    * 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("EndTime")
     @Expose
@@ -136,32 +136,32 @@ public class DescribeSparkAppTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get 更新时间起始点 
-     * @return StartTime 更新时间起始点
+     * Get 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss 
+     * @return StartTime 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 更新时间起始点
-     * @param StartTime 更新时间起始点
+     * Set 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
+     * @param StartTime 更新时间起始点，支持格式：yyyy-MM-dd HH:mm:ss
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 更新时间截止点 
-     * @return EndTime 更新时间截止点
+     * Get 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss 
+     * @return EndTime 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 更新时间截止点
-     * @param EndTime 更新时间截止点
+     * Set 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
+     * @param EndTime 更新时间截止点，支持格式：yyyy-MM-dd HH:mm:ss
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

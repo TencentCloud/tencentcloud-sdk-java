@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteSparkAppRequest extends AbstractModel{
 
     /**
-    * spark应用名
+    * spark作业名
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-     * Get spark应用名 
-     * @return AppName spark应用名
+     * Get spark作业名 
+     * @return AppName spark作业名
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set spark应用名
-     * @param AppName spark应用名
+     * Set spark作业名
+     * @param AppName spark作业名
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

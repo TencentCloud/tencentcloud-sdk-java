@@ -30,13 +30,7 @@ public class DescribeDataEnginesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+    * 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
     */
     @SerializedName("Filters")
     @Expose
@@ -85,7 +79,7 @@ message - String
     private String [] AccessTypes;
 
     /**
-    * 引擎执行任务类型，有效值：SQL/BATCH
+    * 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
     */
     @SerializedName("EngineExecType")
     @Expose
@@ -122,40 +116,16 @@ message - String
     }
 
     /**
-     * Get 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String 
-     * @return Filters 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+     * Get 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH） 
+     * @return Filters 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
-     * @param Filters 滤类型，传参Name应为以下其中一个,
-data-engine-name - String 
-engine-type - String
-state - String 
-mode - String 
-create-time - String 
-message - String
+     * Set 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
+     * @param Filters 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -258,16 +228,16 @@ message - String
     }
 
     /**
-     * Get 引擎执行任务类型，有效值：SQL/BATCH 
-     * @return EngineExecType 引擎执行任务类型，有效值：SQL/BATCH
+     * Get 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL 
+     * @return EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public String getEngineExecType() {
         return this.EngineExecType;
     }
 
     /**
-     * Set 引擎执行任务类型，有效值：SQL/BATCH
-     * @param EngineExecType 引擎执行任务类型，有效值：SQL/BATCH
+     * Set 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * @param EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public void setEngineExecType(String EngineExecType) {
         this.EngineExecType = EngineExecType;

@@ -31,6 +31,14 @@ public class ImportSnapshotsResponse extends AbstractModel{
     private String TaskId;
 
     /**
+    * ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ public class ImportSnapshotsResponse extends AbstractModel{
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId ApplicationId由 AppInstanceId-applicationId 组成，以区分不同集群的申请
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
     }
 
     /**
@@ -84,6 +112,9 @@ public class ImportSnapshotsResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +126,7 @@ public class ImportSnapshotsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

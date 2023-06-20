@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSparkAppJobRequest extends AbstractModel{
 
     /**
-    * spark作业Id，与JobName同时存在时，JobName无效
+    * spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
     */
     @SerializedName("JobId")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSparkAppJobRequest extends AbstractModel{
     private String JobName;
 
     /**
-     * Get spark作业Id，与JobName同时存在时，JobName无效 
-     * @return JobId spark作业Id，与JobName同时存在时，JobName无效
+     * Get spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个 
+     * @return JobId spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set spark作业Id，与JobName同时存在时，JobName无效
-     * @param JobId spark作业Id，与JobName同时存在时，JobName无效
+     * Set spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
+     * @param JobId spark作业Id，与JobName同时存在时，JobName无效，JobId与JobName至少存在一个
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

@@ -156,7 +156,7 @@ public class CreateDataEngineRequest extends AbstractModel{
     private CrontabResumeSuspendStrategy CrontabResumeSuspendStrategy;
 
     /**
-    * 引擎执行任务类型，默认为SQL
+    * 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
     */
     @SerializedName("EngineExecType")
     @Expose
@@ -537,16 +537,16 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get 引擎执行任务类型，默认为SQL 
-     * @return EngineExecType 引擎执行任务类型，默认为SQL
+     * Get 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL 
+     * @return EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public String getEngineExecType() {
         return this.EngineExecType;
     }
 
     /**
-     * Set 引擎执行任务类型，默认为SQL
-     * @param EngineExecType 引擎执行任务类型，默认为SQL
+     * Set 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * @param EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
      */
     public void setEngineExecType(String EngineExecType) {
         this.EngineExecType = EngineExecType;

@@ -30,7 +30,7 @@ public class CreateSparkAppTaskRequest extends AbstractModel{
     private String JobName;
 
     /**
-    * spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+    * spark作业程序入参，以空格分隔；一般用于周期性调用使用
     */
     @SerializedName("CmdArgs")
     @Expose
@@ -53,16 +53,16 @@ public class CreateSparkAppTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get spark作业的命令行参数，以空格分隔；一般用于周期性调用使用 
-     * @return CmdArgs spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+     * Get spark作业程序入参，以空格分隔；一般用于周期性调用使用 
+     * @return CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
      */
     public String getCmdArgs() {
         return this.CmdArgs;
     }
 
     /**
-     * Set spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
-     * @param CmdArgs spark作业的命令行参数，以空格分隔；一般用于周期性调用使用
+     * Set spark作业程序入参，以空格分隔；一般用于周期性调用使用
+     * @param CmdArgs spark作业程序入参，以空格分隔；一般用于周期性调用使用
      */
     public void setCmdArgs(String CmdArgs) {
         this.CmdArgs = CmdArgs;

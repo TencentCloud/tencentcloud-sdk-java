@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cloudstudio.v20210524;
 public enum CloudstudioErrorCode {
+    // 工作空间名称重复
+     FAILEDOPERATION_WORKSPACENAMEDUPLICATE("FailedOperation.WorkspaceNameDuplicate"),
+     
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable");
      

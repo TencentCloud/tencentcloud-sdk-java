@@ -304,6 +304,30 @@ public class TaskResponseInfo extends AbstractModel{
     private Long ExecutorMaxNumbers;
 
     /**
+    * 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CommonMetrics")
+    @Expose
+    private CommonMetrics CommonMetrics;
+
+    /**
+    * spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SparkMonitorMetrics")
+    @Expose
+    private SparkMonitorMetrics SparkMonitorMetrics;
+
+    /**
+    * presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PrestoMonitorMetrics")
+    @Expose
+    private PrestoMonitorMetrics PrestoMonitorMetrics;
+
+    /**
      * Get 任务所属Database的名称。 
      * @return DatabaseName 任务所属Database的名称。
      */
@@ -983,6 +1007,66 @@ public class TaskResponseInfo extends AbstractModel{
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
     }
 
+    /**
+     * Get 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CommonMetrics 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommonMetrics getCommonMetrics() {
+        return this.CommonMetrics;
+    }
+
+    /**
+     * Set 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommonMetrics 任务公共指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommonMetrics(CommonMetrics CommonMetrics) {
+        this.CommonMetrics = CommonMetrics;
+    }
+
+    /**
+     * Get spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SparkMonitorMetrics spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SparkMonitorMetrics getSparkMonitorMetrics() {
+        return this.SparkMonitorMetrics;
+    }
+
+    /**
+     * Set spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SparkMonitorMetrics spark任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSparkMonitorMetrics(SparkMonitorMetrics SparkMonitorMetrics) {
+        this.SparkMonitorMetrics = SparkMonitorMetrics;
+    }
+
+    /**
+     * Get presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PrestoMonitorMetrics presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrestoMonitorMetrics getPrestoMonitorMetrics() {
+        return this.PrestoMonitorMetrics;
+    }
+
+    /**
+     * Set presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PrestoMonitorMetrics presto任务指标数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrestoMonitorMetrics(PrestoMonitorMetrics PrestoMonitorMetrics) {
+        this.PrestoMonitorMetrics = PrestoMonitorMetrics;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -1102,6 +1186,15 @@ public class TaskResponseInfo extends AbstractModel{
         if (source.ExecutorMaxNumbers != null) {
             this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
         }
+        if (source.CommonMetrics != null) {
+            this.CommonMetrics = new CommonMetrics(source.CommonMetrics);
+        }
+        if (source.SparkMonitorMetrics != null) {
+            this.SparkMonitorMetrics = new SparkMonitorMetrics(source.SparkMonitorMetrics);
+        }
+        if (source.PrestoMonitorMetrics != null) {
+            this.PrestoMonitorMetrics = new PrestoMonitorMetrics(source.PrestoMonitorMetrics);
+        }
     }
 
 
@@ -1146,6 +1239,9 @@ public class TaskResponseInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ExecutorSize", this.ExecutorSize);
         this.setParamSimple(map, prefix + "ExecutorNums", this.ExecutorNums);
         this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+        this.setParamObj(map, prefix + "CommonMetrics.", this.CommonMetrics);
+        this.setParamObj(map, prefix + "SparkMonitorMetrics.", this.SparkMonitorMetrics);
+        this.setParamObj(map, prefix + "PrestoMonitorMetrics.", this.PrestoMonitorMetrics);
 
     }
 }

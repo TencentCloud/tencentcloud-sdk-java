@@ -51,7 +51,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
     private String DatasourceConnectionName;
 
     /**
-    * 排序字段，当前版本仅支持按库名排序
+    * 排序字段，CreateTime：创建时间，Name：数据库名称
     */
     @SerializedName("Sort")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeDatabasesRequest extends AbstractModel{
     }
 
     /**
-     * Get 排序字段，当前版本仅支持按库名排序 
-     * @return Sort 排序字段，当前版本仅支持按库名排序
+     * Get 排序字段，CreateTime：创建时间，Name：数据库名称 
+     * @return Sort 排序字段，CreateTime：创建时间，Name：数据库名称
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 排序字段，当前版本仅支持按库名排序
-     * @param Sort 排序字段，当前版本仅支持按库名排序
+     * Set 排序字段，CreateTime：创建时间，Name：数据库名称
+     * @param Sort 排序字段，CreateTime：创建时间，Name：数据库名称
      */
     public void setSort(String Sort) {
         this.Sort = Sort;

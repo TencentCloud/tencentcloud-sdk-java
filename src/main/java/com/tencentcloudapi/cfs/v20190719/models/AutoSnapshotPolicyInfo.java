@@ -130,6 +130,13 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private Long IntervalDays;
 
     /**
+    * 跨地域复制的快照保留时间
+    */
+    @SerializedName("CrossRegionsAliveDays")
+    @Expose
+    private Long CrossRegionsAliveDays;
+
+    /**
      * Get 快照策略ID 
      * @return AutoSnapshotPolicyId 快照策略ID
      */
@@ -377,6 +384,22 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.IntervalDays = IntervalDays;
     }
 
+    /**
+     * Get 跨地域复制的快照保留时间 
+     * @return CrossRegionsAliveDays 跨地域复制的快照保留时间
+     */
+    public Long getCrossRegionsAliveDays() {
+        return this.CrossRegionsAliveDays;
+    }
+
+    /**
+     * Set 跨地域复制的快照保留时间
+     * @param CrossRegionsAliveDays 跨地域复制的快照保留时间
+     */
+    public void setCrossRegionsAliveDays(Long CrossRegionsAliveDays) {
+        this.CrossRegionsAliveDays = CrossRegionsAliveDays;
+    }
+
     public AutoSnapshotPolicyInfo() {
     }
 
@@ -433,6 +456,9 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         if (source.IntervalDays != null) {
             this.IntervalDays = new Long(source.IntervalDays);
         }
+        if (source.CrossRegionsAliveDays != null) {
+            this.CrossRegionsAliveDays = new Long(source.CrossRegionsAliveDays);
+        }
     }
 
 
@@ -455,6 +481,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
         this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
         this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+        this.setParamSimple(map, prefix + "CrossRegionsAliveDays", this.CrossRegionsAliveDays);
 
     }
 }

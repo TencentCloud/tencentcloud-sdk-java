@@ -37,7 +37,7 @@ public class DescribeTablesRequest extends AbstractModel{
     private String [] TableGroupIds;
 
     /**
-    * 待查询表格信息列表
+    * 待查询表格信息列表，用户不用关注，过滤请使用filter
     */
     @SerializedName("SelectedTables")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get 待查询表格信息列表 
-     * @return SelectedTables 待查询表格信息列表
+     * Get 待查询表格信息列表，用户不用关注，过滤请使用filter 
+     * @return SelectedTables 待查询表格信息列表，用户不用关注，过滤请使用filter
      */
     public SelectedTableInfoNew [] getSelectedTables() {
         return this.SelectedTables;
     }
 
     /**
-     * Set 待查询表格信息列表
-     * @param SelectedTables 待查询表格信息列表
+     * Set 待查询表格信息列表，用户不用关注，过滤请使用filter
+     * @param SelectedTables 待查询表格信息列表，用户不用关注，过滤请使用filter
      */
     public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
         this.SelectedTables = SelectedTables;

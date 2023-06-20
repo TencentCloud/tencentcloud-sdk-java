@@ -66,7 +66,7 @@ public class SendSmsRequest extends AbstractModel{
     private String ExtendCode;
 
     /**
-    * 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+    * 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
     */
     @SerializedName("SessionContext")
     @Expose
@@ -180,16 +180,16 @@ public class SendSmsRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。 
-     * @return SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+     * Get 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。 
+     * @return SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
-     * @param SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。
+     * Set 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
+     * @param SessionContext 用户的 session 内容，可以携带用户侧 ID 等上下文信息，server 会原样返回。注意长度需小于512字节。
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
