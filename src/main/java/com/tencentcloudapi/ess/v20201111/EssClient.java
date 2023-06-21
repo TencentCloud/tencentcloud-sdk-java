@@ -750,6 +750,26 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询流程填写控件内容，可以根据流程Id查询该流程相关联的填写控件信息
+     * @param req DescribeFlowComponentsRequest
+     * @return DescribeFlowComponentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowComponentsResponse DescribeFlowComponents(DescribeFlowComponentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowComponentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowComponentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlowComponents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询出证报告，返回报告 URL。
      * @param req DescribeFlowEvidenceReportRequest
      * @return DescribeFlowEvidenceReportResponse

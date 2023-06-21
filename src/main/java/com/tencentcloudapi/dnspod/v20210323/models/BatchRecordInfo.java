@@ -126,6 +126,14 @@ public class BatchRecordInfo extends AbstractModel{
     private Long Weight;
 
     /**
+    * 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 记录 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordId 记录 ID
@@ -381,6 +389,26 @@ public class BatchRecordInfo extends AbstractModel{
         this.Weight = Weight;
     }
 
+    /**
+     * Get 备注信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public BatchRecordInfo() {
     }
 
@@ -428,6 +456,9 @@ public class BatchRecordInfo extends AbstractModel{
         if (source.Weight != null) {
             this.Weight = new Long(source.Weight);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -448,6 +479,7 @@ public class BatchRecordInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "MX", this.MX);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

@@ -30,14 +30,21 @@ public class CreateLibraryRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 存储桶全名，新建后不可更改
+    * 备注，最多 250 个字符
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * 存储桶所在地域，新建后不可更改
+    * 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -49,13 +56,6 @@ public class CreateLibraryRequest extends AbstractModel{
     @SerializedName("LibraryExtension")
     @Expose
     private LibraryExtension LibraryExtension;
-
-    /**
-    * 备注，最多 250 个字符
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
 
     /**
      * Get 媒体库名称，最多 50 个字符 
@@ -74,32 +74,48 @@ public class CreateLibraryRequest extends AbstractModel{
     }
 
     /**
-     * Get 存储桶全名，新建后不可更改 
-     * @return BucketName 存储桶全名，新建后不可更改
+     * Get 备注，最多 250 个字符 
+     * @return Remark 备注，最多 250 个字符
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注，最多 250 个字符
+     * @param Remark 备注，最多 250 个字符
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。 
+     * @return BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set 存储桶全名，新建后不可更改
-     * @param BucketName 存储桶全名，新建后不可更改
+     * Set 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
+     * @param BucketName 存储桶全名，新建后不可更改。当前版本不再支持指定存储桶。
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 存储桶所在地域，新建后不可更改 
-     * @return BucketRegion 存储桶所在地域，新建后不可更改
+     * Get 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。 
+     * @return BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set 存储桶所在地域，新建后不可更改
-     * @param BucketRegion 存储桶所在地域，新建后不可更改
+     * Set 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
+     * @param BucketRegion 存储桶所在地域，新建后不可更改。当前版本不再支持指定存储桶所在地域。
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
@@ -121,22 +137,6 @@ public class CreateLibraryRequest extends AbstractModel{
         this.LibraryExtension = LibraryExtension;
     }
 
-    /**
-     * Get 备注，最多 250 个字符 
-     * @return Remark 备注，最多 250 个字符
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set 备注，最多 250 个字符
-     * @param Remark 备注，最多 250 个字符
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
     public CreateLibraryRequest() {
     }
 
@@ -148,6 +148,9 @@ public class CreateLibraryRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
         if (source.BucketName != null) {
             this.BucketName = new String(source.BucketName);
         }
@@ -157,9 +160,6 @@ public class CreateLibraryRequest extends AbstractModel{
         if (source.LibraryExtension != null) {
             this.LibraryExtension = new LibraryExtension(source.LibraryExtension);
         }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
-        }
     }
 
 
@@ -168,10 +168,10 @@ public class CreateLibraryRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
         this.setParamObj(map, prefix + "LibraryExtension.", this.LibraryExtension);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

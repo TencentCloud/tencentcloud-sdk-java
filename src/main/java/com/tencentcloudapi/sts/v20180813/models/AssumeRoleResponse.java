@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class AssumeRoleResponse extends AbstractModel{
 
     /**
-    * 临时安全证书
+    * 临时访问凭证
     */
     @SerializedName("Credentials")
     @Expose
     private Credentials Credentials;
 
     /**
-    * 证书无效的时间，返回 Unix 时间戳，精确到秒
+    * 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-    * 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+    * 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
     */
     @SerializedName("Expiration")
     @Expose
@@ -51,48 +51,48 @@ public class AssumeRoleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 临时安全证书 
-     * @return Credentials 临时安全证书
+     * Get 临时访问凭证 
+     * @return Credentials 临时访问凭证
      */
     public Credentials getCredentials() {
         return this.Credentials;
     }
 
     /**
-     * Set 临时安全证书
-     * @param Credentials 临时安全证书
+     * Set 临时访问凭证
+     * @param Credentials 临时访问凭证
      */
     public void setCredentials(Credentials Credentials) {
         this.Credentials = Credentials;
     }
 
     /**
-     * Get 证书无效的时间，返回 Unix 时间戳，精确到秒 
-     * @return ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
+     * Get 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒 
+     * @return ExpiredTime 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 证书无效的时间，返回 Unix 时间戳，精确到秒
-     * @param ExpiredTime 证书无效的时间，返回 Unix 时间戳，精确到秒
+     * Set 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
+     * @param ExpiredTime 临时访问凭证的过期时间，返回 Unix 时间戳，精确到秒
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 证书无效的时间，以 iso8601 格式的 UTC 时间表示 
-     * @return Expiration 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+     * Get 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示 
+     * @return Expiration 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
      */
     public String getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set 证书无效的时间，以 iso8601 格式的 UTC 时间表示
-     * @param Expiration 证书无效的时间，以 iso8601 格式的 UTC 时间表示
+     * Set 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
+     * @param Expiration 临时访问凭证的过期时间，以 iso8601 格式的 UTC 时间表示
      */
     public void setExpiration(String Expiration) {
         this.Expiration = Expiration;

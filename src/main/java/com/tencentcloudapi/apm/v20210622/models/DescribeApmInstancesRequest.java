@@ -51,6 +51,13 @@ public class DescribeApmInstancesRequest extends AbstractModel{
     private Long DemoInstanceFlag;
 
     /**
+    * 是否查询全地域实例
+    */
+    @SerializedName("AllRegionsFlag")
+    @Expose
+    private Long AllRegionsFlag;
+
+    /**
      * Get Tag列表 
      * @return Tags Tag列表
      */
@@ -114,6 +121,22 @@ public class DescribeApmInstancesRequest extends AbstractModel{
         this.DemoInstanceFlag = DemoInstanceFlag;
     }
 
+    /**
+     * Get 是否查询全地域实例 
+     * @return AllRegionsFlag 是否查询全地域实例
+     */
+    public Long getAllRegionsFlag() {
+        return this.AllRegionsFlag;
+    }
+
+    /**
+     * Set 是否查询全地域实例
+     * @param AllRegionsFlag 是否查询全地域实例
+     */
+    public void setAllRegionsFlag(Long AllRegionsFlag) {
+        this.AllRegionsFlag = AllRegionsFlag;
+    }
+
     public DescribeApmInstancesRequest() {
     }
 
@@ -140,6 +163,9 @@ public class DescribeApmInstancesRequest extends AbstractModel{
         if (source.DemoInstanceFlag != null) {
             this.DemoInstanceFlag = new Long(source.DemoInstanceFlag);
         }
+        if (source.AllRegionsFlag != null) {
+            this.AllRegionsFlag = new Long(source.AllRegionsFlag);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class DescribeApmInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
+        this.setParamSimple(map, prefix + "AllRegionsFlag", this.AllRegionsFlag);
 
     }
 }

@@ -1544,6 +1544,26 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询直播拉流任务状态信息。
+     * @param req DescribeLivePullStreamTaskStatusRequest
+     * @return DescribeLivePullStreamTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePullStreamTaskStatusResponse DescribeLivePullStreamTaskStatus(DescribeLivePullStreamTaskStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePullStreamTaskStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTaskStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLivePullStreamTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
 排序方式：默认按更新时间 倒序排列。
      * @param req DescribeLivePullStreamTasksRequest

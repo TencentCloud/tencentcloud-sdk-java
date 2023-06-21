@@ -1182,7 +1182,6 @@ public class CkafkaClient extends AbstractClient{
 
     /**
      *获取Topic流量排行，消费者流量排行
-
      * @param req DescribeTopicFlowRankingRequest
      * @return DescribeTopicFlowRankingResponse
      * @throws TencentCloudSDKException

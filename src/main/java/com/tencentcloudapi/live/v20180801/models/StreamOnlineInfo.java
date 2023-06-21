@@ -51,6 +51,16 @@ public class StreamOnlineInfo extends AbstractModel{
     private String DomainName;
 
     /**
+    * 流是否推送到延播。
+0 - 无延播，
+1 - 有延播。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PushToDelay")
+    @Expose
+    private Long PushToDelay;
+
+    /**
      * Get 流名称。 
      * @return StreamName 流名称。
      */
@@ -114,6 +124,34 @@ public class StreamOnlineInfo extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get 流是否推送到延播。
+0 - 无延播，
+1 - 有延播。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PushToDelay 流是否推送到延播。
+0 - 无延播，
+1 - 有延播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPushToDelay() {
+        return this.PushToDelay;
+    }
+
+    /**
+     * Set 流是否推送到延播。
+0 - 无延播，
+1 - 有延播。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PushToDelay 流是否推送到延播。
+0 - 无延播，
+1 - 有延播。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPushToDelay(Long PushToDelay) {
+        this.PushToDelay = PushToDelay;
+    }
+
     public StreamOnlineInfo() {
     }
 
@@ -137,6 +175,9 @@ public class StreamOnlineInfo extends AbstractModel{
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.PushToDelay != null) {
+            this.PushToDelay = new Long(source.PushToDelay);
+        }
     }
 
 
@@ -148,6 +189,7 @@ public class StreamOnlineInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PublishTimeList.", this.PublishTimeList);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "PushToDelay", this.PushToDelay);
 
     }
 }

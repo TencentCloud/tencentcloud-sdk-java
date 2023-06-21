@@ -51,7 +51,7 @@ public class AssumeRoleWithWebIdentityRequest extends AbstractModel{
     private String RoleSessionName;
 
     /**
-    * 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+    * 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
     */
     @SerializedName("DurationSeconds")
     @Expose
@@ -122,16 +122,16 @@ public class AssumeRoleWithWebIdentityRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒 
-     * @return DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * Get 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒 
+     * @return DurationSeconds 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public Long getDurationSeconds() {
         return this.DurationSeconds;
     }
 
     /**
-     * Set 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
-     * @param DurationSeconds 指定临时证书的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * Set 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
+     * @param DurationSeconds 指定临时访问凭证的有效期，单位：秒，默认 7200 秒，最长可设定有效期为 43200 秒
      */
     public void setDurationSeconds(Long DurationSeconds) {
         this.DurationSeconds = DurationSeconds;

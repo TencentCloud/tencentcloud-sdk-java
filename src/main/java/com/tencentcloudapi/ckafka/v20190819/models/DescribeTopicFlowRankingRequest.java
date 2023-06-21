@@ -51,6 +51,13 @@ public class DescribeTopicFlowRankingRequest extends AbstractModel{
     private String EndDate;
 
     /**
+    * Broker IP 地址
+    */
+    @SerializedName("BrokerIp")
+    @Expose
+    private String BrokerIp;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -114,6 +121,22 @@ public class DescribeTopicFlowRankingRequest extends AbstractModel{
         this.EndDate = EndDate;
     }
 
+    /**
+     * Get Broker IP 地址 
+     * @return BrokerIp Broker IP 地址
+     */
+    public String getBrokerIp() {
+        return this.BrokerIp;
+    }
+
+    /**
+     * Set Broker IP 地址
+     * @param BrokerIp Broker IP 地址
+     */
+    public void setBrokerIp(String BrokerIp) {
+        this.BrokerIp = BrokerIp;
+    }
+
     public DescribeTopicFlowRankingRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTopicFlowRankingRequest extends AbstractModel{
         if (source.EndDate != null) {
             this.EndDate = new String(source.EndDate);
         }
+        if (source.BrokerIp != null) {
+            this.BrokerIp = new String(source.BrokerIp);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTopicFlowRankingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RankingType", this.RankingType);
         this.setParamSimple(map, prefix + "BeginDate", this.BeginDate);
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
+        this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
 
     }
 }

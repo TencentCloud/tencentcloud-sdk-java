@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class AssumeRoleWithWebIdentityResponse extends AbstractModel{
 
     /**
-    * 临时密钥过期时间(时间戳)
+    * 临时访问凭证过期时间(时间戳)
     */
     @SerializedName("ExpiredTime")
     @Expose
     private Long ExpiredTime;
 
     /**
-    * 临时密钥过期时间
+    * 临时访问凭证过期时间
     */
     @SerializedName("Expiration")
     @Expose
     private String Expiration;
 
     /**
-    * 临时密钥
+    * 临时访问凭证
     */
     @SerializedName("Credentials")
     @Expose
@@ -51,48 +51,48 @@ public class AssumeRoleWithWebIdentityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 临时密钥过期时间(时间戳) 
-     * @return ExpiredTime 临时密钥过期时间(时间戳)
+     * Get 临时访问凭证过期时间(时间戳) 
+     * @return ExpiredTime 临时访问凭证过期时间(时间戳)
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 临时密钥过期时间(时间戳)
-     * @param ExpiredTime 临时密钥过期时间(时间戳)
+     * Set 临时访问凭证过期时间(时间戳)
+     * @param ExpiredTime 临时访问凭证过期时间(时间戳)
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 临时密钥过期时间 
-     * @return Expiration 临时密钥过期时间
+     * Get 临时访问凭证过期时间 
+     * @return Expiration 临时访问凭证过期时间
      */
     public String getExpiration() {
         return this.Expiration;
     }
 
     /**
-     * Set 临时密钥过期时间
-     * @param Expiration 临时密钥过期时间
+     * Set 临时访问凭证过期时间
+     * @param Expiration 临时访问凭证过期时间
      */
     public void setExpiration(String Expiration) {
         this.Expiration = Expiration;
     }
 
     /**
-     * Get 临时密钥 
-     * @return Credentials 临时密钥
+     * Get 临时访问凭证 
+     * @return Credentials 临时访问凭证
      */
     public Credentials getCredentials() {
         return this.Credentials;
     }
 
     /**
-     * Set 临时密钥
-     * @param Credentials 临时密钥
+     * Set 临时访问凭证
+     * @param Credentials 临时访问凭证
      */
     public void setCredentials(Credentials Credentials) {
         this.Credentials = Credentials;

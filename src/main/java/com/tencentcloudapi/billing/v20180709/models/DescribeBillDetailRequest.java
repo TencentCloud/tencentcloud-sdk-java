@@ -98,29 +98,31 @@ public class DescribeBillDetailRequest extends AbstractModel{
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
     */
     @SerializedName("ActionType")
     @Expose
@@ -147,6 +149,13 @@ public class DescribeBillDetailRequest extends AbstractModel{
     @SerializedName("Context")
     @Expose
     private String Context;
+
+    /**
+    * 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
 
     /**
      * Get 分页偏移量，Offset=0表示第一页，如果Limit=100，则Offset=100表示第二页，Offset=200表示第三页，依次类推 
@@ -317,56 +326,60 @@ public class DescribeBillDetailRequest extends AbstractModel{
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
 包年包月转按量 
+保底扣款 
+节省计划小时费用 
      * @return ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
      */
     public String getActionType() {
         return this.ActionType;
@@ -377,56 +390,60 @@ public class DescribeBillDetailRequest extends AbstractModel{
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
      * @param ActionType 查询交易类型（请使用交易类型名称入参），入参示例枚举如下：
 包年包月新购
 包年包月续费
 包年包月配置变更
-包年包月退款
-按量计费扣费
-按量计费小时结
-按量计费日结
-按量计费月结
-线下项目扣费
-线下产品扣费
-调账扣费
-调账补偿
-竞价实例小时结
-线下项目调账补偿
-线下产品调账补偿
-优惠扣费
-优惠补偿
-按量计费迁入资源
-按量计费迁出资源
-包年包月迁入资源
-包年包月迁出资源
-预付费用
-小时费用
-预留实例退款
-按量计费冲正
-包年包月转按量
+包年包月退款 
+按量计费扣费 
+线下项目扣费 
+线下产品扣费 
+调账扣费 
+调账补偿 
+按量计费小时结 
+按量计费日结 
+按量计费月结 
+竞价实例小时结 
+线下项目调账补偿 
+线下产品调账补偿 
+优惠扣费 
+优惠补偿 
+按量计费迁入资源 
+按量计费迁出资源 
+包年包月迁入资源 
+包年包月迁出资源 
+预付费用 
+小时费用 
+预留实例退款 
+按量计费冲正 
+包年包月转按量 
+保底扣款 
+节省计划小时费用
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -484,6 +501,22 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.Context = Context;
     }
 
+    /**
+     * Get 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN 
+     * @return PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     * @param PayerUin 支付者的账号 ID（账号 ID 是用户在腾讯云的唯一账号标识），默认查询本账号账单，如集团管理账号需查询成员账号自付的账单，该字段需入参成员账号UIN
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
     public DescribeBillDetailRequest() {
     }
 
@@ -534,6 +567,9 @@ public class DescribeBillDetailRequest extends AbstractModel{
         if (source.Context != null) {
             this.Context = new String(source.Context);
         }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -555,6 +591,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "Context", this.Context);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

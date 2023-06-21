@@ -30,7 +30,7 @@ public class GetFederationTokenRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 授予该临时证书权限的CAM策略
+    * 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
@@ -64,12 +64,12 @@ public class GetFederationTokenRequest extends AbstractModel{
     }
 
     /**
-     * Get 授予该临时证书权限的CAM策略
+     * Get 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
 3、该参数需要做urlencode。 
-     * @return Policy 授予该临时证书权限的CAM策略
+     * @return Policy 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
@@ -80,12 +80,12 @@ public class GetFederationTokenRequest extends AbstractModel{
     }
 
     /**
-     * Set 授予该临时证书权限的CAM策略
+     * Set 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。
 3、该参数需要做urlencode。
-     * @param Policy 授予该临时证书权限的CAM策略
+     * @param Policy 授予该临时访问凭证权限的CAM策略
 注意：
 1、策略语法参照[ CAM 策略语法](https://cloud.tencent.com/document/product/598/10603)。
 2、策略中不能包含 principal 元素。

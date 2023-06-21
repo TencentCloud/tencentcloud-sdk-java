@@ -461,6 +461,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBTmpInstances）用于获取实例回档生成的临时实例
+     * @param req DescribeDBTmpInstancesRequest
+     * @return DescribeDBTmpInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBTmpInstancesResponse DescribeDBTmpInstances(DescribeDBTmpInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBTmpInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBTmpInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBTmpInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeDCDBInstanceDetail）用于获取TDSQL实例详情
      * @param req DescribeDCDBInstanceDetailRequest
      * @return DescribeDCDBInstanceDetailResponse
