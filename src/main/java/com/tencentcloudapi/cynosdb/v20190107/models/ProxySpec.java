@@ -13,56 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tbp.v20190311.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResponseMessage extends AbstractModel{
+public class ProxySpec extends AbstractModel{
 
     /**
-    * 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+    * 数据库代理cpu核数
     */
-    @SerializedName("GroupList")
+    @SerializedName("Cpu")
     @Expose
-    private Group [] GroupList;
+    private Long Cpu;
 
     /**
-     * Get 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupList 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+    * 数据库代理内存
+    */
+    @SerializedName("Mem")
+    @Expose
+    private Long Mem;
+
+    /**
+     * Get 数据库代理cpu核数 
+     * @return Cpu 数据库代理cpu核数
      */
-    public Group [] getGroupList() {
-        return this.GroupList;
+    public Long getCpu() {
+        return this.Cpu;
     }
 
     /**
-     * Set 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupList 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 数据库代理cpu核数
+     * @param Cpu 数据库代理cpu核数
      */
-    public void setGroupList(Group [] GroupList) {
-        this.GroupList = GroupList;
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
     }
 
-    public ResponseMessage() {
+    /**
+     * Get 数据库代理内存 
+     * @return Mem 数据库代理内存
+     */
+    public Long getMem() {
+        return this.Mem;
+    }
+
+    /**
+     * Set 数据库代理内存
+     * @param Mem 数据库代理内存
+     */
+    public void setMem(Long Mem) {
+        this.Mem = Mem;
+    }
+
+    public ProxySpec() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResponseMessage(ResponseMessage source) {
-        if (source.GroupList != null) {
-            this.GroupList = new Group[source.GroupList.length];
-            for (int i = 0; i < source.GroupList.length; i++) {
-                this.GroupList[i] = new Group(source.GroupList[i]);
-            }
+    public ProxySpec(ProxySpec source) {
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Long(source.Mem);
         }
     }
 
@@ -71,7 +89,8 @@ public class ResponseMessage extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Mem", this.Mem);
 
     }
 }

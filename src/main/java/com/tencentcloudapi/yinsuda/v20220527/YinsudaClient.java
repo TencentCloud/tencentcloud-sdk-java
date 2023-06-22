@@ -119,6 +119,26 @@ public class YinsudaClient extends AbstractClient{
     }
 
     /**
+     *获取歌曲伴奏片段链接，可用于抢唱
+     * @param req DescribeKTVMusicAccompanySegmentUrlRequest
+     * @return DescribeKTVMusicAccompanySegmentUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKTVMusicAccompanySegmentUrlResponse DescribeKTVMusicAccompanySegmentUrl(DescribeKTVMusicAccompanySegmentUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKTVMusicAccompanySegmentUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过标签过滤歌曲列表。
      * @param req DescribeKTVMusicsByTagRequest
      * @return DescribeKTVMusicsByTagResponse

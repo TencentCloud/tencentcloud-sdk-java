@@ -79,20 +79,20 @@ public class TextProcessResponse extends AbstractModel{
     private String ResponseText;
 
     /**
-    * 机器人应答。	
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ResponseMessage")
-    @Expose
-    private ResponseMessage ResponseMessage;
-
-    /**
     * 结果类型 {中间逻辑出错:0; 任务型机器人:1; 问答型机器人:2; 闲聊型机器人:3; 未匹配上，返回预设兜底话术:5; 未匹配上，返回相似问题列表:6}。	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultType")
     @Expose
     private String ResultType;
+
+    /**
+    * 机器人应答。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseMessage")
+    @Expose
+    private ResponseMessage ResponseMessage;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -242,26 +242,6 @@ public class TextProcessResponse extends AbstractModel{
     }
 
     /**
-     * Get 机器人应答。	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResponseMessage 机器人应答。	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ResponseMessage getResponseMessage() {
-        return this.ResponseMessage;
-    }
-
-    /**
-     * Set 机器人应答。	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResponseMessage 机器人应答。	
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResponseMessage(ResponseMessage ResponseMessage) {
-        this.ResponseMessage = ResponseMessage;
-    }
-
-    /**
      * Get 结果类型 {中间逻辑出错:0; 任务型机器人:1; 问答型机器人:2; 闲聊型机器人:3; 未匹配上，返回预设兜底话术:5; 未匹配上，返回相似问题列表:6}。	
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ResultType 结果类型 {中间逻辑出错:0; 任务型机器人:1; 问答型机器人:2; 闲聊型机器人:3; 未匹配上，返回预设兜底话术:5; 未匹配上，返回相似问题列表:6}。	
@@ -279,6 +259,26 @@ public class TextProcessResponse extends AbstractModel{
      */
     public void setResultType(String ResultType) {
         this.ResultType = ResultType;
+    }
+
+    /**
+     * Get 机器人应答。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseMessage 机器人应答。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ResponseMessage getResponseMessage() {
+        return this.ResponseMessage;
+    }
+
+    /**
+     * Set 机器人应答。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseMessage 机器人应答。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseMessage(ResponseMessage ResponseMessage) {
+        this.ResponseMessage = ResponseMessage;
     }
 
     /**
@@ -329,11 +329,11 @@ public class TextProcessResponse extends AbstractModel{
         if (source.ResponseText != null) {
             this.ResponseText = new String(source.ResponseText);
         }
-        if (source.ResponseMessage != null) {
-            this.ResponseMessage = new ResponseMessage(source.ResponseMessage);
-        }
         if (source.ResultType != null) {
             this.ResultType = new String(source.ResultType);
+        }
+        if (source.ResponseMessage != null) {
+            this.ResponseMessage = new ResponseMessage(source.ResponseMessage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -352,8 +352,8 @@ public class TextProcessResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "InputText", this.InputText);
         this.setParamSimple(map, prefix + "SessionAttributes", this.SessionAttributes);
         this.setParamSimple(map, prefix + "ResponseText", this.ResponseText);
-        this.setParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
         this.setParamSimple(map, prefix + "ResultType", this.ResultType);
+        this.setParamObj(map, prefix + "ResponseMessage.", this.ResponseMessage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

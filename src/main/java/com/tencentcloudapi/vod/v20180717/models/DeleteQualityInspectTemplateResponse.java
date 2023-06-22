@@ -13,56 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tbp.v20190311.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResponseMessage extends AbstractModel{
+public class DeleteQualityInspectTemplateResponse extends AbstractModel{
 
     /**
-    * 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("GroupList")
+    @SerializedName("RequestId")
     @Expose
-    private Group [] GroupList;
+    private String RequestId;
 
     /**
-     * Get 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupList 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Group [] getGroupList() {
-        return this.GroupList;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupList 消息组列表。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setGroupList(Group [] GroupList) {
-        this.GroupList = GroupList;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public ResponseMessage() {
+    public DeleteQualityInspectTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResponseMessage(ResponseMessage source) {
-        if (source.GroupList != null) {
-            this.GroupList = new Group[source.GroupList.length];
-            for (int i = 0; i < source.GroupList.length; i++) {
-                this.GroupList[i] = new Group(source.GroupList[i]);
-            }
+    public DeleteQualityInspectTemplateResponse(DeleteQualityInspectTemplateResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -71,7 +63,7 @@ public class ResponseMessage extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

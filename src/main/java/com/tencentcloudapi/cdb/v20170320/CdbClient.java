@@ -458,6 +458,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateDatabase)用于在云数据库实例中创建数据库。
+     * @param req CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDatabaseResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDatabaseResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDatabase");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(CreateDeployGroup)用于创建放置实例的置放群组
      * @param req CreateDeployGroupRequest
      * @return CreateDeployGroupResponse

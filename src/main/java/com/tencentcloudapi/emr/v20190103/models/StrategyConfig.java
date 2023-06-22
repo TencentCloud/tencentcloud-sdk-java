@@ -32,7 +32,7 @@ public class StrategyConfig extends AbstractModel{
     private Long RollingRestartSwitch;
 
     /**
-    * 滚动重启每批次的重启数量
+    * 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchSize")
@@ -40,7 +40,7 @@ public class StrategyConfig extends AbstractModel{
     private Long BatchSize;
 
     /**
-    * 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+    * 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeWait")
@@ -80,9 +80,9 @@ public class StrategyConfig extends AbstractModel{
     }
 
     /**
-     * Get 滚动重启每批次的重启数量
+     * Get 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BatchSize 滚动重启每批次的重启数量
+     * @return BatchSize 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchSize() {
@@ -90,9 +90,9 @@ public class StrategyConfig extends AbstractModel{
     }
 
     /**
-     * Set 滚动重启每批次的重启数量
+     * Set 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BatchSize 滚动重启每批次的重启数量
+     * @param BatchSize 滚动重启每批次的重启数量，最大重启台数为 99999 台
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchSize(Long BatchSize) {
@@ -100,9 +100,9 @@ public class StrategyConfig extends AbstractModel{
     }
 
     /**
-     * Get 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * Get 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TimeWait 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * @return TimeWait 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeWait() {
@@ -110,9 +110,9 @@ public class StrategyConfig extends AbstractModel{
     }
 
     /**
-     * Set 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * Set 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TimeWait 滚动重启每批停止等待时间 ,最大重启台数为 99999 台，最大间隔为 5 分钟 单位是秒
+     * @param TimeWait 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeWait(Long TimeWait) {
