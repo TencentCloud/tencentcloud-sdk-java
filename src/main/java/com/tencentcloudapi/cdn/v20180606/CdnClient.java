@@ -1412,6 +1412,30 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *ModifyDomainConfig 用于修改内容分发网络加速域名配置信息
+注意：
+Route 字段，使用点分隔，最后一段称为叶子节点，非叶子节点配置保持不变；
+Value 字段，使用 json 进行序列化，其中固定 update 作为 key，配置路径值参考 https://cloud.tencent.com/document/product/228/41116 接口各配置项复杂类型，为配置路径对应复杂类型下的节点。
+云审计相关：接口的入参可能包含密钥等敏感信息，所以此接口的入参不会上报到云审计。
+     * @param req ModifyDomainConfigRequest
+     * @return ModifyDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainConfigResponse ModifyDomainConfig(ModifyDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDomainConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDomainConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDomainConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
      * @param req ModifyPurgeFetchTaskStatusRequest
      * @return ModifyPurgeFetchTaskStatusResponse

@@ -30,6 +30,13 @@ public class DescribeTraceCodeByIdResponse extends AbstractModel{
     private TraceCode TraceCode;
 
     /**
+    * 码路径，如level是2，则为 [1级, 2级]
+    */
+    @SerializedName("CodePath")
+    @Expose
+    private String [] CodePath;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeTraceCodeByIdResponse extends AbstractModel{
      */
     public void setTraceCode(TraceCode TraceCode) {
         this.TraceCode = TraceCode;
+    }
+
+    /**
+     * Get 码路径，如level是2，则为 [1级, 2级] 
+     * @return CodePath 码路径，如level是2，则为 [1级, 2级]
+     */
+    public String [] getCodePath() {
+        return this.CodePath;
+    }
+
+    /**
+     * Set 码路径，如level是2，则为 [1级, 2级]
+     * @param CodePath 码路径，如level是2，则为 [1级, 2级]
+     */
+    public void setCodePath(String [] CodePath) {
+        this.CodePath = CodePath;
     }
 
     /**
@@ -79,6 +102,12 @@ public class DescribeTraceCodeByIdResponse extends AbstractModel{
         if (source.TraceCode != null) {
             this.TraceCode = new TraceCode(source.TraceCode);
         }
+        if (source.CodePath != null) {
+            this.CodePath = new String[source.CodePath.length];
+            for (int i = 0; i < source.CodePath.length; i++) {
+                this.CodePath[i] = new String(source.CodePath[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +119,7 @@ public class DescribeTraceCodeByIdResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TraceCode.", this.TraceCode);
+        this.setParamArraySimple(map, prefix + "CodePath.", this.CodePath);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

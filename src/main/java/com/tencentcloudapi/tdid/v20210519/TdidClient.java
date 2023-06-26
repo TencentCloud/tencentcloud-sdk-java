@@ -62,28 +62,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-撤消权威机构认证
-     * @param req CancelAuthorityIssuerRequest
-     * @return CancelAuthorityIssuerResponse
-     * @throws TencentCloudSDKException
-     */
-    public CancelAuthorityIssuerResponse CancelAuthorityIssuer(CancelAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CancelAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CancelAuthorityIssuerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CancelAuthorityIssuer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *检查区块链信息
      * @param req CheckChainRequest
      * @return CheckChainResponse
@@ -104,28 +82,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-检查部署情况
-     * @param req CheckDidDeployRequest
-     * @return CheckDidDeployResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckDidDeployResponse CheckDidDeploy(CheckDidDeployRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckDidDeployResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckDidDeployResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckDidDeploy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建凭证
      * @param req CreateCredentialRequest
      * @return CreateCredentialResponse
@@ -138,50 +94,6 @@ DID添加标签
                 Type type = new TypeToken<JsonResponseModel<CreateCredentialResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCredential");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-创建DID服务
-     * @param req CreateDidServiceRequest
-     * @return CreateDidServiceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDidServiceResponse CreateDidService(CreateDidServiceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDidServiceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDidServiceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDidService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-新建标签
-     * @param req CreateLabelRequest
-     * @return CreateLabelResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLabelResponse CreateLabel(CreateLabelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLabelResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLabelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLabel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -270,72 +182,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-通过Name部署TDID合约
-     * @param req DeployByNameRequest
-     * @return DeployByNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeployByNameResponse DeployByName(DeployByNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeployByNameResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeployByNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeployByName");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-凭证模版下载
-     * @param req DownCptRequest
-     * @return DownCptResponse
-     * @throws TencentCloudSDKException
-     */
-    public DownCptResponse DownCpt(DownCptRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DownCptResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DownCptResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DownCpt");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-启用合约
-     * @param req EnableHashRequest
-     * @return EnableHashResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnableHashResponse EnableHash(EnableHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableHashResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnableHashResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableHash");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口已废弃
 
 本机构DID详情
@@ -350,28 +196,6 @@ DID添加标签
                 Type type = new TypeToken<JsonResponseModel<GetAgencyTDidResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetAgencyTDid");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-权威机构列表
-     * @param req GetAuthoritiesListRequest
-     * @return GetAuthoritiesListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetAuthoritiesListResponse GetAuthoritiesList(GetAuthoritiesListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAuthoritiesListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetAuthoritiesListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAuthoritiesList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -466,28 +290,6 @@ DID添加标签
     /**
      *下线已有内测接口，待上线正式版本的接口
 
-凭证模版列表
-     * @param req GetCptListRequest
-     * @return GetCptListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCptListResponse GetCptList(GetCptListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCptListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCptListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCptList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
 凭证颁发按机构排行
      * @param req GetCredentialCptRankRequest
      * @return GetCredentialCptRankResponse
@@ -508,50 +310,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-凭证颁发按机构排行
-     * @param req GetCredentialIssueRankRequest
-     * @return GetCredentialIssueRankResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCredentialIssueRankResponse GetCredentialIssueRank(GetCredentialIssueRankRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialIssueRankResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCredentialIssueRankResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCredentialIssueRank");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-凭证颁发趋势
-     * @param req GetCredentialIssueTrendRequest
-     * @return GetCredentialIssueTrendResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCredentialIssueTrendResponse GetCredentialIssueTrend(GetCredentialIssueTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialIssueTrendResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCredentialIssueTrendResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCredentialIssueTrend");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取凭证链上状态信息
      * @param req GetCredentialStatusRequest
      * @return GetCredentialStatusResponse
@@ -564,74 +322,6 @@ DID添加标签
                 Type type = new TypeToken<JsonResponseModel<GetCredentialStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetCredentialStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-概览
-
-     * @param req GetDataPanelRequest
-     * @return GetDataPanelResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDataPanelResponse GetDataPanel(GetDataPanelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDataPanelResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDataPanelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDataPanel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-合约部署详情
-
-     * @param req GetDeployInfoRequest
-     * @return GetDeployInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDeployInfoResponse GetDeployInfo(GetDeployInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDeployInfoResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDeployInfoResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDeployInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-合约部署列表
-     * @param req GetDeployListRequest
-     * @return GetDeployListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDeployListResponse GetDeployList(GetDeployListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDeployListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDeployListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDeployList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -684,28 +374,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-DID详情
-     * @param req GetDidDetailRequest
-     * @return GetDidDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidDetailResponse GetDidDetail(GetDidDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidDetailResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查看DID文档
 
      * @param req GetDidDocumentRequest
@@ -727,248 +395,6 @@ DID详情
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-DID列表
-     * @param req GetDidListRequest
-     * @return GetDidListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidListResponse GetDidList(GetDidListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-DID注册趋势
-     * @param req GetDidRegisterTrendRequest
-     * @return GetDidRegisterTrendResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidRegisterTrendResponse GetDidRegisterTrend(GetDidRegisterTrendRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidRegisterTrendResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidRegisterTrendResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidRegisterTrend");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-获取DID服务详情
-     * @param req GetDidServiceDetailRequest
-     * @return GetDidServiceDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidServiceDetailResponse GetDidServiceDetail(GetDidServiceDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidServiceDetailResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidServiceDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidServiceDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-获取DID服务列表
-     * @param req GetDidServiceListRequest
-     * @return GetDidServiceListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidServiceListResponse GetDidServiceList(GetDidServiceListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidServiceListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidServiceListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidServiceList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-主群组配置列表
-     * @param req GetGroupListRequest
-     * @return GetGroupListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetGroupListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetGroupListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetGroupList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-标签列表
-     * @param req GetLabelListRequest
-     * @return GetLabelListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetLabelListResponse GetLabelList(GetLabelListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetLabelListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetLabelListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetLabelList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-披露策略Policy管理列表
-     * @param req GetPolicyListRequest
-     * @return GetPolicyListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetPolicyListResponse GetPolicyList(GetPolicyListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPolicyListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetPolicyListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPolicyList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-查看公钥
-     * @param req GetPublicKeyRequest
-     * @return GetPublicKeyResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPublicKeyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPublicKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-披露策略Policy查看
-     * @param req QueryPolicyRequest
-     * @return QueryPolicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryPolicyResponse QueryPolicy(QueryPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryPolicyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryPolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-认证权威机构
-     * @param req RecognizeAuthorityIssuerRequest
-     * @return RecognizeAuthorityIssuerResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeAuthorityIssuerResponse RecognizeAuthorityIssuer(RecognizeAuthorityIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RecognizeAuthorityIssuerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RecognizeAuthorityIssuerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RecognizeAuthorityIssuer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-披露策略Policy注册
-     * @param req RegisterClaimPolicyRequest
-     * @return RegisterClaimPolicyResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterClaimPolicyResponse RegisterClaimPolicy(RegisterClaimPolicyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterClaimPolicyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RegisterClaimPolicyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterClaimPolicy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *凭证模版新建
      * @param req RegisterCptRequest
      * @return RegisterCptResponse
@@ -981,50 +407,6 @@ DID注册趋势
                 Type type = new TypeToken<JsonResponseModel<RegisterCptResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RegisterCpt");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-注册为权威机构
-     * @param req RegisterIssuerRequest
-     * @return RegisterIssuerResponse
-     * @throws TencentCloudSDKException
-     */
-    public RegisterIssuerResponse RegisterIssuer(RegisterIssuerRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RegisterIssuerResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RegisterIssuerResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RegisterIssuer");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-删除合约
-     * @param req RemoveHashRequest
-     * @return RemoveHashResponse
-     * @throws TencentCloudSDKException
-     */
-    public RemoveHashResponse RemoveHash(RemoveHashRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RemoveHashResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RemoveHashResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RemoveHash");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -86,6 +86,20 @@ public class CreateCodeBatchRequest extends AbstractModel{
     private String BatchCode;
 
     /**
+    * 有效期
+    */
+    @SerializedName("ValidDate")
+    @Expose
+    private String ValidDate;
+
+    /**
+    * 生产日期
+    */
+    @SerializedName("ProductionDate")
+    @Expose
+    private String ProductionDate;
+
+    /**
      * Get 企业ID 
      * @return CorpId 企业ID
      */
@@ -229,6 +243,38 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.BatchCode = BatchCode;
     }
 
+    /**
+     * Get 有效期 
+     * @return ValidDate 有效期
+     */
+    public String getValidDate() {
+        return this.ValidDate;
+    }
+
+    /**
+     * Set 有效期
+     * @param ValidDate 有效期
+     */
+    public void setValidDate(String ValidDate) {
+        this.ValidDate = ValidDate;
+    }
+
+    /**
+     * Get 生产日期 
+     * @return ProductionDate 生产日期
+     */
+    public String getProductionDate() {
+        return this.ProductionDate;
+    }
+
+    /**
+     * Set 生产日期
+     * @param ProductionDate 生产日期
+     */
+    public void setProductionDate(String ProductionDate) {
+        this.ProductionDate = ProductionDate;
+    }
+
     public CreateCodeBatchRequest() {
     }
 
@@ -264,6 +310,12 @@ public class CreateCodeBatchRequest extends AbstractModel{
         if (source.BatchCode != null) {
             this.BatchCode = new String(source.BatchCode);
         }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.ProductionDate != null) {
+            this.ProductionDate = new String(source.ProductionDate);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class CreateCodeBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MpTpl", this.MpTpl);
         this.setParamSimple(map, prefix + "CloneId", this.CloneId);
         this.setParamSimple(map, prefix + "BatchCode", this.BatchCode);
+        this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
+        this.setParamSimple(map, prefix + "ProductionDate", this.ProductionDate);
 
     }
 }

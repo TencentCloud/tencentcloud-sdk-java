@@ -1379,6 +1379,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询支持的数据库代理版本
+     * @param req DescribeSupportProxyVersionRequest
+     * @return DescribeSupportProxyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(DescribeSupportProxyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupportProxyVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupportProxyVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSupportProxyVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeZones)用于查询可售卖地域可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse

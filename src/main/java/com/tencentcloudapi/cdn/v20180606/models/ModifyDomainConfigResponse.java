@@ -13,28 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RegisterClaimPolicyResponse extends AbstractModel{
-
-    /**
-    * 披露策略索引
-    */
-    @SerializedName("Id")
-    @Expose
-    private Long Id;
-
-    /**
-    * 披露策略ID
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private Long PolicyId;
+public class ModifyDomainConfigResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,38 +28,6 @@ public class RegisterClaimPolicyResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 披露策略索引 
-     * @return Id 披露策略索引
-     */
-    public Long getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 披露策略索引
-     * @param Id 披露策略索引
-     */
-    public void setId(Long Id) {
-        this.Id = Id;
-    }
-
-    /**
-     * Get 披露策略ID 
-     * @return PolicyId 披露策略ID
-     */
-    public Long getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set 披露策略ID
-     * @param PolicyId 披露策略ID
-     */
-    public void setPolicyId(Long PolicyId) {
-        this.PolicyId = PolicyId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -91,20 +45,14 @@ public class RegisterClaimPolicyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public RegisterClaimPolicyResponse() {
+    public ModifyDomainConfigResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RegisterClaimPolicyResponse(RegisterClaimPolicyResponse source) {
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
-        }
-        if (source.PolicyId != null) {
-            this.PolicyId = new Long(source.PolicyId);
-        }
+    public ModifyDomainConfigResponse(ModifyDomainConfigResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -115,8 +63,6 @@ public class RegisterClaimPolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -259,7 +259,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *创建托管集群外网访问端口（老的方式，仅支持托管集群外网端口）
+     *创建托管集群外网访问端口（不再维护，准备下线）请使用新接口：CreateClusterEndpoint
      * @param req CreateClusterEndpointVipRequest
      * @return CreateClusterEndpointVipResponse
      * @throws TencentCloudSDKException

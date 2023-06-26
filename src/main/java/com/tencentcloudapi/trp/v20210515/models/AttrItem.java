@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TraceItem extends AbstractModel{
+public class AttrItem extends AbstractModel{
 
     /**
     * 字段名称
@@ -48,13 +48,6 @@ mp:小程序类型
     private String Type;
 
     /**
-    * 多个值
-    */
-    @SerializedName("Values")
-    @Expose
-    private String [] Values;
-
-    /**
     * 只读
     */
     @SerializedName("ReadOnly")
@@ -69,6 +62,13 @@ mp:小程序类型
     private Boolean Hidden;
 
     /**
+    * 多个值
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
     * 类型标识
     */
     @SerializedName("Key")
@@ -81,20 +81,6 @@ mp:小程序类型
     @SerializedName("Ext")
     @Expose
     private String Ext;
-
-    /**
-    * 额外属性
-    */
-    @SerializedName("Attrs")
-    @Expose
-    private TraceItem [] Attrs;
-
-    /**
-    * 子页面，只读
-    */
-    @SerializedName("List")
-    @Expose
-    private TraceData [] List;
 
     /**
      * Get 字段名称 
@@ -161,22 +147,6 @@ mp:小程序类型
     }
 
     /**
-     * Get 多个值 
-     * @return Values 多个值
-     */
-    public String [] getValues() {
-        return this.Values;
-    }
-
-    /**
-     * Set 多个值
-     * @param Values 多个值
-     */
-    public void setValues(String [] Values) {
-        this.Values = Values;
-    }
-
-    /**
      * Get 只读 
      * @return ReadOnly 只读
      */
@@ -206,6 +176,22 @@ mp:小程序类型
      */
     public void setHidden(Boolean Hidden) {
         this.Hidden = Hidden;
+    }
+
+    /**
+     * Get 多个值 
+     * @return Values 多个值
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 多个值
+     * @param Values 多个值
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
     }
 
     /**
@@ -240,46 +226,14 @@ mp:小程序类型
         this.Ext = Ext;
     }
 
-    /**
-     * Get 额外属性 
-     * @return Attrs 额外属性
-     */
-    public TraceItem [] getAttrs() {
-        return this.Attrs;
-    }
-
-    /**
-     * Set 额外属性
-     * @param Attrs 额外属性
-     */
-    public void setAttrs(TraceItem [] Attrs) {
-        this.Attrs = Attrs;
-    }
-
-    /**
-     * Get 子页面，只读 
-     * @return List 子页面，只读
-     */
-    public TraceData [] getList() {
-        return this.List;
-    }
-
-    /**
-     * Set 子页面，只读
-     * @param List 子页面，只读
-     */
-    public void setList(TraceData [] List) {
-        this.List = List;
-    }
-
-    public TraceItem() {
+    public AttrItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TraceItem(TraceItem source) {
+    public AttrItem(AttrItem source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -289,35 +243,23 @@ mp:小程序类型
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.Values != null) {
-            this.Values = new String[source.Values.length];
-            for (int i = 0; i < source.Values.length; i++) {
-                this.Values[i] = new String(source.Values[i]);
-            }
-        }
         if (source.ReadOnly != null) {
             this.ReadOnly = new Boolean(source.ReadOnly);
         }
         if (source.Hidden != null) {
             this.Hidden = new Boolean(source.Hidden);
         }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
+        }
         if (source.Key != null) {
             this.Key = new String(source.Key);
         }
         if (source.Ext != null) {
             this.Ext = new String(source.Ext);
-        }
-        if (source.Attrs != null) {
-            this.Attrs = new TraceItem[source.Attrs.length];
-            for (int i = 0; i < source.Attrs.length; i++) {
-                this.Attrs[i] = new TraceItem(source.Attrs[i]);
-            }
-        }
-        if (source.List != null) {
-            this.List = new TraceData[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new TraceData(source.List[i]);
-            }
         }
     }
 
@@ -329,13 +271,11 @@ mp:小程序类型
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Ext", this.Ext);
-        this.setParamArrayObj(map, prefix + "Attrs.", this.Attrs);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
 
     }
 }

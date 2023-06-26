@@ -79,6 +79,13 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
     private Long EventSaveDays;
 
     /**
+    * TDE透明数据加密配置
+    */
+    @SerializedName("TDEConfig")
+    @Expose
+    private TDEConfigAttribute TDEConfig;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -214,6 +221,22 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
     }
 
     /**
+     * Get TDE透明数据加密配置 
+     * @return TDEConfig TDE透明数据加密配置
+     */
+    public TDEConfigAttribute getTDEConfig() {
+        return this.TDEConfig;
+    }
+
+    /**
+     * Set TDE透明数据加密配置
+     * @param TDEConfig TDE透明数据加密配置
+     */
+    public void setTDEConfig(TDEConfigAttribute TDEConfig) {
+        this.TDEConfig = TDEConfig;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -261,6 +284,9 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
         if (source.EventSaveDays != null) {
             this.EventSaveDays = new Long(source.EventSaveDays);
         }
+        if (source.TDEConfig != null) {
+            this.TDEConfig = new TDEConfigAttribute(source.TDEConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +305,7 @@ public class DescribeDBInstancesAttributeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
         this.setParamSimple(map, prefix + "BlockedThreshold", this.BlockedThreshold);
         this.setParamSimple(map, prefix + "EventSaveDays", this.EventSaveDays);
+        this.setParamObj(map, prefix + "TDEConfig.", this.TDEConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

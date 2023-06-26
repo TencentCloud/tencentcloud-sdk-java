@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDataPanelRequest extends AbstractModel{
+public class DescribeSupportProxyVersionRequest extends AbstractModel{
 
     /**
-    * 网络ID
+    * 集群ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get 网络ID 
-     * @return ClusterId 网络ID
+    * 数据库代理组ID
+    */
+    @SerializedName("ProxyGroupId")
+    @Expose
+    private String ProxyGroupId;
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 网络ID
-     * @param ClusterId 网络ID
+     * Set 集群ID
+     * @param ClusterId 集群ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
-    public GetDataPanelRequest() {
+    /**
+     * Get 数据库代理组ID 
+     * @return ProxyGroupId 数据库代理组ID
+     */
+    public String getProxyGroupId() {
+        return this.ProxyGroupId;
+    }
+
+    /**
+     * Set 数据库代理组ID
+     * @param ProxyGroupId 数据库代理组ID
+     */
+    public void setProxyGroupId(String ProxyGroupId) {
+        this.ProxyGroupId = ProxyGroupId;
+    }
+
+    public DescribeSupportProxyVersionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDataPanelRequest(GetDataPanelRequest source) {
+    public DescribeSupportProxyVersionRequest(DescribeSupportProxyVersionRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ProxyGroupId != null) {
+            this.ProxyGroupId = new String(source.ProxyGroupId);
         }
     }
 
@@ -64,6 +90,7 @@ public class GetDataPanelRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
 
     }
 }

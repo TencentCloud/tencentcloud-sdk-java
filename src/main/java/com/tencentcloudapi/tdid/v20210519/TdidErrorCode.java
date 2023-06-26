@@ -6,7 +6,7 @@ public enum TdidErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
-    // 无访问权限。
+    // 用户接口鉴权失败
      FAILEDOPERATION_INVALIDAUTH("FailedOperation.InvalidAuth"),
      
     // 操作失败。
@@ -18,13 +18,13 @@ public enum TdidErrorCode {
     // 服务器异常。
      INTERNALERROR_SERVEREXCEPTION("InternalError.ServerException"),
      
-    // 服务内部错误。
+    // 服务错误，请稍后重试，或联系客服
      INTERNALERROR_SERVICEERROR("InternalError.ServiceError"),
      
     // 服务异常。
      INTERNALERROR_SERVICEPANIC("InternalError.ServicePanic"),
      
-    // 未知错误。
+    // 服务错误，请稍后重试，或联系客服
      INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
      
     // 参数错误。
@@ -33,7 +33,7 @@ public enum TdidErrorCode {
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 参数错误。
+    // 请求参数格式错误，请按照格式要求重新填写
      INVALIDPARAMETERVALUE_ILLEGALVALUE("InvalidParameterValue.IllegalValue"),
      
     // 缺少参数错误。
@@ -41,9 +41,6 @@ public enum TdidErrorCode {
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
-     
-    // 资源不可用。
-     RESOURCEUNAVAILABLE("ResourceUnavailable"),
      
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation");

@@ -359,6 +359,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+     * @param req CreatePostPaidInstanceRequest
+     * @return CreatePostPaidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePostPaidInstanceResponse CreatePostPaidInstance(CreatePostPaidInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePostPaidInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePostPaidInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *添加实例路由
      * @param req CreateRouteRequest
      * @return CreateRouteResponse

@@ -37,6 +37,22 @@ public class CFSConfig extends AbstractModel{
     private String Path;
 
     /**
+    * cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MountType")
+    @Expose
+    private String MountType;
+
+    /**
+    * 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get cfs的实例的ID 
      * @return Id cfs的实例的ID
      */
@@ -68,6 +84,46 @@ public class CFSConfig extends AbstractModel{
         this.Path = Path;
     }
 
+    /**
+     * Get cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMountType() {
+        return this.MountType;
+    }
+
+    /**
+     * Set cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountType cfs的挂载类型，可选值为：STORAGE、SOURCE 分别表示存储拓展模式和数据源模式，默认为 STORAGE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMountType(String MountType) {
+        this.MountType = MountType;
+    }
+
+    /**
+     * Get 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 协议 1: NFS, 2: TURBO
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public CFSConfig() {
     }
 
@@ -82,6 +138,12 @@ public class CFSConfig extends AbstractModel{
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.MountType != null) {
+            this.MountType = new String(source.MountType);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class CFSConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "MountType", this.MountType);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

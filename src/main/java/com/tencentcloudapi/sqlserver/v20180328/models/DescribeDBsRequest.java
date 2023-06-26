@@ -58,6 +58,13 @@ public class DescribeDBsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
+    * 是否已开启TDE加密，enable-已加密，disable-未加密
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private String Encryption;
+
+    /**
      * Get 实例ID 
      * @return InstanceIdSet 实例ID
      */
@@ -137,6 +144,22 @@ public class DescribeDBsRequest extends AbstractModel{
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get 是否已开启TDE加密，enable-已加密，disable-未加密 
+     * @return Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public String getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否已开启TDE加密，enable-已加密，disable-未加密
+     * @param Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public void setEncryption(String Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public DescribeDBsRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeDBsRequest extends AbstractModel{
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new String(source.Encryption);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeDBsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
 
     }
 }

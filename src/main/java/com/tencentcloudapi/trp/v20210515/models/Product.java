@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class Product extends AbstractModel{
 
     /**
+    * 商户标识码
+    */
+    @SerializedName("MerchantId")
+    @Expose
+    private String MerchantId;
+
+    /**
+    * 商品名称
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * 商品id
     */
     @SerializedName("ProductId")
@@ -37,25 +51,11 @@ public class Product extends AbstractModel{
     private Long CorpId;
 
     /**
-    * 商户标识码
-    */
-    @SerializedName("MerchantId")
-    @Expose
-    private String MerchantId;
-
-    /**
     * 商品编号
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
-
-    /**
-    * 商品名称
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
 
     /**
     * 商品规格
@@ -111,6 +111,38 @@ public class Product extends AbstractModel{
     private String MerchantName;
 
     /**
+     * Get 商户标识码 
+     * @return MerchantId 商户标识码
+     */
+    public String getMerchantId() {
+        return this.MerchantId;
+    }
+
+    /**
+     * Set 商户标识码
+     * @param MerchantId 商户标识码
+     */
+    public void setMerchantId(String MerchantId) {
+        this.MerchantId = MerchantId;
+    }
+
+    /**
+     * Get 商品名称 
+     * @return Name 商品名称
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 商品名称
+     * @param Name 商品名称
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
      * Get 商品id 
      * @return ProductId 商品id
      */
@@ -143,22 +175,6 @@ public class Product extends AbstractModel{
     }
 
     /**
-     * Get 商户标识码 
-     * @return MerchantId 商户标识码
-     */
-    public String getMerchantId() {
-        return this.MerchantId;
-    }
-
-    /**
-     * Set 商户标识码
-     * @param MerchantId 商户标识码
-     */
-    public void setMerchantId(String MerchantId) {
-        this.MerchantId = MerchantId;
-    }
-
-    /**
      * Get 商品编号 
      * @return ProductCode 商品编号
      */
@@ -172,22 +188,6 @@ public class Product extends AbstractModel{
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
-    }
-
-    /**
-     * Get 商品名称 
-     * @return Name 商品名称
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 商品名称
-     * @param Name 商品名称
-     */
-    public void setName(String Name) {
-        this.Name = Name;
     }
 
     /**
@@ -326,20 +326,20 @@ public class Product extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Product(Product source) {
+        if (source.MerchantId != null) {
+            this.MerchantId = new String(source.MerchantId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
         if (source.CorpId != null) {
             this.CorpId = new Long(source.CorpId);
         }
-        if (source.MerchantId != null) {
-            this.MerchantId = new String(source.MerchantId);
-        }
         if (source.ProductCode != null) {
             this.ProductCode = new String(source.ProductCode);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
         }
         if (source.Specification != null) {
             this.Specification = new String(source.Specification);
@@ -372,11 +372,11 @@ public class Product extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "CorpId", this.CorpId);
-        this.setParamSimple(map, prefix + "MerchantId", this.MerchantId);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
-        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Specification", this.Specification);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArraySimple(map, prefix + "Logo.", this.Logo);

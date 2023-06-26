@@ -159,6 +159,29 @@ public class CodeBatch extends AbstractModel{
     private Job Job;
 
     /**
+    * 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductionDate")
+    @Expose
+    private String ProductionDate;
+
+    /**
+    * 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ValidDate")
+    @Expose
+    private String ValidDate;
+
+    /**
+    * 扩展属性
+    */
+    @SerializedName("Attrs")
+    @Expose
+    private AttrItem [] Attrs;
+
+    /**
      * Get 批次号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BatchId 批次号
@@ -498,6 +521,62 @@ public class CodeBatch extends AbstractModel{
         this.Job = Job;
     }
 
+    /**
+     * Get 生产日期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductionDate 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductionDate() {
+        return this.ProductionDate;
+    }
+
+    /**
+     * Set 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductionDate 生产日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductionDate(String ProductionDate) {
+        this.ProductionDate = ProductionDate;
+    }
+
+    /**
+     * Get 有效期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ValidDate 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getValidDate() {
+        return this.ValidDate;
+    }
+
+    /**
+     * Set 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ValidDate 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setValidDate(String ValidDate) {
+        this.ValidDate = ValidDate;
+    }
+
+    /**
+     * Get 扩展属性 
+     * @return Attrs 扩展属性
+     */
+    public AttrItem [] getAttrs() {
+        return this.Attrs;
+    }
+
+    /**
+     * Set 扩展属性
+     * @param Attrs 扩展属性
+     */
+    public void setAttrs(AttrItem [] Attrs) {
+        this.Attrs = Attrs;
+    }
+
     public CodeBatch() {
     }
 
@@ -557,6 +636,18 @@ public class CodeBatch extends AbstractModel{
         if (source.Job != null) {
             this.Job = new Job(source.Job);
         }
+        if (source.ProductionDate != null) {
+            this.ProductionDate = new String(source.ProductionDate);
+        }
+        if (source.ValidDate != null) {
+            this.ValidDate = new String(source.ValidDate);
+        }
+        if (source.Attrs != null) {
+            this.Attrs = new AttrItem[source.Attrs.length];
+            for (int i = 0; i < source.Attrs.length; i++) {
+                this.Attrs[i] = new AttrItem(source.Attrs[i]);
+            }
+        }
     }
 
 
@@ -581,6 +672,9 @@ public class CodeBatch extends AbstractModel{
         this.setParamObj(map, prefix + "Ext.", this.Ext);
         this.setParamSimple(map, prefix + "TplName", this.TplName);
         this.setParamObj(map, prefix + "Job.", this.Job);
+        this.setParamSimple(map, prefix + "ProductionDate", this.ProductionDate);
+        this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
+        this.setParamArrayObj(map, prefix + "Attrs.", this.Attrs);
 
     }
 }

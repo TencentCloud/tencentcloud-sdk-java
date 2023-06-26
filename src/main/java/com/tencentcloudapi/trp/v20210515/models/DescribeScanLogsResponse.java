@@ -24,7 +24,6 @@ public class DescribeScanLogsResponse extends AbstractModel{
 
     /**
     * 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Products")
     @Expose
@@ -52,21 +51,21 @@ public class DescribeScanLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 【弃用】 
      * @return Products 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public ScanLog [] getProducts() {
         return this.Products;
     }
 
     /**
      * Set 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Products 【弃用】
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setProducts(ScanLog [] Products) {
         this.Products = Products;
     }

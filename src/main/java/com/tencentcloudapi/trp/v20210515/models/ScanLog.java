@@ -24,7 +24,6 @@ public class ScanLog extends AbstractModel{
 
     /**
     * 行ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogId")
     @Expose
@@ -151,10 +150,31 @@ public class ScanLog extends AbstractModel{
     private String BatchId;
 
     /**
-     * Get 行ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogId 行ID
+    * 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 商户名称
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MerchantName")
+    @Expose
+    private String MerchantName;
+
+    /**
+    * 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+     * Get 行ID 
+     * @return LogId 行ID
      */
     public Long getLogId() {
         return this.LogId;
@@ -162,9 +182,7 @@ public class ScanLog extends AbstractModel{
 
     /**
      * Set 行ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogId 行ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogId(Long LogId) {
         this.LogId = LogId;
@@ -470,6 +488,62 @@ public class ScanLog extends AbstractModel{
         this.BatchId = BatchId;
     }
 
+    /**
+     * Get 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码 
+     * @return Type 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+     * @param Type 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 商户名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MerchantName 商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMerchantName() {
+        return this.MerchantName;
+    }
+
+    /**
+     * Set 商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MerchantName 商户名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMerchantName(String MerchantName) {
+        this.MerchantName = MerchantName;
+    }
+
+    /**
+     * Get 产品名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductName 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductName 产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
     public ScanLog() {
     }
 
@@ -526,6 +600,15 @@ public class ScanLog extends AbstractModel{
         if (source.BatchId != null) {
             this.BatchId = new String(source.BatchId);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.MerchantName != null) {
+            this.MerchantName = new String(source.MerchantName);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -549,6 +632,9 @@ public class ScanLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Unionid", this.Unionid);
         this.setParamSimple(map, prefix + "First", this.First);
         this.setParamSimple(map, prefix + "BatchId", this.BatchId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

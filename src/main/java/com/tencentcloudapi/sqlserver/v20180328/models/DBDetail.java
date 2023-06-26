@@ -72,6 +72,13 @@ public class DBDetail extends AbstractModel{
     private String InternalStatus;
 
     /**
+    * 是否已开启TDE加密，enable-已加密，disable-未加密
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private String Encryption;
+
+    /**
      * Get 数据库名称 
      * @return Name 数据库名称
      */
@@ -183,6 +190,22 @@ public class DBDetail extends AbstractModel{
         this.InternalStatus = InternalStatus;
     }
 
+    /**
+     * Get 是否已开启TDE加密，enable-已加密，disable-未加密 
+     * @return Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public String getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否已开启TDE加密，enable-已加密，disable-未加密
+     * @param Encryption 是否已开启TDE加密，enable-已加密，disable-未加密
+     */
+    public void setEncryption(String Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public DBDetail() {
     }
 
@@ -215,6 +238,9 @@ public class DBDetail extends AbstractModel{
         if (source.InternalStatus != null) {
             this.InternalStatus = new String(source.InternalStatus);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new String(source.Encryption);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class DBDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
+        this.setParamSimple(map, prefix + "Encryption", this.Encryption);
 
     }
 }

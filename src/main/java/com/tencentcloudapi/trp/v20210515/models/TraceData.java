@@ -81,13 +81,6 @@ public class TraceData extends AbstractModel{
     private String TraceTime;
 
     /**
-    * 无
-    */
-    @SerializedName("TraceItems")
-    @Expose
-    private TraceItem [] TraceItems;
-
-    /**
     * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -133,6 +126,13 @@ public class TraceData extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private Long Status;
+
+    /**
+    * 无
+    */
+    @SerializedName("TraceItems")
+    @Expose
+    private TraceItem [] TraceItems;
 
     /**
      * Get 溯源ID 
@@ -271,22 +271,6 @@ public class TraceData extends AbstractModel{
     }
 
     /**
-     * Get 无 
-     * @return TraceItems 无
-     */
-    public TraceItem [] getTraceItems() {
-        return this.TraceItems;
-    }
-
-    /**
-     * Set 无
-     * @param TraceItems 无
-     */
-    public void setTraceItems(TraceItem [] TraceItems) {
-        this.TraceItems = TraceItems;
-    }
-
-    /**
      * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间
@@ -402,6 +386,22 @@ public class TraceData extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 无 
+     * @return TraceItems 无
+     */
+    public TraceItem [] getTraceItems() {
+        return this.TraceItems;
+    }
+
+    /**
+     * Set 无
+     * @param TraceItems 无
+     */
+    public void setTraceItems(TraceItem [] TraceItems) {
+        this.TraceItems = TraceItems;
+    }
+
     public TraceData() {
     }
 
@@ -434,12 +434,6 @@ public class TraceData extends AbstractModel{
         if (source.TraceTime != null) {
             this.TraceTime = new String(source.TraceTime);
         }
-        if (source.TraceItems != null) {
-            this.TraceItems = new TraceItem[source.TraceItems.length];
-            for (int i = 0; i < source.TraceItems.length; i++) {
-                this.TraceItems[i] = new TraceItem(source.TraceItems[i]);
-            }
-        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -458,6 +452,12 @@ public class TraceData extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.TraceItems != null) {
+            this.TraceItems = new TraceItem[source.TraceItems.length];
+            for (int i = 0; i < source.TraceItems.length; i++) {
+                this.TraceItems[i] = new TraceItem(source.TraceItems[i]);
+            }
+        }
     }
 
 
@@ -473,13 +473,13 @@ public class TraceData extends AbstractModel{
         this.setParamSimple(map, prefix + "Phase", this.Phase);
         this.setParamSimple(map, prefix + "PhaseName", this.PhaseName);
         this.setParamSimple(map, prefix + "TraceTime", this.TraceTime);
-        this.setParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ChainStatus", this.ChainStatus);
         this.setParamSimple(map, prefix + "ChainTime", this.ChainTime);
         this.setParamObj(map, prefix + "ChainData.", this.ChainData);
         this.setParamObj(map, prefix + "PhaseData.", this.PhaseData);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
 
     }
 }
