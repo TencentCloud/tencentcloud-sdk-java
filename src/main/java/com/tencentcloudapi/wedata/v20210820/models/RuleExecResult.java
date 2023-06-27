@@ -175,6 +175,22 @@ public class RuleExecResult extends AbstractModel{
     private String RelConditionExpr;
 
     /**
+    * 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
      * Get 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleExecId 规则执行ID
@@ -554,6 +570,46 @@ public class RuleExecResult extends AbstractModel{
         this.RelConditionExpr = RelConditionExpr;
     }
 
+    /**
+     * Get 执行时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartTime 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartTime 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmLevel 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmLevel 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
     public RuleExecResult() {
     }
 
@@ -619,6 +675,12 @@ public class RuleExecResult extends AbstractModel{
         if (source.RelConditionExpr != null) {
             this.RelConditionExpr = new String(source.RelConditionExpr);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
     }
 
 
@@ -645,6 +707,8 @@ public class RuleExecResult extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetObjectDataType", this.TargetObjectDataType);
         this.setParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
         this.setParamSimple(map, prefix + "RelConditionExpr", this.RelConditionExpr);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
 
     }
 }

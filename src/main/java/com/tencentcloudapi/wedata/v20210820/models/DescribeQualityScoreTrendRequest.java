@@ -51,6 +51,20 @@ public class DescribeQualityScoreTrendRequest extends AbstractModel{
     private String DatasourceId;
 
     /**
+    * 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+    */
+    @SerializedName("ScoreType")
+    @Expose
+    private String ScoreType;
+
+    /**
+    * 过滤参数
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 统计开始日期 
      * @return StatisticsStartDate 统计开始日期
      */
@@ -114,6 +128,38 @@ public class DescribeQualityScoreTrendRequest extends AbstractModel{
         this.DatasourceId = DatasourceId;
     }
 
+    /**
+     * Get 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1 
+     * @return ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public String getScoreType() {
+        return this.ScoreType;
+    }
+
+    /**
+     * Set 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     * @param ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public void setScoreType(String ScoreType) {
+        this.ScoreType = ScoreType;
+    }
+
+    /**
+     * Get 过滤参数 
+     * @return Filters 过滤参数
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数
+     * @param Filters 过滤参数
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeQualityScoreTrendRequest() {
     }
 
@@ -134,6 +180,15 @@ public class DescribeQualityScoreTrendRequest extends AbstractModel{
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
         }
+        if (source.ScoreType != null) {
+            this.ScoreType = new String(source.ScoreType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -145,6 +200,8 @@ public class DescribeQualityScoreTrendRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StatisticsEndDate", this.StatisticsEndDate);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "ScoreType", this.ScoreType);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

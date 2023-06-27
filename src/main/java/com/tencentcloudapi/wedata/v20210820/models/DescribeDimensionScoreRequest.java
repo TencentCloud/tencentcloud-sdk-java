@@ -44,6 +44,13 @@ public class DescribeDimensionScoreRequest extends AbstractModel{
     private String DatasourceId;
 
     /**
+    * 过滤参数
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 统计日期 时间戳 
      * @return StatisticsDate 统计日期 时间戳
      */
@@ -91,6 +98,22 @@ public class DescribeDimensionScoreRequest extends AbstractModel{
         this.DatasourceId = DatasourceId;
     }
 
+    /**
+     * Get 过滤参数 
+     * @return Filters 过滤参数
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数
+     * @param Filters 过滤参数
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeDimensionScoreRequest() {
     }
 
@@ -108,6 +131,12 @@ public class DescribeDimensionScoreRequest extends AbstractModel{
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class DescribeDimensionScoreRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StatisticsDate", this.StatisticsDate);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

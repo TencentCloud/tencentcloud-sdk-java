@@ -65,7 +65,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel{
     private Long ClusterId;
 
     /**
-    * 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+    * 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -142,7 +142,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel{
     private Long InstanceNum;
 
     /**
-    * 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+    * 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
@@ -245,16 +245,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1" 
-     * @return KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+     * Get 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。 
+     * @return KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
-     * @param KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.2","2.8.1"
+     * Set 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
+     * @param KafkaVersion 实例版本。目前支持 "0.10.2","1.1.1","2.4.1","2.4.2","2.8.1"。"2.4.1" 与 "2.4.2" 属于同一个版本，传任意一个均可。
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
@@ -421,16 +421,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1 
-     * @return PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+     * Get 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍 
+     * @return PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
-     * @param PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1
+     * Set 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
+     * @param PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。需要保证传入参数为 3 的整数倍
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;

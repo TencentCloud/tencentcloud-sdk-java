@@ -13,23 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDidClusterListRequest extends AbstractModel{
+public class AnalyzeSentimentRequest extends AbstractModel{
 
-    public GetDidClusterListRequest() {
+    /**
+    * 待分析的文本（仅支持UTF-8格式，不超过200字）。
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+     * Get 待分析的文本（仅支持UTF-8格式，不超过200字）。 
+     * @return Text 待分析的文本（仅支持UTF-8格式，不超过200字）。
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set 待分析的文本（仅支持UTF-8格式，不超过200字）。
+     * @param Text 待分析的文本（仅支持UTF-8格式，不超过200字）。
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    public AnalyzeSentimentRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDidClusterListRequest(GetDidClusterListRequest source) {
+    public AnalyzeSentimentRequest(AnalyzeSentimentRequest source) {
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class GetDidClusterListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

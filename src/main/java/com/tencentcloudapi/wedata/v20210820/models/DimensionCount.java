@@ -39,11 +39,21 @@ public class DimensionCount extends AbstractModel{
     private Long Count;
 
     /**
+    * 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityDim")
+    @Expose
+    private Long QualityDim;
+
+    /**
      * Get 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DimType 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getDimType() {
         return this.DimType;
     }
@@ -53,7 +63,9 @@ public class DimensionCount extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DimType 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDimType(Long DimType) {
         this.DimType = DimType;
     }
@@ -78,6 +90,26 @@ public class DimensionCount extends AbstractModel{
         this.Count = Count;
     }
 
+    /**
+     * Get 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityDim 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getQualityDim() {
+        return this.QualityDim;
+    }
+
+    /**
+     * Set 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityDim 维度类型1：准确性，2：唯一性，3：完整性，4：一致性，5：及时性，6：有效性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityDim(Long QualityDim) {
+        this.QualityDim = QualityDim;
+    }
+
     public DimensionCount() {
     }
 
@@ -92,6 +124,9 @@ public class DimensionCount extends AbstractModel{
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.QualityDim != null) {
+            this.QualityDim = new Long(source.QualityDim);
+        }
     }
 
 
@@ -101,6 +136,7 @@ public class DimensionCount extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DimType", this.DimType);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "QualityDim", this.QualityDim);
 
     }
 }

@@ -51,6 +51,13 @@ public class DescribeTableScoreTrendRequest extends AbstractModel{
     private String TableId;
 
     /**
+    * 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+    */
+    @SerializedName("ScoreType")
+    @Expose
+    private String ScoreType;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -114,6 +121,22 @@ public class DescribeTableScoreTrendRequest extends AbstractModel{
         this.TableId = TableId;
     }
 
+    /**
+     * Get 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1 
+     * @return ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public String getScoreType() {
+        return this.ScoreType;
+    }
+
+    /**
+     * Set 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     * @param ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public void setScoreType(String ScoreType) {
+        this.ScoreType = ScoreType;
+    }
+
     public DescribeTableScoreTrendRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTableScoreTrendRequest extends AbstractModel{
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
         }
+        if (source.ScoreType != null) {
+            this.ScoreType = new String(source.ScoreType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTableScoreTrendRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StatisticsStartDate", this.StatisticsStartDate);
         this.setParamSimple(map, prefix + "StatisticsEndDate", this.StatisticsEndDate);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamSimple(map, prefix + "ScoreType", this.ScoreType);
 
     }
 }

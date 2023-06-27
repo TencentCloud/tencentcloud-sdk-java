@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDidClusterDetailRequest extends AbstractModel{
+public class ModifySpartaProtectionResponse extends AbstractModel{
 
     /**
-    * DID网络ID
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("ClusterId")
+    @SerializedName("RequestId")
     @Expose
-    private String ClusterId;
+    private String RequestId;
 
     /**
-     * Get DID网络ID 
-     * @return ClusterId DID网络ID
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set DID网络ID
-     * @param ClusterId DID网络ID
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public GetDidClusterDetailRequest() {
+    public ModifySpartaProtectionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDidClusterDetailRequest(GetDidClusterDetailRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public ModifySpartaProtectionResponse(ModifySpartaProtectionResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class GetDidClusterDetailRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

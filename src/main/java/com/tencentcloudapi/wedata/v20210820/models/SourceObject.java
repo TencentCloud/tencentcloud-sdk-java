@@ -39,11 +39,37 @@ public class SourceObject extends AbstractModel{
     private String SourceObjectValue;
 
     /**
+    * 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectDataTypeName")
+    @Expose
+    private String ObjectDataTypeName;
+
+    /**
+    * 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectValue")
+    @Expose
+    private String ObjectValue;
+
+    /**
+    * 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectType")
+    @Expose
+    private Long ObjectType;
+
+    /**
      * Get 源字段详细类型，int、string
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceObjectDataTypeName 源字段详细类型，int、string
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSourceObjectDataTypeName() {
         return this.SourceObjectDataTypeName;
     }
@@ -53,7 +79,9 @@ public class SourceObject extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceObjectDataTypeName 源字段详细类型，int、string
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSourceObjectDataTypeName(String SourceObjectDataTypeName) {
         this.SourceObjectDataTypeName = SourceObjectDataTypeName;
     }
@@ -63,7 +91,9 @@ public class SourceObject extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceObjectValue 源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getSourceObjectValue() {
         return this.SourceObjectValue;
     }
@@ -73,9 +103,71 @@ public class SourceObject extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceObjectValue 源字段名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setSourceObjectValue(String SourceObjectValue) {
         this.SourceObjectValue = SourceObjectValue;
+    }
+
+    /**
+     * Get 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectDataTypeName 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getObjectDataTypeName() {
+        return this.ObjectDataTypeName;
+    }
+
+    /**
+     * Set 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectDataTypeName 源字段详细类型，int、string
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectDataTypeName(String ObjectDataTypeName) {
+        this.ObjectDataTypeName = ObjectDataTypeName;
+    }
+
+    /**
+     * Get 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectValue 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getObjectValue() {
+        return this.ObjectValue;
+    }
+
+    /**
+     * Set 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectValue 源字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectValue(String ObjectValue) {
+        this.ObjectValue = ObjectValue;
+    }
+
+    /**
+     * Get 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectType 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getObjectType() {
+        return this.ObjectType;
+    }
+
+    /**
+     * Set 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectType 对象类型 1.常量  2.离线表级   3.离线字段级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectType(Long ObjectType) {
+        this.ObjectType = ObjectType;
     }
 
     public SourceObject() {
@@ -92,6 +184,15 @@ public class SourceObject extends AbstractModel{
         if (source.SourceObjectValue != null) {
             this.SourceObjectValue = new String(source.SourceObjectValue);
         }
+        if (source.ObjectDataTypeName != null) {
+            this.ObjectDataTypeName = new String(source.ObjectDataTypeName);
+        }
+        if (source.ObjectValue != null) {
+            this.ObjectValue = new String(source.ObjectValue);
+        }
+        if (source.ObjectType != null) {
+            this.ObjectType = new Long(source.ObjectType);
+        }
     }
 
 
@@ -101,6 +202,9 @@ public class SourceObject extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceObjectDataTypeName", this.SourceObjectDataTypeName);
         this.setParamSimple(map, prefix + "SourceObjectValue", this.SourceObjectValue);
+        this.setParamSimple(map, prefix + "ObjectDataTypeName", this.ObjectDataTypeName);
+        this.setParamSimple(map, prefix + "ObjectValue", this.ObjectValue);
+        this.setParamSimple(map, prefix + "ObjectType", this.ObjectType);
 
     }
 }

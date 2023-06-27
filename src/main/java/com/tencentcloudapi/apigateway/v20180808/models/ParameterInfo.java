@@ -217,7 +217,9 @@ public class ParameterInfo extends AbstractModel{
     /**
      * Get 修改时间 
      * @return ModifedTime 修改时间
+     * @deprecated
      */
+    @Deprecated
     public String getModifedTime() {
         return this.ModifedTime;
     }
@@ -225,7 +227,9 @@ public class ParameterInfo extends AbstractModel{
     /**
      * Set 修改时间
      * @param ModifedTime 修改时间
+     * @deprecated
      */
+    @Deprecated
     public void setModifedTime(String ModifedTime) {
         this.ModifedTime = ModifedTime;
     }

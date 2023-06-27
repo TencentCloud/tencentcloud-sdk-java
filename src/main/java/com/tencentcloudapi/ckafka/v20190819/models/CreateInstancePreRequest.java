@@ -52,7 +52,7 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long InstanceType;
 
     /**
-    * vpcId，不填默认基础网络
+    * vpcId必填
     */
     @SerializedName("VpcId")
     @Expose
@@ -87,7 +87,7 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+    * CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
     */
     @SerializedName("KafkaVersion")
     @Expose
@@ -150,11 +150,18 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Long [] ZoneIds;
 
     /**
-    * 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+    * 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
     private Long PublicNetworkMonthly;
+
+    /**
+    * 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+    */
+    @SerializedName("InstanceNum")
+    @Expose
+    private Long InstanceNum;
 
     /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
@@ -225,16 +232,16 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get vpcId，不填默认基础网络 
-     * @return VpcId vpcId，不填默认基础网络
+     * Get vpcId必填 
+     * @return VpcId vpcId必填
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId，不填默认基础网络
-     * @param VpcId vpcId，不填默认基础网络
+     * Set vpcId必填
+     * @param VpcId vpcId必填
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -305,16 +312,16 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1 
-     * @return KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+     * Get CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。 
+     * @return KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
-     * @param KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1], 默认是1.1.1
+     * Set CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+     * @param KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
@@ -449,19 +456,35 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0 
-     * @return PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     * Get 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍 
+     * @return PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
-     * @param PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 4Mbps 公网带宽，此处传 1。默认值为 0
+     * Set 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
+     * @param PublicNetworkMonthly 公网带宽大小，单位 Mbps。默认是没有加上免费 3Mbps 带宽。例如总共需要 3Mbps 公网带宽，此处传 0；总共需要 6Mbps 公网带宽，此处传 3。默认值为 0。需要保证传入参数为 3 的整数倍
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;
+    }
+
+    /**
+     * Get 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例 
+     * @return InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+     */
+    public Long getInstanceNum() {
+        return this.InstanceNum;
+    }
+
+    /**
+     * Set 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+     * @param InstanceNum 购买实例数量。非必填，默认值为 1。当传入该参数时，会创建多个 instanceName 加后缀区分的实例
+     */
+    public void setInstanceNum(Long InstanceNum) {
+        this.InstanceNum = InstanceNum;
     }
 
     public CreateInstancePreRequest() {
@@ -535,6 +558,9 @@ public class CreateInstancePreRequest extends AbstractModel{
         if (source.PublicNetworkMonthly != null) {
             this.PublicNetworkMonthly = new Long(source.PublicNetworkMonthly);
         }
+        if (source.InstanceNum != null) {
+            this.InstanceNum = new Long(source.InstanceNum);
+        }
     }
 
 
@@ -561,6 +587,7 @@ public class CreateInstancePreRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+        this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
 
     }
 }

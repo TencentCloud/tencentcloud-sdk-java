@@ -879,6 +879,26 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改域名配置
+     * @param req ModifySpartaProtectionRequest
+     * @return ModifySpartaProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySpartaProtectionResponse ModifySpartaProtection(ModifySpartaProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySpartaProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySpartaProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySpartaProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改ip惩罚规则
      * @param req ModifyWafAutoDenyRulesRequest
      * @return ModifyWafAutoDenyRulesResponse

@@ -95,6 +95,14 @@ public class RuleExecResultDetail extends AbstractModel{
     private Long TableOwnerUserId;
 
     /**
+    * 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private Long DatasourceType;
+
+    /**
      * Get 数据源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceId 数据源id
@@ -274,6 +282,26 @@ public class RuleExecResultDetail extends AbstractModel{
         this.TableOwnerUserId = TableOwnerUserId;
     }
 
+    /**
+     * Get 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(Long DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
     public RuleExecResultDetail() {
     }
 
@@ -309,6 +337,9 @@ public class RuleExecResultDetail extends AbstractModel{
         if (source.TableOwnerUserId != null) {
             this.TableOwnerUserId = new Long(source.TableOwnerUserId);
         }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new Long(source.DatasourceType);
+        }
     }
 
 
@@ -325,6 +356,7 @@ public class RuleExecResultDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamObj(map, prefix + "RuleExecResult.", this.RuleExecResult);
         this.setParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
 
     }
 }

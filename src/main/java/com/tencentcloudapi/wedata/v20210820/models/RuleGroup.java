@@ -159,6 +159,14 @@ public class RuleGroup extends AbstractModel{
     private Long TableOwnerUserId;
 
     /**
+    * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -498,6 +506,26 @@ public class RuleGroup extends AbstractModel{
         this.TableOwnerUserId = TableOwnerUserId;
     }
 
+    /**
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public RuleGroup() {
     }
 
@@ -557,6 +585,9 @@ public class RuleGroup extends AbstractModel{
         if (source.TableOwnerUserId != null) {
             this.TableOwnerUserId = new Long(source.TableOwnerUserId);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class RuleGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleCount", this.RuleCount);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

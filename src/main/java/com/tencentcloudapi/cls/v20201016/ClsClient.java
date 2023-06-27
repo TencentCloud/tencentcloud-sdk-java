@@ -559,7 +559,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *删除投递规则
+     *删除投递COS任务
      * @param req DeleteShipperRequest
      * @return DeleteShipperResponse
      * @throws TencentCloudSDKException

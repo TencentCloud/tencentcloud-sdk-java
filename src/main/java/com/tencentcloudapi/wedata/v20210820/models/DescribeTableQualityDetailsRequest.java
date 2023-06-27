@@ -72,6 +72,13 @@ public class DescribeTableQualityDetailsRequest extends AbstractModel{
     private String DatasourceId;
 
     /**
+    * 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+    */
+    @SerializedName("ScoreType")
+    @Expose
+    private String ScoreType;
+
+    /**
      * Get 统计日期 
      * @return StatisticsDate 统计日期
      */
@@ -183,6 +190,22 @@ public class DescribeTableQualityDetailsRequest extends AbstractModel{
         this.DatasourceId = DatasourceId;
     }
 
+    /**
+     * Get 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1 
+     * @return ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public String getScoreType() {
+        return this.ScoreType;
+    }
+
+    /**
+     * Set 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     * @param ScoreType 1:按全维度权重计算,2:按已配置维度权重计算,3:不按维度权重计算,默认1
+     */
+    public void setScoreType(String ScoreType) {
+        this.ScoreType = ScoreType;
+    }
+
     public DescribeTableQualityDetailsRequest() {
     }
 
@@ -218,6 +241,9 @@ public class DescribeTableQualityDetailsRequest extends AbstractModel{
         if (source.DatasourceId != null) {
             this.DatasourceId = new String(source.DatasourceId);
         }
+        if (source.ScoreType != null) {
+            this.ScoreType = new String(source.ScoreType);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class DescribeTableQualityDetailsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
+        this.setParamSimple(map, prefix + "ScoreType", this.ScoreType);
 
     }
 }

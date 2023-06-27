@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdid.v20210519.models;
+package com.tencentcloudapi.nlp.v20190408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetDidClusterDetailResponse extends AbstractModel{
+public class ComposePoetryResponse extends AbstractModel{
 
     /**
-    * 网络ID
+    * 诗题，即输入的生成诗词的关键词。
     */
-    @SerializedName("ClusterId")
+    @SerializedName("Title")
     @Expose
-    private String ClusterId;
+    private String Title;
 
     /**
-    * 组织名称
+    * 诗的内容。
     */
-    @SerializedName("ConsortiumName")
+    @SerializedName("Content")
     @Expose
-    private String ConsortiumName;
-
-    /**
-    * 区块链组织名称
-    */
-    @SerializedName("ChainAgency")
-    @Expose
-    private String ChainAgency;
+    private String [] Content;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +44,35 @@ public class GetDidClusterDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 网络ID 
-     * @return ClusterId 网络ID
+     * Get 诗题，即输入的生成诗词的关键词。 
+     * @return Title 诗题，即输入的生成诗词的关键词。
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getTitle() {
+        return this.Title;
     }
 
     /**
-     * Set 网络ID
-     * @param ClusterId 网络ID
+     * Set 诗题，即输入的生成诗词的关键词。
+     * @param Title 诗题，即输入的生成诗词的关键词。
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setTitle(String Title) {
+        this.Title = Title;
     }
 
     /**
-     * Get 组织名称 
-     * @return ConsortiumName 组织名称
+     * Get 诗的内容。 
+     * @return Content 诗的内容。
      */
-    public String getConsortiumName() {
-        return this.ConsortiumName;
+    public String [] getContent() {
+        return this.Content;
     }
 
     /**
-     * Set 组织名称
-     * @param ConsortiumName 组织名称
+     * Set 诗的内容。
+     * @param Content 诗的内容。
      */
-    public void setConsortiumName(String ConsortiumName) {
-        this.ConsortiumName = ConsortiumName;
-    }
-
-    /**
-     * Get 区块链组织名称 
-     * @return ChainAgency 区块链组织名称
-     */
-    public String getChainAgency() {
-        return this.ChainAgency;
-    }
-
-    /**
-     * Set 区块链组织名称
-     * @param ChainAgency 区块链组织名称
-     */
-    public void setChainAgency(String ChainAgency) {
-        this.ChainAgency = ChainAgency;
+    public void setContent(String [] Content) {
+        this.Content = Content;
     }
 
     /**
@@ -114,22 +91,22 @@ public class GetDidClusterDetailResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetDidClusterDetailResponse() {
+    public ComposePoetryResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetDidClusterDetailResponse(GetDidClusterDetailResponse source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public ComposePoetryResponse(ComposePoetryResponse source) {
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
         }
-        if (source.ConsortiumName != null) {
-            this.ConsortiumName = new String(source.ConsortiumName);
-        }
-        if (source.ChainAgency != null) {
-            this.ChainAgency = new String(source.ChainAgency);
+        if (source.Content != null) {
+            this.Content = new String[source.Content.length];
+            for (int i = 0; i < source.Content.length; i++) {
+                this.Content[i] = new String(source.Content[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +118,8 @@ public class GetDidClusterDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "ConsortiumName", this.ConsortiumName);
-        this.setParamSimple(map, prefix + "ChainAgency", this.ChainAgency);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamArraySimple(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -62,7 +62,9 @@ DID添加标签
     }
 
     /**
-     *检查区块链信息
+     *该接口不再使用
+
+检查区块链信息
      * @param req CheckChainRequest
      * @return CheckChainResponse
      * @throws TencentCloudSDKException
@@ -82,7 +84,9 @@ DID添加标签
     }
 
     /**
-     *创建凭证
+     *该接口不再使用
+
+创建凭证
      * @param req CreateCredentialRequest
      * @return CreateCredentialResponse
      * @throws TencentCloudSDKException
@@ -102,7 +106,9 @@ DID添加标签
     }
 
     /**
-     *创建选择性批露凭证
+     *该接口不再使用
+
+创建选择性批露凭证
      * @param req CreateSelectiveCredentialRequest
      * @return CreateSelectiveCredentialResponse
      * @throws TencentCloudSDKException
@@ -122,7 +128,9 @@ DID添加标签
     }
 
     /**
-     *创建机构DID
+     *该接口不再使用
+
+创建机构DID
      * @param req CreateTDidRequest
      * @return CreateTDidResponse
      * @throws TencentCloudSDKException
@@ -142,7 +150,9 @@ DID添加标签
     }
 
     /**
-     *新建DID根据私钥生成Tdid
+     *该接口不再使用
+
+新建DID根据私钥生成Tdid
      * @param req CreateTDidByPrivateKeyRequest
      * @return CreateTDidByPrivateKeyResponse
      * @throws TencentCloudSDKException
@@ -162,7 +172,9 @@ DID添加标签
     }
 
     /**
-     * 新建DID根据公钥生成Tdid
+     *该接口不再使用
+
+ 新建DID根据公钥生成Tdid
      * @param req CreateTDidByPublicKeyRequest
      * @return CreateTDidByPublicKeyResponse
      * @throws TencentCloudSDKException
@@ -204,7 +216,9 @@ DID添加标签
     }
 
     /**
-     *获取权威机构信息
+     *该接口不再使用
+
+获取权威机构信息
      * @param req GetAuthorityIssuerRequest
      * @return GetAuthorityIssuerResponse
      * @throws TencentCloudSDKException
@@ -268,7 +282,9 @@ DID添加标签
     }
 
     /**
-     *凭证模版详情
+     *该接口不再使用
+
+凭证模版详情
      * @param req GetCptInfoRequest
      * @return GetCptInfoResponse
      * @throws TencentCloudSDKException
@@ -310,7 +326,9 @@ DID添加标签
     }
 
     /**
-     *获取凭证链上状态信息
+     *该接口不再使用
+
+获取凭证链上状态信息
      * @param req GetCredentialStatusRequest
      * @return GetCredentialStatusResponse
      * @throws TencentCloudSDKException
@@ -330,51 +348,9 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
+     *该接口不再使用
 
-获取DID区块链网络详情
-     * @param req GetDidClusterDetailRequest
-     * @return GetDidClusterDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidClusterDetailResponse GetDidClusterDetail(GetDidClusterDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidClusterDetailResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidClusterDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidClusterDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-获取用户的DID网络列表
-     * @param req GetDidClusterListRequest
-     * @return GetDidClusterListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetDidClusterListResponse GetDidClusterList(GetDidClusterListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetDidClusterListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetDidClusterListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetDidClusterList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *查看DID文档
+查看DID文档
 
      * @param req GetDidDocumentRequest
      * @return GetDidDocumentResponse
@@ -395,7 +371,9 @@ DID添加标签
     }
 
     /**
-     *凭证模版新建
+     *该接口不再使用
+
+凭证模版新建
      * @param req RegisterCptRequest
      * @return RegisterCptResponse
      * @throws TencentCloudSDKException
@@ -415,7 +393,9 @@ DID添加标签
     }
 
     /**
-     *设置凭证链上状态
+     *该接口不再使用
+
+设置凭证链上状态
      * @param req SetCredentialStatusRequest
      * @return SetCredentialStatusResponse
      * @throws TencentCloudSDKException
@@ -435,7 +415,9 @@ DID添加标签
     }
 
     /**
-     *验证凭证
+     *该接口不再使用
+
+验证凭证
      * @param req VerifyCredentialRequest
      * @return VerifyCredentialResponse
      * @throws TencentCloudSDKException

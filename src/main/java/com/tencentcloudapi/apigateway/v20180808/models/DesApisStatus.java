@@ -469,7 +469,9 @@ public class DesApisStatus extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RelationBuniessApiIds 授权API关联的业务API列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String [] getRelationBuniessApiIds() {
         return this.RelationBuniessApiIds;
     }
@@ -479,7 +481,9 @@ public class DesApisStatus extends AbstractModel{
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RelationBuniessApiIds 授权API关联的业务API列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setRelationBuniessApiIds(String [] RelationBuniessApiIds) {
         this.RelationBuniessApiIds = RelationBuniessApiIds;
     }

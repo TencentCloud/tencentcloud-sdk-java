@@ -39,12 +39,12 @@ public class ProxyInst extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 实例类型
+    * 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
-    private String InstanceType;
+    private Long InstanceType;
 
     /**
     * 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
@@ -119,22 +119,22 @@ public class ProxyInst extends AbstractModel{
     }
 
     /**
-     * Get 实例类型
+     * Get 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType 实例类型
+     * @return InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getInstanceType() {
+    public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
+     * Set 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType 实例类型
+     * @param InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setInstanceType(String InstanceType) {
+    public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
@@ -233,7 +233,7 @@ public class ProxyInst extends AbstractModel{
             this.InstanceName = new String(source.InstanceName);
         }
         if (source.InstanceType != null) {
-            this.InstanceType = new String(source.InstanceType);
+            this.InstanceType = new Long(source.InstanceType);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);

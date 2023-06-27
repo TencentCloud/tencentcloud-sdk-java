@@ -149,6 +149,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String [] FilterAssetIpList;
 
     /**
+    * 是否包含基础防护增强版 0: 不包含 1: 包含
+    */
+    @SerializedName("FilterBasicPlusFlag")
+    @Expose
+    private Long FilterBasicPlusFlag;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -436,6 +443,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterAssetIpList = FilterAssetIpList;
     }
 
+    /**
+     * Get 是否包含基础防护增强版 0: 不包含 1: 包含 
+     * @return FilterBasicPlusFlag 是否包含基础防护增强版 0: 不包含 1: 包含
+     */
+    public Long getFilterBasicPlusFlag() {
+        return this.FilterBasicPlusFlag;
+    }
+
+    /**
+     * Set 是否包含基础防护增强版 0: 不包含 1: 包含
+     * @param FilterBasicPlusFlag 是否包含基础防护增强版 0: 不包含 1: 包含
+     */
+    public void setFilterBasicPlusFlag(Long FilterBasicPlusFlag) {
+        this.FilterBasicPlusFlag = FilterBasicPlusFlag;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -504,6 +527,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
                 this.FilterAssetIpList[i] = new String(source.FilterAssetIpList[i]);
             }
         }
+        if (source.FilterBasicPlusFlag != null) {
+            this.FilterBasicPlusFlag = new Long(source.FilterBasicPlusFlag);
+        }
     }
 
 
@@ -529,6 +555,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
         this.setParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
         this.setParamArraySimple(map, prefix + "FilterAssetIpList.", this.FilterAssetIpList);
+        this.setParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
 
     }
 }
