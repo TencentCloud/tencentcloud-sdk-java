@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChangeMasterInstanceResponse extends AbstractModel{
+public class ModifyDBEncryptAttributesResponse extends AbstractModel{
 
     /**
-    * 异步流程ID。
+    * 任务流ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("FlowId")
     @Expose
-    private Long TaskId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +37,19 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID。 
-     * @return TaskId 异步流程ID。
+     * Get 任务流ID 
+     * @return FlowId 任务流ID
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set 异步流程ID。
-     * @param TaskId 异步流程ID。
+     * Set 任务流ID
+     * @param FlowId 任务流ID
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChangeMasterInstanceResponse() {
+    public ModifyDBEncryptAttributesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChangeMasterInstanceResponse(ChangeMasterInstanceResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public ModifyDBEncryptAttributesResponse(ModifyDBEncryptAttributesResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

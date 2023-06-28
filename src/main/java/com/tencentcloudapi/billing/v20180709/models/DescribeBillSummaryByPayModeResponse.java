@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryByPayModeResponse extends AbstractModel{
 
     /**
-    * 数据是否准备好，0未准备好，1准备好。
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+    * 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
     */
     @SerializedName("Ready")
     @Expose
@@ -46,20 +45,16 @@ Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请
     private String RequestId;
 
     /**
-     * Get 数据是否准备好，0未准备好，1准备好。
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试 
-     * @return Ready 数据是否准备好，0未准备好，1准备好。
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+     * Get 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可） 
+     * @return Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set 数据是否准备好，0未准备好，1准备好。
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
-     * @param Ready 数据是否准备好，0未准备好，1准备好。
-Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟，请于10分钟后重试
+     * Set 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
+     * @param Ready 数据是否准备好，0准备中，1已就绪。（Ready=0，为当前UIN首次进行初始化出账，预计需要5~10分钟出账，请于10分钟后重试即可）
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;

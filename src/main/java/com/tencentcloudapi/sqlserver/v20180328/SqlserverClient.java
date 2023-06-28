@@ -1519,6 +1519,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDBEncryptAttributes）用于开启、关闭数据库的TDE加密功能。
+     * @param req ModifyDBEncryptAttributesRequest
+     * @return ModifyDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBEncryptAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyDBInstanceName）用于修改实例名字。
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse
@@ -1731,6 +1751,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyIncrementalMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIncrementalMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（ModifyInstanceEncryptAttributes）用于开通实例的TDE加密功能。
+     * @param req ModifyInstanceEncryptAttributesRequest
+     * @return ModifyInstanceEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributes(ModifyInstanceEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceEncryptAttributes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

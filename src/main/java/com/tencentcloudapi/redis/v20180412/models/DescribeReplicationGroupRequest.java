@@ -37,14 +37,14 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 复制组ID。
+    * 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+    * 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
     */
     @SerializedName("SearchKey")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 复制组ID。 
-     * @return GroupId 复制组ID。
+     * Get 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。 
+     * @return GroupId 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组ID。
-     * @param GroupId 复制组ID。
+     * Set 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+     * @param GroupId 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。 
-     * @return SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+     * Get 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。 
+     * @return SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
-     * @param SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。
+     * Set 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
+     * @param SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

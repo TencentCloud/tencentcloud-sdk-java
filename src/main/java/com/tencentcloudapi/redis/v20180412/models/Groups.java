@@ -47,7 +47,6 @@ public class Groups extends AbstractModel{
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
     */
     @SerializedName("RegionId")
@@ -138,7 +137,6 @@ public class Groups extends AbstractModel{
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本 
      * @return RegionId 地域ID 。
 - 1：广州 
@@ -157,7 +155,6 @@ public class Groups extends AbstractModel{
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
      */
     public Long getRegionId() {
@@ -182,7 +179,6 @@ public class Groups extends AbstractModel{
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
      * @param RegionId 地域ID 。
 - 1：广州 
@@ -201,7 +197,6 @@ public class Groups extends AbstractModel{
 - 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
-- 24：俄罗斯 
 - 25：日本
      */
     public void setRegionId(Long RegionId) {

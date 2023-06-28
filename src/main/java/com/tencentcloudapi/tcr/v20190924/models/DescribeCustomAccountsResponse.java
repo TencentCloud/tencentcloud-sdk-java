@@ -13,21 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChangeMasterInstanceResponse extends AbstractModel{
+public class DescribeCustomAccountsResponse extends AbstractModel{
 
     /**
-    * 异步流程ID。
+    * 自定义账户列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TaskId")
+    @SerializedName("CustomAccounts")
     @Expose
-    private Long TaskId;
+    private CustomAccount [] CustomAccounts;
+
+    /**
+    * 自定义账户数量
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +45,39 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID。 
-     * @return TaskId 异步流程ID。
+     * Get 自定义账户列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CustomAccounts 自定义账户列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public CustomAccount [] getCustomAccounts() {
+        return this.CustomAccounts;
     }
 
     /**
-     * Set 异步流程ID。
-     * @param TaskId 异步流程ID。
+     * Set 自定义账户列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CustomAccounts 自定义账户列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setCustomAccounts(CustomAccount [] CustomAccounts) {
+        this.CustomAccounts = CustomAccounts;
+    }
+
+    /**
+     * Get 自定义账户数量 
+     * @return TotalCount 自定义账户数量
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 自定义账户数量
+     * @param TotalCount 自定义账户数量
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -68,16 +96,22 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChangeMasterInstanceResponse() {
+    public DescribeCustomAccountsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChangeMasterInstanceResponse(ChangeMasterInstanceResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+    public DescribeCustomAccountsResponse(DescribeCustomAccountsResponse source) {
+        if (source.CustomAccounts != null) {
+            this.CustomAccounts = new CustomAccount[source.CustomAccounts.length];
+            for (int i = 0; i < source.CustomAccounts.length; i++) {
+                this.CustomAccounts[i] = new CustomAccount(source.CustomAccounts[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "CustomAccounts.", this.CustomAccounts);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

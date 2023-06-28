@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquireCkafkaPriceRequest extends AbstractModel{
 
     /**
-    * 国内站标准版填写standards2, 专业版填写profession
+    * 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
     */
     @SerializedName("InstanceType")
     @Expose
@@ -44,14 +44,14 @@ public class InquireCkafkaPriceRequest extends AbstractModel{
     private Long InstanceNum;
 
     /**
-    * 实例内网带宽大小, 单位MB/s (购买时必填)
+    * 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * 实例的硬盘购买类型以及大小 (购买时必填)
+    * 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
     */
     @SerializedName("InquiryDiskParam")
     @Expose
@@ -72,7 +72,7 @@ public class InquireCkafkaPriceRequest extends AbstractModel{
     private Long Topic;
 
     /**
-    * 购买实例分区数, 单位个 (购买时必填)
+    * 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
     */
     @SerializedName("Partition")
     @Expose
@@ -114,16 +114,16 @@ public class InquireCkafkaPriceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get 国内站标准版填写standards2, 专业版填写profession 
-     * @return InstanceType 国内站标准版填写standards2, 专业版填写profession
+     * Get 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession 
+     * @return InstanceType 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 国内站标准版填写standards2, 专业版填写profession
-     * @param InstanceType 国内站标准版填写standards2, 专业版填写profession
+     * Set 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
+     * @param InstanceType 国内站标准版填写standards2, 国际站标准版填写standard，专业版填写profession
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -162,32 +162,32 @@ public class InquireCkafkaPriceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例内网带宽大小, 单位MB/s (购买时必填) 
-     * @return Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填)
+     * Get 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填) 
+     * @return Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 实例内网带宽大小, 单位MB/s (购买时必填)
-     * @param Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填)
+     * Set 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
+     * @param Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填，专业版询价时带宽信息必填)
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 实例的硬盘购买类型以及大小 (购买时必填) 
-     * @return InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填)
+     * Get 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填) 
+     * @return InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
      */
     public InquiryDiskParam getInquiryDiskParam() {
         return this.InquiryDiskParam;
     }
 
     /**
-     * Set 实例的硬盘购买类型以及大小 (购买时必填)
-     * @param InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填)
+     * Set 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
+     * @param InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版询价时磁盘信息必填)
      */
     public void setInquiryDiskParam(InquiryDiskParam InquiryDiskParam) {
         this.InquiryDiskParam = InquiryDiskParam;
@@ -226,16 +226,16 @@ public class InquireCkafkaPriceRequest extends AbstractModel{
     }
 
     /**
-     * Get 购买实例分区数, 单位个 (购买时必填) 
-     * @return Partition 购买实例分区数, 单位个 (购买时必填)
+     * Get 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填) 
+     * @return Partition 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 购买实例分区数, 单位个 (购买时必填)
-     * @param Partition 购买实例分区数, 单位个 (购买时必填)
+     * Set 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
+     * @param Partition 购买实例分区数, 单位个 (购买时必填，专业版询价时带宽信息必填)
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

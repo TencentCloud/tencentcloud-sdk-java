@@ -142,6 +142,13 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
     private String SecurityGroupId;
 
     /**
+    * 安全组ID列表
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
     * DCN源实例ID
     */
     @SerializedName("DcnInstanceId")
@@ -491,6 +498,22 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get 安全组ID列表 
+     * @return SecurityGroupIds 安全组ID列表
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ID列表
+     * @param SecurityGroupIds 安全组ID列表
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Get DCN源实例ID 
      * @return DcnInstanceId DCN源实例ID
      */
@@ -725,6 +748,12 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
         if (source.DcnInstanceId != null) {
             this.DcnInstanceId = new String(source.DcnInstanceId);
         }
@@ -791,6 +820,7 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ShardNodeStorage", this.ShardNodeStorage);
         this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);

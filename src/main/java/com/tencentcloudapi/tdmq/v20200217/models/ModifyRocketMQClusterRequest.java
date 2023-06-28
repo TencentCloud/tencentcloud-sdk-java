@@ -44,6 +44,13 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 是否开启HTTP公网访问
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get RocketMQ集群ID 
      * @return ClusterId RocketMQ集群ID
      */
@@ -91,6 +98,22 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 是否开启HTTP公网访问 
+     * @return PublicAccessEnabled 是否开启HTTP公网访问
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set 是否开启HTTP公网访问
+     * @param PublicAccessEnabled 是否开启HTTP公网访问
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public ModifyRocketMQClusterRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyRocketMQClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

@@ -58,6 +58,13 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * 是否开启公网访问
+    */
+    @SerializedName("PublicAccessEnabled")
+    @Expose
+    private Boolean PublicAccessEnabled;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -137,6 +144,22 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get 是否开启公网访问 
+     * @return PublicAccessEnabled 是否开启公网访问
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.PublicAccessEnabled;
+    }
+
+    /**
+     * Set 是否开启公网访问
+     * @param PublicAccessEnabled 是否开启公网访问
+     */
+    public void setPublicAccessEnabled(Boolean PublicAccessEnabled) {
+        this.PublicAccessEnabled = PublicAccessEnabled;
+    }
+
     public ModifyRocketMQNamespaceRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.PublicAccessEnabled != null) {
+            this.PublicAccessEnabled = new Boolean(source.PublicAccessEnabled);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyRocketMQNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
         this.setParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
 
     }
 }

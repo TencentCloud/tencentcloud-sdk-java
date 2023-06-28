@@ -45,7 +45,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
     * 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
     */
     @SerializedName("BeginTime")
     @Expose
@@ -53,7 +53,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
     * 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
     */
     @SerializedName("EndTime")
     @Expose
@@ -109,9 +109,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
      * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。 
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。 
      * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public String getBeginTime() {
         return this.BeginTime;
@@ -119,9 +119,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
      * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-注：拉取套餐包的创建时间不小于起始时间。
+注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
@@ -129,9 +129,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
      * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。 
+注：EndTime 必须大于 BeginTime 且小于当前时间。 
      * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -139,9 +139,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel{
 
     /**
      * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
      * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime且小于当前时间，拉取套餐包的创建时间不大于结束时间。
+注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

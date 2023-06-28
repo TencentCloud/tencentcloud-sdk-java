@@ -30,7 +30,7 @@ public class CreateReplicationGroupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 复制组名称。
+    * 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
     */
     @SerializedName("GroupName")
     @Expose
@@ -60,16 +60,16 @@ public class CreateReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 复制组名称。 
-     * @return GroupName 复制组名称。
+     * Get 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。 
+     * @return GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 复制组名称。
-     * @param GroupName 复制组名称。
+     * Set 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * @param GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

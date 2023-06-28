@@ -79,7 +79,7 @@ public class Instances extends AbstractModel{
     private Long RedisShardSize;
 
     /**
-    * 实例的磁盘大小
+    * 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
@@ -303,9 +303,9 @@ public class Instances extends AbstractModel{
     }
 
     /**
-     * Get 实例的磁盘大小
+     * Get 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskSize 实例的磁盘大小
+     * @return DiskSize 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDiskSize() {
@@ -313,9 +313,9 @@ public class Instances extends AbstractModel{
     }
 
     /**
-     * Set 实例的磁盘大小
+     * Set 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskSize 实例的磁盘大小
+     * @param DiskSize 实例的磁盘大小。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(Long DiskSize) {

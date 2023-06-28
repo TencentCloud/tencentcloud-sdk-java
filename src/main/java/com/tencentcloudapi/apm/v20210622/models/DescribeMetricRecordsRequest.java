@@ -107,6 +107,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
     private Long PageSize;
 
     /**
+    * Or过滤条件
+    */
+    @SerializedName("OrFilters")
+    @Expose
+    private Filter [] OrFilters;
+
+    /**
      * Get 过滤条件 
      * @return Filters 过滤条件
      */
@@ -298,6 +305,22 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get Or过滤条件 
+     * @return OrFilters Or过滤条件
+     */
+    public Filter [] getOrFilters() {
+        return this.OrFilters;
+    }
+
+    /**
+     * Set Or过滤条件
+     * @param OrFilters Or过滤条件
+     */
+    public void setOrFilters(Filter [] OrFilters) {
+        this.OrFilters = OrFilters;
+    }
+
     public DescribeMetricRecordsRequest() {
     }
 
@@ -351,6 +374,12 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.OrFilters != null) {
+            this.OrFilters = new Filter[source.OrFilters.length];
+            for (int i = 0; i < source.OrFilters.length; i++) {
+                this.OrFilters[i] = new Filter(source.OrFilters[i]);
+            }
+        }
     }
 
 
@@ -370,6 +399,7 @@ public class DescribeMetricRecordsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BusinessName", this.BusinessName);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
 
     }
 }

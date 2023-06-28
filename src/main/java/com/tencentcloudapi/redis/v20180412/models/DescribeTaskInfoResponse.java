@@ -23,35 +23,40 @@ import java.util.HashMap;
 public class DescribeTaskInfoResponse extends AbstractModel{
 
     /**
-    * 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+    * 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 任务开始时间
+    * 任务开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 任务类型
+    * 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 实例的ID
+    * 实例的 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 任务信息，错误时显示错误信息。执行中与成功则为空
+    * 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
     */
     @SerializedName("TaskMessage")
     @Expose
@@ -65,80 +70,100 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错 
-     * @return Status 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+     * Get 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。 
+     * @return Status 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
-     * @param Status 任务状态preparing:待执行，running：执行中，succeed：成功，failed：失败，error 执行出错
+     * Set 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
+     * @param Status 任务状态。
+- preparing：待执行。
+- running：执行中。
+- succeed：成功。
+- failed：失败。
+- error：执行出错。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务开始时间 
-     * @return StartTime 任务开始时间
+     * Get 任务开始时间。 
+     * @return StartTime 任务开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 任务开始时间
-     * @param StartTime 任务开始时间
+     * Set 任务开始时间。
+     * @param StartTime 任务开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务类型 
-     * @return TaskType 任务类型
+     * Get 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。 
+     * @return TaskType 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型
-     * @param TaskType 任务类型
+     * Set 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
+     * @param TaskType 任务类型。常见的类型包含：新建类型、配置变更、关闭实例、清空实例、重置密码、版本升级、备份实例、改变网络类型、实例可用区迁移、手动提主等。
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 实例的ID 
-     * @return InstanceId 实例的ID
+     * Get 实例的 ID。 
+     * @return InstanceId 实例的 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例的ID
-     * @param InstanceId 实例的ID
+     * Set 实例的 ID。
+     * @param InstanceId 实例的 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 任务信息，错误时显示错误信息。执行中与成功则为空 
-     * @return TaskMessage 任务信息，错误时显示错误信息。执行中与成功则为空
+     * Get 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。 
+     * @return TaskMessage 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
      */
     public String getTaskMessage() {
         return this.TaskMessage;
     }
 
     /**
-     * Set 任务信息，错误时显示错误信息。执行中与成功则为空
-     * @param TaskMessage 任务信息，错误时显示错误信息。执行中与成功则为空
+     * Set 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
+     * @param TaskMessage 任务执行返回的信息，执行错误时显示错误信息。执行中或执行成功则为空。
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;

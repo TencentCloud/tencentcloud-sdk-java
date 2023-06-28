@@ -30,14 +30,26 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
+    * WEB嵌入资源类型。
+CREATE_SEAL: 创建印章
+CREATE_TEMPLATE：创建模版
+MODIFY_TEMPLATE：修改模版
+PREVIEW_TEMPLATE：预览模版
+PREVIEW_FLOW：预览合同文档
+PREVIEW_FLOW_DETAIL：预览合同详情
+PREVIEW_SEAL_LIST：预览印章列表
+PREVIEW_SEAL_DETAIL：预览印章详情
+EXTEND_SERVICE：扩展服务
     */
     @SerializedName("EmbedType")
     @Expose
     private String EmbedType;
 
     /**
-    * WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
+    * WEB嵌入的业务资源ID
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
+PREVIEW_SEAL_DETAIL，必填，取值为印章id
     */
     @SerializedName("BusinessId")
     @Expose
@@ -74,32 +86,80 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程 
-     * @return EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
+     * Get WEB嵌入资源类型。
+CREATE_SEAL: 创建印章
+CREATE_TEMPLATE：创建模版
+MODIFY_TEMPLATE：修改模版
+PREVIEW_TEMPLATE：预览模版
+PREVIEW_FLOW：预览合同文档
+PREVIEW_FLOW_DETAIL：预览合同详情
+PREVIEW_SEAL_LIST：预览印章列表
+PREVIEW_SEAL_DETAIL：预览印章详情
+EXTEND_SERVICE：扩展服务 
+     * @return EmbedType WEB嵌入资源类型。
+CREATE_SEAL: 创建印章
+CREATE_TEMPLATE：创建模版
+MODIFY_TEMPLATE：修改模版
+PREVIEW_TEMPLATE：预览模版
+PREVIEW_FLOW：预览合同文档
+PREVIEW_FLOW_DETAIL：预览合同详情
+PREVIEW_SEAL_LIST：预览印章列表
+PREVIEW_SEAL_DETAIL：预览印章详情
+EXTEND_SERVICE：扩展服务
      */
     public String getEmbedType() {
         return this.EmbedType;
     }
 
     /**
-     * Set WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
-     * @param EmbedType WEB嵌入资源类型，取值范围：CREATE_SEAL创建印章，CREATE_TEMPLATE创建模板，MODIFY_TEMPLATE修改模板，PREVIEW_TEMPLATE预览模板，PREVIEW_FLOW预览流程
+     * Set WEB嵌入资源类型。
+CREATE_SEAL: 创建印章
+CREATE_TEMPLATE：创建模版
+MODIFY_TEMPLATE：修改模版
+PREVIEW_TEMPLATE：预览模版
+PREVIEW_FLOW：预览合同文档
+PREVIEW_FLOW_DETAIL：预览合同详情
+PREVIEW_SEAL_LIST：预览印章列表
+PREVIEW_SEAL_DETAIL：预览印章详情
+EXTEND_SERVICE：扩展服务
+     * @param EmbedType WEB嵌入资源类型。
+CREATE_SEAL: 创建印章
+CREATE_TEMPLATE：创建模版
+MODIFY_TEMPLATE：修改模版
+PREVIEW_TEMPLATE：预览模版
+PREVIEW_FLOW：预览合同文档
+PREVIEW_FLOW_DETAIL：预览合同详情
+PREVIEW_SEAL_LIST：预览印章列表
+PREVIEW_SEAL_DETAIL：预览印章详情
+EXTEND_SERVICE：扩展服务
      */
     public void setEmbedType(String EmbedType) {
         this.EmbedType = EmbedType;
     }
 
     /**
-     * Get WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填 
-     * @return BusinessId WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
+     * Get WEB嵌入的业务资源ID
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
+PREVIEW_SEAL_DETAIL，必填，取值为印章id 
+     * @return BusinessId WEB嵌入的业务资源ID
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
+PREVIEW_SEAL_DETAIL，必填，取值为印章id
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
-     * @param BusinessId WEB嵌入的业务资源ID，EmbedType取值MODIFY_TEMPLATE或PREVIEW_TEMPLATE或 PREVIEW_FLOW时BusinessId必填
+     * Set WEB嵌入的业务资源ID
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
+PREVIEW_SEAL_DETAIL，必填，取值为印章id
+     * @param BusinessId WEB嵌入的业务资源ID
+EmbedType取值MODIFY_TEMPLATE，PREVIEW_TEMPLATE时必填，取值为模版id
+PREVIEW_FLOW，PREVIEW_FLOW_DETAIL时必填，取值为合同id
+PREVIEW_SEAL_DETAIL，必填，取值为印章id
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

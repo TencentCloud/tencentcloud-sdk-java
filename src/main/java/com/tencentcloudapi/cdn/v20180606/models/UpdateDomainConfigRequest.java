@@ -100,7 +100,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private ErrorPage ErrorPage;
 
     /**
-    * 请求头部配置
+    * 回源请求头部配置
     */
     @SerializedName("RequestHeader")
     @Expose
@@ -550,16 +550,16 @@ global：全球加速
     }
 
     /**
-     * Get 请求头部配置 
-     * @return RequestHeader 请求头部配置
+     * Get 回源请求头部配置 
+     * @return RequestHeader 回源请求头部配置
      */
     public RequestHeader getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set 请求头部配置
-     * @param RequestHeader 请求头部配置
+     * Set 回源请求头部配置
+     * @param RequestHeader 回源请求头部配置
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
         this.RequestHeader = RequestHeader;

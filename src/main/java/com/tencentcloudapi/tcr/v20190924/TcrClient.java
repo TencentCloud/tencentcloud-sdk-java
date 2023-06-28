@@ -139,6 +139,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建自定义账户
+     * @param req CreateCustomAccountRequest
+     * @return CreateCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomAccountResponse CreateCustomAccount(CreateCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建镜像加速服务
      * @param req CreateImageAccelerationServiceRequest
      * @return CreateImageAccelerationServiceResponse
@@ -553,6 +573,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationTriggerPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteApplicationTriggerPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除自定义账号
+     * @param req DeleteCustomAccountRequest
+     * @return DeleteCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomAccountResponse DeleteCustomAccount(DeleteCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCustomAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1037,6 +1077,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeChartDownloadInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeChartDownloadInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询自定义账号
+     * @param req DescribeCustomAccountsRequest
+     * @return DescribeCustomAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomAccountsResponse DescribeCustomAccounts(DescribeCustomAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomAccounts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1877,6 +1937,26 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyApplicationTriggerPersonal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新自定义账户
+     * @param req ModifyCustomAccountRequest
+     * @return ModifyCustomAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomAccountResponse ModifyCustomAccount(ModifyCustomAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCustomAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCustomAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCustomAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

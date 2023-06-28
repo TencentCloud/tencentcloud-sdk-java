@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.tcr.v20190924.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChangeMasterInstanceResponse extends AbstractModel{
-
-    /**
-    * 异步流程ID。
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private Long TaskId;
+public class DeleteCustomAccountResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -35,22 +28,6 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 异步流程ID。 
-     * @return TaskId 异步流程ID。
-     */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 异步流程ID。
-     * @param TaskId 异步流程ID。
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -68,17 +45,14 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ChangeMasterInstanceResponse() {
+    public DeleteCustomAccountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChangeMasterInstanceResponse(ChangeMasterInstanceResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
+    public DeleteCustomAccountResponse(DeleteCustomAccountResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class ChangeMasterInstanceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

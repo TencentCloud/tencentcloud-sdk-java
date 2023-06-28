@@ -44,7 +44,7 @@ public class DescribeConsumerGroupRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * 本次返回个数限制
+    * 本次返回个数限制，最大支持50
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeConsumerGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 本次返回个数限制 
-     * @return Limit 本次返回个数限制
+     * Get 本次返回个数限制，最大支持50 
+     * @return Limit 本次返回个数限制，最大支持50
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次返回个数限制
-     * @param Limit 本次返回个数限制
+     * Set 本次返回个数限制，最大支持50
+     * @param Limit 本次返回个数限制，最大支持50
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
