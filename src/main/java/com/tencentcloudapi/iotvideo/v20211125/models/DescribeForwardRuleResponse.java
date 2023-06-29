@@ -86,14 +86,14 @@ public class DescribeForwardRuleResponse extends AbstractModel{
     private Long QueueType;
 
     /**
-    * 实例id， 目前只有Ckafaka会用到
+    * 实例id， 目前只有Ckafka会用到
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称，目前只有Ckafaka会用到
+    * 实例名称，目前只有Ckafka会用到
     */
     @SerializedName("InstanceName")
     @Expose
@@ -258,32 +258,32 @@ public class DescribeForwardRuleResponse extends AbstractModel{
     }
 
     /**
-     * Get 实例id， 目前只有Ckafaka会用到 
-     * @return InstanceId 实例id， 目前只有Ckafaka会用到
+     * Get 实例id， 目前只有Ckafka会用到 
+     * @return InstanceId 实例id， 目前只有Ckafka会用到
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id， 目前只有Ckafaka会用到
-     * @param InstanceId 实例id， 目前只有Ckafaka会用到
+     * Set 实例id， 目前只有Ckafka会用到
+     * @param InstanceId 实例id， 目前只有Ckafka会用到
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称，目前只有Ckafaka会用到 
-     * @return InstanceName 实例名称，目前只有Ckafaka会用到
+     * Get 实例名称，目前只有Ckafka会用到 
+     * @return InstanceName 实例名称，目前只有Ckafka会用到
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，目前只有Ckafaka会用到
-     * @param InstanceName 实例名称，目前只有Ckafaka会用到
+     * Set 实例名称，目前只有Ckafka会用到
+     * @param InstanceName 实例名称，目前只有Ckafka会用到
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

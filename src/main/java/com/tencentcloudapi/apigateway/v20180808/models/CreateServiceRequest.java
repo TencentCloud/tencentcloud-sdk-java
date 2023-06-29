@@ -44,13 +44,6 @@ public class CreateServiceRequest extends AbstractModel{
     private String ServiceDesc;
 
     /**
-    * 独立集群名称，用于指定创建服务所在的独立集群。
-    */
-    @SerializedName("ExclusiveSetName")
-    @Expose
-    private String ExclusiveSetName;
-
-    /**
     * 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
     */
     @SerializedName("NetTypes")
@@ -65,7 +58,7 @@ public class CreateServiceRequest extends AbstractModel{
     private String IpVersion;
 
     /**
-    * 集群名称。保留字段，tsf serverlss类型使用。
+    * 集群名称。保留字段，tsf serverless类型使用。
     */
     @SerializedName("SetServerName")
     @Expose
@@ -148,22 +141,6 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 独立集群名称，用于指定创建服务所在的独立集群。 
-     * @return ExclusiveSetName 独立集群名称，用于指定创建服务所在的独立集群。
-     */
-    public String getExclusiveSetName() {
-        return this.ExclusiveSetName;
-    }
-
-    /**
-     * Set 独立集群名称，用于指定创建服务所在的独立集群。
-     * @param ExclusiveSetName 独立集群名称，用于指定创建服务所在的独立集群。
-     */
-    public void setExclusiveSetName(String ExclusiveSetName) {
-        this.ExclusiveSetName = ExclusiveSetName;
-    }
-
-    /**
      * Get 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。 
      * @return NetTypes 网络类型列表，用于指定支持的访问类型，INNER为内网访问，OUTER为外网访问。默认为OUTER。
      */
@@ -196,16 +173,16 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 集群名称。保留字段，tsf serverlss类型使用。 
-     * @return SetServerName 集群名称。保留字段，tsf serverlss类型使用。
+     * Get 集群名称。保留字段，tsf serverless类型使用。 
+     * @return SetServerName 集群名称。保留字段，tsf serverless类型使用。
      */
     public String getSetServerName() {
         return this.SetServerName;
     }
 
     /**
-     * Set 集群名称。保留字段，tsf serverlss类型使用。
-     * @param SetServerName 集群名称。保留字段，tsf serverlss类型使用。
+     * Set 集群名称。保留字段，tsf serverless类型使用。
+     * @param SetServerName 集群名称。保留字段，tsf serverless类型使用。
      */
     public void setSetServerName(String SetServerName) {
         this.SetServerName = SetServerName;
@@ -292,9 +269,6 @@ public class CreateServiceRequest extends AbstractModel{
         if (source.ServiceDesc != null) {
             this.ServiceDesc = new String(source.ServiceDesc);
         }
-        if (source.ExclusiveSetName != null) {
-            this.ExclusiveSetName = new String(source.ExclusiveSetName);
-        }
         if (source.NetTypes != null) {
             this.NetTypes = new String[source.NetTypes.length];
             for (int i = 0; i < source.NetTypes.length; i++) {
@@ -332,7 +306,6 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "ServiceDesc", this.ServiceDesc);
-        this.setParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
         this.setParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);

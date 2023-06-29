@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class EnableEncryptionProtectionRequest extends AbstractModel{
 
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * kms加密配置
+    */
+    @SerializedName("KMSConfiguration")
+    @Expose
+    private KMSConfiguration KMSConfiguration;
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get kms加密配置 
+     * @return KMSConfiguration kms加密配置
+     */
+    public KMSConfiguration getKMSConfiguration() {
+        return this.KMSConfiguration;
+    }
+
+    /**
+     * Set kms加密配置
+     * @param KMSConfiguration kms加密配置
+     */
+    public void setKMSConfiguration(KMSConfiguration KMSConfiguration) {
+        this.KMSConfiguration = KMSConfiguration;
+    }
+
     public EnableEncryptionProtectionRequest() {
     }
 
@@ -30,6 +76,12 @@ public class EnableEncryptionProtectionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public EnableEncryptionProtectionRequest(EnableEncryptionProtectionRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.KMSConfiguration != null) {
+            this.KMSConfiguration = new KMSConfiguration(source.KMSConfiguration);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class EnableEncryptionProtectionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamObj(map, prefix + "KMSConfiguration.", this.KMSConfiguration);
 
     }
 }

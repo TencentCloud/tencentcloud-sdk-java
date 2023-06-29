@@ -30,7 +30,7 @@ public class DescribeUsagePlanEnvironmentsRequest extends AbstractModel{
     private String UsagePlanId;
 
     /**
-    * 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+    * 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
     */
     @SerializedName("BindType")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeUsagePlanEnvironmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get 定类型，取值为 API、SERVICE，默认值为 SERVICE。 
-     * @return BindType 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+     * Get 定义类型，取值为 API、SERVICE，默认值为 SERVICE。 
+     * @return BindType 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
      */
     public String getBindType() {
         return this.BindType;
     }
 
     /**
-     * Set 定类型，取值为 API、SERVICE，默认值为 SERVICE。
-     * @param BindType 定类型，取值为 API、SERVICE，默认值为 SERVICE。
+     * Set 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
+     * @param BindType 定义类型，取值为 API、SERVICE，默认值为 SERVICE。
      */
     public void setBindType(String BindType) {
         this.BindType = BindType;

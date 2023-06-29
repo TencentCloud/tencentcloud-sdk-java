@@ -34,6 +34,7 @@ public class MediaCastSourceInfo extends AbstractModel{
     * 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -52,6 +53,27 @@ public class MediaCastSourceInfo extends AbstractModel{
     @SerializedName("MaterialId")
     @Expose
     private String MaterialId;
+
+    /**
+    * 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Float Offset;
+
+    /**
+    * 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Float Duration;
+
+    /**
+    * 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
 
     /**
      * Get 输入源 Id，由系统分配。
@@ -76,10 +98,12 @@ public class MediaCastSourceInfo extends AbstractModel{
     /**
      * Get 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
-<li>VOD：云点播的媒资文件。</li> 
+<li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li> 
      * @return Type 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      */
     public String getType() {
         return this.Type;
@@ -89,9 +113,11 @@ public class MediaCastSourceInfo extends AbstractModel{
      * Set 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      * @param Type 输入源的媒体类型，取值有：
 <li>CME：多媒体创作引擎的媒体文件；</li>
 <li>VOD：云点播的媒资文件。</li>
+<li>EXTERNAL：非多媒体创建引擎或者云点播的媒资文件。</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -129,6 +155,54 @@ public class MediaCastSourceInfo extends AbstractModel{
         this.MaterialId = MaterialId;
     }
 
+    /**
+     * Get 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。 
+     * @return Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     */
+    public Float getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * @param Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     */
+    public void setOffset(Float Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。 
+     * @return Duration 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+     */
+    public Float getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+     * @param Duration 播放时长，单位：秒。默认播放整个文件。当 Type = CME  或者 VOD 时有效。
+     */
+    public void setDuration(Float Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
+     * Get 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。 
+     * @return Url 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+     * @param Url 外部文件的 Url， Type=EXTERNAL 时必填，可以是点播文件或者直播文件，支持的 Scheme 包括HTTP、HTTPS、RTMP。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public MediaCastSourceInfo() {
     }
 
@@ -149,6 +223,15 @@ public class MediaCastSourceInfo extends AbstractModel{
         if (source.MaterialId != null) {
             this.MaterialId = new String(source.MaterialId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Float(source.Offset);
+        }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -160,6 +243,9 @@ public class MediaCastSourceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

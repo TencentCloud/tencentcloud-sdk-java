@@ -2195,7 +2195,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。 
+     *本接口(ModifyBackupEncryptionStatus)用于设置实例备份文件是否加密。
      * @param req ModifyBackupEncryptionStatusRequest
      * @return ModifyBackupEncryptionStatusResponse
      * @throws TencentCloudSDKException

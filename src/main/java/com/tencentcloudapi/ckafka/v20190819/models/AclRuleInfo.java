@@ -37,7 +37,7 @@ public class AclRuleInfo extends AbstractModel{
     private String PermissionType;
 
     /**
-    * 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+    * 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
     */
     @SerializedName("Host")
     @Expose
@@ -83,16 +83,16 @@ public class AclRuleInfo extends AbstractModel{
     }
 
     /**
-     * Get 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段 
-     * @return Host 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+     * Get 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段 
+     * @return Host 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
-     * @param Host 默认为*，表示任何host都可以访问，当前ckafka不支持host为*和ip网段
+     * Set 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
+     * @param Host 默认为：*，表示任何host都可以访问，当前ckafka不支持host为：* 和 ip网段
      */
     public void setHost(String Host) {
         this.Host = Host;

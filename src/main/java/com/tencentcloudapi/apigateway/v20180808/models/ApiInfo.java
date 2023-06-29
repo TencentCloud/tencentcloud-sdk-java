@@ -351,7 +351,7 @@ public class ApiInfo extends AbstractModel{
     private String ServiceWebsocketTransportFunctionQualifier;
 
     /**
-    * API绑定微服务服务列表。
+    * API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroServices")
@@ -1251,9 +1251,9 @@ public class ApiInfo extends AbstractModel{
     }
 
     /**
-     * Get API绑定微服务服务列表。
+     * Get API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MicroServices API绑定微服务服务列表。
+     * @return MicroServices API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public MicroService [] getMicroServices() {
@@ -1261,9 +1261,9 @@ public class ApiInfo extends AbstractModel{
     }
 
     /**
-     * Set API绑定微服务服务列表。
+     * Set API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MicroServices API绑定微服务服务列表。
+     * @param MicroServices API绑定微服务列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroServices(MicroService [] MicroServices) {

@@ -37,7 +37,7 @@ public class ModifyInstanceAttributesConfig extends AbstractModel{
     private Long DefaultNumPartitions;
 
     /**
-    * 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+    * 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
     */
     @SerializedName("DefaultReplicationFactor")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyInstanceAttributesConfig extends AbstractModel{
     }
 
     /**
-     * Get 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2 
-     * @return DefaultReplicationFactor 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * Get 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2 
+     * @return DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
      */
     public Long getDefaultReplicationFactor() {
         return this.DefaultReplicationFactor;
     }
 
     /**
-     * Set 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
-     * @param DefaultReplicationFactor 如歌auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * Set 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * @param DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
      */
     public void setDefaultReplicationFactor(Long DefaultReplicationFactor) {
         this.DefaultReplicationFactor = DefaultReplicationFactor;

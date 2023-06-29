@@ -27,7 +27,7 @@ public class RemoteBackupInfo extends AbstractModel{
     */
     @SerializedName("SubBackupId")
     @Expose
-    private Long [] SubBackupId;
+    private Long SubBackupId;
 
     /**
     * 异地备份所在地域
@@ -68,7 +68,7 @@ public class RemoteBackupInfo extends AbstractModel{
      * Get 异地备份子任务的ID 
      * @return SubBackupId 异地备份子任务的ID
      */
-    public Long [] getSubBackupId() {
+    public Long getSubBackupId() {
         return this.SubBackupId;
     }
 
@@ -76,7 +76,7 @@ public class RemoteBackupInfo extends AbstractModel{
      * Set 异地备份子任务的ID
      * @param SubBackupId 异地备份子任务的ID
      */
-    public void setSubBackupId(Long [] SubBackupId) {
+    public void setSubBackupId(Long SubBackupId) {
         this.SubBackupId = SubBackupId;
     }
 
@@ -169,10 +169,7 @@ public class RemoteBackupInfo extends AbstractModel{
      */
     public RemoteBackupInfo(RemoteBackupInfo source) {
         if (source.SubBackupId != null) {
-            this.SubBackupId = new Long[source.SubBackupId.length];
-            for (int i = 0; i < source.SubBackupId.length; i++) {
-                this.SubBackupId[i] = new Long(source.SubBackupId[i]);
-            }
+            this.SubBackupId = new Long(source.SubBackupId);
         }
         if (source.Region != null) {
             this.Region = new String(source.Region);
@@ -196,7 +193,7 @@ public class RemoteBackupInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SubBackupId.", this.SubBackupId);
+        this.setParamSimple(map, prefix + "SubBackupId", this.SubBackupId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);

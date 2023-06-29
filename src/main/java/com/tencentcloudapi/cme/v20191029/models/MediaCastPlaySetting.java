@@ -37,6 +37,13 @@ public class MediaCastPlaySetting extends AbstractModel{
     private String EndTime;
 
     /**
+    * 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+    */
+    @SerializedName("AutoStartTime")
+    @Expose
+    private String AutoStartTime;
+
+    /**
      * Get 循环播放次数。LoopCount 和 EndTime 同时只能有一个生效。默认循环播放次数为一次。如果同时设置了 LoopCount 和 EndTime 参数，优先使用 LoopCount 参数。 
      * @return LoopCount 循环播放次数。LoopCount 和 EndTime 同时只能有一个生效。默认循环播放次数为一次。如果同时设置了 LoopCount 和 EndTime 参数，优先使用 LoopCount 参数。
      */
@@ -68,6 +75,22 @@ public class MediaCastPlaySetting extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。 
+     * @return AutoStartTime 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public String getAutoStartTime() {
+        return this.AutoStartTime;
+    }
+
+    /**
+     * Set 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     * @param AutoStartTime 自动启动时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+     */
+    public void setAutoStartTime(String AutoStartTime) {
+        this.AutoStartTime = AutoStartTime;
+    }
+
     public MediaCastPlaySetting() {
     }
 
@@ -82,6 +105,9 @@ public class MediaCastPlaySetting extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.AutoStartTime != null) {
+            this.AutoStartTime = new String(source.AutoStartTime);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class MediaCastPlaySetting extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoopCount", this.LoopCount);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "AutoStartTime", this.AutoStartTime);
 
     }
 }

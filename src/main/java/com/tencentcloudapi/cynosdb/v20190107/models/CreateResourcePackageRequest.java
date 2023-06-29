@@ -38,9 +38,7 @@ china-中国内地通用，overseas-港澳台及海外通用
     private String PackageRegion;
 
     /**
-    * 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+    * 资源包类型：CCU-计算资源包，DISK-存储资源包
     */
     @SerializedName("PackageType")
     @Expose
@@ -119,24 +117,16 @@ china-中国内地通用，overseas-港澳台及海外通用
     }
 
     /**
-     * Get 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包 
-     * @return PackageType 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+     * Get 资源包类型：CCU-计算资源包，DISK-存储资源包 
+     * @return PackageType 资源包类型：CCU-计算资源包，DISK-存储资源包
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
-     * @param PackageType 资源包类型
-
-资源包类型：CCU-计算资源包，DISK-存储资源包
+     * Set 资源包类型：CCU-计算资源包，DISK-存储资源包
+     * @param PackageType 资源包类型：CCU-计算资源包，DISK-存储资源包
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

@@ -131,6 +131,14 @@ public class Template extends AbstractModel{
     private TagWithDescribe [] Tags;
 
     /**
+    * 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateSource")
+    @Expose
+    private Long TemplateSource;
+
+    /**
      * Get 经验库ID 
      * @return TemplateId 经验库ID
      */
@@ -382,6 +390,26 @@ public class Template extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateSource 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTemplateSource() {
+        return this.TemplateSource;
+    }
+
+    /**
+     * Set 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateSource 经验来源 0-自建 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateSource(Long TemplateSource) {
+        this.TemplateSource = TemplateSource;
+    }
+
     public Template() {
     }
 
@@ -444,6 +472,9 @@ public class Template extends AbstractModel{
                 this.Tags[i] = new TagWithDescribe(source.Tags[i]);
             }
         }
+        if (source.TemplateSource != null) {
+            this.TemplateSource = new Long(source.TemplateSource);
+        }
     }
 
 
@@ -466,6 +497,7 @@ public class Template extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TemplateMonitors.", this.TemplateMonitors);
         this.setParamObj(map, prefix + "TemplatePolicy.", this.TemplatePolicy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
 
     }
 }

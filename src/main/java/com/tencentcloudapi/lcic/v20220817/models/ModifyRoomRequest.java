@@ -107,7 +107,6 @@ public class ModifyRoomRequest extends AbstractModel{
     * 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
 直播开始后不允许修改。
     */
     @SerializedName("SubType")
@@ -132,18 +131,34 @@ coteaching 双师
     private String [] Assistants;
 
     /**
-    * 房间绑定的群组ID
+    * 房间绑定的群组ID。直播开始后不允许修改。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 打开学生麦克风/摄像头的授权开关
+    * 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。
     */
     @SerializedName("EnableDirectControl")
     @Expose
     private Long EnableDirectControl;
+
+    /**
+    * 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+    */
+    @SerializedName("InteractionMode")
+    @Expose
+    private Long InteractionMode;
+
+    /**
+    * 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+    */
+    @SerializedName("VideoOrientation")
+    @Expose
+    private Long VideoOrientation;
 
     /**
      * Get 房间ID。 
@@ -353,12 +368,10 @@ coteaching 双师
      * Get 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
 直播开始后不允许修改。 
      * @return SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
 直播开始后不允许修改。
      */
     public String getSubType() {
@@ -369,12 +382,10 @@ coteaching 双师
      * Set 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
 直播开始后不允许修改。
      * @param SubType 房间子类型，可以有以下取值：
 videodoc 文档+视频
 video 纯视频
-coteaching 双师
 直播开始后不允许修改。
      */
     public void setSubType(String SubType) {
@@ -426,35 +437,75 @@ coteaching 双师
     }
 
     /**
-     * Get 房间绑定的群组ID 
-     * @return GroupId 房间绑定的群组ID
+     * Get 房间绑定的群组ID。直播开始后不允许修改。 
+     * @return GroupId 房间绑定的群组ID。直播开始后不允许修改。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 房间绑定的群组ID
-     * @param GroupId 房间绑定的群组ID
+     * Set 房间绑定的群组ID。直播开始后不允许修改。
+     * @param GroupId 房间绑定的群组ID。直播开始后不允许修改。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 打开学生麦克风/摄像头的授权开关 
-     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Get 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。 
+     * @return EnableDirectControl 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。
      */
     public Long getEnableDirectControl() {
         return this.EnableDirectControl;
     }
 
     /**
-     * Set 打开学生麦克风/摄像头的授权开关
-     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关
+     * Set 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。
+     * @param EnableDirectControl 打开学生麦克风/摄像头的授权开关。直播开始后不允许修改。
      */
     public void setEnableDirectControl(Long EnableDirectControl) {
         this.EnableDirectControl = EnableDirectControl;
+    }
+
+    /**
+     * Get 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教 
+     * @return InteractionMode 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     */
+    public Long getInteractionMode() {
+        return this.InteractionMode;
+    }
+
+    /**
+     * Set 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     * @param InteractionMode 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     */
+    public void setInteractionMode(Long InteractionMode) {
+        this.InteractionMode = InteractionMode;
+    }
+
+    /**
+     * Get 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型 
+     * @return VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     */
+    public Long getVideoOrientation() {
+        return this.VideoOrientation;
+    }
+
+    /**
+     * Set 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     * @param VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     */
+    public void setVideoOrientation(Long VideoOrientation) {
+        this.VideoOrientation = VideoOrientation;
     }
 
     public ModifyRoomRequest() {
@@ -513,6 +564,12 @@ coteaching 双师
         if (source.EnableDirectControl != null) {
             this.EnableDirectControl = new Long(source.EnableDirectControl);
         }
+        if (source.InteractionMode != null) {
+            this.InteractionMode = new Long(source.InteractionMode);
+        }
+        if (source.VideoOrientation != null) {
+            this.VideoOrientation = new Long(source.VideoOrientation);
+        }
     }
 
 
@@ -535,6 +592,8 @@ coteaching 双师
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+        this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+        this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
 
     }
 }

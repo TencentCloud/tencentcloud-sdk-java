@@ -320,7 +320,9 @@ public class CommonFlowApprover extends AbstractModel{
     /**
      * Get 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS 
      * @return NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
+     * @deprecated
      */
+    @Deprecated
     public String getNotifyType() {
         return this.NotifyType;
     }
@@ -328,7 +330,9 @@ public class CommonFlowApprover extends AbstractModel{
     /**
      * Set 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
      * @param NotifyType 通知类型：SMS（短信） NONE（不做通知）, 不传 默认SMS
+     * @deprecated
      */
+    @Deprecated
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }

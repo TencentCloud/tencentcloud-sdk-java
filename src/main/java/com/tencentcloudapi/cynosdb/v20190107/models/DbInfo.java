@@ -44,7 +44,7 @@ public class DbInfo extends AbstractModel{
     private String Status;
 
     /**
-    * 拍讯规则
+    * 排序规则
     */
     @SerializedName("CollateRule")
     @Expose
@@ -163,16 +163,16 @@ public class DbInfo extends AbstractModel{
     }
 
     /**
-     * Get 拍讯规则 
-     * @return CollateRule 拍讯规则
+     * Get 排序规则 
+     * @return CollateRule 排序规则
      */
     public String getCollateRule() {
         return this.CollateRule;
     }
 
     /**
-     * Set 拍讯规则
-     * @param CollateRule 拍讯规则
+     * Set 排序规则
+     * @param CollateRule 排序规则
      */
     public void setCollateRule(String CollateRule) {
         this.CollateRule = CollateRule;

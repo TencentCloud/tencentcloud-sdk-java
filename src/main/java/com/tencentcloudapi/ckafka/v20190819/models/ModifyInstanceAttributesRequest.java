@@ -58,7 +58,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private DynamicRetentionTime DynamicRetentionConfig;
 
     /**
-    * 修改升配置rebalance时间
+    * 升配Rebalance时间
     */
     @SerializedName("RebalanceTime")
     @Expose
@@ -166,16 +166,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get 修改升配置rebalance时间 
-     * @return RebalanceTime 修改升配置rebalance时间
+     * Get 升配Rebalance时间 
+     * @return RebalanceTime 升配Rebalance时间
      */
     public Long getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set 修改升配置rebalance时间
-     * @param RebalanceTime 修改升配置rebalance时间
+     * Set 升配Rebalance时间
+     * @param RebalanceTime 升配Rebalance时间
      */
     public void setRebalanceTime(Long RebalanceTime) {
         this.RebalanceTime = RebalanceTime;

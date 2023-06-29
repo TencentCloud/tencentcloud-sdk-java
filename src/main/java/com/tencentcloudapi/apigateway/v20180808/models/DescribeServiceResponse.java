@@ -73,13 +73,6 @@ public class DescribeServiceResponse extends AbstractModel{
     private String ModifiedTime;
 
     /**
-    * 独立集群名称。
-    */
-    @SerializedName("ExclusiveSetName")
-    @Expose
-    private String ExclusiveSetName;
-
-    /**
     * 网络类型列表，INNER为内网访问，OUTER为外网访问。
     */
     @SerializedName("NetTypes")
@@ -337,22 +330,6 @@ public class DescribeServiceResponse extends AbstractModel{
      */
     public void setModifiedTime(String ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
-    }
-
-    /**
-     * Get 独立集群名称。 
-     * @return ExclusiveSetName 独立集群名称。
-     */
-    public String getExclusiveSetName() {
-        return this.ExclusiveSetName;
-    }
-
-    /**
-     * Set 独立集群名称。
-     * @param ExclusiveSetName 独立集群名称。
-     */
-    public void setExclusiveSetName(String ExclusiveSetName) {
-        this.ExclusiveSetName = ExclusiveSetName;
     }
 
     /**
@@ -735,9 +712,6 @@ public class DescribeServiceResponse extends AbstractModel{
         if (source.ModifiedTime != null) {
             this.ModifiedTime = new String(source.ModifiedTime);
         }
-        if (source.ExclusiveSetName != null) {
-            this.ExclusiveSetName = new String(source.ExclusiveSetName);
-        }
         if (source.NetTypes != null) {
             this.NetTypes = new String[source.NetTypes.length];
             for (int i = 0; i < source.NetTypes.length; i++) {
@@ -821,7 +795,6 @@ public class DescribeServiceResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
-        this.setParamSimple(map, prefix + "ExclusiveSetName", this.ExclusiveSetName);
         this.setParamArraySimple(map, prefix + "NetTypes.", this.NetTypes);
         this.setParamSimple(map, prefix + "InternalSubDomain", this.InternalSubDomain);
         this.setParamSimple(map, prefix + "OuterSubDomain", this.OuterSubDomain);

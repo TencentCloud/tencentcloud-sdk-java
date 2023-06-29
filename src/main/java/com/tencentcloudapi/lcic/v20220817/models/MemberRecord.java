@@ -166,6 +166,14 @@ public class MemberRecord extends AbstractModel{
     private Long Stage;
 
     /**
+    * 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentState")
+    @Expose
+    private Long CurrentState;
+
+    /**
      * Get 用户ID。 
      * @return UserId 用户ID。
      */
@@ -497,6 +505,26 @@ public class MemberRecord extends AbstractModel{
         this.Stage = Stage;
     }
 
+    /**
+     * Get 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCurrentState() {
+        return this.CurrentState;
+    }
+
+    /**
+     * Set 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentState 用户状态。0为未到，1为在线，2为离线，3为被踢，4为永久被踢，5为暂时掉线
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentState(Long CurrentState) {
+        this.CurrentState = CurrentState;
+    }
+
     public MemberRecord() {
     }
 
@@ -568,6 +596,9 @@ public class MemberRecord extends AbstractModel{
         if (source.Stage != null) {
             this.Stage = new Long(source.Stage);
         }
+        if (source.CurrentState != null) {
+            this.CurrentState = new Long(source.CurrentState);
+        }
     }
 
 
@@ -595,6 +626,7 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "SubGroupId.", this.SubGroupId);
         this.setParamSimple(map, prefix + "Stage", this.Stage);
+        this.setParamSimple(map, prefix + "CurrentState", this.CurrentState);
 
     }
 }

@@ -79,21 +79,21 @@ public class CreateForwardRuleResponse extends AbstractModel{
     private String QueueRegion;
 
     /**
-    * 消息队列的类型。 0：CMQ，1：CKafaka
+    * 消息队列的类型。 0：CMQ，1：Ckafka
     */
     @SerializedName("QueueType")
     @Expose
     private Long QueueType;
 
     /**
-    * 实例id， 目前只有Ckafaka会用到
+    * 实例id， 目前只有Ckafka会用到
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称，目前只有Ckafaka会用到
+    * 实例名称，目前只有Ckafka会用到
     */
     @SerializedName("InstanceName")
     @Expose
@@ -242,48 +242,48 @@ public class CreateForwardRuleResponse extends AbstractModel{
     }
 
     /**
-     * Get 消息队列的类型。 0：CMQ，1：CKafaka 
-     * @return QueueType 消息队列的类型。 0：CMQ，1：CKafaka
+     * Get 消息队列的类型。 0：CMQ，1：Ckafka 
+     * @return QueueType 消息队列的类型。 0：CMQ，1：Ckafka
      */
     public Long getQueueType() {
         return this.QueueType;
     }
 
     /**
-     * Set 消息队列的类型。 0：CMQ，1：CKafaka
-     * @param QueueType 消息队列的类型。 0：CMQ，1：CKafaka
+     * Set 消息队列的类型。 0：CMQ，1：Ckafka
+     * @param QueueType 消息队列的类型。 0：CMQ，1：Ckafka
      */
     public void setQueueType(Long QueueType) {
         this.QueueType = QueueType;
     }
 
     /**
-     * Get 实例id， 目前只有Ckafaka会用到 
-     * @return InstanceId 实例id， 目前只有Ckafaka会用到
+     * Get 实例id， 目前只有Ckafka会用到 
+     * @return InstanceId 实例id， 目前只有Ckafka会用到
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id， 目前只有Ckafaka会用到
-     * @param InstanceId 实例id， 目前只有Ckafaka会用到
+     * Set 实例id， 目前只有Ckafka会用到
+     * @param InstanceId 实例id， 目前只有Ckafka会用到
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称，目前只有Ckafaka会用到 
-     * @return InstanceName 实例名称，目前只有Ckafaka会用到
+     * Get 实例名称，目前只有Ckafka会用到 
+     * @return InstanceName 实例名称，目前只有Ckafka会用到
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，目前只有Ckafaka会用到
-     * @param InstanceName 实例名称，目前只有Ckafaka会用到
+     * Set 实例名称，目前只有Ckafka会用到
+     * @param InstanceName 实例名称，目前只有Ckafka会用到
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

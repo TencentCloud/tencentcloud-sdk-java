@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeEncryptionStatusResponse extends AbstractModel{
 
     /**
+    * 加密状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 加密错误信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 加密状态 
+     * @return Status 加密状态
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 加密状态
+     * @param Status 加密状态
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 加密错误信息 
+     * @return ErrorMsg 加密错误信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 加密错误信息
+     * @param ErrorMsg 加密错误信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +99,12 @@ public class DescribeEncryptionStatusResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeEncryptionStatusResponse(DescribeEncryptionStatusResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +115,8 @@ public class DescribeEncryptionStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -121,7 +121,7 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceMockReturnMessage;
 
     /**
-    * API绑定微服务服务列表。
+    * API绑定微服务列表。
     */
     @SerializedName("MicroServices")
     @Expose
@@ -618,16 +618,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API绑定微服务服务列表。 
-     * @return MicroServices API绑定微服务服务列表。
+     * Get API绑定微服务列表。 
+     * @return MicroServices API绑定微服务列表。
      */
     public MicroServiceReq [] getMicroServices() {
         return this.MicroServices;
     }
 
     /**
-     * Set API绑定微服务服务列表。
-     * @param MicroServices API绑定微服务服务列表。
+     * Set API绑定微服务列表。
+     * @param MicroServices API绑定微服务列表。
      */
     public void setMicroServices(MicroServiceReq [] MicroServices) {
         this.MicroServices = MicroServices;

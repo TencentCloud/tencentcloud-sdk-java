@@ -121,7 +121,7 @@ public class InstanceDetail extends AbstractModel{
     private String HealthyMessage;
 
     /**
-    * 实例创建时间时间
+    * 实例创建时间
     */
     @SerializedName("CreateTime")
     @Expose
@@ -484,16 +484,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get 实例创建时间时间 
-     * @return CreateTime 实例创建时间时间
+     * Get 实例创建时间 
+     * @return CreateTime 实例创建时间
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 实例创建时间时间
-     * @param CreateTime 实例创建时间时间
+     * Set 实例创建时间
+     * @param CreateTime 实例创建时间
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

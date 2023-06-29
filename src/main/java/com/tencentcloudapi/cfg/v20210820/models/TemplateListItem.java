@@ -80,6 +80,14 @@ public class TemplateListItem extends AbstractModel{
     private Long TemplateUsedNum;
 
     /**
+    * 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TemplateSource")
+    @Expose
+    private Long TemplateSource;
+
+    /**
      * Get 经验库ID 
      * @return TemplateId 经验库ID
      */
@@ -211,6 +219,26 @@ public class TemplateListItem extends AbstractModel{
         this.TemplateUsedNum = TemplateUsedNum;
     }
 
+    /**
+     * Get 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TemplateSource 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTemplateSource() {
+        return this.TemplateSource;
+    }
+
+    /**
+     * Set 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TemplateSource 经验库来源 0-自建经验 1-专家推荐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemplateSource(Long TemplateSource) {
+        this.TemplateSource = TemplateSource;
+    }
+
     public TemplateListItem() {
     }
 
@@ -243,6 +271,9 @@ public class TemplateListItem extends AbstractModel{
         if (source.TemplateUsedNum != null) {
             this.TemplateUsedNum = new Long(source.TemplateUsedNum);
         }
+        if (source.TemplateSource != null) {
+            this.TemplateSource = new Long(source.TemplateSource);
+        }
     }
 
 
@@ -258,6 +289,7 @@ public class TemplateListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateCreateTime", this.TemplateCreateTime);
         this.setParamSimple(map, prefix + "TemplateUpdateTime", this.TemplateUpdateTime);
         this.setParamSimple(map, prefix + "TemplateUsedNum", this.TemplateUsedNum);
+        this.setParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
 
     }
 }

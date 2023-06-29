@@ -89,6 +89,14 @@ public class TaskListItem extends AbstractModel{
     private Boolean TaskPreCheckSuccess;
 
     /**
+    * 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskExpect")
+    @Expose
+    private Long TaskExpect;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -244,6 +252,26 @@ public class TaskListItem extends AbstractModel{
         this.TaskPreCheckSuccess = TaskPreCheckSuccess;
     }
 
+    /**
+     * Get 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTaskExpect() {
+        return this.TaskExpect;
+    }
+
+    /**
+     * Set 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskExpect(Long TaskExpect) {
+        this.TaskExpect = TaskExpect;
+    }
+
     public TaskListItem() {
     }
 
@@ -279,6 +307,9 @@ public class TaskListItem extends AbstractModel{
         if (source.TaskPreCheckSuccess != null) {
             this.TaskPreCheckSuccess = new Boolean(source.TaskPreCheckSuccess);
         }
+        if (source.TaskExpect != null) {
+            this.TaskExpect = new Long(source.TaskExpect);
+        }
     }
 
 
@@ -295,6 +326,7 @@ public class TaskListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskUpdateTime", this.TaskUpdateTime);
         this.setParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
         this.setParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
+        this.setParamSimple(map, prefix + "TaskExpect", this.TaskExpect);
 
     }
 }

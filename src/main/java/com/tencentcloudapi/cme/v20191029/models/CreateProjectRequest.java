@@ -128,7 +128,7 @@ public class CreateProjectRequest extends AbstractModel{
     private RecordReplayProjectInput RecordReplayProjectInput;
 
     /**
-    * 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+    * 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
     */
     @SerializedName("MediaCastProjectInput")
     @Expose
@@ -399,16 +399,16 @@ public class CreateProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。 
-     * @return MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * Get 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。 
+     * @return MediaCastProjectInput 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
      */
     public MediaCastProjectInput getMediaCastProjectInput() {
         return this.MediaCastProjectInput;
     }
 
     /**
-     * Set 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
-     * @param MediaCastProjectInput 点播转直播项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * Set 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
+     * @param MediaCastProjectInput 媒体转推项目输入信息，仅当项目类型为 MEDIA_CAST 时必填。
      */
     public void setMediaCastProjectInput(MediaCastProjectInput MediaCastProjectInput) {
         this.MediaCastProjectInput = MediaCastProjectInput;

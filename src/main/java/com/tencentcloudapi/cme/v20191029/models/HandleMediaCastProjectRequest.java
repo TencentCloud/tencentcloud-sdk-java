@@ -30,7 +30,7 @@ public class HandleMediaCastProjectRequest extends AbstractModel{
     private String Platform;
 
     /**
-    * 点播转直播项目 Id 。
+    * 媒体转推项目 Id 。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -84,7 +84,7 @@ public class HandleMediaCastProjectRequest extends AbstractModel{
     private Long Position;
 
     /**
-    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+    * 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
     */
     @SerializedName("Operator")
     @Expose
@@ -107,16 +107,16 @@ public class HandleMediaCastProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 点播转直播项目 Id 。 
-     * @return ProjectId 点播转直播项目 Id 。
+     * Get 媒体转推项目 Id 。 
+     * @return ProjectId 媒体转推项目 Id 。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 点播转直播项目 Id 。
-     * @param ProjectId 点播转直播项目 Id 。
+     * Set 媒体转推项目 Id 。
+     * @param ProjectId 媒体转推项目 Id 。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
@@ -239,16 +239,16 @@ public class HandleMediaCastProjectRequest extends AbstractModel{
     }
 
     /**
-     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。 
-     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+     * Get 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。 
+     * @return Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
-     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有点播转直播项目。如果指定操作者，则操作者必须为项目所有者。
+     * Set 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
+     * @param Operator 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有媒体转推项目。如果指定操作者，则操作者必须为项目所有者。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

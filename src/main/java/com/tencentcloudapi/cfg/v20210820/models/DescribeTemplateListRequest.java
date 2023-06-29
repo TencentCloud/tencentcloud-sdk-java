@@ -65,6 +65,20 @@ public class DescribeTemplateListRequest extends AbstractModel{
     private TagWithDescribe [] Tags;
 
     /**
+    * 经验来源 0-自建 1-专家推荐
+    */
+    @SerializedName("TemplateSource")
+    @Expose
+    private Long TemplateSource;
+
+    /**
+    * 经验ID
+    */
+    @SerializedName("TemplateIdList")
+    @Expose
+    private Long [] TemplateIdList;
+
+    /**
      * Get 分页Limit, 最大值100 
      * @return Limit 分页Limit, 最大值100
      */
@@ -160,6 +174,38 @@ public class DescribeTemplateListRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 经验来源 0-自建 1-专家推荐 
+     * @return TemplateSource 经验来源 0-自建 1-专家推荐
+     */
+    public Long getTemplateSource() {
+        return this.TemplateSource;
+    }
+
+    /**
+     * Set 经验来源 0-自建 1-专家推荐
+     * @param TemplateSource 经验来源 0-自建 1-专家推荐
+     */
+    public void setTemplateSource(Long TemplateSource) {
+        this.TemplateSource = TemplateSource;
+    }
+
+    /**
+     * Get 经验ID 
+     * @return TemplateIdList 经验ID
+     */
+    public Long [] getTemplateIdList() {
+        return this.TemplateIdList;
+    }
+
+    /**
+     * Set 经验ID
+     * @param TemplateIdList 经验ID
+     */
+    public void setTemplateIdList(Long [] TemplateIdList) {
+        this.TemplateIdList = TemplateIdList;
+    }
+
     public DescribeTemplateListRequest() {
     }
 
@@ -192,6 +238,15 @@ public class DescribeTemplateListRequest extends AbstractModel{
                 this.Tags[i] = new TagWithDescribe(source.Tags[i]);
             }
         }
+        if (source.TemplateSource != null) {
+            this.TemplateSource = new Long(source.TemplateSource);
+        }
+        if (source.TemplateIdList != null) {
+            this.TemplateIdList = new Long[source.TemplateIdList.length];
+            for (int i = 0; i < source.TemplateIdList.length; i++) {
+                this.TemplateIdList[i] = new Long(source.TemplateIdList[i]);
+            }
+        }
     }
 
 
@@ -205,6 +260,8 @@ public class DescribeTemplateListRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "IsUsed", this.IsUsed);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TemplateSource", this.TemplateSource);
+        this.setParamArraySimple(map, prefix + "TemplateIdList.", this.TemplateIdList);
 
     }
 }

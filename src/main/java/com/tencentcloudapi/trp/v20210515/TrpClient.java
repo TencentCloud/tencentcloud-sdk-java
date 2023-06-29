@@ -359,6 +359,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *查询渠道企业列表
+     * @param req DescribeAgentCorpsRequest
+     * @return DescribeAgentCorpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentCorpsResponse DescribeAgentCorps(DescribeAgentCorpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAgentCorpsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAgentCorpsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAgentCorps");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询批次信息
      * @param req DescribeCodeBatchByIdRequest
      * @return DescribeCodeBatchByIdResponse

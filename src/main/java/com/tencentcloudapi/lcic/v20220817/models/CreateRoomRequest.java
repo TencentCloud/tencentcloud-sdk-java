@@ -135,7 +135,7 @@ video 纯视频
     private Long RTCAudienceNumber;
 
     /**
-    * 观看类型，互动直播（默认）。
+    * 观看类型。互动观看 （默认）
     */
     @SerializedName("AudienceType")
     @Expose
@@ -163,6 +163,22 @@ video 纯视频
     @SerializedName("EnableDirectControl")
     @Expose
     private Long EnableDirectControl;
+
+    /**
+    * 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+    */
+    @SerializedName("InteractionMode")
+    @Expose
+    private Long InteractionMode;
+
+    /**
+    * 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+    */
+    @SerializedName("VideoOrientation")
+    @Expose
+    private Long VideoOrientation;
 
     /**
      * Get 房间名称。 
@@ -445,16 +461,16 @@ video 纯视频
     }
 
     /**
-     * Get 观看类型，互动直播（默认）。 
-     * @return AudienceType 观看类型，互动直播（默认）。
+     * Get 观看类型。互动观看 （默认） 
+     * @return AudienceType 观看类型。互动观看 （默认）
      */
     public Long getAudienceType() {
         return this.AudienceType;
     }
 
     /**
-     * Set 观看类型，互动直播（默认）。
-     * @param AudienceType 观看类型，互动直播（默认）。
+     * Set 观看类型。互动观看 （默认）
+     * @param AudienceType 观看类型。互动观看 （默认）
      */
     public void setAudienceType(Long AudienceType) {
         this.AudienceType = AudienceType;
@@ -514,6 +530,46 @@ video 纯视频
      */
     public void setEnableDirectControl(Long EnableDirectControl) {
         this.EnableDirectControl = EnableDirectControl;
+    }
+
+    /**
+     * Get 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教 
+     * @return InteractionMode 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     */
+    public Long getInteractionMode() {
+        return this.InteractionMode;
+    }
+
+    /**
+     * Set 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     * @param InteractionMode 开启专注模式。
+0 收看全部角色音视频(默认)
+1 只看老师和助教
+     */
+    public void setInteractionMode(Long InteractionMode) {
+        this.InteractionMode = InteractionMode;
+    }
+
+    /**
+     * Get 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型 
+     * @return VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     */
+    public Long getVideoOrientation() {
+        return this.VideoOrientation;
+    }
+
+    /**
+     * Set 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     * @param VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+     */
+    public void setVideoOrientation(Long VideoOrientation) {
+        this.VideoOrientation = VideoOrientation;
     }
 
     public CreateRoomRequest() {
@@ -581,6 +637,12 @@ video 纯视频
         if (source.EnableDirectControl != null) {
             this.EnableDirectControl = new Long(source.EnableDirectControl);
         }
+        if (source.InteractionMode != null) {
+            this.InteractionMode = new Long(source.InteractionMode);
+        }
+        if (source.VideoOrientation != null) {
+            this.VideoOrientation = new Long(source.VideoOrientation);
+        }
     }
 
 
@@ -606,6 +668,8 @@ video 纯视频
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+        this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+        this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
 
     }
 }

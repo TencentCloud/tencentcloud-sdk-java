@@ -122,7 +122,7 @@ public class InstanceDetail extends AbstractModel{
     */
     @SerializedName("Zones")
     @Expose
-    private String Zones;
+    private String [] Zones;
 
     /**
      * Get 独享实例唯一id 
@@ -350,7 +350,7 @@ public class InstanceDetail extends AbstractModel{
      * @return Zones 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getZones() {
+    public String [] getZones() {
         return this.Zones;
     }
 
@@ -360,7 +360,7 @@ public class InstanceDetail extends AbstractModel{
      * @param Zones 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setZones(String Zones) {
+    public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
@@ -415,7 +415,10 @@ public class InstanceDetail extends AbstractModel{
             this.CreatedTime = new String(source.CreatedTime);
         }
         if (source.Zones != null) {
-            this.Zones = new String(source.Zones);
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
         }
     }
 
@@ -437,7 +440,7 @@ public class InstanceDetail extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Parameters.", this.Parameters);
         this.setParamSimple(map, prefix + "IsolationStartedTime", this.IsolationStartedTime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "Zones", this.Zones);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

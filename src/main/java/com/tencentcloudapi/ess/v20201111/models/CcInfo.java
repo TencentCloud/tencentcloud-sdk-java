@@ -55,6 +55,13 @@ public class CcInfo extends AbstractModel{
     private Long CcPermission;
 
     /**
+    * 关注方通知类型：sms--短信，none--不通知
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
      * Get 被抄送人手机号，11位数字 
      * @return Mobile 被抄送人手机号，11位数字
      */
@@ -134,6 +141,22 @@ public class CcInfo extends AbstractModel{
         this.CcPermission = CcPermission;
     }
 
+    /**
+     * Get 关注方通知类型：sms--短信，none--不通知 
+     * @return NotifyType 关注方通知类型：sms--短信，none--不通知
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set 关注方通知类型：sms--短信，none--不通知
+     * @param NotifyType 关注方通知类型：sms--短信，none--不通知
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
     public CcInfo() {
     }
 
@@ -154,6 +177,9 @@ public class CcInfo extends AbstractModel{
         if (source.CcPermission != null) {
             this.CcPermission = new Long(source.CcPermission);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
     }
 
 
@@ -165,6 +191,7 @@ public class CcInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "CcType", this.CcType);
         this.setParamSimple(map, prefix + "CcPermission", this.CcPermission);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
 
     }
 }

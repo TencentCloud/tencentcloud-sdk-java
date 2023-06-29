@@ -153,6 +153,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long [] ApproverSignTypes;
 
     /**
+    * 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+    */
+    @SerializedName("ApproverNeedSignReview")
+    @Expose
+    private Boolean ApproverNeedSignReview;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -468,6 +475,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
+    /**
+     * Get 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	 
+     * @return ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+     */
+    public Boolean getApproverNeedSignReview() {
+        return this.ApproverNeedSignReview;
+    }
+
+    /**
+     * Set 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+     * @param ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。	
+     */
+    public void setApproverNeedSignReview(Boolean ApproverNeedSignReview) {
+        this.ApproverNeedSignReview = ApproverNeedSignReview;
+    }
+
     public ApproverInfo() {
     }
 
@@ -539,6 +562,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
                 this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
             }
         }
+        if (source.ApproverNeedSignReview != null) {
+            this.ApproverNeedSignReview = new Boolean(source.ApproverNeedSignReview);
+        }
     }
 
 
@@ -563,6 +589,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamObj(map, prefix + "ApproverOption.", this.ApproverOption);
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+        this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
 
     }
 }
