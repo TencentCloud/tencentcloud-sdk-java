@@ -360,6 +360,14 @@ public class TelCdrInfo extends AbstractModel{
     private String [] VoicemailRecordURL;
 
     /**
+    * 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoicemailAsrURL")
+    @Expose
+    private String [] VoicemailAsrURL;
+
+    /**
      * Get 主叫号码 
      * @return Caller 主叫号码
      */
@@ -1311,6 +1319,26 @@ public class TelCdrInfo extends AbstractModel{
         this.VoicemailRecordURL = VoicemailRecordURL;
     }
 
+    /**
+     * Get 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoicemailAsrURL 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getVoicemailAsrURL() {
+        return this.VoicemailAsrURL;
+    }
+
+    /**
+     * Set 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoicemailAsrURL 通话中语音留言ASR文本信息地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoicemailAsrURL(String [] VoicemailAsrURL) {
+        this.VoicemailAsrURL = VoicemailAsrURL;
+    }
+
     public TelCdrInfo() {
     }
 
@@ -1433,6 +1461,12 @@ public class TelCdrInfo extends AbstractModel{
                 this.VoicemailRecordURL[i] = new String(source.VoicemailRecordURL[i]);
             }
         }
+        if (source.VoicemailAsrURL != null) {
+            this.VoicemailAsrURL = new String[source.VoicemailAsrURL.length];
+            for (int i = 0; i < source.VoicemailAsrURL.length; i++) {
+                this.VoicemailAsrURL[i] = new String(source.VoicemailAsrURL[i]);
+            }
+        }
     }
 
 
@@ -1473,6 +1507,7 @@ public class TelCdrInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);
         this.setParamArraySimple(map, prefix + "VoicemailRecordURL.", this.VoicemailRecordURL);
+        this.setParamArraySimple(map, prefix + "VoicemailAsrURL.", this.VoicemailAsrURL);
 
     }
 }

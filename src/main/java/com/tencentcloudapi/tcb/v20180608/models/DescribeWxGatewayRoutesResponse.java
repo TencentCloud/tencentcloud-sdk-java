@@ -20,28 +20,23 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class FreezeCloudBaseRunServersResponse extends AbstractModel{
+public class DescribeWxGatewayRoutesResponse extends AbstractModel{
 
     /**
-    * 批量状态
-成功：succ
-失败：fail
-部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回的服务个数
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("TotalCount")
     @Expose
-    private String Result;
+    private Long TotalCount;
 
     /**
-    * 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回的服务列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FailServerList")
+    @SerializedName("WxGatewayRouteSet")
     @Expose
-    private String [] FailServerList;
+    private WxGatewayRountItem [] WxGatewayRouteSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,63 +46,43 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 批量状态
-成功：succ
-失败：fail
-部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回的服务个数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 批量状态
-成功：succ
-失败：fail
-部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return TotalCount 返回的服务个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getResult() {
-        return this.Result;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 批量状态
-成功：succ
-失败：fail
-部分：partial（部分成功、部分失败）
+     * Set 返回的服务个数
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 批量状态
-成功：succ
-失败：fail
-部分：partial（部分成功、部分失败）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 返回的服务个数
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(String Result) {
-        this.Result = Result;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回的服务列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailServerList 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @return WxGatewayRouteSet 返回的服务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getFailServerList() {
-        return this.FailServerList;
+    public WxGatewayRountItem [] getWxGatewayRouteSet() {
+        return this.WxGatewayRouteSet;
     }
 
     /**
-     * Set 冻结失败服务列表
+     * Set 返回的服务列表
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailServerList 冻结失败服务列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxGatewayRouteSet 返回的服务列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFailServerList(String [] FailServerList) {
-        this.FailServerList = FailServerList;
+    public void setWxGatewayRouteSet(WxGatewayRountItem [] WxGatewayRouteSet) {
+        this.WxGatewayRouteSet = WxGatewayRouteSet;
     }
 
     /**
@@ -126,21 +101,21 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public FreezeCloudBaseRunServersResponse() {
+    public DescribeWxGatewayRoutesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public FreezeCloudBaseRunServersResponse(FreezeCloudBaseRunServersResponse source) {
-        if (source.Result != null) {
-            this.Result = new String(source.Result);
+    public DescribeWxGatewayRoutesResponse(DescribeWxGatewayRoutesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.FailServerList != null) {
-            this.FailServerList = new String[source.FailServerList.length];
-            for (int i = 0; i < source.FailServerList.length; i++) {
-                this.FailServerList[i] = new String(source.FailServerList[i]);
+        if (source.WxGatewayRouteSet != null) {
+            this.WxGatewayRouteSet = new WxGatewayRountItem[source.WxGatewayRouteSet.length];
+            for (int i = 0; i < source.WxGatewayRouteSet.length; i++) {
+                this.WxGatewayRouteSet[i] = new WxGatewayRountItem(source.WxGatewayRouteSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -153,8 +128,8 @@ public class FreezeCloudBaseRunServersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamArraySimple(map, prefix + "FailServerList.", this.FailServerList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "WxGatewayRouteSet.", this.WxGatewayRouteSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

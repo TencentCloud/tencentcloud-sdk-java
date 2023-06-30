@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.organization.v20210331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateImageLifecyclePersonalResponse extends AbstractModel{
+public class UpdateOrganizationMemberResponse extends AbstractModel{
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -45,14 +45,14 @@ public class CreateImageLifecyclePersonalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateImageLifecyclePersonalResponse() {
+    public UpdateOrganizationMemberResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateImageLifecyclePersonalResponse(CreateImageLifecyclePersonalResponse source) {
+    public UpdateOrganizationMemberResponse(UpdateOrganizationMemberResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }

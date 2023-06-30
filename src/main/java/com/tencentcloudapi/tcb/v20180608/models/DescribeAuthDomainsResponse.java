@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAuthDomainsResponse extends AbstractModel{
 
     /**
-    * 安全域名列表列表
+    * 安全域名列表
     */
     @SerializedName("Domains")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAuthDomainsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 安全域名列表列表 
-     * @return Domains 安全域名列表列表
+     * Get 安全域名列表 
+     * @return Domains 安全域名列表
      */
     public AuthDomain [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set 安全域名列表列表
-     * @param Domains 安全域名列表列表
+     * Set 安全域名列表
+     * @param Domains 安全域名列表
      */
     public void setDomains(AuthDomain [] Domains) {
         this.Domains = Domains;

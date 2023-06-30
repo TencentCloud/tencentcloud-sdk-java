@@ -58,6 +58,13 @@ public class DescribeInstancesNewRequest extends AbstractModel{
     private SearchTags [] SearchTags;
 
     /**
+    * 信息详细与否
+    */
+    @SerializedName("IsSimple")
+    @Expose
+    private Boolean IsSimple;
+
+    /**
      * Get 搜索的集群id名称 
      * @return SearchInstanceId 搜索的集群id名称
      */
@@ -137,6 +144,22 @@ public class DescribeInstancesNewRequest extends AbstractModel{
         this.SearchTags = SearchTags;
     }
 
+    /**
+     * Get 信息详细与否 
+     * @return IsSimple 信息详细与否
+     */
+    public Boolean getIsSimple() {
+        return this.IsSimple;
+    }
+
+    /**
+     * Set 信息详细与否
+     * @param IsSimple 信息详细与否
+     */
+    public void setIsSimple(Boolean IsSimple) {
+        this.IsSimple = IsSimple;
+    }
+
     public DescribeInstancesNewRequest() {
     }
 
@@ -163,6 +186,9 @@ public class DescribeInstancesNewRequest extends AbstractModel{
                 this.SearchTags[i] = new SearchTags(source.SearchTags[i]);
             }
         }
+        if (source.IsSimple != null) {
+            this.IsSimple = new Boolean(source.IsSimple);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class DescribeInstancesNewRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "SearchTags.", this.SearchTags);
+        this.setParamSimple(map, prefix + "IsSimple", this.IsSimple);
 
     }
 }

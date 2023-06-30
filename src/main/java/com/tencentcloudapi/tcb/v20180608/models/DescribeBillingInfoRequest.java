@@ -13,74 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KMSConfiguration extends AbstractModel{
+public class DescribeBillingInfoRequest extends AbstractModel{
 
     /**
-    * kms id
+    * 环境ID
     */
-    @SerializedName("KeyId")
+    @SerializedName("EnvId")
     @Expose
-    private String KeyId;
+    private String EnvId;
 
     /**
-    * kms 地域
-    */
-    @SerializedName("KmsRegion")
-    @Expose
-    private String KmsRegion;
-
-    /**
-     * Get kms id 
-     * @return KeyId kms id
+     * Get 环境ID 
+     * @return EnvId 环境ID
      */
-    public String getKeyId() {
-        return this.KeyId;
+    public String getEnvId() {
+        return this.EnvId;
     }
 
     /**
-     * Set kms id
-     * @param KeyId kms id
+     * Set 环境ID
+     * @param EnvId 环境ID
      */
-    public void setKeyId(String KeyId) {
-        this.KeyId = KeyId;
+    public void setEnvId(String EnvId) {
+        this.EnvId = EnvId;
     }
 
-    /**
-     * Get kms 地域 
-     * @return KmsRegion kms 地域
-     */
-    public String getKmsRegion() {
-        return this.KmsRegion;
-    }
-
-    /**
-     * Set kms 地域
-     * @param KmsRegion kms 地域
-     */
-    public void setKmsRegion(String KmsRegion) {
-        this.KmsRegion = KmsRegion;
-    }
-
-    public KMSConfiguration() {
+    public DescribeBillingInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public KMSConfiguration(KMSConfiguration source) {
-        if (source.KeyId != null) {
-            this.KeyId = new String(source.KeyId);
-        }
-        if (source.KmsRegion != null) {
-            this.KmsRegion = new String(source.KmsRegion);
+    public DescribeBillingInfoRequest(DescribeBillingInfoRequest source) {
+        if (source.EnvId != null) {
+            this.EnvId = new String(source.EnvId);
         }
     }
 
@@ -89,8 +63,7 @@ public class KMSConfiguration extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
-        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
+        this.setParamSimple(map, prefix + "EnvId", this.EnvId);
 
     }
 }

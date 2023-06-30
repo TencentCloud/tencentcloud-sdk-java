@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteImageLifecyclePersonalResponse extends AbstractModel{
+public class DescribeBillingInfoResponse extends AbstractModel{
+
+    /**
+    * 环境计费信息列表
+    */
+    @SerializedName("EnvBillingInfoList")
+    @Expose
+    private EnvBillingInfoItem [] EnvBillingInfoList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class DeleteImageLifecyclePersonalResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 环境计费信息列表 
+     * @return EnvBillingInfoList 环境计费信息列表
+     */
+    public EnvBillingInfoItem [] getEnvBillingInfoList() {
+        return this.EnvBillingInfoList;
+    }
+
+    /**
+     * Set 环境计费信息列表
+     * @param EnvBillingInfoList 环境计费信息列表
+     */
+    public void setEnvBillingInfoList(EnvBillingInfoItem [] EnvBillingInfoList) {
+        this.EnvBillingInfoList = EnvBillingInfoList;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,20 @@ public class DeleteImageLifecyclePersonalResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteImageLifecyclePersonalResponse() {
+    public DescribeBillingInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteImageLifecyclePersonalResponse(DeleteImageLifecyclePersonalResponse source) {
+    public DescribeBillingInfoResponse(DescribeBillingInfoResponse source) {
+        if (source.EnvBillingInfoList != null) {
+            this.EnvBillingInfoList = new EnvBillingInfoItem[source.EnvBillingInfoList.length];
+            for (int i = 0; i < source.EnvBillingInfoList.length; i++) {
+                this.EnvBillingInfoList[i] = new EnvBillingInfoItem(source.EnvBillingInfoList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class DeleteImageLifecyclePersonalResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "EnvBillingInfoList.", this.EnvBillingInfoList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteImageLifecyclePersonalRequest extends AbstractModel{
+public class ModifyGatewayVersionTrafficResponse extends AbstractModel{
 
     /**
-    * 仓库名称
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("RepoName")
+    @SerializedName("RequestId")
     @Expose
-    private String RepoName;
+    private String RequestId;
 
     /**
-     * Get 仓库名称 
-     * @return RepoName 仓库名称
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getRepoName() {
-        return this.RepoName;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 仓库名称
-     * @param RepoName 仓库名称
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setRepoName(String RepoName) {
-        this.RepoName = RepoName;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DeleteImageLifecyclePersonalRequest() {
+    public ModifyGatewayVersionTrafficResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteImageLifecyclePersonalRequest(DeleteImageLifecyclePersonalRequest source) {
-        if (source.RepoName != null) {
-            this.RepoName = new String(source.RepoName);
+    public ModifyGatewayVersionTrafficResponse(ModifyGatewayVersionTrafficResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteImageLifecyclePersonalRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RepoName", this.RepoName);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -320,8 +320,6 @@ public class IaiClient extends AbstractClient{
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-
-
      * @param req DetectFaceRequest
      * @return DetectFaceResponse
      * @throws TencentCloudSDKException

@@ -46,7 +46,7 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     private String Source;
 
     /**
-    * 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+    * 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
     */
     @SerializedName("FreeQuota")
     @Expose
@@ -166,16 +166,16 @@ public class CreatePostpayPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。 
-     * @return FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * Get 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。 
+     * @return FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
      */
     public String getFreeQuota() {
         return this.FreeQuota;
     }
 
     /**
-     * Set 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
-     * @param FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
+     * Set 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
+     * @param FreeQuota 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，表示不享受免费额度。
      */
     public void setFreeQuota(String FreeQuota) {
         this.FreeQuota = FreeQuota;

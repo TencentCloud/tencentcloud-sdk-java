@@ -44,6 +44,20 @@ public class CreateExtensionRequest extends AbstractModel{
     private String ExtensionName;
 
     /**
+    * 绑定的技能组列表
+    */
+    @SerializedName("SkillGroupIds")
+    @Expose
+    private Long [] SkillGroupIds;
+
+    /**
+    * 绑定的坐席邮箱
+    */
+    @SerializedName("Relation")
+    @Expose
+    private String Relation;
+
+    /**
      * Get TCCC 实例应用 ID 
      * @return SdkAppId TCCC 实例应用 ID
      */
@@ -91,6 +105,38 @@ public class CreateExtensionRequest extends AbstractModel{
         this.ExtensionName = ExtensionName;
     }
 
+    /**
+     * Get 绑定的技能组列表 
+     * @return SkillGroupIds 绑定的技能组列表
+     */
+    public Long [] getSkillGroupIds() {
+        return this.SkillGroupIds;
+    }
+
+    /**
+     * Set 绑定的技能组列表
+     * @param SkillGroupIds 绑定的技能组列表
+     */
+    public void setSkillGroupIds(Long [] SkillGroupIds) {
+        this.SkillGroupIds = SkillGroupIds;
+    }
+
+    /**
+     * Get 绑定的坐席邮箱 
+     * @return Relation 绑定的坐席邮箱
+     */
+    public String getRelation() {
+        return this.Relation;
+    }
+
+    /**
+     * Set 绑定的坐席邮箱
+     * @param Relation 绑定的坐席邮箱
+     */
+    public void setRelation(String Relation) {
+        this.Relation = Relation;
+    }
+
     public CreateExtensionRequest() {
     }
 
@@ -108,6 +154,15 @@ public class CreateExtensionRequest extends AbstractModel{
         if (source.ExtensionName != null) {
             this.ExtensionName = new String(source.ExtensionName);
         }
+        if (source.SkillGroupIds != null) {
+            this.SkillGroupIds = new Long[source.SkillGroupIds.length];
+            for (int i = 0; i < source.SkillGroupIds.length; i++) {
+                this.SkillGroupIds[i] = new Long(source.SkillGroupIds[i]);
+            }
+        }
+        if (source.Relation != null) {
+            this.Relation = new String(source.Relation);
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class CreateExtensionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
         this.setParamSimple(map, prefix + "ExtensionName", this.ExtensionName);
+        this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
+        this.setParamSimple(map, prefix + "Relation", this.Relation);
 
     }
 }

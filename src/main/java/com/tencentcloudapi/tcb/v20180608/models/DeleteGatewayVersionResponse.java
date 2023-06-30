@@ -13,35 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxyEndPointResponse extends AbstractModel{
+public class DeleteGatewayVersionResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * 删除结果
     */
-    @SerializedName("FlowId")
+    @SerializedName("Result")
     @Expose
-    private Long FlowId;
-
-    /**
-    * 异步任务ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private Long TaskId;
-
-    /**
-    * 数据库代理组ID
-    */
-    @SerializedName("ProxyGroupId")
-    @Expose
-    private String ProxyGroupId;
+    private String Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +37,19 @@ public class CreateProxyEndPointResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get 删除结果 
+     * @return Result 删除结果
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set 删除结果
+     * @param Result 删除结果
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
-    }
-
-    /**
-     * Get 异步任务ID 
-     * @return TaskId 异步任务ID
-     */
-    public Long getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set 异步任务ID
-     * @param TaskId 异步任务ID
-     */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    /**
-     * Get 数据库代理组ID 
-     * @return ProxyGroupId 数据库代理组ID
-     */
-    public String getProxyGroupId() {
-        return this.ProxyGroupId;
-    }
-
-    /**
-     * Set 数据库代理组ID
-     * @param ProxyGroupId 数据库代理组ID
-     */
-    public void setProxyGroupId(String ProxyGroupId) {
-        this.ProxyGroupId = ProxyGroupId;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -114,22 +68,16 @@ public class CreateProxyEndPointResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateProxyEndPointResponse() {
+    public DeleteGatewayVersionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateProxyEndPointResponse(CreateProxyEndPointResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
-        }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
-        if (source.ProxyGroupId != null) {
-            this.ProxyGroupId = new String(source.ProxyGroupId);
+    public DeleteGatewayVersionResponse(DeleteGatewayVersionResponse source) {
+        if (source.Result != null) {
+            this.Result = new String(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class CreateProxyEndPointResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

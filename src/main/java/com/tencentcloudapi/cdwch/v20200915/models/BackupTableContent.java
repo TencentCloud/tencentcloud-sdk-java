@@ -24,6 +24,7 @@ public class BackupTableContent extends AbstractModel{
 
     /**
     * 数据库
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -31,6 +32,7 @@ public class BackupTableContent extends AbstractModel{
 
     /**
     * 表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -38,6 +40,7 @@ public class BackupTableContent extends AbstractModel{
 
     /**
     * 表总字节数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalBytes")
     @Expose
@@ -45,6 +48,7 @@ public class BackupTableContent extends AbstractModel{
 
     /**
     * 虚拟cluster
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VCluster")
     @Expose
@@ -52,14 +56,33 @@ public class BackupTableContent extends AbstractModel{
 
     /**
     * 表ip
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ips")
     @Expose
     private String Ips;
 
     /**
-     * Get 数据库 
+    * zk路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZooPath")
+    @Expose
+    private String ZooPath;
+
+    /**
+    * cvm的ip地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rip")
+    @Expose
+    private String Rip;
+
+    /**
+     * Get 数据库
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Database 数据库
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -67,15 +90,19 @@ public class BackupTableContent extends AbstractModel{
 
     /**
      * Set 数据库
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 表 
+     * Get 表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Table 表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -83,15 +110,19 @@ public class BackupTableContent extends AbstractModel{
 
     /**
      * Set 表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 表总字节数 
+     * Get 表总字节数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalBytes 表总字节数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalBytes() {
         return this.TotalBytes;
@@ -99,15 +130,19 @@ public class BackupTableContent extends AbstractModel{
 
     /**
      * Set 表总字节数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalBytes 表总字节数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalBytes(Long TotalBytes) {
         this.TotalBytes = TotalBytes;
     }
 
     /**
-     * Get 虚拟cluster 
+     * Get 虚拟cluster
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VCluster 虚拟cluster
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVCluster() {
         return this.VCluster;
@@ -115,15 +150,19 @@ public class BackupTableContent extends AbstractModel{
 
     /**
      * Set 虚拟cluster
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VCluster 虚拟cluster
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVCluster(String VCluster) {
         this.VCluster = VCluster;
     }
 
     /**
-     * Get 表ip 
+     * Get 表ip
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ips 表ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIps() {
         return this.Ips;
@@ -131,10 +170,52 @@ public class BackupTableContent extends AbstractModel{
 
     /**
      * Set 表ip
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Ips 表ip
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIps(String Ips) {
         this.Ips = Ips;
+    }
+
+    /**
+     * Get zk路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZooPath zk路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZooPath() {
+        return this.ZooPath;
+    }
+
+    /**
+     * Set zk路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZooPath zk路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZooPath(String ZooPath) {
+        this.ZooPath = ZooPath;
+    }
+
+    /**
+     * Get cvm的ip地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rip cvm的ip地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRip() {
+        return this.Rip;
+    }
+
+    /**
+     * Set cvm的ip地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rip cvm的ip地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRip(String Rip) {
+        this.Rip = Rip;
     }
 
     public BackupTableContent() {
@@ -160,6 +241,12 @@ public class BackupTableContent extends AbstractModel{
         if (source.Ips != null) {
             this.Ips = new String(source.Ips);
         }
+        if (source.ZooPath != null) {
+            this.ZooPath = new String(source.ZooPath);
+        }
+        if (source.Rip != null) {
+            this.Rip = new String(source.Rip);
+        }
     }
 
 
@@ -172,6 +259,8 @@ public class BackupTableContent extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalBytes", this.TotalBytes);
         this.setParamSimple(map, prefix + "VCluster", this.VCluster);
         this.setParamSimple(map, prefix + "Ips", this.Ips);
+        this.setParamSimple(map, prefix + "ZooPath", this.ZooPath);
+        this.setParamSimple(map, prefix + "Rip", this.Rip);
 
     }
 }

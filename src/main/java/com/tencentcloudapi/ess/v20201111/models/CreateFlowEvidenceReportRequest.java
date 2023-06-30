@@ -37,6 +37,14 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel{
     private String FlowId;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -68,6 +76,26 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel{
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+ 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateFlowEvidenceReportRequest() {
     }
 
@@ -82,6 +110,9 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel{
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class CreateFlowEvidenceReportRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

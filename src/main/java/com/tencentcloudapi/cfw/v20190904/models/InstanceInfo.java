@@ -131,6 +131,14 @@ public class InstanceInfo extends AbstractModel{
     private String [] Server;
 
     /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionKey")
+    @Expose
+    private String RegionKey;
+
+    /**
      * Get appid信息 
      * @return AppId appid信息
      */
@@ -382,6 +390,26 @@ public class InstanceInfo extends AbstractModel{
         this.Server = Server;
     }
 
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionKey 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionKey() {
+        return this.RegionKey;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionKey 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionKey(String RegionKey) {
+        this.RegionKey = RegionKey;
+    }
+
     public InstanceInfo() {
     }
 
@@ -441,6 +469,9 @@ public class InstanceInfo extends AbstractModel{
                 this.Server[i] = new String(source.Server[i]);
             }
         }
+        if (source.RegionKey != null) {
+            this.RegionKey = new String(source.RegionKey);
+        }
     }
 
 
@@ -463,6 +494,7 @@ public class InstanceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "InsSource", this.InsSource);
         this.setParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
         this.setParamArraySimple(map, prefix + "Server.", this.Server);
+        this.setParamSimple(map, prefix + "RegionKey", this.RegionKey);
 
     }
 }

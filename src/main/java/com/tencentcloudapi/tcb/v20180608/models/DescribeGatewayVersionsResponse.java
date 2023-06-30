@@ -13,35 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cynosdb.v20190107.models;
+package com.tencentcloudapi.tcb.v20180608.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateProxyEndPointResponse extends AbstractModel{
+public class DescribeGatewayVersionsResponse extends AbstractModel{
 
     /**
-    * 异步流程ID
+    * 网关id
     */
-    @SerializedName("FlowId")
+    @SerializedName("GatewayId")
     @Expose
-    private Long FlowId;
+    private String GatewayId;
 
     /**
-    * 异步任务ID
+    * 版本总数
     */
-    @SerializedName("TaskId")
+    @SerializedName("TotalCount")
     @Expose
-    private Long TaskId;
+    private Long TotalCount;
 
     /**
-    * 数据库代理组ID
+    * 版本信息详情
     */
-    @SerializedName("ProxyGroupId")
+    @SerializedName("GatewayVersionItems")
     @Expose
-    private String ProxyGroupId;
+    private GatewayVersionItem [] GatewayVersionItems;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,51 +51,51 @@ public class CreateProxyEndPointResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步流程ID 
-     * @return FlowId 异步流程ID
+     * Get 网关id 
+     * @return GatewayId 网关id
      */
-    public Long getFlowId() {
-        return this.FlowId;
+    public String getGatewayId() {
+        return this.GatewayId;
     }
 
     /**
-     * Set 异步流程ID
-     * @param FlowId 异步流程ID
+     * Set 网关id
+     * @param GatewayId 网关id
      */
-    public void setFlowId(Long FlowId) {
-        this.FlowId = FlowId;
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 异步任务ID 
-     * @return TaskId 异步任务ID
+     * Get 版本总数 
+     * @return TotalCount 版本总数
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 异步任务ID
-     * @param TaskId 异步任务ID
+     * Set 版本总数
+     * @param TotalCount 版本总数
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据库代理组ID 
-     * @return ProxyGroupId 数据库代理组ID
+     * Get 版本信息详情 
+     * @return GatewayVersionItems 版本信息详情
      */
-    public String getProxyGroupId() {
-        return this.ProxyGroupId;
+    public GatewayVersionItem [] getGatewayVersionItems() {
+        return this.GatewayVersionItems;
     }
 
     /**
-     * Set 数据库代理组ID
-     * @param ProxyGroupId 数据库代理组ID
+     * Set 版本信息详情
+     * @param GatewayVersionItems 版本信息详情
      */
-    public void setProxyGroupId(String ProxyGroupId) {
-        this.ProxyGroupId = ProxyGroupId;
+    public void setGatewayVersionItems(GatewayVersionItem [] GatewayVersionItems) {
+        this.GatewayVersionItems = GatewayVersionItems;
     }
 
     /**
@@ -114,22 +114,25 @@ public class CreateProxyEndPointResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateProxyEndPointResponse() {
+    public DescribeGatewayVersionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateProxyEndPointResponse(CreateProxyEndPointResponse source) {
-        if (source.FlowId != null) {
-            this.FlowId = new Long(source.FlowId);
+    public DescribeGatewayVersionsResponse(DescribeGatewayVersionsResponse source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
         }
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.ProxyGroupId != null) {
-            this.ProxyGroupId = new String(source.ProxyGroupId);
+        if (source.GatewayVersionItems != null) {
+            this.GatewayVersionItems = new GatewayVersionItem[source.GatewayVersionItems.length];
+            for (int i = 0; i < source.GatewayVersionItems.length; i++) {
+                this.GatewayVersionItems[i] = new GatewayVersionItem(source.GatewayVersionItems[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +144,9 @@ public class CreateProxyEndPointResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "GatewayVersionItems.", this.GatewayVersionItems);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

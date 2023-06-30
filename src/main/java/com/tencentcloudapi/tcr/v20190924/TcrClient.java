@@ -179,28 +179,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *前端与现有逻辑均不再使用，可下线
-
-用于在个人版中创建清理策略
-     * @param req CreateImageLifecyclePersonalRequest
-     * @return CreateImageLifecyclePersonalResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateImageLifecyclePersonalResponse CreateImageLifecyclePersonal(CreateImageLifecyclePersonalRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateImageLifecyclePersonalResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateImageLifecyclePersonalResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateImageLifecyclePersonal");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *创建镜像不可变规则
      * @param req CreateImmutableTagRulesRequest
      * @return CreateImmutableTagRulesResponse
@@ -653,28 +631,6 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteImageLifecycleGlobalPersonalResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteImageLifecycleGlobalPersonal");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *前端与后端目前现有逻辑均不再使用，可下线
-
-用于在个人版镜像仓库中删除仓库Tag自动清理策略
-     * @param req DeleteImageLifecyclePersonalRequest
-     * @return DeleteImageLifecyclePersonalResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteImageLifecyclePersonalResponse DeleteImageLifecyclePersonal(DeleteImageLifecyclePersonalRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteImageLifecyclePersonalResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteImageLifecyclePersonalResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteImageLifecyclePersonal");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -20,103 +20,96 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEndUserRequest extends AbstractModel{
+public class ModifyGatewayVersionTrafficRequest extends AbstractModel{
 
     /**
-    * 环境ID
+    * 环境id
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * C端用户端的唯一ID
+    * 网关id
     */
-    @SerializedName("UUId")
+    @SerializedName("GatewayId")
     @Expose
-    private String UUId;
+    private String GatewayId;
 
     /**
-    * 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+    * 网关版本流量比例信息
     */
-    @SerializedName("Status")
+    @SerializedName("VersionsWeight")
     @Expose
-    private String Status;
+    private GatewayVersionItem [] VersionsWeight;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get 环境id 
+     * @return EnvId 环境id
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set 环境id
+     * @param EnvId 环境id
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get C端用户端的唯一ID 
-     * @return UUId C端用户端的唯一ID
+     * Get 网关id 
+     * @return GatewayId 网关id
      */
-    public String getUUId() {
-        return this.UUId;
+    public String getGatewayId() {
+        return this.GatewayId;
     }
 
     /**
-     * Set C端用户端的唯一ID
-     * @param UUId C端用户端的唯一ID
+     * Set 网关id
+     * @param GatewayId 网关id
      */
-    public void setUUId(String UUId) {
-        this.UUId = UUId;
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li> 
-     * @return Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Get 网关版本流量比例信息 
+     * @return VersionsWeight 网关版本流量比例信息
      */
-    public String getStatus() {
-        return this.Status;
+    public GatewayVersionItem [] getVersionsWeight() {
+        return this.VersionsWeight;
     }
 
     /**
-     * Set 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
-     * @param Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Set 网关版本流量比例信息
+     * @param VersionsWeight 网关版本流量比例信息
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setVersionsWeight(GatewayVersionItem [] VersionsWeight) {
+        this.VersionsWeight = VersionsWeight;
     }
 
-    public ModifyEndUserRequest() {
+    public ModifyGatewayVersionTrafficRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyEndUserRequest(ModifyEndUserRequest source) {
+    public ModifyGatewayVersionTrafficRequest(ModifyGatewayVersionTrafficRequest source) {
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
-        if (source.UUId != null) {
-            this.UUId = new String(source.UUId);
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.VersionsWeight != null) {
+            this.VersionsWeight = new GatewayVersionItem[source.VersionsWeight.length];
+            for (int i = 0; i < source.VersionsWeight.length; i++) {
+                this.VersionsWeight[i] = new GatewayVersionItem(source.VersionsWeight[i]);
+            }
         }
     }
 
@@ -126,8 +119,8 @@ public class ModifyEndUserRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "UUId", this.UUId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamArrayObj(map, prefix + "VersionsWeight.", this.VersionsWeight);
 
     }
 }

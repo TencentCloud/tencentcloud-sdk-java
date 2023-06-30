@@ -20,103 +20,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEndUserRequest extends AbstractModel{
+public class DescribeGatewayVersionsRequest extends AbstractModel{
 
     /**
-    * 环境ID
+    * 环境id
     */
     @SerializedName("EnvId")
     @Expose
     private String EnvId;
 
     /**
-    * C端用户端的唯一ID
+    * 网关id
     */
-    @SerializedName("UUId")
+    @SerializedName("GatewayId")
     @Expose
-    private String UUId;
+    private String GatewayId;
 
     /**
-    * 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+    * 版本名
     */
-    @SerializedName("Status")
+    @SerializedName("VersionName")
     @Expose
-    private String Status;
+    private String VersionName;
 
     /**
-     * Get 环境ID 
-     * @return EnvId 环境ID
+     * Get 环境id 
+     * @return EnvId 环境id
      */
     public String getEnvId() {
         return this.EnvId;
     }
 
     /**
-     * Set 环境ID
-     * @param EnvId 环境ID
+     * Set 环境id
+     * @param EnvId 环境id
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
     }
 
     /**
-     * Get C端用户端的唯一ID 
-     * @return UUId C端用户端的唯一ID
+     * Get 网关id 
+     * @return GatewayId 网关id
      */
-    public String getUUId() {
-        return this.UUId;
+    public String getGatewayId() {
+        return this.GatewayId;
     }
 
     /**
-     * Set C端用户端的唯一ID
-     * @param UUId C端用户端的唯一ID
+     * Set 网关id
+     * @param GatewayId 网关id
      */
-    public void setUUId(String UUId) {
-        this.UUId = UUId;
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
     }
 
     /**
-     * Get 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li> 
-     * @return Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Get 版本名 
+     * @return VersionName 版本名
      */
-    public String getStatus() {
-        return this.Status;
+    public String getVersionName() {
+        return this.VersionName;
     }
 
     /**
-     * Set 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
-     * @param Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Set 版本名
+     * @param VersionName 版本名
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setVersionName(String VersionName) {
+        this.VersionName = VersionName;
     }
 
-    public ModifyEndUserRequest() {
+    public DescribeGatewayVersionsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyEndUserRequest(ModifyEndUserRequest source) {
+    public DescribeGatewayVersionsRequest(DescribeGatewayVersionsRequest source) {
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
-        if (source.UUId != null) {
-            this.UUId = new String(source.UUId);
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
         }
     }
 
@@ -126,8 +116,8 @@ public class ModifyEndUserRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "UUId", this.UUId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamSimple(map, prefix + "VersionName", this.VersionName);
 
     }
 }

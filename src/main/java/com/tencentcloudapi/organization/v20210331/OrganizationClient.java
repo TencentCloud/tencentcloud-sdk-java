@@ -460,6 +460,26 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *更新组织成员信息
+     * @param req UpdateOrganizationMemberRequest
+     * @return UpdateOrganizationMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMemberResponse UpdateOrganizationMember(UpdateOrganizationMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOrganizationMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOrganizationMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOrganizationMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改绑定成员邮箱
      * @param req UpdateOrganizationMemberEmailBindRequest
      * @return UpdateOrganizationMemberEmailBindResponse

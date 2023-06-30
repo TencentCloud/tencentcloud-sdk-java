@@ -59,6 +59,14 @@ public class ScheduleStrategy extends AbstractModel{
     private Long ScheduleId;
 
     /**
+    * 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextBackupTime")
+    @Expose
+    private String NextBackupTime;
+
+    /**
      * Get 备份桶列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosBucketName 备份桶列表
@@ -142,6 +150,26 @@ public class ScheduleStrategy extends AbstractModel{
         this.ScheduleId = ScheduleId;
     }
 
+    /**
+     * Get 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextBackupTime 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNextBackupTime() {
+        return this.NextBackupTime;
+    }
+
+    /**
+     * Set 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextBackupTime 下次备份时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNextBackupTime(String NextBackupTime) {
+        this.NextBackupTime = NextBackupTime;
+    }
+
     public ScheduleStrategy() {
     }
 
@@ -165,6 +193,9 @@ public class ScheduleStrategy extends AbstractModel{
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
+        if (source.NextBackupTime != null) {
+            this.NextBackupTime = new String(source.NextBackupTime);
+        }
     }
 
 
@@ -177,6 +208,7 @@ public class ScheduleStrategy extends AbstractModel{
         this.setParamSimple(map, prefix + "WeekDays", this.WeekDays);
         this.setParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+        this.setParamSimple(map, prefix + "NextBackupTime", this.NextBackupTime);
 
     }
 }

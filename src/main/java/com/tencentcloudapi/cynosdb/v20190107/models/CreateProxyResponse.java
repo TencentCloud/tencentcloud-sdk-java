@@ -37,6 +37,13 @@ public class CreateProxyResponse extends AbstractModel{
     private Long TaskId;
 
     /**
+    * 数据库代理组ID
+    */
+    @SerializedName("ProxyGroupId")
+    @Expose
+    private String ProxyGroupId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class CreateProxyResponse extends AbstractModel{
     }
 
     /**
+     * Get 数据库代理组ID 
+     * @return ProxyGroupId 数据库代理组ID
+     */
+    public String getProxyGroupId() {
+        return this.ProxyGroupId;
+    }
+
+    /**
+     * Set 数据库代理组ID
+     * @param ProxyGroupId 数据库代理组ID
+     */
+    public void setProxyGroupId(String ProxyGroupId) {
+        this.ProxyGroupId = ProxyGroupId;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -105,6 +128,9 @@ public class CreateProxyResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.ProxyGroupId != null) {
+            this.ProxyGroupId = new String(source.ProxyGroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class CreateProxyResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

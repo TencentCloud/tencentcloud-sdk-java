@@ -204,6 +204,22 @@ public class EnvInfo extends AbstractModel{
     private String PackageType;
 
     /**
+    * 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchitectureType")
+    @Expose
+    private String ArchitectureType;
+
+    /**
+    * 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Recycle")
+    @Expose
+    private String Recycle;
+
+    /**
      * Get 账户下该环境唯一标识 
      * @return EnvId 账户下该环境唯一标识
      */
@@ -651,6 +667,46 @@ public class EnvInfo extends AbstractModel{
         this.PackageType = PackageType;
     }
 
+    /**
+     * Get 架构类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchitectureType 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArchitectureType() {
+        return this.ArchitectureType;
+    }
+
+    /**
+     * Set 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchitectureType 架构类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchitectureType(String ArchitectureType) {
+        this.ArchitectureType = ArchitectureType;
+    }
+
+    /**
+     * Get 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Recycle 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRecycle() {
+        return this.Recycle;
+    }
+
+    /**
+     * Set 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Recycle 回收标志，默认为空
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecycle(String Recycle) {
+        this.Recycle = Recycle;
+    }
+
     public EnvInfo() {
     }
 
@@ -749,6 +805,12 @@ public class EnvInfo extends AbstractModel{
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.ArchitectureType != null) {
+            this.ArchitectureType = new String(source.ArchitectureType);
+        }
+        if (source.Recycle != null) {
+            this.Recycle = new String(source.Recycle);
+        }
     }
 
 
@@ -779,6 +841,8 @@ public class EnvInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "IsDauPackage", this.IsDauPackage);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "ArchitectureType", this.ArchitectureType);
+        this.setParamSimple(map, prefix + "Recycle", this.Recycle);
 
     }
 }

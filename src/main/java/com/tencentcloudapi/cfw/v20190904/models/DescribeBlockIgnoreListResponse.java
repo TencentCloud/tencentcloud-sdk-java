@@ -51,6 +51,13 @@ public class DescribeBlockIgnoreListResponse extends AbstractModel{
     private String ReturnMsg;
 
     /**
+    * 安全事件来源下拉框
+    */
+    @SerializedName("SourceList")
+    @Expose
+    private String [] SourceList;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeBlockIgnoreListResponse extends AbstractModel{
     }
 
     /**
+     * Get 安全事件来源下拉框 
+     * @return SourceList 安全事件来源下拉框
+     */
+    public String [] getSourceList() {
+        return this.SourceList;
+    }
+
+    /**
+     * Set 安全事件来源下拉框
+     * @param SourceList 安全事件来源下拉框
+     */
+    public void setSourceList(String [] SourceList) {
+        this.SourceList = SourceList;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -160,6 +183,12 @@ public class DescribeBlockIgnoreListResponse extends AbstractModel{
         if (source.ReturnMsg != null) {
             this.ReturnMsg = new String(source.ReturnMsg);
         }
+        if (source.SourceList != null) {
+            this.SourceList = new String[source.SourceList.length];
+            for (int i = 0; i < source.SourceList.length; i++) {
+                this.SourceList[i] = new String(source.SourceList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -174,6 +203,7 @@ public class DescribeBlockIgnoreListResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamArraySimple(map, prefix + "SourceList.", this.SourceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEndUserRequest extends AbstractModel{
+public class DescribeCbrServerVersionRequest extends AbstractModel{
 
     /**
     * 环境ID
@@ -30,20 +30,18 @@ public class ModifyEndUserRequest extends AbstractModel{
     private String EnvId;
 
     /**
-    * C端用户端的唯一ID
+    * 服务名称
     */
-    @SerializedName("UUId")
+    @SerializedName("ServerName")
     @Expose
-    private String UUId;
+    private String ServerName;
 
     /**
-    * 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+    * 版本名称
     */
-    @SerializedName("Status")
+    @SerializedName("VersionName")
     @Expose
-    private String Status;
+    private String VersionName;
 
     /**
      * Get 环境ID 
@@ -62,61 +60,53 @@ public class ModifyEndUserRequest extends AbstractModel{
     }
 
     /**
-     * Get C端用户端的唯一ID 
-     * @return UUId C端用户端的唯一ID
+     * Get 服务名称 
+     * @return ServerName 服务名称
      */
-    public String getUUId() {
-        return this.UUId;
+    public String getServerName() {
+        return this.ServerName;
     }
 
     /**
-     * Set C端用户端的唯一ID
-     * @param UUId C端用户端的唯一ID
+     * Set 服务名称
+     * @param ServerName 服务名称
      */
-    public void setUUId(String UUId) {
-        this.UUId = UUId;
+    public void setServerName(String ServerName) {
+        this.ServerName = ServerName;
     }
 
     /**
-     * Get 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li> 
-     * @return Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Get 版本名称 
+     * @return VersionName 版本名称
      */
-    public String getStatus() {
-        return this.Status;
+    public String getVersionName() {
+        return this.VersionName;
     }
 
     /**
-     * Set 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
-     * @param Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Set 版本名称
+     * @param VersionName 版本名称
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setVersionName(String VersionName) {
+        this.VersionName = VersionName;
     }
 
-    public ModifyEndUserRequest() {
+    public DescribeCbrServerVersionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyEndUserRequest(ModifyEndUserRequest source) {
+    public DescribeCbrServerVersionRequest(DescribeCbrServerVersionRequest source) {
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
-        if (source.UUId != null) {
-            this.UUId = new String(source.UUId);
+        if (source.ServerName != null) {
+            this.ServerName = new String(source.ServerName);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.VersionName != null) {
+            this.VersionName = new String(source.VersionName);
         }
     }
 
@@ -126,8 +116,8 @@ public class ModifyEndUserRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "UUId", this.UUId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ServerName", this.ServerName);
+        this.setParamSimple(map, prefix + "VersionName", this.VersionName);
 
     }
 }

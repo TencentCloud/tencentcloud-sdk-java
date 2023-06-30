@@ -37,6 +37,13 @@ public class CreateFlowRemindsRequest extends AbstractModel{
     private String [] FlowIds;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -68,6 +75,22 @@ public class CreateFlowRemindsRequest extends AbstractModel{
         this.FlowIds = FlowIds;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateFlowRemindsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateFlowRemindsRequest extends AbstractModel{
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateFlowRemindsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyEndUserRequest extends AbstractModel{
+public class DescribeWxGatewaysRequest extends AbstractModel{
 
     /**
     * 环境ID
@@ -30,20 +30,25 @@ public class ModifyEndUserRequest extends AbstractModel{
     private String EnvId;
 
     /**
-    * C端用户端的唯一ID
+    * 服务名称，精确匹配
     */
-    @SerializedName("UUId")
+    @SerializedName("GatewayName")
     @Expose
-    private String UUId;
+    private String GatewayName;
 
     /**
-    * 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+    * 分页参数
     */
-    @SerializedName("Status")
+    @SerializedName("Limit")
     @Expose
-    private String Status;
+    private Long Limit;
+
+    /**
+    * 分页参数
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 环境ID 
@@ -62,61 +67,72 @@ public class ModifyEndUserRequest extends AbstractModel{
     }
 
     /**
-     * Get C端用户端的唯一ID 
-     * @return UUId C端用户端的唯一ID
+     * Get 服务名称，精确匹配 
+     * @return GatewayName 服务名称，精确匹配
      */
-    public String getUUId() {
-        return this.UUId;
+    public String getGatewayName() {
+        return this.GatewayName;
     }
 
     /**
-     * Set C端用户端的唯一ID
-     * @param UUId C端用户端的唯一ID
+     * Set 服务名称，精确匹配
+     * @param GatewayName 服务名称，精确匹配
      */
-    public void setUUId(String UUId) {
-        this.UUId = UUId;
+    public void setGatewayName(String GatewayName) {
+        this.GatewayName = GatewayName;
     }
 
     /**
-     * Get 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li> 
-     * @return Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Get 分页参数 
+     * @return Limit 分页参数
      */
-    public String getStatus() {
-        return this.Status;
+    public Long getLimit() {
+        return this.Limit;
     }
 
     /**
-     * Set 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
-     * @param Status 账号的状态
-<li>ENABLE</li>
-<li>DISABLE</li>
+     * Set 分页参数
+     * @param Limit 分页参数
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
-    public ModifyEndUserRequest() {
+    /**
+     * Get 分页参数 
+     * @return Offset 分页参数
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页参数
+     * @param Offset 分页参数
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    public DescribeWxGatewaysRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyEndUserRequest(ModifyEndUserRequest source) {
+    public DescribeWxGatewaysRequest(DescribeWxGatewaysRequest source) {
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
-        if (source.UUId != null) {
-            this.UUId = new String(source.UUId);
+        if (source.GatewayName != null) {
+            this.GatewayName = new String(source.GatewayName);
         }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -126,8 +142,9 @@ public class ModifyEndUserRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
-        this.setParamSimple(map, prefix + "UUId", this.UUId);
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

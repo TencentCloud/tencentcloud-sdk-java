@@ -39,6 +39,14 @@ public class ComplianceHostDetailInfo extends AbstractModel{
     private String K8SVersion;
 
     /**
+    * 主机上Containerd版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerdVersion")
+    @Expose
+    private String ContainerdVersion;
+
+    /**
      * Get 主机上的Docker版本。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DockerVersion 主机上的Docker版本。
@@ -78,6 +86,26 @@ public class ComplianceHostDetailInfo extends AbstractModel{
         this.K8SVersion = K8SVersion;
     }
 
+    /**
+     * Get 主机上Containerd版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerdVersion 主机上Containerd版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerdVersion() {
+        return this.ContainerdVersion;
+    }
+
+    /**
+     * Set 主机上Containerd版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerdVersion 主机上Containerd版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerdVersion(String ContainerdVersion) {
+        this.ContainerdVersion = ContainerdVersion;
+    }
+
     public ComplianceHostDetailInfo() {
     }
 
@@ -92,6 +120,9 @@ public class ComplianceHostDetailInfo extends AbstractModel{
         if (source.K8SVersion != null) {
             this.K8SVersion = new String(source.K8SVersion);
         }
+        if (source.ContainerdVersion != null) {
+            this.ContainerdVersion = new String(source.ContainerdVersion);
+        }
     }
 
 
@@ -101,6 +132,7 @@ public class ComplianceHostDetailInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
         this.setParamSimple(map, prefix + "K8SVersion", this.K8SVersion);
+        this.setParamSimple(map, prefix + "ContainerdVersion", this.ContainerdVersion);
 
     }
 }
