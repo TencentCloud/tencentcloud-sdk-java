@@ -159,6 +159,26 @@ public class WavClient extends AbstractClient{
     }
 
     /**
+     *查询指定时间范围内发生过到店的潜客到店信息
+     * @param req QueryArrivalListRequest
+     * @return QueryArrivalListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryArrivalListResponse QueryArrivalList(QueryArrivalListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryArrivalListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryArrivalListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryArrivalList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *根据游标拉取渠道活码列表信息
      * @param req QueryChannelCodeListRequest
      * @return QueryChannelCodeListResponse
@@ -391,6 +411,26 @@ public class WavClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<QueryExternalUserMappingInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "QueryExternalUserMappingInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询指定时间范围内发生过跟进的潜客信息
+     * @param req QueryFollowListRequest
+     * @return QueryFollowListResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryFollowListResponse QueryFollowList(QueryFollowListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryFollowListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryFollowListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryFollowList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

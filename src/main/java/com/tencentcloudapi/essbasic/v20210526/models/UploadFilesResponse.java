@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class UploadFilesResponse extends AbstractModel{
 
     /**
-    * 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-    */
-    @SerializedName("FileIds")
-    @Expose
-    private String [] FileIds;
-
-    /**
     * 上传成功文件数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+    */
+    @SerializedName("FileIds")
+    @Expose
+    private String [] FileIds;
 
     /**
     * 文件Url
@@ -51,22 +51,6 @@ public class UploadFilesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 文件id数组，有效期一个小时；有效期内此文件id可以反复使用 
-     * @return FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-     */
-    public String [] getFileIds() {
-        return this.FileIds;
-    }
-
-    /**
-     * Set 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-     * @param FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
-     */
-    public void setFileIds(String [] FileIds) {
-        this.FileIds = FileIds;
-    }
-
-    /**
      * Get 上传成功文件数量 
      * @return TotalCount 上传成功文件数量
      */
@@ -80,6 +64,22 @@ public class UploadFilesResponse extends AbstractModel{
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 文件id数组，有效期一个小时；有效期内此文件id可以反复使用 
+     * @return FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     */
+    public String [] getFileIds() {
+        return this.FileIds;
+    }
+
+    /**
+     * Set 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     * @param FileIds 文件id数组，有效期一个小时；有效期内此文件id可以反复使用
+     */
+    public void setFileIds(String [] FileIds) {
+        this.FileIds = FileIds;
     }
 
     /**
@@ -122,14 +122,14 @@ public class UploadFilesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UploadFilesResponse(UploadFilesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.FileIds != null) {
             this.FileIds = new String[source.FileIds.length];
             for (int i = 0; i < source.FileIds.length; i++) {
                 this.FileIds[i] = new String(source.FileIds[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.FileUrls != null) {
             this.FileUrls = new String[source.FileUrls.length];
@@ -147,8 +147,8 @@ public class UploadFilesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArraySimple(map, prefix + "FileUrls.", this.FileUrls);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

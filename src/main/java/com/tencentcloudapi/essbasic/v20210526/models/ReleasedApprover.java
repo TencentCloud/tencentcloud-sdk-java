@@ -92,6 +92,22 @@ ENTERPRISESERVER-企业静默签
     private String OpenId;
 
     /**
+    * 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+    */
+    @SerializedName("ApproverSignComponentType")
+    @Expose
+    private String ApproverSignComponentType;
+
+    /**
+    * 签署方自定义控件别名，最大长度20个字符
+    */
+    @SerializedName("ApproverSignRole")
+    @Expose
+    private String ApproverSignRole;
+
+    /**
      * Get 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符 
      * @return OrganizationName 企业签署方工商营业执照上的企业名称，签署方为非发起方企业场景下必传，最大长度64个字符
      */
@@ -259,6 +275,46 @@ ENTERPRISESERVER-企业静默签
         this.OpenId = OpenId;
     }
 
+    /**
+     * Get 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型 
+     * @return ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     */
+    public String getApproverSignComponentType() {
+        return this.ApproverSignComponentType;
+    }
+
+    /**
+     * Set 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     * @param ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件为“印章”或“签名”
+- SIGN_SEAL-默认为印章控件类型
+- SIGN_SIGNATURE-手写签名控件类型
+     */
+    public void setApproverSignComponentType(String ApproverSignComponentType) {
+        this.ApproverSignComponentType = ApproverSignComponentType;
+    }
+
+    /**
+     * Get 签署方自定义控件别名，最大长度20个字符 
+     * @return ApproverSignRole 签署方自定义控件别名，最大长度20个字符
+     */
+    public String getApproverSignRole() {
+        return this.ApproverSignRole;
+    }
+
+    /**
+     * Set 签署方自定义控件别名，最大长度20个字符
+     * @param ApproverSignRole 签署方自定义控件别名，最大长度20个字符
+     */
+    public void setApproverSignRole(String ApproverSignRole) {
+        this.ApproverSignRole = ApproverSignRole;
+    }
+
     public ReleasedApprover() {
     }
 
@@ -294,6 +350,12 @@ ENTERPRISESERVER-企业静默签
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
+        if (source.ApproverSignComponentType != null) {
+            this.ApproverSignComponentType = new String(source.ApproverSignComponentType);
+        }
+        if (source.ApproverSignRole != null) {
+            this.ApproverSignRole = new String(source.ApproverSignRole);
+        }
     }
 
 
@@ -310,6 +372,8 @@ ENTERPRISESERVER-企业静默签
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "ApproverSignComponentType", this.ApproverSignComponentType);
+        this.setParamSimple(map, prefix + "ApproverSignRole", this.ApproverSignRole);
 
     }
 }

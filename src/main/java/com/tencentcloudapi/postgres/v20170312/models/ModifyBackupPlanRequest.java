@@ -44,7 +44,7 @@ public class ModifyBackupPlanRequest extends AbstractModel{
     private String MaxBackupStartTime;
 
     /**
-    * 实例备份保留时长，取值范围为3-7，单位是天
+    * 实例备份保留时长，取值范围为7-1830，单位是天
     */
     @SerializedName("BaseBackupRetentionPeriod")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyBackupPlanRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例备份保留时长，取值范围为3-7，单位是天 
-     * @return BaseBackupRetentionPeriod 实例备份保留时长，取值范围为3-7，单位是天
+     * Get 实例备份保留时长，取值范围为7-1830，单位是天 
+     * @return BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
      */
     public Long getBaseBackupRetentionPeriod() {
         return this.BaseBackupRetentionPeriod;
     }
 
     /**
-     * Set 实例备份保留时长，取值范围为3-7，单位是天
-     * @param BaseBackupRetentionPeriod 实例备份保留时长，取值范围为3-7，单位是天
+     * Set 实例备份保留时长，取值范围为7-1830，单位是天
+     * @param BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
      */
     public void setBaseBackupRetentionPeriod(Long BaseBackupRetentionPeriod) {
         this.BaseBackupRetentionPeriod = BaseBackupRetentionPeriod;

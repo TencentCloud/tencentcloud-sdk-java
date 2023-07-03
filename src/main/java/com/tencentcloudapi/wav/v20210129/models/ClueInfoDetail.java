@@ -30,7 +30,7 @@ public class ClueInfoDetail extends AbstractModel{
     private String ClueId;
 
     /**
-    * 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+    * 接待客户经销商顾问所属经销商code
     */
     @SerializedName("DealerId")
     @Expose
@@ -216,6 +216,175 @@ public class ClueInfoDetail extends AbstractModel{
     private Long CreateAtTime;
 
     /**
+    * 客户微信id
+    */
+    @SerializedName("WxId")
+    @Expose
+    private String WxId;
+
+    /**
+    * 意向车型对应品牌code
+    */
+    @SerializedName("BrandCode")
+    @Expose
+    private String BrandCode;
+
+    /**
+    * 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BuildTime")
+    @Expose
+    private Long BuildTime;
+
+    /**
+    * 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderTime")
+    @Expose
+    private Long OrderTime;
+
+    /**
+    * 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArrivalTime")
+    @Expose
+    private Long ArrivalTime;
+
+    /**
+    * 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeliveryTime")
+    @Expose
+    private Long DeliveryTime;
+
+    /**
+    * 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FollowTime")
+    @Expose
+    private Long FollowTime;
+
+    /**
+    * 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NextFollowTime")
+    @Expose
+    private Long NextFollowTime;
+
+    /**
+    * 线索所属组织id
+    */
+    @SerializedName("OrgId")
+    @Expose
+    private Long OrgId;
+
+    /**
+    * 线索所属组织名称
+    */
+    @SerializedName("OrgName")
+    @Expose
+    private String OrgName;
+
+    /**
+    * 介绍人姓名
+    */
+    @SerializedName("Introducer")
+    @Expose
+    private String Introducer;
+
+    /**
+    * 介绍人电话
+    */
+    @SerializedName("IntroducerPhone")
+    @Expose
+    private String IntroducerPhone;
+
+    /**
+    * 是否关联微信 1 是 0 否
+    */
+    @SerializedName("IsBindWx")
+    @Expose
+    private Long IsBindWx;
+
+    /**
+    * 是否经过合并 1 是 0 否
+    */
+    @SerializedName("IsMerge")
+    @Expose
+    private Long IsMerge;
+
+    /**
+    * 是否无效  1 是 0 否
+    */
+    @SerializedName("IsInvalid")
+    @Expose
+    private Long IsInvalid;
+
+    /**
+    * 无效类型
+    */
+    @SerializedName("InvalidType")
+    @Expose
+    private String InvalidType;
+
+    /**
+    * 无效类型枚举：
+无意向购买、空错号、未接听、其他
+    */
+    @SerializedName("InvalidTypeName")
+    @Expose
+    private String InvalidTypeName;
+
+    /**
+    * 由顾问手动输入的无效原因文字
+    */
+    @SerializedName("InvalidRemark")
+    @Expose
+    private String InvalidRemark;
+
+    /**
+    * 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InvalidTime")
+    @Expose
+    private Long InvalidTime;
+
+    /**
+    * 经销商名称
+    */
+    @SerializedName("DealerName")
+    @Expose
+    private String DealerName;
+
+    /**
+    * 经销商下级门店ID
+    */
+    @SerializedName("ShopId")
+    @Expose
+    private Long ShopId;
+
+    /**
+    * 经销商下级门店名称
+    */
+    @SerializedName("ShopName")
+    @Expose
+    private String ShopName;
+
+    /**
+    * 职位
+    */
+    @SerializedName("Position")
+    @Expose
+    private String Position;
+
+    /**
      * Get 线索id，线索唯一识别编码 
      * @return ClueId 线索id，线索唯一识别编码
      */
@@ -232,16 +401,16 @@ public class ClueInfoDetail extends AbstractModel{
     }
 
     /**
-     * Get 接待客户经销商顾问所属组织id,多个组织使用逗号分割 
-     * @return DealerId 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+     * Get 接待客户经销商顾问所属经销商code 
+     * @return DealerId 接待客户经销商顾问所属经销商code
      */
     public String getDealerId() {
         return this.DealerId;
     }
 
     /**
-     * Set 接待客户经销商顾问所属组织id,多个组织使用逗号分割
-     * @param DealerId 接待客户经销商顾问所属组织id,多个组织使用逗号分割
+     * Set 接待客户经销商顾问所属经销商code
+     * @param DealerId 接待客户经销商顾问所属经销商code
      */
     public void setDealerId(String DealerId) {
         this.DealerId = DealerId;
@@ -663,6 +832,406 @@ public class ClueInfoDetail extends AbstractModel{
         this.CreateAtTime = CreateAtTime;
     }
 
+    /**
+     * Get 客户微信id 
+     * @return WxId 客户微信id
+     */
+    public String getWxId() {
+        return this.WxId;
+    }
+
+    /**
+     * Set 客户微信id
+     * @param WxId 客户微信id
+     */
+    public void setWxId(String WxId) {
+        this.WxId = WxId;
+    }
+
+    /**
+     * Get 意向车型对应品牌code 
+     * @return BrandCode 意向车型对应品牌code
+     */
+    public String getBrandCode() {
+        return this.BrandCode;
+    }
+
+    /**
+     * Set 意向车型对应品牌code
+     * @param BrandCode 意向车型对应品牌code
+     */
+    public void setBrandCode(String BrandCode) {
+        this.BrandCode = BrandCode;
+    }
+
+    /**
+     * Get 建档时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BuildTime 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBuildTime() {
+        return this.BuildTime;
+    }
+
+    /**
+     * Set 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BuildTime 建档时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBuildTime(Long BuildTime) {
+        this.BuildTime = BuildTime;
+    }
+
+    /**
+     * Get 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderTime 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOrderTime() {
+        return this.OrderTime;
+    }
+
+    /**
+     * Set 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderTime 下订时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderTime(Long OrderTime) {
+        this.OrderTime = OrderTime;
+    }
+
+    /**
+     * Get 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArrivalTime 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getArrivalTime() {
+        return this.ArrivalTime;
+    }
+
+    /**
+     * Set 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArrivalTime 到店时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArrivalTime(Long ArrivalTime) {
+        this.ArrivalTime = ArrivalTime;
+    }
+
+    /**
+     * Get 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeliveryTime 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeliveryTime() {
+        return this.DeliveryTime;
+    }
+
+    /**
+     * Set 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeliveryTime 交车时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeliveryTime(Long DeliveryTime) {
+        this.DeliveryTime = DeliveryTime;
+    }
+
+    /**
+     * Get 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FollowTime 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFollowTime() {
+        return this.FollowTime;
+    }
+
+    /**
+     * Set 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FollowTime 上次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFollowTime(Long FollowTime) {
+        this.FollowTime = FollowTime;
+    }
+
+    /**
+     * Get 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextFollowTime 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNextFollowTime() {
+        return this.NextFollowTime;
+    }
+
+    /**
+     * Set 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextFollowTime 下次跟进时间，单位：秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNextFollowTime(Long NextFollowTime) {
+        this.NextFollowTime = NextFollowTime;
+    }
+
+    /**
+     * Get 线索所属组织id 
+     * @return OrgId 线索所属组织id
+     */
+    public Long getOrgId() {
+        return this.OrgId;
+    }
+
+    /**
+     * Set 线索所属组织id
+     * @param OrgId 线索所属组织id
+     */
+    public void setOrgId(Long OrgId) {
+        this.OrgId = OrgId;
+    }
+
+    /**
+     * Get 线索所属组织名称 
+     * @return OrgName 线索所属组织名称
+     */
+    public String getOrgName() {
+        return this.OrgName;
+    }
+
+    /**
+     * Set 线索所属组织名称
+     * @param OrgName 线索所属组织名称
+     */
+    public void setOrgName(String OrgName) {
+        this.OrgName = OrgName;
+    }
+
+    /**
+     * Get 介绍人姓名 
+     * @return Introducer 介绍人姓名
+     */
+    public String getIntroducer() {
+        return this.Introducer;
+    }
+
+    /**
+     * Set 介绍人姓名
+     * @param Introducer 介绍人姓名
+     */
+    public void setIntroducer(String Introducer) {
+        this.Introducer = Introducer;
+    }
+
+    /**
+     * Get 介绍人电话 
+     * @return IntroducerPhone 介绍人电话
+     */
+    public String getIntroducerPhone() {
+        return this.IntroducerPhone;
+    }
+
+    /**
+     * Set 介绍人电话
+     * @param IntroducerPhone 介绍人电话
+     */
+    public void setIntroducerPhone(String IntroducerPhone) {
+        this.IntroducerPhone = IntroducerPhone;
+    }
+
+    /**
+     * Get 是否关联微信 1 是 0 否 
+     * @return IsBindWx 是否关联微信 1 是 0 否
+     */
+    public Long getIsBindWx() {
+        return this.IsBindWx;
+    }
+
+    /**
+     * Set 是否关联微信 1 是 0 否
+     * @param IsBindWx 是否关联微信 1 是 0 否
+     */
+    public void setIsBindWx(Long IsBindWx) {
+        this.IsBindWx = IsBindWx;
+    }
+
+    /**
+     * Get 是否经过合并 1 是 0 否 
+     * @return IsMerge 是否经过合并 1 是 0 否
+     */
+    public Long getIsMerge() {
+        return this.IsMerge;
+    }
+
+    /**
+     * Set 是否经过合并 1 是 0 否
+     * @param IsMerge 是否经过合并 1 是 0 否
+     */
+    public void setIsMerge(Long IsMerge) {
+        this.IsMerge = IsMerge;
+    }
+
+    /**
+     * Get 是否无效  1 是 0 否 
+     * @return IsInvalid 是否无效  1 是 0 否
+     */
+    public Long getIsInvalid() {
+        return this.IsInvalid;
+    }
+
+    /**
+     * Set 是否无效  1 是 0 否
+     * @param IsInvalid 是否无效  1 是 0 否
+     */
+    public void setIsInvalid(Long IsInvalid) {
+        this.IsInvalid = IsInvalid;
+    }
+
+    /**
+     * Get 无效类型 
+     * @return InvalidType 无效类型
+     */
+    public String getInvalidType() {
+        return this.InvalidType;
+    }
+
+    /**
+     * Set 无效类型
+     * @param InvalidType 无效类型
+     */
+    public void setInvalidType(String InvalidType) {
+        this.InvalidType = InvalidType;
+    }
+
+    /**
+     * Get 无效类型枚举：
+无意向购买、空错号、未接听、其他 
+     * @return InvalidTypeName 无效类型枚举：
+无意向购买、空错号、未接听、其他
+     */
+    public String getInvalidTypeName() {
+        return this.InvalidTypeName;
+    }
+
+    /**
+     * Set 无效类型枚举：
+无意向购买、空错号、未接听、其他
+     * @param InvalidTypeName 无效类型枚举：
+无意向购买、空错号、未接听、其他
+     */
+    public void setInvalidTypeName(String InvalidTypeName) {
+        this.InvalidTypeName = InvalidTypeName;
+    }
+
+    /**
+     * Get 由顾问手动输入的无效原因文字 
+     * @return InvalidRemark 由顾问手动输入的无效原因文字
+     */
+    public String getInvalidRemark() {
+        return this.InvalidRemark;
+    }
+
+    /**
+     * Set 由顾问手动输入的无效原因文字
+     * @param InvalidRemark 由顾问手动输入的无效原因文字
+     */
+    public void setInvalidRemark(String InvalidRemark) {
+        this.InvalidRemark = InvalidRemark;
+    }
+
+    /**
+     * Get 无效时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInvalidTime() {
+        return this.InvalidTime;
+    }
+
+    /**
+     * Set 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInvalidTime(Long InvalidTime) {
+        this.InvalidTime = InvalidTime;
+    }
+
+    /**
+     * Get 经销商名称 
+     * @return DealerName 经销商名称
+     */
+    public String getDealerName() {
+        return this.DealerName;
+    }
+
+    /**
+     * Set 经销商名称
+     * @param DealerName 经销商名称
+     */
+    public void setDealerName(String DealerName) {
+        this.DealerName = DealerName;
+    }
+
+    /**
+     * Get 经销商下级门店ID 
+     * @return ShopId 经销商下级门店ID
+     */
+    public Long getShopId() {
+        return this.ShopId;
+    }
+
+    /**
+     * Set 经销商下级门店ID
+     * @param ShopId 经销商下级门店ID
+     */
+    public void setShopId(Long ShopId) {
+        this.ShopId = ShopId;
+    }
+
+    /**
+     * Get 经销商下级门店名称 
+     * @return ShopName 经销商下级门店名称
+     */
+    public String getShopName() {
+        return this.ShopName;
+    }
+
+    /**
+     * Set 经销商下级门店名称
+     * @param ShopName 经销商下级门店名称
+     */
+    public void setShopName(String ShopName) {
+        this.ShopName = ShopName;
+    }
+
+    /**
+     * Get 职位 
+     * @return Position 职位
+     */
+    public String getPosition() {
+        return this.Position;
+    }
+
+    /**
+     * Set 职位
+     * @param Position 职位
+     */
+    public void setPosition(String Position) {
+        this.Position = Position;
+    }
+
     public ClueInfoDetail() {
     }
 
@@ -755,6 +1324,75 @@ public class ClueInfoDetail extends AbstractModel{
         if (source.CreateAtTime != null) {
             this.CreateAtTime = new Long(source.CreateAtTime);
         }
+        if (source.WxId != null) {
+            this.WxId = new String(source.WxId);
+        }
+        if (source.BrandCode != null) {
+            this.BrandCode = new String(source.BrandCode);
+        }
+        if (source.BuildTime != null) {
+            this.BuildTime = new Long(source.BuildTime);
+        }
+        if (source.OrderTime != null) {
+            this.OrderTime = new Long(source.OrderTime);
+        }
+        if (source.ArrivalTime != null) {
+            this.ArrivalTime = new Long(source.ArrivalTime);
+        }
+        if (source.DeliveryTime != null) {
+            this.DeliveryTime = new Long(source.DeliveryTime);
+        }
+        if (source.FollowTime != null) {
+            this.FollowTime = new Long(source.FollowTime);
+        }
+        if (source.NextFollowTime != null) {
+            this.NextFollowTime = new Long(source.NextFollowTime);
+        }
+        if (source.OrgId != null) {
+            this.OrgId = new Long(source.OrgId);
+        }
+        if (source.OrgName != null) {
+            this.OrgName = new String(source.OrgName);
+        }
+        if (source.Introducer != null) {
+            this.Introducer = new String(source.Introducer);
+        }
+        if (source.IntroducerPhone != null) {
+            this.IntroducerPhone = new String(source.IntroducerPhone);
+        }
+        if (source.IsBindWx != null) {
+            this.IsBindWx = new Long(source.IsBindWx);
+        }
+        if (source.IsMerge != null) {
+            this.IsMerge = new Long(source.IsMerge);
+        }
+        if (source.IsInvalid != null) {
+            this.IsInvalid = new Long(source.IsInvalid);
+        }
+        if (source.InvalidType != null) {
+            this.InvalidType = new String(source.InvalidType);
+        }
+        if (source.InvalidTypeName != null) {
+            this.InvalidTypeName = new String(source.InvalidTypeName);
+        }
+        if (source.InvalidRemark != null) {
+            this.InvalidRemark = new String(source.InvalidRemark);
+        }
+        if (source.InvalidTime != null) {
+            this.InvalidTime = new Long(source.InvalidTime);
+        }
+        if (source.DealerName != null) {
+            this.DealerName = new String(source.DealerName);
+        }
+        if (source.ShopId != null) {
+            this.ShopId = new Long(source.ShopId);
+        }
+        if (source.ShopName != null) {
+            this.ShopName = new String(source.ShopName);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
     }
 
 
@@ -789,6 +1427,29 @@ public class ClueInfoDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);
         this.setParamSimple(map, prefix + "DistributeTime", this.DistributeTime);
         this.setParamSimple(map, prefix + "CreateAtTime", this.CreateAtTime);
+        this.setParamSimple(map, prefix + "WxId", this.WxId);
+        this.setParamSimple(map, prefix + "BrandCode", this.BrandCode);
+        this.setParamSimple(map, prefix + "BuildTime", this.BuildTime);
+        this.setParamSimple(map, prefix + "OrderTime", this.OrderTime);
+        this.setParamSimple(map, prefix + "ArrivalTime", this.ArrivalTime);
+        this.setParamSimple(map, prefix + "DeliveryTime", this.DeliveryTime);
+        this.setParamSimple(map, prefix + "FollowTime", this.FollowTime);
+        this.setParamSimple(map, prefix + "NextFollowTime", this.NextFollowTime);
+        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
+        this.setParamSimple(map, prefix + "OrgName", this.OrgName);
+        this.setParamSimple(map, prefix + "Introducer", this.Introducer);
+        this.setParamSimple(map, prefix + "IntroducerPhone", this.IntroducerPhone);
+        this.setParamSimple(map, prefix + "IsBindWx", this.IsBindWx);
+        this.setParamSimple(map, prefix + "IsMerge", this.IsMerge);
+        this.setParamSimple(map, prefix + "IsInvalid", this.IsInvalid);
+        this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "InvalidTypeName", this.InvalidTypeName);
+        this.setParamSimple(map, prefix + "InvalidRemark", this.InvalidRemark);
+        this.setParamSimple(map, prefix + "InvalidTime", this.InvalidTime);
+        this.setParamSimple(map, prefix + "DealerName", this.DealerName);
+        this.setParamSimple(map, prefix + "ShopId", this.ShopId);
+        this.setParamSimple(map, prefix + "ShopName", this.ShopName);
+        this.setParamSimple(map, prefix + "Position", this.Position);
 
     }
 }

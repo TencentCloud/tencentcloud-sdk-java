@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadFilesRequest extends AbstractModel{
 
     /**
-    * 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
+    * 应用相关信息，若是第三方应用集成调用 若是第三方应用集成调用,Agent.AppId 和 Agent.ProxyOrganizationOpenId 必填
     */
     @SerializedName("Agent")
     @Expose
@@ -53,16 +53,16 @@ public class UploadFilesRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-     * Get 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填 
-     * @return Agent 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
+     * Get 应用相关信息，若是第三方应用集成调用 若是第三方应用集成调用,Agent.AppId 和 Agent.ProxyOrganizationOpenId 必填 
+     * @return Agent 应用相关信息，若是第三方应用集成调用 若是第三方应用集成调用,Agent.AppId 和 Agent.ProxyOrganizationOpenId 必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
-     * @param Agent 应用相关信息，若是第三方应用集成调用 appid 和proxyappid 必填
+     * Set 应用相关信息，若是第三方应用集成调用 若是第三方应用集成调用,Agent.AppId 和 Agent.ProxyOrganizationOpenId 必填
+     * @param Agent 应用相关信息，若是第三方应用集成调用 若是第三方应用集成调用,Agent.AppId 和 Agent.ProxyOrganizationOpenId 必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

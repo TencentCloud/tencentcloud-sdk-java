@@ -72,6 +72,13 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
+    * 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
      */
@@ -191,6 +198,22 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
         this.Operator = Operator;
     }
 
+    /**
+     * Get 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后 
+     * @return Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     * @param Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public ChannelCreateReleaseFlowRequest() {
     }
 
@@ -223,6 +246,9 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
     }
 
 
@@ -237,6 +263,7 @@ public class ChannelCreateReleaseFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

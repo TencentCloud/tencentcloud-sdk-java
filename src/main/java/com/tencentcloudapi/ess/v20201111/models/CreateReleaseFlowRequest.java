@@ -53,6 +53,13 @@ public class CreateReleaseFlowRequest extends AbstractModel{
     private ReleasedApprover [] ReleasedApprovers;
 
     /**
+    * 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -124,6 +131,22 @@ public class CreateReleaseFlowRequest extends AbstractModel{
         this.ReleasedApprovers = ReleasedApprovers;
     }
 
+    /**
+     * Get 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后 
+     * @return Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     * @param Deadline 签署流程的签署截止时间。 值为unix时间戳,精确到秒,不传默认为当前时间七天后
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
     public CreateReleaseFlowRequest() {
     }
 
@@ -147,6 +170,9 @@ public class CreateReleaseFlowRequest extends AbstractModel{
                 this.ReleasedApprovers[i] = new ReleasedApprover(source.ReleasedApprovers[i]);
             }
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
     }
 
 
@@ -158,6 +184,7 @@ public class CreateReleaseFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedRelievedFlowId", this.NeedRelievedFlowId);
         this.setParamObj(map, prefix + "ReliveInfo.", this.ReliveInfo);
         this.setParamArrayObj(map, prefix + "ReleasedApprovers.", this.ReleasedApprovers);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

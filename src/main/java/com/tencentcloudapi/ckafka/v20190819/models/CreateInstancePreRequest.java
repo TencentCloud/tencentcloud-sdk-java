@@ -30,7 +30,7 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+    * 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
     */
     @SerializedName("ZoneId")
     @Expose
@@ -44,22 +44,21 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String Period;
 
     /**
-    * 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
+    * 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * vpcId必填
+    * vpcId，必填
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网id，vpc网络需要传该参数，基础网络可以不传
+    * 子网id，必填
     */
     @SerializedName("SubnetId")
     @Expose
@@ -94,28 +93,28 @@ public class CreateInstancePreRequest extends AbstractModel{
     private String KafkaVersion;
 
     /**
-    * 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+    * 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
     */
     @SerializedName("SpecificationsType")
     @Expose
     private String SpecificationsType;
 
     /**
-    * 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+    * 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+    * 带宽，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+    * 分区大小，如果跟控制台规格配比不相符，则无法创建成功
     */
     @SerializedName("Partition")
     @Expose
@@ -129,14 +128,14 @@ public class CreateInstancePreRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+    * 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * 跨可用区，zoneIds必填
+    * 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
     */
     @SerializedName("MultiZoneFlag")
     @Expose
@@ -180,16 +179,16 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值 
-     * @return ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+     * Get 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区 
+     * @return ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
-     * @param ZoneId 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
+     * Set 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
+     * @param ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。需要保证传入的参数和 SubnetId 所在子网属于同一个可用区
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -212,52 +211,48 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。 
-     * @return InstanceType 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
+     * Get 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。 
+     * @return InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
-     * @param InstanceType 实例规格说明 专业版实例[所有规格]填写1.
-标准版实例 ([入门型(general)]填写1，[标准型(standard)]填写2，[进阶型(advanced)]填写3，[容量型(capacity)]填写4，[高阶型1(specialized-1)]填写5，[高阶型2(specialized-2)]填写6,[高阶型3(specialized-3)]填写7,[高阶型4(specialized-4)]填写8，[独占型(exclusive)]填写9。
+     * Set 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
+     * @param InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get vpcId必填 
-     * @return VpcId vpcId必填
+     * Get vpcId，必填 
+     * @return VpcId vpcId，必填
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId必填
-     * @param VpcId vpcId必填
+     * Set vpcId，必填
+     * @param VpcId vpcId，必填
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网id，vpc网络需要传该参数，基础网络可以不传 
-     * @return SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
+     * Get 子网id，必填 
+     * @return SubnetId 子网id，必填
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网id，vpc网络需要传该参数，基础网络可以不传
-     * @param SubnetId 子网id，vpc网络需要传该参数，基础网络可以不传
+     * Set 子网id，必填
+     * @param SubnetId 子网id，必填
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -328,64 +323,64 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession 
-     * @return SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+     * Get 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession" 
+     * @return SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
-     * @param SpecificationsType 实例类型: [标准版实例]填写 standard(默认), [专业版实例]填写 profession
+     * Set 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
+     * @param SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession"
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
     }
 
     /**
-     * Get 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功 
-     * @return DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+     * Get 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
-     * @param DiskSize 磁盘大小，专业版不填写默认最小磁盘，如果跟控制台规格配比不相符，则无法创建成功
+     * Set 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @param DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功 
-     * @return BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * Get 带宽，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
-     * @param BandWidth 带宽，专业版不填写默认最小带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * Set 带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * @param BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功 
-     * @return Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+     * Get 分区大小，如果跟控制台规格配比不相符，则无法创建成功 
+     * @return Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
-     * @param Partition 分区大小，专业版不填写默认最小分区数，如果跟控制台规格配比不相符，则无法创建成功
+     * Set 分区大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @param Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
@@ -408,32 +403,32 @@ public class CreateInstancePreRequest extends AbstractModel{
     }
 
     /**
-     * Get 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC） 
-     * @return DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     * Get 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC" 
+     * @return DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
-     * @param DiskType 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+     * Set 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
+     * @param DiskType 专业版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 跨可用区，zoneIds必填 
-     * @return MultiZoneFlag 跨可用区，zoneIds必填
+     * Get 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填 
+     * @return MultiZoneFlag 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
      */
     public Boolean getMultiZoneFlag() {
         return this.MultiZoneFlag;
     }
 
     /**
-     * Set 跨可用区，zoneIds必填
-     * @param MultiZoneFlag 跨可用区，zoneIds必填
+     * Set 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
+     * @param MultiZoneFlag 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填
      */
     public void setMultiZoneFlag(Boolean MultiZoneFlag) {
         this.MultiZoneFlag = MultiZoneFlag;

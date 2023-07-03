@@ -55,7 +55,7 @@ public class MediaCastSourceInfo extends AbstractModel{
     private String MaterialId;
 
     /**
-    * 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+    * 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
     */
     @SerializedName("Offset")
     @Expose
@@ -156,16 +156,16 @@ public class MediaCastSourceInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。 
-     * @return Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * Get 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。 
+     * @return Offset 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
      */
     public Float getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
-     * @param Offset 文件播放的的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * Set 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
+     * @param Offset 文件播放的起始位置，单位：秒。默认为0，从文件头开始播放。当 Type = CME  或者 VOD 时有效。
      */
     public void setOffset(Float Offset) {
         this.Offset = Offset;

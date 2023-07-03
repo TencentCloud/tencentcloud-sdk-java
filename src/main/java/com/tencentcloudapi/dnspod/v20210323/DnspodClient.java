@@ -339,6 +339,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *批量删除解析记录
+     * @param req DeleteRecordBatchRequest
+     * @return DeleteRecordBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordBatchResponse DeleteRecordBatch(DeleteRecordBatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordBatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordBatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRecordBatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除记录分组
      * @param req DeleteRecordGroupRequest
      * @return DeleteRecordGroupResponse

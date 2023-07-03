@@ -101,6 +101,14 @@ public class CorpUserInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * 工号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobNumber")
+    @Expose
+    private String JobNumber;
+
+    /**
      * Get 企业成员UserId 
      * @return UserId 企业成员UserId
      */
@@ -292,6 +300,26 @@ public class CorpUserInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 工号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobNumber() {
+        return this.JobNumber;
+    }
+
+    /**
+     * Set 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobNumber 工号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobNumber(String JobNumber) {
+        this.JobNumber = JobNumber;
+    }
+
     public CorpUserInfo() {
     }
 
@@ -330,6 +358,9 @@ public class CorpUserInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.JobNumber != null) {
+            this.JobNumber = new String(source.JobNumber);
+        }
     }
 
 
@@ -347,6 +378,7 @@ public class CorpUserInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "MainDepartment", this.MainDepartment);
         this.setParamSimple(map, prefix + "IsLeaderInDept", this.IsLeaderInDept);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "JobNumber", this.JobNumber);
 
     }
 }

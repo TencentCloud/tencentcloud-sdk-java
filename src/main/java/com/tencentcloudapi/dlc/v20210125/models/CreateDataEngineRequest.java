@@ -72,7 +72,7 @@ public class CreateDataEngineRequest extends AbstractModel{
     private Long MaxClusters;
 
     /**
-    * 是否为默虚拟集群
+    * 是否为默认虚拟集群
     */
     @SerializedName("DefaultDataEngine")
     @Expose
@@ -205,7 +205,7 @@ public class CreateDataEngineRequest extends AbstractModel{
     private String ImageVersionName;
 
     /**
-    * 主集群名称
+    * 主集群名称，创建容灾集群时指定
     */
     @SerializedName("MainClusterName")
     @Expose
@@ -345,17 +345,21 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否为默虚拟集群 
-     * @return DefaultDataEngine 是否为默虚拟集群
+     * Get 是否为默认虚拟集群 
+     * @return DefaultDataEngine 是否为默认虚拟集群
+     * @deprecated
      */
+    @Deprecated
     public Boolean getDefaultDataEngine() {
         return this.DefaultDataEngine;
     }
 
     /**
-     * Set 是否为默虚拟集群
-     * @param DefaultDataEngine 是否为默虚拟集群
+     * Set 是否为默认虚拟集群
+     * @param DefaultDataEngine 是否为默认虚拟集群
+     * @deprecated
      */
+    @Deprecated
     public void setDefaultDataEngine(Boolean DefaultDataEngine) {
         this.DefaultDataEngine = DefaultDataEngine;
     }
@@ -649,16 +653,16 @@ public class CreateDataEngineRequest extends AbstractModel{
     }
 
     /**
-     * Get 主集群名称 
-     * @return MainClusterName 主集群名称
+     * Get 主集群名称，创建容灾集群时指定 
+     * @return MainClusterName 主集群名称，创建容灾集群时指定
      */
     public String getMainClusterName() {
         return this.MainClusterName;
     }
 
     /**
-     * Set 主集群名称
-     * @param MainClusterName 主集群名称
+     * Set 主集群名称，创建容灾集群时指定
+     * @param MainClusterName 主集群名称，创建容灾集群时指定
      */
     public void setMainClusterName(String MainClusterName) {
         this.MainClusterName = MainClusterName;

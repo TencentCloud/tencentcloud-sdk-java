@@ -72,6 +72,22 @@ public class BillDetailComponent extends AbstractModel{
     private String UsedAmountUnit;
 
     /**
+    * 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealTotalMeasure")
+    @Expose
+    private String RealTotalMeasure;
+
+    /**
+    * 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeductedMeasure")
+    @Expose
+    private String DeductedMeasure;
+
+    /**
     * 使用时长：资源使用的时长
     */
     @SerializedName("TimeSpan")
@@ -336,6 +352,46 @@ public class BillDetailComponent extends AbstractModel{
      */
     public void setUsedAmountUnit(String UsedAmountUnit) {
         this.UsedAmountUnit = UsedAmountUnit;
+    }
+
+    /**
+     * Get 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRealTotalMeasure() {
+        return this.RealTotalMeasure;
+    }
+
+    /**
+     * Set 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealTotalMeasure(String RealTotalMeasure) {
+        this.RealTotalMeasure = RealTotalMeasure;
+    }
+
+    /**
+     * Get 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeductedMeasure() {
+        return this.DeductedMeasure;
+    }
+
+    /**
+     * Set 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeductedMeasure(String DeductedMeasure) {
+        this.DeductedMeasure = DeductedMeasure;
     }
 
     /**
@@ -735,6 +791,12 @@ public class BillDetailComponent extends AbstractModel{
         if (source.UsedAmountUnit != null) {
             this.UsedAmountUnit = new String(source.UsedAmountUnit);
         }
+        if (source.RealTotalMeasure != null) {
+            this.RealTotalMeasure = new String(source.RealTotalMeasure);
+        }
+        if (source.DeductedMeasure != null) {
+            this.DeductedMeasure = new String(source.DeductedMeasure);
+        }
         if (source.TimeSpan != null) {
             this.TimeSpan = new String(source.TimeSpan);
         }
@@ -809,6 +871,8 @@ public class BillDetailComponent extends AbstractModel{
         this.setParamSimple(map, prefix + "PriceUnit", this.PriceUnit);
         this.setParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
         this.setParamSimple(map, prefix + "UsedAmountUnit", this.UsedAmountUnit);
+        this.setParamSimple(map, prefix + "RealTotalMeasure", this.RealTotalMeasure);
+        this.setParamSimple(map, prefix + "DeductedMeasure", this.DeductedMeasure);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnitName", this.TimeUnitName);
         this.setParamSimple(map, prefix + "Cost", this.Cost);
