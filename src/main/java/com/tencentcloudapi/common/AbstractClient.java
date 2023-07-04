@@ -524,27 +524,31 @@ public abstract class AbstractClient {
         Sign.sha256Hex(canonicalRequest.getBytes(StandardCharsets.UTF_8));
     String stringToSign =
         "TC3-HMAC-SHA256\n" + timestamp + "\n" + credentialScope + "\n" + hashedCanonicalRequest;
-
-    String secretId = this.credential.getSecretId();
-    String secretKey = this.credential.getSecretKey();
-    byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
-    byte[] secretService = Sign.hmac256(secretDate, service);
-    byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
-    String signature =
-        DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
-    String authorization =
-        "TC3-HMAC-SHA256 "
-            + "Credential="
-            + secretId
-            + "/"
-            + credentialScope
-            + ", "
-            + "SignedHeaders="
-            + signedHeaders
-            + ", "
-            + "Signature="
-            + signature;
-
+    boolean skipSign = request.getSkipSign();
+    String authorization = "";
+    if (skipSign) {
+      authorization = "SKIP";
+    } else {
+      String secretId = this.credential.getSecretId();
+      String secretKey = this.credential.getSecretKey();
+      byte[] secretDate = Sign.hmac256(("TC3" + secretKey).getBytes(StandardCharsets.UTF_8), date);
+      byte[] secretService = Sign.hmac256(secretDate, service);
+      byte[] secretSigning = Sign.hmac256(secretService, "tc3_request");
+      String signature =
+              DatatypeConverter.printHexBinary(Sign.hmac256(secretSigning, stringToSign)).toLowerCase();
+      authorization =
+          "TC3-HMAC-SHA256 "
+                  + "Credential="
+                  + secretId
+                  + "/"
+                  + credentialScope
+                  + ", "
+                  + "SignedHeaders="
+                  + signedHeaders
+                  + ", "
+                  + "Signature="
+                  + signature;
+    }
     String url = this.profile.getHttpProfile().getProtocol() + endpoint + this.path;
     Builder hb = new Headers.Builder();
     hb.add("Content-Type", contentType)
