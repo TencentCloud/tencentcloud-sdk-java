@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.ciam.v20220331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApproverOption extends AbstractModel{
+public class DeleteUserStoreRequest extends AbstractModel{
 
     /**
-    * 是否隐藏一键签署 默认false-不隐藏true-隐藏
+    * 用户池ID
     */
-    @SerializedName("HideOneKeySign")
+    @SerializedName("UserPoolId")
     @Expose
-    private Boolean HideOneKeySign;
+    private String UserPoolId;
 
     /**
-     * Get 是否隐藏一键签署 默认false-不隐藏true-隐藏 
-     * @return HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Get 用户池ID 
+     * @return UserPoolId 用户池ID
      */
-    public Boolean getHideOneKeySign() {
-        return this.HideOneKeySign;
+    public String getUserPoolId() {
+        return this.UserPoolId;
     }
 
     /**
-     * Set 是否隐藏一键签署 默认false-不隐藏true-隐藏
-     * @param HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Set 用户池ID
+     * @param UserPoolId 用户池ID
      */
-    public void setHideOneKeySign(Boolean HideOneKeySign) {
-        this.HideOneKeySign = HideOneKeySign;
+    public void setUserPoolId(String UserPoolId) {
+        this.UserPoolId = UserPoolId;
     }
 
-    public ApproverOption() {
+    public DeleteUserStoreRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApproverOption(ApproverOption source) {
-        if (source.HideOneKeySign != null) {
-            this.HideOneKeySign = new Boolean(source.HideOneKeySign);
+    public DeleteUserStoreRequest(DeleteUserStoreRequest source) {
+        if (source.UserPoolId != null) {
+            this.UserPoolId = new String(source.UserPoolId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ApproverOption extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
+        this.setParamSimple(map, prefix + "UserPoolId", this.UserPoolId);
 
     }
 }

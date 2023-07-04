@@ -24,6 +24,9 @@ public enum SqlserverErrorCode {
     // 备份导入任务锁定失败。
      FAILEDOPERATION_MIGRATIONLOCKERROR("FailedOperation.MigrationLockError"),
      
+    // 不支持此类操作。
+     FAILEDOPERATION_NOTSUPPORT("FailedOperation.NotSupport"),
+     
     // 查询订单失败。
      FAILEDOPERATION_QUERYORDERFAILED("FailedOperation.QueryOrderFailed"),
      

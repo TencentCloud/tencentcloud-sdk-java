@@ -79,6 +79,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于校验Kafka服务集群是否可以正常访问
+     * @param req CheckRechargeKafkaServerRequest
+     * @return CheckRechargeKafkaServerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(CheckRechargeKafkaServerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckRechargeKafkaServerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckRechargeKafkaServerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckRechargeKafkaServer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *关闭Kafka协议消费
      * @param req CloseKafkaConsumerRequest
      * @return CloseKafkaConsumerResponse
@@ -251,6 +271,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于创建Kafka数据订阅任务
+     * @param req CreateKafkaRechargeRequest
+     * @return CreateKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKafkaRechargeResponse CreateKafkaRecharge(CreateKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -491,6 +531,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于删除Kafka数据订阅任务
+     * @param req DeleteKafkaRechargeRequest
+     * @return DeleteKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteKafkaRechargeResponse DeleteKafkaRecharge(DeleteKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -791,6 +851,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取Kafka数据订阅任务
+     * @param req DescribeKafkaRechargesRequest
+     * @return DescribeKafkaRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaRechargesResponse DescribeKafkaRecharges(DescribeKafkaRechargesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKafkaRechargesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKafkaRechargesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKafkaRecharges");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1180,6 +1260,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于修改Kafka数据订阅任务
+     * @param req ModifyKafkaRechargeRequest
+     * @return ModifyKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaRechargeResponse ModifyKafkaRecharge(ModifyKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyKafkaRecharge");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改日志集信息
      * @param req ModifyLogsetRequest
      * @return ModifyLogsetResponse
@@ -1272,6 +1372,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenKafkaConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenKafkaConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于预览Kafka数据订阅任务客户日志信息
+     * @param req PreviewKafkaRechargeRequest
+     * @return PreviewKafkaRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public PreviewKafkaRechargeResponse PreviewKafkaRecharge(PreviewKafkaRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PreviewKafkaRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PreviewKafkaRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PreviewKafkaRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.essbasic.v20210526.models;
+package com.tencentcloudapi.ciam.v20220331.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApproverOption extends AbstractModel{
+public class CreateUserStoreResponse extends AbstractModel{
 
     /**
-    * 是否隐藏一键签署 默认false-不隐藏true-隐藏
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("HideOneKeySign")
+    @SerializedName("RequestId")
     @Expose
-    private Boolean HideOneKeySign;
+    private String RequestId;
 
     /**
-     * Get 是否隐藏一键签署 默认false-不隐藏true-隐藏 
-     * @return HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public Boolean getHideOneKeySign() {
-        return this.HideOneKeySign;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 是否隐藏一键签署 默认false-不隐藏true-隐藏
-     * @param HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setHideOneKeySign(Boolean HideOneKeySign) {
-        this.HideOneKeySign = HideOneKeySign;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public ApproverOption() {
+    public CreateUserStoreResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApproverOption(ApproverOption source) {
-        if (source.HideOneKeySign != null) {
-            this.HideOneKeySign = new Boolean(source.HideOneKeySign);
+    public CreateUserStoreResponse(CreateUserStoreResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class ApproverOption extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "HideOneKeySign", this.HideOneKeySign);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

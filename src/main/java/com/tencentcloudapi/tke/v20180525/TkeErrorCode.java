@@ -144,6 +144,9 @@ public enum TkeErrorCode {
     // 网络扩展错误。
      FAILEDOPERATION_NETWORKSCALEERROR("FailedOperation.NetworkScaleError"),
      
+    // 节点存在辅助网卡
+     FAILEDOPERATION_NODEEXISTSSECONDARYNETWORKINTERFACE("FailedOperation.NodeExistsSecondaryNetworkInterface"),
+     
     // 镜像OS不支持。
      FAILEDOPERATION_OSNOTSUPPORT("FailedOperation.OsNotSupport"),
      

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ApproverOption extends AbstractModel{
 
     /**
-    * 是否可以拒签 false-可以拒签,默认 true-不可以拒签
+    * 是否可以拒签 默认false-可以拒签 true-不可以拒签
     */
     @SerializedName("NoRefuse")
     @Expose
     private Boolean NoRefuse;
 
     /**
-    * 是否可以转发 false-可以转发,默认 true-不可以转发
+    * 是否可以转发 默认false-可以转发 true-不可以转发
     */
     @SerializedName("NoTransfer")
     @Expose
     private Boolean NoTransfer;
 
     /**
-     * Get 是否可以拒签 false-可以拒签,默认 true-不可以拒签 
-     * @return NoRefuse 是否可以拒签 false-可以拒签,默认 true-不可以拒签
+     * Get 是否可以拒签 默认false-可以拒签 true-不可以拒签 
+     * @return NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
      */
     public Boolean getNoRefuse() {
         return this.NoRefuse;
     }
 
     /**
-     * Set 是否可以拒签 false-可以拒签,默认 true-不可以拒签
-     * @param NoRefuse 是否可以拒签 false-可以拒签,默认 true-不可以拒签
+     * Set 是否可以拒签 默认false-可以拒签 true-不可以拒签
+     * @param NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
      */
     public void setNoRefuse(Boolean NoRefuse) {
         this.NoRefuse = NoRefuse;
     }
 
     /**
-     * Get 是否可以转发 false-可以转发,默认 true-不可以转发 
-     * @return NoTransfer 是否可以转发 false-可以转发,默认 true-不可以转发
+     * Get 是否可以转发 默认false-可以转发 true-不可以转发 
+     * @return NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
      */
     public Boolean getNoTransfer() {
         return this.NoTransfer;
     }
 
     /**
-     * Set 是否可以转发 false-可以转发,默认 true-不可以转发
-     * @param NoTransfer 是否可以转发 false-可以转发,默认 true-不可以转发
+     * Set 是否可以转发 默认false-可以转发 true-不可以转发
+     * @param NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
      */
     public void setNoTransfer(Boolean NoTransfer) {
         this.NoTransfer = NoTransfer;
