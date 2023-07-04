@@ -152,4 +152,14 @@ public abstract class AbstractModel {
   public HashMap<String, Object> any() {
     return this.customizedParams;
   }
+
+  protected boolean skipSign = false;
+
+  public boolean getSkipSign() {
+    return skipSign;
+  }
+
+  public void setSkipSign(boolean skipSign) {
+    this.skipSign = skipSign;
+  }
 }
