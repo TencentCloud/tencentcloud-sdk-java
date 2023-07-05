@@ -93,7 +93,10 @@ public class CreateNotebookSessionRequest extends AbstractModel{
     private Long ExecutorNumbers;
 
     /**
-    * Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+    * Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
     */
     @SerializedName("Arguments")
     @Expose
@@ -119,6 +122,13 @@ public class CreateNotebookSessionRequest extends AbstractModel{
     @SerializedName("ExecutorMaxNumbers")
     @Expose
     private Long ExecutorMaxNumbers;
+
+    /**
+    * 指定spark版本名称，当前任务使用该spark镜像运行
+    */
+    @SerializedName("SparkImage")
+    @Expose
+    private String SparkImage;
 
     /**
      * Get Session名称 
@@ -281,16 +291,28 @@ public class CreateNotebookSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填； 
-     * @return Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * Get Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置； 
+     * @return Arguments Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
      */
     public KVPair [] getArguments() {
         return this.Arguments;
     }
 
     /**
-     * Set Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
-     * @param Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * Set Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
+     * @param Arguments Session相关配置，当前支持：
+1. dlc.eni: 用户配置的eni网关信息，可以通过该字段设置；
+2. dlc.role.arn: 用户配置的roleArn鉴权策略配置信息，可以通过该字段设置；
+3. dlc.sql.set.config: 用户配置的集群配置信息，可以通过该字段设置；
      */
     public void setArguments(KVPair [] Arguments) {
         this.Arguments = Arguments;
@@ -342,6 +364,22 @@ public class CreateNotebookSessionRequest extends AbstractModel{
      */
     public void setExecutorMaxNumbers(Long ExecutorMaxNumbers) {
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
+    }
+
+    /**
+     * Get 指定spark版本名称，当前任务使用该spark镜像运行 
+     * @return SparkImage 指定spark版本名称，当前任务使用该spark镜像运行
+     */
+    public String getSparkImage() {
+        return this.SparkImage;
+    }
+
+    /**
+     * Set 指定spark版本名称，当前任务使用该spark镜像运行
+     * @param SparkImage 指定spark版本名称，当前任务使用该spark镜像运行
+     */
+    public void setSparkImage(String SparkImage) {
+        this.SparkImage = SparkImage;
     }
 
     public CreateNotebookSessionRequest() {
@@ -409,6 +447,9 @@ public class CreateNotebookSessionRequest extends AbstractModel{
         if (source.ExecutorMaxNumbers != null) {
             this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
         }
+        if (source.SparkImage != null) {
+            this.SparkImage = new String(source.SparkImage);
+        }
     }
 
 
@@ -430,6 +471,7 @@ public class CreateNotebookSessionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyUser", this.ProxyUser);
         this.setParamSimple(map, prefix + "TimeoutInSecond", this.TimeoutInSecond);
         this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
 
     }
 }

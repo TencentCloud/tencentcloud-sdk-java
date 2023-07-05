@@ -31,7 +31,8 @@ public class CreateIntegrationEmployeesRequest extends AbstractModel{
 
     /**
     * 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
     */
     @SerializedName("Employees")
     @Expose
@@ -62,9 +63,11 @@ Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其�
 
     /**
      * Get 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。 
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息 
      * @return Employees 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
      */
     public Staff [] getEmployees() {
         return this.Employees;
@@ -72,9 +75,11 @@ Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其�
 
     /**
      * Set 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
      * @param Employees 待创建员工的信息，不超过20个。
-Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+所有类型的企业支持的入参：Mobile和DisplayName必填,OpenId、Email和Department.DepartmentId选填，其他字段暂不支持。
+企微类型的企业特有支持的入参：WeworkOpenId，传入此字段无需在传入其他信息
      */
     public void setEmployees(Staff [] Employees) {
         this.Employees = Employees;

@@ -30,7 +30,8 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * 新的数据库实例名字
+    * 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
     */
     @SerializedName("InstanceName")
     @Expose
@@ -53,16 +54,20 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     }
 
     /**
-     * Get 新的数据库实例名字 
-     * @return InstanceName 新的数据库实例名字
+     * Get 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+ 
+     * @return InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 新的数据库实例名字
-     * @param InstanceName 新的数据库实例名字
+     * Set 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
+     * @param InstanceName 实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

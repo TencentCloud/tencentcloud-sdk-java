@@ -226,6 +226,13 @@ public class ModifySparkAppRequest extends AbstractModel{
     private Long IsInherit;
 
     /**
+    * 是否使用session脚本的sql运行任务：false：否，true：是
+    */
+    @SerializedName("IsSessionStarted")
+    @Expose
+    private Boolean IsSessionStarted;
+
+    /**
      * Get spark作业名 
      * @return AppName spark作业名
      */
@@ -689,6 +696,22 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.IsInherit = IsInherit;
     }
 
+    /**
+     * Get 是否使用session脚本的sql运行任务：false：否，true：是 
+     * @return IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+     */
+    public Boolean getIsSessionStarted() {
+        return this.IsSessionStarted;
+    }
+
+    /**
+     * Set 是否使用session脚本的sql运行任务：false：否，true：是
+     * @param IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+     */
+    public void setIsSessionStarted(Boolean IsSessionStarted) {
+        this.IsSessionStarted = IsSessionStarted;
+    }
+
     public ModifySparkAppRequest() {
     }
 
@@ -784,6 +807,9 @@ public class ModifySparkAppRequest extends AbstractModel{
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.IsSessionStarted != null) {
+            this.IsSessionStarted = new Boolean(source.IsSessionStarted);
+        }
     }
 
 
@@ -820,6 +846,7 @@ public class ModifySparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
 
     }
 }

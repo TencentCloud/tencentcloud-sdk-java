@@ -41,7 +41,7 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -105,12 +105,12 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li> 
+<li>instance-id - String -（过滤条件）关联实例ID。</li> 
      * @return Filters 过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -121,12 +121,12 @@ public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
      * @param Filters 过滤条件：
 <li>ccn-id - String -（过滤条件）CCN实例ID。</li>
 <li>instance-type - String -（过滤条件）关联实例类型。</li>
 <li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+<li>instance-id - String -（过滤条件）关联实例ID。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

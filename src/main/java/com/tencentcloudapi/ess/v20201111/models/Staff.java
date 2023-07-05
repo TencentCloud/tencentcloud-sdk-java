@@ -24,6 +24,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 用户在电子签平台的id
+注：创建和更新场景无需填写
     */
     @SerializedName("UserId")
     @Expose
@@ -61,6 +62,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工角色
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Roles")
@@ -77,6 +79,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工是否实名
+注：创建和更新场景无需填写
     */
     @SerializedName("Verified")
     @Expose
@@ -84,6 +87,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工创建时间戳，单位秒
+注：创建和更新场景无需填写
     */
     @SerializedName("CreatedOn")
     @Expose
@@ -91,6 +95,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工实名时间戳，单位秒
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VerifiedOn")
@@ -99,6 +104,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工是否离职：0-未离职，1-离职
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuiteJob")
@@ -107,6 +113,7 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工离职交接人用户id
+注：创建和更新场景无需填写
     */
     @SerializedName("ReceiveUserId")
     @Expose
@@ -114,14 +121,26 @@ public class Staff extends AbstractModel{
 
     /**
     * 员工离职交接人用户OpenId
+注：创建和更新场景无需填写
     */
     @SerializedName("ReceiveOpenId")
     @Expose
     private String ReceiveOpenId;
 
     /**
-     * Get 用户在电子签平台的id 
+    * 企业微信用户账号ID
+注：仅企微类型的企业创建员工接口支持该字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WeworkOpenId")
+    @Expose
+    private String WeworkOpenId;
+
+    /**
+     * Get 用户在电子签平台的id
+注：创建和更新场景无需填写 
      * @return UserId 用户在电子签平台的id
+注：创建和更新场景无需填写
      */
     public String getUserId() {
         return this.UserId;
@@ -129,7 +148,9 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 用户在电子签平台的id
+注：创建和更新场景无需填写
      * @param UserId 用户在电子签平台的id
+注：创建和更新场景无需填写
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -209,8 +230,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Get 员工角色
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Roles 员工角色
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public StaffRole [] getRoles() {
@@ -219,8 +242,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工角色
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Roles 员工角色
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoles(StaffRole [] Roles) {
@@ -248,8 +273,10 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 员工是否实名 
+     * Get 员工是否实名
+注：创建和更新场景无需填写 
      * @return Verified 员工是否实名
+注：创建和更新场景无需填写
      */
     public Boolean getVerified() {
         return this.Verified;
@@ -257,15 +284,19 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工是否实名
+注：创建和更新场景无需填写
      * @param Verified 员工是否实名
+注：创建和更新场景无需填写
      */
     public void setVerified(Boolean Verified) {
         this.Verified = Verified;
     }
 
     /**
-     * Get 员工创建时间戳，单位秒 
+     * Get 员工创建时间戳，单位秒
+注：创建和更新场景无需填写 
      * @return CreatedOn 员工创建时间戳，单位秒
+注：创建和更新场景无需填写
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
@@ -273,7 +304,9 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工创建时间戳，单位秒
+注：创建和更新场景无需填写
      * @param CreatedOn 员工创建时间戳，单位秒
+注：创建和更新场景无需填写
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
@@ -281,8 +314,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Get 员工实名时间戳，单位秒
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VerifiedOn 员工实名时间戳，单位秒
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVerifiedOn() {
@@ -291,8 +326,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工实名时间戳，单位秒
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VerifiedOn 员工实名时间戳，单位秒
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVerifiedOn(Long VerifiedOn) {
@@ -301,8 +338,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Get 员工是否离职：0-未离职，1-离职
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QuiteJob 员工是否离职：0-未离职，1-离职
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuiteJob() {
@@ -311,8 +350,10 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工是否离职：0-未离职，1-离职
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QuiteJob 员工是否离职：0-未离职，1-离职
+注：创建和更新场景无需填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuiteJob(Long QuiteJob) {
@@ -320,8 +361,10 @@ public class Staff extends AbstractModel{
     }
 
     /**
-     * Get 员工离职交接人用户id 
+     * Get 员工离职交接人用户id
+注：创建和更新场景无需填写 
      * @return ReceiveUserId 员工离职交接人用户id
+注：创建和更新场景无需填写
      */
     public String getReceiveUserId() {
         return this.ReceiveUserId;
@@ -329,15 +372,19 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工离职交接人用户id
+注：创建和更新场景无需填写
      * @param ReceiveUserId 员工离职交接人用户id
+注：创建和更新场景无需填写
      */
     public void setReceiveUserId(String ReceiveUserId) {
         this.ReceiveUserId = ReceiveUserId;
     }
 
     /**
-     * Get 员工离职交接人用户OpenId 
+     * Get 员工离职交接人用户OpenId
+注：创建和更新场景无需填写 
      * @return ReceiveOpenId 员工离职交接人用户OpenId
+注：创建和更新场景无需填写
      */
     public String getReceiveOpenId() {
         return this.ReceiveOpenId;
@@ -345,10 +392,36 @@ public class Staff extends AbstractModel{
 
     /**
      * Set 员工离职交接人用户OpenId
+注：创建和更新场景无需填写
      * @param ReceiveOpenId 员工离职交接人用户OpenId
+注：创建和更新场景无需填写
      */
     public void setReceiveOpenId(String ReceiveOpenId) {
         this.ReceiveOpenId = ReceiveOpenId;
+    }
+
+    /**
+     * Get 企业微信用户账号ID
+注：仅企微类型的企业创建员工接口支持该字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WeworkOpenId 企业微信用户账号ID
+注：仅企微类型的企业创建员工接口支持该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWeworkOpenId() {
+        return this.WeworkOpenId;
+    }
+
+    /**
+     * Set 企业微信用户账号ID
+注：仅企微类型的企业创建员工接口支持该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WeworkOpenId 企业微信用户账号ID
+注：仅企微类型的企业创建员工接口支持该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeworkOpenId(String WeworkOpenId) {
+        this.WeworkOpenId = WeworkOpenId;
     }
 
     public Staff() {
@@ -401,6 +474,9 @@ public class Staff extends AbstractModel{
         if (source.ReceiveOpenId != null) {
             this.ReceiveOpenId = new String(source.ReceiveOpenId);
         }
+        if (source.WeworkOpenId != null) {
+            this.WeworkOpenId = new String(source.WeworkOpenId);
+        }
     }
 
 
@@ -421,6 +497,7 @@ public class Staff extends AbstractModel{
         this.setParamSimple(map, prefix + "QuiteJob", this.QuiteJob);
         this.setParamSimple(map, prefix + "ReceiveUserId", this.ReceiveUserId);
         this.setParamSimple(map, prefix + "ReceiveOpenId", this.ReceiveOpenId);
+        this.setParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
 
     }
 }

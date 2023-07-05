@@ -659,6 +659,26 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *支持增量查询扫码日志，通常提供给数据同步使用，调用时需要指定从哪一行开始查询数据
+     * @param req DescribeRawScanLogsRequest
+     * @return DescribeRawScanLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRawScanLogsResponse DescribeRawScanLogs(DescribeRawScanLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRawScanLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRawScanLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRawScanLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询扫码日志明细
      * @param req DescribeScanLogsRequest
      * @return DescribeScanLogsResponse

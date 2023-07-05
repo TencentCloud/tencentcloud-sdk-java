@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 实例或只读组要绑定的安全组列表
+    * 实例或只读组要绑定的安全组列表。
+安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
+
     */
     @SerializedName("SecurityGroupIdSet")
     @Expose
@@ -44,16 +46,24 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-     * Get 实例或只读组要绑定的安全组列表 
-     * @return SecurityGroupIdSet 实例或只读组要绑定的安全组列表
+     * Get 实例或只读组要绑定的安全组列表。
+安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
+ 
+     * @return SecurityGroupIdSet 实例或只读组要绑定的安全组列表。
+安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
+
      */
     public String [] getSecurityGroupIdSet() {
         return this.SecurityGroupIdSet;
     }
 
     /**
-     * Set 实例或只读组要绑定的安全组列表
-     * @param SecurityGroupIdSet 实例或只读组要绑定的安全组列表
+     * Set 实例或只读组要绑定的安全组列表。
+安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
+
+     * @param SecurityGroupIdSet 实例或只读组要绑定的安全组列表。
+安全组信息可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来查询。
+
      */
     public void setSecurityGroupIdSet(String [] SecurityGroupIdSet) {
         this.SecurityGroupIdSet = SecurityGroupIdSet;

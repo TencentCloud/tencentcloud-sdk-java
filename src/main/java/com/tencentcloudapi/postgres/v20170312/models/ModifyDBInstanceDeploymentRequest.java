@@ -30,14 +30,19 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * 实例节点信息。
+    * 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
     */
     @SerializedName("DBNodeSet")
     @Expose
     private DBNode [] DBNodeSet;
 
     /**
-    * 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+    * 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -74,32 +79,52 @@ public class ModifyDBInstanceDeploymentRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例节点信息。 
-     * @return DBNodeSet 实例节点信息。
+     * Get 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
+     * @return DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set 实例节点信息。
-     * @param DBNodeSet 实例节点信息。
+     * Set 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
     }
 
     /**
-     * Get 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换 
-     * @return SwitchTag 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+     * Get 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0  
+     * @return SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
-     * @param SwitchTag 切换时间。默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换
+     * Set 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
+     * @param SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

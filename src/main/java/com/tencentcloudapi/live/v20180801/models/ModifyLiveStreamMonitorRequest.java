@@ -109,6 +109,13 @@ public class ModifyLiveStreamMonitorRequest extends AbstractModel{
     private Long AllowMonitorReport;
 
     /**
+    * 是否开启格式诊断。
+    */
+    @SerializedName("AiFormatDiagnose")
+    @Expose
+    private Long AiFormatDiagnose;
+
+    /**
      * Get 监播任务ID。 
      * @return MonitorId 监播任务ID。
      */
@@ -308,6 +315,22 @@ public class ModifyLiveStreamMonitorRequest extends AbstractModel{
         this.AllowMonitorReport = AllowMonitorReport;
     }
 
+    /**
+     * Get 是否开启格式诊断。 
+     * @return AiFormatDiagnose 是否开启格式诊断。
+     */
+    public Long getAiFormatDiagnose() {
+        return this.AiFormatDiagnose;
+    }
+
+    /**
+     * Set 是否开启格式诊断。
+     * @param AiFormatDiagnose 是否开启格式诊断。
+     */
+    public void setAiFormatDiagnose(Long AiFormatDiagnose) {
+        this.AiFormatDiagnose = AiFormatDiagnose;
+    }
+
     public ModifyLiveStreamMonitorRequest() {
     }
 
@@ -361,6 +384,9 @@ public class ModifyLiveStreamMonitorRequest extends AbstractModel{
         if (source.AllowMonitorReport != null) {
             this.AllowMonitorReport = new Long(source.AllowMonitorReport);
         }
+        if (source.AiFormatDiagnose != null) {
+            this.AiFormatDiagnose = new Long(source.AiFormatDiagnose);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class ModifyLiveStreamMonitorRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckStreamBroken", this.CheckStreamBroken);
         this.setParamSimple(map, prefix + "CheckStreamLowFrameRate", this.CheckStreamLowFrameRate);
         this.setParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
+        this.setParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
 
     }
 }

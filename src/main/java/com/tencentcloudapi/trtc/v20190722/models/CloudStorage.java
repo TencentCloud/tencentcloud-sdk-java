@@ -46,7 +46,7 @@ public class CloudStorage extends AbstractModel{
 
     /**
     * 第三方存储的access_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
     */
     @SerializedName("AccessKey")
     @Expose
@@ -54,7 +54,7 @@ public class CloudStorage extends AbstractModel{
 
     /**
     * 第三方存储的secret_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
     */
     @SerializedName("SecretKey")
     @Expose
@@ -121,9 +121,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Get 第三方存储的access_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建 
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。 
      * @return AccessKey 第三方存储的access_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
      */
     public String getAccessKey() {
         return this.AccessKey;
@@ -131,9 +131,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Set 第三方存储的access_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
      * @param AccessKey 第三方存储的access_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
@@ -141,9 +141,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Get 第三方存储的secret_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建 
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。 
      * @return SecretKey 第三方存储的secret_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -151,9 +151,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Set 第三方存储的secret_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
      * @param SecretKey 第三方存储的secret_key账号信息。
-若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建
+若存储至腾讯云COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

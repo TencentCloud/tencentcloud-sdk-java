@@ -37,6 +37,20 @@ public class ResumeIntegrationTaskRequest extends AbstractModel{
     private String ProjectId;
 
     /**
+    * 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+    */
+    @SerializedName("Event")
+    @Expose
+    private String Event;
+
+    /**
+    * 额外参数
+    */
+    @SerializedName("ExtConfig")
+    @Expose
+    private RecordField [] ExtConfig;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -68,6 +82,38 @@ public class ResumeIntegrationTaskRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP) 
+     * @return Event 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+     */
+    public String getEvent() {
+        return this.Event;
+    }
+
+    /**
+     * Set 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+     * @param Event 事件类型(START, STOP, SUSPEND, RESUME, COMMIT, TIMESTAMP)
+     */
+    public void setEvent(String Event) {
+        this.Event = Event;
+    }
+
+    /**
+     * Get 额外参数 
+     * @return ExtConfig 额外参数
+     */
+    public RecordField [] getExtConfig() {
+        return this.ExtConfig;
+    }
+
+    /**
+     * Set 额外参数
+     * @param ExtConfig 额外参数
+     */
+    public void setExtConfig(RecordField [] ExtConfig) {
+        this.ExtConfig = ExtConfig;
+    }
+
     public ResumeIntegrationTaskRequest() {
     }
 
@@ -82,6 +128,15 @@ public class ResumeIntegrationTaskRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Event != null) {
+            this.Event = new String(source.Event);
+        }
+        if (source.ExtConfig != null) {
+            this.ExtConfig = new RecordField[source.ExtConfig.length];
+            for (int i = 0; i < source.ExtConfig.length; i++) {
+                this.ExtConfig[i] = new RecordField(source.ExtConfig[i]);
+            }
+        }
     }
 
 
@@ -91,6 +146,8 @@ public class ResumeIntegrationTaskRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Event", this.Event);
+        this.setParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
 
     }
 }

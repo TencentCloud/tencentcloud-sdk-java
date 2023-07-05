@@ -52,6 +52,13 @@ public class SuccessCreateStaffData extends AbstractModel{
     private String Note;
 
     /**
+    * 传入的企微账号id
+    */
+    @SerializedName("WeworkOpenId")
+    @Expose
+    private String WeworkOpenId;
+
+    /**
      * Get 员工名 
      * @return DisplayName 员工名
      */
@@ -119,6 +126,22 @@ public class SuccessCreateStaffData extends AbstractModel{
         this.Note = Note;
     }
 
+    /**
+     * Get 传入的企微账号id 
+     * @return WeworkOpenId 传入的企微账号id
+     */
+    public String getWeworkOpenId() {
+        return this.WeworkOpenId;
+    }
+
+    /**
+     * Set 传入的企微账号id
+     * @param WeworkOpenId 传入的企微账号id
+     */
+    public void setWeworkOpenId(String WeworkOpenId) {
+        this.WeworkOpenId = WeworkOpenId;
+    }
+
     public SuccessCreateStaffData() {
     }
 
@@ -139,6 +162,9 @@ public class SuccessCreateStaffData extends AbstractModel{
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.WeworkOpenId != null) {
+            this.WeworkOpenId = new String(source.WeworkOpenId);
+        }
     }
 
 
@@ -150,6 +176,7 @@ public class SuccessCreateStaffData extends AbstractModel{
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
 
     }
 }

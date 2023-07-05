@@ -180,6 +180,46 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *获取hive查询信息
+     * @param req DescribeHiveQueriesRequest
+     * @return DescribeHiveQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHiveQueriesResponse DescribeHiveQueries(DescribeHiveQueriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHiveQueriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHiveQueriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHiveQueries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeImpalaQueries
+     * @param req DescribeImpalaQueriesRequest
+     * @return DescribeImpalaQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImpalaQueriesResponse DescribeImpalaQueries(DescribeImpalaQueriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImpalaQueriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImpalaQueriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImpalaQueries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询待续费节点信息
      * @param req DescribeInstanceRenewNodesRequest
      * @return DescribeInstanceRenewNodesResponse
@@ -293,6 +333,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUsersForUserManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DescribeYarnApplications
+     * @param req DescribeYarnApplicationsRequest
+     * @return DescribeYarnApplicationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnApplicationsResponse DescribeYarnApplications(DescribeYarnApplicationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeYarnApplicationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeYarnApplicationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeYarnApplications");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

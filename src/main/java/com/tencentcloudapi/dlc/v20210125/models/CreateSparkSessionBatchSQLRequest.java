@@ -86,7 +86,9 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     private String SessionName;
 
     /**
-    * Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+    * Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
     */
     @SerializedName("Arguments")
     @Expose
@@ -237,16 +239,24 @@ public class CreateSparkSessionBatchSQLRequest extends AbstractModel{
     }
 
     /**
-     * Get Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填； 
-     * @return Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * Get Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置； 
+     * @return Arguments Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      */
     public KVPair [] getArguments() {
         return this.Arguments;
     }
 
     /**
-     * Set Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
-     * @param Arguments Session相关配置，当前支持：dlc.eni、dlc.role.arn、dlc.sql.set.config以及用户指定的配置，注：roleArn必填；
+     * Set Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
+     * @param Arguments Session相关配置，当前支持：1.dlc.eni：用户配置的eni网关信息，可以用过该字段设置；
+2.dlc.role.arn：用户配置的roleArn鉴权策略配置信息，可以用过该字段设置；
+3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      */
     public void setArguments(KVPair [] Arguments) {
         this.Arguments = Arguments;

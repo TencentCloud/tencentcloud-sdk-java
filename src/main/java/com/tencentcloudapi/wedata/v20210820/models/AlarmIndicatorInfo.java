@@ -79,6 +79,27 @@ public class AlarmIndicatorInfo extends AbstractModel{
     private String AlarmIndicatorUnit;
 
     /**
+    * 告警周期
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Long Duration;
+
+    /**
+    * 告警周期单位
+    */
+    @SerializedName("DurationUnit")
+    @Expose
+    private String DurationUnit;
+
+    /**
+    * 周期内最多告警次数
+    */
+    @SerializedName("MaxTimes")
+    @Expose
+    private Long MaxTimes;
+
+    /**
      * Get 指标id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 指标id
@@ -218,6 +239,54 @@ public class AlarmIndicatorInfo extends AbstractModel{
         this.AlarmIndicatorUnit = AlarmIndicatorUnit;
     }
 
+    /**
+     * Get 告警周期 
+     * @return Duration 告警周期
+     */
+    public Long getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 告警周期
+     * @param Duration 告警周期
+     */
+    public void setDuration(Long Duration) {
+        this.Duration = Duration;
+    }
+
+    /**
+     * Get 告警周期单位 
+     * @return DurationUnit 告警周期单位
+     */
+    public String getDurationUnit() {
+        return this.DurationUnit;
+    }
+
+    /**
+     * Set 告警周期单位
+     * @param DurationUnit 告警周期单位
+     */
+    public void setDurationUnit(String DurationUnit) {
+        this.DurationUnit = DurationUnit;
+    }
+
+    /**
+     * Get 周期内最多告警次数 
+     * @return MaxTimes 周期内最多告警次数
+     */
+    public Long getMaxTimes() {
+        return this.MaxTimes;
+    }
+
+    /**
+     * Set 周期内最多告警次数
+     * @param MaxTimes 周期内最多告警次数
+     */
+    public void setMaxTimes(Long MaxTimes) {
+        this.MaxTimes = MaxTimes;
+    }
+
     public AlarmIndicatorInfo() {
     }
 
@@ -247,6 +316,15 @@ public class AlarmIndicatorInfo extends AbstractModel{
         if (source.AlarmIndicatorUnit != null) {
             this.AlarmIndicatorUnit = new String(source.AlarmIndicatorUnit);
         }
+        if (source.Duration != null) {
+            this.Duration = new Long(source.Duration);
+        }
+        if (source.DurationUnit != null) {
+            this.DurationUnit = new String(source.DurationUnit);
+        }
+        if (source.MaxTimes != null) {
+            this.MaxTimes = new Long(source.MaxTimes);
+        }
     }
 
 
@@ -261,6 +339,9 @@ public class AlarmIndicatorInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EstimatedTime", this.EstimatedTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "AlarmIndicatorUnit", this.AlarmIndicatorUnit);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "DurationUnit", this.DurationUnit);
+        this.setParamSimple(map, prefix + "MaxTimes", this.MaxTimes);
 
     }
 }

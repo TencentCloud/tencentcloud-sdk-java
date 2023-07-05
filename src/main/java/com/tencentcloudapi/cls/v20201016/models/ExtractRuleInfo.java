@@ -155,7 +155,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     private Long MetadataType;
 
     /**
-    * 采集配置路径正则表达式，MetadataType为1时必填
+    * 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathRegex")
@@ -506,9 +506,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Get 采集配置路径正则表达式，MetadataType为1时必填
+     * Get 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PathRegex 采集配置路径正则表达式，MetadataType为1时必填
+     * @return PathRegex 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathRegex() {
@@ -516,9 +516,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议
     }
 
     /**
-     * Set 采集配置路径正则表达式，MetadataType为1时必填
+     * Set 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PathRegex 采集配置路径正则表达式，MetadataType为1时必填
+     * @param PathRegex 采集配置路径正则表达式，MetadataType为3时必填
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathRegex(String PathRegex) {

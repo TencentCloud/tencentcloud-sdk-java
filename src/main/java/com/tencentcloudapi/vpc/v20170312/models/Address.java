@@ -185,6 +185,13 @@ public class Address extends AbstractModel{
     private String InstanceType;
 
     /**
+    * 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+    */
+    @SerializedName("AntiDDoSPackageId")
+    @Expose
+    private String AntiDDoSPackageId;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -580,6 +587,22 @@ public class Address extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID. 
+     * @return AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+     */
+    public String getAntiDDoSPackageId() {
+        return this.AntiDDoSPackageId;
+    }
+
+    /**
+     * Set 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+     * @param AntiDDoSPackageId 高防包ID,当EIP类型为高防EIP时，返回EIP绑定的高防包ID.
+     */
+    public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
+        this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
     public Address() {
     }
 
@@ -654,6 +677,9 @@ public class Address extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.AntiDDoSPackageId != null) {
+            this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
     }
 
 
@@ -682,6 +708,7 @@ public class Address extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "DeadlineDate", this.DeadlineDate);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
 
     }
 }

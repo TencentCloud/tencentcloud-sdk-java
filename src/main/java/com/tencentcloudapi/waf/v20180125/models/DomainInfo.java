@@ -51,7 +51,7 @@ public class DomainInfo extends AbstractModel{
     private String Cname;
 
     /**
-    * 实例类型
+    * 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
     */
     @SerializedName("Edition")
     @Expose
@@ -79,28 +79,28 @@ public class DomainInfo extends AbstractModel{
     private Long ClsStatus;
 
     /**
-    * clb模式
+    * clbwaf使用模式,0镜像模式 1清洗模式
     */
     @SerializedName("FlowMode")
     @Expose
     private Long FlowMode;
 
     /**
-    * waf开关
+    * waf开关,0关闭 1开启
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 防御模式
+    * 规则防御模式,0观察模式 1拦截模式
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * AI防御模式
+    * AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
     */
     @SerializedName("Engine")
     @Expose
@@ -142,7 +142,7 @@ public class DomainInfo extends AbstractModel{
     private Long AppId;
 
     /**
-    * clb状态
+    * clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
     */
     @SerializedName("State")
     @Expose
@@ -156,14 +156,14 @@ public class DomainInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 0关闭 1开启
+    * Ipv6开关状态,0关闭 1开启
     */
     @SerializedName("Ipv6Status")
     @Expose
     private Long Ipv6Status;
 
     /**
-    * 0关闭 1开启
+    * BOT开关状态,0关闭 1开启
     */
     @SerializedName("BotStatus")
     @Expose
@@ -177,26 +177,58 @@ public class DomainInfo extends AbstractModel{
     private Long Level;
 
     /**
-    * 是否开启投递CLS功能
+    * 是否开启投递CLS功能,0关闭 1开启
     */
     @SerializedName("PostCLSStatus")
     @Expose
     private Long PostCLSStatus;
 
     /**
-    * 是否开启投递CKafka功能
+    * 是否开启投递CKafka功能,0关闭 1开启
     */
     @SerializedName("PostCKafkaStatus")
     @Expose
     private Long PostCKafkaStatus;
 
     /**
-    * 应用型负载均衡类型: clb或者apisix，默认clb
+    * cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcClusters")
+    @Expose
+    private String CdcClusters;
+
+    /**
+    * api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiStatus")
+    @Expose
+    private Long ApiStatus;
+
+    /**
+    * 应用型负载均衡类型,clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbType")
     @Expose
     private String AlbType;
+
+    /**
+    * 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SgState")
+    @Expose
+    private Long SgState;
+
+    /**
+    * 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SgDetail")
+    @Expose
+    private String SgDetail;
 
     /**
      * Get 域名 
@@ -263,16 +295,16 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例类型 
-     * @return Edition 实例类型
+     * Get 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名 
+     * @return Edition 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 实例类型
-     * @param Edition 实例类型
+     * Set 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
+     * @param Edition 实例类型,sparta-waf表示saaswaf实例域名,clb-waf表示clbwaf实例域名,cdc-clb-waf表示CDC环境下clbwaf实例域名,cdn-waf表示cdnwaf实例域名
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;
@@ -327,64 +359,64 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get clb模式 
-     * @return FlowMode clb模式
+     * Get clbwaf使用模式,0镜像模式 1清洗模式 
+     * @return FlowMode clbwaf使用模式,0镜像模式 1清洗模式
      */
     public Long getFlowMode() {
         return this.FlowMode;
     }
 
     /**
-     * Set clb模式
-     * @param FlowMode clb模式
+     * Set clbwaf使用模式,0镜像模式 1清洗模式
+     * @param FlowMode clbwaf使用模式,0镜像模式 1清洗模式
      */
     public void setFlowMode(Long FlowMode) {
         this.FlowMode = FlowMode;
     }
 
     /**
-     * Get waf开关 
-     * @return Status waf开关
+     * Get waf开关,0关闭 1开启 
+     * @return Status waf开关,0关闭 1开启
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set waf开关
-     * @param Status waf开关
+     * Set waf开关,0关闭 1开启
+     * @param Status waf开关,0关闭 1开启
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 防御模式 
-     * @return Mode 防御模式
+     * Get 规则防御模式,0观察模式 1拦截模式 
+     * @return Mode 规则防御模式,0观察模式 1拦截模式
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 防御模式
-     * @param Mode 防御模式
+     * Set 规则防御模式,0观察模式 1拦截模式
+     * @param Mode 规则防御模式,0观察模式 1拦截模式
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get AI防御模式 
-     * @return Engine AI防御模式
+     * Get AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式 
+     * @return Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public Long getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set AI防御模式
-     * @param Engine AI防御模式
+     * Set AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
+     * @param Engine AI防御模式,10规则引擎观察&&AI引擎关闭模式 11规则引擎观察&&AI引擎观察模式 12规则引擎观察&&AI引擎拦截模式 20规则引擎拦截&&AI引擎关闭模式 21规则引擎拦截&&AI引擎观察模式 22规则引擎拦截&&AI引擎拦截模式
      */
     public void setEngine(Long Engine) {
         this.Engine = Engine;
@@ -471,16 +503,16 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get clb状态 
-     * @return State clb状态
+     * Get clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误 
+     * @return State clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set clb状态
-     * @param State clb状态
+     * Set clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
+     * @param State clbwaf域名监听器状态,0操作成功 4正在绑定LB 6正在解绑LB 7解绑LB失败 8绑定LB失败 10内部错误
      */
     public void setState(Long State) {
         this.State = State;
@@ -503,32 +535,32 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 0关闭 1开启 
-     * @return Ipv6Status 0关闭 1开启
+     * Get Ipv6开关状态,0关闭 1开启 
+     * @return Ipv6Status Ipv6开关状态,0关闭 1开启
      */
     public Long getIpv6Status() {
         return this.Ipv6Status;
     }
 
     /**
-     * Set 0关闭 1开启
-     * @param Ipv6Status 0关闭 1开启
+     * Set Ipv6开关状态,0关闭 1开启
+     * @param Ipv6Status Ipv6开关状态,0关闭 1开启
      */
     public void setIpv6Status(Long Ipv6Status) {
         this.Ipv6Status = Ipv6Status;
     }
 
     /**
-     * Get 0关闭 1开启 
-     * @return BotStatus 0关闭 1开启
+     * Get BOT开关状态,0关闭 1开启 
+     * @return BotStatus BOT开关状态,0关闭 1开启
      */
     public Long getBotStatus() {
         return this.BotStatus;
     }
 
     /**
-     * Set 0关闭 1开启
-     * @param BotStatus 0关闭 1开启
+     * Set BOT开关状态,0关闭 1开启
+     * @param BotStatus BOT开关状态,0关闭 1开启
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
@@ -551,41 +583,81 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否开启投递CLS功能 
-     * @return PostCLSStatus 是否开启投递CLS功能
+     * Get 是否开启投递CLS功能,0关闭 1开启 
+     * @return PostCLSStatus 是否开启投递CLS功能,0关闭 1开启
      */
     public Long getPostCLSStatus() {
         return this.PostCLSStatus;
     }
 
     /**
-     * Set 是否开启投递CLS功能
-     * @param PostCLSStatus 是否开启投递CLS功能
+     * Set 是否开启投递CLS功能,0关闭 1开启
+     * @param PostCLSStatus 是否开启投递CLS功能,0关闭 1开启
      */
     public void setPostCLSStatus(Long PostCLSStatus) {
         this.PostCLSStatus = PostCLSStatus;
     }
 
     /**
-     * Get 是否开启投递CKafka功能 
-     * @return PostCKafkaStatus 是否开启投递CKafka功能
+     * Get 是否开启投递CKafka功能,0关闭 1开启 
+     * @return PostCKafkaStatus 是否开启投递CKafka功能,0关闭 1开启
      */
     public Long getPostCKafkaStatus() {
         return this.PostCKafkaStatus;
     }
 
     /**
-     * Set 是否开启投递CKafka功能
-     * @param PostCKafkaStatus 是否开启投递CKafka功能
+     * Set 是否开启投递CKafka功能,0关闭 1开启
+     * @param PostCKafkaStatus 是否开启投递CKafka功能,0关闭 1开启
      */
     public void setPostCKafkaStatus(Long PostCKafkaStatus) {
         this.PostCKafkaStatus = PostCKafkaStatus;
     }
 
     /**
-     * Get 应用型负载均衡类型: clb或者apisix，默认clb
+     * Get cdc实例域名接入的集群信息,非cdc实例忽略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+     * @return CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcClusters() {
+        return this.CdcClusters;
+    }
+
+    /**
+     * Set cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcClusters(String CdcClusters) {
+        this.CdcClusters = CdcClusters;
+    }
+
+    /**
+     * Get api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiStatus api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApiStatus() {
+        return this.ApiStatus;
+    }
+
+    /**
+     * Set api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiStatus api安全开关状态,0关闭 1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiStatus(Long ApiStatus) {
+        this.ApiStatus = ApiStatus;
+    }
+
+    /**
+     * Get 应用型负载均衡类型,clb或者apisix，默认clb
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlbType 应用型负载均衡类型,clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlbType() {
@@ -593,13 +665,53 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Set 应用型负载均衡类型: clb或者apisix，默认clb
+     * Set 应用型负载均衡类型,clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AlbType 应用型负载均衡类型: clb或者apisix，默认clb
+     * @param AlbType 应用型负载均衡类型,clb或者apisix，默认clb
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
+    }
+
+    /**
+     * Get 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSgState() {
+        return this.SgState;
+    }
+
+    /**
+     * Set 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SgState 安全组状态,0不展示 1非腾讯云源站 2安全组绑定失败 3安全组发生变更
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSgState(Long SgState) {
+        this.SgState = SgState;
+    }
+
+    /**
+     * Get 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SgDetail 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSgDetail() {
+        return this.SgDetail;
+    }
+
+    /**
+     * Set 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SgDetail 安全组状态的详细解释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSgDetail(String SgDetail) {
+        this.SgDetail = SgDetail;
     }
 
     public DomainInfo() {
@@ -694,8 +806,20 @@ public class DomainInfo extends AbstractModel{
         if (source.PostCKafkaStatus != null) {
             this.PostCKafkaStatus = new Long(source.PostCKafkaStatus);
         }
+        if (source.CdcClusters != null) {
+            this.CdcClusters = new String(source.CdcClusters);
+        }
+        if (source.ApiStatus != null) {
+            this.ApiStatus = new Long(source.ApiStatus);
+        }
         if (source.AlbType != null) {
             this.AlbType = new String(source.AlbType);
+        }
+        if (source.SgState != null) {
+            this.SgState = new Long(source.SgState);
+        }
+        if (source.SgDetail != null) {
+            this.SgDetail = new String(source.SgDetail);
         }
     }
 
@@ -728,7 +852,11 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "PostCLSStatus", this.PostCLSStatus);
         this.setParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
+        this.setParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
+        this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
         this.setParamSimple(map, prefix + "AlbType", this.AlbType);
+        this.setParamSimple(map, prefix + "SgState", this.SgState);
+        this.setParamSimple(map, prefix + "SgDetail", this.SgDetail);
 
     }
 }

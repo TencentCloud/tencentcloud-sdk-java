@@ -44,7 +44,10 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * 是否自动使用代金券,1是,0否，默认不使用。
+    * 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -65,7 +68,11 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+    * 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -134,16 +141,28 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否自动使用代金券,1是,0否，默认不使用。 
-     * @return AutoVoucher 是否自动使用代金券,1是,0否，默认不使用。
+     * Get 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0 
+     * @return AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券,1是,0否，默认不使用。
-     * @param AutoVoucher 是否自动使用代金券,1是,0否，默认不使用。
+     * Set 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+     * @param AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -182,16 +201,32 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。 
-     * @return SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * Get 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0  
+     * @return SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
-     * @param SwitchTag 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
+     * Set 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
+     * @param SwitchTag 指定实例配置完成变更后的切换时间。
+<li>0：立即切换 
+<li>1：指定时间切换
+<li>2：维护时间窗口内切换
+默认值：0 
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

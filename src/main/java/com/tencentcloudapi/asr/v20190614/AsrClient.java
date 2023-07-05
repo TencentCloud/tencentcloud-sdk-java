@@ -464,4 +464,90 @@ public class AsrClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *本接口用于以删除已经注册的说话人信息（删除之后，原有的说话人ID和说话人音频数据都会失效）
+     * @param req VoicePrintDeleteRequest
+     * @return VoicePrintDeleteResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintDeleteResponse VoicePrintDelete(VoicePrintDeleteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VoicePrintDeleteResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VoicePrintDeleteResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VoicePrintDelete");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *说话人注册接口用于注册一个指定音频，生成一个唯一的说话人id，后续可通过说话人验证接口验证其它音频和已有的说话人ID匹配度，注册时可指定说话人昵称，方便标识说话人ID，  说话人昵称可重复配置。 
+（注: 一个appid最多可以注册1000个说话人ID，一个说话人ID仅支持一条音频注册，后续可通过更新接口进行更新）
+
+使用须知
+支持的输入格式：编码文件(PCM, WAV)、16 bit采样位数、单声道（mono）。
+
+支持的音频采样率：16000 Hz。
+     * @param req VoicePrintEnrollRequest
+     * @return VoicePrintEnrollResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintEnrollResponse VoicePrintEnroll(VoicePrintEnrollRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VoicePrintEnrollResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VoicePrintEnrollResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VoicePrintEnroll");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于更新和覆盖已注册的音频数据和说话人昵称，更新后原有的音频数据将失效。
+     * @param req VoicePrintUpdateRequest
+     * @return VoicePrintUpdateResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintUpdateResponse VoicePrintUpdate(VoicePrintUpdateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VoicePrintUpdateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VoicePrintUpdateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VoicePrintUpdate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于校验传入音频与已注册音频的匹配程度，通过指定说话人ID（VoicePrintId）和一段音频进行音频和说话人的匹配度判断
+     * @param req VoicePrintVerifyRequest
+     * @return VoicePrintVerifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoicePrintVerifyResponse VoicePrintVerify(VoicePrintVerifyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VoicePrintVerifyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VoicePrintVerifyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VoicePrintVerify");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

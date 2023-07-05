@@ -23,92 +23,117 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+    * 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * 包年包月实例解隔离时购买时常 以月为单位
+    * 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 是否使用代金券：true-使用,false-不使用，默认不使用
+    * 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
 
     /**
-    * 代金券id列表
+    * 代金券id列表。
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-     * Get 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。 
-     * @return DBInstanceIdSet 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * Get 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。 
+     * @return DBInstanceIdSet 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
-     * @param DBInstanceIdSet 资源ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * Set 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
+     * @param DBInstanceIdSet 实例ID列表。注意：当前已不支持同时解隔离多个实例，这里只能传入单个实例ID。
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get 包年包月实例解隔离时购买时常 以月为单位 
-     * @return Period 包年包月实例解隔离时购买时常 以月为单位
+     * Get 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1 
+     * @return Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 包年包月实例解隔离时购买时常 以月为单位
-     * @param Period 包年包月实例解隔离时购买时常 以月为单位
+     * Set 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 是否使用代金券：true-使用,false-不使用，默认不使用 
-     * @return AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
+     * Get 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false 
+     * @return AutoVoucher 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否使用代金券：true-使用,false-不使用，默认不使用
-     * @param AutoVoucher 是否使用代金券：true-使用,false-不使用，默认不使用
+     * Set 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
+     * @param AutoVoucher 是否使用代金券：
+<li>true：使用
+<li>false：不使用
+默认值：false
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get 代金券id列表 
-     * @return VoucherIds 代金券id列表
+     * Get 代金券id列表。 
+     * @return VoucherIds 代金券id列表。
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set 代金券id列表
-     * @param VoucherIds 代金券id列表
+     * Set 代金券id列表。
+     * @param VoucherIds 代金券id列表。
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;

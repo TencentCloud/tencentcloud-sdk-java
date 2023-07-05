@@ -128,6 +128,20 @@ AnycastEIP是否用于绑定负载均衡。
     private String Egress;
 
     /**
+    * 高防包ID， 申请高防IP时，该字段必传。
+    */
+    @SerializedName("AntiDDoSPackageId")
+    @Expose
+    private String AntiDDoSPackageId;
+
+    /**
+    * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get EIP数量。默认值：1。 
      * @return AddressCount EIP数量。默认值：1。
      */
@@ -403,6 +417,38 @@ AnycastEIP是否用于绑定负载均衡。
         this.Egress = Egress;
     }
 
+    /**
+     * Get 高防包ID， 申请高防IP时，该字段必传。 
+     * @return AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
+     */
+    public String getAntiDDoSPackageId() {
+        return this.AntiDDoSPackageId;
+    }
+
+    /**
+     * Set 高防包ID， 申请高防IP时，该字段必传。
+     * @param AntiDDoSPackageId 高防包ID， 申请高防IP时，该字段必传。
+     */
+    public void setAntiDDoSPackageId(String AntiDDoSPackageId) {
+        this.AntiDDoSPackageId = AntiDDoSPackageId;
+    }
+
+    /**
+     * Get 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。 
+     * @return ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     * @param ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public AllocateAddressesRequest() {
     }
 
@@ -450,6 +496,12 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.AntiDDoSPackageId != null) {
+            this.AntiDDoSPackageId = new String(source.AntiDDoSPackageId);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -469,6 +521,8 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

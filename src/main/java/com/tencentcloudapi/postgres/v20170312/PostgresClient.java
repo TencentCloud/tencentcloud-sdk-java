@@ -1239,7 +1239,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *本接口（IsolateDBInstances）用于隔离实例
+     *本接口（IsolateDBInstances）用于隔离实例。
      * @param req IsolateDBInstancesRequest
      * @return IsolateDBInstancesResponse
      * @throws TencentCloudSDKException

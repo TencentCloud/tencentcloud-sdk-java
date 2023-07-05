@@ -37,6 +37,13 @@ public class FailedCreateStaffData extends AbstractModel{
     private String Mobile;
 
     /**
+    * 传入的企微账号id
+    */
+    @SerializedName("WeworkOpenId")
+    @Expose
+    private String WeworkOpenId;
+
+    /**
     * 失败原因
     */
     @SerializedName("Reason")
@@ -76,6 +83,22 @@ public class FailedCreateStaffData extends AbstractModel{
     }
 
     /**
+     * Get 传入的企微账号id 
+     * @return WeworkOpenId 传入的企微账号id
+     */
+    public String getWeworkOpenId() {
+        return this.WeworkOpenId;
+    }
+
+    /**
+     * Set 传入的企微账号id
+     * @param WeworkOpenId 传入的企微账号id
+     */
+    public void setWeworkOpenId(String WeworkOpenId) {
+        this.WeworkOpenId = WeworkOpenId;
+    }
+
+    /**
      * Get 失败原因 
      * @return Reason 失败原因
      */
@@ -105,6 +128,9 @@ public class FailedCreateStaffData extends AbstractModel{
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.WeworkOpenId != null) {
+            this.WeworkOpenId = new String(source.WeworkOpenId);
+        }
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
@@ -117,6 +143,7 @@ public class FailedCreateStaffData extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "WeworkOpenId", this.WeworkOpenId);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }

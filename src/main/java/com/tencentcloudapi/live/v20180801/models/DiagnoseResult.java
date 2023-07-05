@@ -39,6 +39,14 @@ public class DiagnoseResult extends AbstractModel{
     private String [] LowFrameRateResults;
 
     /**
+    * 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StreamFormatResults")
+    @Expose
+    private String [] StreamFormatResults;
+
+    /**
      * Get 断流信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StreamBrokenResults 断流信息
@@ -78,6 +86,26 @@ public class DiagnoseResult extends AbstractModel{
         this.LowFrameRateResults = LowFrameRateResults;
     }
 
+    /**
+     * Get 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StreamFormatResults 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getStreamFormatResults() {
+        return this.StreamFormatResults;
+    }
+
+    /**
+     * Set 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamFormatResults 流格式诊断信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStreamFormatResults(String [] StreamFormatResults) {
+        this.StreamFormatResults = StreamFormatResults;
+    }
+
     public DiagnoseResult() {
     }
 
@@ -98,6 +126,12 @@ public class DiagnoseResult extends AbstractModel{
                 this.LowFrameRateResults[i] = new String(source.LowFrameRateResults[i]);
             }
         }
+        if (source.StreamFormatResults != null) {
+            this.StreamFormatResults = new String[source.StreamFormatResults.length];
+            for (int i = 0; i < source.StreamFormatResults.length; i++) {
+                this.StreamFormatResults[i] = new String(source.StreamFormatResults[i]);
+            }
+        }
     }
 
 
@@ -107,6 +141,7 @@ public class DiagnoseResult extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "StreamBrokenResults.", this.StreamBrokenResults);
         this.setParamArraySimple(map, prefix + "LowFrameRateResults.", this.LowFrameRateResults);
+        this.setParamArraySimple(map, prefix + "StreamFormatResults.", this.StreamFormatResults);
 
     }
 }

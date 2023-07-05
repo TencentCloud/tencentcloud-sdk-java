@@ -170,6 +170,20 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
     private String TargetDatasourceId;
 
     /**
+    * dlc upsert主键
+    */
+    @SerializedName("UpsertKeys")
+    @Expose
+    private String [] UpsertKeys;
+
+    /**
+    * dlc表治理信息
+    */
+    @SerializedName("TableBaseInfo")
+    @Expose
+    private TableBaseInfo TableBaseInfo;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -505,6 +519,38 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.TargetDatasourceId = TargetDatasourceId;
     }
 
+    /**
+     * Get dlc upsert主键 
+     * @return UpsertKeys dlc upsert主键
+     */
+    public String [] getUpsertKeys() {
+        return this.UpsertKeys;
+    }
+
+    /**
+     * Set dlc upsert主键
+     * @param UpsertKeys dlc upsert主键
+     */
+    public void setUpsertKeys(String [] UpsertKeys) {
+        this.UpsertKeys = UpsertKeys;
+    }
+
+    /**
+     * Get dlc表治理信息 
+     * @return TableBaseInfo dlc表治理信息
+     */
+    public TableBaseInfo getTableBaseInfo() {
+        return this.TableBaseInfo;
+    }
+
+    /**
+     * Set dlc表治理信息
+     * @param TableBaseInfo dlc表治理信息
+     */
+    public void setTableBaseInfo(TableBaseInfo TableBaseInfo) {
+        this.TableBaseInfo = TableBaseInfo;
+    }
+
     public GenHiveTableDDLSqlRequest() {
     }
 
@@ -585,6 +631,15 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         if (source.TargetDatasourceId != null) {
             this.TargetDatasourceId = new String(source.TargetDatasourceId);
         }
+        if (source.UpsertKeys != null) {
+            this.UpsertKeys = new String[source.UpsertKeys.length];
+            for (int i = 0; i < source.UpsertKeys.length; i++) {
+                this.UpsertKeys[i] = new String(source.UpsertKeys[i]);
+            }
+        }
+        if (source.TableBaseInfo != null) {
+            this.TableBaseInfo = new TableBaseInfo(source.TableBaseInfo);
+        }
     }
 
 
@@ -613,6 +668,8 @@ public class GenHiveTableDDLSqlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AddPositionDeletes", this.AddPositionDeletes);
         this.setParamSimple(map, prefix + "AddDeleteFiles", this.AddDeleteFiles);
         this.setParamSimple(map, prefix + "TargetDatasourceId", this.TargetDatasourceId);
+        this.setParamArraySimple(map, prefix + "UpsertKeys.", this.UpsertKeys);
+        this.setParamObj(map, prefix + "TableBaseInfo.", this.TableBaseInfo);
 
     }
 }

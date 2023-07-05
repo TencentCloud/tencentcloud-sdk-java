@@ -44,6 +44,14 @@ public class SourceFieldInfo extends AbstractModel{
     private String Alias;
 
     /**
+    * 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get 字段名称 
      * @return FieldName 字段名称
      */
@@ -91,6 +99,26 @@ public class SourceFieldInfo extends AbstractModel{
         this.Alias = Alias;
     }
 
+    /**
+     * Get 字段描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Comment 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Comment 字段描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
     public SourceFieldInfo() {
     }
 
@@ -108,6 +136,9 @@ public class SourceFieldInfo extends AbstractModel{
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class SourceFieldInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FieldName", this.FieldName);
         this.setParamSimple(map, prefix + "FieldType", this.FieldType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

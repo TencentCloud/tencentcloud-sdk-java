@@ -27,7 +27,7 @@ public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
     */
     @SerializedName("Status")
     @Expose
@@ -38,12 +38,12 @@ public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发 
+2：关闭立即下发开关情况下，触发开始下发 
      * @return Status 0：打开立即下发开关；
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
      */
     public Long getStatus() {
         return this.Status;
@@ -54,12 +54,12 @@ public class ModifyEnterpriseSecurityDispatchStatusRequest extends AbstractModel
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
      * @param Status 0：打开立即下发开关；
 
 1：关闭立即下发开关；
 
-2：关闭立即下发开关下，触发开始下发
+2：关闭立即下发开关情况下，触发开始下发
      */
     public void setStatus(Long Status) {
         this.Status = Status;

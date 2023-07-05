@@ -51,6 +51,13 @@ public class CommitIntegrationTaskRequest extends AbstractModel{
     private Long TaskType;
 
     /**
+    * 额外参数
+    */
+    @SerializedName("ExtConfig")
+    @Expose
+    private RecordField [] ExtConfig;
+
+    /**
      * Get 任务id 
      * @return TaskId 任务id
      */
@@ -114,6 +121,22 @@ public class CommitIntegrationTaskRequest extends AbstractModel{
         this.TaskType = TaskType;
     }
 
+    /**
+     * Get 额外参数 
+     * @return ExtConfig 额外参数
+     */
+    public RecordField [] getExtConfig() {
+        return this.ExtConfig;
+    }
+
+    /**
+     * Set 额外参数
+     * @param ExtConfig 额外参数
+     */
+    public void setExtConfig(RecordField [] ExtConfig) {
+        this.ExtConfig = ExtConfig;
+    }
+
     public CommitIntegrationTaskRequest() {
     }
 
@@ -134,6 +157,12 @@ public class CommitIntegrationTaskRequest extends AbstractModel{
         if (source.TaskType != null) {
             this.TaskType = new Long(source.TaskType);
         }
+        if (source.ExtConfig != null) {
+            this.ExtConfig = new RecordField[source.ExtConfig.length];
+            for (int i = 0; i < source.ExtConfig.length; i++) {
+                this.ExtConfig[i] = new RecordField(source.ExtConfig[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class CommitIntegrationTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CommitType", this.CommitType);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
+        this.setParamArrayObj(map, prefix + "ExtConfig.", this.ExtConfig);
 
     }
 }
