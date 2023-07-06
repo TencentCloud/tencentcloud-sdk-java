@@ -29,7 +29,7 @@ public class EccClient extends AbstractClient{
     private static String endpoint = "ecc.tencentcloudapi.com";
     private static String service = "ecc";
     private static String version = "2018-12-13";
-
+    
     public EccClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class EccClient extends AbstractClient{
     public CorrectMultiImageResponse CorrectMultiImage(CorrectMultiImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CorrectMultiImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CorrectMultiImageResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class EccClient extends AbstractClient{
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class EccClient extends AbstractClient{
     public ECCResponse ECC(ECCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ECCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ECCResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ public class EccClient extends AbstractClient{
     public EHOCRResponse EHOCR(EHOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EHOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EHOCRResponse>>() {
                 }.getType();

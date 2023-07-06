@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateUserStoreResponse extends AbstractModel{
 
     /**
+    * 用户目录ID
+    */
+    @SerializedName("UserStoreId")
+    @Expose
+    private String UserStoreId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 用户目录ID 
+     * @return UserStoreId 用户目录ID
+     */
+    public String getUserStoreId() {
+        return this.UserStoreId;
+    }
+
+    /**
+     * Set 用户目录ID
+     * @param UserStoreId 用户目录ID
+     */
+    public void setUserStoreId(String UserStoreId) {
+        this.UserStoreId = UserStoreId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreateUserStoreResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateUserStoreResponse(CreateUserStoreResponse source) {
+        if (source.UserStoreId != null) {
+            this.UserStoreId = new String(source.UserStoreId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateUserStoreResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

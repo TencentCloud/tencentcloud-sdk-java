@@ -29,7 +29,7 @@ public class SesClient extends AbstractClient{
     private static String endpoint = "ses.tencentcloudapi.com";
     private static String service = "ses";
     private static String version = "2020-10-02";
-
+    
     public SesClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SesClient extends AbstractClient{
     public BatchSendEmailResponse BatchSendEmail(BatchSendEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchSendEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchSendEmailResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SesClient extends AbstractClient{
     public CreateEmailAddressResponse CreateEmailAddress(CreateEmailAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEmailAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEmailAddressResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SesClient extends AbstractClient{
     public CreateEmailIdentityResponse CreateEmailIdentity(CreateEmailIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEmailIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEmailIdentityResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class SesClient extends AbstractClient{
     public CreateEmailTemplateResponse CreateEmailTemplate(CreateEmailTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEmailTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEmailTemplateResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class SesClient extends AbstractClient{
     public CreateReceiverResponse CreateReceiver(CreateReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReceiverResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class SesClient extends AbstractClient{
     public CreateReceiverDetailResponse CreateReceiverDetail(CreateReceiverDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class SesClient extends AbstractClient{
     public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReceiverDetailWithDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailWithDataResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class SesClient extends AbstractClient{
     public DeleteBlackListResponse DeleteBlackList(DeleteBlackListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBlackListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBlackListResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class SesClient extends AbstractClient{
     public DeleteEmailAddressResponse DeleteEmailAddress(DeleteEmailAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEmailAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEmailAddressResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class SesClient extends AbstractClient{
     public DeleteEmailIdentityResponse DeleteEmailIdentity(DeleteEmailIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEmailIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEmailIdentityResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class SesClient extends AbstractClient{
     public DeleteEmailTemplateResponse DeleteEmailTemplate(DeleteEmailTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEmailTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class SesClient extends AbstractClient{
     public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class SesClient extends AbstractClient{
     public GetEmailIdentityResponse GetEmailIdentity(GetEmailIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetEmailIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetEmailIdentityResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class SesClient extends AbstractClient{
     public GetEmailTemplateResponse GetEmailTemplate(GetEmailTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetEmailTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetEmailTemplateResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class SesClient extends AbstractClient{
     public GetSendEmailStatusResponse GetSendEmailStatus(GetSendEmailStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSendEmailStatusResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class SesClient extends AbstractClient{
     public GetStatisticsReportResponse GetStatisticsReport(GetStatisticsReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetStatisticsReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetStatisticsReportResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class SesClient extends AbstractClient{
     public ListBlackEmailAddressResponse ListBlackEmailAddress(ListBlackEmailAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListBlackEmailAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListBlackEmailAddressResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class SesClient extends AbstractClient{
     public ListEmailAddressResponse ListEmailAddress(ListEmailAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEmailAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEmailAddressResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class SesClient extends AbstractClient{
     public ListEmailIdentitiesResponse ListEmailIdentities(ListEmailIdentitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEmailIdentitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEmailIdentitiesResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ public class SesClient extends AbstractClient{
     public ListEmailTemplatesResponse ListEmailTemplates(ListEmailTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEmailTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEmailTemplatesResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ public class SesClient extends AbstractClient{
     public ListReceiversResponse ListReceivers(ListReceiversRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListReceiversResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListReceiversResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ public class SesClient extends AbstractClient{
     public ListSendTasksResponse ListSendTasks(ListSendTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListSendTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListSendTasksResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ public class SesClient extends AbstractClient{
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendEmailResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ public class SesClient extends AbstractClient{
     public UpdateEmailIdentityResponse UpdateEmailIdentity(UpdateEmailIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEmailIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEmailIdentityResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ public class SesClient extends AbstractClient{
     public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ public class SesClient extends AbstractClient{
     public UpdateEmailTemplateResponse UpdateEmailTemplate(UpdateEmailTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEmailTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEmailTemplateResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class IcClient extends AbstractClient{
     private static String endpoint = "ic.tencentcloudapi.com";
     private static String service = "ic";
     private static String version = "2019-03-07";
-
+    
     public IcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IcClient extends AbstractClient{
     public DescribeAppResponse DescribeApp(DescribeAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IcClient extends AbstractClient{
     public DescribeCardResponse DescribeCard(DescribeCardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCardResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IcClient extends AbstractClient{
     public DescribeCardsResponse DescribeCards(DescribeCardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCardsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCardsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IcClient extends AbstractClient{
     public DescribeSmsResponse DescribeSms(DescribeSmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class IcClient extends AbstractClient{
     public ModifyUserCardRemarkResponse ModifyUserCardRemark(ModifyUserCardRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserCardRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserCardRemarkResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class IcClient extends AbstractClient{
     public PayForExtendDataResponse PayForExtendData(PayForExtendDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PayForExtendDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PayForExtendDataResponse>>() {
                 }.getType();
@@ -172,6 +178,7 @@ public class IcClient extends AbstractClient{
     public RenewCardsResponse RenewCards(RenewCardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewCardsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewCardsResponse>>() {
                 }.getType();
@@ -192,6 +199,7 @@ public class IcClient extends AbstractClient{
     public SendMultiSmsResponse SendMultiSms(SendMultiSmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendMultiSmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendMultiSmsResponse>>() {
                 }.getType();
@@ -212,6 +220,7 @@ public class IcClient extends AbstractClient{
     public SendSmsResponse SendSms(SendSmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendSmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendSmsResponse>>() {
                 }.getType();

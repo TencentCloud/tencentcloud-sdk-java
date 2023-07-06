@@ -29,7 +29,7 @@ public class TdmqClient extends AbstractClient{
     private static String endpoint = "tdmq.tencentcloudapi.com";
     private static String service = "tdmq";
     private static String version = "2020-02-17";
-
+    
     public TdmqClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TdmqClient extends AbstractClient{
     public AcknowledgeMessageResponse AcknowledgeMessage(AcknowledgeMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AcknowledgeMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AcknowledgeMessageResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TdmqClient extends AbstractClient{
     public ClearCmqQueueResponse ClearCmqQueue(ClearCmqQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearCmqQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearCmqQueueResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TdmqClient extends AbstractClient{
     public ClearCmqSubscriptionFilterTagsResponse ClearCmqSubscriptionFilterTags(ClearCmqSubscriptionFilterTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class TdmqClient extends AbstractClient{
     public CreateAMQPClusterResponse CreateAMQPCluster(CreateAMQPClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAMQPClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAMQPClusterResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class TdmqClient extends AbstractClient{
     public CreateAMQPExchangeResponse CreateAMQPExchange(CreateAMQPExchangeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAMQPExchangeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAMQPExchangeResponse>>() {
                 }.getType();
@@ -153,6 +158,7 @@ public class TdmqClient extends AbstractClient{
     public CreateAMQPQueueResponse CreateAMQPQueue(CreateAMQPQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAMQPQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAMQPQueueResponse>>() {
                 }.getType();
@@ -175,6 +181,7 @@ public class TdmqClient extends AbstractClient{
     public CreateAMQPRouteRelationResponse CreateAMQPRouteRelation(CreateAMQPRouteRelationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAMQPRouteRelationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAMQPRouteRelationResponse>>() {
                 }.getType();
@@ -197,6 +204,7 @@ public class TdmqClient extends AbstractClient{
     public CreateAMQPVHostResponse CreateAMQPVHost(CreateAMQPVHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAMQPVHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAMQPVHostResponse>>() {
                 }.getType();
@@ -217,6 +225,7 @@ public class TdmqClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -237,6 +246,7 @@ public class TdmqClient extends AbstractClient{
     public CreateCmqQueueResponse CreateCmqQueue(CreateCmqQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCmqQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCmqQueueResponse>>() {
                 }.getType();
@@ -257,6 +267,7 @@ public class TdmqClient extends AbstractClient{
     public CreateCmqSubscribeResponse CreateCmqSubscribe(CreateCmqSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCmqSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCmqSubscribeResponse>>() {
                 }.getType();
@@ -277,6 +288,7 @@ public class TdmqClient extends AbstractClient{
     public CreateCmqTopicResponse CreateCmqTopic(CreateCmqTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCmqTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCmqTopicResponse>>() {
                 }.getType();
@@ -297,6 +309,7 @@ public class TdmqClient extends AbstractClient{
     public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnvironmentResponse>>() {
                 }.getType();
@@ -317,6 +330,7 @@ public class TdmqClient extends AbstractClient{
     public CreateEnvironmentRoleResponse CreateEnvironmentRole(CreateEnvironmentRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnvironmentRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnvironmentRoleResponse>>() {
                 }.getType();
@@ -337,6 +351,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRabbitMQUserResponse CreateRabbitMQUser(CreateRabbitMQUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRabbitMQUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRabbitMQUserResponse>>() {
                 }.getType();
@@ -357,6 +372,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(CreateRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRabbitMQVipInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVipInstanceResponse>>() {
                 }.getType();
@@ -377,6 +393,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHost(CreateRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRabbitMQVirtualHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRabbitMQVirtualHostResponse>>() {
                 }.getType();
@@ -397,6 +414,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQClusterResponse CreateRocketMQCluster(CreateRocketMQClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRocketMQClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRocketMQClusterResponse>>() {
                 }.getType();
@@ -417,6 +435,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQGroupResponse CreateRocketMQGroup(CreateRocketMQGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRocketMQGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRocketMQGroupResponse>>() {
                 }.getType();
@@ -437,6 +456,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQNamespaceResponse CreateRocketMQNamespace(CreateRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRocketMQNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRocketMQNamespaceResponse>>() {
                 }.getType();
@@ -457,6 +477,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQTopicResponse CreateRocketMQTopic(CreateRocketMQTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRocketMQTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRocketMQTopicResponse>>() {
                 }.getType();
@@ -477,6 +498,7 @@ public class TdmqClient extends AbstractClient{
     public CreateRoleResponse CreateRole(CreateRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoleResponse>>() {
                 }.getType();
@@ -497,6 +519,7 @@ public class TdmqClient extends AbstractClient{
     public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubscriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubscriptionResponse>>() {
                 }.getType();
@@ -517,6 +540,7 @@ public class TdmqClient extends AbstractClient{
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
                 }.getType();
@@ -539,6 +563,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteAMQPClusterResponse DeleteAMQPCluster(DeleteAMQPClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAMQPClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAMQPClusterResponse>>() {
                 }.getType();
@@ -561,6 +586,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteAMQPExchangeResponse DeleteAMQPExchange(DeleteAMQPExchangeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAMQPExchangeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAMQPExchangeResponse>>() {
                 }.getType();
@@ -583,6 +609,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteAMQPQueueResponse DeleteAMQPQueue(DeleteAMQPQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAMQPQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAMQPQueueResponse>>() {
                 }.getType();
@@ -605,6 +632,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteAMQPRouteRelationResponse DeleteAMQPRouteRelation(DeleteAMQPRouteRelationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAMQPRouteRelationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAMQPRouteRelationResponse>>() {
                 }.getType();
@@ -627,6 +655,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteAMQPVHostResponse DeleteAMQPVHost(DeleteAMQPVHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAMQPVHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAMQPVHostResponse>>() {
                 }.getType();
@@ -647,6 +676,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
@@ -667,6 +697,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteCmqQueueResponse DeleteCmqQueue(DeleteCmqQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCmqQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCmqQueueResponse>>() {
                 }.getType();
@@ -687,6 +718,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteCmqSubscribeResponse DeleteCmqSubscribe(DeleteCmqSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCmqSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCmqSubscribeResponse>>() {
                 }.getType();
@@ -707,6 +739,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteCmqTopicResponse DeleteCmqTopic(DeleteCmqTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCmqTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCmqTopicResponse>>() {
                 }.getType();
@@ -727,6 +760,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteEnvironmentRolesResponse DeleteEnvironmentRoles(DeleteEnvironmentRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEnvironmentRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentRolesResponse>>() {
                 }.getType();
@@ -747,6 +781,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteEnvironmentsResponse DeleteEnvironments(DeleteEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentsResponse>>() {
                 }.getType();
@@ -767,6 +802,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRabbitMQUserResponse DeleteRabbitMQUser(DeleteRabbitMQUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRabbitMQUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQUserResponse>>() {
                 }.getType();
@@ -787,6 +823,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(DeleteRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRabbitMQVirtualHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQVirtualHostResponse>>() {
                 }.getType();
@@ -807,6 +844,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQClusterResponse DeleteRocketMQCluster(DeleteRocketMQClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRocketMQClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRocketMQClusterResponse>>() {
                 }.getType();
@@ -827,6 +865,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQGroupResponse DeleteRocketMQGroup(DeleteRocketMQGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRocketMQGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRocketMQGroupResponse>>() {
                 }.getType();
@@ -847,6 +886,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(DeleteRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRocketMQNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRocketMQNamespaceResponse>>() {
                 }.getType();
@@ -867,6 +907,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQTopicResponse DeleteRocketMQTopic(DeleteRocketMQTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRocketMQTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRocketMQTopicResponse>>() {
                 }.getType();
@@ -887,6 +928,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteRolesResponse DeleteRoles(DeleteRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRolesResponse>>() {
                 }.getType();
@@ -907,6 +949,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSubscriptionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSubscriptionsResponse>>() {
                 }.getType();
@@ -927,6 +970,7 @@ public class TdmqClient extends AbstractClient{
     public DeleteTopicsResponse DeleteTopics(DeleteTopicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTopicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTopicsResponse>>() {
                 }.getType();
@@ -949,6 +993,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPClusterResponse DescribeAMQPCluster(DescribeAMQPClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPClusterResponse>>() {
                 }.getType();
@@ -969,6 +1014,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPClustersResponse DescribeAMQPClusters(DescribeAMQPClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPClustersResponse>>() {
                 }.getType();
@@ -991,6 +1037,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPCreateQuotaResponse DescribeAMQPCreateQuota(DescribeAMQPCreateQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPCreateQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPCreateQuotaResponse>>() {
                 }.getType();
@@ -1013,6 +1060,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPExchangesResponse DescribeAMQPExchanges(DescribeAMQPExchangesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPExchangesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPExchangesResponse>>() {
                 }.getType();
@@ -1035,6 +1083,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPQueuesResponse DescribeAMQPQueues(DescribeAMQPQueuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPQueuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPQueuesResponse>>() {
                 }.getType();
@@ -1057,6 +1106,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPRouteRelationsResponse DescribeAMQPRouteRelations(DescribeAMQPRouteRelationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPRouteRelationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPRouteRelationsResponse>>() {
                 }.getType();
@@ -1079,6 +1129,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAMQPVHostsResponse DescribeAMQPVHosts(DescribeAMQPVHostsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAMQPVHostsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAMQPVHostsResponse>>() {
                 }.getType();
@@ -1099,6 +1150,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeAllTenantsResponse DescribeAllTenants(DescribeAllTenantsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllTenantsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllTenantsResponse>>() {
                 }.getType();
@@ -1119,6 +1171,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeBindClustersResponse DescribeBindClusters(DescribeBindClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBindClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBindClustersResponse>>() {
                 }.getType();
@@ -1139,6 +1192,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeBindVpcsResponse DescribeBindVpcs(DescribeBindVpcsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBindVpcsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBindVpcsResponse>>() {
                 }.getType();
@@ -1159,6 +1213,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeClusterDetailResponse DescribeClusterDetail(DescribeClusterDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterDetailResponse>>() {
                 }.getType();
@@ -1179,6 +1234,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -1199,6 +1255,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse>>() {
                 }.getType();
@@ -1219,6 +1276,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqQueueDetailResponse DescribeCmqQueueDetail(DescribeCmqQueueDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqQueueDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqQueueDetailResponse>>() {
                 }.getType();
@@ -1239,6 +1297,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqQueuesResponse DescribeCmqQueues(DescribeCmqQueuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqQueuesResponse>>() {
                 }.getType();
@@ -1259,6 +1318,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetail(DescribeCmqSubscriptionDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqSubscriptionDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqSubscriptionDetailResponse>>() {
                 }.getType();
@@ -1279,6 +1339,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqTopicDetailResponse DescribeCmqTopicDetail(DescribeCmqTopicDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqTopicDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqTopicDetailResponse>>() {
                 }.getType();
@@ -1299,6 +1360,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeCmqTopicsResponse DescribeCmqTopics(DescribeCmqTopicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmqTopicsResponse>>() {
                 }.getType();
@@ -1319,6 +1381,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeEnvironmentAttributesResponse DescribeEnvironmentAttributes(DescribeEnvironmentAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentAttributesResponse>>() {
                 }.getType();
@@ -1339,6 +1402,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeEnvironmentRolesResponse DescribeEnvironmentRoles(DescribeEnvironmentRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentRolesResponse>>() {
                 }.getType();
@@ -1359,6 +1423,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentsResponse>>() {
                 }.getType();
@@ -1379,6 +1444,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeNamespaceBundlesOptResponse DescribeNamespaceBundlesOpt(DescribeNamespaceBundlesOptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNamespaceBundlesOptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNamespaceBundlesOptResponse>>() {
                 }.getType();
@@ -1399,6 +1465,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeNodeHealthOptResponse DescribeNodeHealthOpt(DescribeNodeHealthOptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNodeHealthOptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNodeHealthOptResponse>>() {
                 }.getType();
@@ -1419,6 +1486,7 @@ public class TdmqClient extends AbstractClient{
     public DescribePublisherSummaryResponse DescribePublisherSummary(DescribePublisherSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublisherSummaryResponse>>() {
                 }.getType();
@@ -1439,6 +1507,7 @@ public class TdmqClient extends AbstractClient{
     public DescribePublishersResponse DescribePublishers(DescribePublishersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublishersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublishersResponse>>() {
                 }.getType();
@@ -1459,6 +1528,7 @@ public class TdmqClient extends AbstractClient{
     public DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(DescribePulsarProInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePulsarProInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstanceDetailResponse>>() {
                 }.getType();
@@ -1479,6 +1549,7 @@ public class TdmqClient extends AbstractClient{
     public DescribePulsarProInstancesResponse DescribePulsarProInstances(DescribePulsarProInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePulsarProInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePulsarProInstancesResponse>>() {
                 }.getType();
@@ -1499,6 +1570,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQNodeListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQNodeListResponse>>() {
                 }.getType();
@@ -1519,6 +1591,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQUserResponse DescribeRabbitMQUser(DescribeRabbitMQUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQUserResponse>>() {
                 }.getType();
@@ -1539,6 +1612,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(DescribeRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQVipInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstanceResponse>>() {
                 }.getType();
@@ -1559,6 +1633,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(DescribeRabbitMQVipInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQVipInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>() {
                 }.getType();
@@ -1579,6 +1654,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(DescribeRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQVirtualHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostResponse>>() {
                 }.getType();
@@ -1599,6 +1675,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(DescribeRabbitMQVirtualHostListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRabbitMQVirtualHostListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVirtualHostListResponse>>() {
                 }.getType();
@@ -1619,6 +1696,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQClusterResponse DescribeRocketMQCluster(DescribeRocketMQClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQClusterResponse>>() {
                 }.getType();
@@ -1639,6 +1717,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQClustersResponse DescribeRocketMQClusters(DescribeRocketMQClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQClustersResponse>>() {
                 }.getType();
@@ -1659,6 +1738,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQGroupsResponse DescribeRocketMQGroups(DescribeRocketMQGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQGroupsResponse>>() {
                 }.getType();
@@ -1679,6 +1759,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQMsgResponse DescribeRocketMQMsg(DescribeRocketMQMsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQMsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQMsgResponse>>() {
                 }.getType();
@@ -1699,6 +1780,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(DescribeRocketMQNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQNamespacesResponse>>() {
                 }.getType();
@@ -1719,6 +1801,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQTopicsResponse DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQTopicsResponse>>() {
                 }.getType();
@@ -1739,6 +1822,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(DescribeRocketMQVipInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>() {
                 }.getType();
@@ -1759,6 +1843,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstances(DescribeRocketMQVipInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>() {
                 }.getType();
@@ -1779,6 +1864,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeRolesResponse DescribeRoles(DescribeRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRolesResponse>>() {
                 }.getType();
@@ -1799,6 +1885,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeSubscriptionsResponse DescribeSubscriptions(DescribeSubscriptionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscriptionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscriptionsResponse>>() {
                 }.getType();
@@ -1819,6 +1906,7 @@ public class TdmqClient extends AbstractClient{
     public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicsResponse>>() {
                 }.getType();
@@ -1839,6 +1927,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyAMQPClusterResponse ModifyAMQPCluster(ModifyAMQPClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAMQPClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAMQPClusterResponse>>() {
                 }.getType();
@@ -1861,6 +1950,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyAMQPExchangeResponse ModifyAMQPExchange(ModifyAMQPExchangeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAMQPExchangeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAMQPExchangeResponse>>() {
                 }.getType();
@@ -1883,6 +1973,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyAMQPQueueResponse ModifyAMQPQueue(ModifyAMQPQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAMQPQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAMQPQueueResponse>>() {
                 }.getType();
@@ -1903,6 +1994,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyClusterResponse ModifyCluster(ModifyClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterResponse>>() {
                 }.getType();
@@ -1923,6 +2015,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(ModifyCmqQueueAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCmqQueueAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCmqQueueAttributeResponse>>() {
                 }.getType();
@@ -1943,6 +2036,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(ModifyCmqSubscriptionAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCmqSubscriptionAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCmqSubscriptionAttributeResponse>>() {
                 }.getType();
@@ -1963,6 +2057,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(ModifyCmqTopicAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCmqTopicAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCmqTopicAttributeResponse>>() {
                 }.getType();
@@ -1983,6 +2078,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyEnvironmentAttributesResponse ModifyEnvironmentAttributes(ModifyEnvironmentAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEnvironmentAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentAttributesResponse>>() {
                 }.getType();
@@ -2003,6 +2099,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyEnvironmentRoleResponse ModifyEnvironmentRole(ModifyEnvironmentRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEnvironmentRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentRoleResponse>>() {
                 }.getType();
@@ -2023,6 +2120,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRabbitMQUserResponse ModifyRabbitMQUser(ModifyRabbitMQUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRabbitMQUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQUserResponse>>() {
                 }.getType();
@@ -2043,6 +2141,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstance(ModifyRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRabbitMQVipInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQVipInstanceResponse>>() {
                 }.getType();
@@ -2063,6 +2162,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(ModifyRabbitMQVirtualHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRabbitMQVirtualHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRabbitMQVirtualHostResponse>>() {
                 }.getType();
@@ -2083,6 +2183,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQClusterResponse ModifyRocketMQCluster(ModifyRocketMQClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRocketMQClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQClusterResponse>>() {
                 }.getType();
@@ -2103,6 +2204,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQGroupResponse ModifyRocketMQGroup(ModifyRocketMQGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRocketMQGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQGroupResponse>>() {
                 }.getType();
@@ -2123,6 +2225,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(ModifyRocketMQInstanceSpecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRocketMQInstanceSpecResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQInstanceSpecResponse>>() {
                 }.getType();
@@ -2143,6 +2246,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(ModifyRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRocketMQNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQNamespaceResponse>>() {
                 }.getType();
@@ -2163,6 +2267,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQTopicResponse ModifyRocketMQTopic(ModifyRocketMQTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRocketMQTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRocketMQTopicResponse>>() {
                 }.getType();
@@ -2183,6 +2288,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyRoleResponse ModifyRole(ModifyRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoleResponse>>() {
                 }.getType();
@@ -2203,6 +2309,7 @@ public class TdmqClient extends AbstractClient{
     public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTopicResponse>>() {
                 }.getType();
@@ -2223,6 +2330,7 @@ public class TdmqClient extends AbstractClient{
     public PublishCmqMsgResponse PublishCmqMsg(PublishCmqMsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishCmqMsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishCmqMsgResponse>>() {
                 }.getType();
@@ -2263,6 +2371,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public ReceiveMessageResponse ReceiveMessage(ReceiveMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReceiveMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReceiveMessageResponse>>() {
                 }.getType();
@@ -2283,6 +2392,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public ResetMsgSubOffsetByTimestampResponse ResetMsgSubOffsetByTimestamp(ResetMsgSubOffsetByTimestampRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetMsgSubOffsetByTimestampResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetMsgSubOffsetByTimestampResponse>>() {
                 }.getType();
@@ -2303,6 +2413,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(ResetRocketMQConsumerOffSetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>() {
                 }.getType();
@@ -2323,6 +2434,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public RewindCmqQueueResponse RewindCmqQueue(RewindCmqQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RewindCmqQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RewindCmqQueueResponse>>() {
                 }.getType();
@@ -2345,6 +2457,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public SendBatchMessagesResponse SendBatchMessages(SendBatchMessagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendBatchMessagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendBatchMessagesResponse>>() {
                 }.getType();
@@ -2365,6 +2478,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public SendCmqMsgResponse SendCmqMsg(SendCmqMsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendCmqMsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendCmqMsgResponse>>() {
                 }.getType();
@@ -2386,6 +2500,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public SendMessagesResponse SendMessages(SendMessagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendMessagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendMessagesResponse>>() {
                 }.getType();
@@ -2406,6 +2521,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public SendMsgResponse SendMsg(SendMsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendMsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendMsgResponse>>() {
                 }.getType();
@@ -2426,6 +2542,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public SendRocketMQMessageResponse SendRocketMQMessage(SendRocketMQMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendRocketMQMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendRocketMQMessageResponse>>() {
                 }.getType();
@@ -2446,6 +2563,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     public UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(UnbindCmqDeadLetterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindCmqDeadLetterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindCmqDeadLetterResponse>>() {
                 }.getType();

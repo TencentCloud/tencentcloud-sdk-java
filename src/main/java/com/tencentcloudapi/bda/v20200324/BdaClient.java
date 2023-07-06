@@ -29,7 +29,7 @@ public class BdaClient extends AbstractClient{
     private static String endpoint = "bda.tencentcloudapi.com";
     private static String service = "bda";
     private static String version = "2020-03-24";
-
+    
     public BdaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -53,6 +53,7 @@ public class BdaClient extends AbstractClient{
     public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
                 }.getType();
@@ -80,6 +81,7 @@ public class BdaClient extends AbstractClient{
     public CreatePersonResponse CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonResponse>>() {
                 }.getType();
@@ -100,6 +102,7 @@ public class BdaClient extends AbstractClient{
     public CreateSegmentationTaskResponse CreateSegmentationTask(CreateSegmentationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSegmentationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSegmentationTaskResponse>>() {
                 }.getType();
@@ -127,6 +130,7 @@ public class BdaClient extends AbstractClient{
     public CreateTraceResponse CreateTrace(CreateTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTraceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTraceResponse>>() {
                 }.getType();
@@ -147,6 +151,7 @@ public class BdaClient extends AbstractClient{
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -167,6 +172,7 @@ public class BdaClient extends AbstractClient{
     public DeletePersonResponse DeletePerson(DeletePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonResponse>>() {
                 }.getType();
@@ -187,6 +193,7 @@ public class BdaClient extends AbstractClient{
     public DescribeSegmentationTaskResponse DescribeSegmentationTask(DescribeSegmentationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSegmentationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSegmentationTaskResponse>>() {
                 }.getType();
@@ -208,6 +215,7 @@ public class BdaClient extends AbstractClient{
     public DetectBodyResponse DetectBody(DetectBodyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectBodyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectBodyResponse>>() {
                 }.getType();
@@ -229,6 +237,7 @@ public class BdaClient extends AbstractClient{
     public DetectBodyJointsResponse DetectBodyJoints(DetectBodyJointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectBodyJointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectBodyJointsResponse>>() {
                 }.getType();
@@ -249,6 +258,7 @@ public class BdaClient extends AbstractClient{
     public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetGroupListResponse>>() {
                 }.getType();
@@ -269,6 +279,7 @@ public class BdaClient extends AbstractClient{
     public GetPersonListResponse GetPersonList(GetPersonListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPersonListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPersonListResponse>>() {
                 }.getType();
@@ -289,6 +300,7 @@ public class BdaClient extends AbstractClient{
     public GetSummaryInfoResponse GetSummaryInfo(GetSummaryInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSummaryInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSummaryInfoResponse>>() {
                 }.getType();
@@ -309,6 +321,7 @@ public class BdaClient extends AbstractClient{
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
                 }.getType();
@@ -329,6 +342,7 @@ public class BdaClient extends AbstractClient{
     public ModifyPersonInfoResponse ModifyPersonInfo(ModifyPersonInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonInfoResponse>>() {
                 }.getType();
@@ -356,6 +370,7 @@ public class BdaClient extends AbstractClient{
     public SearchTraceResponse SearchTrace(SearchTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchTraceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchTraceResponse>>() {
                 }.getType();
@@ -376,6 +391,7 @@ public class BdaClient extends AbstractClient{
     public SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(SegmentCustomizedPortraitPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SegmentCustomizedPortraitPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SegmentCustomizedPortraitPicResponse>>() {
                 }.getType();
@@ -397,6 +413,7 @@ public class BdaClient extends AbstractClient{
     public SegmentPortraitPicResponse SegmentPortraitPic(SegmentPortraitPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SegmentPortraitPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SegmentPortraitPicResponse>>() {
                 }.getType();
@@ -417,6 +434,7 @@ public class BdaClient extends AbstractClient{
     public TerminateSegmentationTaskResponse TerminateSegmentationTask(TerminateSegmentationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateSegmentationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateSegmentationTaskResponse>>() {
                 }.getType();

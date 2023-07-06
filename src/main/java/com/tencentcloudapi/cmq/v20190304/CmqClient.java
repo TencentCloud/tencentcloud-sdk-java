@@ -29,7 +29,7 @@ public class CmqClient extends AbstractClient{
     private static String endpoint = "cmq.tencentcloudapi.com";
     private static String service = "cmq";
     private static String version = "2019-03-04";
-
+    
     public CmqClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CmqClient extends AbstractClient{
     public ClearQueueResponse ClearQueue(ClearQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearQueueResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CmqClient extends AbstractClient{
     public ClearSubscriptionFilterTagsResponse ClearSubscriptionFilterTags(ClearSubscriptionFilterTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearSubscriptionFilterTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearSubscriptionFilterTagsResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class CmqClient extends AbstractClient{
     public CreateQueueResponse CreateQueue(CreateQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateQueueResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class CmqClient extends AbstractClient{
     public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class CmqClient extends AbstractClient{
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class CmqClient extends AbstractClient{
     public DeleteQueueResponse DeleteQueue(DeleteQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteQueueResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class CmqClient extends AbstractClient{
     public DeleteSubscribeResponse DeleteSubscribe(DeleteSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSubscribeResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class CmqClient extends AbstractClient{
     public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTopicResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class CmqClient extends AbstractClient{
     public DescribeDeadLetterSourceQueuesResponse DescribeDeadLetterSourceQueues(DescribeDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeadLetterSourceQueuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeadLetterSourceQueuesResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class CmqClient extends AbstractClient{
     public DescribeQueueDetailResponse DescribeQueueDetail(DescribeQueueDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQueueDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQueueDetailResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class CmqClient extends AbstractClient{
     public DescribeSubscriptionDetailResponse DescribeSubscriptionDetail(DescribeSubscriptionDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscriptionDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscriptionDetailResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class CmqClient extends AbstractClient{
     public DescribeTopicDetailResponse DescribeTopicDetail(DescribeTopicDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicDetailResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class CmqClient extends AbstractClient{
     public ModifyQueueAttributeResponse ModifyQueueAttribute(ModifyQueueAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyQueueAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyQueueAttributeResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class CmqClient extends AbstractClient{
     public ModifySubscriptionAttributeResponse ModifySubscriptionAttribute(ModifySubscriptionAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscriptionAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscriptionAttributeResponse>>() {
                 }.getType();
@@ -328,6 +342,7 @@ public class CmqClient extends AbstractClient{
     public ModifyTopicAttributeResponse ModifyTopicAttribute(ModifyTopicAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTopicAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTopicAttributeResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class CmqClient extends AbstractClient{
     public RewindQueueResponse RewindQueue(RewindQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RewindQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RewindQueueResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ public class CmqClient extends AbstractClient{
     public UnbindDeadLetterResponse UnbindDeadLetter(UnbindDeadLetterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindDeadLetterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindDeadLetterResponse>>() {
                 }.getType();

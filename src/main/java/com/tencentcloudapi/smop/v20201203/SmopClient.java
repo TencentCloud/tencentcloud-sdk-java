@@ -29,7 +29,7 @@ public class SmopClient extends AbstractClient{
     private static String endpoint = "smop.tencentcloudapi.com";
     private static String service = "smop";
     private static String version = "2020-12-03";
-
+    
     public SmopClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SmopClient extends AbstractClient{
     public SubmitTaskEventResponse SubmitTaskEvent(SubmitTaskEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitTaskEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitTaskEventResponse>>() {
                 }.getType();

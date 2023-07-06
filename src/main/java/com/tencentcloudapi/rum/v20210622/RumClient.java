@@ -29,7 +29,7 @@ public class RumClient extends AbstractClient{
     private static String endpoint = "rum.tencentcloudapi.com";
     private static String service = "rum";
     private static String version = "2021-06-22";
-
+    
     public RumClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class RumClient extends AbstractClient{
     public CreateLogExportResponse CreateLogExport(CreateLogExportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLogExportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLogExportResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class RumClient extends AbstractClient{
     public CreateOfflineLogConfigResponse CreateOfflineLogConfig(CreateOfflineLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOfflineLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOfflineLogConfigResponse>>() {
                 }.getType();
@@ -91,6 +93,7 @@ public class RumClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class RumClient extends AbstractClient{
     public CreateReleaseFileResponse CreateReleaseFile(CreateReleaseFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReleaseFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReleaseFileResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class RumClient extends AbstractClient{
     public CreateStarProjectResponse CreateStarProject(CreateStarProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStarProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStarProjectResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class RumClient extends AbstractClient{
     public CreateTawInstanceResponse CreateTawInstance(CreateTawInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTawInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTawInstanceResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class RumClient extends AbstractClient{
     public CreateWhitelistResponse CreateWhitelist(CreateWhitelistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWhitelistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWhitelistResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ public class RumClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
@@ -215,6 +223,7 @@ public class RumClient extends AbstractClient{
     public DeleteLogExportResponse DeleteLogExport(DeleteLogExportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLogExportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLogExportResponse>>() {
                 }.getType();
@@ -235,6 +244,7 @@ public class RumClient extends AbstractClient{
     public DeleteOfflineLogConfigResponse DeleteOfflineLogConfig(DeleteOfflineLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOfflineLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOfflineLogConfigResponse>>() {
                 }.getType();
@@ -255,6 +265,7 @@ public class RumClient extends AbstractClient{
     public DeleteOfflineLogRecordResponse DeleteOfflineLogRecord(DeleteOfflineLogRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOfflineLogRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOfflineLogRecordResponse>>() {
                 }.getType();
@@ -275,6 +286,7 @@ public class RumClient extends AbstractClient{
     public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProjectResponse>>() {
                 }.getType();
@@ -295,6 +307,7 @@ public class RumClient extends AbstractClient{
     public DeleteReleaseFileResponse DeleteReleaseFile(DeleteReleaseFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReleaseFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReleaseFileResponse>>() {
                 }.getType();
@@ -315,6 +328,7 @@ public class RumClient extends AbstractClient{
     public DeleteStarProjectResponse DeleteStarProject(DeleteStarProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStarProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStarProjectResponse>>() {
                 }.getType();
@@ -335,6 +349,7 @@ public class RumClient extends AbstractClient{
     public DeleteWhitelistResponse DeleteWhitelist(DeleteWhitelistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWhitelistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWhitelistResponse>>() {
                 }.getType();
@@ -355,6 +370,7 @@ public class RumClient extends AbstractClient{
     public DescribeAppDimensionMetricsResponse DescribeAppDimensionMetrics(DescribeAppDimensionMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppDimensionMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppDimensionMetricsResponse>>() {
                 }.getType();
@@ -375,6 +391,7 @@ public class RumClient extends AbstractClient{
     public DescribeAppMetricsDataResponse DescribeAppMetricsData(DescribeAppMetricsDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppMetricsDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppMetricsDataResponse>>() {
                 }.getType();
@@ -395,6 +412,7 @@ public class RumClient extends AbstractClient{
     public DescribeAppSingleCaseDetailListResponse DescribeAppSingleCaseDetailList(DescribeAppSingleCaseDetailListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppSingleCaseDetailListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppSingleCaseDetailListResponse>>() {
                 }.getType();
@@ -415,6 +433,7 @@ public class RumClient extends AbstractClient{
     public DescribeAppSingleCaseListResponse DescribeAppSingleCaseList(DescribeAppSingleCaseListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppSingleCaseListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppSingleCaseListResponse>>() {
                 }.getType();
@@ -435,6 +454,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataResponse DescribeData(DescribeDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataResponse>>() {
                 }.getType();
@@ -455,6 +475,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataCustomUrlResponse DescribeDataCustomUrl(DescribeDataCustomUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataCustomUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataCustomUrlResponse>>() {
                 }.getType();
@@ -475,6 +496,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataEventUrlResponse DescribeDataEventUrl(DescribeDataEventUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataEventUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataEventUrlResponse>>() {
                 }.getType();
@@ -495,6 +517,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataFetchProjectResponse DescribeDataFetchProject(DescribeDataFetchProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataFetchProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataFetchProjectResponse>>() {
                 }.getType();
@@ -515,6 +538,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataFetchUrlResponse DescribeDataFetchUrl(DescribeDataFetchUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataFetchUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlResponse>>() {
                 }.getType();
@@ -535,6 +559,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfo(DescribeDataFetchUrlInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataFetchUrlInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataFetchUrlInfoResponse>>() {
                 }.getType();
@@ -555,6 +580,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataLogUrlInfoResponse DescribeDataLogUrlInfo(DescribeDataLogUrlInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataLogUrlInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataLogUrlInfoResponse>>() {
                 }.getType();
@@ -575,6 +601,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatistics(DescribeDataLogUrlStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataLogUrlStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataLogUrlStatisticsResponse>>() {
                 }.getType();
@@ -595,6 +622,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataPerformancePageResponse DescribeDataPerformancePage(DescribeDataPerformancePageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataPerformancePageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataPerformancePageResponse>>() {
                 }.getType();
@@ -615,6 +643,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataPerformanceProjectResponse DescribeDataPerformanceProject(DescribeDataPerformanceProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataPerformanceProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataPerformanceProjectResponse>>() {
                 }.getType();
@@ -635,6 +664,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataPvUrlInfoResponse DescribeDataPvUrlInfo(DescribeDataPvUrlInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataPvUrlInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataPvUrlInfoResponse>>() {
                 }.getType();
@@ -655,6 +685,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatistics(DescribeDataPvUrlStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataPvUrlStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataPvUrlStatisticsResponse>>() {
                 }.getType();
@@ -675,6 +706,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataReportCountResponse DescribeDataReportCount(DescribeDataReportCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataReportCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataReportCountResponse>>() {
                 }.getType();
@@ -695,6 +727,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataSetUrlStatisticsResponse DescribeDataSetUrlStatistics(DescribeDataSetUrlStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataSetUrlStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataSetUrlStatisticsResponse>>() {
                 }.getType();
@@ -715,6 +748,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataStaticProjectResponse DescribeDataStaticProject(DescribeDataStaticProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataStaticProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataStaticProjectResponse>>() {
                 }.getType();
@@ -735,6 +769,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataStaticResourceResponse DescribeDataStaticResource(DescribeDataStaticResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataStaticResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataStaticResourceResponse>>() {
                 }.getType();
@@ -755,6 +790,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataStaticUrlResponse DescribeDataStaticUrl(DescribeDataStaticUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataStaticUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataStaticUrlResponse>>() {
                 }.getType();
@@ -776,6 +812,7 @@ public class RumClient extends AbstractClient{
     public DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(DescribeDataWebVitalsPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataWebVitalsPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataWebVitalsPageResponse>>() {
                 }.getType();
@@ -796,6 +833,7 @@ public class RumClient extends AbstractClient{
     public DescribeErrorResponse DescribeError(DescribeErrorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeErrorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeErrorResponse>>() {
                 }.getType();
@@ -820,6 +858,7 @@ public class RumClient extends AbstractClient{
     public DescribeLogExportsResponse DescribeLogExports(DescribeLogExportsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogExportsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogExportsResponse>>() {
                 }.getType();
@@ -840,6 +879,7 @@ public class RumClient extends AbstractClient{
     public DescribeLogListResponse DescribeLogList(DescribeLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogListResponse>>() {
                 }.getType();
@@ -860,6 +900,7 @@ public class RumClient extends AbstractClient{
     public DescribeOfflineLogConfigsResponse DescribeOfflineLogConfigs(DescribeOfflineLogConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfflineLogConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogConfigsResponse>>() {
                 }.getType();
@@ -880,6 +921,7 @@ public class RumClient extends AbstractClient{
     public DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(DescribeOfflineLogRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfflineLogRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogRecordsResponse>>() {
                 }.getType();
@@ -900,6 +942,7 @@ public class RumClient extends AbstractClient{
     public DescribeOfflineLogsResponse DescribeOfflineLogs(DescribeOfflineLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfflineLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfflineLogsResponse>>() {
                 }.getType();
@@ -920,6 +963,7 @@ public class RumClient extends AbstractClient{
     public DescribeProjectLimitsResponse DescribeProjectLimits(DescribeProjectLimitsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectLimitsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectLimitsResponse>>() {
                 }.getType();
@@ -940,6 +984,7 @@ public class RumClient extends AbstractClient{
     public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
@@ -960,6 +1005,7 @@ public class RumClient extends AbstractClient{
     public DescribePvListResponse DescribePvList(DescribePvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePvListResponse>>() {
                 }.getType();
@@ -980,6 +1026,7 @@ public class RumClient extends AbstractClient{
     public DescribeReleaseFileSignResponse DescribeReleaseFileSign(DescribeReleaseFileSignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReleaseFileSignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReleaseFileSignResponse>>() {
                 }.getType();
@@ -1000,6 +1047,7 @@ public class RumClient extends AbstractClient{
     public DescribeReleaseFilesResponse DescribeReleaseFiles(DescribeReleaseFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReleaseFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReleaseFilesResponse>>() {
                 }.getType();
@@ -1020,6 +1068,7 @@ public class RumClient extends AbstractClient{
     public DescribeRumGroupLogResponse DescribeRumGroupLog(DescribeRumGroupLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRumGroupLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRumGroupLogResponse>>() {
                 }.getType();
@@ -1040,6 +1089,7 @@ public class RumClient extends AbstractClient{
     public DescribeRumLogExportResponse DescribeRumLogExport(DescribeRumLogExportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportResponse>>() {
                 }.getType();
@@ -1060,6 +1110,7 @@ public class RumClient extends AbstractClient{
     public DescribeRumLogExportsResponse DescribeRumLogExports(DescribeRumLogExportsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportsResponse>>() {
                 }.getType();
@@ -1080,6 +1131,7 @@ public class RumClient extends AbstractClient{
     public DescribeRumLogListResponse DescribeRumLogList(DescribeRumLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRumLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRumLogListResponse>>() {
                 }.getType();
@@ -1100,6 +1152,7 @@ public class RumClient extends AbstractClient{
     public DescribeRumStatsLogListResponse DescribeRumStatsLogList(DescribeRumStatsLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRumStatsLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRumStatsLogListResponse>>() {
                 }.getType();
@@ -1120,6 +1173,7 @@ public class RumClient extends AbstractClient{
     public DescribeScoresResponse DescribeScores(DescribeScoresRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScoresResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScoresResponse>>() {
                 }.getType();
@@ -1140,6 +1194,7 @@ public class RumClient extends AbstractClient{
     public DescribeTawAreasResponse DescribeTawAreas(DescribeTawAreasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTawAreasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTawAreasResponse>>() {
                 }.getType();
@@ -1160,6 +1215,7 @@ public class RumClient extends AbstractClient{
     public DescribeTawInstancesResponse DescribeTawInstances(DescribeTawInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTawInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTawInstancesResponse>>() {
                 }.getType();
@@ -1180,6 +1236,7 @@ public class RumClient extends AbstractClient{
     public DescribeUvListResponse DescribeUvList(DescribeUvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUvListResponse>>() {
                 }.getType();
@@ -1200,6 +1257,7 @@ public class RumClient extends AbstractClient{
     public DescribeWhitelistsResponse DescribeWhitelists(DescribeWhitelistsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhitelistsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhitelistsResponse>>() {
                 }.getType();
@@ -1220,6 +1278,7 @@ public class RumClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
                 }.getType();
@@ -1240,6 +1299,7 @@ public class RumClient extends AbstractClient{
     public ModifyProjectResponse ModifyProject(ModifyProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProjectResponse>>() {
                 }.getType();
@@ -1260,6 +1320,7 @@ public class RumClient extends AbstractClient{
     public ModifyProjectLimitResponse ModifyProjectLimit(ModifyProjectLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProjectLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProjectLimitResponse>>() {
                 }.getType();
@@ -1280,6 +1341,7 @@ public class RumClient extends AbstractClient{
     public ResumeInstanceResponse ResumeInstance(ResumeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeInstanceResponse>>() {
                 }.getType();
@@ -1300,6 +1362,7 @@ public class RumClient extends AbstractClient{
     public ResumeProjectResponse ResumeProject(ResumeProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeProjectResponse>>() {
                 }.getType();
@@ -1320,6 +1383,7 @@ public class RumClient extends AbstractClient{
     public StopInstanceResponse StopInstance(StopInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopInstanceResponse>>() {
                 }.getType();
@@ -1340,6 +1404,7 @@ public class RumClient extends AbstractClient{
     public StopProjectResponse StopProject(StopProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopProjectResponse>>() {
                 }.getType();

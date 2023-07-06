@@ -29,7 +29,7 @@ public class TiemsClient extends AbstractClient{
     private static String endpoint = "tiems.tencentcloudapi.com";
     private static String service = "tiems";
     private static String version = "2019-04-16";
-
+    
     public TiemsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class TiemsClient extends AbstractClient{
     public CreateJobResponse CreateJob(CreateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateJobResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class TiemsClient extends AbstractClient{
     public CreateRsgAsGroupResponse CreateRsgAsGroup(CreateRsgAsGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRsgAsGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRsgAsGroupResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ public class TiemsClient extends AbstractClient{
     public CreateRuntimeResponse CreateRuntime(CreateRuntimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuntimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuntimeResponse>>() {
                 }.getType();
@@ -115,6 +118,7 @@ public class TiemsClient extends AbstractClient{
     public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceResponse>>() {
                 }.getType();
@@ -137,6 +141,7 @@ public class TiemsClient extends AbstractClient{
     public CreateServiceConfigResponse CreateServiceConfig(CreateServiceConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceConfigResponse>>() {
                 }.getType();
@@ -159,6 +164,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteInstanceResponse DeleteInstance(DeleteInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
@@ -181,6 +187,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteJobResponse DeleteJob(DeleteJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteJobResponse>>() {
                 }.getType();
@@ -203,6 +210,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteResourceGroupResponse DeleteResourceGroup(DeleteResourceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteResourceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteResourceGroupResponse>>() {
                 }.getType();
@@ -225,6 +233,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteRsgAsGroupResponse DeleteRsgAsGroup(DeleteRsgAsGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRsgAsGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRsgAsGroupResponse>>() {
                 }.getType();
@@ -247,6 +256,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteRuntimeResponse DeleteRuntime(DeleteRuntimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuntimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuntimeResponse>>() {
                 }.getType();
@@ -269,6 +279,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceResponse>>() {
                 }.getType();
@@ -291,6 +302,7 @@ public class TiemsClient extends AbstractClient{
     public DeleteServiceConfigResponse DeleteServiceConfig(DeleteServiceConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceConfigResponse>>() {
                 }.getType();
@@ -313,6 +325,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -335,6 +348,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeResourceGroupsResponse DescribeResourceGroups(DescribeResourceGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceGroupsResponse>>() {
                 }.getType();
@@ -357,6 +371,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeRsgAsGroupActivitiesResponse DescribeRsgAsGroupActivities(DescribeRsgAsGroupActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRsgAsGroupActivitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRsgAsGroupActivitiesResponse>>() {
                 }.getType();
@@ -379,6 +394,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeRsgAsGroupsResponse DescribeRsgAsGroups(DescribeRsgAsGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRsgAsGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRsgAsGroupsResponse>>() {
                 }.getType();
@@ -401,6 +417,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeRuntimesResponse DescribeRuntimes(DescribeRuntimesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuntimesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuntimesResponse>>() {
                 }.getType();
@@ -423,6 +440,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeServiceConfigsResponse DescribeServiceConfigs(DescribeServiceConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceConfigsResponse>>() {
                 }.getType();
@@ -445,6 +463,7 @@ public class TiemsClient extends AbstractClient{
     public DescribeServicesResponse DescribeServices(DescribeServicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServicesResponse>>() {
                 }.getType();
@@ -467,6 +486,7 @@ public class TiemsClient extends AbstractClient{
     public DisableRsgAsGroupResponse DisableRsgAsGroup(DisableRsgAsGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableRsgAsGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableRsgAsGroupResponse>>() {
                 }.getType();
@@ -489,6 +509,7 @@ public class TiemsClient extends AbstractClient{
     public EnableRsgAsGroupResponse EnableRsgAsGroup(EnableRsgAsGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableRsgAsGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableRsgAsGroupResponse>>() {
                 }.getType();
@@ -511,6 +532,7 @@ public class TiemsClient extends AbstractClient{
     public ExposeServiceResponse ExposeService(ExposeServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExposeServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExposeServiceResponse>>() {
                 }.getType();
@@ -533,6 +555,7 @@ public class TiemsClient extends AbstractClient{
     public UpdateJobResponse UpdateJob(UpdateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateJobResponse>>() {
                 }.getType();
@@ -555,6 +578,7 @@ public class TiemsClient extends AbstractClient{
     public UpdateRsgAsGroupResponse UpdateRsgAsGroup(UpdateRsgAsGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRsgAsGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRsgAsGroupResponse>>() {
                 }.getType();
@@ -577,6 +601,7 @@ public class TiemsClient extends AbstractClient{
     public UpdateServiceResponse UpdateService(UpdateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateServiceResponse>>() {
                 }.getType();

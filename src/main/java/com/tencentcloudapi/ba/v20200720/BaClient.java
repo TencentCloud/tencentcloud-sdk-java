@@ -29,7 +29,7 @@ public class BaClient extends AbstractClient{
     private static String endpoint = "ba.tencentcloudapi.com";
     private static String service = "ba";
     private static String version = "2020-07-20";
-
+    
     public BaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BaClient extends AbstractClient{
     public CreateWeappQRUrlResponse CreateWeappQRUrl(CreateWeappQRUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWeappQRUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWeappQRUrlResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BaClient extends AbstractClient{
     public DescribeGetAuthInfoResponse DescribeGetAuthInfo(DescribeGetAuthInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGetAuthInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGetAuthInfoResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class BaClient extends AbstractClient{
     public SyncIcpOrderWebInfoResponse SyncIcpOrderWebInfo(SyncIcpOrderWebInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncIcpOrderWebInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncIcpOrderWebInfoResponse>>() {
                 }.getType();

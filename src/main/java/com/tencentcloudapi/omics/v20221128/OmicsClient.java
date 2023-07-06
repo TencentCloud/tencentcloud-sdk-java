@@ -29,7 +29,7 @@ public class OmicsClient extends AbstractClient{
     private static String endpoint = "omics.tencentcloudapi.com";
     private static String service = "omics";
     private static String version = "2022-11-28";
-
+    
     public OmicsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class OmicsClient extends AbstractClient{
     public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnvironmentResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class OmicsClient extends AbstractClient{
     public DeleteEnvironmentResponse DeleteEnvironment(DeleteEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEnvironmentResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class OmicsClient extends AbstractClient{
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class OmicsClient extends AbstractClient{
     public DescribeRunGroupsResponse DescribeRunGroups(DescribeRunGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRunGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRunGroupsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class OmicsClient extends AbstractClient{
     public DescribeRunsResponse DescribeRuns(DescribeRunsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRunsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRunsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class OmicsClient extends AbstractClient{
     public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class OmicsClient extends AbstractClient{
     public DescribeTablesRowsResponse DescribeTablesRows(DescribeTablesRowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesRowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesRowsResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class OmicsClient extends AbstractClient{
     public GetRunCallsResponse GetRunCalls(GetRunCallsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRunCallsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRunCallsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class OmicsClient extends AbstractClient{
     public GetRunStatusResponse GetRunStatus(GetRunStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRunStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRunStatusResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class OmicsClient extends AbstractClient{
     public ImportTableFileResponse ImportTableFile(ImportTableFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportTableFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportTableFileResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class OmicsClient extends AbstractClient{
     public RetryRunsResponse RetryRuns(RetryRunsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RetryRunsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RetryRunsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class OmicsClient extends AbstractClient{
     public RunApplicationResponse RunApplication(RunApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunApplicationResponse>>() {
                 }.getType();

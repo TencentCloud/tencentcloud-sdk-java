@@ -29,7 +29,7 @@ public class TbpClient extends AbstractClient{
     private static String endpoint = "tbp.tencentcloudapi.com";
     private static String service = "tbp";
     private static String version = "2019-03-11";
-
+    
     public TbpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TbpClient extends AbstractClient{
     public CreateBotResponse CreateBot(CreateBotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBotResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TbpClient extends AbstractClient{
     public ResetResponse Reset(ResetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TbpClient extends AbstractClient{
     public TextProcessResponse TextProcess(TextProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextProcessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextProcessResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TbpClient extends AbstractClient{
     public TextResetResponse TextReset(TextResetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextResetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextResetResponse>>() {
                 }.getType();

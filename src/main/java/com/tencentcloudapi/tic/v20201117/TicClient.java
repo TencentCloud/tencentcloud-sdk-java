@@ -29,7 +29,7 @@ public class TicClient extends AbstractClient{
     private static String endpoint = "tic.tencentcloudapi.com";
     private static String service = "tic";
     private static String version = "2020-11-17";
-
+    
     public TicClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -50,6 +50,7 @@ public class TicClient extends AbstractClient{
     public ApplyStackResponse ApplyStack(ApplyStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyStackResponse>>() {
                 }.getType();
@@ -70,6 +71,7 @@ public class TicClient extends AbstractClient{
     public CreateStackResponse CreateStack(CreateStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStackResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ public class TicClient extends AbstractClient{
     public CreateStackVersionResponse CreateStackVersion(CreateStackVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStackVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStackVersionResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ public class TicClient extends AbstractClient{
     public DeleteStackResponse DeleteStack(DeleteStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStackResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ public class TicClient extends AbstractClient{
     public DeleteStackVersionResponse DeleteStackVersion(DeleteStackVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteStackVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteStackVersionResponse>>() {
                 }.getType();
@@ -150,6 +155,7 @@ public class TicClient extends AbstractClient{
     public DescribeStackEventResponse DescribeStackEvent(DescribeStackEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStackEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStackEventResponse>>() {
                 }.getType();
@@ -174,6 +180,7 @@ public class TicClient extends AbstractClient{
     public DescribeStackEventsResponse DescribeStackEvents(DescribeStackEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStackEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStackEventsResponse>>() {
                 }.getType();
@@ -198,6 +205,7 @@ public class TicClient extends AbstractClient{
     public DescribeStackVersionsResponse DescribeStackVersions(DescribeStackVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStackVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStackVersionsResponse>>() {
                 }.getType();
@@ -221,6 +229,7 @@ public class TicClient extends AbstractClient{
     public DescribeStacksResponse DescribeStacks(DescribeStacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStacksResponse>>() {
                 }.getType();
@@ -241,6 +250,7 @@ public class TicClient extends AbstractClient{
     public DestroyStackResponse DestroyStack(DestroyStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyStackResponse>>() {
                 }.getType();
@@ -264,6 +274,7 @@ public class TicClient extends AbstractClient{
     public PlanStackResponse PlanStack(PlanStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PlanStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PlanStackResponse>>() {
                 }.getType();
@@ -284,6 +295,7 @@ public class TicClient extends AbstractClient{
     public UpdateStackResponse UpdateStack(UpdateStackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateStackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateStackResponse>>() {
                 }.getType();
@@ -304,6 +316,7 @@ public class TicClient extends AbstractClient{
     public UpdateStackVersionResponse UpdateStackVersion(UpdateStackVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateStackVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateStackVersionResponse>>() {
                 }.getType();

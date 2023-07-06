@@ -29,7 +29,7 @@ public class FtClient extends AbstractClient{
     private static String endpoint = "ft.tencentcloudapi.com";
     private static String service = "ft";
     private static String version = "2020-03-04";
-
+    
     public FtClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class FtClient extends AbstractClient{
     public CancelFaceMorphJobResponse CancelFaceMorphJob(CancelFaceMorphJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelFaceMorphJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelFaceMorphJobResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class FtClient extends AbstractClient{
     public ChangeAgePicResponse ChangeAgePic(ChangeAgePicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeAgePicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeAgePicResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class FtClient extends AbstractClient{
     public FaceCartoonPicResponse FaceCartoonPic(FaceCartoonPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FaceCartoonPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FaceCartoonPicResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class FtClient extends AbstractClient{
     public MorphFaceResponse MorphFace(MorphFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MorphFaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MorphFaceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class FtClient extends AbstractClient{
     public QueryFaceMorphJobResponse QueryFaceMorphJob(QueryFaceMorphJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFaceMorphJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFaceMorphJobResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class FtClient extends AbstractClient{
     public SwapGenderPicResponse SwapGenderPic(SwapGenderPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwapGenderPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwapGenderPicResponse>>() {
                 }.getType();

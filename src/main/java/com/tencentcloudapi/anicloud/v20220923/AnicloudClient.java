@@ -29,7 +29,7 @@ public class AnicloudClient extends AbstractClient{
     private static String endpoint = "anicloud.tencentcloudapi.com";
     private static String service = "anicloud";
     private static String version = "2022-09-23";
-
+    
     public AnicloudClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AnicloudClient extends AbstractClient{
     public CheckAppidExistResponse CheckAppidExist(CheckAppidExistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAppidExistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAppidExistResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AnicloudClient extends AbstractClient{
     public QueryResourceResponse QueryResource(QueryResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryResourceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AnicloudClient extends AbstractClient{
     public QueryResourceInfoResponse QueryResourceInfo(QueryResourceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryResourceInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryResourceInfoResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class BmvpcClient extends AbstractClient{
     private static String endpoint = "bmvpc.tencentcloudapi.com";
     private static String service = "bmvpc";
     private static String version = "2018-06-25";
-
+    
     public BmvpcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BmvpcClient extends AbstractClient{
     public AcceptVpcPeerConnectionResponse AcceptVpcPeerConnection(AcceptVpcPeerConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AcceptVpcPeerConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AcceptVpcPeerConnectionResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BmvpcClient extends AbstractClient{
     public AsyncRegisterIpsResponse AsyncRegisterIps(AsyncRegisterIpsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AsyncRegisterIpsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AsyncRegisterIpsResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BmvpcClient extends AbstractClient{
     public BindEipsToNatGatewayResponse BindEipsToNatGateway(BindEipsToNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEipsToNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEipsToNatGatewayResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BmvpcClient extends AbstractClient{
     public BindIpsToNatGatewayResponse BindIpsToNatGateway(BindIpsToNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindIpsToNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindIpsToNatGatewayResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BmvpcClient extends AbstractClient{
     public BindSubnetsToNatGatewayResponse BindSubnetsToNatGateway(BindSubnetsToNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindSubnetsToNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindSubnetsToNatGatewayResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateCustomerGatewayResponse CreateCustomerGateway(CreateCustomerGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomerGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomerGatewayResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateDockerSubnetWithVlanResponse CreateDockerSubnetWithVlan(CreateDockerSubnetWithVlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDockerSubnetWithVlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDockerSubnetWithVlanResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateHostedInterfaceResponse CreateHostedInterface(CreateHostedInterfaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHostedInterfaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHostedInterfaceResponse>>() {
                 }.getType();
@@ -211,6 +219,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateInterfacesResponse CreateInterfaces(CreateInterfacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInterfacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInterfacesResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateNatGatewayResponse CreateNatGateway(CreateNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNatGatewayResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateRoutePoliciesResponse CreateRoutePolicies(CreateRoutePoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoutePoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoutePoliciesResponse>>() {
                 }.getType();
@@ -272,6 +283,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateSubnetResponse CreateSubnet(CreateSubnetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubnetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubnetResponse>>() {
                 }.getType();
@@ -292,6 +304,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateVirtualSubnetWithVlanResponse CreateVirtualSubnetWithVlan(CreateVirtualSubnetWithVlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVirtualSubnetWithVlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVirtualSubnetWithVlanResponse>>() {
                 }.getType();
@@ -312,6 +325,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateVpcResponse CreateVpc(CreateVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVpcResponse>>() {
                 }.getType();
@@ -332,6 +346,7 @@ public class BmvpcClient extends AbstractClient{
     public CreateVpcPeerConnectionResponse CreateVpcPeerConnection(CreateVpcPeerConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVpcPeerConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVpcPeerConnectionResponse>>() {
                 }.getType();
@@ -352,6 +367,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteCustomerGatewayResponse DeleteCustomerGateway(DeleteCustomerGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomerGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomerGatewayResponse>>() {
                 }.getType();
@@ -374,6 +390,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteHostedInterfaceResponse DeleteHostedInterface(DeleteHostedInterfaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteHostedInterfaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteHostedInterfaceResponse>>() {
                 }.getType();
@@ -394,6 +411,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteHostedInterfacesResponse DeleteHostedInterfaces(DeleteHostedInterfacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteHostedInterfacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteHostedInterfacesResponse>>() {
                 }.getType();
@@ -414,6 +432,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteInterfacesResponse DeleteInterfaces(DeleteInterfacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInterfacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInterfacesResponse>>() {
                 }.getType();
@@ -434,6 +453,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteNatGatewayResponse DeleteNatGateway(DeleteNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayResponse>>() {
                 }.getType();
@@ -454,6 +474,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteRoutePolicyResponse DeleteRoutePolicy(DeleteRoutePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoutePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoutePolicyResponse>>() {
                 }.getType();
@@ -475,6 +496,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteSubnetResponse DeleteSubnet(DeleteSubnetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSubnetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSubnetResponse>>() {
                 }.getType();
@@ -495,6 +517,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteVirtualIpResponse DeleteVirtualIp(DeleteVirtualIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVirtualIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVirtualIpResponse>>() {
                 }.getType();
@@ -517,6 +540,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteVpcResponse DeleteVpc(DeleteVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVpcResponse>>() {
                 }.getType();
@@ -537,6 +561,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteVpcPeerConnectionResponse DeleteVpcPeerConnection(DeleteVpcPeerConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVpcPeerConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVpcPeerConnectionResponse>>() {
                 }.getType();
@@ -557,6 +582,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteVpnConnectionResponse DeleteVpnConnection(DeleteVpnConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVpnConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnConnectionResponse>>() {
                 }.getType();
@@ -577,6 +603,7 @@ public class BmvpcClient extends AbstractClient{
     public DeleteVpnGatewayResponse DeleteVpnGateway(DeleteVpnGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVpnGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
                 }.getType();
@@ -597,6 +624,7 @@ public class BmvpcClient extends AbstractClient{
     public DeregisterIpsResponse DeregisterIps(DeregisterIpsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeregisterIpsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeregisterIpsResponse>>() {
                 }.getType();
@@ -617,6 +645,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeCustomerGatewaysResponse DescribeCustomerGateways(DescribeCustomerGatewaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomerGatewaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomerGatewaysResponse>>() {
                 }.getType();
@@ -637,6 +666,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeNatGatewaysResponse DescribeNatGateways(DescribeNatGatewaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNatGatewaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaysResponse>>() {
                 }.getType();
@@ -657,6 +687,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeNatSubnetsResponse DescribeNatSubnets(DescribeNatSubnetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNatSubnetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNatSubnetsResponse>>() {
                 }.getType();
@@ -677,6 +708,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeRoutePoliciesResponse DescribeRoutePolicies(DescribeRoutePoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoutePoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoutePoliciesResponse>>() {
                 }.getType();
@@ -697,6 +729,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTablesResponse>>() {
                 }.getType();
@@ -717,6 +750,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeSubnetAvailableIpsResponse DescribeSubnetAvailableIps(DescribeSubnetAvailableIpsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubnetAvailableIpsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetAvailableIpsResponse>>() {
                 }.getType();
@@ -737,6 +771,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeSubnetByDeviceResponse DescribeSubnetByDevice(DescribeSubnetByDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubnetByDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetByDeviceResponse>>() {
                 }.getType();
@@ -757,6 +792,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeSubnetByHostedDeviceResponse DescribeSubnetByHostedDevice(DescribeSubnetByHostedDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubnetByHostedDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetByHostedDeviceResponse>>() {
                 }.getType();
@@ -777,6 +813,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeSubnetsResponse DescribeSubnets(DescribeSubnetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubnetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetsResponse>>() {
                 }.getType();
@@ -797,6 +834,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
@@ -817,6 +855,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpcPeerConnectionsResponse DescribeVpcPeerConnections(DescribeVpcPeerConnectionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcPeerConnectionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcPeerConnectionsResponse>>() {
                 }.getType();
@@ -837,6 +876,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpcQuotaResponse DescribeVpcQuota(DescribeVpcQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcQuotaResponse>>() {
                 }.getType();
@@ -857,6 +897,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpcResourceResponse DescribeVpcResource(DescribeVpcResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcResourceResponse>>() {
                 }.getType();
@@ -877,6 +918,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpcViewResponse DescribeVpcView(DescribeVpcViewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcViewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcViewResponse>>() {
                 }.getType();
@@ -898,6 +940,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpcsResponse DescribeVpcs(DescribeVpcsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcsResponse>>() {
                 }.getType();
@@ -918,6 +961,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpnConnectionsResponse DescribeVpnConnections(DescribeVpnConnectionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpnConnectionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpnConnectionsResponse>>() {
                 }.getType();
@@ -938,6 +982,7 @@ public class BmvpcClient extends AbstractClient{
     public DescribeVpnGatewaysResponse DescribeVpnGateways(DescribeVpnGatewaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpnGatewaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewaysResponse>>() {
                 }.getType();
@@ -958,6 +1003,7 @@ public class BmvpcClient extends AbstractClient{
     public DownloadCustomerGatewayConfigurationResponse DownloadCustomerGatewayConfiguration(DownloadCustomerGatewayConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadCustomerGatewayConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadCustomerGatewayConfigurationResponse>>() {
                 }.getType();
@@ -978,6 +1024,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyCustomerGatewayAttributeResponse ModifyCustomerGatewayAttribute(ModifyCustomerGatewayAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomerGatewayAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomerGatewayAttributeResponse>>() {
                 }.getType();
@@ -998,6 +1045,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyRoutePolicyResponse ModifyRoutePolicy(ModifyRoutePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoutePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoutePolicyResponse>>() {
                 }.getType();
@@ -1018,6 +1066,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyRouteTableResponse ModifyRouteTable(ModifyRouteTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRouteTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRouteTableResponse>>() {
                 }.getType();
@@ -1038,6 +1087,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifySubnetAttributeResponse ModifySubnetAttribute(ModifySubnetAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubnetAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubnetAttributeResponse>>() {
                 }.getType();
@@ -1058,6 +1108,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifySubnetDHCPRelayResponse ModifySubnetDHCPRelay(ModifySubnetDHCPRelayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubnetDHCPRelayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubnetDHCPRelayResponse>>() {
                 }.getType();
@@ -1078,6 +1129,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyVpcAttributeResponse ModifyVpcAttribute(ModifyVpcAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVpcAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVpcAttributeResponse>>() {
                 }.getType();
@@ -1098,6 +1150,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyVpcPeerConnectionResponse ModifyVpcPeerConnection(ModifyVpcPeerConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVpcPeerConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVpcPeerConnectionResponse>>() {
                 }.getType();
@@ -1118,6 +1171,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyVpnConnectionAttributeResponse ModifyVpnConnectionAttribute(ModifyVpnConnectionAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVpnConnectionAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnConnectionAttributeResponse>>() {
                 }.getType();
@@ -1138,6 +1192,7 @@ public class BmvpcClient extends AbstractClient{
     public ModifyVpnGatewayAttributeResponse ModifyVpnGatewayAttribute(ModifyVpnGatewayAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVpnGatewayAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayAttributeResponse>>() {
                 }.getType();
@@ -1158,6 +1213,7 @@ public class BmvpcClient extends AbstractClient{
     public RejectVpcPeerConnectionResponse RejectVpcPeerConnection(RejectVpcPeerConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RejectVpcPeerConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RejectVpcPeerConnectionResponse>>() {
                 }.getType();
@@ -1178,6 +1234,7 @@ public class BmvpcClient extends AbstractClient{
     public ResetVpnConnectionResponse ResetVpnConnection(ResetVpnConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetVpnConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetVpnConnectionResponse>>() {
                 }.getType();
@@ -1199,6 +1256,7 @@ public class BmvpcClient extends AbstractClient{
     public UnbindEipsFromNatGatewayResponse UnbindEipsFromNatGateway(UnbindEipsFromNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindEipsFromNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindEipsFromNatGatewayResponse>>() {
                 }.getType();
@@ -1219,6 +1277,7 @@ public class BmvpcClient extends AbstractClient{
     public UnbindIpsFromNatGatewayResponse UnbindIpsFromNatGateway(UnbindIpsFromNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindIpsFromNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindIpsFromNatGatewayResponse>>() {
                 }.getType();
@@ -1239,6 +1298,7 @@ public class BmvpcClient extends AbstractClient{
     public UnbindSubnetsFromNatGatewayResponse UnbindSubnetsFromNatGateway(UnbindSubnetsFromNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindSubnetsFromNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindSubnetsFromNatGatewayResponse>>() {
                 }.getType();
@@ -1260,6 +1320,7 @@ public class BmvpcClient extends AbstractClient{
     public UpgradeNatGatewayResponse UpgradeNatGateway(UpgradeNatGatewayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeNatGatewayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeNatGatewayResponse>>() {
                 }.getType();

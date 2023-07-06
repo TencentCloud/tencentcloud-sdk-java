@@ -29,7 +29,7 @@ public class DbdcClient extends AbstractClient{
     private static String endpoint = "dbdc.tencentcloudapi.com";
     private static String service = "dbdc";
     private static String version = "2020-10-29";
-
+    
     public DbdcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DbdcClient extends AbstractClient{
     public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DbdcClient extends AbstractClient{
     public DescribeHostListResponse DescribeHostList(DescribeHostListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostListResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DbdcClient extends AbstractClient{
     public DescribeInstanceDetailResponse DescribeInstanceDetail(DescribeInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDetailResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DbdcClient extends AbstractClient{
     public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceListResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DbdcClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DbdcClient extends AbstractClient{
     public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceNameResponse>>() {
                 }.getType();

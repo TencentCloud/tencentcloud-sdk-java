@@ -29,7 +29,7 @@ public class AdvisorClient extends AbstractClient{
     private static String endpoint = "advisor.tencentcloudapi.com";
     private static String service = "advisor";
     private static String version = "2020-07-21";
-
+    
     public AdvisorClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AdvisorClient extends AbstractClient{
     public DescribeStrategiesResponse DescribeStrategies(DescribeStrategiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStrategiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStrategiesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AdvisorClient extends AbstractClient{
     public DescribeTaskStrategyRisksResponse DescribeTaskStrategyRisks(DescribeTaskStrategyRisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStrategyRisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStrategyRisksResponse>>() {
                 }.getType();

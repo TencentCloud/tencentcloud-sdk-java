@@ -29,7 +29,7 @@ public class MgobeClient extends AbstractClient{
     private static String endpoint = "mgobe.tencentcloudapi.com";
     private static String service = "mgobe";
     private static String version = "2020-10-14";
-
+    
     public MgobeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class MgobeClient extends AbstractClient{
     public ChangeRoomPlayerProfileResponse ChangeRoomPlayerProfile(ChangeRoomPlayerProfileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeRoomPlayerProfileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerProfileResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class MgobeClient extends AbstractClient{
     public ChangeRoomPlayerStatusResponse ChangeRoomPlayerStatus(ChangeRoomPlayerStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeRoomPlayerStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeRoomPlayerStatusResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ public class MgobeClient extends AbstractClient{
     public DescribePlayerResponse DescribePlayer(DescribePlayerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayerResponse>>() {
                 }.getType();
@@ -115,6 +118,7 @@ public class MgobeClient extends AbstractClient{
     public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
                 }.getType();
@@ -137,6 +141,7 @@ public class MgobeClient extends AbstractClient{
     public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();
@@ -159,6 +164,7 @@ public class MgobeClient extends AbstractClient{
     public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
                 }.getType();
@@ -181,6 +187,7 @@ public class MgobeClient extends AbstractClient{
     public RemoveRoomPlayerResponse RemoveRoomPlayer(RemoveRoomPlayerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveRoomPlayerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveRoomPlayerResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class OcrClient extends AbstractClient{
     private static String endpoint = "ocr.tencentcloudapi.com";
     private static String service = "ocr";
     private static String version = "2018-11-19";
-
+    
     public OcrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class OcrClient extends AbstractClient{
     public AdvertiseOCRResponse AdvertiseOCR(AdvertiseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AdvertiseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AdvertiseOCRResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class OcrClient extends AbstractClient{
     public ArithmeticOCRResponse ArithmeticOCR(ArithmeticOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ArithmeticOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ArithmeticOCRResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ public class OcrClient extends AbstractClient{
     public BankCardOCRResponse BankCardOCR(BankCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCardOCRResponse>>() {
                 }.getType();
@@ -115,6 +118,7 @@ public class OcrClient extends AbstractClient{
     public BankSlipOCRResponse BankSlipOCR(BankSlipOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankSlipOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankSlipOCRResponse>>() {
                 }.getType();
@@ -137,6 +141,7 @@ public class OcrClient extends AbstractClient{
     public BizLicenseOCRResponse BizLicenseOCR(BizLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BizLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BizLicenseOCRResponse>>() {
                 }.getType();
@@ -159,6 +164,7 @@ public class OcrClient extends AbstractClient{
     public BusInvoiceOCRResponse BusInvoiceOCR(BusInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BusInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BusInvoiceOCRResponse>>() {
                 }.getType();
@@ -181,6 +187,7 @@ public class OcrClient extends AbstractClient{
     public BusinessCardOCRResponse BusinessCardOCR(BusinessCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BusinessCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BusinessCardOCRResponse>>() {
                 }.getType();
@@ -203,6 +210,7 @@ public class OcrClient extends AbstractClient{
     public CarInvoiceOCRResponse CarInvoiceOCR(CarInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CarInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CarInvoiceOCRResponse>>() {
                 }.getType();
@@ -225,6 +233,7 @@ public class OcrClient extends AbstractClient{
     public ClassifyDetectOCRResponse ClassifyDetectOCR(ClassifyDetectOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClassifyDetectOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClassifyDetectOCRResponse>>() {
                 }.getType();
@@ -247,6 +256,7 @@ public class OcrClient extends AbstractClient{
     public CreateAIFormTaskResponse CreateAIFormTask(CreateAIFormTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAIFormTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAIFormTaskResponse>>() {
                 }.getType();
@@ -277,6 +287,7 @@ public class OcrClient extends AbstractClient{
     public DriverLicenseOCRResponse DriverLicenseOCR(DriverLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DriverLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DriverLicenseOCRResponse>>() {
                 }.getType();
@@ -299,6 +310,7 @@ public class OcrClient extends AbstractClient{
     public DutyPaidProofOCRResponse DutyPaidProofOCR(DutyPaidProofOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DutyPaidProofOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DutyPaidProofOCRResponse>>() {
                 }.getType();
@@ -321,6 +333,7 @@ public class OcrClient extends AbstractClient{
     public EduPaperOCRResponse EduPaperOCR(EduPaperOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EduPaperOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EduPaperOCRResponse>>() {
                 }.getType();
@@ -343,6 +356,7 @@ public class OcrClient extends AbstractClient{
     public EnglishOCRResponse EnglishOCR(EnglishOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnglishOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnglishOCRResponse>>() {
                 }.getType();
@@ -365,6 +379,7 @@ public class OcrClient extends AbstractClient{
     public EnterpriseLicenseOCRResponse EnterpriseLicenseOCR(EnterpriseLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnterpriseLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnterpriseLicenseOCRResponse>>() {
                 }.getType();
@@ -389,6 +404,7 @@ public class OcrClient extends AbstractClient{
     public EstateCertOCRResponse EstateCertOCR(EstateCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EstateCertOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EstateCertOCRResponse>>() {
                 }.getType();
@@ -411,6 +427,7 @@ public class OcrClient extends AbstractClient{
     public FinanBillOCRResponse FinanBillOCR(FinanBillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FinanBillOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FinanBillOCRResponse>>() {
                 }.getType();
@@ -433,6 +450,7 @@ public class OcrClient extends AbstractClient{
     public FinanBillSliceOCRResponse FinanBillSliceOCR(FinanBillSliceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FinanBillSliceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FinanBillSliceOCRResponse>>() {
                 }.getType();
@@ -455,6 +473,7 @@ public class OcrClient extends AbstractClient{
     public FlightInvoiceOCRResponse FlightInvoiceOCR(FlightInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FlightInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FlightInvoiceOCRResponse>>() {
                 }.getType();
@@ -477,6 +496,7 @@ public class OcrClient extends AbstractClient{
     public FormulaOCRResponse FormulaOCR(FormulaOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FormulaOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FormulaOCRResponse>>() {
                 }.getType();
@@ -559,6 +579,7 @@ public class OcrClient extends AbstractClient{
     public GeneralAccurateOCRResponse GeneralAccurateOCR(GeneralAccurateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralAccurateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralAccurateOCRResponse>>() {
                 }.getType();
@@ -641,6 +662,7 @@ public class OcrClient extends AbstractClient{
     public GeneralBasicOCRResponse GeneralBasicOCR(GeneralBasicOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralBasicOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralBasicOCRResponse>>() {
                 }.getType();
@@ -723,6 +745,7 @@ public class OcrClient extends AbstractClient{
     public GeneralEfficientOCRResponse GeneralEfficientOCR(GeneralEfficientOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralEfficientOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralEfficientOCRResponse>>() {
                 }.getType();
@@ -745,6 +768,7 @@ public class OcrClient extends AbstractClient{
     public GeneralFastOCRResponse GeneralFastOCR(GeneralFastOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralFastOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralFastOCRResponse>>() {
                 }.getType();
@@ -767,6 +791,7 @@ public class OcrClient extends AbstractClient{
     public GeneralHandwritingOCRResponse GeneralHandwritingOCR(GeneralHandwritingOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneralHandwritingOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneralHandwritingOCRResponse>>() {
                 }.getType();
@@ -787,6 +812,7 @@ public class OcrClient extends AbstractClient{
     public GetTaskStateResponse GetTaskState(GetTaskStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTaskStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTaskStateResponse>>() {
                 }.getType();
@@ -809,6 +835,7 @@ public class OcrClient extends AbstractClient{
     public HKIDCardOCRResponse HKIDCardOCR(HKIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HKIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<HKIDCardOCRResponse>>() {
                 }.getType();
@@ -831,6 +858,7 @@ public class OcrClient extends AbstractClient{
     public HmtResidentPermitOCRResponse HmtResidentPermitOCR(HmtResidentPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<HmtResidentPermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<HmtResidentPermitOCRResponse>>() {
                 }.getType();
@@ -898,6 +926,7 @@ public class OcrClient extends AbstractClient{
     public IDCardOCRResponse IDCardOCR(IDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IDCardOCRResponse>>() {
                 }.getType();
@@ -920,6 +949,7 @@ public class OcrClient extends AbstractClient{
     public ImageEnhancementResponse ImageEnhancement(ImageEnhancementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageEnhancementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageEnhancementResponse>>() {
                 }.getType();
@@ -942,6 +972,7 @@ public class OcrClient extends AbstractClient{
     public InstitutionOCRResponse InstitutionOCR(InstitutionOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstitutionOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InstitutionOCRResponse>>() {
                 }.getType();
@@ -964,6 +995,7 @@ public class OcrClient extends AbstractClient{
     public InsuranceBillOCRResponse InsuranceBillOCR(InsuranceBillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InsuranceBillOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InsuranceBillOCRResponse>>() {
                 }.getType();
@@ -986,6 +1018,7 @@ public class OcrClient extends AbstractClient{
     public InvoiceGeneralOCRResponse InvoiceGeneralOCR(InvoiceGeneralOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvoiceGeneralOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvoiceGeneralOCRResponse>>() {
                 }.getType();
@@ -1008,6 +1041,7 @@ public class OcrClient extends AbstractClient{
     public LicensePlateOCRResponse LicensePlateOCR(LicensePlateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LicensePlateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LicensePlateOCRResponse>>() {
                 }.getType();
@@ -1030,6 +1064,7 @@ public class OcrClient extends AbstractClient{
     public MLIDCardOCRResponse MLIDCardOCR(MLIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDCardOCRResponse>>() {
                 }.getType();
@@ -1052,6 +1087,7 @@ public class OcrClient extends AbstractClient{
     public MLIDPassportOCRResponse MLIDPassportOCR(MLIDPassportOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MLIDPassportOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MLIDPassportOCRResponse>>() {
                 }.getType();
@@ -1074,6 +1110,7 @@ public class OcrClient extends AbstractClient{
     public MainlandPermitOCRResponse MainlandPermitOCR(MainlandPermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MainlandPermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MainlandPermitOCRResponse>>() {
                 }.getType();
@@ -1095,6 +1132,7 @@ public class OcrClient extends AbstractClient{
     public MixedInvoiceDetectResponse MixedInvoiceDetect(MixedInvoiceDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MixedInvoiceDetectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MixedInvoiceDetectResponse>>() {
                 }.getType();
@@ -1117,6 +1155,7 @@ public class OcrClient extends AbstractClient{
     public MixedInvoiceOCRResponse MixedInvoiceOCR(MixedInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MixedInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MixedInvoiceOCRResponse>>() {
                 }.getType();
@@ -1139,6 +1178,7 @@ public class OcrClient extends AbstractClient{
     public OrgCodeCertOCRResponse OrgCodeCertOCR(OrgCodeCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OrgCodeCertOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OrgCodeCertOCRResponse>>() {
                 }.getType();
@@ -1161,6 +1201,7 @@ public class OcrClient extends AbstractClient{
     public PassportOCRResponse PassportOCR(PassportOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PassportOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PassportOCRResponse>>() {
                 }.getType();
@@ -1183,6 +1224,7 @@ public class OcrClient extends AbstractClient{
     public PermitOCRResponse PermitOCR(PermitOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PermitOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PermitOCRResponse>>() {
                 }.getType();
@@ -1206,6 +1248,7 @@ public class OcrClient extends AbstractClient{
     public PropOwnerCertOCRResponse PropOwnerCertOCR(PropOwnerCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PropOwnerCertOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PropOwnerCertOCRResponse>>() {
                 }.getType();
@@ -1228,6 +1271,7 @@ public class OcrClient extends AbstractClient{
     public QrcodeOCRResponse QrcodeOCR(QrcodeOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QrcodeOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QrcodeOCRResponse>>() {
                 }.getType();
@@ -1252,6 +1296,7 @@ public class OcrClient extends AbstractClient{
     public QueryBarCodeResponse QueryBarCode(QueryBarCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBarCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBarCodeResponse>>() {
                 }.getType();
@@ -1274,6 +1319,7 @@ public class OcrClient extends AbstractClient{
     public QuotaInvoiceOCRResponse QuotaInvoiceOCR(QuotaInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuotaInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QuotaInvoiceOCRResponse>>() {
                 }.getType();
@@ -1295,6 +1341,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeContainerOCRResponse RecognizeContainerOCR(RecognizeContainerOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeContainerOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeContainerOCRResponse>>() {
                 }.getType();
@@ -1451,6 +1498,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeGeneralInvoiceResponse RecognizeGeneralInvoice(RecognizeGeneralInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeGeneralInvoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeGeneralInvoiceResponse>>() {
                 }.getType();
@@ -1473,6 +1521,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCR(RecognizeHealthCodeOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeHealthCodeOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeHealthCodeOCRResponse>>() {
                 }.getType();
@@ -1495,6 +1544,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>() {
                 }.getType();
@@ -1517,6 +1567,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCR(RecognizeMedicalInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeMedicalInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeMedicalInvoiceOCRResponse>>() {
                 }.getType();
@@ -1539,6 +1590,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(RecognizeOnlineTaxiItineraryOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>() {
                 }.getType();
@@ -1559,6 +1611,7 @@ public class OcrClient extends AbstractClient{
     public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>() {
                 }.getType();
@@ -1579,6 +1632,7 @@ public class OcrClient extends AbstractClient{
     public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesSssIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesSssIDOCRResponse>>() {
                 }.getType();
@@ -1599,6 +1653,7 @@ public class OcrClient extends AbstractClient{
     public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesTinIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesTinIDOCRResponse>>() {
                 }.getType();
@@ -1619,6 +1674,7 @@ public class OcrClient extends AbstractClient{
     public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesUMIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesUMIDOCRResponse>>() {
                 }.getType();
@@ -1641,6 +1697,7 @@ public class OcrClient extends AbstractClient{
     public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>() {
                 }.getType();
@@ -1663,6 +1720,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeTableAccurateOCRResponse RecognizeTableAccurateOCR(RecognizeTableAccurateOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeTableAccurateOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeTableAccurateOCRResponse>>() {
                 }.getType();
@@ -1685,6 +1743,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeTableOCRResponse RecognizeTableOCR(RecognizeTableOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeTableOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeTableOCRResponse>>() {
                 }.getType();
@@ -1708,6 +1767,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeThaiIDCardOCRResponse RecognizeThaiIDCardOCR(RecognizeThaiIDCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeThaiIDCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeThaiIDCardOCRResponse>>() {
                 }.getType();
@@ -1730,6 +1790,7 @@ public class OcrClient extends AbstractClient{
     public RecognizeTravelCardOCRResponse RecognizeTravelCardOCR(RecognizeTravelCardOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeTravelCardOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeTravelCardOCRResponse>>() {
                 }.getType();
@@ -1752,6 +1813,7 @@ public class OcrClient extends AbstractClient{
     public ResidenceBookletOCRResponse ResidenceBookletOCR(ResidenceBookletOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResidenceBookletOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResidenceBookletOCRResponse>>() {
                 }.getType();
@@ -1774,6 +1836,7 @@ public class OcrClient extends AbstractClient{
     public RideHailingDriverLicenseOCRResponse RideHailingDriverLicenseOCR(RideHailingDriverLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RideHailingDriverLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RideHailingDriverLicenseOCRResponse>>() {
                 }.getType();
@@ -1796,6 +1859,7 @@ public class OcrClient extends AbstractClient{
     public RideHailingTransportLicenseOCRResponse RideHailingTransportLicenseOCR(RideHailingTransportLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RideHailingTransportLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RideHailingTransportLicenseOCRResponse>>() {
                 }.getType();
@@ -1818,6 +1882,7 @@ public class OcrClient extends AbstractClient{
     public SealOCRResponse SealOCR(SealOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SealOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SealOCRResponse>>() {
                 }.getType();
@@ -1840,6 +1905,7 @@ public class OcrClient extends AbstractClient{
     public ShipInvoiceOCRResponse ShipInvoiceOCR(ShipInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ShipInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ShipInvoiceOCRResponse>>() {
                 }.getType();
@@ -1862,6 +1928,7 @@ public class OcrClient extends AbstractClient{
     public SmartStructuralOCRResponse SmartStructuralOCR(SmartStructuralOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SmartStructuralOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SmartStructuralOCRResponse>>() {
                 }.getType();
@@ -1884,6 +1951,7 @@ public class OcrClient extends AbstractClient{
     public SmartStructuralOCRV2Response SmartStructuralOCRV2(SmartStructuralOCRV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<SmartStructuralOCRV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SmartStructuralOCRV2Response>>() {
                 }.getType();
@@ -1908,6 +1976,7 @@ public class OcrClient extends AbstractClient{
     public TableOCRResponse TableOCR(TableOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TableOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TableOCRResponse>>() {
                 }.getType();
@@ -1930,6 +1999,7 @@ public class OcrClient extends AbstractClient{
     public TaxiInvoiceOCRResponse TaxiInvoiceOCR(TaxiInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TaxiInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TaxiInvoiceOCRResponse>>() {
                 }.getType();
@@ -1950,6 +2020,7 @@ public class OcrClient extends AbstractClient{
     public TextDetectResponse TextDetect(TextDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextDetectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextDetectResponse>>() {
                 }.getType();
@@ -1972,6 +2043,7 @@ public class OcrClient extends AbstractClient{
     public TollInvoiceOCRResponse TollInvoiceOCR(TollInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TollInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TollInvoiceOCRResponse>>() {
                 }.getType();
@@ -1994,6 +2066,7 @@ public class OcrClient extends AbstractClient{
     public TrainTicketOCRResponse TrainTicketOCR(TrainTicketOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrainTicketOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TrainTicketOCRResponse>>() {
                 }.getType();
@@ -2016,6 +2089,7 @@ public class OcrClient extends AbstractClient{
     public VatInvoiceOCRResponse VatInvoiceOCR(VatInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceOCRResponse>>() {
                 }.getType();
@@ -2038,6 +2112,7 @@ public class OcrClient extends AbstractClient{
     public VatInvoiceVerifyResponse VatInvoiceVerify(VatInvoiceVerifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatInvoiceVerifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceVerifyResponse>>() {
                 }.getType();
@@ -2060,6 +2135,7 @@ public class OcrClient extends AbstractClient{
     public VatInvoiceVerifyNewResponse VatInvoiceVerifyNew(VatInvoiceVerifyNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatInvoiceVerifyNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VatInvoiceVerifyNewResponse>>() {
                 }.getType();
@@ -2082,6 +2158,7 @@ public class OcrClient extends AbstractClient{
     public VatRollInvoiceOCRResponse VatRollInvoiceOCR(VatRollInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VatRollInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VatRollInvoiceOCRResponse>>() {
                 }.getType();
@@ -2110,6 +2187,7 @@ public class OcrClient extends AbstractClient{
     public VehicleLicenseOCRResponse VehicleLicenseOCR(VehicleLicenseOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VehicleLicenseOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VehicleLicenseOCRResponse>>() {
                 }.getType();
@@ -2132,6 +2210,7 @@ public class OcrClient extends AbstractClient{
     public VehicleRegCertOCRResponse VehicleRegCertOCR(VehicleRegCertOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VehicleRegCertOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VehicleRegCertOCRResponse>>() {
                 }.getType();
@@ -2156,6 +2235,7 @@ public class OcrClient extends AbstractClient{
     public VerifyBasicBizLicenseResponse VerifyBasicBizLicense(VerifyBasicBizLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyBasicBizLicenseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyBasicBizLicenseResponse>>() {
                 }.getType();
@@ -2182,6 +2262,7 @@ public class OcrClient extends AbstractClient{
     public VerifyBizLicenseResponse VerifyBizLicense(VerifyBizLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyBizLicenseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyBizLicenseResponse>>() {
                 }.getType();
@@ -2204,6 +2285,7 @@ public class OcrClient extends AbstractClient{
     public VerifyEnterpriseFourFactorsResponse VerifyEnterpriseFourFactors(VerifyEnterpriseFourFactorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>() {
                 }.getType();
@@ -2224,6 +2306,7 @@ public class OcrClient extends AbstractClient{
     public VerifyOfdVatInvoiceOCRResponse VerifyOfdVatInvoiceOCR(VerifyOfdVatInvoiceOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyOfdVatInvoiceOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyOfdVatInvoiceOCRResponse>>() {
                 }.getType();
@@ -2244,6 +2327,7 @@ public class OcrClient extends AbstractClient{
     public VinOCRResponse VinOCR(VinOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VinOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VinOCRResponse>>() {
                 }.getType();
@@ -2266,6 +2350,7 @@ public class OcrClient extends AbstractClient{
     public WaybillOCRResponse WaybillOCR(WaybillOCRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WaybillOCRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<WaybillOCRResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class HasimClient extends AbstractClient{
     private static String endpoint = "hasim.tencentcloudapi.com";
     private static String service = "hasim";
     private static String version = "2021-07-16";
-
+    
     public HasimClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class HasimClient extends AbstractClient{
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class HasimClient extends AbstractClient{
     public CreateTacticResponse CreateTactic(CreateTacticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTacticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTacticResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class HasimClient extends AbstractClient{
     public CreateTagResponse CreateTag(CreateTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTagResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class HasimClient extends AbstractClient{
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class HasimClient extends AbstractClient{
     public DeleteTacticResponse DeleteTactic(DeleteTacticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTacticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTacticResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class HasimClient extends AbstractClient{
     public DeleteTagResponse DeleteTag(DeleteTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTagResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class HasimClient extends AbstractClient{
     public DescribeLinkResponse DescribeLink(DescribeLinkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLinkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLinkResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class HasimClient extends AbstractClient{
     public DescribeLinksResponse DescribeLinks(DescribeLinksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLinksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLinksResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class HasimClient extends AbstractClient{
     public DescribeOrdersResponse DescribeOrders(DescribeOrdersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrdersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class HasimClient extends AbstractClient{
     public DescribeRuleResponse DescribeRule(DescribeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class HasimClient extends AbstractClient{
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class HasimClient extends AbstractClient{
     public DescribeTacticResponse DescribeTactic(DescribeTacticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTacticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTacticResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class HasimClient extends AbstractClient{
     public DescribeTacticsResponse DescribeTactics(DescribeTacticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTacticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTacticsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class HasimClient extends AbstractClient{
     public DescribeTagsResponse DescribeTags(DescribeTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class HasimClient extends AbstractClient{
     public ModifyLinkAdvancedLogResponse ModifyLinkAdvancedLog(ModifyLinkAdvancedLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLinkAdvancedLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLinkAdvancedLogResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class HasimClient extends AbstractClient{
     public ModifyLinkTacticResponse ModifyLinkTactic(ModifyLinkTacticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLinkTacticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLinkTacticResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class HasimClient extends AbstractClient{
     public ModifyLinkTeleResponse ModifyLinkTele(ModifyLinkTeleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLinkTeleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLinkTeleResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class HasimClient extends AbstractClient{
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class HasimClient extends AbstractClient{
     public ModifyRuleStatusResponse ModifyRuleStatus(ModifyRuleStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleStatusResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class HasimClient extends AbstractClient{
     public ModifyTacticResponse ModifyTactic(ModifyTacticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTacticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTacticResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class HasimClient extends AbstractClient{
     public ModifyTagResponse ModifyTag(ModifyTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTagResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class HasimClient extends AbstractClient{
     public RenewLinkInfoResponse RenewLinkInfo(RenewLinkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewLinkInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewLinkInfoResponse>>() {
                 }.getType();

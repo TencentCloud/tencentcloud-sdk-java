@@ -29,7 +29,7 @@ public class CasbClient extends AbstractClient{
     private static String endpoint = "casb.tencentcloudapi.com";
     private static String service = "casb";
     private static String version = "2020-05-07";
-
+    
     public CasbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -54,6 +54,7 @@ public class CasbClient extends AbstractClient{
     public CopyCryptoColumnPolicyResponse CopyCryptoColumnPolicy(CopyCryptoColumnPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyCryptoColumnPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyCryptoColumnPolicyResponse>>() {
                 }.getType();

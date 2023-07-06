@@ -29,7 +29,7 @@ public class IirClient extends AbstractClient{
     private static String endpoint = "iir.tencentcloudapi.com";
     private static String service = "iir";
     private static String version = "2020-04-17";
-
+    
     public IirClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class IirClient extends AbstractClient{
     public RecognizeProductResponse RecognizeProduct(RecognizeProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeProductResponse>>() {
                 }.getType();

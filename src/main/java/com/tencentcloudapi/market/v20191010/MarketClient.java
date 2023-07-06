@@ -29,7 +29,7 @@ public class MarketClient extends AbstractClient{
     private static String endpoint = "market.tencentcloudapi.com";
     private static String service = "market";
     private static String version = "2019-10-10";
-
+    
     public MarketClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MarketClient extends AbstractClient{
     public FlowProductRemindResponse FlowProductRemind(FlowProductRemindRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FlowProductRemindResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FlowProductRemindResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class MarketClient extends AbstractClient{
     public GetUsagePlanUsageAmountResponse GetUsagePlanUsageAmount(GetUsagePlanUsageAmountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetUsagePlanUsageAmountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetUsagePlanUsageAmountResponse>>() {
                 }.getType();

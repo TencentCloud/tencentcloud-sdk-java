@@ -29,7 +29,7 @@ public class ApeClient extends AbstractClient{
     private static String endpoint = "ape.tencentcloudapi.com";
     private static String service = "ape";
     private static String version = "2020-05-13";
-
+    
     public ApeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ApeClient extends AbstractClient{
     public BatchDescribeOrderCertificateResponse BatchDescribeOrderCertificate(BatchDescribeOrderCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeOrderCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeOrderCertificateResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ApeClient extends AbstractClient{
     public BatchDescribeOrderImageResponse BatchDescribeOrderImage(BatchDescribeOrderImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeOrderImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeOrderImageResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class ApeClient extends AbstractClient{
     public CreateOrderAndDownloadsResponse CreateOrderAndDownloads(CreateOrderAndDownloadsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrderAndDownloadsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrderAndDownloadsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class ApeClient extends AbstractClient{
     public CreateOrderAndPayResponse CreateOrderAndPay(CreateOrderAndPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrderAndPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrderAndPayResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class ApeClient extends AbstractClient{
     public DescribeAuthUsersResponse DescribeAuthUsers(DescribeAuthUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuthUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuthUsersResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class ApeClient extends AbstractClient{
     public DescribeDownloadInfosResponse DescribeDownloadInfos(DescribeDownloadInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDownloadInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDownloadInfosResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class ApeClient extends AbstractClient{
     public DescribeImageResponse DescribeImage(DescribeImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class ApeClient extends AbstractClient{
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();

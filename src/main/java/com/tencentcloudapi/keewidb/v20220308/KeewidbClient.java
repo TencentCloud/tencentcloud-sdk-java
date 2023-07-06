@@ -29,7 +29,7 @@ public class KeewidbClient extends AbstractClient{
     private static String endpoint = "keewidb.tencentcloudapi.com";
     private static String service = "keewidb";
     private static String version = "2022-03-08";
-
+    
     public KeewidbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class KeewidbClient extends AbstractClient{
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class KeewidbClient extends AbstractClient{
     public ChangeInstanceMasterResponse ChangeInstanceMaster(ChangeInstanceMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeInstanceMasterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeInstanceMasterResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class KeewidbClient extends AbstractClient{
     public CleanUpInstanceResponse CleanUpInstance(CleanUpInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CleanUpInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CleanUpInstanceResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class KeewidbClient extends AbstractClient{
     public ClearInstanceResponse ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearInstanceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class KeewidbClient extends AbstractClient{
     public CreateBackupManuallyResponse CreateBackupManually(CreateBackupManuallyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupManuallyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupManuallyResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class KeewidbClient extends AbstractClient{
     public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoBackupConfigResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeConnectionConfigResponse DescribeConnectionConfig(DescribeConnectionConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConnectionConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConnectionConfigResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceBackupsResponse DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceBinlogsResponse DescribeInstanceBinlogs(DescribeInstanceBinlogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceBinlogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceBinlogsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstanceReplicasResponse DescribeInstanceReplicas(DescribeInstanceReplicasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceReplicasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceReplicasResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceWindowResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeProductInfoResponse DescribeProductInfo(DescribeProductInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductInfoResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeProxySlowLogResponse DescribeProxySlowLog(DescribeProxySlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class KeewidbClient extends AbstractClient{
     public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class KeewidbClient extends AbstractClient{
     public DestroyPostpaidInstanceResponse DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyPostpaidInstanceResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class KeewidbClient extends AbstractClient{
     public DestroyPrepaidInstanceResponse DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyPrepaidInstanceResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class KeewidbClient extends AbstractClient{
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyConnectionConfigResponse ModifyConnectionConfig(ModifyConnectionConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConnectionConfigResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamsResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class KeewidbClient extends AbstractClient{
     public ModifyNetworkConfigResponse ModifyNetworkConfig(ModifyNetworkConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class KeewidbClient extends AbstractClient{
     public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class KeewidbClient extends AbstractClient{
     public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class KeewidbClient extends AbstractClient{
     public StartUpInstanceResponse StartUpInstance(StartUpInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartUpInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartUpInstanceResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class KeewidbClient extends AbstractClient{
     public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();

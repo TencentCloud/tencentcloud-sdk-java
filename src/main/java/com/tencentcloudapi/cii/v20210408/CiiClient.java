@@ -29,7 +29,7 @@ public class CiiClient extends AbstractClient{
     private static String endpoint = "cii.tencentcloudapi.com";
     private static String service = "cii";
     private static String version = "2021-04-08";
-
+    
     public CiiClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CiiClient extends AbstractClient{
     public AddSubStructureTasksResponse AddSubStructureTasks(AddSubStructureTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddSubStructureTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddSubStructureTasksResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CiiClient extends AbstractClient{
     public CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTask(CreateAutoClassifyStructureTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoClassifyStructureTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoClassifyStructureTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CiiClient extends AbstractClient{
     public CreateStructureTaskResponse CreateStructureTask(CreateStructureTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStructureTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStructureTaskResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CiiClient extends AbstractClient{
     public CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskById(CreateUnderwriteTaskByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUnderwriteTaskByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUnderwriteTaskByIdResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CiiClient extends AbstractClient{
     public DescribeMachineUnderwriteResponse DescribeMachineUnderwrite(DescribeMachineUnderwriteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachineUnderwriteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachineUnderwriteResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CiiClient extends AbstractClient{
     public DescribeQualityScoreResponse DescribeQualityScore(DescribeQualityScoreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityScoreResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CiiClient extends AbstractClient{
     public DescribeReportClassifyResponse DescribeReportClassify(DescribeReportClassifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReportClassifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReportClassifyResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructCompareDataResponse DescribeStructCompareData(DescribeStructCompareDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructCompareDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructCompareDataResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructureDifferenceResponse DescribeStructureDifference(DescribeStructureDifferenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructureDifferenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureDifferenceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructureResultResponse DescribeStructureResult(DescribeStructureResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructureResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureResultResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructureTaskResultResponse DescribeStructureTaskResult(DescribeStructureTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructureTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CiiClient extends AbstractClient{
     public DescribeUnderwriteTaskResponse DescribeUnderwriteTask(DescribeUnderwriteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnderwriteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnderwriteTaskResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CiiClient extends AbstractClient{
     public UploadMedicalFileResponse UploadMedicalFile(UploadMedicalFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadMedicalFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadMedicalFileResponse>>() {
                 }.getType();

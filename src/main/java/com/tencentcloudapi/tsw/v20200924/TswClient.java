@@ -29,7 +29,7 @@ public class TswClient extends AbstractClient{
     private static String endpoint = "tsw.tencentcloudapi.com";
     private static String service = "tsw";
     private static String version = "2020-09-24";
-
+    
     public TswClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TswClient extends AbstractClient{
     public DescribeAgentShellResponse DescribeAgentShell(DescribeAgentShellRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentShellResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentShellResponse>>() {
                 }.getType();

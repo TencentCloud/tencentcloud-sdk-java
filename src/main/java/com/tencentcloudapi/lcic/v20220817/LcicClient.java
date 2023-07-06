@@ -29,7 +29,7 @@ public class LcicClient extends AbstractClient{
     private static String endpoint = "lcic.tencentcloudapi.com";
     private static String service = "lcic";
     private static String version = "2022-08-17";
-
+    
     public LcicClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class LcicClient extends AbstractClient{
     public AddGroupMemberResponse AddGroupMember(AddGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddGroupMemberResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class LcicClient extends AbstractClient{
     public BatchAddGroupMemberResponse BatchAddGroupMember(BatchAddGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchAddGroupMemberResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class LcicClient extends AbstractClient{
     public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateGroupWithMembersResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class LcicClient extends AbstractClient{
     public BatchCreateRoomResponse BatchCreateRoom(BatchCreateRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class LcicClient extends AbstractClient{
     public BatchDeleteGroupMemberResponse BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteGroupMemberResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class LcicClient extends AbstractClient{
     public BatchDeleteRecordResponse BatchDeleteRecord(BatchDeleteRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteRecordResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class LcicClient extends AbstractClient{
     public BatchDescribeDocumentResponse BatchDescribeDocument(BatchDescribeDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeDocumentResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class LcicClient extends AbstractClient{
     public BatchRegisterResponse BatchRegister(BatchRegisterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchRegisterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchRegisterResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class LcicClient extends AbstractClient{
     public BindDocumentToRoomResponse BindDocumentToRoom(BindDocumentToRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindDocumentToRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindDocumentToRoomResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class LcicClient extends AbstractClient{
     public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class LcicClient extends AbstractClient{
     public CreateGroupWithMembersResponse CreateGroupWithMembers(CreateGroupWithMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupWithMembersResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class LcicClient extends AbstractClient{
     public CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupWithSubGroupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class LcicClient extends AbstractClient{
     public CreateRoomResponse CreateRoom(CreateRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRoomResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class LcicClient extends AbstractClient{
     public CreateSupervisorResponse CreateSupervisor(CreateSupervisorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSupervisorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSupervisorResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class LcicClient extends AbstractClient{
     public DeleteAppCustomContentResponse DeleteAppCustomContent(DeleteAppCustomContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAppCustomContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAppCustomContentResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class LcicClient extends AbstractClient{
     public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class LcicClient extends AbstractClient{
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class LcicClient extends AbstractClient{
     public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupMemberResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class LcicClient extends AbstractClient{
     public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class LcicClient extends AbstractClient{
     public DeleteRoomResponse DeleteRoom(DeleteRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRoomResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class LcicClient extends AbstractClient{
     public DeleteSupervisorResponse DeleteSupervisor(DeleteSupervisorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSupervisorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSupervisorResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class LcicClient extends AbstractClient{
     public DescribeAnswerListResponse DescribeAnswerList(DescribeAnswerListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAnswerListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAnswerListResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class LcicClient extends AbstractClient{
     public DescribeAppDetailResponse DescribeAppDetail(DescribeAppDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppDetailResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class LcicClient extends AbstractClient{
     public DescribeCurrentMemberListResponse DescribeCurrentMemberList(DescribeCurrentMemberListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCurrentMemberListResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class LcicClient extends AbstractClient{
     public DescribeDeveloperResponse DescribeDeveloper(DescribeDeveloperRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeveloperResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeveloperResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class LcicClient extends AbstractClient{
     public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ public class LcicClient extends AbstractClient{
     public DescribeDocumentsResponse DescribeDocuments(DescribeDocumentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentsResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ public class LcicClient extends AbstractClient{
     public DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
                 }.getType();
@@ -609,6 +637,7 @@ public class LcicClient extends AbstractClient{
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
                 }.getType();
@@ -629,6 +658,7 @@ public class LcicClient extends AbstractClient{
     public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupListResponse>>() {
                 }.getType();
@@ -649,6 +679,7 @@ public class LcicClient extends AbstractClient{
     public DescribeGroupMemberListResponse DescribeGroupMemberList(DescribeGroupMemberListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupMemberListResponse>>() {
                 }.getType();
@@ -669,6 +700,7 @@ public class LcicClient extends AbstractClient{
     public DescribeQuestionListResponse DescribeQuestionList(DescribeQuestionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQuestionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQuestionListResponse>>() {
                 }.getType();
@@ -689,6 +721,7 @@ public class LcicClient extends AbstractClient{
     public DescribeRoomResponse DescribeRoom(DescribeRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomResponse>>() {
                 }.getType();
@@ -709,6 +742,7 @@ public class LcicClient extends AbstractClient{
     public DescribeRoomStatisticsResponse DescribeRoomStatistics(DescribeRoomStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomStatisticsResponse>>() {
                 }.getType();
@@ -729,6 +763,7 @@ public class LcicClient extends AbstractClient{
     public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSdkAppIdUsersResponse>>() {
                 }.getType();
@@ -749,6 +784,7 @@ public class LcicClient extends AbstractClient{
     public DescribeSupervisorsResponse DescribeSupervisors(DescribeSupervisorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSupervisorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSupervisorsResponse>>() {
                 }.getType();
@@ -769,6 +805,7 @@ public class LcicClient extends AbstractClient{
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
@@ -789,6 +826,7 @@ public class LcicClient extends AbstractClient{
     public EndRoomResponse EndRoom(EndRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EndRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EndRoomResponse>>() {
                 }.getType();
@@ -809,6 +847,7 @@ public class LcicClient extends AbstractClient{
     public GetRoomEventResponse GetRoomEvent(GetRoomEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomEventResponse>>() {
                 }.getType();
@@ -829,6 +868,7 @@ public class LcicClient extends AbstractClient{
     public GetRoomMessageResponse GetRoomMessage(GetRoomMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomMessageResponse>>() {
                 }.getType();
@@ -849,6 +889,7 @@ public class LcicClient extends AbstractClient{
     public GetRoomsResponse GetRooms(GetRoomsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRoomsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRoomsResponse>>() {
                 }.getType();
@@ -869,6 +910,7 @@ public class LcicClient extends AbstractClient{
     public GetWatermarkResponse GetWatermark(GetWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
                 }.getType();
@@ -889,6 +931,7 @@ public class LcicClient extends AbstractClient{
     public KickUserFromRoomResponse KickUserFromRoom(KickUserFromRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KickUserFromRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KickUserFromRoomResponse>>() {
                 }.getType();
@@ -909,6 +952,7 @@ public class LcicClient extends AbstractClient{
     public LoginOriginIdResponse LoginOriginId(LoginOriginIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LoginOriginIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LoginOriginIdResponse>>() {
                 }.getType();
@@ -929,6 +973,7 @@ public class LcicClient extends AbstractClient{
     public LoginUserResponse LoginUser(LoginUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LoginUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LoginUserResponse>>() {
                 }.getType();
@@ -949,6 +994,7 @@ public class LcicClient extends AbstractClient{
     public ModifyAppResponse ModifyApp(ModifyAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAppResponse>>() {
                 }.getType();
@@ -969,6 +1015,7 @@ public class LcicClient extends AbstractClient{
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
                 }.getType();
@@ -989,6 +1036,7 @@ public class LcicClient extends AbstractClient{
     public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ public class LcicClient extends AbstractClient{
     public ModifyUserProfileResponse ModifyUserProfile(ModifyUserProfileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserProfileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserProfileResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ public class LcicClient extends AbstractClient{
     public RegisterUserResponse RegisterUser(RegisterUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterUserResponse>>() {
                 }.getType();
@@ -1049,6 +1099,7 @@ public class LcicClient extends AbstractClient{
     public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAppCustomContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
                 }.getType();
@@ -1069,6 +1120,7 @@ public class LcicClient extends AbstractClient{
     public SetWatermarkResponse SetWatermark(SetWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
                 }.getType();
@@ -1089,6 +1141,7 @@ public class LcicClient extends AbstractClient{
     public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartRoomResponse>>() {
                 }.getType();
@@ -1109,6 +1162,7 @@ public class LcicClient extends AbstractClient{
     public UnbindDocumentFromRoomResponse UnbindDocumentFromRoom(UnbindDocumentFromRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindDocumentFromRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindDocumentFromRoomResponse>>() {
                 }.getType();

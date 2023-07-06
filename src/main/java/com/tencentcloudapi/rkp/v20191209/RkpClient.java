@@ -29,7 +29,7 @@ public class RkpClient extends AbstractClient{
     private static String endpoint = "rkp.tencentcloudapi.com";
     private static String service = "rkp";
     private static String version = "2019-12-09";
-
+    
     public RkpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class RkpClient extends AbstractClient{
     public GetOpenIdResponse GetOpenId(GetOpenIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetOpenIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetOpenIdResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class RkpClient extends AbstractClient{
     public GetTokenResponse GetToken(GetTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTokenResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class RkpClient extends AbstractClient{
     public QueryDevAndRiskResponse QueryDevAndRisk(QueryDevAndRiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryDevAndRiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryDevAndRiskResponse>>() {
                 }.getType();

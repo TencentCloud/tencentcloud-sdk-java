@@ -29,7 +29,7 @@ public class TdsClient extends AbstractClient{
     private static String endpoint = "tds.tencentcloudapi.com";
     private static String service = "tds";
     private static String version = "2022-08-01";
-
+    
     public TdsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TdsClient extends AbstractClient{
     public DescribeFraudBaseResponse DescribeFraudBase(DescribeFraudBaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFraudBaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFraudBaseResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TdsClient extends AbstractClient{
     public DescribeFraudPremiumResponse DescribeFraudPremium(DescribeFraudPremiumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFraudPremiumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFraudPremiumResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TdsClient extends AbstractClient{
     public DescribeFraudUltimateResponse DescribeFraudUltimate(DescribeFraudUltimateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFraudUltimateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFraudUltimateResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TdsClient extends AbstractClient{
     public DescribeTrustedIDResponse DescribeTrustedID(DescribeTrustedIDRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrustedIDResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrustedIDResponse>>() {
                 }.getType();

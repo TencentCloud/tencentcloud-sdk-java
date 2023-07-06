@@ -29,7 +29,7 @@ public class TsfClient extends AbstractClient{
     private static String endpoint = "tsf.tencentcloudapi.com";
     private static String service = "tsf";
     private static String version = "2018-03-26";
-
+    
     public TsfClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TsfClient extends AbstractClient{
     public AddClusterInstancesResponse AddClusterInstances(AddClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddClusterInstancesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TsfClient extends AbstractClient{
     public AddInstancesResponse AddInstances(AddInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddInstancesResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TsfClient extends AbstractClient{
     public AssociateBusinessLogConfigResponse AssociateBusinessLogConfig(AssociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateBusinessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateBusinessLogConfigResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TsfClient extends AbstractClient{
     public AssociateConfigWithGroupResponse AssociateConfigWithGroup(AssociateConfigWithGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateConfigWithGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateConfigWithGroupResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TsfClient extends AbstractClient{
     public BindApiGroupResponse BindApiGroup(BindApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindApiGroupResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TsfClient extends AbstractClient{
     public BindPluginResponse BindPlugin(BindPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindPluginResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TsfClient extends AbstractClient{
     public ChangeApiUsableStatusResponse ChangeApiUsableStatus(ChangeApiUsableStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeApiUsableStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeApiUsableStatusResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TsfClient extends AbstractClient{
     public ContinueRunFailedTaskBatchResponse ContinueRunFailedTaskBatch(ContinueRunFailedTaskBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ContinueRunFailedTaskBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ContinueRunFailedTaskBatchResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TsfClient extends AbstractClient{
     public CreateAllGatewayApiAsyncResponse CreateAllGatewayApiAsync(CreateAllGatewayApiAsyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAllGatewayApiAsyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAllGatewayApiAsyncResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TsfClient extends AbstractClient{
     public CreateApiGroupResponse CreateApiGroup(CreateApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiGroupResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TsfClient extends AbstractClient{
     public CreateApiRateLimitRuleResponse CreateApiRateLimitRule(CreateApiRateLimitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiRateLimitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiRateLimitRuleResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TsfClient extends AbstractClient{
     public CreateApiRateLimitRuleWithDetailRespResponse CreateApiRateLimitRuleWithDetailResp(CreateApiRateLimitRuleWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiRateLimitRuleWithDetailRespResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TsfClient extends AbstractClient{
     public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TsfClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TsfClient extends AbstractClient{
     public CreateConfigResponse CreateConfig(CreateConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConfigResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TsfClient extends AbstractClient{
     public CreateConfigTemplateResponse CreateConfigTemplate(CreateConfigTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConfigTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConfigTemplateResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TsfClient extends AbstractClient{
     public CreateConfigTemplateWithDetailRespResponse CreateConfigTemplateWithDetailResp(CreateConfigTemplateWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConfigTemplateWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConfigTemplateWithDetailRespResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TsfClient extends AbstractClient{
     public CreateConfigWithDetailRespResponse CreateConfigWithDetailResp(CreateConfigWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConfigWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConfigWithDetailRespResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TsfClient extends AbstractClient{
     public CreateContainGroupResponse CreateContainGroup(CreateContainGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContainGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContainGroupResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TsfClient extends AbstractClient{
     public CreateFileConfigResponse CreateFileConfig(CreateFileConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFileConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFileConfigResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TsfClient extends AbstractClient{
     public CreateFileConfigWithDetailRespResponse CreateFileConfigWithDetailResp(CreateFileConfigWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFileConfigWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFileConfigWithDetailRespResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TsfClient extends AbstractClient{
     public CreateGatewayApiResponse CreateGatewayApi(CreateGatewayApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGatewayApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGatewayApiResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TsfClient extends AbstractClient{
     public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGroupResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TsfClient extends AbstractClient{
     public CreateLaneResponse CreateLane(CreateLaneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLaneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLaneResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TsfClient extends AbstractClient{
     public CreateLaneRuleResponse CreateLaneRule(CreateLaneRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLaneRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLaneRuleResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TsfClient extends AbstractClient{
     public CreateMicroserviceResponse CreateMicroservice(CreateMicroserviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMicroserviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMicroserviceResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TsfClient extends AbstractClient{
     public CreateMicroserviceWithDetailRespResponse CreateMicroserviceWithDetailResp(CreateMicroserviceWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMicroserviceWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMicroserviceWithDetailRespResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TsfClient extends AbstractClient{
     public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class TsfClient extends AbstractClient{
     public CreatePathRewritesResponse CreatePathRewrites(CreatePathRewritesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePathRewritesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePathRewritesResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class TsfClient extends AbstractClient{
     public CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailResp(CreatePathRewritesWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePathRewritesWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePathRewritesWithDetailRespResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class TsfClient extends AbstractClient{
     public CreatePublicConfigResponse CreatePublicConfig(CreatePublicConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePublicConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePublicConfigResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class TsfClient extends AbstractClient{
     public CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(CreatePublicConfigWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePublicConfigWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePublicConfigWithDetailRespResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class TsfClient extends AbstractClient{
     public CreateRepositoryResponse CreateRepository(CreateRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRepositoryResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class TsfClient extends AbstractClient{
     public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class TsfClient extends AbstractClient{
     public CreateTaskFlowResponse CreateTaskFlow(CreateTaskFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskFlowResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class TsfClient extends AbstractClient{
     public CreateUnitNamespacesResponse CreateUnitNamespaces(CreateUnitNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUnitNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUnitNamespacesResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class TsfClient extends AbstractClient{
     public CreateUnitRuleResponse CreateUnitRule(CreateUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUnitRuleResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class TsfClient extends AbstractClient{
     public CreateUnitRuleWithDetailRespResponse CreateUnitRuleWithDetailResp(CreateUnitRuleWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUnitRuleWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUnitRuleWithDetailRespResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class TsfClient extends AbstractClient{
     public DeleteApiGroupResponse DeleteApiGroup(DeleteApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiGroupResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class TsfClient extends AbstractClient{
     public DeleteApiRateLimitRuleResponse DeleteApiRateLimitRule(DeleteApiRateLimitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiRateLimitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiRateLimitRuleResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class TsfClient extends AbstractClient{
     public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class TsfClient extends AbstractClient{
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class TsfClient extends AbstractClient{
     public DeleteConfigResponse DeleteConfig(DeleteConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteConfigResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class TsfClient extends AbstractClient{
     public DeleteConfigTemplateResponse DeleteConfigTemplate(DeleteConfigTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteConfigTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteConfigTemplateResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class TsfClient extends AbstractClient{
     public DeleteContainerGroupResponse DeleteContainerGroup(DeleteContainerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteContainerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteContainerGroupResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class TsfClient extends AbstractClient{
     public DeleteFileConfigResponse DeleteFileConfig(DeleteFileConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFileConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFileConfigResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class TsfClient extends AbstractClient{
     public DeleteGatewayApiResponse DeleteGatewayApi(DeleteGatewayApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGatewayApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGatewayApiResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class TsfClient extends AbstractClient{
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class TsfClient extends AbstractClient{
     public DeleteImageTagsResponse DeleteImageTags(DeleteImageTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImageTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImageTagsResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class TsfClient extends AbstractClient{
     public DeleteLaneResponse DeleteLane(DeleteLaneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaneResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class TsfClient extends AbstractClient{
     public DeleteLaneRuleResponse DeleteLaneRule(DeleteLaneRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaneRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaneRuleResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class TsfClient extends AbstractClient{
     public DeleteMicroserviceResponse DeleteMicroservice(DeleteMicroserviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMicroserviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMicroserviceResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class TsfClient extends AbstractClient{
     public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class TsfClient extends AbstractClient{
     public DeletePathRewritesResponse DeletePathRewrites(DeletePathRewritesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePathRewritesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePathRewritesResponse>>() {
                 }.getType();
@@ -1128,6 +1182,7 @@ public class TsfClient extends AbstractClient{
     public DeletePkgsResponse DeletePkgs(DeletePkgsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePkgsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePkgsResponse>>() {
                 }.getType();
@@ -1148,6 +1203,7 @@ public class TsfClient extends AbstractClient{
     public DeletePublicConfigResponse DeletePublicConfig(DeletePublicConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePublicConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePublicConfigResponse>>() {
                 }.getType();
@@ -1168,6 +1224,7 @@ public class TsfClient extends AbstractClient{
     public DeleteRepositoryResponse DeleteRepository(DeleteRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRepositoryResponse>>() {
                 }.getType();
@@ -1188,6 +1245,7 @@ public class TsfClient extends AbstractClient{
     public DeleteServerlessGroupResponse DeleteServerlessGroup(DeleteServerlessGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServerlessGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServerlessGroupResponse>>() {
                 }.getType();
@@ -1208,6 +1266,7 @@ public class TsfClient extends AbstractClient{
     public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
                 }.getType();
@@ -1228,6 +1287,7 @@ public class TsfClient extends AbstractClient{
     public DeleteUnitNamespacesResponse DeleteUnitNamespaces(DeleteUnitNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUnitNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUnitNamespacesResponse>>() {
                 }.getType();
@@ -1248,6 +1308,7 @@ public class TsfClient extends AbstractClient{
     public DeleteUnitRuleResponse DeleteUnitRule(DeleteUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUnitRuleResponse>>() {
                 }.getType();
@@ -1268,6 +1329,7 @@ public class TsfClient extends AbstractClient{
     public DeployContainerGroupResponse DeployContainerGroup(DeployContainerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeployContainerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeployContainerGroupResponse>>() {
                 }.getType();
@@ -1288,6 +1350,7 @@ public class TsfClient extends AbstractClient{
     public DeployGroupResponse DeployGroup(DeployGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeployGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeployGroupResponse>>() {
                 }.getType();
@@ -1308,6 +1371,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiDetailResponse DescribeApiDetail(DescribeApiDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiDetailResponse>>() {
                 }.getType();
@@ -1328,6 +1392,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiGroupResponse DescribeApiGroup(DescribeApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiGroupResponse>>() {
                 }.getType();
@@ -1348,6 +1413,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiGroupsResponse DescribeApiGroups(DescribeApiGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiGroupsResponse>>() {
                 }.getType();
@@ -1368,6 +1434,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiRateLimitRulesResponse DescribeApiRateLimitRules(DescribeApiRateLimitRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiRateLimitRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiRateLimitRulesResponse>>() {
                 }.getType();
@@ -1388,6 +1455,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiUseDetailResponse DescribeApiUseDetail(DescribeApiUseDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiUseDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiUseDetailResponse>>() {
                 }.getType();
@@ -1408,6 +1476,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApiVersionsResponse DescribeApiVersions(DescribeApiVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiVersionsResponse>>() {
                 }.getType();
@@ -1428,6 +1497,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApplicationResponse DescribeApplication(DescribeApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationResponse>>() {
                 }.getType();
@@ -1448,6 +1518,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApplicationAttributeResponse DescribeApplicationAttribute(DescribeApplicationAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationAttributeResponse>>() {
                 }.getType();
@@ -1468,6 +1539,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(DescribeApplicationBusinessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationBusinessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationBusinessLogConfigResponse>>() {
                 }.getType();
@@ -1488,6 +1560,7 @@ public class TsfClient extends AbstractClient{
     public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
                 }.getType();
@@ -1508,6 +1581,7 @@ public class TsfClient extends AbstractClient{
     public DescribeBasicResourceUsageResponse DescribeBasicResourceUsage(DescribeBasicResourceUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicResourceUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicResourceUsageResponse>>() {
                 }.getType();
@@ -1528,6 +1602,7 @@ public class TsfClient extends AbstractClient{
     public DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(DescribeBusinessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBusinessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBusinessLogConfigResponse>>() {
                 }.getType();
@@ -1548,6 +1623,7 @@ public class TsfClient extends AbstractClient{
     public DescribeBusinessLogConfigsResponse DescribeBusinessLogConfigs(DescribeBusinessLogConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBusinessLogConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBusinessLogConfigsResponse>>() {
                 }.getType();
@@ -1568,6 +1644,7 @@ public class TsfClient extends AbstractClient{
     public DescribeClusterInstancesResponse DescribeClusterInstances(DescribeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstancesResponse>>() {
                 }.getType();
@@ -1588,6 +1665,7 @@ public class TsfClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -1608,6 +1686,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
                 }.getType();
@@ -1628,6 +1707,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigReleaseLogsResponse DescribeConfigReleaseLogs(DescribeConfigReleaseLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigReleaseLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigReleaseLogsResponse>>() {
                 }.getType();
@@ -1648,6 +1728,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigReleasesResponse DescribeConfigReleases(DescribeConfigReleasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigReleasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigReleasesResponse>>() {
                 }.getType();
@@ -1668,6 +1749,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigSummaryResponse DescribeConfigSummary(DescribeConfigSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigSummaryResponse>>() {
                 }.getType();
@@ -1688,6 +1770,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigTemplateResponse DescribeConfigTemplate(DescribeConfigTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigTemplateResponse>>() {
                 }.getType();
@@ -1708,6 +1791,7 @@ public class TsfClient extends AbstractClient{
     public DescribeConfigsResponse DescribeConfigs(DescribeConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigsResponse>>() {
                 }.getType();
@@ -1728,6 +1812,7 @@ public class TsfClient extends AbstractClient{
     public DescribeContainerEventsResponse DescribeContainerEvents(DescribeContainerEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerEventsResponse>>() {
                 }.getType();
@@ -1748,6 +1833,7 @@ public class TsfClient extends AbstractClient{
     public DescribeContainerGroupAttributeResponse DescribeContainerGroupAttribute(DescribeContainerGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerGroupAttributeResponse>>() {
                 }.getType();
@@ -1768,6 +1854,7 @@ public class TsfClient extends AbstractClient{
     public DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(DescribeContainerGroupDeployInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerGroupDeployInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerGroupDeployInfoResponse>>() {
                 }.getType();
@@ -1788,6 +1875,7 @@ public class TsfClient extends AbstractClient{
     public DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(DescribeContainerGroupDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerGroupDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerGroupDetailResponse>>() {
                 }.getType();
@@ -1808,6 +1896,7 @@ public class TsfClient extends AbstractClient{
     public DescribeContainerGroupsResponse DescribeContainerGroups(DescribeContainerGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerGroupsResponse>>() {
                 }.getType();
@@ -1828,6 +1917,7 @@ public class TsfClient extends AbstractClient{
     public DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(DescribeCreateGatewayApiStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCreateGatewayApiStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCreateGatewayApiStatusResponse>>() {
                 }.getType();
@@ -1848,6 +1938,7 @@ public class TsfClient extends AbstractClient{
     public DescribeDeliveryConfigResponse DescribeDeliveryConfig(DescribeDeliveryConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeliveryConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigResponse>>() {
                 }.getType();
@@ -1868,6 +1959,7 @@ public class TsfClient extends AbstractClient{
     public DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupId(DescribeDeliveryConfigByGroupIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse>>() {
                 }.getType();
@@ -1888,6 +1980,7 @@ public class TsfClient extends AbstractClient{
     public DescribeDeliveryConfigsResponse DescribeDeliveryConfigs(DescribeDeliveryConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeliveryConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeliveryConfigsResponse>>() {
                 }.getType();
@@ -1909,6 +2002,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeDownloadInfoResponse DescribeDownloadInfo(DescribeDownloadInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDownloadInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDownloadInfoResponse>>() {
                 }.getType();
@@ -1929,6 +2023,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeEnabledUnitRuleResponse DescribeEnabledUnitRule(DescribeEnabledUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnabledUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnabledUnitRuleResponse>>() {
                 }.getType();
@@ -1949,6 +2044,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeFileConfigReleasesResponse DescribeFileConfigReleases(DescribeFileConfigReleasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileConfigReleasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileConfigReleasesResponse>>() {
                 }.getType();
@@ -1969,6 +2065,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeFileConfigsResponse DescribeFileConfigs(DescribeFileConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileConfigsResponse>>() {
                 }.getType();
@@ -1989,6 +2086,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeFlowLastBatchStateResponse DescribeFlowLastBatchState(DescribeFlowLastBatchStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowLastBatchStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowLastBatchStateResponse>>() {
                 }.getType();
@@ -2009,6 +2107,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGatewayAllGroupApisResponse DescribeGatewayAllGroupApis(DescribeGatewayAllGroupApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGatewayAllGroupApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGatewayAllGroupApisResponse>>() {
                 }.getType();
@@ -2029,6 +2128,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGatewayApisResponse DescribeGatewayApis(DescribeGatewayApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGatewayApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGatewayApisResponse>>() {
                 }.getType();
@@ -2049,6 +2149,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGatewayMonitorOverviewResponse DescribeGatewayMonitorOverview(DescribeGatewayMonitorOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGatewayMonitorOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGatewayMonitorOverviewResponse>>() {
                 }.getType();
@@ -2069,6 +2170,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
                 }.getType();
@@ -2089,6 +2191,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupAttributeResponse DescribeGroupAttribute(DescribeGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupAttributeResponse>>() {
                 }.getType();
@@ -2109,6 +2212,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupBindedGatewaysResponse DescribeGroupBindedGateways(DescribeGroupBindedGatewaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupBindedGatewaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>() {
                 }.getType();
@@ -2129,6 +2233,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupBusinessLogConfigsResponse DescribeGroupBusinessLogConfigs(DescribeGroupBusinessLogConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupBusinessLogConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupBusinessLogConfigsResponse>>() {
                 }.getType();
@@ -2149,6 +2254,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupGatewaysResponse DescribeGroupGateways(DescribeGroupGatewaysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupGatewaysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupGatewaysResponse>>() {
                 }.getType();
@@ -2169,6 +2275,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupInstancesResponse DescribeGroupInstances(DescribeGroupInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupInstancesResponse>>() {
                 }.getType();
@@ -2189,6 +2296,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupReleaseResponse DescribeGroupRelease(DescribeGroupReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupReleaseResponse>>() {
                 }.getType();
@@ -2209,6 +2317,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupUseDetailResponse DescribeGroupUseDetail(DescribeGroupUseDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupUseDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupUseDetailResponse>>() {
                 }.getType();
@@ -2229,6 +2338,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupsResponse DescribeGroups(DescribeGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupsResponse>>() {
                 }.getType();
@@ -2249,6 +2359,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(DescribeGroupsWithPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupsWithPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupsWithPluginResponse>>() {
                 }.getType();
@@ -2269,6 +2380,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeImageRepositoryResponse DescribeImageRepository(DescribeImageRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageRepositoryResponse>>() {
                 }.getType();
@@ -2289,6 +2401,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeImageTagsResponse DescribeImageTags(DescribeImageTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageTagsResponse>>() {
                 }.getType();
@@ -2309,6 +2422,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(DescribeInovcationIndicatorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInovcationIndicatorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInovcationIndicatorsResponse>>() {
                 }.getType();
@@ -2329,6 +2443,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -2349,6 +2464,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(DescribeInvocationMetricDataCurveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationMetricDataCurveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataCurveResponse>>() {
                 }.getType();
@@ -2369,6 +2485,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(DescribeInvocationMetricDataDimensionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationMetricDataDimensionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataDimensionResponse>>() {
                 }.getType();
@@ -2389,6 +2506,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPoint(DescribeInvocationMetricDataPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationMetricDataPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricDataPointResponse>>() {
                 }.getType();
@@ -2409,6 +2527,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeInvocationMetricScatterPlotResponse DescribeInvocationMetricScatterPlot(DescribeInvocationMetricScatterPlotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationMetricScatterPlotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationMetricScatterPlotResponse>>() {
                 }.getType();
@@ -2429,6 +2548,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeJvmMonitorResponse DescribeJvmMonitor(DescribeJvmMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJvmMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJvmMonitorResponse>>() {
                 }.getType();
@@ -2449,6 +2569,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeLaneRulesResponse DescribeLaneRules(DescribeLaneRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLaneRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLaneRulesResponse>>() {
                 }.getType();
@@ -2469,6 +2590,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeLanesResponse DescribeLanes(DescribeLanesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLanesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLanesResponse>>() {
                 }.getType();
@@ -2489,6 +2611,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeMicroserviceResponse DescribeMicroservice(DescribeMicroserviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMicroserviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMicroserviceResponse>>() {
                 }.getType();
@@ -2509,6 +2632,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeMicroservicesResponse DescribeMicroservices(DescribeMicroservicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMicroservicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMicroservicesResponse>>() {
                 }.getType();
@@ -2529,6 +2653,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeMsApiListResponse DescribeMsApiList(DescribeMsApiListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMsApiListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMsApiListResponse>>() {
                 }.getType();
@@ -2549,6 +2674,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeOverviewInvocationResponse DescribeOverviewInvocation(DescribeOverviewInvocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewInvocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewInvocationResponse>>() {
                 }.getType();
@@ -2569,6 +2695,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePathRewriteResponse DescribePathRewrite(DescribePathRewriteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePathRewriteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePathRewriteResponse>>() {
                 }.getType();
@@ -2589,6 +2716,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePathRewritesResponse DescribePathRewrites(DescribePathRewritesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePathRewritesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePathRewritesResponse>>() {
                 }.getType();
@@ -2609,6 +2737,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePkgsResponse DescribePkgs(DescribePkgsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePkgsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePkgsResponse>>() {
                 }.getType();
@@ -2629,6 +2758,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePluginInstancesResponse DescribePluginInstances(DescribePluginInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginInstancesResponse>>() {
                 }.getType();
@@ -2649,6 +2779,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePodInstancesResponse DescribePodInstances(DescribePodInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePodInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePodInstancesResponse>>() {
                 }.getType();
@@ -2669,6 +2800,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeProgramsResponse DescribePrograms(DescribeProgramsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProgramsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProgramsResponse>>() {
                 }.getType();
@@ -2689,6 +2821,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePublicConfigResponse DescribePublicConfig(DescribePublicConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicConfigResponse>>() {
                 }.getType();
@@ -2709,6 +2842,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePublicConfigReleaseLogsResponse DescribePublicConfigReleaseLogs(DescribePublicConfigReleaseLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicConfigReleaseLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicConfigReleaseLogsResponse>>() {
                 }.getType();
@@ -2729,6 +2863,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePublicConfigReleasesResponse DescribePublicConfigReleases(DescribePublicConfigReleasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicConfigReleasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicConfigReleasesResponse>>() {
                 }.getType();
@@ -2749,6 +2884,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePublicConfigSummaryResponse DescribePublicConfigSummary(DescribePublicConfigSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicConfigSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicConfigSummaryResponse>>() {
                 }.getType();
@@ -2769,6 +2905,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribePublicConfigsResponse DescribePublicConfigs(DescribePublicConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicConfigsResponse>>() {
                 }.getType();
@@ -2789,6 +2926,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeReleasedConfigResponse DescribeReleasedConfig(DescribeReleasedConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReleasedConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReleasedConfigResponse>>() {
                 }.getType();
@@ -2809,6 +2947,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeRepositoriesResponse DescribeRepositories(DescribeRepositoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRepositoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRepositoriesResponse>>() {
                 }.getType();
@@ -2829,6 +2968,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeRepositoryResponse DescribeRepository(DescribeRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRepositoryResponse>>() {
                 }.getType();
@@ -2849,6 +2989,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeResourceTaskStatusResponse DescribeResourceTaskStatus(DescribeResourceTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTaskStatusResponse>>() {
                 }.getType();
@@ -2869,6 +3010,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeSimpleApplicationsResponse DescribeSimpleApplications(DescribeSimpleApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSimpleApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSimpleApplicationsResponse>>() {
                 }.getType();
@@ -2889,6 +3031,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeSimpleClustersResponse DescribeSimpleClusters(DescribeSimpleClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSimpleClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSimpleClustersResponse>>() {
                 }.getType();
@@ -2909,6 +3052,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeSimpleGroupsResponse DescribeSimpleGroups(DescribeSimpleGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSimpleGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSimpleGroupsResponse>>() {
                 }.getType();
@@ -2929,6 +3073,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeSimpleNamespacesResponse DescribeSimpleNamespaces(DescribeSimpleNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSimpleNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSimpleNamespacesResponse>>() {
                 }.getType();
@@ -2949,6 +3094,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeStatisticsResponse DescribeStatistics(DescribeStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatisticsResponse>>() {
                 }.getType();
@@ -2969,6 +3115,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -2989,6 +3136,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeTaskLastStatusResponse DescribeTaskLastStatus(DescribeTaskLastStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskLastStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskLastStatusResponse>>() {
                 }.getType();
@@ -3009,6 +3157,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeTaskRecordsResponse DescribeTaskRecords(DescribeTaskRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskRecordsResponse>>() {
                 }.getType();
@@ -3029,6 +3178,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetail(DescribeUnitApiUseDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnitApiUseDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnitApiUseDetailResponse>>() {
                 }.getType();
@@ -3049,6 +3199,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUnitNamespacesResponse DescribeUnitNamespaces(DescribeUnitNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnitNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnitNamespacesResponse>>() {
                 }.getType();
@@ -3069,6 +3220,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUnitRuleResponse DescribeUnitRule(DescribeUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnitRuleResponse>>() {
                 }.getType();
@@ -3089,6 +3241,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUnitRulesResponse DescribeUnitRules(DescribeUnitRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnitRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnitRulesResponse>>() {
                 }.getType();
@@ -3109,6 +3262,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUnitRulesV2Response DescribeUnitRulesV2(DescribeUnitRulesV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnitRulesV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnitRulesV2Response>>() {
                 }.getType();
@@ -3130,6 +3284,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUploadInfoResponse DescribeUploadInfo(DescribeUploadInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUploadInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadInfoResponse>>() {
                 }.getType();
@@ -3150,6 +3305,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespaces(DescribeUsableUnitNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsableUnitNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsableUnitNamespacesResponse>>() {
                 }.getType();
@@ -3170,6 +3326,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisableTaskResponse DisableTask(DisableTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableTaskResponse>>() {
                 }.getType();
@@ -3190,6 +3347,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisableTaskFlowResponse DisableTaskFlow(DisableTaskFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableTaskFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableTaskFlowResponse>>() {
                 }.getType();
@@ -3210,6 +3368,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisableUnitRouteResponse DisableUnitRoute(DisableUnitRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableUnitRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableUnitRouteResponse>>() {
                 }.getType();
@@ -3230,6 +3389,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisableUnitRuleResponse DisableUnitRule(DisableUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableUnitRuleResponse>>() {
                 }.getType();
@@ -3250,6 +3410,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfig(DisassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateBusinessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateBusinessLogConfigResponse>>() {
                 }.getType();
@@ -3270,6 +3431,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DisassociateKafkaConfigResponse DisassociateKafkaConfig(DisassociateKafkaConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateKafkaConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateKafkaConfigResponse>>() {
                 }.getType();
@@ -3290,6 +3452,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DraftApiGroupResponse DraftApiGroup(DraftApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DraftApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DraftApiGroupResponse>>() {
                 }.getType();
@@ -3310,6 +3473,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public EnableTaskResponse EnableTask(EnableTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableTaskResponse>>() {
                 }.getType();
@@ -3330,6 +3494,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public EnableTaskFlowResponse EnableTaskFlow(EnableTaskFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableTaskFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableTaskFlowResponse>>() {
                 }.getType();
@@ -3350,6 +3515,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public EnableUnitRouteResponse EnableUnitRoute(EnableUnitRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableUnitRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableUnitRouteResponse>>() {
                 }.getType();
@@ -3370,6 +3536,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public EnableUnitRuleResponse EnableUnitRule(EnableUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableUnitRuleResponse>>() {
                 }.getType();
@@ -3390,6 +3557,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ExecuteTaskResponse ExecuteTask(ExecuteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteTaskResponse>>() {
                 }.getType();
@@ -3410,6 +3578,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ExecuteTaskFlowResponse ExecuteTaskFlow(ExecuteTaskFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteTaskFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteTaskFlowResponse>>() {
                 }.getType();
@@ -3430,6 +3599,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ExpandGroupResponse ExpandGroup(ExpandGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExpandGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExpandGroupResponse>>() {
                 }.getType();
@@ -3450,6 +3620,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationResponse>>() {
                 }.getType();
@@ -3470,6 +3641,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyClusterResponse ModifyCluster(ModifyClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterResponse>>() {
                 }.getType();
@@ -3490,6 +3662,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyContainerGroupResponse ModifyContainerGroup(ModifyContainerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyContainerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyContainerGroupResponse>>() {
                 }.getType();
@@ -3510,6 +3683,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyContainerReplicasResponse ModifyContainerReplicas(ModifyContainerReplicasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyContainerReplicasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyContainerReplicasResponse>>() {
                 }.getType();
@@ -3530,6 +3704,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
                 }.getType();
@@ -3550,6 +3725,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyLaneResponse ModifyLane(ModifyLaneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLaneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLaneResponse>>() {
                 }.getType();
@@ -3570,6 +3746,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyLaneRuleResponse ModifyLaneRule(ModifyLaneRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLaneRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLaneRuleResponse>>() {
                 }.getType();
@@ -3590,6 +3767,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyMicroserviceResponse ModifyMicroservice(ModifyMicroserviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMicroserviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMicroserviceResponse>>() {
                 }.getType();
@@ -3610,6 +3788,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyNamespaceResponse ModifyNamespace(ModifyNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNamespaceResponse>>() {
                 }.getType();
@@ -3630,6 +3809,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyPathRewriteResponse ModifyPathRewrite(ModifyPathRewriteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPathRewriteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPathRewriteResponse>>() {
                 }.getType();
@@ -3650,6 +3830,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyTaskResponse ModifyTask(ModifyTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskResponse>>() {
                 }.getType();
@@ -3671,6 +3852,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyUploadInfoResponse ModifyUploadInfo(ModifyUploadInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUploadInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUploadInfoResponse>>() {
                 }.getType();
@@ -3691,6 +3873,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(OperateApplicationTcrBindingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OperateApplicationTcrBindingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OperateApplicationTcrBindingResponse>>() {
                 }.getType();
@@ -3711,6 +3894,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(ReassociateBusinessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReassociateBusinessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReassociateBusinessLogConfigResponse>>() {
                 }.getType();
@@ -3731,6 +3915,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RedoTaskResponse RedoTask(RedoTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RedoTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RedoTaskResponse>>() {
                 }.getType();
@@ -3751,6 +3936,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RedoTaskBatchResponse RedoTaskBatch(RedoTaskBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RedoTaskBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RedoTaskBatchResponse>>() {
                 }.getType();
@@ -3771,6 +3957,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RedoTaskExecuteResponse RedoTaskExecute(RedoTaskExecuteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RedoTaskExecuteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RedoTaskExecuteResponse>>() {
                 }.getType();
@@ -3791,6 +3978,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RedoTaskFlowBatchResponse RedoTaskFlowBatch(RedoTaskFlowBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RedoTaskFlowBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RedoTaskFlowBatchResponse>>() {
                 }.getType();
@@ -3811,6 +3999,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReleaseApiGroupResponse ReleaseApiGroup(ReleaseApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseApiGroupResponse>>() {
                 }.getType();
@@ -3831,6 +4020,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReleaseConfigResponse ReleaseConfig(ReleaseConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseConfigResponse>>() {
                 }.getType();
@@ -3851,6 +4041,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReleaseConfigWithDetailRespResponse ReleaseConfigWithDetailResp(ReleaseConfigWithDetailRespRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseConfigWithDetailRespResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseConfigWithDetailRespResponse>>() {
                 }.getType();
@@ -3871,6 +4062,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReleaseFileConfigResponse ReleaseFileConfig(ReleaseFileConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseFileConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseFileConfigResponse>>() {
                 }.getType();
@@ -3891,6 +4083,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ReleasePublicConfigResponse ReleasePublicConfig(ReleasePublicConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleasePublicConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleasePublicConfigResponse>>() {
                 }.getType();
@@ -3911,6 +4104,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RemoveInstancesResponse RemoveInstances(RemoveInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
                 }.getType();
@@ -3931,6 +4125,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RevocationConfigResponse RevocationConfig(RevocationConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevocationConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevocationConfigResponse>>() {
                 }.getType();
@@ -3951,6 +4146,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RevocationPublicConfigResponse RevocationPublicConfig(RevocationPublicConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevocationPublicConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevocationPublicConfigResponse>>() {
                 }.getType();
@@ -3971,6 +4167,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RevokeFileConfigResponse RevokeFileConfig(RevokeFileConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevokeFileConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevokeFileConfigResponse>>() {
                 }.getType();
@@ -3991,6 +4188,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public RollbackConfigResponse RollbackConfig(RollbackConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollbackConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RollbackConfigResponse>>() {
                 }.getType();
@@ -4011,6 +4209,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public SearchBusinessLogResponse SearchBusinessLog(SearchBusinessLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchBusinessLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchBusinessLogResponse>>() {
                 }.getType();
@@ -4031,6 +4230,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public SearchStdoutLogResponse SearchStdoutLog(SearchStdoutLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchStdoutLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchStdoutLogResponse>>() {
                 }.getType();
@@ -4051,6 +4251,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ShrinkGroupResponse ShrinkGroup(ShrinkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ShrinkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ShrinkGroupResponse>>() {
                 }.getType();
@@ -4071,6 +4272,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ShrinkInstancesResponse ShrinkInstances(ShrinkInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ShrinkInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ShrinkInstancesResponse>>() {
                 }.getType();
@@ -4091,6 +4293,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StartContainerGroupResponse StartContainerGroup(StartContainerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartContainerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartContainerGroupResponse>>() {
                 }.getType();
@@ -4111,6 +4314,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StartGroupResponse StartGroup(StartGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartGroupResponse>>() {
                 }.getType();
@@ -4131,6 +4335,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StopContainerGroupResponse StopContainerGroup(StopContainerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopContainerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopContainerGroupResponse>>() {
                 }.getType();
@@ -4151,6 +4356,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StopGroupResponse StopGroup(StopGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopGroupResponse>>() {
                 }.getType();
@@ -4171,6 +4377,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StopTaskBatchResponse StopTaskBatch(StopTaskBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopTaskBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopTaskBatchResponse>>() {
                 }.getType();
@@ -4191,6 +4398,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public StopTaskExecuteResponse StopTaskExecute(StopTaskExecuteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopTaskExecuteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopTaskExecuteResponse>>() {
                 }.getType();
@@ -4211,6 +4419,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public TerminateTaskFlowBatchResponse TerminateTaskFlowBatch(TerminateTaskFlowBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateTaskFlowBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateTaskFlowBatchResponse>>() {
                 }.getType();
@@ -4231,6 +4440,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UnbindApiGroupResponse UnbindApiGroup(UnbindApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindApiGroupResponse>>() {
                 }.getType();
@@ -4251,6 +4461,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateApiGroupResponse UpdateApiGroup(UpdateApiGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiGroupResponse>>() {
                 }.getType();
@@ -4271,6 +4482,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateApiRateLimitRuleResponse UpdateApiRateLimitRule(UpdateApiRateLimitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiRateLimitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiRateLimitRuleResponse>>() {
                 }.getType();
@@ -4291,6 +4503,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateApiRateLimitRulesResponse UpdateApiRateLimitRules(UpdateApiRateLimitRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiRateLimitRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiRateLimitRulesResponse>>() {
                 }.getType();
@@ -4311,6 +4524,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateApiTimeoutsResponse UpdateApiTimeouts(UpdateApiTimeoutsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiTimeoutsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiTimeoutsResponse>>() {
                 }.getType();
@@ -4331,6 +4545,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateConfigTemplateResponse UpdateConfigTemplate(UpdateConfigTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateConfigTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateConfigTemplateResponse>>() {
                 }.getType();
@@ -4351,6 +4566,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateGatewayApiResponse UpdateGatewayApi(UpdateGatewayApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateGatewayApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateGatewayApiResponse>>() {
                 }.getType();
@@ -4371,6 +4587,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateHealthCheckSettingsResponse UpdateHealthCheckSettings(UpdateHealthCheckSettingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateHealthCheckSettingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateHealthCheckSettingsResponse>>() {
                 }.getType();
@@ -4391,6 +4608,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateRepositoryResponse UpdateRepository(UpdateRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRepositoryResponse>>() {
                 }.getType();
@@ -4411,6 +4629,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public UpdateUnitRuleResponse UpdateUnitRule(UpdateUnitRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateUnitRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateUnitRuleResponse>>() {
                 }.getType();

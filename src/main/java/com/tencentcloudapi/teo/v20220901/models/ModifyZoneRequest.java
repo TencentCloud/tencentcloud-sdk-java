@@ -32,14 +32,14 @@ public class ModifyZoneRequest extends AbstractModel{
     /**
     * 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+    * 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
     */
     @SerializedName("VanityNameServers")
     @Expose
@@ -51,6 +51,23 @@ public class ModifyZoneRequest extends AbstractModel{
     @SerializedName("AliasZoneName")
     @Expose
     private String AliasZoneName;
+
+    /**
+    * 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
 
     /**
      * Get 站点 ID。 
@@ -71,10 +88,10 @@ public class ModifyZoneRequest extends AbstractModel{
     /**
      * Get 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。 
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。 
      * @return Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
      */
     public String getType() {
         return this.Type;
@@ -83,26 +100,26 @@ public class ModifyZoneRequest extends AbstractModel{
     /**
      * Set 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
      * @param Type 站点接入方式，取值有：
 <li> full：NS 接入；</li>
-<li> partial：CNAME 接入。</li>不填写保持原有配置。
+<li> partial：CNAME 接入，如果站点当前是无域名接入，仅支持切换到CNAME接入。</li>不填写保持原有配置。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。 
-     * @return VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+     * Get 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。 
+     * @return VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
      */
     public VanityNameServers getVanityNameServers() {
         return this.VanityNameServers;
     }
 
     /**
-     * Set 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
-     * @param VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。
+     * Set 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
+     * @param VanityNameServers 自定义站点信息，以替代系统默认分配的名称服务器。不填写保持原有配置。当站点是无域名接入方式时不允许传此参数。
      */
     public void setVanityNameServers(VanityNameServers VanityNameServers) {
         this.VanityNameServers = VanityNameServers;
@@ -122,6 +139,50 @@ public class ModifyZoneRequest extends AbstractModel{
      */
     public void setAliasZoneName(String AliasZoneName) {
         this.AliasZoneName = AliasZoneName;
+    }
+
+    /**
+     * Get 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。 
+     * @return Area 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+     * @param Area 站点接入地域，取值有：
+<li> global：全球；</li>
+<li> mainland：中国大陆；</li>
+<li> overseas：境外区域。</li>当站点是无域名接入方式时，不允许传此参数。
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。 
+     * @return ZoneName 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+     * @param ZoneName 站点名称。仅当站点由无域名接入方式切换到CNAME接入方式的场景下有效。
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
     }
 
     public ModifyZoneRequest() {
@@ -144,6 +205,12 @@ public class ModifyZoneRequest extends AbstractModel{
         if (source.AliasZoneName != null) {
             this.AliasZoneName = new String(source.AliasZoneName);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
     }
 
 
@@ -155,6 +222,8 @@ public class ModifyZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

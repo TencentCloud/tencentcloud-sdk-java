@@ -29,7 +29,7 @@ public class TagClient extends AbstractClient{
     private static String endpoint = "tag.tencentcloudapi.com";
     private static String service = "tag";
     private static String version = "2018-08-13";
-
+    
     public TagClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TagClient extends AbstractClient{
     public AddProjectResponse AddProject(AddProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddProjectResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TagClient extends AbstractClient{
     public AddResourceTagResponse AddResourceTag(AddResourceTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddResourceTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddResourceTagResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TagClient extends AbstractClient{
     public AttachResourcesTagResponse AttachResourcesTag(AttachResourcesTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachResourcesTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachResourcesTagResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TagClient extends AbstractClient{
     public CreateTagResponse CreateTag(CreateTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTagResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TagClient extends AbstractClient{
     public CreateTagsResponse CreateTags(CreateTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTagsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TagClient extends AbstractClient{
     public DeleteResourceTagResponse DeleteResourceTag(DeleteResourceTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteResourceTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteResourceTagResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TagClient extends AbstractClient{
     public DeleteTagResponse DeleteTag(DeleteTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTagResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TagClient extends AbstractClient{
     public DeleteTagsResponse DeleteTags(DeleteTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTagsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TagClient extends AbstractClient{
     public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourceTagsResponse DescribeResourceTags(DescribeResourceTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourceTagsByResourceIdsResponse DescribeResourceTagsByResourceIds(DescribeResourceTagsByResourceIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTagsByResourceIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsByResourceIdsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourceTagsByResourceIdsSeqResponse DescribeResourceTagsByResourceIdsSeq(DescribeResourceTagsByResourceIdsSeqRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsByResourceIdsSeqResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourceTagsByTagKeysResponse DescribeResourceTagsByTagKeys(DescribeResourceTagsByTagKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTagsByTagKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsByTagKeysResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourcesByTagsResponse DescribeResourcesByTags(DescribeResourcesByTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesByTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesByTagsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TagClient extends AbstractClient{
     public DescribeResourcesByTagsUnionResponse DescribeResourcesByTagsUnion(DescribeResourcesByTagsUnionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesByTagsUnionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesByTagsUnionResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class TagClient extends AbstractClient{
     public DescribeTagKeysResponse DescribeTagKeys(DescribeTagKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagKeysResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ public class TagClient extends AbstractClient{
     public DescribeTagValuesResponse DescribeTagValues(DescribeTagValuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagValuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagValuesResponse>>() {
                 }.getType();
@@ -388,6 +405,7 @@ public class TagClient extends AbstractClient{
     public DescribeTagValuesSeqResponse DescribeTagValuesSeq(DescribeTagValuesSeqRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagValuesSeqResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagValuesSeqResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class TagClient extends AbstractClient{
     public DescribeTagsResponse DescribeTags(DescribeTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagsResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ public class TagClient extends AbstractClient{
     public DescribeTagsSeqResponse DescribeTagsSeq(DescribeTagsSeqRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTagsSeqResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTagsSeqResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ public class TagClient extends AbstractClient{
     public DetachResourcesTagResponse DetachResourcesTag(DetachResourcesTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachResourcesTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachResourcesTagResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ public class TagClient extends AbstractClient{
     public GetResourcesResponse GetResources(GetResourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetResourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetResourcesResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ public class TagClient extends AbstractClient{
     public GetTagKeysResponse GetTagKeys(GetTagKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTagKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTagKeysResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ public class TagClient extends AbstractClient{
     public GetTagValuesResponse GetTagValues(GetTagValuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTagValuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTagValuesResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ public class TagClient extends AbstractClient{
     public GetTagsResponse GetTags(GetTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTagsResponse>>() {
                 }.getType();
@@ -550,6 +575,7 @@ public class TagClient extends AbstractClient{
     public ModifyResourceTagsResponse ModifyResourceTags(ModifyResourceTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceTagsResponse>>() {
                 }.getType();
@@ -570,6 +596,7 @@ public class TagClient extends AbstractClient{
     public ModifyResourcesTagValueResponse ModifyResourcesTagValue(ModifyResourcesTagValueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourcesTagValueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourcesTagValueResponse>>() {
                 }.getType();
@@ -590,6 +617,7 @@ public class TagClient extends AbstractClient{
     public TagResourcesResponse TagResources(TagResourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TagResourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TagResourcesResponse>>() {
                 }.getType();
@@ -610,6 +638,7 @@ public class TagClient extends AbstractClient{
     public UnTagResourcesResponse UnTagResources(UnTagResourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnTagResourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnTagResourcesResponse>>() {
                 }.getType();
@@ -630,6 +659,7 @@ public class TagClient extends AbstractClient{
     public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProjectResponse>>() {
                 }.getType();
@@ -650,6 +680,7 @@ public class TagClient extends AbstractClient{
     public UpdateResourceTagValueResponse UpdateResourceTagValue(UpdateResourceTagValueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateResourceTagValueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateResourceTagValueResponse>>() {
                 }.getType();

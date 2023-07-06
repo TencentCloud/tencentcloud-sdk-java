@@ -29,7 +29,7 @@ public class IvldClient extends AbstractClient{
     private static String endpoint = "ivld.tencentcloudapi.com";
     private static String service = "ivld";
     private static String version = "2021-09-03";
-
+    
     public IvldClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class IvldClient extends AbstractClient{
     public AddCustomPersonImageResponse AddCustomPersonImage(AddCustomPersonImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddCustomPersonImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddCustomPersonImageResponse>>() {
                 }.getType();
@@ -72,6 +73,7 @@ public class IvldClient extends AbstractClient{
     public CreateCustomCategoryResponse CreateCustomCategory(CreateCustomCategoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomCategoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomCategoryResponse>>() {
                 }.getType();
@@ -103,6 +105,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public CreateCustomGroupResponse CreateCustomGroup(CreateCustomGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomGroupResponse>>() {
                 }.getType();
@@ -128,6 +131,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public CreateCustomPersonResponse CreateCustomPerson(CreateCustomPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomPersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomPersonResponse>>() {
                 }.getType();
@@ -148,6 +152,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public CreateDefaultCategoriesResponse CreateDefaultCategories(CreateDefaultCategoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDefaultCategoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDefaultCategoriesResponse>>() {
                 }.getType();
@@ -171,6 +176,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
                 }.getType();
@@ -191,6 +197,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DeleteCustomCategoryResponse DeleteCustomCategory(DeleteCustomCategoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomCategoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomCategoryResponse>>() {
                 }.getType();
@@ -211,6 +218,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DeleteCustomPersonResponse DeleteCustomPerson(DeleteCustomPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomPersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomPersonResponse>>() {
                 }.getType();
@@ -231,6 +239,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DeleteCustomPersonImageResponse DeleteCustomPersonImage(DeleteCustomPersonImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomPersonImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomPersonImageResponse>>() {
                 }.getType();
@@ -253,6 +262,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DeleteMediaResponse DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
                 }.getType();
@@ -277,6 +287,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
                 }.getType();
@@ -297,6 +308,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeCustomCategoriesResponse DescribeCustomCategories(DescribeCustomCategoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomCategoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomCategoriesResponse>>() {
                 }.getType();
@@ -317,6 +329,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeCustomGroupResponse DescribeCustomGroup(DescribeCustomGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomGroupResponse>>() {
                 }.getType();
@@ -337,6 +350,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeCustomPersonDetailResponse DescribeCustomPersonDetail(DescribeCustomPersonDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomPersonDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomPersonDetailResponse>>() {
                 }.getType();
@@ -359,6 +373,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeCustomPersonsResponse DescribeCustomPersons(DescribeCustomPersonsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomPersonsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomPersonsResponse>>() {
                 }.getType();
@@ -381,6 +396,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeMediaResponse DescribeMedia(DescribeMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaResponse>>() {
                 }.getType();
@@ -405,6 +421,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeMediasResponse DescribeMedias(DescribeMediasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediasResponse>>() {
                 }.getType();
@@ -429,6 +446,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
                 }.getType();
@@ -449,6 +467,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -471,6 +490,7 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -500,6 +520,7 @@ URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.
     public ImportMediaResponse ImportMedia(ImportMediaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportMediaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportMediaResponse>>() {
                 }.getType();
@@ -554,6 +575,7 @@ URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.
     public ModifyCallbackResponse ModifyCallback(ModifyCallbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCallbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCallbackResponse>>() {
                 }.getType();
@@ -574,6 +596,7 @@ URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.
     public QueryCallbackResponse QueryCallback(QueryCallbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCallbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCallbackResponse>>() {
                 }.getType();
@@ -597,6 +620,7 @@ URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.
     public UpdateCustomCategoryResponse UpdateCustomCategory(UpdateCustomCategoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCustomCategoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCustomCategoryResponse>>() {
                 }.getType();
@@ -617,6 +641,7 @@ URL字段推荐您使用COS地址，其形式为`https://${Bucket}-${AppId}.cos.
     public UpdateCustomPersonResponse UpdateCustomPerson(UpdateCustomPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCustomPersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCustomPersonResponse>>() {
                 }.getType();

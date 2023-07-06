@@ -29,7 +29,7 @@ public class FacefusionClient extends AbstractClient{
     private static String endpoint = "facefusion.tencentcloudapi.com";
     private static String service = "facefusion";
     private static String version = "2018-12-01";
-
+    
     public FacefusionClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class FacefusionClient extends AbstractClient{
     public DescribeMaterialListResponse DescribeMaterialList(DescribeMaterialListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaterialListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaterialListResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class FacefusionClient extends AbstractClient{
     public FaceFusionResponse FaceFusion(FaceFusionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FaceFusionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FaceFusionResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class FacefusionClient extends AbstractClient{
     public FaceFusionLiteResponse FaceFusionLite(FaceFusionLiteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FaceFusionLiteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FaceFusionLiteResponse>>() {
                 }.getType();
@@ -113,6 +116,7 @@ public class FacefusionClient extends AbstractClient{
     public FuseFaceResponse FuseFace(FuseFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FuseFaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FuseFaceResponse>>() {
                 }.getType();

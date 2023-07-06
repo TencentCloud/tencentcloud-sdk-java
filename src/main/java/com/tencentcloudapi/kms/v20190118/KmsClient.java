@@ -29,7 +29,7 @@ public class KmsClient extends AbstractClient{
     private static String endpoint = "kms.tencentcloudapi.com";
     private static String service = "kms";
     private static String version = "2019-01-18";
-
+    
     public KmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class KmsClient extends AbstractClient{
     public ArchiveKeyResponse ArchiveKey(ArchiveKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ArchiveKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ArchiveKeyResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class KmsClient extends AbstractClient{
     public AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AsymmetricRsaDecryptResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class KmsClient extends AbstractClient{
     public AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AsymmetricSm2DecryptResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class KmsClient extends AbstractClient{
     public BindCloudResourceResponse BindCloudResource(BindCloudResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindCloudResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class KmsClient extends AbstractClient{
     public CancelKeyArchiveResponse CancelKeyArchive(CancelKeyArchiveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelKeyArchiveResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class KmsClient extends AbstractClient{
     public CancelKeyDeletionResponse CancelKeyDeletion(CancelKeyDeletionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelKeyDeletionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelKeyDeletionResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class KmsClient extends AbstractClient{
     public CreateKeyResponse CreateKey(CreateKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKeyResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class KmsClient extends AbstractClient{
     public CreateWhiteBoxKeyResponse CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWhiteBoxKeyResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class KmsClient extends AbstractClient{
     public DecryptResponse Decrypt(DecryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DecryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DecryptResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class KmsClient extends AbstractClient{
     public DeleteImportedKeyMaterialResponse DeleteImportedKeyMaterial(DeleteImportedKeyMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImportedKeyMaterialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImportedKeyMaterialResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class KmsClient extends AbstractClient{
     public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWhiteBoxKeyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class KmsClient extends AbstractClient{
     public DescribeKeyResponse DescribeKey(DescribeKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeyResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class KmsClient extends AbstractClient{
     public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class KmsClient extends AbstractClient{
     public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class KmsClient extends AbstractClient{
     public DescribeWhiteBoxDeviceFingerprintsResponse DescribeWhiteBoxDeviceFingerprints(DescribeWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDeviceFingerprintsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class KmsClient extends AbstractClient{
     public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class KmsClient extends AbstractClient{
     public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class KmsClient extends AbstractClient{
     public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class KmsClient extends AbstractClient{
     public DisableKeyResponse DisableKey(DisableKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableKeyResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class KmsClient extends AbstractClient{
     public DisableKeyRotationResponse DisableKeyRotation(DisableKeyRotationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableKeyRotationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableKeyRotationResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class KmsClient extends AbstractClient{
     public DisableKeysResponse DisableKeys(DisableKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableKeysResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class KmsClient extends AbstractClient{
     public DisableWhiteBoxKeyResponse DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeyResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class KmsClient extends AbstractClient{
     public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeysResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class KmsClient extends AbstractClient{
     public EnableKeyResponse EnableKey(EnableKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableKeyResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class KmsClient extends AbstractClient{
     public EnableKeyRotationResponse EnableKeyRotation(EnableKeyRotationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableKeyRotationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableKeyRotationResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class KmsClient extends AbstractClient{
     public EnableKeysResponse EnableKeys(EnableKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableKeysResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class KmsClient extends AbstractClient{
     public EnableWhiteBoxKeyResponse EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeyResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class KmsClient extends AbstractClient{
     public EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeysResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class KmsClient extends AbstractClient{
     public EncryptResponse Encrypt(EncryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EncryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EncryptResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class KmsClient extends AbstractClient{
     public EncryptByWhiteBoxResponse EncryptByWhiteBox(EncryptByWhiteBoxRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EncryptByWhiteBoxResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class KmsClient extends AbstractClient{
     public GenerateDataKeyResponse GenerateDataKey(GenerateDataKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateDataKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateDataKeyResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class KmsClient extends AbstractClient{
     public GenerateRandomResponse GenerateRandom(GenerateRandomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateRandomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateRandomResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class KmsClient extends AbstractClient{
     public GetKeyRotationStatusResponse GetKeyRotationStatus(GetKeyRotationStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetKeyRotationStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetKeyRotationStatusResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class KmsClient extends AbstractClient{
     public GetParametersForImportResponse GetParametersForImport(GetParametersForImportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetParametersForImportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetParametersForImportResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class KmsClient extends AbstractClient{
     public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class KmsClient extends AbstractClient{
     public GetRegionsResponse GetRegions(GetRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class KmsClient extends AbstractClient{
     public GetServiceStatusResponse GetServiceStatus(GetServiceStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetServiceStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetServiceStatusResponse>>() {
                 }.getType();
@@ -788,6 +825,7 @@ public class KmsClient extends AbstractClient{
     public ImportKeyMaterialResponse ImportKeyMaterial(ImportKeyMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportKeyMaterialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportKeyMaterialResponse>>() {
                 }.getType();
@@ -808,6 +846,7 @@ public class KmsClient extends AbstractClient{
     public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAlgorithmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAlgorithmsResponse>>() {
                 }.getType();
@@ -828,6 +867,7 @@ public class KmsClient extends AbstractClient{
     public ListKeyDetailResponse ListKeyDetail(ListKeyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListKeyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListKeyDetailResponse>>() {
                 }.getType();
@@ -848,6 +888,7 @@ public class KmsClient extends AbstractClient{
     public ListKeysResponse ListKeys(ListKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListKeysResponse>>() {
                 }.getType();
@@ -868,6 +909,7 @@ public class KmsClient extends AbstractClient{
     public OverwriteWhiteBoxDeviceFingerprintsResponse OverwriteWhiteBoxDeviceFingerprints(OverwriteWhiteBoxDeviceFingerprintsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OverwriteWhiteBoxDeviceFingerprintsResponse>>() {
                 }.getType();
@@ -888,6 +930,7 @@ public class KmsClient extends AbstractClient{
     public PostQuantumCryptoDecryptResponse PostQuantumCryptoDecrypt(PostQuantumCryptoDecryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PostQuantumCryptoDecryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoDecryptResponse>>() {
                 }.getType();
@@ -908,6 +951,7 @@ public class KmsClient extends AbstractClient{
     public PostQuantumCryptoEncryptResponse PostQuantumCryptoEncrypt(PostQuantumCryptoEncryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PostQuantumCryptoEncryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoEncryptResponse>>() {
                 }.getType();
@@ -928,6 +972,7 @@ public class KmsClient extends AbstractClient{
     public PostQuantumCryptoSignResponse PostQuantumCryptoSign(PostQuantumCryptoSignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PostQuantumCryptoSignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoSignResponse>>() {
                 }.getType();
@@ -948,6 +993,7 @@ public class KmsClient extends AbstractClient{
     public PostQuantumCryptoVerifyResponse PostQuantumCryptoVerify(PostQuantumCryptoVerifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PostQuantumCryptoVerifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PostQuantumCryptoVerifyResponse>>() {
                 }.getType();
@@ -968,6 +1014,7 @@ public class KmsClient extends AbstractClient{
     public ReEncryptResponse ReEncrypt(ReEncryptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReEncryptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReEncryptResponse>>() {
                 }.getType();
@@ -988,6 +1035,7 @@ public class KmsClient extends AbstractClient{
     public ScheduleKeyDeletionResponse ScheduleKeyDeletion(ScheduleKeyDeletionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScheduleKeyDeletionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScheduleKeyDeletionResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ public class KmsClient extends AbstractClient{
     public SignByAsymmetricKeyResponse SignByAsymmetricKey(SignByAsymmetricKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SignByAsymmetricKeyResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ public class KmsClient extends AbstractClient{
     public UnbindCloudResourceResponse UnbindCloudResource(UnbindCloudResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindCloudResourceResponse>>() {
                 }.getType();
@@ -1049,6 +1099,7 @@ public class KmsClient extends AbstractClient{
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
                 }.getType();
@@ -1069,6 +1120,7 @@ public class KmsClient extends AbstractClient{
     public UpdateKeyDescriptionResponse UpdateKeyDescription(UpdateKeyDescriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateKeyDescriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateKeyDescriptionResponse>>() {
                 }.getType();
@@ -1089,6 +1141,7 @@ public class KmsClient extends AbstractClient{
     public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyByAsymmetricKeyResponse>>() {
                 }.getType();

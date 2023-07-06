@@ -32,6 +32,7 @@ public class CreatePrefetchTaskRequest extends AbstractModel{
     /**
     * 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
     */
     @SerializedName("Targets")
     @Expose
@@ -69,9 +70,11 @@ http://www.example.com/example.txt。
 
     /**
      * Get 要预热的资源列表，每个元素格式类似如下:
-http://www.example.com/example.txt。 
+http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。 
      * @return Targets 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
      */
     public String [] getTargets() {
         return this.Targets;
@@ -80,8 +83,10 @@ http://www.example.com/example.txt。
     /**
      * Set 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
      * @param Targets 要预热的资源列表，每个元素格式类似如下:
 http://www.example.com/example.txt。
+注意：提交任务数受计费套餐配额限制，请查看 [EO计费套餐](https://cloud.tencent.com/document/product/1552/77380)。
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

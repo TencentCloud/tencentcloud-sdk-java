@@ -29,7 +29,7 @@ public class FmuClient extends AbstractClient{
     private static String endpoint = "fmu.tencentcloudapi.com";
     private static String service = "fmu";
     private static String version = "2019-12-13";
-
+    
     public FmuClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class FmuClient extends AbstractClient{
     public BeautifyPicResponse BeautifyPic(BeautifyPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BeautifyPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BeautifyPicResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class FmuClient extends AbstractClient{
     public BeautifyVideoResponse BeautifyVideo(BeautifyVideoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BeautifyVideoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BeautifyVideoResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class FmuClient extends AbstractClient{
     public CancelBeautifyVideoJobResponse CancelBeautifyVideoJob(CancelBeautifyVideoJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelBeautifyVideoJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelBeautifyVideoJobResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ public class FmuClient extends AbstractClient{
     public CreateModelResponse CreateModel(CreateModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateModelResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ public class FmuClient extends AbstractClient{
     public DeleteModelResponse DeleteModel(DeleteModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelResponse>>() {
                 }.getType();
@@ -150,6 +155,7 @@ public class FmuClient extends AbstractClient{
     public GetModelListResponse GetModelList(GetModelListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetModelListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetModelListResponse>>() {
                 }.getType();
@@ -170,6 +176,7 @@ public class FmuClient extends AbstractClient{
     public QueryBeautifyVideoJobResponse QueryBeautifyVideoJob(QueryBeautifyVideoJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBeautifyVideoJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBeautifyVideoJobResponse>>() {
                 }.getType();
@@ -190,6 +197,7 @@ public class FmuClient extends AbstractClient{
     public StyleImageResponse StyleImage(StyleImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StyleImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StyleImageResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ public class FmuClient extends AbstractClient{
     public StyleImageProResponse StyleImagePro(StyleImageProRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StyleImageProResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StyleImageProResponse>>() {
                 }.getType();
@@ -237,6 +246,7 @@ public class FmuClient extends AbstractClient{
     public TryLipstickPicResponse TryLipstickPic(TryLipstickPicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TryLipstickPicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TryLipstickPicResponse>>() {
                 }.getType();

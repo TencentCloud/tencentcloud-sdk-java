@@ -29,7 +29,7 @@ public class WafClient extends AbstractClient{
     private static String endpoint = "waf.tencentcloudapi.com";
     private static String service = "waf";
     private static String version = "2018-01-25";
-
+    
     public WafClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class WafClient extends AbstractClient{
     public AddCustomRuleResponse AddCustomRule(AddCustomRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddCustomRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddCustomRuleResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class WafClient extends AbstractClient{
     public AddCustomWhiteRuleResponse AddCustomWhiteRule(AddCustomWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddCustomWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddCustomWhiteRuleResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class WafClient extends AbstractClient{
     public AddDomainWhiteRuleResponse AddDomainWhiteRule(AddDomainWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDomainWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDomainWhiteRuleResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class WafClient extends AbstractClient{
     public AddSpartaProtectionResponse AddSpartaProtection(AddSpartaProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddSpartaProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddSpartaProtectionResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class WafClient extends AbstractClient{
     public CreateAccessExportResponse CreateAccessExport(CreateAccessExportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccessExportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccessExportResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class WafClient extends AbstractClient{
     public CreateHostResponse CreateHost(CreateHostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHostResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class WafClient extends AbstractClient{
     public DeleteAccessExportResponse DeleteAccessExport(DeleteAccessExportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccessExportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccessExportResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class WafClient extends AbstractClient{
     public DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(DeleteAttackDownloadRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAttackDownloadRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAttackDownloadRecordResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class WafClient extends AbstractClient{
     public DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(DeleteCustomWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomWhiteRuleResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class WafClient extends AbstractClient{
     public DeleteDomainWhiteRulesResponse DeleteDomainWhiteRules(DeleteDomainWhiteRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainWhiteRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainWhiteRulesResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class WafClient extends AbstractClient{
     public DeleteDownloadRecordResponse DeleteDownloadRecord(DeleteDownloadRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDownloadRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDownloadRecordResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class WafClient extends AbstractClient{
     public DeleteIpAccessControlResponse DeleteIpAccessControl(DeleteIpAccessControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIpAccessControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIpAccessControlResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class WafClient extends AbstractClient{
     public DeleteSessionResponse DeleteSession(DeleteSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSessionResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class WafClient extends AbstractClient{
     public DescribeAccessExportsResponse DescribeAccessExports(DescribeAccessExportsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessExportsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessExportsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class WafClient extends AbstractClient{
     public DescribeAccessFastAnalysisResponse DescribeAccessFastAnalysis(DescribeAccessFastAnalysisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessFastAnalysisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessFastAnalysisResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class WafClient extends AbstractClient{
     public DescribeAccessIndexResponse DescribeAccessIndex(DescribeAccessIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessIndexResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class WafClient extends AbstractClient{
     public DescribeAttackOverviewResponse DescribeAttackOverview(DescribeAttackOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAttackOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAttackOverviewResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class WafClient extends AbstractClient{
     public DescribeAutoDenyIPResponse DescribeAutoDenyIP(DescribeAutoDenyIPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoDenyIPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoDenyIPResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class WafClient extends AbstractClient{
     public DescribeCustomWhiteRuleResponse DescribeCustomWhiteRule(DescribeCustomWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomWhiteRuleResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class WafClient extends AbstractClient{
     public DescribeDomainDetailsSaasResponse DescribeDomainDetailsSaas(DescribeDomainDetailsSaasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainDetailsSaasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainDetailsSaasResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class WafClient extends AbstractClient{
     public DescribeDomainWhiteRulesResponse DescribeDomainWhiteRules(DescribeDomainWhiteRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainWhiteRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainWhiteRulesResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class WafClient extends AbstractClient{
     public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class WafClient extends AbstractClient{
     public DescribeFlowTrendResponse DescribeFlowTrend(DescribeFlowTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowTrendResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class WafClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class WafClient extends AbstractClient{
     public DescribeIpAccessControlResponse DescribeIpAccessControl(DescribeIpAccessControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpAccessControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpAccessControlResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class WafClient extends AbstractClient{
     public DescribeIpHitItemsResponse DescribeIpHitItems(DescribeIpHitItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpHitItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpHitItemsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class WafClient extends AbstractClient{
     public DescribePeakPointsResponse DescribePeakPoints(DescribePeakPointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePeakPointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePeakPointsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class WafClient extends AbstractClient{
     public DescribePeakValueResponse DescribePeakValue(DescribePeakValueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePeakValueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePeakValueResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class WafClient extends AbstractClient{
     public DescribePolicyStatusResponse DescribePolicyStatus(DescribePolicyStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyStatusResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class WafClient extends AbstractClient{
     public DescribeRuleLimitResponse DescribeRuleLimit(DescribeRuleLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleLimitResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class WafClient extends AbstractClient{
     public DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegions(DescribeUserCdcClbWafRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCdcClbWafRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCdcClbWafRegionsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class WafClient extends AbstractClient{
     public DescribeUserClbWafRegionsResponse DescribeUserClbWafRegions(DescribeUserClbWafRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserClbWafRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserClbWafRegionsResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class WafClient extends AbstractClient{
     public DescribeVipInfoResponse DescribeVipInfo(DescribeVipInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVipInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVipInfoResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class WafClient extends AbstractClient{
     public DescribeWafAutoDenyRulesResponse DescribeWafAutoDenyRules(DescribeWafAutoDenyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWafAutoDenyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWafAutoDenyRulesResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class WafClient extends AbstractClient{
     public DescribeWafAutoDenyStatusResponse DescribeWafAutoDenyStatus(DescribeWafAutoDenyStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWafAutoDenyStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWafAutoDenyStatusResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class WafClient extends AbstractClient{
     public DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(DescribeWafThreatenIntelligenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWafThreatenIntelligenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWafThreatenIntelligenceResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class WafClient extends AbstractClient{
     public GetAttackDownloadRecordsResponse GetAttackDownloadRecords(GetAttackDownloadRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAttackDownloadRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAttackDownloadRecordsResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class WafClient extends AbstractClient{
     public ModifyAccessPeriodResponse ModifyAccessPeriod(ModifyAccessPeriodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccessPeriodResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccessPeriodResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class WafClient extends AbstractClient{
     public ModifyAreaBanStatusResponse ModifyAreaBanStatus(ModifyAreaBanStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAreaBanStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAreaBanStatusResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class WafClient extends AbstractClient{
     public ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(ModifyCustomRuleStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomRuleStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleStatusResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class WafClient extends AbstractClient{
     public ModifyCustomWhiteRuleResponse ModifyCustomWhiteRule(ModifyCustomWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomWhiteRuleResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class WafClient extends AbstractClient{
     public ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(ModifyDomainWhiteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainWhiteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainWhiteRuleResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class WafClient extends AbstractClient{
     public ModifySpartaProtectionResponse ModifySpartaProtection(ModifySpartaProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySpartaProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySpartaProtectionResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class WafClient extends AbstractClient{
     public ModifyWafAutoDenyRulesResponse ModifyWafAutoDenyRules(ModifyWafAutoDenyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWafAutoDenyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWafAutoDenyRulesResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class WafClient extends AbstractClient{
     public ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatus(ModifyWafAutoDenyStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWafAutoDenyStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWafAutoDenyStatusResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class WafClient extends AbstractClient{
     public ModifyWafThreatenIntelligenceResponse ModifyWafThreatenIntelligence(ModifyWafThreatenIntelligenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWafThreatenIntelligenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWafThreatenIntelligenceResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class WafClient extends AbstractClient{
     public PostAttackDownloadTaskResponse PostAttackDownloadTask(PostAttackDownloadTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PostAttackDownloadTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PostAttackDownloadTaskResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class WafClient extends AbstractClient{
     public SearchAccessLogResponse SearchAccessLog(SearchAccessLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchAccessLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchAccessLogResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class WafClient extends AbstractClient{
     public SearchAttackLogResponse SearchAttackLog(SearchAttackLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchAttackLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchAttackLogResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class WafClient extends AbstractClient{
     public SwitchDomainRulesResponse SwitchDomainRules(SwitchDomainRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchDomainRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchDomainRulesResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class WafClient extends AbstractClient{
     public UpsertIpAccessControlResponse UpsertIpAccessControl(UpsertIpAccessControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpsertIpAccessControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpsertIpAccessControlResponse>>() {
                 }.getType();

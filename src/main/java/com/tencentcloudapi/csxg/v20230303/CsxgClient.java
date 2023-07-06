@@ -29,7 +29,7 @@ public class CsxgClient extends AbstractClient{
     private static String endpoint = "csxg.tencentcloudapi.com";
     private static String service = "csxg";
     private static String version = "2023-03-03";
-
+    
     public CsxgClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CsxgClient extends AbstractClient{
     public Create5GInstanceResponse Create5GInstance(Create5GInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Create5GInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Create5GInstanceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CsxgClient extends AbstractClient{
     public Delete5GInstanceResponse Delete5GInstance(Delete5GInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Delete5GInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Delete5GInstanceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CsxgClient extends AbstractClient{
     public Describe5GAPNsResponse Describe5GAPNs(Describe5GAPNsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Describe5GAPNsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Describe5GAPNsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CsxgClient extends AbstractClient{
     public Describe5GInstancesResponse Describe5GInstances(Describe5GInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Describe5GInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Describe5GInstancesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CsxgClient extends AbstractClient{
     public Modify5GInstanceAttributeResponse Modify5GInstanceAttribute(Modify5GInstanceAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Modify5GInstanceAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Modify5GInstanceAttributeResponse>>() {
                 }.getType();

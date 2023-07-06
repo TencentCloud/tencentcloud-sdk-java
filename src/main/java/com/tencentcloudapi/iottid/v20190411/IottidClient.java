@@ -29,7 +29,7 @@ public class IottidClient extends AbstractClient{
     private static String endpoint = "iottid.tencentcloudapi.com";
     private static String service = "iottid";
     private static String version = "2019-04-11";
-
+    
     public IottidClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IottidClient extends AbstractClient{
     public AuthTestTidResponse AuthTestTid(AuthTestTidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuthTestTidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuthTestTidResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IottidClient extends AbstractClient{
     public BurnTidNotifyResponse BurnTidNotify(BurnTidNotifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BurnTidNotifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BurnTidNotifyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IottidClient extends AbstractClient{
     public DeliverTidNotifyResponse DeliverTidNotify(DeliverTidNotifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeliverTidNotifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeliverTidNotifyResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IottidClient extends AbstractClient{
     public DeliverTidsResponse DeliverTids(DeliverTidsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeliverTidsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeliverTidsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class IottidClient extends AbstractClient{
     public DescribeAvailableLibCountResponse DescribeAvailableLibCount(DescribeAvailableLibCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableLibCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableLibCountResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class IottidClient extends AbstractClient{
     public DescribePermissionResponse DescribePermission(DescribePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePermissionResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class IottidClient extends AbstractClient{
     public DownloadTidsResponse DownloadTids(DownloadTidsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadTidsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadTidsResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class IottidClient extends AbstractClient{
     public UploadDeviceUniqueCodeResponse UploadDeviceUniqueCode(UploadDeviceUniqueCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadDeviceUniqueCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadDeviceUniqueCodeResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class IottidClient extends AbstractClient{
     public VerifyChipBurnInfoResponse VerifyChipBurnInfo(VerifyChipBurnInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyChipBurnInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyChipBurnInfoResponse>>() {
                 }.getType();

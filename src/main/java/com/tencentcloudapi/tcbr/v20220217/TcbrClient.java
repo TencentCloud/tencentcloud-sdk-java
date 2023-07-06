@@ -29,7 +29,7 @@ public class TcbrClient extends AbstractClient{
     private static String endpoint = "tcbr.tencentcloudapi.com";
     private static String service = "tcbr";
     private static String version = "2022-02-17";
-
+    
     public TcbrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TcbrClient extends AbstractClient{
     public CreateCloudRunEnvResponse CreateCloudRunEnv(CreateCloudRunEnvRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudRunEnvResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudRunEnvResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TcbrClient extends AbstractClient{
     public CreateCloudRunServerResponse CreateCloudRunServer(CreateCloudRunServerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudRunServerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudRunServerResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TcbrClient extends AbstractClient{
     public DescribeCloudRunEnvsResponse DescribeCloudRunEnvs(DescribeCloudRunEnvsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudRunEnvsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudRunEnvsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TcbrClient extends AbstractClient{
     public DescribeCloudRunServerDetailResponse DescribeCloudRunServerDetail(DescribeCloudRunServerDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudRunServerDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudRunServerDetailResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TcbrClient extends AbstractClient{
     public DescribeCloudRunServersResponse DescribeCloudRunServers(DescribeCloudRunServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudRunServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudRunServersResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TcbrClient extends AbstractClient{
     public DescribeEnvBaseInfoResponse DescribeEnvBaseInfo(DescribeEnvBaseInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvBaseInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvBaseInfoResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TcbrClient extends AbstractClient{
     public DescribeServerManageTaskResponse DescribeServerManageTask(DescribeServerManageTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServerManageTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServerManageTaskResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TcbrClient extends AbstractClient{
     public OperateServerManageResponse OperateServerManage(OperateServerManageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OperateServerManageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OperateServerManageResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TcbrClient extends AbstractClient{
     public ReleaseGrayResponse ReleaseGray(ReleaseGrayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseGrayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseGrayResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TcbrClient extends AbstractClient{
     public UpdateCloudRunServerResponse UpdateCloudRunServer(UpdateCloudRunServerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCloudRunServerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCloudRunServerResponse>>() {
                 }.getType();

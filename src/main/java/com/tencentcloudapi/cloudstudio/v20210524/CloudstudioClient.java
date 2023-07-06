@@ -29,7 +29,7 @@ public class CloudstudioClient extends AbstractClient{
     private static String endpoint = "cloudstudio.tencentcloudapi.com";
     private static String service = "cloudstudio";
     private static String version = "2021-05-24";
-
+    
     public CloudstudioClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateCustomizeTemplatesResponse CreateCustomizeTemplates(CreateCustomizeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomizeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomizeTemplatesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceByAgentResponse CreateWorkspaceByAgent(CreateWorkspaceByAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceByAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceByAgentResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceByTemplateResponse CreateWorkspaceByTemplate(CreateWorkspaceByTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceByTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceByTemplateResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceByVersionControlResponse CreateWorkspaceByVersionControl(CreateWorkspaceByVersionControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceByVersionControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceByVersionControlResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceTemporaryTokenResponse CreateWorkspaceTemporaryToken(CreateWorkspaceTemporaryTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceTemporaryTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceTemporaryTokenResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CloudstudioClient extends AbstractClient{
     public DeleteCustomizeTemplatesByIdResponse DeleteCustomizeTemplatesById(DeleteCustomizeTemplatesByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomizeTemplatesByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomizeTemplatesByIdResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeCustomizeTemplatesResponse DescribeCustomizeTemplates(DescribeCustomizeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomizeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomizeTemplatesResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeCustomizeTemplatesByIdResponse DescribeCustomizeTemplatesById(DescribeCustomizeTemplatesByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomizeTemplatesByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomizeTemplatesByIdResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeCustomizeTemplatesPresetsResponse DescribeCustomizeTemplatesPresets(DescribeCustomizeTemplatesPresetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomizeTemplatesPresetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomizeTemplatesPresetsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspaceEnvListResponse DescribeWorkspaceEnvList(DescribeWorkspaceEnvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspaceEnvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceEnvListResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspaceIsReadyResponse DescribeWorkspaceIsReady(DescribeWorkspaceIsReadyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspaceIsReadyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceIsReadyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspaceNameExistResponse DescribeWorkspaceNameExist(DescribeWorkspaceNameExistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspaceNameExistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceNameExistResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspaceStatusResponse DescribeWorkspaceStatus(DescribeWorkspaceStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspaceStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceStatusResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspaceStatusListResponse DescribeWorkspaceStatusList(DescribeWorkspaceStatusListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspaceStatusListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspaceStatusListResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CloudstudioClient extends AbstractClient{
     public ModifyCustomizeTemplateVersionControlResponse ModifyCustomizeTemplateVersionControl(ModifyCustomizeTemplateVersionControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomizeTemplateVersionControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomizeTemplateVersionControlResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CloudstudioClient extends AbstractClient{
     public ModifyCustomizeTemplatesFullByIdResponse ModifyCustomizeTemplatesFullById(ModifyCustomizeTemplatesFullByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomizeTemplatesFullByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomizeTemplatesFullByIdResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CloudstudioClient extends AbstractClient{
     public ModifyCustomizeTemplatesPartByIdResponse ModifyCustomizeTemplatesPartById(ModifyCustomizeTemplatesPartByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomizeTemplatesPartByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomizeTemplatesPartByIdResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CloudstudioClient extends AbstractClient{
     public ModifyWorkspaceAttributesResponse ModifyWorkspaceAttributes(ModifyWorkspaceAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWorkspaceAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkspaceAttributesResponse>>() {
                 }.getType();
@@ -408,6 +426,7 @@ public class CloudstudioClient extends AbstractClient{
     public RecoverWorkspaceResponse RecoverWorkspace(RecoverWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecoverWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecoverWorkspaceResponse>>() {
                 }.getType();
@@ -428,6 +447,7 @@ public class CloudstudioClient extends AbstractClient{
     public RemoveWorkspaceResponse RemoveWorkspace(RemoveWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveWorkspaceResponse>>() {
                 }.getType();
@@ -448,6 +468,7 @@ public class CloudstudioClient extends AbstractClient{
     public RunWorkspaceResponse RunWorkspace(RunWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunWorkspaceResponse>>() {
                 }.getType();
@@ -468,6 +489,7 @@ public class CloudstudioClient extends AbstractClient{
     public StopWorkspaceResponse StopWorkspace(StopWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopWorkspaceResponse>>() {
                 }.getType();

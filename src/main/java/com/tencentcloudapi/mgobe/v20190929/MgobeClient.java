@@ -29,7 +29,7 @@ public class MgobeClient extends AbstractClient{
     private static String endpoint = "mgobe.tencentcloudapi.com";
     private static String service = "mgobe";
     private static String version = "2019-09-29";
-
+    
     public MgobeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MgobeClient extends AbstractClient{
     public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();

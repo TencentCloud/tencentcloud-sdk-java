@@ -29,7 +29,7 @@ public class DataintegrationClient extends AbstractClient{
     private static String endpoint = "dataintegration.tencentcloudapi.com";
     private static String service = "dataintegration";
     private static String version = "2022-06-13";
-
+    
     public DataintegrationClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DataintegrationClient extends AbstractClient{
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
                 }.getType();

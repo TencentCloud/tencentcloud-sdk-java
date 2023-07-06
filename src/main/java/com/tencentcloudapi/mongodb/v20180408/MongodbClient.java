@@ -29,7 +29,7 @@ public class MongodbClient extends AbstractClient{
     private static String endpoint = "mongodb.tencentcloudapi.com";
     private static String service = "mongodb";
     private static String version = "2018-04-08";
-
+    
     public MongodbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class MongodbClient extends AbstractClient{
     public AssignProjectResponse AssignProject(AssignProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssignProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssignProjectResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class MongodbClient extends AbstractClient{
     public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class MongodbClient extends AbstractClient{
     public CreateDBInstanceHourResponse CreateDBInstanceHour(CreateDBInstanceHourRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class MongodbClient extends AbstractClient{
     public DescribeClientConnectionsResponse DescribeClientConnections(DescribeClientConnectionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClientConnectionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClientConnectionsResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class MongodbClient extends AbstractClient{
     public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class MongodbClient extends AbstractClient{
     public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogResponse>>() {
                 }.getType();
@@ -169,6 +175,7 @@ public class MongodbClient extends AbstractClient{
     public DescribeSpecInfoResponse DescribeSpecInfo(DescribeSpecInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSpecInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSpecInfoResponse>>() {
                 }.getType();
@@ -189,6 +196,7 @@ public class MongodbClient extends AbstractClient{
     public RenameInstanceResponse RenameInstance(RenameInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenameInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenameInstanceResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class MongodbClient extends AbstractClient{
     public SetAutoRenewResponse SetAutoRenew(SetAutoRenewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAutoRenewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAutoRenewResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ public class MongodbClient extends AbstractClient{
     public SetPasswordResponse SetPassword(SetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetPasswordResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ public class MongodbClient extends AbstractClient{
     public TerminateDBInstanceResponse TerminateDBInstance(TerminateDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDBInstanceResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ public class MongodbClient extends AbstractClient{
     public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ public class MongodbClient extends AbstractClient{
     public UpgradeDBInstanceHourResponse UpgradeDBInstanceHour(UpgradeDBInstanceHourRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeDBInstanceHourResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceHourResponse>>() {
                 }.getType();

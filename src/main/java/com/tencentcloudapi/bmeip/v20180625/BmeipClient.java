@@ -29,7 +29,7 @@ public class BmeipClient extends AbstractClient{
     private static String endpoint = "bmeip.tencentcloudapi.com";
     private static String service = "bmeip";
     private static String version = "2018-06-25";
-
+    
     public BmeipClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BmeipClient extends AbstractClient{
     public BindEipAclsResponse BindEipAcls(BindEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEipAclsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEipAclsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BmeipClient extends AbstractClient{
     public BindHostedResponse BindHosted(BindHostedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindHostedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindHostedResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BmeipClient extends AbstractClient{
     public BindRsResponse BindRs(BindRsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BmeipClient extends AbstractClient{
     public BindVpcIpResponse BindVpcIp(BindVpcIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindVpcIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindVpcIpResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BmeipClient extends AbstractClient{
     public CreateEipResponse CreateEip(CreateEipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEipResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class BmeipClient extends AbstractClient{
     public CreateEipAclResponse CreateEipAcl(CreateEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEipAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEipAclResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class BmeipClient extends AbstractClient{
     public DeleteEipResponse DeleteEip(DeleteEipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEipResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class BmeipClient extends AbstractClient{
     public DeleteEipAclResponse DeleteEipAcl(DeleteEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEipAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEipAclResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class BmeipClient extends AbstractClient{
     public DescribeEipAclsResponse DescribeEipAcls(DescribeEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipAclsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipAclsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class BmeipClient extends AbstractClient{
     public DescribeEipQuotaResponse DescribeEipQuota(DescribeEipQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipQuotaResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class BmeipClient extends AbstractClient{
     public DescribeEipTaskResponse DescribeEipTask(DescribeEipTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipTaskResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class BmeipClient extends AbstractClient{
     public DescribeEipsResponse DescribeEips(DescribeEipsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEipsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEipsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class BmeipClient extends AbstractClient{
     public ModifyEipAclResponse ModifyEipAcl(ModifyEipAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipAclResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class BmeipClient extends AbstractClient{
     public ModifyEipChargeResponse ModifyEipCharge(ModifyEipChargeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipChargeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipChargeResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class BmeipClient extends AbstractClient{
     public ModifyEipNameResponse ModifyEipName(ModifyEipNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEipNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEipNameResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class BmeipClient extends AbstractClient{
     public UnbindEipAclsResponse UnbindEipAcls(UnbindEipAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindEipAclsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindEipAclsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class BmeipClient extends AbstractClient{
     public UnbindHostedResponse UnbindHosted(UnbindHostedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindHostedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindHostedResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class BmeipClient extends AbstractClient{
     public UnbindRsResponse UnbindRs(UnbindRsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindRsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindRsResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class BmeipClient extends AbstractClient{
     public UnbindRsListResponse UnbindRsList(UnbindRsListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindRsListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindRsListResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class BmeipClient extends AbstractClient{
     public UnbindVpcIpResponse UnbindVpcIp(UnbindVpcIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindVpcIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindVpcIpResponse>>() {
                 }.getType();

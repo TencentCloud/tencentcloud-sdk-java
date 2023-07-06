@@ -29,7 +29,7 @@ public class TbaasClient extends AbstractClient{
     private static String endpoint = "tbaas.tencentcloudapi.com";
     private static String service = "tbaas";
     private static String version = "2018-04-16";
-
+    
     public TbaasClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TbaasClient extends AbstractClient{
     public ApplyChainMakerBatchUserCertResponse ApplyChainMakerBatchUserCert(ApplyChainMakerBatchUserCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyChainMakerBatchUserCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyChainMakerBatchUserCertResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TbaasClient extends AbstractClient{
     public ApplyUserCertResponse ApplyUserCert(ApplyUserCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyUserCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyUserCertResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class TbaasClient extends AbstractClient{
     public CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(CreateChaincodeAndInstallForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateChaincodeAndInstallForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateChaincodeAndInstallForUserResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class TbaasClient extends AbstractClient{
     public DownloadUserCertResponse DownloadUserCert(DownloadUserCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadUserCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadUserCertResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class TbaasClient extends AbstractClient{
     public GetBlockListResponse GetBlockList(GetBlockListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetBlockListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetBlockListResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class TbaasClient extends AbstractClient{
     public GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(GetBlockTransactionListForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetBlockTransactionListForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetBlockTransactionListForUserResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class TbaasClient extends AbstractClient{
     public GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUser(GetChaincodeCompileLogForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetChaincodeCompileLogForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetChaincodeCompileLogForUserResponse>>() {
                 }.getType();
@@ -193,6 +200,7 @@ public class TbaasClient extends AbstractClient{
     public GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUser(GetChaincodeInitializeResultForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetChaincodeInitializeResultForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetChaincodeInitializeResultForUserResponse>>() {
                 }.getType();
@@ -215,6 +223,7 @@ public class TbaasClient extends AbstractClient{
     public GetChaincodeLogForUserResponse GetChaincodeLogForUser(GetChaincodeLogForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetChaincodeLogForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetChaincodeLogForUserResponse>>() {
                 }.getType();
@@ -237,6 +246,7 @@ public class TbaasClient extends AbstractClient{
     public GetChannelListForUserResponse GetChannelListForUser(GetChannelListForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetChannelListForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetChannelListForUserResponse>>() {
                 }.getType();
@@ -259,6 +269,7 @@ public class TbaasClient extends AbstractClient{
     public GetClusterListForUserResponse GetClusterListForUser(GetClusterListForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetClusterListForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetClusterListForUserResponse>>() {
                 }.getType();
@@ -279,6 +290,7 @@ public class TbaasClient extends AbstractClient{
     public GetClusterSummaryResponse GetClusterSummary(GetClusterSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetClusterSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetClusterSummaryResponse>>() {
                 }.getType();
@@ -299,6 +311,7 @@ public class TbaasClient extends AbstractClient{
     public GetInvokeTxResponse GetInvokeTx(GetInvokeTxRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetInvokeTxResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetInvokeTxResponse>>() {
                 }.getType();
@@ -319,6 +332,7 @@ public class TbaasClient extends AbstractClient{
     public GetLatesdTransactionListResponse GetLatesdTransactionList(GetLatesdTransactionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLatesdTransactionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLatesdTransactionListResponse>>() {
                 }.getType();
@@ -339,6 +353,7 @@ public class TbaasClient extends AbstractClient{
     public GetLatestTransactionListResponse GetLatestTransactionList(GetLatestTransactionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLatestTransactionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLatestTransactionListResponse>>() {
                 }.getType();
@@ -361,6 +376,7 @@ public class TbaasClient extends AbstractClient{
     public GetPeerLogForUserResponse GetPeerLogForUser(GetPeerLogForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPeerLogForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPeerLogForUserResponse>>() {
                 }.getType();
@@ -381,6 +397,7 @@ public class TbaasClient extends AbstractClient{
     public GetTransactionDetailForUserResponse GetTransactionDetailForUser(GetTransactionDetailForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTransactionDetailForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTransactionDetailForUserResponse>>() {
                 }.getType();
@@ -403,6 +420,7 @@ public class TbaasClient extends AbstractClient{
     public InitializeChaincodeForUserResponse InitializeChaincodeForUser(InitializeChaincodeForUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitializeChaincodeForUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InitializeChaincodeForUserResponse>>() {
                 }.getType();
@@ -423,6 +441,7 @@ public class TbaasClient extends AbstractClient{
     public InvokeResponse Invoke(InvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
@@ -443,6 +462,7 @@ public class TbaasClient extends AbstractClient{
     public InvokeChainMakerContractResponse InvokeChainMakerContract(InvokeChainMakerContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeChainMakerContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeChainMakerContractResponse>>() {
                 }.getType();
@@ -463,6 +483,7 @@ public class TbaasClient extends AbstractClient{
     public InvokeChainMakerDemoContractResponse InvokeChainMakerDemoContract(InvokeChainMakerDemoContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeChainMakerDemoContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeChainMakerDemoContractResponse>>() {
                 }.getType();
@@ -483,6 +504,7 @@ public class TbaasClient extends AbstractClient{
     public QueryResponse Query(QueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryResponse>>() {
                 }.getType();
@@ -503,6 +525,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerBlockTransactionResponse QueryChainMakerBlockTransaction(QueryChainMakerBlockTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerBlockTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerBlockTransactionResponse>>() {
                 }.getType();
@@ -523,6 +546,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerContractResponse QueryChainMakerContract(QueryChainMakerContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerContractResponse>>() {
                 }.getType();
@@ -543,6 +567,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerDemoBlockTransactionResponse QueryChainMakerDemoBlockTransaction(QueryChainMakerDemoBlockTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerDemoBlockTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoBlockTransactionResponse>>() {
                 }.getType();
@@ -563,6 +588,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerDemoContractResponse QueryChainMakerDemoContract(QueryChainMakerDemoContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerDemoContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoContractResponse>>() {
                 }.getType();
@@ -583,6 +609,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerDemoTransactionResponse QueryChainMakerDemoTransaction(QueryChainMakerDemoTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerDemoTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerDemoTransactionResponse>>() {
                 }.getType();
@@ -603,6 +630,7 @@ public class TbaasClient extends AbstractClient{
     public QueryChainMakerTransactionResponse QueryChainMakerTransaction(QueryChainMakerTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryChainMakerTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryChainMakerTransactionResponse>>() {
                 }.getType();
@@ -623,6 +651,7 @@ public class TbaasClient extends AbstractClient{
     public SrvInvokeResponse SrvInvoke(SrvInvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SrvInvokeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SrvInvokeResponse>>() {
                 }.getType();

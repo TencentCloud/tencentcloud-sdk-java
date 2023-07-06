@@ -29,7 +29,7 @@ public class BmClient extends AbstractClient{
     private static String endpoint = "bm.tencentcloudapi.com";
     private static String service = "bm";
     private static String version = "2018-04-23";
-
+    
     public BmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BmClient extends AbstractClient{
     public AttachCamRoleResponse AttachCamRole(AttachCamRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachCamRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachCamRoleResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BmClient extends AbstractClient{
     public BindPsaTagResponse BindPsaTag(BindPsaTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindPsaTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindPsaTagResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BmClient extends AbstractClient{
     public BuyDevicesResponse BuyDevices(BuyDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BuyDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BuyDevicesResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class BmClient extends AbstractClient{
     public CreateCustomImageResponse CreateCustomImage(CreateCustomImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomImageResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class BmClient extends AbstractClient{
     public CreatePsaRegulationResponse CreatePsaRegulation(CreatePsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePsaRegulationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePsaRegulationResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class BmClient extends AbstractClient{
     public CreateSpotDeviceResponse CreateSpotDevice(CreateSpotDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSpotDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSpotDeviceResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class BmClient extends AbstractClient{
     public CreateUserCmdResponse CreateUserCmd(CreateUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserCmdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserCmdResponse>>() {
                 }.getType();
@@ -189,6 +196,7 @@ public class BmClient extends AbstractClient{
     public DeleteCustomImagesResponse DeleteCustomImages(DeleteCustomImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomImagesResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class BmClient extends AbstractClient{
     public DeletePsaRegulationResponse DeletePsaRegulation(DeletePsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePsaRegulationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePsaRegulationResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ public class BmClient extends AbstractClient{
     public DeleteUserCmdsResponse DeleteUserCmds(DeleteUserCmdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserCmdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserCmdsResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class BmClient extends AbstractClient{
     public DescribeCustomImageProcessResponse DescribeCustomImageProcess(DescribeCustomImageProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomImageProcessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomImageProcessResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class BmClient extends AbstractClient{
     public DescribeCustomImagesResponse DescribeCustomImages(DescribeCustomImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomImagesResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class BmClient extends AbstractClient{
     public DescribeDeviceClassResponse DescribeDeviceClass(DescribeDeviceClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceClassResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class BmClient extends AbstractClient{
     public DescribeDeviceClassPartitionResponse DescribeDeviceClassPartition(DescribeDeviceClassPartitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceClassPartitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceClassPartitionResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class BmClient extends AbstractClient{
     public DescribeDeviceHardwareInfoResponse DescribeDeviceHardwareInfo(DescribeDeviceHardwareInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceHardwareInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceHardwareInfoResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class BmClient extends AbstractClient{
     public DescribeDeviceInventoryResponse DescribeDeviceInventory(DescribeDeviceInventoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceInventoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceInventoryResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class BmClient extends AbstractClient{
     public DescribeDeviceOperationLogResponse DescribeDeviceOperationLog(DescribeDeviceOperationLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceOperationLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceOperationLogResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class BmClient extends AbstractClient{
     public DescribeDevicePartitionResponse DescribeDevicePartition(DescribeDevicePartitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePartitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePartitionResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class BmClient extends AbstractClient{
     public DescribeDevicePositionResponse DescribeDevicePosition(DescribeDevicePositionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePositionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePositionResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ public class BmClient extends AbstractClient{
     public DescribeDevicePriceInfoResponse DescribeDevicePriceInfo(DescribeDevicePriceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePriceInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePriceInfoResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ public class BmClient extends AbstractClient{
     public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ public class BmClient extends AbstractClient{
     public DescribeHardwareSpecificationResponse DescribeHardwareSpecification(DescribeHardwareSpecificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHardwareSpecificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHardwareSpecificationResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ public class BmClient extends AbstractClient{
     public DescribeHostedDeviceOutBandInfoResponse DescribeHostedDeviceOutBandInfo(DescribeHostedDeviceOutBandInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHostedDeviceOutBandInfoResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ public class BmClient extends AbstractClient{
     public DescribeOperationResultResponse DescribeOperationResult(DescribeOperationResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOperationResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOperationResultResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ public class BmClient extends AbstractClient{
     public DescribeOsInfoResponse DescribeOsInfo(DescribeOsInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOsInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOsInfoResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ public class BmClient extends AbstractClient{
     public DescribePsaRegulationsResponse DescribePsaRegulations(DescribePsaRegulationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePsaRegulationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePsaRegulationsResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ public class BmClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ public class BmClient extends AbstractClient{
     public DescribeRepairTaskConstantResponse DescribeRepairTaskConstant(DescribeRepairTaskConstantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRepairTaskConstantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRepairTaskConstantResponse>>() {
                 }.getType();
@@ -617,6 +645,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
@@ -637,6 +666,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DescribeTaskOperationLogResponse DescribeTaskOperationLog(DescribeTaskOperationLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskOperationLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskOperationLogResponse>>() {
                 }.getType();
@@ -657,6 +687,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DescribeUserCmdTaskInfoResponse DescribeUserCmdTaskInfo(DescribeUserCmdTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdTaskInfoResponse>>() {
                 }.getType();
@@ -677,6 +708,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DescribeUserCmdTasksResponse DescribeUserCmdTasks(DescribeUserCmdTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdTasksResponse>>() {
                 }.getType();
@@ -697,6 +729,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DescribeUserCmdsResponse DescribeUserCmds(DescribeUserCmdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserCmdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserCmdsResponse>>() {
                 }.getType();
@@ -717,6 +750,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public DetachCamRoleResponse DetachCamRole(DetachCamRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachCamRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachCamRoleResponse>>() {
                 }.getType();
@@ -737,6 +771,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyCustomImageAttributeResponse ModifyCustomImageAttribute(ModifyCustomImageAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomImageAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomImageAttributeResponse>>() {
                 }.getType();
@@ -757,6 +792,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyDeviceAliasesResponse ModifyDeviceAliases(ModifyDeviceAliasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceAliasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceAliasesResponse>>() {
                 }.getType();
@@ -777,6 +813,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyDeviceAutoRenewFlagResponse ModifyDeviceAutoRenewFlag(ModifyDeviceAutoRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceAutoRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceAutoRenewFlagResponse>>() {
                 }.getType();
@@ -797,6 +834,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyLanIpResponse ModifyLanIp(ModifyLanIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLanIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLanIpResponse>>() {
                 }.getType();
@@ -817,6 +855,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyPayModePre2PostResponse ModifyPayModePre2Post(ModifyPayModePre2PostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPayModePre2PostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPayModePre2PostResponse>>() {
                 }.getType();
@@ -837,6 +876,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyPsaRegulationResponse ModifyPsaRegulation(ModifyPsaRegulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPsaRegulationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPsaRegulationResponse>>() {
                 }.getType();
@@ -857,6 +897,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ModifyUserCmdResponse ModifyUserCmd(ModifyUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserCmdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserCmdResponse>>() {
                 }.getType();
@@ -877,6 +918,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public OfflineDevicesResponse OfflineDevices(OfflineDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineDevicesResponse>>() {
                 }.getType();
@@ -897,6 +939,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public RebootDevicesResponse RebootDevices(RebootDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RebootDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RebootDevicesResponse>>() {
                 }.getType();
@@ -917,6 +960,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public RecoverDevicesResponse RecoverDevices(RecoverDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecoverDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecoverDevicesResponse>>() {
                 }.getType();
@@ -937,6 +981,7 @@ TaskStatus（任务状态ID）与状态中文名的对应关系如下：<br>
     public ReloadDeviceOsResponse ReloadDeviceOs(ReloadDeviceOsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReloadDeviceOsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReloadDeviceOsResponse>>() {
                 }.getType();
@@ -979,6 +1024,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public RepairTaskControlResponse RepairTaskControl(RepairTaskControlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RepairTaskControlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RepairTaskControlResponse>>() {
                 }.getType();
@@ -999,6 +1045,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public ResetDevicePasswordResponse ResetDevicePassword(ResetDevicePasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetDevicePasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetDevicePasswordResponse>>() {
                 }.getType();
@@ -1019,6 +1066,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public ReturnDevicesResponse ReturnDevices(ReturnDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReturnDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReturnDevicesResponse>>() {
                 }.getType();
@@ -1039,6 +1087,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public RunUserCmdResponse RunUserCmd(RunUserCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunUserCmdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunUserCmdResponse>>() {
                 }.getType();
@@ -1059,6 +1108,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public SetOutBandVpnAuthPasswordResponse SetOutBandVpnAuthPassword(SetOutBandVpnAuthPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetOutBandVpnAuthPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetOutBandVpnAuthPasswordResponse>>() {
                 }.getType();
@@ -1079,6 +1129,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public ShutdownDevicesResponse ShutdownDevices(ShutdownDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ShutdownDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ShutdownDevicesResponse>>() {
                 }.getType();
@@ -1099,6 +1150,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public StartDevicesResponse StartDevices(StartDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartDevicesResponse>>() {
                 }.getType();
@@ -1119,6 +1171,7 @@ NeedRepairAgain（维修完成后，故障未恢复，需要重新维修，推�
     public UnbindPsaTagResponse UnbindPsaTag(UnbindPsaTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindPsaTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindPsaTagResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class YinsudaClient extends AbstractClient{
     private static String endpoint = "yinsuda.tencentcloudapi.com";
     private static String service = "yinsuda";
     private static String version = "2022-05-27";
-
+    
     public YinsudaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class YinsudaClient extends AbstractClient{
     public ApplyChorusResponse ApplyChorus(ApplyChorusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyChorusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyChorusResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class YinsudaClient extends AbstractClient{
     public BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(BatchDescribeKTVMusicDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeKTVMusicDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeKTVMusicDetailsResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class YinsudaClient extends AbstractClient{
     public CreateKTVRobotResponse CreateKTVRobot(CreateKTVRobotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKTVRobotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKTVRobotResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVMatchMusicsResponse DescribeKTVMatchMusics(DescribeKTVMatchMusicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVMatchMusicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVMatchMusicsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVMusicAccompanySegmentUrlResponse DescribeKTVMusicAccompanySegmentUrl(DescribeKTVMusicAccompanySegmentUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicAccompanySegmentUrlResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVMusicsByTagResponse DescribeKTVMusicsByTag(DescribeKTVMusicsByTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVMusicsByTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicsByTagResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(DescribeKTVPlaylistDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVPlaylistDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistDetailResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVPlaylistsResponse DescribeKTVPlaylists(DescribeKTVPlaylistsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVPlaylistsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVRobotsResponse DescribeKTVRobots(DescribeKTVRobotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVRobotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVRobotsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVSuggestionsResponse DescribeKTVSuggestions(DescribeKTVSuggestionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVSuggestionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSuggestionsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeKTVTagsResponse DescribeKTVTags(DescribeKTVTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVTagsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeLiveVipTradeInfosResponse DescribeLiveVipTradeInfos(DescribeLiveVipTradeInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveVipTradeInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveVipTradeInfosResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class YinsudaClient extends AbstractClient{
     public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class YinsudaClient extends AbstractClient{
     public DestroyKTVRobotResponse DestroyKTVRobot(DestroyKTVRobotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyKTVRobotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyKTVRobotResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class YinsudaClient extends AbstractClient{
     public RechargeLiveVipResponse RechargeLiveVip(RechargeLiveVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RechargeLiveVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RechargeLiveVipResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class YinsudaClient extends AbstractClient{
     public SearchKTVMusicsResponse SearchKTVMusics(SearchKTVMusicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchKTVMusicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchKTVMusicsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class YinsudaClient extends AbstractClient{
     public SyncKTVRobotCommandResponse SyncKTVRobotCommand(SyncKTVRobotCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncKTVRobotCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncKTVRobotCommandResponse>>() {
                 }.getType();

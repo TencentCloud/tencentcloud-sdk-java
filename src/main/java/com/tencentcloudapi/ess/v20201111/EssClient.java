@@ -29,7 +29,7 @@ public class EssClient extends AbstractClient{
     private static String endpoint = "ess.tencentcloudapi.com";
     private static String service = "ess";
     private static String version = "2020-11-11";
-
+    
     public EssClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class EssClient extends AbstractClient{
     public BindEmployeeUserIdWithClientOpenIdResponse BindEmployeeUserIdWithClientOpenId(BindEmployeeUserIdWithClientOpenIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEmployeeUserIdWithClientOpenIdResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class EssClient extends AbstractClient{
     public CancelFlowResponse CancelFlow(CancelFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelFlowResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class EssClient extends AbstractClient{
     public CancelMultiFlowSignQRCodeResponse CancelMultiFlowSignQRCode(CancelMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelMultiFlowSignQRCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelMultiFlowSignQRCodeResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class EssClient extends AbstractClient{
     public CancelUserAutoSignEnableUrlResponse CancelUserAutoSignEnableUrl(CancelUserAutoSignEnableUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelUserAutoSignEnableUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelUserAutoSignEnableUrlResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class EssClient extends AbstractClient{
     public CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrl(CreateBatchCancelFlowUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBatchCancelFlowUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBatchCancelFlowUrlResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class EssClient extends AbstractClient{
     public CreateChannelSubOrganizationModifyQrCodeResponse CreateChannelSubOrganizationModifyQrCode(CreateChannelSubOrganizationModifyQrCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateChannelSubOrganizationModifyQrCodeResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class EssClient extends AbstractClient{
     public CreateConvertTaskApiResponse CreateConvertTaskApi(CreateConvertTaskApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConvertTaskApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConvertTaskApiResponse>>() {
                 }.getType();
@@ -193,6 +200,7 @@ public class EssClient extends AbstractClient{
     public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
                 }.getType();
@@ -216,6 +224,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowResponse CreateFlow(CreateFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowResponse>>() {
                 }.getType();
@@ -240,6 +249,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowApproversResponse CreateFlowApprovers(CreateFlowApproversRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowApproversResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowApproversResponse>>() {
                 }.getType();
@@ -263,6 +273,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowByFilesResponse CreateFlowByFiles(CreateFlowByFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowByFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowByFilesResponse>>() {
                 }.getType();
@@ -284,6 +295,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowEvidenceReportResponse CreateFlowEvidenceReport(CreateFlowEvidenceReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowEvidenceReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowEvidenceReportResponse>>() {
                 }.getType();
@@ -308,6 +320,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowRemindsResponse CreateFlowReminds(CreateFlowRemindsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowRemindsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowRemindsResponse>>() {
                 }.getType();
@@ -331,6 +344,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowSignReviewResponse CreateFlowSignReview(CreateFlowSignReviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowSignReviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowSignReviewResponse>>() {
                 }.getType();
@@ -355,6 +369,7 @@ public class EssClient extends AbstractClient{
     public CreateFlowSignUrlResponse CreateFlowSignUrl(CreateFlowSignUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowSignUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowSignUrlResponse>>() {
                 }.getType();
@@ -375,6 +390,7 @@ public class EssClient extends AbstractClient{
     public CreateIntegrationDepartmentResponse CreateIntegrationDepartment(CreateIntegrationDepartmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntegrationDepartmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntegrationDepartmentResponse>>() {
                 }.getType();
@@ -395,6 +411,7 @@ public class EssClient extends AbstractClient{
     public CreateIntegrationEmployeesResponse CreateIntegrationEmployees(CreateIntegrationEmployeesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntegrationEmployeesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntegrationEmployeesResponse>>() {
                 }.getType();
@@ -415,6 +432,7 @@ public class EssClient extends AbstractClient{
     public CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(CreateIntegrationUserRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntegrationUserRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntegrationUserRolesResponse>>() {
                 }.getType();
@@ -443,6 +461,7 @@ public class EssClient extends AbstractClient{
     public CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(CreateMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMultiFlowSignQRCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMultiFlowSignQRCodeResponse>>() {
                 }.getType();
@@ -465,6 +484,7 @@ public class EssClient extends AbstractClient{
     public CreatePrepareFlowResponse CreatePrepareFlow(CreatePrepareFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrepareFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrepareFlowResponse>>() {
                 }.getType();
@@ -485,6 +505,7 @@ public class EssClient extends AbstractClient{
     public CreatePreparedPersonalEsignResponse CreatePreparedPersonalEsign(CreatePreparedPersonalEsignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePreparedPersonalEsignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePreparedPersonalEsignResponse>>() {
                 }.getType();
@@ -505,6 +526,7 @@ public class EssClient extends AbstractClient{
     public CreateReleaseFlowResponse CreateReleaseFlow(CreateReleaseFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReleaseFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReleaseFlowResponse>>() {
                 }.getType();
@@ -535,6 +557,7 @@ public class EssClient extends AbstractClient{
     public CreateSchemeUrlResponse CreateSchemeUrl(CreateSchemeUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSchemeUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSchemeUrlResponse>>() {
                 }.getType();
@@ -555,6 +578,7 @@ public class EssClient extends AbstractClient{
     public CreateSealResponse CreateSeal(CreateSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSealResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSealResponse>>() {
                 }.getType();
@@ -575,6 +599,7 @@ public class EssClient extends AbstractClient{
     public CreateSealPolicyResponse CreateSealPolicy(CreateSealPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSealPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSealPolicyResponse>>() {
                 }.getType();
@@ -595,6 +620,7 @@ public class EssClient extends AbstractClient{
     public CreateUserAutoSignEnableUrlResponse CreateUserAutoSignEnableUrl(CreateUserAutoSignEnableUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserAutoSignEnableUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>() {
                 }.getType();
@@ -615,6 +641,7 @@ public class EssClient extends AbstractClient{
     public DeleteIntegrationDepartmentResponse DeleteIntegrationDepartment(DeleteIntegrationDepartmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntegrationDepartmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationDepartmentResponse>>() {
                 }.getType();
@@ -635,6 +662,7 @@ public class EssClient extends AbstractClient{
     public DeleteIntegrationEmployeesResponse DeleteIntegrationEmployees(DeleteIntegrationEmployeesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntegrationEmployeesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationEmployeesResponse>>() {
                 }.getType();
@@ -655,6 +683,7 @@ public class EssClient extends AbstractClient{
     public DeleteIntegrationRoleUsersResponse DeleteIntegrationRoleUsers(DeleteIntegrationRoleUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntegrationRoleUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationRoleUsersResponse>>() {
                 }.getType();
@@ -675,6 +704,7 @@ public class EssClient extends AbstractClient{
     public DeleteSealPoliciesResponse DeleteSealPolicies(DeleteSealPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSealPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSealPoliciesResponse>>() {
                 }.getType();
@@ -695,6 +725,7 @@ public class EssClient extends AbstractClient{
     public DescribeExtendedServiceAuthInfosResponse DescribeExtendedServiceAuthInfos(DescribeExtendedServiceAuthInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExtendedServiceAuthInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExtendedServiceAuthInfosResponse>>() {
                 }.getType();
@@ -716,6 +747,7 @@ public class EssClient extends AbstractClient{
     public DescribeFileUrlsResponse DescribeFileUrls(DescribeFileUrlsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileUrlsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileUrlsResponse>>() {
                 }.getType();
@@ -738,6 +770,7 @@ public class EssClient extends AbstractClient{
     public DescribeFlowBriefsResponse DescribeFlowBriefs(DescribeFlowBriefsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowBriefsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowBriefsResponse>>() {
                 }.getType();
@@ -758,6 +791,7 @@ public class EssClient extends AbstractClient{
     public DescribeFlowComponentsResponse DescribeFlowComponents(DescribeFlowComponentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowComponentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowComponentsResponse>>() {
                 }.getType();
@@ -778,6 +812,7 @@ public class EssClient extends AbstractClient{
     public DescribeFlowEvidenceReportResponse DescribeFlowEvidenceReport(DescribeFlowEvidenceReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowEvidenceReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowEvidenceReportResponse>>() {
                 }.getType();
@@ -799,6 +834,7 @@ public class EssClient extends AbstractClient{
     public DescribeFlowInfoResponse DescribeFlowInfo(DescribeFlowInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowInfoResponse>>() {
                 }.getType();
@@ -820,6 +856,7 @@ public class EssClient extends AbstractClient{
     public DescribeFlowTemplatesResponse DescribeFlowTemplates(DescribeFlowTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowTemplatesResponse>>() {
                 }.getType();
@@ -840,6 +877,7 @@ public class EssClient extends AbstractClient{
     public DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(DescribeIntegrationDepartmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationDepartmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationDepartmentsResponse>>() {
                 }.getType();
@@ -860,6 +898,7 @@ public class EssClient extends AbstractClient{
     public DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(DescribeIntegrationEmployeesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationEmployeesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationEmployeesResponse>>() {
                 }.getType();
@@ -880,6 +919,7 @@ public class EssClient extends AbstractClient{
     public DescribeIntegrationMainOrganizationUserResponse DescribeIntegrationMainOrganizationUser(DescribeIntegrationMainOrganizationUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationMainOrganizationUserResponse>>() {
                 }.getType();
@@ -900,6 +940,7 @@ public class EssClient extends AbstractClient{
     public DescribeIntegrationRolesResponse DescribeIntegrationRoles(DescribeIntegrationRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationRolesResponse>>() {
                 }.getType();
@@ -920,6 +961,7 @@ public class EssClient extends AbstractClient{
     public DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(DescribeOrganizationGroupOrganizationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationGroupOrganizationsResponse>>() {
                 }.getType();
@@ -941,6 +983,7 @@ public class EssClient extends AbstractClient{
     public DescribeOrganizationSealsResponse DescribeOrganizationSeals(DescribeOrganizationSealsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationSealsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationSealsResponse>>() {
                 }.getType();
@@ -961,6 +1004,7 @@ public class EssClient extends AbstractClient{
     public DescribeThirdPartyAuthCodeResponse DescribeThirdPartyAuthCode(DescribeThirdPartyAuthCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeThirdPartyAuthCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeThirdPartyAuthCodeResponse>>() {
                 }.getType();
@@ -981,6 +1025,7 @@ public class EssClient extends AbstractClient{
     public DescribeUserAutoSignStatusResponse DescribeUserAutoSignStatus(DescribeUserAutoSignStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserAutoSignStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserAutoSignStatusResponse>>() {
                 }.getType();
@@ -1001,6 +1046,7 @@ public class EssClient extends AbstractClient{
     public DisableUserAutoSignResponse DisableUserAutoSign(DisableUserAutoSignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableUserAutoSignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableUserAutoSignResponse>>() {
                 }.getType();
@@ -1022,6 +1068,7 @@ public class EssClient extends AbstractClient{
     public GetTaskResultApiResponse GetTaskResultApi(GetTaskResultApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTaskResultApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTaskResultApiResponse>>() {
                 }.getType();
@@ -1044,6 +1091,7 @@ callbackinfo包含： 回调地址和签名key
     public ModifyApplicationCallbackInfoResponse ModifyApplicationCallbackInfo(ModifyApplicationCallbackInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationCallbackInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationCallbackInfoResponse>>() {
                 }.getType();
@@ -1064,6 +1112,7 @@ callbackinfo包含： 回调地址和签名key
     public ModifyIntegrationDepartmentResponse ModifyIntegrationDepartment(ModifyIntegrationDepartmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIntegrationDepartmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIntegrationDepartmentResponse>>() {
                 }.getType();
@@ -1086,6 +1135,7 @@ callbackinfo包含： 回调地址和签名key
     public StartFlowResponse StartFlow(StartFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartFlowResponse>>() {
                 }.getType();
@@ -1106,6 +1156,7 @@ callbackinfo包含： 回调地址和签名key
     public UnbindEmployeeUserIdWithClientOpenIdResponse UnbindEmployeeUserIdWithClientOpenId(UnbindEmployeeUserIdWithClientOpenIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindEmployeeUserIdWithClientOpenIdResponse>>() {
                 }.getType();
@@ -1126,6 +1177,7 @@ callbackinfo包含： 回调地址和签名key
     public UpdateIntegrationEmployeesResponse UpdateIntegrationEmployees(UpdateIntegrationEmployeesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateIntegrationEmployeesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateIntegrationEmployeesResponse>>() {
                 }.getType();
@@ -1152,6 +1204,7 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");<br/>
     public UploadFilesResponse UploadFiles(UploadFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadFilesResponse>>() {
                 }.getType();
@@ -1172,6 +1225,7 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");<br/>
     public VerifyPdfResponse VerifyPdf(VerifyPdfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyPdfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyPdfResponse>>() {
                 }.getType();

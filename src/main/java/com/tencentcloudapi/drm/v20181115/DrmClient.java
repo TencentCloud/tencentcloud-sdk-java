@@ -29,7 +29,7 @@ public class DrmClient extends AbstractClient{
     private static String endpoint = "drm.tencentcloudapi.com";
     private static String service = "drm";
     private static String version = "2018-11-15";
-
+    
     public DrmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class DrmClient extends AbstractClient{
     public AddFairPlayPemResponse AddFairPlayPem(AddFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddFairPlayPemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddFairPlayPemResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class DrmClient extends AbstractClient{
     public CreateEncryptKeysResponse CreateEncryptKeys(CreateEncryptKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEncryptKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEncryptKeysResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class DrmClient extends AbstractClient{
     public CreateLicenseResponse CreateLicense(CreateLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLicenseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLicenseResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class DrmClient extends AbstractClient{
     public DeleteFairPlayPemResponse DeleteFairPlayPem(DeleteFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFairPlayPemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFairPlayPemResponse>>() {
                 }.getType();
@@ -132,6 +136,7 @@ public class DrmClient extends AbstractClient{
     public DescribeAllKeysResponse DescribeAllKeys(DescribeAllKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllKeysResponse>>() {
                 }.getType();
@@ -152,6 +157,7 @@ public class DrmClient extends AbstractClient{
     public DescribeFairPlayPemResponse DescribeFairPlayPem(DescribeFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFairPlayPemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFairPlayPemResponse>>() {
                 }.getType();
@@ -174,6 +180,7 @@ public class DrmClient extends AbstractClient{
     public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeysResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
@@ -195,6 +202,7 @@ public class DrmClient extends AbstractClient{
     public ModifyFairPlayPemResponse ModifyFairPlayPem(ModifyFairPlayPemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFairPlayPemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFairPlayPemResponse>>() {
                 }.getType();
@@ -216,6 +224,7 @@ public class DrmClient extends AbstractClient{
     public StartEncryptionResponse StartEncryption(StartEncryptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartEncryptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartEncryptionResponse>>() {
                 }.getType();

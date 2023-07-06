@@ -199,6 +199,14 @@ public class ZoneSetting extends AbstractModel{
     private AccelerateMainland AccelerateMainland;
 
     /**
+    * 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandardDebug")
+    @Expose
+    private StandardDebug StandardDebug;
+
+    /**
      * Get 站点名称。 
      * @return ZoneName 站点名称。
      */
@@ -638,6 +646,26 @@ public class ZoneSetting extends AbstractModel{
         this.AccelerateMainland = AccelerateMainland;
     }
 
+    /**
+     * Get 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandardDebug 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StandardDebug getStandardDebug() {
+        return this.StandardDebug;
+    }
+
+    /**
+     * Set 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandardDebug 标准 Debug 配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandardDebug(StandardDebug StandardDebug) {
+        this.StandardDebug = StandardDebug;
+    }
+
     public ZoneSetting() {
     }
 
@@ -712,6 +740,9 @@ public class ZoneSetting extends AbstractModel{
         if (source.AccelerateMainland != null) {
             this.AccelerateMainland = new AccelerateMainland(source.AccelerateMainland);
         }
+        if (source.StandardDebug != null) {
+            this.StandardDebug = new StandardDebug(source.StandardDebug);
+        }
     }
 
 
@@ -741,6 +772,7 @@ public class ZoneSetting extends AbstractModel{
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
         this.setParamObj(map, prefix + "AccelerateMainland.", this.AccelerateMainland);
+        this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 
     }
 }

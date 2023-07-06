@@ -29,7 +29,7 @@ public class IrpClient extends AbstractClient{
     private static String endpoint = "irp.tencentcloudapi.com";
     private static String service = "irp";
     private static String version = "2022-03-24";
-
+    
     public IrpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IrpClient extends AbstractClient{
     public RecommendContentResponse RecommendContent(RecommendContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecommendContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecommendContentResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IrpClient extends AbstractClient{
     public ReportActionResponse ReportAction(ReportActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportActionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportActionResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IrpClient extends AbstractClient{
     public ReportMaterialResponse ReportMaterial(ReportMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportMaterialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportMaterialResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IrpClient extends AbstractClient{
     public ReportPortraitResponse ReportPortrait(ReportPortraitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportPortraitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportPortraitResponse>>() {
                 }.getType();

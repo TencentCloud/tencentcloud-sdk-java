@@ -29,7 +29,7 @@ public class GaapClient extends AbstractClient{
     private static String endpoint = "gaap.tencentcloudapi.com";
     private static String service = "gaap";
     private static String version = "2018-05-29";
-
+    
     public GaapClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GaapClient extends AbstractClient{
     public AddRealServersResponse AddRealServers(AddRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddRealServersResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GaapClient extends AbstractClient{
     public BanAndRecoverProxyResponse BanAndRecoverProxy(BanAndRecoverProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BanAndRecoverProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BanAndRecoverProxyResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class GaapClient extends AbstractClient{
     public BindListenerRealServersResponse BindListenerRealServers(BindListenerRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindListenerRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindListenerRealServersResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class GaapClient extends AbstractClient{
     public BindRuleRealServersResponse BindRuleRealServers(BindRuleRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRuleRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRuleRealServersResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class GaapClient extends AbstractClient{
     public CheckProxyCreateResponse CheckProxyCreate(CheckProxyCreateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckProxyCreateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckProxyCreateResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class GaapClient extends AbstractClient{
     public CloseProxiesResponse CloseProxies(CloseProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProxiesResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class GaapClient extends AbstractClient{
     public CloseProxyGroupResponse CloseProxyGroup(CloseProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseProxyGroupResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class GaapClient extends AbstractClient{
     public CloseSecurityPolicyResponse CloseSecurityPolicy(CloseSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseSecurityPolicyResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class GaapClient extends AbstractClient{
     public CreateCertificateResponse CreateCertificate(CreateCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCertificateResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class GaapClient extends AbstractClient{
     public CreateCustomHeaderResponse CreateCustomHeader(CreateCustomHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomHeaderResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class GaapClient extends AbstractClient{
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class GaapClient extends AbstractClient{
     public CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(CreateDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class GaapClient extends AbstractClient{
     public CreateFirstLinkSessionResponse CreateFirstLinkSession(CreateFirstLinkSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFirstLinkSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFirstLinkSessionResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class GaapClient extends AbstractClient{
     public CreateGlobalDomainResponse CreateGlobalDomain(CreateGlobalDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGlobalDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGlobalDomainResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class GaapClient extends AbstractClient{
     public CreateGlobalDomainDnsResponse CreateGlobalDomainDns(CreateGlobalDomainDnsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateGlobalDomainDnsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateGlobalDomainDnsResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class GaapClient extends AbstractClient{
     public CreateHTTPListenerResponse CreateHTTPListener(CreateHTTPListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHTTPListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHTTPListenerResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class GaapClient extends AbstractClient{
     public CreateHTTPSListenerResponse CreateHTTPSListener(CreateHTTPSListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHTTPSListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHTTPSListenerResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class GaapClient extends AbstractClient{
     public CreateProxyResponse CreateProxy(CreateProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class GaapClient extends AbstractClient{
     public CreateProxyGroupResponse CreateProxyGroup(CreateProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyGroupResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ public class GaapClient extends AbstractClient{
     public CreateProxyGroupDomainResponse CreateProxyGroupDomain(CreateProxyGroupDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProxyGroupDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProxyGroupDomainResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ public class GaapClient extends AbstractClient{
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ public class GaapClient extends AbstractClient{
     public CreateSecurityPolicyResponse CreateSecurityPolicy(CreateSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSecurityPolicyResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ public class GaapClient extends AbstractClient{
     public CreateSecurityRulesResponse CreateSecurityRules(CreateSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSecurityRulesResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ public class GaapClient extends AbstractClient{
     public CreateTCPListenersResponse CreateTCPListeners(CreateTCPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTCPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTCPListenersResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ public class GaapClient extends AbstractClient{
     public CreateUDPListenersResponse CreateUDPListeners(CreateUDPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUDPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUDPListenersResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ public class GaapClient extends AbstractClient{
     public DeleteCertificateResponse DeleteCertificate(DeleteCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCertificateResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ public class GaapClient extends AbstractClient{
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ public class GaapClient extends AbstractClient{
     public DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(DeleteDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -609,6 +637,7 @@ public class GaapClient extends AbstractClient{
     public DeleteFirstLinkSessionResponse DeleteFirstLinkSession(DeleteFirstLinkSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFirstLinkSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFirstLinkSessionResponse>>() {
                 }.getType();
@@ -629,6 +658,7 @@ public class GaapClient extends AbstractClient{
     public DeleteGlobalDomainResponse DeleteGlobalDomain(DeleteGlobalDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGlobalDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGlobalDomainResponse>>() {
                 }.getType();
@@ -649,6 +679,7 @@ public class GaapClient extends AbstractClient{
     public DeleteGlobalDomainDnsResponse DeleteGlobalDomainDns(DeleteGlobalDomainDnsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGlobalDomainDnsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGlobalDomainDnsResponse>>() {
                 }.getType();
@@ -669,6 +700,7 @@ public class GaapClient extends AbstractClient{
     public DeleteListenersResponse DeleteListeners(DeleteListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteListenersResponse>>() {
                 }.getType();
@@ -689,6 +721,7 @@ public class GaapClient extends AbstractClient{
     public DeleteProxyGroupResponse DeleteProxyGroup(DeleteProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProxyGroupResponse>>() {
                 }.getType();
@@ -709,6 +742,7 @@ public class GaapClient extends AbstractClient{
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -729,6 +763,7 @@ public class GaapClient extends AbstractClient{
     public DeleteSecurityPolicyResponse DeleteSecurityPolicy(DeleteSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
@@ -749,6 +784,7 @@ public class GaapClient extends AbstractClient{
     public DeleteSecurityRulesResponse DeleteSecurityRules(DeleteSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityRulesResponse>>() {
                 }.getType();
@@ -769,6 +805,7 @@ public class GaapClient extends AbstractClient{
     public DescribeAccessRegionsResponse DescribeAccessRegions(DescribeAccessRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessRegionsResponse>>() {
                 }.getType();
@@ -789,6 +826,7 @@ public class GaapClient extends AbstractClient{
     public DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(DescribeAccessRegionsByDestRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessRegionsByDestRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessRegionsByDestRegionResponse>>() {
                 }.getType();
@@ -809,6 +847,7 @@ public class GaapClient extends AbstractClient{
     public DescribeAuthSignatureResponse DescribeAuthSignature(DescribeAuthSignatureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuthSignatureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuthSignatureResponse>>() {
                 }.getType();
@@ -829,6 +868,7 @@ public class GaapClient extends AbstractClient{
     public DescribeBlackHeaderResponse DescribeBlackHeader(DescribeBlackHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBlackHeaderResponse>>() {
                 }.getType();
@@ -849,6 +889,7 @@ public class GaapClient extends AbstractClient{
     public DescribeCertificateDetailResponse DescribeCertificateDetail(DescribeCertificateDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificateDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificateDetailResponse>>() {
                 }.getType();
@@ -869,6 +910,7 @@ public class GaapClient extends AbstractClient{
     public DescribeCertificatesResponse DescribeCertificates(DescribeCertificatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertificatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertificatesResponse>>() {
                 }.getType();
@@ -889,6 +931,7 @@ public class GaapClient extends AbstractClient{
     public DescribeCountryAreaMappingResponse DescribeCountryAreaMapping(DescribeCountryAreaMappingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCountryAreaMappingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCountryAreaMappingResponse>>() {
                 }.getType();
@@ -909,6 +952,7 @@ public class GaapClient extends AbstractClient{
     public DescribeCrossBorderProxiesResponse DescribeCrossBorderProxies(DescribeCrossBorderProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCrossBorderProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCrossBorderProxiesResponse>>() {
                 }.getType();
@@ -929,6 +973,7 @@ public class GaapClient extends AbstractClient{
     public DescribeCustomHeaderResponse DescribeCustomHeader(DescribeCustomHeaderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomHeaderResponse>>() {
                 }.getType();
@@ -949,6 +994,7 @@ public class GaapClient extends AbstractClient{
     public DescribeDestRegionsResponse DescribeDestRegions(DescribeDestRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDestRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDestRegionsResponse>>() {
                 }.getType();
@@ -969,6 +1015,7 @@ public class GaapClient extends AbstractClient{
     public DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(DescribeDomainErrorPageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainErrorPageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoResponse>>() {
                 }.getType();
@@ -989,6 +1036,7 @@ public class GaapClient extends AbstractClient{
     public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ public class GaapClient extends AbstractClient{
     public DescribeFirstLinkSessionResponse DescribeFirstLinkSession(DescribeFirstLinkSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFirstLinkSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFirstLinkSessionResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ public class GaapClient extends AbstractClient{
     public DescribeGlobalDomainDnsResponse DescribeGlobalDomainDns(DescribeGlobalDomainDnsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGlobalDomainDnsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGlobalDomainDnsResponse>>() {
                 }.getType();
@@ -1049,6 +1099,7 @@ public class GaapClient extends AbstractClient{
     public DescribeGlobalDomainsResponse DescribeGlobalDomains(DescribeGlobalDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGlobalDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGlobalDomainsResponse>>() {
                 }.getType();
@@ -1069,6 +1120,7 @@ public class GaapClient extends AbstractClient{
     public DescribeGroupAndStatisticsProxyResponse DescribeGroupAndStatisticsProxy(DescribeGroupAndStatisticsProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupAndStatisticsProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupAndStatisticsProxyResponse>>() {
                 }.getType();
@@ -1089,6 +1141,7 @@ public class GaapClient extends AbstractClient{
     public DescribeGroupDomainConfigResponse DescribeGroupDomainConfig(DescribeGroupDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupDomainConfigResponse>>() {
                 }.getType();
@@ -1109,6 +1162,7 @@ public class GaapClient extends AbstractClient{
     public DescribeHTTPListenersResponse DescribeHTTPListeners(DescribeHTTPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHTTPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHTTPListenersResponse>>() {
                 }.getType();
@@ -1129,6 +1183,7 @@ public class GaapClient extends AbstractClient{
     public DescribeHTTPSListenersResponse DescribeHTTPSListeners(DescribeHTTPSListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHTTPSListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHTTPSListenersResponse>>() {
                 }.getType();
@@ -1149,6 +1204,7 @@ public class GaapClient extends AbstractClient{
     public DescribeListenerRealServersResponse DescribeListenerRealServers(DescribeListenerRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListenerRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListenerRealServersResponse>>() {
                 }.getType();
@@ -1169,6 +1225,7 @@ public class GaapClient extends AbstractClient{
     public DescribeListenerStatisticsResponse DescribeListenerStatistics(DescribeListenerStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListenerStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListenerStatisticsResponse>>() {
                 }.getType();
@@ -1189,6 +1246,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxiesResponse DescribeProxies(DescribeProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxiesResponse>>() {
                 }.getType();
@@ -1209,6 +1267,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxiesStatusResponse DescribeProxiesStatus(DescribeProxiesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxiesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxiesStatusResponse>>() {
                 }.getType();
@@ -1229,6 +1288,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyAndStatisticsListenersResponse DescribeProxyAndStatisticsListeners(DescribeProxyAndStatisticsListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyAndStatisticsListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyAndStatisticsListenersResponse>>() {
                 }.getType();
@@ -1249,6 +1309,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyDetailResponse DescribeProxyDetail(DescribeProxyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyDetailResponse>>() {
                 }.getType();
@@ -1269,6 +1330,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyGroupDetailsResponse DescribeProxyGroupDetails(DescribeProxyGroupDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupDetailsResponse>>() {
                 }.getType();
@@ -1289,6 +1351,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyGroupListResponse DescribeProxyGroupList(DescribeProxyGroupListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupListResponse>>() {
                 }.getType();
@@ -1309,6 +1372,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyGroupStatisticsResponse DescribeProxyGroupStatistics(DescribeProxyGroupStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyGroupStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyGroupStatisticsResponse>>() {
                 }.getType();
@@ -1329,6 +1393,7 @@ public class GaapClient extends AbstractClient{
     public DescribeProxyStatisticsResponse DescribeProxyStatistics(DescribeProxyStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxyStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxyStatisticsResponse>>() {
                 }.getType();
@@ -1349,6 +1414,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRealServerStatisticsResponse DescribeRealServerStatistics(DescribeRealServerStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServerStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServerStatisticsResponse>>() {
                 }.getType();
@@ -1369,6 +1435,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRealServersResponse DescribeRealServers(DescribeRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServersResponse>>() {
                 }.getType();
@@ -1389,6 +1456,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRealServersStatusResponse DescribeRealServersStatus(DescribeRealServersStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealServersStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealServersStatusResponse>>() {
                 }.getType();
@@ -1409,6 +1477,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRegionAndPriceResponse DescribeRegionAndPrice(DescribeRegionAndPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionAndPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionAndPriceResponse>>() {
                 }.getType();
@@ -1429,6 +1498,7 @@ public class GaapClient extends AbstractClient{
     public DescribeResourcesByTagResponse DescribeResourcesByTag(DescribeResourcesByTagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesByTagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesByTagResponse>>() {
                 }.getType();
@@ -1449,6 +1519,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRuleRealServersResponse DescribeRuleRealServers(DescribeRuleRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleRealServersResponse>>() {
                 }.getType();
@@ -1469,6 +1540,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
                 }.getType();
@@ -1489,6 +1561,7 @@ public class GaapClient extends AbstractClient{
     public DescribeRulesByRuleIdsResponse DescribeRulesByRuleIds(DescribeRulesByRuleIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesByRuleIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesByRuleIdsResponse>>() {
                 }.getType();
@@ -1509,6 +1582,7 @@ public class GaapClient extends AbstractClient{
     public DescribeSecurityPolicyDetailResponse DescribeSecurityPolicyDetail(DescribeSecurityPolicyDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityPolicyDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityPolicyDetailResponse>>() {
                 }.getType();
@@ -1529,6 +1603,7 @@ public class GaapClient extends AbstractClient{
     public DescribeSecurityRulesResponse DescribeSecurityRules(DescribeSecurityRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecurityRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecurityRulesResponse>>() {
                 }.getType();
@@ -1549,6 +1624,7 @@ public class GaapClient extends AbstractClient{
     public DescribeTCPListenersResponse DescribeTCPListeners(DescribeTCPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTCPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTCPListenersResponse>>() {
                 }.getType();
@@ -1569,6 +1645,7 @@ public class GaapClient extends AbstractClient{
     public DescribeUDPListenersResponse DescribeUDPListeners(DescribeUDPListenersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUDPListenersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUDPListenersResponse>>() {
                 }.getType();
@@ -1589,6 +1666,7 @@ public class GaapClient extends AbstractClient{
     public DestroyProxiesResponse DestroyProxies(DestroyProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyProxiesResponse>>() {
                 }.getType();
@@ -1609,6 +1687,7 @@ public class GaapClient extends AbstractClient{
     public DisableGlobalDomainResponse DisableGlobalDomain(DisableGlobalDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableGlobalDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableGlobalDomainResponse>>() {
                 }.getType();
@@ -1629,6 +1708,7 @@ public class GaapClient extends AbstractClient{
     public EnableGlobalDomainResponse EnableGlobalDomain(EnableGlobalDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableGlobalDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableGlobalDomainResponse>>() {
                 }.getType();
@@ -1649,6 +1729,7 @@ public class GaapClient extends AbstractClient{
     public InquiryPriceCreateProxyResponse InquiryPriceCreateProxy(InquiryPriceCreateProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateProxyResponse>>() {
                 }.getType();
@@ -1669,6 +1750,7 @@ public class GaapClient extends AbstractClient{
     public ModifyCertificateResponse ModifyCertificate(ModifyCertificateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateResponse>>() {
                 }.getType();
@@ -1689,6 +1771,7 @@ public class GaapClient extends AbstractClient{
     public ModifyCertificateAttributesResponse ModifyCertificateAttributes(ModifyCertificateAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCertificateAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCertificateAttributesResponse>>() {
                 }.getType();
@@ -1709,6 +1792,7 @@ public class GaapClient extends AbstractClient{
     public ModifyDomainResponse ModifyDomain(ModifyDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainResponse>>() {
                 }.getType();
@@ -1729,6 +1813,7 @@ public class GaapClient extends AbstractClient{
     public ModifyGlobalDomainAttributeResponse ModifyGlobalDomainAttribute(ModifyGlobalDomainAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGlobalDomainAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGlobalDomainAttributeResponse>>() {
                 }.getType();
@@ -1749,6 +1834,7 @@ public class GaapClient extends AbstractClient{
     public ModifyGlobalDomainDnsResponse ModifyGlobalDomainDns(ModifyGlobalDomainDnsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGlobalDomainDnsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGlobalDomainDnsResponse>>() {
                 }.getType();
@@ -1769,6 +1855,7 @@ public class GaapClient extends AbstractClient{
     public ModifyGroupDomainConfigResponse ModifyGroupDomainConfig(ModifyGroupDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupDomainConfigResponse>>() {
                 }.getType();
@@ -1790,6 +1877,7 @@ public class GaapClient extends AbstractClient{
     public ModifyHTTPListenerAttributeResponse ModifyHTTPListenerAttribute(ModifyHTTPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHTTPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHTTPListenerAttributeResponse>>() {
                 }.getType();
@@ -1810,6 +1898,7 @@ public class GaapClient extends AbstractClient{
     public ModifyHTTPSListenerAttributeResponse ModifyHTTPSListenerAttribute(ModifyHTTPSListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyHTTPSListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyHTTPSListenerAttributeResponse>>() {
                 }.getType();
@@ -1830,6 +1919,7 @@ public class GaapClient extends AbstractClient{
     public ModifyProxiesAttributeResponse ModifyProxiesAttribute(ModifyProxiesAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxiesAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxiesAttributeResponse>>() {
                 }.getType();
@@ -1850,6 +1940,7 @@ public class GaapClient extends AbstractClient{
     public ModifyProxiesProjectResponse ModifyProxiesProject(ModifyProxiesProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxiesProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxiesProjectResponse>>() {
                 }.getType();
@@ -1870,6 +1961,7 @@ public class GaapClient extends AbstractClient{
     public ModifyProxyConfigurationResponse ModifyProxyConfiguration(ModifyProxyConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxyConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxyConfigurationResponse>>() {
                 }.getType();
@@ -1890,6 +1982,7 @@ public class GaapClient extends AbstractClient{
     public ModifyProxyGroupAttributeResponse ModifyProxyGroupAttribute(ModifyProxyGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProxyGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProxyGroupAttributeResponse>>() {
                 }.getType();
@@ -1910,6 +2003,7 @@ public class GaapClient extends AbstractClient{
     public ModifyRealServerNameResponse ModifyRealServerName(ModifyRealServerNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRealServerNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRealServerNameResponse>>() {
                 }.getType();
@@ -1930,6 +2024,7 @@ public class GaapClient extends AbstractClient{
     public ModifyRuleAttributeResponse ModifyRuleAttribute(ModifyRuleAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleAttributeResponse>>() {
                 }.getType();
@@ -1950,6 +2045,7 @@ public class GaapClient extends AbstractClient{
     public ModifySecurityRuleResponse ModifySecurityRule(ModifySecurityRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySecurityRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityRuleResponse>>() {
                 }.getType();
@@ -1970,6 +2066,7 @@ public class GaapClient extends AbstractClient{
     public ModifyTCPListenerAttributeResponse ModifyTCPListenerAttribute(ModifyTCPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTCPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTCPListenerAttributeResponse>>() {
                 }.getType();
@@ -1990,6 +2087,7 @@ public class GaapClient extends AbstractClient{
     public ModifyUDPListenerAttributeResponse ModifyUDPListenerAttribute(ModifyUDPListenerAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUDPListenerAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUDPListenerAttributeResponse>>() {
                 }.getType();
@@ -2010,6 +2108,7 @@ public class GaapClient extends AbstractClient{
     public OpenProxiesResponse OpenProxies(OpenProxiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProxiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProxiesResponse>>() {
                 }.getType();
@@ -2030,6 +2129,7 @@ public class GaapClient extends AbstractClient{
     public OpenProxyGroupResponse OpenProxyGroup(OpenProxyGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenProxyGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenProxyGroupResponse>>() {
                 }.getType();
@@ -2050,6 +2150,7 @@ public class GaapClient extends AbstractClient{
     public OpenSecurityPolicyResponse OpenSecurityPolicy(OpenSecurityPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenSecurityPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenSecurityPolicyResponse>>() {
                 }.getType();
@@ -2070,6 +2171,7 @@ public class GaapClient extends AbstractClient{
     public RemoveRealServersResponse RemoveRealServers(RemoveRealServersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveRealServersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveRealServersResponse>>() {
                 }.getType();
@@ -2090,6 +2192,7 @@ public class GaapClient extends AbstractClient{
     public SetAuthenticationResponse SetAuthentication(SetAuthenticationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAuthenticationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAuthenticationResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class StsClient extends AbstractClient{
     private static String endpoint = "sts.tencentcloudapi.com";
     private static String service = "sts";
     private static String version = "2018-08-13";
-
+    
     public StsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class StsClient extends AbstractClient{
     public AssumeRoleResponse AssumeRole(AssumeRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class StsClient extends AbstractClient{
     public AssumeRoleWithSAMLResponse AssumeRoleWithSAML(AssumeRoleWithSAMLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleWithSAMLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(true);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleWithSAMLResponse>>() {
                 }.getType();
@@ -91,6 +93,7 @@ public class StsClient extends AbstractClient{
     public AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(true);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>() {
                 }.getType();
@@ -113,6 +116,7 @@ public class StsClient extends AbstractClient{
     public GetCallerIdentityResponse GetCallerIdentity(GetCallerIdentityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCallerIdentityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCallerIdentityResponse>>() {
                 }.getType();
@@ -141,6 +145,7 @@ public class StsClient extends AbstractClient{
     public GetFederationTokenResponse GetFederationToken(GetFederationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFederationTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFederationTokenResponse>>() {
                 }.getType();
@@ -161,6 +166,7 @@ public class StsClient extends AbstractClient{
     public QueryApiKeyResponse QueryApiKey(QueryApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryApiKeyResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class LpClient extends AbstractClient{
     private static String endpoint = "lp.tencentcloudapi.com";
     private static String service = "lp";
     private static String version = "2020-02-24";
-
+    
     public LpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class LpClient extends AbstractClient{
     public QueryLoginProtectionResponse QueryLoginProtection(QueryLoginProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryLoginProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryLoginProtectionResponse>>() {
                 }.getType();

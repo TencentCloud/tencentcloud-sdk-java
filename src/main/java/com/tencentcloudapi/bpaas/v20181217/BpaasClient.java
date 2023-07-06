@@ -29,7 +29,7 @@ public class BpaasClient extends AbstractClient{
     private static String endpoint = "bpaas.tencentcloudapi.com";
     private static String service = "bpaas";
     private static String version = "2018-12-17";
-
+    
     public BpaasClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BpaasClient extends AbstractClient{
     public GetBpaasApproveDetailResponse GetBpaasApproveDetail(GetBpaasApproveDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetBpaasApproveDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetBpaasApproveDetailResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BpaasClient extends AbstractClient{
     public OutApproveBpaasApplicationResponse OutApproveBpaasApplication(OutApproveBpaasApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OutApproveBpaasApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OutApproveBpaasApplicationResponse>>() {
                 }.getType();

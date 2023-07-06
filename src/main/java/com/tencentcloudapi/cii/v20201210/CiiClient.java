@@ -29,7 +29,7 @@ public class CiiClient extends AbstractClient{
     private static String endpoint = "cii.tencentcloudapi.com";
     private static String service = "cii";
     private static String version = "2020-12-10";
-
+    
     public CiiClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CiiClient extends AbstractClient{
     public CreateStructureTaskResponse CreateStructureTask(CreateStructureTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStructureTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStructureTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructCompareDataResponse DescribeStructCompareData(DescribeStructCompareDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructCompareDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructCompareDataResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CiiClient extends AbstractClient{
     public DescribeStructureTaskResultResponse DescribeStructureTaskResult(DescribeStructureTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStructureTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStructureTaskResultResponse>>() {
                 }.getType();

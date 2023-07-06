@@ -29,7 +29,7 @@ public class CsipClient extends AbstractClient{
     private static String endpoint = "csip.tencentcloudapi.com";
     private static String service = "csip";
     private static String version = "2022-11-21";
-
+    
     public CsipClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CsipClient extends AbstractClient{
     public AddNewBindRoleUserResponse AddNewBindRoleUser(AddNewBindRoleUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddNewBindRoleUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddNewBindRoleUserResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CsipClient extends AbstractClient{
     public CreateDomainAndIpResponse CreateDomainAndIp(CreateDomainAndIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainAndIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainAndIpResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CsipClient extends AbstractClient{
     public CreateRiskCenterScanTaskResponse CreateRiskCenterScanTask(CreateRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRiskCenterScanTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRiskCenterScanTaskResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CsipClient extends AbstractClient{
     public DescribeCVMAssetInfoResponse DescribeCVMAssetInfo(DescribeCVMAssetInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCVMAssetInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCVMAssetInfoResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CsipClient extends AbstractClient{
     public DescribeCVMAssetsResponse DescribeCVMAssets(DescribeCVMAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCVMAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCVMAssetsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CsipClient extends AbstractClient{
     public DescribeClusterPodAssetsResponse DescribeClusterPodAssets(DescribeClusterPodAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPodAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPodAssetsResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CsipClient extends AbstractClient{
     public DescribeDbAssetInfoResponse DescribeDbAssetInfo(DescribeDbAssetInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDbAssetInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDbAssetInfoResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CsipClient extends AbstractClient{
     public DescribeDbAssetsResponse DescribeDbAssets(DescribeDbAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDbAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDbAssetsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CsipClient extends AbstractClient{
     public DescribeDomainAssetsResponse DescribeDomainAssets(DescribeDomainAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainAssetsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CsipClient extends AbstractClient{
     public DescribePublicIpAssetsResponse DescribePublicIpAssets(DescribePublicIpAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicIpAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicIpAssetsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CsipClient extends AbstractClient{
     public DescribeRiskCenterAssetViewPortRiskListResponse DescribeRiskCenterAssetViewPortRiskList(DescribeRiskCenterAssetViewPortRiskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewPortRiskListResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CsipClient extends AbstractClient{
     public DescribeRiskCenterAssetViewVULRiskListResponse DescribeRiskCenterAssetViewVULRiskList(DescribeRiskCenterAssetViewVULRiskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskCenterAssetViewVULRiskListResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CsipClient extends AbstractClient{
     public DescribeScanReportListResponse DescribeScanReportList(DescribeScanReportListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanReportListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanReportListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CsipClient extends AbstractClient{
     public DescribeSubnetAssetsResponse DescribeSubnetAssets(DescribeSubnetAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubnetAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubnetAssetsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CsipClient extends AbstractClient{
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcAssetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcAssetsResponse>>() {
                 }.getType();

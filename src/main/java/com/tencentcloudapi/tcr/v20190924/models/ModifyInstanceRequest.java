@@ -30,11 +30,21 @@ public class ModifyInstanceRequest extends AbstractModel{
     private String RegistryId;
 
     /**
-    * 实例的规格
+    * 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
     */
     @SerializedName("RegistryType")
     @Expose
     private String RegistryType;
+
+    /**
+    * 实例删除保护，false为关闭
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get 实例ID 
@@ -53,19 +63,47 @@ public class ModifyInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例的规格 
-     * @return RegistryType 实例的规格
+     * Get 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium 
+     * @return RegistryType 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
      */
     public String getRegistryType() {
         return this.RegistryType;
     }
 
     /**
-     * Set 实例的规格
-     * @param RegistryType 实例的规格
+     * Set 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
+     * @param RegistryType 实例的规格,
+基础版：basic
+标准版：standard
+高级版：premium
      */
     public void setRegistryType(String RegistryType) {
         this.RegistryType = RegistryType;
+    }
+
+    /**
+     * Get 实例删除保护，false为关闭 
+     * @return DeletionProtection 实例删除保护，false为关闭
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 实例删除保护，false为关闭
+     * @param DeletionProtection 实例删除保护，false为关闭
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public ModifyInstanceRequest() {
@@ -82,6 +120,9 @@ public class ModifyInstanceRequest extends AbstractModel{
         if (source.RegistryType != null) {
             this.RegistryType = new String(source.RegistryType);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -91,6 +132,7 @@ public class ModifyInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

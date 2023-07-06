@@ -182,6 +182,13 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ImageOptimize ImageOptimize;
 
     /**
+    * 标准 Debug 配置。
+    */
+    @SerializedName("StandardDebug")
+    @Expose
+    private StandardDebug StandardDebug;
+
+    /**
      * Get 待变更的站点 ID。 
      * @return ZoneId 待变更的站点 ID。
      */
@@ -577,6 +584,22 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.ImageOptimize = ImageOptimize;
     }
 
+    /**
+     * Get 标准 Debug 配置。 
+     * @return StandardDebug 标准 Debug 配置。
+     */
+    public StandardDebug getStandardDebug() {
+        return this.StandardDebug;
+    }
+
+    /**
+     * Set 标准 Debug 配置。
+     * @param StandardDebug 标准 Debug 配置。
+     */
+    public void setStandardDebug(StandardDebug StandardDebug) {
+        this.StandardDebug = StandardDebug;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -645,6 +668,9 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         if (source.ImageOptimize != null) {
             this.ImageOptimize = new ImageOptimize(source.ImageOptimize);
         }
+        if (source.StandardDebug != null) {
+            this.StandardDebug = new StandardDebug(source.StandardDebug);
+        }
     }
 
 
@@ -672,6 +698,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         this.setParamObj(map, prefix + "Grpc.", this.Grpc);
         this.setParamObj(map, prefix + "ImageOptimize.", this.ImageOptimize);
+        this.setParamObj(map, prefix + "StandardDebug.", this.StandardDebug);
 
     }
 }

@@ -29,7 +29,7 @@ public class DtfClient extends AbstractClient{
     private static String endpoint = "dtf.tencentcloudapi.com";
     private static String service = "dtf";
     private static String version = "2020-05-06";
-
+    
     public DtfClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DtfClient extends AbstractClient{
     public DescribeTransactionsResponse DescribeTransactions(DescribeTransactionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTransactionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTransactionsResponse>>() {
                 }.getType();

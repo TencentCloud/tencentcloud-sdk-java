@@ -29,7 +29,7 @@ public class AmsClient extends AbstractClient{
     private static String endpoint = "ams.tencentcloudapi.com";
     private static String service = "ams";
     private static String version = "2020-12-29";
-
+    
     public AmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AmsClient extends AbstractClient{
     public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelTaskResponse>>() {
                 }.getType();
@@ -80,6 +81,7 @@ public class AmsClient extends AbstractClient{
     public CreateAudioModerationSyncTaskResponse CreateAudioModerationSyncTask(CreateAudioModerationSyncTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAudioModerationSyncTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAudioModerationSyncTaskResponse>>() {
                 }.getType();
@@ -131,6 +133,7 @@ public class AmsClient extends AbstractClient{
     public CreateAudioModerationTaskResponse CreateAudioModerationTask(CreateAudioModerationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAudioModerationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAudioModerationTaskResponse>>() {
                 }.getType();
@@ -151,6 +154,7 @@ public class AmsClient extends AbstractClient{
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -171,6 +175,7 @@ public class AmsClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();

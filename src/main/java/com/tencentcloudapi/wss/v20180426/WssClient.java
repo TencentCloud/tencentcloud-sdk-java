@@ -29,7 +29,7 @@ public class WssClient extends AbstractClient{
     private static String endpoint = "wss.tencentcloudapi.com";
     private static String service = "wss";
     private static String version = "2018-04-26";
-
+    
     public WssClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class WssClient extends AbstractClient{
     public DeleteCertResponse DeleteCert(DeleteCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCertResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class WssClient extends AbstractClient{
     public DescribeCertListResponse DescribeCertList(DescribeCertListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCertListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCertListResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class WssClient extends AbstractClient{
     public UploadCertResponse UploadCert(UploadCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadCertResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class RedisClient extends AbstractClient{
     private static String endpoint = "redis.tencentcloudapi.com";
     private static String service = "redis";
     private static String version = "2018-04-12";
-
+    
     public RedisClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class RedisClient extends AbstractClient{
     public AddReplicationInstanceResponse AddReplicationInstance(AddReplicationInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddReplicationInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddReplicationInstanceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class RedisClient extends AbstractClient{
     public AllocateWanAddressResponse AllocateWanAddress(AllocateWanAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AllocateWanAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AllocateWanAddressResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class RedisClient extends AbstractClient{
     public ApplyParamsTemplateResponse ApplyParamsTemplate(ApplyParamsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyParamsTemplateResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class RedisClient extends AbstractClient{
     public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class RedisClient extends AbstractClient{
     public ChangeInstanceRoleResponse ChangeInstanceRole(ChangeInstanceRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeInstanceRoleResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class RedisClient extends AbstractClient{
     public ChangeMasterInstanceResponse ChangeMasterInstance(ChangeMasterInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeMasterInstanceResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class RedisClient extends AbstractClient{
     public ChangeReplicaToMasterResponse ChangeReplicaToMaster(ChangeReplicaToMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeReplicaToMasterResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class RedisClient extends AbstractClient{
     public CleanUpInstanceResponse CleanUpInstance(CleanUpInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CleanUpInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CleanUpInstanceResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class RedisClient extends AbstractClient{
     public ClearInstanceResponse ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearInstanceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class RedisClient extends AbstractClient{
     public CloneInstancesResponse CloneInstances(CloneInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloneInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloneInstancesResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class RedisClient extends AbstractClient{
     public CloseSSLResponse CloseSSL(CloseSSLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseSSLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseSSLResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class RedisClient extends AbstractClient{
     public CreateInstanceAccountResponse CreateInstanceAccount(CreateInstanceAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceAccountResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class RedisClient extends AbstractClient{
     public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class RedisClient extends AbstractClient{
     public CreateParamTemplateResponse CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class RedisClient extends AbstractClient{
     public CreateReplicationGroupResponse CreateReplicationGroup(CreateReplicationGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateReplicationGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateReplicationGroupResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class RedisClient extends AbstractClient{
     public DeleteInstanceAccountResponse DeleteInstanceAccount(DeleteInstanceAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceAccountResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class RedisClient extends AbstractClient{
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class RedisClient extends AbstractClient{
     public DeleteReplicationInstanceResponse DeleteReplicationInstance(DeleteReplicationInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReplicationInstanceResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class RedisClient extends AbstractClient{
     public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoBackupConfigResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class RedisClient extends AbstractClient{
     public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class RedisClient extends AbstractClient{
     public DescribeBackupUrlResponse DescribeBackupUrl(DescribeBackupUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class RedisClient extends AbstractClient{
     public DescribeBandwidthRangeResponse DescribeBandwidthRange(DescribeBandwidthRangeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBandwidthRangeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBandwidthRangeResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class RedisClient extends AbstractClient{
     public DescribeCommonDBInstancesResponse DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCommonDBInstancesResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class RedisClient extends AbstractClient{
     public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceAccountResponse DescribeInstanceAccount(DescribeInstanceAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceAccountResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceBackupsResponse DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDTSInfoResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorBigKeyResponse DescribeInstanceMonitorBigKey(DescribeInstanceMonitorBigKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorBigKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorBigKeySizeDistResponse DescribeInstanceMonitorBigKeySizeDist(DescribeInstanceMonitorBigKeySizeDistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeySizeDistResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorBigKeyTypeDistResponse DescribeInstanceMonitorBigKeyTypeDist(DescribeInstanceMonitorBigKeyTypeDistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorBigKeyTypeDistResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorHotKeyResponse DescribeInstanceMonitorHotKey(DescribeInstanceMonitorHotKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorHotKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorHotKeyResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorSIPResponse DescribeInstanceMonitorSIP(DescribeInstanceMonitorSIPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorSIPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorSIPResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorTookDistResponse DescribeInstanceMonitorTookDist(DescribeInstanceMonitorTookDistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorTookDistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTookDistResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorTopNCmdResponse DescribeInstanceMonitorTopNCmd(DescribeInstanceMonitorTopNCmdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceMonitorTopNCmdTookResponse DescribeInstanceMonitorTopNCmdTook(DescribeInstanceMonitorTopNCmdTookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceMonitorTopNCmdTookResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(DescribeInstanceSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceShardsResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(DescribeInstanceZoneInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceZoneInfoResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class RedisClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class RedisClient extends AbstractClient{
     public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceWindowResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class RedisClient extends AbstractClient{
     public DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class RedisClient extends AbstractClient{
     public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class RedisClient extends AbstractClient{
     public DescribeProductInfoResponse DescribeProductInfo(DescribeProductInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductInfoResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class RedisClient extends AbstractClient{
     public DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroup(DescribeProjectSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class RedisClient extends AbstractClient{
     public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class RedisClient extends AbstractClient{
     public DescribeProxySlowLogResponse DescribeProxySlowLog(DescribeProxySlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class RedisClient extends AbstractClient{
     public DescribeReplicationGroupResponse DescribeReplicationGroup(DescribeReplicationGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeReplicationGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeReplicationGroupResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class RedisClient extends AbstractClient{
     public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSSLStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSSLStatusResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class RedisClient extends AbstractClient{
     public DescribeSlowLogResponse DescribeSlowLog(DescribeSlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class RedisClient extends AbstractClient{
     public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class RedisClient extends AbstractClient{
     public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class RedisClient extends AbstractClient{
     public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class RedisClient extends AbstractClient{
     public DestroyPostpaidInstanceResponse DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyPostpaidInstanceResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class RedisClient extends AbstractClient{
     public DestroyPrepaidInstanceResponse DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyPrepaidInstanceResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class RedisClient extends AbstractClient{
     public DisableReplicaReadonlyResponse DisableReplicaReadonly(DisableReplicaReadonlyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableReplicaReadonlyResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class RedisClient extends AbstractClient{
     public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class RedisClient extends AbstractClient{
     public EnableReplicaReadonlyResponse EnableReplicaReadonly(EnableReplicaReadonlyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
                 }.getType();
@@ -1267,6 +1328,7 @@ public class RedisClient extends AbstractClient{
     public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
                 }.getType();
@@ -1287,6 +1349,7 @@ public class RedisClient extends AbstractClient{
     public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
                 }.getType();
@@ -1307,6 +1370,7 @@ public class RedisClient extends AbstractClient{
     public InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>() {
                 }.getType();
@@ -1327,6 +1391,7 @@ public class RedisClient extends AbstractClient{
     public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KillMasterGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
                 }.getType();
@@ -1347,6 +1412,7 @@ public class RedisClient extends AbstractClient{
     public ManualBackupInstanceResponse ManualBackupInstance(ManualBackupInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManualBackupInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ManualBackupInstanceResponse>>() {
                 }.getType();
@@ -1367,6 +1433,7 @@ public class RedisClient extends AbstractClient{
     public ModfiyInstancePasswordResponse ModfiyInstancePassword(ModfiyInstancePasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModfiyInstancePasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModfiyInstancePasswordResponse>>() {
                 }.getType();
@@ -1387,6 +1454,7 @@ public class RedisClient extends AbstractClient{
     public ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
                 }.getType();
@@ -1407,6 +1475,7 @@ public class RedisClient extends AbstractClient{
     public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
                 }.getType();
@@ -1427,6 +1496,7 @@ public class RedisClient extends AbstractClient{
     public ModifyConnectionConfigResponse ModifyConnectionConfig(ModifyConnectionConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConnectionConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConnectionConfigResponse>>() {
                 }.getType();
@@ -1447,6 +1517,7 @@ public class RedisClient extends AbstractClient{
     public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
                 }.getType();
@@ -1467,6 +1538,7 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
                 }.getType();
@@ -1487,6 +1559,7 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceAccountResponse ModifyInstanceAccount(ModifyInstanceAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceAccountResponse>>() {
                 }.getType();
@@ -1507,6 +1580,7 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamsResponse>>() {
                 }.getType();
@@ -1527,6 +1601,7 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceReadOnlyResponse>>() {
                 }.getType();
@@ -1547,6 +1622,7 @@ public class RedisClient extends AbstractClient{
     public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
                 }.getType();
@@ -1567,6 +1643,7 @@ public class RedisClient extends AbstractClient{
     public ModifyNetworkConfigResponse ModifyNetworkConfig(ModifyNetworkConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
                 }.getType();
@@ -1587,6 +1664,7 @@ public class RedisClient extends AbstractClient{
     public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
@@ -1607,6 +1685,7 @@ public class RedisClient extends AbstractClient{
     public OpenSSLResponse OpenSSL(OpenSSLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenSSLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenSSLResponse>>() {
                 }.getType();
@@ -1627,6 +1706,7 @@ public class RedisClient extends AbstractClient{
     public ReleaseWanAddressResponse ReleaseWanAddress(ReleaseWanAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
                 }.getType();
@@ -1647,6 +1727,7 @@ public class RedisClient extends AbstractClient{
     public RemoveReplicationInstanceResponse RemoveReplicationInstance(RemoveReplicationInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveReplicationInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveReplicationInstanceResponse>>() {
                 }.getType();
@@ -1667,6 +1748,7 @@ public class RedisClient extends AbstractClient{
     public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
                 }.getType();
@@ -1687,6 +1769,7 @@ public class RedisClient extends AbstractClient{
     public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
                 }.getType();
@@ -1707,6 +1790,7 @@ public class RedisClient extends AbstractClient{
     public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestoreInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
                 }.getType();
@@ -1727,6 +1811,7 @@ public class RedisClient extends AbstractClient{
     public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartupInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartupInstanceResponse>>() {
                 }.getType();
@@ -1747,6 +1832,7 @@ public class RedisClient extends AbstractClient{
     public SwitchInstanceVipResponse SwitchInstanceVip(SwitchInstanceVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchInstanceVipResponse>>() {
                 }.getType();
@@ -1767,6 +1853,7 @@ public class RedisClient extends AbstractClient{
     public SwitchProxyResponse SwitchProxy(SwitchProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchProxyResponse>>() {
                 }.getType();
@@ -1787,6 +1874,7 @@ public class RedisClient extends AbstractClient{
     public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();
@@ -1807,6 +1895,7 @@ public class RedisClient extends AbstractClient{
     public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
                 }.getType();
@@ -1827,6 +1916,7 @@ public class RedisClient extends AbstractClient{
     public UpgradeProxyVersionResponse UpgradeProxyVersion(UpgradeProxyVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeProxyVersionResponse>>() {
                 }.getType();
@@ -1847,6 +1937,7 @@ public class RedisClient extends AbstractClient{
     public UpgradeSmallVersionResponse UpgradeSmallVersion(UpgradeSmallVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeSmallVersionResponse>>() {
                 }.getType();
@@ -1867,6 +1958,7 @@ public class RedisClient extends AbstractClient{
     public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>() {
                 }.getType();

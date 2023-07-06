@@ -20,69 +20,69 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRulePriorityRequest extends AbstractModel{
+public class CheckCnameStatusRequest extends AbstractModel{
 
     /**
-    * 站点 ID。
+    * 站点ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 规则 ID 的顺序，多条规则执行顺序依次往下。
+    * 记录名称列表。
     */
-    @SerializedName("RuleIds")
+    @SerializedName("RecordNames")
     @Expose
-    private String [] RuleIds;
+    private String [] RecordNames;
 
     /**
-     * Get 站点 ID。 
-     * @return ZoneId 站点 ID。
+     * Get 站点ID。 
+     * @return ZoneId 站点ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点 ID。
-     * @param ZoneId 站点 ID。
+     * Set 站点ID。
+     * @param ZoneId 站点ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 规则 ID 的顺序，多条规则执行顺序依次往下。 
-     * @return RuleIds 规则 ID 的顺序，多条规则执行顺序依次往下。
+     * Get 记录名称列表。 
+     * @return RecordNames 记录名称列表。
      */
-    public String [] getRuleIds() {
-        return this.RuleIds;
+    public String [] getRecordNames() {
+        return this.RecordNames;
     }
 
     /**
-     * Set 规则 ID 的顺序，多条规则执行顺序依次往下。
-     * @param RuleIds 规则 ID 的顺序，多条规则执行顺序依次往下。
+     * Set 记录名称列表。
+     * @param RecordNames 记录名称列表。
      */
-    public void setRuleIds(String [] RuleIds) {
-        this.RuleIds = RuleIds;
+    public void setRecordNames(String [] RecordNames) {
+        this.RecordNames = RecordNames;
     }
 
-    public ModifyRulePriorityRequest() {
+    public CheckCnameStatusRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRulePriorityRequest(ModifyRulePriorityRequest source) {
+    public CheckCnameStatusRequest(CheckCnameStatusRequest source) {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
-        if (source.RuleIds != null) {
-            this.RuleIds = new String[source.RuleIds.length];
-            for (int i = 0; i < source.RuleIds.length; i++) {
-                this.RuleIds[i] = new String(source.RuleIds[i]);
+        if (source.RecordNames != null) {
+            this.RecordNames = new String[source.RecordNames.length];
+            for (int i = 0; i < source.RecordNames.length; i++) {
+                this.RecordNames[i] = new String(source.RecordNames[i]);
             }
         }
     }
@@ -93,7 +93,7 @@ public class ModifyRulePriorityRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
+        this.setParamArraySimple(map, prefix + "RecordNames.", this.RecordNames);
 
     }
 }

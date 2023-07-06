@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePurgeTaskResponse extends AbstractModel{
 
     /**
-    * 任务ID。
+    * 任务 ID。
     */
     @SerializedName("JobId")
     @Expose
@@ -45,16 +45,16 @@ public class CreatePurgeTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID。 
-     * @return JobId 任务ID。
+     * Get 任务 ID。 
+     * @return JobId 任务 ID。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID。
-     * @param JobId 任务ID。
+     * Set 任务 ID。
+     * @param JobId 任务 ID。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

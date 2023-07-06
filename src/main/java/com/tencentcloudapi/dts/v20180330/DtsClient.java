@@ -29,7 +29,7 @@ public class DtsClient extends AbstractClient{
     private static String endpoint = "dts.tencentcloudapi.com";
     private static String service = "dts";
     private static String version = "2018-03-30";
-
+    
     public DtsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DtsClient extends AbstractClient{
     public ActivateSubscribeResponse ActivateSubscribe(ActivateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ActivateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ActivateSubscribeResponse>>() {
                 }.getType();
@@ -70,6 +71,7 @@ public class DtsClient extends AbstractClient{
     public CompleteMigrateJobResponse CompleteMigrateJob(CompleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompleteMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CompleteMigrateJobResponse>>() {
                 }.getType();
@@ -94,6 +96,7 @@ public class DtsClient extends AbstractClient{
     public CreateMigrateCheckJobResponse CreateMigrateCheckJob(CreateMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateCheckJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateCheckJobResponse>>() {
                 }.getType();
@@ -116,6 +119,7 @@ public class DtsClient extends AbstractClient{
     public CreateMigrateJobResponse CreateMigrateJob(CreateMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
                 }.getType();
@@ -136,6 +140,7 @@ public class DtsClient extends AbstractClient{
     public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
                 }.getType();
@@ -156,6 +161,7 @@ public class DtsClient extends AbstractClient{
     public DeleteMigrateJobResponse DeleteMigrateJob(DeleteMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
                 }.getType();
@@ -176,6 +182,7 @@ public class DtsClient extends AbstractClient{
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
                 }.getType();
@@ -198,6 +205,7 @@ public class DtsClient extends AbstractClient{
     public DescribeMigrateCheckJobResponse DescribeMigrateCheckJob(DescribeMigrateCheckJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateCheckJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateCheckJobResponse>>() {
                 }.getType();
@@ -219,6 +227,7 @@ public class DtsClient extends AbstractClient{
     public DescribeMigrateJobsResponse DescribeMigrateJobs(DescribeMigrateJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrateJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
                 }.getType();
@@ -239,6 +248,7 @@ public class DtsClient extends AbstractClient{
     public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionConfResponse>>() {
                 }.getType();
@@ -259,6 +269,7 @@ public class DtsClient extends AbstractClient{
     public DescribeSubscribeConfResponse DescribeSubscribeConf(DescribeSubscribeConfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscribeConfResponse>>() {
                 }.getType();
@@ -279,6 +290,7 @@ public class DtsClient extends AbstractClient{
     public DescribeSubscribesResponse DescribeSubscribes(DescribeSubscribesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscribesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscribesResponse>>() {
                 }.getType();
@@ -299,6 +311,7 @@ public class DtsClient extends AbstractClient{
     public IsolateSubscribeResponse IsolateSubscribe(IsolateSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IsolateSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IsolateSubscribeResponse>>() {
                 }.getType();
@@ -322,6 +335,7 @@ public class DtsClient extends AbstractClient{
     public ModifyMigrateJobResponse ModifyMigrateJob(ModifyMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrateJobResponse>>() {
                 }.getType();
@@ -342,6 +356,7 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeAutoRenewFlagResponse ModifySubscribeAutoRenewFlag(ModifySubscribeAutoRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeAutoRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeAutoRenewFlagResponse>>() {
                 }.getType();
@@ -362,6 +377,7 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTime(ModifySubscribeConsumeTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>() {
                 }.getType();
@@ -382,6 +398,7 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeNameResponse ModifySubscribeName(ModifySubscribeNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeNameResponse>>() {
                 }.getType();
@@ -402,6 +419,7 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeObjectsResponse>>() {
                 }.getType();
@@ -422,6 +440,7 @@ public class DtsClient extends AbstractClient{
     public ModifySubscribeVipVportResponse ModifySubscribeVipVport(ModifySubscribeVipVportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
                 }.getType();
@@ -442,6 +461,7 @@ public class DtsClient extends AbstractClient{
     public OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribe(OfflineIsolatedSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OfflineIsolatedSubscribeResponse>>() {
                 }.getType();
@@ -462,6 +482,7 @@ public class DtsClient extends AbstractClient{
     public ResetSubscribeResponse ResetSubscribe(ResetSubscribeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetSubscribeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetSubscribeResponse>>() {
                 }.getType();
@@ -483,6 +504,7 @@ public class DtsClient extends AbstractClient{
     public StartMigrateJobResponse StartMigrateJob(StartMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMigrateJobResponse>>() {
                 }.getType();
@@ -504,6 +526,7 @@ public class DtsClient extends AbstractClient{
     public StopMigrateJobResponse StopMigrateJob(StopMigrateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMigrateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
                 }.getType();

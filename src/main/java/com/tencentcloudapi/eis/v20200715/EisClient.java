@@ -29,7 +29,7 @@ public class EisClient extends AbstractClient{
     private static String endpoint = "eis.tencentcloudapi.com";
     private static String service = "eis";
     private static String version = "2020-07-15";
-
+    
     public EisClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class EisClient extends AbstractClient{
     public DescribeEisConnectorConfigResponse DescribeEisConnectorConfig(DescribeEisConnectorConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEisConnectorConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEisConnectorConfigResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class EisClient extends AbstractClient{
     public ListEisConnectorOperationsResponse ListEisConnectorOperations(ListEisConnectorOperationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEisConnectorOperationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEisConnectorOperationsResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class EisClient extends AbstractClient{
     public ListEisConnectorsResponse ListEisConnectors(ListEisConnectorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEisConnectorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEisConnectorsResponse>>() {
                 }.getType();

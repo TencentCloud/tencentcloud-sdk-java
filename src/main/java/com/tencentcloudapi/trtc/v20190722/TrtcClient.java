@@ -29,7 +29,7 @@ public class TrtcClient extends AbstractClient{
     private static String endpoint = "trtc.tencentcloudapi.com";
     private static String service = "trtc";
     private static String version = "2019-07-22";
-
+    
     public TrtcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -58,6 +58,7 @@ public class TrtcClient extends AbstractClient{
     public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudRecordingResponse>>() {
                 }.getType();
@@ -78,6 +79,7 @@ public class TrtcClient extends AbstractClient{
     public CreatePictureResponse CreatePicture(CreatePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePictureResponse>>() {
                 }.getType();
@@ -98,6 +100,7 @@ public class TrtcClient extends AbstractClient{
     public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCloudRecordingResponse>>() {
                 }.getType();
@@ -118,6 +121,7 @@ public class TrtcClient extends AbstractClient{
     public DeletePictureResponse DeletePicture(DeletePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePictureResponse>>() {
                 }.getType();
@@ -141,6 +145,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeCallDetailInfoResponse DescribeCallDetailInfo(DescribeCallDetailInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallDetailInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallDetailInfoResponse>>() {
                 }.getType();
@@ -162,6 +167,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudRecordingResponse>>() {
                 }.getType();
@@ -185,6 +191,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasure(DescribeExternalTrtcMeasureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>() {
                 }.getType();
@@ -210,6 +217,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsage(DescribeMixTranscodingUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMixTranscodingUsageResponse>>() {
                 }.getType();
@@ -230,6 +238,7 @@ public class TrtcClient extends AbstractClient{
     public DescribePictureResponse DescribePicture(DescribePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePictureResponse>>() {
                 }.getType();
@@ -255,6 +264,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeRecordStatisticResponse DescribeRecordStatistic(DescribeRecordStatisticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordStatisticResponse>>() {
                 }.getType();
@@ -280,6 +290,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeRecordingUsageResponse DescribeRecordingUsage(DescribeRecordingUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordingUsageResponse>>() {
                 }.getType();
@@ -305,6 +316,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeRelayUsageResponse DescribeRelayUsage(DescribeRelayUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelayUsageResponse>>() {
                 }.getType();
@@ -328,6 +340,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeRoomInfoResponse DescribeRoomInfo(DescribeRoomInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomInfoResponse>>() {
                 }.getType();
@@ -348,6 +361,7 @@ public class TrtcClient extends AbstractClient{
     public DescribeScaleInfoResponse DescribeScaleInfo(DescribeScaleInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScaleInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScaleInfoResponse>>() {
                 }.getType();
@@ -376,6 +390,7 @@ networkDelay ：网络延迟率。
     public DescribeTRTCMarketQualityMetricDataResponse DescribeTRTCMarketQualityMetricData(DescribeTRTCMarketQualityMetricDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTRTCMarketQualityMetricDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTRTCMarketQualityMetricDataResponse>>() {
                 }.getType();
@@ -403,6 +418,7 @@ peakCurrentUsers：峰值同时在线人数。
     public DescribeTRTCMarketScaleMetricDataResponse DescribeTRTCMarketScaleMetricData(DescribeTRTCMarketScaleMetricDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTRTCMarketScaleMetricDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTRTCMarketScaleMetricDataResponse>>() {
                 }.getType();
@@ -428,6 +444,7 @@ peakCurrentUsers：峰值同时在线人数。
     public DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricData(DescribeTRTCRealTimeQualityMetricDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTRTCRealTimeQualityMetricDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTRTCRealTimeQualityMetricDataResponse>>() {
                 }.getType();
@@ -455,6 +472,7 @@ xa0
     public DescribeTRTCRealTimeScaleMetricDataResponse DescribeTRTCRealTimeScaleMetricData(DescribeTRTCRealTimeScaleMetricDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTRTCRealTimeScaleMetricDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTRTCRealTimeScaleMetricDataResponse>>() {
                 }.getType();
@@ -479,6 +497,7 @@ xa0
     public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
                 }.getType();
@@ -502,6 +521,7 @@ xa0
     public DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(DescribeTrtcRoomUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrtcRoomUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcRoomUsageResponse>>() {
                 }.getType();
@@ -527,6 +547,7 @@ xa0
     public DescribeTrtcUsageResponse DescribeTrtcUsage(DescribeTrtcUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrtcUsageResponse>>() {
                 }.getType();
@@ -548,6 +569,7 @@ xa0
     public DescribeUnusualEventResponse DescribeUnusualEvent(DescribeUnusualEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnusualEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnusualEventResponse>>() {
                 }.getType();
@@ -568,6 +590,7 @@ xa0
     public DescribeUserEventResponse DescribeUserEvent(DescribeUserEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserEventResponse>>() {
                 }.getType();
@@ -591,6 +614,7 @@ xa0
     public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
                 }.getType();
@@ -611,6 +635,7 @@ xa0
     public DismissRoomResponse DismissRoom(DismissRoomRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomResponse>>() {
                 }.getType();
@@ -631,6 +656,7 @@ xa0
     public DismissRoomByStrRoomIdResponse DismissRoomByStrRoomId(DismissRoomByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DismissRoomByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DismissRoomByStrRoomIdResponse>>() {
                 }.getType();
@@ -651,6 +677,7 @@ xa0
     public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCloudRecordingResponse>>() {
                 }.getType();
@@ -671,6 +698,7 @@ xa0
     public ModifyPictureResponse ModifyPicture(ModifyPictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPictureResponse>>() {
                 }.getType();
@@ -691,6 +719,7 @@ xa0
     public RemoveUserResponse RemoveUser(RemoveUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserResponse>>() {
                 }.getType();
@@ -711,6 +740,7 @@ xa0
     public RemoveUserByStrRoomIdResponse RemoveUserByStrRoomId(RemoveUserByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserByStrRoomIdResponse>>() {
                 }.getType();
@@ -751,6 +781,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StartMCUMixTranscodeResponse StartMCUMixTranscode(StartMCUMixTranscodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMCUMixTranscodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMCUMixTranscodeResponse>>() {
                 }.getType();
@@ -791,6 +822,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StartMCUMixTranscodeByStrRoomIdResponse StartMCUMixTranscodeByStrRoomId(StartMCUMixTranscodeByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>() {
                 }.getType();
@@ -832,6 +864,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StartPublishCdnStreamResponse StartPublishCdnStream(StartPublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartPublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartPublishCdnStreamResponse>>() {
                 }.getType();
@@ -852,6 +885,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StopMCUMixTranscodeResponse StopMCUMixTranscode(StopMCUMixTranscodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMCUMixTranscodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMCUMixTranscodeResponse>>() {
                 }.getType();
@@ -872,6 +906,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomId(StopMCUMixTranscodeByStrRoomIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>() {
                 }.getType();
@@ -892,6 +927,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public StopPublishCdnStreamResponse StopPublishCdnStream(StopPublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopPublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopPublishCdnStreamResponse>>() {
                 }.getType();
@@ -913,6 +949,7 @@ TRTC 的一个房间中可能会同时存在多路音视频流，您可以通过
     public UpdatePublishCdnStreamResponse UpdatePublishCdnStream(UpdatePublishCdnStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdatePublishCdnStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdatePublishCdnStreamResponse>>() {
                 }.getType();

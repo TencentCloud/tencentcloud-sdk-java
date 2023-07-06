@@ -29,7 +29,7 @@ public class TourismClient extends AbstractClient{
     private static String endpoint = "tourism.tencentcloudapi.com";
     private static String service = "tourism";
     private static String version = "2023-02-15";
-
+    
     public TourismClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TourismClient extends AbstractClient{
     public DescribeDrawResourceListResponse DescribeDrawResourceList(DescribeDrawResourceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDrawResourceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDrawResourceListResponse>>() {
                 }.getType();

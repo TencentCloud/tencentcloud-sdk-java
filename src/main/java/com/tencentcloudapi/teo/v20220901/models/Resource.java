@@ -103,6 +103,25 @@ public class Resource extends AbstractModel{
     private String Area;
 
     /**
+    * 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Group")
+    @Expose
+    private String Group;
+
+    /**
+    * 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneNumber")
+    @Expose
+    private Long ZoneNumber;
+
+    /**
      * Get 资源 ID。 
      * @return Id 资源 ID。
      */
@@ -302,6 +321,58 @@ public class Resource extends AbstractModel{
         this.Area = Area;
     }
 
+    /**
+     * Get 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Group 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Group 资源类型，取值有：
+<li>plan：套餐类型；</li>
+<li>pay-as-you-go：后付费类型。</li>
+<li>value-added：增值服务类型。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroup(String Group) {
+        this.Group = Group;
+    }
+
+    /**
+     * Get 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneNumber 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneNumber() {
+        return this.ZoneNumber;
+    }
+
+    /**
+     * Set 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneNumber 当前资源绑定的站点数量。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneNumber(Long ZoneNumber) {
+        this.ZoneNumber = ZoneNumber;
+    }
+
     public Resource() {
     }
 
@@ -343,6 +414,12 @@ public class Resource extends AbstractModel{
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+        if (source.ZoneNumber != null) {
+            this.ZoneNumber = new Long(source.ZoneNumber);
+        }
     }
 
 
@@ -360,6 +437,8 @@ public class Resource extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "ZoneNumber", this.ZoneNumber);
 
     }
 }

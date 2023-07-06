@@ -29,7 +29,7 @@ public class BriClient extends AbstractClient{
     private static String endpoint = "bri.tencentcloudapi.com";
     private static String service = "bri";
     private static String version = "2019-03-28";
-
+    
     public BriClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -59,6 +59,7 @@ public class BriClient extends AbstractClient{
     public DescribeBRIResponse DescribeBRI(DescribeBRIRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBRIResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBRIResponse>>() {
                 }.getType();

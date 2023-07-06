@@ -29,7 +29,7 @@ public class ZjClient extends AbstractClient{
     private static String endpoint = "zj.tencentcloudapi.com";
     private static String service = "zj";
     private static String version = "2019-01-21";
-
+    
     public ZjClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ZjClient extends AbstractClient{
     public AddCrowdPackInfoResponse AddCrowdPackInfo(AddCrowdPackInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddCrowdPackInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddCrowdPackInfoResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ZjClient extends AbstractClient{
     public AddSmsSignResponse AddSmsSign(AddSmsSignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddSmsSignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddSmsSignResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class ZjClient extends AbstractClient{
     public AddSmsTemplateResponse AddSmsTemplate(AddSmsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddSmsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddSmsTemplateResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class ZjClient extends AbstractClient{
     public CancelCampaignResponse CancelCampaign(CancelCampaignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelCampaignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelCampaignResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class ZjClient extends AbstractClient{
     public CreateCampaignResponse CreateCampaign(CreateCampaignRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCampaignResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCampaignResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class ZjClient extends AbstractClient{
     public CreateMmsInstanceResponse CreateMmsInstance(CreateMmsInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMmsInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMmsInstanceResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class ZjClient extends AbstractClient{
     public DelCrowdPackResponse DelCrowdPack(DelCrowdPackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DelCrowdPackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DelCrowdPackResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class ZjClient extends AbstractClient{
     public DelTemplateResponse DelTemplate(DelTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DelTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DelTemplateResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class ZjClient extends AbstractClient{
     public DeleteMmsInstanceResponse DeleteMmsInstance(DeleteMmsInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMmsInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMmsInstanceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class ZjClient extends AbstractClient{
     public DescribeMmsInstanceInfoResponse DescribeMmsInstanceInfo(DescribeMmsInstanceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMmsInstanceInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMmsInstanceInfoResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class ZjClient extends AbstractClient{
     public DescribeMmsInstanceListResponse DescribeMmsInstanceList(DescribeMmsInstanceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMmsInstanceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMmsInstanceListResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class ZjClient extends AbstractClient{
     public DescribeSmsCampaignStatisticsResponse DescribeSmsCampaignStatistics(DescribeSmsCampaignStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSmsCampaignStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsCampaignStatisticsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class ZjClient extends AbstractClient{
     public DescribeSmsSignListResponse DescribeSmsSignList(DescribeSmsSignListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSmsSignListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsSignListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class ZjClient extends AbstractClient{
     public DescribeSmsTemplateListResponse DescribeSmsTemplateList(DescribeSmsTemplateListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSmsTemplateListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSmsTemplateListResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class ZjClient extends AbstractClient{
     public GetCrowdPackListResponse GetCrowdPackList(GetCrowdPackListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCrowdPackListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCrowdPackListResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class ZjClient extends AbstractClient{
     public GetCrowdUploadInfoResponse GetCrowdUploadInfo(GetCrowdUploadInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCrowdUploadInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCrowdUploadInfoResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class ZjClient extends AbstractClient{
     public GetSmsAmountInfoResponse GetSmsAmountInfo(GetSmsAmountInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSmsAmountInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSmsAmountInfoResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class ZjClient extends AbstractClient{
     public GetSmsCampaignStatusResponse GetSmsCampaignStatus(GetSmsCampaignStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSmsCampaignStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSmsCampaignStatusResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class ZjClient extends AbstractClient{
     public ModifySmsTemplateResponse ModifySmsTemplate(ModifySmsTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySmsTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySmsTemplateResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class ZjClient extends AbstractClient{
     public PushMmsContentResponse PushMmsContent(PushMmsContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PushMmsContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PushMmsContentResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class ZjClient extends AbstractClient{
     public SendSmsResponse SendSms(SendSmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendSmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendSmsResponse>>() {
                 }.getType();

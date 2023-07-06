@@ -29,7 +29,7 @@ public class HcmClient extends AbstractClient{
     private static String endpoint = "hcm.tencentcloudapi.com";
     private static String service = "hcm";
     private static String version = "2018-11-06";
-
+    
     public HcmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class HcmClient extends AbstractClient{
     public EvaluationResponse Evaluation(EvaluationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EvaluationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EvaluationResponse>>() {
                 }.getType();

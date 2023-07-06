@@ -29,7 +29,7 @@ public class PrivatednsClient extends AbstractClient{
     private static String endpoint = "privatedns.tencentcloudapi.com";
     private static String service = "privatedns";
     private static String version = "2020-10-28";
-
+    
     public PrivatednsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class PrivatednsClient extends AbstractClient{
     public CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(CreatePrivateDNSAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrivateDNSAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrivateDNSAccountResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class PrivatednsClient extends AbstractClient{
     public CreatePrivateZoneResponse CreatePrivateZone(CreatePrivateZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrivateZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrivateZoneResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class PrivatednsClient extends AbstractClient{
     public CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(CreatePrivateZoneRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrivateZoneRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrivateZoneRecordResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class PrivatednsClient extends AbstractClient{
     public DeleteEndPointResponse DeleteEndPoint(DeleteEndPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEndPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEndPointResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class PrivatednsClient extends AbstractClient{
     public DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(DeletePrivateDNSAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrivateDNSAccountResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class PrivatednsClient extends AbstractClient{
     public DeletePrivateZoneResponse DeletePrivateZone(DeletePrivateZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrivateZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrivateZoneResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class PrivatednsClient extends AbstractClient{
     public DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(DeletePrivateZoneRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrivateZoneRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrivateZoneRecordResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeAccountVpcListResponse DescribeAccountVpcList(DescribeAccountVpcListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountVpcListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountVpcListResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeAuditLogResponse DescribeAuditLog(DescribeAuditLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditLogResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDashboardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDashboardResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateDNSAccountListResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateZoneResponse DescribePrivateZone(DescribePrivateZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateZoneResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateZoneListResponse DescribePrivateZoneList(DescribePrivateZoneListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateZoneListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateZoneListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(DescribePrivateZoneRecordListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateZoneRecordListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateZoneRecordListResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribePrivateZoneServiceResponse DescribePrivateZoneService(DescribePrivateZoneServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrivateZoneServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrivateZoneServiceResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeQuotaUsageResponse DescribeQuotaUsage(DescribeQuotaUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQuotaUsageResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeRequestDataResponse DescribeRequestData(DescribeRequestDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRequestDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRequestDataResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class PrivatednsClient extends AbstractClient{
     public ModifyPrivateZoneResponse ModifyPrivateZone(ModifyPrivateZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrivateZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrivateZoneResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class PrivatednsClient extends AbstractClient{
     public ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(ModifyPrivateZoneRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrivateZoneRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrivateZoneRecordResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class PrivatednsClient extends AbstractClient{
     public ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(ModifyPrivateZoneVpcRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrivateZoneVpcResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrivateZoneVpcResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class PrivatednsClient extends AbstractClient{
     public ModifyRecordsStatusResponse ModifyRecordsStatus(ModifyRecordsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordsStatusResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class PrivatednsClient extends AbstractClient{
     public SubscribePrivateZoneServiceResponse SubscribePrivateZoneService(SubscribePrivateZoneServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubscribePrivateZoneServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubscribePrivateZoneServiceResponse>>() {
                 }.getType();

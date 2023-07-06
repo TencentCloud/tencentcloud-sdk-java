@@ -29,7 +29,7 @@ public class BtoeClient extends AbstractClient{
     private static String endpoint = "btoe.tencentcloudapi.com";
     private static String service = "btoe";
     private static String version = "2021-05-14";
-
+    
     public BtoeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BtoeClient extends AbstractClient{
     public CreateAudioDepositResponse CreateAudioDeposit(CreateAudioDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAudioDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAudioDepositResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BtoeClient extends AbstractClient{
     public CreateDataDepositResponse CreateDataDeposit(CreateDataDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDataDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDataDepositResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BtoeClient extends AbstractClient{
     public CreateDocDepositResponse CreateDocDeposit(CreateDocDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDocDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDocDepositResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BtoeClient extends AbstractClient{
     public CreateHashDepositResponse CreateHashDeposit(CreateHashDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHashDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHashDepositResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BtoeClient extends AbstractClient{
     public CreateHashDepositNoCertResponse CreateHashDepositNoCert(CreateHashDepositNoCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHashDepositNoCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHashDepositNoCertResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class BtoeClient extends AbstractClient{
     public CreateHashDepositNoSealResponse CreateHashDepositNoSeal(CreateHashDepositNoSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHashDepositNoSealResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHashDepositNoSealResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class BtoeClient extends AbstractClient{
     public CreateImageDepositResponse CreateImageDeposit(CreateImageDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageDepositResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class BtoeClient extends AbstractClient{
     public CreateVideoDepositResponse CreateVideoDeposit(CreateVideoDepositRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVideoDepositResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVideoDepositResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class BtoeClient extends AbstractClient{
     public GetDepositCertResponse GetDepositCert(GetDepositCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDepositCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDepositCertResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class BtoeClient extends AbstractClient{
     public GetDepositFileResponse GetDepositFile(GetDepositFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDepositFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDepositFileResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class BtoeClient extends AbstractClient{
     public GetDepositInfoResponse GetDepositInfo(GetDepositInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDepositInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDepositInfoResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class BtoeClient extends AbstractClient{
     public VerifyEvidenceBlockChainTxHashResponse VerifyEvidenceBlockChainTxHash(VerifyEvidenceBlockChainTxHashRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyEvidenceBlockChainTxHashResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyEvidenceBlockChainTxHashResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class BtoeClient extends AbstractClient{
     public VerifyEvidenceHashResponse VerifyEvidenceHash(VerifyEvidenceHashRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyEvidenceHashResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyEvidenceHashResponse>>() {
                 }.getType();

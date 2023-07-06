@@ -29,7 +29,7 @@ public class TkeClient extends AbstractClient{
     private static String endpoint = "tke.tencentcloudapi.com";
     private static String service = "tke";
     private static String version = "2018-05-25";
-
+    
     public TkeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TkeClient extends AbstractClient{
     public AcquireClusterAdminRoleResponse AcquireClusterAdminRole(AcquireClusterAdminRoleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AcquireClusterAdminRoleResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TkeClient extends AbstractClient{
     public AddClusterCIDRResponse AddClusterCIDR(AddClusterCIDRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddClusterCIDRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddClusterCIDRResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TkeClient extends AbstractClient{
     public AddExistedInstancesResponse AddExistedInstances(AddExistedInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddExistedInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddExistedInstancesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TkeClient extends AbstractClient{
     public AddNodeToNodePoolResponse AddNodeToNodePool(AddNodeToNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddNodeToNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddNodeToNodePoolResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TkeClient extends AbstractClient{
     public AddVpcCniSubnetsResponse AddVpcCniSubnets(AddVpcCniSubnetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddVpcCniSubnetsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TkeClient extends AbstractClient{
     public CancelClusterReleaseResponse CancelClusterRelease(CancelClusterReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelClusterReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelClusterReleaseResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TkeClient extends AbstractClient{
     public CheckEdgeClusterCIDRResponse CheckEdgeClusterCIDR(CheckEdgeClusterCIDRRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckEdgeClusterCIDRResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckEdgeClusterCIDRResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TkeClient extends AbstractClient{
     public CheckInstancesUpgradeAbleResponse CheckInstancesUpgradeAble(CheckInstancesUpgradeAbleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckInstancesUpgradeAbleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckInstancesUpgradeAbleResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TkeClient extends AbstractClient{
     public CreateBackupStorageLocationResponse CreateBackupStorageLocation(CreateBackupStorageLocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupStorageLocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupStorageLocationResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterEndpointResponse CreateClusterEndpoint(CreateClusterEndpointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterEndpointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterEndpointResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterEndpointVipResponse CreateClusterEndpointVip(CreateClusterEndpointVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterEndpointVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterEndpointVipResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterInstancesResponse CreateClusterInstances(CreateClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterInstancesResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterNodePoolResponse CreateClusterNodePool(CreateClusterNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterNodePoolResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterReleaseResponse CreateClusterRelease(CreateClusterReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterReleaseResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterRouteResponse CreateClusterRoute(CreateClusterRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterRouteResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterRouteTableResponse CreateClusterRouteTable(CreateClusterRouteTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterRouteTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterRouteTableResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterVirtualNodeResponse CreateClusterVirtualNode(CreateClusterVirtualNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterVirtualNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodeResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TkeClient extends AbstractClient{
     public CreateClusterVirtualNodePoolResponse CreateClusterVirtualNodePool(CreateClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterVirtualNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodePoolResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TkeClient extends AbstractClient{
     public CreateECMInstancesResponse CreateECMInstances(CreateECMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateECMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateECMInstancesResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TkeClient extends AbstractClient{
     public CreateEKSClusterResponse CreateEKSCluster(CreateEKSClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEKSClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEKSClusterResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TkeClient extends AbstractClient{
     public CreateEKSContainerInstancesResponse CreateEKSContainerInstances(CreateEKSContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEKSContainerInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEKSContainerInstancesResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TkeClient extends AbstractClient{
     public CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(CreateEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEdgeCVMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEdgeCVMInstancesResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TkeClient extends AbstractClient{
     public CreateEdgeLogConfigResponse CreateEdgeLogConfig(CreateEdgeLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEdgeLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEdgeLogConfigResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TkeClient extends AbstractClient{
     public CreateImageCacheResponse CreateImageCache(CreateImageCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageCacheResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(CreatePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(CreatePrometheusAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertRuleResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(CreatePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusClusterAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusClusterAgentResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusConfigResponse CreatePrometheusConfig(CreatePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusConfigResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusDashboardResponse CreatePrometheusDashboard(CreatePrometheusDashboardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusDashboardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusDashboardResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotification(CreatePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusRecordRuleYamlResponse CreatePrometheusRecordRuleYaml(CreatePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusTempResponse CreatePrometheusTemp(CreatePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusTempResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class TkeClient extends AbstractClient{
     public CreatePrometheusTemplateResponse CreatePrometheusTemplate(CreatePrometheusTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePrometheusTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusTemplateResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class TkeClient extends AbstractClient{
     public CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(CreateTKEEdgeClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTKEEdgeClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTKEEdgeClusterResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class TkeClient extends AbstractClient{
     public DeleteAddonResponse DeleteAddon(DeleteAddonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAddonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAddonResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class TkeClient extends AbstractClient{
     public DeleteBackupStorageLocationResponse DeleteBackupStorageLocation(DeleteBackupStorageLocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBackupStorageLocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupStorageLocationResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterAsGroupsResponse DeleteClusterAsGroups(DeleteClusterAsGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterAsGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterAsGroupsResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterEndpointResponse DeleteClusterEndpoint(DeleteClusterEndpointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterEndpointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterEndpointResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterEndpointVipResponse DeleteClusterEndpointVip(DeleteClusterEndpointVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterEndpointVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterEndpointVipResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterInstancesResponse DeleteClusterInstances(DeleteClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterInstancesResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterNodePoolResponse DeleteClusterNodePool(DeleteClusterNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterNodePoolResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterRouteResponse DeleteClusterRoute(DeleteClusterRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterRouteTableResponse DeleteClusterRouteTable(DeleteClusterRouteTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterRouteTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterVirtualNodeResponse DeleteClusterVirtualNode(DeleteClusterVirtualNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterVirtualNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodeResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class TkeClient extends AbstractClient{
     public DeleteClusterVirtualNodePoolResponse DeleteClusterVirtualNodePool(DeleteClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterVirtualNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodePoolResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class TkeClient extends AbstractClient{
     public DeleteECMInstancesResponse DeleteECMInstances(DeleteECMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteECMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteECMInstancesResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class TkeClient extends AbstractClient{
     public DeleteEKSClusterResponse DeleteEKSCluster(DeleteEKSClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEKSClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEKSClusterResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class TkeClient extends AbstractClient{
     public DeleteEKSContainerInstancesResponse DeleteEKSContainerInstances(DeleteEKSContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEKSContainerInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEKSContainerInstancesResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class TkeClient extends AbstractClient{
     public DeleteEdgeCVMInstancesResponse DeleteEdgeCVMInstances(DeleteEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEdgeCVMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEdgeCVMInstancesResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class TkeClient extends AbstractClient{
     public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEdgeClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEdgeClusterInstancesResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class TkeClient extends AbstractClient{
     public DeleteImageCachesResponse DeleteImageCaches(DeleteImageCachesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteImageCachesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteImageCachesResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(DeletePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusAlertRuleResponse DeletePrometheusAlertRule(DeletePrometheusAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertRuleResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(DeletePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusClusterAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusClusterAgentResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusConfigResponse DeletePrometheusConfig(DeletePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusConfigResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusRecordRuleYamlResponse DeletePrometheusRecordRuleYaml(DeletePrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusTempResponse DeletePrometheusTemp(DeletePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusTempSyncResponse DeletePrometheusTempSync(DeletePrometheusTempSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTempSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTempSyncResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusTemplateResponse DeletePrometheusTemplate(DeletePrometheusTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTemplateResponse>>() {
                 }.getType();
@@ -1267,6 +1328,7 @@ public class TkeClient extends AbstractClient{
     public DeletePrometheusTemplateSyncResponse DeletePrometheusTemplateSync(DeletePrometheusTemplateSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePrometheusTemplateSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePrometheusTemplateSyncResponse>>() {
                 }.getType();
@@ -1287,6 +1349,7 @@ public class TkeClient extends AbstractClient{
     public DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(DeleteTKEEdgeClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTKEEdgeClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTKEEdgeClusterResponse>>() {
                 }.getType();
@@ -1307,6 +1370,7 @@ public class TkeClient extends AbstractClient{
     public DescribeAddonResponse DescribeAddon(DescribeAddonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAddonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAddonResponse>>() {
                 }.getType();
@@ -1327,6 +1391,7 @@ public class TkeClient extends AbstractClient{
     public DescribeAddonValuesResponse DescribeAddonValues(DescribeAddonValuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAddonValuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAddonValuesResponse>>() {
                 }.getType();
@@ -1347,6 +1412,7 @@ public class TkeClient extends AbstractClient{
     public DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(DescribeAvailableClusterVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableClusterVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableClusterVersionResponse>>() {
                 }.getType();
@@ -1367,6 +1433,7 @@ public class TkeClient extends AbstractClient{
     public DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(DescribeAvailableTKEEdgeVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>() {
                 }.getType();
@@ -1387,6 +1454,7 @@ public class TkeClient extends AbstractClient{
     public DescribeBackupStorageLocationsResponse DescribeBackupStorageLocations(DescribeBackupStorageLocationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupStorageLocationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupStorageLocationsResponse>>() {
                 }.getType();
@@ -1407,6 +1475,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterAsGroupOptionResponse DescribeClusterAsGroupOption(DescribeClusterAsGroupOptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterAsGroupOptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterAsGroupOptionResponse>>() {
                 }.getType();
@@ -1427,6 +1496,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterAsGroupsResponse DescribeClusterAsGroups(DescribeClusterAsGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterAsGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterAsGroupsResponse>>() {
                 }.getType();
@@ -1447,6 +1517,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptions(DescribeClusterAuthenticationOptionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>() {
                 }.getType();
@@ -1467,6 +1538,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterCommonNamesResponse DescribeClusterCommonNames(DescribeClusterCommonNamesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterCommonNamesResponse>>() {
                 }.getType();
@@ -1487,6 +1559,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterControllersResponse DescribeClusterControllers(DescribeClusterControllersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterControllersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterControllersResponse>>() {
                 }.getType();
@@ -1507,6 +1580,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterEndpointStatusResponse DescribeClusterEndpointStatus(DescribeClusterEndpointStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterEndpointStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointStatusResponse>>() {
                 }.getType();
@@ -1527,6 +1601,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterEndpointVipStatusResponse DescribeClusterEndpointVipStatus(DescribeClusterEndpointVipStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterEndpointVipStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointVipStatusResponse>>() {
                 }.getType();
@@ -1547,6 +1622,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterEndpointsResponse DescribeClusterEndpoints(DescribeClusterEndpointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterEndpointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointsResponse>>() {
                 }.getType();
@@ -1567,6 +1643,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterInspectionResultsOverviewResponse DescribeClusterInspectionResultsOverview(DescribeClusterInspectionResultsOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterInspectionResultsOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInspectionResultsOverviewResponse>>() {
                 }.getType();
@@ -1587,6 +1664,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterInstancesResponse DescribeClusterInstances(DescribeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterInstancesResponse>>() {
                 }.getType();
@@ -1607,6 +1685,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(DescribeClusterKubeconfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterKubeconfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterKubeconfigResponse>>() {
                 }.getType();
@@ -1627,6 +1706,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(DescribeClusterLevelAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterLevelAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelAttributeResponse>>() {
                 }.getType();
@@ -1647,6 +1727,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(DescribeClusterLevelChangeRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterLevelChangeRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelChangeRecordsResponse>>() {
                 }.getType();
@@ -1667,6 +1748,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterNodePoolDetailResponse DescribeClusterNodePoolDetail(DescribeClusterNodePoolDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterNodePoolDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNodePoolDetailResponse>>() {
                 }.getType();
@@ -1687,6 +1769,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterNodePoolsResponse DescribeClusterNodePools(DescribeClusterNodePoolsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterNodePoolsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNodePoolsResponse>>() {
                 }.getType();
@@ -1707,6 +1790,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterPendingReleasesResponse DescribeClusterPendingReleases(DescribeClusterPendingReleasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPendingReleasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPendingReleasesResponse>>() {
                 }.getType();
@@ -1727,6 +1811,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterReleaseDetailsResponse DescribeClusterReleaseDetails(DescribeClusterReleaseDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterReleaseDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterReleaseDetailsResponse>>() {
                 }.getType();
@@ -1747,6 +1832,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterReleaseHistoryResponse DescribeClusterReleaseHistory(DescribeClusterReleaseHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterReleaseHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterReleaseHistoryResponse>>() {
                 }.getType();
@@ -1767,6 +1853,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterReleasesResponse DescribeClusterReleases(DescribeClusterReleasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterReleasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterReleasesResponse>>() {
                 }.getType();
@@ -1787,6 +1874,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterRouteTablesResponse DescribeClusterRouteTables(DescribeClusterRouteTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterRouteTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterRouteTablesResponse>>() {
                 }.getType();
@@ -1807,6 +1895,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterRoutesResponse DescribeClusterRoutes(DescribeClusterRoutesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterRoutesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterRoutesResponse>>() {
                 }.getType();
@@ -1827,6 +1916,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterSecurityResponse DescribeClusterSecurity(DescribeClusterSecurityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterSecurityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterSecurityResponse>>() {
                 }.getType();
@@ -1847,6 +1937,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterStatusResponse DescribeClusterStatus(DescribeClusterStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterStatusResponse>>() {
                 }.getType();
@@ -1867,6 +1958,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(DescribeClusterVirtualNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterVirtualNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodeResponse>>() {
                 }.getType();
@@ -1887,6 +1979,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(DescribeClusterVirtualNodePoolsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterVirtualNodePoolsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodePoolsResponse>>() {
                 }.getType();
@@ -1907,6 +2000,7 @@ public class TkeClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -1927,6 +2021,7 @@ public class TkeClient extends AbstractClient{
     public DescribeECMInstancesResponse DescribeECMInstances(DescribeECMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeECMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeECMInstancesResponse>>() {
                 }.getType();
@@ -1947,6 +2042,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEKSClusterCredentialResponse DescribeEKSClusterCredential(DescribeEKSClusterCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEKSClusterCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSClusterCredentialResponse>>() {
                 }.getType();
@@ -1967,6 +2063,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEKSClustersResponse DescribeEKSClusters(DescribeEKSClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEKSClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSClustersResponse>>() {
                 }.getType();
@@ -1987,6 +2084,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEKSContainerInstanceEventResponse DescribeEKSContainerInstanceEvent(DescribeEKSContainerInstanceEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEKSContainerInstanceEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstanceEventResponse>>() {
                 }.getType();
@@ -2007,6 +2105,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEKSContainerInstanceRegionsResponse DescribeEKSContainerInstanceRegions(DescribeEKSContainerInstanceRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>() {
                 }.getType();
@@ -2027,6 +2126,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEKSContainerInstancesResponse DescribeEKSContainerInstances(DescribeEKSContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEKSContainerInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEKSContainerInstancesResponse>>() {
                 }.getType();
@@ -2047,6 +2147,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgs(DescribeEdgeAvailableExtraArgsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse>>() {
                 }.getType();
@@ -2067,6 +2168,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstances(DescribeEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeCVMInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeCVMInstancesResponse>>() {
                 }.getType();
@@ -2087,6 +2189,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeClusterExtraArgsResponse DescribeEdgeClusterExtraArgs(DescribeEdgeClusterExtraArgsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeClusterExtraArgsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterExtraArgsResponse>>() {
                 }.getType();
@@ -2107,6 +2210,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeClusterInstancesResponse DescribeEdgeClusterInstances(DescribeEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>() {
                 }.getType();
@@ -2127,6 +2231,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeClusterUpgradeInfoResponse DescribeEdgeClusterUpgradeInfo(DescribeEdgeClusterUpgradeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>() {
                 }.getType();
@@ -2147,6 +2252,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(DescribeEdgeLogSwitchesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>() {
                 }.getType();
@@ -2167,6 +2273,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLog(DescribeEksContainerInstanceLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEksContainerInstanceLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEksContainerInstanceLogResponse>>() {
                 }.getType();
@@ -2187,6 +2294,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(DescribeEnableVpcCniProgressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>() {
                 }.getType();
@@ -2207,6 +2315,7 @@ public class TkeClient extends AbstractClient{
     public DescribeEncryptionStatusResponse DescribeEncryptionStatus(DescribeEncryptionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEncryptionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEncryptionStatusResponse>>() {
                 }.getType();
@@ -2227,6 +2336,7 @@ public class TkeClient extends AbstractClient{
     public DescribeExistedInstancesResponse DescribeExistedInstances(DescribeExistedInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExistedInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExistedInstancesResponse>>() {
                 }.getType();
@@ -2247,6 +2357,7 @@ public class TkeClient extends AbstractClient{
     public DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExternalClusterSpecResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExternalClusterSpecResponse>>() {
                 }.getType();
@@ -2267,6 +2378,7 @@ public class TkeClient extends AbstractClient{
     public DescribeImageCachesResponse DescribeImageCaches(DescribeImageCachesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageCachesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageCachesResponse>>() {
                 }.getType();
@@ -2287,6 +2399,7 @@ public class TkeClient extends AbstractClient{
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();
@@ -2307,6 +2420,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(DescribePrometheusAgentInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAgentInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentInstancesResponse>>() {
                 }.getType();
@@ -2327,6 +2441,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusAgentsResponse DescribePrometheusAgents(DescribePrometheusAgentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAgentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAgentsResponse>>() {
                 }.getType();
@@ -2347,6 +2462,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusAlertHistoryResponse DescribePrometheusAlertHistory(DescribePrometheusAlertHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAlertHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertHistoryResponse>>() {
                 }.getType();
@@ -2367,6 +2483,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusAlertPolicyResponse DescribePrometheusAlertPolicy(DescribePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -2387,6 +2504,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusAlertRuleResponse DescribePrometheusAlertRule(DescribePrometheusAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusAlertRuleResponse>>() {
                 }.getType();
@@ -2407,6 +2525,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(DescribePrometheusClusterAgentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusClusterAgentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusClusterAgentsResponse>>() {
                 }.getType();
@@ -2427,6 +2546,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusConfigResponse DescribePrometheusConfig(DescribePrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusConfigResponse>>() {
                 }.getType();
@@ -2447,6 +2567,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(DescribePrometheusGlobalConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusGlobalConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalConfigResponse>>() {
                 }.getType();
@@ -2467,6 +2588,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(DescribePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -2487,6 +2609,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusInstanceResponse DescribePrometheusInstance(DescribePrometheusInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceResponse>>() {
                 }.getType();
@@ -2507,6 +2630,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusInstanceInitStatusResponse DescribePrometheusInstanceInitStatus(DescribePrometheusInstanceInitStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstanceInitStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceInitStatusResponse>>() {
                 }.getType();
@@ -2527,6 +2651,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(DescribePrometheusInstancesOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusInstancesOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstancesOverviewResponse>>() {
                 }.getType();
@@ -2547,6 +2672,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusOverviewsResponse DescribePrometheusOverviews(DescribePrometheusOverviewsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusOverviewsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusOverviewsResponse>>() {
                 }.getType();
@@ -2567,6 +2693,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(DescribePrometheusRecordRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusRecordRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusRecordRulesResponse>>() {
                 }.getType();
@@ -2587,6 +2714,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusTargetsResponse DescribePrometheusTargets(DescribePrometheusTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTargetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTargetsResponse>>() {
                 }.getType();
@@ -2607,6 +2735,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusTempResponse DescribePrometheusTemp(DescribePrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempResponse>>() {
                 }.getType();
@@ -2627,6 +2756,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusTempSyncResponse DescribePrometheusTempSync(DescribePrometheusTempSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTempSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTempSyncResponse>>() {
                 }.getType();
@@ -2647,6 +2777,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusTemplateSyncResponse DescribePrometheusTemplateSync(DescribePrometheusTemplateSyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTemplateSyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTemplateSyncResponse>>() {
                 }.getType();
@@ -2667,6 +2798,7 @@ public class TkeClient extends AbstractClient{
     public DescribePrometheusTemplatesResponse DescribePrometheusTemplates(DescribePrometheusTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePrometheusTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusTemplatesResponse>>() {
                 }.getType();
@@ -2687,6 +2819,7 @@ public class TkeClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -2707,6 +2840,7 @@ public class TkeClient extends AbstractClient{
     public DescribeResourceUsageResponse DescribeResourceUsage(DescribeResourceUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageResponse>>() {
                 }.getType();
@@ -2727,6 +2861,7 @@ public class TkeClient extends AbstractClient{
     public DescribeRouteTableConflictsResponse DescribeRouteTableConflicts(DescribeRouteTableConflictsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRouteTableConflictsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
@@ -2747,6 +2882,7 @@ public class TkeClient extends AbstractClient{
     public DescribeTKEEdgeClusterCredentialResponse DescribeTKEEdgeClusterCredential(DescribeTKEEdgeClusterCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse>>() {
                 }.getType();
@@ -2767,6 +2903,7 @@ public class TkeClient extends AbstractClient{
     public DescribeTKEEdgeClusterStatusResponse DescribeTKEEdgeClusterStatus(DescribeTKEEdgeClusterStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTKEEdgeClusterStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClusterStatusResponse>>() {
                 }.getType();
@@ -2787,6 +2924,7 @@ public class TkeClient extends AbstractClient{
     public DescribeTKEEdgeClustersResponse DescribeTKEEdgeClusters(DescribeTKEEdgeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTKEEdgeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClustersResponse>>() {
                 }.getType();
@@ -2807,6 +2945,7 @@ public class TkeClient extends AbstractClient{
     public DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(DescribeTKEEdgeExternalKubeconfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse>>() {
                 }.getType();
@@ -2827,6 +2966,7 @@ public class TkeClient extends AbstractClient{
     public DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(DescribeTKEEdgeScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeScriptResponse>>() {
                 }.getType();
@@ -2847,6 +2987,7 @@ public class TkeClient extends AbstractClient{
     public DescribeVersionsResponse DescribeVersions(DescribeVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVersionsResponse>>() {
                 }.getType();
@@ -2867,6 +3008,7 @@ public class TkeClient extends AbstractClient{
     public DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(DescribeVpcCniPodLimitsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>() {
                 }.getType();
@@ -2887,6 +3029,7 @@ public class TkeClient extends AbstractClient{
     public DisableClusterAuditResponse DisableClusterAudit(DisableClusterAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableClusterAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableClusterAuditResponse>>() {
                 }.getType();
@@ -2907,6 +3050,7 @@ public class TkeClient extends AbstractClient{
     public DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(DisableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableClusterDeletionProtectionResponse>>() {
                 }.getType();
@@ -2927,6 +3071,7 @@ public class TkeClient extends AbstractClient{
     public DisableEncryptionProtectionResponse DisableEncryptionProtection(DisableEncryptionProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableEncryptionProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableEncryptionProtectionResponse>>() {
                 }.getType();
@@ -2947,6 +3092,7 @@ public class TkeClient extends AbstractClient{
     public DisableEventPersistenceResponse DisableEventPersistence(DisableEventPersistenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableEventPersistenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableEventPersistenceResponse>>() {
                 }.getType();
@@ -2967,6 +3113,7 @@ public class TkeClient extends AbstractClient{
     public DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkType(DisableVpcCniNetworkTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableVpcCniNetworkTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>() {
                 }.getType();
@@ -2987,6 +3134,7 @@ public class TkeClient extends AbstractClient{
     public DrainClusterVirtualNodeResponse DrainClusterVirtualNode(DrainClusterVirtualNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DrainClusterVirtualNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DrainClusterVirtualNodeResponse>>() {
                 }.getType();
@@ -3007,6 +3155,7 @@ public class TkeClient extends AbstractClient{
     public EnableClusterAuditResponse EnableClusterAudit(EnableClusterAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableClusterAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableClusterAuditResponse>>() {
                 }.getType();
@@ -3027,6 +3176,7 @@ public class TkeClient extends AbstractClient{
     public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
                 }.getType();
@@ -3047,6 +3197,7 @@ public class TkeClient extends AbstractClient{
     public EnableEncryptionProtectionResponse EnableEncryptionProtection(EnableEncryptionProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableEncryptionProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableEncryptionProtectionResponse>>() {
                 }.getType();
@@ -3067,6 +3218,7 @@ public class TkeClient extends AbstractClient{
     public EnableEventPersistenceResponse EnableEventPersistence(EnableEventPersistenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableEventPersistenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableEventPersistenceResponse>>() {
                 }.getType();
@@ -3087,6 +3239,7 @@ public class TkeClient extends AbstractClient{
     public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(EnableVpcCniNetworkTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>() {
                 }.getType();
@@ -3107,6 +3260,7 @@ public class TkeClient extends AbstractClient{
     public ForwardApplicationRequestV3Response ForwardApplicationRequestV3(ForwardApplicationRequestV3Request req) throws TencentCloudSDKException{
         JsonResponseModel<ForwardApplicationRequestV3Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForwardApplicationRequestV3Response>>() {
                 }.getType();
@@ -3127,6 +3281,7 @@ public class TkeClient extends AbstractClient{
     public ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(ForwardTKEEdgeApplicationRequestV3Request req) throws TencentCloudSDKException{
         JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>() {
                 }.getType();
@@ -3147,6 +3302,7 @@ public class TkeClient extends AbstractClient{
     public GetClusterLevelPriceResponse GetClusterLevelPrice(GetClusterLevelPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetClusterLevelPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetClusterLevelPriceResponse>>() {
                 }.getType();
@@ -3167,6 +3323,7 @@ public class TkeClient extends AbstractClient{
     public GetMostSuitableImageCacheResponse GetMostSuitableImageCache(GetMostSuitableImageCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetMostSuitableImageCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetMostSuitableImageCacheResponse>>() {
                 }.getType();
@@ -3187,6 +3344,7 @@ public class TkeClient extends AbstractClient{
     public GetTkeAppChartListResponse GetTkeAppChartList(GetTkeAppChartListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTkeAppChartListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTkeAppChartListResponse>>() {
                 }.getType();
@@ -3207,6 +3365,7 @@ public class TkeClient extends AbstractClient{
     public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(GetUpgradeInstanceProgressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetUpgradeInstanceProgressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetUpgradeInstanceProgressResponse>>() {
                 }.getType();
@@ -3227,6 +3386,7 @@ public class TkeClient extends AbstractClient{
     public InstallAddonResponse InstallAddon(InstallAddonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstallAddonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InstallAddonResponse>>() {
                 }.getType();
@@ -3247,6 +3407,7 @@ public class TkeClient extends AbstractClient{
     public InstallEdgeLogAgentResponse InstallEdgeLogAgent(InstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstallEdgeLogAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InstallEdgeLogAgentResponse>>() {
                 }.getType();
@@ -3267,6 +3428,7 @@ public class TkeClient extends AbstractClient{
     public InstallLogAgentResponse InstallLogAgent(InstallLogAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InstallLogAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InstallLogAgentResponse>>() {
                 }.getType();
@@ -3287,6 +3449,7 @@ public class TkeClient extends AbstractClient{
     public ListClusterInspectionResultsResponse ListClusterInspectionResults(ListClusterInspectionResultsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListClusterInspectionResultsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListClusterInspectionResultsResponse>>() {
                 }.getType();
@@ -3307,6 +3470,7 @@ public class TkeClient extends AbstractClient{
     public ListClusterInspectionResultsItemsResponse ListClusterInspectionResultsItems(ListClusterInspectionResultsItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListClusterInspectionResultsItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListClusterInspectionResultsItemsResponse>>() {
                 }.getType();
@@ -3327,6 +3491,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterAsGroupAttributeResponse ModifyClusterAsGroupAttribute(ModifyClusterAsGroupAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterAsGroupAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAsGroupAttributeResponse>>() {
                 }.getType();
@@ -3347,6 +3512,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterAsGroupOptionAttributeResponse ModifyClusterAsGroupOptionAttribute(ModifyClusterAsGroupOptionAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAsGroupOptionAttributeResponse>>() {
                 }.getType();
@@ -3367,6 +3533,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterAttributeResponse ModifyClusterAttribute(ModifyClusterAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAttributeResponse>>() {
                 }.getType();
@@ -3387,6 +3554,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterAuthenticationOptionsResponse ModifyClusterAuthenticationOptions(ModifyClusterAuthenticationOptionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>() {
                 }.getType();
@@ -3407,6 +3575,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterEndpointSPResponse ModifyClusterEndpointSP(ModifyClusterEndpointSPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterEndpointSPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterEndpointSPResponse>>() {
                 }.getType();
@@ -3427,6 +3596,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterNodePoolResponse ModifyClusterNodePool(ModifyClusterNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterNodePoolResponse>>() {
                 }.getType();
@@ -3447,6 +3617,7 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterVirtualNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterVirtualNodePoolResponse>>() {
                 }.getType();
@@ -3467,6 +3638,7 @@ public class TkeClient extends AbstractClient{
     public ModifyNodePoolDesiredCapacityAboutAsgResponse ModifyNodePoolDesiredCapacityAboutAsg(ModifyNodePoolDesiredCapacityAboutAsgRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNodePoolDesiredCapacityAboutAsgResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNodePoolDesiredCapacityAboutAsgResponse>>() {
                 }.getType();
@@ -3487,6 +3659,7 @@ public class TkeClient extends AbstractClient{
     public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(ModifyNodePoolInstanceTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNodePoolInstanceTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNodePoolInstanceTypesResponse>>() {
                 }.getType();
@@ -3507,6 +3680,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusAgentExternalLabelsResponse ModifyPrometheusAgentExternalLabels(ModifyPrometheusAgentExternalLabelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse>>() {
                 }.getType();
@@ -3527,6 +3701,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(ModifyPrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusAlertPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertPolicyResponse>>() {
                 }.getType();
@@ -3547,6 +3722,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(ModifyPrometheusAlertRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>() {
                 }.getType();
@@ -3567,6 +3743,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusConfigResponse ModifyPrometheusConfig(ModifyPrometheusConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusConfigResponse>>() {
                 }.getType();
@@ -3587,6 +3764,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(ModifyPrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusGlobalNotificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>() {
                 }.getType();
@@ -3607,6 +3785,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(ModifyPrometheusRecordRuleYamlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusRecordRuleYamlResponse>>() {
                 }.getType();
@@ -3627,6 +3806,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusTempResponse ModifyPrometheusTemp(ModifyPrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTempResponse>>() {
                 }.getType();
@@ -3647,6 +3827,7 @@ public class TkeClient extends AbstractClient{
     public ModifyPrometheusTemplateResponse ModifyPrometheusTemplate(ModifyPrometheusTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPrometheusTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPrometheusTemplateResponse>>() {
                 }.getType();
@@ -3667,6 +3848,7 @@ public class TkeClient extends AbstractClient{
     public RemoveNodeFromNodePoolResponse RemoveNodeFromNodePool(RemoveNodeFromNodePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveNodeFromNodePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveNodeFromNodePoolResponse>>() {
                 }.getType();
@@ -3687,6 +3869,7 @@ public class TkeClient extends AbstractClient{
     public RestartEKSContainerInstancesResponse RestartEKSContainerInstances(RestartEKSContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartEKSContainerInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartEKSContainerInstancesResponse>>() {
                 }.getType();
@@ -3707,6 +3890,7 @@ public class TkeClient extends AbstractClient{
     public RollbackClusterReleaseResponse RollbackClusterRelease(RollbackClusterReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollbackClusterReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RollbackClusterReleaseResponse>>() {
                 }.getType();
@@ -3727,6 +3911,7 @@ public class TkeClient extends AbstractClient{
     public RunPrometheusInstanceResponse RunPrometheusInstance(RunPrometheusInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunPrometheusInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunPrometheusInstanceResponse>>() {
                 }.getType();
@@ -3747,6 +3932,7 @@ public class TkeClient extends AbstractClient{
     public ScaleInClusterMasterResponse ScaleInClusterMaster(ScaleInClusterMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleInClusterMasterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleInClusterMasterResponse>>() {
                 }.getType();
@@ -3767,6 +3953,7 @@ public class TkeClient extends AbstractClient{
     public ScaleOutClusterMasterResponse ScaleOutClusterMaster(ScaleOutClusterMasterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutClusterMasterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutClusterMasterResponse>>() {
                 }.getType();
@@ -3787,6 +3974,7 @@ public class TkeClient extends AbstractClient{
     public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetNodePoolNodeProtectionResponse>>() {
                 }.getType();
@@ -3807,6 +3995,7 @@ public class TkeClient extends AbstractClient{
     public SyncPrometheusTempResponse SyncPrometheusTemp(SyncPrometheusTempRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncPrometheusTempResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTempResponse>>() {
                 }.getType();
@@ -3827,6 +4016,7 @@ public class TkeClient extends AbstractClient{
     public SyncPrometheusTemplateResponse SyncPrometheusTemplate(SyncPrometheusTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncPrometheusTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncPrometheusTemplateResponse>>() {
                 }.getType();
@@ -3847,6 +4037,7 @@ public class TkeClient extends AbstractClient{
     public UninstallClusterReleaseResponse UninstallClusterRelease(UninstallClusterReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UninstallClusterReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UninstallClusterReleaseResponse>>() {
                 }.getType();
@@ -3867,6 +4058,7 @@ public class TkeClient extends AbstractClient{
     public UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(UninstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UninstallEdgeLogAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UninstallEdgeLogAgentResponse>>() {
                 }.getType();
@@ -3887,6 +4079,7 @@ public class TkeClient extends AbstractClient{
     public UninstallLogAgentResponse UninstallLogAgent(UninstallLogAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UninstallLogAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UninstallLogAgentResponse>>() {
                 }.getType();
@@ -3907,6 +4100,7 @@ public class TkeClient extends AbstractClient{
     public UpdateAddonResponse UpdateAddon(UpdateAddonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAddonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAddonResponse>>() {
                 }.getType();
@@ -3927,6 +4121,7 @@ public class TkeClient extends AbstractClient{
     public UpdateClusterKubeconfigResponse UpdateClusterKubeconfig(UpdateClusterKubeconfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateClusterKubeconfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateClusterKubeconfigResponse>>() {
                 }.getType();
@@ -3947,6 +4142,7 @@ public class TkeClient extends AbstractClient{
     public UpdateClusterVersionResponse UpdateClusterVersion(UpdateClusterVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateClusterVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateClusterVersionResponse>>() {
                 }.getType();
@@ -3967,6 +4163,7 @@ public class TkeClient extends AbstractClient{
     public UpdateEKSClusterResponse UpdateEKSCluster(UpdateEKSClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEKSClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEKSClusterResponse>>() {
                 }.getType();
@@ -3987,6 +4184,7 @@ public class TkeClient extends AbstractClient{
     public UpdateEKSContainerInstanceResponse UpdateEKSContainerInstance(UpdateEKSContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEKSContainerInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEKSContainerInstanceResponse>>() {
                 }.getType();
@@ -4007,6 +4205,7 @@ public class TkeClient extends AbstractClient{
     public UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersion(UpdateEdgeClusterVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEdgeClusterVersionResponse>>() {
                 }.getType();
@@ -4027,6 +4226,7 @@ public class TkeClient extends AbstractClient{
     public UpdateImageCacheResponse UpdateImageCache(UpdateImageCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateImageCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateImageCacheResponse>>() {
                 }.getType();
@@ -4047,6 +4247,7 @@ public class TkeClient extends AbstractClient{
     public UpdateTKEEdgeClusterResponse UpdateTKEEdgeCluster(UpdateTKEEdgeClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTKEEdgeClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTKEEdgeClusterResponse>>() {
                 }.getType();
@@ -4067,6 +4268,7 @@ public class TkeClient extends AbstractClient{
     public UpgradeClusterInstancesResponse UpgradeClusterInstances(UpgradeClusterInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeClusterInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeClusterInstancesResponse>>() {
                 }.getType();
@@ -4087,6 +4289,7 @@ public class TkeClient extends AbstractClient{
     public UpgradeClusterReleaseResponse UpgradeClusterRelease(UpgradeClusterReleaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeClusterReleaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeClusterReleaseResponse>>() {
                 }.getType();

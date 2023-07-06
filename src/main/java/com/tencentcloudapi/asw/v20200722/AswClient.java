@@ -29,7 +29,7 @@ public class AswClient extends AbstractClient{
     private static String endpoint = "asw.tencentcloudapi.com";
     private static String service = "asw";
     private static String version = "2020-07-22";
-
+    
     public AswClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AswClient extends AbstractClient{
     public CreateFlowServiceResponse CreateFlowService(CreateFlowServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowServiceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AswClient extends AbstractClient{
     public DescribeExecutionResponse DescribeExecution(DescribeExecutionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExecutionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExecutionResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AswClient extends AbstractClient{
     public DescribeExecutionHistoryResponse DescribeExecutionHistory(DescribeExecutionHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExecutionHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExecutionHistoryResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class AswClient extends AbstractClient{
     public DescribeExecutionsResponse DescribeExecutions(DescribeExecutionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExecutionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExecutionsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class AswClient extends AbstractClient{
     public DescribeFlowServiceDetailResponse DescribeFlowServiceDetail(DescribeFlowServiceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowServiceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowServiceDetailResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class AswClient extends AbstractClient{
     public DescribeFlowServicesResponse DescribeFlowServices(DescribeFlowServicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowServicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowServicesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class AswClient extends AbstractClient{
     public ModifyFlowServiceResponse ModifyFlowService(ModifyFlowServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFlowServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFlowServiceResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class AswClient extends AbstractClient{
     public StartExecutionResponse StartExecution(StartExecutionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartExecutionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartExecutionResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class AswClient extends AbstractClient{
     public StopExecutionResponse StopExecution(StopExecutionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopExecutionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopExecutionResponse>>() {
                 }.getType();

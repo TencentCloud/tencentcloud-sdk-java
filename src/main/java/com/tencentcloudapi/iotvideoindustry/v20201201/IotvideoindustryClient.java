@@ -29,7 +29,7 @@ public class IotvideoindustryClient extends AbstractClient{
     private static String endpoint = "iotvideoindustry.tencentcloudapi.com";
     private static String service = "iotvideoindustry";
     private static String version = "2020-12-01";
-
+    
     public IotvideoindustryClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public BindGroupDevicesResponse BindGroupDevices(BindGroupDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindGroupDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindGroupDevicesResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlChannelLocalRecordResponse ControlChannelLocalRecord(ControlChannelLocalRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlChannelLocalRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlChannelLocalRecordResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlChannelPTZResponse ControlChannelPTZ(ControlChannelPTZRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlChannelPTZResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlChannelPTZResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlDevicePTZResponse ControlDevicePTZ(ControlDevicePTZRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlDevicePTZResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlDevicePTZResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlHomePositionResponse ControlHomePosition(ControlHomePositionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlHomePositionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlHomePositionResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlPresetResponse ControlPreset(ControlPresetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlPresetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlPresetResponse>>() {
                 }.getType();
@@ -170,6 +176,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public ControlRecordStreamResponse ControlRecordStream(ControlRecordStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ControlRecordStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ControlRecordStreamResponse>>() {
                 }.getType();
@@ -190,6 +197,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateDeviceResponse CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateDeviceGroupResponse CreateDeviceGroup(CreateDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceGroupResponse>>() {
                 }.getType();
@@ -230,6 +239,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateLiveChannelResponse CreateLiveChannel(CreateLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveChannelResponse>>() {
                 }.getType();
@@ -250,6 +260,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateLiveRecordPlanResponse CreateLiveRecordPlan(CreateLiveRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordPlanResponse>>() {
                 }.getType();
@@ -270,6 +281,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateMessageForwardResponse CreateMessageForward(CreateMessageForwardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMessageForwardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMessageForwardResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateRecordPlanResponse CreateRecordPlan(CreateRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordPlanResponse>>() {
                 }.getType();
@@ -311,6 +324,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateRecordingPlanResponse CreateRecordingPlan(CreateRecordingPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordingPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordingPlanResponse>>() {
                 }.getType();
@@ -331,6 +345,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateSceneResponse CreateScene(CreateSceneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSceneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSceneResponse>>() {
                 }.getType();
@@ -351,6 +366,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public CreateTimeTemplateResponse CreateTimeTemplate(CreateTimeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTimeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTimeTemplateResponse>>() {
                 }.getType();
@@ -372,6 +388,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteChannelResponse DeleteChannel(DeleteChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteChannelResponse>>() {
                 }.getType();
@@ -392,6 +409,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
                 }.getType();
@@ -412,6 +430,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteDeviceGroupResponse DeleteDeviceGroup(DeleteDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupResponse>>() {
                 }.getType();
@@ -432,6 +451,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteLiveChannelResponse DeleteLiveChannel(DeleteLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveChannelResponse>>() {
                 }.getType();
@@ -452,6 +472,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteLiveRecordPlanResponse DeleteLiveRecordPlan(DeleteLiveRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordPlanResponse>>() {
                 }.getType();
@@ -472,6 +493,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteLiveVideoListResponse DeleteLiveVideoList(DeleteLiveVideoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveVideoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveVideoListResponse>>() {
                 }.getType();
@@ -492,6 +514,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteMessageForwardResponse DeleteMessageForward(DeleteMessageForwardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMessageForwardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMessageForwardResponse>>() {
                 }.getType();
@@ -514,6 +537,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteRecordPlanResponse DeleteRecordPlan(DeleteRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordPlanResponse>>() {
                 }.getType();
@@ -535,6 +559,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteRecordingPlanResponse DeleteRecordingPlan(DeleteRecordingPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordingPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordingPlanResponse>>() {
                 }.getType();
@@ -555,6 +580,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteSceneResponse DeleteScene(DeleteSceneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSceneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSceneResponse>>() {
                 }.getType();
@@ -575,6 +601,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteTimeTemplateResponse DeleteTimeTemplate(DeleteTimeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTimeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTimeTemplateResponse>>() {
                 }.getType();
@@ -595,6 +622,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteVideoListResponse DeleteVideoList(DeleteVideoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVideoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVideoListResponse>>() {
                 }.getType();
@@ -615,6 +643,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DeleteWarningResponse DeleteWarning(DeleteWarningRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWarningResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWarningResponse>>() {
                 }.getType();
@@ -635,6 +664,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeAbnormalEventsResponse DescribeAbnormalEvents(DescribeAbnormalEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAbnormalEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAbnormalEventsResponse>>() {
                 }.getType();
@@ -656,6 +686,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeAllDeviceListResponse DescribeAllDeviceList(DescribeAllDeviceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllDeviceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllDeviceListResponse>>() {
                 }.getType();
@@ -676,6 +707,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeBindSceneChannelsResponse DescribeBindSceneChannels(DescribeBindSceneChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBindSceneChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBindSceneChannelsResponse>>() {
                 }.getType();
@@ -696,6 +728,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeBindSceneDevicesResponse DescribeBindSceneDevices(DescribeBindSceneDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBindSceneDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBindSceneDevicesResponse>>() {
                 }.getType();
@@ -717,6 +750,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeChannelLiveStreamURLResponse DescribeChannelLiveStreamURL(DescribeChannelLiveStreamURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelLiveStreamURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelLiveStreamURLResponse>>() {
                 }.getType();
@@ -738,6 +772,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeChannelLocalRecordURLResponse DescribeChannelLocalRecordURL(DescribeChannelLocalRecordURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelLocalRecordURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelLocalRecordURLResponse>>() {
                 }.getType();
@@ -759,6 +794,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeChannelStreamURLResponse DescribeChannelStreamURL(DescribeChannelStreamURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelStreamURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelStreamURLResponse>>() {
                 }.getType();
@@ -779,6 +815,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeChannelsResponse DescribeChannels(DescribeChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelsResponse>>() {
                 }.getType();
@@ -799,6 +836,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeChannelsByLiveRecordPlanResponse DescribeChannelsByLiveRecordPlan(DescribeChannelsByLiveRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse>>() {
                 }.getType();
@@ -819,6 +857,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeCurrentDeviceDataResponse DescribeCurrentDeviceData(DescribeCurrentDeviceDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCurrentDeviceDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCurrentDeviceDataResponse>>() {
                 }.getType();
@@ -839,6 +878,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceResponse DescribeDevice(DescribeDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceResponse>>() {
                 }.getType();
@@ -859,6 +899,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceEventResponse DescribeDeviceEvent(DescribeDeviceEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceEventResponse>>() {
                 }.getType();
@@ -879,6 +920,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceGroupResponse DescribeDeviceGroup(DescribeDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupResponse>>() {
                 }.getType();
@@ -899,6 +941,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceListResponse DescribeDeviceList(DescribeDeviceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceListResponse>>() {
                 }.getType();
@@ -919,6 +962,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceMonitorDataResponse DescribeDeviceMonitorData(DescribeDeviceMonitorDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceMonitorDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceMonitorDataResponse>>() {
                 }.getType();
@@ -939,6 +983,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDevicePassWordResponse DescribeDevicePassWord(DescribeDevicePassWordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicePassWordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicePassWordResponse>>() {
                 }.getType();
@@ -960,6 +1005,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeDeviceStreamsResponse DescribeDeviceStreams(DescribeDeviceStreamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceStreamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceStreamsResponse>>() {
                 }.getType();
@@ -980,6 +1026,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeGroupByIdResponse DescribeGroupById(DescribeGroupByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupByIdResponse>>() {
                 }.getType();
@@ -1000,6 +1047,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeGroupByPathResponse DescribeGroupByPath(DescribeGroupByPathRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupByPathResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupByPathResponse>>() {
                 }.getType();
@@ -1020,6 +1068,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeGroupDevicesResponse DescribeGroupDevices(DescribeGroupDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupDevicesResponse>>() {
                 }.getType();
@@ -1040,6 +1089,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeGroupsResponse DescribeGroups(DescribeGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupsResponse>>() {
                 }.getType();
@@ -1061,6 +1111,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeIPCChannelsResponse DescribeIPCChannels(DescribeIPCChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPCChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPCChannelsResponse>>() {
                 }.getType();
@@ -1081,6 +1132,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveChannelResponse DescribeLiveChannel(DescribeLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveChannelResponse>>() {
                 }.getType();
@@ -1101,6 +1153,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveChannelListResponse DescribeLiveChannelList(DescribeLiveChannelListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveChannelListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveChannelListResponse>>() {
                 }.getType();
@@ -1121,6 +1174,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveRecordPlanByIdResponse DescribeLiveRecordPlanById(DescribeLiveRecordPlanByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordPlanByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordPlanByIdResponse>>() {
                 }.getType();
@@ -1141,6 +1195,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveRecordPlanIdsResponse DescribeLiveRecordPlanIds(DescribeLiveRecordPlanIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordPlanIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordPlanIdsResponse>>() {
                 }.getType();
@@ -1161,6 +1216,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveStreamResponse DescribeLiveStream(DescribeLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamResponse>>() {
                 }.getType();
@@ -1181,6 +1237,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeLiveVideoListResponse DescribeLiveVideoList(DescribeLiveVideoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveVideoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveVideoListResponse>>() {
                 }.getType();
@@ -1201,6 +1258,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeMessageForwardResponse DescribeMessageForward(DescribeMessageForwardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMessageForwardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMessageForwardResponse>>() {
                 }.getType();
@@ -1221,6 +1279,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeMessageForwardsResponse DescribeMessageForwards(DescribeMessageForwardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMessageForwardsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMessageForwardsResponse>>() {
                 }.getType();
@@ -1241,6 +1300,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeMonitorDataByDateResponse DescribeMonitorDataByDate(DescribeMonitorDataByDateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorDataByDateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorDataByDateResponse>>() {
                 }.getType();
@@ -1261,6 +1321,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribePresetListResponse DescribePresetList(DescribePresetListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePresetListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePresetListResponse>>() {
                 }.getType();
@@ -1281,6 +1342,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeRecordDatesByChannelResponse DescribeRecordDatesByChannel(DescribeRecordDatesByChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordDatesByChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordDatesByChannelResponse>>() {
                 }.getType();
@@ -1301,6 +1363,7 @@ public class IotvideoindustryClient extends AbstractClient{
     public DescribeRecordDatesByLiveResponse DescribeRecordDatesByLive(DescribeRecordDatesByLiveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordDatesByLiveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordDatesByLiveResponse>>() {
                 }.getType();
@@ -1326,6 +1389,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeRecordStreamResponse DescribeRecordStream(DescribeRecordStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordStreamResponse>>() {
                 }.getType();
@@ -1346,6 +1410,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeRecordingPlanByIdResponse DescribeRecordingPlanById(DescribeRecordingPlanByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordingPlanByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordingPlanByIdResponse>>() {
                 }.getType();
@@ -1366,6 +1431,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeRecordingPlansResponse DescribeRecordingPlans(DescribeRecordingPlansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordingPlansResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordingPlansResponse>>() {
                 }.getType();
@@ -1386,6 +1452,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeSIPServerResponse DescribeSIPServer(DescribeSIPServerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSIPServerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSIPServerResponse>>() {
                 }.getType();
@@ -1406,6 +1473,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeSceneResponse DescribeScene(DescribeSceneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSceneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSceneResponse>>() {
                 }.getType();
@@ -1426,6 +1494,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScenesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScenesResponse>>() {
                 }.getType();
@@ -1446,6 +1515,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeStatisticDetailsResponse DescribeStatisticDetails(DescribeStatisticDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatisticDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatisticDetailsResponse>>() {
                 }.getType();
@@ -1466,6 +1536,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeStatisticSummaryResponse DescribeStatisticSummary(DescribeStatisticSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatisticSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatisticSummaryResponse>>() {
                 }.getType();
@@ -1486,6 +1557,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeSubGroupsResponse DescribeSubGroups(DescribeSubGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubGroupsResponse>>() {
                 }.getType();
@@ -1506,6 +1578,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeSubscriptionStatusResponse DescribeSubscriptionStatus(DescribeSubscriptionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubscriptionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubscriptionStatusResponse>>() {
                 }.getType();
@@ -1526,6 +1599,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeVideoListResponse DescribeVideoList(DescribeVideoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVideoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVideoListResponse>>() {
                 }.getType();
@@ -1546,6 +1620,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeVideoListByChannelResponse DescribeVideoListByChannel(DescribeVideoListByChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVideoListByChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVideoListByChannelResponse>>() {
                 }.getType();
@@ -1566,6 +1641,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeWarnModResponse DescribeWarnMod(DescribeWarnModRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWarnModResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWarnModResponse>>() {
                 }.getType();
@@ -1586,6 +1662,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeWarningsResponse DescribeWarnings(DescribeWarningsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWarningsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWarningsResponse>>() {
                 }.getType();
@@ -1606,6 +1683,7 @@ RecordId和StartTime/EndTime互斥
     public DescribeXP2PDataResponse DescribeXP2PData(DescribeXP2PDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeXP2PDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeXP2PDataResponse>>() {
                 }.getType();
@@ -1627,6 +1705,7 @@ RecordId和StartTime/EndTime互斥
     public GetRecordDatesByDevResponse GetRecordDatesByDev(GetRecordDatesByDevRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRecordDatesByDevResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRecordDatesByDevResponse>>() {
                 }.getType();
@@ -1648,6 +1727,7 @@ RecordId和StartTime/EndTime互斥
     public GetRecordPlanByDevResponse GetRecordPlanByDev(GetRecordPlanByDevRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRecordPlanByDevResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRecordPlanByDevResponse>>() {
                 }.getType();
@@ -1669,6 +1749,7 @@ RecordId和StartTime/EndTime互斥
     public GetRecordPlanByIdResponse GetRecordPlanById(GetRecordPlanByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRecordPlanByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRecordPlanByIdResponse>>() {
                 }.getType();
@@ -1690,6 +1771,7 @@ RecordId和StartTime/EndTime互斥
     public GetRecordPlansResponse GetRecordPlans(GetRecordPlansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRecordPlansResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRecordPlansResponse>>() {
                 }.getType();
@@ -1710,6 +1792,7 @@ RecordId和StartTime/EndTime互斥
     public GetTimeTemplateByIdResponse GetTimeTemplateById(GetTimeTemplateByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTimeTemplateByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTimeTemplateByIdResponse>>() {
                 }.getType();
@@ -1730,6 +1813,7 @@ RecordId和StartTime/EndTime互斥
     public GetTimeTemplatesResponse GetTimeTemplates(GetTimeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTimeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTimeTemplatesResponse>>() {
                 }.getType();
@@ -1751,6 +1835,7 @@ RecordId和StartTime/EndTime互斥
     public GetVideoListByConResponse GetVideoListByCon(GetVideoListByConRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetVideoListByConResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetVideoListByConResponse>>() {
                 }.getType();
@@ -1771,6 +1856,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyBindPlanLiveChannelResponse ModifyBindPlanLiveChannel(ModifyBindPlanLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBindPlanLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBindPlanLiveChannelResponse>>() {
                 }.getType();
@@ -1791,6 +1877,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyBindRecordingPlanResponse ModifyBindRecordingPlan(ModifyBindRecordingPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBindRecordingPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBindRecordingPlanResponse>>() {
                 }.getType();
@@ -1811,6 +1898,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyBindSceneChannelsResponse ModifyBindSceneChannels(ModifyBindSceneChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBindSceneChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBindSceneChannelsResponse>>() {
                 }.getType();
@@ -1831,6 +1919,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyBindSceneDeviceResponse ModifyBindSceneDevice(ModifyBindSceneDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBindSceneDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBindSceneDeviceResponse>>() {
                 }.getType();
@@ -1851,6 +1940,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyDeviceDataResponse ModifyDeviceData(ModifyDeviceDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceDataResponse>>() {
                 }.getType();
@@ -1871,6 +1961,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyLiveChannelResponse ModifyLiveChannel(ModifyLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveChannelResponse>>() {
                 }.getType();
@@ -1891,6 +1982,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyLiveRecordPlanResponse ModifyLiveRecordPlan(ModifyLiveRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordPlanResponse>>() {
                 }.getType();
@@ -1911,6 +2003,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyLiveVideoResponse ModifyLiveVideo(ModifyLiveVideoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveVideoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveVideoResponse>>() {
                 }.getType();
@@ -1931,6 +2024,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyMessageForwardResponse ModifyMessageForward(ModifyMessageForwardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMessageForwardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMessageForwardResponse>>() {
                 }.getType();
@@ -1951,6 +2045,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyPresetResponse ModifyPreset(ModifyPresetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPresetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPresetResponse>>() {
                 }.getType();
@@ -1972,6 +2067,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyRecordingPlanResponse ModifyRecordingPlan(ModifyRecordingPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRecordingPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRecordingPlanResponse>>() {
                 }.getType();
@@ -1992,6 +2088,7 @@ RecordId和StartTime/EndTime互斥
     public ModifySceneResponse ModifyScene(ModifySceneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySceneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySceneResponse>>() {
                 }.getType();
@@ -2012,6 +2109,7 @@ RecordId和StartTime/EndTime互斥
     public ModifySubscriptionStatusResponse ModifySubscriptionStatus(ModifySubscriptionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubscriptionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubscriptionStatusResponse>>() {
                 }.getType();
@@ -2032,6 +2130,7 @@ RecordId和StartTime/EndTime互斥
     public ModifyVideoInfoResponse ModifyVideoInfo(ModifyVideoInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyVideoInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyVideoInfoResponse>>() {
                 }.getType();
@@ -2052,6 +2151,7 @@ RecordId和StartTime/EndTime互斥
     public ResetWarningResponse ResetWarning(ResetWarningRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetWarningResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetWarningResponse>>() {
                 }.getType();
@@ -2072,6 +2172,7 @@ RecordId和StartTime/EndTime互斥
     public UpdateDeviceGroupResponse UpdateDeviceGroup(UpdateDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceGroupResponse>>() {
                 }.getType();
@@ -2092,6 +2193,7 @@ RecordId和StartTime/EndTime互斥
     public UpdateDevicePassWordResponse UpdateDevicePassWord(UpdateDevicePassWordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDevicePassWordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDevicePassWordResponse>>() {
                 }.getType();
@@ -2113,6 +2215,7 @@ RecordId和StartTime/EndTime互斥
     public UpdateRecordPlanResponse UpdateRecordPlan(UpdateRecordPlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRecordPlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRecordPlanResponse>>() {
                 }.getType();
@@ -2133,6 +2236,7 @@ RecordId和StartTime/EndTime互斥
     public UpdateTimeTemplateResponse UpdateTimeTemplate(UpdateTimeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTimeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTimeTemplateResponse>>() {
                 }.getType();

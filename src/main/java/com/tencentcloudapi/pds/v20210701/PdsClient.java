@@ -29,7 +29,7 @@ public class PdsClient extends AbstractClient{
     private static String endpoint = "pds.tencentcloudapi.com";
     private static String service = "pds";
     private static String version = "2021-07-01";
-
+    
     public PdsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class PdsClient extends AbstractClient{
     public DescribeNewUserAcquisitionResponse DescribeNewUserAcquisition(DescribeNewUserAcquisitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewUserAcquisitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewUserAcquisitionResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class PdsClient extends AbstractClient{
     public DescribeStockEstimationResponse DescribeStockEstimation(DescribeStockEstimationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStockEstimationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStockEstimationResponse>>() {
                 }.getType();

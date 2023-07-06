@@ -29,7 +29,7 @@ public class TdidClient extends AbstractClient{
     private static String endpoint = "tdid.tencentcloudapi.com";
     private static String service = "tdid";
     private static String version = "2021-05-19";
-
+    
     public TdidClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -50,6 +50,7 @@ DID添加标签
     public AddLabelResponse AddLabel(AddLabelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLabelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLabelResponse>>() {
                 }.getType();
@@ -72,6 +73,7 @@ DID添加标签
     public CheckChainResponse CheckChain(CheckChainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckChainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckChainResponse>>() {
                 }.getType();
@@ -94,6 +96,7 @@ DID添加标签
     public CreateCredentialResponse CreateCredential(CreateCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCredentialResponse>>() {
                 }.getType();
@@ -116,6 +119,7 @@ DID添加标签
     public CreateSelectiveCredentialResponse CreateSelectiveCredential(CreateSelectiveCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSelectiveCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSelectiveCredentialResponse>>() {
                 }.getType();
@@ -138,6 +142,7 @@ DID添加标签
     public CreateTDidResponse CreateTDid(CreateTDidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidResponse>>() {
                 }.getType();
@@ -160,6 +165,7 @@ DID添加标签
     public CreateTDidByPrivateKeyResponse CreateTDidByPrivateKey(CreateTDidByPrivateKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidByPrivateKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidByPrivateKeyResponse>>() {
                 }.getType();
@@ -182,6 +188,7 @@ DID添加标签
     public CreateTDidByPublicKeyResponse CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTDidByPublicKeyResponse>>() {
                 }.getType();
@@ -204,6 +211,7 @@ DID添加标签
     public GetAgencyTDidResponse GetAgencyTDid(GetAgencyTDidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAgencyTDidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAgencyTDidResponse>>() {
                 }.getType();
@@ -226,6 +234,7 @@ DID添加标签
     public GetAuthorityIssuerResponse GetAuthorityIssuer(GetAuthorityIssuerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAuthorityIssuerResponse>>() {
                 }.getType();
@@ -248,6 +257,7 @@ DID添加标签
     public GetConsortiumClusterListResponse GetConsortiumClusterList(GetConsortiumClusterListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetConsortiumClusterListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetConsortiumClusterListResponse>>() {
                 }.getType();
@@ -270,6 +280,7 @@ DID添加标签
     public GetConsortiumListResponse GetConsortiumList(GetConsortiumListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetConsortiumListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetConsortiumListResponse>>() {
                 }.getType();
@@ -292,6 +303,7 @@ DID添加标签
     public GetCptInfoResponse GetCptInfo(GetCptInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCptInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCptInfoResponse>>() {
                 }.getType();
@@ -314,6 +326,7 @@ DID添加标签
     public GetCredentialCptRankResponse GetCredentialCptRank(GetCredentialCptRankRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialCptRankResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialCptRankResponse>>() {
                 }.getType();
@@ -336,6 +349,7 @@ DID添加标签
     public GetCredentialStatusResponse GetCredentialStatus(GetCredentialStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetCredentialStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetCredentialStatusResponse>>() {
                 }.getType();
@@ -359,6 +373,7 @@ DID添加标签
     public GetDidDocumentResponse GetDidDocument(GetDidDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDidDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDidDocumentResponse>>() {
                 }.getType();
@@ -381,6 +396,7 @@ DID添加标签
     public RegisterCptResponse RegisterCpt(RegisterCptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterCptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterCptResponse>>() {
                 }.getType();
@@ -403,6 +419,7 @@ DID添加标签
     public SetCredentialStatusResponse SetCredentialStatus(SetCredentialStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetCredentialStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetCredentialStatusResponse>>() {
                 }.getType();
@@ -425,6 +442,7 @@ DID添加标签
     public VerifyCredentialResponse VerifyCredential(VerifyCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyCredentialResponse>>() {
                 }.getType();

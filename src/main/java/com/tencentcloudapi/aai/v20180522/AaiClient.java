@@ -29,7 +29,7 @@ public class AaiClient extends AbstractClient{
     private static String endpoint = "aai.tencentcloudapi.com";
     private static String service = "aai";
     private static String version = "2018-05-22";
-
+    
     public AaiClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AaiClient extends AbstractClient{
     public ChatResponse Chat(ChatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChatResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AaiClient extends AbstractClient{
     public SentenceRecognitionResponse SentenceRecognition(SentenceRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentenceRecognitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SentenceRecognitionResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AaiClient extends AbstractClient{
     public SimultaneousInterpretingResponse SimultaneousInterpreting(SimultaneousInterpretingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimultaneousInterpretingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SimultaneousInterpretingResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class AaiClient extends AbstractClient{
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToVoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
                 }.getType();

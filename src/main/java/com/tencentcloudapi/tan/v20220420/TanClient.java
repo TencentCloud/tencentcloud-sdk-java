@@ -29,7 +29,7 @@ public class TanClient extends AbstractClient{
     private static String endpoint = "tan.tencentcloudapi.com";
     private static String service = "tan";
     private static String version = "2022-04-20";
-
+    
     public TanClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TanClient extends AbstractClient{
     public CreateBlockNodeRecordsResponse CreateBlockNodeRecords(CreateBlockNodeRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBlockNodeRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBlockNodeRecordsResponse>>() {
                 }.getType();

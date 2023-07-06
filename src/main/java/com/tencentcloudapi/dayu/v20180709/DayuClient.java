@@ -29,7 +29,7 @@ public class DayuClient extends AbstractClient{
     private static String endpoint = "dayu.tencentcloudapi.com";
     private static String service = "dayu";
     private static String version = "2018-07-09";
-
+    
     public DayuClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DayuClient extends AbstractClient{
     public CreateBasicDDoSAlarmThresholdResponse CreateBasicDDoSAlarmThreshold(CreateBasicDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBasicDDoSAlarmThresholdResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DayuClient extends AbstractClient{
     public CreateBoundIPResponse CreateBoundIP(CreateBoundIPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBoundIPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBoundIPResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DayuClient extends AbstractClient{
     public CreateCCFrequencyRulesResponse CreateCCFrequencyRules(CreateCCFrequencyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCCFrequencyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCCFrequencyRulesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DayuClient extends AbstractClient{
     public CreateCCSelfDefinePolicyResponse CreateCCSelfDefinePolicy(CreateCCSelfDefinePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCCSelfDefinePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCCSelfDefinePolicyResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DayuClient extends AbstractClient{
     public CreateDDoSPolicyResponse CreateDDoSPolicy(CreateDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSPolicyResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DayuClient extends AbstractClient{
     public CreateDDoSPolicyCaseResponse CreateDDoSPolicyCase(CreateDDoSPolicyCaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSPolicyCaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSPolicyCaseResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DayuClient extends AbstractClient{
     public CreateInstanceNameResponse CreateInstanceName(CreateInstanceNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceNameResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DayuClient extends AbstractClient{
     public CreateL4HealthConfigResponse CreateL4HealthConfig(CreateL4HealthConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL4HealthConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL4HealthConfigResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DayuClient extends AbstractClient{
     public CreateL4RulesResponse CreateL4Rules(CreateL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL4RulesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DayuClient extends AbstractClient{
     public CreateL7CCRuleResponse CreateL7CCRule(CreateL7CCRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7CCRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7CCRuleResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class DayuClient extends AbstractClient{
     public CreateL7HealthConfigResponse CreateL7HealthConfig(CreateL7HealthConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7HealthConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7HealthConfigResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class DayuClient extends AbstractClient{
     public CreateL7RuleCertResponse CreateL7RuleCert(CreateL7RuleCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7RuleCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7RuleCertResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class DayuClient extends AbstractClient{
     public CreateL7RulesResponse CreateL7Rules(CreateL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7RulesResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class DayuClient extends AbstractClient{
     public CreateL7RulesUploadResponse CreateL7RulesUpload(CreateL7RulesUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7RulesUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7RulesUploadResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class DayuClient extends AbstractClient{
     public CreateNetReturnResponse CreateNetReturn(CreateNetReturnRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNetReturnResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNetReturnResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class DayuClient extends AbstractClient{
     public CreateNewL4RulesResponse CreateNewL4Rules(CreateNewL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNewL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNewL4RulesResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class DayuClient extends AbstractClient{
     public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class DayuClient extends AbstractClient{
     public CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(CreateNewL7RulesUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesUploadResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class DayuClient extends AbstractClient{
     public CreateUnblockIpResponse CreateUnblockIp(CreateUnblockIpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUnblockIpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUnblockIpResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class DayuClient extends AbstractClient{
     public DeleteCCFrequencyRulesResponse DeleteCCFrequencyRules(DeleteCCFrequencyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCFrequencyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCFrequencyRulesResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class DayuClient extends AbstractClient{
     public DeleteCCSelfDefinePolicyResponse DeleteCCSelfDefinePolicy(DeleteCCSelfDefinePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCSelfDefinePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCSelfDefinePolicyResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class DayuClient extends AbstractClient{
     public DeleteDDoSPolicyResponse DeleteDDoSPolicy(DeleteDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDDoSPolicyResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class DayuClient extends AbstractClient{
     public DeleteDDoSPolicyCaseResponse DeleteDDoSPolicyCase(DeleteDDoSPolicyCaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDDoSPolicyCaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDDoSPolicyCaseResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class DayuClient extends AbstractClient{
     public DeleteL4RulesResponse DeleteL4Rules(DeleteL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteL4RulesResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class DayuClient extends AbstractClient{
     public DeleteL7RulesResponse DeleteL7Rules(DeleteL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteL7RulesResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class DayuClient extends AbstractClient{
     public DeleteNewL4RulesResponse DeleteNewL4Rules(DeleteNewL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNewL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNewL4RulesResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class DayuClient extends AbstractClient{
     public DeleteNewL7RulesResponse DeleteNewL7Rules(DeleteNewL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNewL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNewL7RulesResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class DayuClient extends AbstractClient{
     public DescribeActionLogResponse DescribeActionLog(DescribeActionLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeActionLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeActionLogResponse>>() {
                 }.getType();
@@ -608,6 +636,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBGPIPL7RuleMaxCntResponse DescribeBGPIPL7RuleMaxCnt(DescribeBGPIPL7RuleMaxCntRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBGPIPL7RuleMaxCntResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBGPIPL7RuleMaxCntResponse>>() {
                 }.getType();
@@ -628,6 +657,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBaradDataResponse DescribeBaradData(DescribeBaradDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBaradDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBaradDataResponse>>() {
                 }.getType();
@@ -648,6 +678,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(DescribeBasicCCThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicCCThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicCCThresholdResponse>>() {
                 }.getType();
@@ -668,6 +699,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(DescribeBasicDeviceThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicDeviceThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceThresholdResponse>>() {
                 }.getType();
@@ -688,6 +720,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBizHttpStatusResponse>>() {
                 }.getType();
@@ -708,6 +741,7 @@ public class DayuClient extends AbstractClient{
     public DescribeBizTrendResponse DescribeBizTrend(DescribeBizTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBizTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBizTrendResponse>>() {
                 }.getType();
@@ -728,6 +762,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(DescribeCCAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCAlarmThresholdResponse>>() {
                 }.getType();
@@ -748,6 +783,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCEvListResponse DescribeCCEvList(DescribeCCEvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCEvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCEvListResponse>>() {
                 }.getType();
@@ -768,6 +804,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCFrequencyRulesResponse DescribeCCFrequencyRules(DescribeCCFrequencyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCFrequencyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCFrequencyRulesResponse>>() {
                 }.getType();
@@ -788,6 +825,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCIpAllowDenyResponse DescribeCCIpAllowDeny(DescribeCCIpAllowDenyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCIpAllowDenyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCIpAllowDenyResponse>>() {
                 }.getType();
@@ -808,6 +846,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCSelfDefinePolicyResponse DescribeCCSelfDefinePolicy(DescribeCCSelfDefinePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCSelfDefinePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCSelfDefinePolicyResponse>>() {
                 }.getType();
@@ -828,6 +867,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCTrendResponse DescribeCCTrend(DescribeCCTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
                 }.getType();
@@ -848,6 +888,7 @@ public class DayuClient extends AbstractClient{
     public DescribeCCUrlAllowResponse DescribeCCUrlAllow(DescribeCCUrlAllowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCUrlAllowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCUrlAllowResponse>>() {
                 }.getType();
@@ -868,6 +909,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSAlarmThresholdResponse DescribeDDoSAlarmThreshold(DescribeDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSAlarmThresholdResponse>>() {
                 }.getType();
@@ -888,6 +930,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSAttackIPRegionMapResponse DescribeDDoSAttackIPRegionMap(DescribeDDoSAttackIPRegionMapRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSAttackIPRegionMapResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackIPRegionMapResponse>>() {
                 }.getType();
@@ -908,6 +951,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSAttackSourceResponse DescribeDDoSAttackSource(DescribeDDoSAttackSourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSAttackSourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackSourceResponse>>() {
                 }.getType();
@@ -928,6 +972,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSCountResponse DescribeDDoSCount(DescribeDDoSCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSCountResponse>>() {
                 }.getType();
@@ -948,6 +993,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSDefendStatusResponse DescribeDDoSDefendStatus(DescribeDDoSDefendStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSDefendStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSDefendStatusResponse>>() {
                 }.getType();
@@ -968,6 +1014,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSEvInfoResponse DescribeDDoSEvInfo(DescribeDDoSEvInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSEvInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSEvInfoResponse>>() {
                 }.getType();
@@ -988,6 +1035,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSEvListResponse DescribeDDoSEvList(DescribeDDoSEvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSEvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSEvListResponse>>() {
                 }.getType();
@@ -1008,6 +1056,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSIpLogResponse DescribeDDoSIpLog(DescribeDDoSIpLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSIpLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSIpLogResponse>>() {
                 }.getType();
@@ -1028,6 +1077,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSNetCountResponse DescribeDDoSNetCount(DescribeDDoSNetCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSNetCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSNetCountResponse>>() {
                 }.getType();
@@ -1048,6 +1098,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSNetEvInfoResponse DescribeDDoSNetEvInfo(DescribeDDoSNetEvInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSNetEvInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSNetEvInfoResponse>>() {
                 }.getType();
@@ -1068,6 +1119,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSNetEvListResponse DescribeDDoSNetEvList(DescribeDDoSNetEvListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSNetEvListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSNetEvListResponse>>() {
                 }.getType();
@@ -1088,6 +1140,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSNetIpLogResponse DescribeDDoSNetIpLog(DescribeDDoSNetIpLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSNetIpLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSNetIpLogResponse>>() {
                 }.getType();
@@ -1108,6 +1161,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSNetTrendResponse DescribeDDoSNetTrend(DescribeDDoSNetTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSNetTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSNetTrendResponse>>() {
                 }.getType();
@@ -1128,6 +1182,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSPolicyResponse DescribeDDoSPolicy(DescribeDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSPolicyResponse>>() {
                 }.getType();
@@ -1148,6 +1203,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSTrendResponse DescribeDDoSTrend(DescribeDDoSTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSTrendResponse>>() {
                 }.getType();
@@ -1168,6 +1224,7 @@ public class DayuClient extends AbstractClient{
     public DescribeDDoSUsedStatisResponse DescribeDDoSUsedStatis(DescribeDDoSUsedStatisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSUsedStatisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSUsedStatisResponse>>() {
                 }.getType();
@@ -1188,6 +1245,7 @@ public class DayuClient extends AbstractClient{
     public DescribeIPProductInfoResponse DescribeIPProductInfo(DescribeIPProductInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPProductInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPProductInfoResponse>>() {
                 }.getType();
@@ -1208,6 +1266,7 @@ public class DayuClient extends AbstractClient{
     public DescribeInsurePacksResponse DescribeInsurePacks(DescribeInsurePacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInsurePacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInsurePacksResponse>>() {
                 }.getType();
@@ -1228,6 +1287,7 @@ public class DayuClient extends AbstractClient{
     public DescribeIpBlockListResponse DescribeIpBlockList(DescribeIpBlockListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpBlockListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpBlockListResponse>>() {
                 }.getType();
@@ -1248,6 +1308,7 @@ public class DayuClient extends AbstractClient{
     public DescribeIpUnBlockListResponse DescribeIpUnBlockList(DescribeIpUnBlockListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpUnBlockListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpUnBlockListResponse>>() {
                 }.getType();
@@ -1268,6 +1329,7 @@ public class DayuClient extends AbstractClient{
     public DescribeL4HealthConfigResponse DescribeL4HealthConfig(DescribeL4HealthConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeL4HealthConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeL4HealthConfigResponse>>() {
                 }.getType();
@@ -1288,6 +1350,7 @@ public class DayuClient extends AbstractClient{
     public DescribeL4RulesErrHealthResponse DescribeL4RulesErrHealth(DescribeL4RulesErrHealthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeL4RulesErrHealthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeL4RulesErrHealthResponse>>() {
                 }.getType();
@@ -1308,6 +1371,7 @@ public class DayuClient extends AbstractClient{
     public DescribeL7HealthConfigResponse DescribeL7HealthConfig(DescribeL7HealthConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeL7HealthConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeL7HealthConfigResponse>>() {
                 }.getType();
@@ -1328,6 +1392,7 @@ public class DayuClient extends AbstractClient{
     public DescribeNewL4RulesResponse DescribeNewL4Rules(DescribeNewL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewL4RulesResponse>>() {
                 }.getType();
@@ -1348,6 +1413,7 @@ public class DayuClient extends AbstractClient{
     public DescribeNewL4RulesErrHealthResponse DescribeNewL4RulesErrHealth(DescribeNewL4RulesErrHealthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewL4RulesErrHealthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewL4RulesErrHealthResponse>>() {
                 }.getType();
@@ -1368,6 +1434,7 @@ public class DayuClient extends AbstractClient{
     public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>() {
                 }.getType();
@@ -1388,6 +1455,7 @@ public class DayuClient extends AbstractClient{
     public DescribePackIndexResponse DescribePackIndex(DescribePackIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePackIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePackIndexResponse>>() {
                 }.getType();
@@ -1408,6 +1476,7 @@ public class DayuClient extends AbstractClient{
     public DescribePcapResponse DescribePcap(DescribePcapRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePcapResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePcapResponse>>() {
                 }.getType();
@@ -1428,6 +1497,7 @@ public class DayuClient extends AbstractClient{
     public DescribePolicyCaseResponse DescribePolicyCase(DescribePolicyCaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyCaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyCaseResponse>>() {
                 }.getType();
@@ -1448,6 +1518,7 @@ public class DayuClient extends AbstractClient{
     public DescribeResIpListResponse DescribeResIpList(DescribeResIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResIpListResponse>>() {
                 }.getType();
@@ -1468,6 +1539,7 @@ public class DayuClient extends AbstractClient{
     public DescribeResourceListResponse DescribeResourceList(DescribeResourceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceListResponse>>() {
                 }.getType();
@@ -1488,6 +1560,7 @@ public class DayuClient extends AbstractClient{
     public DescribeRuleSetsResponse DescribeRuleSets(DescribeRuleSetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleSetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleSetsResponse>>() {
                 }.getType();
@@ -1508,6 +1581,7 @@ public class DayuClient extends AbstractClient{
     public DescribeSchedulingDomainListResponse DescribeSchedulingDomainList(DescribeSchedulingDomainListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSchedulingDomainListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSchedulingDomainListResponse>>() {
                 }.getType();
@@ -1528,6 +1602,7 @@ public class DayuClient extends AbstractClient{
     public DescribeSecIndexResponse DescribeSecIndex(DescribeSecIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSecIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSecIndexResponse>>() {
                 }.getType();
@@ -1548,6 +1623,7 @@ public class DayuClient extends AbstractClient{
     public DescribeSourceIpSegmentResponse DescribeSourceIpSegment(DescribeSourceIpSegmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSourceIpSegmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSourceIpSegmentResponse>>() {
                 }.getType();
@@ -1568,6 +1644,7 @@ public class DayuClient extends AbstractClient{
     public DescribeTransmitStatisResponse DescribeTransmitStatis(DescribeTransmitStatisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTransmitStatisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTransmitStatisResponse>>() {
                 }.getType();
@@ -1588,6 +1665,7 @@ public class DayuClient extends AbstractClient{
     public DescribeUnBlockStatisResponse DescribeUnBlockStatis(DescribeUnBlockStatisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnBlockStatisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnBlockStatisResponse>>() {
                 }.getType();
@@ -1608,6 +1686,7 @@ public class DayuClient extends AbstractClient{
     public DescribleL4RulesResponse DescribleL4Rules(DescribleL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribleL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribleL4RulesResponse>>() {
                 }.getType();
@@ -1628,6 +1707,7 @@ public class DayuClient extends AbstractClient{
     public DescribleL7RulesResponse DescribleL7Rules(DescribleL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribleL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribleL7RulesResponse>>() {
                 }.getType();
@@ -1648,6 +1728,7 @@ public class DayuClient extends AbstractClient{
     public DescribleNewL7RulesResponse DescribleNewL7Rules(DescribleNewL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribleNewL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribleNewL7RulesResponse>>() {
                 }.getType();
@@ -1668,6 +1749,7 @@ public class DayuClient extends AbstractClient{
     public DescribleRegionCountResponse DescribleRegionCount(DescribleRegionCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribleRegionCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribleRegionCountResponse>>() {
                 }.getType();
@@ -1688,6 +1770,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCAlarmThresholdResponse ModifyCCAlarmThreshold(ModifyCCAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCAlarmThresholdResponse>>() {
                 }.getType();
@@ -1708,6 +1791,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCFrequencyRulesResponse ModifyCCFrequencyRules(ModifyCCFrequencyRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCFrequencyRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCFrequencyRulesResponse>>() {
                 }.getType();
@@ -1728,6 +1812,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCFrequencyRulesStatusResponse ModifyCCFrequencyRulesStatus(ModifyCCFrequencyRulesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCFrequencyRulesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCFrequencyRulesStatusResponse>>() {
                 }.getType();
@@ -1748,6 +1833,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCHostProtectionResponse ModifyCCHostProtection(ModifyCCHostProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCHostProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCHostProtectionResponse>>() {
                 }.getType();
@@ -1768,6 +1854,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCIpAllowDenyResponse ModifyCCIpAllowDeny(ModifyCCIpAllowDenyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCIpAllowDenyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCIpAllowDenyResponse>>() {
                 }.getType();
@@ -1788,6 +1875,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCLevelResponse ModifyCCLevel(ModifyCCLevelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCLevelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCLevelResponse>>() {
                 }.getType();
@@ -1808,6 +1896,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCPolicySwitchResponse ModifyCCPolicySwitch(ModifyCCPolicySwitchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCPolicySwitchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCPolicySwitchResponse>>() {
                 }.getType();
@@ -1828,6 +1917,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCSelfDefinePolicyResponse ModifyCCSelfDefinePolicy(ModifyCCSelfDefinePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCSelfDefinePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCSelfDefinePolicyResponse>>() {
                 }.getType();
@@ -1848,6 +1938,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCThresholdResponse ModifyCCThreshold(ModifyCCThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCThresholdResponse>>() {
                 }.getType();
@@ -1868,6 +1959,7 @@ public class DayuClient extends AbstractClient{
     public ModifyCCUrlAllowResponse ModifyCCUrlAllow(ModifyCCUrlAllowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCUrlAllowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCUrlAllowResponse>>() {
                 }.getType();
@@ -1888,6 +1980,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSAIStatusResponse ModifyDDoSAIStatus(ModifyDDoSAIStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSAIStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSAIStatusResponse>>() {
                 }.getType();
@@ -1908,6 +2001,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSAlarmThresholdResponse ModifyDDoSAlarmThreshold(ModifyDDoSAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSAlarmThresholdResponse>>() {
                 }.getType();
@@ -1928,6 +2022,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSDefendStatusResponse ModifyDDoSDefendStatus(ModifyDDoSDefendStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSDefendStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSDefendStatusResponse>>() {
                 }.getType();
@@ -1948,6 +2043,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSLevelResponse ModifyDDoSLevel(ModifyDDoSLevelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSLevelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSLevelResponse>>() {
                 }.getType();
@@ -1968,6 +2064,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSPolicyResponse ModifyDDoSPolicy(ModifyDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSPolicyResponse>>() {
                 }.getType();
@@ -1988,6 +2085,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSPolicyCaseResponse ModifyDDoSPolicyCase(ModifyDDoSPolicyCaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSPolicyCaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSPolicyCaseResponse>>() {
                 }.getType();
@@ -2008,6 +2106,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSPolicyNameResponse ModifyDDoSPolicyName(ModifyDDoSPolicyNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSPolicyNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSPolicyNameResponse>>() {
                 }.getType();
@@ -2028,6 +2127,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSSwitchResponse ModifyDDoSSwitch(ModifyDDoSSwitchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSSwitchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSSwitchResponse>>() {
                 }.getType();
@@ -2048,6 +2148,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSThresholdResponse ModifyDDoSThreshold(ModifyDDoSThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSThresholdResponse>>() {
                 }.getType();
@@ -2068,6 +2169,7 @@ public class DayuClient extends AbstractClient{
     public ModifyDDoSWaterKeyResponse ModifyDDoSWaterKey(ModifyDDoSWaterKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSWaterKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSWaterKeyResponse>>() {
                 }.getType();
@@ -2088,6 +2190,7 @@ public class DayuClient extends AbstractClient{
     public ModifyElasticLimitResponse ModifyElasticLimit(ModifyElasticLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyElasticLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyElasticLimitResponse>>() {
                 }.getType();
@@ -2108,6 +2211,7 @@ public class DayuClient extends AbstractClient{
     public ModifyL4HealthResponse ModifyL4Health(ModifyL4HealthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyL4HealthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyL4HealthResponse>>() {
                 }.getType();
@@ -2128,6 +2232,7 @@ public class DayuClient extends AbstractClient{
     public ModifyL4KeepTimeResponse ModifyL4KeepTime(ModifyL4KeepTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyL4KeepTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyL4KeepTimeResponse>>() {
                 }.getType();
@@ -2148,6 +2253,7 @@ public class DayuClient extends AbstractClient{
     public ModifyL4RulesResponse ModifyL4Rules(ModifyL4RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyL4RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyL4RulesResponse>>() {
                 }.getType();
@@ -2168,6 +2274,7 @@ public class DayuClient extends AbstractClient{
     public ModifyL7RulesResponse ModifyL7Rules(ModifyL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyL7RulesResponse>>() {
                 }.getType();
@@ -2188,6 +2295,7 @@ public class DayuClient extends AbstractClient{
     public ModifyNetReturnSwitchResponse ModifyNetReturnSwitch(ModifyNetReturnSwitchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNetReturnSwitchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNetReturnSwitchResponse>>() {
                 }.getType();
@@ -2208,6 +2316,7 @@ public class DayuClient extends AbstractClient{
     public ModifyNewDomainRulesResponse ModifyNewDomainRules(ModifyNewDomainRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNewDomainRulesResponse>>() {
                 }.getType();
@@ -2228,6 +2337,7 @@ public class DayuClient extends AbstractClient{
     public ModifyNewL4RuleResponse ModifyNewL4Rule(ModifyNewL4RuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNewL4RuleResponse>>() {
                 }.getType();
@@ -2248,6 +2358,7 @@ public class DayuClient extends AbstractClient{
     public ModifyResBindDDoSPolicyResponse ModifyResBindDDoSPolicy(ModifyResBindDDoSPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResBindDDoSPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResBindDDoSPolicyResponse>>() {
                 }.getType();
@@ -2268,6 +2379,7 @@ public class DayuClient extends AbstractClient{
     public ModifyResourceRenewFlagResponse ModifyResourceRenewFlag(ModifyResourceRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceRenewFlagResponse>>() {
                 }.getType();

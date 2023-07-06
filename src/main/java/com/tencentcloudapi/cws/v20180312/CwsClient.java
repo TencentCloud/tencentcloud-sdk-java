@@ -29,7 +29,7 @@ public class CwsClient extends AbstractClient{
     private static String endpoint = "cws.tencentcloudapi.com";
     private static String service = "cws";
     private static String version = "2018-03-12";
-
+    
     public CwsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CwsClient extends AbstractClient{
     public CreateMonitorsResponse CreateMonitors(CreateMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMonitorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMonitorsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CwsClient extends AbstractClient{
     public CreateSitesResponse CreateSites(CreateSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSitesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSitesResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CwsClient extends AbstractClient{
     public CreateSitesScansResponse CreateSitesScans(CreateSitesScansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSitesScansResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSitesScansResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CwsClient extends AbstractClient{
     public CreateVulsMisinformationResponse CreateVulsMisinformation(CreateVulsMisinformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVulsMisinformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVulsMisinformationResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CwsClient extends AbstractClient{
     public CreateVulsReportResponse CreateVulsReport(CreateVulsReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVulsReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVulsReportResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CwsClient extends AbstractClient{
     public DeleteMonitorsResponse DeleteMonitors(DeleteMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMonitorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMonitorsResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CwsClient extends AbstractClient{
     public DeleteSitesResponse DeleteSites(DeleteSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSitesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSitesResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CwsClient extends AbstractClient{
     public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CwsClient extends AbstractClient{
     public DescribeMonitorsResponse DescribeMonitors(DescribeMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CwsClient extends AbstractClient{
     public DescribeSiteQuotaResponse DescribeSiteQuota(DescribeSiteQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSiteQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSiteQuotaResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CwsClient extends AbstractClient{
     public DescribeSitesResponse DescribeSites(DescribeSitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSitesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSitesResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CwsClient extends AbstractClient{
     public DescribeSitesVerificationResponse DescribeSitesVerification(DescribeSitesVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSitesVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSitesVerificationResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CwsClient extends AbstractClient{
     public DescribeVulsResponse DescribeVuls(DescribeVulsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CwsClient extends AbstractClient{
     public DescribeVulsNumberResponse DescribeVulsNumber(DescribeVulsNumberRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsNumberResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CwsClient extends AbstractClient{
     public DescribeVulsNumberTimelineResponse DescribeVulsNumberTimeline(DescribeVulsNumberTimelineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulsNumberTimelineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulsNumberTimelineResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CwsClient extends AbstractClient{
     public ModifyConfigAttributeResponse ModifyConfigAttribute(ModifyConfigAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConfigAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConfigAttributeResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CwsClient extends AbstractClient{
     public ModifyMonitorAttributeResponse ModifyMonitorAttribute(ModifyMonitorAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMonitorAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMonitorAttributeResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CwsClient extends AbstractClient{
     public ModifySiteAttributeResponse ModifySiteAttribute(ModifySiteAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySiteAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySiteAttributeResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class CwsClient extends AbstractClient{
     public VerifySitesResponse VerifySites(VerifySitesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifySitesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifySitesResponse>>() {
                 }.getType();

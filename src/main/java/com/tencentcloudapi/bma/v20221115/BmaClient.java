@@ -29,7 +29,7 @@ public class BmaClient extends AbstractClient{
     private static String endpoint = "bma.tencentcloudapi.com";
     private static String service = "bma";
     private static String version = "2022-11-15";
-
+    
     public BmaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPBrandResponse CreateBPBrand(CreateBPBrandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPBrandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPBrandResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFakeAPPResponse CreateBPFakeAPP(CreateBPFakeAPPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFakeAPPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeAPPResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFakeAPPListResponse CreateBPFakeAPPList(CreateBPFakeAPPListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFakeAPPListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeAPPListResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFakeURLResponse CreateBPFakeURL(CreateBPFakeURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFakeURLsResponse CreateBPFakeURLs(CreateBPFakeURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFakeURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPWhiteListResponse CreateBPWhiteList(CreateBPWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPWhiteListResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class BmaClient extends AbstractClient{
     public DeleteBPWhiteListResponse DeleteBPWhiteList(DeleteBPWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBPWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBPWhiteListResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPBrandsResponse DescribeBPBrands(DescribeBPBrandsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPBrandsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPBrandsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPFakeAPPListResponse DescribeBPFakeAPPList(DescribeBPFakeAPPListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPFakeAPPListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPFakeAPPListResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPFakeURLsResponse DescribeBPFakeURLs(DescribeBPFakeURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPFakeURLsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPWhiteListsResponse DescribeBPWhiteLists(DescribeBPWhiteListsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPWhiteListsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPWhiteListsResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class AaClient extends AbstractClient{
     private static String endpoint = "aa.tencentcloudapi.com";
     private static String service = "aa";
     private static String version = "2020-02-24";
-
+    
     public AaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AaClient extends AbstractClient{
     public QueryActivityAntiRushResponse QueryActivityAntiRush(QueryActivityAntiRushRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryActivityAntiRushResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryActivityAntiRushResponse>>() {
                 }.getType();

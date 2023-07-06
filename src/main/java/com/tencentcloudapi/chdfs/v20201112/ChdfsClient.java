@@ -29,7 +29,7 @@ public class ChdfsClient extends AbstractClient{
     private static String endpoint = "chdfs.tencentcloudapi.com";
     private static String service = "chdfs";
     private static String version = "2020-11-12";
-
+    
     public ChdfsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ChdfsClient extends AbstractClient{
     public AssociateAccessGroupsResponse AssociateAccessGroups(AssociateAccessGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateAccessGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateAccessGroupsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateAccessGroupResponse CreateAccessGroup(CreateAccessGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccessGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccessGroupResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateAccessRulesResponse CreateAccessRules(CreateAccessRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccessRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccessRulesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateFileSystemResponse CreateFileSystem(CreateFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFileSystemResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateLifeCycleRulesResponse CreateLifeCycleRules(CreateLifeCycleRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLifeCycleRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLifeCycleRulesResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateMountPointResponse CreateMountPoint(CreateMountPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMountPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMountPointResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class ChdfsClient extends AbstractClient{
     public CreateRestoreTasksResponse CreateRestoreTasks(CreateRestoreTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRestoreTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRestoreTasksResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class ChdfsClient extends AbstractClient{
     public DeleteAccessGroupResponse DeleteAccessGroup(DeleteAccessGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccessGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccessGroupResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class ChdfsClient extends AbstractClient{
     public DeleteAccessRulesResponse DeleteAccessRules(DeleteAccessRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccessRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccessRulesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class ChdfsClient extends AbstractClient{
     public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFileSystemResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class ChdfsClient extends AbstractClient{
     public DeleteLifeCycleRulesResponse DeleteLifeCycleRules(DeleteLifeCycleRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLifeCycleRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLifeCycleRulesResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class ChdfsClient extends AbstractClient{
     public DeleteMountPointResponse DeleteMountPoint(DeleteMountPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMountPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMountPointResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeAccessGroupResponse DescribeAccessGroup(DescribeAccessGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessGroupResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeAccessGroupsResponse DescribeAccessGroups(DescribeAccessGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessGroupsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeAccessRulesResponse DescribeAccessRules(DescribeAccessRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessRulesResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeFileSystemResponse DescribeFileSystem(DescribeFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileSystemResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeFileSystemsResponse DescribeFileSystems(DescribeFileSystemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileSystemsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeLifeCycleRulesResponse DescribeLifeCycleRules(DescribeLifeCycleRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLifeCycleRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLifeCycleRulesResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeMountPointResponse DescribeMountPoint(DescribeMountPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMountPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMountPointResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeMountPointsResponse DescribeMountPoints(DescribeMountPointsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMountPointsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMountPointsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeResourceTagsResponse DescribeResourceTags(DescribeResourceTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class ChdfsClient extends AbstractClient{
     public DescribeRestoreTasksResponse DescribeRestoreTasks(DescribeRestoreTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRestoreTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRestoreTasksResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class ChdfsClient extends AbstractClient{
     public DisassociateAccessGroupsResponse DisassociateAccessGroups(DisassociateAccessGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateAccessGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateAccessGroupsResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyAccessGroupResponse ModifyAccessGroup(ModifyAccessGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccessGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccessGroupResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyAccessRulesResponse ModifyAccessRules(ModifyAccessRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccessRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccessRulesResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyFileSystemResponse ModifyFileSystem(ModifyFileSystemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFileSystemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFileSystemResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyLifeCycleRulesResponse ModifyLifeCycleRules(ModifyLifeCycleRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLifeCycleRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLifeCycleRulesResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyMountPointResponse ModifyMountPoint(ModifyMountPointRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMountPointResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMountPointResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class ChdfsClient extends AbstractClient{
     public ModifyResourceTagsResponse ModifyResourceTags(ModifyResourceTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceTagsResponse>>() {
                 }.getType();

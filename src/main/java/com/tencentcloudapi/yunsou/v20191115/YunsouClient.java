@@ -29,7 +29,7 @@ public class YunsouClient extends AbstractClient{
     private static String endpoint = "yunsou.tencentcloudapi.com";
     private static String service = "yunsou";
     private static String version = "2019-11-15";
-
+    
     public YunsouClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class YunsouClient extends AbstractClient{
     public DataManipulationResponse DataManipulation(DataManipulationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DataManipulationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DataManipulationResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class YunsouClient extends AbstractClient{
     public DataSearchResponse DataSearch(DataSearchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DataSearchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DataSearchResponse>>() {
                 }.getType();

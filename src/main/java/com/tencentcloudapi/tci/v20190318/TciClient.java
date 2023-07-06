@@ -29,7 +29,7 @@ public class TciClient extends AbstractClient{
     private static String endpoint = "tci.tencentcloudapi.com";
     private static String service = "tci";
     private static String version = "2019-03-18";
-
+    
     public TciClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TciClient extends AbstractClient{
     public AIAssistantResponse AIAssistant(AIAssistantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AIAssistantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AIAssistantResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TciClient extends AbstractClient{
     public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TciClient extends AbstractClient{
     public CheckFacePhotoResponse CheckFacePhoto(CheckFacePhotoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckFacePhotoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckFacePhotoResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TciClient extends AbstractClient{
     public CreateFaceResponse CreateFace(CreateFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFaceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TciClient extends AbstractClient{
     public CreateLibraryResponse CreateLibrary(CreateLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLibraryResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TciClient extends AbstractClient{
     public CreatePersonResponse CreatePerson(CreatePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TciClient extends AbstractClient{
     public CreateVocabResponse CreateVocab(CreateVocabRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVocabResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVocabResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TciClient extends AbstractClient{
     public CreateVocabLibResponse CreateVocabLib(CreateVocabLibRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVocabLibResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVocabLibResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TciClient extends AbstractClient{
     public DeleteFaceResponse DeleteFace(DeleteFaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFaceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TciClient extends AbstractClient{
     public DeleteLibraryResponse DeleteLibrary(DeleteLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLibraryResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TciClient extends AbstractClient{
     public DeletePersonResponse DeletePerson(DeletePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TciClient extends AbstractClient{
     public DeleteVocabResponse DeleteVocab(DeleteVocabRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVocabResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVocabResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TciClient extends AbstractClient{
     public DeleteVocabLibResponse DeleteVocabLib(DeleteVocabLibRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteVocabLibResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteVocabLibResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TciClient extends AbstractClient{
     public DescribeAITaskResultResponse DescribeAITaskResult(DescribeAITaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAITaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAITaskResultResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TciClient extends AbstractClient{
     public DescribeAttendanceResultResponse DescribeAttendanceResult(DescribeAttendanceResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAttendanceResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAttendanceResultResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TciClient extends AbstractClient{
     public DescribeAudioTaskResponse DescribeAudioTask(DescribeAudioTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAudioTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAudioTaskResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TciClient extends AbstractClient{
     public DescribeConversationTaskResponse DescribeConversationTask(DescribeConversationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConversationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConversationTaskResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TciClient extends AbstractClient{
     public DescribeHighlightResultResponse DescribeHighlightResult(DescribeHighlightResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHighlightResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHighlightResultResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TciClient extends AbstractClient{
     public DescribeImageTaskResponse DescribeImageTask(DescribeImageTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageTaskResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TciClient extends AbstractClient{
     public DescribeImageTaskStatisticResponse DescribeImageTaskStatistic(DescribeImageTaskStatisticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageTaskStatisticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageTaskStatisticResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TciClient extends AbstractClient{
     public DescribeLibrariesResponse DescribeLibraries(DescribeLibrariesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLibrariesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLibrariesResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TciClient extends AbstractClient{
     public DescribePersonResponse DescribePerson(DescribePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TciClient extends AbstractClient{
     public DescribePersonsResponse DescribePersons(DescribePersonsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonsResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TciClient extends AbstractClient{
     public DescribeVocabResponse DescribeVocab(DescribeVocabRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVocabResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVocabResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TciClient extends AbstractClient{
     public DescribeVocabLibResponse DescribeVocabLib(DescribeVocabLibRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVocabLibResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVocabLibResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TciClient extends AbstractClient{
     public ModifyLibraryResponse ModifyLibrary(ModifyLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLibraryResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TciClient extends AbstractClient{
     public ModifyPersonResponse ModifyPerson(ModifyPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TciClient extends AbstractClient{
     public SubmitAudioTaskResponse SubmitAudioTask(SubmitAudioTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitAudioTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitAudioTaskResponse>>() {
                 }.getType();
@@ -620,6 +648,7 @@ public class TciClient extends AbstractClient{
     public SubmitCheckAttendanceTaskResponse SubmitCheckAttendanceTask(SubmitCheckAttendanceTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitCheckAttendanceTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitCheckAttendanceTaskResponse>>() {
                 }.getType();
@@ -640,6 +669,7 @@ public class TciClient extends AbstractClient{
     public SubmitCheckAttendanceTaskPlusResponse SubmitCheckAttendanceTaskPlus(SubmitCheckAttendanceTaskPlusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitCheckAttendanceTaskPlusResponse>>() {
                 }.getType();
@@ -660,6 +690,7 @@ public class TciClient extends AbstractClient{
     public SubmitConversationTaskResponse SubmitConversationTask(SubmitConversationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitConversationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitConversationTaskResponse>>() {
                 }.getType();
@@ -681,6 +712,7 @@ public class TciClient extends AbstractClient{
     public SubmitDoubleVideoHighlightsResponse SubmitDoubleVideoHighlights(SubmitDoubleVideoHighlightsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitDoubleVideoHighlightsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitDoubleVideoHighlightsResponse>>() {
                 }.getType();
@@ -707,6 +739,7 @@ public class TciClient extends AbstractClient{
     public SubmitFullBodyClassTaskResponse SubmitFullBodyClassTask(SubmitFullBodyClassTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitFullBodyClassTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitFullBodyClassTaskResponse>>() {
                 }.getType();
@@ -727,6 +760,7 @@ public class TciClient extends AbstractClient{
     public SubmitHighlightsResponse SubmitHighlights(SubmitHighlightsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitHighlightsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitHighlightsResponse>>() {
                 }.getType();
@@ -747,6 +781,7 @@ public class TciClient extends AbstractClient{
     public SubmitImageTaskResponse SubmitImageTask(SubmitImageTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitImageTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitImageTaskResponse>>() {
                 }.getType();
@@ -767,6 +802,7 @@ public class TciClient extends AbstractClient{
     public SubmitImageTaskPlusResponse SubmitImageTaskPlus(SubmitImageTaskPlusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitImageTaskPlusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitImageTaskPlusResponse>>() {
                 }.getType();
@@ -794,6 +830,7 @@ public class TciClient extends AbstractClient{
     public SubmitOneByOneClassTaskResponse SubmitOneByOneClassTask(SubmitOneByOneClassTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitOneByOneClassTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitOneByOneClassTaskResponse>>() {
                 }.getType();
@@ -821,6 +858,7 @@ public class TciClient extends AbstractClient{
     public SubmitOpenClassTaskResponse SubmitOpenClassTask(SubmitOpenClassTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitOpenClassTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitOpenClassTaskResponse>>() {
                 }.getType();
@@ -847,6 +885,7 @@ public class TciClient extends AbstractClient{
     public SubmitPartialBodyClassTaskResponse SubmitPartialBodyClassTask(SubmitPartialBodyClassTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitPartialBodyClassTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitPartialBodyClassTaskResponse>>() {
                 }.getType();
@@ -875,6 +914,7 @@ public class TciClient extends AbstractClient{
     public SubmitTraditionalClassTaskResponse SubmitTraditionalClassTask(SubmitTraditionalClassTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitTraditionalClassTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitTraditionalClassTaskResponse>>() {
                 }.getType();
@@ -895,6 +935,7 @@ public class TciClient extends AbstractClient{
     public TransmitAudioStreamResponse TransmitAudioStream(TransmitAudioStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitAudioStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitAudioStreamResponse>>() {
                 }.getType();

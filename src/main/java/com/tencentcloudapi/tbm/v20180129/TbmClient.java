@@ -29,7 +29,7 @@ public class TbmClient extends AbstractClient{
     private static String endpoint = "tbm.tencentcloudapi.com";
     private static String service = "tbm";
     private static String version = "2018-01-29";
-
+    
     public TbmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandCommentCountResponse DescribeBrandCommentCount(DescribeBrandCommentCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandCommentCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandCommentCountResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandExposureResponse DescribeBrandExposure(DescribeBrandExposureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandExposureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandExposureResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandMediaReportResponse DescribeBrandMediaReport(DescribeBrandMediaReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandMediaReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandMediaReportResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandNegCommentsResponse DescribeBrandNegComments(DescribeBrandNegCommentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandNegCommentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandNegCommentsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandPosCommentsResponse DescribeBrandPosComments(DescribeBrandPosCommentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandPosCommentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandPosCommentsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandSocialOpinionResponse DescribeBrandSocialOpinion(DescribeBrandSocialOpinionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandSocialOpinionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialOpinionResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TbmClient extends AbstractClient{
     public DescribeBrandSocialReportResponse DescribeBrandSocialReport(DescribeBrandSocialReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBrandSocialReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBrandSocialReportResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TbmClient extends AbstractClient{
     public DescribeIndustryNewsResponse DescribeIndustryNews(DescribeIndustryNewsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIndustryNewsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIndustryNewsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TbmClient extends AbstractClient{
     public DescribeUserPortraitResponse DescribeUserPortrait(DescribeUserPortraitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserPortraitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserPortraitResponse>>() {
                 }.getType();

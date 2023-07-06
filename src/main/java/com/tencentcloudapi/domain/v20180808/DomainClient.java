@@ -29,7 +29,7 @@ public class DomainClient extends AbstractClient{
     private static String endpoint = "domain.tencentcloudapi.com";
     private static String service = "domain";
     private static String version = "2018-08-08";
-
+    
     public DomainClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DomainClient extends AbstractClient{
     public BatchModifyDomainInfoResponse BatchModifyDomainInfo(BatchModifyDomainInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyDomainInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyDomainInfoResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DomainClient extends AbstractClient{
     public CheckBatchStatusResponse CheckBatchStatus(CheckBatchStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckBatchStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckBatchStatusResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DomainClient extends AbstractClient{
     public CheckDomainResponse CheckDomain(CheckDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckDomainResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DomainClient extends AbstractClient{
     public CreateDomainBatchResponse CreateDomainBatch(CreateDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainBatchResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DomainClient extends AbstractClient{
     public CreatePhoneEmailResponse CreatePhoneEmail(CreatePhoneEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePhoneEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePhoneEmailResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DomainClient extends AbstractClient{
     public CreateTemplateResponse CreateTemplate(CreateTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTemplateResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DomainClient extends AbstractClient{
     public DeletePhoneEmailResponse DeletePhoneEmail(DeletePhoneEmailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePhoneEmailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePhoneEmailResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DomainClient extends AbstractClient{
     public DeleteTemplateResponse DeleteTemplate(DeleteTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTemplateResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DomainClient extends AbstractClient{
     public DescribeBatchOperationLogDetailsResponse DescribeBatchOperationLogDetails(DescribeBatchOperationLogDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBatchOperationLogDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchOperationLogDetailsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DomainClient extends AbstractClient{
     public DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(DescribeBatchOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBatchOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchOperationLogsResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class DomainClient extends AbstractClient{
     public DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(DescribeDomainBaseInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainBaseInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainBaseInfoResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class DomainClient extends AbstractClient{
     public DescribeDomainNameListResponse DescribeDomainNameList(DescribeDomainNameListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainNameListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainNameListResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class DomainClient extends AbstractClient{
     public DescribeDomainPriceListResponse DescribeDomainPriceList(DescribeDomainPriceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainPriceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainPriceListResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class DomainClient extends AbstractClient{
     public DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfo(DescribeDomainSimpleInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainSimpleInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainSimpleInfoResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class DomainClient extends AbstractClient{
     public DescribePhoneEmailListResponse DescribePhoneEmailList(DescribePhoneEmailListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePhoneEmailListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePhoneEmailListResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class DomainClient extends AbstractClient{
     public DescribeTemplateResponse DescribeTemplate(DescribeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class DomainClient extends AbstractClient{
     public DescribeTemplateListResponse DescribeTemplateList(DescribeTemplateListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateListResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class DomainClient extends AbstractClient{
     public ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(ModifyDomainDNSBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainDNSBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainDNSBatchResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class DomainClient extends AbstractClient{
     public ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(ModifyDomainOwnerBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainOwnerBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainOwnerBatchResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ public class DomainClient extends AbstractClient{
     public RenewDomainBatchResponse RenewDomainBatch(RenewDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDomainBatchResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ public class DomainClient extends AbstractClient{
     public SendPhoneEmailCodeResponse SendPhoneEmailCode(SendPhoneEmailCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendPhoneEmailCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendPhoneEmailCodeResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ public class DomainClient extends AbstractClient{
     public SetDomainAutoRenewResponse SetDomainAutoRenew(SetDomainAutoRenewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetDomainAutoRenewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetDomainAutoRenewResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ public class DomainClient extends AbstractClient{
     public TransferInDomainBatchResponse TransferInDomainBatch(TransferInDomainBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransferInDomainBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransferInDomainBatchResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ public class DomainClient extends AbstractClient{
     public TransferProhibitionBatchResponse TransferProhibitionBatch(TransferProhibitionBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransferProhibitionBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransferProhibitionBatchResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ public class DomainClient extends AbstractClient{
     public UpdateProhibitionBatchResponse UpdateProhibitionBatch(UpdateProhibitionBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProhibitionBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProhibitionBatchResponse>>() {
                 }.getType();
@@ -550,6 +575,7 @@ public class DomainClient extends AbstractClient{
     public UploadImageResponse UploadImage(UploadImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadImageResponse>>() {
                 }.getType();

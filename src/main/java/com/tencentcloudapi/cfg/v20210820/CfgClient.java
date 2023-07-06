@@ -29,7 +29,7 @@ public class CfgClient extends AbstractClient{
     private static String endpoint = "cfg.tencentcloudapi.com";
     private static String service = "cfg";
     private static String version = "2021-08-20";
-
+    
     public CfgClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CfgClient extends AbstractClient{
     public CreateTaskFromTemplateResponse CreateTaskFromTemplate(CreateTaskFromTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskFromTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskFromTemplateResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CfgClient extends AbstractClient{
     public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CfgClient extends AbstractClient{
     public DescribeTaskResponse DescribeTask(DescribeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CfgClient extends AbstractClient{
     public DescribeTaskExecuteLogsResponse DescribeTaskExecuteLogs(DescribeTaskExecuteLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskExecuteLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskExecuteLogsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CfgClient extends AbstractClient{
     public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CfgClient extends AbstractClient{
     public DescribeTemplateResponse DescribeTemplate(DescribeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CfgClient extends AbstractClient{
     public DescribeTemplateListResponse DescribeTemplateList(DescribeTemplateListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateListResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CfgClient extends AbstractClient{
     public ExecuteTaskResponse ExecuteTask(ExecuteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteTaskResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CfgClient extends AbstractClient{
     public ExecuteTaskInstanceResponse ExecuteTaskInstance(ExecuteTaskInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteTaskInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteTaskInstanceResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CfgClient extends AbstractClient{
     public ModifyTaskRunStatusResponse ModifyTaskRunStatus(ModifyTaskRunStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskRunStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskRunStatusResponse>>() {
                 }.getType();

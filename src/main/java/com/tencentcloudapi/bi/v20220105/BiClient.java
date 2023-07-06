@@ -29,7 +29,7 @@ public class BiClient extends AbstractClient{
     private static String endpoint = "bi.tencentcloudapi.com";
     private static String service = "bi";
     private static String version = "2022-01-05";
-
+    
     public BiClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BiClient extends AbstractClient{
     public ApplyEmbedIntervalResponse ApplyEmbedInterval(ApplyEmbedIntervalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyEmbedIntervalResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyEmbedIntervalResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BiClient extends AbstractClient{
     public CreateEmbedTokenResponse CreateEmbedToken(CreateEmbedTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEmbedTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEmbedTokenResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class PartnersClient extends AbstractClient{
     private static String endpoint = "partners.tencentcloudapi.com";
     private static String service = "partners";
     private static String version = "2018-03-21";
-
+    
     public PartnersClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class PartnersClient extends AbstractClient{
     public AgentPayDealsResponse AgentPayDeals(AgentPayDealsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AgentPayDealsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AgentPayDealsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class PartnersClient extends AbstractClient{
     public AgentTransferMoneyResponse AgentTransferMoney(AgentTransferMoneyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AgentTransferMoneyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AgentTransferMoneyResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ public class PartnersClient extends AbstractClient{
     public AssignClientsToSalesResponse AssignClientsToSales(AssignClientsToSalesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssignClientsToSalesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssignClientsToSalesResponse>>() {
                 }.getType();
@@ -110,6 +113,7 @@ public class PartnersClient extends AbstractClient{
     public AuditApplyClientResponse AuditApplyClient(AuditApplyClientRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuditApplyClientResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuditApplyClientResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ public class PartnersClient extends AbstractClient{
     public CreatePayRelationForClientResponse CreatePayRelationForClient(CreatePayRelationForClientRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePayRelationForClientResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePayRelationForClientResponse>>() {
                 }.getType();
@@ -150,6 +155,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentAuditedClientsResponse DescribeAgentAuditedClients(DescribeAgentAuditedClientsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentAuditedClientsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentAuditedClientsResponse>>() {
                 }.getType();
@@ -170,6 +176,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentBillsResponse DescribeAgentBills(DescribeAgentBillsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentBillsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentBillsResponse>>() {
                 }.getType();
@@ -190,6 +197,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentClientGradeResponse DescribeAgentClientGrade(DescribeAgentClientGradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentClientGradeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentClientGradeResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentClientsResponse DescribeAgentClients(DescribeAgentClientsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentClientsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentClientsResponse>>() {
                 }.getType();
@@ -230,6 +239,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(DescribeAgentDealsByCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentDealsByCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentDealsByCacheResponse>>() {
                 }.getType();
@@ -250,6 +260,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(DescribeAgentPayDealsV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentPayDealsV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentPayDealsV2Response>>() {
                 }.getType();
@@ -270,6 +281,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(DescribeAgentSelfPayDealsV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentSelfPayDealsV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentSelfPayDealsV2Response>>() {
                 }.getType();
@@ -290,6 +302,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeClientBalanceNewResponse DescribeClientBalanceNew(DescribeClientBalanceNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClientBalanceNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClientBalanceNewResponse>>() {
                 }.getType();
@@ -310,6 +323,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeRebateInfosResponse DescribeRebateInfos(DescribeRebateInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRebateInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRebateInfosResponse>>() {
                 }.getType();
@@ -330,6 +344,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeRebateInfosNewResponse DescribeRebateInfosNew(DescribeRebateInfosNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRebateInfosNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRebateInfosNewResponse>>() {
                 }.getType();
@@ -350,6 +365,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeSalesmansResponse DescribeSalesmans(DescribeSalesmansRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSalesmansResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSalesmansResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ public class PartnersClient extends AbstractClient{
     public DescribeUnbindClientListResponse DescribeUnbindClientList(DescribeUnbindClientListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUnbindClientListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUnbindClientListResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ public class PartnersClient extends AbstractClient{
     public ModifyClientRemarkResponse ModifyClientRemark(ModifyClientRemarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClientRemarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClientRemarkResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ public class PartnersClient extends AbstractClient{
     public RemovePayRelationForClientResponse RemovePayRelationForClient(RemovePayRelationForClientRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemovePayRelationForClientResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemovePayRelationForClientResponse>>() {
                 }.getType();

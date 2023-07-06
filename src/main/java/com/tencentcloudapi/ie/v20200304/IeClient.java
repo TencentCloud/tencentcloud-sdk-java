@@ -29,7 +29,7 @@ public class IeClient extends AbstractClient{
     private static String endpoint = "ie.tencentcloudapi.com";
     private static String service = "ie";
     private static String version = "2020-03-04";
-
+    
     public IeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IeClient extends AbstractClient{
     public CreateEditingTaskResponse CreateEditingTask(CreateEditingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEditingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEditingTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IeClient extends AbstractClient{
     public CreateMediaProcessTaskResponse CreateMediaProcessTask(CreateMediaProcessTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMediaProcessTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMediaProcessTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IeClient extends AbstractClient{
     public CreateMediaQualityRestorationTaskResponse CreateMediaQualityRestorationTask(CreateMediaQualityRestorationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMediaQualityRestorationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMediaQualityRestorationTaskResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IeClient extends AbstractClient{
     public CreateQualityControlTaskResponse CreateQualityControlTask(CreateQualityControlTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateQualityControlTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateQualityControlTaskResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class IeClient extends AbstractClient{
     public DescribeEditingTaskResultResponse DescribeEditingTaskResult(DescribeEditingTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEditingTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEditingTaskResultResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class IeClient extends AbstractClient{
     public DescribeMediaProcessTaskResultResponse DescribeMediaProcessTaskResult(DescribeMediaProcessTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaProcessTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessTaskResultResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class IeClient extends AbstractClient{
     public DescribeMediaQualityRestorationTaskRusultResponse DescribeMediaQualityRestorationTaskRusult(DescribeMediaQualityRestorationTaskRusultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaQualityRestorationTaskRusultResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class IeClient extends AbstractClient{
     public DescribeQualityControlTaskResultResponse DescribeQualityControlTaskResult(DescribeQualityControlTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQualityControlTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityControlTaskResultResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class IeClient extends AbstractClient{
     public StopMediaProcessTaskResponse StopMediaProcessTask(StopMediaProcessTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMediaProcessTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMediaProcessTaskResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class IeClient extends AbstractClient{
     public StopMediaQualityRestorationTaskResponse StopMediaQualityRestorationTask(StopMediaQualityRestorationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMediaQualityRestorationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMediaQualityRestorationTaskResponse>>() {
                 }.getType();

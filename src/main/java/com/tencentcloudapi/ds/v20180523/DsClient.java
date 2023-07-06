@@ -29,7 +29,7 @@ public class DsClient extends AbstractClient{
     private static String endpoint = "ds.tencentcloudapi.com";
     private static String service = "ds";
     private static String version = "2018-05-23";
-
+    
     public DsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class DsClient extends AbstractClient{
     public CheckVcodeResponse CheckVcode(CheckVcodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckVcodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckVcodeResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class DsClient extends AbstractClient{
     public CreateContractByUploadResponse CreateContractByUpload(CreateContractByUploadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContractByUploadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContractByUploadResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class DsClient extends AbstractClient{
     public CreateEnterpriseAccountResponse CreateEnterpriseAccount(CreateEnterpriseAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnterpriseAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnterpriseAccountResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class DsClient extends AbstractClient{
     public CreatePersonalAccountResponse CreatePersonalAccount(CreatePersonalAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePersonalAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePersonalAccountResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class DsClient extends AbstractClient{
     public CreateSealResponse CreateSeal(CreateSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSealResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSealResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class DsClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountResponse>>() {
                 }.getType();
@@ -169,6 +175,7 @@ public class DsClient extends AbstractClient{
     public DeleteSealResponse DeleteSeal(DeleteSealRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSealResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSealResponse>>() {
                 }.getType();
@@ -189,6 +196,7 @@ public class DsClient extends AbstractClient{
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class DsClient extends AbstractClient{
     public DownloadContractResponse DownloadContract(DownloadContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadContractResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ public class DsClient extends AbstractClient{
     public SendVcodeResponse SendVcode(SendVcodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendVcodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendVcodeResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class DsClient extends AbstractClient{
     public SignContractByCoordinateResponse SignContractByCoordinate(SignContractByCoordinateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignContractByCoordinateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SignContractByCoordinateResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class DsClient extends AbstractClient{
     public SignContractByKeywordResponse SignContractByKeyword(SignContractByKeywordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SignContractByKeywordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SignContractByKeywordResponse>>() {
                 }.getType();

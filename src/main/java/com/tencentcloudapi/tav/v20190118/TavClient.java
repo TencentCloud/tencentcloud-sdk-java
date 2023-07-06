@@ -29,7 +29,7 @@ public class TavClient extends AbstractClient{
     private static String endpoint = "tav.tencentcloudapi.com";
     private static String service = "tav";
     private static String version = "2019-01-18";
-
+    
     public TavClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TavClient extends AbstractClient{
     public GetLocalEngineResponse GetLocalEngine(GetLocalEngineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLocalEngineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLocalEngineResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TavClient extends AbstractClient{
     public GetScanResultResponse GetScanResult(GetScanResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetScanResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetScanResultResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TavClient extends AbstractClient{
     public ScanFileResponse ScanFile(ScanFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScanFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScanFileResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TavClient extends AbstractClient{
     public ScanFileHashResponse ScanFileHash(ScanFileHashRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScanFileHashResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScanFileHashResponse>>() {
                 }.getType();

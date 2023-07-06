@@ -29,7 +29,7 @@ public class NlpClient extends AbstractClient{
     private static String endpoint = "nlp.tencentcloudapi.com";
     private static String service = "nlp";
     private static String version = "2019-04-08";
-
+    
     public NlpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class NlpClient extends AbstractClient{
     public AnalyzeSentimentResponse AnalyzeSentiment(AnalyzeSentimentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AnalyzeSentimentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AnalyzeSentimentResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class NlpClient extends AbstractClient{
     public AutoSummarizationResponse AutoSummarization(AutoSummarizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AutoSummarizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AutoSummarizationResponse>>() {
                 }.getType();
@@ -93,6 +95,7 @@ public class NlpClient extends AbstractClient{
     public ChatBotResponse ChatBot(ChatBotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChatBotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChatBotResponse>>() {
                 }.getType();
@@ -113,6 +116,7 @@ public class NlpClient extends AbstractClient{
     public ClassifyContentResponse ClassifyContent(ClassifyContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClassifyContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClassifyContentResponse>>() {
                 }.getType();
@@ -133,6 +137,7 @@ public class NlpClient extends AbstractClient{
     public ComposeCoupletResponse ComposeCouplet(ComposeCoupletRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ComposeCoupletResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ComposeCoupletResponse>>() {
                 }.getType();
@@ -153,6 +158,7 @@ public class NlpClient extends AbstractClient{
     public ComposePoetryResponse ComposePoetry(ComposePoetryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ComposePoetryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ComposePoetryResponse>>() {
                 }.getType();
@@ -175,6 +181,7 @@ public class NlpClient extends AbstractClient{
     public CreateDictResponse CreateDict(CreateDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDictResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDictResponse>>() {
                 }.getType();
@@ -197,6 +204,7 @@ public class NlpClient extends AbstractClient{
     public CreateWordItemsResponse CreateWordItems(CreateWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWordItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWordItemsResponse>>() {
                 }.getType();
@@ -219,6 +227,7 @@ public class NlpClient extends AbstractClient{
     public DeleteDictResponse DeleteDict(DeleteDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDictResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDictResponse>>() {
                 }.getType();
@@ -241,6 +250,7 @@ public class NlpClient extends AbstractClient{
     public DeleteWordItemsResponse DeleteWordItems(DeleteWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWordItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWordItemsResponse>>() {
                 }.getType();
@@ -263,6 +273,7 @@ public class NlpClient extends AbstractClient{
     public DependencyParsingResponse DependencyParsing(DependencyParsingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DependencyParsingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DependencyParsingResponse>>() {
                 }.getType();
@@ -285,6 +296,7 @@ public class NlpClient extends AbstractClient{
     public DescribeDictResponse DescribeDict(DescribeDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDictResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDictResponse>>() {
                 }.getType();
@@ -307,6 +319,7 @@ public class NlpClient extends AbstractClient{
     public DescribeDictsResponse DescribeDicts(DescribeDictsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDictsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDictsResponse>>() {
                 }.getType();
@@ -329,6 +342,7 @@ public class NlpClient extends AbstractClient{
     public DescribeWordItemsResponse DescribeWordItems(DescribeWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWordItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWordItemsResponse>>() {
                 }.getType();
@@ -349,6 +363,7 @@ public class NlpClient extends AbstractClient{
     public EvaluateSentenceSimilarityResponse EvaluateSentenceSimilarity(EvaluateSentenceSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EvaluateSentenceSimilarityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EvaluateSentenceSimilarityResponse>>() {
                 }.getType();
@@ -369,6 +384,7 @@ public class NlpClient extends AbstractClient{
     public EvaluateWordSimilarityResponse EvaluateWordSimilarity(EvaluateWordSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EvaluateWordSimilarityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EvaluateWordSimilarityResponse>>() {
                 }.getType();
@@ -391,6 +407,7 @@ public class NlpClient extends AbstractClient{
     public GenerateCoupletResponse GenerateCouplet(GenerateCoupletRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateCoupletResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateCoupletResponse>>() {
                 }.getType();
@@ -411,6 +428,7 @@ public class NlpClient extends AbstractClient{
     public GenerateKeywordSentenceResponse GenerateKeywordSentence(GenerateKeywordSentenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateKeywordSentenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateKeywordSentenceResponse>>() {
                 }.getType();
@@ -433,6 +451,7 @@ public class NlpClient extends AbstractClient{
     public GeneratePoetryResponse GeneratePoetry(GeneratePoetryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GeneratePoetryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GeneratePoetryResponse>>() {
                 }.getType();
@@ -455,6 +474,7 @@ public class NlpClient extends AbstractClient{
     public KeywordsExtractionResponse KeywordsExtraction(KeywordsExtractionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KeywordsExtractionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KeywordsExtractionResponse>>() {
                 }.getType();
@@ -485,6 +505,7 @@ public class NlpClient extends AbstractClient{
     public LexicalAnalysisResponse LexicalAnalysis(LexicalAnalysisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LexicalAnalysisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LexicalAnalysisResponse>>() {
                 }.getType();
@@ -505,6 +526,7 @@ public class NlpClient extends AbstractClient{
     public ParseWordsResponse ParseWords(ParseWordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ParseWordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ParseWordsResponse>>() {
                 }.getType();
@@ -525,6 +547,7 @@ public class NlpClient extends AbstractClient{
     public RetrieveSimilarWordsResponse RetrieveSimilarWords(RetrieveSimilarWordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RetrieveSimilarWordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RetrieveSimilarWordsResponse>>() {
                 }.getType();
@@ -547,6 +570,7 @@ public class NlpClient extends AbstractClient{
     public SearchWordItemsResponse SearchWordItems(SearchWordItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchWordItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchWordItemsResponse>>() {
                 }.getType();
@@ -567,6 +591,7 @@ public class NlpClient extends AbstractClient{
     public SentenceCorrectionResponse SentenceCorrection(SentenceCorrectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentenceCorrectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SentenceCorrectionResponse>>() {
                 }.getType();
@@ -591,6 +616,7 @@ public class NlpClient extends AbstractClient{
     public SentenceEmbeddingResponse SentenceEmbedding(SentenceEmbeddingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentenceEmbeddingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SentenceEmbeddingResponse>>() {
                 }.getType();
@@ -615,6 +641,7 @@ public class NlpClient extends AbstractClient{
     public SentimentAnalysisResponse SentimentAnalysis(SentimentAnalysisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SentimentAnalysisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SentimentAnalysisResponse>>() {
                 }.getType();
@@ -637,6 +664,7 @@ public class NlpClient extends AbstractClient{
     public SimilarWordsResponse SimilarWords(SimilarWordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SimilarWordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SimilarWordsResponse>>() {
                 }.getType();
@@ -665,6 +693,7 @@ public class NlpClient extends AbstractClient{
     public TextClassificationResponse TextClassification(TextClassificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextClassificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextClassificationResponse>>() {
                 }.getType();
@@ -689,6 +718,7 @@ public class NlpClient extends AbstractClient{
     public TextCorrectionResponse TextCorrection(TextCorrectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextCorrectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextCorrectionResponse>>() {
                 }.getType();
@@ -713,6 +743,7 @@ public class NlpClient extends AbstractClient{
     public TextCorrectionProResponse TextCorrectionPro(TextCorrectionProRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextCorrectionProResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextCorrectionProResponse>>() {
                 }.getType();
@@ -733,6 +764,7 @@ public class NlpClient extends AbstractClient{
     public TextEmbellishResponse TextEmbellish(TextEmbellishRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextEmbellishResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextEmbellishResponse>>() {
                 }.getType();
@@ -759,6 +791,7 @@ public class NlpClient extends AbstractClient{
     public TextSimilarityResponse TextSimilarity(TextSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextSimilarityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityResponse>>() {
                 }.getType();
@@ -785,6 +818,7 @@ public class NlpClient extends AbstractClient{
     public TextSimilarityProResponse TextSimilarityPro(TextSimilarityProRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextSimilarityProResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextSimilarityProResponse>>() {
                 }.getType();
@@ -805,6 +839,7 @@ public class NlpClient extends AbstractClient{
     public TextWritingResponse TextWriting(TextWritingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextWritingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextWritingResponse>>() {
                 }.getType();
@@ -827,6 +862,7 @@ public class NlpClient extends AbstractClient{
     public UpdateDictResponse UpdateDict(UpdateDictRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDictResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDictResponse>>() {
                 }.getType();
@@ -852,6 +888,7 @@ public class NlpClient extends AbstractClient{
     public WordEmbeddingResponse WordEmbedding(WordEmbeddingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WordEmbeddingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<WordEmbeddingResponse>>() {
                 }.getType();
@@ -874,6 +911,7 @@ public class NlpClient extends AbstractClient{
     public WordSimilarityResponse WordSimilarity(WordSimilarityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WordSimilarityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<WordSimilarityResponse>>() {
                 }.getType();

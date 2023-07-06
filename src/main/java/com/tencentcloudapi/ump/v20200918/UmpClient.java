@@ -29,7 +29,7 @@ public class UmpClient extends AbstractClient{
     private static String endpoint = "ump.tencentcloudapi.com";
     private static String service = "ump";
     private static String version = "2020-09-18";
-
+    
     public UmpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class UmpClient extends AbstractClient{
     public CreateCameraAlertsResponse CreateCameraAlerts(CreateCameraAlertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCameraAlertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCameraAlertsResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class UmpClient extends AbstractClient{
     public CreateCameraStateResponse CreateCameraState(CreateCameraStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCameraStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCameraStateResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class UmpClient extends AbstractClient{
     public CreateCaptureResponse CreateCapture(CreateCaptureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCaptureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCaptureResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class UmpClient extends AbstractClient{
     public CreateMultiBizAlertResponse CreateMultiBizAlert(CreateMultiBizAlertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMultiBizAlertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMultiBizAlertResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class UmpClient extends AbstractClient{
     public CreateProgramStateResponse CreateProgramState(CreateProgramStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProgramStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProgramStateResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class UmpClient extends AbstractClient{
     public CreateServerStateResponse CreateServerState(CreateServerStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServerStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServerStateResponse>>() {
                 }.getType();
@@ -169,6 +175,7 @@ public class UmpClient extends AbstractClient{
     public DeleteMultiBizAlertResponse DeleteMultiBizAlert(DeleteMultiBizAlertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMultiBizAlertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMultiBizAlertResponse>>() {
                 }.getType();
@@ -189,6 +196,7 @@ public class UmpClient extends AbstractClient{
     public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class UmpClient extends AbstractClient{
     public DescribeCamerasResponse DescribeCameras(DescribeCamerasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCamerasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCamerasResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public DescribeImageResponse DescribeImage(DescribeImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImageResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public DescribeMultiBizBaseImageResponse DescribeMultiBizBaseImage(DescribeMultiBizBaseImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMultiBizBaseImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMultiBizBaseImageResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -311,6 +324,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZonesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
                 }.getType();
@@ -331,6 +345,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public ModifyMultiBizConfigResponse ModifyMultiBizConfig(ModifyMultiBizConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMultiBizConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMultiBizConfigResponse>>() {
                 }.getType();
@@ -351,6 +366,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public ReportServiceRegisterResponse ReportServiceRegister(ReportServiceRegisterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportServiceRegisterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportServiceRegisterResponse>>() {
                 }.getType();
@@ -371,6 +387,7 @@ mac为空返回对应GroupCode和MallId全量配置
     public SearchImageResponse SearchImage(SearchImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchImageResponse>>() {
                 }.getType();

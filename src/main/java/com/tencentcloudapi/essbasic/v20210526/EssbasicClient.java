@@ -29,7 +29,7 @@ public class EssbasicClient extends AbstractClient{
     private static String endpoint = "essbasic.tencentcloudapi.com";
     private static String service = "essbasic";
     private static String version = "2021-05-26";
-
+    
     public EssbasicClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -55,6 +55,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelBatchCancelFlowsResponse ChannelBatchCancelFlows(ChannelBatchCancelFlowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelBatchCancelFlowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelBatchCancelFlowsResponse>>() {
                 }.getType();
@@ -77,6 +78,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCancelFlowResponse ChannelCancelFlow(ChannelCancelFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCancelFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCancelFlowResponse>>() {
                 }.getType();
@@ -97,6 +99,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCancelMultiFlowSignQRCodeResponse ChannelCancelMultiFlowSignQRCode(ChannelCancelMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse>>() {
                 }.getType();
@@ -122,6 +125,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrl(ChannelCreateBatchCancelFlowUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse>>() {
                 }.getType();
@@ -142,6 +146,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateBoundFlowsResponse ChannelCreateBoundFlows(ChannelCreateBoundFlowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateBoundFlowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateBoundFlowsResponse>>() {
                 }.getType();
@@ -162,6 +167,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApi(ChannelCreateConvertTaskApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateConvertTaskApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateConvertTaskApiResponse>>() {
                 }.getType();
@@ -184,6 +190,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(ChannelCreateEmbedWebUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateEmbedWebUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateEmbedWebUrlResponse>>() {
                 }.getType();
@@ -204,6 +211,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateFlowByFilesResponse ChannelCreateFlowByFiles(ChannelCreateFlowByFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateFlowByFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowByFilesResponse>>() {
                 }.getType();
@@ -224,6 +232,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFiles(ChannelCreateFlowGroupByFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateFlowGroupByFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowGroupByFilesResponse>>() {
                 }.getType();
@@ -247,6 +256,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateFlowRemindsResponse ChannelCreateFlowReminds(ChannelCreateFlowRemindsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateFlowRemindsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowRemindsResponse>>() {
                 }.getType();
@@ -271,6 +281,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateFlowSignReviewResponse ChannelCreateFlowSignReview(ChannelCreateFlowSignReviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateFlowSignReviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowSignReviewResponse>>() {
                 }.getType();
@@ -295,6 +306,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateFlowSignUrlResponse ChannelCreateFlowSignUrl(ChannelCreateFlowSignUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateFlowSignUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowSignUrlResponse>>() {
                 }.getType();
@@ -323,6 +335,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCode(ChannelCreateMultiFlowSignQRCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>() {
                 }.getType();
@@ -347,6 +360,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreatePrepareFlowResponse ChannelCreatePrepareFlow(ChannelCreatePrepareFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreatePrepareFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreatePrepareFlowResponse>>() {
                 }.getType();
@@ -368,6 +382,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(ChannelCreateReleaseFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateReleaseFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateReleaseFlowResponse>>() {
                 }.getType();
@@ -388,6 +403,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateSealPolicyResponse ChannelCreateSealPolicy(ChannelCreateSealPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateSealPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateSealPolicyResponse>>() {
                 }.getType();
@@ -408,6 +424,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelCreateUserRolesResponse ChannelCreateUserRoles(ChannelCreateUserRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelCreateUserRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelCreateUserRolesResponse>>() {
                 }.getType();
@@ -428,6 +445,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDeleteRoleUsersResponse ChannelDeleteRoleUsers(ChannelDeleteRoleUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDeleteRoleUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDeleteRoleUsersResponse>>() {
                 }.getType();
@@ -448,6 +466,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDeleteSealPoliciesResponse ChannelDeleteSealPolicies(ChannelDeleteSealPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDeleteSealPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDeleteSealPoliciesResponse>>() {
                 }.getType();
@@ -468,6 +487,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDescribeEmployeesResponse ChannelDescribeEmployees(ChannelDescribeEmployeesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDescribeEmployeesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDescribeEmployeesResponse>>() {
                 }.getType();
@@ -488,6 +508,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDescribeFlowComponentsResponse ChannelDescribeFlowComponents(ChannelDescribeFlowComponentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDescribeFlowComponentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDescribeFlowComponentsResponse>>() {
                 }.getType();
@@ -509,6 +530,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDescribeOrganizationSealsResponse ChannelDescribeOrganizationSeals(ChannelDescribeOrganizationSealsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDescribeOrganizationSealsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDescribeOrganizationSealsResponse>>() {
                 }.getType();
@@ -529,6 +551,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelDescribeRolesResponse ChannelDescribeRoles(ChannelDescribeRolesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelDescribeRolesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelDescribeRolesResponse>>() {
                 }.getType();
@@ -549,6 +572,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelGetTaskResultApiResponse ChannelGetTaskResultApi(ChannelGetTaskResultApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelGetTaskResultApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelGetTaskResultApiResponse>>() {
                 }.getType();
@@ -569,6 +593,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(ChannelUpdateSealStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelUpdateSealStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelUpdateSealStatusResponse>>() {
                 }.getType();
@@ -589,6 +614,7 @@ public class EssbasicClient extends AbstractClient{
     public ChannelVerifyPdfResponse ChannelVerifyPdf(ChannelVerifyPdfRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChannelVerifyPdfResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChannelVerifyPdfResponse>>() {
                 }.getType();
@@ -610,6 +636,7 @@ public class EssbasicClient extends AbstractClient{
     public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>() {
                 }.getType();
@@ -633,6 +660,7 @@ public class EssbasicClient extends AbstractClient{
     public CreateConsoleLoginUrlResponse CreateConsoleLoginUrl(CreateConsoleLoginUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConsoleLoginUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConsoleLoginUrlResponse>>() {
                 }.getType();
@@ -655,6 +683,7 @@ public class EssbasicClient extends AbstractClient{
     public CreateFlowsByTemplatesResponse CreateFlowsByTemplates(CreateFlowsByTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlowsByTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlowsByTemplatesResponse>>() {
                 }.getType();
@@ -675,6 +704,7 @@ public class EssbasicClient extends AbstractClient{
     public CreateSealByImageResponse CreateSealByImage(CreateSealByImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSealByImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSealByImageResponse>>() {
                 }.getType();
@@ -717,6 +747,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public CreateSignUrlsResponse CreateSignUrls(CreateSignUrlsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSignUrlsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSignUrlsResponse>>() {
                 }.getType();
@@ -737,6 +768,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeChannelFlowEvidenceReportResponse DescribeChannelFlowEvidenceReport(DescribeChannelFlowEvidenceReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelFlowEvidenceReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelFlowEvidenceReportResponse>>() {
                 }.getType();
@@ -757,6 +789,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeExtendedServiceAuthInfoResponse DescribeExtendedServiceAuthInfo(DescribeExtendedServiceAuthInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExtendedServiceAuthInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExtendedServiceAuthInfoResponse>>() {
                 }.getType();
@@ -777,6 +810,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeFlowDetailInfoResponse DescribeFlowDetailInfo(DescribeFlowDetailInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlowDetailInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowDetailInfoResponse>>() {
                 }.getType();
@@ -798,6 +832,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeResourceUrlsByFlowsResponse DescribeResourceUrlsByFlows(DescribeResourceUrlsByFlowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceUrlsByFlowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceUrlsByFlowsResponse>>() {
                 }.getType();
@@ -818,6 +853,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeTemplatesResponse DescribeTemplates(DescribeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplatesResponse>>() {
                 }.getType();
@@ -839,6 +875,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public DescribeUsageResponse DescribeUsage(DescribeUsageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsageResponse>>() {
                 }.getType();
@@ -861,6 +898,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public GetDownloadFlowUrlResponse GetDownloadFlowUrl(GetDownloadFlowUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDownloadFlowUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDownloadFlowUrlResponse>>() {
                 }.getType();
@@ -881,6 +919,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public ModifyExtendedServiceResponse ModifyExtendedService(ModifyExtendedServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyExtendedServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyExtendedServiceResponse>>() {
                 }.getType();
@@ -905,6 +944,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public OperateChannelTemplateResponse OperateChannelTemplate(OperateChannelTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OperateChannelTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OperateChannelTemplateResponse>>() {
                 }.getType();
@@ -927,6 +967,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public PrepareFlowsResponse PrepareFlows(PrepareFlowsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PrepareFlowsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PrepareFlowsResponse>>() {
                 }.getType();
@@ -947,6 +988,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public SyncProxyOrganizationResponse SyncProxyOrganization(SyncProxyOrganizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncProxyOrganizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncProxyOrganizationResponse>>() {
                 }.getType();
@@ -968,6 +1010,7 @@ https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchAp
     public SyncProxyOrganizationOperatorsResponse SyncProxyOrganizationOperators(SyncProxyOrganizationOperatorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncProxyOrganizationOperatorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncProxyOrganizationOperatorsResponse>>() {
                 }.getType();
@@ -993,6 +1036,7 @@ httpProfile.setEndpoint("file.test.ess.tencent.cn");
     public UploadFilesResponse UploadFiles(UploadFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadFilesResponse>>() {
                 }.getType();

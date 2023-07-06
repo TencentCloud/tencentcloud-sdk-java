@@ -29,7 +29,7 @@ public class TcaplusdbClient extends AbstractClient{
     private static String endpoint = "tcaplusdb.tencentcloudapi.com";
     private static String service = "tcaplusdb";
     private static String version = "2019-08-23";
-
+    
     public TcaplusdbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ClearTablesResponse ClearTables(ClearTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearTablesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CompareIdlFilesResponse CompareIdlFiles(CompareIdlFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompareIdlFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CompareIdlFilesResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CreateSnapshotsResponse CreateSnapshots(CreateSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CreateTableGroupResponse CreateTableGroup(CreateTableGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTableGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTableGroupResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TcaplusdbClient extends AbstractClient{
     public CreateTablesResponse CreateTables(CreateTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTablesResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteBackupRecordsResponse DeleteBackupRecords(DeleteBackupRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBackupRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupRecordsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteIdlFilesResponse DeleteIdlFiles(DeleteIdlFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIdlFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIdlFilesResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteTableDataFlowResponse DeleteTableDataFlow(DeleteTableDataFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTableDataFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTableDataFlowResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteTableGroupResponse DeleteTableGroup(DeleteTableGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTableGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTableGroupResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteTableIndexResponse DeleteTableIndex(DeleteTableIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTableIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTableIndexResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DeleteTablesResponse DeleteTables(DeleteTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTablesResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
                 }.getType();
@@ -371,6 +387,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeBackupRecordsResponse DescribeBackupRecords(DescribeBackupRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackupRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupRecordsResponse>>() {
                 }.getType();
@@ -391,6 +408,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeClusterTagsResponse DescribeClusterTags(DescribeClusterTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterTagsResponse>>() {
                 }.getType();
@@ -411,6 +429,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -431,6 +450,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeIdlFileInfosResponse DescribeIdlFileInfos(DescribeIdlFileInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIdlFileInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIdlFileInfosResponse>>() {
                 }.getType();
@@ -451,6 +471,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeMachineResponse DescribeMachine(DescribeMachineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMachineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMachineResponse>>() {
                 }.getType();
@@ -471,6 +492,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -491,6 +513,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
                 }.getType();
@@ -511,6 +534,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTableGroupTagsResponse DescribeTableGroupTags(DescribeTableGroupTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableGroupTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableGroupTagsResponse>>() {
                 }.getType();
@@ -531,6 +555,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTableGroupsResponse DescribeTableGroups(DescribeTableGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableGroupsResponse>>() {
                 }.getType();
@@ -551,6 +576,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTableTagsResponse DescribeTableTags(DescribeTableTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableTagsResponse>>() {
                 }.getType();
@@ -571,6 +597,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
                 }.getType();
@@ -591,6 +618,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTablesInRecycleResponse DescribeTablesInRecycle(DescribeTablesInRecycleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesInRecycleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesInRecycleResponse>>() {
                 }.getType();
@@ -611,6 +639,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -631,6 +660,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DescribeUinInWhitelistResponse DescribeUinInWhitelist(DescribeUinInWhitelistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUinInWhitelistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUinInWhitelistResponse>>() {
                 }.getType();
@@ -651,6 +681,7 @@ public class TcaplusdbClient extends AbstractClient{
     public DisableRestProxyResponse DisableRestProxy(DisableRestProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableRestProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableRestProxyResponse>>() {
                 }.getType();
@@ -671,6 +702,7 @@ public class TcaplusdbClient extends AbstractClient{
     public EnableRestProxyResponse EnableRestProxy(EnableRestProxyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableRestProxyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableRestProxyResponse>>() {
                 }.getType();
@@ -691,6 +723,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ImportSnapshotsResponse ImportSnapshots(ImportSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportSnapshotsResponse>>() {
                 }.getType();
@@ -711,6 +744,7 @@ public class TcaplusdbClient extends AbstractClient{
     public MergeTablesDataResponse MergeTablesData(MergeTablesDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MergeTablesDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MergeTablesDataResponse>>() {
                 }.getType();
@@ -731,6 +765,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyCensorshipResponse ModifyCensorship(ModifyCensorshipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCensorshipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCensorshipResponse>>() {
                 }.getType();
@@ -751,6 +786,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterMachineResponse>>() {
                 }.getType();
@@ -771,6 +807,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyClusterNameResponse ModifyClusterName(ModifyClusterNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterNameResponse>>() {
                 }.getType();
@@ -791,6 +828,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyClusterPasswordResponse ModifyClusterPassword(ModifyClusterPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterPasswordResponse>>() {
                 }.getType();
@@ -811,6 +849,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterTagsResponse>>() {
                 }.getType();
@@ -831,6 +870,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifySnapshotsResponse ModifySnapshots(ModifySnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotsResponse>>() {
                 }.getType();
@@ -851,6 +891,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTableGroupNameResponse ModifyTableGroupName(ModifyTableGroupNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTableGroupNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTableGroupNameResponse>>() {
                 }.getType();
@@ -871,6 +912,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTableGroupTagsResponse ModifyTableGroupTags(ModifyTableGroupTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTableGroupTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTableGroupTagsResponse>>() {
                 }.getType();
@@ -891,6 +933,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTableMemosResponse ModifyTableMemos(ModifyTableMemosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTableMemosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTableMemosResponse>>() {
                 }.getType();
@@ -911,6 +954,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTableQuotasResponse ModifyTableQuotas(ModifyTableQuotasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTableQuotasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTableQuotasResponse>>() {
                 }.getType();
@@ -931,6 +975,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTableTagsResponse ModifyTableTags(ModifyTableTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTableTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTableTagsResponse>>() {
                 }.getType();
@@ -951,6 +996,7 @@ public class TcaplusdbClient extends AbstractClient{
     public ModifyTablesResponse ModifyTables(ModifyTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTablesResponse>>() {
                 }.getType();
@@ -971,6 +1017,7 @@ public class TcaplusdbClient extends AbstractClient{
     public RecoverRecycleTablesResponse RecoverRecycleTables(RecoverRecycleTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecoverRecycleTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecoverRecycleTablesResponse>>() {
                 }.getType();
@@ -991,6 +1038,7 @@ public class TcaplusdbClient extends AbstractClient{
     public RollbackTablesResponse RollbackTables(RollbackTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollbackTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
@@ -1011,6 +1059,7 @@ public class TcaplusdbClient extends AbstractClient{
     public SetBackupExpireRuleResponse SetBackupExpireRule(SetBackupExpireRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetBackupExpireRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetBackupExpireRuleResponse>>() {
                 }.getType();
@@ -1031,6 +1080,7 @@ public class TcaplusdbClient extends AbstractClient{
     public SetTableDataFlowResponse SetTableDataFlow(SetTableDataFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetTableDataFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetTableDataFlowResponse>>() {
                 }.getType();
@@ -1051,6 +1101,7 @@ public class TcaplusdbClient extends AbstractClient{
     public SetTableIndexResponse SetTableIndex(SetTableIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetTableIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetTableIndexResponse>>() {
                 }.getType();
@@ -1071,6 +1122,7 @@ public class TcaplusdbClient extends AbstractClient{
     public UpdateApplyResponse UpdateApply(UpdateApplyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApplyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApplyResponse>>() {
                 }.getType();
@@ -1091,6 +1143,7 @@ public class TcaplusdbClient extends AbstractClient{
     public VerifyIdlFilesResponse VerifyIdlFiles(VerifyIdlFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyIdlFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyIdlFilesResponse>>() {
                 }.getType();

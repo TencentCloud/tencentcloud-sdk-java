@@ -72,6 +72,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Boolean EnableCosMAZ;
 
     /**
+    * 是否开启实例删除保护
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get 企业版实例名称 
      * @return RegistryName 企业版实例名称
      */
@@ -183,6 +190,22 @@ public class CreateInstanceRequest extends AbstractModel{
         this.EnableCosMAZ = EnableCosMAZ;
     }
 
+    /**
+     * Get 是否开启实例删除保护 
+     * @return DeletionProtection 是否开启实例删除保护
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 是否开启实例删除保护
+     * @param DeletionProtection 是否开启实例删除保护
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.EnableCosMAZ != null) {
             this.EnableCosMAZ = new Boolean(source.EnableCosMAZ);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
         this.setParamSimple(map, prefix + "EnableCosMAZ", this.EnableCosMAZ);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

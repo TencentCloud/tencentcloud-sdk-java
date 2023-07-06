@@ -29,7 +29,7 @@ public class TafClient extends AbstractClient{
     private static String endpoint = "taf.tencentcloudapi.com";
     private static String service = "taf";
     private static String version = "2020-02-10";
-
+    
     public TafClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TafClient extends AbstractClient{
     public RecognizeCustomizedAudienceResponse RecognizeCustomizedAudience(RecognizeCustomizedAudienceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeCustomizedAudienceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeCustomizedAudienceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TafClient extends AbstractClient{
     public RecognizePreciseTargetAudienceResponse RecognizePreciseTargetAudience(RecognizePreciseTargetAudienceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizePreciseTargetAudienceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizePreciseTargetAudienceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TafClient extends AbstractClient{
     public RecognizeTargetAudienceResponse RecognizeTargetAudience(RecognizeTargetAudienceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RecognizeTargetAudienceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RecognizeTargetAudienceResponse>>() {
                 }.getType();

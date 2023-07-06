@@ -29,7 +29,7 @@ public class TrpClient extends AbstractClient{
     private static String endpoint = "trp.tencentcloudapi.com";
     private static String service = "trp";
     private static String version = "2021-05-15";
-
+    
     public TrpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TrpClient extends AbstractClient{
     public AuthorizedTransferResponse AuthorizedTransfer(AuthorizedTransferRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuthorizedTransferResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuthorizedTransferResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TrpClient extends AbstractClient{
     public CreateCodeBatchResponse CreateCodeBatch(CreateCodeBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCodeBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCodeBatchResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TrpClient extends AbstractClient{
     public CreateCodePackResponse CreateCodePack(CreateCodePackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCodePackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCodePackResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TrpClient extends AbstractClient{
     public CreateCorporationOrderResponse CreateCorporationOrder(CreateCorporationOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCorporationOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCorporationOrderResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TrpClient extends AbstractClient{
     public CreateCustomPackResponse CreateCustomPack(CreateCustomPackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomPackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomPackResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TrpClient extends AbstractClient{
     public CreateCustomRuleResponse CreateCustomRule(CreateCustomRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomRuleResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TrpClient extends AbstractClient{
     public CreateMerchantResponse CreateMerchant(CreateMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMerchantResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TrpClient extends AbstractClient{
     public CreateProductResponse CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TrpClient extends AbstractClient{
     public CreateTraceChainResponse CreateTraceChain(CreateTraceChainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTraceChainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTraceChainResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TrpClient extends AbstractClient{
     public CreateTraceCodesResponse CreateTraceCodes(CreateTraceCodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTraceCodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTraceCodesResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TrpClient extends AbstractClient{
     public CreateTraceCodesAsyncResponse CreateTraceCodesAsync(CreateTraceCodesAsyncRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTraceCodesAsyncResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTraceCodesAsyncResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TrpClient extends AbstractClient{
     public CreateTraceDataResponse CreateTraceData(CreateTraceDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTraceDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTraceDataResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TrpClient extends AbstractClient{
     public DeleteCodeBatchResponse DeleteCodeBatch(DeleteCodeBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCodeBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCodeBatchResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TrpClient extends AbstractClient{
     public DeleteMerchantResponse DeleteMerchant(DeleteMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMerchantResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TrpClient extends AbstractClient{
     public DeleteProductResponse DeleteProduct(DeleteProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProductResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TrpClient extends AbstractClient{
     public DeleteTraceDataResponse DeleteTraceData(DeleteTraceDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTraceDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTraceDataResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TrpClient extends AbstractClient{
     public DescribeAgentCorpsResponse DescribeAgentCorps(DescribeAgentCorpsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAgentCorpsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAgentCorpsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodeBatchByIdResponse DescribeCodeBatchById(DescribeCodeBatchByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodeBatchByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodeBatchByIdResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodeBatchsResponse DescribeCodeBatchs(DescribeCodeBatchsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodeBatchsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodeBatchsResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodePackStatusResponse DescribeCodePackStatus(DescribeCodePackStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodePackStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodePackStatusResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodePackUrlResponse DescribeCodePackUrl(DescribeCodePackUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodePackUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodePackUrlResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodePacksResponse DescribeCodePacks(DescribeCodePacksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodePacksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodePacksResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCodesByPackResponse DescribeCodesByPack(DescribeCodesByPackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodesByPackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodesByPackResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCorpQuotasResponse DescribeCorpQuotas(DescribeCorpQuotasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCorpQuotasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCorpQuotasResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCustomRuleByIdResponse DescribeCustomRuleById(DescribeCustomRuleByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomRuleByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomRuleByIdResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TrpClient extends AbstractClient{
     public DescribeCustomRulesResponse DescribeCustomRules(DescribeCustomRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomRulesResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TrpClient extends AbstractClient{
     public DescribeJobFileUrlResponse DescribeJobFileUrl(DescribeJobFileUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobFileUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobFileUrlResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TrpClient extends AbstractClient{
     public DescribeMerchantByIdResponse DescribeMerchantById(DescribeMerchantByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMerchantByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMerchantByIdResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class TrpClient extends AbstractClient{
     public DescribeMerchantsResponse DescribeMerchants(DescribeMerchantsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMerchantsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMerchantsResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class TrpClient extends AbstractClient{
     public DescribeProductByIdResponse DescribeProductById(DescribeProductByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductByIdResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class TrpClient extends AbstractClient{
     public DescribeProductsResponse DescribeProducts(DescribeProductsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProductsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProductsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class TrpClient extends AbstractClient{
     public DescribeRawScanLogsResponse DescribeRawScanLogs(DescribeRawScanLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRawScanLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRawScanLogsResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class TrpClient extends AbstractClient{
     public DescribeScanLogsResponse DescribeScanLogs(DescribeScanLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanLogsResponse>>() {
                 }.getType();
@@ -708,6 +741,7 @@ public class TrpClient extends AbstractClient{
     public DescribeScanStatsResponse DescribeScanStats(DescribeScanStatsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanStatsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanStatsResponse>>() {
                 }.getType();
@@ -728,6 +762,7 @@ public class TrpClient extends AbstractClient{
     public DescribeTmpTokenResponse DescribeTmpToken(DescribeTmpTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTmpTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTmpTokenResponse>>() {
                 }.getType();
@@ -748,6 +783,7 @@ public class TrpClient extends AbstractClient{
     public DescribeTraceCodeByIdResponse DescribeTraceCodeById(DescribeTraceCodeByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTraceCodeByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTraceCodeByIdResponse>>() {
                 }.getType();
@@ -768,6 +804,7 @@ public class TrpClient extends AbstractClient{
     public DescribeTraceCodesResponse DescribeTraceCodes(DescribeTraceCodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTraceCodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTraceCodesResponse>>() {
                 }.getType();
@@ -788,6 +825,7 @@ public class TrpClient extends AbstractClient{
     public DescribeTraceDataByIdResponse DescribeTraceDataById(DescribeTraceDataByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTraceDataByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTraceDataByIdResponse>>() {
                 }.getType();
@@ -808,6 +846,7 @@ public class TrpClient extends AbstractClient{
     public DescribeTraceDataListResponse DescribeTraceDataList(DescribeTraceDataListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTraceDataListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTraceDataListResponse>>() {
                 }.getType();
@@ -828,6 +867,7 @@ public class TrpClient extends AbstractClient{
     public EffectFeedbackResponse EffectFeedback(EffectFeedbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EffectFeedbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EffectFeedbackResponse>>() {
                 }.getType();
@@ -848,6 +888,7 @@ public class TrpClient extends AbstractClient{
     public ModifyCodeBatchResponse ModifyCodeBatch(ModifyCodeBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCodeBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCodeBatchResponse>>() {
                 }.getType();
@@ -868,6 +909,7 @@ public class TrpClient extends AbstractClient{
     public ModifyCustomRuleResponse ModifyCustomRule(ModifyCustomRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleResponse>>() {
                 }.getType();
@@ -888,6 +930,7 @@ public class TrpClient extends AbstractClient{
     public ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(ModifyCustomRuleStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCustomRuleStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCustomRuleStatusResponse>>() {
                 }.getType();
@@ -908,6 +951,7 @@ public class TrpClient extends AbstractClient{
     public ModifyMerchantResponse ModifyMerchant(ModifyMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMerchantResponse>>() {
                 }.getType();
@@ -928,6 +972,7 @@ public class TrpClient extends AbstractClient{
     public ModifyProductResponse ModifyProduct(ModifyProductRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProductResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProductResponse>>() {
                 }.getType();
@@ -948,6 +993,7 @@ public class TrpClient extends AbstractClient{
     public ModifyTraceCodeResponse ModifyTraceCode(ModifyTraceCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTraceCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTraceCodeResponse>>() {
                 }.getType();
@@ -969,6 +1015,7 @@ public class TrpClient extends AbstractClient{
     public ModifyTraceCodeUnlinkResponse ModifyTraceCodeUnlink(ModifyTraceCodeUnlinkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTraceCodeUnlinkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTraceCodeUnlinkResponse>>() {
                 }.getType();
@@ -989,6 +1036,7 @@ public class TrpClient extends AbstractClient{
     public ModifyTraceDataResponse ModifyTraceData(ModifyTraceDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTraceDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTraceDataResponse>>() {
                 }.getType();
@@ -1009,6 +1057,7 @@ public class TrpClient extends AbstractClient{
     public ModifyTraceDataRanksResponse ModifyTraceDataRanks(ModifyTraceDataRanksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTraceDataRanksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTraceDataRanksResponse>>() {
                 }.getType();
@@ -1029,6 +1078,7 @@ public class TrpClient extends AbstractClient{
     public ReportBatchCallbackStatusResponse ReportBatchCallbackStatus(ReportBatchCallbackStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportBatchCallbackStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportBatchCallbackStatusResponse>>() {
                 }.getType();

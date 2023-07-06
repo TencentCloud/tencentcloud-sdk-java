@@ -29,7 +29,7 @@ public class ThpcClient extends AbstractClient{
     private static String endpoint = "thpc.tencentcloudapi.com";
     private static String service = "thpc";
     private static String version = "2023-03-21";
-
+    
     public ThpcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ThpcClient extends AbstractClient{
     public AddClusterStorageOptionResponse AddClusterStorageOption(AddClusterStorageOptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddClusterStorageOptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddClusterStorageOptionResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ThpcClient extends AbstractClient{
     public AddNodesResponse AddNodes(AddNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddNodesResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class ThpcClient extends AbstractClient{
     public AddQueueResponse AddQueue(AddQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddQueueResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class ThpcClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class ThpcClient extends AbstractClient{
     public DeleteClusterResponse DeleteCluster(DeleteClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class ThpcClient extends AbstractClient{
     public DeleteClusterStorageOptionResponse DeleteClusterStorageOption(DeleteClusterStorageOptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteClusterStorageOptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterStorageOptionResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class ThpcClient extends AbstractClient{
     public DeleteNodesResponse DeleteNodes(DeleteNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNodesResponse>>() {
                 }.getType();
@@ -194,6 +201,7 @@ public class ThpcClient extends AbstractClient{
     public DeleteQueueResponse DeleteQueue(DeleteQueueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteQueueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteQueueResponse>>() {
                 }.getType();
@@ -214,6 +222,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeAutoScalingConfigurationResponse DescribeAutoScalingConfiguration(DescribeAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingConfigurationResponse>>() {
                 }.getType();
@@ -234,6 +243,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeClusterActivitiesResponse DescribeClusterActivities(DescribeClusterActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterActivitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterActivitiesResponse>>() {
                 }.getType();
@@ -254,6 +264,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeClusterStorageOptionResponse DescribeClusterStorageOption(DescribeClusterStorageOptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterStorageOptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterStorageOptionResponse>>() {
                 }.getType();
@@ -274,6 +285,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
                 }.getType();
@@ -294,6 +306,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeInitNodeScriptsResponse DescribeInitNodeScripts(DescribeInitNodeScriptsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInitNodeScriptsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInitNodeScriptsResponse>>() {
                 }.getType();
@@ -314,6 +327,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeNodesResponse DescribeNodes(DescribeNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNodesResponse>>() {
                 }.getType();
@@ -334,6 +348,7 @@ public class ThpcClient extends AbstractClient{
     public DescribeQueuesResponse DescribeQueues(DescribeQueuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQueuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQueuesResponse>>() {
                 }.getType();
@@ -354,6 +369,7 @@ public class ThpcClient extends AbstractClient{
     public ModifyInitNodeScriptsResponse ModifyInitNodeScripts(ModifyInitNodeScriptsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInitNodeScriptsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInitNodeScriptsResponse>>() {
                 }.getType();
@@ -374,6 +390,7 @@ public class ThpcClient extends AbstractClient{
     public SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetAutoScalingConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetAutoScalingConfigurationResponse>>() {
                 }.getType();

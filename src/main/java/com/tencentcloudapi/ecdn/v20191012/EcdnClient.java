@@ -29,7 +29,7 @@ public class EcdnClient extends AbstractClient{
     private static String endpoint = "ecdn.tencentcloudapi.com";
     private static String service = "ecdn";
     private static String version = "2019-10-12";
-
+    
     public EcdnClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class EcdnClient extends AbstractClient{
     public AddEcdnDomainResponse AddEcdnDomain(AddEcdnDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddEcdnDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddEcdnDomainResponse>>() {
                 }.getType();
@@ -75,6 +76,7 @@ public class EcdnClient extends AbstractClient{
     public CreateVerifyRecordResponse CreateVerifyRecord(CreateVerifyRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVerifyRecordResponse>>() {
                 }.getType();
@@ -99,6 +101,7 @@ public class EcdnClient extends AbstractClient{
     public DeleteEcdnDomainResponse DeleteEcdnDomain(DeleteEcdnDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEcdnDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEcdnDomainResponse>>() {
                 }.getType();
@@ -121,6 +124,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
                 }.getType();
@@ -143,6 +147,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeDomainsConfigResponse DescribeDomainsConfig(DescribeDomainsConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainsConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainsConfigResponse>>() {
                 }.getType();
@@ -163,6 +168,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeEcdnDomainLogsResponse DescribeEcdnDomainLogs(DescribeEcdnDomainLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEcdnDomainLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEcdnDomainLogsResponse>>() {
                 }.getType();
@@ -185,6 +191,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeEcdnDomainStatisticsResponse DescribeEcdnDomainStatistics(DescribeEcdnDomainStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEcdnDomainStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEcdnDomainStatisticsResponse>>() {
                 }.getType();
@@ -213,6 +220,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeEcdnStatisticsResponse DescribeEcdnStatistics(DescribeEcdnStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEcdnStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEcdnStatisticsResponse>>() {
                 }.getType();
@@ -235,6 +243,7 @@ public class EcdnClient extends AbstractClient{
     public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
                 }.getType();
@@ -259,6 +268,7 @@ public class EcdnClient extends AbstractClient{
     public DescribePurgeQuotaResponse DescribePurgeQuota(DescribePurgeQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePurgeQuotaResponse>>() {
                 }.getType();
@@ -281,6 +291,7 @@ public class EcdnClient extends AbstractClient{
     public DescribePurgeTasksResponse DescribePurgeTasks(DescribePurgeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePurgeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
                 }.getType();
@@ -305,6 +316,7 @@ PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷�
     public PurgePathCacheResponse PurgePathCache(PurgePathCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PurgePathCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PurgePathCacheResponse>>() {
                 }.getType();
@@ -327,6 +339,7 @@ PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷�
     public PurgeUrlsCacheResponse PurgeUrlsCache(PurgeUrlsCacheRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PurgeUrlsCacheResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PurgeUrlsCacheResponse>>() {
                 }.getType();
@@ -351,6 +364,7 @@ PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷�
     public StartEcdnDomainResponse StartEcdnDomain(StartEcdnDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartEcdnDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartEcdnDomainResponse>>() {
                 }.getType();
@@ -375,6 +389,7 @@ PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷�
     public StopEcdnDomainResponse StopEcdnDomain(StopEcdnDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopEcdnDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopEcdnDomainResponse>>() {
                 }.getType();
@@ -401,6 +416,7 @@ PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷�
     public UpdateDomainConfigResponse UpdateDomainConfig(UpdateDomainConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDomainConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDomainConfigResponse>>() {
                 }.getType();

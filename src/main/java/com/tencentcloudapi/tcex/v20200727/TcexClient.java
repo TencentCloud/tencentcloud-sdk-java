@@ -29,7 +29,7 @@ public class TcexClient extends AbstractClient{
     private static String endpoint = "tcex.tencentcloudapi.com";
     private static String service = "tcex";
     private static String version = "2020-07-27";
-
+    
     public TcexClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class TcexClient extends AbstractClient{
     public DescribeInvocationResultResponse DescribeInvocationResult(DescribeInvocationResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationResultResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class TcexClient extends AbstractClient{
     public InvokeServiceResponse InvokeService(InvokeServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeServiceResponse>>() {
                 }.getType();

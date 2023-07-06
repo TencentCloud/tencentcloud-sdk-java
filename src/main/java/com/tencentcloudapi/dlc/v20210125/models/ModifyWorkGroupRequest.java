@@ -30,7 +30,7 @@ public class ModifyWorkGroupRequest extends AbstractModel{
     private Long WorkGroupId;
 
     /**
-    * 工作组描述
+    * 工作组描述，最大字符数限制50
     */
     @SerializedName("WorkGroupDescription")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyWorkGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 工作组描述 
-     * @return WorkGroupDescription 工作组描述
+     * Get 工作组描述，最大字符数限制50 
+     * @return WorkGroupDescription 工作组描述，最大字符数限制50
      */
     public String getWorkGroupDescription() {
         return this.WorkGroupDescription;
     }
 
     /**
-     * Set 工作组描述
-     * @param WorkGroupDescription 工作组描述
+     * Set 工作组描述，最大字符数限制50
+     * @param WorkGroupDescription 工作组描述，最大字符数限制50
      */
     public void setWorkGroupDescription(String WorkGroupDescription) {
         this.WorkGroupDescription = WorkGroupDescription;

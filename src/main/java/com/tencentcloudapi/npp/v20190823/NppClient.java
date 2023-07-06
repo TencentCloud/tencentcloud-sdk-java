@@ -29,7 +29,7 @@ public class NppClient extends AbstractClient{
     private static String endpoint = "npp.tencentcloudapi.com";
     private static String service = "npp";
     private static String version = "2019-08-23";
-
+    
     public NppClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class NppClient extends AbstractClient{
     public CreateCallBackResponse CreateCallBack(CreateCallBackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCallBackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCallBackResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class NppClient extends AbstractClient{
     public DelVirtualNumResponse DelVirtualNum(DelVirtualNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DelVirtualNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DelVirtualNumResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class NppClient extends AbstractClient{
     public DeleteCallBackResponse DeleteCallBack(DeleteCallBackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCallBackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCallBackResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class NppClient extends AbstractClient{
     public DescribeCallBackCdrResponse DescribeCallBackCdr(DescribeCallBackCdrRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallBackCdrResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallBackCdrResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class NppClient extends AbstractClient{
     public DescribeCallBackStatusResponse DescribeCallBackStatus(DescribeCallBackStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallBackStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallBackStatusResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class NppClient extends AbstractClient{
     public DescribeCallerDisplayListResponse DescribeCallerDisplayList(DescribeCallerDisplayListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallerDisplayListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallerDisplayListResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class NppClient extends AbstractClient{
     public Get400CdrResponse Get400Cdr(Get400CdrRequest req) throws TencentCloudSDKException{
         JsonResponseModel<Get400CdrResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<Get400CdrResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class NppClient extends AbstractClient{
     public GetVirtualNumResponse GetVirtualNum(GetVirtualNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetVirtualNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetVirtualNumResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TswClient extends AbstractClient{
     private static String endpoint = "tsw.tencentcloudapi.com";
     private static String service = "tsw";
     private static String version = "2021-04-12";
-
+    
     public TswClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TswClient extends AbstractClient{
     public DescribeComponentAlertObjectResponse DescribeComponentAlertObject(DescribeComponentAlertObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComponentAlertObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComponentAlertObjectResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TswClient extends AbstractClient{
     public DescribeServiceAlertObjectResponse DescribeServiceAlertObject(DescribeServiceAlertObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceAlertObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceAlertObjectResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TswClient extends AbstractClient{
     public DescribeTokenResponse DescribeToken(DescribeTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
                 }.getType();

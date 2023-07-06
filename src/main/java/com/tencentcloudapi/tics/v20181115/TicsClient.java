@@ -29,7 +29,7 @@ public class TicsClient extends AbstractClient{
     private static String endpoint = "tics.tencentcloudapi.com";
     private static String service = "tics";
     private static String version = "2018-11-15";
-
+    
     public TicsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TicsClient extends AbstractClient{
     public DescribeDomainInfoResponse DescribeDomainInfo(DescribeDomainInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainInfoResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TicsClient extends AbstractClient{
     public DescribeFileInfoResponse DescribeFileInfo(DescribeFileInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileInfoResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TicsClient extends AbstractClient{
     public DescribeIpInfoResponse DescribeIpInfo(DescribeIpInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIpInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIpInfoResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TicsClient extends AbstractClient{
     public DescribeThreatInfoResponse DescribeThreatInfo(DescribeThreatInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeThreatInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeThreatInfoResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class AiartClient extends AbstractClient{
     private static String endpoint = "aiart.tencentcloudapi.com";
     private static String service = "aiart";
     private static String version = "2022-12-29";
-
+    
     public AiartClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -52,6 +52,7 @@ public class AiartClient extends AbstractClient{
     public ImageToImageResponse ImageToImage(ImageToImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageToImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageToImageResponse>>() {
                 }.getType();
@@ -77,6 +78,7 @@ public class AiartClient extends AbstractClient{
     public TextToImageResponse TextToImage(TextToImageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToImageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToImageResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class AcpClient extends AbstractClient{
     private static String endpoint = "acp.tencentcloudapi.com";
     private static String service = "acp";
     private static String version = "2022-01-05";
-
+    
     public AcpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AcpClient extends AbstractClient{
     public CreateAppScanTaskResponse CreateAppScanTask(CreateAppScanTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppScanTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppScanTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AcpClient extends AbstractClient{
     public CreateAppScanTaskRepeatResponse CreateAppScanTaskRepeat(CreateAppScanTaskRepeatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppScanTaskRepeatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppScanTaskRepeatResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AcpClient extends AbstractClient{
     public DescribeChannelTaskReportUrlResponse DescribeChannelTaskReportUrl(DescribeChannelTaskReportUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChannelTaskReportUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChannelTaskReportUrlResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class AcpClient extends AbstractClient{
     public DescribeFileTicketResponse DescribeFileTicket(DescribeFileTicketRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileTicketResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileTicketResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class AcpClient extends AbstractClient{
     public DescribeResourceUsageInfoResponse DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageInfoResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class AcpClient extends AbstractClient{
     public DescribeScanTaskListResponse DescribeScanTaskList(DescribeScanTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskListResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class AcpClient extends AbstractClient{
     public DescribeScanTaskReportUrlResponse DescribeScanTaskReportUrl(DescribeScanTaskReportUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskReportUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskReportUrlResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class AcpClient extends AbstractClient{
     public DescribeScanTaskStatusResponse DescribeScanTaskStatus(DescribeScanTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskStatusResponse>>() {
                 }.getType();

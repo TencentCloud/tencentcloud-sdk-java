@@ -29,7 +29,7 @@ public class CloudauditClient extends AbstractClient{
     private static String endpoint = "cloudaudit.tencentcloudapi.com";
     private static String service = "cloudaudit";
     private static String version = "2019-03-19";
-
+    
     public CloudauditClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class CloudauditClient extends AbstractClient{
     public CreateAuditResponse CreateAudit(CreateAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAuditResponse>>() {
                 }.getType();
@@ -71,6 +72,7 @@ public class CloudauditClient extends AbstractClient{
     public CreateAuditTrackResponse CreateAuditTrack(CreateAuditTrackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAuditTrackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAuditTrackResponse>>() {
                 }.getType();
@@ -91,6 +93,7 @@ public class CloudauditClient extends AbstractClient{
     public DeleteAuditResponse DeleteAudit(DeleteAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAuditResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class CloudauditClient extends AbstractClient{
     public DeleteAuditTrackResponse DeleteAuditTrack(DeleteAuditTrackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAuditTrackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAuditTrackResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class CloudauditClient extends AbstractClient{
     public DescribeAuditResponse DescribeAudit(DescribeAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class CloudauditClient extends AbstractClient{
     public DescribeAuditTrackResponse DescribeAuditTrack(DescribeAuditTrackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditTrackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditTrackResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class CloudauditClient extends AbstractClient{
     public DescribeAuditTracksResponse DescribeAuditTracks(DescribeAuditTracksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuditTracksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuditTracksResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ public class CloudauditClient extends AbstractClient{
     public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEventsResponse>>() {
                 }.getType();
@@ -211,6 +219,7 @@ public class CloudauditClient extends AbstractClient{
     public GetAttributeKeyResponse GetAttributeKey(GetAttributeKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAttributeKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAttributeKeyResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ public class CloudauditClient extends AbstractClient{
     public InquireAuditCreditResponse InquireAuditCredit(InquireAuditCreditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquireAuditCreditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquireAuditCreditResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ public class CloudauditClient extends AbstractClient{
     public ListAuditsResponse ListAudits(ListAuditsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAuditsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAuditsResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ public class CloudauditClient extends AbstractClient{
     public ListCmqEnableRegionResponse ListCmqEnableRegion(ListCmqEnableRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListCmqEnableRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListCmqEnableRegionResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ public class CloudauditClient extends AbstractClient{
     public ListCosEnableRegionResponse ListCosEnableRegion(ListCosEnableRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListCosEnableRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListCosEnableRegionResponse>>() {
                 }.getType();
@@ -311,6 +324,7 @@ public class CloudauditClient extends AbstractClient{
     public ListKeyAliasByRegionResponse ListKeyAliasByRegion(ListKeyAliasByRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListKeyAliasByRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListKeyAliasByRegionResponse>>() {
                 }.getType();
@@ -331,6 +345,7 @@ public class CloudauditClient extends AbstractClient{
     public LookUpEventsResponse LookUpEvents(LookUpEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LookUpEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LookUpEventsResponse>>() {
                 }.getType();
@@ -351,6 +366,7 @@ public class CloudauditClient extends AbstractClient{
     public ModifyAuditTrackResponse ModifyAuditTrack(ModifyAuditTrackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAuditTrackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAuditTrackResponse>>() {
                 }.getType();
@@ -371,6 +387,7 @@ public class CloudauditClient extends AbstractClient{
     public StartLoggingResponse StartLogging(StartLoggingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartLoggingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartLoggingResponse>>() {
                 }.getType();
@@ -391,6 +408,7 @@ public class CloudauditClient extends AbstractClient{
     public StopLoggingResponse StopLogging(StopLoggingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopLoggingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopLoggingResponse>>() {
                 }.getType();
@@ -415,6 +433,7 @@ public class CloudauditClient extends AbstractClient{
     public UpdateAuditResponse UpdateAudit(UpdateAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAuditResponse>>() {
                 }.getType();

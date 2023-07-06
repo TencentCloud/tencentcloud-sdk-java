@@ -29,7 +29,7 @@ public class SslpodClient extends AbstractClient{
     private static String endpoint = "sslpod.tencentcloudapi.com";
     private static String service = "sslpod";
     private static String version = "2019-06-05";
-
+    
     public SslpodClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SslpodClient extends AbstractClient{
     public CreateDomainResponse CreateDomain(CreateDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDomainResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SslpodClient extends AbstractClient{
     public DeleteDomainResponse DeleteDomain(DeleteDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDomainResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SslpodClient extends AbstractClient{
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDashboardResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDashboardResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SslpodClient extends AbstractClient{
     public DescribeDomainCertsResponse DescribeDomainCerts(DescribeDomainCertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainCertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainCertsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SslpodClient extends AbstractClient{
     public DescribeDomainTagsResponse DescribeDomainTags(DescribeDomainTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainTagsResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SslpodClient extends AbstractClient{
     public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SslpodClient extends AbstractClient{
     public DescribeNoticeInfoResponse DescribeNoticeInfo(DescribeNoticeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNoticeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNoticeInfoResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SslpodClient extends AbstractClient{
     public ModifyDomainTagsResponse ModifyDomainTags(ModifyDomainTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainTagsResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SslpodClient extends AbstractClient{
     public RefreshDomainResponse RefreshDomain(RefreshDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefreshDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefreshDomainResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SslpodClient extends AbstractClient{
     public ResolveDomainResponse ResolveDomain(ResolveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResolveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResolveDomainResponse>>() {
                 }.getType();

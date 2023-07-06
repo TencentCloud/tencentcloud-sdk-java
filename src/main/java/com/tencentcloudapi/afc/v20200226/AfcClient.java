@@ -29,7 +29,7 @@ public class AfcClient extends AbstractClient{
     private static String endpoint = "afc.tencentcloudapi.com";
     private static String service = "afc";
     private static String version = "2020-02-26";
-
+    
     public AfcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AfcClient extends AbstractClient{
     public GetAntiFraudVipResponse GetAntiFraudVip(GetAntiFraudVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAntiFraudVipResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class AfcClient extends AbstractClient{
     public QueryAntiFraudVipResponse QueryAntiFraudVip(QueryAntiFraudVipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAntiFraudVipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAntiFraudVipResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class AfcClient extends AbstractClient{
     public TransportGeneralInterfaceResponse TransportGeneralInterface(TransportGeneralInterfaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransportGeneralInterfaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransportGeneralInterfaceResponse>>() {
                 }.getType();

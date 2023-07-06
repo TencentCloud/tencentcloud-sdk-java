@@ -29,7 +29,7 @@ public class MvjClient extends AbstractClient{
     private static String endpoint = "mvj.tencentcloudapi.com";
     private static String service = "mvj";
     private static String version = "2019-09-26";
-
+    
     public MvjClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class MvjClient extends AbstractClient{
     public MarketingValueJudgementResponse MarketingValueJudgement(MarketingValueJudgementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MarketingValueJudgementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MarketingValueJudgementResponse>>() {
                 }.getType();

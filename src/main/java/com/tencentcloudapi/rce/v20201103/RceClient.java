@@ -29,7 +29,7 @@ public class RceClient extends AbstractClient{
     private static String endpoint = "rce.tencentcloudapi.com";
     private static String service = "rce";
     private static String version = "2020-11-03";
-
+    
     public RceClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class RceClient extends AbstractClient{
     public DescribeRiskAssessmentResponse DescribeRiskAssessment(DescribeRiskAssessmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRiskAssessmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskAssessmentResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class RceClient extends AbstractClient{
     public DescribeRiskTrendsResponse DescribeRiskTrends(DescribeRiskTrendsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRiskTrendsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRiskTrendsResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class RceClient extends AbstractClient{
     public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ManageMarketingRiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ManageMarketingRiskResponse>>() {
                 }.getType();

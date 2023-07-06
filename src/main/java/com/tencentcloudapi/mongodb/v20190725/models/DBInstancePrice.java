@@ -38,7 +38,7 @@ public class DBInstancePrice extends AbstractModel{
     private Float OriginalPrice;
 
     /**
-    * 折扣加
+    * 折扣价
     */
     @SerializedName("DiscountPrice")
     @Expose
@@ -81,16 +81,16 @@ public class DBInstancePrice extends AbstractModel{
     }
 
     /**
-     * Get 折扣加 
-     * @return DiscountPrice 折扣加
+     * Get 折扣价 
+     * @return DiscountPrice 折扣价
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 折扣加
-     * @param DiscountPrice 折扣加
+     * Set 折扣价
+     * @param DiscountPrice 折扣价
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

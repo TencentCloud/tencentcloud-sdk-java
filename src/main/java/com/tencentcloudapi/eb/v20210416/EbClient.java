@@ -29,7 +29,7 @@ public class EbClient extends AbstractClient{
     private static String endpoint = "eb.tencentcloudapi.com";
     private static String service = "eb";
     private static String version = "2021-04-16";
-
+    
     public EbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class EbClient extends AbstractClient{
     public CheckRuleResponse CheckRule(CheckRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckRuleResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class EbClient extends AbstractClient{
     public CheckTransformationResponse CheckTransformation(CheckTransformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckTransformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckTransformationResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class EbClient extends AbstractClient{
     public CreateConnectionResponse CreateConnection(CreateConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConnectionResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class EbClient extends AbstractClient{
     public CreateEventBusResponse CreateEventBus(CreateEventBusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEventBusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEventBusResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class EbClient extends AbstractClient{
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class EbClient extends AbstractClient{
     public CreateTargetResponse CreateTarget(CreateTargetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTargetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTargetResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class EbClient extends AbstractClient{
     public CreateTransformationResponse CreateTransformation(CreateTransformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTransformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTransformationResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class EbClient extends AbstractClient{
     public DeleteConnectionResponse DeleteConnection(DeleteConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteConnectionResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class EbClient extends AbstractClient{
     public DeleteEventBusResponse DeleteEventBus(DeleteEventBusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteEventBusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteEventBusResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class EbClient extends AbstractClient{
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class EbClient extends AbstractClient{
     public DeleteTargetResponse DeleteTarget(DeleteTargetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTargetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTargetResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class EbClient extends AbstractClient{
     public DeleteTransformationResponse DeleteTransformation(DeleteTransformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTransformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTransformationResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class EbClient extends AbstractClient{
     public DescribeLogTagValueResponse DescribeLogTagValue(DescribeLogTagValueRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogTagValueResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogTagValueResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class EbClient extends AbstractClient{
     public GetEventBusResponse GetEventBus(GetEventBusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetEventBusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetEventBusResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class EbClient extends AbstractClient{
     public GetRuleResponse GetRule(GetRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRuleResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class EbClient extends AbstractClient{
     public GetTransformationResponse GetTransformation(GetTransformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTransformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTransformationResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class EbClient extends AbstractClient{
     public ListConnectionsResponse ListConnections(ListConnectionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListConnectionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListConnectionsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class EbClient extends AbstractClient{
     public ListEventBusesResponse ListEventBuses(ListEventBusesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListEventBusesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListEventBusesResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class EbClient extends AbstractClient{
     public ListRulesResponse ListRules(ListRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListRulesResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class EbClient extends AbstractClient{
     public ListTargetsResponse ListTargets(ListTargetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListTargetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListTargetsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class EbClient extends AbstractClient{
     public PublishEventResponse PublishEvent(PublishEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishEventResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class EbClient extends AbstractClient{
     public PutEventsResponse PutEvents(PutEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutEventsResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class EbClient extends AbstractClient{
     public SearchLogResponse SearchLog(SearchLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchLogResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class EbClient extends AbstractClient{
     public UpdateConnectionResponse UpdateConnection(UpdateConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateConnectionResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class EbClient extends AbstractClient{
     public UpdateEventBusResponse UpdateEventBus(UpdateEventBusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateEventBusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateEventBusResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class EbClient extends AbstractClient{
     public UpdateRuleResponse UpdateRule(UpdateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRuleResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class EbClient extends AbstractClient{
     public UpdateTargetResponse UpdateTarget(UpdateTargetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTargetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTargetResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class EbClient extends AbstractClient{
     public UpdateTransformationResponse UpdateTransformation(UpdateTransformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTransformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTransformationResponse>>() {
                 }.getType();

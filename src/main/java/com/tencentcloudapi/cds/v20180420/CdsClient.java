@@ -29,7 +29,7 @@ public class CdsClient extends AbstractClient{
     private static String endpoint = "cds.tencentcloudapi.com";
     private static String service = "cds";
     private static String version = "2018-04-20";
-
+    
     public CdsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CdsClient extends AbstractClient{
     public DescribeDasbImageIdsResponse DescribeDasbImageIds(DescribeDasbImageIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDasbImageIdsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CdsClient extends AbstractClient{
     public DescribeDbauditInstanceTypeResponse DescribeDbauditInstanceType(DescribeDbauditInstanceTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDbauditInstanceTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDbauditInstanceTypeResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CdsClient extends AbstractClient{
     public DescribeDbauditInstancesResponse DescribeDbauditInstances(DescribeDbauditInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDbauditInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDbauditInstancesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CdsClient extends AbstractClient{
     public DescribeDbauditUsedRegionsResponse DescribeDbauditUsedRegions(DescribeDbauditUsedRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDbauditUsedRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDbauditUsedRegionsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CdsClient extends AbstractClient{
     public InquiryPriceDbauditInstanceResponse InquiryPriceDbauditInstance(InquiryPriceDbauditInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceDbauditInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceDbauditInstanceResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CdsClient extends AbstractClient{
     public ModifyDbauditInstancesRenewFlagResponse ModifyDbauditInstancesRenewFlag(ModifyDbauditInstancesRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDbauditInstancesRenewFlagResponse>>() {
                 }.getType();

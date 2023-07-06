@@ -29,7 +29,7 @@ public class TioneClient extends AbstractClient{
     private static String endpoint = "tione.tencentcloudapi.com";
     private static String service = "tione";
     private static String version = "2021-11-11";
-
+    
     public TioneClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TioneClient extends AbstractClient{
     public CreateBatchModelAccTasksResponse CreateBatchModelAccTasks(CreateBatchModelAccTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBatchModelAccTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBatchModelAccTasksResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TioneClient extends AbstractClient{
     public CreateBatchTaskResponse CreateBatchTask(CreateBatchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBatchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBatchTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TioneClient extends AbstractClient{
     public CreateDatasetResponse CreateDataset(CreateDatasetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDatasetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDatasetResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TioneClient extends AbstractClient{
     public CreateModelServiceResponse CreateModelService(CreateModelServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateModelServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateModelServiceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TioneClient extends AbstractClient{
     public CreateOptimizedModelResponse CreateOptimizedModel(CreateOptimizedModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOptimizedModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOptimizedModelResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TioneClient extends AbstractClient{
     public CreateTrainingModelResponse CreateTrainingModel(CreateTrainingModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTrainingModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTrainingModelResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TioneClient extends AbstractClient{
     public CreateTrainingTaskResponse CreateTrainingTask(CreateTrainingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTrainingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTrainingTaskResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TioneClient extends AbstractClient{
     public DeleteBatchTaskResponse DeleteBatchTask(DeleteBatchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteBatchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteBatchTaskResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TioneClient extends AbstractClient{
     public DeleteDatasetResponse DeleteDataset(DeleteDatasetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDatasetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDatasetResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TioneClient extends AbstractClient{
     public DeleteModelAccelerateTaskResponse DeleteModelAccelerateTask(DeleteModelAccelerateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelAccelerateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelAccelerateTaskResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TioneClient extends AbstractClient{
     public DeleteModelServiceResponse DeleteModelService(DeleteModelServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelServiceResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TioneClient extends AbstractClient{
     public DeleteModelServiceGroupResponse DeleteModelServiceGroup(DeleteModelServiceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteModelServiceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteModelServiceGroupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TioneClient extends AbstractClient{
     public DeleteTrainingModelResponse DeleteTrainingModel(DeleteTrainingModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTrainingModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTrainingModelResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TioneClient extends AbstractClient{
     public DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(DeleteTrainingModelVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTrainingModelVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTrainingModelVersionResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TioneClient extends AbstractClient{
     public DeleteTrainingTaskResponse DeleteTrainingTask(DeleteTrainingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTrainingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTrainingTaskResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TioneClient extends AbstractClient{
     public DescribeAPIConfigsResponse DescribeAPIConfigs(DescribeAPIConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAPIConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIConfigsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBatchTaskResponse DescribeBatchTask(DescribeBatchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBatchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchTaskResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(DescribeBatchTaskInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBatchTaskInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchTaskInstancesResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBatchTasksResponse DescribeBatchTasks(DescribeBatchTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBatchTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchTasksResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBillingResourceGroupsResponse DescribeBillingResourceGroups(DescribeBillingResourceGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillingResourceGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillingResourceGroupsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBillingSpecsResponse DescribeBillingSpecs(DescribeBillingSpecsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillingSpecsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillingSpecsResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TioneClient extends AbstractClient{
     public DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(DescribeBillingSpecsPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillingSpecsPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillingSpecsPriceResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TioneClient extends AbstractClient{
     public DescribeDatasetDetailStructuredResponse DescribeDatasetDetailStructured(DescribeDatasetDetailStructuredRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatasetDetailStructuredResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatasetDetailStructuredResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class TioneClient extends AbstractClient{
     public DescribeDatasetDetailUnstructuredResponse DescribeDatasetDetailUnstructured(DescribeDatasetDetailUnstructuredRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatasetDetailUnstructuredResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatasetDetailUnstructuredResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class TioneClient extends AbstractClient{
     public DescribeDatasetsResponse DescribeDatasets(DescribeDatasetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatasetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatasetsResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class TioneClient extends AbstractClient{
     public DescribeInferTemplatesResponse DescribeInferTemplates(DescribeInferTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInferTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInferTemplatesResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class TioneClient extends AbstractClient{
     public DescribeLatestTrainingMetricsResponse DescribeLatestTrainingMetrics(DescribeLatestTrainingMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLatestTrainingMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLatestTrainingMetricsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class TioneClient extends AbstractClient{
     public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogsResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelAccEngineVersionsResponse DescribeModelAccEngineVersions(DescribeModelAccEngineVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelAccEngineVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelAccEngineVersionsResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(DescribeModelAccelerateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelAccelerateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelAccelerateTaskResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelAccelerateTasksResponse DescribeModelAccelerateTasks(DescribeModelAccelerateTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelAccelerateTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelAccelerateTasksResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceResponse DescribeModelService(DescribeModelServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceCallInfoResponse DescribeModelServiceCallInfo(DescribeModelServiceCallInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceCallInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceCallInfoResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceGroupResponse DescribeModelServiceGroup(DescribeModelServiceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceGroupResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceGroupsResponse DescribeModelServiceGroups(DescribeModelServiceGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceGroupsResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceHistoryResponse DescribeModelServiceHistory(DescribeModelServiceHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceHistoryResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(DescribeModelServiceHotUpdatedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServiceHotUpdatedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServiceHotUpdatedResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServicesResponse DescribeModelServices(DescribeModelServicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeModelServicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeModelServicesResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingFrameworksResponse DescribeTrainingFrameworks(DescribeTrainingFrameworksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingFrameworksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingFrameworksResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingMetricsResponse DescribeTrainingMetrics(DescribeTrainingMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingMetricsResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingModelVersionResponse DescribeTrainingModelVersion(DescribeTrainingModelVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingModelVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingModelVersionResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingModelVersionsResponse DescribeTrainingModelVersions(DescribeTrainingModelVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingModelVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingModelVersionsResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingModelsResponse DescribeTrainingModels(DescribeTrainingModelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingModelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingModelsResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingTaskResponse DescribeTrainingTask(DescribeTrainingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingTaskResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingTaskPodsResponse DescribeTrainingTaskPods(DescribeTrainingTaskPodsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingTaskPodsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingTaskPodsResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingTasksResponse DescribeTrainingTasks(DescribeTrainingTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingTasksResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class TioneClient extends AbstractClient{
     public ModifyModelServiceResponse ModifyModelService(ModifyModelServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyModelServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyModelServiceResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class TioneClient extends AbstractClient{
     public ModifyModelServicePartialConfigResponse ModifyModelServicePartialConfig(ModifyModelServicePartialConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyModelServicePartialConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyModelServicePartialConfigResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class TioneClient extends AbstractClient{
     public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyServiceGroupWeightsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyServiceGroupWeightsResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class TioneClient extends AbstractClient{
     public PushTrainingMetricsResponse PushTrainingMetrics(PushTrainingMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PushTrainingMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PushTrainingMetricsResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class TioneClient extends AbstractClient{
     public RestartModelAccelerateTaskResponse RestartModelAccelerateTask(RestartModelAccelerateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartModelAccelerateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartModelAccelerateTaskResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class TioneClient extends AbstractClient{
     public StartTrainingTaskResponse StartTrainingTask(StartTrainingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartTrainingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartTrainingTaskResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class TioneClient extends AbstractClient{
     public StopBatchTaskResponse StopBatchTask(StopBatchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopBatchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopBatchTaskResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class TioneClient extends AbstractClient{
     public StopModelAccelerateTaskResponse StopModelAccelerateTask(StopModelAccelerateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopModelAccelerateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopModelAccelerateTaskResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class TioneClient extends AbstractClient{
     public StopTrainingTaskResponse StopTrainingTask(StopTrainingTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopTrainingTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopTrainingTaskResponse>>() {
                 }.getType();

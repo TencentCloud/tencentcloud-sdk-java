@@ -29,7 +29,7 @@ public class GoosefsClient extends AbstractClient{
     private static String endpoint = "goosefs.tencentcloudapi.com";
     private static String service = "goosefs";
     private static String version = "2022-05-19";
-
+    
     public GoosefsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GoosefsClient extends AbstractClient{
     public CreateDataRepositoryTaskResponse CreateDataRepositoryTask(CreateDataRepositoryTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDataRepositoryTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDataRepositoryTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GoosefsClient extends AbstractClient{
     public DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(DescribeDataRepositoryTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataRepositoryTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>() {
                 }.getType();

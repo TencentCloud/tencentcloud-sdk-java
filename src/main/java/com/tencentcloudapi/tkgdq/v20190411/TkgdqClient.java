@@ -29,7 +29,7 @@ public class TkgdqClient extends AbstractClient{
     private static String endpoint = "tkgdq.tencentcloudapi.com";
     private static String service = "tkgdq";
     private static String version = "2019-04-11";
-
+    
     public TkgdqClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TkgdqClient extends AbstractClient{
     public DescribeEntityResponse DescribeEntity(DescribeEntityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEntityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEntityResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TkgdqClient extends AbstractClient{
     public DescribeRelationResponse DescribeRelation(DescribeRelationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelationResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TkgdqClient extends AbstractClient{
     public DescribeTripleResponse DescribeTriple(DescribeTripleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTripleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTripleResponse>>() {
                 }.getType();

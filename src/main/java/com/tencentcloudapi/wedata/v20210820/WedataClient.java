@@ -29,7 +29,7 @@ public class WedataClient extends AbstractClient{
     private static String endpoint = "wedata.tencentcloudapi.com";
     private static String service = "wedata";
     private static String version = "2021-08-20";
-
+    
     public WedataClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class WedataClient extends AbstractClient{
     public BatchCreateIntegrationTaskAlarmsResponse BatchCreateIntegrationTaskAlarms(BatchCreateIntegrationTaskAlarmsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateIntegrationTaskAlarmsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class WedataClient extends AbstractClient{
     public BatchDeleteIntegrationTasksResponse BatchDeleteIntegrationTasks(BatchDeleteIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteIntegrationTasksResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class WedataClient extends AbstractClient{
     public BatchDeleteTasksNewResponse BatchDeleteTasksNew(BatchDeleteTasksNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteTasksNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteTasksNewResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class WedataClient extends AbstractClient{
     public BatchForceSuccessIntegrationTaskInstancesResponse BatchForceSuccessIntegrationTaskInstances(BatchForceSuccessIntegrationTaskInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchForceSuccessIntegrationTaskInstancesResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class WedataClient extends AbstractClient{
     public BatchKillIntegrationTaskInstancesResponse BatchKillIntegrationTaskInstances(BatchKillIntegrationTaskInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchKillIntegrationTaskInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchKillIntegrationTaskInstancesResponse>>() {
                 }.getType();
@@ -149,6 +154,7 @@ public class WedataClient extends AbstractClient{
     public BatchMakeUpIntegrationTasksResponse BatchMakeUpIntegrationTasks(BatchMakeUpIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchMakeUpIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchMakeUpIntegrationTasksResponse>>() {
                 }.getType();
@@ -170,6 +176,7 @@ public class WedataClient extends AbstractClient{
     public BatchModifyOwnersNewResponse BatchModifyOwnersNew(BatchModifyOwnersNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyOwnersNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyOwnersNewResponse>>() {
                 }.getType();
@@ -190,6 +197,7 @@ public class WedataClient extends AbstractClient{
     public BatchRerunIntegrationTaskInstancesResponse BatchRerunIntegrationTaskInstances(BatchRerunIntegrationTaskInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchRerunIntegrationTaskInstancesResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ public class WedataClient extends AbstractClient{
     public BatchResumeIntegrationTasksResponse BatchResumeIntegrationTasks(BatchResumeIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchResumeIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchResumeIntegrationTasksResponse>>() {
                 }.getType();
@@ -230,6 +239,7 @@ public class WedataClient extends AbstractClient{
     public BatchStartIntegrationTasksResponse BatchStartIntegrationTasks(BatchStartIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchStartIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchStartIntegrationTasksResponse>>() {
                 }.getType();
@@ -250,6 +260,7 @@ public class WedataClient extends AbstractClient{
     public BatchStopIntegrationTasksResponse BatchStopIntegrationTasks(BatchStopIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchStopIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchStopIntegrationTasksResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ public class WedataClient extends AbstractClient{
     public BatchStopTasksNewResponse BatchStopTasksNew(BatchStopTasksNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchStopTasksNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchStopTasksNewResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ public class WedataClient extends AbstractClient{
     public BatchSuspendIntegrationTasksResponse BatchSuspendIntegrationTasks(BatchSuspendIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchSuspendIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchSuspendIntegrationTasksResponse>>() {
                 }.getType();
@@ -311,6 +324,7 @@ public class WedataClient extends AbstractClient{
     public BatchUpdateIntegrationTasksResponse BatchUpdateIntegrationTasks(BatchUpdateIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchUpdateIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchUpdateIntegrationTasksResponse>>() {
                 }.getType();
@@ -331,6 +345,7 @@ public class WedataClient extends AbstractClient{
     public CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExist(CheckAlarmRegularNameExistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAlarmRegularNameExistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAlarmRegularNameExistResponse>>() {
                 }.getType();
@@ -351,6 +366,7 @@ public class WedataClient extends AbstractClient{
     public CheckDuplicateRuleNameResponse CheckDuplicateRuleName(CheckDuplicateRuleNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckDuplicateRuleNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckDuplicateRuleNameResponse>>() {
                 }.getType();
@@ -371,6 +387,7 @@ public class WedataClient extends AbstractClient{
     public CheckDuplicateTemplateNameResponse CheckDuplicateTemplateName(CheckDuplicateTemplateNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckDuplicateTemplateNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckDuplicateTemplateNameResponse>>() {
                 }.getType();
@@ -391,6 +408,7 @@ public class WedataClient extends AbstractClient{
     public CheckIntegrationNodeNameExistsResponse CheckIntegrationNodeNameExists(CheckIntegrationNodeNameExistsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIntegrationNodeNameExistsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIntegrationNodeNameExistsResponse>>() {
                 }.getType();
@@ -411,6 +429,7 @@ public class WedataClient extends AbstractClient{
     public CheckIntegrationTaskNameExistsResponse CheckIntegrationTaskNameExists(CheckIntegrationTaskNameExistsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIntegrationTaskNameExistsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIntegrationTaskNameExistsResponse>>() {
                 }.getType();
@@ -431,6 +450,7 @@ public class WedataClient extends AbstractClient{
     public CheckTaskNameExistResponse CheckTaskNameExist(CheckTaskNameExistRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckTaskNameExistResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckTaskNameExistResponse>>() {
                 }.getType();
@@ -451,6 +471,7 @@ public class WedataClient extends AbstractClient{
     public CommitExportTaskResponse CommitExportTask(CommitExportTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitExportTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitExportTaskResponse>>() {
                 }.getType();
@@ -471,6 +492,7 @@ public class WedataClient extends AbstractClient{
     public CommitIntegrationTaskResponse CommitIntegrationTask(CommitIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitIntegrationTaskResponse>>() {
                 }.getType();
@@ -491,6 +513,7 @@ public class WedataClient extends AbstractClient{
     public CommitRuleGroupExecResultResponse CommitRuleGroupExecResult(CommitRuleGroupExecResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitRuleGroupExecResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitRuleGroupExecResultResponse>>() {
                 }.getType();
@@ -511,6 +534,7 @@ public class WedataClient extends AbstractClient{
     public CommitRuleGroupTaskResponse CommitRuleGroupTask(CommitRuleGroupTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CommitRuleGroupTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CommitRuleGroupTaskResponse>>() {
                 }.getType();
@@ -531,6 +555,7 @@ public class WedataClient extends AbstractClient{
     public CreateCustomFunctionResponse CreateCustomFunction(CreateCustomFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustomFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustomFunctionResponse>>() {
                 }.getType();
@@ -552,6 +577,7 @@ public class WedataClient extends AbstractClient{
     public CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDataSourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDataSourceResponse>>() {
                 }.getType();
@@ -573,6 +599,7 @@ public class WedataClient extends AbstractClient{
     public CreateFolderResponse CreateFolder(CreateFolderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFolderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFolderResponse>>() {
                 }.getType();
@@ -593,6 +620,7 @@ public class WedataClient extends AbstractClient{
     public CreateHiveTableResponse CreateHiveTable(CreateHiveTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHiveTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHiveTableResponse>>() {
                 }.getType();
@@ -613,6 +641,7 @@ public class WedataClient extends AbstractClient{
     public CreateHiveTableByDDLResponse CreateHiveTableByDDL(CreateHiveTableByDDLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateHiveTableByDDLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateHiveTableByDDLResponse>>() {
                 }.getType();
@@ -633,6 +662,7 @@ public class WedataClient extends AbstractClient{
     public CreateInLongAgentResponse CreateInLongAgent(CreateInLongAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInLongAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInLongAgentResponse>>() {
                 }.getType();
@@ -653,6 +683,7 @@ public class WedataClient extends AbstractClient{
     public CreateIntegrationNodeResponse CreateIntegrationNode(CreateIntegrationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntegrationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntegrationNodeResponse>>() {
                 }.getType();
@@ -673,6 +704,7 @@ public class WedataClient extends AbstractClient{
     public CreateIntegrationTaskResponse CreateIntegrationTask(CreateIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIntegrationTaskResponse>>() {
                 }.getType();
@@ -693,6 +725,7 @@ public class WedataClient extends AbstractClient{
     public CreateOfflineTaskResponse CreateOfflineTask(CreateOfflineTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOfflineTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOfflineTaskResponse>>() {
                 }.getType();
@@ -713,6 +746,7 @@ public class WedataClient extends AbstractClient{
     public CreateOrUpdateResourceResponse CreateOrUpdateResource(CreateOrUpdateResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrUpdateResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrUpdateResourceResponse>>() {
                 }.getType();
@@ -733,6 +767,7 @@ public class WedataClient extends AbstractClient{
     public CreateResourcePathResponse CreateResourcePath(CreateResourcePathRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateResourcePathResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateResourcePathResponse>>() {
                 }.getType();
@@ -753,6 +788,7 @@ public class WedataClient extends AbstractClient{
     public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
                 }.getType();
@@ -773,6 +809,7 @@ public class WedataClient extends AbstractClient{
     public CreateRuleTemplateResponse CreateRuleTemplate(CreateRuleTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRuleTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRuleTemplateResponse>>() {
                 }.getType();
@@ -794,6 +831,7 @@ public class WedataClient extends AbstractClient{
     public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
                 }.getType();
@@ -814,6 +852,7 @@ public class WedataClient extends AbstractClient{
     public CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(CreateTaskAlarmRegularRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskAlarmRegularResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskAlarmRegularResponse>>() {
                 }.getType();
@@ -835,6 +874,7 @@ public class WedataClient extends AbstractClient{
     public CreateWorkflowResponse CreateWorkflow(CreateWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkflowResponse>>() {
                 }.getType();
@@ -855,6 +895,7 @@ public class WedataClient extends AbstractClient{
     public DeleteCustomFunctionResponse DeleteCustomFunction(DeleteCustomFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCustomFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCustomFunctionResponse>>() {
                 }.getType();
@@ -876,6 +917,7 @@ public class WedataClient extends AbstractClient{
     public DeleteDataSourcesResponse DeleteDataSources(DeleteDataSourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDataSourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDataSourcesResponse>>() {
                 }.getType();
@@ -897,6 +939,7 @@ public class WedataClient extends AbstractClient{
     public DeleteFolderResponse DeleteFolder(DeleteFolderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFolderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFolderResponse>>() {
                 }.getType();
@@ -917,6 +960,7 @@ public class WedataClient extends AbstractClient{
     public DeleteInLongAgentResponse DeleteInLongAgent(DeleteInLongAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInLongAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInLongAgentResponse>>() {
                 }.getType();
@@ -937,6 +981,7 @@ public class WedataClient extends AbstractClient{
     public DeleteIntegrationNodeResponse DeleteIntegrationNode(DeleteIntegrationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntegrationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationNodeResponse>>() {
                 }.getType();
@@ -957,6 +1002,7 @@ public class WedataClient extends AbstractClient{
     public DeleteIntegrationTaskResponse DeleteIntegrationTask(DeleteIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIntegrationTaskResponse>>() {
                 }.getType();
@@ -977,6 +1023,7 @@ public class WedataClient extends AbstractClient{
     public DeleteOfflineTaskResponse DeleteOfflineTask(DeleteOfflineTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOfflineTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOfflineTaskResponse>>() {
                 }.getType();
@@ -997,6 +1044,7 @@ public class WedataClient extends AbstractClient{
     public DeleteResourceResponse DeleteResource(DeleteResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteResourceResponse>>() {
                 }.getType();
@@ -1017,6 +1065,7 @@ public class WedataClient extends AbstractClient{
     public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
                 }.getType();
@@ -1037,6 +1086,7 @@ public class WedataClient extends AbstractClient{
     public DeleteRuleTemplateResponse DeleteRuleTemplate(DeleteRuleTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRuleTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRuleTemplateResponse>>() {
                 }.getType();
@@ -1057,6 +1107,7 @@ public class WedataClient extends AbstractClient{
     public DeleteTaskAlarmRegularResponse DeleteTaskAlarmRegular(DeleteTaskAlarmRegularRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTaskAlarmRegularResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskAlarmRegularResponse>>() {
                 }.getType();
@@ -1078,6 +1129,7 @@ public class WedataClient extends AbstractClient{
     public DeleteWorkflowNewResponse DeleteWorkflowNew(DeleteWorkflowNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWorkflowNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWorkflowNewResponse>>() {
                 }.getType();
@@ -1098,6 +1150,7 @@ public class WedataClient extends AbstractClient{
     public DescribeAlarmEventsResponse DescribeAlarmEvents(DescribeAlarmEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmEventsResponse>>() {
                 }.getType();
@@ -1118,6 +1171,7 @@ public class WedataClient extends AbstractClient{
     public DescribeAlarmReceiverResponse DescribeAlarmReceiver(DescribeAlarmReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlarmReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlarmReceiverResponse>>() {
                 }.getType();
@@ -1138,6 +1192,7 @@ public class WedataClient extends AbstractClient{
     public DescribeClusterNamespaceListResponse DescribeClusterNamespaceList(DescribeClusterNamespaceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterNamespaceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNamespaceListResponse>>() {
                 }.getType();
@@ -1158,6 +1213,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataBasesResponse DescribeDataBases(DescribeDataBasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataBasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataBasesResponse>>() {
                 }.getType();
@@ -1178,6 +1234,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataCheckStatResponse DescribeDataCheckStat(DescribeDataCheckStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataCheckStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataCheckStatResponse>>() {
                 }.getType();
@@ -1198,6 +1255,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataObjectsResponse DescribeDataObjects(DescribeDataObjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataObjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataObjectsResponse>>() {
                 }.getType();
@@ -1218,6 +1276,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataSourceInfoListResponse DescribeDataSourceInfoList(DescribeDataSourceInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataSourceInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataSourceInfoListResponse>>() {
                 }.getType();
@@ -1239,6 +1298,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataSourceListResponse DescribeDataSourceList(DescribeDataSourceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataSourceListResponse>>() {
                 }.getType();
@@ -1260,6 +1320,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfo(DescribeDataSourceWithoutInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataSourceWithoutInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataSourceWithoutInfoResponse>>() {
                 }.getType();
@@ -1280,6 +1341,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDataTypesResponse DescribeDataTypes(DescribeDataTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataTypesResponse>>() {
                 }.getType();
@@ -1300,6 +1362,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDatabaseInfoListResponse DescribeDatabaseInfoList(DescribeDatabaseInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabaseInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabaseInfoListResponse>>() {
                 }.getType();
@@ -1321,6 +1384,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDatasourceResponse DescribeDatasource(DescribeDatasourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatasourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatasourceResponse>>() {
                 }.getType();
@@ -1342,6 +1406,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDependTasksNewResponse DescribeDependTasksNew(DescribeDependTasksNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDependTasksNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDependTasksNewResponse>>() {
                 }.getType();
@@ -1362,6 +1427,7 @@ public class WedataClient extends AbstractClient{
     public DescribeDimensionScoreResponse DescribeDimensionScore(DescribeDimensionScoreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDimensionScoreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDimensionScoreResponse>>() {
                 }.getType();
@@ -1382,6 +1448,7 @@ public class WedataClient extends AbstractClient{
     public DescribeExecStrategyResponse DescribeExecStrategy(DescribeExecStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExecStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExecStrategyResponse>>() {
                 }.getType();
@@ -1403,6 +1470,7 @@ public class WedataClient extends AbstractClient{
     public DescribeFolderListResponse DescribeFolderList(DescribeFolderListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFolderListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFolderListResponse>>() {
                 }.getType();
@@ -1424,6 +1492,7 @@ public class WedataClient extends AbstractClient{
     public DescribeFolderWorkflowListResponse DescribeFolderWorkflowList(DescribeFolderWorkflowListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFolderWorkflowListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFolderWorkflowListResponse>>() {
                 }.getType();
@@ -1444,6 +1513,7 @@ public class WedataClient extends AbstractClient{
     public DescribeFunctionKindsResponse DescribeFunctionKinds(DescribeFunctionKindsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFunctionKindsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFunctionKindsResponse>>() {
                 }.getType();
@@ -1464,6 +1534,7 @@ public class WedataClient extends AbstractClient{
     public DescribeFunctionTypesResponse DescribeFunctionTypes(DescribeFunctionTypesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFunctionTypesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFunctionTypesResponse>>() {
                 }.getType();
@@ -1484,6 +1555,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInLongAgentListResponse DescribeInLongAgentList(DescribeInLongAgentListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInLongAgentListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInLongAgentListResponse>>() {
                 }.getType();
@@ -1504,6 +1576,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInLongAgentTaskListResponse DescribeInLongAgentTaskList(DescribeInLongAgentTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInLongAgentTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInLongAgentTaskListResponse>>() {
                 }.getType();
@@ -1524,6 +1597,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInLongAgentVpcListResponse DescribeInLongAgentVpcList(DescribeInLongAgentVpcListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInLongAgentVpcListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInLongAgentVpcListResponse>>() {
                 }.getType();
@@ -1544,6 +1618,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInLongTkeClusterListResponse DescribeInLongTkeClusterList(DescribeInLongTkeClusterListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInLongTkeClusterListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInLongTkeClusterListResponse>>() {
                 }.getType();
@@ -1564,6 +1639,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstanceLastLogResponse DescribeInstanceLastLog(DescribeInstanceLastLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceLastLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLastLogResponse>>() {
                 }.getType();
@@ -1584,6 +1660,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceListResponse>>() {
                 }.getType();
@@ -1604,6 +1681,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstanceLogResponse DescribeInstanceLog(DescribeInstanceLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogResponse>>() {
                 }.getType();
@@ -1624,6 +1702,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstanceLogListResponse DescribeInstanceLogList(DescribeInstanceLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogListResponse>>() {
                 }.getType();
@@ -1645,6 +1724,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstanceLogsResponse DescribeInstanceLogs(DescribeInstanceLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogsResponse>>() {
                 }.getType();
@@ -1665,6 +1745,7 @@ public class WedataClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -1685,6 +1766,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationNodeResponse DescribeIntegrationNode(DescribeIntegrationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationNodeResponse>>() {
                 }.getType();
@@ -1705,6 +1787,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsResponse DescribeIntegrationStatistics(DescribeIntegrationStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsResponse>>() {
                 }.getType();
@@ -1725,6 +1808,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsAgentStatusResponse DescribeIntegrationStatisticsAgentStatus(DescribeIntegrationStatisticsAgentStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsAgentStatusResponse>>() {
                 }.getType();
@@ -1745,6 +1829,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsInstanceTrendResponse DescribeIntegrationStatisticsInstanceTrend(DescribeIntegrationStatisticsInstanceTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsInstanceTrendResponse>>() {
                 }.getType();
@@ -1765,6 +1850,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsRecordsTrendResponse DescribeIntegrationStatisticsRecordsTrend(DescribeIntegrationStatisticsRecordsTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsRecordsTrendResponse>>() {
                 }.getType();
@@ -1785,6 +1871,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsTaskStatusResponse DescribeIntegrationStatisticsTaskStatus(DescribeIntegrationStatisticsTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusResponse>>() {
                 }.getType();
@@ -1805,6 +1892,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationStatisticsTaskStatusTrendResponse DescribeIntegrationStatisticsTaskStatusTrend(DescribeIntegrationStatisticsTaskStatusTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationStatisticsTaskStatusTrendResponse>>() {
                 }.getType();
@@ -1825,6 +1913,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationTaskResponse DescribeIntegrationTask(DescribeIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationTaskResponse>>() {
                 }.getType();
@@ -1845,6 +1934,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationTasksResponse DescribeIntegrationTasks(DescribeIntegrationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationTasksResponse>>() {
                 }.getType();
@@ -1865,6 +1955,7 @@ public class WedataClient extends AbstractClient{
     public DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(DescribeIntegrationVersionNodesInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIntegrationVersionNodesInfoResponse>>() {
                 }.getType();
@@ -1885,6 +1976,7 @@ public class WedataClient extends AbstractClient{
     public DescribeKafkaTopicInfoResponse DescribeKafkaTopicInfo(DescribeKafkaTopicInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKafkaTopicInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKafkaTopicInfoResponse>>() {
                 }.getType();
@@ -1905,6 +1997,7 @@ public class WedataClient extends AbstractClient{
     public DescribeMonitorsByPageResponse DescribeMonitorsByPage(DescribeMonitorsByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorsByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorsByPageResponse>>() {
                 }.getType();
@@ -1925,6 +2018,7 @@ public class WedataClient extends AbstractClient{
     public DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(DescribeOfflineTaskTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfflineTaskTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfflineTaskTokenResponse>>() {
                 }.getType();
@@ -1945,6 +2039,7 @@ public class WedataClient extends AbstractClient{
     public DescribeOperateTasksResponse DescribeOperateTasks(DescribeOperateTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOperateTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOperateTasksResponse>>() {
                 }.getType();
@@ -1965,6 +2060,7 @@ public class WedataClient extends AbstractClient{
     public DescribeOrganizationalFunctionsResponse DescribeOrganizationalFunctions(DescribeOrganizationalFunctionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrganizationalFunctionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrganizationalFunctionsResponse>>() {
                 }.getType();
@@ -1985,6 +2081,7 @@ public class WedataClient extends AbstractClient{
     public DescribeProdTasksResponse DescribeProdTasks(DescribeProdTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProdTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProdTasksResponse>>() {
                 }.getType();
@@ -2005,6 +2102,7 @@ public class WedataClient extends AbstractClient{
     public DescribeProjectResponse DescribeProject(DescribeProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectResponse>>() {
                 }.getType();
@@ -2025,6 +2123,7 @@ public class WedataClient extends AbstractClient{
     public DescribeQualityScoreResponse DescribeQualityScore(DescribeQualityScoreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityScoreResponse>>() {
                 }.getType();
@@ -2045,6 +2144,7 @@ public class WedataClient extends AbstractClient{
     public DescribeQualityScoreTrendResponse DescribeQualityScoreTrend(DescribeQualityScoreTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQualityScoreTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQualityScoreTrendResponse>>() {
                 }.getType();
@@ -2065,6 +2165,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRealTimeTaskInstanceNodeInfoResponse DescribeRealTimeTaskInstanceNodeInfo(DescribeRealTimeTaskInstanceNodeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealTimeTaskInstanceNodeInfoResponse>>() {
                 }.getType();
@@ -2085,6 +2186,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRealTimeTaskMetricOverviewResponse DescribeRealTimeTaskMetricOverview(DescribeRealTimeTaskMetricOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealTimeTaskMetricOverviewResponse>>() {
                 }.getType();
@@ -2105,6 +2207,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRealTimeTaskSpeedResponse DescribeRealTimeTaskSpeed(DescribeRealTimeTaskSpeedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRealTimeTaskSpeedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRealTimeTaskSpeedResponse>>() {
                 }.getType();
@@ -2125,6 +2228,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRelatedInstancesResponse DescribeRelatedInstances(DescribeRelatedInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelatedInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelatedInstancesResponse>>() {
                 }.getType();
@@ -2145,6 +2249,7 @@ public class WedataClient extends AbstractClient{
     public DescribeResourceManagePathTreesResponse DescribeResourceManagePathTrees(DescribeResourceManagePathTreesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceManagePathTreesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceManagePathTreesResponse>>() {
                 }.getType();
@@ -2165,6 +2270,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleResponse DescribeRule(DescribeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleResponse>>() {
                 }.getType();
@@ -2185,6 +2291,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleDataSourcesResponse DescribeRuleDataSources(DescribeRuleDataSourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleDataSourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleDataSourcesResponse>>() {
                 }.getType();
@@ -2205,6 +2312,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleDimStatResponse DescribeRuleDimStat(DescribeRuleDimStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleDimStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleDimStatResponse>>() {
                 }.getType();
@@ -2225,6 +2333,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecDetailResponse DescribeRuleExecDetail(DescribeRuleExecDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecDetailResponse>>() {
                 }.getType();
@@ -2245,6 +2354,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecExportResultResponse DescribeRuleExecExportResult(DescribeRuleExecExportResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecExportResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecExportResultResponse>>() {
                 }.getType();
@@ -2265,6 +2375,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecHistoryResponse DescribeRuleExecHistory(DescribeRuleExecHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecHistoryResponse>>() {
                 }.getType();
@@ -2285,6 +2396,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecLogResponse DescribeRuleExecLog(DescribeRuleExecLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecLogResponse>>() {
                 }.getType();
@@ -2305,6 +2417,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecResultsResponse DescribeRuleExecResults(DescribeRuleExecResultsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecResultsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecResultsResponse>>() {
                 }.getType();
@@ -2325,6 +2438,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecResultsByPageResponse DescribeRuleExecResultsByPage(DescribeRuleExecResultsByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecResultsByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecResultsByPageResponse>>() {
                 }.getType();
@@ -2345,6 +2459,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleExecStatResponse DescribeRuleExecStat(DescribeRuleExecStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleExecStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleExecStatResponse>>() {
                 }.getType();
@@ -2365,6 +2480,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupResponse DescribeRuleGroup(DescribeRuleGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupResponse>>() {
                 }.getType();
@@ -2385,6 +2501,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupExecResultsByPageResponse DescribeRuleGroupExecResultsByPage(DescribeRuleGroupExecResultsByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupExecResultsByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupExecResultsByPageResponse>>() {
                 }.getType();
@@ -2405,6 +2522,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupExecResultsByPageWithoutAuthResponse DescribeRuleGroupExecResultsByPageWithoutAuth(DescribeRuleGroupExecResultsByPageWithoutAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupExecResultsByPageWithoutAuthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupExecResultsByPageWithoutAuthResponse>>() {
                 }.getType();
@@ -2425,6 +2543,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupSubscriptionResponse DescribeRuleGroupSubscription(DescribeRuleGroupSubscriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupSubscriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupSubscriptionResponse>>() {
                 }.getType();
@@ -2445,6 +2564,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupTableResponse DescribeRuleGroupTable(DescribeRuleGroupTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupTableResponse>>() {
                 }.getType();
@@ -2468,6 +2588,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleGroupsByPageResponse DescribeRuleGroupsByPage(DescribeRuleGroupsByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleGroupsByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleGroupsByPageResponse>>() {
                 }.getType();
@@ -2488,6 +2609,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleHistoryByPageResponse DescribeRuleHistoryByPage(DescribeRuleHistoryByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleHistoryByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleHistoryByPageResponse>>() {
                 }.getType();
@@ -2508,6 +2630,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleTablesByPageResponse DescribeRuleTablesByPage(DescribeRuleTablesByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleTablesByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleTablesByPageResponse>>() {
                 }.getType();
@@ -2528,6 +2651,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleTemplateResponse DescribeRuleTemplate(DescribeRuleTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleTemplateResponse>>() {
                 }.getType();
@@ -2548,6 +2672,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleTemplatesResponse DescribeRuleTemplates(DescribeRuleTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleTemplatesResponse>>() {
                 }.getType();
@@ -2568,6 +2693,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRuleTemplatesByPageResponse DescribeRuleTemplatesByPage(DescribeRuleTemplatesByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRuleTemplatesByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRuleTemplatesByPageResponse>>() {
                 }.getType();
@@ -2588,6 +2714,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
                 }.getType();
@@ -2608,6 +2735,7 @@ public class WedataClient extends AbstractClient{
     public DescribeRulesByPageResponse DescribeRulesByPage(DescribeRulesByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRulesByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRulesByPageResponse>>() {
                 }.getType();
@@ -2628,6 +2756,7 @@ public class WedataClient extends AbstractClient{
     public DescribeStandardRuleDetailInfoListResponse DescribeStandardRuleDetailInfoList(DescribeStandardRuleDetailInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStandardRuleDetailInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStandardRuleDetailInfoListResponse>>() {
                 }.getType();
@@ -2648,6 +2777,7 @@ public class WedataClient extends AbstractClient{
     public DescribeStreamTaskLogListResponse DescribeStreamTaskLogList(DescribeStreamTaskLogListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamTaskLogListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamTaskLogListResponse>>() {
                 }.getType();
@@ -2668,6 +2798,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTableInfoListResponse DescribeTableInfoList(DescribeTableInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableInfoListResponse>>() {
                 }.getType();
@@ -2688,6 +2819,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTableQualityDetailsResponse DescribeTableQualityDetails(DescribeTableQualityDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableQualityDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableQualityDetailsResponse>>() {
                 }.getType();
@@ -2708,6 +2840,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTableSchemaInfoResponse DescribeTableSchemaInfo(DescribeTableSchemaInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableSchemaInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableSchemaInfoResponse>>() {
                 }.getType();
@@ -2728,6 +2861,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTableScoreTrendResponse DescribeTableScoreTrend(DescribeTableScoreTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableScoreTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableScoreTrendResponse>>() {
                 }.getType();
@@ -2748,6 +2882,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskAlarmRegulationsResponse DescribeTaskAlarmRegulations(DescribeTaskAlarmRegulationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskAlarmRegulationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskAlarmRegulationsResponse>>() {
                 }.getType();
@@ -2769,6 +2904,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
@@ -2789,6 +2925,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskInstanceResponse DescribeTaskInstance(DescribeTaskInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInstanceResponse>>() {
                 }.getType();
@@ -2809,6 +2946,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskInstanceReportDetailResponse DescribeTaskInstanceReportDetail(DescribeTaskInstanceReportDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInstanceReportDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInstanceReportDetailResponse>>() {
                 }.getType();
@@ -2829,6 +2967,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskInstancesResponse DescribeTaskInstances(DescribeTaskInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskInstancesResponse>>() {
                 }.getType();
@@ -2849,6 +2988,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskLockStatusResponse DescribeTaskLockStatus(DescribeTaskLockStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskLockStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskLockStatusResponse>>() {
                 }.getType();
@@ -2869,6 +3009,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskReportResponse DescribeTaskReport(DescribeTaskReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskReportResponse>>() {
                 }.getType();
@@ -2889,6 +3030,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskReportDetailListResponse DescribeTaskReportDetailList(DescribeTaskReportDetailListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskReportDetailListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskReportDetailListResponse>>() {
                 }.getType();
@@ -2910,6 +3052,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTaskScriptResponse DescribeTaskScript(DescribeTaskScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskScriptResponse>>() {
                 }.getType();
@@ -2931,6 +3074,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTasksByPageResponse DescribeTasksByPage(DescribeTasksByPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksByPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksByPageResponse>>() {
                 }.getType();
@@ -2951,6 +3095,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTemplateDimCountResponse DescribeTemplateDimCount(DescribeTemplateDimCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateDimCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateDimCountResponse>>() {
                 }.getType();
@@ -2971,6 +3116,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTemplateHistoryResponse DescribeTemplateHistory(DescribeTemplateHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTemplateHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTemplateHistoryResponse>>() {
                 }.getType();
@@ -2991,6 +3137,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTopTableStatResponse DescribeTopTableStat(DescribeTopTableStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopTableStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopTableStatResponse>>() {
                 }.getType();
@@ -3011,6 +3158,7 @@ public class WedataClient extends AbstractClient{
     public DescribeTrendStatResponse DescribeTrendStat(DescribeTrendStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrendStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrendStatResponse>>() {
                 }.getType();
@@ -3031,6 +3179,7 @@ public class WedataClient extends AbstractClient{
     public DryRunDIOfflineTaskResponse DryRunDIOfflineTask(DryRunDIOfflineTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DryRunDIOfflineTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DryRunDIOfflineTaskResponse>>() {
                 }.getType();
@@ -3052,6 +3201,7 @@ public class WedataClient extends AbstractClient{
     public ForceSucInstancesResponse ForceSucInstances(ForceSucInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForceSucInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForceSucInstancesResponse>>() {
                 }.getType();
@@ -3073,6 +3223,7 @@ public class WedataClient extends AbstractClient{
     public FreezeTasksResponse FreezeTasks(FreezeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FreezeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FreezeTasksResponse>>() {
                 }.getType();
@@ -3094,6 +3245,7 @@ public class WedataClient extends AbstractClient{
     public FreezeTasksByMultiWorkflowResponse FreezeTasksByMultiWorkflow(FreezeTasksByMultiWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FreezeTasksByMultiWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FreezeTasksByMultiWorkflowResponse>>() {
                 }.getType();
@@ -3114,6 +3266,7 @@ public class WedataClient extends AbstractClient{
     public GenHiveTableDDLSqlResponse GenHiveTableDDLSql(GenHiveTableDDLSqlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenHiveTableDDLSqlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenHiveTableDDLSqlResponse>>() {
                 }.getType();
@@ -3134,6 +3287,7 @@ public class WedataClient extends AbstractClient{
     public GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(GetIntegrationNodeColumnSchemaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetIntegrationNodeColumnSchemaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetIntegrationNodeColumnSchemaResponse>>() {
                 }.getType();
@@ -3154,6 +3308,7 @@ public class WedataClient extends AbstractClient{
     public GetOfflineDIInstanceListResponse GetOfflineDIInstanceList(GetOfflineDIInstanceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetOfflineDIInstanceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetOfflineDIInstanceListResponse>>() {
                 }.getType();
@@ -3174,6 +3329,7 @@ public class WedataClient extends AbstractClient{
     public GetOfflineInstanceListResponse GetOfflineInstanceList(GetOfflineInstanceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetOfflineInstanceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetOfflineInstanceListResponse>>() {
                 }.getType();
@@ -3195,6 +3351,7 @@ public class WedataClient extends AbstractClient{
     public KillInstancesResponse KillInstances(KillInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KillInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KillInstancesResponse>>() {
                 }.getType();
@@ -3215,6 +3372,7 @@ public class WedataClient extends AbstractClient{
     public LockIntegrationTaskResponse LockIntegrationTask(LockIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LockIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LockIntegrationTaskResponse>>() {
                 }.getType();
@@ -3239,6 +3397,7 @@ public class WedataClient extends AbstractClient{
     public MakeUpTasksNewResponse MakeUpTasksNew(MakeUpTasksNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MakeUpTasksNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MakeUpTasksNewResponse>>() {
                 }.getType();
@@ -3260,6 +3419,7 @@ public class WedataClient extends AbstractClient{
     public MakeUpWorkflowNewResponse MakeUpWorkflowNew(MakeUpWorkflowNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MakeUpWorkflowNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MakeUpWorkflowNewResponse>>() {
                 }.getType();
@@ -3281,6 +3441,7 @@ public class WedataClient extends AbstractClient{
     public ModifyDataSourceResponse ModifyDataSource(ModifyDataSourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDataSourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDataSourceResponse>>() {
                 }.getType();
@@ -3301,6 +3462,7 @@ public class WedataClient extends AbstractClient{
     public ModifyDimensionWeightResponse ModifyDimensionWeight(ModifyDimensionWeightRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDimensionWeightResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDimensionWeightResponse>>() {
                 }.getType();
@@ -3321,6 +3483,7 @@ public class WedataClient extends AbstractClient{
     public ModifyExecStrategyResponse ModifyExecStrategy(ModifyExecStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyExecStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyExecStrategyResponse>>() {
                 }.getType();
@@ -3342,6 +3505,7 @@ public class WedataClient extends AbstractClient{
     public ModifyFolderResponse ModifyFolder(ModifyFolderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFolderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFolderResponse>>() {
                 }.getType();
@@ -3362,6 +3526,7 @@ public class WedataClient extends AbstractClient{
     public ModifyIntegrationNodeResponse ModifyIntegrationNode(ModifyIntegrationNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIntegrationNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIntegrationNodeResponse>>() {
                 }.getType();
@@ -3382,6 +3547,7 @@ public class WedataClient extends AbstractClient{
     public ModifyIntegrationTaskResponse ModifyIntegrationTask(ModifyIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIntegrationTaskResponse>>() {
                 }.getType();
@@ -3402,6 +3568,7 @@ public class WedataClient extends AbstractClient{
     public ModifyMonitorStatusResponse ModifyMonitorStatus(ModifyMonitorStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMonitorStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMonitorStatusResponse>>() {
                 }.getType();
@@ -3422,6 +3589,7 @@ public class WedataClient extends AbstractClient{
     public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
                 }.getType();
@@ -3442,6 +3610,7 @@ public class WedataClient extends AbstractClient{
     public ModifyRuleGroupSubscriptionResponse ModifyRuleGroupSubscription(ModifyRuleGroupSubscriptionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleGroupSubscriptionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleGroupSubscriptionResponse>>() {
                 }.getType();
@@ -3462,6 +3631,7 @@ public class WedataClient extends AbstractClient{
     public ModifyRuleTemplateResponse ModifyRuleTemplate(ModifyRuleTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyRuleTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyRuleTemplateResponse>>() {
                 }.getType();
@@ -3482,6 +3652,7 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskAlarmRegularResponse ModifyTaskAlarmRegular(ModifyTaskAlarmRegularRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskAlarmRegularResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskAlarmRegularResponse>>() {
                 }.getType();
@@ -3503,6 +3674,7 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskInfoResponse ModifyTaskInfo(ModifyTaskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskInfoResponse>>() {
                 }.getType();
@@ -3524,6 +3696,7 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskLinksResponse ModifyTaskLinks(ModifyTaskLinksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskLinksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskLinksResponse>>() {
                 }.getType();
@@ -3544,6 +3717,7 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskNameResponse ModifyTaskName(ModifyTaskNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskNameResponse>>() {
                 }.getType();
@@ -3565,6 +3739,7 @@ public class WedataClient extends AbstractClient{
     public ModifyTaskScriptResponse ModifyTaskScript(ModifyTaskScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTaskScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTaskScriptResponse>>() {
                 }.getType();
@@ -3586,6 +3761,7 @@ public class WedataClient extends AbstractClient{
     public ModifyWorkflowInfoResponse ModifyWorkflowInfo(ModifyWorkflowInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWorkflowInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkflowInfoResponse>>() {
                 }.getType();
@@ -3607,6 +3783,7 @@ public class WedataClient extends AbstractClient{
     public ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(ModifyWorkflowScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWorkflowScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkflowScheduleResponse>>() {
                 }.getType();
@@ -3628,6 +3805,7 @@ public class WedataClient extends AbstractClient{
     public RegisterEventResponse RegisterEvent(RegisterEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterEventResponse>>() {
                 }.getType();
@@ -3649,6 +3827,7 @@ public class WedataClient extends AbstractClient{
     public RegisterEventListenerResponse RegisterEventListener(RegisterEventListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterEventListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterEventListenerResponse>>() {
                 }.getType();
@@ -3670,6 +3849,7 @@ public class WedataClient extends AbstractClient{
     public RerunInstancesResponse RerunInstances(RerunInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RerunInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RerunInstancesResponse>>() {
                 }.getType();
@@ -3690,6 +3870,7 @@ public class WedataClient extends AbstractClient{
     public RestartInLongAgentResponse RestartInLongAgent(RestartInLongAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartInLongAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartInLongAgentResponse>>() {
                 }.getType();
@@ -3710,6 +3891,7 @@ public class WedataClient extends AbstractClient{
     public ResumeIntegrationTaskResponse ResumeIntegrationTask(ResumeIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeIntegrationTaskResponse>>() {
                 }.getType();
@@ -3730,6 +3912,7 @@ public class WedataClient extends AbstractClient{
     public RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(RobAndLockIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RobAndLockIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RobAndLockIntegrationTaskResponse>>() {
                 }.getType();
@@ -3751,6 +3934,7 @@ public class WedataClient extends AbstractClient{
     public RunTaskResponse RunTask(RunTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunTaskResponse>>() {
                 }.getType();
@@ -3771,6 +3955,7 @@ public class WedataClient extends AbstractClient{
     public SaveCustomFunctionResponse SaveCustomFunction(SaveCustomFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SaveCustomFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SaveCustomFunctionResponse>>() {
                 }.getType();
@@ -3792,6 +3977,7 @@ public class WedataClient extends AbstractClient{
     public SetTaskAlarmNewResponse SetTaskAlarmNew(SetTaskAlarmNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetTaskAlarmNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetTaskAlarmNewResponse>>() {
                 }.getType();
@@ -3812,6 +3998,7 @@ public class WedataClient extends AbstractClient{
     public StartIntegrationTaskResponse StartIntegrationTask(StartIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartIntegrationTaskResponse>>() {
                 }.getType();
@@ -3832,6 +4019,7 @@ public class WedataClient extends AbstractClient{
     public StopIntegrationTaskResponse StopIntegrationTask(StopIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopIntegrationTaskResponse>>() {
                 }.getType();
@@ -3852,6 +4040,7 @@ public class WedataClient extends AbstractClient{
     public SubmitCustomFunctionResponse SubmitCustomFunction(SubmitCustomFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitCustomFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitCustomFunctionResponse>>() {
                 }.getType();
@@ -3873,6 +4062,7 @@ public class WedataClient extends AbstractClient{
     public SubmitTaskResponse SubmitTask(SubmitTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitTaskResponse>>() {
                 }.getType();
@@ -3894,6 +4084,7 @@ public class WedataClient extends AbstractClient{
     public SubmitWorkflowResponse SubmitWorkflow(SubmitWorkflowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SubmitWorkflowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SubmitWorkflowResponse>>() {
                 }.getType();
@@ -3914,6 +4105,7 @@ public class WedataClient extends AbstractClient{
     public SuspendIntegrationTaskResponse SuspendIntegrationTask(SuspendIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SuspendIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SuspendIntegrationTaskResponse>>() {
                 }.getType();
@@ -3934,6 +4126,7 @@ public class WedataClient extends AbstractClient{
     public TaskLogResponse TaskLog(TaskLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TaskLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TaskLogResponse>>() {
                 }.getType();
@@ -3955,6 +4148,7 @@ public class WedataClient extends AbstractClient{
     public TriggerEventResponse TriggerEvent(TriggerEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TriggerEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TriggerEventResponse>>() {
                 }.getType();
@@ -3975,6 +4169,7 @@ public class WedataClient extends AbstractClient{
     public UnlockIntegrationTaskResponse UnlockIntegrationTask(UnlockIntegrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnlockIntegrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnlockIntegrationTaskResponse>>() {
                 }.getType();
@@ -3995,6 +4190,7 @@ public class WedataClient extends AbstractClient{
     public UpdateInLongAgentResponse UpdateInLongAgent(UpdateInLongAgentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateInLongAgentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateInLongAgentResponse>>() {
                 }.getType();
@@ -4015,6 +4211,7 @@ public class WedataClient extends AbstractClient{
     public UploadContentResponse UploadContent(UploadContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadContentResponse>>() {
                 }.getType();

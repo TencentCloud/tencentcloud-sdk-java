@@ -29,7 +29,7 @@ public class ApigatewayClient extends AbstractClient{
     private static String endpoint = "apigateway.tencentcloudapi.com";
     private static String service = "apigateway";
     private static String version = "2018-08-08";
-
+    
     public ApigatewayClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ApigatewayClient extends AbstractClient{
     public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ApigatewayClient extends AbstractClient{
     public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class ApigatewayClient extends AbstractClient{
     public BindEnvironmentResponse BindEnvironment(BindEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindEnvironmentResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class ApigatewayClient extends AbstractClient{
     public BindIPStrategyResponse BindIPStrategy(BindIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindIPStrategyResponse>>() {
                 }.getType();
@@ -130,6 +134,7 @@ public class ApigatewayClient extends AbstractClient{
     public BindSecretIdsResponse BindSecretIds(BindSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindSecretIdsResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public BindSubDomainResponse BindSubDomain(BindSubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindSubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindSubDomainResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BuildAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
                 }.getType();
@@ -211,6 +219,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreateApiResponse CreateApi(CreateApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreateApiKeyResponse CreateApiKey(CreateApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApiKeyResponse>>() {
                 }.getType();
@@ -271,6 +282,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreateIPStrategyResponse CreateIPStrategy(CreateIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIPStrategyResponse>>() {
                 }.getType();
@@ -291,6 +303,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePluginResponse>>() {
                 }.getType();
@@ -312,6 +325,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public CreateServiceResponse CreateService(CreateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateServiceResponse>>() {
                 }.getType();
@@ -332,6 +346,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
                 }.getType();
@@ -353,6 +368,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public CreateUsagePlanResponse CreateUsagePlan(CreateUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
                 }.getType();
@@ -373,6 +389,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
                 }.getType();
@@ -393,6 +410,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteApiResponse DeleteApi(DeleteApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiResponse>>() {
                 }.getType();
@@ -413,6 +431,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
                 }.getType();
@@ -433,6 +452,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteApiKeyResponse DeleteApiKey(DeleteApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApiKeyResponse>>() {
                 }.getType();
@@ -453,6 +473,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteIPStrategyResponse DeleteIPStrategy(DeleteIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIPStrategyResponse>>() {
                 }.getType();
@@ -473,6 +494,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
                 }.getType();
@@ -493,6 +515,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteServiceResponse DeleteService(DeleteServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceResponse>>() {
                 }.getType();
@@ -514,6 +537,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(DeleteServiceSubDomainMappingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteServiceSubDomainMappingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
                 }.getType();
@@ -534,6 +558,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
                 }.getType();
@@ -554,6 +579,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DeleteUsagePlanResponse DeleteUsagePlan(DeleteUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsagePlanResponse>>() {
                 }.getType();
@@ -576,6 +602,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(DemoteServiceUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DemoteServiceUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
                 }.getType();
@@ -596,6 +623,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
                 }.getType();
@@ -616,6 +644,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
                 }.getType();
@@ -636,6 +665,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
                 }.getType();
@@ -656,6 +686,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiResponse DescribeApi(DescribeApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiResponse>>() {
                 }.getType();
@@ -676,6 +707,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
                 }.getType();
@@ -696,6 +728,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
                 }.getType();
@@ -716,6 +749,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
                 }.getType();
@@ -736,6 +770,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
                 }.getType();
@@ -756,6 +791,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(DescribeApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -776,6 +812,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
                 }.getType();
@@ -797,6 +834,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiKeyResponse DescribeApiKey(DescribeApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiKeyResponse>>() {
                 }.getType();
@@ -818,6 +856,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiKeysStatusResponse DescribeApiKeysStatus(DescribeApiKeysStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiKeysStatusResponse>>() {
                 }.getType();
@@ -839,6 +878,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApiUsagePlanResponse DescribeApiUsagePlan(DescribeApiUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApiUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApiUsagePlanResponse>>() {
                 }.getType();
@@ -859,6 +899,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeApisStatusResponse DescribeApisStatus(DescribeApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApisStatusResponse>>() {
                 }.getType();
@@ -879,6 +920,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(DescribeExclusiveInstanceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExclusiveInstanceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstanceDetailResponse>>() {
                 }.getType();
@@ -899,6 +941,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeExclusiveInstancesResponse DescribeExclusiveInstances(DescribeExclusiveInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExclusiveInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesResponse>>() {
                 }.getType();
@@ -919,6 +962,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(DescribeExclusiveInstancesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeExclusiveInstancesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeExclusiveInstancesStatusResponse>>() {
                 }.getType();
@@ -939,6 +983,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeIPStrategyResponse DescribeIPStrategy(DescribeIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyResponse>>() {
                 }.getType();
@@ -959,6 +1004,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>() {
                 }.getType();
@@ -979,6 +1025,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIPStrategysStatusResponse>>() {
                 }.getType();
@@ -999,6 +1046,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeLogSearchResponse DescribeLogSearch(DescribeLogSearchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogSearchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogSearchResponse>>() {
                 }.getType();
@@ -1019,6 +1067,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
                 }.getType();
@@ -1039,6 +1088,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
                 }.getType();
@@ -1059,6 +1109,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribePluginsResponse DescribePlugins(DescribePluginsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginsResponse>>() {
                 }.getType();
@@ -1079,6 +1130,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePluginsByApiResponse>>() {
                 }.getType();
@@ -1099,6 +1151,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceResponse DescribeService(DescribeServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceResponse>>() {
                 }.getType();
@@ -1119,6 +1172,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(DescribeServiceEnvironmentListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentListResponse>>() {
                 }.getType();
@@ -1140,6 +1194,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(DescribeServiceEnvironmentReleaseHistoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentReleaseHistoryResponse>>() {
                 }.getType();
@@ -1160,6 +1215,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceEnvironmentStrategyResponse DescribeServiceEnvironmentStrategy(DescribeServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1180,6 +1236,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
                 }.getType();
@@ -1201,6 +1258,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeServiceReleaseVersionResponse DescribeServiceReleaseVersion(DescribeServiceReleaseVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceReleaseVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceReleaseVersionResponse>>() {
                 }.getType();
@@ -1222,6 +1280,7 @@ API 网关可绑定自定义域名到服务，并且可以对自定义域名的�
     public DescribeServiceSubDomainMappingsResponse DescribeServiceSubDomainMappings(DescribeServiceSubDomainMappingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceSubDomainMappingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainMappingsResponse>>() {
                 }.getType();
@@ -1243,6 +1302,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeServiceSubDomainsResponse DescribeServiceSubDomains(DescribeServiceSubDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceSubDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceSubDomainsResponse>>() {
                 }.getType();
@@ -1264,6 +1324,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(DescribeServiceUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServiceUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceUsagePlanResponse>>() {
                 }.getType();
@@ -1284,6 +1345,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeServicesStatusResponse DescribeServicesStatus(DescribeServicesStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeServicesStatusResponse>>() {
                 }.getType();
@@ -1304,6 +1366,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
                 }.getType();
@@ -1324,6 +1387,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
                 }.getType();
@@ -1344,6 +1408,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUsagePlanResponse DescribeUsagePlan(DescribeUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanResponse>>() {
                 }.getType();
@@ -1365,6 +1430,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(DescribeUsagePlanEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanEnvironmentsResponse>>() {
                 }.getType();
@@ -1386,6 +1452,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUsagePlanSecretIdsResponse DescribeUsagePlanSecretIds(DescribeUsagePlanSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlanSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>() {
                 }.getType();
@@ -1406,6 +1473,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlansStatusResponse>>() {
                 }.getType();
@@ -1426,6 +1494,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
                 }.getType();
@@ -1446,6 +1515,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public DisableApiKeyResponse DisableApiKey(DisableApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableApiKeyResponse>>() {
                 }.getType();
@@ -1466,6 +1536,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public EnableApiKeyResponse EnableApiKey(EnableApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableApiKeyResponse>>() {
                 }.getType();
@@ -1486,6 +1557,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public GenerateApiDocumentResponse GenerateApiDocument(GenerateApiDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateApiDocumentResponse>>() {
                 }.getType();
@@ -1506,6 +1578,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportOpenApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
                 }.getType();
@@ -1526,6 +1599,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAPIDocResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
                 }.getType();
@@ -1546,6 +1620,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyApiResponse ModifyApi(ModifyApiRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiResponse>>() {
                 }.getType();
@@ -1566,6 +1641,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
                 }.getType();
@@ -1586,6 +1662,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(ModifyApiEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1606,6 +1683,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyApiIncrementResponse ModifyApiIncrement(ModifyApiIncrementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApiIncrementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApiIncrementResponse>>() {
                 }.getType();
@@ -1626,6 +1704,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyExclusiveInstanceResponse ModifyExclusiveInstance(ModifyExclusiveInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyExclusiveInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyExclusiveInstanceResponse>>() {
                 }.getType();
@@ -1646,6 +1725,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyIPStrategyResponse ModifyIPStrategy(ModifyIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
                 }.getType();
@@ -1666,6 +1746,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPluginResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
                 }.getType();
@@ -1686,6 +1767,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyServiceResponse ModifyService(ModifyServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyServiceResponse>>() {
                 }.getType();
@@ -1706,6 +1788,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(ModifyServiceEnvironmentStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyServiceEnvironmentStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyServiceEnvironmentStrategyResponse>>() {
                 }.getType();
@@ -1726,6 +1809,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifySubDomainResponse ModifySubDomain(ModifySubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
                 }.getType();
@@ -1746,6 +1830,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUpstreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
                 }.getType();
@@ -1766,6 +1851,7 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     public ModifyUsagePlanResponse ModifyUsagePlan(ModifyUsagePlanRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUsagePlanResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUsagePlanResponse>>() {
                 }.getType();
@@ -1787,6 +1873,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public ReleaseServiceResponse ReleaseService(ReleaseServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReleaseServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
                 }.getType();
@@ -1807,6 +1894,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
                 }.getType();
@@ -1827,6 +1915,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnBindEnvironmentResponse UnBindEnvironment(UnBindEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindEnvironmentResponse>>() {
                 }.getType();
@@ -1847,6 +1936,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnBindIPStrategyResponse UnBindIPStrategy(UnBindIPStrategyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindIPStrategyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindIPStrategyResponse>>() {
                 }.getType();
@@ -1867,6 +1957,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnBindSecretIdsResponse UnBindSecretIds(UnBindSecretIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindSecretIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindSecretIdsResponse>>() {
                 }.getType();
@@ -1888,6 +1979,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnBindSubDomainResponse UnBindSubDomain(UnBindSubDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindSubDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindSubDomainResponse>>() {
                 }.getType();
@@ -1909,6 +2001,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnReleaseServiceResponse UnReleaseService(UnReleaseServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnReleaseServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
                 }.getType();
@@ -1929,6 +2022,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindApiAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
                 }.getType();
@@ -1949,6 +2043,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
                 }.getType();
@@ -1969,6 +2064,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UpdateApiKeyResponse UpdateApiKey(UpdateApiKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateApiKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateApiKeyResponse>>() {
                 }.getType();
@@ -1989,6 +2085,7 @@ API 网关的服务创建后，需要发布到某个环境方生效后，使用�
     public UpdateServiceResponse UpdateService(UpdateServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateServiceResponse>>() {
                 }.getType();

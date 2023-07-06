@@ -29,7 +29,7 @@ public class TicmClient extends AbstractClient{
     private static String endpoint = "ticm.tencentcloudapi.com";
     private static String service = "ticm";
     private static String version = "2018-11-27";
-
+    
     public TicmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TicmClient extends AbstractClient{
     public DescribeVideoTaskResponse DescribeVideoTask(DescribeVideoTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVideoTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVideoTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TicmClient extends AbstractClient{
     public ImageModerationResponse ImageModeration(ImageModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TicmClient extends AbstractClient{
     public VideoModerationResponse VideoModeration(VideoModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VideoModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VideoModerationResponse>>() {
                 }.getType();

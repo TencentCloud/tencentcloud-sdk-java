@@ -29,7 +29,7 @@ public class TrdpClient extends AbstractClient{
     private static String endpoint = "trdp.tencentcloudapi.com";
     private static String service = "trdp";
     private static String version = "2022-07-26";
-
+    
     public TrdpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TrdpClient extends AbstractClient{
     public EvaluateUserRiskResponse EvaluateUserRisk(EvaluateUserRiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EvaluateUserRiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EvaluateUserRiskResponse>>() {
                 }.getType();

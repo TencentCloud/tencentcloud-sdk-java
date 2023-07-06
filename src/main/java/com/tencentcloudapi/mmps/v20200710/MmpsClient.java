@@ -29,7 +29,7 @@ public class MmpsClient extends AbstractClient{
     private static String endpoint = "mmps.tencentcloudapi.com";
     private static String service = "mmps";
     private static String version = "2020-07-10";
-
+    
     public MmpsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MmpsClient extends AbstractClient{
     public CreateAppScanTaskResponse CreateAppScanTask(CreateAppScanTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppScanTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppScanTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MmpsClient extends AbstractClient{
     public CreateAppScanTaskRepeatResponse CreateAppScanTaskRepeat(CreateAppScanTaskRepeatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppScanTaskRepeatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppScanTaskRepeatResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MmpsClient extends AbstractClient{
     public CreateFlySecMiniAppProfessionalScanTaskResponse CreateFlySecMiniAppProfessionalScanTask(CreateFlySecMiniAppProfessionalScanTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MmpsClient extends AbstractClient{
     public CreateFlySecMiniAppScanTaskResponse CreateFlySecMiniAppScanTask(CreateFlySecMiniAppScanTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlySecMiniAppScanTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlySecMiniAppScanTaskResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MmpsClient extends AbstractClient{
     public CreateFlySecMiniAppScanTaskRepeatResponse CreateFlySecMiniAppScanTaskRepeat(CreateFlySecMiniAppScanTaskRepeatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlySecMiniAppScanTaskRepeatResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfo(DescribeBasicDiagnosisResourceUsageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeFlySecMiniAppReportUrlResponse DescribeFlySecMiniAppReportUrl(DescribeFlySecMiniAppReportUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppReportUrlResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeFlySecMiniAppScanReportListResponse DescribeFlySecMiniAppScanReportList(DescribeFlySecMiniAppScanReportListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeFlySecMiniAppScanTaskListResponse DescribeFlySecMiniAppScanTaskList(DescribeFlySecMiniAppScanTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanTaskListResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeFlySecMiniAppScanTaskParamResponse DescribeFlySecMiniAppScanTaskParam(DescribeFlySecMiniAppScanTaskParamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanTaskParamResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeFlySecMiniAppScanTaskStatusResponse DescribeFlySecMiniAppScanTaskStatus(DescribeFlySecMiniAppScanTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeResourceUsageInfoResponse DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageInfoResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeScanTaskListResponse DescribeScanTaskList(DescribeScanTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeScanTaskReportUrlResponse DescribeScanTaskReportUrl(DescribeScanTaskReportUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskReportUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskReportUrlResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class MmpsClient extends AbstractClient{
     public DescribeScanTaskStatusResponse DescribeScanTaskStatus(DescribeScanTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScanTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScanTaskStatusResponse>>() {
                 }.getType();

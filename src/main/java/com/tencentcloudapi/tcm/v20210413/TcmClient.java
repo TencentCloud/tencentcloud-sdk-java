@@ -29,7 +29,7 @@ public class TcmClient extends AbstractClient{
     private static String endpoint = "tcm.tencentcloudapi.com";
     private static String service = "tcm";
     private static String version = "2021-04-13";
-
+    
     public TcmClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TcmClient extends AbstractClient{
     public CreateMeshResponse CreateMesh(CreateMeshRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMeshResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMeshResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TcmClient extends AbstractClient{
     public DeleteMeshResponse DeleteMesh(DeleteMeshRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMeshResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMeshResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TcmClient extends AbstractClient{
     public DescribeAccessLogConfigResponse DescribeAccessLogConfig(DescribeAccessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccessLogConfigResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TcmClient extends AbstractClient{
     public DescribeMeshResponse DescribeMesh(DescribeMeshRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMeshResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMeshResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TcmClient extends AbstractClient{
     public DescribeMeshListResponse DescribeMeshList(DescribeMeshListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMeshListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMeshListResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TcmClient extends AbstractClient{
     public LinkClusterListResponse LinkClusterList(LinkClusterListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LinkClusterListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LinkClusterListResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TcmClient extends AbstractClient{
     public LinkPrometheusResponse LinkPrometheus(LinkPrometheusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LinkPrometheusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LinkPrometheusResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TcmClient extends AbstractClient{
     public ModifyAccessLogConfigResponse ModifyAccessLogConfig(ModifyAccessLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccessLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccessLogConfigResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TcmClient extends AbstractClient{
     public ModifyMeshResponse ModifyMesh(ModifyMeshRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMeshResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMeshResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TcmClient extends AbstractClient{
     public ModifyTracingConfigResponse ModifyTracingConfig(ModifyTracingConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTracingConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTracingConfigResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TcmClient extends AbstractClient{
     public UnlinkClusterResponse UnlinkCluster(UnlinkClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnlinkClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnlinkClusterResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TcmClient extends AbstractClient{
     public UnlinkPrometheusResponse UnlinkPrometheus(UnlinkPrometheusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnlinkPrometheusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnlinkPrometheusResponse>>() {
                 }.getType();

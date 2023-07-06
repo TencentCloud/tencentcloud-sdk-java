@@ -29,7 +29,7 @@ public class ScfClient extends AbstractClient{
     private static String endpoint = "scf.tencentcloudapi.com";
     private static String service = "scf";
     private static String version = "2018-04-16";
-
+    
     public ScfClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -53,6 +53,7 @@ public class ScfClient extends AbstractClient{
     public CopyFunctionResponse CopyFunction(CopyFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyFunctionResponse>>() {
                 }.getType();
@@ -74,6 +75,7 @@ public class ScfClient extends AbstractClient{
     public CreateAliasResponse CreateAlias(CreateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAliasResponse>>() {
                 }.getType();
@@ -94,6 +96,7 @@ public class ScfClient extends AbstractClient{
     public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFunctionResponse>>() {
                 }.getType();
@@ -114,6 +117,7 @@ public class ScfClient extends AbstractClient{
     public CreateNamespaceResponse CreateNamespace(CreateNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNamespaceResponse>>() {
                 }.getType();
@@ -134,6 +138,7 @@ public class ScfClient extends AbstractClient{
     public CreateTriggerResponse CreateTrigger(CreateTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTriggerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTriggerResponse>>() {
                 }.getType();
@@ -154,6 +159,7 @@ public class ScfClient extends AbstractClient{
     public DeleteAliasResponse DeleteAlias(DeleteAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAliasResponse>>() {
                 }.getType();
@@ -174,6 +180,7 @@ public class ScfClient extends AbstractClient{
     public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
                 }.getType();
@@ -194,6 +201,7 @@ public class ScfClient extends AbstractClient{
     public DeleteLayerVersionResponse DeleteLayerVersion(DeleteLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLayerVersionResponse>>() {
                 }.getType();
@@ -214,6 +222,7 @@ public class ScfClient extends AbstractClient{
     public DeleteNamespaceResponse DeleteNamespace(DeleteNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNamespaceResponse>>() {
                 }.getType();
@@ -234,6 +243,7 @@ public class ScfClient extends AbstractClient{
     public DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(DeleteProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -254,6 +264,7 @@ public class ScfClient extends AbstractClient{
     public DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(DeleteReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -274,6 +285,7 @@ public class ScfClient extends AbstractClient{
     public DeleteTriggerResponse DeleteTrigger(DeleteTriggerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTriggerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
                 }.getType();
@@ -294,6 +306,7 @@ public class ScfClient extends AbstractClient{
     public GetAccountResponse GetAccount(GetAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAccountResponse>>() {
                 }.getType();
@@ -314,6 +327,7 @@ public class ScfClient extends AbstractClient{
     public GetAliasResponse GetAlias(GetAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAliasResponse>>() {
                 }.getType();
@@ -334,6 +348,7 @@ public class ScfClient extends AbstractClient{
     public GetAsyncEventStatusResponse GetAsyncEventStatus(GetAsyncEventStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetAsyncEventStatusResponse>>() {
                 }.getType();
@@ -354,6 +369,7 @@ public class ScfClient extends AbstractClient{
     public GetFunctionResponse GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionResponse>>() {
                 }.getType();
@@ -374,6 +390,7 @@ public class ScfClient extends AbstractClient{
     public GetFunctionAddressResponse GetFunctionAddress(GetFunctionAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionAddressResponse>>() {
                 }.getType();
@@ -394,6 +411,7 @@ public class ScfClient extends AbstractClient{
     public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>() {
                 }.getType();
@@ -414,6 +432,7 @@ public class ScfClient extends AbstractClient{
     public GetFunctionLogsResponse GetFunctionLogs(GetFunctionLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFunctionLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFunctionLogsResponse>>() {
                 }.getType();
@@ -434,6 +453,7 @@ public class ScfClient extends AbstractClient{
     public GetLayerVersionResponse GetLayerVersion(GetLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
                 }.getType();
@@ -454,6 +474,7 @@ public class ScfClient extends AbstractClient{
     public GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(GetProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -474,6 +495,7 @@ public class ScfClient extends AbstractClient{
     public GetRequestStatusResponse GetRequestStatus(GetRequestStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRequestStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRequestStatusResponse>>() {
                 }.getType();
@@ -494,6 +516,7 @@ public class ScfClient extends AbstractClient{
     public GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(GetReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -514,6 +537,7 @@ public class ScfClient extends AbstractClient{
     public InvokeResponse Invoke(InvokeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
@@ -534,6 +558,7 @@ public class ScfClient extends AbstractClient{
     public InvokeFunctionResponse InvokeFunction(InvokeFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeFunctionResponse>>() {
                 }.getType();
@@ -554,6 +579,7 @@ public class ScfClient extends AbstractClient{
     public ListAliasesResponse ListAliases(ListAliasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAliasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAliasesResponse>>() {
                 }.getType();
@@ -574,6 +600,7 @@ public class ScfClient extends AbstractClient{
     public ListAsyncEventsResponse ListAsyncEvents(ListAsyncEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAsyncEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAsyncEventsResponse>>() {
                 }.getType();
@@ -594,6 +621,7 @@ public class ScfClient extends AbstractClient{
     public ListFunctionsResponse ListFunctions(ListFunctionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListFunctionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListFunctionsResponse>>() {
                 }.getType();
@@ -614,6 +642,7 @@ public class ScfClient extends AbstractClient{
     public ListLayerVersionsResponse ListLayerVersions(ListLayerVersionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListLayerVersionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListLayerVersionsResponse>>() {
                 }.getType();
@@ -634,6 +663,7 @@ public class ScfClient extends AbstractClient{
     public ListLayersResponse ListLayers(ListLayersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListLayersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListLayersResponse>>() {
                 }.getType();
@@ -654,6 +684,7 @@ public class ScfClient extends AbstractClient{
     public ListNamespacesResponse ListNamespaces(ListNamespacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListNamespacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListNamespacesResponse>>() {
                 }.getType();
@@ -674,6 +705,7 @@ public class ScfClient extends AbstractClient{
     public ListTriggersResponse ListTriggers(ListTriggersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListTriggersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListTriggersResponse>>() {
                 }.getType();
@@ -694,6 +726,7 @@ public class ScfClient extends AbstractClient{
     public ListVersionByFunctionResponse ListVersionByFunction(ListVersionByFunctionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListVersionByFunctionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListVersionByFunctionResponse>>() {
                 }.getType();
@@ -714,6 +747,7 @@ public class ScfClient extends AbstractClient{
     public PublishLayerVersionResponse PublishLayerVersion(PublishLayerVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishLayerVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishLayerVersionResponse>>() {
                 }.getType();
@@ -734,6 +768,7 @@ public class ScfClient extends AbstractClient{
     public PublishVersionResponse PublishVersion(PublishVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PublishVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
@@ -754,6 +789,7 @@ public class ScfClient extends AbstractClient{
     public PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -774,6 +810,7 @@ public class ScfClient extends AbstractClient{
     public PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfig(PutReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutReservedConcurrencyConfigResponse>>() {
                 }.getType();
@@ -794,6 +831,7 @@ public class ScfClient extends AbstractClient{
     public PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(PutTotalConcurrencyConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
                 }.getType();
@@ -814,6 +852,7 @@ public class ScfClient extends AbstractClient{
     public TerminateAsyncEventResponse TerminateAsyncEvent(TerminateAsyncEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateAsyncEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateAsyncEventResponse>>() {
                 }.getType();
@@ -834,6 +873,7 @@ public class ScfClient extends AbstractClient{
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateAliasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
                 }.getType();
@@ -854,6 +894,7 @@ public class ScfClient extends AbstractClient{
     public UpdateFunctionCodeResponse UpdateFunctionCode(UpdateFunctionCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
                 }.getType();
@@ -874,6 +915,7 @@ public class ScfClient extends AbstractClient{
     public UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
                 }.getType();
@@ -894,6 +936,7 @@ public class ScfClient extends AbstractClient{
     public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>() {
                 }.getType();
@@ -914,6 +957,7 @@ public class ScfClient extends AbstractClient{
     public UpdateNamespaceResponse UpdateNamespace(UpdateNamespaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateNamespaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateNamespaceResponse>>() {
                 }.getType();
@@ -934,6 +978,7 @@ public class ScfClient extends AbstractClient{
     public UpdateTriggerStatusResponse UpdateTriggerStatus(UpdateTriggerStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateTriggerStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateTriggerStatusResponse>>() {
                 }.getType();

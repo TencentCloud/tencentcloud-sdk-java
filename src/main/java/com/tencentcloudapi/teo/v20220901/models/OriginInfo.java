@@ -28,6 +28,7 @@ public class OriginInfo extends AbstractModel{
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
+<li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -68,12 +69,14 @@ public class OriginInfo extends AbstractModel{
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
-<li>AWS_S3：AWS S3对象存储源站。</li> 
+<li>AWS_S3：AWS S3对象存储源站。</li>
+<li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li> 
      * @return OriginType 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
+<li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li>
      */
     public String getOriginType() {
         return this.OriginType;
@@ -85,11 +88,13 @@ public class OriginInfo extends AbstractModel{
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
+<li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li>
      * @param OriginType 源站类型，取值有：
 <li>IP_DOMAIN：IPV4、IPV6或域名类型源站；</li>
 <li>COS：COS源。</li>
 <li>ORIGIN_GROUP：源站组类型源站。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
+<li>SPACE：Edgeone源站Space存储，Space存储不允许配置该类型源站。</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;

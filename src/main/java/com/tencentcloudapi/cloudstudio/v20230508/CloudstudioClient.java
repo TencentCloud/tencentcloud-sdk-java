@@ -29,7 +29,7 @@ public class CloudstudioClient extends AbstractClient{
     private static String endpoint = "cloudstudio.tencentcloudapi.com";
     private static String service = "cloudstudio";
     private static String version = "2023-05-08";
-
+    
     public CloudstudioClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CloudstudioClient extends AbstractClient{
     public CreateWorkspaceTokenResponse CreateWorkspaceToken(CreateWorkspaceTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkspaceTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkspaceTokenResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeConfigResponse DescribeConfig(DescribeConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CloudstudioClient extends AbstractClient{
     public DescribeWorkspacesResponse DescribeWorkspaces(DescribeWorkspacesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkspacesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkspacesResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CloudstudioClient extends AbstractClient{
     public ModifyWorkspaceResponse ModifyWorkspace(ModifyWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkspaceResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CloudstudioClient extends AbstractClient{
     public RemoveWorkspaceResponse RemoveWorkspace(RemoveWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveWorkspaceResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CloudstudioClient extends AbstractClient{
     public RunWorkspaceResponse RunWorkspace(RunWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunWorkspaceResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CloudstudioClient extends AbstractClient{
     public StopWorkspaceResponse StopWorkspace(StopWorkspaceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopWorkspaceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopWorkspaceResponse>>() {
                 }.getType();

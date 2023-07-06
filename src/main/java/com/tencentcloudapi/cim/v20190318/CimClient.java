@@ -29,7 +29,7 @@ public class CimClient extends AbstractClient{
     private static String endpoint = "cim.tencentcloudapi.com";
     private static String service = "cim";
     private static String version = "2019-03-18";
-
+    
     public CimClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CimClient extends AbstractClient{
     public DescribeSdkAppidResponse DescribeSdkAppid(DescribeSdkAppidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSdkAppidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSdkAppidResponse>>() {
                 }.getType();

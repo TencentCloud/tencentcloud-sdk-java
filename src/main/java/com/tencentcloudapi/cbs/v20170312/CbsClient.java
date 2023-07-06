@@ -29,7 +29,7 @@ public class CbsClient extends AbstractClient{
     private static String endpoint = "cbs.tencentcloudapi.com";
     private static String service = "cbs";
     private static String version = "2017-03-12";
-
+    
     public CbsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -51,6 +51,7 @@ public class CbsClient extends AbstractClient{
     public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyDiskBackupResponse>>() {
                 }.getType();
@@ -75,6 +76,7 @@ public class CbsClient extends AbstractClient{
     public ApplySnapshotResponse ApplySnapshot(ApplySnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplySnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplySnapshotResponse>>() {
                 }.getType();
@@ -98,6 +100,7 @@ public class CbsClient extends AbstractClient{
     public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachDisksResponse>>() {
                 }.getType();
@@ -121,6 +124,7 @@ public class CbsClient extends AbstractClient{
     public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -144,6 +148,7 @@ public class CbsClient extends AbstractClient{
     public CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(CopySnapshotCrossRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopySnapshotCrossRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopySnapshotCrossRegionsResponse>>() {
                 }.getType();
@@ -167,6 +172,7 @@ public class CbsClient extends AbstractClient{
     public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -187,6 +193,7 @@ public class CbsClient extends AbstractClient{
     public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDiskBackupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDiskBackupResponse>>() {
                 }.getType();
@@ -211,6 +218,7 @@ public class CbsClient extends AbstractClient{
     public CreateDisksResponse CreateDisks(CreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDisksResponse>>() {
                 }.getType();
@@ -235,6 +243,7 @@ public class CbsClient extends AbstractClient{
     public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSnapshotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSnapshotResponse>>() {
                 }.getType();
@@ -257,6 +266,7 @@ public class CbsClient extends AbstractClient{
     public DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(DeleteAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAutoSnapshotPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>() {
                 }.getType();
@@ -277,6 +287,7 @@ public class CbsClient extends AbstractClient{
     public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDiskBackupsResponse>>() {
                 }.getType();
@@ -300,6 +311,7 @@ public class CbsClient extends AbstractClient{
     public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
                 }.getType();
@@ -323,6 +335,7 @@ public class CbsClient extends AbstractClient{
     public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>() {
                 }.getType();
@@ -343,6 +356,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(DescribeDiskAssociatedAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>() {
                 }.getType();
@@ -366,6 +380,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsResponse>>() {
                 }.getType();
@@ -386,6 +401,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(DescribeDiskConfigQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskConfigQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskConfigQuotaResponse>>() {
                 }.getType();
@@ -408,6 +424,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(DescribeDiskOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskOperationLogsResponse>>() {
                 }.getType();
@@ -431,6 +448,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDiskStoragePoolResponse DescribeDiskStoragePool(DescribeDiskStoragePoolRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDiskStoragePoolResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskStoragePoolResponse>>() {
                 }.getType();
@@ -454,6 +472,7 @@ public class CbsClient extends AbstractClient{
     public DescribeDisksResponse DescribeDisks(DescribeDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDisksResponse>>() {
                 }.getType();
@@ -476,6 +495,7 @@ public class CbsClient extends AbstractClient{
     public DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDiskNumResponse>>() {
                 }.getType();
@@ -499,6 +519,7 @@ public class CbsClient extends AbstractClient{
     public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
                 }.getType();
@@ -519,6 +540,7 @@ public class CbsClient extends AbstractClient{
     public DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(DescribeSnapshotSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotSharePermissionResponse>>() {
                 }.getType();
@@ -542,6 +564,7 @@ public class CbsClient extends AbstractClient{
     public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
                 }.getType();
@@ -565,6 +588,7 @@ public class CbsClient extends AbstractClient{
     public DetachDisksResponse DetachDisks(DetachDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachDisksResponse>>() {
                 }.getType();
@@ -585,6 +609,7 @@ public class CbsClient extends AbstractClient{
     public GetSnapOverviewResponse GetSnapOverview(GetSnapOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetSnapOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetSnapOverviewResponse>>() {
                 }.getType();
@@ -609,6 +634,7 @@ public class CbsClient extends AbstractClient{
     public InitializeDisksResponse InitializeDisks(InitializeDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitializeDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InitializeDisksResponse>>() {
                 }.getType();
@@ -629,6 +655,7 @@ public class CbsClient extends AbstractClient{
     public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>() {
                 }.getType();
@@ -649,6 +676,7 @@ public class CbsClient extends AbstractClient{
     public InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(InquirePriceModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskExtraPerformanceResponse>>() {
                 }.getType();
@@ -671,6 +699,7 @@ public class CbsClient extends AbstractClient{
     public InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(InquiryPriceCreateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDisksResponse>>() {
                 }.getType();
@@ -695,6 +724,7 @@ public class CbsClient extends AbstractClient{
     public InquiryPriceRenewDisksResponse InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDisksResponse>>() {
                 }.getType();
@@ -715,6 +745,7 @@ public class CbsClient extends AbstractClient{
     public InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(InquiryPriceResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceResizeDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeDiskResponse>>() {
                 }.getType();
@@ -738,6 +769,7 @@ public class CbsClient extends AbstractClient{
     public ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(ModifyAutoSnapshotPolicyAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoSnapshotPolicyAttributeResponse>>() {
                 }.getType();
@@ -760,6 +792,7 @@ public class CbsClient extends AbstractClient{
     public ModifyDiskAttributesResponse ModifyDiskAttributes(ModifyDiskAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
@@ -780,6 +813,7 @@ public class CbsClient extends AbstractClient{
     public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskBackupQuotaResponse>>() {
                 }.getType();
@@ -802,6 +836,7 @@ public class CbsClient extends AbstractClient{
     public ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(ModifyDiskExtraPerformanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDiskExtraPerformanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskExtraPerformanceResponse>>() {
                 }.getType();
@@ -825,6 +860,7 @@ public class CbsClient extends AbstractClient{
     public ModifyDisksChargeTypeResponse ModifyDisksChargeType(ModifyDisksChargeTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDisksChargeTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDisksChargeTypeResponse>>() {
                 }.getType();
@@ -845,6 +881,7 @@ public class CbsClient extends AbstractClient{
     public ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDisksRenewFlagResponse>>() {
                 }.getType();
@@ -868,6 +905,7 @@ public class CbsClient extends AbstractClient{
     public ModifySnapshotAttributeResponse ModifySnapshotAttribute(ModifySnapshotAttributeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotAttributeResponse>>() {
                 }.getType();
@@ -894,6 +932,7 @@ public class CbsClient extends AbstractClient{
     public ModifySnapshotsSharePermissionResponse ModifySnapshotsSharePermission(ModifySnapshotsSharePermissionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySnapshotsSharePermissionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySnapshotsSharePermissionResponse>>() {
                 }.getType();
@@ -917,6 +956,7 @@ public class CbsClient extends AbstractClient{
     public RenewDiskResponse RenewDisk(RenewDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewDiskResponse>>() {
                 }.getType();
@@ -940,6 +980,7 @@ public class CbsClient extends AbstractClient{
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeDiskResponse>>() {
                 }.getType();
@@ -964,6 +1005,7 @@ public class CbsClient extends AbstractClient{
     public TerminateDisksResponse TerminateDisks(TerminateDisksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateDisksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateDisksResponse>>() {
                 }.getType();
@@ -987,6 +1029,7 @@ public class CbsClient extends AbstractClient{
     public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>() {
                 }.getType();

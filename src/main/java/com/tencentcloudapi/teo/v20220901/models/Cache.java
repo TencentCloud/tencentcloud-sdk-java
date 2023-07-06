@@ -107,7 +107,9 @@ public class Cache extends AbstractModel{
 <li>on：开启；</li>
 <li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
     }
@@ -121,7 +123,9 @@ public class Cache extends AbstractModel{
 <li>on：开启；</li>
 <li>off：关闭。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
     }

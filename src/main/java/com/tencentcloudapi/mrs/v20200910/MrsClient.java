@@ -29,7 +29,7 @@ public class MrsClient extends AbstractClient{
     private static String endpoint = "mrs.tencentcloudapi.com";
     private static String service = "mrs";
     private static String version = "2020-09-10";
-
+    
     public MrsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MrsClient extends AbstractClient{
     public ImageToClassResponse ImageToClass(ImageToClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageToClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageToClassResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MrsClient extends AbstractClient{
     public ImageToObjectResponse ImageToObject(ImageToObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageToObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageToObjectResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MrsClient extends AbstractClient{
     public TextToClassResponse TextToClass(TextToClassRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToClassResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToClassResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class MrsClient extends AbstractClient{
     public TextToObjectResponse TextToObject(TextToObjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToObjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToObjectResponse>>() {
                 }.getType();

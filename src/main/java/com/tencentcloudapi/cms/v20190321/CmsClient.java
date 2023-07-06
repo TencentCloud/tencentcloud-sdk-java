@@ -29,7 +29,7 @@ public class CmsClient extends AbstractClient{
     private static String endpoint = "cms.tencentcloudapi.com";
     private static String service = "cms";
     private static String version = "2019-03-21";
-
+    
     public CmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CmsClient extends AbstractClient{
     public CreateKeywordsSamplesResponse CreateKeywordsSamples(CreateKeywordsSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKeywordsSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKeywordsSamplesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CmsClient extends AbstractClient{
     public DeleteLibSamplesResponse DeleteLibSamples(DeleteLibSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLibSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLibSamplesResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CmsClient extends AbstractClient{
     public DescribeKeywordsLibsResponse DescribeKeywordsLibs(DescribeKeywordsLibsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKeywordsLibsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKeywordsLibsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CmsClient extends AbstractClient{
     public DescribeLibSamplesResponse DescribeLibSamples(DescribeLibSamplesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLibSamplesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLibSamplesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CmsClient extends AbstractClient{
     public ImageModerationResponse ImageModeration(ImageModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CmsClient extends AbstractClient{
     public TextModerationResponse TextModeration(TextModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextModerationResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class AmeClient extends AbstractClient{
     private static String endpoint = "ame.tencentcloudapi.com";
     private static String service = "ame";
     private static String version = "2019-09-16";
-
+    
     public AmeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AmeClient extends AbstractClient{
     public BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetails(BatchDescribeKTVMusicDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDescribeKTVMusicDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDescribeKTVMusicDetailsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AmeClient extends AbstractClient{
     public CreateKTVRobotResponse CreateKTVRobot(CreateKTVRobotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateKTVRobotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateKTVRobotResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AmeClient extends AbstractClient{
     public DescribeAuthInfoResponse DescribeAuthInfo(DescribeAuthInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAuthInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAuthInfoResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class AmeClient extends AbstractClient{
     public DescribeCloudMusicResponse DescribeCloudMusic(DescribeCloudMusicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudMusicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudMusicResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class AmeClient extends AbstractClient{
     public DescribeCloudMusicPurchasedResponse DescribeCloudMusicPurchased(DescribeCloudMusicPurchasedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCloudMusicPurchasedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCloudMusicPurchasedResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class AmeClient extends AbstractClient{
     public DescribeItemByIdResponse DescribeItemById(DescribeItemByIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeItemByIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeItemByIdResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class AmeClient extends AbstractClient{
     public DescribeItemsResponse DescribeItems(DescribeItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeItemsResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVMusicDetailResponse DescribeKTVMusicDetail(DescribeKTVMusicDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVMusicDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicDetailResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVMusicTagsResponse DescribeKTVMusicTags(DescribeKTVMusicTagsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVMusicTagsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVMusicTagsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetail(DescribeKTVPlaylistDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVPlaylistDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistDetailResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVPlaylistsResponse DescribeKTVPlaylists(DescribeKTVPlaylistsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVPlaylistsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVPlaylistsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVRobotsResponse DescribeKTVRobots(DescribeKTVRobotsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVRobotsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVRobotsResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVSingerCategoriesResponse DescribeKTVSingerCategories(DescribeKTVSingerCategoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVSingerCategoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSingerCategoriesResponse>>() {
                 }.getType();
@@ -310,6 +323,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVSingerMusicsResponse DescribeKTVSingerMusics(DescribeKTVSingerMusicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVSingerMusicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSingerMusicsResponse>>() {
                 }.getType();
@@ -330,6 +344,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVSingersResponse DescribeKTVSingers(DescribeKTVSingersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVSingersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSingersResponse>>() {
                 }.getType();
@@ -350,6 +365,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVSuggestionsResponse DescribeKTVSuggestions(DescribeKTVSuggestionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVSuggestionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVSuggestionsResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ public class AmeClient extends AbstractClient{
     public DescribeKTVTopListResponse DescribeKTVTopList(DescribeKTVTopListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKTVTopListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKTVTopListResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ public class AmeClient extends AbstractClient{
     public DescribeLyricResponse DescribeLyric(DescribeLyricRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLyricResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLyricResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ public class AmeClient extends AbstractClient{
     public DescribeMusicResponse DescribeMusic(DescribeMusicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMusicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMusicResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ public class AmeClient extends AbstractClient{
     public DescribeMusicSaleStatusResponse DescribeMusicSaleStatus(DescribeMusicSaleStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMusicSaleStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMusicSaleStatusResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ public class AmeClient extends AbstractClient{
     public DescribePackageItemsResponse DescribePackageItems(DescribePackageItemsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePackageItemsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePackageItemsResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ public class AmeClient extends AbstractClient{
     public DescribePackagesResponse DescribePackages(DescribePackagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePackagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePackagesResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ public class AmeClient extends AbstractClient{
     public DescribePkgOfflineMusicResponse DescribePkgOfflineMusic(DescribePkgOfflineMusicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePkgOfflineMusicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePkgOfflineMusicResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ public class AmeClient extends AbstractClient{
     public DescribeStationsResponse DescribeStations(DescribeStationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStationsResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ public class AmeClient extends AbstractClient{
     public DestroyKTVRobotResponse DestroyKTVRobot(DestroyKTVRobotRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyKTVRobotResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyKTVRobotResponse>>() {
                 }.getType();
@@ -550,6 +575,7 @@ public class AmeClient extends AbstractClient{
     public ModifyMusicOnShelvesResponse ModifyMusicOnShelves(ModifyMusicOnShelvesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMusicOnShelvesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMusicOnShelvesResponse>>() {
                 }.getType();
@@ -570,6 +596,7 @@ public class AmeClient extends AbstractClient{
     public PutMusicOnTheShelvesResponse PutMusicOnTheShelves(PutMusicOnTheShelvesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PutMusicOnTheShelvesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PutMusicOnTheShelvesResponse>>() {
                 }.getType();
@@ -590,6 +617,7 @@ public class AmeClient extends AbstractClient{
     public ReportDataResponse ReportData(ReportDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportDataResponse>>() {
                 }.getType();
@@ -610,6 +638,7 @@ public class AmeClient extends AbstractClient{
     public SearchKTVMusicsResponse SearchKTVMusics(SearchKTVMusicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchKTVMusicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchKTVMusicsResponse>>() {
                 }.getType();
@@ -630,6 +659,7 @@ public class AmeClient extends AbstractClient{
     public SyncKTVRobotCommandResponse SyncKTVRobotCommand(SyncKTVRobotCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncKTVRobotCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncKTVRobotCommandResponse>>() {
                 }.getType();
@@ -650,6 +680,7 @@ public class AmeClient extends AbstractClient{
     public TakeMusicOffShelvesResponse TakeMusicOffShelves(TakeMusicOffShelvesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TakeMusicOffShelvesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TakeMusicOffShelvesResponse>>() {
                 }.getType();

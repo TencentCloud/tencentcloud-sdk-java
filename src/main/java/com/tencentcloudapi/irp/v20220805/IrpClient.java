@@ -29,7 +29,7 @@ public class IrpClient extends AbstractClient{
     private static String endpoint = "irp.tencentcloudapi.com";
     private static String service = "irp";
     private static String version = "2022-08-05";
-
+    
     public IrpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IrpClient extends AbstractClient{
     public DescribeGoodsRecommendResponse DescribeGoodsRecommend(DescribeGoodsRecommendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGoodsRecommendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGoodsRecommendResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class IrpClient extends AbstractClient{
     public FeedRecommendResponse FeedRecommend(FeedRecommendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FeedRecommendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FeedRecommendResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class IrpClient extends AbstractClient{
     public ReportFeedBehaviorResponse ReportFeedBehavior(ReportFeedBehaviorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportFeedBehaviorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportFeedBehaviorResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class IrpClient extends AbstractClient{
     public ReportFeedItemResponse ReportFeedItem(ReportFeedItemRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportFeedItemResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportFeedItemResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class IrpClient extends AbstractClient{
     public ReportFeedUserResponse ReportFeedUser(ReportFeedUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportFeedUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportFeedUserResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class IrpClient extends AbstractClient{
     public ReportGoodsBehaviorResponse ReportGoodsBehavior(ReportGoodsBehaviorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportGoodsBehaviorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportGoodsBehaviorResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class IrpClient extends AbstractClient{
     public ReportGoodsInfoResponse ReportGoodsInfo(ReportGoodsInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportGoodsInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportGoodsInfoResponse>>() {
                 }.getType();

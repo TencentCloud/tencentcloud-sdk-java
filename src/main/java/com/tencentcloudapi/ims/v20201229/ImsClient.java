@@ -29,7 +29,7 @@ public class ImsClient extends AbstractClient{
     private static String endpoint = "ims.tencentcloudapi.com";
     private static String service = "ims";
     private static String version = "2020-12-29";
-
+    
     public ImsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -66,6 +66,7 @@ public class ImsClient extends AbstractClient{
     public CreateImageModerationAsyncTaskResponse CreateImageModerationAsyncTask(CreateImageModerationAsyncTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImageModerationAsyncTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImageModerationAsyncTaskResponse>>() {
                 }.getType();
@@ -124,6 +125,7 @@ public class ImsClient extends AbstractClient{
     public ImageModerationResponse ImageModeration(ImageModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageModerationResponse>>() {
                 }.getType();

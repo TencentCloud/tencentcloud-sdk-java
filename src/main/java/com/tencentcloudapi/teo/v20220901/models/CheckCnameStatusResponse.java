@@ -20,7 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReclaimAliasDomainResponse extends AbstractModel{
+public class CheckCnameStatusResponse extends AbstractModel{
+
+    /**
+    * 域名Cname状态信息列表。
+    */
+    @SerializedName("CnameStatus")
+    @Expose
+    private CnameStatus [] CnameStatus;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +35,22 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 域名Cname状态信息列表。 
+     * @return CnameStatus 域名Cname状态信息列表。
+     */
+    public CnameStatus [] getCnameStatus() {
+        return this.CnameStatus;
+    }
+
+    /**
+     * Set 域名Cname状态信息列表。
+     * @param CnameStatus 域名Cname状态信息列表。
+     */
+    public void setCnameStatus(CnameStatus [] CnameStatus) {
+        this.CnameStatus = CnameStatus;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +68,20 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ReclaimAliasDomainResponse() {
+    public CheckCnameStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReclaimAliasDomainResponse(ReclaimAliasDomainResponse source) {
+    public CheckCnameStatusResponse(CheckCnameStatusResponse source) {
+        if (source.CnameStatus != null) {
+            this.CnameStatus = new CnameStatus[source.CnameStatus.length];
+            for (int i = 0; i < source.CnameStatus.length; i++) {
+                this.CnameStatus[i] = new CnameStatus(source.CnameStatus[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class ReclaimAliasDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "CnameStatus.", this.CnameStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

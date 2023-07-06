@@ -29,7 +29,7 @@ public class HaboClient extends AbstractClient{
     private static String endpoint = "habo.tencentcloudapi.com";
     private static String service = "habo";
     private static String version = "2018-12-03";
-
+    
     public HaboClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class HaboClient extends AbstractClient{
     public DescribeStatusResponse DescribeStatus(DescribeStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStatusResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class HaboClient extends AbstractClient{
     public StartAnalyseResponse StartAnalyse(StartAnalyseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartAnalyseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartAnalyseResponse>>() {
                 }.getType();

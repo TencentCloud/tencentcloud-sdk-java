@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateUserGroupResponse extends AbstractModel{
 
     /**
+    * 用户组ID
+    */
+    @SerializedName("UserGroupId")
+    @Expose
+    private String UserGroupId;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 用户组ID 
+     * @return UserGroupId 用户组ID
+     */
+    public String getUserGroupId() {
+        return this.UserGroupId;
+    }
+
+    /**
+     * Set 用户组ID
+     * @param UserGroupId 用户组ID
+     */
+    public void setUserGroupId(String UserGroupId) {
+        this.UserGroupId = UserGroupId;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreateUserGroupResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateUserGroupResponse(CreateUserGroupResponse source) {
+        if (source.UserGroupId != null) {
+            this.UserGroupId = new String(source.UserGroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateUserGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UserGroupId", this.UserGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

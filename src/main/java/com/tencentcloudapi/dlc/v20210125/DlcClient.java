@@ -29,7 +29,7 @@ public class DlcClient extends AbstractClient{
     private static String endpoint = "dlc.tencentcloudapi.com";
     private static String service = "dlc";
     private static String version = "2021-01-25";
-
+    
     public DlcClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DlcClient extends AbstractClient{
     public AddDMSPartitionsResponse AddDMSPartitions(AddDMSPartitionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDMSPartitionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDMSPartitionsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DlcClient extends AbstractClient{
     public AddUsersToWorkGroupResponse AddUsersToWorkGroup(AddUsersToWorkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUsersToWorkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUsersToWorkGroupResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DlcClient extends AbstractClient{
     public AlterDMSDatabaseResponse AlterDMSDatabase(AlterDMSDatabaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AlterDMSDatabaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AlterDMSDatabaseResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DlcClient extends AbstractClient{
     public AlterDMSPartitionResponse AlterDMSPartition(AlterDMSPartitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AlterDMSPartitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AlterDMSPartitionResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DlcClient extends AbstractClient{
     public AlterDMSTableResponse AlterDMSTable(AlterDMSTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AlterDMSTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AlterDMSTableResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DlcClient extends AbstractClient{
     public AttachUserPolicyResponse AttachUserPolicy(AttachUserPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachUserPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachUserPolicyResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DlcClient extends AbstractClient{
     public AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(AttachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachWorkGroupPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachWorkGroupPolicyResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DlcClient extends AbstractClient{
     public BindWorkGroupsToUserResponse BindWorkGroupsToUser(BindWorkGroupsToUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindWorkGroupsToUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindWorkGroupsToUserResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DlcClient extends AbstractClient{
     public CancelNotebookSessionStatementResponse CancelNotebookSessionStatement(CancelNotebookSessionStatementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelNotebookSessionStatementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelNotebookSessionStatementResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DlcClient extends AbstractClient{
     public CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(CancelNotebookSessionStatementBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelNotebookSessionStatementBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelNotebookSessionStatementBatchResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class DlcClient extends AbstractClient{
     public CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(CancelSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelSparkSessionBatchSQLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelSparkSessionBatchSQLResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class DlcClient extends AbstractClient{
     public CancelTaskResponse CancelTask(CancelTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelTaskResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class DlcClient extends AbstractClient{
     public CheckLockMetaDataResponse CheckLockMetaData(CheckLockMetaDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckLockMetaDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckLockMetaDataResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class DlcClient extends AbstractClient{
     public CreateDMSDatabaseResponse CreateDMSDatabase(CreateDMSDatabaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDMSDatabaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDMSDatabaseResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class DlcClient extends AbstractClient{
     public CreateDMSTableResponse CreateDMSTable(CreateDMSTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDMSTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDMSTableResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class DlcClient extends AbstractClient{
     public CreateDataEngineResponse CreateDataEngine(CreateDataEngineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDataEngineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDataEngineResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class DlcClient extends AbstractClient{
     public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDatabaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDatabaseResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class DlcClient extends AbstractClient{
     public CreateExportTaskResponse CreateExportTask(CreateExportTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateExportTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateExportTaskResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class DlcClient extends AbstractClient{
     public CreateImportTaskResponse CreateImportTask(CreateImportTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateImportTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateImportTaskResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class DlcClient extends AbstractClient{
     public CreateInternalTableResponse CreateInternalTable(CreateInternalTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInternalTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInternalTableResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class DlcClient extends AbstractClient{
     public CreateNotebookSessionResponse CreateNotebookSession(CreateNotebookSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotebookSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class DlcClient extends AbstractClient{
     public CreateNotebookSessionStatementResponse CreateNotebookSessionStatement(CreateNotebookSessionStatementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotebookSessionStatementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionStatementResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class DlcClient extends AbstractClient{
     public CreateNotebookSessionStatementSupportBatchSQLResponse CreateNotebookSessionStatementSupportBatchSQL(CreateNotebookSessionStatementSupportBatchSQLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookSessionStatementSupportBatchSQLResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class DlcClient extends AbstractClient{
     public CreateResultDownloadResponse CreateResultDownload(CreateResultDownloadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateResultDownloadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateResultDownloadResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class DlcClient extends AbstractClient{
     public CreateScriptResponse CreateScript(CreateScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScriptResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class DlcClient extends AbstractClient{
     public CreateSparkAppResponse CreateSparkApp(CreateSparkAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSparkAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSparkAppResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class DlcClient extends AbstractClient{
     public CreateSparkAppTaskResponse CreateSparkAppTask(CreateSparkAppTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSparkAppTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSparkAppTaskResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class DlcClient extends AbstractClient{
     public CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(CreateSparkSessionBatchSQLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSparkSessionBatchSQLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSparkSessionBatchSQLResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class DlcClient extends AbstractClient{
     public CreateStoreLocationResponse CreateStoreLocation(CreateStoreLocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateStoreLocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateStoreLocationResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class DlcClient extends AbstractClient{
     public CreateTableResponse CreateTable(CreateTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTableResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class DlcClient extends AbstractClient{
     public CreateTaskResponse CreateTask(CreateTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTaskResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class DlcClient extends AbstractClient{
     public CreateTasksResponse CreateTasks(CreateTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTasksResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class DlcClient extends AbstractClient{
     public CreateTasksInOrderResponse CreateTasksInOrder(CreateTasksInOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTasksInOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTasksInOrderResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class DlcClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class DlcClient extends AbstractClient{
     public CreateWorkGroupResponse CreateWorkGroup(CreateWorkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWorkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWorkGroupResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class DlcClient extends AbstractClient{
     public DeleteNotebookSessionResponse DeleteNotebookSession(DeleteNotebookSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNotebookSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNotebookSessionResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class DlcClient extends AbstractClient{
     public DeleteScriptResponse DeleteScript(DeleteScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScriptResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class DlcClient extends AbstractClient{
     public DeleteSparkAppResponse DeleteSparkApp(DeleteSparkAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteSparkAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteSparkAppResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class DlcClient extends AbstractClient{
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class DlcClient extends AbstractClient{
     public DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(DeleteUsersFromWorkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsersFromWorkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsersFromWorkGroupResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class DlcClient extends AbstractClient{
     public DeleteWorkGroupResponse DeleteWorkGroup(DeleteWorkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWorkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWorkGroupResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDMSDatabaseResponse DescribeDMSDatabase(DescribeDMSDatabaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDMSDatabaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDMSDatabaseResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDMSPartitionsResponse DescribeDMSPartitions(DescribeDMSPartitionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDMSPartitionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDMSPartitionsResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDMSTableResponse DescribeDMSTable(DescribeDMSTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDMSTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDMSTableResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDMSTablesResponse DescribeDMSTables(DescribeDMSTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDMSTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDMSTablesResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDataEnginesResponse DescribeDataEngines(DescribeDataEnginesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataEnginesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataEnginesResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class DlcClient extends AbstractClient{
     public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatabasesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class DlcClient extends AbstractClient{
     public DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(DescribeEngineUsageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEngineUsageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEngineUsageInfoResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class DlcClient extends AbstractClient{
     public DescribeForbiddenTableProResponse DescribeForbiddenTablePro(DescribeForbiddenTableProRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeForbiddenTableProResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeForbiddenTableProResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class DlcClient extends AbstractClient{
     public DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(DescribeLakeFsDirSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLakeFsDirSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLakeFsDirSummaryResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class DlcClient extends AbstractClient{
     public DescribeLakeFsInfoResponse DescribeLakeFsInfo(DescribeLakeFsInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLakeFsInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLakeFsInfoResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionResponse DescribeNotebookSession(DescribeNotebookSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionLogResponse DescribeNotebookSessionLog(DescribeNotebookSessionLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionLogResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatement(DescribeNotebookSessionStatementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionStatementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionStatementSqlResultResponse DescribeNotebookSessionStatementSqlResult(DescribeNotebookSessionStatementSqlResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementSqlResultResponse>>() {
                 }.getType();
@@ -1147,6 +1202,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionStatementsResponse DescribeNotebookSessionStatements(DescribeNotebookSessionStatementsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionStatementsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionStatementsResponse>>() {
                 }.getType();
@@ -1167,6 +1223,7 @@ public class DlcClient extends AbstractClient{
     public DescribeNotebookSessionsResponse DescribeNotebookSessions(DescribeNotebookSessionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSessionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSessionsResponse>>() {
                 }.getType();
@@ -1187,6 +1244,7 @@ public class DlcClient extends AbstractClient{
     public DescribeResultDownloadResponse DescribeResultDownload(DescribeResultDownloadRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResultDownloadResponse>>() {
                 }.getType();
@@ -1207,6 +1265,7 @@ public class DlcClient extends AbstractClient{
     public DescribeScriptsResponse DescribeScripts(DescribeScriptsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScriptsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScriptsResponse>>() {
                 }.getType();
@@ -1227,6 +1286,7 @@ public class DlcClient extends AbstractClient{
     public DescribeSparkAppJobResponse DescribeSparkAppJob(DescribeSparkAppJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSparkAppJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSparkAppJobResponse>>() {
                 }.getType();
@@ -1247,6 +1307,7 @@ public class DlcClient extends AbstractClient{
     public DescribeSparkAppJobsResponse DescribeSparkAppJobs(DescribeSparkAppJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSparkAppJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSparkAppJobsResponse>>() {
                 }.getType();
@@ -1267,6 +1328,7 @@ public class DlcClient extends AbstractClient{
     public DescribeSparkAppTasksResponse DescribeSparkAppTasks(DescribeSparkAppTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSparkAppTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSparkAppTasksResponse>>() {
                 }.getType();
@@ -1287,6 +1349,7 @@ public class DlcClient extends AbstractClient{
     public DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(DescribeSparkSessionBatchSqlLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSparkSessionBatchSqlLogResponse>>() {
                 }.getType();
@@ -1307,6 +1370,7 @@ public class DlcClient extends AbstractClient{
     public DescribeStoreLocationResponse DescribeStoreLocation(DescribeStoreLocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStoreLocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStoreLocationResponse>>() {
                 }.getType();
@@ -1327,6 +1391,7 @@ public class DlcClient extends AbstractClient{
     public DescribeTableResponse DescribeTable(DescribeTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTableResponse>>() {
                 }.getType();
@@ -1347,6 +1412,7 @@ public class DlcClient extends AbstractClient{
     public DescribeTablesResponse DescribeTables(DescribeTablesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTablesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTablesResponse>>() {
                 }.getType();
@@ -1367,6 +1433,7 @@ public class DlcClient extends AbstractClient{
     public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
                 }.getType();
@@ -1387,6 +1454,7 @@ public class DlcClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
@@ -1407,6 +1475,7 @@ public class DlcClient extends AbstractClient{
     public DescribeUsersResponse DescribeUsers(DescribeUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsersResponse>>() {
                 }.getType();
@@ -1427,6 +1496,7 @@ public class DlcClient extends AbstractClient{
     public DescribeViewsResponse DescribeViews(DescribeViewsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeViewsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeViewsResponse>>() {
                 }.getType();
@@ -1447,6 +1517,7 @@ public class DlcClient extends AbstractClient{
     public DescribeWorkGroupsResponse DescribeWorkGroups(DescribeWorkGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkGroupsResponse>>() {
                 }.getType();
@@ -1467,6 +1538,7 @@ public class DlcClient extends AbstractClient{
     public DetachUserPolicyResponse DetachUserPolicy(DetachUserPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachUserPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachUserPolicyResponse>>() {
                 }.getType();
@@ -1487,6 +1559,7 @@ public class DlcClient extends AbstractClient{
     public DetachWorkGroupPolicyResponse DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachWorkGroupPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachWorkGroupPolicyResponse>>() {
                 }.getType();
@@ -1507,6 +1580,7 @@ public class DlcClient extends AbstractClient{
     public DropDMSDatabaseResponse DropDMSDatabase(DropDMSDatabaseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropDMSDatabaseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DropDMSDatabaseResponse>>() {
                 }.getType();
@@ -1527,6 +1601,7 @@ public class DlcClient extends AbstractClient{
     public DropDMSPartitionsResponse DropDMSPartitions(DropDMSPartitionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropDMSPartitionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DropDMSPartitionsResponse>>() {
                 }.getType();
@@ -1547,6 +1622,7 @@ public class DlcClient extends AbstractClient{
     public DropDMSTableResponse DropDMSTable(DropDMSTableRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropDMSTableResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DropDMSTableResponse>>() {
                 }.getType();
@@ -1567,6 +1643,7 @@ public class DlcClient extends AbstractClient{
     public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>() {
                 }.getType();
@@ -1587,6 +1664,7 @@ public class DlcClient extends AbstractClient{
     public ListTaskJobLogDetailResponse ListTaskJobLogDetail(ListTaskJobLogDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListTaskJobLogDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListTaskJobLogDetailResponse>>() {
                 }.getType();
@@ -1607,6 +1685,7 @@ public class DlcClient extends AbstractClient{
     public LockMetaDataResponse LockMetaData(LockMetaDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LockMetaDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LockMetaDataResponse>>() {
                 }.getType();
@@ -1627,6 +1706,7 @@ public class DlcClient extends AbstractClient{
     public ModifyGovernEventRuleResponse ModifyGovernEventRule(ModifyGovernEventRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGovernEventRuleResponse>>() {
                 }.getType();
@@ -1647,6 +1727,7 @@ public class DlcClient extends AbstractClient{
     public ModifySparkAppResponse ModifySparkApp(ModifySparkAppRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySparkAppResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySparkAppResponse>>() {
                 }.getType();
@@ -1667,6 +1748,7 @@ public class DlcClient extends AbstractClient{
     public ModifySparkAppBatchResponse ModifySparkAppBatch(ModifySparkAppBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifySparkAppBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifySparkAppBatchResponse>>() {
                 }.getType();
@@ -1687,6 +1769,7 @@ public class DlcClient extends AbstractClient{
     public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserResponse>>() {
                 }.getType();
@@ -1707,6 +1790,7 @@ public class DlcClient extends AbstractClient{
     public ModifyWorkGroupResponse ModifyWorkGroup(ModifyWorkGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyWorkGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyWorkGroupResponse>>() {
                 }.getType();
@@ -1727,6 +1811,7 @@ public class DlcClient extends AbstractClient{
     public ReportHeartbeatMetaDataResponse ReportHeartbeatMetaData(ReportHeartbeatMetaDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReportHeartbeatMetaDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReportHeartbeatMetaDataResponse>>() {
                 }.getType();
@@ -1747,6 +1832,7 @@ public class DlcClient extends AbstractClient{
     public SuspendResumeDataEngineResponse SuspendResumeDataEngine(SuspendResumeDataEngineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SuspendResumeDataEngineResponse>>() {
                 }.getType();
@@ -1767,6 +1853,7 @@ public class DlcClient extends AbstractClient{
     public SwitchDataEngineResponse SwitchDataEngine(SwitchDataEngineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchDataEngineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchDataEngineResponse>>() {
                 }.getType();
@@ -1787,6 +1874,7 @@ public class DlcClient extends AbstractClient{
     public UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(UnbindWorkGroupsFromUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindWorkGroupsFromUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindWorkGroupsFromUserResponse>>() {
                 }.getType();
@@ -1807,6 +1895,7 @@ public class DlcClient extends AbstractClient{
     public UnlockMetaDataResponse UnlockMetaData(UnlockMetaDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnlockMetaDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnlockMetaDataResponse>>() {
                 }.getType();
@@ -1827,6 +1916,7 @@ public class DlcClient extends AbstractClient{
     public UpdateRowFilterResponse UpdateRowFilter(UpdateRowFilterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateRowFilterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateRowFilterResponse>>() {
                 }.getType();

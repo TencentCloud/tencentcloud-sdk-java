@@ -29,7 +29,7 @@ public class EisClient extends AbstractClient{
     private static String endpoint = "eis.tencentcloudapi.com";
     private static String service = "eis";
     private static String version = "2021-06-01";
-
+    
     public EisClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class EisClient extends AbstractClient{
     public GetRuntimeMCResponse GetRuntimeMC(GetRuntimeMCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRuntimeMCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRuntimeMCResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class EisClient extends AbstractClient{
     public GetRuntimeResourceMonitorMetricMCResponse GetRuntimeResourceMonitorMetricMC(GetRuntimeResourceMonitorMetricMCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetRuntimeResourceMonitorMetricMCResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class EisClient extends AbstractClient{
     public ListDeployableRuntimesMCResponse ListDeployableRuntimesMC(ListDeployableRuntimesMCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListDeployableRuntimesMCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListDeployableRuntimesMCResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class EisClient extends AbstractClient{
     public ListRuntimeDeployedInstancesMCResponse ListRuntimeDeployedInstancesMC(ListRuntimeDeployedInstancesMCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListRuntimeDeployedInstancesMCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListRuntimeDeployedInstancesMCResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class EisClient extends AbstractClient{
     public ListRuntimesMCResponse ListRuntimesMC(ListRuntimesMCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListRuntimesMCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListRuntimesMCResponse>>() {
                 }.getType();

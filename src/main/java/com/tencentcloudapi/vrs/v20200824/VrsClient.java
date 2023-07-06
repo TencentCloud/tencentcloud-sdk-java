@@ -29,7 +29,7 @@ public class VrsClient extends AbstractClient{
     private static String endpoint = "vrs.tencentcloudapi.com";
     private static String service = "vrs";
     private static String version = "2020-08-24";
-
+    
     public VrsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class VrsClient extends AbstractClient{
     public CreateVRSTaskResponse CreateVRSTask(CreateVRSTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateVRSTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateVRSTaskResponse>>() {
                 }.getType();
@@ -73,6 +74,7 @@ public class VrsClient extends AbstractClient{
     public DescribeVRSTaskStatusResponse DescribeVRSTaskStatus(DescribeVRSTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVRSTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVRSTaskStatusResponse>>() {
                 }.getType();
@@ -95,6 +97,7 @@ public class VrsClient extends AbstractClient{
     public DetectEnvAndSoundQualityResponse DetectEnvAndSoundQuality(DetectEnvAndSoundQualityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectEnvAndSoundQualityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectEnvAndSoundQualityResponse>>() {
                 }.getType();
@@ -117,6 +120,7 @@ public class VrsClient extends AbstractClient{
     public GetTrainingTextResponse GetTrainingText(GetTrainingTextRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTrainingTextResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTrainingTextResponse>>() {
                 }.getType();

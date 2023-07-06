@@ -29,7 +29,7 @@ public class IcrClient extends AbstractClient{
     private static String endpoint = "icr.tencentcloudapi.com";
     private static String service = "icr";
     private static String version = "2021-10-14";
-
+    
     public IcrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class IcrClient extends AbstractClient{
     public GetIndustryV1HomeMembersResponse GetIndustryV1HomeMembers(GetIndustryV1HomeMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetIndustryV1HomeMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetIndustryV1HomeMembersResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TioneClient extends AbstractClient{
     private static String endpoint = "tione.tencentcloudapi.com";
     private static String service = "tione";
     private static String version = "2019-10-22";
-
+    
     public TioneClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TioneClient extends AbstractClient{
     public CreateCodeRepositoryResponse CreateCodeRepository(CreateCodeRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCodeRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCodeRepositoryResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TioneClient extends AbstractClient{
     public CreateNotebookInstanceResponse CreateNotebookInstance(CreateNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookInstanceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TioneClient extends AbstractClient{
     public CreateNotebookLifecycleScriptResponse CreateNotebookLifecycleScript(CreateNotebookLifecycleScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotebookLifecycleScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotebookLifecycleScriptResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TioneClient extends AbstractClient{
     public CreatePresignedNotebookInstanceUrlResponse CreatePresignedNotebookInstanceUrl(CreatePresignedNotebookInstanceUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePresignedNotebookInstanceUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePresignedNotebookInstanceUrlResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TioneClient extends AbstractClient{
     public CreateTrainingJobResponse CreateTrainingJob(CreateTrainingJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTrainingJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTrainingJobResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TioneClient extends AbstractClient{
     public DeleteCodeRepositoryResponse DeleteCodeRepository(DeleteCodeRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCodeRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCodeRepositoryResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TioneClient extends AbstractClient{
     public DeleteNotebookInstanceResponse DeleteNotebookInstance(DeleteNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNotebookInstanceResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TioneClient extends AbstractClient{
     public DeleteNotebookLifecycleScriptResponse DeleteNotebookLifecycleScript(DeleteNotebookLifecycleScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNotebookLifecycleScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNotebookLifecycleScriptResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TioneClient extends AbstractClient{
     public DescribeCodeRepositoriesResponse DescribeCodeRepositories(DescribeCodeRepositoriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodeRepositoriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodeRepositoriesResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TioneClient extends AbstractClient{
     public DescribeCodeRepositoryResponse DescribeCodeRepository(DescribeCodeRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCodeRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCodeRepositoryResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebookInstanceResponse DescribeNotebookInstance(DescribeNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookInstanceResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebookInstancesResponse DescribeNotebookInstances(DescribeNotebookInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookInstancesResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebookLifecycleScriptResponse DescribeNotebookLifecycleScript(DescribeNotebookLifecycleScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookLifecycleScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookLifecycleScriptResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebookLifecycleScriptsResponse DescribeNotebookLifecycleScripts(DescribeNotebookLifecycleScriptsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookLifecycleScriptsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookLifecycleScriptsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebookSummaryResponse DescribeNotebookSummary(DescribeNotebookSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotebookSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotebookSummaryResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingJobResponse DescribeTrainingJob(DescribeTrainingJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingJobResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingJobsResponse DescribeTrainingJobs(DescribeTrainingJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrainingJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrainingJobsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TioneClient extends AbstractClient{
     public StartNotebookInstanceResponse StartNotebookInstance(StartNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartNotebookInstanceResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TioneClient extends AbstractClient{
     public StopNotebookInstanceResponse StopNotebookInstance(StopNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopNotebookInstanceResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TioneClient extends AbstractClient{
     public StopTrainingJobResponse StopTrainingJob(StopTrainingJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopTrainingJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopTrainingJobResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TioneClient extends AbstractClient{
     public UpdateCodeRepositoryResponse UpdateCodeRepository(UpdateCodeRepositoryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCodeRepositoryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCodeRepositoryResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TioneClient extends AbstractClient{
     public UpdateNotebookInstanceResponse UpdateNotebookInstance(UpdateNotebookInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateNotebookInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateNotebookInstanceResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TioneClient extends AbstractClient{
     public UpdateNotebookLifecycleScriptResponse UpdateNotebookLifecycleScript(UpdateNotebookLifecycleScriptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateNotebookLifecycleScriptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateNotebookLifecycleScriptResponse>>() {
                 }.getType();

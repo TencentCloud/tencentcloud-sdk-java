@@ -29,7 +29,7 @@ public class LiveClient extends AbstractClient{
     private static String endpoint = "live.tencentcloudapi.com";
     private static String service = "live";
     private static String version = "2018-08-01";
-
+    
     public LiveClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -49,6 +49,7 @@ public class LiveClient extends AbstractClient{
     public AddDelayLiveStreamResponse AddDelayLiveStream(AddDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDelayLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDelayLiveStreamResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class LiveClient extends AbstractClient{
     public AddLiveDomainResponse AddLiveDomain(AddLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLiveDomainResponse>>() {
                 }.getType();
@@ -89,6 +91,7 @@ public class LiveClient extends AbstractClient{
     public AddLiveWatermarkResponse AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
                 }.getType();
@@ -109,6 +112,7 @@ public class LiveClient extends AbstractClient{
     public AuthenticateDomainOwnerResponse AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuthenticateDomainOwnerResponse>>() {
                 }.getType();
@@ -129,6 +133,7 @@ public class LiveClient extends AbstractClient{
     public CancelCommonMixStreamResponse CancelCommonMixStream(CancelCommonMixStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelCommonMixStreamResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class LiveClient extends AbstractClient{
     public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCommonMixStreamResponse>>() {
                 }.getType();
@@ -172,6 +178,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveCallbackRuleResponse CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackRuleResponse>>() {
                 }.getType();
@@ -194,6 +201,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -214,6 +222,7 @@ public class LiveClient extends AbstractClient{
     public CreateLivePadRuleResponse CreateLivePadRule(CreateLivePadRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLivePadRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLivePadRuleResponse>>() {
                 }.getType();
@@ -234,6 +243,7 @@ public class LiveClient extends AbstractClient{
     public CreateLivePadTemplateResponse CreateLivePadTemplate(CreateLivePadTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLivePadTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLivePadTemplateResponse>>() {
                 }.getType();
@@ -261,6 +271,7 @@ public class LiveClient extends AbstractClient{
     public CreateLivePullStreamTaskResponse CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -296,6 +307,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveRecordResponse CreateLiveRecord(CreateLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordResponse>>() {
                 }.getType();
@@ -317,6 +329,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveRecordRuleResponse CreateLiveRecordRule(CreateLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordRuleResponse>>() {
                 }.getType();
@@ -338,6 +351,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -360,6 +374,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotRuleResponse>>() {
                 }.getType();
@@ -381,6 +396,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -401,6 +417,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveStreamMonitorResponse CreateLiveStreamMonitor(CreateLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -422,6 +439,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>() {
                 }.getType();
@@ -442,6 +460,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -463,6 +482,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveTranscodeRuleResponse CreateLiveTranscodeRule(CreateLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeRuleResponse>>() {
                 }.getType();
@@ -484,6 +504,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveTranscodeTemplateResponse CreateLiveTranscodeTemplate(CreateLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -504,6 +525,7 @@ public class LiveClient extends AbstractClient{
     public CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLiveWatermarkRuleResponse>>() {
                 }.getType();
@@ -529,6 +551,7 @@ public class LiveClient extends AbstractClient{
     public CreatePullStreamConfigResponse CreatePullStreamConfig(CreatePullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePullStreamConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePullStreamConfigResponse>>() {
                 }.getType();
@@ -558,6 +581,7 @@ public class LiveClient extends AbstractClient{
     public CreateRecordTaskResponse CreateRecordTask(CreateRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
                 }.getType();
@@ -584,6 +608,7 @@ public class LiveClient extends AbstractClient{
     public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScreenshotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScreenshotTaskResponse>>() {
                 }.getType();
@@ -604,6 +629,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackRuleResponse>>() {
                 }.getType();
@@ -624,6 +650,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -644,6 +671,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
                 }.getType();
@@ -664,6 +692,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLivePadRuleResponse DeleteLivePadRule(DeleteLivePadRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLivePadRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLivePadRuleResponse>>() {
                 }.getType();
@@ -684,6 +713,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLivePadTemplateResponse DeleteLivePadTemplate(DeleteLivePadTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLivePadTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLivePadTemplateResponse>>() {
                 }.getType();
@@ -707,6 +737,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -727,6 +758,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveRecordResponse DeleteLiveRecord(DeleteLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordResponse>>() {
                 }.getType();
@@ -747,6 +779,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveRecordRuleResponse DeleteLiveRecordRule(DeleteLiveRecordRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordRuleResponse>>() {
                 }.getType();
@@ -767,6 +800,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -787,6 +821,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>() {
                 }.getType();
@@ -807,6 +842,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -827,6 +863,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveStreamMonitorResponse DeleteLiveStreamMonitor(DeleteLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -847,6 +884,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>() {
                 }.getType();
@@ -867,6 +905,7 @@ public class LiveClient extends AbstractClient{
     public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -888,6 +927,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteLiveTranscodeRuleResponse DeleteLiveTranscodeRule(DeleteLiveTranscodeRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeRuleResponse>>() {
                 }.getType();
@@ -908,6 +948,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteLiveTranscodeTemplateResponse DeleteLiveTranscodeTemplate(DeleteLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -928,6 +969,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteLiveWatermarkResponse DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
                 }.getType();
@@ -948,6 +990,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
                 }.getType();
@@ -968,6 +1011,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeletePullStreamConfigResponse DeletePullStreamConfig(DeletePullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePullStreamConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePullStreamConfigResponse>>() {
                 }.getType();
@@ -988,6 +1032,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteRecordTaskResponse DeleteRecordTask(DeleteRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
                 }.getType();
@@ -1008,6 +1053,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DeleteScreenshotTaskResponse DeleteScreenshotTask(DeleteScreenshotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScreenshotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScreenshotTaskResponse>>() {
                 }.getType();
@@ -1028,6 +1074,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
                 }.getType();
@@ -1048,6 +1095,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>() {
                 }.getType();
@@ -1068,6 +1116,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
                 }.getType();
@@ -1088,6 +1137,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(DescribeCallbackRecordsListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCallbackRecordsListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCallbackRecordsListResponse>>() {
                 }.getType();
@@ -1108,6 +1158,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>() {
                 }.getType();
@@ -1128,6 +1179,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeliverBandwidthListResponse>>() {
                 }.getType();
@@ -1148,6 +1200,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>() {
                 }.getType();
@@ -1169,6 +1222,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHttpStatusInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHttpStatusInfoListResponse>>() {
                 }.getType();
@@ -1189,6 +1243,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackRulesResponse>>() {
                 }.getType();
@@ -1209,6 +1264,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -1229,6 +1285,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>() {
                 }.getType();
@@ -1249,6 +1306,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveCertResponse DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertResponse>>() {
                 }.getType();
@@ -1269,6 +1327,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveCertsResponse DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveCertsResponse>>() {
                 }.getType();
@@ -1289,6 +1348,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(DescribeLiveDelayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDelayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDelayInfoListResponse>>() {
                 }.getType();
@@ -1309,6 +1369,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainResponse DescribeLiveDomain(DescribeLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainResponse>>() {
                 }.getType();
@@ -1329,6 +1390,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainCertResponse DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
@@ -1349,6 +1411,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>() {
                 }.getType();
@@ -1369,6 +1432,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(DescribeLiveDomainPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>() {
                 }.getType();
@@ -1390,6 +1454,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainRefererResponse>>() {
                 }.getType();
@@ -1410,6 +1475,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainsResponse>>() {
                 }.getType();
@@ -1432,6 +1498,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(DescribeLiveForbidStreamListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveForbidStreamListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveForbidStreamListResponse>>() {
                 }.getType();
@@ -1452,6 +1519,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePackageInfoResponse DescribeLivePackageInfo(DescribeLivePackageInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePackageInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePackageInfoResponse>>() {
                 }.getType();
@@ -1472,6 +1540,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePadRulesResponse DescribeLivePadRules(DescribeLivePadRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePadRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePadRulesResponse>>() {
                 }.getType();
@@ -1492,6 +1561,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePadTemplateResponse DescribeLivePadTemplate(DescribeLivePadTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePadTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePadTemplateResponse>>() {
                 }.getType();
@@ -1512,6 +1582,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePadTemplatesResponse DescribeLivePadTemplates(DescribeLivePadTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePadTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePadTemplatesResponse>>() {
                 }.getType();
@@ -1532,6 +1603,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(DescribeLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePlayAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>() {
                 }.getType();
@@ -1552,6 +1624,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePullStreamTaskStatusResponse DescribeLivePullStreamTaskStatus(DescribeLivePullStreamTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePullStreamTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTaskStatusResponse>>() {
                 }.getType();
@@ -1573,6 +1646,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTasksResponse>>() {
                 }.getType();
@@ -1593,6 +1667,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(DescribeLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLivePushAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePushAuthKeyResponse>>() {
                 }.getType();
@@ -1613,6 +1688,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveRecordRulesResponse DescribeLiveRecordRules(DescribeLiveRecordRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordRulesResponse>>() {
                 }.getType();
@@ -1633,6 +1709,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveRecordTemplateResponse DescribeLiveRecordTemplate(DescribeLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -1653,6 +1730,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveRecordTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplatesResponse>>() {
                 }.getType();
@@ -1673,6 +1751,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>() {
                 }.getType();
@@ -1693,6 +1772,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -1713,6 +1793,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
                 }.getType();
@@ -1737,6 +1818,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(DescribeLiveStreamEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamEventListResponse>>() {
                 }.getType();
@@ -1757,6 +1839,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamMonitorResponse DescribeLiveStreamMonitor(DescribeLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -1777,6 +1860,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamMonitorListResponse DescribeLiveStreamMonitorList(DescribeLiveStreamMonitorListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamMonitorListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamMonitorListResponse>>() {
                 }.getType();
@@ -1802,6 +1886,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(DescribeLiveStreamOnlineListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamOnlineListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamOnlineListResponse>>() {
                 }.getType();
@@ -1823,6 +1908,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(DescribeLiveStreamPublishedListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamPublishedListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPublishedListResponse>>() {
                 }.getType();
@@ -1843,6 +1929,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>() {
                 }.getType();
@@ -1872,6 +1959,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveStreamStateResponse DescribeLiveStreamState(DescribeLiveStreamStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveStreamStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
                 }.getType();
@@ -1892,6 +1980,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>() {
                 }.getType();
@@ -1912,6 +2001,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>() {
                 }.getType();
@@ -1932,6 +2022,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>() {
                 }.getType();
@@ -1952,6 +2043,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>() {
                 }.getType();
@@ -1972,6 +2064,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(DescribeLiveTranscodeRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeRulesResponse>>() {
                 }.getType();
@@ -1992,6 +2085,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(DescribeLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -2012,6 +2106,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTranscodeTemplatesResponse DescribeLiveTranscodeTemplates(DescribeLiveTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTemplatesResponse>>() {
                 }.getType();
@@ -2035,6 +2130,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>() {
                 }.getType();
@@ -2055,6 +2151,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveWatermarkResponse DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkResponse>>() {
                 }.getType();
@@ -2075,6 +2172,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>() {
                 }.getType();
@@ -2095,6 +2193,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
                 }.getType();
@@ -2115,6 +2214,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLiveXP2PDetailInfoListResponse DescribeLiveXP2PDetailInfoList(DescribeLiveXP2PDetailInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveXP2PDetailInfoListResponse>>() {
                 }.getType();
@@ -2135,6 +2235,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeLogDownloadListResponse DescribeLogDownloadList(DescribeLogDownloadListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogDownloadListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogDownloadListResponse>>() {
                 }.getType();
@@ -2155,6 +2256,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeMonitorReportResponse DescribeMonitorReport(DescribeMonitorReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMonitorReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMonitorReportResponse>>() {
                 }.getType();
@@ -2177,6 +2279,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(DescribePlayErrorCodeDetailInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse>>() {
                 }.getType();
@@ -2197,6 +2300,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(DescribePlayErrorCodeSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse>>() {
                 }.getType();
@@ -2217,6 +2321,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>() {
                 }.getType();
@@ -2237,6 +2342,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>() {
                 }.getType();
@@ -2257,6 +2363,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribePullStreamConfigsResponse DescribePullStreamConfigs(DescribePullStreamConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePullStreamConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePullStreamConfigsResponse>>() {
                 }.getType();
@@ -2278,6 +2385,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribePushBandwidthAndFluxListResponse DescribePushBandwidthAndFluxList(DescribePushBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePushBandwidthAndFluxListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePushBandwidthAndFluxListResponse>>() {
                 }.getType();
@@ -2302,6 +2410,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeRecordTaskResponse DescribeRecordTask(DescribeRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordTaskResponse>>() {
                 }.getType();
@@ -2322,6 +2431,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(DescribeScreenShotSheetNumListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScreenShotSheetNumListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScreenShotSheetNumListResponse>>() {
                 }.getType();
@@ -2345,6 +2455,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeScreenshotTaskResponse DescribeScreenshotTask(DescribeScreenshotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScreenshotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScreenshotTaskResponse>>() {
                 }.getType();
@@ -2365,6 +2476,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>() {
                 }.getType();
@@ -2385,6 +2497,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
@@ -2405,6 +2518,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
                 }.getType();
@@ -2425,6 +2539,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>() {
                 }.getType();
@@ -2445,6 +2560,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftStreamListResponse>>() {
                 }.getType();
@@ -2465,6 +2581,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(DescribeTopClientIpSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopClientIpSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>() {
                 }.getType();
@@ -2485,6 +2602,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTaskNumResponse>>() {
                 }.getType();
@@ -2505,6 +2623,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeUploadStreamNumsResponse DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUploadStreamNumsResponse>>() {
                 }.getType();
@@ -2525,6 +2644,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(DescribeVisitTopSumInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVisitTopSumInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>() {
                 }.getType();
@@ -2546,6 +2666,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DropLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
                 }.getType();
@@ -2566,6 +2687,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public EnableLiveDomainResponse EnableLiveDomain(EnableLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableLiveDomainResponse>>() {
                 }.getType();
@@ -2586,6 +2708,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ForbidLiveDomainResponse ForbidLiveDomain(ForbidLiveDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveDomainResponse>>() {
                 }.getType();
@@ -2610,6 +2733,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveStreamResponse>>() {
                 }.getType();
@@ -2630,6 +2754,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
                 }.getType();
@@ -2651,6 +2776,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>() {
                 }.getType();
@@ -2672,6 +2798,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainRefererResponse>>() {
                 }.getType();
@@ -2692,6 +2819,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLivePadTemplateResponse ModifyLivePadTemplate(ModifyLivePadTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePadTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePadTemplateResponse>>() {
                 }.getType();
@@ -2712,6 +2840,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(ModifyLivePlayAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePlayAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
                 }.getType();
@@ -2732,6 +2861,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLivePlayDomainResponse ModifyLivePlayDomain(ModifyLivePlayDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
                 }.getType();
@@ -2754,6 +2884,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -2774,6 +2905,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLivePushAuthKeyResponse ModifyLivePushAuthKey(ModifyLivePushAuthKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLivePushAuthKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePushAuthKeyResponse>>() {
                 }.getType();
@@ -2794,6 +2926,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveRecordTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordTemplateResponse>>() {
                 }.getType();
@@ -2814,6 +2947,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
                 }.getType();
@@ -2834,6 +2968,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitor(ModifyLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -2854,6 +2989,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>() {
                 }.getType();
@@ -2874,6 +3010,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(ModifyLiveTranscodeTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLiveTranscodeTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveTranscodeTemplateResponse>>() {
                 }.getType();
@@ -2894,6 +3031,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyPullStreamConfigResponse ModifyPullStreamConfig(ModifyPullStreamConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPullStreamConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPullStreamConfigResponse>>() {
                 }.getType();
@@ -2914,6 +3052,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyPullStreamStatusResponse ModifyPullStreamStatus(ModifyPullStreamStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPullStreamStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPullStreamStatusResponse>>() {
                 }.getType();
@@ -2937,6 +3076,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public RestartLivePullStreamTaskResponse RestartLivePullStreamTask(RestartLivePullStreamTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartLivePullStreamTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartLivePullStreamTaskResponse>>() {
                 }.getType();
@@ -2957,6 +3097,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ResumeDelayLiveStreamResponse ResumeDelayLiveStream(ResumeDelayLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeDelayLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeDelayLiveStreamResponse>>() {
                 }.getType();
@@ -2977,6 +3118,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ResumeLiveStreamResponse ResumeLiveStream(ResumeLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeLiveStreamResponse>>() {
                 }.getType();
@@ -2997,6 +3139,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StartLiveStreamMonitorResponse StartLiveStreamMonitor(StartLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -3017,6 +3160,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopLiveRecordResponse StopLiveRecord(StopLiveRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopLiveRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
@@ -3037,6 +3181,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopLiveStreamMonitorResponse StopLiveStreamMonitor(StopLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopLiveStreamMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopLiveStreamMonitorResponse>>() {
                 }.getType();
@@ -3057,6 +3202,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopRecordTaskResponse StopRecordTask(StopRecordTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopRecordTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
                 }.getType();
@@ -3077,6 +3223,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StopScreenshotTaskResponse StopScreenshotTask(StopScreenshotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopScreenshotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopScreenshotTaskResponse>>() {
                 }.getType();
@@ -3097,6 +3244,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public UnBindLiveDomainCertResponse UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindLiveDomainCertResponse>>() {
                 }.getType();
@@ -3117,6 +3265,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public UpdateLiveWatermarkResponse UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {
                 }.getType();

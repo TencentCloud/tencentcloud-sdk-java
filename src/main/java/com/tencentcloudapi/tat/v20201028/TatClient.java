@@ -29,7 +29,7 @@ public class TatClient extends AbstractClient{
     private static String endpoint = "tat.tencentcloudapi.com";
     private static String service = "tat";
     private static String version = "2020-10-28";
-
+    
     public TatClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -50,6 +50,7 @@ public class TatClient extends AbstractClient{
     public CancelInvocationResponse CancelInvocation(CancelInvocationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelInvocationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelInvocationResponse>>() {
                 }.getType();
@@ -70,6 +71,7 @@ public class TatClient extends AbstractClient{
     public CreateCommandResponse CreateCommand(CreateCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCommandResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ public class TatClient extends AbstractClient{
     public CreateInvokerResponse CreateInvoker(CreateInvokerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInvokerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInvokerResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class TatClient extends AbstractClient{
     public DeleteCommandResponse DeleteCommand(DeleteCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCommandResponse>>() {
                 }.getType();
@@ -131,6 +135,7 @@ public class TatClient extends AbstractClient{
     public DeleteInvokerResponse DeleteInvoker(DeleteInvokerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInvokerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInvokerResponse>>() {
                 }.getType();
@@ -151,6 +156,7 @@ public class TatClient extends AbstractClient{
     public DescribeAutomationAgentStatusResponse DescribeAutomationAgentStatus(DescribeAutomationAgentStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutomationAgentStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutomationAgentStatusResponse>>() {
                 }.getType();
@@ -171,6 +177,7 @@ public class TatClient extends AbstractClient{
     public DescribeCommandsResponse DescribeCommands(DescribeCommandsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCommandsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCommandsResponse>>() {
                 }.getType();
@@ -191,6 +198,7 @@ public class TatClient extends AbstractClient{
     public DescribeInvocationTasksResponse DescribeInvocationTasks(DescribeInvocationTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationTasksResponse>>() {
                 }.getType();
@@ -211,6 +219,7 @@ public class TatClient extends AbstractClient{
     public DescribeInvocationsResponse DescribeInvocations(DescribeInvocationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvocationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvocationsResponse>>() {
                 }.getType();
@@ -231,6 +240,7 @@ public class TatClient extends AbstractClient{
     public DescribeInvokerRecordsResponse DescribeInvokerRecords(DescribeInvokerRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvokerRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvokerRecordsResponse>>() {
                 }.getType();
@@ -251,6 +261,7 @@ public class TatClient extends AbstractClient{
     public DescribeInvokersResponse DescribeInvokers(DescribeInvokersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInvokersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInvokersResponse>>() {
                 }.getType();
@@ -272,6 +283,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -292,6 +304,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public DisableInvokerResponse DisableInvoker(DisableInvokerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableInvokerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableInvokerResponse>>() {
                 }.getType();
@@ -312,6 +325,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public EnableInvokerResponse EnableInvoker(EnableInvokerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableInvokerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableInvokerResponse>>() {
                 }.getType();
@@ -338,6 +352,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public InvokeCommandResponse InvokeCommand(InvokeCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InvokeCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InvokeCommandResponse>>() {
                 }.getType();
@@ -358,6 +373,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public ModifyCommandResponse ModifyCommand(ModifyCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCommandResponse>>() {
                 }.getType();
@@ -378,6 +394,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public ModifyInvokerResponse ModifyInvoker(ModifyInvokerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInvokerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInvokerResponse>>() {
                 }.getType();
@@ -398,6 +415,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public PreviewReplacedCommandContentResponse PreviewReplacedCommandContent(PreviewReplacedCommandContentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PreviewReplacedCommandContentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PreviewReplacedCommandContentResponse>>() {
                 }.getType();
@@ -424,6 +442,7 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     public RunCommandResponse RunCommand(RunCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunCommandResponse>>() {
                 }.getType();

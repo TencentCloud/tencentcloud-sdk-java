@@ -29,7 +29,7 @@ public class BmaClient extends AbstractClient{
     private static String endpoint = "bma.tencentcloudapi.com";
     private static String service = "bma";
     private static String version = "2021-06-24";
-
+    
     public BmaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFakeURLResponse CreateBPFakeURL(CreateBPFakeURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFakeURLResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPFalseTicketResponse CreateBPFalseTicket(CreateBPFalseTicketRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPFalseTicketResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPFalseTicketResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPOfflineAttachmentResponse CreateBPOfflineAttachment(CreateBPOfflineAttachmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPOfflineAttachmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPOfflineAttachmentResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPOfflineTicketResponse CreateBPOfflineTicket(CreateBPOfflineTicketRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPOfflineTicketResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPOfflineTicketResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BmaClient extends AbstractClient{
     public CreateBPProtectURLsResponse CreateBPProtectURLs(CreateBPProtectURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBPProtectURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBPProtectURLsResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRBlockResponse CreateCRBlock(CreateCRBlockRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRBlockResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRBlockResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRCompanyVerifyResponse CreateCRCompanyVerify(CreateCRCompanyVerifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRCompanyVerifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRCompanyVerifyResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRDesktopCodeResponse CreateCRDesktopCode(CreateCRDesktopCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRDesktopCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRDesktopCodeResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRRightResponse CreateCRRight(CreateCRRightRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRRightResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRRightResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRRightFileResponse CreateCRRightFile(CreateCRRightFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRRightFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRRightFileResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRTortResponse CreateCRTort(CreateCRTortRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRTortResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRTortResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRUserVerifyResponse CreateCRUserVerify(CreateCRUserVerifyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRUserVerifyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRUserVerifyResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class BmaClient extends AbstractClient{
     public CreateCRWorkResponse CreateCRWork(CreateCRWorkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCRWorkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCRWorkResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPCompanyInfoResponse DescribeBPCompanyInfo(DescribeBPCompanyInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPCompanyInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPCompanyInfoResponse>>() {
                 }.getType();
@@ -328,6 +342,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPFakeURLsResponse DescribeBPFakeURLs(DescribeBPFakeURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPFakeURLsResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPProtectURLsResponse DescribeBPProtectURLs(DescribeBPProtectURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPProtectURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPProtectURLsResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ public class BmaClient extends AbstractClient{
     public DescribeBPReportFakeURLsResponse DescribeBPReportFakeURLs(DescribeBPReportFakeURLsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBPReportFakeURLsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBPReportFakeURLsResponse>>() {
                 }.getType();
@@ -388,6 +405,7 @@ public class BmaClient extends AbstractClient{
     public DescribeCRMonitorDetailResponse DescribeCRMonitorDetail(DescribeCRMonitorDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCRMonitorDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCRMonitorDetailResponse>>() {
                 }.getType();
@@ -408,6 +426,7 @@ public class BmaClient extends AbstractClient{
     public DescribeCRMonitorsResponse DescribeCRMonitors(DescribeCRMonitorsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCRMonitorsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCRMonitorsResponse>>() {
                 }.getType();
@@ -428,6 +447,7 @@ public class BmaClient extends AbstractClient{
     public DescribeCRObtainDetailResponse DescribeCRObtainDetail(DescribeCRObtainDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCRObtainDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCRObtainDetailResponse>>() {
                 }.getType();
@@ -448,6 +468,7 @@ public class BmaClient extends AbstractClient{
     public DescribeCRWorkInfoResponse DescribeCRWorkInfo(DescribeCRWorkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCRWorkInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCRWorkInfoResponse>>() {
                 }.getType();
@@ -468,6 +489,7 @@ public class BmaClient extends AbstractClient{
     public ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachment(ModifyBPOfflineAttachmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBPOfflineAttachmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBPOfflineAttachmentResponse>>() {
                 }.getType();
@@ -488,6 +510,7 @@ public class BmaClient extends AbstractClient{
     public ModifyCRBlockStatusResponse ModifyCRBlockStatus(ModifyCRBlockStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCRBlockStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCRBlockStatusResponse>>() {
                 }.getType();
@@ -508,6 +531,7 @@ public class BmaClient extends AbstractClient{
     public ModifyCRMonitorResponse ModifyCRMonitor(ModifyCRMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCRMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCRMonitorResponse>>() {
                 }.getType();
@@ -528,6 +552,7 @@ public class BmaClient extends AbstractClient{
     public ModifyCRObtainStatusResponse ModifyCRObtainStatus(ModifyCRObtainStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCRObtainStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCRObtainStatusResponse>>() {
                 }.getType();
@@ -548,6 +573,7 @@ public class BmaClient extends AbstractClient{
     public ModifyCRRightStatusResponse ModifyCRRightStatus(ModifyCRRightStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCRRightStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCRRightStatusResponse>>() {
                 }.getType();
@@ -568,6 +594,7 @@ public class BmaClient extends AbstractClient{
     public ModifyCRWhiteListResponse ModifyCRWhiteList(ModifyCRWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCRWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCRWhiteListResponse>>() {
                 }.getType();
@@ -588,6 +615,7 @@ public class BmaClient extends AbstractClient{
     public UpdateCRWorkResponse UpdateCRWork(UpdateCRWorkRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCRWorkResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCRWorkResponse>>() {
                 }.getType();

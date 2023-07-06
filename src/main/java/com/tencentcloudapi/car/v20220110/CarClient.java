@@ -29,7 +29,7 @@ public class CarClient extends AbstractClient{
     private static String endpoint = "car.tencentcloudapi.com";
     private static String service = "car";
     private static String version = "2022-01-10";
-
+    
     public CarClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CarClient extends AbstractClient{
     public ApplyConcurrentResponse ApplyConcurrent(ApplyConcurrentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyConcurrentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyConcurrentResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CarClient extends AbstractClient{
     public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSessionResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CarClient extends AbstractClient{
     public DestroySessionResponse DestroySession(DestroySessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroySessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroySessionResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CarClient extends AbstractClient{
     public StartPublishStreamResponse StartPublishStream(StartPublishStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartPublishStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartPublishStreamResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CarClient extends AbstractClient{
     public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopPublishStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopPublishStreamResponse>>() {
                 }.getType();

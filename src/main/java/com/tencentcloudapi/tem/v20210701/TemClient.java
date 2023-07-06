@@ -29,7 +29,7 @@ public class TemClient extends AbstractClient{
     private static String endpoint = "tem.tencentcloudapi.com";
     private static String service = "tem";
     private static String version = "2021-07-01";
-
+    
     public TemClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TemClient extends AbstractClient{
     public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TemClient extends AbstractClient{
     public CreateApplicationAutoscalerResponse CreateApplicationAutoscaler(CreateApplicationAutoscalerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationAutoscalerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationAutoscalerResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TemClient extends AbstractClient{
     public CreateApplicationServiceResponse CreateApplicationService(CreateApplicationServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateApplicationServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateApplicationServiceResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TemClient extends AbstractClient{
     public CreateConfigDataResponse CreateConfigData(CreateConfigDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConfigDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConfigDataResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TemClient extends AbstractClient{
     public CreateCosTokenResponse CreateCosToken(CreateCosTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCosTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCosTokenResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TemClient extends AbstractClient{
     public CreateEnvironmentResponse CreateEnvironment(CreateEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEnvironmentResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TemClient extends AbstractClient{
     public CreateLogConfigResponse CreateLogConfig(CreateLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLogConfigResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TemClient extends AbstractClient{
     public CreateResourceResponse CreateResource(CreateResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateResourceResponse>>() {
                 }.getType();
@@ -210,6 +218,7 @@ public class TemClient extends AbstractClient{
     public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
                 }.getType();
@@ -230,6 +239,7 @@ public class TemClient extends AbstractClient{
     public DeleteApplicationAutoscalerResponse DeleteApplicationAutoscaler(DeleteApplicationAutoscalerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationAutoscalerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationAutoscalerResponse>>() {
                 }.getType();
@@ -250,6 +260,7 @@ public class TemClient extends AbstractClient{
     public DeleteApplicationServiceResponse DeleteApplicationService(DeleteApplicationServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteApplicationServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationServiceResponse>>() {
                 }.getType();
@@ -270,6 +281,7 @@ public class TemClient extends AbstractClient{
     public DeleteIngressResponse DeleteIngress(DeleteIngressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteIngressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteIngressResponse>>() {
                 }.getType();
@@ -290,6 +302,7 @@ public class TemClient extends AbstractClient{
     public DeployApplicationResponse DeployApplication(DeployApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeployApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeployApplicationResponse>>() {
                 }.getType();
@@ -310,6 +323,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationAutoscalerListResponse DescribeApplicationAutoscalerList(DescribeApplicationAutoscalerListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationAutoscalerListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationAutoscalerListResponse>>() {
                 }.getType();
@@ -330,6 +344,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationInfoResponse DescribeApplicationInfo(DescribeApplicationInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationInfoResponse>>() {
                 }.getType();
@@ -350,6 +365,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationPodsResponse DescribeApplicationPods(DescribeApplicationPodsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationPodsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationPodsResponse>>() {
                 }.getType();
@@ -370,6 +386,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationServiceListResponse DescribeApplicationServiceList(DescribeApplicationServiceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationServiceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationServiceListResponse>>() {
                 }.getType();
@@ -390,6 +407,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
                 }.getType();
@@ -410,6 +428,7 @@ public class TemClient extends AbstractClient{
     public DescribeApplicationsStatusResponse DescribeApplicationsStatus(DescribeApplicationsStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationsStatusResponse>>() {
                 }.getType();
@@ -430,6 +449,7 @@ public class TemClient extends AbstractClient{
     public DescribeConfigDataResponse DescribeConfigData(DescribeConfigDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigDataResponse>>() {
                 }.getType();
@@ -450,6 +470,7 @@ public class TemClient extends AbstractClient{
     public DescribeConfigDataListResponse DescribeConfigDataList(DescribeConfigDataListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigDataListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigDataListResponse>>() {
                 }.getType();
@@ -470,6 +491,7 @@ public class TemClient extends AbstractClient{
     public DescribeDeployApplicationDetailResponse DescribeDeployApplicationDetail(DescribeDeployApplicationDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeployApplicationDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeployApplicationDetailResponse>>() {
                 }.getType();
@@ -490,6 +512,7 @@ public class TemClient extends AbstractClient{
     public DescribeEnvironmentResponse DescribeEnvironment(DescribeEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentResponse>>() {
                 }.getType();
@@ -510,6 +533,7 @@ public class TemClient extends AbstractClient{
     public DescribeEnvironmentStatusResponse DescribeEnvironmentStatus(DescribeEnvironmentStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentStatusResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ public class TemClient extends AbstractClient{
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentsResponse>>() {
                 }.getType();
@@ -550,6 +575,7 @@ public class TemClient extends AbstractClient{
     public DescribeIngressResponse DescribeIngress(DescribeIngressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIngressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIngressResponse>>() {
                 }.getType();
@@ -570,6 +596,7 @@ public class TemClient extends AbstractClient{
     public DescribeIngressesResponse DescribeIngresses(DescribeIngressesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeIngressesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeIngressesResponse>>() {
                 }.getType();
@@ -590,6 +617,7 @@ public class TemClient extends AbstractClient{
     public DescribeLogConfigResponse DescribeLogConfig(DescribeLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLogConfigResponse>>() {
                 }.getType();
@@ -610,6 +638,7 @@ public class TemClient extends AbstractClient{
     public DescribePagedLogConfigListResponse DescribePagedLogConfigList(DescribePagedLogConfigListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePagedLogConfigListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePagedLogConfigListResponse>>() {
                 }.getType();
@@ -630,6 +659,7 @@ public class TemClient extends AbstractClient{
     public DescribeRelatedIngressesResponse DescribeRelatedIngresses(DescribeRelatedIngressesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRelatedIngressesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRelatedIngressesResponse>>() {
                 }.getType();
@@ -650,6 +680,7 @@ public class TemClient extends AbstractClient{
     public DestroyConfigDataResponse DestroyConfigData(DestroyConfigDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyConfigDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyConfigDataResponse>>() {
                 }.getType();
@@ -670,6 +701,7 @@ public class TemClient extends AbstractClient{
     public DestroyEnvironmentResponse DestroyEnvironment(DestroyEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyEnvironmentResponse>>() {
                 }.getType();
@@ -690,6 +722,7 @@ public class TemClient extends AbstractClient{
     public DestroyLogConfigResponse DestroyLogConfig(DestroyLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyLogConfigResponse>>() {
                 }.getType();
@@ -710,6 +743,7 @@ public class TemClient extends AbstractClient{
     public DisableApplicationAutoscalerResponse DisableApplicationAutoscaler(DisableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableApplicationAutoscalerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableApplicationAutoscalerResponse>>() {
                 }.getType();
@@ -730,6 +764,7 @@ public class TemClient extends AbstractClient{
     public EnableApplicationAutoscalerResponse EnableApplicationAutoscaler(EnableApplicationAutoscalerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableApplicationAutoscalerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableApplicationAutoscalerResponse>>() {
                 }.getType();
@@ -750,6 +785,7 @@ public class TemClient extends AbstractClient{
     public GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(GenerateApplicationPackageDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateApplicationPackageDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateApplicationPackageDownloadUrlResponse>>() {
                 }.getType();
@@ -770,6 +806,7 @@ public class TemClient extends AbstractClient{
     public ModifyApplicationAutoscalerResponse ModifyApplicationAutoscaler(ModifyApplicationAutoscalerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationAutoscalerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationAutoscalerResponse>>() {
                 }.getType();
@@ -790,6 +827,7 @@ public class TemClient extends AbstractClient{
     public ModifyApplicationInfoResponse ModifyApplicationInfo(ModifyApplicationInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationInfoResponse>>() {
                 }.getType();
@@ -810,6 +848,7 @@ public class TemClient extends AbstractClient{
     public ModifyApplicationReplicasResponse ModifyApplicationReplicas(ModifyApplicationReplicasRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationReplicasResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationReplicasResponse>>() {
                 }.getType();
@@ -830,6 +869,7 @@ public class TemClient extends AbstractClient{
     public ModifyApplicationServiceResponse ModifyApplicationService(ModifyApplicationServiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationServiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationServiceResponse>>() {
                 }.getType();
@@ -850,6 +890,7 @@ public class TemClient extends AbstractClient{
     public ModifyConfigDataResponse ModifyConfigData(ModifyConfigDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConfigDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConfigDataResponse>>() {
                 }.getType();
@@ -870,6 +911,7 @@ public class TemClient extends AbstractClient{
     public ModifyEnvironmentResponse ModifyEnvironment(ModifyEnvironmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyEnvironmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyEnvironmentResponse>>() {
                 }.getType();
@@ -890,6 +932,7 @@ public class TemClient extends AbstractClient{
     public ModifyIngressResponse ModifyIngress(ModifyIngressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyIngressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyIngressResponse>>() {
                 }.getType();
@@ -910,6 +953,7 @@ public class TemClient extends AbstractClient{
     public ModifyLogConfigResponse ModifyLogConfig(ModifyLogConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLogConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLogConfigResponse>>() {
                 }.getType();
@@ -930,6 +974,7 @@ public class TemClient extends AbstractClient{
     public RestartApplicationResponse RestartApplication(RestartApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartApplicationResponse>>() {
                 }.getType();
@@ -950,6 +995,7 @@ public class TemClient extends AbstractClient{
     public RestartApplicationPodResponse RestartApplicationPod(RestartApplicationPodRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartApplicationPodResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartApplicationPodResponse>>() {
                 }.getType();
@@ -970,6 +1016,7 @@ public class TemClient extends AbstractClient{
     public ResumeDeployApplicationResponse ResumeDeployApplication(ResumeDeployApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeDeployApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeDeployApplicationResponse>>() {
                 }.getType();
@@ -990,6 +1037,7 @@ public class TemClient extends AbstractClient{
     public RevertDeployApplicationResponse RevertDeployApplication(RevertDeployApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevertDeployApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevertDeployApplicationResponse>>() {
                 }.getType();
@@ -1010,6 +1058,7 @@ public class TemClient extends AbstractClient{
     public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>() {
                 }.getType();
@@ -1030,6 +1079,7 @@ public class TemClient extends AbstractClient{
     public StopApplicationResponse StopApplication(StopApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopApplicationResponse>>() {
                 }.getType();

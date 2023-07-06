@@ -29,7 +29,7 @@ public class EiamClient extends AbstractClient{
     private static String endpoint = "eiam.tencentcloudapi.com";
     private static String service = "eiam";
     private static String version = "2021-04-20";
-
+    
     public EiamClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class EiamClient extends AbstractClient{
     public AddAccountToAccountGroupResponse AddAccountToAccountGroup(AddAccountToAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddAccountToAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddAccountToAccountGroupResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class EiamClient extends AbstractClient{
     public AddUserToUserGroupResponse AddUserToUserGroup(AddUserToUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUserToUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUserToUserGroupResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class EiamClient extends AbstractClient{
     public CreateAccountGroupResponse CreateAccountGroup(CreateAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountGroupResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class EiamClient extends AbstractClient{
     public CreateAppAccountResponse CreateAppAccount(CreateAppAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAppAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAppAccountResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class EiamClient extends AbstractClient{
     public CreateOrgNodeResponse CreateOrgNode(CreateOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrgNodeResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class EiamClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class EiamClient extends AbstractClient{
     public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserGroupResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class EiamClient extends AbstractClient{
     public DeleteAccountGroupResponse DeleteAccountGroup(DeleteAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAccountGroupResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class EiamClient extends AbstractClient{
     public DeleteAppAccountResponse DeleteAppAccount(DeleteAppAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAppAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAppAccountResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class EiamClient extends AbstractClient{
     public DeleteOrgNodeResponse DeleteOrgNode(DeleteOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteOrgNodeResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class EiamClient extends AbstractClient{
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class EiamClient extends AbstractClient{
     public DeleteUserGroupResponse DeleteUserGroup(DeleteUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserGroupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class EiamClient extends AbstractClient{
     public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class EiamClient extends AbstractClient{
     public DescribeAccountGroupResponse DescribeAccountGroup(DescribeAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountGroupResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class EiamClient extends AbstractClient{
     public DescribeAppAccountResponse DescribeAppAccount(DescribeAppAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppAccountResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class EiamClient extends AbstractClient{
     public DescribeApplicationResponse DescribeApplication(DescribeApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApplicationResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class EiamClient extends AbstractClient{
     public DescribeOrgNodeResponse DescribeOrgNode(DescribeOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrgNodeResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class EiamClient extends AbstractClient{
     public DescribeOrgResourcesAuthorizationResponse DescribeOrgResourcesAuthorization(DescribeOrgResourcesAuthorizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrgResourcesAuthorizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrgResourcesAuthorizationResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class EiamClient extends AbstractClient{
     public DescribePublicKeyResponse DescribePublicKey(DescribePublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePublicKeyResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class EiamClient extends AbstractClient{
     public DescribeUserGroupResponse DescribeUserGroup(DescribeUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserGroupResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class EiamClient extends AbstractClient{
     public DescribeUserGroupResourcesAuthorizationResponse DescribeUserGroupResourcesAuthorization(DescribeUserGroupResourcesAuthorizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class EiamClient extends AbstractClient{
     public DescribeUserInfoResponse DescribeUserInfo(DescribeUserInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserInfoResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class EiamClient extends AbstractClient{
     public DescribeUserResourcesAuthorizationResponse DescribeUserResourcesAuthorization(DescribeUserResourcesAuthorizationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserResourcesAuthorizationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class EiamClient extends AbstractClient{
     public DescribeUserThirdPartyAccountInfoResponse DescribeUserThirdPartyAccountInfo(DescribeUserThirdPartyAccountInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class EiamClient extends AbstractClient{
     public ListAccountInAccountGroupResponse ListAccountInAccountGroup(ListAccountInAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAccountInAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAccountInAccountGroupResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class EiamClient extends AbstractClient{
     public ListApplicationAuthorizationsResponse ListApplicationAuthorizations(ListApplicationAuthorizationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListApplicationAuthorizationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListApplicationAuthorizationsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class EiamClient extends AbstractClient{
     public ListApplicationsResponse ListApplications(ListApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListApplicationsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class EiamClient extends AbstractClient{
     public ListAuthorizedApplicationsToOrgNodeResponse ListAuthorizedApplicationsToOrgNode(ListAuthorizedApplicationsToOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAuthorizedApplicationsToOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToOrgNodeResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class EiamClient extends AbstractClient{
     public ListAuthorizedApplicationsToUserResponse ListAuthorizedApplicationsToUser(ListAuthorizedApplicationsToUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAuthorizedApplicationsToUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToUserResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class EiamClient extends AbstractClient{
     public ListAuthorizedApplicationsToUserGroupResponse ListAuthorizedApplicationsToUserGroup(ListAuthorizedApplicationsToUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListAuthorizedApplicationsToUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListAuthorizedApplicationsToUserGroupResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class EiamClient extends AbstractClient{
     public ListUserGroupsResponse ListUserGroups(ListUserGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUserGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUserGroupsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class EiamClient extends AbstractClient{
     public ListUserGroupsOfUserResponse ListUserGroupsOfUser(ListUserGroupsOfUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUserGroupsOfUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUserGroupsOfUserResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class EiamClient extends AbstractClient{
     public ListUsersResponse ListUsers(ListUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUsersResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class EiamClient extends AbstractClient{
     public ListUsersInOrgNodeResponse ListUsersInOrgNode(ListUsersInOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUsersInOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUsersInOrgNodeResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class EiamClient extends AbstractClient{
     public ListUsersInUserGroupResponse ListUsersInUserGroup(ListUsersInUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListUsersInUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListUsersInUserGroupResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class EiamClient extends AbstractClient{
     public ModifyAccountGroupResponse ModifyAccountGroup(ModifyAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountGroupResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class EiamClient extends AbstractClient{
     public ModifyAppAccountResponse ModifyAppAccount(ModifyAppAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAppAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAppAccountResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class EiamClient extends AbstractClient{
     public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyApplicationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyApplicationResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class EiamClient extends AbstractClient{
     public ModifyUserInfoResponse ModifyUserInfo(ModifyUserInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserInfoResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class EiamClient extends AbstractClient{
     public RemoveAccountFromAccountGroupResponse RemoveAccountFromAccountGroup(RemoveAccountFromAccountGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveAccountFromAccountGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveAccountFromAccountGroupResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class EiamClient extends AbstractClient{
     public RemoveUserFromUserGroupResponse RemoveUserFromUserGroup(RemoveUserFromUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveUserFromUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveUserFromUserGroupResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class EiamClient extends AbstractClient{
     public UpdateOrgNodeResponse UpdateOrgNode(UpdateOrgNodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateOrgNodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateOrgNodeResponse>>() {
                 }.getType();

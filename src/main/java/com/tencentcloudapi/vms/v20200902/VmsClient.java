@@ -29,7 +29,7 @@ public class VmsClient extends AbstractClient{
     private static String endpoint = "vms.tencentcloudapi.com";
     private static String service = "vms";
     private static String version = "2020-09-02";
-
+    
     public VmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class VmsClient extends AbstractClient{
     public SendCodeVoiceResponse SendCodeVoice(SendCodeVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendCodeVoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendCodeVoiceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class VmsClient extends AbstractClient{
     public SendTtsVoiceResponse SendTtsVoice(SendTtsVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendTtsVoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendTtsVoiceResponse>>() {
                 }.getType();

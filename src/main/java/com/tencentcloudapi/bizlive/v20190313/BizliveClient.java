@@ -29,7 +29,7 @@ public class BizliveClient extends AbstractClient{
     private static String endpoint = "bizlive.tencentcloudapi.com";
     private static String service = "bizlive";
     private static String version = "2019-03-13";
-
+    
     public BizliveClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BizliveClient extends AbstractClient{
     public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSessionResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BizliveClient extends AbstractClient{
     public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BizliveClient extends AbstractClient{
     public DescribeWorkersResponse DescribeWorkers(DescribeWorkersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeWorkersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeWorkersResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BizliveClient extends AbstractClient{
     public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ForbidLiveStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ForbidLiveStreamResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BizliveClient extends AbstractClient{
     public RegisterIMResponse RegisterIM(RegisterIMRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterIMResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterIMResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class BizliveClient extends AbstractClient{
     public StopGameResponse StopGame(StopGameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopGameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopGameResponse>>() {
                 }.getType();

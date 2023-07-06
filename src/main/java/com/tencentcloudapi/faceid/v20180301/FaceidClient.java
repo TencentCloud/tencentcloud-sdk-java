@@ -29,7 +29,7 @@ public class FaceidClient extends AbstractClient{
     private static String endpoint = "faceid.tencentcloudapi.com";
     private static String service = "faceid";
     private static String version = "2018-03-01";
-
+    
     public FaceidClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class FaceidClient extends AbstractClient{
     public BankCard2EVerificationResponse BankCard2EVerification(BankCard2EVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCard2EVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCard2EVerificationResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class FaceidClient extends AbstractClient{
     public BankCard4EVerificationResponse BankCard4EVerification(BankCard4EVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCard4EVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCard4EVerificationResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class FaceidClient extends AbstractClient{
     public BankCardVerificationResponse BankCardVerification(BankCardVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BankCardVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BankCardVerificationResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class FaceidClient extends AbstractClient{
     public CheckBankCardInformationResponse CheckBankCardInformation(CheckBankCardInformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckBankCardInformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckBankCardInformationResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class FaceidClient extends AbstractClient{
     public CheckEidTokenStatusResponse CheckEidTokenStatus(CheckEidTokenStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckEidTokenStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckEidTokenStatusResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class FaceidClient extends AbstractClient{
     public CheckIdCardInformationResponse CheckIdCardInformation(CheckIdCardInformationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIdCardInformationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIdCardInformationResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class FaceidClient extends AbstractClient{
     public CheckIdNameDateResponse CheckIdNameDate(CheckIdNameDateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckIdNameDateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckIdNameDateResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class FaceidClient extends AbstractClient{
     public CheckPhoneAndNameResponse CheckPhoneAndName(CheckPhoneAndNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckPhoneAndNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckPhoneAndNameResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class FaceidClient extends AbstractClient{
     public DetectAuthResponse DetectAuth(DetectAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetectAuthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetectAuthResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class FaceidClient extends AbstractClient{
     public EncryptedPhoneVerificationResponse EncryptedPhoneVerification(EncryptedPhoneVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EncryptedPhoneVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EncryptedPhoneVerificationResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class FaceidClient extends AbstractClient{
     public GetActionSequenceResponse GetActionSequence(GetActionSequenceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetActionSequenceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetActionSequenceResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class FaceidClient extends AbstractClient{
     public GetDetectInfoResponse GetDetectInfo(GetDetectInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDetectInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDetectInfoResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class FaceidClient extends AbstractClient{
     public GetDetectInfoEnhancedResponse GetDetectInfoEnhanced(GetDetectInfoEnhancedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDetectInfoEnhancedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDetectInfoEnhancedResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class FaceidClient extends AbstractClient{
     public GetEidResultResponse GetEidResult(GetEidResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetEidResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetEidResultResponse>>() {
                 }.getType();
@@ -328,6 +342,7 @@ public class FaceidClient extends AbstractClient{
     public GetEidTokenResponse GetEidToken(GetEidTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetEidTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetEidTokenResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class FaceidClient extends AbstractClient{
     public GetFaceIdResultResponse GetFaceIdResult(GetFaceIdResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFaceIdResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFaceIdResultResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ public class FaceidClient extends AbstractClient{
     public GetFaceIdTokenResponse GetFaceIdToken(GetFaceIdTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFaceIdTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFaceIdTokenResponse>>() {
                 }.getType();
@@ -388,6 +405,7 @@ public class FaceidClient extends AbstractClient{
     public GetLiveCodeResponse GetLiveCode(GetLiveCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLiveCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLiveCodeResponse>>() {
                 }.getType();
@@ -408,6 +426,7 @@ public class FaceidClient extends AbstractClient{
     public GetWeChatBillDetailsResponse GetWeChatBillDetails(GetWeChatBillDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetWeChatBillDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetWeChatBillDetailsResponse>>() {
                 }.getType();
@@ -428,6 +447,7 @@ public class FaceidClient extends AbstractClient{
     public IdCardOCRVerificationResponse IdCardOCRVerification(IdCardOCRVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IdCardOCRVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IdCardOCRVerificationResponse>>() {
                 }.getType();
@@ -448,6 +468,7 @@ public class FaceidClient extends AbstractClient{
     public IdCardVerificationResponse IdCardVerification(IdCardVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<IdCardVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<IdCardVerificationResponse>>() {
                 }.getType();
@@ -468,6 +489,7 @@ public class FaceidClient extends AbstractClient{
     public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageRecognitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageRecognitionResponse>>() {
                 }.getType();
@@ -488,6 +510,7 @@ public class FaceidClient extends AbstractClient{
     public LivenessResponse Liveness(LivenessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessResponse>>() {
                 }.getType();
@@ -508,6 +531,7 @@ public class FaceidClient extends AbstractClient{
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessCompareResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
                 }.getType();
@@ -528,6 +552,7 @@ public class FaceidClient extends AbstractClient{
     public LivenessRecognitionResponse LivenessRecognition(LivenessRecognitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessRecognitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessRecognitionResponse>>() {
                 }.getType();
@@ -548,6 +573,7 @@ public class FaceidClient extends AbstractClient{
     public MinorsVerificationResponse MinorsVerification(MinorsVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MinorsVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MinorsVerificationResponse>>() {
                 }.getType();
@@ -568,6 +594,7 @@ public class FaceidClient extends AbstractClient{
     public MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(MobileNetworkTimeVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MobileNetworkTimeVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MobileNetworkTimeVerificationResponse>>() {
                 }.getType();
@@ -588,6 +615,7 @@ public class FaceidClient extends AbstractClient{
     public MobileStatusResponse MobileStatus(MobileStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MobileStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MobileStatusResponse>>() {
                 }.getType();
@@ -608,6 +636,7 @@ public class FaceidClient extends AbstractClient{
     public ParseNfcDataResponse ParseNfcData(ParseNfcDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ParseNfcDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ParseNfcDataResponse>>() {
                 }.getType();
@@ -628,6 +657,7 @@ public class FaceidClient extends AbstractClient{
     public PhoneVerificationResponse PhoneVerification(PhoneVerificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PhoneVerificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PhoneVerificationResponse>>() {
                 }.getType();
@@ -648,6 +678,7 @@ public class FaceidClient extends AbstractClient{
     public PhoneVerificationCMCCResponse PhoneVerificationCMCC(PhoneVerificationCMCCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PhoneVerificationCMCCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PhoneVerificationCMCCResponse>>() {
                 }.getType();
@@ -668,6 +699,7 @@ public class FaceidClient extends AbstractClient{
     public PhoneVerificationCTCCResponse PhoneVerificationCTCC(PhoneVerificationCTCCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PhoneVerificationCTCCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PhoneVerificationCTCCResponse>>() {
                 }.getType();
@@ -688,6 +720,7 @@ public class FaceidClient extends AbstractClient{
     public PhoneVerificationCUCCResponse PhoneVerificationCUCC(PhoneVerificationCUCCRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PhoneVerificationCUCCResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PhoneVerificationCUCCResponse>>() {
                 }.getType();

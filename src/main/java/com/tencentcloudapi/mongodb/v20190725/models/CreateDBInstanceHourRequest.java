@@ -184,27 +184,26 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String [] AvailabilityZoneList;
 
     /**
-    * Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+    * Mongos CPU 核数。购买分片集群时，必须填写。
+
     */
     @SerializedName("MongosCpu")
     @Expose
     private Long MongosCpu;
 
     /**
-    * Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+    * Mongos 内存大小。购买分片集群时，必须填写。
+
+
     */
     @SerializedName("MongosMemory")
     @Expose
     private Long MongosMemory;
 
     /**
-    * Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+    * Mongos 数量。购买分片集群时，必须填写。
+
+
     */
     @SerializedName("MongosNodeNum")
     @Expose
@@ -636,72 +635,68 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。 
-     * @return MongosCpu Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Get Mongos CPU 核数。购买分片集群时，必须填写。
+ 
+     * @return MongosCpu Mongos CPU 核数。购买分片集群时，必须填写。
+
      */
     public Long getMongosCpu() {
         return this.MongosCpu;
     }
 
     /**
-     * Set Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
-     * @param MongosCpu Mongos CPU 核数。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Set Mongos CPU 核数。购买分片集群时，必须填写。
+
+     * @param MongosCpu Mongos CPU 核数。购买分片集群时，必须填写。
+
      */
     public void setMongosCpu(Long MongosCpu) {
         this.MongosCpu = MongosCpu;
     }
 
     /**
-     * Get Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。 
-     * @return MongosMemory Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Get Mongos 内存大小。购买分片集群时，必须填写。
+
+ 
+     * @return MongosMemory Mongos 内存大小。购买分片集群时，必须填写。
+
+
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
-     * @param MongosMemory Mongos 内存大小。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Set Mongos 内存大小。购买分片集群时，必须填写。
+
+
+     * @param MongosMemory Mongos 内存大小。购买分片集群时，必须填写。
+
+
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。 
-     * @return MongosNodeNum Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Get Mongos 数量。购买分片集群时，必须填写。
+
+ 
+     * @return MongosNodeNum Mongos 数量。购买分片集群时，必须填写。
+
+
      */
     public Long getMongosNodeNum() {
         return this.MongosNodeNum;
     }
 
     /**
-     * Set Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
-     * @param MongosNodeNum Mongos 数量。
-- 购买MongoDB 3.6 WiredTiger存储引擎版本以上的分片集群时，可选择性配置该参数。
-- 若不配置该参数，则根据Mongod节点规格默认适配 Mongos 规格，默认规格免费。
+     * Set Mongos 数量。购买分片集群时，必须填写。
+
+
+     * @param MongosNodeNum Mongos 数量。购买分片集群时，必须填写。
+
+
      */
     public void setMongosNodeNum(Long MongosNodeNum) {
         this.MongosNodeNum = MongosNodeNum;

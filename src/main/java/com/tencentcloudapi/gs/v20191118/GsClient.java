@@ -29,7 +29,7 @@ public class GsClient extends AbstractClient{
     private static String endpoint = "gs.tencentcloudapi.com";
     private static String service = "gs";
     private static String version = "2019-11-18";
-
+    
     public GsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class GsClient extends AbstractClient{
     public CreateSessionResponse CreateSession(CreateSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSessionResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class GsClient extends AbstractClient{
     public DescribeInstancesCountResponse DescribeInstancesCount(DescribeInstancesCountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesCountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesCountResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class GsClient extends AbstractClient{
     public SaveGameArchiveResponse SaveGameArchive(SaveGameArchiveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SaveGameArchiveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SaveGameArchiveResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class GsClient extends AbstractClient{
     public StartPublishStreamResponse StartPublishStream(StartPublishStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartPublishStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartPublishStreamResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class GsClient extends AbstractClient{
     public StopGameResponse StopGame(StopGameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopGameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopGameResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class GsClient extends AbstractClient{
     public StopPublishStreamResponse StopPublishStream(StopPublishStreamRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopPublishStreamResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopPublishStreamResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class GsClient extends AbstractClient{
     public SwitchGameArchiveResponse SwitchGameArchive(SwitchGameArchiveRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchGameArchiveResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchGameArchiveResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class GsClient extends AbstractClient{
     public TrylockWorkerResponse TrylockWorker(TrylockWorkerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TrylockWorkerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TrylockWorkerResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class YoumallClient extends AbstractClient{
     private static String endpoint = "youmall.tencentcloudapi.com";
     private static String service = "youmall";
     private static String version = "2018-02-28";
-
+    
     public YoumallClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class YoumallClient extends AbstractClient{
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class YoumallClient extends AbstractClient{
     public CreateFacePictureResponse CreateFacePicture(CreateFacePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFacePictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFacePictureResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class YoumallClient extends AbstractClient{
     public DeletePersonFeatureResponse DeletePersonFeature(DeletePersonFeatureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePersonFeatureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePersonFeatureResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeCameraPersonResponse DescribeCameraPerson(DescribeCameraPersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCameraPersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCameraPersonResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeClusterPersonArrivedMallResponse DescribeClusterPersonArrivedMall(DescribeClusterPersonArrivedMallRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPersonArrivedMallResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonArrivedMallResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeClusterPersonTraceResponse DescribeClusterPersonTrace(DescribeClusterPersonTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterPersonTraceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterPersonTraceResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeFaceIdByTempIdResponse DescribeFaceIdByTempId(DescribeFaceIdByTempIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFaceIdByTempIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFaceIdByTempIdResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeHistoryNetworkInfoResponse DescribeHistoryNetworkInfo(DescribeHistoryNetworkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHistoryNetworkInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHistoryNetworkInfoResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeNetworkInfoResponse DescribeNetworkInfo(DescribeNetworkInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNetworkInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNetworkInfoResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonResponse DescribePerson(DescribePersonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonArrivedMallResponse DescribePersonArrivedMall(DescribePersonArrivedMallRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonArrivedMallResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonArrivedMallResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonInfoResponse DescribePersonInfo(DescribePersonInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonInfoResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonInfoByFacePictureResponse DescribePersonInfoByFacePicture(DescribePersonInfoByFacePictureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonInfoByFacePictureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonInfoByFacePictureResponse>>() {
                 }.getType();
@@ -309,6 +322,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonTraceResponse DescribePersonTrace(DescribePersonTraceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonTraceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonTraceResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonTraceDetailResponse DescribePersonTraceDetail(DescribePersonTraceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonTraceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonTraceDetailResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class YoumallClient extends AbstractClient{
     public DescribePersonVisitInfoResponse DescribePersonVisitInfo(DescribePersonVisitInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePersonVisitInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePersonVisitInfoResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeShopHourTrafficInfoResponse DescribeShopHourTrafficInfo(DescribeShopHourTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopHourTrafficInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopHourTrafficInfoResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeShopInfoResponse DescribeShopInfo(DescribeShopInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopInfoResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeShopTrafficInfoResponse DescribeShopTrafficInfo(DescribeShopTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShopTrafficInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShopTrafficInfoResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeTrajectoryDataResponse DescribeTrajectoryData(DescribeTrajectoryDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrajectoryDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrajectoryDataResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowAgeInfoByZoneIdResponse DescribeZoneFlowAgeInfoByZoneId(DescribeZoneFlowAgeInfoByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAgeInfoByZoneIdResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowAndStayTimeResponse DescribeZoneFlowAndStayTime(DescribeZoneFlowAndStayTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowAndStayTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowAndStayTimeResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowDailyByZoneIdResponse DescribeZoneFlowDailyByZoneId(DescribeZoneFlowDailyByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowDailyByZoneIdResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse DescribeZoneFlowGenderAvrStayTimeByZoneId(DescribeZoneFlowGenderAvrStayTimeByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderAvrStayTimeByZoneIdResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowGenderInfoByZoneIdResponse DescribeZoneFlowGenderInfoByZoneId(DescribeZoneFlowGenderInfoByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowGenderInfoByZoneIdResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneFlowHourlyByZoneIdResponse DescribeZoneFlowHourlyByZoneId(DescribeZoneFlowHourlyByZoneIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneFlowHourlyByZoneIdResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ public class YoumallClient extends AbstractClient{
     public DescribeZoneTrafficInfoResponse DescribeZoneTrafficInfo(DescribeZoneTrafficInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeZoneTrafficInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneTrafficInfoResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ public class YoumallClient extends AbstractClient{
     public ModifyPersonFeatureInfoResponse ModifyPersonFeatureInfo(ModifyPersonFeatureInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonFeatureInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonFeatureInfoResponse>>() {
                 }.getType();
@@ -610,6 +638,7 @@ public class YoumallClient extends AbstractClient{
     public ModifyPersonTagInfoResponse ModifyPersonTagInfo(ModifyPersonTagInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonTagInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonTagInfoResponse>>() {
                 }.getType();
@@ -630,6 +659,7 @@ public class YoumallClient extends AbstractClient{
     public ModifyPersonTypeResponse ModifyPersonType(ModifyPersonTypeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPersonTypeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonTypeResponse>>() {
                 }.getType();
@@ -650,6 +680,7 @@ public class YoumallClient extends AbstractClient{
     public RegisterCallbackResponse RegisterCallback(RegisterCallbackRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterCallbackResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterCallbackResponse>>() {
                 }.getType();

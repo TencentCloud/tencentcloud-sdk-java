@@ -29,7 +29,7 @@ public class SoeClient extends AbstractClient{
     private static String endpoint = "soe.tencentcloudapi.com";
     private static String service = "soe";
     private static String version = "2018-07-24";
-
+    
     public SoeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SoeClient extends AbstractClient{
     public InitOralProcessResponse InitOralProcess(InitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InitOralProcessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InitOralProcessResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SoeClient extends AbstractClient{
     public KeywordEvaluateResponse KeywordEvaluate(KeywordEvaluateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<KeywordEvaluateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<KeywordEvaluateResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SoeClient extends AbstractClient{
     public TransmitOralProcessResponse TransmitOralProcess(TransmitOralProcessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SoeClient extends AbstractClient{
     public TransmitOralProcessWithInitResponse TransmitOralProcessWithInit(TransmitOralProcessWithInitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransmitOralProcessWithInitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransmitOralProcessWithInitResponse>>() {
                 }.getType();

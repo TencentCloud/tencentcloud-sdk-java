@@ -29,7 +29,7 @@ public class CkafkaClient extends AbstractClient{
     private static String endpoint = "ckafka.tencentcloudapi.com";
     private static String service = "ckafka";
     private static String version = "2019-08-19";
-
+    
     public CkafkaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CkafkaClient extends AbstractClient{
     public AuthorizeTokenResponse AuthorizeToken(AuthorizeTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AuthorizeTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AuthorizeTokenResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CkafkaClient extends AbstractClient{
     public BatchCreateAclResponse BatchCreateAcl(BatchCreateAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchCreateAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchCreateAclResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CkafkaClient extends AbstractClient{
     public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyGroupOffsetsResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CkafkaClient extends AbstractClient{
     public BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchModifyTopicAttributesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CkafkaClient extends AbstractClient{
     public CancelAuthorizationTokenResponse CancelAuthorizationToken(CancelAuthorizationTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CancelAuthorizationTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CancelAuthorizationTokenResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CkafkaClient extends AbstractClient{
     public CheckCdcClusterResponse CheckCdcCluster(CheckCdcClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckCdcClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckCdcClusterResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateAclResponse CreateAcl(CreateAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateAclRuleResponse CreateAclRule(CreateAclRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAclRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAclRuleResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateCdcClusterResponse CreateCdcCluster(CreateCdcClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCdcClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCdcClusterResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateConnectResourceResponse CreateConnectResource(CreateConnectResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConnectResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConnectResourceResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateConsumerResponse CreateConsumer(CreateConsumerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateConsumerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateDatahubTaskResponse CreateDatahubTask(CreateDatahubTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDatahubTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDatahubTaskResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateDatahubTopicResponse CreateDatahubTopic(CreateDatahubTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDatahubTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDatahubTopicResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateInstancePostResponse CreateInstancePost(CreateInstancePostRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstancePostResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstancePostResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateInstancePreResponse CreateInstancePre(CreateInstancePreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstancePreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstancePreResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CkafkaClient extends AbstractClient{
     public CreatePartitionResponse CreatePartition(CreatePartitionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePartitionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePartitionResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CkafkaClient extends AbstractClient{
     public CreatePostPaidInstanceResponse CreatePostPaidInstance(CreatePostPaidInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePostPaidInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePostPaidInstanceResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateRouteResponse CreateRoute(CreateRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRouteResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateTokenResponse CreateToken(CreateTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTokenResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(CreateTopicIpWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTopicIpWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTopicIpWhiteListResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class CkafkaClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteAclResponse DeleteAcl(DeleteAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAclResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteAclRuleResponse DeleteAclRule(DeleteAclRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAclRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAclRuleResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteConnectResourceResponse DeleteConnectResource(DeleteConnectResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteConnectResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteConnectResourceResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteDatahubTaskResponse DeleteDatahubTask(DeleteDatahubTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDatahubTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDatahubTaskResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteDatahubTopicResponse DeleteDatahubTopic(DeleteDatahubTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDatahubTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDatahubTopicResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteInstancePreResponse DeleteInstancePre(DeleteInstancePreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteInstancePreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteInstancePreResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteRouteResponse DeleteRoute(DeleteRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRouteResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteRouteTriggerTimeResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTopicResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(DeleteTopicIpWhiteListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteTopicIpWhiteListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteTopicIpWhiteListResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class CkafkaClient extends AbstractClient{
     public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeACLResponse DescribeACL(DescribeACLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeACLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeACLResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeAclRuleResponse DescribeAclRule(DescribeAclRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAclRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAclRuleResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeAppInfoResponse DescribeAppInfo(DescribeAppInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAppInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAppInfoResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeCkafkaZoneResponse DescribeCkafkaZone(DescribeCkafkaZoneRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCkafkaZoneResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeConnectResourceResponse DescribeConnectResource(DescribeConnectResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConnectResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConnectResourceResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeConnectResourcesResponse DescribeConnectResources(DescribeConnectResourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConnectResourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConnectResourcesResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeConsumerGroupResponse DescribeConsumerGroup(DescribeConsumerGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConsumerGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConsumerGroupResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(DescribeDatahubGroupOffsetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatahubGroupOffsetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatahubGroupOffsetsResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeDatahubTaskResponse DescribeDatahubTask(DescribeDatahubTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatahubTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatahubTaskResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeDatahubTasksResponse DescribeDatahubTasks(DescribeDatahubTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatahubTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatahubTasksResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeDatahubTopicResponse DescribeDatahubTopic(DescribeDatahubTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeDatahubTopicsResponse DescribeDatahubTopics(DescribeDatahubTopicsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicsResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeGroupInfoResponse DescribeGroupInfo(DescribeGroupInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupInfoResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeGroupOffsetsResponse DescribeGroupOffsets(DescribeGroupOffsetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeGroupOffsetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupOffsetsResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstanceAttributesResponse DescribeInstanceAttributes(DescribeInstanceAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceAttributesResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstancesDetailResponse DescribeInstancesDetail(DescribeInstancesDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesDetailResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeRegionResponse DescribeRegion(DescribeRegionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeRouteResponse DescribeRoute(DescribeRouteRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRouteResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
@@ -1148,6 +1203,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicResponse DescribeTopic(DescribeTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicResponse>>() {
                 }.getType();
@@ -1169,6 +1225,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicAttributesResponse DescribeTopicAttributes(DescribeTopicAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicAttributesResponse>>() {
                 }.getType();
@@ -1189,6 +1246,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicDetailResponse DescribeTopicDetail(DescribeTopicDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicDetailResponse>>() {
                 }.getType();
@@ -1209,6 +1267,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicFlowRankingResponse DescribeTopicFlowRanking(DescribeTopicFlowRankingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicFlowRankingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicFlowRankingResponse>>() {
                 }.getType();
@@ -1229,6 +1288,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicProduceConnectionResponse>>() {
                 }.getType();
@@ -1249,6 +1309,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>() {
                 }.getType();
@@ -1269,6 +1330,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTopicSyncReplicaResponse>>() {
                 }.getType();
@@ -1289,6 +1351,7 @@ public class CkafkaClient extends AbstractClient{
     public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
@@ -1309,6 +1372,7 @@ public class CkafkaClient extends AbstractClient{
     public FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(FetchDatahubMessageByOffsetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FetchDatahubMessageByOffsetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FetchDatahubMessageByOffsetResponse>>() {
                 }.getType();
@@ -1329,6 +1393,7 @@ public class CkafkaClient extends AbstractClient{
     public FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(FetchLatestDatahubMessageListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FetchLatestDatahubMessageListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FetchLatestDatahubMessageListResponse>>() {
                 }.getType();
@@ -1349,6 +1414,7 @@ public class CkafkaClient extends AbstractClient{
     public FetchMessageByOffsetResponse FetchMessageByOffset(FetchMessageByOffsetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
                 }.getType();
@@ -1369,6 +1435,7 @@ public class CkafkaClient extends AbstractClient{
     public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
                 }.getType();
@@ -1389,6 +1456,7 @@ public class CkafkaClient extends AbstractClient{
     public InquireCkafkaPriceResponse InquireCkafkaPrice(InquireCkafkaPriceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
                 }.getType();
@@ -1409,6 +1477,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyAclRuleResponse ModifyAclRule(ModifyAclRuleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAclRuleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAclRuleResponse>>() {
                 }.getType();
@@ -1429,6 +1498,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyConnectResourceResponse ModifyConnectResource(ModifyConnectResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyConnectResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyConnectResourceResponse>>() {
                 }.getType();
@@ -1449,6 +1519,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyDatahubTaskResponse ModifyDatahubTask(ModifyDatahubTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDatahubTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDatahubTaskResponse>>() {
                 }.getType();
@@ -1469,6 +1540,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyDatahubTopicResponse ModifyDatahubTopic(ModifyDatahubTopicRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDatahubTopicResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDatahubTopicResponse>>() {
                 }.getType();
@@ -1489,6 +1561,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyGroupOffsetsResponse ModifyGroupOffsets(ModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyGroupOffsetsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyGroupOffsetsResponse>>() {
                 }.getType();
@@ -1509,6 +1582,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyInstanceAttributesResponse ModifyInstanceAttributes(ModifyInstanceAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceAttributesResponse>>() {
                 }.getType();
@@ -1529,6 +1603,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyInstancePreResponse ModifyInstancePre(ModifyInstancePreRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstancePreResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstancePreResponse>>() {
                 }.getType();
@@ -1549,6 +1624,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyPasswordResponse ModifyPassword(ModifyPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPasswordResponse>>() {
                 }.getType();
@@ -1569,6 +1645,7 @@ public class CkafkaClient extends AbstractClient{
     public ModifyTopicAttributesResponse ModifyTopicAttributes(ModifyTopicAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyTopicAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyTopicAttributesResponse>>() {
                 }.getType();
@@ -1589,6 +1666,7 @@ public class CkafkaClient extends AbstractClient{
     public RenewCkafkaInstanceResponse RenewCkafkaInstance(RenewCkafkaInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RenewCkafkaInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RenewCkafkaInstanceResponse>>() {
                 }.getType();
@@ -1609,6 +1687,7 @@ public class CkafkaClient extends AbstractClient{
     public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendMessageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class MemcachedClient extends AbstractClient{
     private static String endpoint = "memcached.tencentcloudapi.com";
     private static String service = "memcached";
     private static String version = "2019-03-18";
-
+    
     public MemcachedClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MemcachedClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();

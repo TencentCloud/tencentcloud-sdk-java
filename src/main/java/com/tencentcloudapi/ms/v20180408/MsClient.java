@@ -29,7 +29,7 @@ public class MsClient extends AbstractClient{
     private static String endpoint = "ms.tencentcloudapi.com";
     private static String service = "ms";
     private static String version = "2018-04-08";
-
+    
     public MsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MsClient extends AbstractClient{
     public CreateBindInstanceResponse CreateBindInstance(CreateBindInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBindInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBindInstanceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MsClient extends AbstractClient{
     public CreateCosSecKeyInstanceResponse CreateCosSecKeyInstance(CreateCosSecKeyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCosSecKeyInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCosSecKeyInstanceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MsClient extends AbstractClient{
     public CreateResourceInstancesResponse CreateResourceInstances(CreateResourceInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateResourceInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateResourceInstancesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MsClient extends AbstractClient{
     public CreateShieldInstanceResponse CreateShieldInstance(CreateShieldInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateShieldInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateShieldInstanceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MsClient extends AbstractClient{
     public CreateShieldPlanInstanceResponse CreateShieldPlanInstance(CreateShieldPlanInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateShieldPlanInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateShieldPlanInstanceResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MsClient extends AbstractClient{
     public DeleteShieldInstancesResponse DeleteShieldInstances(DeleteShieldInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteShieldInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteShieldInstancesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MsClient extends AbstractClient{
     public DescribeApkDetectionResultResponse DescribeApkDetectionResult(DescribeApkDetectionResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeApkDetectionResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeApkDetectionResultResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MsClient extends AbstractClient{
     public DescribeResourceInstancesResponse DescribeResourceInstances(DescribeResourceInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceInstancesResponse>>() {
                 }.getType();
@@ -209,6 +217,7 @@ public class MsClient extends AbstractClient{
     public DescribeShieldInstancesResponse DescribeShieldInstances(DescribeShieldInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldInstancesResponse>>() {
                 }.getType();
@@ -229,6 +238,7 @@ public class MsClient extends AbstractClient{
     public DescribeShieldPlanInstanceResponse DescribeShieldPlanInstance(DescribeShieldPlanInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldPlanInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldPlanInstanceResponse>>() {
                 }.getType();
@@ -249,6 +259,7 @@ public class MsClient extends AbstractClient{
     public DescribeShieldResultResponse DescribeShieldResult(DescribeShieldResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeShieldResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeShieldResultResponse>>() {
                 }.getType();
@@ -269,6 +280,7 @@ public class MsClient extends AbstractClient{
     public DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(DescribeUrlDetectionResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUrlDetectionResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUrlDetectionResultResponse>>() {
                 }.getType();
@@ -289,6 +301,7 @@ public class MsClient extends AbstractClient{
     public DescribeUserBaseInfoInstanceResponse DescribeUserBaseInfoInstance(DescribeUserBaseInfoInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserBaseInfoInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserBaseInfoInstanceResponse>>() {
                 }.getType();

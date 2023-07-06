@@ -29,7 +29,7 @@ public class AsClient extends AbstractClient{
     private static String endpoint = "as.tencentcloudapi.com";
     private static String service = "as";
     private static String version = "2018-04-19";
-
+    
     public AsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -50,6 +50,7 @@ public class AsClient extends AbstractClient{
     public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
                 }.getType();
@@ -70,6 +71,7 @@ public class AsClient extends AbstractClient{
     public AttachLoadBalancersResponse AttachLoadBalancers(AttachLoadBalancersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AttachLoadBalancersResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ public class AsClient extends AbstractClient{
     public ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(ClearLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ClearLaunchConfigurationAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>() {
                 }.getType();
@@ -112,6 +115,7 @@ public class AsClient extends AbstractClient{
     public CompleteLifecycleActionResponse CompleteLifecycleAction(CompleteLifecycleActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CompleteLifecycleActionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CompleteLifecycleActionResponse>>() {
                 }.getType();
@@ -132,6 +136,7 @@ public class AsClient extends AbstractClient{
     public CreateAutoScalingGroupResponse CreateAutoScalingGroup(CreateAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoScalingGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupResponse>>() {
                 }.getType();
@@ -154,6 +159,7 @@ public class AsClient extends AbstractClient{
     public CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(CreateAutoScalingGroupFromInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>() {
                 }.getType();
@@ -178,6 +184,7 @@ public class AsClient extends AbstractClient{
     public CreateLaunchConfigurationResponse CreateLaunchConfiguration(CreateLaunchConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLaunchConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLaunchConfigurationResponse>>() {
                 }.getType();
@@ -218,6 +225,7 @@ public class AsClient extends AbstractClient{
     public CreateLifecycleHookResponse CreateLifecycleHook(CreateLifecycleHookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLifecycleHookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLifecycleHookResponse>>() {
                 }.getType();
@@ -265,6 +273,7 @@ public class AsClient extends AbstractClient{
     public CreateNotificationConfigurationResponse CreateNotificationConfiguration(CreateNotificationConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNotificationConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNotificationConfigurationResponse>>() {
                 }.getType();
@@ -285,6 +294,7 @@ public class AsClient extends AbstractClient{
     public CreateScalingPolicyResponse CreateScalingPolicy(CreateScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScalingPolicyResponse>>() {
                 }.getType();
@@ -305,6 +315,7 @@ public class AsClient extends AbstractClient{
     public CreateScheduledActionResponse CreateScheduledAction(CreateScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScheduledActionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScheduledActionResponse>>() {
                 }.getType();
@@ -325,6 +336,7 @@ public class AsClient extends AbstractClient{
     public DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(DeleteAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAutoScalingGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoScalingGroupResponse>>() {
                 }.getType();
@@ -348,6 +360,7 @@ public class AsClient extends AbstractClient{
     public DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(DeleteLaunchConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLaunchConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchConfigurationResponse>>() {
                 }.getType();
@@ -368,6 +381,7 @@ public class AsClient extends AbstractClient{
     public DeleteLifecycleHookResponse DeleteLifecycleHook(DeleteLifecycleHookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLifecycleHookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLifecycleHookResponse>>() {
                 }.getType();
@@ -388,6 +402,7 @@ public class AsClient extends AbstractClient{
     public DeleteNotificationConfigurationResponse DeleteNotificationConfiguration(DeleteNotificationConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteNotificationConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteNotificationConfigurationResponse>>() {
                 }.getType();
@@ -408,6 +423,7 @@ public class AsClient extends AbstractClient{
     public DeleteScalingPolicyResponse DeleteScalingPolicy(DeleteScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScalingPolicyResponse>>() {
                 }.getType();
@@ -428,6 +444,7 @@ public class AsClient extends AbstractClient{
     public DeleteScheduledActionResponse DeleteScheduledAction(DeleteScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScheduledActionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScheduledActionResponse>>() {
                 }.getType();
@@ -448,6 +465,7 @@ public class AsClient extends AbstractClient{
     public DescribeAccountLimitsResponse DescribeAccountLimits(DescribeAccountLimitsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAccountLimitsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountLimitsResponse>>() {
                 }.getType();
@@ -468,6 +486,7 @@ public class AsClient extends AbstractClient{
     public DescribeAutoScalingActivitiesResponse DescribeAutoScalingActivities(DescribeAutoScalingActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingActivitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingActivitiesResponse>>() {
                 }.getType();
@@ -488,6 +507,7 @@ public class AsClient extends AbstractClient{
     public DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvices(DescribeAutoScalingAdvicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>() {
                 }.getType();
@@ -508,6 +528,7 @@ public class AsClient extends AbstractClient{
     public DescribeAutoScalingGroupLastActivitiesResponse DescribeAutoScalingGroupLastActivities(DescribeAutoScalingGroupLastActivitiesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingGroupLastActivitiesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupLastActivitiesResponse>>() {
                 }.getType();
@@ -531,6 +552,7 @@ public class AsClient extends AbstractClient{
     public DescribeAutoScalingGroupsResponse DescribeAutoScalingGroups(DescribeAutoScalingGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingGroupsResponse>>() {
                 }.getType();
@@ -554,6 +576,7 @@ public class AsClient extends AbstractClient{
     public DescribeAutoScalingInstancesResponse DescribeAutoScalingInstances(DescribeAutoScalingInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAutoScalingInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingInstancesResponse>>() {
                 }.getType();
@@ -577,6 +600,7 @@ public class AsClient extends AbstractClient{
     public DescribeLaunchConfigurationsResponse DescribeLaunchConfigurations(DescribeLaunchConfigurationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLaunchConfigurationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLaunchConfigurationsResponse>>() {
                 }.getType();
@@ -600,6 +624,7 @@ public class AsClient extends AbstractClient{
     public DescribeLifecycleHooksResponse DescribeLifecycleHooks(DescribeLifecycleHooksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLifecycleHooksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLifecycleHooksResponse>>() {
                 }.getType();
@@ -623,6 +648,7 @@ public class AsClient extends AbstractClient{
     public DescribeNotificationConfigurationsResponse DescribeNotificationConfigurations(DescribeNotificationConfigurationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNotificationConfigurationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNotificationConfigurationsResponse>>() {
                 }.getType();
@@ -643,6 +669,7 @@ public class AsClient extends AbstractClient{
     public DescribeScalingPoliciesResponse DescribeScalingPolicies(DescribeScalingPoliciesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScalingPoliciesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScalingPoliciesResponse>>() {
                 }.getType();
@@ -666,6 +693,7 @@ public class AsClient extends AbstractClient{
     public DescribeScheduledActionsResponse DescribeScheduledActions(DescribeScheduledActionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScheduledActionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScheduledActionsResponse>>() {
                 }.getType();
@@ -689,6 +717,7 @@ public class AsClient extends AbstractClient{
     public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
                 }.getType();
@@ -709,6 +738,7 @@ public class AsClient extends AbstractClient{
     public DetachLoadBalancersResponse DetachLoadBalancers(DetachLoadBalancersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DetachLoadBalancersResponse>>() {
                 }.getType();
@@ -742,6 +772,7 @@ public class AsClient extends AbstractClient{
     public DisableAutoScalingGroupResponse DisableAutoScalingGroup(DisableAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisableAutoScalingGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisableAutoScalingGroupResponse>>() {
                 }.getType();
@@ -762,6 +793,7 @@ public class AsClient extends AbstractClient{
     public EnableAutoScalingGroupResponse EnableAutoScalingGroup(EnableAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<EnableAutoScalingGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<EnableAutoScalingGroupResponse>>() {
                 }.getType();
@@ -786,6 +818,7 @@ public class AsClient extends AbstractClient{
     public ExecuteScalingPolicyResponse ExecuteScalingPolicy(ExecuteScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteScalingPolicyResponse>>() {
                 }.getType();
@@ -806,6 +839,7 @@ public class AsClient extends AbstractClient{
     public ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(ModifyAutoScalingGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAutoScalingGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoScalingGroupResponse>>() {
                 }.getType();
@@ -826,6 +860,7 @@ public class AsClient extends AbstractClient{
     public ModifyDesiredCapacityResponse ModifyDesiredCapacity(ModifyDesiredCapacityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDesiredCapacityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDesiredCapacityResponse>>() {
                 }.getType();
@@ -849,6 +884,7 @@ public class AsClient extends AbstractClient{
     public ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(ModifyLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLaunchConfigurationAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
                 }.getType();
@@ -869,6 +905,7 @@ public class AsClient extends AbstractClient{
     public ModifyLifecycleHookResponse ModifyLifecycleHook(ModifyLifecycleHookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLifecycleHookResponse>>() {
                 }.getType();
@@ -889,6 +926,7 @@ public class AsClient extends AbstractClient{
     public ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(ModifyLoadBalancerTargetAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>() {
                 }.getType();
@@ -913,6 +951,7 @@ public class AsClient extends AbstractClient{
     public ModifyLoadBalancersResponse ModifyLoadBalancers(ModifyLoadBalancersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLoadBalancersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancersResponse>>() {
                 }.getType();
@@ -934,6 +973,7 @@ public class AsClient extends AbstractClient{
     public ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(ModifyNotificationConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNotificationConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNotificationConfigurationResponse>>() {
                 }.getType();
@@ -954,6 +994,7 @@ public class AsClient extends AbstractClient{
     public ModifyScalingPolicyResponse ModifyScalingPolicy(ModifyScalingPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyScalingPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyScalingPolicyResponse>>() {
                 }.getType();
@@ -974,6 +1015,7 @@ public class AsClient extends AbstractClient{
     public ModifyScheduledActionResponse ModifyScheduledAction(ModifyScheduledActionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyScheduledActionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyScheduledActionResponse>>() {
                 }.getType();
@@ -997,6 +1039,7 @@ public class AsClient extends AbstractClient{
     public RemoveInstancesResponse RemoveInstances(RemoveInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RemoveInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
                 }.getType();
@@ -1023,6 +1066,7 @@ public class AsClient extends AbstractClient{
     public ScaleInInstancesResponse ScaleInInstances(ScaleInInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleInInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleInInstancesResponse>>() {
                 }.getType();
@@ -1048,6 +1092,7 @@ public class AsClient extends AbstractClient{
     public ScaleOutInstancesResponse ScaleOutInstances(ScaleOutInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutInstancesResponse>>() {
                 }.getType();
@@ -1069,6 +1114,7 @@ public class AsClient extends AbstractClient{
     public SetInstancesProtectionResponse SetInstancesProtection(SetInstancesProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SetInstancesProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SetInstancesProtectionResponse>>() {
                 }.getType();
@@ -1091,6 +1137,7 @@ public class AsClient extends AbstractClient{
     public StartAutoScalingInstancesResponse StartAutoScalingInstances(StartAutoScalingInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartAutoScalingInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartAutoScalingInstancesResponse>>() {
                 }.getType();
@@ -1115,6 +1162,7 @@ public class AsClient extends AbstractClient{
     public StopAutoScalingInstancesResponse StopAutoScalingInstances(StopAutoScalingInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopAutoScalingInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StopAutoScalingInstancesResponse>>() {
                 }.getType();
@@ -1138,6 +1186,7 @@ public class AsClient extends AbstractClient{
     public UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(UpgradeLaunchConfigurationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeLaunchConfigurationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeLaunchConfigurationResponse>>() {
                 }.getType();
@@ -1161,6 +1210,7 @@ public class AsClient extends AbstractClient{
     public UpgradeLifecycleHookResponse UpgradeLifecycleHook(UpgradeLifecycleHookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpgradeLifecycleHookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpgradeLifecycleHookResponse>>() {
                 }.getType();

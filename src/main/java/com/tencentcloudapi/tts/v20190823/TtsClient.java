@@ -29,7 +29,7 @@ public class TtsClient extends AbstractClient{
     private static String endpoint = "tts.tencentcloudapi.com";
     private static String service = "tts";
     private static String version = "2019-08-23";
-
+    
     public TtsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -64,6 +64,7 @@ public class TtsClient extends AbstractClient{
     public CreateTtsTaskResponse CreateTtsTask(CreateTtsTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTtsTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTtsTaskResponse>>() {
                 }.getType();
@@ -87,6 +88,7 @@ public class TtsClient extends AbstractClient{
     public DescribeTtsTaskStatusResponse DescribeTtsTaskStatus(DescribeTtsTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTtsTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTtsTaskStatusResponse>>() {
                 }.getType();
@@ -111,6 +113,7 @@ public class TtsClient extends AbstractClient{
     public TextToVoiceResponse TextToVoice(TextToVoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextToVoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextToVoiceResponse>>() {
                 }.getType();

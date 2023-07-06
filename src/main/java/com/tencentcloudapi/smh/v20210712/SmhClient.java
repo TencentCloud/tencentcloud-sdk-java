@@ -29,7 +29,7 @@ public class SmhClient extends AbstractClient{
     private static String endpoint = "smh.tencentcloudapi.com";
     private static String service = "smh";
     private static String version = "2021-07-12";
-
+    
     public SmhClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SmhClient extends AbstractClient{
     public CreateLibraryResponse CreateLibrary(CreateLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateLibraryResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SmhClient extends AbstractClient{
     public DeleteLibraryResponse DeleteLibrary(DeleteLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteLibraryResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SmhClient extends AbstractClient{
     public DescribeLibrariesResponse DescribeLibraries(DescribeLibrariesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLibrariesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLibrariesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SmhClient extends AbstractClient{
     public DescribeLibrarySecretResponse DescribeLibrarySecret(DescribeLibrarySecretRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLibrarySecretResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLibrarySecretResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SmhClient extends AbstractClient{
     public DescribeOfficialInstancesResponse DescribeOfficialInstances(DescribeOfficialInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfficialInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfficialInstancesResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SmhClient extends AbstractClient{
     public DescribeOfficialOverviewResponse DescribeOfficialOverview(DescribeOfficialOverviewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOfficialOverviewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOfficialOverviewResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SmhClient extends AbstractClient{
     public DescribeTrafficPackagesResponse DescribeTrafficPackages(DescribeTrafficPackagesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SmhClient extends AbstractClient{
     public ModifyLibraryResponse ModifyLibrary(ModifyLibraryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyLibraryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyLibraryResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SmhClient extends AbstractClient{
     public SendSmsCodeResponse SendSmsCode(SendSmsCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendSmsCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendSmsCodeResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SmhClient extends AbstractClient{
     public VerifySmsCodeResponse VerifySmsCode(VerifySmsCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifySmsCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifySmsCodeResponse>>() {
                 }.getType();

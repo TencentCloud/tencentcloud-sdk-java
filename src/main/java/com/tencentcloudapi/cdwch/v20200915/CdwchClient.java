@@ -29,7 +29,7 @@ public class CdwchClient extends AbstractClient{
     private static String endpoint = "cdwch.tencentcloudapi.com";
     private static String service = "cdwch";
     private static String version = "2020-09-15";
-
+    
     public CdwchClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CdwchClient extends AbstractClient{
     public ActionAlterCkUserResponse ActionAlterCkUser(ActionAlterCkUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ActionAlterCkUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ActionAlterCkUserResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CdwchClient extends AbstractClient{
     public CreateBackUpScheduleResponse CreateBackUpSchedule(CreateBackUpScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBackUpScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBackUpScheduleResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CdwchClient extends AbstractClient{
     public CreateInstanceNewResponse CreateInstanceNew(CreateInstanceNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceNewResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeBackUpScheduleResponse DescribeBackUpSchedule(DescribeBackUpScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBackUpScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBackUpScheduleResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeCkSqlApisResponse DescribeCkSqlApis(DescribeCkSqlApisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCkSqlApisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCkSqlApisResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeClusterConfigsResponse DescribeClusterConfigs(DescribeClusterConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterConfigsResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstanceClustersResponse DescribeInstanceClusters(DescribeInstanceClustersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceClustersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceClustersResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstanceKeyValConfigsResponse DescribeInstanceKeyValConfigs(DescribeInstanceKeyValConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceKeyValConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceKeyValConfigsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceShardsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstanceStateResponse DescribeInstanceState(DescribeInstanceStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceStateResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeInstancesNewResponse DescribeInstancesNew(DescribeInstancesNewRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesNewResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesNewResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CdwchClient extends AbstractClient{
     public DescribeSpecResponse DescribeSpec(DescribeSpecRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSpecResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSpecResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CdwchClient extends AbstractClient{
     public DestroyInstanceResponse DestroyInstance(DestroyInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DestroyInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DestroyInstanceResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CdwchClient extends AbstractClient{
     public ModifyClusterConfigsResponse ModifyClusterConfigs(ModifyClusterConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyClusterConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterConfigsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CdwchClient extends AbstractClient{
     public ModifyInstanceKeyValConfigsResponse ModifyInstanceKeyValConfigs(ModifyInstanceKeyValConfigsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyInstanceKeyValConfigsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceKeyValConfigsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CdwchClient extends AbstractClient{
     public ModifyUserNewPrivilegeResponse ModifyUserNewPrivilege(ModifyUserNewPrivilegeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserNewPrivilegeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserNewPrivilegeResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CdwchClient extends AbstractClient{
     public OpenBackUpResponse OpenBackUp(OpenBackUpRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OpenBackUpResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OpenBackUpResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class CdwchClient extends AbstractClient{
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResizeDiskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResizeDiskResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class CdwchClient extends AbstractClient{
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class CdwchClient extends AbstractClient{
     public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleUpInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleUpInstanceResponse>>() {
                 }.getType();

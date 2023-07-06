@@ -29,7 +29,7 @@ public class LowcodeClient extends AbstractClient{
     private static String endpoint = "lowcode.tencentcloudapi.com";
     private static String service = "lowcode";
     private static String version = "2021-01-08";
-
+    
     public LowcodeClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class LowcodeClient extends AbstractClient{
     public DescribeDataSourceListResponse DescribeDataSourceList(DescribeDataSourceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDataSourceListResponse>>() {
                 }.getType();

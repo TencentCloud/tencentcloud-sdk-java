@@ -29,7 +29,7 @@ public class CatClient extends AbstractClient{
     private static String endpoint = "cat.tencentcloudapi.com";
     private static String service = "cat";
     private static String version = "2018-04-09";
-
+    
     public CatClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CatClient extends AbstractClient{
     public CreateProbeTasksResponse CreateProbeTasks(CreateProbeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProbeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProbeTasksResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CatClient extends AbstractClient{
     public DeleteProbeTaskResponse DeleteProbeTask(DeleteProbeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProbeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProbeTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CatClient extends AbstractClient{
     public DescribeDetailedSingleProbeDataResponse DescribeDetailedSingleProbeData(DescribeDetailedSingleProbeDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDetailedSingleProbeDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDetailedSingleProbeDataResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CatClient extends AbstractClient{
     public DescribeNodesResponse DescribeNodes(DescribeNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNodesResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CatClient extends AbstractClient{
     public DescribeProbeMetricDataResponse DescribeProbeMetricData(DescribeProbeMetricDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProbeMetricDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProbeMetricDataResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CatClient extends AbstractClient{
     public DescribeProbeNodesResponse DescribeProbeNodes(DescribeProbeNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProbeNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProbeNodesResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CatClient extends AbstractClient{
     public DescribeProbeTasksResponse DescribeProbeTasks(DescribeProbeTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProbeTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProbeTasksResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CatClient extends AbstractClient{
     public ResumeProbeTaskResponse ResumeProbeTask(ResumeProbeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResumeProbeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResumeProbeTaskResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CatClient extends AbstractClient{
     public SuspendProbeTaskResponse SuspendProbeTask(SuspendProbeTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SuspendProbeTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SuspendProbeTaskResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CatClient extends AbstractClient{
     public UpdateProbeTaskAttributesResponse UpdateProbeTaskAttributes(UpdateProbeTaskAttributesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProbeTaskAttributesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProbeTaskAttributesResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CatClient extends AbstractClient{
     public UpdateProbeTaskConfigurationListResponse UpdateProbeTaskConfigurationList(UpdateProbeTaskConfigurationListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProbeTaskConfigurationListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProbeTaskConfigurationListResponse>>() {
                 }.getType();

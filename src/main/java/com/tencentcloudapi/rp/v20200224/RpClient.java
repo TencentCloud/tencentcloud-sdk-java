@@ -29,7 +29,7 @@ public class RpClient extends AbstractClient{
     private static String endpoint = "rp.tencentcloudapi.com";
     private static String service = "rp";
     private static String version = "2020-02-24";
-
+    
     public RpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class RpClient extends AbstractClient{
     public QueryRegisterProtectionResponse QueryRegisterProtection(QueryRegisterProtectionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryRegisterProtectionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryRegisterProtectionResponse>>() {
                 }.getType();

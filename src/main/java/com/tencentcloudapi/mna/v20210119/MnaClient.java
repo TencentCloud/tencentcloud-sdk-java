@@ -29,7 +29,7 @@ public class MnaClient extends AbstractClient{
     private static String endpoint = "mna.tencentcloudapi.com";
     private static String service = "mna";
     private static String version = "2021-01-19";
-
+    
     public MnaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MnaClient extends AbstractClient{
     public AddDeviceResponse AddDevice(AddDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDeviceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MnaClient extends AbstractClient{
     public CreateEncryptedKeyResponse CreateEncryptedKey(CreateEncryptedKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateEncryptedKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateEncryptedKeyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MnaClient extends AbstractClient{
     public CreateQosResponse CreateQos(CreateQosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateQosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateQosResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MnaClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MnaClient extends AbstractClient{
     public DeleteQosResponse DeleteQos(DeleteQosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteQosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteQosResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MnaClient extends AbstractClient{
     public DescribeQosResponse DescribeQos(DescribeQosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeQosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeQosResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MnaClient extends AbstractClient{
     public GetDeviceResponse GetDevice(GetDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDeviceResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class MnaClient extends AbstractClient{
     public GetDevicesResponse GetDevices(GetDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDevicesResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class MnaClient extends AbstractClient{
     public GetFlowStatisticResponse GetFlowStatistic(GetFlowStatisticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFlowStatisticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFlowStatisticResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class MnaClient extends AbstractClient{
     public GetMultiFlowStatisticResponse GetMultiFlowStatistic(GetMultiFlowStatisticRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetMultiFlowStatisticResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetMultiFlowStatisticResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class MnaClient extends AbstractClient{
     public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPublicKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class MnaClient extends AbstractClient{
     public GetStatisticDataResponse GetStatisticData(GetStatisticDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetStatisticDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetStatisticDataResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class MnaClient extends AbstractClient{
     public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateDeviceResponse>>() {
                 }.getType();

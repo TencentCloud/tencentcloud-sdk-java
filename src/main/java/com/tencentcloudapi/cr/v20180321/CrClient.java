@@ -29,7 +29,7 @@ public class CrClient extends AbstractClient{
     private static String endpoint = "cr.tencentcloudapi.com";
     private static String service = "cr";
     private static String version = "2018-03-21";
-
+    
     public CrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CrClient extends AbstractClient{
     public ApplyBlackListResponse ApplyBlackList(ApplyBlackListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyBlackListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyBlackListResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CrClient extends AbstractClient{
     public ApplyBlackListDataResponse ApplyBlackListData(ApplyBlackListDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyBlackListDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyBlackListDataResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CrClient extends AbstractClient{
     public ApplyCreditAuditResponse ApplyCreditAudit(ApplyCreditAuditRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyCreditAuditResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyCreditAuditResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CrClient extends AbstractClient{
     public ChangeBotCallStatusResponse ChangeBotCallStatus(ChangeBotCallStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeBotCallStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeBotCallStatusResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CrClient extends AbstractClient{
     public ChangeBotTaskStatusResponse ChangeBotTaskStatus(ChangeBotTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ChangeBotTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ChangeBotTaskStatusResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CrClient extends AbstractClient{
     public CreateBotTaskResponse CreateBotTask(CreateBotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBotTaskResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CrClient extends AbstractClient{
     public DescribeBotFlowResponse DescribeBotFlow(DescribeBotFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBotFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBotFlowResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CrClient extends AbstractClient{
     public DescribeCreditResultResponse DescribeCreditResult(DescribeCreditResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCreditResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCreditResultResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CrClient extends AbstractClient{
     public DescribeFileModelResponse DescribeFileModel(DescribeFileModelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFileModelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFileModelResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CrClient extends AbstractClient{
     public DescribeRecordsResponse DescribeRecords(DescribeRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecordsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CrClient extends AbstractClient{
     public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskStatusResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CrClient extends AbstractClient{
     public DownloadBotRecordResponse DownloadBotRecord(DownloadBotRecordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadBotRecordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadBotRecordResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CrClient extends AbstractClient{
     public DownloadDialogueTextResponse DownloadDialogueText(DownloadDialogueTextRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadDialogueTextResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadDialogueTextResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class CrClient extends AbstractClient{
     public DownloadRecordListResponse DownloadRecordList(DownloadRecordListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadRecordListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadRecordListResponse>>() {
                 }.getType();
@@ -328,6 +342,7 @@ public class CrClient extends AbstractClient{
     public DownloadReportResponse DownloadReport(DownloadReportRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadReportResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadReportResponse>>() {
                 }.getType();
@@ -348,6 +363,7 @@ public class CrClient extends AbstractClient{
     public ExportBotDataResponse ExportBotData(ExportBotDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExportBotDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExportBotDataResponse>>() {
                 }.getType();
@@ -368,6 +384,7 @@ public class CrClient extends AbstractClient{
     public QueryBlackListDataResponse QueryBlackListData(QueryBlackListDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBlackListDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBlackListDataResponse>>() {
                 }.getType();
@@ -388,6 +405,7 @@ public class CrClient extends AbstractClient{
     public QueryBotListResponse QueryBotList(QueryBotListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBotListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBotListResponse>>() {
                 }.getType();
@@ -408,6 +426,7 @@ public class CrClient extends AbstractClient{
     public QueryCallListResponse QueryCallList(QueryCallListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCallListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCallListResponse>>() {
                 }.getType();
@@ -428,6 +447,7 @@ public class CrClient extends AbstractClient{
     public QueryInstantDataResponse QueryInstantData(QueryInstantDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryInstantDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryInstantDataResponse>>() {
                 }.getType();
@@ -448,6 +468,7 @@ public class CrClient extends AbstractClient{
     public QueryProductsResponse QueryProducts(QueryProductsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryProductsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryProductsResponse>>() {
                 }.getType();
@@ -468,6 +489,7 @@ public class CrClient extends AbstractClient{
     public QueryRecordListResponse QueryRecordList(QueryRecordListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryRecordListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryRecordListResponse>>() {
                 }.getType();
@@ -488,6 +510,7 @@ public class CrClient extends AbstractClient{
     public UpdateBotTaskResponse UpdateBotTask(UpdateBotTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateBotTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateBotTaskResponse>>() {
                 }.getType();
@@ -508,6 +531,7 @@ public class CrClient extends AbstractClient{
     public UploadBotDataResponse UploadBotData(UploadBotDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadBotDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadBotDataResponse>>() {
                 }.getType();
@@ -528,6 +552,7 @@ public class CrClient extends AbstractClient{
     public UploadBotFileResponse UploadBotFile(UploadBotFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadBotFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadBotFileResponse>>() {
                 }.getType();
@@ -548,6 +573,7 @@ public class CrClient extends AbstractClient{
     public UploadDataFileResponse UploadDataFile(UploadDataFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadDataFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadDataFileResponse>>() {
                 }.getType();
@@ -568,6 +594,7 @@ public class CrClient extends AbstractClient{
     public UploadDataJsonResponse UploadDataJson(UploadDataJsonRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadDataJsonResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadDataJsonResponse>>() {
                 }.getType();
@@ -588,6 +615,7 @@ public class CrClient extends AbstractClient{
     public UploadFileResponse UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadFileResponse>>() {
                 }.getType();

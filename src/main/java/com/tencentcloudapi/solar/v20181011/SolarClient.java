@@ -29,7 +29,7 @@ public class SolarClient extends AbstractClient{
     private static String endpoint = "solar.tencentcloudapi.com";
     private static String service = "solar";
     private static String version = "2018-10-11";
-
+    
     public SolarClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SolarClient extends AbstractClient{
     public CheckStaffChUserResponse CheckStaffChUser(CheckStaffChUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckStaffChUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckStaffChUserResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SolarClient extends AbstractClient{
     public CopyActivityChannelResponse CopyActivityChannel(CopyActivityChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyActivityChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyActivityChannelResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SolarClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SolarClient extends AbstractClient{
     public CreateSubProjectResponse CreateSubProject(CreateSubProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSubProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSubProjectResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SolarClient extends AbstractClient{
     public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProjectResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SolarClient extends AbstractClient{
     public DescribeCustomerResponse DescribeCustomer(DescribeCustomerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomerResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SolarClient extends AbstractClient{
     public DescribeCustomersResponse DescribeCustomers(DescribeCustomersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCustomersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCustomersResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SolarClient extends AbstractClient{
     public DescribeProjectResponse DescribeProject(DescribeProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SolarClient extends AbstractClient{
     public DescribeProjectStockResponse DescribeProjectStock(DescribeProjectStockRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectStockResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectStockResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SolarClient extends AbstractClient{
     public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class SolarClient extends AbstractClient{
     public DescribeResourceTemplateHeadersResponse DescribeResourceTemplateHeaders(DescribeResourceTemplateHeadersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceTemplateHeadersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceTemplateHeadersResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class SolarClient extends AbstractClient{
     public DescribeSubProjectResponse DescribeSubProject(DescribeSubProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSubProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSubProjectResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class SolarClient extends AbstractClient{
     public ExpireFlowResponse ExpireFlow(ExpireFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExpireFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExpireFlowResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class SolarClient extends AbstractClient{
     public ModifyProjectResponse ModifyProject(ModifyProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProjectResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class SolarClient extends AbstractClient{
     public OffLineProjectResponse OffLineProject(OffLineProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<OffLineProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<OffLineProjectResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class SolarClient extends AbstractClient{
     public ReplenishProjectStockResponse ReplenishProjectStock(ReplenishProjectStockRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReplenishProjectStockResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReplenishProjectStockResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class SolarClient extends AbstractClient{
     public SendWxTouchTaskResponse SendWxTouchTask(SendWxTouchTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SendWxTouchTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SendWxTouchTaskResponse>>() {
                 }.getType();

@@ -37,6 +37,35 @@ public class Sv extends AbstractModel{
     private String Value;
 
     /**
+    * 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Pack")
+    @Expose
+    private String Pack;
+
+    /**
+    * 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectionSpecs")
+    @Expose
+    private String ProtectionSpecs;
+
+    /**
      * Get 询价参数键。 
      * @return Key 询价参数键。
      */
@@ -68,6 +97,86 @@ public class Sv extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Pack 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPack() {
+        return this.Pack;
+    }
+
+    /**
+     * Set 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Pack 询价参数映射的配额，取值有：
+<li>zone：站点数；</li>
+<li>custom-rule：自定义规则数；</li>
+<li>rate-limiting-rule：速率限制规则数；</li>
+<li>l4-proxy-instance：四层代理实例数。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPack(String Pack) {
+        this.Pack = Pack;
+    }
+
+    /**
+     * Get 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 询价参数映射的四层代理实例Id。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectionSpecs 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtectionSpecs() {
+        return this.ProtectionSpecs;
+    }
+
+    /**
+     * Set 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectionSpecs 询价参数对应的防护等级。
+取值有： <li> cm_30G：中国大陆加速区域保底防护30Gbps；</li><li> cm_60G：中国大陆加速区域保底防护60Gbps；</li><li> cm_100G：中国大陆加速区域保底防护100Gbps；</li><li> anycast_300G：全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> anycast_unlimited：全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_30G_anycast_300G：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_30G_anycast_unlimited：中国大陆加速区域保底防护30Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_60G_anycast_300G：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_60G_anycast_unlimited：中国大陆加速区域保底防护60Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护；</li><li> cm_100G_anycast_300G：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast联防300Gbps；</li><li> cm_100G_anycast_unlimited：中国大陆加速区域保底防护100Gbps，全球加速区域（除中国大陆）Anycast无上限全力防护。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectionSpecs(String ProtectionSpecs) {
+        this.ProtectionSpecs = ProtectionSpecs;
+    }
+
     public Sv() {
     }
 
@@ -82,6 +191,15 @@ public class Sv extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Pack != null) {
+            this.Pack = new String(source.Pack);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ProtectionSpecs != null) {
+            this.ProtectionSpecs = new String(source.ProtectionSpecs);
+        }
     }
 
 
@@ -91,6 +209,9 @@ public class Sv extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Pack", this.Pack);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ProtectionSpecs", this.ProtectionSpecs);
 
     }
 }

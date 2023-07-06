@@ -29,7 +29,7 @@ public class TmtClient extends AbstractClient{
     private static String endpoint = "tmt.tencentcloudapi.com";
     private static String service = "tmt";
     private static String version = "2018-03-21";
-
+    
     public TmtClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TmtClient extends AbstractClient{
     public FileTranslateResponse FileTranslate(FileTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FileTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FileTranslateResponse>>() {
                 }.getType();
@@ -69,6 +70,7 @@ public class TmtClient extends AbstractClient{
     public GetFileTranslateResponse GetFileTranslate(GetFileTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetFileTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetFileTranslateResponse>>() {
                 }.getType();
@@ -90,6 +92,7 @@ public class TmtClient extends AbstractClient{
     public ImageTranslateResponse ImageTranslate(ImageTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImageTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImageTranslateResponse>>() {
                 }.getType();
@@ -111,6 +114,7 @@ public class TmtClient extends AbstractClient{
     public LanguageDetectResponse LanguageDetect(LanguageDetectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LanguageDetectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<LanguageDetectResponse>>() {
                 }.getType();
@@ -135,6 +139,7 @@ public class TmtClient extends AbstractClient{
     public SpeechTranslateResponse SpeechTranslate(SpeechTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SpeechTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SpeechTranslateResponse>>() {
                 }.getType();
@@ -156,6 +161,7 @@ public class TmtClient extends AbstractClient{
     public TextTranslateResponse TextTranslate(TextTranslateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextTranslateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextTranslateResponse>>() {
                 }.getType();
@@ -176,6 +182,7 @@ public class TmtClient extends AbstractClient{
     public TextTranslateBatchResponse TextTranslateBatch(TextTranslateBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextTranslateBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextTranslateBatchResponse>>() {
                 }.getType();

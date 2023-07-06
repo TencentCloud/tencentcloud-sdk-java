@@ -29,7 +29,7 @@ public class ApcasClient extends AbstractClient{
     private static String endpoint = "apcas.tencentcloudapi.com";
     private static String service = "apcas";
     private static String version = "2020-11-27";
-
+    
     public ApcasClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class ApcasClient extends AbstractClient{
     public GetTaskDetailResponse GetTaskDetail(GetTaskDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTaskDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTaskDetailResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class ApcasClient extends AbstractClient{
     public GetTaskListResponse GetTaskList(GetTaskListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetTaskListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetTaskListResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class ApcasClient extends AbstractClient{
     public PredictRatingResponse PredictRating(PredictRatingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<PredictRatingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<PredictRatingResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class ApcasClient extends AbstractClient{
     public QueryCallDetailsResponse QueryCallDetails(QueryCallDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCallDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCallDetailsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class ApcasClient extends AbstractClient{
     public QueryCallStatResponse QueryCallStat(QueryCallStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCallStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCallStatResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class ApcasClient extends AbstractClient{
     public QueryGeneralStatResponse QueryGeneralStat(QueryGeneralStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryGeneralStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryGeneralStatResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class ApcasClient extends AbstractClient{
     public UploadIdResponse UploadId(UploadIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadIdResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class BscaClient extends AbstractClient{
     private static String endpoint = "bsca.tencentcloudapi.com";
     private static String service = "bsca";
     private static String version = "2021-08-11";
-
+    
     public BscaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class BscaClient extends AbstractClient{
     public DescribeKBComponentResponse DescribeKBComponent(DescribeKBComponentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKBComponentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKBComponentResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class BscaClient extends AbstractClient{
     public DescribeKBComponentVulnerabilityResponse DescribeKBComponentVulnerability(DescribeKBComponentVulnerabilityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKBComponentVulnerabilityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKBComponentVulnerabilityResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class BscaClient extends AbstractClient{
     public DescribeKBLicenseResponse DescribeKBLicense(DescribeKBLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKBLicenseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKBLicenseResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class BscaClient extends AbstractClient{
     public DescribeKBVulnerabilityResponse DescribeKBVulnerability(DescribeKBVulnerabilityRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeKBVulnerabilityResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeKBVulnerabilityResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class BscaClient extends AbstractClient{
     public MatchKBPURLListResponse MatchKBPURLList(MatchKBPURLListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MatchKBPURLListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MatchKBPURLListResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TmsClient extends AbstractClient{
     private static String endpoint = "tms.tencentcloudapi.com";
     private static String service = "tms";
     private static String version = "2020-12-29";
-
+    
     public TmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -64,6 +64,7 @@ public class TmsClient extends AbstractClient{
     public TextModerationResponse TextModeration(TextModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextModerationResponse>>() {
                 }.getType();

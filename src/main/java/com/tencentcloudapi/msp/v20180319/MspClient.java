@@ -29,7 +29,7 @@ public class MspClient extends AbstractClient{
     private static String endpoint = "msp.tencentcloudapi.com";
     private static String service = "msp";
     private static String version = "2018-03-19";
-
+    
     public MspClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class MspClient extends AbstractClient{
     public DeregisterMigrationTaskResponse DeregisterMigrationTask(DeregisterMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeregisterMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeregisterMigrationTaskResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class MspClient extends AbstractClient{
     public DescribeMigrationTaskResponse DescribeMigrationTask(DescribeMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrationTaskResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class MspClient extends AbstractClient{
     public ListMigrationProjectResponse ListMigrationProject(ListMigrationProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListMigrationProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListMigrationProjectResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class MspClient extends AbstractClient{
     public ListMigrationTaskResponse ListMigrationTask(ListMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ListMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ListMigrationTaskResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class MspClient extends AbstractClient{
     public ModifyMigrationTaskBelongToProjectResponse ModifyMigrationTaskBelongToProject(ModifyMigrationTaskBelongToProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationTaskBelongToProjectResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class MspClient extends AbstractClient{
     public ModifyMigrationTaskStatusResponse ModifyMigrationTaskStatus(ModifyMigrationTaskStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMigrationTaskStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationTaskStatusResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class MspClient extends AbstractClient{
     public RegisterMigrationTaskResponse RegisterMigrationTask(RegisterMigrationTaskRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterMigrationTaskResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterMigrationTaskResponse>>() {
                 }.getType();

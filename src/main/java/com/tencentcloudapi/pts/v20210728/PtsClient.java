@@ -29,7 +29,7 @@ public class PtsClient extends AbstractClient{
     private static String endpoint = "pts.tencentcloudapi.com";
     private static String service = "pts";
     private static String version = "2021-07-28";
-
+    
     public PtsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class PtsClient extends AbstractClient{
     public AbortCronJobsResponse AbortCronJobs(AbortCronJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AbortCronJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AbortCronJobsResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class PtsClient extends AbstractClient{
     public AbortJobResponse AbortJob(AbortJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AbortJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AbortJobResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class PtsClient extends AbstractClient{
     public AdjustJobSpeedResponse AdjustJobSpeed(AdjustJobSpeedRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AdjustJobSpeedResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AdjustJobSpeedResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class PtsClient extends AbstractClient{
     public CopyScenarioResponse CopyScenario(CopyScenarioRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CopyScenarioResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CopyScenarioResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class PtsClient extends AbstractClient{
     public CreateAlertChannelResponse CreateAlertChannel(CreateAlertChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAlertChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAlertChannelResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class PtsClient extends AbstractClient{
     public CreateCronJobResponse CreateCronJob(CreateCronJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCronJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCronJobResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class PtsClient extends AbstractClient{
     public CreateFileResponse CreateFile(CreateFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFileResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class PtsClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class PtsClient extends AbstractClient{
     public CreateScenarioResponse CreateScenario(CreateScenarioRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateScenarioResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateScenarioResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class PtsClient extends AbstractClient{
     public DeleteAlertChannelResponse DeleteAlertChannel(DeleteAlertChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAlertChannelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAlertChannelResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class PtsClient extends AbstractClient{
     public DeleteCronJobsResponse DeleteCronJobs(DeleteCronJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCronJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCronJobsResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class PtsClient extends AbstractClient{
     public DeleteFilesResponse DeleteFiles(DeleteFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteFilesResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class PtsClient extends AbstractClient{
     public DeleteJobsResponse DeleteJobs(DeleteJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteJobsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class PtsClient extends AbstractClient{
     public DeleteProjectsResponse DeleteProjects(DeleteProjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProjectsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class PtsClient extends AbstractClient{
     public DeleteScenariosResponse DeleteScenarios(DeleteScenariosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteScenariosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteScenariosResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class PtsClient extends AbstractClient{
     public DescribeAlertChannelsResponse DescribeAlertChannels(DescribeAlertChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlertChannelsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlertChannelsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class PtsClient extends AbstractClient{
     public DescribeAlertRecordsResponse DescribeAlertRecords(DescribeAlertRecordsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAlertRecordsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAlertRecordsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class PtsClient extends AbstractClient{
     public DescribeAvailableMetricsResponse DescribeAvailableMetrics(DescribeAvailableMetricsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAvailableMetricsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableMetricsResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class PtsClient extends AbstractClient{
     public DescribeCheckSummaryResponse DescribeCheckSummary(DescribeCheckSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCheckSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCheckSummaryResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class PtsClient extends AbstractClient{
     public DescribeCronJobsResponse DescribeCronJobs(DescribeCronJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCronJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCronJobsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class PtsClient extends AbstractClient{
     public DescribeErrorSummaryResponse DescribeErrorSummary(DescribeErrorSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeErrorSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeErrorSummaryResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class PtsClient extends AbstractClient{
     public DescribeFilesResponse DescribeFiles(DescribeFilesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeFilesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeFilesResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class PtsClient extends AbstractClient{
     public DescribeJobsResponse DescribeJobs(DescribeJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobsResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class PtsClient extends AbstractClient{
     public DescribeLabelValuesResponse DescribeLabelValues(DescribeLabelValuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLabelValuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLabelValuesResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class PtsClient extends AbstractClient{
     public DescribeMetricLabelWithValuesResponse DescribeMetricLabelWithValues(DescribeMetricLabelWithValuesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMetricLabelWithValuesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMetricLabelWithValuesResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class PtsClient extends AbstractClient{
     public DescribeNormalLogsResponse DescribeNormalLogs(DescribeNormalLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNormalLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNormalLogsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class PtsClient extends AbstractClient{
     public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class PtsClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRegionsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class PtsClient extends AbstractClient{
     public DescribeRequestSummaryResponse DescribeRequestSummary(DescribeRequestSummaryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRequestSummaryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRequestSummaryResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class PtsClient extends AbstractClient{
     public DescribeSampleBatchQueryResponse DescribeSampleBatchQuery(DescribeSampleBatchQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleBatchQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleBatchQueryResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class PtsClient extends AbstractClient{
     public DescribeSampleLogsResponse DescribeSampleLogs(DescribeSampleLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleLogsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleLogsResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class PtsClient extends AbstractClient{
     public DescribeSampleMatrixBatchQueryResponse DescribeSampleMatrixBatchQuery(DescribeSampleMatrixBatchQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleMatrixBatchQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleMatrixBatchQueryResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class PtsClient extends AbstractClient{
     public DescribeSampleMatrixQueryResponse DescribeSampleMatrixQuery(DescribeSampleMatrixQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleMatrixQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleMatrixQueryResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class PtsClient extends AbstractClient{
     public DescribeSampleQueryResponse DescribeSampleQuery(DescribeSampleQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSampleQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSampleQueryResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class PtsClient extends AbstractClient{
     public DescribeScenarioWithJobsResponse DescribeScenarioWithJobs(DescribeScenarioWithJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScenarioWithJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScenarioWithJobsResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class PtsClient extends AbstractClient{
     public DescribeScenariosResponse DescribeScenarios(DescribeScenariosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeScenariosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeScenariosResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class PtsClient extends AbstractClient{
     public GenerateTmpKeyResponse GenerateTmpKey(GenerateTmpKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GenerateTmpKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GenerateTmpKeyResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class PtsClient extends AbstractClient{
     public RestartCronJobsResponse RestartCronJobs(RestartCronJobsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RestartCronJobsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RestartCronJobsResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class PtsClient extends AbstractClient{
     public StartJobResponse StartJob(StartJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartJobResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class PtsClient extends AbstractClient{
     public UpdateCronJobResponse UpdateCronJob(UpdateCronJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateCronJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateCronJobResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class PtsClient extends AbstractClient{
     public UpdateFileScenarioRelationResponse UpdateFileScenarioRelation(UpdateFileScenarioRelationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateFileScenarioRelationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateFileScenarioRelationResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class PtsClient extends AbstractClient{
     public UpdateJobResponse UpdateJob(UpdateJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateJobResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class PtsClient extends AbstractClient{
     public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateProjectResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class PtsClient extends AbstractClient{
     public UpdateScenarioResponse UpdateScenario(UpdateScenarioRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UpdateScenarioResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UpdateScenarioResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TrroClient extends AbstractClient{
     private static String endpoint = "trro.tencentcloudapi.com";
     private static String service = "trro";
     private static String version = "2022-03-25";
-
+    
     public TrroClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TrroClient extends AbstractClient{
     public BatchDeleteDevicesResponse BatchDeleteDevices(BatchDeleteDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeleteDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeleteDevicesResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TrroClient extends AbstractClient{
     public BatchDeletePolicyResponse BatchDeletePolicy(BatchDeletePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BatchDeletePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BatchDeletePolicyResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TrroClient extends AbstractClient{
     public BoundLicensesResponse BoundLicenses(BoundLicensesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BoundLicensesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BoundLicensesResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TrroClient extends AbstractClient{
     public CreateDeviceResponse CreateDevice(CreateDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class TrroClient extends AbstractClient{
     public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProjectResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class TrroClient extends AbstractClient{
     public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteProjectResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class TrroClient extends AbstractClient{
     public DescribeDeviceInfoResponse DescribeDeviceInfo(DescribeDeviceInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceInfoResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class TrroClient extends AbstractClient{
     public DescribeDeviceListResponse DescribeDeviceList(DescribeDeviceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceListResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class TrroClient extends AbstractClient{
     public DescribeDeviceSessionDetailsResponse DescribeDeviceSessionDetails(DescribeDeviceSessionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceSessionDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceSessionDetailsResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class TrroClient extends AbstractClient{
     public DescribeDeviceSessionListResponse DescribeDeviceSessionList(DescribeDeviceSessionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceSessionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceSessionListResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class TrroClient extends AbstractClient{
     public DescribePolicyResponse DescribePolicy(DescribePolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePolicyResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class TrroClient extends AbstractClient{
     public DescribeProjectInfoResponse DescribeProjectInfo(DescribeProjectInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectInfoResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class TrroClient extends AbstractClient{
     public DescribeProjectListResponse DescribeProjectList(DescribeProjectListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeProjectListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class TrroClient extends AbstractClient{
     public DescribeRecentSessionListResponse DescribeRecentSessionList(DescribeRecentSessionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeRecentSessionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeRecentSessionListResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class TrroClient extends AbstractClient{
     public DescribeSessionStatisticsResponse DescribeSessionStatistics(DescribeSessionStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSessionStatisticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSessionStatisticsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class TrroClient extends AbstractClient{
     public DescribeSessionStatisticsByIntervalResponse DescribeSessionStatisticsByInterval(DescribeSessionStatisticsByIntervalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSessionStatisticsByIntervalResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSessionStatisticsByIntervalResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class TrroClient extends AbstractClient{
     public GetDeviceLicenseResponse GetDeviceLicense(GetDeviceLicenseRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDeviceLicenseResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDeviceLicenseResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class TrroClient extends AbstractClient{
     public GetDevicesResponse GetDevices(GetDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDevicesResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class TrroClient extends AbstractClient{
     public GetLicenseStatResponse GetLicenseStat(GetLicenseStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLicenseStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLicenseStatResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class TrroClient extends AbstractClient{
     public GetLicensesResponse GetLicenses(GetLicensesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetLicensesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetLicensesResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class TrroClient extends AbstractClient{
     public ModifyDeviceResponse ModifyDevice(ModifyDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class TrroClient extends AbstractClient{
     public ModifyPolicyResponse ModifyPolicy(ModifyPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPolicyResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class TrroClient extends AbstractClient{
     public ModifyProjectResponse ModifyProject(ModifyProjectRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyProjectResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyProjectResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class TmsClient extends AbstractClient{
     private static String endpoint = "tms.tencentcloudapi.com";
     private static String service = "tms";
     private static String version = "2020-07-13";
-
+    
     public TmsClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class TmsClient extends AbstractClient{
     public AccountTipoffAccessResponse AccountTipoffAccess(AccountTipoffAccessRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AccountTipoffAccessResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AccountTipoffAccessResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class TmsClient extends AbstractClient{
     public DescribeTextLibResponse DescribeTextLib(DescribeTextLibRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTextLibResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTextLibResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class TmsClient extends AbstractClient{
     public DescribeTextStatResponse DescribeTextStat(DescribeTextStatRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeTextStatResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeTextStatResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class TmsClient extends AbstractClient{
     public TextModerationResponse TextModeration(TextModerationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TextModerationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TextModerationResponse>>() {
                 }.getType();

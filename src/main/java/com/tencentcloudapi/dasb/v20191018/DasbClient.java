@@ -29,7 +29,7 @@ public class DasbClient extends AbstractClient{
     private static String endpoint = "dasb.tencentcloudapi.com";
     private static String service = "dasb";
     private static String version = "2019-10-18";
-
+    
     public DasbClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class DasbClient extends AbstractClient{
     public AddDeviceGroupMembersResponse AddDeviceGroupMembers(AddDeviceGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddDeviceGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddDeviceGroupMembersResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class DasbClient extends AbstractClient{
     public AddUserGroupMembersResponse AddUserGroupMembers(AddUserGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUserGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUserGroupMembersResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class DasbClient extends AbstractClient{
     public BindDeviceAccountPasswordResponse BindDeviceAccountPassword(BindDeviceAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindDeviceAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindDeviceAccountPasswordResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class DasbClient extends AbstractClient{
     public BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKey(BindDeviceAccountPrivateKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindDeviceAccountPrivateKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindDeviceAccountPrivateKeyResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class DasbClient extends AbstractClient{
     public BindDeviceResourceResponse BindDeviceResource(BindDeviceResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindDeviceResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindDeviceResourceResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class DasbClient extends AbstractClient{
     public CreateAclResponse CreateAcl(CreateAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAclResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class DasbClient extends AbstractClient{
     public CreateAssetSyncJobResponse CreateAssetSyncJob(CreateAssetSyncJobRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAssetSyncJobResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAssetSyncJobResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class DasbClient extends AbstractClient{
     public CreateCmdTemplateResponse CreateCmdTemplate(CreateCmdTemplateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCmdTemplateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCmdTemplateResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class DasbClient extends AbstractClient{
     public CreateDeviceAccountResponse CreateDeviceAccount(CreateDeviceAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceAccountResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class DasbClient extends AbstractClient{
     public CreateDeviceGroupResponse CreateDeviceGroup(CreateDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDeviceGroupResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class DasbClient extends AbstractClient{
     public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class DasbClient extends AbstractClient{
     public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateUserGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateUserGroupResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class DasbClient extends AbstractClient{
     public DeleteAclsResponse DeleteAcls(DeleteAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAclsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAclsResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class DasbClient extends AbstractClient{
     public DeleteCmdTemplatesResponse DeleteCmdTemplates(DeleteCmdTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCmdTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCmdTemplatesResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class DasbClient extends AbstractClient{
     public DeleteDeviceAccountsResponse DeleteDeviceAccounts(DeleteDeviceAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceAccountsResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class DasbClient extends AbstractClient{
     public DeleteDeviceGroupMembersResponse DeleteDeviceGroupMembers(DeleteDeviceGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupMembersResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class DasbClient extends AbstractClient{
     public DeleteDeviceGroupsResponse DeleteDeviceGroups(DeleteDeviceGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDeviceGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDeviceGroupsResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class DasbClient extends AbstractClient{
     public DeleteDevicesResponse DeleteDevices(DeleteDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDevicesResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class DasbClient extends AbstractClient{
     public DeleteUserGroupMembersResponse DeleteUserGroupMembers(DeleteUserGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserGroupMembersResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class DasbClient extends AbstractClient{
     public DeleteUserGroupsResponse DeleteUserGroups(DeleteUserGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserGroupsResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class DasbClient extends AbstractClient{
     public DeleteUsersResponse DeleteUsers(DeleteUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUsersResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class DasbClient extends AbstractClient{
     public DeployResourceResponse DeployResource(DeployResourceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeployResourceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeployResourceResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class DasbClient extends AbstractClient{
     public DescribeAclsResponse DescribeAcls(DescribeAclsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAclsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAclsResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class DasbClient extends AbstractClient{
     public DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(DescribeAssetSyncStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAssetSyncStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetSyncStatusResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class DasbClient extends AbstractClient{
     public DescribeCmdTemplatesResponse DescribeCmdTemplates(DescribeCmdTemplatesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCmdTemplatesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCmdTemplatesResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class DasbClient extends AbstractClient{
     public DescribeDasbImageIdsResponse DescribeDasbImageIds(DescribeDasbImageIdsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDasbImageIdsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDasbImageIdsResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class DasbClient extends AbstractClient{
     public DescribeDeviceAccountsResponse DescribeDeviceAccounts(DescribeDeviceAccountsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceAccountsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceAccountsResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class DasbClient extends AbstractClient{
     public DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(DescribeDeviceGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupMembersResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class DasbClient extends AbstractClient{
     public DescribeDeviceGroupsResponse DescribeDeviceGroups(DescribeDeviceGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDeviceGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceGroupsResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class DasbClient extends AbstractClient{
     public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDevicesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDevicesResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class DasbClient extends AbstractClient{
     public DescribeLoginEventResponse DescribeLoginEvent(DescribeLoginEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLoginEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLoginEventResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class DasbClient extends AbstractClient{
     public DescribeOperationEventResponse DescribeOperationEvent(DescribeOperationEventRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOperationEventResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOperationEventResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class DasbClient extends AbstractClient{
     public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourcesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class DasbClient extends AbstractClient{
     public DescribeUserGroupMembersResponse DescribeUserGroupMembers(DescribeUserGroupMembersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserGroupMembersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserGroupMembersResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class DasbClient extends AbstractClient{
     public DescribeUserGroupsResponse DescribeUserGroups(DescribeUserGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUserGroupsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUserGroupsResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class DasbClient extends AbstractClient{
     public DescribeUsersResponse DescribeUsers(DescribeUsersRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsersResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsersResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class DasbClient extends AbstractClient{
     public ImportExternalDeviceResponse ImportExternalDevice(ImportExternalDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ImportExternalDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ImportExternalDeviceResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class DasbClient extends AbstractClient{
     public ModifyAclResponse ModifyAcl(ModifyAclRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAclResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAclResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class DasbClient extends AbstractClient{
     public ModifyDeviceResponse ModifyDevice(ModifyDeviceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class DasbClient extends AbstractClient{
     public ModifyDeviceGroupResponse ModifyDeviceGroup(ModifyDeviceGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDeviceGroupResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDeviceGroupResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class DasbClient extends AbstractClient{
     public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyUserResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class DasbClient extends AbstractClient{
     public ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(ResetDeviceAccountPasswordRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetDeviceAccountPasswordResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetDeviceAccountPasswordResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class DasbClient extends AbstractClient{
     public ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(ResetDeviceAccountPrivateKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetDeviceAccountPrivateKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetDeviceAccountPrivateKeyResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class DasbClient extends AbstractClient{
     public ResetUserResponse ResetUser(ResetUserRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ResetUserResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ResetUserResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class DasbClient extends AbstractClient{
     public SearchAuditLogResponse SearchAuditLog(SearchAuditLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchAuditLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchAuditLogResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class DasbClient extends AbstractClient{
     public SearchCommandResponse SearchCommand(SearchCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchCommandResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class DasbClient extends AbstractClient{
     public SearchCommandBySidResponse SearchCommandBySid(SearchCommandBySidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchCommandBySidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchCommandBySidResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class DasbClient extends AbstractClient{
     public SearchFileResponse SearchFile(SearchFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchFileResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class DasbClient extends AbstractClient{
     public SearchFileBySidResponse SearchFileBySid(SearchFileBySidRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchFileBySidResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchFileBySidResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class DasbClient extends AbstractClient{
     public SearchSessionResponse SearchSession(SearchSessionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchSessionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchSessionResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class DasbClient extends AbstractClient{
     public SearchSessionCommandResponse SearchSessionCommand(SearchSessionCommandRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SearchSessionCommandResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SearchSessionCommandResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class AntiddosClient extends AbstractClient{
     private static String endpoint = "antiddos.tencentcloudapi.com";
     private static String service = "antiddos";
     private static String version = "2020-03-09";
-
+    
     public AntiddosClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class AntiddosClient extends AbstractClient{
     public AssociateDDoSEipAddressResponse AssociateDDoSEipAddress(AssociateDDoSEipAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateDDoSEipAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateDDoSEipAddressResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class AntiddosClient extends AbstractClient{
     public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(CreateBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateBoundIPResponse CreateBoundIP(CreateBoundIPRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBoundIPResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBoundIPResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(CreateCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCCPrecisionPolicyResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(CreateCCReqLimitPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCCReqLimitPolicyResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(CreateCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCcBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCcBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(CreateCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDDoSAIResponse CreateDDoSAI(CreateDDoSAIRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSAIResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSAIResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpList(CreateDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDDoSConnectLimitResponse CreateDDoSConnectLimit(CreateDDoSConnectLimitRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSConnectLimitResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSConnectLimitResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDDoSGeoIPBlockConfigResponse CreateDDoSGeoIPBlockConfig(CreateDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDDoSSpeedLimitConfigResponse CreateDDoSSpeedLimitConfig(CreateDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDDoSSpeedLimitConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDDoSSpeedLimitConfigResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(CreateDefaultAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateDefaultAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateDefaultAlarmThresholdResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(CreateIPAlarmThresholdConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateIPAlarmThresholdConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateIPAlarmThresholdConfigResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateL7RuleCertsResponse CreateL7RuleCerts(CreateL7RuleCertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateL7RuleCertsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateL7RuleCertsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class AntiddosClient extends AbstractClient{
     public CreatePacketFilterConfigResponse CreatePacketFilterConfig(CreatePacketFilterConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePacketFilterConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePacketFilterConfigResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class AntiddosClient extends AbstractClient{
     public CreatePortAclConfigResponse CreatePortAclConfig(CreatePortAclConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePortAclConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePortAclConfigResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class AntiddosClient extends AbstractClient{
     public CreatePortAclConfigListResponse CreatePortAclConfigList(CreatePortAclConfigListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePortAclConfigListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePortAclConfigListResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateProtocolBlockConfigResponse CreateProtocolBlockConfig(CreateProtocolBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateProtocolBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateProtocolBlockConfigResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateSchedulingDomainResponse CreateSchedulingDomain(CreateSchedulingDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSchedulingDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSchedulingDomainResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateWaterPrintConfigResponse CreateWaterPrintConfig(CreateWaterPrintConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWaterPrintConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWaterPrintConfigResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class AntiddosClient extends AbstractClient{
     public CreateWaterPrintKeyResponse CreateWaterPrintKey(CreateWaterPrintKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateWaterPrintKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateWaterPrintKeyResponse>>() {
                 }.getType();
@@ -527,6 +551,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(DeleteCCLevelPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCLevelPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCLevelPolicyResponse>>() {
                 }.getType();
@@ -547,6 +572,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(DeleteCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>() {
                 }.getType();
@@ -567,6 +593,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicy(DeleteCCRequestLimitPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCRequestLimitPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCRequestLimitPolicyResponse>>() {
                 }.getType();
@@ -587,6 +614,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(DeleteCCThresholdPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCCThresholdPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCCThresholdPolicyResponse>>() {
                 }.getType();
@@ -607,6 +635,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(DeleteCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -627,6 +656,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(DeleteCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -647,6 +677,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteDDoSBlackWhiteIpListResponse DeleteDDoSBlackWhiteIpList(DeleteDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -667,6 +698,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteDDoSGeoIPBlockConfigResponse DeleteDDoSGeoIPBlockConfig(DeleteDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDDoSGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDDoSGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -687,6 +719,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteDDoSSpeedLimitConfigResponse DeleteDDoSSpeedLimitConfig(DeleteDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteDDoSSpeedLimitConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteDDoSSpeedLimitConfigResponse>>() {
                 }.getType();
@@ -707,6 +740,7 @@ public class AntiddosClient extends AbstractClient{
     public DeletePacketFilterConfigResponse DeletePacketFilterConfig(DeletePacketFilterConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePacketFilterConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePacketFilterConfigResponse>>() {
                 }.getType();
@@ -727,6 +761,7 @@ public class AntiddosClient extends AbstractClient{
     public DeletePortAclConfigResponse DeletePortAclConfig(DeletePortAclConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeletePortAclConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeletePortAclConfigResponse>>() {
                 }.getType();
@@ -747,6 +782,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(DeleteWaterPrintConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWaterPrintConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWaterPrintConfigResponse>>() {
                 }.getType();
@@ -767,6 +803,7 @@ public class AntiddosClient extends AbstractClient{
     public DeleteWaterPrintKeyResponse DeleteWaterPrintKey(DeleteWaterPrintKeyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteWaterPrintKeyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteWaterPrintKeyResponse>>() {
                 }.getType();
@@ -787,6 +824,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceStatusResponse>>() {
                 }.getType();
@@ -807,6 +845,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBgpBizTrendResponse DescribeBgpBizTrend(DescribeBgpBizTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBgpBizTrendResponse>>() {
                 }.getType();
@@ -827,6 +866,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBizHttpStatusResponse>>() {
                 }.getType();
@@ -847,6 +887,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBizTrendResponse DescribeBizTrend(DescribeBizTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBizTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBizTrendResponse>>() {
                 }.getType();
@@ -867,6 +908,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(DescribeBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -887,6 +929,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCLevelListResponse DescribeCCLevelList(DescribeCCLevelListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCLevelListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCLevelListResponse>>() {
                 }.getType();
@@ -907,6 +950,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(DescribeCCLevelPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCLevelPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCLevelPolicyResponse>>() {
                 }.getType();
@@ -927,6 +971,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>() {
                 }.getType();
@@ -947,6 +992,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCReqLimitPolicyListResponse DescribeCCReqLimitPolicyList(DescribeCCReqLimitPolicyListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCReqLimitPolicyListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCReqLimitPolicyListResponse>>() {
                 }.getType();
@@ -967,6 +1013,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCThresholdListResponse DescribeCCThresholdList(DescribeCCThresholdListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCThresholdListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCThresholdListResponse>>() {
                 }.getType();
@@ -987,6 +1034,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCCTrendResponse DescribeCCTrend(DescribeCCTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCCTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
                 }.getType();
@@ -1007,6 +1055,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -1027,6 +1076,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>() {
                 }.getType();
@@ -1047,6 +1097,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeDDoSBlackWhiteIpListResponse DescribeDDoSBlackWhiteIpList(DescribeDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -1067,6 +1118,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitList(DescribeDDoSConnectLimitListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSConnectLimitListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSConnectLimitListResponse>>() {
                 }.getType();
@@ -1087,6 +1139,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeDDoSTrendResponse DescribeDDoSTrend(DescribeDDoSTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDDoSTrendResponse>>() {
                 }.getType();
@@ -1107,6 +1160,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(DescribeDefaultAlarmThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDefaultAlarmThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDefaultAlarmThresholdResponse>>() {
                 }.getType();
@@ -1127,6 +1181,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(DescribeL7RulesBySSLCertIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeL7RulesBySSLCertIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeL7RulesBySSLCertIdResponse>>() {
                 }.getType();
@@ -1148,6 +1203,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(DescribeListBGPIPInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListBGPIPInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListBGPIPInstancesResponse>>() {
                 }.getType();
@@ -1168,6 +1224,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListBGPInstancesResponse DescribeListBGPInstances(DescribeListBGPInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListBGPInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListBGPInstancesResponse>>() {
                 }.getType();
@@ -1188,6 +1245,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListBlackWhiteIpListResponse DescribeListBlackWhiteIpList(DescribeListBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -1208,6 +1266,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListDDoSAIResponse DescribeListDDoSAI(DescribeListDDoSAIRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListDDoSAIResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListDDoSAIResponse>>() {
                 }.getType();
@@ -1228,6 +1287,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListDDoSGeoIPBlockConfigResponse DescribeListDDoSGeoIPBlockConfig(DescribeListDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListDDoSGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListDDoSGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -1248,6 +1308,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListDDoSSpeedLimitConfigResponse DescribeListDDoSSpeedLimitConfig(DescribeListDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListDDoSSpeedLimitConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListDDoSSpeedLimitConfigResponse>>() {
                 }.getType();
@@ -1268,6 +1329,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListIPAlarmConfigResponse DescribeListIPAlarmConfig(DescribeListIPAlarmConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListIPAlarmConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListIPAlarmConfigResponse>>() {
                 }.getType();
@@ -1288,6 +1350,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListListenerResponse DescribeListListener(DescribeListListenerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListListenerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListListenerResponse>>() {
                 }.getType();
@@ -1308,6 +1371,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(DescribeListPacketFilterConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListPacketFilterConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListPacketFilterConfigResponse>>() {
                 }.getType();
@@ -1328,6 +1392,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListPortAclListResponse DescribeListPortAclList(DescribeListPortAclListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListPortAclListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListPortAclListResponse>>() {
                 }.getType();
@@ -1348,6 +1413,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(DescribeListProtectThresholdConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListProtectThresholdConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListProtectThresholdConfigResponse>>() {
                 }.getType();
@@ -1368,6 +1434,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(DescribeListProtocolBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListProtocolBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListProtocolBlockConfigResponse>>() {
                 }.getType();
@@ -1388,6 +1455,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(DescribeListSchedulingDomainRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListSchedulingDomainResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListSchedulingDomainResponse>>() {
                 }.getType();
@@ -1408,6 +1476,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(DescribeListWaterPrintConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeListWaterPrintConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeListWaterPrintConfigResponse>>() {
                 }.getType();
@@ -1428,6 +1497,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeNewL7RulesResponse DescribeNewL7Rules(DescribeNewL7RulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesResponse>>() {
                 }.getType();
@@ -1448,6 +1518,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>() {
                 }.getType();
@@ -1468,6 +1539,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrend(DescribeOverviewAttackTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewAttackTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewAttackTrendResponse>>() {
                 }.getType();
@@ -1488,6 +1560,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeOverviewCCTrendResponse DescribeOverviewCCTrend(DescribeOverviewCCTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewCCTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewCCTrendResponse>>() {
                 }.getType();
@@ -1508,6 +1581,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>() {
                 }.getType();
@@ -1528,6 +1602,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrend(DescribeOverviewDDoSTrendRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewDDoSTrendResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewDDoSTrendResponse>>() {
                 }.getType();
@@ -1548,6 +1623,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribeOverviewIndexResponse DescribeOverviewIndex(DescribeOverviewIndexRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOverviewIndexResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOverviewIndexResponse>>() {
                 }.getType();
@@ -1568,6 +1644,7 @@ public class AntiddosClient extends AbstractClient{
     public DescribePendingRiskInfoResponse DescribePendingRiskInfo(DescribePendingRiskInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribePendingRiskInfoResponse>>() {
                 }.getType();
@@ -1588,6 +1665,7 @@ public class AntiddosClient extends AbstractClient{
     public DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(DisassociateDDoSEipAddressRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DisassociateDDoSEipAddressResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DisassociateDDoSEipAddressResponse>>() {
                 }.getType();
@@ -1608,6 +1686,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyCCLevelPolicyResponse ModifyCCLevelPolicy(ModifyCCLevelPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCLevelPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCLevelPolicyResponse>>() {
                 }.getType();
@@ -1628,6 +1707,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(ModifyCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>() {
                 }.getType();
@@ -1648,6 +1728,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyCCReqLimitPolicyResponse ModifyCCReqLimitPolicy(ModifyCCReqLimitPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCReqLimitPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCReqLimitPolicyResponse>>() {
                 }.getType();
@@ -1668,6 +1749,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyCCThresholdPolicyResponse ModifyCCThresholdPolicy(ModifyCCThresholdPolicyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCCThresholdPolicyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCCThresholdPolicyResponse>>() {
                 }.getType();
@@ -1688,6 +1770,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(ModifyCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -1708,6 +1791,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDDoSBlackWhiteIpListResponse ModifyDDoSBlackWhiteIpList(ModifyDDoSBlackWhiteIpListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse>>() {
                 }.getType();
@@ -1728,6 +1812,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDDoSGeoIPBlockConfigResponse ModifyDDoSGeoIPBlockConfig(ModifyDDoSGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSGeoIPBlockConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSGeoIPBlockConfigResponse>>() {
                 }.getType();
@@ -1748,6 +1833,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDDoSLevelResponse ModifyDDoSLevel(ModifyDDoSLevelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSLevelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSLevelResponse>>() {
                 }.getType();
@@ -1768,6 +1854,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(ModifyDDoSSpeedLimitConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSSpeedLimitConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSSpeedLimitConfigResponse>>() {
                 }.getType();
@@ -1788,6 +1875,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDDoSThresholdResponse ModifyDDoSThreshold(ModifyDDoSThresholdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDDoSThresholdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDDoSThresholdResponse>>() {
                 }.getType();
@@ -1808,6 +1896,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyDomainUsrNameResponse ModifyDomainUsrName(ModifyDomainUsrNameRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyDomainUsrNameResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyDomainUsrNameResponse>>() {
                 }.getType();
@@ -1828,6 +1917,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyNewDomainRulesResponse ModifyNewDomainRules(ModifyNewDomainRulesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyNewDomainRulesResponse>>() {
                 }.getType();
@@ -1848,6 +1938,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(ModifyPacketFilterConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPacketFilterConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPacketFilterConfigResponse>>() {
                 }.getType();
@@ -1868,6 +1959,7 @@ public class AntiddosClient extends AbstractClient{
     public ModifyPortAclConfigResponse ModifyPortAclConfig(ModifyPortAclConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyPortAclConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyPortAclConfigResponse>>() {
                 }.getType();
@@ -1888,6 +1980,7 @@ public class AntiddosClient extends AbstractClient{
     public SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(SwitchWaterPrintConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SwitchWaterPrintConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SwitchWaterPrintConfigResponse>>() {
                 }.getType();

@@ -29,7 +29,7 @@ public class CpdpClient extends AbstractClient{
     private static String endpoint = "cpdp.tencentcloudapi.com";
     private static String service = "cpdp";
     private static String version = "2019-08-20";
-
+    
     public CpdpClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CpdpClient extends AbstractClient{
     public AddContractResponse AddContract(AddContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddContractResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CpdpClient extends AbstractClient{
     public AddFlexFundingAccountResponse AddFlexFundingAccount(AddFlexFundingAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddFlexFundingAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddFlexFundingAccountResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CpdpClient extends AbstractClient{
     public AddFlexIdInfoResponse AddFlexIdInfo(AddFlexIdInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddFlexIdInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddFlexIdInfoResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CpdpClient extends AbstractClient{
     public AddFlexPhoneNoResponse AddFlexPhoneNo(AddFlexPhoneNoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddFlexPhoneNoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddFlexPhoneNoResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CpdpClient extends AbstractClient{
     public AddMerchantResponse AddMerchant(AddMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddMerchantResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CpdpClient extends AbstractClient{
     public AddShopResponse AddShop(AddShopRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddShopResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddShopResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyApplicationMaterialResponse ApplyApplicationMaterial(ApplyApplicationMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyApplicationMaterialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyApplicationMaterialResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyFlexPaymentResponse ApplyFlexPayment(ApplyFlexPaymentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyFlexPaymentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyFlexPaymentResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyFlexSettlementResponse ApplyFlexSettlement(ApplyFlexSettlementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyFlexSettlementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyFlexSettlementResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyFlexWechatPreAuthResponse ApplyFlexWechatPreAuth(ApplyFlexWechatPreAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyFlexWechatPreAuthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyFlexWechatPreAuthResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyOpenBankOrderDetailReceiptResponse ApplyOpenBankOrderDetailReceipt(ApplyOpenBankOrderDetailReceiptRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyOpenBankOrderDetailReceiptResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyOpenBankOrderDetailReceiptResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyOpenBankSettleOrderResponse ApplyOpenBankSettleOrder(ApplyOpenBankSettleOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyOpenBankSettleOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyOpenBankSettleOrderResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyOpenBankSubMerchantSignOnlineResponse ApplyOpenBankSubMerchantSignOnline(ApplyOpenBankSubMerchantSignOnlineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyOpenBankSubMerchantSignOnlineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyOpenBankSubMerchantSignOnlineResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyOutwardOrderResponse ApplyOutwardOrder(ApplyOutwardOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyOutwardOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyOutwardOrderResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyPayerInfoResponse ApplyPayerInfo(ApplyPayerInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyPayerInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyPayerInfoResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyReWithdrawalResponse ApplyReWithdrawal(ApplyReWithdrawalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyReWithdrawalResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyReWithdrawalResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyReconciliationFileResponse ApplyReconciliationFile(ApplyReconciliationFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyReconciliationFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyReconciliationFileResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyTradeResponse ApplyTrade(ApplyTradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyTradeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyTradeResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class CpdpClient extends AbstractClient{
     public ApplyWithdrawalResponse ApplyWithdrawal(ApplyWithdrawalRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ApplyWithdrawalResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ApplyWithdrawalResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class CpdpClient extends AbstractClient{
     public BindAccountResponse BindAccount(BindAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAccountResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class CpdpClient extends AbstractClient{
     public BindAcctResponse BindAcct(BindAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindAcctResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindAcctResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class CpdpClient extends AbstractClient{
     public BindOpenBankExternalSubMerchantBankAccountResponse BindOpenBankExternalSubMerchantBankAccount(BindOpenBankExternalSubMerchantBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindOpenBankExternalSubMerchantBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindOpenBankExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class CpdpClient extends AbstractClient{
     public BindOpenBankProfitSharePayeeResponse BindOpenBankProfitSharePayee(BindOpenBankProfitSharePayeeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindOpenBankProfitSharePayeeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindOpenBankProfitSharePayeeResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class CpdpClient extends AbstractClient{
     public BindRelateAccReUnionPayResponse BindRelateAccReUnionPay(BindRelateAccReUnionPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAccReUnionPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAccReUnionPayResponse>>() {
                 }.getType();
@@ -530,6 +554,7 @@ public class CpdpClient extends AbstractClient{
     public BindRelateAcctSmallAmountResponse BindRelateAcctSmallAmount(BindRelateAcctSmallAmountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAcctSmallAmountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAcctSmallAmountResponse>>() {
                 }.getType();
@@ -554,6 +579,7 @@ public class CpdpClient extends AbstractClient{
     public BindRelateAcctUnionPayResponse BindRelateAcctUnionPay(BindRelateAcctUnionPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<BindRelateAcctUnionPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<BindRelateAcctUnionPayResponse>>() {
                 }.getType();
@@ -574,6 +600,7 @@ public class CpdpClient extends AbstractClient{
     public CheckAcctResponse CheckAcct(CheckAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAcctResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAcctResponse>>() {
                 }.getType();
@@ -594,6 +621,7 @@ public class CpdpClient extends AbstractClient{
     public CheckAmountResponse CheckAmount(CheckAmountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CheckAmountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CheckAmountResponse>>() {
                 }.getType();
@@ -614,6 +642,7 @@ public class CpdpClient extends AbstractClient{
     public CloseCloudOrderResponse CloseCloudOrder(CloseCloudOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseCloudOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseCloudOrderResponse>>() {
                 }.getType();
@@ -634,6 +663,7 @@ public class CpdpClient extends AbstractClient{
     public CloseOpenBankPaymentOrderResponse CloseOpenBankPaymentOrder(CloseOpenBankPaymentOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseOpenBankPaymentOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseOpenBankPaymentOrderResponse>>() {
                 }.getType();
@@ -654,6 +684,7 @@ public class CpdpClient extends AbstractClient{
     public CloseOrderResponse CloseOrder(CloseOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CloseOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CloseOrderResponse>>() {
                 }.getType();
@@ -674,6 +705,7 @@ public class CpdpClient extends AbstractClient{
     public ConfirmOrderResponse ConfirmOrder(ConfirmOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ConfirmOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ConfirmOrderResponse>>() {
                 }.getType();
@@ -694,6 +726,7 @@ public class CpdpClient extends AbstractClient{
     public ContractOrderResponse ContractOrder(ContractOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ContractOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ContractOrderResponse>>() {
                 }.getType();
@@ -714,6 +747,7 @@ public class CpdpClient extends AbstractClient{
     public CreateAcctResponse CreateAcct(CreateAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAcctResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAcctResponse>>() {
                 }.getType();
@@ -734,6 +768,7 @@ public class CpdpClient extends AbstractClient{
     public CreateAgentTaxPaymentInfosResponse CreateAgentTaxPaymentInfos(CreateAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAgentTaxPaymentInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAgentTaxPaymentInfosResponse>>() {
                 }.getType();
@@ -754,6 +789,7 @@ public class CpdpClient extends AbstractClient{
     public CreateAnchorResponse CreateAnchor(CreateAnchorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateAnchorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateAnchorResponse>>() {
                 }.getType();
@@ -774,6 +810,7 @@ public class CpdpClient extends AbstractClient{
     public CreateBatchPaymentResponse CreateBatchPayment(CreateBatchPaymentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateBatchPaymentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateBatchPaymentResponse>>() {
                 }.getType();
@@ -794,6 +831,7 @@ public class CpdpClient extends AbstractClient{
     public CreateCloudSubMerchantResponse CreateCloudSubMerchant(CreateCloudSubMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCloudSubMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCloudSubMerchantResponse>>() {
                 }.getType();
@@ -815,6 +853,7 @@ public class CpdpClient extends AbstractClient{
     public CreateCustAcctIdResponse CreateCustAcctId(CreateCustAcctIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateCustAcctIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateCustAcctIdResponse>>() {
                 }.getType();
@@ -835,6 +874,7 @@ public class CpdpClient extends AbstractClient{
     public CreateExternalAnchorResponse CreateExternalAnchor(CreateExternalAnchorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateExternalAnchorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateExternalAnchorResponse>>() {
                 }.getType();
@@ -855,6 +895,7 @@ public class CpdpClient extends AbstractClient{
     public CreateFlexPayeeResponse CreateFlexPayee(CreateFlexPayeeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateFlexPayeeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateFlexPayeeResponse>>() {
                 }.getType();
@@ -875,6 +916,7 @@ public class CpdpClient extends AbstractClient{
     public CreateInvoiceResponse CreateInvoice(CreateInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInvoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInvoiceResponse>>() {
                 }.getType();
@@ -895,6 +937,7 @@ public class CpdpClient extends AbstractClient{
     public CreateInvoiceV2Response CreateInvoiceV2(CreateInvoiceV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInvoiceV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInvoiceV2Response>>() {
                 }.getType();
@@ -915,6 +958,7 @@ public class CpdpClient extends AbstractClient{
     public CreateMerchantResponse CreateMerchant(CreateMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMerchantResponse>>() {
                 }.getType();
@@ -935,6 +979,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankAggregatedSubMerchantRegistrationResponse CreateOpenBankAggregatedSubMerchantRegistration(CreateOpenBankAggregatedSubMerchantRegistrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse>>() {
                 }.getType();
@@ -955,6 +1000,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankExternalSubMerchantAccountBookResponse CreateOpenBankExternalSubMerchantAccountBook(CreateOpenBankExternalSubMerchantAccountBookRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankExternalSubMerchantAccountBookResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankExternalSubMerchantAccountBookResponse>>() {
                 }.getType();
@@ -975,6 +1021,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankExternalSubMerchantRegistrationResponse CreateOpenBankExternalSubMerchantRegistration(CreateOpenBankExternalSubMerchantRegistrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankExternalSubMerchantRegistrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankExternalSubMerchantRegistrationResponse>>() {
                 }.getType();
@@ -995,6 +1042,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankGlobalPaymentOrderResponse CreateOpenBankGlobalPaymentOrder(CreateOpenBankGlobalPaymentOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankGlobalPaymentOrderResponse>>() {
                 }.getType();
@@ -1015,6 +1063,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankMerchantResponse CreateOpenBankMerchant(CreateOpenBankMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankMerchantResponse>>() {
                 }.getType();
@@ -1035,6 +1084,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankPaymentOrderResponse CreateOpenBankPaymentOrder(CreateOpenBankPaymentOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankPaymentOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankPaymentOrderResponse>>() {
                 }.getType();
@@ -1055,6 +1105,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankRechargeOrderResponse CreateOpenBankRechargeOrder(CreateOpenBankRechargeOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankRechargeOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankRechargeOrderResponse>>() {
                 }.getType();
@@ -1075,6 +1126,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankSubMerchantRateConfigureResponse CreateOpenBankSubMerchantRateConfigure(CreateOpenBankSubMerchantRateConfigureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse>>() {
                 }.getType();
@@ -1095,6 +1147,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankUnifiedOrderResponse CreateOpenBankUnifiedOrder(CreateOpenBankUnifiedOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankUnifiedOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankUnifiedOrderResponse>>() {
                 }.getType();
@@ -1115,6 +1168,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOpenBankVerificationOrderResponse CreateOpenBankVerificationOrder(CreateOpenBankVerificationOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOpenBankVerificationOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOpenBankVerificationOrderResponse>>() {
                 }.getType();
@@ -1135,6 +1189,7 @@ public class CpdpClient extends AbstractClient{
     public CreateOrderResponse CreateOrder(CreateOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateOrderResponse>>() {
                 }.getType();
@@ -1155,6 +1210,7 @@ public class CpdpClient extends AbstractClient{
     public CreatePayMerchantResponse CreatePayMerchant(CreatePayMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePayMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePayMerchantResponse>>() {
                 }.getType();
@@ -1175,6 +1231,7 @@ public class CpdpClient extends AbstractClient{
     public CreatePayRollPreOrderResponse CreatePayRollPreOrder(CreatePayRollPreOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePayRollPreOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePayRollPreOrderResponse>>() {
                 }.getType();
@@ -1195,6 +1252,7 @@ public class CpdpClient extends AbstractClient{
     public CreatePayRollPreOrderWithAuthResponse CreatePayRollPreOrderWithAuth(CreatePayRollPreOrderWithAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePayRollPreOrderWithAuthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePayRollPreOrderWithAuthResponse>>() {
                 }.getType();
@@ -1215,6 +1273,7 @@ public class CpdpClient extends AbstractClient{
     public CreatePayRollTokenResponse CreatePayRollToken(CreatePayRollTokenRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreatePayRollTokenResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreatePayRollTokenResponse>>() {
                 }.getType();
@@ -1235,6 +1294,7 @@ public class CpdpClient extends AbstractClient{
     public CreateRedInvoiceResponse CreateRedInvoice(CreateRedInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRedInvoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceResponse>>() {
                 }.getType();
@@ -1255,6 +1315,7 @@ public class CpdpClient extends AbstractClient{
     public CreateRedInvoiceV2Response CreateRedInvoiceV2(CreateRedInvoiceV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<CreateRedInvoiceV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateRedInvoiceV2Response>>() {
                 }.getType();
@@ -1275,6 +1336,7 @@ public class CpdpClient extends AbstractClient{
     public CreateSinglePaymentResponse CreateSinglePayment(CreateSinglePaymentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateSinglePaymentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateSinglePaymentResponse>>() {
                 }.getType();
@@ -1295,6 +1357,7 @@ public class CpdpClient extends AbstractClient{
     public CreateTransferBatchResponse CreateTransferBatch(CreateTransferBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateTransferBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateTransferBatchResponse>>() {
                 }.getType();
@@ -1315,6 +1378,7 @@ public class CpdpClient extends AbstractClient{
     public DeduceQuotaResponse DeduceQuota(DeduceQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeduceQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeduceQuotaResponse>>() {
                 }.getType();
@@ -1335,6 +1399,7 @@ public class CpdpClient extends AbstractClient{
     public DeleteAgentTaxPaymentInfoResponse DeleteAgentTaxPaymentInfo(DeleteAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAgentTaxPaymentInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfoResponse>>() {
                 }.getType();
@@ -1355,6 +1420,7 @@ public class CpdpClient extends AbstractClient{
     public DeleteAgentTaxPaymentInfosResponse DeleteAgentTaxPaymentInfos(DeleteAgentTaxPaymentInfosRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteAgentTaxPaymentInfosResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteAgentTaxPaymentInfosResponse>>() {
                 }.getType();
@@ -1375,6 +1441,7 @@ public class CpdpClient extends AbstractClient{
     public DescribeChargeDetailResponse DescribeChargeDetail(DescribeChargeDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeChargeDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeChargeDetailResponse>>() {
                 }.getType();
@@ -1395,6 +1462,7 @@ public class CpdpClient extends AbstractClient{
     public DescribeOrderStatusResponse DescribeOrderStatus(DescribeOrderStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeOrderStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeOrderStatusResponse>>() {
                 }.getType();
@@ -1415,6 +1483,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeAccreditQueryResponse DistributeAccreditQuery(DistributeAccreditQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeAccreditQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeAccreditQueryResponse>>() {
                 }.getType();
@@ -1435,6 +1504,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeAccreditTlinxResponse DistributeAccreditTlinx(DistributeAccreditTlinxRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeAccreditTlinxResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeAccreditTlinxResponse>>() {
                 }.getType();
@@ -1455,6 +1525,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeAddReceiverResponse DistributeAddReceiver(DistributeAddReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeAddReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeAddReceiverResponse>>() {
                 }.getType();
@@ -1475,6 +1546,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeApplyResponse DistributeApply(DistributeApplyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeApplyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeApplyResponse>>() {
                 }.getType();
@@ -1495,6 +1567,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeCancelResponse DistributeCancel(DistributeCancelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeCancelResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeCancelResponse>>() {
                 }.getType();
@@ -1515,6 +1588,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeQueryResponse DistributeQuery(DistributeQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeQueryResponse>>() {
                 }.getType();
@@ -1535,6 +1609,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeQueryReceiverResponse DistributeQueryReceiver(DistributeQueryReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeQueryReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeQueryReceiverResponse>>() {
                 }.getType();
@@ -1555,6 +1630,7 @@ public class CpdpClient extends AbstractClient{
     public DistributeRemoveReceiverResponse DistributeRemoveReceiver(DistributeRemoveReceiverRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DistributeRemoveReceiverResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DistributeRemoveReceiverResponse>>() {
                 }.getType();
@@ -1575,6 +1651,7 @@ public class CpdpClient extends AbstractClient{
     public DownloadBillResponse DownloadBill(DownloadBillRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadBillResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadBillResponse>>() {
                 }.getType();
@@ -1595,6 +1672,7 @@ public class CpdpClient extends AbstractClient{
     public DownloadOrgFileResponse DownloadOrgFile(DownloadOrgFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadOrgFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadOrgFileResponse>>() {
                 }.getType();
@@ -1615,6 +1693,7 @@ public class CpdpClient extends AbstractClient{
     public DownloadReconciliationUrlResponse DownloadReconciliationUrl(DownloadReconciliationUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DownloadReconciliationUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DownloadReconciliationUrlResponse>>() {
                 }.getType();
@@ -1635,6 +1714,7 @@ public class CpdpClient extends AbstractClient{
     public ExecuteMemberTransactionResponse ExecuteMemberTransaction(ExecuteMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ExecuteMemberTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ExecuteMemberTransactionResponse>>() {
                 }.getType();
@@ -1655,6 +1735,7 @@ public class CpdpClient extends AbstractClient{
     public FreezeFlexBalanceResponse FreezeFlexBalance(FreezeFlexBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<FreezeFlexBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<FreezeFlexBalanceResponse>>() {
                 }.getType();
@@ -1676,6 +1757,7 @@ public class CpdpClient extends AbstractClient{
     public GetBillDownloadUrlResponse GetBillDownloadUrl(GetBillDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetBillDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetBillDownloadUrlResponse>>() {
                 }.getType();
@@ -1697,6 +1779,7 @@ public class CpdpClient extends AbstractClient{
     public GetDistributeBillDownloadUrlResponse GetDistributeBillDownloadUrl(GetDistributeBillDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetDistributeBillDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetDistributeBillDownloadUrlResponse>>() {
                 }.getType();
@@ -1717,6 +1800,7 @@ public class CpdpClient extends AbstractClient{
     public GetPayRollAuthResponse GetPayRollAuth(GetPayRollAuthRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPayRollAuthResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPayRollAuthResponse>>() {
                 }.getType();
@@ -1737,6 +1821,7 @@ public class CpdpClient extends AbstractClient{
     public GetPayRollAuthListResponse GetPayRollAuthList(GetPayRollAuthListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPayRollAuthListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPayRollAuthListResponse>>() {
                 }.getType();
@@ -1757,6 +1842,7 @@ public class CpdpClient extends AbstractClient{
     public GetPayRollAuthResultResponse GetPayRollAuthResult(GetPayRollAuthResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<GetPayRollAuthResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<GetPayRollAuthResultResponse>>() {
                 }.getType();
@@ -1777,6 +1863,7 @@ public class CpdpClient extends AbstractClient{
     public MigrateOrderRefundResponse MigrateOrderRefund(MigrateOrderRefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MigrateOrderRefundResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundResponse>>() {
                 }.getType();
@@ -1797,6 +1884,7 @@ public class CpdpClient extends AbstractClient{
     public MigrateOrderRefundQueryResponse MigrateOrderRefundQuery(MigrateOrderRefundQueryRequest req) throws TencentCloudSDKException{
         JsonResponseModel<MigrateOrderRefundQueryResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<MigrateOrderRefundQueryResponse>>() {
                 }.getType();
@@ -1817,6 +1905,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyAgentTaxPaymentInfoResponse ModifyAgentTaxPaymentInfo(ModifyAgentTaxPaymentInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyAgentTaxPaymentInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>() {
                 }.getType();
@@ -1837,6 +1926,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyBindedAccountResponse ModifyBindedAccount(ModifyBindedAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyBindedAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyBindedAccountResponse>>() {
                 }.getType();
@@ -1857,6 +1947,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyFlexFundingAccountResponse ModifyFlexFundingAccount(ModifyFlexFundingAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFlexFundingAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFlexFundingAccountResponse>>() {
                 }.getType();
@@ -1877,6 +1968,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyFlexPayeeAccountRightStatusResponse ModifyFlexPayeeAccountRightStatus(ModifyFlexPayeeAccountRightStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse>>() {
                 }.getType();
@@ -1897,6 +1989,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyMerchantResponse ModifyMerchant(ModifyMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMerchantResponse>>() {
                 }.getType();
@@ -1917,6 +2010,7 @@ public class CpdpClient extends AbstractClient{
     public ModifyMntMbrBindRelateAcctBankCodeResponse ModifyMntMbrBindRelateAcctBankCode(ModifyMntMbrBindRelateAcctBankCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMntMbrBindRelateAcctBankCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMntMbrBindRelateAcctBankCodeResponse>>() {
                 }.getType();
@@ -1937,6 +2031,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAcctBindingResponse QueryAcctBinding(QueryAcctBindingRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctBindingResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctBindingResponse>>() {
                 }.getType();
@@ -1957,6 +2052,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAcctInfoResponse QueryAcctInfo(QueryAcctInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctInfoResponse>>() {
                 }.getType();
@@ -1977,6 +2073,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAcctInfoListResponse QueryAcctInfoList(QueryAcctInfoListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAcctInfoListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAcctInfoListResponse>>() {
                 }.getType();
@@ -1997,6 +2094,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAgentStatementsResponse QueryAgentStatements(QueryAgentStatementsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAgentStatementsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAgentStatementsResponse>>() {
                 }.getType();
@@ -2017,6 +2115,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAgentTaxPaymentBatchResponse QueryAgentTaxPaymentBatch(QueryAgentTaxPaymentBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAgentTaxPaymentBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAgentTaxPaymentBatchResponse>>() {
                 }.getType();
@@ -2037,6 +2136,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAnchorContractInfoResponse QueryAnchorContractInfo(QueryAnchorContractInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAnchorContractInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAnchorContractInfoResponse>>() {
                 }.getType();
@@ -2057,6 +2157,7 @@ public class CpdpClient extends AbstractClient{
     public QueryApplicationMaterialResponse QueryApplicationMaterial(QueryApplicationMaterialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryApplicationMaterialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryApplicationMaterialResponse>>() {
                 }.getType();
@@ -2077,6 +2178,7 @@ public class CpdpClient extends AbstractClient{
     public QueryAssignmentResponse QueryAssignment(QueryAssignmentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryAssignmentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryAssignmentResponse>>() {
                 }.getType();
@@ -2097,6 +2199,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBalanceResponse QueryBalance(QueryBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBalanceResponse>>() {
                 }.getType();
@@ -2117,6 +2220,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBankClearResponse QueryBankClear(QueryBankClearRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankClearResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankClearResponse>>() {
                 }.getType();
@@ -2137,6 +2241,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBankTransactionDetailsResponse QueryBankTransactionDetails(QueryBankTransactionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankTransactionDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankTransactionDetailsResponse>>() {
                 }.getType();
@@ -2157,6 +2262,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBankWithdrawCashDetailsResponse QueryBankWithdrawCashDetails(QueryBankWithdrawCashDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBankWithdrawCashDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBankWithdrawCashDetailsResponse>>() {
                 }.getType();
@@ -2177,6 +2283,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBatchPaymentResultResponse QueryBatchPaymentResult(QueryBatchPaymentResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBatchPaymentResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBatchPaymentResultResponse>>() {
                 }.getType();
@@ -2197,6 +2304,7 @@ public class CpdpClient extends AbstractClient{
     public QueryBillDownloadURLResponse QueryBillDownloadURL(QueryBillDownloadURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryBillDownloadURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryBillDownloadURLResponse>>() {
                 }.getType();
@@ -2217,6 +2325,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCityCodeResponse QueryCityCode(QueryCityCodeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCityCodeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCityCodeResponse>>() {
                 }.getType();
@@ -2237,6 +2346,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCloudChannelDataResponse QueryCloudChannelData(QueryCloudChannelDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCloudChannelDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCloudChannelDataResponse>>() {
                 }.getType();
@@ -2257,6 +2367,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCloudOrderResponse QueryCloudOrder(QueryCloudOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCloudOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCloudOrderResponse>>() {
                 }.getType();
@@ -2277,6 +2388,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCloudRefundOrderResponse QueryCloudRefundOrder(QueryCloudRefundOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCloudRefundOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCloudRefundOrderResponse>>() {
                 }.getType();
@@ -2297,6 +2409,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCommonTransferRechargeResponse QueryCommonTransferRecharge(QueryCommonTransferRechargeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCommonTransferRechargeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCommonTransferRechargeResponse>>() {
                 }.getType();
@@ -2317,6 +2430,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCompanyTitleResponse QueryCompanyTitle(QueryCompanyTitleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCompanyTitleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCompanyTitleResponse>>() {
                 }.getType();
@@ -2337,6 +2451,7 @@ public class CpdpClient extends AbstractClient{
     public QueryContractResponse QueryContract(QueryContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryContractResponse>>() {
                 }.getType();
@@ -2357,6 +2472,7 @@ public class CpdpClient extends AbstractClient{
     public QueryContractPayFeeResponse QueryContractPayFee(QueryContractPayFeeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryContractPayFeeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryContractPayFeeResponse>>() {
                 }.getType();
@@ -2377,6 +2493,7 @@ public class CpdpClient extends AbstractClient{
     public QueryContractPayWayListResponse QueryContractPayWayList(QueryContractPayWayListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryContractPayWayListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryContractPayWayListResponse>>() {
                 }.getType();
@@ -2397,6 +2514,7 @@ public class CpdpClient extends AbstractClient{
     public QueryContractRelateShopResponse QueryContractRelateShop(QueryContractRelateShopRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryContractRelateShopResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryContractRelateShopResponse>>() {
                 }.getType();
@@ -2417,6 +2535,7 @@ public class CpdpClient extends AbstractClient{
     public QueryCustAcctIdBalanceResponse QueryCustAcctIdBalance(QueryCustAcctIdBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryCustAcctIdBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryCustAcctIdBalanceResponse>>() {
                 }.getType();
@@ -2437,6 +2556,7 @@ public class CpdpClient extends AbstractClient{
     public QueryDownloadBillURLResponse QueryDownloadBillURL(QueryDownloadBillURLRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryDownloadBillURLResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryDownloadBillURLResponse>>() {
                 }.getType();
@@ -2457,6 +2577,7 @@ public class CpdpClient extends AbstractClient{
     public QueryExceedingInfoResponse QueryExceedingInfo(QueryExceedingInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryExceedingInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryExceedingInfoResponse>>() {
                 }.getType();
@@ -2477,6 +2598,7 @@ public class CpdpClient extends AbstractClient{
     public QueryExchangeRateResponse QueryExchangeRate(QueryExchangeRateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryExchangeRateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryExchangeRateResponse>>() {
                 }.getType();
@@ -2497,6 +2619,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFinancialDataUrlResponse QueryFinancialDataUrl(QueryFinancialDataUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFinancialDataUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFinancialDataUrlResponse>>() {
                 }.getType();
@@ -2517,6 +2640,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexAmountBeforeTaxResponse QueryFlexAmountBeforeTax(QueryFlexAmountBeforeTaxRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexAmountBeforeTaxResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexAmountBeforeTaxResponse>>() {
                 }.getType();
@@ -2537,6 +2661,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexBillDownloadUrlResponse QueryFlexBillDownloadUrl(QueryFlexBillDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexBillDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexBillDownloadUrlResponse>>() {
                 }.getType();
@@ -2557,6 +2682,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexFreezeOrderListResponse QueryFlexFreezeOrderList(QueryFlexFreezeOrderListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexFreezeOrderListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexFreezeOrderListResponse>>() {
                 }.getType();
@@ -2577,6 +2703,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexOrderSummaryListResponse QueryFlexOrderSummaryList(QueryFlexOrderSummaryListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexOrderSummaryListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexOrderSummaryListResponse>>() {
                 }.getType();
@@ -2597,6 +2724,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPayeeAccountBalanceResponse QueryFlexPayeeAccountBalance(QueryFlexPayeeAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPayeeAccountBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPayeeAccountBalanceResponse>>() {
                 }.getType();
@@ -2617,6 +2745,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPayeeAccountInfoResponse QueryFlexPayeeAccountInfo(QueryFlexPayeeAccountInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPayeeAccountInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPayeeAccountInfoResponse>>() {
                 }.getType();
@@ -2637,6 +2766,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPayeeAccountListResponse QueryFlexPayeeAccountList(QueryFlexPayeeAccountListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPayeeAccountListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPayeeAccountListResponse>>() {
                 }.getType();
@@ -2657,6 +2787,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPayeeInfoResponse QueryFlexPayeeInfo(QueryFlexPayeeInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPayeeInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPayeeInfoResponse>>() {
                 }.getType();
@@ -2677,6 +2808,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPaymentOrderListResponse QueryFlexPaymentOrderList(QueryFlexPaymentOrderListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPaymentOrderListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPaymentOrderListResponse>>() {
                 }.getType();
@@ -2697,6 +2829,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPaymentOrderStatusResponse QueryFlexPaymentOrderStatus(QueryFlexPaymentOrderStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPaymentOrderStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPaymentOrderStatusResponse>>() {
                 }.getType();
@@ -2717,6 +2850,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexPlatformAccountBalanceResponse QueryFlexPlatformAccountBalance(QueryFlexPlatformAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexPlatformAccountBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexPlatformAccountBalanceResponse>>() {
                 }.getType();
@@ -2737,6 +2871,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexServiceProviderAccountBalanceResponse QueryFlexServiceProviderAccountBalance(QueryFlexServiceProviderAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexServiceProviderAccountBalanceResponse>>() {
                 }.getType();
@@ -2757,6 +2892,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderList(QueryFlexSettlementOrderListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexSettlementOrderListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexSettlementOrderListResponse>>() {
                 }.getType();
@@ -2777,6 +2913,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFlexWechatAuthResultResponse QueryFlexWechatAuthResult(QueryFlexWechatAuthResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFlexWechatAuthResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFlexWechatAuthResultResponse>>() {
                 }.getType();
@@ -2797,6 +2934,7 @@ public class CpdpClient extends AbstractClient{
     public QueryFundsTransactionDetailsResponse QueryFundsTransactionDetails(QueryFundsTransactionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryFundsTransactionDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryFundsTransactionDetailsResponse>>() {
                 }.getType();
@@ -2817,6 +2955,7 @@ public class CpdpClient extends AbstractClient{
     public QueryInvoiceResponse QueryInvoice(QueryInvoiceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryInvoiceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryInvoiceResponse>>() {
                 }.getType();
@@ -2837,6 +2976,7 @@ public class CpdpClient extends AbstractClient{
     public QueryInvoiceV2Response QueryInvoiceV2(QueryInvoiceV2Request req) throws TencentCloudSDKException{
         JsonResponseModel<QueryInvoiceV2Response> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryInvoiceV2Response>>() {
                 }.getType();
@@ -2857,6 +2997,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMaliciousRegistrationResponse QueryMaliciousRegistration(QueryMaliciousRegistrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMaliciousRegistrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMaliciousRegistrationResponse>>() {
                 }.getType();
@@ -2878,6 +3019,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMemberBindResponse QueryMemberBind(QueryMemberBindRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMemberBindResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMemberBindResponse>>() {
                 }.getType();
@@ -2898,6 +3040,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMemberTransactionResponse QueryMemberTransaction(QueryMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMemberTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionResponse>>() {
                 }.getType();
@@ -2918,6 +3061,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMemberTransactionDetailsResponse QueryMemberTransactionDetails(QueryMemberTransactionDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMemberTransactionDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMemberTransactionDetailsResponse>>() {
                 }.getType();
@@ -2938,6 +3082,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantResponse QueryMerchant(QueryMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantResponse>>() {
                 }.getType();
@@ -2958,6 +3103,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantBalanceResponse QueryMerchantBalance(QueryMerchantBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantBalanceResponse>>() {
                 }.getType();
@@ -2978,6 +3124,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantClassificationResponse QueryMerchantClassification(QueryMerchantClassificationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantClassificationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantClassificationResponse>>() {
                 }.getType();
@@ -2998,6 +3145,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantInfoForManagementResponse QueryMerchantInfoForManagement(QueryMerchantInfoForManagementRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantInfoForManagementResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantInfoForManagementResponse>>() {
                 }.getType();
@@ -3018,6 +3166,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantOrderResponse QueryMerchantOrder(QueryMerchantOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantOrderResponse>>() {
                 }.getType();
@@ -3038,6 +3187,7 @@ public class CpdpClient extends AbstractClient{
     public QueryMerchantPayWayListResponse QueryMerchantPayWayList(QueryMerchantPayWayListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryMerchantPayWayListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryMerchantPayWayListResponse>>() {
                 }.getType();
@@ -3058,6 +3208,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalance(QueryOpenBankBankAccountBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankBankAccountBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBankAccountBalanceResponse>>() {
                 }.getType();
@@ -3078,6 +3229,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankBankBranchListResponse QueryOpenBankBankBranchList(QueryOpenBankBankBranchListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankBankBranchListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBankBranchListResponse>>() {
                 }.getType();
@@ -3098,6 +3250,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankBillDataPageResponse QueryOpenBankBillDataPage(QueryOpenBankBillDataPageRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankBillDataPageResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBillDataPageResponse>>() {
                 }.getType();
@@ -3118,6 +3271,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankBindExternalSubMerchantBankAccountResponse QueryOpenBankBindExternalSubMerchantBankAccount(QueryOpenBankBindExternalSubMerchantBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankBindExternalSubMerchantBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankBindExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
@@ -3138,6 +3292,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrl(QueryOpenBankDailyReceiptDownloadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse>>() {
                 }.getType();
@@ -3158,6 +3313,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankDownLoadUrlResponse QueryOpenBankDownLoadUrl(QueryOpenBankDownLoadUrlRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankDownLoadUrlResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankDownLoadUrlResponse>>() {
                 }.getType();
@@ -3178,6 +3334,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankExternalSubAccountBookBalanceResponse QueryOpenBankExternalSubAccountBookBalance(QueryOpenBankExternalSubAccountBookBalanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankExternalSubAccountBookBalanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankExternalSubAccountBookBalanceResponse>>() {
                 }.getType();
@@ -3198,6 +3355,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankExternalSubMerchantBankAccountResponse QueryOpenBankExternalSubMerchantBankAccount(QueryOpenBankExternalSubMerchantBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankExternalSubMerchantBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
@@ -3218,6 +3376,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankExternalSubMerchantRegistrationResponse QueryOpenBankExternalSubMerchantRegistration(QueryOpenBankExternalSubMerchantRegistrationRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankExternalSubMerchantRegistrationResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankExternalSubMerchantRegistrationResponse>>() {
                 }.getType();
@@ -3238,6 +3397,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankOrderDetailReceiptInfoResponse QueryOpenBankOrderDetailReceiptInfo(QueryOpenBankOrderDetailReceiptInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankOrderDetailReceiptInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankOrderDetailReceiptInfoResponse>>() {
                 }.getType();
@@ -3258,6 +3418,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankPaymentOrderResponse QueryOpenBankPaymentOrder(QueryOpenBankPaymentOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankPaymentOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankPaymentOrderResponse>>() {
                 }.getType();
@@ -3278,6 +3439,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankProfitSharePayeeResponse QueryOpenBankProfitSharePayee(QueryOpenBankProfitSharePayeeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankProfitSharePayeeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankProfitSharePayeeResponse>>() {
                 }.getType();
@@ -3298,6 +3460,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankRefundOrderResponse QueryOpenBankRefundOrder(QueryOpenBankRefundOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankRefundOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankRefundOrderResponse>>() {
                 }.getType();
@@ -3318,6 +3481,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankSettleOrderResponse QueryOpenBankSettleOrder(QueryOpenBankSettleOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankSettleOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSettleOrderResponse>>() {
                 }.getType();
@@ -3338,6 +3502,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankSubMerchantCredentialResponse QueryOpenBankSubMerchantCredential(QueryOpenBankSubMerchantCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse>>() {
                 }.getType();
@@ -3358,6 +3523,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankSubMerchantRateConfigureResponse QueryOpenBankSubMerchantRateConfigure(QueryOpenBankSubMerchantRateConfigureRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse>>() {
                 }.getType();
@@ -3378,6 +3544,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankSubMerchantSignOnlineResponse QueryOpenBankSubMerchantSignOnline(QueryOpenBankSubMerchantSignOnlineRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankSubMerchantSignOnlineResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSubMerchantSignOnlineResponse>>() {
                 }.getType();
@@ -3398,6 +3565,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankList(QueryOpenBankSupportBankListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankSupportBankListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankSupportBankListResponse>>() {
                 }.getType();
@@ -3418,6 +3586,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankUnbindExternalSubMerchantBankAccountResponse QueryOpenBankUnbindExternalSubMerchantBankAccount(QueryOpenBankUnbindExternalSubMerchantBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankUnbindExternalSubMerchantBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankUnbindExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
@@ -3438,6 +3607,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOpenBankVerificationOrderResponse QueryOpenBankVerificationOrder(QueryOpenBankVerificationOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOpenBankVerificationOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOpenBankVerificationOrderResponse>>() {
                 }.getType();
@@ -3458,6 +3628,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOrderResponse QueryOrder(QueryOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOrderResponse>>() {
                 }.getType();
@@ -3478,6 +3649,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOrderStatusResponse QueryOrderStatus(QueryOrderStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOrderStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOrderStatusResponse>>() {
                 }.getType();
@@ -3498,6 +3670,7 @@ public class CpdpClient extends AbstractClient{
     public QueryOutwardOrderResponse QueryOutwardOrder(QueryOutwardOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryOutwardOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryOutwardOrderResponse>>() {
                 }.getType();
@@ -3518,6 +3691,7 @@ public class CpdpClient extends AbstractClient{
     public QueryPayerInfoResponse QueryPayerInfo(QueryPayerInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryPayerInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryPayerInfoResponse>>() {
                 }.getType();
@@ -3538,6 +3712,7 @@ public class CpdpClient extends AbstractClient{
     public QueryReconciliationDocumentResponse QueryReconciliationDocument(QueryReconciliationDocumentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryReconciliationDocumentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryReconciliationDocumentResponse>>() {
                 }.getType();
@@ -3558,6 +3733,7 @@ public class CpdpClient extends AbstractClient{
     public QueryReconciliationFileApplyInfoResponse QueryReconciliationFileApplyInfo(QueryReconciliationFileApplyInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryReconciliationFileApplyInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryReconciliationFileApplyInfoResponse>>() {
                 }.getType();
@@ -3578,6 +3754,7 @@ public class CpdpClient extends AbstractClient{
     public QueryRefundResponse QueryRefund(QueryRefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryRefundResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryRefundResponse>>() {
                 }.getType();
@@ -3598,6 +3775,7 @@ public class CpdpClient extends AbstractClient{
     public QueryShopOpenIdResponse QueryShopOpenId(QueryShopOpenIdRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryShopOpenIdResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryShopOpenIdResponse>>() {
                 }.getType();
@@ -3618,6 +3796,7 @@ public class CpdpClient extends AbstractClient{
     public QuerySinglePaymentResultResponse QuerySinglePaymentResult(QuerySinglePaymentResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySinglePaymentResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySinglePaymentResultResponse>>() {
                 }.getType();
@@ -3638,6 +3817,7 @@ public class CpdpClient extends AbstractClient{
     public QuerySingleTransactionStatusResponse QuerySingleTransactionStatus(QuerySingleTransactionStatusRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySingleTransactionStatusResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySingleTransactionStatusResponse>>() {
                 }.getType();
@@ -3658,6 +3838,7 @@ public class CpdpClient extends AbstractClient{
     public QuerySmallAmountTransferResponse QuerySmallAmountTransfer(QuerySmallAmountTransferRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QuerySmallAmountTransferResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QuerySmallAmountTransferResponse>>() {
                 }.getType();
@@ -3678,6 +3859,7 @@ public class CpdpClient extends AbstractClient{
     public QueryTradeResponse QueryTrade(QueryTradeRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTradeResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTradeResponse>>() {
                 }.getType();
@@ -3698,6 +3880,7 @@ public class CpdpClient extends AbstractClient{
     public QueryTransferBatchResponse QueryTransferBatch(QueryTransferBatchRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTransferBatchResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTransferBatchResponse>>() {
                 }.getType();
@@ -3718,6 +3901,7 @@ public class CpdpClient extends AbstractClient{
     public QueryTransferDetailResponse QueryTransferDetail(QueryTransferDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTransferDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTransferDetailResponse>>() {
                 }.getType();
@@ -3738,6 +3922,7 @@ public class CpdpClient extends AbstractClient{
     public QueryTransferResultResponse QueryTransferResult(QueryTransferResultRequest req) throws TencentCloudSDKException{
         JsonResponseModel<QueryTransferResultResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<QueryTransferResultResponse>>() {
                 }.getType();
@@ -3758,6 +3943,7 @@ public class CpdpClient extends AbstractClient{
     public RechargeByThirdPayResponse RechargeByThirdPay(RechargeByThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RechargeByThirdPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RechargeByThirdPayResponse>>() {
                 }.getType();
@@ -3778,6 +3964,7 @@ public class CpdpClient extends AbstractClient{
     public RechargeMemberThirdPayResponse RechargeMemberThirdPay(RechargeMemberThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RechargeMemberThirdPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RechargeMemberThirdPayResponse>>() {
                 }.getType();
@@ -3798,6 +3985,7 @@ public class CpdpClient extends AbstractClient{
     public RefundResponse Refund(RefundRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundResponse>>() {
                 }.getType();
@@ -3818,6 +4006,7 @@ public class CpdpClient extends AbstractClient{
     public RefundCloudOrderResponse RefundCloudOrder(RefundCloudOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundCloudOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundCloudOrderResponse>>() {
                 }.getType();
@@ -3838,6 +4027,7 @@ public class CpdpClient extends AbstractClient{
     public RefundMemberTransactionResponse RefundMemberTransaction(RefundMemberTransactionRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundMemberTransactionResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundMemberTransactionResponse>>() {
                 }.getType();
@@ -3858,6 +4048,7 @@ public class CpdpClient extends AbstractClient{
     public RefundOpenBankOrderResponse RefundOpenBankOrder(RefundOpenBankOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundOpenBankOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundOpenBankOrderResponse>>() {
                 }.getType();
@@ -3878,6 +4069,7 @@ public class CpdpClient extends AbstractClient{
     public RefundOrderResponse RefundOrder(RefundOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundOrderResponse>>() {
                 }.getType();
@@ -3898,6 +4090,7 @@ public class CpdpClient extends AbstractClient{
     public RefundTlinxOrderResponse RefundTlinxOrder(RefundTlinxOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RefundTlinxOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RefundTlinxOrderResponse>>() {
                 }.getType();
@@ -3918,6 +4111,7 @@ public class CpdpClient extends AbstractClient{
     public RegisterBehaviorResponse RegisterBehavior(RegisterBehaviorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterBehaviorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterBehaviorResponse>>() {
                 }.getType();
@@ -3938,6 +4132,7 @@ public class CpdpClient extends AbstractClient{
     public RegisterBillResponse RegisterBill(RegisterBillRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterBillResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterBillResponse>>() {
                 }.getType();
@@ -3958,6 +4153,7 @@ public class CpdpClient extends AbstractClient{
     public RegisterBillSupportWithdrawResponse RegisterBillSupportWithdraw(RegisterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RegisterBillSupportWithdrawResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RegisterBillSupportWithdrawResponse>>() {
                 }.getType();
@@ -3978,6 +4174,7 @@ public class CpdpClient extends AbstractClient{
     public RevResigterBillSupportWithdrawResponse RevResigterBillSupportWithdraw(RevResigterBillSupportWithdrawRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevResigterBillSupportWithdrawResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevResigterBillSupportWithdrawResponse>>() {
                 }.getType();
@@ -3998,6 +4195,7 @@ public class CpdpClient extends AbstractClient{
     public ReviseMbrPropertyResponse ReviseMbrProperty(ReviseMbrPropertyRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ReviseMbrPropertyResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ReviseMbrPropertyResponse>>() {
                 }.getType();
@@ -4018,6 +4216,7 @@ public class CpdpClient extends AbstractClient{
     public RevokeMemberRechargeThirdPayResponse RevokeMemberRechargeThirdPay(RevokeMemberRechargeThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevokeMemberRechargeThirdPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevokeMemberRechargeThirdPayResponse>>() {
                 }.getType();
@@ -4038,6 +4237,7 @@ public class CpdpClient extends AbstractClient{
     public RevokeRechargeByThirdPayResponse RevokeRechargeByThirdPay(RevokeRechargeByThirdPayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RevokeRechargeByThirdPayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RevokeRechargeByThirdPayResponse>>() {
                 }.getType();
@@ -4058,6 +4258,7 @@ public class CpdpClient extends AbstractClient{
     public SyncContractDataResponse SyncContractData(SyncContractDataRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncContractDataResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncContractDataResponse>>() {
                 }.getType();
@@ -4078,6 +4279,7 @@ public class CpdpClient extends AbstractClient{
     public TerminateContractResponse TerminateContract(TerminateContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateContractResponse>>() {
                 }.getType();
@@ -4098,6 +4300,7 @@ public class CpdpClient extends AbstractClient{
     public TransferSinglePayResponse TransferSinglePay(TransferSinglePayRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TransferSinglePayResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TransferSinglePayResponse>>() {
                 }.getType();
@@ -4118,6 +4321,7 @@ public class CpdpClient extends AbstractClient{
     public UnBindAcctResponse UnBindAcct(UnBindAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnBindAcctResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnBindAcctResponse>>() {
                 }.getType();
@@ -4138,6 +4342,7 @@ public class CpdpClient extends AbstractClient{
     public UnbindOpenBankExternalSubMerchantBankAccountResponse UnbindOpenBankExternalSubMerchantBankAccount(UnbindOpenBankExternalSubMerchantBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindOpenBankExternalSubMerchantBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindOpenBankExternalSubMerchantBankAccountResponse>>() {
                 }.getType();
@@ -4158,6 +4363,7 @@ public class CpdpClient extends AbstractClient{
     public UnbindRelateAcctResponse UnbindRelateAcct(UnbindRelateAcctRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnbindRelateAcctResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnbindRelateAcctResponse>>() {
                 }.getType();
@@ -4178,6 +4384,7 @@ public class CpdpClient extends AbstractClient{
     public UnifiedCloudOrderResponse UnifiedCloudOrder(UnifiedCloudOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnifiedCloudOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnifiedCloudOrderResponse>>() {
                 }.getType();
@@ -4198,6 +4405,7 @@ public class CpdpClient extends AbstractClient{
     public UnifiedOrderResponse UnifiedOrder(UnifiedOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnifiedOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnifiedOrderResponse>>() {
                 }.getType();
@@ -4218,6 +4426,7 @@ public class CpdpClient extends AbstractClient{
     public UnifiedTlinxOrderResponse UnifiedTlinxOrder(UnifiedTlinxOrderRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UnifiedTlinxOrderResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UnifiedTlinxOrderResponse>>() {
                 }.getType();
@@ -4238,6 +4447,7 @@ public class CpdpClient extends AbstractClient{
     public UploadExternalAnchorInfoResponse UploadExternalAnchorInfo(UploadExternalAnchorInfoRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadExternalAnchorInfoResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadExternalAnchorInfoResponse>>() {
                 }.getType();
@@ -4258,6 +4468,7 @@ public class CpdpClient extends AbstractClient{
     public UploadFileResponse UploadFile(UploadFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadFileResponse>>() {
                 }.getType();
@@ -4278,6 +4489,7 @@ public class CpdpClient extends AbstractClient{
     public UploadOpenBankSubMerchantCredentialResponse UploadOpenBankSubMerchantCredential(UploadOpenBankSubMerchantCredentialRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse>>() {
                 }.getType();
@@ -4298,6 +4510,7 @@ public class CpdpClient extends AbstractClient{
     public UploadOrgFileResponse UploadOrgFile(UploadOrgFileRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadOrgFileResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadOrgFileResponse>>() {
                 }.getType();
@@ -4318,6 +4531,7 @@ public class CpdpClient extends AbstractClient{
     public UploadTaxListResponse UploadTaxList(UploadTaxListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadTaxListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadTaxListResponse>>() {
                 }.getType();
@@ -4338,6 +4552,7 @@ public class CpdpClient extends AbstractClient{
     public UploadTaxPaymentResponse UploadTaxPayment(UploadTaxPaymentRequest req) throws TencentCloudSDKException{
         JsonResponseModel<UploadTaxPaymentResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<UploadTaxPaymentResponse>>() {
                 }.getType();
@@ -4358,6 +4573,7 @@ public class CpdpClient extends AbstractClient{
     public VerifyOpenBankAccountResponse VerifyOpenBankAccount(VerifyOpenBankAccountRequest req) throws TencentCloudSDKException{
         JsonResponseModel<VerifyOpenBankAccountResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<VerifyOpenBankAccountResponse>>() {
                 }.getType();
@@ -4378,6 +4594,7 @@ public class CpdpClient extends AbstractClient{
     public ViewContractResponse ViewContract(ViewContractRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ViewContractResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ViewContractResponse>>() {
                 }.getType();
@@ -4398,6 +4615,7 @@ public class CpdpClient extends AbstractClient{
     public ViewMerchantResponse ViewMerchant(ViewMerchantRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ViewMerchantResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ViewMerchantResponse>>() {
                 }.getType();
@@ -4418,6 +4636,7 @@ public class CpdpClient extends AbstractClient{
     public ViewShopResponse ViewShop(ViewShopRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ViewShopResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ViewShopResponse>>() {
                 }.getType();
@@ -4438,6 +4657,7 @@ public class CpdpClient extends AbstractClient{
     public WithdrawCashMembershipResponse WithdrawCashMembership(WithdrawCashMembershipRequest req) throws TencentCloudSDKException{
         JsonResponseModel<WithdrawCashMembershipResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<WithdrawCashMembershipResponse>>() {
                 }.getType();

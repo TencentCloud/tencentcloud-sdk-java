@@ -29,7 +29,7 @@ public class CisClient extends AbstractClient{
     private static String endpoint = "cis.tencentcloudapi.com";
     private static String service = "cis";
     private static String version = "2018-04-08";
-
+    
     public CisClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class CisClient extends AbstractClient{
     public CreateContainerInstanceResponse CreateContainerInstance(CreateContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateContainerInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateContainerInstanceResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class CisClient extends AbstractClient{
     public DeleteContainerInstanceResponse DeleteContainerInstance(DeleteContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteContainerInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteContainerInstanceResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class CisClient extends AbstractClient{
     public DescribeContainerInstanceResponse DescribeContainerInstance(DescribeContainerInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstanceResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class CisClient extends AbstractClient{
     public DescribeContainerInstanceEventsResponse DescribeContainerInstanceEvents(DescribeContainerInstanceEventsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstanceEventsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstanceEventsResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class CisClient extends AbstractClient{
     public DescribeContainerInstancesResponse DescribeContainerInstances(DescribeContainerInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerInstancesResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class CisClient extends AbstractClient{
     public DescribeContainerLogResponse DescribeContainerLog(DescribeContainerLogRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeContainerLogResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeContainerLogResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class CisClient extends AbstractClient{
     public InquiryPriceCreateCisResponse InquiryPriceCreateCis(InquiryPriceCreateCisRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateCisResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateCisResponse>>() {
                 }.getType();

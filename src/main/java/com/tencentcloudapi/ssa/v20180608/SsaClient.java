@@ -29,7 +29,7 @@ public class SsaClient extends AbstractClient{
     private static String endpoint = "ssa.tencentcloudapi.com";
     private static String service = "ssa";
     private static String version = "2018-06-08";
-
+    
     public SsaClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -47,6 +47,7 @@ public class SsaClient extends AbstractClient{
     public DescribeAssetDetailResponse DescribeAssetDetail(DescribeAssetDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAssetDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetDetailResponse>>() {
                 }.getType();
@@ -67,6 +68,7 @@ public class SsaClient extends AbstractClient{
     public DescribeAssetDetailListResponse DescribeAssetDetailList(DescribeAssetDetailListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAssetDetailListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetDetailListResponse>>() {
                 }.getType();
@@ -87,6 +89,7 @@ public class SsaClient extends AbstractClient{
     public DescribeAssetListResponse DescribeAssetList(DescribeAssetListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAssetListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetListResponse>>() {
                 }.getType();
@@ -107,6 +110,7 @@ public class SsaClient extends AbstractClient{
     public DescribeAssetsMappingListResponse DescribeAssetsMappingList(DescribeAssetsMappingListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeAssetsMappingListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeAssetsMappingListResponse>>() {
                 }.getType();
@@ -127,6 +131,7 @@ public class SsaClient extends AbstractClient{
     public DescribeCheckConfigAssetListResponse DescribeCheckConfigAssetList(DescribeCheckConfigAssetListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCheckConfigAssetListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCheckConfigAssetListResponse>>() {
                 }.getType();
@@ -147,6 +152,7 @@ public class SsaClient extends AbstractClient{
     public DescribeCheckConfigDetailResponse DescribeCheckConfigDetail(DescribeCheckConfigDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCheckConfigDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCheckConfigDetailResponse>>() {
                 }.getType();
@@ -167,6 +173,7 @@ public class SsaClient extends AbstractClient{
     public DescribeComplianceAssetListResponse DescribeComplianceAssetList(DescribeComplianceAssetListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComplianceAssetListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComplianceAssetListResponse>>() {
                 }.getType();
@@ -187,6 +194,7 @@ public class SsaClient extends AbstractClient{
     public DescribeComplianceDetailResponse DescribeComplianceDetail(DescribeComplianceDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComplianceDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComplianceDetailResponse>>() {
                 }.getType();
@@ -207,6 +215,7 @@ public class SsaClient extends AbstractClient{
     public DescribeComplianceListResponse DescribeComplianceList(DescribeComplianceListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeComplianceListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeComplianceListResponse>>() {
                 }.getType();
@@ -227,6 +236,7 @@ public class SsaClient extends AbstractClient{
     public DescribeConfigListResponse DescribeConfigList(DescribeConfigListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeConfigListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigListResponse>>() {
                 }.getType();
@@ -247,6 +257,7 @@ public class SsaClient extends AbstractClient{
     public DescribeDomainListResponse DescribeDomainList(DescribeDomainListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeDomainListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeDomainListResponse>>() {
                 }.getType();
@@ -267,6 +278,7 @@ public class SsaClient extends AbstractClient{
     public DescribeEventDetailResponse DescribeEventDetail(DescribeEventDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEventDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEventDetailResponse>>() {
                 }.getType();
@@ -287,6 +299,7 @@ public class SsaClient extends AbstractClient{
     public DescribeLeakDetectionListResponse DescribeLeakDetectionList(DescribeLeakDetectionListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeLeakDetectionListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeLeakDetectionListResponse>>() {
                 }.getType();
@@ -307,6 +320,7 @@ public class SsaClient extends AbstractClient{
     public DescribeMappingResultsResponse DescribeMappingResults(DescribeMappingResultsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMappingResultsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMappingResultsResponse>>() {
                 }.getType();
@@ -327,6 +341,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSafetyEventListResponse DescribeSafetyEventList(DescribeSafetyEventListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSafetyEventListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSafetyEventListResponse>>() {
                 }.getType();
@@ -347,6 +362,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSocAlertDetailsResponse DescribeSocAlertDetails(DescribeSocAlertDetailsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSocAlertDetailsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSocAlertDetailsResponse>>() {
                 }.getType();
@@ -367,6 +383,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSocAlertListResponse DescribeSocAlertList(DescribeSocAlertListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSocAlertListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSocAlertListResponse>>() {
                 }.getType();
@@ -387,6 +404,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSocCheckItemListResponse DescribeSocCheckItemList(DescribeSocCheckItemListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSocCheckItemListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSocCheckItemListResponse>>() {
                 }.getType();
@@ -407,6 +425,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSocCheckResultListResponse DescribeSocCheckResultList(DescribeSocCheckResultListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSocCheckResultListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSocCheckResultListResponse>>() {
                 }.getType();
@@ -427,6 +446,7 @@ public class SsaClient extends AbstractClient{
     public DescribeSocCspmComplianceResponse DescribeSocCspmCompliance(DescribeSocCspmComplianceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeSocCspmComplianceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeSocCspmComplianceResponse>>() {
                 }.getType();
@@ -447,6 +467,7 @@ public class SsaClient extends AbstractClient{
     public DescribeVulDetailResponse DescribeVulDetail(DescribeVulDetailRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulDetailResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulDetailResponse>>() {
                 }.getType();
@@ -467,6 +488,7 @@ public class SsaClient extends AbstractClient{
     public DescribeVulListResponse DescribeVulList(DescribeVulListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeVulListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeVulListResponse>>() {
                 }.getType();
@@ -487,6 +509,7 @@ public class SsaClient extends AbstractClient{
     public SaDivulgeDataQueryPubResponse SaDivulgeDataQueryPub(SaDivulgeDataQueryPubRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SaDivulgeDataQueryPubResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SaDivulgeDataQueryPubResponse>>() {
                 }.getType();
@@ -507,6 +530,7 @@ public class SsaClient extends AbstractClient{
     public SaEventPubResponse SaEventPub(SaEventPubRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SaEventPubResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SaEventPubResponse>>() {
                 }.getType();

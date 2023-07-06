@@ -29,7 +29,7 @@ public class EmrClient extends AbstractClient{
     private static String endpoint = "emr.tencentcloudapi.com";
     private static String service = "emr";
     private static String version = "2019-01-03";
-
+    
     public EmrClient(Credential credential, String region) {
         this(credential, region, new ClientProfile());
     }
@@ -48,6 +48,7 @@ public class EmrClient extends AbstractClient{
     public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<AddUsersForUserManagerResponse>>() {
                 }.getType();
@@ -68,6 +69,7 @@ public class EmrClient extends AbstractClient{
     public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
                 }.getType();
@@ -88,6 +90,7 @@ public class EmrClient extends AbstractClient{
     public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateInstanceResponse>>() {
                 }.getType();
@@ -108,6 +111,7 @@ public class EmrClient extends AbstractClient{
     public DeleteUserManagerUserListResponse DeleteUserManagerUserList(DeleteUserManagerUserListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteUserManagerUserListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteUserManagerUserListResponse>>() {
                 }.getType();
@@ -128,6 +132,7 @@ public class EmrClient extends AbstractClient{
     public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterNodesResponse>>() {
                 }.getType();
@@ -148,6 +153,7 @@ public class EmrClient extends AbstractClient{
     public DescribeCvmQuotaResponse DescribeCvmQuota(DescribeCvmQuotaRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeCvmQuotaResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeCvmQuotaResponse>>() {
                 }.getType();
@@ -168,6 +174,7 @@ public class EmrClient extends AbstractClient{
     public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>() {
                 }.getType();
@@ -188,6 +195,7 @@ public class EmrClient extends AbstractClient{
     public DescribeHiveQueriesResponse DescribeHiveQueries(DescribeHiveQueriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeHiveQueriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeHiveQueriesResponse>>() {
                 }.getType();
@@ -208,6 +216,7 @@ public class EmrClient extends AbstractClient{
     public DescribeImpalaQueriesResponse DescribeImpalaQueries(DescribeImpalaQueriesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeImpalaQueriesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeImpalaQueriesResponse>>() {
                 }.getType();
@@ -228,6 +237,7 @@ public class EmrClient extends AbstractClient{
     public DescribeInstanceRenewNodesResponse DescribeInstanceRenewNodes(DescribeInstanceRenewNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstanceRenewNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceRenewNodesResponse>>() {
                 }.getType();
@@ -248,6 +258,7 @@ public class EmrClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
@@ -268,6 +279,7 @@ public class EmrClient extends AbstractClient{
     public DescribeInstancesListResponse DescribeInstancesList(DescribeInstancesListRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeInstancesListResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesListResponse>>() {
                 }.getType();
@@ -288,6 +300,7 @@ public class EmrClient extends AbstractClient{
     public DescribeJobFlowResponse DescribeJobFlow(DescribeJobFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeJobFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeJobFlowResponse>>() {
                 }.getType();
@@ -308,6 +321,7 @@ public class EmrClient extends AbstractClient{
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
                 }.getType();
@@ -329,6 +343,7 @@ public class EmrClient extends AbstractClient{
     public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
                 }.getType();
@@ -349,6 +364,7 @@ public class EmrClient extends AbstractClient{
     public DescribeYarnApplicationsResponse DescribeYarnApplications(DescribeYarnApplicationsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeYarnApplicationsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeYarnApplicationsResponse>>() {
                 }.getType();
@@ -369,6 +385,7 @@ public class EmrClient extends AbstractClient{
     public InquirePriceRenewEmrResponse InquirePriceRenewEmr(InquirePriceRenewEmrRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquirePriceRenewEmrResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquirePriceRenewEmrResponse>>() {
                 }.getType();
@@ -389,6 +406,7 @@ public class EmrClient extends AbstractClient{
     public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
                 }.getType();
@@ -409,6 +427,7 @@ public class EmrClient extends AbstractClient{
     public InquiryPriceRenewInstanceResponse InquiryPriceRenewInstance(InquiryPriceRenewInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceRenewInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewInstanceResponse>>() {
                 }.getType();
@@ -429,6 +448,7 @@ public class EmrClient extends AbstractClient{
     public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
                 }.getType();
@@ -449,6 +469,7 @@ public class EmrClient extends AbstractClient{
     public InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(InquiryPriceUpdateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<InquiryPriceUpdateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>() {
                 }.getType();
@@ -469,6 +490,7 @@ public class EmrClient extends AbstractClient{
     public ModifyResourcePoolsResponse ModifyResourcePools(ModifyResourcePoolsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourcePoolsResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourcePoolsResponse>>() {
                 }.getType();
@@ -489,6 +511,7 @@ public class EmrClient extends AbstractClient{
     public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceScheduleConfigResponse>>() {
                 }.getType();
@@ -509,6 +532,7 @@ public class EmrClient extends AbstractClient{
     public ModifyResourceSchedulerResponse ModifyResourceScheduler(ModifyResourceSchedulerRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
                 }.getType();
@@ -529,6 +553,7 @@ public class EmrClient extends AbstractClient{
     public RunJobFlowResponse RunJobFlow(RunJobFlowRequest req) throws TencentCloudSDKException{
         JsonResponseModel<RunJobFlowResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<RunJobFlowResponse>>() {
                 }.getType();
@@ -549,6 +574,7 @@ public class EmrClient extends AbstractClient{
     public ScaleOutClusterResponse ScaleOutCluster(ScaleOutClusterRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutClusterResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutClusterResponse>>() {
                 }.getType();
@@ -569,6 +595,7 @@ public class EmrClient extends AbstractClient{
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
                 }.getType();
@@ -589,6 +616,7 @@ public class EmrClient extends AbstractClient{
     public StartStopServiceOrMonitorResponse StartStopServiceOrMonitor(StartStopServiceOrMonitorRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartStopServiceOrMonitorResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<StartStopServiceOrMonitorResponse>>() {
                 }.getType();
@@ -609,6 +637,7 @@ public class EmrClient extends AbstractClient{
     public SyncPodStateResponse SyncPodState(SyncPodStateRequest req) throws TencentCloudSDKException{
         JsonResponseModel<SyncPodStateResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<SyncPodStateResponse>>() {
                 }.getType();
@@ -629,6 +658,7 @@ public class EmrClient extends AbstractClient{
     public TerminateClusterNodesResponse TerminateClusterNodes(TerminateClusterNodesRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateClusterNodesResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateClusterNodesResponse>>() {
                 }.getType();
@@ -649,6 +679,7 @@ public class EmrClient extends AbstractClient{
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateInstanceResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
                 }.getType();
@@ -669,6 +700,7 @@ public class EmrClient extends AbstractClient{
     public TerminateTasksResponse TerminateTasks(TerminateTasksRequest req) throws TencentCloudSDKException{
         JsonResponseModel<TerminateTasksResponse> rsp = null;
         String rspStr = "";
+        req.setSkipSign(false);
         try {
                 Type type = new TypeToken<JsonResponseModel<TerminateTasksResponse>>() {
                 }.getType();
