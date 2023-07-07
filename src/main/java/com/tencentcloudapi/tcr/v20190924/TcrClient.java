@@ -438,6 +438,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *创建自定义账户
+     * @param req CreateServiceAccountRequest
+     * @return CreateServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceAccountResponse CreateServiceAccount(CreateServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateServiceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *为一个镜像版本创建签名
      * @param req CreateSignatureRequest
      * @return CreateSignatureResponse
@@ -957,6 +978,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除服务级账号
+     * @param req DeleteServiceAccountRequest
+     * @return DeleteServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServiceAccountResponse DeleteServiceAccount(DeleteServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteServiceAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1721,6 +1763,27 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *查询服务级账号
+     * @param req DescribeServiceAccountsRequest
+     * @return DescribeServiceAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceAccountsResponse DescribeServiceAccounts(DescribeServiceAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServiceAccountsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServiceAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServiceAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询版本保留执行记录
      * @param req DescribeTagRetentionExecutionRequest
      * @return DescribeTagRetentionExecutionResponse
@@ -2175,6 +2238,27 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifySecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *更新服务级账号
+     * @param req ModifyServiceAccountRequest
+     * @return ModifyServiceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceAccountResponse ModifyServiceAccount(ModifyServiceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyServiceAccountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyServiceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyServiceAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

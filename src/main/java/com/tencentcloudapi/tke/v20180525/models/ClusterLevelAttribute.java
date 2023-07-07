@@ -58,6 +58,13 @@ public class ClusterLevelAttribute extends AbstractModel{
     private Long ConfigMapCount;
 
     /**
+    * ReplicaSets数量
+    */
+    @SerializedName("RSCount")
+    @Expose
+    private Long RSCount;
+
+    /**
     * CRD数量
     */
     @SerializedName("CRDCount")
@@ -160,6 +167,22 @@ public class ClusterLevelAttribute extends AbstractModel{
     }
 
     /**
+     * Get ReplicaSets数量 
+     * @return RSCount ReplicaSets数量
+     */
+    public Long getRSCount() {
+        return this.RSCount;
+    }
+
+    /**
+     * Set ReplicaSets数量
+     * @param RSCount ReplicaSets数量
+     */
+    public void setRSCount(Long RSCount) {
+        this.RSCount = RSCount;
+    }
+
+    /**
      * Get CRD数量 
      * @return CRDCount CRD数量
      */
@@ -234,6 +257,9 @@ public class ClusterLevelAttribute extends AbstractModel{
         if (source.ConfigMapCount != null) {
             this.ConfigMapCount = new Long(source.ConfigMapCount);
         }
+        if (source.RSCount != null) {
+            this.RSCount = new Long(source.RSCount);
+        }
         if (source.CRDCount != null) {
             this.CRDCount = new Long(source.CRDCount);
         }
@@ -255,6 +281,7 @@ public class ClusterLevelAttribute extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "PodCount", this.PodCount);
         this.setParamSimple(map, prefix + "ConfigMapCount", this.ConfigMapCount);
+        this.setParamSimple(map, prefix + "RSCount", this.RSCount);
         this.setParamSimple(map, prefix + "CRDCount", this.CRDCount);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "OtherCount", this.OtherCount);

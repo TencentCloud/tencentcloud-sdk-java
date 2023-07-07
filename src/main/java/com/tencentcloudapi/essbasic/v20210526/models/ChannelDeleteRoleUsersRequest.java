@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelDeleteRoleUsersRequest extends AbstractModel{
 
     /**
-    * 代理信息
+    * 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
     */
     @SerializedName("Agent")
     @Expose
@@ -58,16 +58,16 @@ public class ChannelDeleteRoleUsersRequest extends AbstractModel{
     private String [] OpenIds;
 
     /**
-     * Get 代理信息 
-     * @return Agent 代理信息
+     * Get 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
+     * @return Agent 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理信息
-     * @param Agent 代理信息
+     * Set 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
+     * @param Agent 代理信息此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

@@ -37,18 +37,18 @@ public class User extends AbstractModel{
     private String RealName;
 
     /**
-    * 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-    */
-    @SerializedName("Phone")
-    @Expose
-    private String Phone;
-
-    /**
     * 用户ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
+
+    /**
+    * 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+    */
+    @SerializedName("Phone")
+    @Expose
+    private String Phone;
 
     /**
     * 电子邮件
@@ -143,22 +143,6 @@ public class User extends AbstractModel{
     }
 
     /**
-     * Get 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx" 
-     * @return Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     */
-    public String getPhone() {
-        return this.Phone;
-    }
-
-    /**
-     * Set 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     * @param Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     */
-    public void setPhone(String Phone) {
-        this.Phone = Phone;
-    }
-
-    /**
      * Get 用户ID 
      * @return Id 用户ID
      */
@@ -172,6 +156,22 @@ public class User extends AbstractModel{
      */
     public void setId(Long Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx" 
+     * @return Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     */
+    public String getPhone() {
+        return this.Phone;
+    }
+
+    /**
+     * Set 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @param Phone 手机号码， 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     */
+    public void setPhone(String Phone) {
+        this.Phone = Phone;
     }
 
     /**
@@ -332,11 +332,11 @@ public class User extends AbstractModel{
         if (source.RealName != null) {
             this.RealName = new String(source.RealName);
         }
-        if (source.Phone != null) {
-            this.Phone = new String(source.Phone);
-        }
         if (source.Id != null) {
             this.Id = new Long(source.Id);
+        }
+        if (source.Phone != null) {
+            this.Phone = new String(source.Phone);
         }
         if (source.Email != null) {
             this.Email = new String(source.Email);
@@ -374,8 +374,8 @@ public class User extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "RealName", this.RealName);
-        this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);

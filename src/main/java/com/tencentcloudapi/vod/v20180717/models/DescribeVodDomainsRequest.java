@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeVodDomainsRequest extends AbstractModel{
 
     /**
-    * 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+    * 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
     */
     @SerializedName("Domains")
@@ -52,9 +52,9 @@ public class DescribeVodDomainsRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * Get 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li> 
-     * @return Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * @return Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
      */
     public String [] getDomains() {
@@ -62,9 +62,9 @@ public class DescribeVodDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Set 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * Set 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
-     * @param Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段字段限制如下：
+     * @param Domains 域名列表。当该字段不填时，则默认列出所有域名信息。本字段限制如下：
 <li>域名个数度最大为 20。</li>
      */
     public void setDomains(String [] Domains) {

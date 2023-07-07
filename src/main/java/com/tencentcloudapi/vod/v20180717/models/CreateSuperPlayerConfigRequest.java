@@ -93,7 +93,7 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     private Long ImageSpriteDefinition;
 
     /**
-    * 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+    * 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -314,7 +314,7 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * Get 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -322,7 +322,7 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
 <li>MinEdgeLength：1440，Name：2K；</li>
 <li>MinEdgeLength：2160，Name：4K；</li>
 <li>MinEdgeLength：4320，Name：8K。</li> 
-     * @return ResolutionNames 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * @return ResolutionNames 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -336,7 +336,7 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
-     * Set 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * Set 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>
@@ -344,7 +344,7 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
 <li>MinEdgeLength：1440，Name：2K；</li>
 <li>MinEdgeLength：2160，Name：4K；</li>
 <li>MinEdgeLength：4320，Name：8K。</li>
-     * @param ResolutionNames 播放器对不于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
+     * @param ResolutionNames 播放器对于不同分辨率的子流展示名字，不填或者填空数组则使用默认配置：
 <li>MinEdgeLength：240，Name：流畅；</li>
 <li>MinEdgeLength：480，Name：标清；</li>
 <li>MinEdgeLength：720，Name：高清；</li>

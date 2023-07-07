@@ -162,6 +162,14 @@ public class Subnet extends AbstractModel{
     private String Region;
 
     /**
+    * 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ISPType")
+    @Expose
+    private String ISPType;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -489,6 +497,26 @@ public class Subnet extends AbstractModel{
         this.Region = Region;
     }
 
+    /**
+     * Get 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ISPType 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getISPType() {
+        return this.ISPType;
+    }
+
+    /**
+     * Set 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ISPType 运营商类型。'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setISPType(String ISPType) {
+        this.ISPType = ISPType;
+    }
+
     public Subnet() {
     }
 
@@ -557,6 +585,9 @@ public class Subnet extends AbstractModel{
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.ISPType != null) {
+            this.ISPType = new String(source.ISPType);
+        }
     }
 
 
@@ -583,6 +614,7 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
         this.setParamSimple(map, prefix + "VpcIpv6CidrBlock", this.VpcIpv6CidrBlock);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "ISPType", this.ISPType);
 
     }
 }

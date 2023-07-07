@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelDescribeFlowComponentsRequest extends AbstractModel{
 
     /**
-    * 应用相关信息
+    * 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
     */
     @SerializedName("Agent")
     @Expose
@@ -37,16 +37,16 @@ public class ChannelDescribeFlowComponentsRequest extends AbstractModel{
     private String FlowId;
 
     /**
-     * Get 应用相关信息 
-     * @return Agent 应用相关信息
+     * Get 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填 
+     * @return Agent 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息
-     * @param Agent 应用相关信息
+     * Set 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * @param Agent 应用相关信息。此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;

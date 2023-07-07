@@ -37,7 +37,7 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel{
     private String GroupDescription;
 
     /**
-    * 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+    * 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -83,16 +83,16 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目ID，默认0。可在qcloud控制台项目管理页面查询到。 
-     * @return ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。 
+     * @return ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
+     * @param ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

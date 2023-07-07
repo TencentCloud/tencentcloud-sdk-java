@@ -30,7 +30,7 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     private String BusinessType;
 
     /**
-    * 实例Id。
+    * 业务实例Id，和BusinessType对应。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeSnapshotFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例Id。 
-     * @return InstanceId 实例Id。
+     * Get 业务实例Id，和BusinessType对应。 
+     * @return InstanceId 业务实例Id，和BusinessType对应。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id。
-     * @param InstanceId 实例Id。
+     * Set 业务实例Id，和BusinessType对应。
+     * @param InstanceId 业务实例Id，和BusinessType对应。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

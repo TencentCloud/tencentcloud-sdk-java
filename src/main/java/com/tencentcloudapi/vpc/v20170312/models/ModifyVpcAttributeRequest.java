@@ -58,6 +58,13 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+    */
+    @SerializedName("EnableCdcPublish")
+    @Expose
+    private Boolean EnableCdcPublish;
+
+    /**
      * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
      * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
      */
@@ -137,6 +144,22 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。 
+     * @return EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+     */
+    public Boolean getEnableCdcPublish() {
+        return this.EnableCdcPublish;
+    }
+
+    /**
+     * Set 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+     * @param EnableCdcPublish 发布cdc 子网到云联网的开关。true: 发布, false: 不发布。
+     */
+    public void setEnableCdcPublish(Boolean EnableCdcPublish) {
+        this.EnableCdcPublish = EnableCdcPublish;
+    }
+
     public ModifyVpcAttributeRequest() {
     }
 
@@ -163,6 +186,9 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableCdcPublish != null) {
+            this.EnableCdcPublish = new Boolean(source.EnableCdcPublish);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableCdcPublish", this.EnableCdcPublish);
 
     }
 }

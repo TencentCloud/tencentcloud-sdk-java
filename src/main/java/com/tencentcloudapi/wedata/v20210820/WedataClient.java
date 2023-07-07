@@ -1184,6 +1184,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *批量操作任务列表
+     * @param req DescribeBatchOperateTaskRequest
+     * @return DescribeBatchOperateTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchOperateTaskResponse DescribeBatchOperateTask(DescribeBatchOperateTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBatchOperateTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBatchOperateTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBatchOperateTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取集群命名空间列表
      * @param req DescribeClusterNamespaceListRequest
      * @return DescribeClusterNamespaceListResponse

@@ -39,7 +39,8 @@ vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的
 region - String - ECM地域
 zone - String - 可用区。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。
     */
     @SerializedName("Filters")
     @Expose
@@ -99,7 +100,8 @@ vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的
 region - String - ECM地域
 zone - String - 可用区。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。 
+ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。 
      * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 subnet-id - String - Subnet实例名称。
 subnet-name - String - 子网名称。只支持单值的模糊查询。
@@ -109,7 +111,8 @@ vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的
 region - String - ECM地域
 zone - String - 可用区。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -125,7 +128,8 @@ vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的
 region - String - ECM地域
 zone - String - 可用区。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。
      * @param Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 subnet-id - String - Subnet实例名称。
 subnet-name - String - 子网名称。只支持单值的模糊查询。
@@ -135,7 +139,8 @@ vpc-cidr-block  - String - vpc网段，形如: 192.168.1.0 。只支持单值的
 region - String - ECM地域
 zone - String - 可用区。
 tag-key - String -是否必填：否- 按照标签键进行过滤。
-tag:tag-key - String - 是否必填：否 - 按照标签键值对进行过滤。
+ipv6-cidr-block- String - 是否必填：否 - 按照IPv6 CIDR进行过滤。
+isp-type - String - 是否必填：否 - 按照运营商类型( 如CMCC，CUCC， CTCC)进行过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

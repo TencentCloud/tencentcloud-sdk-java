@@ -37,6 +37,13 @@ public class DescribeResourceUsageResponse extends AbstractModel{
     private Long PodUsage;
 
     /**
+    * ReplicaSet使用量
+    */
+    @SerializedName("RSUsage")
+    @Expose
+    private Long RSUsage;
+
+    /**
     * ConfigMap使用量
     */
     @SerializedName("ConfigMapUsage")
@@ -87,6 +94,22 @@ public class DescribeResourceUsageResponse extends AbstractModel{
      */
     public void setPodUsage(Long PodUsage) {
         this.PodUsage = PodUsage;
+    }
+
+    /**
+     * Get ReplicaSet使用量 
+     * @return RSUsage ReplicaSet使用量
+     */
+    public Long getRSUsage() {
+        return this.RSUsage;
+    }
+
+    /**
+     * Set ReplicaSet使用量
+     * @param RSUsage ReplicaSet使用量
+     */
+    public void setRSUsage(Long RSUsage) {
+        this.RSUsage = RSUsage;
     }
 
     /**
@@ -151,6 +174,9 @@ public class DescribeResourceUsageResponse extends AbstractModel{
         if (source.PodUsage != null) {
             this.PodUsage = new Long(source.PodUsage);
         }
+        if (source.RSUsage != null) {
+            this.RSUsage = new Long(source.RSUsage);
+        }
         if (source.ConfigMapUsage != null) {
             this.ConfigMapUsage = new Long(source.ConfigMapUsage);
         }
@@ -169,6 +195,7 @@ public class DescribeResourceUsageResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CRDUsage.", this.CRDUsage);
         this.setParamSimple(map, prefix + "PodUsage", this.PodUsage);
+        this.setParamSimple(map, prefix + "RSUsage", this.RSUsage);
         this.setParamSimple(map, prefix + "ConfigMapUsage", this.ConfigMapUsage);
         this.setParamObj(map, prefix + "OtherUsage.", this.OtherUsage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

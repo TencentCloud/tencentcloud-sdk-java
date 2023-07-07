@@ -84,7 +84,7 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     private Long ImageSpriteDefinition;
 
     /**
-    * 播放器对不于不同分辨率的子流展示名字。
+    * 播放器对于不同分辨率的子流展示名字。
     */
     @SerializedName("ResolutionNames")
     @Expose
@@ -263,16 +263,16 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get 播放器对不于不同分辨率的子流展示名字。 
-     * @return ResolutionNames 播放器对不于不同分辨率的子流展示名字。
+     * Get 播放器对于不同分辨率的子流展示名字。 
+     * @return ResolutionNames 播放器对于不同分辨率的子流展示名字。
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set 播放器对不于不同分辨率的子流展示名字。
-     * @param ResolutionNames 播放器对不于不同分辨率的子流展示名字。
+     * Set 播放器对于不同分辨率的子流展示名字。
+     * @param ResolutionNames 播放器对于不同分辨率的子流展示名字。
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;

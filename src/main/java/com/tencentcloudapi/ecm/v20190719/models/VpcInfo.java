@@ -152,6 +152,22 @@ public class VpcInfo extends AbstractModel{
     private Long InstanceCount;
 
     /**
+    * ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6ISP")
+    @Expose
+    private String Ipv6ISP;
+
+    /**
+    * 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6CidrBlockSet")
+    @Expose
+    private ISPIPv6CidrBlock [] Ipv6CidrBlockSet;
+
+    /**
      * Get VPC名称。 
      * @return VpcName VPC名称。
      */
@@ -451,6 +467,46 @@ public class VpcInfo extends AbstractModel{
         this.InstanceCount = InstanceCount;
     }
 
+    /**
+     * Get ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6ISP ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpv6ISP() {
+        return this.Ipv6ISP;
+    }
+
+    /**
+     * Set ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6ISP ipv6运营商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6ISP(String Ipv6ISP) {
+        this.Ipv6ISP = Ipv6ISP;
+    }
+
+    /**
+     * Get 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6CidrBlockSet 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ISPIPv6CidrBlock [] getIpv6CidrBlockSet() {
+        return this.Ipv6CidrBlockSet;
+    }
+
+    /**
+     * Set 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6CidrBlockSet 多运营商IPv6 Cidr Block。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6CidrBlockSet(ISPIPv6CidrBlock [] Ipv6CidrBlockSet) {
+        this.Ipv6CidrBlockSet = Ipv6CidrBlockSet;
+    }
+
     public VpcInfo() {
     }
 
@@ -522,6 +578,15 @@ public class VpcInfo extends AbstractModel{
         if (source.InstanceCount != null) {
             this.InstanceCount = new Long(source.InstanceCount);
         }
+        if (source.Ipv6ISP != null) {
+            this.Ipv6ISP = new String(source.Ipv6ISP);
+        }
+        if (source.Ipv6CidrBlockSet != null) {
+            this.Ipv6CidrBlockSet = new ISPIPv6CidrBlock[source.Ipv6CidrBlockSet.length];
+            for (int i = 0; i < source.Ipv6CidrBlockSet.length; i++) {
+                this.Ipv6CidrBlockSet[i] = new ISPIPv6CidrBlock(source.Ipv6CidrBlockSet[i]);
+            }
+        }
     }
 
 
@@ -547,6 +612,8 @@ public class VpcInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "SubnetCount", this.SubnetCount);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
+        this.setParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
+        this.setParamArrayObj(map, prefix + "Ipv6CidrBlockSet.", this.Ipv6CidrBlockSet);
 
     }
 }

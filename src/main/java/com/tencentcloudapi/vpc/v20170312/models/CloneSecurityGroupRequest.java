@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CloneSecurityGroupRequest extends AbstractModel{
 
     /**
-    * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+    * 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -44,7 +44,7 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     private String GroupDescription;
 
     /**
-    * 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+    * 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -58,16 +58,16 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     private String RemoteRegion;
 
     /**
-     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
-     * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。 
+     * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
+     * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
@@ -106,16 +106,16 @@ public class CloneSecurityGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 项目ID，默认0。可在qcloud控制台项目管理页面查询到。 
-     * @return ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。 
+     * @return ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目ID，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
+     * @param ProjectId 项目ID，默认0。可在<a href="https://console.cloud.tencent.com/project">qcloud控制台项目管理页面</a>查询到。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

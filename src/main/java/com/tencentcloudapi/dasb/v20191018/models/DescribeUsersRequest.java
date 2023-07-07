@@ -66,6 +66,13 @@ public class DescribeUsersRequest extends AbstractModel{
     private String Phone;
 
     /**
+    * 邮箱，精确查询
+    */
+    @SerializedName("Email")
+    @Expose
+    private String Email;
+
+    /**
     * 查询具有指定资产ID访问权限的用户
     */
     @SerializedName("AuthorizedDeviceIdSet")
@@ -187,6 +194,22 @@ public class DescribeUsersRequest extends AbstractModel{
     }
 
     /**
+     * Get 邮箱，精确查询 
+     * @return Email 邮箱，精确查询
+     */
+    public String getEmail() {
+        return this.Email;
+    }
+
+    /**
+     * Set 邮箱，精确查询
+     * @param Email 邮箱，精确查询
+     */
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    /**
      * Get 查询具有指定资产ID访问权限的用户 
      * @return AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      */
@@ -263,6 +286,9 @@ public class DescribeUsersRequest extends AbstractModel{
         if (source.Phone != null) {
             this.Phone = new String(source.Phone);
         }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
         if (source.AuthorizedDeviceIdSet != null) {
             this.AuthorizedDeviceIdSet = new Long[source.AuthorizedDeviceIdSet.length];
             for (int i = 0; i < source.AuthorizedDeviceIdSet.length; i++) {
@@ -291,6 +317,7 @@ public class DescribeUsersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
+        this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);

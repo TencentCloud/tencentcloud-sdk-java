@@ -37,21 +37,21 @@ public class DescribeUsedIpAddressRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * 查询是否占用的ip列表
+    * 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
     */
     @SerializedName("IpAddresses")
     @Expose
     private String [] IpAddresses;
 
     /**
-    * 偏移量。
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求对象个数。
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -90,48 +90,48 @@ public class DescribeUsedIpAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询是否占用的ip列表 
-     * @return IpAddresses 查询是否占用的ip列表
+     * Get 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。 
+     * @return IpAddresses 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
      */
     public String [] getIpAddresses() {
         return this.IpAddresses;
     }
 
     /**
-     * Set 查询是否占用的ip列表
-     * @param IpAddresses 查询是否占用的ip列表
+     * Set 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
+     * @param IpAddresses 查询是否占用的ip列表，ip需要在vpc或子网内。最多允许一次查询100个IP。
      */
     public void setIpAddresses(String [] IpAddresses) {
         this.IpAddresses = IpAddresses;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求对象个数。 
-     * @return Limit 请求对象个数。
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求对象个数。
-     * @param Limit 请求对象个数。
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

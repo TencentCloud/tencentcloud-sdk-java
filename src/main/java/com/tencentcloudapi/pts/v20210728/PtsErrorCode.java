@@ -3,6 +3,9 @@ public enum PtsErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 当前请求未经CAM授权。
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
@@ -46,7 +49,10 @@ public enum PtsErrorCode {
      LIMITEXCEEDED("LimitExceeded"),
      
     // 资源不存在。
-     RESOURCENOTFOUND("ResourceNotFound");
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
      
     private String value;
     private PtsErrorCode (String value){

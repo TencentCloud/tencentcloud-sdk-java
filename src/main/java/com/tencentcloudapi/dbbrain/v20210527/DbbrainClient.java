@@ -207,6 +207,27 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *即时创建redis实例大key分析任务，限制正在运行的即时分析任务数量默认为5。
+     * @param req CreateRedisBigKeyAnalysisTaskRequest
+     * @return CreateRedisBigKeyAnalysisTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRedisBigKeyAnalysisTaskResponse CreateRedisBigKeyAnalysisTask(CreateRedisBigKeyAnalysisTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRedisBigKeyAnalysisTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRedisBigKeyAnalysisTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口用于创建定期生成健康报告并邮件发送的配置，将健康报告的定期生成时间作为参数传入（周一至周日），用于设置健康报告的定期生成时间，同时保存相应的定期邮件发送的配置。
      * @param req CreateSchedulerMailProfileRequest
      * @return CreateSchedulerMailProfileResponse
