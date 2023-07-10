@@ -59,6 +59,13 @@ public class GetRoomsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long [] Status;
+
+    /**
      * Get 低代码平台的SdkAppId。
  
      * @return SdkAppId 低代码平台的SdkAppId。
@@ -142,6 +149,22 @@ public class GetRoomsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期 
+     * @return Status 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+     */
+    public Long [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+     * @param Status 课堂状态。默认展示所有课堂，0为未开始，1为正在上课，2为已结束，3为已过期
+     */
+    public void setStatus(Long [] Status) {
+        this.Status = Status;
+    }
+
     public GetRoomsRequest() {
     }
 
@@ -165,6 +188,12 @@ public class GetRoomsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
     }
 
 
@@ -177,6 +206,7 @@ public class GetRoomsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
 
     }
 }

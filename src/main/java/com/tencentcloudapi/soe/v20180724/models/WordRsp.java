@@ -87,6 +87,14 @@ public class WordRsp extends AbstractModel{
     private Long KeywordTag;
 
     /**
+    * 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tone")
+    @Expose
+    private Tone Tone;
+
+    /**
      * Get 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。 
      * @return MemBeginTime 当前单词语音起始时间点，单位为ms，该字段段落模式下无意义。
      */
@@ -234,6 +242,26 @@ public class WordRsp extends AbstractModel{
         this.KeywordTag = KeywordTag;
     }
 
+    /**
+     * Get 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tone 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tone getTone() {
+        return this.Tone;
+    }
+
+    /**
+     * Set 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tone 声调检测结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTone(Tone Tone) {
+        this.Tone = Tone;
+    }
+
     public WordRsp() {
     }
 
@@ -272,6 +300,9 @@ public class WordRsp extends AbstractModel{
         if (source.KeywordTag != null) {
             this.KeywordTag = new Long(source.KeywordTag);
         }
+        if (source.Tone != null) {
+            this.Tone = new Tone(source.Tone);
+        }
     }
 
 
@@ -288,6 +319,7 @@ public class WordRsp extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PhoneInfos.", this.PhoneInfos);
         this.setParamSimple(map, prefix + "ReferenceWord", this.ReferenceWord);
         this.setParamSimple(map, prefix + "KeywordTag", this.KeywordTag);
+        this.setParamObj(map, prefix + "Tone.", this.Tone);
 
     }
 }

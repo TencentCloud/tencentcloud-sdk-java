@@ -141,6 +141,13 @@ SPAM：封禁
     private Long ProjectId;
 
     /**
+    * 标签过滤
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItemFilter [] Tags;
+
+    /**
      * Get 根据域名分组类型获取域名。可取值为 ALL，MINE，SHARE，RECENT。
 ALL：全部
 MINE：我的域名
@@ -432,6 +439,22 @@ SPAM：封禁
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 标签过滤 
+     * @return Tags 标签过滤
+     */
+    public TagItemFilter [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签过滤
+     * @param Tags 标签过滤
+     */
+    public void setTags(TagItemFilter [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeDomainFilterListRequest() {
     }
 
@@ -494,6 +517,12 @@ SPAM：封禁
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagItemFilter[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItemFilter(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -516,6 +545,7 @@ SPAM：封禁
         this.setParamSimple(map, prefix + "RecordCountBegin", this.RecordCountBegin);
         this.setParamSimple(map, prefix + "RecordCountEnd", this.RecordCountEnd);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -31,7 +31,7 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
     private Long CorpId;
 
     /**
-    * 分页数量，默认为 100，最大为 1000
+    * 分页数量，默认为 20，最大为 1000
     */
     @SerializedName("PageSize")
     @Expose
@@ -51,6 +51,20 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
     @SerializedName("AfterLogId")
     @Expose
     private Long AfterLogId;
+
+    /**
+    * 开始时间 >= StartTime
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 结束时间 < EndTime
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
 
     /**
      * Get 企业ID, 默认为当前企业
@@ -73,16 +87,16 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 分页数量，默认为 100，最大为 1000 
-     * @return PageSize 分页数量，默认为 100，最大为 1000
+     * Get 分页数量，默认为 20，最大为 1000 
+     * @return PageSize 分页数量，默认为 20，最大为 1000
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 分页数量，默认为 100，最大为 1000
-     * @param PageSize 分页数量，默认为 100，最大为 1000
+     * Set 分页数量，默认为 20，最大为 1000
+     * @param PageSize 分页数量，默认为 20，最大为 1000
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -124,6 +138,38 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
         this.AfterLogId = AfterLogId;
     }
 
+    /**
+     * Get 开始时间 >= StartTime 
+     * @return StartTime 开始时间 >= StartTime
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间 >= StartTime
+     * @param StartTime 开始时间 >= StartTime
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 结束时间 < EndTime 
+     * @return EndTime 结束时间 < EndTime
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 结束时间 < EndTime
+     * @param EndTime 结束时间 < EndTime
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public DescribeRawScanLogsRequest() {
     }
 
@@ -144,6 +190,12 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
         if (source.AfterLogId != null) {
             this.AfterLogId = new Long(source.AfterLogId);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -155,6 +207,8 @@ public class DescribeRawScanLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "AfterLogId", this.AfterLogId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

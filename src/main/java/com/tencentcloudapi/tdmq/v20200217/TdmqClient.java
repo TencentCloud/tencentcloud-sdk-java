@@ -815,6 +815,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除RabbitMQ专享版实例
+     * @param req DeleteRabbitMQVipInstanceRequest
+     * @return DeleteRabbitMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(DeleteRabbitMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRabbitMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRabbitMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRabbitMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除RabbitMQ的vhost
      * @param req DeleteRabbitMQVirtualHostRequest
      * @return DeleteRabbitMQVirtualHostResponse

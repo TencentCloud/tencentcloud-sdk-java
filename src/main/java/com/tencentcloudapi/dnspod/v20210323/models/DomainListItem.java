@@ -177,6 +177,14 @@ public class DomainListItem extends AbstractModel{
     private String Owner;
 
     /**
+    * 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagItem [] TagList;
+
+    /**
      * Get 系统分配给域名的唯一标识 
      * @return DomainId 系统分配给域名的唯一标识
      */
@@ -528,6 +536,26 @@ public class DomainListItem extends AbstractModel{
         this.Owner = Owner;
     }
 
+    /**
+     * Get 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagItem [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(TagItem [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DomainListItem() {
     }
 
@@ -605,6 +633,12 @@ public class DomainListItem extends AbstractModel{
         if (source.Owner != null) {
             this.Owner = new String(source.Owner);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagItem[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagItem(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -634,6 +668,7 @@ public class DomainListItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

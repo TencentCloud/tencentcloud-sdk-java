@@ -58,6 +58,13 @@ public class DescribeDomainListRequest extends AbstractModel{
     private String Keyword;
 
     /**
+    * 标签过滤
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItemFilter [] Tags;
+
+    /**
      * Get 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。 
      * @return Type 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT，FREE。
      */
@@ -137,6 +144,22 @@ public class DescribeDomainListRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    /**
+     * Get 标签过滤 
+     * @return Tags 标签过滤
+     */
+    public TagItemFilter [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签过滤
+     * @param Tags 标签过滤
+     */
+    public void setTags(TagItemFilter [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeDomainListRequest() {
     }
 
@@ -160,6 +183,12 @@ public class DescribeDomainListRequest extends AbstractModel{
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagItemFilter[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItemFilter(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class DescribeDomainListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

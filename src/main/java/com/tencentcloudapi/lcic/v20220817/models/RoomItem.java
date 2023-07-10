@@ -129,6 +129,22 @@ public class RoomItem extends AbstractModel{
     private Long EnableDirectControl;
 
     /**
+    * 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InteractionMode")
+    @Expose
+    private Long InteractionMode;
+
+    /**
+    * 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VideoOrientation")
+    @Expose
+    private Long VideoOrientation;
+
+    /**
      * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 名称
@@ -396,6 +412,46 @@ public class RoomItem extends AbstractModel{
         this.EnableDirectControl = EnableDirectControl;
     }
 
+    /**
+     * Get 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInteractionMode() {
+        return this.InteractionMode;
+    }
+
+    /**
+     * Set 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InteractionMode 开启专注模式。 0 收看全部角色音视频(默认) 1 只看老师和助教
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInteractionMode(Long InteractionMode) {
+        this.InteractionMode = InteractionMode;
+    }
+
+    /**
+     * Get 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVideoOrientation() {
+        return this.VideoOrientation;
+    }
+
+    /**
+     * Set 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VideoOrientation 横竖屏。0：横屏开播（默认值）; 1：竖屏开播，当前仅支持移动端的纯视频类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVideoOrientation(Long VideoOrientation) {
+        this.VideoOrientation = VideoOrientation;
+    }
+
     public RoomItem() {
     }
 
@@ -443,6 +499,12 @@ public class RoomItem extends AbstractModel{
         if (source.EnableDirectControl != null) {
             this.EnableDirectControl = new Long(source.EnableDirectControl);
         }
+        if (source.InteractionMode != null) {
+            this.InteractionMode = new Long(source.InteractionMode);
+        }
+        if (source.VideoOrientation != null) {
+            this.VideoOrientation = new Long(source.VideoOrientation);
+        }
     }
 
 
@@ -463,6 +525,8 @@ public class RoomItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
         this.setParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
+        this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
+        this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
 
     }
 }

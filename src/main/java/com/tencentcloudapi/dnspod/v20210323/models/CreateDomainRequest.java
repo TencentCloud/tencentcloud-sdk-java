@@ -44,6 +44,20 @@ public class CreateDomainRequest extends AbstractModel{
     private String IsMark;
 
     /**
+    * 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+    */
+    @SerializedName("TransferSubDomain")
+    @Expose
+    private Boolean TransferSubDomain;
+
+    /**
+    * 域名绑定的标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -91,6 +105,38 @@ public class CreateDomainRequest extends AbstractModel{
         this.IsMark = IsMark;
     }
 
+    /**
+     * Get 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true 
+     * @return TransferSubDomain 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+     */
+    public Boolean getTransferSubDomain() {
+        return this.TransferSubDomain;
+    }
+
+    /**
+     * Set 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+     * @param TransferSubDomain 添加子域名时，是否迁移相关父域名的解析记录。不传默认为 true
+     */
+    public void setTransferSubDomain(Boolean TransferSubDomain) {
+        this.TransferSubDomain = TransferSubDomain;
+    }
+
+    /**
+     * Get 域名绑定的标签 
+     * @return Tags 域名绑定的标签
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 域名绑定的标签
+     * @param Tags 域名绑定的标签
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDomainRequest() {
     }
 
@@ -108,6 +154,15 @@ public class CreateDomainRequest extends AbstractModel{
         if (source.IsMark != null) {
             this.IsMark = new String(source.IsMark);
         }
+        if (source.TransferSubDomain != null) {
+            this.TransferSubDomain = new Boolean(source.TransferSubDomain);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagItem[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItem(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class CreateDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "IsMark", this.IsMark);
+        this.setParamSimple(map, prefix + "TransferSubDomain", this.TransferSubDomain);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

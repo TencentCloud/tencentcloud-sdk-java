@@ -249,6 +249,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建数据加工任务。
+     * @param req CreateDataTransformRequest
+     * @return CreateDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataTransformResponse CreateDataTransform(CreateDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDataTransform");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -514,6 +535,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于删除数据加工任务
+     * @param req DeleteDataTransformRequest
+     * @return DeleteDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataTransformResponse DeleteDataTransform(DeleteDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDataTransform");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -850,6 +892,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCosRechargesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCosRecharges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于获取数据加工任务列表基本信息
+     * @param req DescribeDataTransformInfoRequest
+     * @return DescribeDataTransformInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataTransformInfoResponse DescribeDataTransformInfo(DescribeDataTransformInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataTransformInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDataTransformInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1291,6 +1354,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyCosRechargeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyCosRecharge");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于修改数据加工任务
+     * @param req ModifyDataTransformRequest
+     * @return ModifyDataTransformResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataTransformResponse ModifyDataTransform(ModifyDataTransformRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataTransformResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataTransformResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataTransform");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -243,6 +243,14 @@ public class DomainInfo extends AbstractModel{
     private Boolean IsSubDomain;
 
     /**
+    * 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagItem [] TagList;
+
+    /**
      * Get 域名ID 
      * @return DomainId 域名ID
      */
@@ -762,6 +770,26 @@ public class DomainInfo extends AbstractModel{
         this.IsSubDomain = IsSubDomain;
     }
 
+    /**
+     * Get 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagItem [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 域名关联的标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(TagItem [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DomainInfo() {
     }
 
@@ -866,6 +894,12 @@ public class DomainInfo extends AbstractModel{
         if (source.IsSubDomain != null) {
             this.IsSubDomain = new Boolean(source.IsSubDomain);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagItem[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagItem(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -903,6 +937,7 @@ public class DomainInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VipAutoRenew", this.VipAutoRenew);
         this.setParamSimple(map, prefix + "VipResourceId", this.VipResourceId);
         this.setParamSimple(map, prefix + "IsSubDomain", this.IsSubDomain);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

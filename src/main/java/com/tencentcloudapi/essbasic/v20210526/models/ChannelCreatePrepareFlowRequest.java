@@ -51,14 +51,14 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     private CommonFlowApprover [] FlowApproverList;
 
     /**
-    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+    * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 合同流程配置信息
+    * 合同流程配置信息，用于配置发起合同时定制化
     */
     @SerializedName("FlowOption")
     @Expose
@@ -157,32 +157,32 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填 
-     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+     * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填 
+     * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
-     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+     * Set 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
+     * @param Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 合同流程配置信息 
-     * @return FlowOption 合同流程配置信息
+     * Get 合同流程配置信息，用于配置发起合同时定制化 
+     * @return FlowOption 合同流程配置信息，用于配置发起合同时定制化
      */
     public CreateFlowOption getFlowOption() {
         return this.FlowOption;
     }
 
     /**
-     * Set 合同流程配置信息
-     * @param FlowOption 合同流程配置信息
+     * Set 合同流程配置信息，用于配置发起合同时定制化
+     * @param FlowOption 合同流程配置信息，用于配置发起合同时定制化
      */
     public void setFlowOption(CreateFlowOption FlowOption) {
         this.FlowOption = FlowOption;
@@ -207,7 +207,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Get 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL 
      * @return NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @deprecated
      */
+    @Deprecated
     public Boolean getNeedPreview() {
         return this.NeedPreview;
     }
@@ -215,7 +217,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     /**
      * Set 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
+     * @deprecated
      */
+    @Deprecated
     public void setNeedPreview(Boolean NeedPreview) {
         this.NeedPreview = NeedPreview;
     }
