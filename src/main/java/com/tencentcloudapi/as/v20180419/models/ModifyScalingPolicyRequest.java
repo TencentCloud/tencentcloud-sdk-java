@@ -93,8 +93,8 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
     private Boolean DisableScaleIn;
 
     /**
-    * 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+    * 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
     */
     @SerializedName("NotificationUserGroupIds")
     @Expose
@@ -261,20 +261,20 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。 
-     * @return NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+     * Get 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。 
+     * @return NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public String [] getNotificationUserGroupIds() {
         return this.NotificationUserGroupIds;
     }
 
     /**
-     * Set 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
-     * @param NotificationUserGroupIds 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
-如果需要清空通知用户组，需要在列表中传入特定字符串 "NULL"。
+     * Set 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
+     * @param NotificationUserGroupIds 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+通知组ID，即为用户组ID集合。
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
         this.NotificationUserGroupIds = NotificationUserGroupIds;

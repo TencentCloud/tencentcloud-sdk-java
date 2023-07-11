@@ -79,7 +79,7 @@ public class CreateProxyRequest extends AbstractModel{
     private String OpenConnectionPool;
 
     /**
-    * 连接池阀值：单位（秒）
+    * 连接池阈值：单位（秒）
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
@@ -235,16 +235,16 @@ public class CreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get 连接池阀值：单位（秒） 
-     * @return ConnectionPoolTimeOut 连接池阀值：单位（秒）
+     * Get 连接池阈值：单位（秒） 
+     * @return ConnectionPoolTimeOut 连接池阈值：单位（秒）
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set 连接池阀值：单位（秒）
-     * @param ConnectionPoolTimeOut 连接池阀值：单位（秒）
+     * Set 连接池阈值：单位（秒）
+     * @param ConnectionPoolTimeOut 连接池阈值：单位（秒）
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;

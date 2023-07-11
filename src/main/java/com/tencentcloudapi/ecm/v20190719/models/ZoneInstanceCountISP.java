@@ -30,7 +30,7 @@ public class ZoneInstanceCountISP extends AbstractModel{
     private String Zone;
 
     /**
-    * 在当前可用区欲创建的实例数目。
+    * 在当前可用区创建的实例数目。
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -92,16 +92,16 @@ CMCC：中国移动
     }
 
     /**
-     * Get 在当前可用区欲创建的实例数目。 
-     * @return InstanceCount 在当前可用区欲创建的实例数目。
+     * Get 在当前可用区创建的实例数目。 
+     * @return InstanceCount 在当前可用区创建的实例数目。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 在当前可用区欲创建的实例数目。
-     * @param InstanceCount 在当前可用区欲创建的实例数目。
+     * Set 在当前可用区创建的实例数目。
+     * @param InstanceCount 在当前可用区创建的实例数目。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;

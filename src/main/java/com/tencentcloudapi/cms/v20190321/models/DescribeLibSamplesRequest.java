@@ -58,6 +58,13 @@ public class DescribeLibSamplesRequest extends AbstractModel{
     private Long [] EvilTypeList;
 
     /**
+    * 样本词ID列表过滤
+    */
+    @SerializedName("SampleIDs")
+    @Expose
+    private String [] SampleIDs;
+
+    /**
      * Get 单页条数，最大为100条 
      * @return Limit 单页条数，最大为100条
      */
@@ -137,6 +144,22 @@ public class DescribeLibSamplesRequest extends AbstractModel{
         this.EvilTypeList = EvilTypeList;
     }
 
+    /**
+     * Get 样本词ID列表过滤 
+     * @return SampleIDs 样本词ID列表过滤
+     */
+    public String [] getSampleIDs() {
+        return this.SampleIDs;
+    }
+
+    /**
+     * Set 样本词ID列表过滤
+     * @param SampleIDs 样本词ID列表过滤
+     */
+    public void setSampleIDs(String [] SampleIDs) {
+        this.SampleIDs = SampleIDs;
+    }
+
     public DescribeLibSamplesRequest() {
     }
 
@@ -163,6 +186,12 @@ public class DescribeLibSamplesRequest extends AbstractModel{
                 this.EvilTypeList[i] = new Long(source.EvilTypeList[i]);
             }
         }
+        if (source.SampleIDs != null) {
+            this.SampleIDs = new String[source.SampleIDs.length];
+            for (int i = 0; i < source.SampleIDs.length; i++) {
+                this.SampleIDs[i] = new String(source.SampleIDs[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class DescribeLibSamplesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LibID", this.LibID);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArraySimple(map, prefix + "EvilTypeList.", this.EvilTypeList);
+        this.setParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
 
     }
 }

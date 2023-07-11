@@ -444,6 +444,9 @@ public enum EcmErrorCode {
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
+    // 网段资源不足。
+     RESOURCEINSUFFICIENT_CIDRBLOCK("ResourceInsufficient.CidrBlock"),
+     
     // IP资源不足。
      RESOURCEINSUFFICIENT_IPQUOTANOTENOUGH("ResourceInsufficient.IPQuotaNotEnough"),
      

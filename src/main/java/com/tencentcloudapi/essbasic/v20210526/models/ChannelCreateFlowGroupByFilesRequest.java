@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChannelCreateFlowGroupByFilesRequest extends AbstractModel{
 
     /**
-    * 每个子合同的发起所需的信息，数量限制2-100
+    * 每个子合同的发起所需的信息，数量限制2-50
     */
     @SerializedName("FlowFileInfos")
     @Expose
@@ -61,16 +61,16 @@ MobileCheck：手机号验证
     private UserInfo Operator;
 
     /**
-     * Get 每个子合同的发起所需的信息，数量限制2-100 
-     * @return FlowFileInfos 每个子合同的发起所需的信息，数量限制2-100
+     * Get 每个子合同的发起所需的信息，数量限制2-50 
+     * @return FlowFileInfos 每个子合同的发起所需的信息，数量限制2-50
      */
     public FlowFileInfo [] getFlowFileInfos() {
         return this.FlowFileInfos;
     }
 
     /**
-     * Set 每个子合同的发起所需的信息，数量限制2-100
-     * @param FlowFileInfos 每个子合同的发起所需的信息，数量限制2-100
+     * Set 每个子合同的发起所需的信息，数量限制2-50
+     * @param FlowFileInfos 每个子合同的发起所需的信息，数量限制2-50
      */
     public void setFlowFileInfos(FlowFileInfo [] FlowFileInfos) {
         this.FlowFileInfos = FlowFileInfos;

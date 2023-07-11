@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeFlowInfoRequest extends AbstractModel{
 
     /**
-    * 需要查询的流程ID列表，限制最大100个
-    */
-    @SerializedName("FlowIds")
-    @Expose
-    private String [] FlowIds;
-
-    /**
     * 调用方用户信息，userId 必填
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
+
+    /**
+    * 需要查询的流程ID列表，限制最大100个
+    */
+    @SerializedName("FlowIds")
+    @Expose
+    private String [] FlowIds;
 
     /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
@@ -44,20 +44,11 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-     * Get 需要查询的流程ID列表，限制最大100个 
-     * @return FlowIds 需要查询的流程ID列表，限制最大100个
-     */
-    public String [] getFlowIds() {
-        return this.FlowIds;
-    }
-
-    /**
-     * Set 需要查询的流程ID列表，限制最大100个
-     * @param FlowIds 需要查询的流程ID列表，限制最大100个
-     */
-    public void setFlowIds(String [] FlowIds) {
-        this.FlowIds = FlowIds;
-    }
+    * 合同组ID
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
 
     /**
      * Get 调用方用户信息，userId 必填 
@@ -76,6 +67,22 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
+     * Get 需要查询的流程ID列表，限制最大100个 
+     * @return FlowIds 需要查询的流程ID列表，限制最大100个
+     */
+    public String [] getFlowIds() {
+        return this.FlowIds;
+    }
+
+    /**
+     * Set 需要查询的流程ID列表，限制最大100个
+     * @param FlowIds 需要查询的流程ID列表，限制最大100个
+     */
+    public void setFlowIds(String [] FlowIds) {
+        this.FlowIds = FlowIds;
+    }
+
+    /**
      * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
      * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
@@ -91,6 +98,22 @@ public class DescribeFlowInfoRequest extends AbstractModel{
         this.Agent = Agent;
     }
 
+    /**
+     * Get 合同组ID 
+     * @return FlowGroupId 合同组ID
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组ID
+     * @param FlowGroupId 合同组ID
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
     public DescribeFlowInfoRequest() {
     }
 
@@ -99,17 +122,20 @@ public class DescribeFlowInfoRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeFlowInfoRequest(DescribeFlowInfoRequest source) {
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
         if (source.FlowIds != null) {
             this.FlowIds = new String[source.FlowIds.length];
             for (int i = 0; i < source.FlowIds.length; i++) {
                 this.FlowIds[i] = new String(source.FlowIds[i]);
             }
         }
-        if (source.Operator != null) {
-            this.Operator = new UserInfo(source.Operator);
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
         }
     }
 
@@ -118,9 +144,10 @@ public class DescribeFlowInfoRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
 
     }
 }

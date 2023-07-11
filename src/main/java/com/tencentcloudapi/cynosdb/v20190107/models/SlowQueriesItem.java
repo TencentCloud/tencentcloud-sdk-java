@@ -86,7 +86,7 @@ public class SlowQueriesItem extends AbstractModel{
     private Long RowsSent;
 
     /**
-    * sql模版
+    * sql模板
     */
     @SerializedName("SqlTemplate")
     @Expose
@@ -244,16 +244,16 @@ public class SlowQueriesItem extends AbstractModel{
     }
 
     /**
-     * Get sql模版 
-     * @return SqlTemplate sql模版
+     * Get sql模板 
+     * @return SqlTemplate sql模板
      */
     public String getSqlTemplate() {
         return this.SqlTemplate;
     }
 
     /**
-     * Set sql模版
-     * @param SqlTemplate sql模版
+     * Set sql模板
+     * @param SqlTemplate sql模板
      */
     public void setSqlTemplate(String SqlTemplate) {
         this.SqlTemplate = SqlTemplate;

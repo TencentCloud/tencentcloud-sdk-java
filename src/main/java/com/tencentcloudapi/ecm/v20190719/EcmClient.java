@@ -60,6 +60,27 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *本接口用于给IPv6地址分配公网带宽
+     * @param req AllocateIpv6AddressesBandwidthRequest
+     * @return AllocateIpv6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateIpv6AddressesBandwidthResponse AllocateIpv6AddressesBandwidth(AllocateIpv6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AllocateIpv6AddressesBandwidthResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AllocateIpv6AddressesBandwidthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AllocateIpv6AddressesBandwidth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（AssignIpv6Addresses）用于弹性网卡申请IPv6地址。
      * @param req AssignIpv6AddressesRequest
      * @return AssignIpv6AddressesResponse
@@ -73,6 +94,77 @@ public class EcmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<AssignIpv6AddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "AssignIpv6Addresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（AssignIpv6CidrBlock）用于分配IPv6网段。
+
+使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+     * @param req AssignIpv6CidrBlockRequest
+     * @return AssignIpv6CidrBlockResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignIpv6CidrBlockResponse AssignIpv6CidrBlock(AssignIpv6CidrBlockRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignIpv6CidrBlockResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignIpv6CidrBlockResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssignIpv6CidrBlock");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（AssignIpv6CidrBlocks）用于分配IPv6网段。
+
+使用本接口前，您需要已有VPC实例，如果没有可通过接口CreateVpc创建。
+每个VPC 可以同时支持运营商网络('CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调)。本接口可以同时申请不同类型的IPv6网段
+     * @param req AssignIpv6CidrBlocksRequest
+     * @return AssignIpv6CidrBlocksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignIpv6CidrBlocksResponse AssignIpv6CidrBlocks(AssignIpv6CidrBlocksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignIpv6CidrBlocksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignIpv6CidrBlocksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssignIpv6CidrBlocks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（AssignIpv6SubnetCidrBlock）用于分配IPv6子网段。
+
+给子网分配 IPv6 网段，要求子网所属 VPC 已获得 IPv6 网段。如果尚未分配，请先通过接口 AssignIpv6CidrBlock 给子网所属 VPC 分配一个 IPv6 网段。否则无法分配 IPv6 子网段。
+每个子网只能分配一个IPv6网段。
+     * @param req AssignIpv6SubnetCidrBlockRequest
+     * @return AssignIpv6SubnetCidrBlockResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignIpv6SubnetCidrBlockResponse AssignIpv6SubnetCidrBlock(AssignIpv6SubnetCidrBlockRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignIpv6SubnetCidrBlockResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignIpv6SubnetCidrBlockResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssignIpv6SubnetCidrBlock");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1414,6 +1506,27 @@ public class EcmClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeRegionIpv6Addresses）用于查询ECM地域之下的IPV6地址信息。
+     * @param req DescribeRegionIpv6AddressesRequest
+     * @return DescribeRegionIpv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionIpv6AddressesResponse DescribeRegionIpv6Addresses(DescribeRegionIpv6AddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionIpv6AddressesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionIpv6AddressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRegionIpv6Addresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询自定义路由策略与云联网路由策略冲突列表
      * @param req DescribeRouteConflictsRequest
      * @return DescribeRouteConflictsResponse
@@ -2077,6 +2190,27 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *该接口(ModifyIpv6AddressesBandwidth)用于修改IPV6地址访问internet的带宽
+     * @param req ModifyIpv6AddressesBandwidthRequest
+     * @return ModifyIpv6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIpv6AddressesBandwidthResponse ModifyIpv6AddressesBandwidth(ModifyIpv6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIpv6AddressesBandwidthResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIpv6AddressesBandwidthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyIpv6AddressesBandwidth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改负载均衡监听器属性。
      * @param req ModifyListenerRequest
      * @return ModifyListenerResponse
@@ -2434,6 +2568,27 @@ EIP 如果被封堵，则不能进行解绑定操作。
     }
 
     /**
+     *查询私有网络下Vpc、子网、havip等异步任务请求结果
+     * @param req QueryVpcTaskResultRequest
+     * @return QueryVpcTaskResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryVpcTaskResultResponse QueryVpcTaskResult(QueryVpcTaskResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryVpcTaskResultResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryVpcTaskResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryVpcTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *只有状态为RUNNING的实例才可以进行此操作；接口调用成功时，实例会进入REBOOTING状态；重启实例成功时，实例会进入RUNNING状态；支持强制重启，强制重启的效果等同于关闭物理计算机的电源开关再重新启动。强制重启可能会导致数据丢失或文件系统损坏，请仅在服务器不能正常重启时使用。
      * @param req RebootInstancesRequest
      * @return RebootInstancesResponse
@@ -2491,6 +2646,27 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<ReleaseIpv6AddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseIpv6Addresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口用于给弹性公网IPv6地址释放带宽。
+     * @param req ReleaseIpv6AddressesBandwidthRequest
+     * @return ReleaseIpv6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIpv6AddressesBandwidthResponse ReleaseIpv6AddressesBandwidth(ReleaseIpv6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseIpv6AddressesBandwidthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseIpv6AddressesBandwidth");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2813,6 +2989,28 @@ EIP 如果被封堵，则不能进行解绑定操作。
                 Type type = new TypeToken<JsonResponseModel<TerminateInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "TerminateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口（UnassignIpv6SubnetCidrBlock）用于释放IPv6子网段。
+子网段如果还有IP占用且未回收，则子网段无法释放。
+     * @param req UnassignIpv6SubnetCidrBlockRequest
+     * @return UnassignIpv6SubnetCidrBlockResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnassignIpv6SubnetCidrBlockResponse UnassignIpv6SubnetCidrBlock(UnassignIpv6SubnetCidrBlockRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnassignIpv6SubnetCidrBlockResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnassignIpv6SubnetCidrBlock");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

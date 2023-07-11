@@ -30,14 +30,14 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     private String [] EngineVersions;
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("TemplateNames")
     @Expose
     private String [] TemplateNames;
 
     /**
-    * 模版ID
+    * 模板ID
     */
     @SerializedName("TemplateIds")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     private String [] Products;
 
     /**
-    * 模版类型
+    * 模板类型
     */
     @SerializedName("TemplateTypes")
     @Expose
@@ -116,32 +116,32 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版名称 
-     * @return TemplateNames 模版名称
+     * Get 模板名称 
+     * @return TemplateNames 模板名称
      */
     public String [] getTemplateNames() {
         return this.TemplateNames;
     }
 
     /**
-     * Set 模版名称
-     * @param TemplateNames 模版名称
+     * Set 模板名称
+     * @param TemplateNames 模板名称
      */
     public void setTemplateNames(String [] TemplateNames) {
         this.TemplateNames = TemplateNames;
     }
 
     /**
-     * Get 模版ID 
-     * @return TemplateIds 模版ID
+     * Get 模板ID 
+     * @return TemplateIds 模板ID
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateIds 模版ID
+     * Set 模板ID
+     * @param TemplateIds 模板ID
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;
@@ -212,16 +212,16 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版类型 
-     * @return TemplateTypes 模版类型
+     * Get 模板类型 
+     * @return TemplateTypes 模板类型
      */
     public String [] getTemplateTypes() {
         return this.TemplateTypes;
     }
 
     /**
-     * Set 模版类型
-     * @param TemplateTypes 模版类型
+     * Set 模板类型
+     * @param TemplateTypes 模板类型
      */
     public void setTemplateTypes(String [] TemplateTypes) {
         this.TemplateTypes = TemplateTypes;

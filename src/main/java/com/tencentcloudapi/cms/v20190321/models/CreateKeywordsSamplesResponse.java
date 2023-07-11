@@ -31,6 +31,13 @@ public class CreateKeywordsSamplesResponse extends AbstractModel{
     private String [] SampleIDs;
 
     /**
+    * 成功入库关键词列表
+    */
+    @SerializedName("SuccessInfos")
+    @Expose
+    private UserKeywordInfo [] SuccessInfos;
+
+    /**
     * 重复关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -71,6 +78,22 @@ public class CreateKeywordsSamplesResponse extends AbstractModel{
      */
     public void setSampleIDs(String [] SampleIDs) {
         this.SampleIDs = SampleIDs;
+    }
+
+    /**
+     * Get 成功入库关键词列表 
+     * @return SuccessInfos 成功入库关键词列表
+     */
+    public UserKeywordInfo [] getSuccessInfos() {
+        return this.SuccessInfos;
+    }
+
+    /**
+     * Set 成功入库关键词列表
+     * @param SuccessInfos 成功入库关键词列表
+     */
+    public void setSuccessInfos(UserKeywordInfo [] SuccessInfos) {
+        this.SuccessInfos = SuccessInfos;
     }
 
     /**
@@ -143,6 +166,12 @@ public class CreateKeywordsSamplesResponse extends AbstractModel{
                 this.SampleIDs[i] = new String(source.SampleIDs[i]);
             }
         }
+        if (source.SuccessInfos != null) {
+            this.SuccessInfos = new UserKeywordInfo[source.SuccessInfos.length];
+            for (int i = 0; i < source.SuccessInfos.length; i++) {
+                this.SuccessInfos[i] = new UserKeywordInfo(source.SuccessInfos[i]);
+            }
+        }
         if (source.DupInfos != null) {
             this.DupInfos = new UserKeywordInfo[source.DupInfos.length];
             for (int i = 0; i < source.DupInfos.length; i++) {
@@ -166,6 +195,7 @@ public class CreateKeywordsSamplesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
+        this.setParamArrayObj(map, prefix + "SuccessInfos.", this.SuccessInfos);
         this.setParamArrayObj(map, prefix + "DupInfos.", this.DupInfos);
         this.setParamArrayObj(map, prefix + "InvalidSamples.", this.InvalidSamples);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

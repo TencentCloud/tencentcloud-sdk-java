@@ -245,6 +245,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *接口（ChannelCreateFlowGroupByTemplates）用于通过多模板创建合同组签署流程。
+     * @param req ChannelCreateFlowGroupByTemplatesRequest
+     * @return ChannelCreateFlowGroupByTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateFlowGroupByTemplatesResponse ChannelCreateFlowGroupByTemplates(ChannelCreateFlowGroupByTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateFlowGroupByTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateFlowGroupByTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *指定需要批量催办的签署流程Id，批量催办合同，最多100个；接口失败后返回错误信息
 注意:
 该接口不可直接调用，请联系客户经理申请使用
@@ -543,7 +564,7 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
-     *查询用户角色
+     *查询角色列表，支持根据类型和状态过滤角色列表
      * @param req ChannelDescribeRolesRequest
      * @return ChannelDescribeRolesResponse
      * @throws TencentCloudSDKException

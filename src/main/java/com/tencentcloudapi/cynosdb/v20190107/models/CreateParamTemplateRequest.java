@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateParamTemplateRequest extends AbstractModel{
 
     /**
-    * 模版名称
+    * 模板名称
     */
     @SerializedName("TemplateName")
     @Expose
@@ -37,14 +37,14 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private String EngineVersion;
 
     /**
-    * 模版描述
+    * 模板描述
     */
     @SerializedName("TemplateDescription")
     @Expose
     private String TemplateDescription;
 
     /**
-    * 可选参数，需要复制的模版ID
+    * 可选参数，需要复制的模板ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -65,16 +65,16 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private ParamItem [] ParamList;
 
     /**
-     * Get 模版名称 
-     * @return TemplateName 模版名称
+     * Get 模板名称 
+     * @return TemplateName 模板名称
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名称
-     * @param TemplateName 模版名称
+     * Set 模板名称
+     * @param TemplateName 模板名称
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -97,32 +97,32 @@ public class CreateParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 模版描述 
-     * @return TemplateDescription 模版描述
+     * Get 模板描述 
+     * @return TemplateDescription 模板描述
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set 模版描述
-     * @param TemplateDescription 模版描述
+     * Set 模板描述
+     * @param TemplateDescription 模板描述
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;
     }
 
     /**
-     * Get 可选参数，需要复制的模版ID 
-     * @return TemplateId 可选参数，需要复制的模版ID
+     * Get 可选参数，需要复制的模板ID 
+     * @return TemplateId 可选参数，需要复制的模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 可选参数，需要复制的模版ID
-     * @param TemplateId 可选参数，需要复制的模版ID
+     * Set 可选参数，需要复制的模板ID
+     * @param TemplateId 可选参数，需要复制的模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

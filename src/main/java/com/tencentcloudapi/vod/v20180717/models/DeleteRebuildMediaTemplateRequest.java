@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteRebuildMediaTemplateRequest extends AbstractModel{
 
     /**
-    * 音画质重生模板号。
+    * 视频重生模板号。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteRebuildMediaTemplateRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 音画质重生模板号。 
-     * @return Definition 音画质重生模板号。
+     * Get 视频重生模板号。 
+     * @return Definition 视频重生模板号。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质重生模板号。
-     * @param Definition 音画质重生模板号。
+     * Set 视频重生模板号。
+     * @param Definition 视频重生模板号。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

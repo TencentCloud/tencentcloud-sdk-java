@@ -68,6 +68,13 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private String FlowId;
 
     /**
+    * 合同组ID
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
     * 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
     */
     @SerializedName("PathType")
@@ -197,6 +204,22 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     }
 
     /**
+     * Get 合同组ID 
+     * @return FlowGroupId 合同组ID
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组ID
+     * @param FlowGroupId 合同组ID
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
+    /**
      * Get 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页 
      * @return PathType 跳转页面 1: 小程序合同详情 2: 小程序合同列表页 0: 不传, 默认主页
      */
@@ -270,6 +293,9 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
         if (source.PathType != null) {
             this.PathType = new Long(source.PathType);
         }
@@ -292,6 +318,7 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "EndPoint", this.EndPoint);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         this.setParamSimple(map, prefix + "PathType", this.PathType);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamObj(map, prefix + "Agent.", this.Agent);

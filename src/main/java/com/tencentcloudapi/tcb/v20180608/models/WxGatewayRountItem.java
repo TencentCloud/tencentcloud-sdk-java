@@ -129,6 +129,14 @@ public class WxGatewayRountItem extends AbstractModel{
     private Long GatewayRoutePort;
 
     /**
+    * 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayRouteEnvId")
+    @Expose
+    private String GatewayRouteEnvId;
+
+    /**
      * Get 安全网关路由名称 
      * @return GatewayRouteName 安全网关路由名称
      */
@@ -384,6 +392,26 @@ public class WxGatewayRountItem extends AbstractModel{
         this.GatewayRoutePort = GatewayRoutePort;
     }
 
+    /**
+     * Get 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayRouteEnvId 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayRouteEnvId() {
+        return this.GatewayRouteEnvId;
+    }
+
+    /**
+     * Set 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayRouteEnvId 路由环境ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayRouteEnvId(String GatewayRouteEnvId) {
+        this.GatewayRouteEnvId = GatewayRouteEnvId;
+    }
+
     public WxGatewayRountItem() {
     }
 
@@ -437,6 +465,9 @@ public class WxGatewayRountItem extends AbstractModel{
         if (source.GatewayRoutePort != null) {
             this.GatewayRoutePort = new Long(source.GatewayRoutePort);
         }
+        if (source.GatewayRouteEnvId != null) {
+            this.GatewayRouteEnvId = new String(source.GatewayRouteEnvId);
+        }
     }
 
 
@@ -458,6 +489,7 @@ public class WxGatewayRountItem extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayRoutePath", this.GatewayRoutePath);
         this.setParamSimple(map, prefix + "GatewayRouteMethod", this.GatewayRouteMethod);
         this.setParamSimple(map, prefix + "GatewayRoutePort", this.GatewayRoutePort);
+        this.setParamSimple(map, prefix + "GatewayRouteEnvId", this.GatewayRouteEnvId);
 
     }
 }

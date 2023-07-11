@@ -308,6 +308,51 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateFlowGroupByFiles）通过多文件创建合同组签署流程。<br/>
+PDF资源Id 通过上传文件接口获取
+此接口合同组中的子合同必须都是文件发起的合同
+     * @param req CreateFlowGroupByFilesRequest
+     * @return CreateFlowGroupByFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowGroupByFilesResponse CreateFlowGroupByFiles(CreateFlowGroupByFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowGroupByFilesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowGroupByFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlowGroupByFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *此接口（CreateFlowGroupByTemplates）通过多模板创建合同组签署流程。<br/>
+此接口合同组中的子合同必须都是模板发起的合同。 <br/>目前最大仅支持50个子合同
+     * @param req CreateFlowGroupByTemplatesRequest
+     * @return CreateFlowGroupByTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowGroupByTemplatesResponse CreateFlowGroupByTemplates(CreateFlowGroupByTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFlowGroupByTemplatesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFlowGroupByTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFlowGroupByTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *指定需要批量催办的签署流程Id，批量催办合同，最多100个; 接口失败后返回错误信息
 注意:
 该接口不可直接调用，请联系客户经理申请使用

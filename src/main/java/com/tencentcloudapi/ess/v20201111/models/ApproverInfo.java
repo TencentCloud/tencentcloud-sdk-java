@@ -48,18 +48,18 @@ public class ApproverInfo extends AbstractModel{
     private String ApproverMobile;
 
     /**
-    * 签署人的签署控件列表
-    */
-    @SerializedName("SignComponents")
-    @Expose
-    private Component [] SignComponents;
-
-    /**
     * 如果签署方是企业签署方，则为企业名
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
+
+    /**
+    * 签署人的签署控件列表
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
 
     /**
     * 签署人的身份证号
@@ -224,22 +224,6 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署人的签署控件列表 
-     * @return SignComponents 签署人的签署控件列表
-     */
-    public Component [] getSignComponents() {
-        return this.SignComponents;
-    }
-
-    /**
-     * Set 签署人的签署控件列表
-     * @param SignComponents 签署人的签署控件列表
-     */
-    public void setSignComponents(Component [] SignComponents) {
-        this.SignComponents = SignComponents;
-    }
-
-    /**
      * Get 如果签署方是企业签署方，则为企业名 
      * @return OrganizationName 如果签署方是企业签署方，则为企业名
      */
@@ -253,6 +237,22 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
+    }
+
+    /**
+     * Get 签署人的签署控件列表 
+     * @return SignComponents 签署人的签署控件列表
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 签署人的签署控件列表
+     * @param SignComponents 签署人的签署控件列表
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
     }
 
     /**
@@ -508,14 +508,14 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.ApproverMobile != null) {
             this.ApproverMobile = new String(source.ApproverMobile);
         }
+        if (source.OrganizationName != null) {
+            this.OrganizationName = new String(source.OrganizationName);
+        }
         if (source.SignComponents != null) {
             this.SignComponents = new Component[source.SignComponents.length];
             for (int i = 0; i < source.SignComponents.length; i++) {
                 this.SignComponents[i] = new Component(source.SignComponents[i]);
             }
-        }
-        if (source.OrganizationName != null) {
-            this.OrganizationName = new String(source.OrganizationName);
         }
         if (source.ApproverIdCardNumber != null) {
             this.ApproverIdCardNumber = new String(source.ApproverIdCardNumber);
@@ -575,8 +575,8 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "ApproverType", this.ApproverType);
         this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
         this.setParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         this.setParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
         this.setParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);

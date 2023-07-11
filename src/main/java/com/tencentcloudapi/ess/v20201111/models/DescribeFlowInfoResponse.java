@@ -30,6 +30,20 @@ public class DescribeFlowInfoResponse extends AbstractModel{
     private FlowDetailInfo [] FlowDetailInfos;
 
     /**
+    * 合同组ID
+    */
+    @SerializedName("FlowGroupId")
+    @Expose
+    private String FlowGroupId;
+
+    /**
+    * 合同组名称
+    */
+    @SerializedName("FlowGroupName")
+    @Expose
+    private String FlowGroupName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +64,38 @@ public class DescribeFlowInfoResponse extends AbstractModel{
      */
     public void setFlowDetailInfos(FlowDetailInfo [] FlowDetailInfos) {
         this.FlowDetailInfos = FlowDetailInfos;
+    }
+
+    /**
+     * Get 合同组ID 
+     * @return FlowGroupId 合同组ID
+     */
+    public String getFlowGroupId() {
+        return this.FlowGroupId;
+    }
+
+    /**
+     * Set 合同组ID
+     * @param FlowGroupId 合同组ID
+     */
+    public void setFlowGroupId(String FlowGroupId) {
+        this.FlowGroupId = FlowGroupId;
+    }
+
+    /**
+     * Get 合同组名称 
+     * @return FlowGroupName 合同组名称
+     */
+    public String getFlowGroupName() {
+        return this.FlowGroupName;
+    }
+
+    /**
+     * Set 合同组名称
+     * @param FlowGroupName 合同组名称
+     */
+    public void setFlowGroupName(String FlowGroupName) {
+        this.FlowGroupName = FlowGroupName;
     }
 
     /**
@@ -82,6 +128,12 @@ public class DescribeFlowInfoResponse extends AbstractModel{
                 this.FlowDetailInfos[i] = new FlowDetailInfo(source.FlowDetailInfos[i]);
             }
         }
+        if (source.FlowGroupId != null) {
+            this.FlowGroupId = new String(source.FlowGroupId);
+        }
+        if (source.FlowGroupName != null) {
+            this.FlowGroupName = new String(source.FlowGroupName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +145,8 @@ public class DescribeFlowInfoResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "FlowDetailInfos.", this.FlowDetailInfos);
+        this.setParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+        this.setParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

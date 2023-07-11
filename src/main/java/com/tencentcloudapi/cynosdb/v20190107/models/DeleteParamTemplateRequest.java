@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteParamTemplateRequest extends AbstractModel{
 
     /**
-    * 参数模版ID
+    * 参数模板ID
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get 参数模版ID 
-     * @return TemplateId 参数模版ID
+     * Get 参数模板ID 
+     * @return TemplateId 参数模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 参数模版ID
-     * @param TemplateId 参数模版ID
+     * Set 参数模板ID
+     * @param TemplateId 参数模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

@@ -385,6 +385,13 @@ public class ClueInfoDetail extends AbstractModel{
     private String Position;
 
     /**
+    * 自定义的门店id
+    */
+    @SerializedName("CorpShopId")
+    @Expose
+    private String CorpShopId;
+
+    /**
      * Get 线索id，线索唯一识别编码 
      * @return ClueId 线索id，线索唯一识别编码
      */
@@ -1232,6 +1239,22 @@ public class ClueInfoDetail extends AbstractModel{
         this.Position = Position;
     }
 
+    /**
+     * Get 自定义的门店id 
+     * @return CorpShopId 自定义的门店id
+     */
+    public String getCorpShopId() {
+        return this.CorpShopId;
+    }
+
+    /**
+     * Set 自定义的门店id
+     * @param CorpShopId 自定义的门店id
+     */
+    public void setCorpShopId(String CorpShopId) {
+        this.CorpShopId = CorpShopId;
+    }
+
     public ClueInfoDetail() {
     }
 
@@ -1393,6 +1416,9 @@ public class ClueInfoDetail extends AbstractModel{
         if (source.Position != null) {
             this.Position = new String(source.Position);
         }
+        if (source.CorpShopId != null) {
+            this.CorpShopId = new String(source.CorpShopId);
+        }
     }
 
 
@@ -1450,6 +1476,7 @@ public class ClueInfoDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "ShopId", this.ShopId);
         this.setParamSimple(map, prefix + "ShopName", this.ShopName);
         this.setParamSimple(map, prefix + "Position", this.Position);
+        this.setParamSimple(map, prefix + "CorpShopId", this.CorpShopId);
 
     }
 }

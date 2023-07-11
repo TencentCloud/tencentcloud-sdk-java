@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ModifyParamTemplateRequest extends AbstractModel{
 
     /**
-    * 模版ID
+    * 模板ID
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 模版名
+    * 模板名
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * 模版描述
+    * 模板描述
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -51,48 +51,48 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private ModifyParamItem [] ParamList;
 
     /**
-     * Get 模版ID 
-     * @return TemplateId 模版ID
+     * Get 模板ID 
+     * @return TemplateId 模板ID
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模版ID
-     * @param TemplateId 模版ID
+     * Set 模板ID
+     * @param TemplateId 模板ID
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模版名 
-     * @return TemplateName 模版名
+     * Get 模板名 
+     * @return TemplateName 模板名
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模版名
-     * @param TemplateName 模版名
+     * Set 模板名
+     * @param TemplateName 模板名
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 模版描述 
-     * @return TemplateDescription 模版描述
+     * Get 模板描述 
+     * @return TemplateDescription 模板描述
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
     }
 
     /**
-     * Set 模版描述
-     * @param TemplateDescription 模版描述
+     * Set 模板描述
+     * @param TemplateDescription 模板描述
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;

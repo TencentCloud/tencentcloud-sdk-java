@@ -436,7 +436,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *创建音画质重生模板。
+     *创建视频重生模板。
      * @param req CreateRebuildMediaTemplateRequest
      * @return CreateRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -995,7 +995,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *删除音画质重生模板。
+     *删除视频重生模板。
      * @param req DeleteRebuildMediaTemplateRequest
      * @return DeleteRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException

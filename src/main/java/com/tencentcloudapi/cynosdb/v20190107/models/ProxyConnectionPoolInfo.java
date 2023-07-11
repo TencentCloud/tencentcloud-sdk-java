@@ -39,7 +39,7 @@ public class ProxyConnectionPoolInfo extends AbstractModel{
     private String OpenConnectionPool;
 
     /**
-    * 连接池类型：SessionConnectionPool（会话级别连接池
+    * 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPoolType")
@@ -87,9 +87,9 @@ public class ProxyConnectionPoolInfo extends AbstractModel{
     }
 
     /**
-     * Get 连接池类型：SessionConnectionPool（会话级别连接池
+     * Get 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池
+     * @return ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectionPoolType() {
@@ -97,9 +97,9 @@ public class ProxyConnectionPoolInfo extends AbstractModel{
     }
 
     /**
-     * Set 连接池类型：SessionConnectionPool（会话级别连接池
+     * Set 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池
+     * @param ConnectionPoolType 连接池类型：SessionConnectionPool（会话级别连接池）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPoolType(String ConnectionPoolType) {

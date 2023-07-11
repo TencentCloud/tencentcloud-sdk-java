@@ -80,7 +80,10 @@ public class TextToVoiceRequest extends AbstractModel{
     private Long PrimaryLanguage;
 
     /**
-    * 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+    * 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
     */
     @SerializedName("SampleRate")
     @Expose
@@ -254,16 +257,28 @@ public class TextToVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li> 
-     * @return SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * Get 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li> 
+     * @return SampleRate 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
-     * @param SampleRate 音频采样率：<li>16000：16k（默认）</li><li>8000：8k</li>
+     * Set 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
+     * @param SampleRate 音频采样率：
+<li>24000：24k（部分音色支持，请参见[音色列表](https://cloud.tencent.com/document/product/1073/92668)）</li>
+<li>16000：16k（默认）</li>
+<li>8000：8k</li>
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;

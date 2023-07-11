@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteLibSamplesRequest extends AbstractModel{
 
     /**
-    * 关键词ID
+    * 关键词ID列表
     */
     @SerializedName("SampleIDs")
     @Expose
@@ -37,16 +37,23 @@ public class DeleteLibSamplesRequest extends AbstractModel{
     private String LibID;
 
     /**
-     * Get 关键词ID 
-     * @return SampleIDs 关键词ID
+    * 关键词内容列表
+    */
+    @SerializedName("SampleContents")
+    @Expose
+    private String [] SampleContents;
+
+    /**
+     * Get 关键词ID列表 
+     * @return SampleIDs 关键词ID列表
      */
     public String [] getSampleIDs() {
         return this.SampleIDs;
     }
 
     /**
-     * Set 关键词ID
-     * @param SampleIDs 关键词ID
+     * Set 关键词ID列表
+     * @param SampleIDs 关键词ID列表
      */
     public void setSampleIDs(String [] SampleIDs) {
         this.SampleIDs = SampleIDs;
@@ -68,6 +75,22 @@ public class DeleteLibSamplesRequest extends AbstractModel{
         this.LibID = LibID;
     }
 
+    /**
+     * Get 关键词内容列表 
+     * @return SampleContents 关键词内容列表
+     */
+    public String [] getSampleContents() {
+        return this.SampleContents;
+    }
+
+    /**
+     * Set 关键词内容列表
+     * @param SampleContents 关键词内容列表
+     */
+    public void setSampleContents(String [] SampleContents) {
+        this.SampleContents = SampleContents;
+    }
+
     public DeleteLibSamplesRequest() {
     }
 
@@ -85,6 +108,12 @@ public class DeleteLibSamplesRequest extends AbstractModel{
         if (source.LibID != null) {
             this.LibID = new String(source.LibID);
         }
+        if (source.SampleContents != null) {
+            this.SampleContents = new String[source.SampleContents.length];
+            for (int i = 0; i < source.SampleContents.length; i++) {
+                this.SampleContents[i] = new String(source.SampleContents[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class DeleteLibSamplesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SampleIDs.", this.SampleIDs);
         this.setParamSimple(map, prefix + "LibID", this.LibID);
+        this.setParamArraySimple(map, prefix + "SampleContents.", this.SampleContents);
 
     }
 }

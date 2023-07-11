@@ -71,7 +71,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     private Long ScaleDownUtilizationThreshold;
 
     /**
-    * 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+    * 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkipNodesWithLocalStorage")
@@ -79,7 +79,7 @@ public class ClusterAsGroupOption extends AbstractModel{
     private Boolean SkipNodesWithLocalStorage;
 
     /**
-    * 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+    * 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkipNodesWithSystemPods")
@@ -247,9 +247,9 @@ public class ClusterAsGroupOption extends AbstractModel{
     }
 
     /**
-     * Get 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * Get 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * @return SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSkipNodesWithLocalStorage() {
@@ -257,9 +257,9 @@ public class ClusterAsGroupOption extends AbstractModel{
     }
 
     /**
-     * Set 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * Set 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： FALSE)
+     * @param SkipNodesWithLocalStorage 含有本地存储Pod的节点是否不缩容(默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipNodesWithLocalStorage(Boolean SkipNodesWithLocalStorage) {
@@ -267,9 +267,9 @@ public class ClusterAsGroupOption extends AbstractModel{
     }
 
     /**
-     * Get 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * Get 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * @return SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSkipNodesWithSystemPods() {
@@ -277,9 +277,9 @@ public class ClusterAsGroupOption extends AbstractModel{
     }
 
     /**
-     * Set 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * Set 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： FALSE)
+     * @param SkipNodesWithSystemPods 含有kube-system namespace下非DaemonSet管理的Pod的节点是否不缩容 (默认： true)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkipNodesWithSystemPods(Boolean SkipNodesWithSystemPods) {

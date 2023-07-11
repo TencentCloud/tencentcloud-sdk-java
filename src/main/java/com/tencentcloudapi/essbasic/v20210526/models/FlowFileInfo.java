@@ -86,6 +86,13 @@ public class FlowFileInfo extends AbstractModel{
     private Boolean Unordered;
 
     /**
+    * 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
     * 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
     */
     @SerializedName("CustomShowMap")
@@ -244,6 +251,22 @@ public class FlowFileInfo extends AbstractModel{
     }
 
     /**
+     * Get 签署文件中的发起方的填写控件，需要在发起的时候进行填充 
+     * @return Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+     * @param Components 签署文件中的发起方的填写控件，需要在发起的时候进行填充
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
+    /**
      * Get 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始 
      * @return CustomShowMap 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
      */
@@ -316,6 +339,12 @@ public class FlowFileInfo extends AbstractModel{
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
         }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
         if (source.CustomShowMap != null) {
             this.CustomShowMap = new String(source.CustomShowMap);
         }
@@ -338,6 +367,7 @@ public class FlowFileInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamSimple(map, prefix + "CustomerData", this.CustomerData);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
 

@@ -115,7 +115,7 @@ public class AddInstancesRequest extends AbstractModel{
     private Long DealMode;
 
     /**
-    * 参数模版ID
+    * 参数模板ID
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -348,16 +348,16 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 参数模版ID 
-     * @return ParamTemplateId 参数模版ID
+     * Get 参数模板ID 
+     * @return ParamTemplateId 参数模板ID
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 参数模版ID
-     * @param ParamTemplateId 参数模版ID
+     * Set 参数模板ID
+     * @param ParamTemplateId 参数模板ID
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
