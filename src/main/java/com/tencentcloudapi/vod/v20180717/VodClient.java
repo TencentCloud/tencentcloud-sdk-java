@@ -1924,7 +1924,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *获取音画质重生模板列表。
+     *获取视频重生模板列表。
      * @param req DescribeRebuildMediaTemplatesRequest
      * @return DescribeRebuildMediaTemplatesResponse
      * @throws TencentCloudSDKException
@@ -2859,7 +2859,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *修改音画质重生模板。
+     *修改视频重生模板。
      * @param req ModifyRebuildMediaTemplateRequest
      * @return ModifyRebuildMediaTemplateResponse
      * @throws TencentCloudSDKException
@@ -3339,7 +3339,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *发起音画质重生
+     *发起视频重生
      * @param req RebuildMediaRequest
      * @return RebuildMediaResponse
      * @throws TencentCloudSDKException
@@ -3360,7 +3360,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *使用模板发起音画质重生。
+     *使用模板发起视频重生。
      * @param req RebuildMediaByTemplateRequest
      * @return RebuildMediaByTemplateResponse
      * @throws TencentCloudSDKException

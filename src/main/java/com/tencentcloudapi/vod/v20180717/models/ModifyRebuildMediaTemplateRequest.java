@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
 
     /**
-    * 音画质重生模板号。
+    * 视频重生模板号。
     */
     @SerializedName("Definition")
     @Expose
@@ -37,28 +37,28 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     private String SubAppId;
 
     /**
-    * 音画质重生模板名称。
+    * 视频重生模板名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 音画质重生模板描述。
+    * 视频重生模板描述。
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * 音画质重生视频控制信息。
+    * 视频重生视频控制信息。
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * 音画质重生音频控制信息。
+    * 视频重生音频控制信息。
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
@@ -104,16 +104,16 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     private Long RemoveAudio;
 
     /**
-     * Get 音画质重生模板号。 
-     * @return Definition 音画质重生模板号。
+     * Get 视频重生模板号。 
+     * @return Definition 视频重生模板号。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质重生模板号。
-     * @param Definition 音画质重生模板号。
+     * Set 视频重生模板号。
+     * @param Definition 视频重生模板号。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -136,64 +136,64 @@ public class ModifyRebuildMediaTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 音画质重生模板名称。 
-     * @return Name 音画质重生模板名称。
+     * Get 视频重生模板名称。 
+     * @return Name 视频重生模板名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 音画质重生模板名称。
-     * @param Name 音画质重生模板名称。
+     * Set 视频重生模板名称。
+     * @param Name 视频重生模板名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 音画质重生模板描述。 
-     * @return Comment 音画质重生模板描述。
+     * Get 视频重生模板描述。 
+     * @return Comment 视频重生模板描述。
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 音画质重生模板描述。
-     * @param Comment 音画质重生模板描述。
+     * Set 视频重生模板描述。
+     * @param Comment 视频重生模板描述。
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get 音画质重生视频控制信息。 
-     * @return RebuildVideoInfo 音画质重生视频控制信息。
+     * Get 视频重生视频控制信息。 
+     * @return RebuildVideoInfo 视频重生视频控制信息。
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set 音画质重生视频控制信息。
-     * @param RebuildVideoInfo 音画质重生视频控制信息。
+     * Set 视频重生视频控制信息。
+     * @param RebuildVideoInfo 视频重生视频控制信息。
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get 音画质重生音频控制信息。 
-     * @return RebuildAudioInfo 音画质重生音频控制信息。
+     * Get 视频重生音频控制信息。 
+     * @return RebuildAudioInfo 视频重生音频控制信息。
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set 音画质重生音频控制信息。
-     * @param RebuildAudioInfo 音画质重生音频控制信息。
+     * Set 视频重生音频控制信息。
+     * @param RebuildAudioInfo 视频重生音频控制信息。
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;

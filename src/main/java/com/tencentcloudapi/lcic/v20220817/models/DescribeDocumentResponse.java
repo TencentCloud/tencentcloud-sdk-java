@@ -121,6 +121,13 @@ public class DescribeDocumentResponse extends AbstractModel{
     private Long UpdateTime;
 
     /**
+    * 课件页数
+    */
+    @SerializedName("Pages")
+    @Expose
+    private Long Pages;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -352,6 +359,22 @@ public class DescribeDocumentResponse extends AbstractModel{
     }
 
     /**
+     * Get 课件页数 
+     * @return Pages 课件页数
+     */
+    public Long getPages() {
+        return this.Pages;
+    }
+
+    /**
+     * Set 课件页数
+     * @param Pages 课件页数
+     */
+    public void setPages(Long Pages) {
+        this.Pages = Pages;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -417,6 +440,9 @@ public class DescribeDocumentResponse extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.Pages != null) {
+            this.Pages = new Long(source.Pages);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -441,6 +467,7 @@ public class DescribeDocumentResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DocumentType", this.DocumentType);
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Pages", this.Pages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

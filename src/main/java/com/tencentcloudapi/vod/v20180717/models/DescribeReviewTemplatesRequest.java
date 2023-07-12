@@ -30,7 +30,7 @@ public class DescribeReviewTemplatesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * 审核模版唯一标识过滤条件，数组长度限制：100。
+    * 审核模板唯一标识过滤条件，数组长度限制：100。
     */
     @SerializedName("Definitions")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeReviewTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get 审核模版唯一标识过滤条件，数组长度限制：100。 
-     * @return Definitions 审核模版唯一标识过滤条件，数组长度限制：100。
+     * Get 审核模板唯一标识过滤条件，数组长度限制：100。 
+     * @return Definitions 审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set 审核模版唯一标识过滤条件，数组长度限制：100。
-     * @param Definitions 审核模版唯一标识过滤条件，数组长度限制：100。
+     * Set 审核模板唯一标识过滤条件，数组长度限制：100。
+     * @param Definitions 审核模板唯一标识过滤条件，数组长度限制：100。
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

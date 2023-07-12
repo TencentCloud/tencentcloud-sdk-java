@@ -1226,6 +1226,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *列出字段血缘信息
+     * @param req DescribeColumnLineageRequest
+     * @return DescribeColumnLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeColumnLineageResponse DescribeColumnLineage(DescribeColumnLineageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeColumnLineageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeColumnLineageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeColumnLineage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询数据来源列表
      * @param req DescribeDataBasesRequest
      * @return DescribeDataBasesResponse
@@ -2824,6 +2845,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTableInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTableInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出表血缘信息
+     * @param req DescribeTableLineageRequest
+     * @return DescribeTableLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableLineageResponse DescribeTableLineage(DescribeTableLineageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTableLineageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTableLineageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTableLineage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,7 +30,7 @@ public class RebuildMediaByTemplateRequest extends AbstractModel{
     private String FileId;
 
     /**
-    * 音画质重生模板 ID。
+    * 视频重生模板 ID。
     */
     @SerializedName("Definition")
     @Expose
@@ -58,7 +58,7 @@ public class RebuildMediaByTemplateRequest extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * 音画质重生后的文件配置。
+    * 视频重生后的文件配置。
     */
     @SerializedName("OutputConfig")
     @Expose
@@ -109,16 +109,16 @@ public class RebuildMediaByTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 音画质重生模板 ID。 
-     * @return Definition 音画质重生模板 ID。
+     * Get 视频重生模板 ID。 
+     * @return Definition 视频重生模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 音画质重生模板 ID。
-     * @param Definition 音画质重生模板 ID。
+     * Set 视频重生模板 ID。
+     * @param Definition 视频重生模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -173,16 +173,16 @@ public class RebuildMediaByTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 音画质重生后的文件配置。 
-     * @return OutputConfig 音画质重生后的文件配置。
+     * Get 视频重生后的文件配置。 
+     * @return OutputConfig 视频重生后的文件配置。
      */
     public RebuildMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 音画质重生后的文件配置。
-     * @param OutputConfig 音画质重生后的文件配置。
+     * Set 视频重生后的文件配置。
+     * @param OutputConfig 视频重生后的文件配置。
      */
     public void setOutputConfig(RebuildMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

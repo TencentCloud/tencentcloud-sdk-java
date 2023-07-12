@@ -37,7 +37,7 @@ public class AiSampleFaceOperation extends AbstractModel{
     private String [] FaceIds;
 
     /**
-    * 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+    * 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合，仅支持 jpeg、png 图片格式。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
@@ -79,11 +79,11 @@ public class AiSampleFaceOperation extends AbstractModel{
     }
 
     /**
-     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * Get 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合，仅支持 jpeg、png 图片格式。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。 
-     * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * @return FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合，仅支持 jpeg、png 图片格式。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
@@ -93,11 +93,11 @@ public class AiSampleFaceOperation extends AbstractModel{
     }
 
     /**
-     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * Set 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合，仅支持 jpeg、png 图片格式。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。
-     * @param FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合。
+     * @param FaceContents 人脸图片 [Base64](https://tools.ietf.org/html/rfc4648) 编码后的字符串集合，仅支持 jpeg、png 图片格式。
 <li>当 Type为add 或 reset 时，该字段必填；</li>
 <li>数组长度限制：5 张图片。</li>
 注意：图片必须是单人像正面人脸较清晰的照片，像素不低于 200*200。

@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRebuildMediaTemplatesResponse extends AbstractModel{
+public class DescribeColumnLineageResponse extends AbstractModel{
 
     /**
-    * 符合过滤条件的记录总数。
+    * 字段血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("TotalCount")
+    @SerializedName("ColumnAggregationLineage")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * 视频重生模板详情列表。
-    */
-    @SerializedName("RebuildMediaTemplateSet")
-    @Expose
-    private RebuildMediaTemplate [] RebuildMediaTemplateSet;
+    private ColumnAggregationLineage ColumnAggregationLineage;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +38,23 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合过滤条件的记录总数。 
-     * @return TotalCount 符合过滤条件的记录总数。
+     * Get 字段血缘信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColumnAggregationLineage 字段血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public ColumnAggregationLineage getColumnAggregationLineage() {
+        return this.ColumnAggregationLineage;
     }
 
     /**
-     * Set 符合过滤条件的记录总数。
-     * @param TotalCount 符合过滤条件的记录总数。
+     * Set 字段血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColumnAggregationLineage 字段血缘信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 视频重生模板详情列表。 
-     * @return RebuildMediaTemplateSet 视频重生模板详情列表。
-     */
-    public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
-        return this.RebuildMediaTemplateSet;
-    }
-
-    /**
-     * Set 视频重生模板详情列表。
-     * @param RebuildMediaTemplateSet 视频重生模板详情列表。
-     */
-    public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
-        this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;
+    public void setColumnAggregationLineage(ColumnAggregationLineage ColumnAggregationLineage) {
+        this.ColumnAggregationLineage = ColumnAggregationLineage;
     }
 
     /**
@@ -91,22 +73,16 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRebuildMediaTemplatesResponse() {
+    public DescribeColumnLineageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRebuildMediaTemplatesResponse(DescribeRebuildMediaTemplatesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.RebuildMediaTemplateSet != null) {
-            this.RebuildMediaTemplateSet = new RebuildMediaTemplate[source.RebuildMediaTemplateSet.length];
-            for (int i = 0; i < source.RebuildMediaTemplateSet.length; i++) {
-                this.RebuildMediaTemplateSet[i] = new RebuildMediaTemplate(source.RebuildMediaTemplateSet[i]);
-            }
+    public DescribeColumnLineageResponse(DescribeColumnLineageResponse source) {
+        if (source.ColumnAggregationLineage != null) {
+            this.ColumnAggregationLineage = new ColumnAggregationLineage(source.ColumnAggregationLineage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +94,7 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RebuildMediaTemplateSet.", this.RebuildMediaTemplateSet);
+        this.setParamObj(map, prefix + "ColumnAggregationLineage.", this.ColumnAggregationLineage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

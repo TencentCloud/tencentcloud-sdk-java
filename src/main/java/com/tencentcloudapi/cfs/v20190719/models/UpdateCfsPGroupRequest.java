@@ -37,7 +37,7 @@ public class UpdateCfsPGroupRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 权限组描述信息，1-255个字符
+    * 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
     */
     @SerializedName("DescInfo")
     @Expose
@@ -76,16 +76,16 @@ public class UpdateCfsPGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get 权限组描述信息，1-255个字符 
-     * @return DescInfo 权限组描述信息，1-255个字符
+     * Get 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空 
+     * @return DescInfo 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
      */
     public String getDescInfo() {
         return this.DescInfo;
     }
 
     /**
-     * Set 权限组描述信息，1-255个字符
-     * @param DescInfo 权限组描述信息，1-255个字符
+     * Set 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
+     * @param DescInfo 权限组描述信息，1-255个字符。 Name和Descinfo不能同时为空
      */
     public void setDescInfo(String DescInfo) {
         this.DescInfo = DescInfo;

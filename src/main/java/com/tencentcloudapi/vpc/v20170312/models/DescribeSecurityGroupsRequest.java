@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+    * 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -56,16 +56,30 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
     private String Limit;
 
     /**
-     * Get 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。 
-     * @return SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+    * 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+    */
+    @SerializedName("OrderDirection")
+    @Expose
+    private String OrderDirection;
+
+    /**
+     * Get 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。 
+     * @return SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
-     * @param SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * Set 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
+     * @param SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n。每次请求的实例的上限为100。参数不支持同时指定SecurityGroupIds和Filters。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -139,6 +153,38 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。 
+     * @return OrderField 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     * @param OrderField 排序字段。支持：`CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC` 
+     * @return OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+     */
+    public String getOrderDirection() {
+        return this.OrderDirection;
+    }
+
+    /**
+     * Set 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+     * @param OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。默认值：`ASC`
+     */
+    public void setOrderDirection(String OrderDirection) {
+        this.OrderDirection = OrderDirection;
+    }
+
     public DescribeSecurityGroupsRequest() {
     }
 
@@ -165,6 +211,12 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.OrderDirection != null) {
+            this.OrderDirection = new String(source.OrderDirection);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class DescribeSecurityGroupsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
 
     }
 }

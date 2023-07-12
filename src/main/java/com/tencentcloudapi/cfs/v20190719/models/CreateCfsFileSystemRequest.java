@@ -121,6 +121,27 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private Long Capacity;
 
     /**
+    * 文件系统快照ID
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
+    * 定期快照策略ID
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
+    * 是否开启默认扩容，仅Turbo类型文件存储支持
+    */
+    @SerializedName("EnableAutoScaleUp")
+    @Expose
+    private Boolean EnableAutoScaleUp;
+
+    /**
      * Get 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表 
      * @return Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      */
@@ -344,6 +365,54 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get 文件系统快照ID 
+     * @return SnapshotId 文件系统快照ID
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set 文件系统快照ID
+     * @param SnapshotId 文件系统快照ID
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
+    /**
+     * Get 定期快照策略ID 
+     * @return AutoSnapshotPolicyId 定期快照策略ID
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set 定期快照策略ID
+     * @param AutoSnapshotPolicyId 定期快照策略ID
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Get 是否开启默认扩容，仅Turbo类型文件存储支持 
+     * @return EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
+     */
+    public Boolean getEnableAutoScaleUp() {
+        return this.EnableAutoScaleUp;
+    }
+
+    /**
+     * Set 是否开启默认扩容，仅Turbo类型文件存储支持
+     * @param EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
+     */
+    public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
+        this.EnableAutoScaleUp = EnableAutoScaleUp;
+    }
+
     public CreateCfsFileSystemRequest() {
     }
 
@@ -397,6 +466,15 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.EnableAutoScaleUp != null) {
+            this.EnableAutoScaleUp = new Boolean(source.EnableAutoScaleUp);
+        }
     }
 
 
@@ -418,6 +496,9 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
 
     }
 }

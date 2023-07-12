@@ -438,6 +438,27 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *修改绑定VIP的安全组，传安全组id列表
+     * @param req ModifyEsVipSecurityGroupRequest
+     * @return ModifyEsVipSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEsVipSecurityGroupResponse ModifyEsVipSecurityGroup(ModifyEsVipSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyEsVipSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyEsVipSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyEsVipSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重启ES集群实例(用于系统版本更新等操作) 
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse

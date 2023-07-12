@@ -44,7 +44,7 @@ public class KongUpstreamInfo extends AbstractModel{
     private String SourceID;
 
     /**
-    * 名字空间
+    * 命名空间
     */
     @SerializedName("Namespace")
     @Expose
@@ -204,16 +204,16 @@ public class KongUpstreamInfo extends AbstractModel{
     }
 
     /**
-     * Get 名字空间 
-     * @return Namespace 名字空间
+     * Get 命名空间 
+     * @return Namespace 命名空间
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 名字空间
-     * @param Namespace 名字空间
+     * Set 命名空间
+     * @param Namespace 命名空间
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

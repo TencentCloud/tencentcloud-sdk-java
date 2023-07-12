@@ -184,6 +184,14 @@ HANDWRITE -手写签名
     private String SignId;
 
     /**
+    * SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
      * Get 签署人姓名，最大长度50个字符 
      * @return Name 签署人姓名，最大长度50个字符
      */
@@ -579,6 +587,26 @@ HANDWRITE -手写签名
         this.SignId = SignId;
     }
 
+    /**
+     * Get SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效) 
+     * @return NotifyType SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+     * @param NotifyType SMS: 短信; NONE: 不发信息
+默认为SMS(该字段对子客无效)
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
     public FlowApproverInfo() {
     }
 
@@ -662,6 +690,9 @@ HANDWRITE -手写签名
         if (source.SignId != null) {
             this.SignId = new String(source.SignId);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
     }
 
 
@@ -690,6 +721,7 @@ HANDWRITE -手写签名
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
 
     }
 }

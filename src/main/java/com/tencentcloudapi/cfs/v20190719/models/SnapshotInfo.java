@@ -122,6 +122,14 @@ public class SnapshotInfo extends AbstractModel{
     private String SnapshotType;
 
     /**
+    * 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SnapshotTime")
+    @Expose
+    private String SnapshotTime;
+
+    /**
      * Get 创建快照时间 
      * @return CreationTime 创建快照时间
      */
@@ -349,6 +357,26 @@ public class SnapshotInfo extends AbstractModel{
         this.SnapshotType = SnapshotType;
     }
 
+    /**
+     * Get 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SnapshotTime 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSnapshotTime() {
+        return this.SnapshotTime;
+    }
+
+    /**
+     * Set 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SnapshotTime 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSnapshotTime(String SnapshotTime) {
+        this.SnapshotTime = SnapshotTime;
+    }
+
     public SnapshotInfo() {
     }
 
@@ -402,6 +430,9 @@ public class SnapshotInfo extends AbstractModel{
         if (source.SnapshotType != null) {
             this.SnapshotType = new String(source.SnapshotType);
         }
+        if (source.SnapshotTime != null) {
+            this.SnapshotTime = new String(source.SnapshotTime);
+        }
     }
 
 
@@ -423,6 +454,7 @@ public class SnapshotInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
+        this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
 
     }
 }

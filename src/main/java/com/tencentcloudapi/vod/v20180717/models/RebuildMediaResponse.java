@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RebuildMediaResponse extends AbstractModel{
 
     /**
-    * 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+    * 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class RebuildMediaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。 
-     * @return TaskId 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+     * Get 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。 
+     * @return TaskId 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
-     * @param TaskId 音画质重生的任务 ID，可以通过该 ID 查询音画质重生任务的状态。
+     * Set 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
+     * @param TaskId 视频重生的任务 ID，可以通过该 ID 查询视频重生任务的状态。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
