@@ -53,6 +53,14 @@ CreateFlowsByTemplates 接口不使用此字段。
     private String ComponentName;
 
     /**
+    * 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LockComponentValue")
+    @Expose
+    private Boolean LockComponentValue;
+
+    /**
      * Get 控件填充vaule，ComponentType和传入值类型对应关系：
 TEXT - 文本内容
 MULTI_LINE_TEXT - 文本内容
@@ -136,6 +144,26 @@ CreateFlowsByTemplates 接口不使用此字段。
         this.ComponentName = ComponentName;
     }
 
+    /**
+     * Get 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LockComponentValue 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLockComponentValue() {
+        return this.LockComponentValue;
+    }
+
+    /**
+     * Set 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LockComponentValue 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLockComponentValue(Boolean LockComponentValue) {
+        this.LockComponentValue = LockComponentValue;
+    }
+
     public FormField() {
     }
 
@@ -153,6 +181,9 @@ CreateFlowsByTemplates 接口不使用此字段。
         if (source.ComponentName != null) {
             this.ComponentName = new String(source.ComponentName);
         }
+        if (source.LockComponentValue != null) {
+            this.LockComponentValue = new Boolean(source.LockComponentValue);
+        }
     }
 
 
@@ -163,6 +194,7 @@ CreateFlowsByTemplates 接口不使用此字段。
         this.setParamSimple(map, prefix + "ComponentValue", this.ComponentValue);
         this.setParamSimple(map, prefix + "ComponentId", this.ComponentId);
         this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
+        this.setParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
 
     }
 }

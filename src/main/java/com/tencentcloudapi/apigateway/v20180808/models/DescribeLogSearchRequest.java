@@ -246,7 +246,9 @@ req_t：”>=“ 、 ”<=“
 
 说明：
 “:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     * @deprecated
      */
+    @Deprecated
     public LogQuery [] getLogQuerys() {
         return this.LogQuerys;
     }
@@ -274,7 +276,9 @@ req_t：”>=“ 、 ”<=“
 
 说明：
 “:”表示包含，“!=”表示不等于，字段含义见输出参数的LogSet说明
+     * @deprecated
      */
+    @Deprecated
     public void setLogQuerys(LogQuery [] LogQuerys) {
         this.LogQuerys = LogQuerys;
     }

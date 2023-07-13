@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cme.v20191029.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportMaterialResponse extends AbstractModel{
+public class CloseAuditServiceResponse extends AbstractModel{
 
     /**
-    * 媒体 Id。
+    * 0-关闭审计成功，非0关闭审计失败。
     */
-    @SerializedName("MaterialId")
+    @SerializedName("TaskId")
     @Expose
-    private String MaterialId;
-
-    /**
-    * 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
-    */
-    @SerializedName("PreProcessTaskId")
-    @Expose
-    private String PreProcessTaskId;
+    private Long TaskId;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class ImportMaterialResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 媒体 Id。 
-     * @return MaterialId 媒体 Id。
+     * Get 0-关闭审计成功，非0关闭审计失败。 
+     * @return TaskId 0-关闭审计成功，非0关闭审计失败。
      */
-    public String getMaterialId() {
-        return this.MaterialId;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set 媒体 Id。
-     * @param MaterialId 媒体 Id。
+     * Set 0-关闭审计成功，非0关闭审计失败。
+     * @param TaskId 0-关闭审计成功，非0关闭审计失败。
      */
-    public void setMaterialId(String MaterialId) {
-        this.MaterialId = MaterialId;
-    }
-
-    /**
-     * Get 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。 
-     * @return PreProcessTaskId 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
-     */
-    public String getPreProcessTaskId() {
-        return this.PreProcessTaskId;
-    }
-
-    /**
-     * Set 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
-     * @param PreProcessTaskId 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
-     */
-    public void setPreProcessTaskId(String PreProcessTaskId) {
-        this.PreProcessTaskId = PreProcessTaskId;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,19 +68,16 @@ public class ImportMaterialResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ImportMaterialResponse() {
+    public CloseAuditServiceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImportMaterialResponse(ImportMaterialResponse source) {
-        if (source.MaterialId != null) {
-            this.MaterialId = new String(source.MaterialId);
-        }
-        if (source.PreProcessTaskId != null) {
-            this.PreProcessTaskId = new String(source.PreProcessTaskId);
+    public CloseAuditServiceResponse(CloseAuditServiceResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +89,7 @@ public class ImportMaterialResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
-        this.setParamSimple(map, prefix + "PreProcessTaskId", this.PreProcessTaskId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

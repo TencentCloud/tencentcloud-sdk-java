@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreateAuditLogFileRequest extends AbstractModel{
 
     /**
-    * 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 开始时间，格式为："2017-07-12 10:29:20"。
+    * 开始时间。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，格式为："2017-07-12 10:29:20"。
+    * 结束时间。
     */
     @SerializedName("EndTime")
     @Expose
@@ -61,55 +61,62 @@ public class CreateAuditLogFileRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * 过滤条件。可按设置的过滤条件过滤日志。
+    * 已废弃。
     */
     @SerializedName("Filter")
     @Expose
     private AuditLogFilter Filter;
 
     /**
-     * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
-     * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+    * 过滤条件。可按设置的过滤条件过滤日志。
+    */
+    @SerializedName("LogFilter")
+    @Expose
+    private InstanceAuditLogFilters [] LogFilter;
+
+    /**
+     * Get 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。 
+     * @return InstanceId 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * Set 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param InstanceId 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 开始时间，格式为："2017-07-12 10:29:20"。 
-     * @return StartTime 开始时间，格式为："2017-07-12 10:29:20"。
+     * Get 开始时间。 
+     * @return StartTime 开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，格式为："2017-07-12 10:29:20"。
-     * @param StartTime 开始时间，格式为："2017-07-12 10:29:20"。
+     * Set 开始时间。
+     * @param StartTime 开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，格式为："2017-07-12 10:29:20"。 
-     * @return EndTime 结束时间，格式为："2017-07-12 10:29:20"。
+     * Get 结束时间。 
+     * @return EndTime 结束时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，格式为："2017-07-12 10:29:20"。
-     * @param EndTime 结束时间，格式为："2017-07-12 10:29:20"。
+     * Set 结束时间。
+     * @param EndTime 结束时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -160,19 +167,35 @@ public class CreateAuditLogFileRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件。可按设置的过滤条件过滤日志。 
-     * @return Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * Get 已废弃。 
+     * @return Filter 已废弃。
      */
     public AuditLogFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件。可按设置的过滤条件过滤日志。
-     * @param Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * Set 已废弃。
+     * @param Filter 已废弃。
      */
     public void setFilter(AuditLogFilter Filter) {
         this.Filter = Filter;
+    }
+
+    /**
+     * Get 过滤条件。可按设置的过滤条件过滤日志。 
+     * @return LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     */
+    public InstanceAuditLogFilters [] getLogFilter() {
+        return this.LogFilter;
+    }
+
+    /**
+     * Set 过滤条件。可按设置的过滤条件过滤日志。
+     * @param LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     */
+    public void setLogFilter(InstanceAuditLogFilters [] LogFilter) {
+        this.LogFilter = LogFilter;
     }
 
     public CreateAuditLogFileRequest() {
@@ -201,6 +224,12 @@ public class CreateAuditLogFileRequest extends AbstractModel{
         if (source.Filter != null) {
             this.Filter = new AuditLogFilter(source.Filter);
         }
+        if (source.LogFilter != null) {
+            this.LogFilter = new InstanceAuditLogFilters[source.LogFilter.length];
+            for (int i = 0; i < source.LogFilter.length; i++) {
+                this.LogFilter[i] = new InstanceAuditLogFilters(source.LogFilter[i]);
+            }
+        }
     }
 
 
@@ -214,6 +243,7 @@ public class CreateAuditLogFileRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
 
     }
 }

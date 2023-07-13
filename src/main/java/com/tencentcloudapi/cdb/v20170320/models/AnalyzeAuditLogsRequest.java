@@ -51,11 +51,18 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
     private AggregationCondition [] AggregationConditions;
 
     /**
-    * 该过滤条件下的审计日志结果集作为分析日志。
+    * 已废弃。该过滤条件下的审计日志结果集作为分析日志。
     */
     @SerializedName("AuditLogFilter")
     @Expose
     private AuditLogFilter AuditLogFilter;
+
+    /**
+    * 该过滤条件下的审计日志结果集作为分析日志。
+    */
+    @SerializedName("LogFilter")
+    @Expose
+    private InstanceAuditLogFilters [] LogFilter;
 
     /**
      * Get 实例ID。 
@@ -122,19 +129,35 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get 该过滤条件下的审计日志结果集作为分析日志。 
-     * @return AuditLogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     * Get 已废弃。该过滤条件下的审计日志结果集作为分析日志。 
+     * @return AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
      */
     public AuditLogFilter getAuditLogFilter() {
         return this.AuditLogFilter;
     }
 
     /**
-     * Set 该过滤条件下的审计日志结果集作为分析日志。
-     * @param AuditLogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     * Set 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * @param AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
      */
     public void setAuditLogFilter(AuditLogFilter AuditLogFilter) {
         this.AuditLogFilter = AuditLogFilter;
+    }
+
+    /**
+     * Get 该过滤条件下的审计日志结果集作为分析日志。 
+     * @return LogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     */
+    public InstanceAuditLogFilters [] getLogFilter() {
+        return this.LogFilter;
+    }
+
+    /**
+     * Set 该过滤条件下的审计日志结果集作为分析日志。
+     * @param LogFilter 该过滤条件下的审计日志结果集作为分析日志。
+     */
+    public void setLogFilter(InstanceAuditLogFilters [] LogFilter) {
+        this.LogFilter = LogFilter;
     }
 
     public AnalyzeAuditLogsRequest() {
@@ -163,6 +186,12 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
         if (source.AuditLogFilter != null) {
             this.AuditLogFilter = new AuditLogFilter(source.AuditLogFilter);
         }
+        if (source.LogFilter != null) {
+            this.LogFilter = new InstanceAuditLogFilters[source.LogFilter.length];
+            for (int i = 0; i < source.LogFilter.length; i++) {
+                this.LogFilter[i] = new InstanceAuditLogFilters(source.LogFilter[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class AnalyzeAuditLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "AggregationConditions.", this.AggregationConditions);
         this.setParamObj(map, prefix + "AuditLogFilter.", this.AuditLogFilter);
+        this.setParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
 
     }
 }

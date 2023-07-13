@@ -45,6 +45,14 @@ public class CreateRoleResponse extends AbstractModel{
     private String Remark;
 
     /**
+    * 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvironmentRoleSets")
+    @Expose
+    private EnvironmentRoleSet [] EnvironmentRoleSets;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ public class CreateRoleResponse extends AbstractModel{
     }
 
     /**
+     * Get 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvironmentRoleSets 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnvironmentRoleSet [] getEnvironmentRoleSets() {
+        return this.EnvironmentRoleSets;
+    }
+
+    /**
+     * Set 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvironmentRoleSets 批量绑定名字空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironmentRoleSets(EnvironmentRoleSet [] EnvironmentRoleSets) {
+        this.EnvironmentRoleSets = EnvironmentRoleSets;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -136,6 +164,12 @@ public class CreateRoleResponse extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.EnvironmentRoleSets != null) {
+            this.EnvironmentRoleSets = new EnvironmentRoleSet[source.EnvironmentRoleSets.length];
+            for (int i = 0; i < source.EnvironmentRoleSets.length; i++) {
+                this.EnvironmentRoleSets[i] = new EnvironmentRoleSet(source.EnvironmentRoleSets[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -149,6 +183,7 @@ public class CreateRoleResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamArrayObj(map, prefix + "EnvironmentRoleSets.", this.EnvironmentRoleSets);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

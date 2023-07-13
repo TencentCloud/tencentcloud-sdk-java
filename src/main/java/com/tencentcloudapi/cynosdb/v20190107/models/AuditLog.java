@@ -93,21 +93,21 @@ public class AuditLog extends AbstractModel{
     private String User;
 
     /**
-    * 执行时间。
+    * 执行时间，微秒。
     */
     @SerializedName("ExecTime")
     @Expose
     private Long ExecTime;
 
     /**
-    * 时间戳。
+    * 时间。
     */
     @SerializedName("Timestamp")
     @Expose
     private String Timestamp;
 
     /**
-    * 发送行数。
+    * 返回行数。
     */
     @SerializedName("SentRows")
     @Expose
@@ -119,6 +119,54 @@ public class AuditLog extends AbstractModel{
     @SerializedName("ThreadId")
     @Expose
     private Long ThreadId;
+
+    /**
+    * 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckRows")
+    @Expose
+    private Long CheckRows;
+
+    /**
+    * cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CpuTime")
+    @Expose
+    private Float CpuTime;
+
+    /**
+    * IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IoWaitTime")
+    @Expose
+    private Long IoWaitTime;
+
+    /**
+    * 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LockWaitTime")
+    @Expose
+    private Long LockWaitTime;
+
+    /**
+    * 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrxLivingTime")
+    @Expose
+    private Long TrxLivingTime;
+
+    /**
+    * 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NsTime")
+    @Expose
+    private Long NsTime;
 
     /**
      * Get 影响行数。 
@@ -281,48 +329,48 @@ public class AuditLog extends AbstractModel{
     }
 
     /**
-     * Get 执行时间。 
-     * @return ExecTime 执行时间。
+     * Get 执行时间，微秒。 
+     * @return ExecTime 执行时间，微秒。
      */
     public Long getExecTime() {
         return this.ExecTime;
     }
 
     /**
-     * Set 执行时间。
-     * @param ExecTime 执行时间。
+     * Set 执行时间，微秒。
+     * @param ExecTime 执行时间，微秒。
      */
     public void setExecTime(Long ExecTime) {
         this.ExecTime = ExecTime;
     }
 
     /**
-     * Get 时间戳。 
-     * @return Timestamp 时间戳。
+     * Get 时间。 
+     * @return Timestamp 时间。
      */
     public String getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 时间戳。
-     * @param Timestamp 时间戳。
+     * Set 时间。
+     * @param Timestamp 时间。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 发送行数。 
-     * @return SentRows 发送行数。
+     * Get 返回行数。 
+     * @return SentRows 返回行数。
      */
     public Long getSentRows() {
         return this.SentRows;
     }
 
     /**
-     * Set 发送行数。
-     * @param SentRows 发送行数。
+     * Set 返回行数。
+     * @param SentRows 返回行数。
      */
     public void setSentRows(Long SentRows) {
         this.SentRows = SentRows;
@@ -342,6 +390,126 @@ public class AuditLog extends AbstractModel{
      */
     public void setThreadId(Long ThreadId) {
         this.ThreadId = ThreadId;
+    }
+
+    /**
+     * Get 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckRows 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCheckRows() {
+        return this.CheckRows;
+    }
+
+    /**
+     * Set 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckRows 扫描行数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckRows(Long CheckRows) {
+        this.CheckRows = CheckRows;
+    }
+
+    /**
+     * Get cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CpuTime cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getCpuTime() {
+        return this.CpuTime;
+    }
+
+    /**
+     * Set cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CpuTime cpu执行时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCpuTime(Float CpuTime) {
+        this.CpuTime = CpuTime;
+    }
+
+    /**
+     * Get IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IoWaitTime IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIoWaitTime() {
+        return this.IoWaitTime;
+    }
+
+    /**
+     * Set IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IoWaitTime IO等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIoWaitTime(Long IoWaitTime) {
+        this.IoWaitTime = IoWaitTime;
+    }
+
+    /**
+     * Get 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LockWaitTime 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLockWaitTime() {
+        return this.LockWaitTime;
+    }
+
+    /**
+     * Set 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LockWaitTime 锁等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLockWaitTime(Long LockWaitTime) {
+        this.LockWaitTime = LockWaitTime;
+    }
+
+    /**
+     * Get 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrxLivingTime 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTrxLivingTime() {
+        return this.TrxLivingTime;
+    }
+
+    /**
+     * Set 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrxLivingTime 事物持续等待时间，微秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrxLivingTime(Long TrxLivingTime) {
+        this.TrxLivingTime = TrxLivingTime;
+    }
+
+    /**
+     * Get 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNsTime() {
+        return this.NsTime;
+    }
+
+    /**
+     * Set 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNsTime(Long NsTime) {
+        this.NsTime = NsTime;
     }
 
     public AuditLog() {
@@ -394,6 +562,24 @@ public class AuditLog extends AbstractModel{
         if (source.ThreadId != null) {
             this.ThreadId = new Long(source.ThreadId);
         }
+        if (source.CheckRows != null) {
+            this.CheckRows = new Long(source.CheckRows);
+        }
+        if (source.CpuTime != null) {
+            this.CpuTime = new Float(source.CpuTime);
+        }
+        if (source.IoWaitTime != null) {
+            this.IoWaitTime = new Long(source.IoWaitTime);
+        }
+        if (source.LockWaitTime != null) {
+            this.LockWaitTime = new Long(source.LockWaitTime);
+        }
+        if (source.TrxLivingTime != null) {
+            this.TrxLivingTime = new Long(source.TrxLivingTime);
+        }
+        if (source.NsTime != null) {
+            this.NsTime = new Long(source.NsTime);
+        }
     }
 
 
@@ -415,6 +601,12 @@ public class AuditLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "SentRows", this.SentRows);
         this.setParamSimple(map, prefix + "ThreadId", this.ThreadId);
+        this.setParamSimple(map, prefix + "CheckRows", this.CheckRows);
+        this.setParamSimple(map, prefix + "CpuTime", this.CpuTime);
+        this.setParamSimple(map, prefix + "IoWaitTime", this.IoWaitTime);
+        this.setParamSimple(map, prefix + "LockWaitTime", this.LockWaitTime);
+        this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
+        this.setParamSimple(map, prefix + "NsTime", this.NsTime);
 
     }
 }

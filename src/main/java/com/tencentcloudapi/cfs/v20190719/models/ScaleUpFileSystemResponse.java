@@ -30,7 +30,7 @@ public class ScaleUpFileSystemResponse extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * 扩容的目标容量
+    * 扩容的目标容量（单位GiB）
     */
     @SerializedName("TargetCapacity")
     @Expose
@@ -60,16 +60,16 @@ public class ScaleUpFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get 扩容的目标容量 
-     * @return TargetCapacity 扩容的目标容量
+     * Get 扩容的目标容量（单位GiB） 
+     * @return TargetCapacity 扩容的目标容量（单位GiB）
      */
     public Long getTargetCapacity() {
         return this.TargetCapacity;
     }
 
     /**
-     * Set 扩容的目标容量
-     * @param TargetCapacity 扩容的目标容量
+     * Set 扩容的目标容量（单位GiB）
+     * @param TargetCapacity 扩容的目标容量（单位GiB）
      */
     public void setTargetCapacity(Long TargetCapacity) {
         this.TargetCapacity = TargetCapacity;

@@ -30,7 +30,7 @@ public class AvailableType extends AbstractModel{
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+    * 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
     */
     @SerializedName("Type")
     @Expose
@@ -60,16 +60,16 @@ public class AvailableType extends AbstractModel{
     }
 
     /**
-     * Get 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储 
-     * @return Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * Get 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。 
+     * @return Type 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
-     * @param Type 存储类型。返回值中 SD 为标准型存储、HP 为性能型存储
+     * Set 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
+     * @param Type 存储类型。返回值中 SD 为通用标准型存储， HP为通用性能型存储， TB为Turbo标准型， TP 为Turbo性能型。
      */
     public void setType(String Type) {
         this.Type = Type;

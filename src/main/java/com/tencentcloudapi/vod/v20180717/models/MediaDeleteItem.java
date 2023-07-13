@@ -27,7 +27,10 @@ public class MediaDeleteItem extends AbstractModel{
 <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
 <li>TranscodeFiles（删除转码文件）；</li>
 <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li>
+<li>WechatPublishFiles（删除微信发布文件）；</li>
+<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
+<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
+<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -46,12 +49,18 @@ public class MediaDeleteItem extends AbstractModel{
 <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
 <li>TranscodeFiles（删除转码文件）；</li>
 <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li> 
+<li>WechatPublishFiles（删除微信发布文件）；</li>
+<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
+<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
+<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li> 
      * @return Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
 <li>TranscodeFiles（删除转码文件）；</li>
 <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li>
+<li>WechatPublishFiles（删除微信发布文件）；</li>
+<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
+<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
+<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
      */
     public String getType() {
         return this.Type;
@@ -62,12 +71,18 @@ public class MediaDeleteItem extends AbstractModel{
 <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
 <li>TranscodeFiles（删除转码文件）；</li>
 <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li>
+<li>WechatPublishFiles（删除微信发布文件）；</li>
+<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
+<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
+<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
      * @param Type 所指定的删除部分。如果未填写该字段则参数无效。可选值有：
 <li>OriginalFiles（删除原文件，删除后无法发起转码、微信发布等任何视频处理操作）；</li>
 <li>TranscodeFiles（删除转码文件）；</li>
 <li>AdaptiveDynamicStreamingFiles（删除转自适应码流文件）；</li>
-<li>WechatPublishFiles（删除微信发布文件）。</li>
+<li>WechatPublishFiles（删除微信发布文件）；</li>
+<li>WechatMiniProgramPublishFiles（删除微信小程序发布文件）。</li>
+<font color=red>注意：</font> <li>取值为OriginalFiles时，文件上传时携带的封面文件会被删除；</li>
+<li>取值为TranscodeFiles时，媒体处理产生的封面文件会被删除。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

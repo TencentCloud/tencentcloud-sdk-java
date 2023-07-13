@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cme.v20191029.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImportMaterialResponse extends AbstractModel{
+public class DescribeAuditInstanceListResponse extends AbstractModel{
 
     /**
-    * 媒体 Id。
+    * 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MaterialId")
+    @SerializedName("TotalCount")
     @Expose
-    private String MaterialId;
+    private Long TotalCount;
 
     /**
-    * 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
+    * 实例详情。
     */
-    @SerializedName("PreProcessTaskId")
+    @SerializedName("Items")
     @Expose
-    private String PreProcessTaskId;
+    private AuditInstance [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +45,39 @@ public class ImportMaterialResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 媒体 Id。 
-     * @return MaterialId 媒体 Id。
+     * Get 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMaterialId() {
-        return this.MaterialId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 媒体 Id。
-     * @param MaterialId 媒体 Id。
+     * Set 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 符合条件的实例个数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMaterialId(String MaterialId) {
-        this.MaterialId = MaterialId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。 
-     * @return PreProcessTaskId 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
+     * Get 实例详情。 
+     * @return Items 实例详情。
      */
-    public String getPreProcessTaskId() {
-        return this.PreProcessTaskId;
+    public AuditInstance [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
-     * @param PreProcessTaskId 媒体文件预处理任务 ID，如果未指定发起预处理任务则为空。
+     * Set 实例详情。
+     * @param Items 实例详情。
      */
-    public void setPreProcessTaskId(String PreProcessTaskId) {
-        this.PreProcessTaskId = PreProcessTaskId;
+    public void setItems(AuditInstance [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -91,19 +96,22 @@ public class ImportMaterialResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ImportMaterialResponse() {
+    public DescribeAuditInstanceListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImportMaterialResponse(ImportMaterialResponse source) {
-        if (source.MaterialId != null) {
-            this.MaterialId = new String(source.MaterialId);
+    public DescribeAuditInstanceListResponse(DescribeAuditInstanceListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.PreProcessTaskId != null) {
-            this.PreProcessTaskId = new String(source.PreProcessTaskId);
+        if (source.Items != null) {
+            this.Items = new AuditInstance[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new AuditInstance(source.Items[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +123,8 @@ public class ImportMaterialResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MaterialId", this.MaterialId);
-        this.setParamSimple(map, prefix + "PreProcessTaskId", this.PreProcessTaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

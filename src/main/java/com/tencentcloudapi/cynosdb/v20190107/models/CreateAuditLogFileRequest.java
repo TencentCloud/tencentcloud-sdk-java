@@ -61,11 +61,18 @@ public class CreateAuditLogFileRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * 过滤条件。可按设置的过滤条件过滤日志。
+    * 已废弃。
     */
     @SerializedName("Filter")
     @Expose
     private AuditLogFilter Filter;
+
+    /**
+    * 审计日志过滤条件
+    */
+    @SerializedName("LogFilter")
+    @Expose
+    private InstanceAuditLogFilter [] LogFilter;
 
     /**
      * Get 实例ID 
@@ -160,19 +167,35 @@ public class CreateAuditLogFileRequest extends AbstractModel{
     }
 
     /**
-     * Get 过滤条件。可按设置的过滤条件过滤日志。 
-     * @return Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * Get 已废弃。 
+     * @return Filter 已废弃。
      */
     public AuditLogFilter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 过滤条件。可按设置的过滤条件过滤日志。
-     * @param Filter 过滤条件。可按设置的过滤条件过滤日志。
+     * Set 已废弃。
+     * @param Filter 已废弃。
      */
     public void setFilter(AuditLogFilter Filter) {
         this.Filter = Filter;
+    }
+
+    /**
+     * Get 审计日志过滤条件 
+     * @return LogFilter 审计日志过滤条件
+     */
+    public InstanceAuditLogFilter [] getLogFilter() {
+        return this.LogFilter;
+    }
+
+    /**
+     * Set 审计日志过滤条件
+     * @param LogFilter 审计日志过滤条件
+     */
+    public void setLogFilter(InstanceAuditLogFilter [] LogFilter) {
+        this.LogFilter = LogFilter;
     }
 
     public CreateAuditLogFileRequest() {
@@ -201,6 +224,12 @@ public class CreateAuditLogFileRequest extends AbstractModel{
         if (source.Filter != null) {
             this.Filter = new AuditLogFilter(source.Filter);
         }
+        if (source.LogFilter != null) {
+            this.LogFilter = new InstanceAuditLogFilter[source.LogFilter.length];
+            for (int i = 0; i < source.LogFilter.length; i++) {
+                this.LogFilter[i] = new InstanceAuditLogFilter(source.LogFilter[i]);
+            }
+        }
     }
 
 
@@ -214,6 +243,7 @@ public class CreateAuditLogFileRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "LogFilter.", this.LogFilter);
 
     }
 }

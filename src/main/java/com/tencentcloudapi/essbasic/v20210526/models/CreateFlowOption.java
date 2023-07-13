@@ -30,6 +30,41 @@ public class CreateFlowOption extends AbstractModel{
     private Boolean CanEditFlow;
 
     /**
+    * 是否允许发起合同弹窗隐藏合同名称
+    */
+    @SerializedName("HideShowFlowName")
+    @Expose
+    private Boolean HideShowFlowName;
+
+    /**
+    * 是否允许发起合同弹窗隐藏合同类型
+    */
+    @SerializedName("HideShowFlowType")
+    @Expose
+    private Boolean HideShowFlowType;
+
+    /**
+    * 是否允许发起合同弹窗隐藏合同到期时间
+    */
+    @SerializedName("HideShowDeadline")
+    @Expose
+    private Boolean HideShowDeadline;
+
+    /**
+    * 是否允许发起合同步骤跳过指定签署方步骤
+    */
+    @SerializedName("CanSkipAddApprover")
+    @Expose
+    private Boolean CanSkipAddApprover;
+
+    /**
+    * 定制化发起合同页合同描述信息
+    */
+    @SerializedName("CustomCreateFlowDescription")
+    @Expose
+    private String CustomCreateFlowDescription;
+
+    /**
      * Get 是否允许修改合同信息，true-是，false-否 
      * @return CanEditFlow 是否允许修改合同信息，true-是，false-否
      */
@@ -45,6 +80,86 @@ public class CreateFlowOption extends AbstractModel{
         this.CanEditFlow = CanEditFlow;
     }
 
+    /**
+     * Get 是否允许发起合同弹窗隐藏合同名称 
+     * @return HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+     */
+    public Boolean getHideShowFlowName() {
+        return this.HideShowFlowName;
+    }
+
+    /**
+     * Set 是否允许发起合同弹窗隐藏合同名称
+     * @param HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+     */
+    public void setHideShowFlowName(Boolean HideShowFlowName) {
+        this.HideShowFlowName = HideShowFlowName;
+    }
+
+    /**
+     * Get 是否允许发起合同弹窗隐藏合同类型 
+     * @return HideShowFlowType 是否允许发起合同弹窗隐藏合同类型
+     */
+    public Boolean getHideShowFlowType() {
+        return this.HideShowFlowType;
+    }
+
+    /**
+     * Set 是否允许发起合同弹窗隐藏合同类型
+     * @param HideShowFlowType 是否允许发起合同弹窗隐藏合同类型
+     */
+    public void setHideShowFlowType(Boolean HideShowFlowType) {
+        this.HideShowFlowType = HideShowFlowType;
+    }
+
+    /**
+     * Get 是否允许发起合同弹窗隐藏合同到期时间 
+     * @return HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+     */
+    public Boolean getHideShowDeadline() {
+        return this.HideShowDeadline;
+    }
+
+    /**
+     * Set 是否允许发起合同弹窗隐藏合同到期时间
+     * @param HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+     */
+    public void setHideShowDeadline(Boolean HideShowDeadline) {
+        this.HideShowDeadline = HideShowDeadline;
+    }
+
+    /**
+     * Get 是否允许发起合同步骤跳过指定签署方步骤 
+     * @return CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+     */
+    public Boolean getCanSkipAddApprover() {
+        return this.CanSkipAddApprover;
+    }
+
+    /**
+     * Set 是否允许发起合同步骤跳过指定签署方步骤
+     * @param CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+     */
+    public void setCanSkipAddApprover(Boolean CanSkipAddApprover) {
+        this.CanSkipAddApprover = CanSkipAddApprover;
+    }
+
+    /**
+     * Get 定制化发起合同页合同描述信息 
+     * @return CustomCreateFlowDescription 定制化发起合同页合同描述信息
+     */
+    public String getCustomCreateFlowDescription() {
+        return this.CustomCreateFlowDescription;
+    }
+
+    /**
+     * Set 定制化发起合同页合同描述信息
+     * @param CustomCreateFlowDescription 定制化发起合同页合同描述信息
+     */
+    public void setCustomCreateFlowDescription(String CustomCreateFlowDescription) {
+        this.CustomCreateFlowDescription = CustomCreateFlowDescription;
+    }
+
     public CreateFlowOption() {
     }
 
@@ -56,6 +171,21 @@ public class CreateFlowOption extends AbstractModel{
         if (source.CanEditFlow != null) {
             this.CanEditFlow = new Boolean(source.CanEditFlow);
         }
+        if (source.HideShowFlowName != null) {
+            this.HideShowFlowName = new Boolean(source.HideShowFlowName);
+        }
+        if (source.HideShowFlowType != null) {
+            this.HideShowFlowType = new Boolean(source.HideShowFlowType);
+        }
+        if (source.HideShowDeadline != null) {
+            this.HideShowDeadline = new Boolean(source.HideShowDeadline);
+        }
+        if (source.CanSkipAddApprover != null) {
+            this.CanSkipAddApprover = new Boolean(source.CanSkipAddApprover);
+        }
+        if (source.CustomCreateFlowDescription != null) {
+            this.CustomCreateFlowDescription = new String(source.CustomCreateFlowDescription);
+        }
     }
 
 
@@ -64,6 +194,11 @@ public class CreateFlowOption extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CanEditFlow", this.CanEditFlow);
+        this.setParamSimple(map, prefix + "HideShowFlowName", this.HideShowFlowName);
+        this.setParamSimple(map, prefix + "HideShowFlowType", this.HideShowFlowType);
+        this.setParamSimple(map, prefix + "HideShowDeadline", this.HideShowDeadline);
+        this.setParamSimple(map, prefix + "CanSkipAddApprover", this.CanSkipAddApprover);
+        this.setParamSimple(map, prefix + "CustomCreateFlowDescription", this.CustomCreateFlowDescription);
 
     }
 }

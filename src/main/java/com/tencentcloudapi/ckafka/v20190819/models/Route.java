@@ -79,6 +79,30 @@ public class Route extends AbstractModel{
     private String DeleteTimestamp;
 
     /**
+    * 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Subnet")
+    @Expose
+    private String Subnet;
+
+    /**
+    * 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BrokerVipList")
+    @Expose
+    private VipEntity [] BrokerVipList;
+
+    /**
+    * vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
@@ -218,6 +242,66 @@ public class Route extends AbstractModel{
         this.DeleteTimestamp = DeleteTimestamp;
     }
 
+    /**
+     * Get 子网信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Subnet 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnet() {
+        return this.Subnet;
+    }
+
+    /**
+     * Set 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Subnet 子网信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnet(String Subnet) {
+        this.Subnet = Subnet;
+    }
+
+    /**
+     * Get 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BrokerVipList 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VipEntity [] getBrokerVipList() {
+        return this.BrokerVipList;
+    }
+
+    /**
+     * Set 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BrokerVipList 虚拟IP列表(1对1 broker节点)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBrokerVipList(VipEntity [] BrokerVipList) {
+        this.BrokerVipList = BrokerVipList;
+    }
+
+    /**
+     * Get vpc信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId vpc信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public Route() {
     }
 
@@ -250,6 +334,18 @@ public class Route extends AbstractModel{
         if (source.DeleteTimestamp != null) {
             this.DeleteTimestamp = new String(source.DeleteTimestamp);
         }
+        if (source.Subnet != null) {
+            this.Subnet = new String(source.Subnet);
+        }
+        if (source.BrokerVipList != null) {
+            this.BrokerVipList = new VipEntity[source.BrokerVipList.length];
+            for (int i = 0; i < source.BrokerVipList.length; i++) {
+                this.BrokerVipList[i] = new VipEntity(source.BrokerVipList[i]);
+            }
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -264,6 +360,9 @@ public class Route extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DomainPort", this.DomainPort);
         this.setParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
+        this.setParamSimple(map, prefix + "Subnet", this.Subnet);
+        this.setParamArrayObj(map, prefix + "BrokerVipList.", this.BrokerVipList);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

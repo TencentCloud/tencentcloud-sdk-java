@@ -115,10 +115,9 @@ public class HKIDCardOCRResponse extends AbstractModel{
     private String HeadImage;
 
     /**
-    * 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+    * 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
     */
     @SerializedName("WarningCode")
     @Expose
@@ -356,28 +355,24 @@ public class HKIDCardOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+     * Get 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
+-9102：证照复印件告警
+-9103：证照翻拍告警 
+     * @return WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警 
-     * @return WarningCode 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
--9104：证照PS告警
      */
     public Long [] getWarningCode() {
         return this.WarningCode;
     }
 
     /**
-     * Set 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+     * Set 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
-     * @param WarningCode 多重告警码，当身份证是翻拍、复印、PS件时返回对应告警码。
+     * @param WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
 -9102：证照复印件告警
 -9103：证照翻拍告警
--9104：证照PS告警
      */
     public void setWarningCode(Long [] WarningCode) {
         this.WarningCode = WarningCode;
