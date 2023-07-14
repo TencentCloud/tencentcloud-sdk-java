@@ -46,7 +46,7 @@ public class DescribeUserQuotaRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Limit 页面大小
+    * Limit 页面大小，可填范围为大于0的整数
     */
     @SerializedName("Limit")
     @Expose
@@ -109,16 +109,16 @@ public class DescribeUserQuotaRequest extends AbstractModel{
     }
 
     /**
-     * Get Limit 页面大小 
-     * @return Limit Limit 页面大小
+     * Get Limit 页面大小，可填范围为大于0的整数 
+     * @return Limit Limit 页面大小，可填范围为大于0的整数
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit 页面大小
-     * @param Limit Limit 页面大小
+     * Set Limit 页面大小，可填范围为大于0的整数
+     * @param Limit Limit 页面大小，可填范围为大于0的整数
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

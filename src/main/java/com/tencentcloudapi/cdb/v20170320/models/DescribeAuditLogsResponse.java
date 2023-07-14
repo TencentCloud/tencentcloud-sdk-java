@@ -13,22 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIPStrategysStatusResponse extends AbstractModel{
+public class DescribeAuditLogsResponse extends AbstractModel{
 
     /**
-    * 符合条件的策略列表。
+    * 符合条件的审计日志条数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Result")
+    @SerializedName("Items")
     @Expose
-    private IPStrategiesStatus Result;
+    private AuditLog [] Items;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -38,23 +45,39 @@ public class DescribeIPStrategysStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的策略列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 符合条件的策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 符合条件的审计日志条数。 
+     * @return TotalCount 符合条件的审计日志条数。
      */
-    public IPStrategiesStatus getResult() {
-        return this.Result;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 符合条件的策略列表。
+     * Set 符合条件的审计日志条数。
+     * @param TotalCount 符合条件的审计日志条数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 审计日志详情。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 审计日志详情。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(IPStrategiesStatus Result) {
-        this.Result = Result;
+    public AuditLog [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 审计日志详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 审计日志详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(AuditLog [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -73,16 +96,22 @@ public class DescribeIPStrategysStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeIPStrategysStatusResponse() {
+    public DescribeAuditLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIPStrategysStatusResponse(DescribeIPStrategysStatusResponse source) {
-        if (source.Result != null) {
-            this.Result = new IPStrategiesStatus(source.Result);
+    public DescribeAuditLogsResponse(DescribeAuditLogsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new AuditLog[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new AuditLog(source.Items[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +123,8 @@ public class DescribeIPStrategysStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

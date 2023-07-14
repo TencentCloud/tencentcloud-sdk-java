@@ -835,6 +835,27 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeAuditLogs)用于查询数据库审计日志。
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditLogsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeAuditPolicies)用于查询云数据库实例的审计策略。
      * @param req DescribeAuditPoliciesRequest
      * @return DescribeAuditPoliciesResponse

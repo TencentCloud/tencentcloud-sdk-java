@@ -28,7 +28,7 @@ public class DescribeApiEnvironmentStrategyResponse extends AbstractModel{
     */
     @SerializedName("Result")
     @Expose
-    private ApiEnvironmentStrategyStataus Result;
+    private ApiEnvironmentStrategyStatus Result;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +43,7 @@ public class DescribeApiEnvironmentStrategyResponse extends AbstractModel{
      * @return Result api绑定策略详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ApiEnvironmentStrategyStataus getResult() {
+    public ApiEnvironmentStrategyStatus getResult() {
         return this.Result;
     }
 
@@ -53,7 +53,7 @@ public class DescribeApiEnvironmentStrategyResponse extends AbstractModel{
      * @param Result api绑定策略详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setResult(ApiEnvironmentStrategyStataus Result) {
+    public void setResult(ApiEnvironmentStrategyStatus Result) {
         this.Result = Result;
     }
 
@@ -82,7 +82,7 @@ public class DescribeApiEnvironmentStrategyResponse extends AbstractModel{
      */
     public DescribeApiEnvironmentStrategyResponse(DescribeApiEnvironmentStrategyResponse source) {
         if (source.Result != null) {
-            this.Result = new ApiEnvironmentStrategyStataus(source.Result);
+            this.Result = new ApiEnvironmentStrategyStatus(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

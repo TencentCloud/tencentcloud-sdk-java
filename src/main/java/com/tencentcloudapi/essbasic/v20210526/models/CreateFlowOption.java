@@ -30,35 +30,35 @@ public class CreateFlowOption extends AbstractModel{
     private Boolean CanEditFlow;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同名称
+    * 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
     */
     @SerializedName("HideShowFlowName")
     @Expose
     private Boolean HideShowFlowName;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同类型
+    * 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
     */
     @SerializedName("HideShowFlowType")
     @Expose
     private Boolean HideShowFlowType;
 
     /**
-    * 是否允许发起合同弹窗隐藏合同到期时间
+    * 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
     */
     @SerializedName("HideShowDeadline")
     @Expose
     private Boolean HideShowDeadline;
 
     /**
-    * 是否允许发起合同步骤跳过指定签署方步骤
+    * 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
     */
     @SerializedName("CanSkipAddApprover")
     @Expose
     private Boolean CanSkipAddApprover;
 
     /**
-    * 定制化发起合同页合同描述信息
+    * 定制化发起合同弹窗的描述信息，描述信息最长500
     */
     @SerializedName("CustomCreateFlowDescription")
     @Expose
@@ -81,80 +81,80 @@ public class CreateFlowOption extends AbstractModel{
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同名称 
-     * @return HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+     * Get 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许 
+     * @return HideShowFlowName 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
      */
     public Boolean getHideShowFlowName() {
         return this.HideShowFlowName;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同名称
-     * @param HideShowFlowName 是否允许发起合同弹窗隐藏合同名称
+     * Set 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
+     * @param HideShowFlowName 是否允许发起合同弹窗隐藏合同名称，true-允许，false-不允许
      */
     public void setHideShowFlowName(Boolean HideShowFlowName) {
         this.HideShowFlowName = HideShowFlowName;
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同类型 
-     * @return HideShowFlowType 是否允许发起合同弹窗隐藏合同类型
+     * Get 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许 
+     * @return HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
      */
     public Boolean getHideShowFlowType() {
         return this.HideShowFlowType;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同类型
-     * @param HideShowFlowType 是否允许发起合同弹窗隐藏合同类型
+     * Set 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
+     * @param HideShowFlowType 是否允许发起合同弹窗隐藏合同类型，true-允许，false-不允许
      */
     public void setHideShowFlowType(Boolean HideShowFlowType) {
         this.HideShowFlowType = HideShowFlowType;
     }
 
     /**
-     * Get 是否允许发起合同弹窗隐藏合同到期时间 
-     * @return HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+     * Get 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许 
+     * @return HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
      */
     public Boolean getHideShowDeadline() {
         return this.HideShowDeadline;
     }
 
     /**
-     * Set 是否允许发起合同弹窗隐藏合同到期时间
-     * @param HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间
+     * Set 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
+     * @param HideShowDeadline 是否允许发起合同弹窗隐藏合同到期时间，true-允许，false-不允许
      */
     public void setHideShowDeadline(Boolean HideShowDeadline) {
         this.HideShowDeadline = HideShowDeadline;
     }
 
     /**
-     * Get 是否允许发起合同步骤跳过指定签署方步骤 
-     * @return CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+     * Get 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许 
+     * @return CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
      */
     public Boolean getCanSkipAddApprover() {
         return this.CanSkipAddApprover;
     }
 
     /**
-     * Set 是否允许发起合同步骤跳过指定签署方步骤
-     * @param CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤
+     * Set 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
+     * @param CanSkipAddApprover 是否允许发起合同步骤跳过指定签署方步骤，true-允许，false-不允许
      */
     public void setCanSkipAddApprover(Boolean CanSkipAddApprover) {
         this.CanSkipAddApprover = CanSkipAddApprover;
     }
 
     /**
-     * Get 定制化发起合同页合同描述信息 
-     * @return CustomCreateFlowDescription 定制化发起合同页合同描述信息
+     * Get 定制化发起合同弹窗的描述信息，描述信息最长500 
+     * @return CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
      */
     public String getCustomCreateFlowDescription() {
         return this.CustomCreateFlowDescription;
     }
 
     /**
-     * Set 定制化发起合同页合同描述信息
-     * @param CustomCreateFlowDescription 定制化发起合同页合同描述信息
+     * Set 定制化发起合同弹窗的描述信息，描述信息最长500
+     * @param CustomCreateFlowDescription 定制化发起合同弹窗的描述信息，描述信息最长500
      */
     public void setCustomCreateFlowDescription(String CustomCreateFlowDescription) {
         this.CustomCreateFlowDescription = CustomCreateFlowDescription;

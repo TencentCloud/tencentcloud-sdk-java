@@ -123,6 +123,27 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *创建地址模板规则
+     * @param req CreateAddressTemplateRequest
+     * @return CreateAddressTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAddressTemplateResponse CreateAddressTemplate(CreateAddressTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAddressTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAddressTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAddressTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建、选择vpc
      * @param req CreateChooseVpcsRequest
      * @return CreateChooseVpcsResponse
@@ -241,6 +262,27 @@ public class CfwClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAcRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAcRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除地址模板规则
+     * @param req DeleteAddressTemplateRequest
+     * @return DeleteAddressTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAddressTemplateResponse DeleteAddressTemplate(DeleteAddressTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAddressTemplateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAddressTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAddressTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

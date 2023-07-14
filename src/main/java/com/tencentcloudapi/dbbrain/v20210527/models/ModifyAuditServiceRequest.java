@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAuditServiceRequest extends AbstractModel{
 
     /**
-    * 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+    * 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
     */
     @SerializedName("Product")
     @Expose
@@ -44,30 +44,30 @@ public class ModifyAuditServiceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 日志保存总时长，只能是7,30,90,180,365,1095,1825
+    * 日志保存总时长，只能是7,30,90,180,365,1095,1825。
     */
     @SerializedName("LogExpireDay")
     @Expose
     private Long LogExpireDay;
 
     /**
-    * 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+    * 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
     */
     @SerializedName("HotLogExpireDay")
     @Expose
     private Long HotLogExpireDay;
 
     /**
-     * Get 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。 
-     * @return Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * Get 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。 
+     * @return Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
-     * @param Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB for MariaDB。
+     * Set 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
+     * @param Product 服务产品类型，支持值包括： "dcdb" - 云数据库 Tdsql， "mariadb" - 云数据库 MariaDB。
      */
     public void setProduct(String Product) {
         this.Product = Product;
@@ -106,32 +106,32 @@ public class ModifyAuditServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 日志保存总时长，只能是7,30,90,180,365,1095,1825 
-     * @return LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825
+     * Get 日志保存总时长，只能是7,30,90,180,365,1095,1825。 
+     * @return LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825。
      */
     public Long getLogExpireDay() {
         return this.LogExpireDay;
     }
 
     /**
-     * Set 日志保存总时长，只能是7,30,90,180,365,1095,1825
-     * @param LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825
+     * Set 日志保存总时长，只能是7,30,90,180,365,1095,1825。
+     * @param LogExpireDay 日志保存总时长，只能是7,30,90,180,365,1095,1825。
      */
     public void setLogExpireDay(Long LogExpireDay) {
         this.LogExpireDay = LogExpireDay;
     }
 
     /**
-     * Get 高频日志保存时长，只能是7,30,90,180,365,1095,1825 
-     * @return HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+     * Get 高频日志保存时长，只能是7,30,90,180,365,1095,1825。 
+     * @return HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
      */
     public Long getHotLogExpireDay() {
         return this.HotLogExpireDay;
     }
 
     /**
-     * Set 高频日志保存时长，只能是7,30,90,180,365,1095,1825
-     * @param HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825
+     * Set 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
+     * @param HotLogExpireDay 高频日志保存时长，只能是7,30,90,180,365,1095,1825。
      */
     public void setHotLogExpireDay(Long HotLogExpireDay) {
         this.HotLogExpireDay = HotLogExpireDay;

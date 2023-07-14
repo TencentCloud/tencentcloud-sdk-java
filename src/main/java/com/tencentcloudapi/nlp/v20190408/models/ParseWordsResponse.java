@@ -30,22 +30,21 @@ public class ParseWordsResponse extends AbstractModel{
     private String NormalText;
 
     /**
-    * 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
+    * 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
     */
     @SerializedName("BasicParticiples")
     @Expose
     private BasicParticiple [] BasicParticiples;
 
     /**
-    * 复合粒度分词和词性标注的结果。（词性表请参见附录）
+    * 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
     */
     @SerializedName("CompoundParticiples")
     @Expose
     private CompoundParticiple [] CompoundParticiples;
 
     /**
-    * 实体识别结果。（实体类型数据请参见附录）
+    * 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
     */
     @SerializedName("Entities")
@@ -76,45 +75,41 @@ public class ParseWordsResponse extends AbstractModel{
     }
 
     /**
-     * Get 基础粒度分词和词性标注的结果。（词性表请参见附录）
- 
-     * @return BasicParticiples 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
+     * Get 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)） 
+     * @return BasicParticiples 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public BasicParticiple [] getBasicParticiples() {
         return this.BasicParticiples;
     }
 
     /**
-     * Set 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
-     * @param BasicParticiples 基础粒度分词和词性标注的结果。（词性表请参见附录）
-
+     * Set 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+     * @param BasicParticiples 基础粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public void setBasicParticiples(BasicParticiple [] BasicParticiples) {
         this.BasicParticiples = BasicParticiples;
     }
 
     /**
-     * Get 复合粒度分词和词性标注的结果。（词性表请参见附录） 
-     * @return CompoundParticiples 复合粒度分词和词性标注的结果。（词性表请参见附录）
+     * Get 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)） 
+     * @return CompoundParticiples 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public CompoundParticiple [] getCompoundParticiples() {
         return this.CompoundParticiples;
     }
 
     /**
-     * Set 复合粒度分词和词性标注的结果。（词性表请参见附录）
-     * @param CompoundParticiples 复合粒度分词和词性标注的结果。（词性表请参见附录）
+     * Set 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
+     * @param CompoundParticiples 复合粒度分词和词性标注的结果。（请参见附录[词性表](https://cloud.tencent.com/document/product/271/36460)）
      */
     public void setCompoundParticiples(CompoundParticiple [] CompoundParticiples) {
         this.CompoundParticiples = CompoundParticiples;
     }
 
     /**
-     * Get 实体识别结果。（实体类型数据请参见附录）
+     * Get 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
  
-     * @return Entities 实体识别结果。（实体类型数据请参见附录）
+     * @return Entities 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
      */
     public Entity [] getEntities() {
@@ -122,9 +117,9 @@ public class ParseWordsResponse extends AbstractModel{
     }
 
     /**
-     * Set 实体识别结果。（实体类型数据请参见附录）
+     * Set 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
-     * @param Entities 实体识别结果。（实体类型数据请参见附录）
+     * @param Entities 实体识别结果。（请参见附录[实体类型数据](https://cloud.tencent.com/document/product/271/90592)）
 
      */
     public void setEntities(Entity [] Entities) {

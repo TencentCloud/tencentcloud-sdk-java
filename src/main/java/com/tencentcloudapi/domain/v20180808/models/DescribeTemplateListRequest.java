@@ -51,7 +51,7 @@ public class DescribeTemplateListRequest extends AbstractModel{
     private String Status;
 
     /**
-    * 域名所有者筛选
+    * 关键字，用于域名所有者筛选
     */
     @SerializedName("Keyword")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeTemplateListRequest extends AbstractModel{
     }
 
     /**
-     * Get 域名所有者筛选 
-     * @return Keyword 域名所有者筛选
+     * Get 关键字，用于域名所有者筛选 
+     * @return Keyword 关键字，用于域名所有者筛选
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set 域名所有者筛选
-     * @param Keyword 域名所有者筛选
+     * Set 关键字，用于域名所有者筛选
+     * @param Keyword 关键字，用于域名所有者筛选
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

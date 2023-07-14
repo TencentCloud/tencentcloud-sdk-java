@@ -184,8 +184,8 @@ HANDWRITE -手写签名
     private String SignId;
 
     /**
-    * SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+    * SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
     */
     @SerializedName("NotifyType")
     @Expose
@@ -588,20 +588,20 @@ HANDWRITE -手写签名
     }
 
     /**
-     * Get SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效) 
-     * @return NotifyType SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+     * Get SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效) 
+     * @return NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
-     * @param NotifyType SMS: 短信; NONE: 不发信息
-默认为SMS(该字段对子客无效)
+     * Set SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
+     * @param NotifyType SMS: 短信(需确保“电子签短信通知签署方”功能是开启状态才能生效); NONE: 不发信息
+默认为SMS(签署方为子客时该字段不生效)
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;

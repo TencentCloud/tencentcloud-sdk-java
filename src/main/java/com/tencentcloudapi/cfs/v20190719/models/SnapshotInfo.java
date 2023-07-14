@@ -44,7 +44,7 @@ public class SnapshotInfo extends AbstractModel{
     private String SnapshotId;
 
     /**
-    * 快照状态
+    * 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
     */
     @SerializedName("Status")
     @Expose
@@ -79,7 +79,7 @@ public class SnapshotInfo extends AbstractModel{
     private Long AliveDay;
 
     /**
-    * 快照进度
+    * 快照进度百分比，1表示1%
     */
     @SerializedName("Percent")
     @Expose
@@ -114,7 +114,7 @@ public class SnapshotInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-    * 快照类型
+    * 快照类型, general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotType")
@@ -122,7 +122,7 @@ public class SnapshotInfo extends AbstractModel{
     private String SnapshotType;
 
     /**
-    * 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+    * 实际快照时间，反应快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotTime")
@@ -178,16 +178,16 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Get 快照状态 
-     * @return Status 快照状态
+     * Get 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败 
+     * @return Status 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 快照状态
-     * @param Status 快照状态
+     * Set 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * @param Status 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -258,16 +258,16 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Get 快照进度 
-     * @return Percent 快照进度
+     * Get 快照进度百分比，1表示1% 
+     * @return Percent 快照进度百分比，1表示1%
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 快照进度
-     * @param Percent 快照进度
+     * Set 快照进度百分比，1表示1%
+     * @param Percent 快照进度百分比，1表示1%
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
@@ -338,9 +338,9 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Get 快照类型
+     * Get 快照类型, general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotType 快照类型
+     * @return SnapshotType 快照类型, general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotType() {
@@ -348,9 +348,9 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Set 快照类型
+     * Set 快照类型, general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotType 快照类型
+     * @param SnapshotType 快照类型, general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotType(String SnapshotType) {
@@ -358,9 +358,9 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Get 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+     * Get 实际快照时间，反应快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotTime 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+     * @return SnapshotTime 实际快照时间，反应快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotTime() {
@@ -368,9 +368,9 @@ public class SnapshotInfo extends AbstractModel{
     }
 
     /**
-     * Set 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+     * Set 实际快照时间，反应快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotTime 实际快照时间，这里主要是为了标识跨地域复制快照的时间快照时间
+     * @param SnapshotTime 实际快照时间，反应快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotTime(String SnapshotTime) {

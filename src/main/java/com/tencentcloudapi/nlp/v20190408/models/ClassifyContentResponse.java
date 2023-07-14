@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ClassifyContentResponse extends AbstractModel{
 
     /**
-    * 一级分类。分类详情见附录-三级分类体系表。
+    * 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
     */
     @SerializedName("FirstClassification")
     @Expose
     private Category FirstClassification;
 
     /**
-    * 二级分类。分类详情见附录-三级分类体系表。
+    * 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
     */
     @SerializedName("SecondClassification")
     @Expose
     private Category SecondClassification;
 
     /**
-    * 三级分类。分类详情见附录-三级分类体系表。
+    * 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ThirdClassification")
@@ -52,41 +52,41 @@ public class ClassifyContentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 一级分类。分类详情见附录-三级分类体系表。 
-     * @return FirstClassification 一级分类。分类详情见附录-三级分类体系表。
+     * Get 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)） 
+     * @return FirstClassification 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public Category getFirstClassification() {
         return this.FirstClassification;
     }
 
     /**
-     * Set 一级分类。分类详情见附录-三级分类体系表。
-     * @param FirstClassification 一级分类。分类详情见附录-三级分类体系表。
+     * Set 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+     * @param FirstClassification 一级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public void setFirstClassification(Category FirstClassification) {
         this.FirstClassification = FirstClassification;
     }
 
     /**
-     * Get 二级分类。分类详情见附录-三级分类体系表。 
-     * @return SecondClassification 二级分类。分类详情见附录-三级分类体系表。
+     * Get 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)） 
+     * @return SecondClassification 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public Category getSecondClassification() {
         return this.SecondClassification;
     }
 
     /**
-     * Set 二级分类。分类详情见附录-三级分类体系表。
-     * @param SecondClassification 二级分类。分类详情见附录-三级分类体系表。
+     * Set 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
+     * @param SecondClassification 二级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
      */
     public void setSecondClassification(Category SecondClassification) {
         this.SecondClassification = SecondClassification;
     }
 
     /**
-     * Get 三级分类。分类详情见附录-三级分类体系表。
+     * Get 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ThirdClassification 三级分类。分类详情见附录-三级分类体系表。
+     * @return ThirdClassification 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Category getThirdClassification() {
@@ -94,9 +94,9 @@ public class ClassifyContentResponse extends AbstractModel{
     }
 
     /**
-     * Set 三级分类。分类详情见附录-三级分类体系表。
+     * Set 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ThirdClassification 三级分类。分类详情见附录-三级分类体系表。
+     * @param ThirdClassification 三级分类。（请参见附录[三级分类体系表](https://cloud.tencent.com/document/product/271/94286)）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThirdClassification(Category ThirdClassification) {

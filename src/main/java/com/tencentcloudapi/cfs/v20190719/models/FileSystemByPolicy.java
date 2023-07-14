@@ -37,21 +37,21 @@ public class FileSystemByPolicy extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * 文件系统大小
+    * 文件系统大小，单位Byte
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * 存储类型
+    * 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * 快照总大小
+    * 快照总大小，单位GiB
     */
     @SerializedName("TotalSnapshotSize")
     @Expose
@@ -104,48 +104,48 @@ public class FileSystemByPolicy extends AbstractModel{
     }
 
     /**
-     * Get 文件系统大小 
-     * @return SizeByte 文件系统大小
+     * Get 文件系统大小，单位Byte 
+     * @return SizeByte 文件系统大小，单位Byte
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set 文件系统大小
-     * @param SizeByte 文件系统大小
+     * Set 文件系统大小，单位Byte
+     * @param SizeByte 文件系统大小，单位Byte
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get 存储类型 
-     * @return StorageType 存储类型
+     * Get 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型 
+     * @return StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set 存储类型
-     * @param StorageType 存储类型
+     * Set 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
+     * @param StorageType 存储类型，HP：通用性能型；SD：通用标准型；TP:turbo性能型；TB：turbo标准型；THP：吞吐型
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get 快照总大小 
-     * @return TotalSnapshotSize 快照总大小
+     * Get 快照总大小，单位GiB 
+     * @return TotalSnapshotSize 快照总大小，单位GiB
      */
     public Long getTotalSnapshotSize() {
         return this.TotalSnapshotSize;
     }
 
     /**
-     * Set 快照总大小
-     * @param TotalSnapshotSize 快照总大小
+     * Set 快照总大小，单位GiB
+     * @param TotalSnapshotSize 快照总大小，单位GiB
      */
     public void setTotalSnapshotSize(Long TotalSnapshotSize) {
         this.TotalSnapshotSize = TotalSnapshotSize;

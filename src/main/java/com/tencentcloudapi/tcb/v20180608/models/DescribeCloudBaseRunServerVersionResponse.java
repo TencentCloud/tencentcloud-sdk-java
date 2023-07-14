@@ -58,14 +58,14 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
     */
     @SerializedName("Cpu")
     @Expose
-    private Long Cpu;
+    private Float Cpu;
 
     /**
     * 请使用MemSize
     */
     @SerializedName("Mem")
     @Expose
-    private Long Mem;
+    private Float Mem;
 
     /**
     * 副本最小值
@@ -412,7 +412,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
      * Get 请使用CPUSize 
      * @return Cpu 请使用CPUSize
      */
-    public Long getCpu() {
+    public Float getCpu() {
         return this.Cpu;
     }
 
@@ -420,7 +420,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
      * Set 请使用CPUSize
      * @param Cpu 请使用CPUSize
      */
-    public void setCpu(Long Cpu) {
+    public void setCpu(Float Cpu) {
         this.Cpu = Cpu;
     }
 
@@ -428,7 +428,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
      * Get 请使用MemSize 
      * @return Mem 请使用MemSize
      */
-    public Long getMem() {
+    public Float getMem() {
         return this.Mem;
     }
 
@@ -436,7 +436,7 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
      * Set 请使用MemSize
      * @param Mem 请使用MemSize
      */
-    public void setMem(Long Mem) {
+    public void setMem(Float Mem) {
         this.Mem = Mem;
     }
 
@@ -1113,10 +1113,10 @@ public class DescribeCloudBaseRunServerVersionResponse extends AbstractModel{
             this.BuildDir = new String(source.BuildDir);
         }
         if (source.Cpu != null) {
-            this.Cpu = new Long(source.Cpu);
+            this.Cpu = new Float(source.Cpu);
         }
         if (source.Mem != null) {
-            this.Mem = new Long(source.Mem);
+            this.Mem = new Float(source.Mem);
         }
         if (source.MinNum != null) {
             this.MinNum = new Long(source.MinNum);

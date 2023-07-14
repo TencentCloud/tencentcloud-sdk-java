@@ -24,6 +24,10 @@ public class SnapshotOperateLog extends AbstractModel{
 
     /**
     * 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
     */
     @SerializedName("Action")
     @Expose
@@ -38,28 +42,40 @@ public class SnapshotOperateLog extends AbstractModel{
 
     /**
     * 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
     */
     @SerializedName("ActionName")
     @Expose
     private String ActionName;
 
     /**
-    * 操作者
+    * 操作者uin
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * 结果
+    * 1-任务进行中；2-任务成功；3-任务失败
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
 
     /**
-     * Get 操作类型 
+     * Get 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照 
      * @return Action 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
      */
     public String getAction() {
         return this.Action;
@@ -67,7 +83,15 @@ public class SnapshotOperateLog extends AbstractModel{
 
     /**
      * Set 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
      * @param Action 操作类型
+CreateCfsSnapshot：创建快照
+DeleteCfsSnapshot：删除快照
+CreateCfsFileSystem：创建文件系统
+UpdateCfsSnapshotAttribute：更新快照
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -90,8 +114,16 @@ public class SnapshotOperateLog extends AbstractModel{
     }
 
     /**
-     * Get 操作名称 
+     * Get 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute 
      * @return ActionName 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public String getActionName() {
         return this.ActionName;
@@ -99,39 +131,47 @@ public class SnapshotOperateLog extends AbstractModel{
 
     /**
      * Set 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      * @param ActionName 操作名称
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public void setActionName(String ActionName) {
         this.ActionName = ActionName;
     }
 
     /**
-     * Get 操作者 
-     * @return Operator 操作者
+     * Get 操作者uin 
+     * @return Operator 操作者uin
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 操作者
-     * @param Operator 操作者
+     * Set 操作者uin
+     * @param Operator 操作者uin
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 结果 
-     * @return Result 结果
+     * Get 1-任务进行中；2-任务成功；3-任务失败 
+     * @return Result 1-任务进行中；2-任务成功；3-任务失败
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 结果
-     * @param Result 结果
+     * Set 1-任务进行中；2-任务成功；3-任务失败
+     * @param Result 1-任务进行中；2-任务成功；3-任务失败
      */
     public void setResult(Long Result) {
         this.Result = Result;

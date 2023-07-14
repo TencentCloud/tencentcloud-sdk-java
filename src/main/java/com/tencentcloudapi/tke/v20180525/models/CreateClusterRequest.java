@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class CreateClusterRequest extends AbstractModel{
 
     /**
-    * 集群容器网络配置信息
-    */
-    @SerializedName("ClusterCIDRSettings")
-    @Expose
-    private ClusterCIDRSettings ClusterCIDRSettings;
-
-    /**
     * 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
+
+    /**
+    * 集群容器网络配置信息
+    */
+    @SerializedName("ClusterCIDRSettings")
+    @Expose
+    private ClusterCIDRSettings ClusterCIDRSettings;
 
     /**
     * CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
@@ -86,22 +86,6 @@ public class CreateClusterRequest extends AbstractModel{
     private ExtensionAddon [] ExtensionAddons;
 
     /**
-     * Get 集群容器网络配置信息 
-     * @return ClusterCIDRSettings 集群容器网络配置信息
-     */
-    public ClusterCIDRSettings getClusterCIDRSettings() {
-        return this.ClusterCIDRSettings;
-    }
-
-    /**
-     * Set 集群容器网络配置信息
-     * @param ClusterCIDRSettings 集群容器网络配置信息
-     */
-    public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
-        this.ClusterCIDRSettings = ClusterCIDRSettings;
-    }
-
-    /**
      * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
      * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
@@ -115,6 +99,22 @@ public class CreateClusterRequest extends AbstractModel{
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 集群容器网络配置信息 
+     * @return ClusterCIDRSettings 集群容器网络配置信息
+     */
+    public ClusterCIDRSettings getClusterCIDRSettings() {
+        return this.ClusterCIDRSettings;
+    }
+
+    /**
+     * Set 集群容器网络配置信息
+     * @param ClusterCIDRSettings 集群容器网络配置信息
+     */
+    public void setClusterCIDRSettings(ClusterCIDRSettings ClusterCIDRSettings) {
+        this.ClusterCIDRSettings = ClusterCIDRSettings;
     }
 
     /**
@@ -237,11 +237,11 @@ public class CreateClusterRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateClusterRequest(CreateClusterRequest source) {
-        if (source.ClusterCIDRSettings != null) {
-            this.ClusterCIDRSettings = new ClusterCIDRSettings(source.ClusterCIDRSettings);
-        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterCIDRSettings != null) {
+            this.ClusterCIDRSettings = new ClusterCIDRSettings(source.ClusterCIDRSettings);
         }
         if (source.RunInstancesForNode != null) {
             this.RunInstancesForNode = new RunInstancesForNode[source.RunInstancesForNode.length];
@@ -283,8 +283,8 @@ public class CreateClusterRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamObj(map, prefix + "ClusterCIDRSettings.", this.ClusterCIDRSettings);
         this.setParamArrayObj(map, prefix + "RunInstancesForNode.", this.RunInstancesForNode);
         this.setParamObj(map, prefix + "ClusterBasicSettings.", this.ClusterBasicSettings);
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);

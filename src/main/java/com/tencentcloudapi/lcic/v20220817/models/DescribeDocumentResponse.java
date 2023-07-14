@@ -128,6 +128,13 @@ public class DescribeDocumentResponse extends AbstractModel{
     private Long Pages;
 
     /**
+    * 课件预览地址
+    */
+    @SerializedName("Preview")
+    @Expose
+    private String Preview;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -375,6 +382,22 @@ public class DescribeDocumentResponse extends AbstractModel{
     }
 
     /**
+     * Get 课件预览地址 
+     * @return Preview 课件预览地址
+     */
+    public String getPreview() {
+        return this.Preview;
+    }
+
+    /**
+     * Set 课件预览地址
+     * @param Preview 课件预览地址
+     */
+    public void setPreview(String Preview) {
+        this.Preview = Preview;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -443,6 +466,9 @@ public class DescribeDocumentResponse extends AbstractModel{
         if (source.Pages != null) {
             this.Pages = new Long(source.Pages);
         }
+        if (source.Preview != null) {
+            this.Preview = new String(source.Preview);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +494,7 @@ public class DescribeDocumentResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "DocumentSize", this.DocumentSize);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Pages", this.Pages);
+        this.setParamSimple(map, prefix + "Preview", this.Preview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

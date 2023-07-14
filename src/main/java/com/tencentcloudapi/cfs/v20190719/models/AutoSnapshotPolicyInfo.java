@@ -65,7 +65,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private String Hour;
 
     /**
-    * 是否激活定期快照功能
+    * 是否激活定期快照功能,1代表已激活，0代表未激活
     */
     @SerializedName("IsActivated")
     @Expose
@@ -79,7 +79,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private String NextActiveTime;
 
     /**
-    * 快照策略状态
+    * 快照策略状态，1代表快照策略状态正常。这里只有一种状态
     */
     @SerializedName("Status")
     @Expose
@@ -130,7 +130,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private Long IntervalDays;
 
     /**
-    * 跨地域复制的快照保留时间
+    * 跨地域复制的快照保留时间，单位天
     */
     @SerializedName("CrossRegionsAliveDays")
     @Expose
@@ -233,16 +233,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否激活定期快照功能 
-     * @return IsActivated 是否激活定期快照功能
+     * Get 是否激活定期快照功能,1代表已激活，0代表未激活 
+     * @return IsActivated 是否激活定期快照功能,1代表已激活，0代表未激活
      */
     public Long getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set 是否激活定期快照功能
-     * @param IsActivated 是否激活定期快照功能
+     * Set 是否激活定期快照功能,1代表已激活，0代表未激活
+     * @param IsActivated 是否激活定期快照功能,1代表已激活，0代表未激活
      */
     public void setIsActivated(Long IsActivated) {
         this.IsActivated = IsActivated;
@@ -265,16 +265,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get 快照策略状态 
-     * @return Status 快照策略状态
+     * Get 快照策略状态，1代表快照策略状态正常。这里只有一种状态 
+     * @return Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 快照策略状态
-     * @param Status 快照策略状态
+     * Set 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+     * @param Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -385,16 +385,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get 跨地域复制的快照保留时间 
-     * @return CrossRegionsAliveDays 跨地域复制的快照保留时间
+     * Get 跨地域复制的快照保留时间，单位天 
+     * @return CrossRegionsAliveDays 跨地域复制的快照保留时间，单位天
      */
     public Long getCrossRegionsAliveDays() {
         return this.CrossRegionsAliveDays;
     }
 
     /**
-     * Set 跨地域复制的快照保留时间
-     * @param CrossRegionsAliveDays 跨地域复制的快照保留时间
+     * Set 跨地域复制的快照保留时间，单位天
+     * @param CrossRegionsAliveDays 跨地域复制的快照保留时间，单位天
      */
     public void setCrossRegionsAliveDays(Long CrossRegionsAliveDays) {
         this.CrossRegionsAliveDays = CrossRegionsAliveDays;

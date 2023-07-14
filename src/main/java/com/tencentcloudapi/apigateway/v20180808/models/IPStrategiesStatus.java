@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApiEnvironmentStrategyStataus extends AbstractModel{
+public class IPStrategiesStatus extends AbstractModel{
 
     /**
-    * API绑定的限流策略数量。
+    * 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -31,17 +31,17 @@ public class ApiEnvironmentStrategyStataus extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * API绑定的限流策略列表。
+    * 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ApiEnvironmentStrategySet")
+    @SerializedName("StrategySet")
     @Expose
-    private ApiEnvironmentStrategy [] ApiEnvironmentStrategySet;
+    private IPStrategy [] StrategySet;
 
     /**
-     * Get API绑定的限流策略数量。
+     * Get 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount API绑定的限流策略数量。
+     * @return TotalCount 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -49,9 +49,9 @@ public class ApiEnvironmentStrategyStataus extends AbstractModel{
     }
 
     /**
-     * Set API绑定的限流策略数量。
+     * Set 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount API绑定的限流策略数量。
+     * @param TotalCount 策略数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -59,40 +59,40 @@ public class ApiEnvironmentStrategyStataus extends AbstractModel{
     }
 
     /**
-     * Get API绑定的限流策略列表。
+     * Get 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApiEnvironmentStrategySet API绑定的限流策略列表。
+     * @return StrategySet 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ApiEnvironmentStrategy [] getApiEnvironmentStrategySet() {
-        return this.ApiEnvironmentStrategySet;
+    public IPStrategy [] getStrategySet() {
+        return this.StrategySet;
     }
 
     /**
-     * Set API绑定的限流策略列表。
+     * Set 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApiEnvironmentStrategySet API绑定的限流策略列表。
+     * @param StrategySet 策略列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setApiEnvironmentStrategySet(ApiEnvironmentStrategy [] ApiEnvironmentStrategySet) {
-        this.ApiEnvironmentStrategySet = ApiEnvironmentStrategySet;
+    public void setStrategySet(IPStrategy [] StrategySet) {
+        this.StrategySet = StrategySet;
     }
 
-    public ApiEnvironmentStrategyStataus() {
+    public IPStrategiesStatus() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApiEnvironmentStrategyStataus(ApiEnvironmentStrategyStataus source) {
+    public IPStrategiesStatus(IPStrategiesStatus source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.ApiEnvironmentStrategySet != null) {
-            this.ApiEnvironmentStrategySet = new ApiEnvironmentStrategy[source.ApiEnvironmentStrategySet.length];
-            for (int i = 0; i < source.ApiEnvironmentStrategySet.length; i++) {
-                this.ApiEnvironmentStrategySet[i] = new ApiEnvironmentStrategy(source.ApiEnvironmentStrategySet[i]);
+        if (source.StrategySet != null) {
+            this.StrategySet = new IPStrategy[source.StrategySet.length];
+            for (int i = 0; i < source.StrategySet.length; i++) {
+                this.StrategySet[i] = new IPStrategy(source.StrategySet[i]);
             }
         }
     }
@@ -103,7 +103,7 @@ public class ApiEnvironmentStrategyStataus extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "ApiEnvironmentStrategySet.", this.ApiEnvironmentStrategySet);
+        this.setParamArrayObj(map, prefix + "StrategySet.", this.StrategySet);
 
     }
 }

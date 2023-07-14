@@ -44,7 +44,7 @@ public class DescribePhoneEmailListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 手机或者邮箱精确搜索
+    * 手机或者邮箱，用于精确搜索
     */
     @SerializedName("Code")
     @Expose
@@ -99,16 +99,16 @@ public class DescribePhoneEmailListRequest extends AbstractModel{
     }
 
     /**
-     * Get 手机或者邮箱精确搜索 
-     * @return Code 手机或者邮箱精确搜索
+     * Get 手机或者邮箱，用于精确搜索 
+     * @return Code 手机或者邮箱，用于精确搜索
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 手机或者邮箱精确搜索
-     * @param Code 手机或者邮箱精确搜索
+     * Set 手机或者邮箱，用于精确搜索
+     * @param Code 手机或者邮箱，用于精确搜索
      */
     public void setCode(String Code) {
         this.Code = Code;

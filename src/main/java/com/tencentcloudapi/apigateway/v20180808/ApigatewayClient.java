@@ -1017,7 +1017,7 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
-     *本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表。
+     *本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表，因为接口名拼写错误，已不推荐使用，请优先使用DescribeIPStrategiesStatus接口。
      * @param req DescribeIPStrategysStatusRequest
      * @return DescribeIPStrategysStatusResponse
      * @throws TencentCloudSDKException

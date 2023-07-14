@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
-    * 快照重复时间点
+    * 快照重复时间点,0-23
     */
     @SerializedName("Hour")
     @Expose
@@ -37,14 +37,14 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private String PolicyName;
 
     /**
-    * 快照重复日期，星期一到星期日
+    * 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
     */
     @SerializedName("DayOfWeek")
     @Expose
     private String DayOfWeek;
 
     /**
-    * 快照保留时长
+    * 快照保留时长，单位天
     */
     @SerializedName("AliveDays")
     @Expose
@@ -65,16 +65,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long IntervalDays;
 
     /**
-     * Get 快照重复时间点 
-     * @return Hour 快照重复时间点
+     * Get 快照重复时间点,0-23 
+     * @return Hour 快照重复时间点,0-23
      */
     public String getHour() {
         return this.Hour;
     }
 
     /**
-     * Set 快照重复时间点
-     * @param Hour 快照重复时间点
+     * Set 快照重复时间点,0-23
+     * @param Hour 快照重复时间点,0-23
      */
     public void setHour(String Hour) {
         this.Hour = Hour;
@@ -97,32 +97,32 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get 快照重复日期，星期一到星期日 
-     * @return DayOfWeek 快照重复日期，星期一到星期日
+     * Get 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天 
+     * @return DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set 快照重复日期，星期一到星期日
-     * @param DayOfWeek 快照重复日期，星期一到星期日
+     * Set 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+     * @param DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
     }
 
     /**
-     * Get 快照保留时长 
-     * @return AliveDays 快照保留时长
+     * Get 快照保留时长，单位天 
+     * @return AliveDays 快照保留时长，单位天
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set 快照保留时长
-     * @param AliveDays 快照保留时长
+     * Set 快照保留时长，单位天
+     * @param AliveDays 快照保留时长，单位天
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;

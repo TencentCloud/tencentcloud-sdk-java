@@ -309,6 +309,98 @@ public class CustomerProfile extends AbstractModel{
     private ChannelTag [] ChannelTags;
 
     /**
+    * 关联线索id
+    */
+    @SerializedName("LeadId")
+    @Expose
+    private Long LeadId;
+
+    /**
+    * 客户微信id
+    */
+    @SerializedName("WxId")
+    @Expose
+    private String WxId;
+
+    /**
+    * 顾问职位
+    */
+    @SerializedName("Position")
+    @Expose
+    private String Position;
+
+    /**
+    * 是否关联微信 1 是 0 否
+    */
+    @SerializedName("IsBindWx")
+    @Expose
+    private Long IsBindWx;
+
+    /**
+    * 是否无效
+    */
+    @SerializedName("IsInvalid")
+    @Expose
+    private Long IsInvalid;
+
+    /**
+    * 无效类型
+    */
+    @SerializedName("InvalidType")
+    @Expose
+    private String InvalidType;
+
+    /**
+    * 无效类型名称
+    */
+    @SerializedName("InvalidTypeName")
+    @Expose
+    private String InvalidTypeName;
+
+    /**
+    * 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InvalidTime")
+    @Expose
+    private Long InvalidTime;
+
+    /**
+    * 由顾问手动输入的无效原因文字
+    */
+    @SerializedName("InvalidRemark")
+    @Expose
+    private String InvalidRemark;
+
+    /**
+    * 线索是否战败
+    */
+    @SerializedName("IsLose")
+    @Expose
+    private Long IsLose;
+
+    /**
+    * 战败类型
+    */
+    @SerializedName("LoseType")
+    @Expose
+    private String LoseType;
+
+    /**
+    * 战败类型名称
+    */
+    @SerializedName("LoseTypeName")
+    @Expose
+    private String LoseTypeName;
+
+    /**
+    * 战败申请原因
+    */
+    @SerializedName("LoseRemark")
+    @Expose
+    private String LoseRemark;
+
+    /**
      * Get 客户档案id，客户唯一识别编码 
      * @return CustomerId 客户档案id，客户唯一识别编码
      */
@@ -984,6 +1076,218 @@ public class CustomerProfile extends AbstractModel{
         this.ChannelTags = ChannelTags;
     }
 
+    /**
+     * Get 关联线索id 
+     * @return LeadId 关联线索id
+     */
+    public Long getLeadId() {
+        return this.LeadId;
+    }
+
+    /**
+     * Set 关联线索id
+     * @param LeadId 关联线索id
+     */
+    public void setLeadId(Long LeadId) {
+        this.LeadId = LeadId;
+    }
+
+    /**
+     * Get 客户微信id 
+     * @return WxId 客户微信id
+     */
+    public String getWxId() {
+        return this.WxId;
+    }
+
+    /**
+     * Set 客户微信id
+     * @param WxId 客户微信id
+     */
+    public void setWxId(String WxId) {
+        this.WxId = WxId;
+    }
+
+    /**
+     * Get 顾问职位 
+     * @return Position 顾问职位
+     */
+    public String getPosition() {
+        return this.Position;
+    }
+
+    /**
+     * Set 顾问职位
+     * @param Position 顾问职位
+     */
+    public void setPosition(String Position) {
+        this.Position = Position;
+    }
+
+    /**
+     * Get 是否关联微信 1 是 0 否 
+     * @return IsBindWx 是否关联微信 1 是 0 否
+     */
+    public Long getIsBindWx() {
+        return this.IsBindWx;
+    }
+
+    /**
+     * Set 是否关联微信 1 是 0 否
+     * @param IsBindWx 是否关联微信 1 是 0 否
+     */
+    public void setIsBindWx(Long IsBindWx) {
+        this.IsBindWx = IsBindWx;
+    }
+
+    /**
+     * Get 是否无效 
+     * @return IsInvalid 是否无效
+     */
+    public Long getIsInvalid() {
+        return this.IsInvalid;
+    }
+
+    /**
+     * Set 是否无效
+     * @param IsInvalid 是否无效
+     */
+    public void setIsInvalid(Long IsInvalid) {
+        this.IsInvalid = IsInvalid;
+    }
+
+    /**
+     * Get 无效类型 
+     * @return InvalidType 无效类型
+     */
+    public String getInvalidType() {
+        return this.InvalidType;
+    }
+
+    /**
+     * Set 无效类型
+     * @param InvalidType 无效类型
+     */
+    public void setInvalidType(String InvalidType) {
+        this.InvalidType = InvalidType;
+    }
+
+    /**
+     * Get 无效类型名称 
+     * @return InvalidTypeName 无效类型名称
+     */
+    public String getInvalidTypeName() {
+        return this.InvalidTypeName;
+    }
+
+    /**
+     * Set 无效类型名称
+     * @param InvalidTypeName 无效类型名称
+     */
+    public void setInvalidTypeName(String InvalidTypeName) {
+        this.InvalidTypeName = InvalidTypeName;
+    }
+
+    /**
+     * Get 无效时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInvalidTime() {
+        return this.InvalidTime;
+    }
+
+    /**
+     * Set 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InvalidTime 无效时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInvalidTime(Long InvalidTime) {
+        this.InvalidTime = InvalidTime;
+    }
+
+    /**
+     * Get 由顾问手动输入的无效原因文字 
+     * @return InvalidRemark 由顾问手动输入的无效原因文字
+     */
+    public String getInvalidRemark() {
+        return this.InvalidRemark;
+    }
+
+    /**
+     * Set 由顾问手动输入的无效原因文字
+     * @param InvalidRemark 由顾问手动输入的无效原因文字
+     */
+    public void setInvalidRemark(String InvalidRemark) {
+        this.InvalidRemark = InvalidRemark;
+    }
+
+    /**
+     * Get 线索是否战败 
+     * @return IsLose 线索是否战败
+     */
+    public Long getIsLose() {
+        return this.IsLose;
+    }
+
+    /**
+     * Set 线索是否战败
+     * @param IsLose 线索是否战败
+     */
+    public void setIsLose(Long IsLose) {
+        this.IsLose = IsLose;
+    }
+
+    /**
+     * Get 战败类型 
+     * @return LoseType 战败类型
+     */
+    public String getLoseType() {
+        return this.LoseType;
+    }
+
+    /**
+     * Set 战败类型
+     * @param LoseType 战败类型
+     */
+    public void setLoseType(String LoseType) {
+        this.LoseType = LoseType;
+    }
+
+    /**
+     * Get 战败类型名称 
+     * @return LoseTypeName 战败类型名称
+     */
+    public String getLoseTypeName() {
+        return this.LoseTypeName;
+    }
+
+    /**
+     * Set 战败类型名称
+     * @param LoseTypeName 战败类型名称
+     */
+    public void setLoseTypeName(String LoseTypeName) {
+        this.LoseTypeName = LoseTypeName;
+    }
+
+    /**
+     * Get 战败申请原因 
+     * @return LoseRemark 战败申请原因
+     */
+    public String getLoseRemark() {
+        return this.LoseRemark;
+    }
+
+    /**
+     * Set 战败申请原因
+     * @param LoseRemark 战败申请原因
+     */
+    public void setLoseRemark(String LoseRemark) {
+        this.LoseRemark = LoseRemark;
+    }
+
     public CustomerProfile() {
     }
 
@@ -1121,6 +1425,45 @@ public class CustomerProfile extends AbstractModel{
                 this.ChannelTags[i] = new ChannelTag(source.ChannelTags[i]);
             }
         }
+        if (source.LeadId != null) {
+            this.LeadId = new Long(source.LeadId);
+        }
+        if (source.WxId != null) {
+            this.WxId = new String(source.WxId);
+        }
+        if (source.Position != null) {
+            this.Position = new String(source.Position);
+        }
+        if (source.IsBindWx != null) {
+            this.IsBindWx = new Long(source.IsBindWx);
+        }
+        if (source.IsInvalid != null) {
+            this.IsInvalid = new Long(source.IsInvalid);
+        }
+        if (source.InvalidType != null) {
+            this.InvalidType = new String(source.InvalidType);
+        }
+        if (source.InvalidTypeName != null) {
+            this.InvalidTypeName = new String(source.InvalidTypeName);
+        }
+        if (source.InvalidTime != null) {
+            this.InvalidTime = new Long(source.InvalidTime);
+        }
+        if (source.InvalidRemark != null) {
+            this.InvalidRemark = new String(source.InvalidRemark);
+        }
+        if (source.IsLose != null) {
+            this.IsLose = new Long(source.IsLose);
+        }
+        if (source.LoseType != null) {
+            this.LoseType = new String(source.LoseType);
+        }
+        if (source.LoseTypeName != null) {
+            this.LoseTypeName = new String(source.LoseTypeName);
+        }
+        if (source.LoseRemark != null) {
+            this.LoseRemark = new String(source.LoseRemark);
+        }
     }
 
 
@@ -1167,6 +1510,19 @@ public class CustomerProfile extends AbstractModel{
         this.setParamSimple(map, prefix + "NextFollowTime", this.NextFollowTime);
         this.setParamArrayObj(map, prefix + "EnterpriseTags.", this.EnterpriseTags);
         this.setParamArrayObj(map, prefix + "ChannelTags.", this.ChannelTags);
+        this.setParamSimple(map, prefix + "LeadId", this.LeadId);
+        this.setParamSimple(map, prefix + "WxId", this.WxId);
+        this.setParamSimple(map, prefix + "Position", this.Position);
+        this.setParamSimple(map, prefix + "IsBindWx", this.IsBindWx);
+        this.setParamSimple(map, prefix + "IsInvalid", this.IsInvalid);
+        this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "InvalidTypeName", this.InvalidTypeName);
+        this.setParamSimple(map, prefix + "InvalidTime", this.InvalidTime);
+        this.setParamSimple(map, prefix + "InvalidRemark", this.InvalidRemark);
+        this.setParamSimple(map, prefix + "IsLose", this.IsLose);
+        this.setParamSimple(map, prefix + "LoseType", this.LoseType);
+        this.setParamSimple(map, prefix + "LoseTypeName", this.LoseTypeName);
+        this.setParamSimple(map, prefix + "LoseRemark", this.LoseRemark);
 
     }
 }
