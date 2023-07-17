@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.mall.v20230518.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAMQPQueueResponse extends AbstractModel{
+public class DescribeDrawResourceListResponse extends AbstractModel{
+
+    /**
+    * 返回数据条数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 返回数据内容
+    */
+    @SerializedName("ResourceDrawList")
+    @Expose
+    private ResourceDrawListType [] ResourceDrawList;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -28,6 +42,38 @@ public class DeleteAMQPQueueResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 返回数据条数 
+     * @return TotalCount 返回数据条数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 返回数据条数
+     * @param TotalCount 返回数据条数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 返回数据内容 
+     * @return ResourceDrawList 返回数据内容
+     */
+    public ResourceDrawListType [] getResourceDrawList() {
+        return this.ResourceDrawList;
+    }
+
+    /**
+     * Set 返回数据内容
+     * @param ResourceDrawList 返回数据内容
+     */
+    public void setResourceDrawList(ResourceDrawListType [] ResourceDrawList) {
+        this.ResourceDrawList = ResourceDrawList;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -45,14 +91,23 @@ public class DeleteAMQPQueueResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteAMQPQueueResponse() {
+    public DescribeDrawResourceListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAMQPQueueResponse(DeleteAMQPQueueResponse source) {
+    public DescribeDrawResourceListResponse(DescribeDrawResourceListResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ResourceDrawList != null) {
+            this.ResourceDrawList = new ResourceDrawListType[source.ResourceDrawList.length];
+            for (int i = 0; i < source.ResourceDrawList.length; i++) {
+                this.ResourceDrawList[i] = new ResourceDrawListType(source.ResourceDrawList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +118,8 @@ public class DeleteAMQPQueueResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ResourceDrawList.", this.ResourceDrawList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

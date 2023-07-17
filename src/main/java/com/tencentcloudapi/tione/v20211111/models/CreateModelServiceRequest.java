@@ -235,6 +235,20 @@ HYBRID_PAID:
     private String CallbackUrl;
 
     /**
+    * 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+    */
+    @SerializedName("ModelTurboEnable")
+    @Expose
+    private Boolean ModelTurboEnable;
+
+    /**
+    * 服务分类
+    */
+    @SerializedName("ServiceCategory")
+    @Expose
+    private String ServiceCategory;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -758,6 +772,38 @@ HYBRID_PAID:
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。 
+     * @return ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     */
+    public Boolean getModelTurboEnable() {
+        return this.ModelTurboEnable;
+    }
+
+    /**
+     * Set 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     * @param ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
+     */
+    public void setModelTurboEnable(Boolean ModelTurboEnable) {
+        this.ModelTurboEnable = ModelTurboEnable;
+    }
+
+    /**
+     * Get 服务分类 
+     * @return ServiceCategory 服务分类
+     */
+    public String getServiceCategory() {
+        return this.ServiceCategory;
+    }
+
+    /**
+     * Set 服务分类
+     * @param ServiceCategory 服务分类
+     */
+    public void setServiceCategory(String ServiceCategory) {
+        this.ServiceCategory = ServiceCategory;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -856,6 +902,12 @@ HYBRID_PAID:
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.ModelTurboEnable != null) {
+            this.ModelTurboEnable = new Boolean(source.ModelTurboEnable);
+        }
+        if (source.ServiceCategory != null) {
+            this.ServiceCategory = new String(source.ServiceCategory);
+        }
     }
 
 
@@ -890,6 +942,8 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
+        this.setParamSimple(map, prefix + "ServiceCategory", this.ServiceCategory);
 
     }
 }

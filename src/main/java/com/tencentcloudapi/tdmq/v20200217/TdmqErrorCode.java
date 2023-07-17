@@ -12,9 +12,6 @@ public enum TdmqErrorCode {
     // CMQ 后台服务错误。
      FAILEDOPERATION_CMQBACKENDERROR("FailedOperation.CmqBackendError"),
      
-    // 创建vpc绑定关系失败。
-     FAILEDOPERATION_CREATEBINDVPC("FailedOperation.CreateBindVpc"),
-     
     // 创建集群失败。
      FAILEDOPERATION_CREATECLUSTER("FailedOperation.CreateCluster"),
      

@@ -186,6 +186,13 @@ HYBRID_PAID:
     private VolumeMount VolumeMount;
 
     /**
+    * 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+    */
+    @SerializedName("ModelTurboEnable")
+    @Expose
+    private Boolean ModelTurboEnable;
+
+    /**
      * Get 服务id 
      * @return ServiceId 服务id
      */
@@ -597,6 +604,22 @@ HYBRID_PAID:
         this.VolumeMount = VolumeMount;
     }
 
+    /**
+     * Get 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启 
+     * @return ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+     */
+    public Boolean getModelTurboEnable() {
+        return this.ModelTurboEnable;
+    }
+
+    /**
+     * Set 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+     * @param ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。默认不开启
+     */
+    public void setModelTurboEnable(Boolean ModelTurboEnable) {
+        this.ModelTurboEnable = ModelTurboEnable;
+    }
+
     public ModifyModelServiceRequest() {
     }
 
@@ -671,6 +694,9 @@ HYBRID_PAID:
         if (source.VolumeMount != null) {
             this.VolumeMount = new VolumeMount(source.VolumeMount);
         }
+        if (source.ModelTurboEnable != null) {
+            this.ModelTurboEnable = new Boolean(source.ModelTurboEnable);
+        }
     }
 
 
@@ -698,6 +724,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamObj(map, prefix + "VolumeMount.", this.VolumeMount);
+        this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
 
     }
 }

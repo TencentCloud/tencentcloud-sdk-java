@@ -30,7 +30,7 @@ public class DescribeBackupFilesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 聚合ID, 可通过接口DescribeBackups获取
+    * 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
     */
     @SerializedName("GroupId")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeBackupFilesRequest extends AbstractModel{
     }
 
     /**
-     * Get 聚合ID, 可通过接口DescribeBackups获取 
-     * @return GroupId 聚合ID, 可通过接口DescribeBackups获取
+     * Get 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录） 
+     * @return GroupId 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 聚合ID, 可通过接口DescribeBackups获取
-     * @param GroupId 聚合ID, 可通过接口DescribeBackups获取
+     * Set 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
+     * @param GroupId 单库备份的聚合ID, 可通过接口DescribeBackups获取（不支持查询打包备份记录）
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

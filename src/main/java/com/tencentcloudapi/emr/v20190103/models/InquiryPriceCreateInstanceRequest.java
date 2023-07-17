@@ -42,7 +42,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
 
     /**
     * 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
     */
     @SerializedName("Currency")
     @Expose
@@ -215,9 +215,9 @@ Hadoop-Hbase
 
     /**
      * Get 货币种类。取值范围：
-<li>CNY：表示人民币。</li> 
+<li>CNY：表示人民币。</li> 
      * @return Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     public String getCurrency() {
         return this.Currency;
@@ -225,9 +225,9 @@ Hadoop-Hbase
 
     /**
      * Set 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      * @param Currency 货币种类。取值范围：
-<li>CNY：表示人民币。</li>
+<li>CNY：表示人民币。</li>
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

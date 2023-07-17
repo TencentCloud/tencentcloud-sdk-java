@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.mall.v20230518.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAMQPVHostRequest extends AbstractModel{
+public class DescribeDrawResourceListRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * PageNumber
     */
-    @SerializedName("ClusterId")
+    @SerializedName("PageNumber")
     @Expose
-    private String ClusterId;
+    private Long PageNumber;
 
     /**
-    * vhost名称
+    * PageSize
     */
-    @SerializedName("VHostId")
+    @SerializedName("PageSize")
     @Expose
-    private String VHostId;
+    private Long PageSize;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get PageNumber 
+     * @return PageNumber PageNumber
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public Long getPageNumber() {
+        return this.PageNumber;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set PageNumber
+     * @param PageNumber PageNumber
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
     }
 
     /**
-     * Get vhost名称 
-     * @return VHostId vhost名称
+     * Get PageSize 
+     * @return PageSize PageSize
      */
-    public String getVHostId() {
-        return this.VHostId;
+    public Long getPageSize() {
+        return this.PageSize;
     }
 
     /**
-     * Set vhost名称
-     * @param VHostId vhost名称
+     * Set PageSize
+     * @param PageSize PageSize
      */
-    public void setVHostId(String VHostId) {
-        this.VHostId = VHostId;
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
     }
 
-    public DeleteAMQPVHostRequest() {
+    public DescribeDrawResourceListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAMQPVHostRequest(DeleteAMQPVHostRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DescribeDrawResourceListRequest(DescribeDrawResourceListRequest source) {
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
         }
-        if (source.VHostId != null) {
-            this.VHostId = new String(source.VHostId);
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
         }
     }
 
@@ -89,8 +89,8 @@ public class DeleteAMQPVHostRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "VHostId", this.VHostId);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

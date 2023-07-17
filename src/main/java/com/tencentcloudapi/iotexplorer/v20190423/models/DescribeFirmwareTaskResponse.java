@@ -87,6 +87,22 @@ public class DescribeFirmwareTaskResponse extends AbstractModel{
     private String OriginalVersion;
 
     /**
+    * 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateUserId")
+    @Expose
+    private Long CreateUserId;
+
+    /**
+    * 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatorNickName")
+    @Expose
+    private String CreatorNickName;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -254,6 +270,46 @@ public class DescribeFirmwareTaskResponse extends AbstractModel{
     }
 
     /**
+     * Get 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateUserId 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateUserId() {
+        return this.CreateUserId;
+    }
+
+    /**
+     * Set 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateUserId 创建账号ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateUserId(Long CreateUserId) {
+        this.CreateUserId = CreateUserId;
+    }
+
+    /**
+     * Get 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatorNickName 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatorNickName() {
+        return this.CreatorNickName;
+    }
+
+    /**
+     * Set 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatorNickName 创建账号ID昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatorNickName(String CreatorNickName) {
+        this.CreatorNickName = CreatorNickName;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -301,6 +357,12 @@ public class DescribeFirmwareTaskResponse extends AbstractModel{
         if (source.OriginalVersion != null) {
             this.OriginalVersion = new String(source.OriginalVersion);
         }
+        if (source.CreateUserId != null) {
+            this.CreateUserId = new Long(source.CreateUserId);
+        }
+        if (source.CreatorNickName != null) {
+            this.CreatorNickName = new String(source.CreatorNickName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -319,6 +381,8 @@ public class DescribeFirmwareTaskResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "OriginalVersion", this.OriginalVersion);
+        this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+        this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

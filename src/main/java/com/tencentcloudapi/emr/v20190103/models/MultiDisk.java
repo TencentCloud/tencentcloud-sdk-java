@@ -27,6 +27,7 @@ public class MultiDisk extends AbstractModel{
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
     @Expose
@@ -34,6 +35,7 @@ public class MultiDisk extends AbstractModel{
 
     /**
     * 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volume")
     @Expose
@@ -41,6 +43,7 @@ public class MultiDisk extends AbstractModel{
 
     /**
     * 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -50,11 +53,13 @@ public class MultiDisk extends AbstractModel{
      * Get 云盘类型
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
-<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li> 
+<li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiskType 云盘类型
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
         return this.DiskType;
@@ -65,18 +70,22 @@ public class MultiDisk extends AbstractModel{
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskType 云盘类型
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get 云盘大小 
+     * Get 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Volume 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolume() {
         return this.Volume;
@@ -84,15 +93,19 @@ public class MultiDisk extends AbstractModel{
 
     /**
      * Set 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Volume 云盘大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 该类型云盘个数 
+     * Get 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Count 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -100,7 +113,9 @@ public class MultiDisk extends AbstractModel{
 
     /**
      * Set 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 该类型云盘个数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

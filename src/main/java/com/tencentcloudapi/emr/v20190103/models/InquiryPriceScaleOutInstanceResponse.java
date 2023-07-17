@@ -41,7 +41,7 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     /**
     * 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
@@ -114,11 +114,11 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
@@ -128,11 +128,11 @@ public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
     /**
      * Set 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 扩容的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {

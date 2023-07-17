@@ -60,7 +60,7 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *视频美颜
+     *视频美颜(此接口目前已下线)
      * @param req BeautifyVideoRequest
      * @return BeautifyVideoResponse
      * @throws TencentCloudSDKException

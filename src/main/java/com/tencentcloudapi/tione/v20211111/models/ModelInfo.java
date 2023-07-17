@@ -82,6 +82,14 @@ public class ModelInfo extends AbstractModel{
     private String ModelType;
 
     /**
+    * 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelFormat")
+    @Expose
+    private String ModelFormat;
+
+    /**
      * Get 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id 
      * @return ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
@@ -221,6 +229,26 @@ public class ModelInfo extends AbstractModel{
         this.ModelType = ModelType;
     }
 
+    /**
+     * Get 模型格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelFormat 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModelFormat() {
+        return this.ModelFormat;
+    }
+
+    /**
+     * Set 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelFormat 模型格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelFormat(String ModelFormat) {
+        this.ModelFormat = ModelFormat;
+    }
+
     public ModelInfo() {
     }
 
@@ -253,6 +281,9 @@ public class ModelInfo extends AbstractModel{
         if (source.ModelType != null) {
             this.ModelType = new String(source.ModelType);
         }
+        if (source.ModelFormat != null) {
+            this.ModelFormat = new String(source.ModelFormat);
+        }
     }
 
 
@@ -268,6 +299,7 @@ public class ModelInfo extends AbstractModel{
         this.setParamObj(map, prefix + "CosPathInfo.", this.CosPathInfo);
         this.setParamSimple(map, prefix + "AlgorithmFramework", this.AlgorithmFramework);
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
+        this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
 
     }
 }

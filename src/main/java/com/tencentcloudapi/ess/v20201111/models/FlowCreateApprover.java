@@ -171,6 +171,31 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Boolean ApproverNeedSignReview;
 
     /**
+    * 签署人签署控件
+    */
+    @SerializedName("SignComponents")
+    @Expose
+    private Component [] SignComponents;
+
+    /**
+    * 签署人填写控件
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component [] Components;
+
+    /**
+    * 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+    */
+    @SerializedName("ComponentLimitType")
+    @Expose
+    private String [] ComponentLimitType;
+
+    /**
      * Get 参与者类型：
 0：企业
 1：个人
@@ -526,6 +551,70 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.ApproverNeedSignReview = ApproverNeedSignReview;
     }
 
+    /**
+     * Get 签署人签署控件 
+     * @return SignComponents 签署人签署控件
+     */
+    public Component [] getSignComponents() {
+        return this.SignComponents;
+    }
+
+    /**
+     * Set 签署人签署控件
+     * @param SignComponents 签署人签署控件
+     */
+    public void setSignComponents(Component [] SignComponents) {
+        this.SignComponents = SignComponents;
+    }
+
+    /**
+     * Get 签署人填写控件 
+     * @return Components 签署人填写控件
+     */
+    public Component [] getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 签署人填写控件
+     * @param Components 签署人填写控件
+     */
+    public void setComponents(Component [] Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署） 
+     * @return ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     */
+    public String [] getComponentLimitType() {
+        return this.ComponentLimitType;
+    }
+
+    /**
+     * Set 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     * @param ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+	HANDWRITE – 手写签名
+	OCR_ESIGN -- AI智能识别手写签名
+	ESIGN -- 个人印章类型
+	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
+     */
+    public void setComponentLimitType(String [] ComponentLimitType) {
+        this.ComponentLimitType = ComponentLimitType;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -597,6 +686,24 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         if (source.ApproverNeedSignReview != null) {
             this.ApproverNeedSignReview = new Boolean(source.ApproverNeedSignReview);
         }
+        if (source.SignComponents != null) {
+            this.SignComponents = new Component[source.SignComponents.length];
+            for (int i = 0; i < source.SignComponents.length; i++) {
+                this.SignComponents[i] = new Component(source.SignComponents[i]);
+            }
+        }
+        if (source.Components != null) {
+            this.Components = new Component[source.Components.length];
+            for (int i = 0; i < source.Components.length; i++) {
+                this.Components[i] = new Component(source.Components[i]);
+            }
+        }
+        if (source.ComponentLimitType != null) {
+            this.ComponentLimitType = new String[source.ComponentLimitType.length];
+            for (int i = 0; i < source.ComponentLimitType.length; i++) {
+                this.ComponentLimitType[i] = new String(source.ComponentLimitType[i]);
+            }
+        }
     }
 
 
@@ -624,6 +731,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamSimple(map, prefix + "SignId", this.SignId);
         this.setParamSimple(map, prefix + "ApproverNeedSignReview", this.ApproverNeedSignReview);
+        this.setParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+        this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
 
     }
 }

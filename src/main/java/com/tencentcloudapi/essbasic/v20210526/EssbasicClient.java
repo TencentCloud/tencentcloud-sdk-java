@@ -369,6 +369,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *生成渠道子客编辑企业信息二维码
+     * @param req ChannelCreateOrganizationModifyQrCodeRequest
+     * @return ChannelCreateOrganizationModifyQrCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateOrganizationModifyQrCodeResponse ChannelCreateOrganizationModifyQrCode(ChannelCreateOrganizationModifyQrCodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateOrganizationModifyQrCodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateOrganizationModifyQrCode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建预发起合同
 通过此接口指定：合同，签署人，填写控件信息，生成预创建合同链接，点击后跳转到web页面完成合同创建并发起
 可指定合同信息不可更改，签署人信息不可更改

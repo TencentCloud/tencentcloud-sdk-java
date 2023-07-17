@@ -303,6 +303,14 @@ public class DescribeCertificateResponse extends AbstractModel{
     private String [] CAEndTimes;
 
     /**
+    * DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DvRevokeAuthDetail")
+    @Expose
+    private DvAuths [] DvRevokeAuthDetail;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1010,6 +1018,26 @@ public class DescribeCertificateResponse extends AbstractModel{
     }
 
     /**
+     * Get DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DvRevokeAuthDetail DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DvAuths [] getDvRevokeAuthDetail() {
+        return this.DvRevokeAuthDetail;
+    }
+
+    /**
+     * Set DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DvRevokeAuthDetail DV证书吊销验证值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDvRevokeAuthDetail(DvAuths [] DvRevokeAuthDetail) {
+        this.DvRevokeAuthDetail = DvRevokeAuthDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1153,6 +1181,12 @@ public class DescribeCertificateResponse extends AbstractModel{
                 this.CAEndTimes[i] = new String(source.CAEndTimes[i]);
             }
         }
+        if (source.DvRevokeAuthDetail != null) {
+            this.DvRevokeAuthDetail = new DvAuths[source.DvRevokeAuthDetail.length];
+            for (int i = 0; i < source.DvRevokeAuthDetail.length; i++) {
+                this.DvRevokeAuthDetail[i] = new DvAuths(source.DvRevokeAuthDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1198,6 +1232,7 @@ public class DescribeCertificateResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
         this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
         this.setParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
+        this.setParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

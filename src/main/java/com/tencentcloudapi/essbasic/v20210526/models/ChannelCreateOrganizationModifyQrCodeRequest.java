@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tdmq.v20200217.models;
+package com.tencentcloudapi.essbasic.v20210526.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAMQPClusterRequest extends AbstractModel{
+public class ChannelCreateOrganizationModifyQrCodeRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * 应用相关信息。 此接口Agent.AppId 必填。
     */
-    @SerializedName("ClusterId")
+    @SerializedName("Agent")
     @Expose
-    private String ClusterId;
+    private Agent Agent;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 应用相关信息。 此接口Agent.AppId 必填。 
+     * @return Agent 应用相关信息。 此接口Agent.AppId 必填。
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public Agent getAgent() {
+        return this.Agent;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 应用相关信息。 此接口Agent.AppId 必填。
+     * @param Agent 应用相关信息。 此接口Agent.AppId 必填。
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
     }
 
-    public DescribeAMQPClusterRequest() {
+    public ChannelCreateOrganizationModifyQrCodeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAMQPClusterRequest(DescribeAMQPClusterRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public ChannelCreateOrganizationModifyQrCodeRequest(ChannelCreateOrganizationModifyQrCodeRequest source) {
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeAMQPClusterRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

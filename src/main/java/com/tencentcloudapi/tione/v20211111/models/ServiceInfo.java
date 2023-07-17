@@ -174,6 +174,39 @@ HYBRID_PAID:
     private Boolean ModelHotUpdateEnable;
 
     /**
+    * 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleMode")
+    @Expose
+    private String ScaleMode;
+
+    /**
+    * 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CronScaleJobs")
+    @Expose
+    private CronScaleJob [] CronScaleJobs;
+
+    /**
+    * 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScaleStrategy")
+    @Expose
+    private String ScaleStrategy;
+
+    /**
+    * 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduledAction")
+    @Expose
+    private String ScheduledAction;
+
+    /**
     * Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -190,31 +223,6 @@ HYBRID_PAID:
     private Pod [] PodInfos;
 
     /**
-    * 定时伸缩策略
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ScaleStrategy")
-    @Expose
-    private String ScaleStrategy;
-
-    /**
-    * 定时伸缩任务
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CronScaleJobs")
-    @Expose
-    private CronScaleJob [] CronScaleJobs;
-
-    /**
-    * 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ScaleMode")
-    @Expose
-    private String ScaleMode;
-
-    /**
     * 服务限速限流相关配置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -223,12 +231,12 @@ HYBRID_PAID:
     private ServiceLimit ServiceLimit;
 
     /**
-    * 定时停止的配置
+    * 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ScheduledAction")
+    @SerializedName("ModelTurboEnable")
     @Expose
-    private String ScheduledAction;
+    private Boolean ModelTurboEnable;
 
     /**
      * Get 期望运行的Pod数量，停止状态是0
@@ -619,6 +627,90 @@ HYBRID_PAID:
     }
 
     /**
+     * Get 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleMode 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScaleMode() {
+        return this.ScaleMode;
+    }
+
+    /**
+     * Set 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleMode 实例数量调节方式,默认为手动
+支持：自动 - "AUTO", 手动 - "MANUAL"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleMode(String ScaleMode) {
+        this.ScaleMode = ScaleMode;
+    }
+
+    /**
+     * Get 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CronScaleJobs 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CronScaleJob [] getCronScaleJobs() {
+        return this.CronScaleJobs;
+    }
+
+    /**
+     * Set 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CronScaleJobs 定时伸缩任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCronScaleJobs(CronScaleJob [] CronScaleJobs) {
+        this.CronScaleJobs = CronScaleJobs;
+    }
+
+    /**
+     * Get 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScaleStrategy 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScaleStrategy() {
+        return this.ScaleStrategy;
+    }
+
+    /**
+     * Set 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScaleStrategy 定时伸缩策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScaleStrategy(String ScaleStrategy) {
+        this.ScaleStrategy = ScaleStrategy;
+    }
+
+    /**
+     * Get 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScheduledAction() {
+        return this.ScheduledAction;
+    }
+
+    /**
+     * Set 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduledAction 定时停止的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduledAction(String ScheduledAction) {
+        this.ScheduledAction = ScheduledAction;
+    }
+
+    /**
      * Get Pod列表信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Pods Pod列表信息
@@ -659,70 +751,6 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 定时伸缩策略
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScaleStrategy 定时伸缩策略
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getScaleStrategy() {
-        return this.ScaleStrategy;
-    }
-
-    /**
-     * Set 定时伸缩策略
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScaleStrategy 定时伸缩策略
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScaleStrategy(String ScaleStrategy) {
-        this.ScaleStrategy = ScaleStrategy;
-    }
-
-    /**
-     * Get 定时伸缩任务
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CronScaleJobs 定时伸缩任务
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public CronScaleJob [] getCronScaleJobs() {
-        return this.CronScaleJobs;
-    }
-
-    /**
-     * Set 定时伸缩任务
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CronScaleJobs 定时伸缩任务
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCronScaleJobs(CronScaleJob [] CronScaleJobs) {
-        this.CronScaleJobs = CronScaleJobs;
-    }
-
-    /**
-     * Get 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScaleMode 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getScaleMode() {
-        return this.ScaleMode;
-    }
-
-    /**
-     * Set 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScaleMode 实例数量调节方式,默认为手动
-支持：自动 - "AUTO", 手动 - "MANUAL"
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScaleMode(String ScaleMode) {
-        this.ScaleMode = ScaleMode;
-    }
-
-    /**
      * Get 服务限速限流相关配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceLimit 服务限速限流相关配置
@@ -743,23 +771,23 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 定时停止的配置
+     * Get 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduledAction 定时停止的配置
+     * @return ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getScheduledAction() {
-        return this.ScheduledAction;
+    public Boolean getModelTurboEnable() {
+        return this.ModelTurboEnable;
     }
 
     /**
-     * Set 定时停止的配置
+     * Set 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction 定时停止的配置
+     * @param ModelTurboEnable 是否开启模型的加速, 仅对StableDiffusion(动态加速)格式的模型有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setScheduledAction(String ScheduledAction) {
-        this.ScheduledAction = ScheduledAction;
+    public void setModelTurboEnable(Boolean ModelTurboEnable) {
+        this.ModelTurboEnable = ModelTurboEnable;
     }
 
     public ServiceInfo() {
@@ -830,6 +858,21 @@ HYBRID_PAID:
         if (source.ModelHotUpdateEnable != null) {
             this.ModelHotUpdateEnable = new Boolean(source.ModelHotUpdateEnable);
         }
+        if (source.ScaleMode != null) {
+            this.ScaleMode = new String(source.ScaleMode);
+        }
+        if (source.CronScaleJobs != null) {
+            this.CronScaleJobs = new CronScaleJob[source.CronScaleJobs.length];
+            for (int i = 0; i < source.CronScaleJobs.length; i++) {
+                this.CronScaleJobs[i] = new CronScaleJob(source.CronScaleJobs[i]);
+            }
+        }
+        if (source.ScaleStrategy != null) {
+            this.ScaleStrategy = new String(source.ScaleStrategy);
+        }
+        if (source.ScheduledAction != null) {
+            this.ScheduledAction = new String(source.ScheduledAction);
+        }
         if (source.Pods != null) {
             this.Pods = new Pod(source.Pods);
         }
@@ -839,23 +882,11 @@ HYBRID_PAID:
                 this.PodInfos[i] = new Pod(source.PodInfos[i]);
             }
         }
-        if (source.ScaleStrategy != null) {
-            this.ScaleStrategy = new String(source.ScaleStrategy);
-        }
-        if (source.CronScaleJobs != null) {
-            this.CronScaleJobs = new CronScaleJob[source.CronScaleJobs.length];
-            for (int i = 0; i < source.CronScaleJobs.length; i++) {
-                this.CronScaleJobs[i] = new CronScaleJob(source.CronScaleJobs[i]);
-            }
-        }
-        if (source.ScaleMode != null) {
-            this.ScaleMode = new String(source.ScaleMode);
-        }
         if (source.ServiceLimit != null) {
             this.ServiceLimit = new ServiceLimit(source.ServiceLimit);
         }
-        if (source.ScheduledAction != null) {
-            this.ScheduledAction = new String(source.ScheduledAction);
+        if (source.ModelTurboEnable != null) {
+            this.ModelTurboEnable = new Boolean(source.ModelTurboEnable);
         }
     }
 
@@ -882,13 +913,14 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
+        this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
+        this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
+        this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
+        this.setParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
         this.setParamObj(map, prefix + "Pods.", this.Pods);
         this.setParamArrayObj(map, prefix + "PodInfos.", this.PodInfos);
-        this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);
-        this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
-        this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
-        this.setParamSimple(map, prefix + "ScheduledAction", this.ScheduledAction);
+        this.setParamSimple(map, prefix + "ModelTurboEnable", this.ModelTurboEnable);
 
     }
 }

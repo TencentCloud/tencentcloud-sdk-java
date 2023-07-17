@@ -265,6 +265,14 @@ public class Instance extends AbstractModel{
     private String [] RdmaIpAddresses;
 
     /**
+    * 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
     * 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -889,6 +897,26 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DedicatedClusterId 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DedicatedClusterId 实例所在的专用集群`ID`。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
      * Get 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsolatedSource 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
@@ -1140,6 +1168,9 @@ public class Instance extends AbstractModel{
                 this.RdmaIpAddresses[i] = new String(source.RdmaIpAddresses[i]);
             }
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
         if (source.IsolatedSource != null) {
             this.IsolatedSource = new String(source.IsolatedSource);
         }
@@ -1201,6 +1232,7 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);

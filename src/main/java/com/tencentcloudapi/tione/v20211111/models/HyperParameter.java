@@ -87,6 +87,14 @@ public class HyperParameter extends AbstractModel{
     private String PipelineArgs;
 
     /**
+    * Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoraScale")
+    @Expose
+    private String LoraScale;
+
+    /**
      * Get 最大nnz数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MaxNNZ 最大nnz数
@@ -246,6 +254,26 @@ public class HyperParameter extends AbstractModel{
         this.PipelineArgs = PipelineArgs;
     }
 
+    /**
+     * Get Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoraScale Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoraScale() {
+        return this.LoraScale;
+    }
+
+    /**
+     * Set Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoraScale Stable Diffusion 模型优化参数，控制Lora模型的影响效果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoraScale(String LoraScale) {
+        this.LoraScale = LoraScale;
+    }
+
     public HyperParameter() {
     }
 
@@ -278,6 +306,9 @@ public class HyperParameter extends AbstractModel{
         if (source.PipelineArgs != null) {
             this.PipelineArgs = new String(source.PipelineArgs);
         }
+        if (source.LoraScale != null) {
+            this.LoraScale = new String(source.LoraScale);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class HyperParameter extends AbstractModel{
         this.setParamSimple(map, prefix + "MinBlockSizePt", this.MinBlockSizePt);
         this.setParamSimple(map, prefix + "MinBlockSizeTf", this.MinBlockSizeTf);
         this.setParamSimple(map, prefix + "PipelineArgs", this.PipelineArgs);
+        this.setParamSimple(map, prefix + "LoraScale", this.LoraScale);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreateBackupRequest extends AbstractModel{
     private String [] DBNames;
 
     /**
-    * 实例ID，形如mssql-i1z41iwd
+    * 实例ID（必填），形如mssql-i1z41iwd
     */
     @SerializedName("InstanceId")
     @Expose
@@ -83,16 +83,16 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例ID，形如mssql-i1z41iwd 
-     * @return InstanceId 实例ID，形如mssql-i1z41iwd
+     * Get 实例ID（必填），形如mssql-i1z41iwd 
+     * @return InstanceId 实例ID（必填），形如mssql-i1z41iwd
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，形如mssql-i1z41iwd
-     * @param InstanceId 实例ID，形如mssql-i1z41iwd
+     * Set 实例ID（必填），形如mssql-i1z41iwd
+     * @param InstanceId 实例ID（必填），形如mssql-i1z41iwd
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

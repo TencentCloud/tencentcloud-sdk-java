@@ -38,6 +38,13 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel{
     private BeautifyVideoOutput BeautifyVideoOutput;
 
     /**
+    * 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+    */
+    @SerializedName("JobStatusCode")
+    @Expose
+    private Long JobStatusCode;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -81,6 +88,22 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel{
     }
 
     /**
+     * Get 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成 
+     * @return JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     */
+    public Long getJobStatusCode() {
+        return this.JobStatusCode;
+    }
+
+    /**
+     * Set 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     * @param JobStatusCode 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+     */
+    public void setJobStatusCode(Long JobStatusCode) {
+        this.JobStatusCode = JobStatusCode;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -110,6 +133,9 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel{
         if (source.BeautifyVideoOutput != null) {
             this.BeautifyVideoOutput = new BeautifyVideoOutput(source.BeautifyVideoOutput);
         }
+        if (source.JobStatusCode != null) {
+            this.JobStatusCode = new Long(source.JobStatusCode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +148,7 @@ public class QueryBeautifyVideoJobResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamObj(map, prefix + "BeautifyVideoOutput.", this.BeautifyVideoOutput);
+        this.setParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

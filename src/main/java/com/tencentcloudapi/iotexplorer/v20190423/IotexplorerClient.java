@@ -1404,7 +1404,7 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *本接口（ListFirmwares）用于获取固件列表 
+     *本接口（ListFirmwares）用于获取固件列表
      * @param req ListFirmwaresRequest
      * @return ListFirmwaresResponse
      * @throws TencentCloudSDKException

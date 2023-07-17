@@ -52,6 +52,14 @@ public class Service extends AbstractModel{
     private String ServiceDescription;
 
     /**
+    * 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceInfo")
+    @Expose
+    private ServiceInfo ServiceInfo;
+
+    /**
     * 集群id
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -90,6 +98,30 @@ public class Service extends AbstractModel{
     @SerializedName("ResourceGroupId")
     @Expose
     private String ResourceGroupId;
+
+    /**
+    * 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
+    * 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IngressName")
+    @Expose
+    private String IngressName;
 
     /**
     * 创建者
@@ -140,30 +172,6 @@ public class Service extends AbstractModel{
     private Long AppId;
 
     /**
-    * 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Version")
-    @Expose
-    private String Version;
-
-    /**
-    * 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LatestVersion")
-    @Expose
-    private String LatestVersion;
-
-    /**
-    * 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ServiceInfo")
-    @Expose
-    private ServiceInfo ServiceInfo;
-
-    /**
     * 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -172,22 +180,28 @@ public class Service extends AbstractModel{
     private String BusinessStatus;
 
     /**
-    * 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+    * 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("CreateSource")
+    @SerializedName("ServiceLimit")
     @Expose
-    private String CreateSource;
+    private ServiceLimit ServiceLimit;
 
     /**
-    * 费用信息
+    * 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BillingInfo")
+    @SerializedName("ScheduledAction")
     @Expose
-    private String BillingInfo;
+    private ScheduledAction ScheduledAction;
+
+    /**
+    * 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateFailedReason")
+    @Expose
+    private String CreateFailedReason;
 
     /**
     * 服务状态
@@ -206,6 +220,14 @@ Waiting 就绪中
     private String Status;
 
     /**
+    * 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingInfo")
+    @Expose
+    private String BillingInfo;
+
+    /**
     * 模型权重
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -214,52 +236,30 @@ Waiting 就绪中
     private Long Weight;
 
     /**
-    * 服务所在的 ingress 的 name
+    * 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IngressName")
+    @SerializedName("CreateSource")
     @Expose
-    private String IngressName;
+    private String CreateSource;
 
     /**
-    * 服务限速限流相关配置
+    * 版本号
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ServiceLimit")
+    @SerializedName("Version")
     @Expose
-    private ServiceLimit ServiceLimit;
+    private String Version;
 
     /**
-    * 定时停止的配置
+    * 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ScheduledAction")
+    @SerializedName("LatestVersion")
     @Expose
-    private ScheduledAction ScheduledAction;
-
-    /**
-    * 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreateFailedReason")
-    @Expose
-    private String CreateFailedReason;
-
-    /**
-    * 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ResourceGroupName")
-    @Expose
-    private String ResourceGroupName;
-
-    /**
-    * 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Tags")
-    @Expose
-    private Tag [] Tags;
+    private String LatestVersion;
 
     /**
      * Get 服务组id 
@@ -327,6 +327,26 @@ Waiting 就绪中
      */
     public void setServiceDescription(String ServiceDescription) {
         this.ServiceDescription = ServiceDescription;
+    }
+
+    /**
+     * Get 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceInfo 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceInfo getServiceInfo() {
+        return this.ServiceInfo;
+    }
+
+    /**
+     * Set 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceInfo 服务的详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceInfo(ServiceInfo ServiceInfo) {
+        this.ServiceInfo = ServiceInfo;
     }
 
     /**
@@ -427,6 +447,66 @@ Waiting 就绪中
      */
     public void setResourceGroupId(String ResourceGroupId) {
         this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
+     * Get 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 包年包月服务对应的资源组名字
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
+    /**
+     * Get 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 服务的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IngressName 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIngressName() {
+        return this.IngressName;
+    }
+
+    /**
+     * Set 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IngressName 服务所在的 ingress 的 name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIngressName(String IngressName) {
+        this.IngressName = IngressName;
     }
 
     /**
@@ -550,66 +630,6 @@ Waiting 就绪中
     }
 
     /**
-     * Get 版本号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getVersion() {
-        return this.Version;
-    }
-
-    /**
-     * Set 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setVersion(String Version) {
-        this.Version = Version;
-    }
-
-    /**
-     * Get 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LatestVersion 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLatestVersion() {
-        return this.LatestVersion;
-    }
-
-    /**
-     * Set 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LatestVersion 服务组下服务的最高版本号
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLatestVersion(String LatestVersion) {
-        this.LatestVersion = LatestVersion;
-    }
-
-    /**
-     * Get 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceInfo 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ServiceInfo getServiceInfo() {
-        return this.ServiceInfo;
-    }
-
-    /**
-     * Set 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceInfo 服务的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setServiceInfo(ServiceInfo ServiceInfo) {
-        this.ServiceInfo = ServiceInfo;
-    }
-
-    /**
      * Get 服务的业务状态
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BusinessStatus 服务的业务状态
@@ -630,51 +650,63 @@ Waiting 就绪中
     }
 
     /**
-     * Get 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * Get 已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @return ServiceLimit 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCreateSource() {
-        return this.CreateSource;
+    public ServiceLimit getServiceLimit() {
+        return this.ServiceLimit;
     }
 
     /**
-     * Set 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * Set 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateSource 服务的创建来源
-AUTO_ML: 来自自动学习的一键发布
-DEFAULT: 其他来源
+     * @param ServiceLimit 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setCreateSource(String CreateSource) {
-        this.CreateSource = CreateSource;
+    public void setServiceLimit(ServiceLimit ServiceLimit) {
+        this.ServiceLimit = ServiceLimit;
     }
 
     /**
-     * Get 费用信息
+     * Get 已废弃
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInfo 费用信息
+     * @return ScheduledAction 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getBillingInfo() {
-        return this.BillingInfo;
+    public ScheduledAction getScheduledAction() {
+        return this.ScheduledAction;
     }
 
     /**
-     * Set 费用信息
+     * Set 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInfo 费用信息
+     * @param ScheduledAction 已废弃
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBillingInfo(String BillingInfo) {
-        this.BillingInfo = BillingInfo;
+    public void setScheduledAction(ScheduledAction ScheduledAction) {
+        this.ScheduledAction = ScheduledAction;
+    }
+
+    /**
+     * Get 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateFailedReason() {
+        return this.CreateFailedReason;
+    }
+
+    /**
+     * Set 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateFailedReason(String CreateFailedReason) {
+        this.CreateFailedReason = CreateFailedReason;
     }
 
     /**
@@ -730,6 +762,26 @@ Waiting 就绪中
     }
 
     /**
+     * Get 费用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingInfo 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingInfo() {
+        return this.BillingInfo;
+    }
+
+    /**
+     * Set 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingInfo 费用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingInfo(String BillingInfo) {
+        this.BillingInfo = BillingInfo;
+    }
+
+    /**
      * Get 模型权重
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Weight 模型权重
@@ -750,123 +802,71 @@ Waiting 就绪中
     }
 
     /**
-     * Get 服务所在的 ingress 的 name
+     * Get 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IngressName 服务所在的 ingress 的 name
+     * @return CreateSource 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIngressName() {
-        return this.IngressName;
+    public String getCreateSource() {
+        return this.CreateSource;
     }
 
     /**
-     * Set 服务所在的 ingress 的 name
+     * Set 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IngressName 服务所在的 ingress 的 name
+     * @param CreateSource 服务的创建来源
+AUTO_ML: 来自自动学习的一键发布
+DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIngressName(String IngressName) {
-        this.IngressName = IngressName;
+    public void setCreateSource(String CreateSource) {
+        this.CreateSource = CreateSource;
     }
 
     /**
-     * Get 服务限速限流相关配置
+     * Get 版本号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceLimit 服务限速限流相关配置
+     * @return Version 版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ServiceLimit getServiceLimit() {
-        return this.ServiceLimit;
+    public String getVersion() {
+        return this.Version;
     }
 
     /**
-     * Set 服务限速限流相关配置
+     * Set 版本号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceLimit 服务限速限流相关配置
+     * @param Version 版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setServiceLimit(ServiceLimit ServiceLimit) {
-        this.ServiceLimit = ServiceLimit;
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     /**
-     * Get 定时停止的配置
+     * Get 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduledAction 定时停止的配置
+     * @return LatestVersion 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public ScheduledAction getScheduledAction() {
-        return this.ScheduledAction;
+    public String getLatestVersion() {
+        return this.LatestVersion;
     }
 
     /**
-     * Set 定时停止的配置
+     * Set 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduledAction 定时停止的配置
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setScheduledAction(ScheduledAction ScheduledAction) {
-        this.ScheduledAction = ScheduledAction;
-    }
-
-    /**
-     * Get 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
+     * @param LatestVersion 服务组下服务的最高版本号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getCreateFailedReason() {
-        return this.CreateFailedReason;
-    }
-
-    /**
-     * Set 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateFailedReason 服务创建失败的原因，创建成功后该字段为默认值 CREATE_SUCCEED
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreateFailedReason(String CreateFailedReason) {
-        this.CreateFailedReason = CreateFailedReason;
-    }
-
-    /**
-     * Get 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceGroupName 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getResourceGroupName() {
-        return this.ResourceGroupName;
-    }
-
-    /**
-     * Set 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceGroupName 包年包月服务对应的资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResourceGroupName(String ResourceGroupName) {
-        this.ResourceGroupName = ResourceGroupName;
-    }
-
-    /**
-     * Get 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Tag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 服务的标签
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
+    public void setLatestVersion(String LatestVersion) {
+        this.LatestVersion = LatestVersion;
     }
 
     public Service() {
@@ -889,6 +889,9 @@ Waiting 就绪中
         if (source.ServiceDescription != null) {
             this.ServiceDescription = new String(source.ServiceDescription);
         }
+        if (source.ServiceInfo != null) {
+            this.ServiceInfo = new ServiceInfo(source.ServiceInfo);
+        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
@@ -903,6 +906,18 @@ Waiting 就绪中
         }
         if (source.ResourceGroupId != null) {
             this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.IngressName != null) {
+            this.IngressName = new String(source.IngressName);
         }
         if (source.CreatedBy != null) {
             this.CreatedBy = new String(source.CreatedBy);
@@ -922,32 +937,8 @@ Waiting 就绪中
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
-        if (source.Version != null) {
-            this.Version = new String(source.Version);
-        }
-        if (source.LatestVersion != null) {
-            this.LatestVersion = new String(source.LatestVersion);
-        }
-        if (source.ServiceInfo != null) {
-            this.ServiceInfo = new ServiceInfo(source.ServiceInfo);
-        }
         if (source.BusinessStatus != null) {
             this.BusinessStatus = new String(source.BusinessStatus);
-        }
-        if (source.CreateSource != null) {
-            this.CreateSource = new String(source.CreateSource);
-        }
-        if (source.BillingInfo != null) {
-            this.BillingInfo = new String(source.BillingInfo);
-        }
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
-        if (source.Weight != null) {
-            this.Weight = new Long(source.Weight);
-        }
-        if (source.IngressName != null) {
-            this.IngressName = new String(source.IngressName);
         }
         if (source.ServiceLimit != null) {
             this.ServiceLimit = new ServiceLimit(source.ServiceLimit);
@@ -958,14 +949,23 @@ Waiting 就绪中
         if (source.CreateFailedReason != null) {
             this.CreateFailedReason = new String(source.CreateFailedReason);
         }
-        if (source.ResourceGroupName != null) {
-            this.ResourceGroupName = new String(source.ResourceGroupName);
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
-        if (source.Tags != null) {
-            this.Tags = new Tag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new Tag(source.Tags[i]);
-            }
+        if (source.BillingInfo != null) {
+            this.BillingInfo = new String(source.BillingInfo);
+        }
+        if (source.Weight != null) {
+            this.Weight = new Long(source.Weight);
+        }
+        if (source.CreateSource != null) {
+            this.CreateSource = new String(source.CreateSource);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.LatestVersion != null) {
+            this.LatestVersion = new String(source.LatestVersion);
         }
     }
 
@@ -978,31 +978,31 @@ Waiting 就绪中
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "ServiceGroupName", this.ServiceGroupName);
         this.setParamSimple(map, prefix + "ServiceDescription", this.ServiceDescription);
+        this.setParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IngressName", this.IngressName);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "Version", this.Version);
-        this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
-        this.setParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
         this.setParamSimple(map, prefix + "BusinessStatus", this.BusinessStatus);
-        this.setParamSimple(map, prefix + "CreateSource", this.CreateSource);
-        this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Weight", this.Weight);
-        this.setParamSimple(map, prefix + "IngressName", this.IngressName);
         this.setParamObj(map, prefix + "ServiceLimit.", this.ServiceLimit);
         this.setParamObj(map, prefix + "ScheduledAction.", this.ScheduledAction);
         this.setParamSimple(map, prefix + "CreateFailedReason", this.CreateFailedReason);
-        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
+        this.setParamSimple(map, prefix + "Weight", this.Weight);
+        this.setParamSimple(map, prefix + "CreateSource", this.CreateSource);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
 
     }
 }

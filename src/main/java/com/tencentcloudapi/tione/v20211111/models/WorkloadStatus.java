@@ -84,6 +84,14 @@ Stopping 停止中
     private StatefulSetCondition [] Conditions;
 
     /**
+    * 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get 当前实例数 
      * @return Replicas 当前实例数
      */
@@ -231,6 +239,26 @@ Stopping 停止中
         this.Conditions = Conditions;
     }
 
+    /**
+     * Get 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Reason 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Reason 状态异常时，展示原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
     public WorkloadStatus() {
     }
 
@@ -269,6 +297,9 @@ Stopping 停止中
                 this.Conditions[i] = new StatefulSetCondition(source.Conditions[i]);
             }
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
     }
 
 
@@ -284,6 +315,7 @@ Stopping 停止中
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "StatefulSetCondition.", this.StatefulSetCondition);
         this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

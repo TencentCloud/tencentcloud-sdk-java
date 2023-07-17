@@ -41,7 +41,7 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     /**
     * 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
@@ -114,11 +114,11 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     /**
      * Get 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
@@ -128,11 +128,11 @@ public class InquiryPriceCreateInstanceResponse extends AbstractModel{
     /**
      * Set 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。</li>
-<li>m：表示月份。</li>
+<li>m：表示月份。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {

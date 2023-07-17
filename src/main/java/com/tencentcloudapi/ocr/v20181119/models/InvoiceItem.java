@@ -55,7 +55,7 @@ FailedOperation.UnKnowError：表示识别失败；
     private Long Type;
 
     /**
-    * 旋转后的图片四点坐标。
+    * 该发票在原图片中的四点坐标。
     */
     @SerializedName("Polygon")
     @Expose
@@ -215,16 +215,16 @@ FailedOperation.UnKnowError：表示识别失败；
     }
 
     /**
-     * Get 旋转后的图片四点坐标。 
-     * @return Polygon 旋转后的图片四点坐标。
+     * Get 该发票在原图片中的四点坐标。 
+     * @return Polygon 该发票在原图片中的四点坐标。
      */
     public Polygon getPolygon() {
         return this.Polygon;
     }
 
     /**
-     * Set 旋转后的图片四点坐标。
-     * @param Polygon 旋转后的图片四点坐标。
+     * Set 该发票在原图片中的四点坐标。
+     * @param Polygon 该发票在原图片中的四点坐标。
      */
     public void setPolygon(Polygon Polygon) {
         this.Polygon = Polygon;

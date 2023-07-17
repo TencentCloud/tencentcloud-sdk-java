@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeModelServiceHotUpdatedResponse extends AbstractModel{
 
     /**
+    * 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+    */
+    @SerializedName("ModelTurboFlag")
+    @Expose
+    private String ModelTurboFlag;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速 
+     * @return ModelTurboFlag 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+     */
+    public String getModelTurboFlag() {
+        return this.ModelTurboFlag;
+    }
+
+    /**
+     * Set 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+     * @param ModelTurboFlag 模型加速标志位.Allowed 允许模型加速. Forbidden 禁止模型加速
+     */
+    public void setModelTurboFlag(String ModelTurboFlag) {
+        this.ModelTurboFlag = ModelTurboFlag;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class DescribeModelServiceHotUpdatedResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeModelServiceHotUpdatedResponse(DescribeModelServiceHotUpdatedResponse source) {
+        if (source.ModelTurboFlag != null) {
+            this.ModelTurboFlag = new String(source.ModelTurboFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class DescribeModelServiceHotUpdatedResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ModelTurboFlag", this.ModelTurboFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

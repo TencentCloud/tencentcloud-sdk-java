@@ -23,10 +23,7 @@ import java.util.HashMap;
 public class InstanceAuditLogFilters extends AbstractModel{
 
     /**
-    * 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+    * 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -72,10 +69,7 @@ RA - 范围。
     private String [] Value;
 
     /**
-     * Get 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * Get 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -96,10 +90,7 @@ cpuTime - cpu时间；
 checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。 
-     * @return Type 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * @return Type 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -126,10 +117,7 @@ sentRows - 返回行数。
     }
 
     /**
-     * Set 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * Set 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
@@ -150,10 +138,7 @@ cpuTime - cpu时间；
 checkRows - 扫描行数；
 affectRows - 影响行数；
 sentRows - 返回行数。
-     * @param Type 过滤项。目前支持以下搜索条件：
-
-分词搜索：
-sql - SQL语句；
+     * @param Type 过滤项。sql 暂时不支持搜索。目前支持以下搜索条件：
 
 等于、不等于、包含、不包含：
 host - 客户端地址；
