@@ -60,6 +60,69 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *查询GooseFS集群客户端凭证
+     * @param req DescribeClusterClientTokenRequest
+     * @return DescribeClusterClientTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterClientTokenResponse DescribeClusterClientToken(DescribeClusterClientTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterClientTokenResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterClientTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterClientToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询GooseFS集群角色凭证
+     * @param req DescribeClusterRoleTokenRequest
+     * @return DescribeClusterRoleTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterRoleTokenResponse DescribeClusterRoleToken(DescribeClusterRoleTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterRoleTokenResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterRoleTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterRoleToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询GooseFS集群角色
+     * @param req DescribeClusterRolesRequest
+     * @return DescribeClusterRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterRolesResponse DescribeClusterRoles(DescribeClusterRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterRolesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取数据流通任务实时状态，用作客户端控制
      * @param req DescribeDataRepositoryTaskStatusRequest
      * @return DescribeDataRepositoryTaskStatusResponse

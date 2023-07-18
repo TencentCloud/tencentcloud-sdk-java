@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class BackupDownloadInfo extends AbstractModel{
 
     /**
-    * 备份文件名称
+    * 备份文件名称。
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * 备份文件大小，单位B，如果为0，表示无效
+    * 备份文件大小，单位B，如果为0，表示无效。
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * 备份文件外网下载地址（6小时）
+    * 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * 备份文件内网下载地址（6小时）
+    * 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
     */
     @SerializedName("InnerDownloadUrl")
     @Expose
     private String InnerDownloadUrl;
 
     /**
-     * Get 备份文件名称 
-     * @return FileName 备份文件名称
+     * Get 备份文件名称。 
+     * @return FileName 备份文件名称。
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set 备份文件名称
-     * @param FileName 备份文件名称
+     * Set 备份文件名称。
+     * @param FileName 备份文件名称。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 备份文件大小，单位B，如果为0，表示无效 
-     * @return FileSize 备份文件大小，单位B，如果为0，表示无效
+     * Get 备份文件大小，单位B，如果为0，表示无效。 
+     * @return FileSize 备份文件大小，单位B，如果为0，表示无效。
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set 备份文件大小，单位B，如果为0，表示无效
-     * @param FileSize 备份文件大小，单位B，如果为0，表示无效
+     * Set 备份文件大小，单位B，如果为0，表示无效。
+     * @param FileSize 备份文件大小，单位B，如果为0，表示无效。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 备份文件外网下载地址（6小时） 
-     * @return DownloadUrl 备份文件外网下载地址（6小时）
+     * Get 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。 
+     * @return DownloadUrl 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set 备份文件外网下载地址（6小时）
-     * @param DownloadUrl 备份文件外网下载地址（6小时）
+     * Set 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+     * @param DownloadUrl 备份文件外网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 备份文件内网下载地址（6小时） 
-     * @return InnerDownloadUrl 备份文件内网下载地址（6小时）
+     * Get 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。 
+     * @return InnerDownloadUrl 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public String getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
 
     /**
-     * Set 备份文件内网下载地址（6小时）
-     * @param InnerDownloadUrl 备份文件内网下载地址（6小时）
+     * Set 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
+     * @param InnerDownloadUrl 备份文件内网下载地址。下载地址的有效时长为6小时，过期后请重新获取。
      */
     public void setInnerDownloadUrl(String InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;

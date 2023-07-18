@@ -142,6 +142,20 @@ public class EsParam extends AbstractModel{
     private FailureParam DropDlq;
 
     /**
+    * 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+    */
+    @SerializedName("RecordMappingList")
+    @Expose
+    private EsRecordMapping [] RecordMappingList;
+
+    /**
+    * 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+    */
+    @SerializedName("DateField")
+    @Expose
+    private String DateField;
+
+    /**
      * Get 实例资源 
      * @return Resource 实例资源
      */
@@ -413,6 +427,38 @@ public class EsParam extends AbstractModel{
         this.DropDlq = DropDlq;
     }
 
+    /**
+     * Get 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配 
+     * @return RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     */
+    public EsRecordMapping [] getRecordMappingList() {
+        return this.RecordMappingList;
+    }
+
+    /**
+     * Set 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     * @param RecordMappingList 使用数据订阅格式导入 es 时，消息与 es 索引字段映射关系。不填默认为默认字段匹配
+     */
+    public void setRecordMappingList(EsRecordMapping [] RecordMappingList) {
+        this.RecordMappingList = RecordMappingList;
+    }
+
+    /**
+     * Get 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射 
+     * @return DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     */
+    public String getDateField() {
+        return this.DateField;
+    }
+
+    /**
+     * Set 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     * @param DateField 消息要映射为 es 索引中 @timestamp 的字段，如果当前配置为空，则使用消息的时间戳进行映射
+     */
+    public void setDateField(String DateField) {
+        this.DateField = DateField;
+    }
+
     public EsParam() {
     }
 
@@ -472,6 +518,15 @@ public class EsParam extends AbstractModel{
         if (source.DropDlq != null) {
             this.DropDlq = new FailureParam(source.DropDlq);
         }
+        if (source.RecordMappingList != null) {
+            this.RecordMappingList = new EsRecordMapping[source.RecordMappingList.length];
+            for (int i = 0; i < source.RecordMappingList.length; i++) {
+                this.RecordMappingList[i] = new EsRecordMapping(source.RecordMappingList[i]);
+            }
+        }
+        if (source.DateField != null) {
+            this.DateField = new String(source.DateField);
+        }
     }
 
 
@@ -496,6 +551,8 @@ public class EsParam extends AbstractModel{
         this.setParamObj(map, prefix + "DropCls.", this.DropCls);
         this.setParamSimple(map, prefix + "DatabasePrimaryKey", this.DatabasePrimaryKey);
         this.setParamObj(map, prefix + "DropDlq.", this.DropDlq);
+        this.setParamArrayObj(map, prefix + "RecordMappingList.", this.RecordMappingList);
+        this.setParamSimple(map, prefix + "DateField", this.DateField);
 
     }
 }

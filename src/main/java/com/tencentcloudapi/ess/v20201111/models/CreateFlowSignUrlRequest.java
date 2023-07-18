@@ -58,6 +58,13 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
     private OrganizationInfo Organization;
 
     /**
+    * 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+    */
+    @SerializedName("JumpUrl")
+    @Expose
+    private String JumpUrl;
+
+    /**
      * Get 流程编号 
      * @return FlowId 流程编号
      */
@@ -141,6 +148,22 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
         this.Organization = Organization;
     }
 
+    /**
+     * Get 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。 
+     * @return JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     */
+    public String getJumpUrl() {
+        return this.JumpUrl;
+    }
+
+    /**
+     * Set 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     * @param JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     */
+    public void setJumpUrl(String JumpUrl) {
+        this.JumpUrl = JumpUrl;
+    }
+
     public CreateFlowSignUrlRequest() {
     }
 
@@ -167,6 +190,9 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
         }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
     }
 
 
@@ -179,6 +205,7 @@ public class CreateFlowSignUrlRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
+        this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
 
     }
 }

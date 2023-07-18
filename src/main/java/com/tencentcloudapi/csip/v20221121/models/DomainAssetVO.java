@@ -287,6 +287,14 @@ public class DomainAssetVO extends AbstractModel{
     private Long WebAttack;
 
     /**
+    * 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceRisk")
+    @Expose
+    private Long ServiceRisk;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -946,6 +954,26 @@ public class DomainAssetVO extends AbstractModel{
         this.WebAttack = WebAttack;
     }
 
+    /**
+     * Get 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceRisk 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getServiceRisk() {
+        return this.ServiceRisk;
+    }
+
+    /**
+     * Set 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceRisk 风险服务暴露数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceRisk(Long ServiceRisk) {
+        this.ServiceRisk = ServiceRisk;
+    }
+
     public DomainAssetVO() {
     }
 
@@ -1071,6 +1099,9 @@ public class DomainAssetVO extends AbstractModel{
         if (source.WebAttack != null) {
             this.WebAttack = new Long(source.WebAttack);
         }
+        if (source.ServiceRisk != null) {
+            this.ServiceRisk = new Long(source.ServiceRisk);
+        }
     }
 
 
@@ -1111,6 +1142,7 @@ public class DomainAssetVO extends AbstractModel{
         this.setParamSimple(map, prefix + "MemberId", this.MemberId);
         this.setParamSimple(map, prefix + "CCAttack", this.CCAttack);
         this.setParamSimple(map, prefix + "WebAttack", this.WebAttack);
+        this.setParamSimple(map, prefix + "ServiceRisk", this.ServiceRisk);
 
     }
 }

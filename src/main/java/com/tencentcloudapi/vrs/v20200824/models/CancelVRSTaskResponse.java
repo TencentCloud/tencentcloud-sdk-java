@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.vrs.v20200824.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSearchExportListResponse extends AbstractModel{
+public class CancelVRSTaskResponse extends AbstractModel{
 
     /**
-    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+    * 任务ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("Data")
     @Expose
-    private Long TaskId;
-
-    /**
-    * 该参数作废
-    */
-    @SerializedName("DownloadUrl")
-    @Expose
-    private String DownloadUrl;
+    private CancelVRSTaskRsp Data;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +37,19 @@ public class DescribeSearchExportListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
-     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * Get 任务ID 
+     * @return Data 任务ID
      */
-    public Long getTaskId() {
-        return this.TaskId;
+    public CancelVRSTaskRsp getData() {
+        return this.Data;
     }
 
     /**
-     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * Set 任务ID
+     * @param Data 任务ID
      */
-    public void setTaskId(Long TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    /**
-     * Get 该参数作废 
-     * @return DownloadUrl 该参数作废
-     */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
-    }
-
-    /**
-     * Set 该参数作废
-     * @param DownloadUrl 该参数作废
-     */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
+    public void setData(CancelVRSTaskRsp Data) {
+        this.Data = Data;
     }
 
     /**
@@ -91,19 +68,16 @@ public class DescribeSearchExportListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeSearchExportListResponse() {
+    public CancelVRSTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSearchExportListResponse(DescribeSearchExportListResponse source) {
-        if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
-        }
-        if (source.DownloadUrl != null) {
-            this.DownloadUrl = new String(source.DownloadUrl);
+    public CancelVRSTaskResponse(CancelVRSTaskResponse source) {
+        if (source.Data != null) {
+            this.Data = new CancelVRSTaskRsp(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +89,7 @@ public class DescribeSearchExportListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

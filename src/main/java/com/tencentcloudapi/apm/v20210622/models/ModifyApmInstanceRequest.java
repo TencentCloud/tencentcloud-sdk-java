@@ -135,6 +135,13 @@ public class ModifyApmInstanceRequest extends AbstractModel{
     private String LogSource;
 
     /**
+    * 用户自定义展示标签列表
+    */
+    @SerializedName("CustomShowTags")
+    @Expose
+    private String [] CustomShowTags;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -390,6 +397,22 @@ public class ModifyApmInstanceRequest extends AbstractModel{
         this.LogSource = LogSource;
     }
 
+    /**
+     * Get 用户自定义展示标签列表 
+     * @return CustomShowTags 用户自定义展示标签列表
+     */
+    public String [] getCustomShowTags() {
+        return this.CustomShowTags;
+    }
+
+    /**
+     * Set 用户自定义展示标签列表
+     * @param CustomShowTags 用户自定义展示标签列表
+     */
+    public void setCustomShowTags(String [] CustomShowTags) {
+        this.CustomShowTags = CustomShowTags;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -449,6 +472,12 @@ public class ModifyApmInstanceRequest extends AbstractModel{
         if (source.LogSource != null) {
             this.LogSource = new String(source.LogSource);
         }
+        if (source.CustomShowTags != null) {
+            this.CustomShowTags = new String[source.CustomShowTags.length];
+            for (int i = 0; i < source.CustomShowTags.length; i++) {
+                this.CustomShowTags[i] = new String(source.CustomShowTags[i]);
+            }
+        }
     }
 
 
@@ -472,6 +501,7 @@ public class ModifyApmInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
         this.setParamSimple(map, prefix + "LogSet", this.LogSet);
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
+        this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
 
     }
 }

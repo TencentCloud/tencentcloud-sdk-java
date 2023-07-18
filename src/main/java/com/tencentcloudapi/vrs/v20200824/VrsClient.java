@@ -39,6 +39,27 @@ public class VrsClient extends AbstractClient{
     }
 
     /**
+     *声音复刻取消任务接口
+     * @param req CancelVRSTaskRequest
+     * @return CancelVRSTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelVRSTaskResponse CancelVRSTask(CancelVRSTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelVRSTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelVRSTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelVRSTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口服务对提交音频进行声音复刻任务创建接口，异步返回复刻结果。
 • 请求方法为 HTTP POST , Content-Type为"application/json; charset=utf-8"
 • 签名方法参考 公共参数 中签名方法v3。
@@ -102,6 +123,27 @@ public class VrsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DetectEnvAndSoundQualityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetectEnvAndSoundQuality");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *下载声音复刻离线模型
+     * @param req DownloadVRSModelRequest
+     * @return DownloadVRSModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadVRSModelResponse DownloadVRSModel(DownloadVRSModelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DownloadVRSModelResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DownloadVRSModelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DownloadVRSModel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

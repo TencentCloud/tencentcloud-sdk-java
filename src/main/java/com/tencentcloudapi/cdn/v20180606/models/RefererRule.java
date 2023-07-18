@@ -54,7 +54,7 @@ blacklist：黑名单
     private String RefererType;
 
     /**
-    * referer 内容列表列表
+    * referer 内容列表
     */
     @SerializedName("Referers")
     @Expose
@@ -158,16 +158,16 @@ blacklist：黑名单
     }
 
     /**
-     * Get referer 内容列表列表 
-     * @return Referers referer 内容列表列表
+     * Get referer 内容列表 
+     * @return Referers referer 内容列表
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set referer 内容列表列表
-     * @param Referers referer 内容列表列表
+     * Set referer 内容列表
+     * @param Referers referer 内容列表
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;

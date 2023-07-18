@@ -65,7 +65,7 @@ public class TaskResponseInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
+    * 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
     */
     @SerializedName("State")
     @Expose
@@ -424,16 +424,16 @@ public class TaskResponseInfo extends AbstractModel{
     }
 
     /**
-     * Get 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。 
-     * @return State 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
+     * Get 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。 
+     * @return State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
-     * @param State 任务状态：0 初始化， 1 执行中， 2 执行成功，-1 执行失败，-3 已取消。
+     * Set 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
+     * @param State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
      */
     public void setState(Long State) {
         this.State = State;

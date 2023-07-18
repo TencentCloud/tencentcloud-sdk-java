@@ -3696,29 +3696,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *旧版日志下载接口下线
-
-导出ES查询文档列表
-     * @param req DescribeSearchExportListRequest
-     * @return DescribeSearchExportListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSearchExportListResponse DescribeSearchExportList(DescribeSearchExportListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSearchExportListResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSearchExportListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSearchExportList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取历史搜索记录
      * @param req DescribeSearchLogsRequest
      * @return DescribeSearchLogsResponse

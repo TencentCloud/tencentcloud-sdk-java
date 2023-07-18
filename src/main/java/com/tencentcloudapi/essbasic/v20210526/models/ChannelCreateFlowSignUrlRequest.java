@@ -58,6 +58,13 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
     private OrganizationInfo Organization;
 
     /**
+    * 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+    */
+    @SerializedName("JumpUrl")
+    @Expose
+    private String JumpUrl;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
@@ -145,6 +152,22 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
         this.Organization = Organization;
     }
 
+    /**
+     * Get 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。 
+     * @return JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     */
+    public String getJumpUrl() {
+        return this.JumpUrl;
+    }
+
+    /**
+     * Set 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     * @param JumpUrl 签署完之后的H5页面的跳转链接，此链接支持http://和https://，最大长度1000个字符。
+     */
+    public void setJumpUrl(String JumpUrl) {
+        this.JumpUrl = JumpUrl;
+    }
+
     public ChannelCreateFlowSignUrlRequest() {
     }
 
@@ -171,6 +194,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
         if (source.Organization != null) {
             this.Organization = new OrganizationInfo(source.Organization);
         }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
     }
 
 
@@ -183,6 +209,7 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FlowApproverInfos.", this.FlowApproverInfos);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamObj(map, prefix + "Organization.", this.Organization);
+        this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
 
     }
 }

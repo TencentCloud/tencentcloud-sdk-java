@@ -179,6 +179,13 @@ public class ClueInfoDetail extends AbstractModel{
     private String CreateTime;
 
     /**
+    * 线索创建时间戳，单位：秒
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
     * 线索所处状态，101-待分配 201-待建档 301-已建档 401-已邀约 501-跟进中 601-已下订单 701-已成交 801-战败申请中 901-已战败 1001-未知状态 1101-转移申请中 1201-已完成
     */
     @SerializedName("LeadStatus")
@@ -749,6 +756,22 @@ public class ClueInfoDetail extends AbstractModel{
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 线索创建时间戳，单位：秒 
+     * @return UpdateTime 线索创建时间戳，单位：秒
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 线索创建时间戳，单位：秒
+     * @param UpdateTime 线索创建时间戳，单位：秒
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
     }
 
     /**
@@ -1332,6 +1355,9 @@ public class ClueInfoDetail extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
         if (source.LeadStatus != null) {
             this.LeadStatus = new Long(source.LeadStatus);
         }
@@ -1448,6 +1474,7 @@ public class ClueInfoDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceChannelName", this.SourceChannelName);
         this.setParamSimple(map, prefix + "Gender", this.Gender);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "LeadStatus", this.LeadStatus);
         this.setParamSimple(map, prefix + "LevelCode", this.LevelCode);
         this.setParamSimple(map, prefix + "ImportAtTime", this.ImportAtTime);

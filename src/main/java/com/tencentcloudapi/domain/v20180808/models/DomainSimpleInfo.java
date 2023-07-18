@@ -105,6 +105,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
     */
     @SerializedName("DomainStatus")
     @Expose
@@ -387,7 +389,9 @@ serverUpdateProhibited：注册局禁止更新
 serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
-clientDeleteProhibited：注册商禁止删除 
+clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费 
      * @return DomainStatus 域名状态。
 ok：正常
 serverHold：注册局暂停解析 
@@ -402,6 +406,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
      */
     public String [] getDomainStatus() {
         return this.DomainStatus;
@@ -422,6 +428,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
      * @param DomainStatus 域名状态。
 ok：正常
 serverHold：注册局暂停解析 
@@ -436,6 +444,8 @@ serverDeleteProhibited：注册局禁止删除
 clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
+serverRenewProhibited: 注册局禁止续费
+clientRenewProhobited: 注册商禁止续费
      */
     public void setDomainStatus(String [] DomainStatus) {
         this.DomainStatus = DomainStatus;

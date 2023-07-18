@@ -450,6 +450,9 @@ public enum EssErrorCode {
     // 没有API权限。
      OPERATIONDENIED_NOAPIAUTH("OperationDenied.NoApiAuth"),
      
+    // 没有手机号查看的权限
+     OPERATIONDENIED_NOAPPROVERMOBILECHECKPERMISSION("OperationDenied.NoApproverMobileCheckPermission"),
+     
     // 无权限操作签署流程，请联系客服了解权限，并在修改后重试。
      OPERATIONDENIED_NOFLOWPERMISSION("OperationDenied.NoFlowPermission"),
      
@@ -506,6 +509,9 @@ public enum EssErrorCode {
      
     // 拒绝个人静默签，请检查个人静默签签署人，并在修改后重试。
      OPERATIONDENIED_PERSONSERVERSIGNFORBID("OperationDenied.PersonServerSignForbid"),
+     
+    // 出证计费额度不足
+     OPERATIONDENIED_PROVENOQUOTA("OperationDenied.ProveNoQuota"),
      
     // 签署二维码已过期，请检查后重试。
      OPERATIONDENIED_QRHASEXPIRE("OperationDenied.QrHasExpire"),

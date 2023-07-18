@@ -58,7 +58,7 @@ public class StartMCUMixTranscodeRequest extends AbstractModel{
     private LayoutParams LayoutParams;
 
     /**
-    * 第三方CDN转推参数。
+    * 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
     */
     @SerializedName("PublishCdnParams")
     @Expose
@@ -145,16 +145,16 @@ public class StartMCUMixTranscodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 第三方CDN转推参数。 
-     * @return PublishCdnParams 第三方CDN转推参数。
+     * Get 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推 
+     * @return PublishCdnParams 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
      */
     public PublishCdnParams getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set 第三方CDN转推参数。
-     * @param PublishCdnParams 第三方CDN转推参数。
+     * Set 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
+     * @param PublishCdnParams 第三方CDN转推参数。如需转推至腾讯云云直播，此参数无需填写，会默认转推
      */
     public void setPublishCdnParams(PublishCdnParams PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;

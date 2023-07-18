@@ -48,7 +48,7 @@ public class ViolationUrl extends AbstractModel{
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
     */
     @SerializedName("UrlStatus")
@@ -122,13 +122,13 @@ complain：申诉进行中
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中 
      * @return UrlStatus 违规资源当前状态
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
      */
     public String getUrlStatus() {
@@ -140,13 +140,13 @@ complain：申诉进行中
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
      * @param UrlStatus 违规资源当前状态
 forbid：已封禁
 release：已解封
 delay ： 延迟处理
-reject ：申诉驳回，状态仍为封禁态
+reject ：申诉驳回，状态仍为封禁状态
 complain：申诉进行中
      */
     public void setUrlStatus(String UrlStatus) {

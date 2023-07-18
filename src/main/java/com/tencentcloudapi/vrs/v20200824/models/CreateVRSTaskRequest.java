@@ -88,6 +88,13 @@ public class CreateVRSTaskRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
+    * 任务类型 1:在线 2:离线  默认为1
+    */
+    @SerializedName("ModelType")
+    @Expose
+    private Long ModelType;
+
+    /**
      * Get 唯一请求 ID 
      * @return SessionId 唯一请求 ID
      */
@@ -251,6 +258,22 @@ public class CreateVRSTaskRequest extends AbstractModel{
         this.CallbackUrl = CallbackUrl;
     }
 
+    /**
+     * Get 任务类型 1:在线 2:离线  默认为1 
+     * @return ModelType 任务类型 1:在线 2:离线  默认为1
+     */
+    public Long getModelType() {
+        return this.ModelType;
+    }
+
+    /**
+     * Set 任务类型 1:在线 2:离线  默认为1
+     * @param ModelType 任务类型 1:在线 2:离线  默认为1
+     */
+    public void setModelType(Long ModelType) {
+        this.ModelType = ModelType;
+    }
+
     public CreateVRSTaskRequest() {
     }
 
@@ -286,6 +309,9 @@ public class CreateVRSTaskRequest extends AbstractModel{
         if (source.CallbackUrl != null) {
             this.CallbackUrl = new String(source.CallbackUrl);
         }
+        if (source.ModelType != null) {
+            this.ModelType = new Long(source.ModelType);
+        }
     }
 
 
@@ -301,6 +327,7 @@ public class CreateVRSTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamArraySimple(map, prefix + "AudioIdList.", this.AudioIdList);
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+        this.setParamSimple(map, prefix + "ModelType", this.ModelType);
 
     }
 }

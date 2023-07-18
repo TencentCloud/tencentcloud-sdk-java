@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.goosefs.v20220519.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSearchExportListRequest extends AbstractModel{
+public class DescribeClusterRolesRequest extends AbstractModel{
 
     /**
-    * ES查询条件JSON
+    * 集群ID
     */
-    @SerializedName("Query")
+    @SerializedName("ClusterId")
     @Expose
-    private String Query;
+    private String ClusterId;
 
     /**
-     * Get ES查询条件JSON 
-     * @return Query ES查询条件JSON
+     * Get 集群ID 
+     * @return ClusterId 集群ID
      */
-    public String getQuery() {
-        return this.Query;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set ES查询条件JSON
-     * @param Query ES查询条件JSON
+     * Set 集群ID
+     * @param ClusterId 集群ID
      */
-    public void setQuery(String Query) {
-        this.Query = Query;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    public DescribeSearchExportListRequest() {
+    public DescribeClusterRolesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSearchExportListRequest(DescribeSearchExportListRequest source) {
-        if (source.Query != null) {
-            this.Query = new String(source.Query);
+    public DescribeClusterRolesRequest(DescribeClusterRolesRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeSearchExportListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

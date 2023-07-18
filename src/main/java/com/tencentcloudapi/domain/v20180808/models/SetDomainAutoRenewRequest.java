@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetDomainAutoRenewRequest extends AbstractModel{
 
     /**
-    * 域名ID。
+    * 域名ID 例如：domain-123abc
     */
     @SerializedName("DomainId")
     @Expose
@@ -40,16 +40,16 @@ public class SetDomainAutoRenewRequest extends AbstractModel{
     private Long AutoRenew;
 
     /**
-     * Get 域名ID。 
-     * @return DomainId 域名ID。
+     * Get 域名ID 例如：domain-123abc 
+     * @return DomainId 域名ID 例如：domain-123abc
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名ID。
-     * @param DomainId 域名ID。
+     * Set 域名ID 例如：domain-123abc
+     * @param DomainId 域名ID 例如：domain-123abc
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

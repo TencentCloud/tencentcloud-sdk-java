@@ -121,6 +121,102 @@ public class SessionDeviceDetail extends AbstractModel{
     private String DeviceId;
 
     /**
+    * sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ver")
+    @Expose
+    private String Ver;
+
+    /**
+    * 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SdkMode")
+    @Expose
+    private String SdkMode;
+
+    /**
+    * 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DecodeCost")
+    @Expose
+    private Long [] DecodeCost;
+
+    /**
+    * 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenderConst")
+    @Expose
+    private Long [] RenderConst;
+
+    /**
+    * 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("K100")
+    @Expose
+    private Float [] K100;
+
+    /**
+    * 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("K150")
+    @Expose
+    private Float [] K150;
+
+    /**
+    * nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NACK")
+    @Expose
+    private Long [] NACK;
+
+    /**
+    * 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BitRateEstimate")
+    @Expose
+    private Long [] BitRateEstimate;
+
+    /**
+    * 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * 高度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EncodeCost")
+    @Expose
+    private Long [] EncodeCost;
+
+    /**
+    * 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CaptureCost")
+    @Expose
+    private Long [] CaptureCost;
+
+    /**
      * Get 设备类型：field或remote 
      * @return DeviceType 设备类型：field或remote
      */
@@ -344,6 +440,246 @@ public class SessionDeviceDetail extends AbstractModel{
         this.DeviceId = DeviceId;
     }
 
+    /**
+     * Get sdk版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ver sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVer() {
+        return this.Ver;
+    }
+
+    /**
+     * Set sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ver sdk版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVer(String Ver) {
+        this.Ver = Ver;
+    }
+
+    /**
+     * Get 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SdkMode 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSdkMode() {
+        return this.SdkMode;
+    }
+
+    /**
+     * Set 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SdkMode 模式(p2p/server)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSdkMode(String SdkMode) {
+        this.SdkMode = SdkMode;
+    }
+
+    /**
+     * Get 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DecodeCost 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getDecodeCost() {
+        return this.DecodeCost;
+    }
+
+    /**
+     * Set 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DecodeCost 解码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDecodeCost(Long [] DecodeCost) {
+        this.DecodeCost = DecodeCost;
+    }
+
+    /**
+     * Get 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenderConst 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getRenderConst() {
+        return this.RenderConst;
+    }
+
+    /**
+     * Set 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenderConst 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenderConst(Long [] RenderConst) {
+        this.RenderConst = RenderConst;
+    }
+
+    /**
+     * Get 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return K100 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getK100() {
+        return this.K100;
+    }
+
+    /**
+     * Set 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param K100 卡顿k100
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setK100(Float [] K100) {
+        this.K100 = K100;
+    }
+
+    /**
+     * Get 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return K150 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float [] getK150() {
+        return this.K150;
+    }
+
+    /**
+     * Set 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param K150 卡顿k150
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setK150(Float [] K150) {
+        this.K150 = K150;
+    }
+
+    /**
+     * Get nack请求数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NACK nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getNACK() {
+        return this.NACK;
+    }
+
+    /**
+     * Set nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NACK nack请求数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNACK(Long [] NACK) {
+        this.NACK = NACK;
+    }
+
+    /**
+     * Get 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BitRateEstimate 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getBitRateEstimate() {
+        return this.BitRateEstimate;
+    }
+
+    /**
+     * Set 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BitRateEstimate 服务端调控码率,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBitRateEstimate(Long [] BitRateEstimate) {
+        this.BitRateEstimate = BitRateEstimate;
+    }
+
+    /**
+     * Get 宽度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Width 宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get 高度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Height 高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EncodeCost 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getEncodeCost() {
+        return this.EncodeCost;
+    }
+
+    /**
+     * Set 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EncodeCost 编码耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEncodeCost(Long [] EncodeCost) {
+        this.EncodeCost = EncodeCost;
+    }
+
+    /**
+     * Get 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CaptureCost 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getCaptureCost() {
+        return this.CaptureCost;
+    }
+
+    /**
+     * Set 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CaptureCost 采集耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCaptureCost(Long [] CaptureCost) {
+        this.CaptureCost = CaptureCost;
+    }
+
     public SessionDeviceDetail() {
     }
 
@@ -418,6 +754,66 @@ public class SessionDeviceDetail extends AbstractModel{
         if (source.DeviceId != null) {
             this.DeviceId = new String(source.DeviceId);
         }
+        if (source.Ver != null) {
+            this.Ver = new String(source.Ver);
+        }
+        if (source.SdkMode != null) {
+            this.SdkMode = new String(source.SdkMode);
+        }
+        if (source.DecodeCost != null) {
+            this.DecodeCost = new Long[source.DecodeCost.length];
+            for (int i = 0; i < source.DecodeCost.length; i++) {
+                this.DecodeCost[i] = new Long(source.DecodeCost[i]);
+            }
+        }
+        if (source.RenderConst != null) {
+            this.RenderConst = new Long[source.RenderConst.length];
+            for (int i = 0; i < source.RenderConst.length; i++) {
+                this.RenderConst[i] = new Long(source.RenderConst[i]);
+            }
+        }
+        if (source.K100 != null) {
+            this.K100 = new Float[source.K100.length];
+            for (int i = 0; i < source.K100.length; i++) {
+                this.K100[i] = new Float(source.K100[i]);
+            }
+        }
+        if (source.K150 != null) {
+            this.K150 = new Float[source.K150.length];
+            for (int i = 0; i < source.K150.length; i++) {
+                this.K150[i] = new Float(source.K150[i]);
+            }
+        }
+        if (source.NACK != null) {
+            this.NACK = new Long[source.NACK.length];
+            for (int i = 0; i < source.NACK.length; i++) {
+                this.NACK[i] = new Long(source.NACK[i]);
+            }
+        }
+        if (source.BitRateEstimate != null) {
+            this.BitRateEstimate = new Long[source.BitRateEstimate.length];
+            for (int i = 0; i < source.BitRateEstimate.length; i++) {
+                this.BitRateEstimate[i] = new Long(source.BitRateEstimate[i]);
+            }
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.EncodeCost != null) {
+            this.EncodeCost = new Long[source.EncodeCost.length];
+            for (int i = 0; i < source.EncodeCost.length; i++) {
+                this.EncodeCost[i] = new Long(source.EncodeCost[i]);
+            }
+        }
+        if (source.CaptureCost != null) {
+            this.CaptureCost = new Long[source.CaptureCost.length];
+            for (int i = 0; i < source.CaptureCost.length; i++) {
+                this.CaptureCost[i] = new Long(source.CaptureCost[i]);
+            }
+        }
     }
 
 
@@ -439,6 +835,18 @@ public class SessionDeviceDetail extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TimeOffset.", this.TimeOffset);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
+        this.setParamSimple(map, prefix + "Ver", this.Ver);
+        this.setParamSimple(map, prefix + "SdkMode", this.SdkMode);
+        this.setParamArraySimple(map, prefix + "DecodeCost.", this.DecodeCost);
+        this.setParamArraySimple(map, prefix + "RenderConst.", this.RenderConst);
+        this.setParamArraySimple(map, prefix + "K100.", this.K100);
+        this.setParamArraySimple(map, prefix + "K150.", this.K150);
+        this.setParamArraySimple(map, prefix + "NACK.", this.NACK);
+        this.setParamArraySimple(map, prefix + "BitRateEstimate.", this.BitRateEstimate);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamArraySimple(map, prefix + "EncodeCost.", this.EncodeCost);
+        this.setParamArraySimple(map, prefix + "CaptureCost.", this.CaptureCost);
 
     }
 }
