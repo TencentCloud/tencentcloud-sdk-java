@@ -81,6 +81,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Ds批量删除任务，仅对任务状态为”已停止“有效；
+     * @param req BatchDeleteTasksDsRequest
+     * @return BatchDeleteTasksDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteTasksDsResponse BatchDeleteTasksDs(BatchDeleteTasksDsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteTasksDsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteTasksDsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteTasksDs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 批量删除任务，仅对任务状态为”已停止“有效；
 
@@ -930,6 +951,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *开发空间-批量删除目录和文件
+     * @param req DeleteFilePathRequest
+     * @return DeleteFilePathResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFilePathResponse DeleteFilePath(DeleteFilePathRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFilePathResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFilePathResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFilePath");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除文件夹
      * @param req DeleteFolderRequest
@@ -1036,6 +1078,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除项目参数
+     * @param req DeleteProjectParamDsRequest
+     * @return DeleteProjectParamDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectParamDsResponse DeleteProjectParamDs(DeleteProjectParamDsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteProjectParamDsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteProjectParamDsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteProjectParamDs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *资源管理删除资源
      * @param req DeleteResourceRequest
      * @return DeleteResourceResponse
@@ -1049,6 +1112,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteResourceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *资源管理-批量删除资源文件
+     * @param req DeleteResourceFilesRequest
+     * @return DeleteResourceFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceFilesResponse DeleteResourceFiles(DeleteResourceFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourceFilesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourceFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteResourceFiles");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1112,6 +1196,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteTaskAlarmRegularResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteTaskAlarmRegular");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除任务Ds
+     * @param req DeleteTaskDsRequest
+     * @return DeleteTaskDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskDsResponse DeleteTaskDs(DeleteTaskDsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTaskDsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTaskDsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTaskDs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3903,6 +4008,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *删除编排空间工作流
+     * @param req RemoveWorkflowDsRequest
+     * @return RemoveWorkflowDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveWorkflowDsResponse RemoveWorkflowDs(RemoveWorkflowDsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveWorkflowDsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveWorkflowDsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveWorkflowDs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 实例批量重跑
      * @param req RerunInstancesRequest
@@ -4116,6 +4242,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *即席分析提交SQL任务
+     * @param req SubmitSqlTaskRequest
+     * @return SubmitSqlTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitSqlTaskResponse SubmitSqlTask(SubmitSqlTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitSqlTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitSqlTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SubmitSqlTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 提交任务
      * @param req SubmitTaskRequest
@@ -4130,6 +4277,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SubmitTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SubmitTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *无
+     * @param req SubmitTaskTestRunRequest
+     * @return SubmitTaskTestRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTaskTestRunResponse SubmitTaskTestRun(SubmitTaskTestRunRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitTaskTestRunResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitTaskTestRunResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SubmitTaskTestRun");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

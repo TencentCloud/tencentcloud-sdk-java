@@ -103,7 +103,7 @@ public class Activity extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 伸缩活动相关实例信息集合。
+    * 该参数已废弃，请勿使用。
     */
     @SerializedName("ActivityRelatedInstanceSet")
     @Expose
@@ -136,6 +136,13 @@ public class Activity extends AbstractModel{
     @SerializedName("InvocationResultSet")
     @Expose
     private InvocationResult [] InvocationResultSet;
+
+    /**
+    * 伸缩活动相关实例信息集合。
+    */
+    @SerializedName("RelatedInstanceSet")
+    @Expose
+    private RelatedInstance [] RelatedInstanceSet;
 
     /**
      * Get 伸缩组ID。 
@@ -338,17 +345,21 @@ public class Activity extends AbstractModel{
     }
 
     /**
-     * Get 伸缩活动相关实例信息集合。 
-     * @return ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
+     * Get 该参数已废弃，请勿使用。 
+     * @return ActivityRelatedInstanceSet 该参数已废弃，请勿使用。
+     * @deprecated
      */
+    @Deprecated
     public ActivtyRelatedInstance [] getActivityRelatedInstanceSet() {
         return this.ActivityRelatedInstanceSet;
     }
 
     /**
-     * Set 伸缩活动相关实例信息集合。
-     * @param ActivityRelatedInstanceSet 伸缩活动相关实例信息集合。
+     * Set 该参数已废弃，请勿使用。
+     * @param ActivityRelatedInstanceSet 该参数已废弃，请勿使用。
+     * @deprecated
      */
+    @Deprecated
     public void setActivityRelatedInstanceSet(ActivtyRelatedInstance [] ActivityRelatedInstanceSet) {
         this.ActivityRelatedInstanceSet = ActivityRelatedInstanceSet;
     }
@@ -417,6 +428,22 @@ public class Activity extends AbstractModel{
         this.InvocationResultSet = InvocationResultSet;
     }
 
+    /**
+     * Get 伸缩活动相关实例信息集合。 
+     * @return RelatedInstanceSet 伸缩活动相关实例信息集合。
+     */
+    public RelatedInstance [] getRelatedInstanceSet() {
+        return this.RelatedInstanceSet;
+    }
+
+    /**
+     * Set 伸缩活动相关实例信息集合。
+     * @param RelatedInstanceSet 伸缩活动相关实例信息集合。
+     */
+    public void setRelatedInstanceSet(RelatedInstance [] RelatedInstanceSet) {
+        this.RelatedInstanceSet = RelatedInstanceSet;
+    }
+
     public Activity() {
     }
 
@@ -482,6 +509,12 @@ public class Activity extends AbstractModel{
                 this.InvocationResultSet[i] = new InvocationResult(source.InvocationResultSet[i]);
             }
         }
+        if (source.RelatedInstanceSet != null) {
+            this.RelatedInstanceSet = new RelatedInstance[source.RelatedInstanceSet.length];
+            for (int i = 0; i < source.RelatedInstanceSet.length; i++) {
+                this.RelatedInstanceSet[i] = new RelatedInstance(source.RelatedInstanceSet[i]);
+            }
+        }
     }
 
 
@@ -504,6 +537,7 @@ public class Activity extends AbstractModel{
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
         this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
         this.setParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
+        this.setParamArrayObj(map, prefix + "RelatedInstanceSet.", this.RelatedInstanceSet);
 
     }
 }

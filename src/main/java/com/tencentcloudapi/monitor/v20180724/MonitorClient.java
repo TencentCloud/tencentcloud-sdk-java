@@ -2621,35 +2621,6 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *对应的功能控制台及后端服务已于2年前下线，剩余该API接口未下线。
-
-默认接口请求频率限制：50次/秒。
-默认单租户指标上限：100个。
-单次上报最多 30 个指标/值对，请求返回错误时，请求中所有的指标/值均不会被保存。
-
-上报的时间戳为期望保存的时间戳，建议构造整数分钟时刻的时间戳。
-时间戳时间范围必须为当前时间到 300 秒前之间。
-同一 IP 指标对的数据需按分钟先后顺序上报。
-     * @param req PutMonitorDataRequest
-     * @return PutMonitorDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public PutMonitorDataResponse PutMonitorData(PutMonitorDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PutMonitorDataResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PutMonitorData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
      * @param req ResumeGrafanaInstanceRequest
      * @return ResumeGrafanaInstanceResponse

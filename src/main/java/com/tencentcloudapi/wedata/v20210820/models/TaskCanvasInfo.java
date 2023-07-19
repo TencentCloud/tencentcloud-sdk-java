@@ -321,6 +321,31 @@ public class TaskCanvasInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * UserId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
+    * OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerId")
+    @Expose
+    private String OwnerId;
+
+    /**
+    * TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TenantId")
+    @Expose
+    private String TenantId;
+
+    /**
      * Get 任务Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务Id
@@ -1140,6 +1165,70 @@ public class TaskCanvasInfo extends AbstractModel{
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get UserId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
+    /**
+     * Get OwnerId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerId OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerId() {
+        return this.OwnerId;
+    }
+
+    /**
+     * Set OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerId OwnerId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerId(String OwnerId) {
+        this.OwnerId = OwnerId;
+    }
+
+    /**
+     * Get TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TenantId TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTenantId() {
+        return this.TenantId;
+    }
+
+    /**
+     * Set TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TenantId TenantId
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTenantId(String TenantId) {
+        this.TenantId = TenantId;
+    }
+
     public TaskCanvasInfo() {
     }
 
@@ -1241,6 +1330,15 @@ public class TaskCanvasInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
+        if (source.OwnerId != null) {
+            this.OwnerId = new String(source.OwnerId);
+        }
+        if (source.TenantId != null) {
+            this.TenantId = new String(source.TenantId);
+        }
     }
 
 
@@ -1279,6 +1377,9 @@ public class TaskCanvasInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetServiceType", this.TargetServiceType);
         this.setParamSimple(map, prefix + "AlarmType", this.AlarmType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "OwnerId", this.OwnerId);
+        this.setParamSimple(map, prefix + "TenantId", this.TenantId);
 
     }
 }

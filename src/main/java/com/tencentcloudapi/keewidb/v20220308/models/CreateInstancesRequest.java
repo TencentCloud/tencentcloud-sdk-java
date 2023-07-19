@@ -82,13 +82,6 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ReplicasNum;
 
     /**
-    * 计算cpu核心数。
-    */
-    @SerializedName("MachineCpu")
-    @Expose
-    private Long MachineCpu;
-
-    /**
     * 实例内存容量，单位：GB。
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
     */
@@ -178,11 +171,25 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     private Long DiskSize;
 
     /**
+    * 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+    */
+    @SerializedName("MachineCpu")
+    @Expose
+    private Long MachineCpu;
+
+    /**
     * 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+    */
+    @SerializedName("Compression")
+    @Expose
+    private String Compression;
 
     /**
      * Get 产品版本。
@@ -322,22 +329,6 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
      */
     public void setReplicasNum(Long ReplicasNum) {
         this.ReplicasNum = ReplicasNum;
-    }
-
-    /**
-     * Get 计算cpu核心数。 
-     * @return MachineCpu 计算cpu核心数。
-     */
-    public Long getMachineCpu() {
-        return this.MachineCpu;
-    }
-
-    /**
-     * Set 计算cpu核心数。
-     * @param MachineCpu 计算cpu核心数。
-     */
-    public void setMachineCpu(Long MachineCpu) {
-        this.MachineCpu = MachineCpu;
     }
 
     /**
@@ -553,6 +544,22 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     }
 
     /**
+     * Get 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。 
+     * @return MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     */
+    public Long getMachineCpu() {
+        return this.MachineCpu;
+    }
+
+    /**
+     * Set 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     * @param MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
+     */
+    public void setMachineCpu(Long MachineCpu) {
+        this.MachineCpu = MachineCpu;
+    }
+
+    /**
      * Get 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。 
      * @return ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
      */
@@ -566,6 +573,22 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li> 
+     * @return Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     */
+    public String getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     * @param Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     */
+    public void setCompression(String Compression) {
+        this.Compression = Compression;
     }
 
     public CreateInstancesRequest() {
@@ -599,9 +622,6 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
         }
         if (source.ReplicasNum != null) {
             this.ReplicasNum = new Long(source.ReplicasNum);
-        }
-        if (source.MachineCpu != null) {
-            this.MachineCpu = new Long(source.MachineCpu);
         }
         if (source.MachineMemory != null) {
             this.MachineMemory = new Long(source.MachineMemory);
@@ -645,8 +665,14 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.MachineCpu != null) {
+            this.MachineCpu = new Long(source.MachineCpu);
+        }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.Compression != null) {
+            this.Compression = new String(source.Compression);
         }
     }
 
@@ -663,7 +689,6 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
         this.setParamSimple(map, prefix + "ReplicasNum", this.ReplicasNum);
-        this.setParamSimple(map, prefix + "MachineCpu", this.MachineCpu);
         this.setParamSimple(map, prefix + "MachineMemory", this.MachineMemory);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
@@ -676,7 +701,9 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "MachineCpu", this.MachineCpu);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
 
     }
 }

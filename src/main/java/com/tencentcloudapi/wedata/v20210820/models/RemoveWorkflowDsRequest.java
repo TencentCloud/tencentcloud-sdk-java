@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class MetricDatum extends AbstractModel{
+public class RemoveWorkflowDsRequest extends AbstractModel{
 
     /**
-    * 指标名称
+    * 项目ID
     */
-    @SerializedName("MetricName")
+    @SerializedName("ProjectId")
     @Expose
-    private String MetricName;
+    private String ProjectId;
 
     /**
-    * 指标的值
+    * 工作流ID
     */
-    @SerializedName("Value")
+    @SerializedName("WorkflowId")
     @Expose
-    private Long Value;
+    private String WorkflowId;
 
     /**
-     * Get 指标名称 
-     * @return MetricName 指标名称
+     * Get 项目ID 
+     * @return ProjectId 项目ID
      */
-    public String getMetricName() {
-        return this.MetricName;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 指标名称
-     * @param MetricName 指标名称
+     * Set 项目ID
+     * @param ProjectId 项目ID
      */
-    public void setMetricName(String MetricName) {
-        this.MetricName = MetricName;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 指标的值 
-     * @return Value 指标的值
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
      */
-    public Long getValue() {
-        return this.Value;
+    public String getWorkflowId() {
+        return this.WorkflowId;
     }
 
     /**
-     * Set 指标的值
-     * @param Value 指标的值
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
      */
-    public void setValue(Long Value) {
-        this.Value = Value;
+    public void setWorkflowId(String WorkflowId) {
+        this.WorkflowId = WorkflowId;
     }
 
-    public MetricDatum() {
+    public RemoveWorkflowDsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public MetricDatum(MetricDatum source) {
-        if (source.MetricName != null) {
-            this.MetricName = new String(source.MetricName);
+    public RemoveWorkflowDsRequest(RemoveWorkflowDsRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
-        if (source.Value != null) {
-            this.Value = new Long(source.Value);
+        if (source.WorkflowId != null) {
+            this.WorkflowId = new String(source.WorkflowId);
         }
     }
 
@@ -89,8 +89,8 @@ public class MetricDatum extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
 
     }
 }

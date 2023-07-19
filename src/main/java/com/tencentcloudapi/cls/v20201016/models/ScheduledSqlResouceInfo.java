@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterRolesRequest extends AbstractModel{
+public class ScheduledSqlResouceInfo extends AbstractModel{
 
     /**
-    * 集群ID
+    * 目标主题id
     */
-    @SerializedName("ClusterId")
+    @SerializedName("TopicId")
     @Expose
-    private String ClusterId;
+    private String TopicId;
 
     /**
-    * 角色名
+    * topic的地域信息
     */
-    @SerializedName("RoleName")
+    @SerializedName("Region")
     @Expose
-    private String RoleName;
+    private String Region;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 目标主题id 
+     * @return TopicId 目标主题id
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getTopicId() {
+        return this.TopicId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 目标主题id
+     * @param TopicId 目标主题id
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
     }
 
     /**
-     * Get 角色名 
-     * @return RoleName 角色名
+     * Get topic的地域信息 
+     * @return Region topic的地域信息
      */
-    public String getRoleName() {
-        return this.RoleName;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set 角色名
-     * @param RoleName 角色名
+     * Set topic的地域信息
+     * @param Region topic的地域信息
      */
-    public void setRoleName(String RoleName) {
-        this.RoleName = RoleName;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
-    public DescribeClusterRolesRequest() {
+    public ScheduledSqlResouceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterRolesRequest(DescribeClusterRolesRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public ScheduledSqlResouceInfo(ScheduledSqlResouceInfo source) {
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
         }
-        if (source.RoleName != null) {
-            this.RoleName = new String(source.RoleName);
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeClusterRolesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

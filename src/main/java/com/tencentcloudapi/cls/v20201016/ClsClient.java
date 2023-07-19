@@ -375,6 +375,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于创建ScheduledSql任务
+     * @param req CreateScheduledSqlRequest
+     * @return CreateScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduledSqlResponse CreateScheduledSql(CreateScheduledSqlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScheduledSqlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScheduledSqlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScheduledSql");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
      * @param req CreateShipperRequest
      * @return CreateShipperResponse

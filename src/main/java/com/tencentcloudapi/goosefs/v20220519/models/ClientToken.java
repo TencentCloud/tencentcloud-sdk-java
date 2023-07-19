@@ -23,12 +23,56 @@ import java.util.HashMap;
 public class ClientToken extends AbstractModel{
 
     /**
+    * 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeIp")
+    @Expose
+    private String NodeIp;
+
+    /**
     * 挂载点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalDirectory")
     @Expose
     private String LocalDirectory;
+
+    /**
+    * 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GooseFSDirectory")
+    @Expose
+    private String GooseFSDirectory;
+
+    /**
+    * token
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Token")
+    @Expose
+    private String Token;
+
+    /**
+     * Get 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeIp 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeIp() {
+        return this.NodeIp;
+    }
+
+    /**
+     * Set 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeIp 节点 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeIp(String NodeIp) {
+        this.NodeIp = NodeIp;
+    }
 
     /**
      * Get 挂载点
@@ -50,6 +94,46 @@ public class ClientToken extends AbstractModel{
         this.LocalDirectory = LocalDirectory;
     }
 
+    /**
+     * Get 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GooseFSDirectory 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGooseFSDirectory() {
+        return this.GooseFSDirectory;
+    }
+
+    /**
+     * Set 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GooseFSDirectory 可以访问的 GooseFS 目录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGooseFSDirectory(String GooseFSDirectory) {
+        this.GooseFSDirectory = GooseFSDirectory;
+    }
+
+    /**
+     * Get token
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Token token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getToken() {
+        return this.Token;
+    }
+
+    /**
+     * Set token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Token token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setToken(String Token) {
+        this.Token = Token;
+    }
+
     public ClientToken() {
     }
 
@@ -58,8 +142,17 @@ public class ClientToken extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ClientToken(ClientToken source) {
+        if (source.NodeIp != null) {
+            this.NodeIp = new String(source.NodeIp);
+        }
         if (source.LocalDirectory != null) {
             this.LocalDirectory = new String(source.LocalDirectory);
+        }
+        if (source.GooseFSDirectory != null) {
+            this.GooseFSDirectory = new String(source.GooseFSDirectory);
+        }
+        if (source.Token != null) {
+            this.Token = new String(source.Token);
         }
     }
 
@@ -68,7 +161,10 @@ public class ClientToken extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "NodeIp", this.NodeIp);
         this.setParamSimple(map, prefix + "LocalDirectory", this.LocalDirectory);
+        this.setParamSimple(map, prefix + "GooseFSDirectory", this.GooseFSDirectory);
+        this.setParamSimple(map, prefix + "Token", this.Token);
 
     }
 }

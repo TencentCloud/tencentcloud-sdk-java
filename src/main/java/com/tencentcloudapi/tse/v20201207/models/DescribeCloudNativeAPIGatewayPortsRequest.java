@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.tse.v20201207.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PutMonitorDataResponse extends AbstractModel{
+public class DescribeCloudNativeAPIGatewayPortsRequest extends AbstractModel{
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 云原生API网关实例ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("GatewayId")
     @Expose
-    private String RequestId;
+    private String GatewayId;
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 云原生API网关实例ID 
+     * @return GatewayId 云原生API网关实例ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getGatewayId() {
+        return this.GatewayId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 云原生API网关实例ID
+     * @param GatewayId 云原生API网关实例ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
     }
 
-    public PutMonitorDataResponse() {
+    public DescribeCloudNativeAPIGatewayPortsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PutMonitorDataResponse(PutMonitorDataResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public DescribeCloudNativeAPIGatewayPortsRequest(DescribeCloudNativeAPIGatewayPortsRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
         }
     }
 
@@ -63,7 +63,7 @@ public class PutMonitorDataResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
 
     }
 }

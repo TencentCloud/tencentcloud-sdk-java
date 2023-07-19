@@ -65,6 +65,13 @@ public class DockerContainerConfiguration extends AbstractModel{
     private String Command;
 
     /**
+    * 容器重启策略
+    */
+    @SerializedName("RestartPolicy")
+    @Expose
+    private String RestartPolicy;
+
+    /**
      * Get 容器镜像地址 
      * @return ContainerImage 容器镜像地址
      */
@@ -160,6 +167,22 @@ public class DockerContainerConfiguration extends AbstractModel{
         this.Command = Command;
     }
 
+    /**
+     * Get 容器重启策略 
+     * @return RestartPolicy 容器重启策略
+     */
+    public String getRestartPolicy() {
+        return this.RestartPolicy;
+    }
+
+    /**
+     * Set 容器重启策略
+     * @param RestartPolicy 容器重启策略
+     */
+    public void setRestartPolicy(String RestartPolicy) {
+        this.RestartPolicy = RestartPolicy;
+    }
+
     public DockerContainerConfiguration() {
     }
 
@@ -195,6 +218,9 @@ public class DockerContainerConfiguration extends AbstractModel{
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.RestartPolicy != null) {
+            this.RestartPolicy = new String(source.RestartPolicy);
+        }
     }
 
 
@@ -208,6 +234,7 @@ public class DockerContainerConfiguration extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PublishPorts.", this.PublishPorts);
         this.setParamArrayObj(map, prefix + "Volumes.", this.Volumes);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "RestartPolicy", this.RestartPolicy);
 
     }
 }

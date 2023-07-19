@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.goosefs.v20220519.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterRolesRequest extends AbstractModel{
+public class DeleteProjectParamDsRequest extends AbstractModel{
 
     /**
-    * 集群ID
+    * 参数名
     */
-    @SerializedName("ClusterId")
+    @SerializedName("ParamKey")
     @Expose
-    private String ClusterId;
+    private String ParamKey;
 
     /**
-    * 角色名
+    * 项目id
     */
-    @SerializedName("RoleName")
+    @SerializedName("ProjectId")
     @Expose
-    private String RoleName;
+    private String ProjectId;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 参数名 
+     * @return ParamKey 参数名
      */
-    public String getClusterId() {
-        return this.ClusterId;
+    public String getParamKey() {
+        return this.ParamKey;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 参数名
+     * @param ParamKey 参数名
      */
-    public void setClusterId(String ClusterId) {
-        this.ClusterId = ClusterId;
+    public void setParamKey(String ParamKey) {
+        this.ParamKey = ParamKey;
     }
 
     /**
-     * Get 角色名 
-     * @return RoleName 角色名
+     * Get 项目id 
+     * @return ProjectId 项目id
      */
-    public String getRoleName() {
-        return this.RoleName;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 角色名
-     * @param RoleName 角色名
+     * Set 项目id
+     * @param ProjectId 项目id
      */
-    public void setRoleName(String RoleName) {
-        this.RoleName = RoleName;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
-    public DescribeClusterRolesRequest() {
+    public DeleteProjectParamDsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterRolesRequest(DescribeClusterRolesRequest source) {
-        if (source.ClusterId != null) {
-            this.ClusterId = new String(source.ClusterId);
+    public DeleteProjectParamDsRequest(DeleteProjectParamDsRequest source) {
+        if (source.ParamKey != null) {
+            this.ParamKey = new String(source.ParamKey);
         }
-        if (source.RoleName != null) {
-            this.RoleName = new String(source.RoleName);
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeClusterRolesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "RoleName", this.RoleName);
+        this.setParamSimple(map, prefix + "ParamKey", this.ParamKey);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

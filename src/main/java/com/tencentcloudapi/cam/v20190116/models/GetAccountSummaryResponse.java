@@ -65,6 +65,13 @@ public class GetAccountSummaryResponse extends AbstractModel{
     private Long Member;
 
     /**
+    * 身份提供商数。
+    */
+    @SerializedName("IdentityProviders")
+    @Expose
+    private Long IdentityProviders;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -106,7 +113,9 @@ public class GetAccountSummaryResponse extends AbstractModel{
     /**
      * Get 身份提供商数 
      * @return Idps 身份提供商数
+     * @deprecated
      */
+    @Deprecated
     public Long getIdps() {
         return this.Idps;
     }
@@ -114,7 +123,9 @@ public class GetAccountSummaryResponse extends AbstractModel{
     /**
      * Set 身份提供商数
      * @param Idps 身份提供商数
+     * @deprecated
      */
+    @Deprecated
     public void setIdps(Long Idps) {
         this.Idps = Idps;
     }
@@ -168,6 +179,22 @@ public class GetAccountSummaryResponse extends AbstractModel{
     }
 
     /**
+     * Get 身份提供商数。 
+     * @return IdentityProviders 身份提供商数。
+     */
+    public Long getIdentityProviders() {
+        return this.IdentityProviders;
+    }
+
+    /**
+     * Set 身份提供商数。
+     * @param IdentityProviders 身份提供商数。
+     */
+    public void setIdentityProviders(Long IdentityProviders) {
+        this.IdentityProviders = IdentityProviders;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +236,9 @@ public class GetAccountSummaryResponse extends AbstractModel{
         if (source.Member != null) {
             this.Member = new Long(source.Member);
         }
+        if (source.IdentityProviders != null) {
+            this.IdentityProviders = new Long(source.IdentityProviders);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +255,7 @@ public class GetAccountSummaryResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "Member", this.Member);
+        this.setParamSimple(map, prefix + "IdentityProviders", this.IdentityProviders);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -333,6 +333,27 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *获取云原生API网关实例端口信息
+     * @param req DescribeCloudNativeAPIGatewayPortsRequest
+     * @return DescribeCloudNativeAPIGatewayPortsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudNativeAPIGatewayPortsResponse DescribeCloudNativeAPIGatewayPorts(DescribeCloudNativeAPIGatewayPortsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudNativeAPIGatewayPortsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloudNativeAPIGatewayPorts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询云原生网关的限流插件(路由)
      * @param req DescribeCloudNativeAPIGatewayRouteRateLimitRequest
      * @return DescribeCloudNativeAPIGatewayRouteRateLimitResponse

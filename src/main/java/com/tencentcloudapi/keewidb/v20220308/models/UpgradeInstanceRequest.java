@@ -38,7 +38,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long MemSize;
 
     /**
-    * CPU 核数。
+    * CPU 核数，可忽略不传
     */
     @SerializedName("MachineCpu")
     @Expose
@@ -105,16 +105,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get CPU 核数。 
-     * @return MachineCpu CPU 核数。
+     * Get CPU 核数，可忽略不传 
+     * @return MachineCpu CPU 核数，可忽略不传
      */
     public Long getMachineCpu() {
         return this.MachineCpu;
     }
 
     /**
-     * Set CPU 核数。
-     * @param MachineCpu CPU 核数。
+     * Set CPU 核数，可忽略不传
+     * @param MachineCpu CPU 核数，可忽略不传
      */
     public void setMachineCpu(Long MachineCpu) {
         this.MachineCpu = MachineCpu;
