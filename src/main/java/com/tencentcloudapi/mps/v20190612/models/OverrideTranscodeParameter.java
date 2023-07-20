@@ -63,6 +63,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
 
     /**
     * 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TEHDConfig")
     @Expose
@@ -70,6 +71,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
 
     /**
     * 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleTemplate")
     @Expose
@@ -180,8 +182,10 @@ public class OverrideTranscodeParameter extends AbstractModel{
     }
 
     /**
-     * Get 极速高清转码参数。 
+     * Get 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public TEHDConfigForUpdate getTEHDConfig() {
         return this.TEHDConfig;
@@ -189,15 +193,19 @@ public class OverrideTranscodeParameter extends AbstractModel{
 
     /**
      * Set 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TEHDConfig 极速高清转码参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTEHDConfig(TEHDConfigForUpdate TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get 字幕流配置参数。 
+     * Get 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubtitleTemplate 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public SubtitleTemplate getSubtitleTemplate() {
         return this.SubtitleTemplate;
@@ -205,7 +213,9 @@ public class OverrideTranscodeParameter extends AbstractModel{
 
     /**
      * Set 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubtitleTemplate 字幕流配置参数。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
         this.SubtitleTemplate = SubtitleTemplate;

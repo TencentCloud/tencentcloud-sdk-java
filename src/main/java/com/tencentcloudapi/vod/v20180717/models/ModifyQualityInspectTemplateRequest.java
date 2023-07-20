@@ -114,18 +114,18 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel{
     private QRCodeConfigureInfoForUpdate QRCodeConfigure;
 
     /**
-    * 视频画面质量评价的控制参数。
-    */
-    @SerializedName("QualityEvaluationConfigure")
-    @Expose
-    private QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure;
-
-    /**
     * 音频（静音、低音、爆音）检测的控制参数。
     */
     @SerializedName("VoiceConfigure")
     @Expose
     private VoiceConfigureInfoForUpdate VoiceConfigure;
+
+    /**
+    * 视频画面质量评价的控制参数。
+    */
+    @SerializedName("QualityEvaluationConfigure")
+    @Expose
+    private QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure;
 
     /**
      * Get 模板 ID。 
@@ -336,22 +336,6 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 视频画面质量评价的控制参数。 
-     * @return QualityEvaluationConfigure 视频画面质量评价的控制参数。
-     */
-    public QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() {
-        return this.QualityEvaluationConfigure;
-    }
-
-    /**
-     * Set 视频画面质量评价的控制参数。
-     * @param QualityEvaluationConfigure 视频画面质量评价的控制参数。
-     */
-    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure) {
-        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
-    }
-
-    /**
      * Get 音频（静音、低音、爆音）检测的控制参数。 
      * @return VoiceConfigure 音频（静音、低音、爆音）检测的控制参数。
      */
@@ -365,6 +349,22 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel{
      */
     public void setVoiceConfigure(VoiceConfigureInfoForUpdate VoiceConfigure) {
         this.VoiceConfigure = VoiceConfigure;
+    }
+
+    /**
+     * Get 视频画面质量评价的控制参数。 
+     * @return QualityEvaluationConfigure 视频画面质量评价的控制参数。
+     */
+    public QualityEvaluationConfigureInfoForUpdate getQualityEvaluationConfigure() {
+        return this.QualityEvaluationConfigure;
+    }
+
+    /**
+     * Set 视频画面质量评价的控制参数。
+     * @param QualityEvaluationConfigure 视频画面质量评价的控制参数。
+     */
+    public void setQualityEvaluationConfigure(QualityEvaluationConfigureInfoForUpdate QualityEvaluationConfigure) {
+        this.QualityEvaluationConfigure = QualityEvaluationConfigure;
     }
 
     public ModifyQualityInspectTemplateRequest() {
@@ -414,11 +414,11 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel{
         if (source.QRCodeConfigure != null) {
             this.QRCodeConfigure = new QRCodeConfigureInfoForUpdate(source.QRCodeConfigure);
         }
-        if (source.QualityEvaluationConfigure != null) {
-            this.QualityEvaluationConfigure = new QualityEvaluationConfigureInfoForUpdate(source.QualityEvaluationConfigure);
-        }
         if (source.VoiceConfigure != null) {
             this.VoiceConfigure = new VoiceConfigureInfoForUpdate(source.VoiceConfigure);
+        }
+        if (source.QualityEvaluationConfigure != null) {
+            this.QualityEvaluationConfigure = new QualityEvaluationConfigureInfoForUpdate(source.QualityEvaluationConfigure);
         }
     }
 
@@ -440,8 +440,8 @@ public class ModifyQualityInspectTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "NoiseConfigure.", this.NoiseConfigure);
         this.setParamObj(map, prefix + "MosaicConfigure.", this.MosaicConfigure);
         this.setParamObj(map, prefix + "QRCodeConfigure.", this.QRCodeConfigure);
-        this.setParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
         this.setParamObj(map, prefix + "VoiceConfigure.", this.VoiceConfigure);
+        this.setParamObj(map, prefix + "QualityEvaluationConfigure.", this.QualityEvaluationConfigure);
 
     }
 }

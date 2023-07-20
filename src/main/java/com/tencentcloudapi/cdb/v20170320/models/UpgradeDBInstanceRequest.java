@@ -100,7 +100,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String DeviceType;
 
     /**
-    * 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+    * 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -318,16 +318,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。 
-     * @return Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * Get 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。 
+     * @return Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
-     * @param Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+     * Set 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。
+     * @param Cpu 升级后的实例cpu核数，如果不传将根据 Memory 指定的内存值自动填充最小允许规格的cpu值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

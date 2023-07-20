@@ -81,6 +81,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *智能运维-批量删除任务
+     * @param req BatchDeleteOpsTasksRequest
+     * @return BatchDeleteOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteOpsTasksResponse BatchDeleteOpsTasks(BatchDeleteOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteOpsTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Ds批量删除任务，仅对任务状态为”已停止“有效；
      * @param req BatchDeleteTasksDsRequest
      * @return BatchDeleteTasksDsResponse
@@ -188,6 +209,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *批量修改任务责任人
+     * @param req BatchModifyOpsOwnersRequest
+     * @return BatchModifyOpsOwnersResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyOpsOwnersResponse BatchModifyOpsOwners(BatchModifyOpsOwnersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyOpsOwnersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyOpsOwnersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyOpsOwners");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 批量修改任务责任人
      * @param req BatchModifyOwnersNewRequest
@@ -252,6 +294,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *任务运维-任务列表 批量运行
+     * @param req BatchRunOpsTaskRequest
+     * @return BatchRunOpsTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchRunOpsTaskResponse BatchRunOpsTask(BatchRunOpsTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchRunOpsTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchRunOpsTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchRunOpsTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量运行集成任务
      * @param req BatchStartIntegrationTasksRequest
      * @return BatchStartIntegrationTasksResponse
@@ -294,6 +357,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
+     * @param req BatchStopOpsTasksRequest
+     * @return BatchStopOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchStopOpsTasksResponse BatchStopOpsTasks(BatchStopOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchStopOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchStopOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchStopOpsTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
      * @param req BatchStopTasksNewRequest
@@ -308,6 +392,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BatchStopTasksNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "BatchStopTasksNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量停止工作流
+     * @param req BatchStopWorkflowsByIdsRequest
+     * @return BatchStopWorkflowsByIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchStopWorkflowsByIdsResponse BatchStopWorkflowsByIds(BatchStopWorkflowsByIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchStopWorkflowsByIdsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchStopWorkflowsByIdsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchStopWorkflowsByIds");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -568,6 +673,48 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *统计任务实例状态
+     * @param req CountOpsInstanceStateRequest
+     * @return CountOpsInstanceStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CountOpsInstanceStateResponse CountOpsInstanceState(CountOpsInstanceStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CountOpsInstanceStateResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CountOpsInstanceStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CountOpsInstanceState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建基线
+     * @param req CreateBaselineRequest
+     * @return CreateBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBaselineResponse CreateBaseline(CreateBaselineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBaselineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBaselineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBaseline");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * 创建用户自定义函数
      * @param req CreateCustomFunctionRequest
      * @return CreateCustomFunctionResponse
@@ -759,6 +906,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *补录任务
+     * @param req CreateOpsMakePlanRequest
+     * @return CreateOpsMakePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOpsMakePlanResponse CreateOpsMakePlan(CreateOpsMakePlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOpsMakePlanResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOpsMakePlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOpsMakePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *资源管理需要先将资源上传到cos中，然后调用该接口，将cos资源绑定到wedata
      * @param req CreateOrUpdateResourceRequest
      * @return CreateOrUpdateResourceResponse
@@ -908,6 +1076,48 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *拉取dag实例
+     * @param req DagInstancesRequest
+     * @return DagInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DagInstancesResponse DagInstances(DagInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DagInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DagInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DagInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *DeleteBaseline
+     * @param req DeleteBaselineRequest
+     * @return DeleteBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaselineResponse DeleteBaseline(DeleteBaselineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBaselineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBaselineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBaseline");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除用户自定义函数
      * @param req DeleteCustomFunctionRequest
      * @return DeleteCustomFunctionResponse
@@ -943,6 +1153,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDataSourcesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDataSources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除文件
+     * @param req DeleteFileRequest
+     * @return DeleteFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFileResponse DeleteFile(DeleteFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFileResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1120,6 +1351,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *资源管理-删除资源文件
+     * @param req DeleteResourceFileRequest
+     * @return DeleteResourceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceFileResponse DeleteResourceFile(DeleteResourceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteResourceFileResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteResourceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteResourceFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *资源管理-批量删除资源文件
      * @param req DeleteResourceFilesRequest
      * @return DeleteResourceFilesResponse
@@ -1225,6 +1477,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *通过工作流Id删除工作流
+     * @param req DeleteWorkflowByIdRequest
+     * @return DeleteWorkflowByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkflowByIdResponse DeleteWorkflowById(DeleteWorkflowByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWorkflowByIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWorkflowByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteWorkflowById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 删除工作流
      * @param req DeleteWorkflowNewRequest
@@ -1289,6 +1562,195 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询父目录下所有子文件夹+工作流
+     * @param req DescribeAllByFolderNewRequest
+     * @return DescribeAllByFolderNewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllByFolderNewResponse DescribeAllByFolderNew(DescribeAllByFolderNewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllByFolderNewResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllByFolderNewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllByFolderNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取所有任务类型
+     * @param req DescribeAllTaskTypeRequest
+     * @return DescribeAllTaskTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllTaskTypeResponse DescribeAllTaskType(DescribeAllTaskTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllTaskTypeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllTaskTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllTaskType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据任务Id查找生产态子任务
+     * @param req DescribeAllUsedVersionSonRequest
+     * @return DescribeAllUsedVersionSonResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllUsedVersionSonResponse DescribeAllUsedVersionSon(DescribeAllUsedVersionSonRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllUsedVersionSonResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllUsedVersionSonResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllUsedVersionSon");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线DAG
+     * @param req DescribeBaselineAllTaskDagRequest
+     * @return DescribeBaselineAllTaskDagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineAllTaskDagResponse DescribeBaselineAllTaskDag(DescribeBaselineAllTaskDagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineAllTaskDagResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineAllTaskDagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineAllTaskDag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *基线列表
+     * @param req DescribeBaselineByIdRequest
+     * @return DescribeBaselineByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineByIdResponse DescribeBaselineById(DescribeBaselineByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineByIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线实例DAG
+     * @param req DescribeBaselineInstanceDagRequest
+     * @return DescribeBaselineInstanceDagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineInstanceDagResponse DescribeBaselineInstanceDag(DescribeBaselineInstanceDagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineInstanceDagResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineInstanceDagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineInstanceDag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线实例关键任务实例甘特图
+     * @param req DescribeBaselineInstanceGanttRequest
+     * @return DescribeBaselineInstanceGanttResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineInstanceGanttResponse DescribeBaselineInstanceGantt(DescribeBaselineInstanceGanttRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineInstanceGanttResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineInstanceGanttResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineInstanceGantt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线实例列表
+     * @param req DescribeBaselineInstancesRequest
+     * @return DescribeBaselineInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselineInstancesResponse DescribeBaselineInstances(DescribeBaselineInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselineInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselineInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselineInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *基线列表
+     * @param req DescribeBaselinesRequest
+     * @return DescribeBaselinesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaselinesResponse DescribeBaselines(DescribeBaselinesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaselinesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaselinesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaselines");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *批量操作任务列表
      * @param req DescribeBatchOperateTaskRequest
      * @return DescribeBatchOperateTaskResponse
@@ -1302,6 +1764,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBatchOperateTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBatchOperateTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能运维-事件列表-所属任务/基线过滤列表
+     * @param req DescribeBelongToRequest
+     * @return DescribeBelongToResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBelongToResponse DescribeBelongTo(DescribeBelongToRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBelongToResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBelongToResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBelongTo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1544,6 +2027,69 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *根据任务id获取下游依赖任务列表
+     * @param req DescribeDependOpsTaskListRequest
+     * @return DescribeDependOpsTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDependOpsTaskListResponse DescribeDependOpsTaskList(DescribeDependOpsTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDependOpsTaskListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDependOpsTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDependOpsTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据层级查找上/下游任务节点
+     * @param req DescribeDependOpsTasksRequest
+     * @return DescribeDependOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDependOpsTasksResponse DescribeDependOpsTasks(DescribeDependOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDependOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDependOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDependOpsTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过taskIds查询task详情列表
+     * @param req DescribeDependTaskListsRequest
+     * @return DescribeDependTaskListsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDependTaskListsResponse DescribeDependTaskLists(DescribeDependTaskListsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDependTaskListsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDependTaskListsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDependTaskLists");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 根据层级查找上/下游任务节点
      * @param req DescribeDependTasksNewRequest
@@ -1558,6 +2104,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDependTasksNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDependTasksNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询基线诊断信息
+     * @param req DescribeDiagnosticInfoByBaselineIdRequest
+     * @return DescribeDiagnosticInfoByBaselineIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiagnosticInfoByBaselineIdResponse DescribeDiagnosticInfoByBaselineId(DescribeDiagnosticInfoByBaselineIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiagnosticInfoByBaselineIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiagnosticInfoByBaselineIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiagnosticInfoByBaselineId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1587,6 +2154,216 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *分页查询试运行实例列表
+     * @param req DescribeDrInstancePageRequest
+     * @return DescribeDrInstancePageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDrInstancePageResponse DescribeDrInstancePage(DescribeDrInstancePageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDrInstancePageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDrInstancePageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDrInstancePage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询试运行实例执行内容
+     * @param req DescribeDrInstanceScriptContentRequest
+     * @return DescribeDrInstanceScriptContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDrInstanceScriptContentResponse DescribeDrInstanceScriptContent(DescribeDrInstanceScriptContentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDrInstanceScriptContentResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDrInstanceScriptContentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDrInstanceScriptContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询试运行实例子实例列表
+     * @param req DescribeDrSonInstanceRequest
+     * @return DescribeDrSonInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDrSonInstanceResponse DescribeDrSonInstance(DescribeDrSonInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDrSonInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDrSonInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDrSonInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据项目ID和事件名称查看事件详情
+     * @param req DescribeEventRequest
+     * @return DescribeEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventResponse DescribeEvent(DescribeEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据条件查找事件实例
+     * @param req DescribeEventCasesRequest
+     * @return DescribeEventCasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventCasesResponse DescribeEventCases(DescribeEventCasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventCasesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventCasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventCases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看事件实例的消费任务
+     * @param req DescribeEventConsumeTasksRequest
+     * @return DescribeEventConsumeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventConsumeTasksResponse DescribeEventConsumeTasks(DescribeEventConsumeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventConsumeTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventConsumeTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventConsumeTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能运维事件详情1
+     * @param req DescribeEventDetailRequest
+     * @return DescribeEventDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventDetailResponse DescribeEventDetail(DescribeEventDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *事件是否告警过滤条件
+     * @param req DescribeEventIsAlarmTypesRequest
+     * @return DescribeEventIsAlarmTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventIsAlarmTypesResponse DescribeEventIsAlarmTypes(DescribeEventIsAlarmTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventIsAlarmTypesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventIsAlarmTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventIsAlarmTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询事件类型列表
+     * @param req DescribeEventTypesRequest
+     * @return DescribeEventTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventTypesResponse DescribeEventTypes(DescribeEventTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventTypesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEventTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *智能运维事件查询列表
+     * @param req DescribeEventsRequest
+     * @return DescribeEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询规则组执行策略
      * @param req DescribeExecStrategyRequest
      * @return DescribeExecStrategyResponse
@@ -1600,6 +2377,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeExecStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeExecStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取关联父实例
+     * @param req DescribeFathersRequest
+     * @return DescribeFathersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFathersResponse DescribeFathers(DescribeFathersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFathersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFathersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFathers");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1778,6 +2576,48 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *根据周期类型查询所有实例
+     * @param req DescribeInstanceByCycleRequest
+     * @return DescribeInstanceByCycleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceByCycleResponse DescribeInstanceByCycle(DescribeInstanceByCycleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceByCycleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceByCycleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceByCycle");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例状态周期增长趋势
+     * @param req DescribeInstanceByCycleReportRequest
+     * @return DescribeInstanceByCycleReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceByCycleReportResponse DescribeInstanceByCycleReport(DescribeInstanceByCycleReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceByCycleReportResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceByCycleReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceByCycleReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *日志获取详情页面
      * @param req DescribeInstanceLastLogRequest
      * @return DescribeInstanceLastLogResponse
@@ -1833,6 +2673,48 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取具体实例相关日志信息
+     * @param req DescribeInstanceLogDetailRequest
+     * @return DescribeInstanceLogDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogDetailResponse DescribeInstanceLogDetail(DescribeInstanceLogDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceLogDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceLogDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *下载日志文件，返回日志URL
+     * @param req DescribeInstanceLogFileRequest
+     * @return DescribeInstanceLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogFileResponse DescribeInstanceLogFile(DescribeInstanceLogFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceLogFileResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceLogFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1897,6 +2779,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *拉取实例列表，join task表一些信息
+     * @param req DescribeInstancesInfoWithTaskInfoRequest
+     * @return DescribeInstancesInfoWithTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesInfoWithTaskInfoResponse DescribeInstancesInfoWithTaskInfo(DescribeInstancesInfoWithTaskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesInfoWithTaskInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesInfoWithTaskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesInfoWithTaskInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2178,6 +3081,69 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *任务运维搜索 查询生产态任务数据源列表
+     * @param req DescribeOperateOpsTaskDatasourceRequest
+     * @return DescribeOperateOpsTaskDatasourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperateOpsTaskDatasourceResponse DescribeOperateOpsTaskDatasource(DescribeOperateOpsTaskDatasourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOperateOpsTaskDatasourceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOperateOpsTaskDatasourceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOperateOpsTaskDatasource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务运维-查询生产态任务数据源类型列表
+     * @param req DescribeOperateOpsTaskDatasourceTypeRequest
+     * @return DescribeOperateOpsTaskDatasourceTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperateOpsTaskDatasourceTypeResponse DescribeOperateOpsTaskDatasourceType(DescribeOperateOpsTaskDatasourceTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOperateOpsTaskDatasourceTypeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOperateOpsTaskDatasourceTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOperateOpsTaskDatasourceType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务运维列表组合条件查询
+     * @param req DescribeOperateOpsTasksRequest
+     * @return DescribeOperateOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOperateOpsTasksResponse DescribeOperateOpsTasks(DescribeOperateOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOperateOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOperateOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOperateOpsTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *任务运维列表组合条件查询
      * @param req DescribeOperateTasksRequest
      * @return DescribeOperateTasksResponse
@@ -2191,6 +3157,111 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOperateTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOperateTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例运维-获取实例日志列表
+     * @param req DescribeOpsInstanceLogListRequest
+     * @return DescribeOpsInstanceLogListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpsInstanceLogListResponse DescribeOpsInstanceLogList(DescribeOpsInstanceLogListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOpsInstanceLogListResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOpsInstanceLogListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOpsInstanceLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据补录计划和补录任务获取补录实例列表。
+     * @param req DescribeOpsMakePlanInstancesRequest
+     * @return DescribeOpsMakePlanInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpsMakePlanInstancesResponse DescribeOpsMakePlanInstances(DescribeOpsMakePlanInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOpsMakePlanInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOpsMakePlanInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOpsMakePlanInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看补录计划任务
+     * @param req DescribeOpsMakePlanTasksRequest
+     * @return DescribeOpsMakePlanTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpsMakePlanTasksResponse DescribeOpsMakePlanTasks(DescribeOpsMakePlanTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOpsMakePlanTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOpsMakePlanTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOpsMakePlanTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据条件分页查询补录计划
+     * @param req DescribeOpsMakePlansRequest
+     * @return DescribeOpsMakePlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpsMakePlansResponse DescribeOpsMakePlans(DescribeOpsMakePlansRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOpsMakePlansResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOpsMakePlansResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOpsMakePlans");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询用户生产工作流列表
+     * @param req DescribeOpsWorkflowsRequest
+     * @return DescribeOpsWorkflowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpsWorkflowsResponse DescribeOpsWorkflows(DescribeOpsWorkflowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOpsWorkflowsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOpsWorkflowsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOpsWorkflows");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2895,6 +3966,153 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *在基线系统内查询单个调度任务实例
+     * @param req DescribeScheduleInstanceRequest
+     * @return DescribeScheduleInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduleInstanceResponse DescribeScheduleInstance(DescribeScheduleInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScheduleInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScheduleInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScheduleInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取实例列表
+     * @param req DescribeScheduleInstancesRequest
+     * @return DescribeScheduleInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduleInstancesResponse DescribeScheduleInstances(DescribeScheduleInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScheduleInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScheduleInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScheduleInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *运维大屏-实例状态分布
+     * @param req DescribeSchedulerInstanceStatusRequest
+     * @return DescribeSchedulerInstanceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulerInstanceStatusResponse DescribeSchedulerInstanceStatus(DescribeSchedulerInstanceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulerInstanceStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulerInstanceStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedulerInstanceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *运维大屏-实例运行时长排行
+     * @param req DescribeSchedulerRunTimeInstanceCntByStatusRequest
+     * @return DescribeSchedulerRunTimeInstanceCntByStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulerRunTimeInstanceCntByStatusResponse DescribeSchedulerRunTimeInstanceCntByStatus(DescribeSchedulerRunTimeInstanceCntByStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulerRunTimeInstanceCntByStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulerRunTimeInstanceCntByStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedulerRunTimeInstanceCntByStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务状态统计
+     * @param req DescribeSchedulerTaskCntByStatusRequest
+     * @return DescribeSchedulerTaskCntByStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulerTaskCntByStatusResponse DescribeSchedulerTaskCntByStatus(DescribeSchedulerTaskCntByStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulerTaskCntByStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulerTaskCntByStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedulerTaskCntByStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *运维大屏-任务状态分布
+     * @param req DescribeSchedulerTaskTypeCntRequest
+     * @return DescribeSchedulerTaskTypeCntResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulerTaskTypeCntResponse DescribeSchedulerTaskTypeCnt(DescribeSchedulerTaskTypeCntRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulerTaskTypeCntResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulerTaskTypeCntResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedulerTaskTypeCnt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取关联子实例
+     * @param req DescribeSonInstancesRequest
+     * @return DescribeSonInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSonInstancesResponse DescribeSonInstances(DescribeSonInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSonInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSonInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSonInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取数据标准规则详情
      * @param req DescribeStandardRuleDetailInfoListRequest
      * @return DescribeStandardRuleDetailInfoListResponse
@@ -2916,6 +4134,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *任务状态趋势
+     * @param req DescribeStatisticInstanceStatusTrendOpsRequest
+     * @return DescribeStatisticInstanceStatusTrendOpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStatisticInstanceStatusTrendOpsResponse DescribeStatisticInstanceStatusTrendOps(DescribeStatisticInstanceStatusTrendOpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStatisticInstanceStatusTrendOpsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStatisticInstanceStatusTrendOpsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStatisticInstanceStatusTrendOps");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询实时任务日志列表
      * @param req DescribeStreamTaskLogListRequest
      * @return DescribeStreamTaskLogListResponse
@@ -2929,6 +4168,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamTaskLogListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStreamTaskLogList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *获取下游任务信息
+     * @param req DescribeSuccessorOpsTaskInfosRequest
+     * @return DescribeSuccessorOpsTaskInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSuccessorOpsTaskInfosResponse DescribeSuccessorOpsTaskInfos(DescribeSuccessorOpsTaskInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSuccessorOpsTaskInfosResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSuccessorOpsTaskInfosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSuccessorOpsTaskInfos");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3055,6 +4315,69 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskAlarmRegulationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTaskAlarmRegulations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据周期类型 查询所有任务
+     * @param req DescribeTaskByCycleRequest
+     * @return DescribeTaskByCycleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskByCycleResponse DescribeTaskByCycle(DescribeTaskByCycleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskByCycleResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskByCycleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskByCycle");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务状态周期增长趋势
+     * @param req DescribeTaskByCycleReportRequest
+     * @return DescribeTaskByCycleReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskByCycleReportResponse DescribeTaskByCycleReport(DescribeTaskByCycleReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskByCycleReportResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskByCycleReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskByCycleReport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务状态趋势
+     * @param req DescribeTaskByStatusReportRequest
+     * @return DescribeTaskByStatusReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskByStatusReportResponse DescribeTaskByStatusReport(DescribeTaskByStatusReportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskByStatusReportResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskByStatusReportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskByStatusReport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3211,6 +4534,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *分页查询任务运行历史
+     * @param req DescribeTaskRunHistoryRequest
+     * @return DescribeTaskRunHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskRunHistoryResponse DescribeTaskRunHistory(DescribeTaskRunHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskRunHistoryResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskRunHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskRunHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *<p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
 查询任务脚本
      * @param req DescribeTaskScriptRequest
@@ -3297,6 +4641,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取第三方运行日志
+     * @param req DescribeThirdTaskRunLogRequest
+     * @return DescribeThirdTaskRunLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(DescribeThirdTaskRunLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeThirdTaskRunLogResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeThirdTaskRunLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeThirdTaskRunLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *数据质量概览页面表排行接口
      * @param req DescribeTopTableStatRequest
      * @return DescribeTopTableStatResponse
@@ -3339,6 +4704,153 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询工作流画布
+     * @param req DescribeWorkflowCanvasInfoRequest
+     * @return DescribeWorkflowCanvasInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowCanvasInfoResponse DescribeWorkflowCanvasInfo(DescribeWorkflowCanvasInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowCanvasInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowCanvasInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowCanvasInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询工作流画布运行起止时间
+     * @param req DescribeWorkflowExecuteByIdRequest
+     * @return DescribeWorkflowExecuteByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowExecuteByIdResponse DescribeWorkflowExecuteById(DescribeWorkflowExecuteByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowExecuteByIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowExecuteByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowExecuteById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *通过工作流id，查询工作流详情
+     * @param req DescribeWorkflowInfoByIdRequest
+     * @return DescribeWorkflowInfoByIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowInfoByIdResponse DescribeWorkflowInfoById(DescribeWorkflowInfoByIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowInfoByIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowInfoByIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowInfoById");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据项目id 获取项目下所有工作流列表
+     * @param req DescribeWorkflowListByProjectIdRequest
+     * @return DescribeWorkflowListByProjectIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowListByProjectIdResponse DescribeWorkflowListByProjectId(DescribeWorkflowListByProjectIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowListByProjectIdResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowListByProjectIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowListByProjectId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询运维画布信息，只需要获取边和节点
+     * @param req DescribeWorkflowOpsCanvasInfoRequest
+     * @return DescribeWorkflowOpsCanvasInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowOpsCanvasInfoResponse DescribeWorkflowOpsCanvasInfo(DescribeWorkflowOpsCanvasInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowOpsCanvasInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowOpsCanvasInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowOpsCanvasInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询工作流任务数
+     * @param req DescribeWorkflowTaskCountRequest
+     * @return DescribeWorkflowTaskCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(DescribeWorkflowTaskCountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWorkflowTaskCountResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWorkflowTaskCountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeWorkflowTaskCount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例诊断信息
+     * @param req DiagnosePlusRequest
+     * @return DiagnosePlusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DiagnosePlusResponse DiagnosePlus(DiagnosePlusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DiagnosePlusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DiagnosePlusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DiagnosePlus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *调试运行集成任务
      * @param req DryRunDIOfflineTaskRequest
      * @return DryRunDIOfflineTaskResponse
@@ -3352,6 +4864,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DryRunDIOfflineTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DryRunDIOfflineTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑基线
+     * @param req EditBaselineRequest
+     * @return EditBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public EditBaselineResponse EditBaseline(EditBaselineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EditBaselineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<EditBaselineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EditBaseline");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3374,6 +4907,48 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ForceSucInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ForceSucInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例强制成功
+     * @param req ForceSucScheduleInstancesRequest
+     * @return ForceSucScheduleInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForceSucScheduleInstancesResponse ForceSucScheduleInstances(ForceSucScheduleInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ForceSucScheduleInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForceSucScheduleInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ForceSucScheduleInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务运维-批量冻结任务
+     * @param req FreezeOpsTasksRequest
+     * @return FreezeOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public FreezeOpsTasksResponse FreezeOpsTasks(FreezeOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FreezeOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<FreezeOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FreezeOpsTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3418,6 +4993,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<FreezeTasksByMultiWorkflowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "FreezeTasksByMultiWorkflow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *暂停工作流下的所有任务
+     * @param req FreezeTasksByWorkflowIdsRequest
+     * @return FreezeTasksByWorkflowIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public FreezeTasksByWorkflowIdsResponse FreezeTasksByWorkflowIds(FreezeTasksByWorkflowIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FreezeTasksByWorkflowIdsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<FreezeTasksByWorkflowIdsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FreezeTasksByWorkflowIds");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3532,6 +5128,48 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *按补录计划批量终止实例。
+     * @param req KillOpsMakePlanInstancesRequest
+     * @return KillOpsMakePlanInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillOpsMakePlanInstancesResponse KillOpsMakePlanInstances(KillOpsMakePlanInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillOpsMakePlanInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillOpsMakePlanInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillOpsMakePlanInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量kill实例
+     * @param req KillScheduleInstancesRequest
+     * @return KillScheduleInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillScheduleInstancesResponse KillScheduleInstances(KillScheduleInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillScheduleInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillScheduleInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillScheduleInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *锁定集成任务
      * @param req LockIntegrationTaskRequest
      * @return LockIntegrationTaskResponse
@@ -3545,6 +5183,48 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<LockIntegrationTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "LockIntegrationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *任务批量补录，调度状态任务才可以补录；
+     * @param req MakeUpOpsTasksRequest
+     * @return MakeUpOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public MakeUpOpsTasksResponse MakeUpOpsTasks(MakeUpOpsTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MakeUpOpsTasksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<MakeUpOpsTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MakeUpOpsTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *工作流补数据
+     * @param req MakeUpTasksByWorkflowRequest
+     * @return MakeUpTasksByWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public MakeUpTasksByWorkflowResponse MakeUpTasksByWorkflow(MakeUpTasksByWorkflowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<MakeUpTasksByWorkflowResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<MakeUpTasksByWorkflowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "MakeUpTasksByWorkflow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3592,6 +5272,48 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<MakeUpWorkflowNewResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "MakeUpWorkflowNew");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑基线告警状态
+     * @param req ModifyBaselineAlarmStatusRequest
+     * @return ModifyBaselineAlarmStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineAlarmStatusResponse ModifyBaselineAlarmStatus(ModifyBaselineAlarmStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBaselineAlarmStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBaselineAlarmStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBaselineAlarmStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *编辑基线实例中任务告警状态
+     * @param req ModifyBaselineTaskAlarmStatusRequest
+     * @return ModifyBaselineTaskAlarmStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaselineTaskAlarmStatusResponse ModifyBaselineTaskAlarmStatus(ModifyBaselineTaskAlarmStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBaselineTaskAlarmStatusResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBaselineTaskAlarmStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBaselineTaskAlarmStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4051,6 +5773,48 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *按补录计划批量重跑/选择补录计划→补录任务→补录实例，点击重跑
+     * @param req RerunOpsMakePlanInstancesRequest
+     * @return RerunOpsMakePlanInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunOpsMakePlanInstancesResponse RerunOpsMakePlanInstances(RerunOpsMakePlanInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RerunOpsMakePlanInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RerunOpsMakePlanInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RerunOpsMakePlanInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *实例批量重跑
+     * @param req RerunScheduleInstancesRequest
+     * @return RerunScheduleInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunScheduleInstancesResponse RerunScheduleInstances(RerunScheduleInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RerunScheduleInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RerunScheduleInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RerunScheduleInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *重启采集器
      * @param req RestartInLongAgentRequest
      * @return RestartInLongAgentResponse
@@ -4136,6 +5900,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *批量启动工作流
+     * @param req RunTasksByMultiWorkflowRequest
+     * @return RunTasksByMultiWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunTasksByMultiWorkflowResponse RunTasksByMultiWorkflow(RunTasksByMultiWorkflowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunTasksByMultiWorkflowResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunTasksByMultiWorkflowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RunTasksByMultiWorkflow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *保存用户自定义函数
      * @param req SaveCustomFunctionRequest
      * @return SaveCustomFunctionResponse
@@ -4200,6 +5985,27 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *提交基线
+     * @param req StopBaselineRequest
+     * @return StopBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopBaselineResponse StopBaseline(StopBaselineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopBaselineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopBaselineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopBaseline");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *停止集成任务
      * @param req StopIntegrationTaskRequest
      * @return StopIntegrationTaskResponse
@@ -4213,6 +6019,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopIntegrationTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopIntegrationTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提交基线
+     * @param req SubmitBaselineRequest
+     * @return SubmitBaselineResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitBaselineResponse SubmitBaseline(SubmitBaselineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SubmitBaselineResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<SubmitBaselineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SubmitBaseline");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4426,6 +6253,27 @@ public class WedataClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateInLongAgentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateInLongAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改工作流责任人
+     * @param req UpdateWorkflowOwnerRequest
+     * @return UpdateWorkflowOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateWorkflowOwnerResponse UpdateWorkflowOwner(UpdateWorkflowOwnerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateWorkflowOwnerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateWorkflowOwnerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateWorkflowOwner");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

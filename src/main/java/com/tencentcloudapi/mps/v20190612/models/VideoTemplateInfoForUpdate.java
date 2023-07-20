@@ -35,7 +35,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 100]，单位：Hz。
+    * 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
     */
     @SerializedName("Fps")
@@ -151,9 +151,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。 
-     * @return Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
     public Long getFps() {
@@ -161,9 +161,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
-     * @param Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
+     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
      */
     public void setFps(Long Fps) {

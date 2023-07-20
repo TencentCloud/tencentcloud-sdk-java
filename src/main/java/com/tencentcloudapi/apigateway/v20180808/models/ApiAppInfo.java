@@ -39,6 +39,7 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
     * 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiAppSecret")
@@ -71,6 +72,7 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
     * 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiAppKey")
@@ -115,8 +117,10 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
      * Get 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiAppSecret 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiAppSecret() {
@@ -125,8 +129,10 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
      * Set 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiAppSecret 应用SECRET
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiAppSecret(String ApiAppSecret) {
@@ -195,8 +201,10 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
      * Get 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApiAppKey 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApiAppKey() {
@@ -205,8 +213,10 @@ public class ApiAppInfo extends AbstractModel{
 
     /**
      * Set 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiAppKey 应用KEY
+注意:此字段可能返回null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiAppKey(String ApiAppKey) {

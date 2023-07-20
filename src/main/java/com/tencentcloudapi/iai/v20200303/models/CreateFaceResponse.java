@@ -48,7 +48,7 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 
     /**
     * 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
     */
     @SerializedName("SucIndexes")
     @Expose
@@ -137,9 +137,9 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 
     /**
      * Get 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。 
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。 
      * @return SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
     public Long [] getSucIndexes() {
         return this.SucIndexes;
@@ -147,9 +147,9 @@ RetCode的顺序和入参中 Images 或 Urls 的顺序一致。
 
     /**
      * Set 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      * @param SucIndexes 加入成功的人脸索引。索引顺序和入参中 Images 或 Urls 的顺序一致。 
-例， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
+例如， Urls 中 有 3 个 url，第二个 url 失败，则 SucIndexes 值为 [0,2] 。
      */
     public void setSucIndexes(Long [] SucIndexes) {
         this.SucIndexes = SucIndexes;

@@ -24,7 +24,7 @@ public class FaceDetailAttributesInfo extends AbstractModel{
 
     /**
     * 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
     */
     @SerializedName("Age")
     @Expose
@@ -159,9 +159,9 @@ FaceAttributesType 不含 Smile 或检测超过 5 张人脸时，此参数仍返
 
     /**
      * Get 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。 
      * @return Age 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public Long getAge() {
         return this.Age;
@@ -169,9 +169,9 @@ FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返
 
     /**
      * Set 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      * @param Age 年龄 [0,65]，其中65代表“65岁及以上”。 
-FaceAttributesType 不为含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
+FaceAttributesType 不含Age 或检测超过 5 张人脸时，此参数仍返回，但不具备参考意义。
      */
     public void setAge(Long Age) {
         this.Age = Age;

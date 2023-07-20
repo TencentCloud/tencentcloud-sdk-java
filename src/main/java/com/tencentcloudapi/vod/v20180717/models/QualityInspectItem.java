@@ -23,18 +23,6 @@ import java.util.HashMap;
 public class QualityInspectItem extends AbstractModel{
 
     /**
-    * 置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li>
-    */
-    @SerializedName("Confidence")
-    @Expose
-    private Long Confidence;
-
-    /**
     * 异常片段起始的偏移时间，单位：秒。
     */
     @SerializedName("StartTimeOffset")
@@ -62,40 +50,16 @@ public class QualityInspectItem extends AbstractModel{
     private Long [] AreaCoordSet;
 
     /**
-     * Get 置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li> 
-     * @return Confidence 置信度，取值范围：[0, 100]。
+    * 置信度，取值范围：[0, 100]。
 <font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
 <li>Mosaic：马赛克；</li>
 <li>QRCode：二维码；</li>
 <li>AppletCode：小程序码；</li>
 <li>BarCode：条形码。</li>
-     */
-    public Long getConfidence() {
-        return this.Confidence;
-    }
-
-    /**
-     * Set 置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li>
-     * @param Confidence 置信度，取值范围：[0, 100]。
-<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
-<li>Mosaic：马赛克；</li>
-<li>QRCode：二维码；</li>
-<li>AppletCode：小程序码；</li>
-<li>BarCode：条形码。</li>
-     */
-    public void setConfidence(Long Confidence) {
-        this.Confidence = Confidence;
-    }
+    */
+    @SerializedName("Confidence")
+    @Expose
+    private Long Confidence;
 
     /**
      * Get 异常片段起始的偏移时间，单位：秒。 
@@ -169,6 +133,42 @@ public class QualityInspectItem extends AbstractModel{
         this.AreaCoordSet = AreaCoordSet;
     }
 
+    /**
+     * Get 置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li> 
+     * @return Confidence 置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li>
+     */
+    public Long getConfidence() {
+        return this.Confidence;
+    }
+
+    /**
+     * Set 置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li>
+     * @param Confidence 置信度，取值范围：[0, 100]。
+<font color=red>注意：</font> 仅当 Type 取值为下列之一时，本字段取值有效：
+<li>Mosaic：马赛克；</li>
+<li>QRCode：二维码；</li>
+<li>AppletCode：小程序码；</li>
+<li>BarCode：条形码。</li>
+     */
+    public void setConfidence(Long Confidence) {
+        this.Confidence = Confidence;
+    }
+
     public QualityInspectItem() {
     }
 
@@ -177,9 +177,6 @@ public class QualityInspectItem extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public QualityInspectItem(QualityInspectItem source) {
-        if (source.Confidence != null) {
-            this.Confidence = new Long(source.Confidence);
-        }
         if (source.StartTimeOffset != null) {
             this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
@@ -192,6 +189,9 @@ public class QualityInspectItem extends AbstractModel{
                 this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
             }
         }
+        if (source.Confidence != null) {
+            this.Confidence = new Long(source.Confidence);
+        }
     }
 
 
@@ -199,10 +199,10 @@ public class QualityInspectItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
 
     }
 }

@@ -60,7 +60,7 @@ public class CloudstudioClient extends AbstractClient{
     }
 
     /**
-     *为工作空间创建临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
+     *创建工作空间临时访问凭证，重复调用会创建新的 Token，旧的 Token 将会自动失效
      * @param req CreateWorkspaceTokenRequest
      * @return CreateWorkspaceTokenResponse
      * @throws TencentCloudSDKException

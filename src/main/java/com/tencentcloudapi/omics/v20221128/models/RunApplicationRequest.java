@@ -93,6 +93,13 @@ public class RunApplicationRequest extends AbstractModel{
     private String [] TableRowUuids;
 
     /**
+    * 应用版本ID。不填表示使用当前最新版本。
+    */
+    @SerializedName("ApplicationVersionId")
+    @Expose
+    private String ApplicationVersionId;
+
+    /**
      * Get 应用ID。 
      * @return ApplicationId 应用ID。
      */
@@ -252,6 +259,22 @@ public class RunApplicationRequest extends AbstractModel{
         this.TableRowUuids = TableRowUuids;
     }
 
+    /**
+     * Get 应用版本ID。不填表示使用当前最新版本。 
+     * @return ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
+     */
+    public String getApplicationVersionId() {
+        return this.ApplicationVersionId;
+    }
+
+    /**
+     * Set 应用版本ID。不填表示使用当前最新版本。
+     * @param ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
+     */
+    public void setApplicationVersionId(String ApplicationVersionId) {
+        this.ApplicationVersionId = ApplicationVersionId;
+    }
+
     public RunApplicationRequest() {
     }
 
@@ -293,6 +316,9 @@ public class RunApplicationRequest extends AbstractModel{
                 this.TableRowUuids[i] = new String(source.TableRowUuids[i]);
             }
         }
+        if (source.ApplicationVersionId != null) {
+            this.ApplicationVersionId = new String(source.ApplicationVersionId);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class RunApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamArraySimple(map, prefix + "TableRowUuids.", this.TableRowUuids);
+        this.setParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
 
     }
 }

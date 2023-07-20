@@ -81,29 +81,6 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃，请通过控制台查询或操作
-
-创建并安装合约
-     * @param req CreateChaincodeAndInstallForUserRequest
-     * @return CreateChaincodeAndInstallForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateChaincodeAndInstallForUserResponse CreateChaincodeAndInstallForUser(CreateChaincodeAndInstallForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateChaincodeAndInstallForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateChaincodeAndInstallForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateChaincodeAndInstallForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *下载用户证书
      * @param req DownloadUserCertRequest
      * @return DownloadUserCertResponse
@@ -159,121 +136,6 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetBlockTransactionListForUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetBlockTransactionListForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-获取合约编译日志
-     * @param req GetChaincodeCompileLogForUserRequest
-     * @return GetChaincodeCompileLogForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetChaincodeCompileLogForUserResponse GetChaincodeCompileLogForUser(GetChaincodeCompileLogForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetChaincodeCompileLogForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetChaincodeCompileLogForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetChaincodeCompileLogForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-实例化结果查询
-     * @param req GetChaincodeInitializeResultForUserRequest
-     * @return GetChaincodeInitializeResultForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetChaincodeInitializeResultForUserResponse GetChaincodeInitializeResultForUser(GetChaincodeInitializeResultForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetChaincodeInitializeResultForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetChaincodeInitializeResultForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetChaincodeInitializeResultForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-获取合约容器日志
-     * @param req GetChaincodeLogForUserRequest
-     * @return GetChaincodeLogForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetChaincodeLogForUserResponse GetChaincodeLogForUser(GetChaincodeLogForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetChaincodeLogForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetChaincodeLogForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetChaincodeLogForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-获取通道列表
-     * @param req GetChannelListForUserRequest
-     * @return GetChannelListForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetChannelListForUserResponse GetChannelListForUser(GetChannelListForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetChannelListForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetChannelListForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetChannelListForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-获取该用户的网络列表。网络信息中包含组织信息，但仅包含该用户所在组织的信息。
-     * @param req GetClusterListForUserRequest
-     * @return GetClusterListForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetClusterListForUserResponse GetClusterListForUser(GetClusterListForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetClusterListForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetClusterListForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetClusterListForUser");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -366,29 +228,6 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃，请通过控制台查询或操作
-
-获取节点日志
-     * @param req GetPeerLogForUserRequest
-     * @return GetPeerLogForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetPeerLogForUserResponse GetPeerLogForUser(GetPeerLogForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetPeerLogForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetPeerLogForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetPeerLogForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *获取交易详情
      * @param req GetTransactionDetailForUserRequest
      * @return GetTransactionDetailForUserResponse
@@ -402,29 +241,6 @@ public class TbaasClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetTransactionDetailForUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetTransactionDetailForUser");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已废弃，请通过控制台查询或操作
-
-实例化合约
-     * @param req InitializeChaincodeForUserRequest
-     * @return InitializeChaincodeForUserResponse
-     * @throws TencentCloudSDKException
-     */
-    public InitializeChaincodeForUserResponse InitializeChaincodeForUser(InitializeChaincodeForUserRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InitializeChaincodeForUserResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<InitializeChaincodeForUserResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InitializeChaincodeForUser");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -2366,29 +2366,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
-
-修改数据库代理描述
-     * @param req ModifyCDBProxyDescRequest
-     * @return ModifyCDBProxyDescResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCDBProxyDescResponse ModifyCDBProxyDesc(ModifyCDBProxyDescRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyDescResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDBProxyDesc");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
 
 修改数据库代理VIP或端口

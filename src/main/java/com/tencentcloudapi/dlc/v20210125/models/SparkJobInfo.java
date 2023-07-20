@@ -319,6 +319,14 @@ public class SparkJobInfo extends AbstractModel{
     private Long IsInherit;
 
     /**
+    * 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSessionStarted")
+    @Expose
+    private Boolean IsSessionStarted;
+
+    /**
      * Get spark作业ID 
      * @return JobId spark作业ID
      */
@@ -1022,6 +1030,26 @@ public class SparkJobInfo extends AbstractModel{
         this.IsInherit = IsInherit;
     }
 
+    /**
+     * Get 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSessionStarted() {
+        return this.IsSessionStarted;
+    }
+
+    /**
+     * Set 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSessionStarted(Boolean IsSessionStarted) {
+        this.IsSessionStarted = IsSessionStarted;
+    }
+
     public SparkJobInfo() {
     }
 
@@ -1150,6 +1178,9 @@ public class SparkJobInfo extends AbstractModel{
         if (source.IsInherit != null) {
             this.IsInherit = new Long(source.IsInherit);
         }
+        if (source.IsSessionStarted != null) {
+            this.IsSessionStarted = new Boolean(source.IsSessionStarted);
+        }
     }
 
 
@@ -1197,6 +1228,7 @@ public class SparkJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DataEngineClusterType", this.DataEngineClusterType);
         this.setParamSimple(map, prefix + "DataEngineImageVersion", this.DataEngineImageVersion);
         this.setParamSimple(map, prefix + "IsInherit", this.IsInherit);
+        this.setParamSimple(map, prefix + "IsSessionStarted", this.IsSessionStarted);
 
     }
 }

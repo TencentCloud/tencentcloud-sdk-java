@@ -87,6 +87,14 @@ public class InstanceStateInfo extends AbstractModel{
     private String RequestId;
 
     /**
+    * 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessSubName")
+    @Expose
+    private String ProcessSubName;
+
+    /**
      * Get 集群状态，例如：Serving
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceState 集群状态，例如：Serving
@@ -246,6 +254,26 @@ public class InstanceStateInfo extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    /**
+     * Get 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessSubName 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProcessSubName() {
+        return this.ProcessSubName;
+    }
+
+    /**
+     * Set 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessSubName 流程的二级名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessSubName(String ProcessSubName) {
+        this.ProcessSubName = ProcessSubName;
+    }
+
     public InstanceStateInfo() {
     }
 
@@ -278,6 +306,9 @@ public class InstanceStateInfo extends AbstractModel{
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.ProcessSubName != null) {
+            this.ProcessSubName = new String(source.ProcessSubName);
+        }
     }
 
 
@@ -293,6 +324,7 @@ public class InstanceStateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowMsg", this.FlowMsg);
         this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "ProcessSubName", this.ProcessSubName);
 
     }
 }

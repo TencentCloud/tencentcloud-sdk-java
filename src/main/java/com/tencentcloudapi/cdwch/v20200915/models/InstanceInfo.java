@@ -362,6 +362,38 @@ Modify 集群变更中；
     private String UpgradeVersions;
 
     /**
+    * ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsIndexId")
+    @Expose
+    private String EsIndexId;
+
+    /**
+    * username
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsIndexUsername")
+    @Expose
+    private String EsIndexUsername;
+
+    /**
+    * password
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EsIndexPassword")
+    @Expose
+    private String EsIndexPassword;
+
+    /**
+    * true
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasEsIndex")
+    @Expose
+    private Boolean HasEsIndex;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1213,6 +1245,86 @@ Modify 集群变更中；
         this.UpgradeVersions = UpgradeVersions;
     }
 
+    /**
+     * Get ex-index
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsIndexId ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsIndexId() {
+        return this.EsIndexId;
+    }
+
+    /**
+     * Set ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsIndexId ex-index
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsIndexId(String EsIndexId) {
+        this.EsIndexId = EsIndexId;
+    }
+
+    /**
+     * Get username
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsIndexUsername username
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsIndexUsername() {
+        return this.EsIndexUsername;
+    }
+
+    /**
+     * Set username
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsIndexUsername username
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsIndexUsername(String EsIndexUsername) {
+        this.EsIndexUsername = EsIndexUsername;
+    }
+
+    /**
+     * Get password
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EsIndexPassword password
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEsIndexPassword() {
+        return this.EsIndexPassword;
+    }
+
+    /**
+     * Set password
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EsIndexPassword password
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEsIndexPassword(String EsIndexPassword) {
+        this.EsIndexPassword = EsIndexPassword;
+    }
+
+    /**
+     * Get true
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasEsIndex true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasEsIndex() {
+        return this.HasEsIndex;
+    }
+
+    /**
+     * Set true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasEsIndex true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasEsIndex(Boolean HasEsIndex) {
+        this.HasEsIndex = HasEsIndex;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1353,6 +1465,18 @@ Modify 集群变更中；
         if (source.UpgradeVersions != null) {
             this.UpgradeVersions = new String(source.UpgradeVersions);
         }
+        if (source.EsIndexId != null) {
+            this.EsIndexId = new String(source.EsIndexId);
+        }
+        if (source.EsIndexUsername != null) {
+            this.EsIndexUsername = new String(source.EsIndexUsername);
+        }
+        if (source.EsIndexPassword != null) {
+            this.EsIndexPassword = new String(source.EsIndexPassword);
+        }
+        if (source.HasEsIndex != null) {
+            this.HasEsIndex = new Boolean(source.HasEsIndex);
+        }
     }
 
 
@@ -1402,6 +1526,10 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "CanAttachCos", this.CanAttachCos);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "UpgradeVersions", this.UpgradeVersions);
+        this.setParamSimple(map, prefix + "EsIndexId", this.EsIndexId);
+        this.setParamSimple(map, prefix + "EsIndexUsername", this.EsIndexUsername);
+        this.setParamSimple(map, prefix + "EsIndexPassword", this.EsIndexPassword);
+        this.setParamSimple(map, prefix + "HasEsIndex", this.HasEsIndex);
 
     }
 }
