@@ -127,7 +127,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String ApproverSource;
 
     /**
-    * 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+    * 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
     */
     @SerializedName("CustomApproverTag")
     @Expose
@@ -444,16 +444,16 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段 
-     * @return CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * Get 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP 
+     * @return CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public String getCustomApproverTag() {
         return this.CustomApproverTag;
     }
 
     /**
-     * Set 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
-     * @param CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+     * Set 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+     * @param CustomApproverTag 客户自定义签署人标识，64位长度，保证唯一。用于发起含有或签签署人的合同。或签参与人必须有此字段。不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public void setCustomApproverTag(String CustomApproverTag) {
         this.CustomApproverTag = CustomApproverTag;

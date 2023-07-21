@@ -181,6 +181,13 @@ video 纯视频
     private Long VideoOrientation;
 
     /**
+    * 开启课后评分。 0：不开启(默认)  1：开启
+    */
+    @SerializedName("IsGradingRequiredPostClass")
+    @Expose
+    private Long IsGradingRequiredPostClass;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -572,6 +579,22 @@ video 纯视频
         this.VideoOrientation = VideoOrientation;
     }
 
+    /**
+     * Get 开启课后评分。 0：不开启(默认)  1：开启 
+     * @return IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     */
+    public Long getIsGradingRequiredPostClass() {
+        return this.IsGradingRequiredPostClass;
+    }
+
+    /**
+     * Set 开启课后评分。 0：不开启(默认)  1：开启
+     * @param IsGradingRequiredPostClass 开启课后评分。 0：不开启(默认)  1：开启
+     */
+    public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
+        this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -643,6 +666,9 @@ video 纯视频
         if (source.VideoOrientation != null) {
             this.VideoOrientation = new Long(source.VideoOrientation);
         }
+        if (source.IsGradingRequiredPostClass != null) {
+            this.IsGradingRequiredPostClass = new Long(source.IsGradingRequiredPostClass);
+        }
     }
 
 
@@ -670,6 +696,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "EnableDirectControl", this.EnableDirectControl);
         this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
+        this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
 
     }
 }

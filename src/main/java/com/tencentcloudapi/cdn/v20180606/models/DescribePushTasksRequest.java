@@ -66,7 +66,7 @@ TaskId 和起始时间必须指定一项
     private Long Limit;
 
     /**
-    * 指定地区查询预热纪录
+    * 指定地区查询预热记录
 mainland：境内
 overseas：境外
 global：全球
@@ -187,11 +187,11 @@ TaskId 和起始时间必须指定一项
     }
 
     /**
-     * Get 指定地区查询预热纪录
+     * Get 指定地区查询预热记录
 mainland：境内
 overseas：境外
 global：全球 
-     * @return Area 指定地区查询预热纪录
+     * @return Area 指定地区查询预热记录
 mainland：境内
 overseas：境外
 global：全球
@@ -201,11 +201,11 @@ global：全球
     }
 
     /**
-     * Set 指定地区查询预热纪录
+     * Set 指定地区查询预热记录
 mainland：境内
 overseas：境外
 global：全球
-     * @param Area 指定地区查询预热纪录
+     * @param Area 指定地区查询预热记录
 mainland：境内
 overseas：境外
 global：全球

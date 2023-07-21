@@ -31,7 +31,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 
     /**
     * 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -76,7 +76,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 
     /**
      * Get 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -85,7 +85,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 <li>private-port， 内网端口。</li>
 <li>description，规则描述。</li> 
      * @return Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -100,7 +100,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 
     /**
      * Set 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
@@ -109,7 +109,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
 <li>private-port， 内网端口。</li>
 <li>description，规则描述。</li>
      * @param Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
+参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5
 <li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
 <li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
 <li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>

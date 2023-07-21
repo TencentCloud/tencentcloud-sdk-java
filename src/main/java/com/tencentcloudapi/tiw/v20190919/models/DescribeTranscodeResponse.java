@@ -118,6 +118,30 @@ public class DescribeTranscodeResponse extends AbstractModel{
     private String Ext;
 
     /**
+    * 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssignTime")
+    @Expose
+    private Long AssignTime;
+
+    /**
+    * 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FinishedTime")
+    @Expose
+    private Long FinishedTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -361,6 +385,66 @@ public class DescribeTranscodeResponse extends AbstractModel{
     }
 
     /**
+     * Get 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 文档转码任务创建时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssignTime 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAssignTime() {
+        return this.AssignTime;
+    }
+
+    /**
+     * Set 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssignTime 文档转码任务分配时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssignTime(Long AssignTime) {
+        this.AssignTime = AssignTime;
+    }
+
+    /**
+     * Get 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FinishedTime 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFinishedTime() {
+        return this.FinishedTime;
+    }
+
+    /**
+     * Set 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FinishedTime 文档转码任务完成时间，单位s
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFinishedTime(Long FinishedTime) {
+        this.FinishedTime = FinishedTime;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -420,6 +504,15 @@ public class DescribeTranscodeResponse extends AbstractModel{
         if (source.Ext != null) {
             this.Ext = new String(source.Ext);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
+        if (source.AssignTime != null) {
+            this.AssignTime = new Long(source.AssignTime);
+        }
+        if (source.FinishedTime != null) {
+            this.FinishedTime = new Long(source.FinishedTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -442,6 +535,9 @@ public class DescribeTranscodeResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CompressFileUrl", this.CompressFileUrl);
         this.setParamSimple(map, prefix + "ResourceListUrl", this.ResourceListUrl);
         this.setParamSimple(map, prefix + "Ext", this.Ext);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssignTime", this.AssignTime);
+        this.setParamSimple(map, prefix + "FinishedTime", this.FinishedTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

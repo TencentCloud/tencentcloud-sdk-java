@@ -51,7 +51,7 @@ public class ModifyWafAutoDenyRulesRequest extends AbstractModel{
     private Long DenyTimeThreshold;
 
     /**
-    * 自动封禁状态
+    * 自动封禁状态，0表示关闭，1表示打开
     */
     @SerializedName("DefenseStatus")
     @Expose
@@ -122,16 +122,16 @@ public class ModifyWafAutoDenyRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 自动封禁状态 
-     * @return DefenseStatus 自动封禁状态
+     * Get 自动封禁状态，0表示关闭，1表示打开 
+     * @return DefenseStatus 自动封禁状态，0表示关闭，1表示打开
      */
     public Long getDefenseStatus() {
         return this.DefenseStatus;
     }
 
     /**
-     * Set 自动封禁状态
-     * @param DefenseStatus 自动封禁状态
+     * Set 自动封禁状态，0表示关闭，1表示打开
+     * @param DefenseStatus 自动封禁状态，0表示关闭，1表示打开
      */
     public void setDefenseStatus(Long DefenseStatus) {
         this.DefenseStatus = DefenseStatus;

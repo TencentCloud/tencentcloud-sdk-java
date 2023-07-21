@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeNatGatewaysRequest extends AbstractModel{
 
     /**
-    * NAT网关统一 ID，形如：`nat-123xx454`。
+    * NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
     */
     @SerializedName("NatGatewayIds")
     @Expose
     private String [] NatGatewayIds;
 
     /**
-    * 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+    * 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
@@ -55,28 +55,28 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get NAT网关统一 ID，形如：`nat-123xx454`。 
-     * @return NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
+     * Get NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。 
+     * @return NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
      */
     public String [] getNatGatewayIds() {
         return this.NatGatewayIds;
     }
 
     /**
-     * Set NAT网关统一 ID，形如：`nat-123xx454`。
-     * @param NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
+     * Set NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
+     * @param NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。每次请求的实例上限为100。参数不支持同时指定NatGatewayIds和Filters。
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
         this.NatGatewayIds = NatGatewayIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * Get 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
 <li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * @return Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
@@ -87,12 +87,12 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * Set 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
 <li>tag-key - String - （过滤条件）标签键，形如：`test-key`。</li>
-     * @param Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
+     * @param Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。每次请求的Filters的上限为10，Filter.Values的上限为5。
 <li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
 <li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
 <li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>

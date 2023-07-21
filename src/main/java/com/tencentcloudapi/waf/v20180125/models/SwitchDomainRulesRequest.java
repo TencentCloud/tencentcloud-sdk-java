@@ -37,14 +37,15 @@ public class SwitchDomainRulesRequest extends AbstractModel{
     private Long [] Ids;
 
     /**
-    * 开关状态
+    * 开关状态，0表示关闭，1表示开启，2表示只观察
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 设置为观察模式原因
+    * 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
     */
     @SerializedName("Reason")
     @Expose
@@ -83,32 +84,36 @@ public class SwitchDomainRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get 开关状态 
-     * @return Status 开关状态
+     * Get 开关状态，0表示关闭，1表示开启，2表示只观察 
+     * @return Status 开关状态，0表示关闭，1表示开启，2表示只观察
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 开关状态
-     * @param Status 开关状态
+     * Set 开关状态，0表示关闭，1表示开启，2表示只观察
+     * @param Status 开关状态，0表示关闭，1表示开启，2表示只观察
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 设置为观察模式原因 
-     * @return Reason 设置为观察模式原因
+     * Get 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他 
+     * @return Reason 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
      */
     public Long getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 设置为观察模式原因
-     * @param Reason 设置为观察模式原因
+     * Set 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
+     * @param Reason 设置为观察模式原因，
+1表示业务自身原因观察，2表示系统规则误报上报，3表示核心业务灰度观察，4表示其他
      */
     public void setReason(Long Reason) {
         this.Reason = Reason;

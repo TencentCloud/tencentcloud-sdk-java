@@ -70,7 +70,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -86,7 +86,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -202,7 +202,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WarnInfos 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -212,7 +212,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -228,7 +228,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WarnInfos 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -238,7 +238,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -254,7 +254,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BackWarnInfos 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -264,7 +264,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -280,7 +280,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BackWarnInfos 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
@@ -290,7 +290,7 @@ public class DetectInfoIdCardData extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警，
+-9106 身份证 PS 告警（疑似存在PS痕迹），
 -9107 身份证反光告警。
 注意：此字段可能返回 null，表示取不到有效值。
      */

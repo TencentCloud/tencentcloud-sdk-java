@@ -100,7 +100,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
     */
@@ -298,7 +298,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104" 
      * @return Warnings 告警信息，当在Config中配置了告警信息会停止人像比对，Result返回错误（FailedOperation.OcrWarningOccurred）并有此告警信息，Code 告警码列表和释义：
@@ -308,7 +308,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
      */
@@ -324,7 +324,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
      * @param Warnings 告警信息，当在Config中配置了告警信息会停止人像比对，Result返回错误（FailedOperation.OcrWarningOccurred）并有此告警信息，Code 告警码列表和释义：
@@ -334,7 +334,7 @@ public class CheckIdCardInformationResponse extends AbstractModel{
 -9103 身份证翻拍告警，
 -9105 身份证框内遮挡告警，
 -9104 临时身份证告警，
--9106 身份证 PS 告警。
+-9106 身份证 PS 告警（疑似存在PS痕迹）。
 -8001 图片模糊告警
 多个会 |  隔开如 "-9101|-9106|-9104"
      */

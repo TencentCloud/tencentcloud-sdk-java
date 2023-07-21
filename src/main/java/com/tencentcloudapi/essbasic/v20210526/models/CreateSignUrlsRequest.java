@@ -120,6 +120,18 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
     private UserInfo Operator;
 
     /**
+    * 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+    */
+    @SerializedName("Hides")
+    @Expose
+    private Long [] Hides;
+
+    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填。
      */
@@ -355,6 +367,42 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.Operator = Operator;
     }
 
+    /**
+     * Get 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮 
+     * @return Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     */
+    public Long [] getHides() {
+        return this.Hides;
+    }
+
+    /**
+     * Set 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     * @param Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     */
+    public void setHides(Long [] Hides) {
+        this.Hides = Hides;
+    }
+
     public CreateSignUrlsRequest() {
     }
 
@@ -405,6 +453,12 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.Hides != null) {
+            this.Hides = new Long[source.Hides.length];
+            for (int i = 0; i < source.Hides.length; i++) {
+                this.Hides[i] = new Long(source.Hides[i]);
+            }
+        }
     }
 
 
@@ -425,6 +479,7 @@ GenerateType为"PERSON"或"FOLLOWER"时必填
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
 
     }
 }

@@ -31,7 +31,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private Long DesiredPodNumber;
 
     /**
-    * GPU驱动相关参数
+    * GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GPUArgs")
@@ -131,9 +131,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get GPU驱动相关参数
+     * Get GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GPUArgs GPU驱动相关参数
+     * @return GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public GPUArgs getGPUArgs() {
@@ -141,9 +141,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Set GPU驱动相关参数
+     * Set GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GPUArgs GPU驱动相关参数
+     * @param GPUArgs GPU驱动相关参数,相关的GPU参数获取:https://cloud.tencent.com/document/api/213/15715
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGPUArgs(GPUArgs GPUArgs) {

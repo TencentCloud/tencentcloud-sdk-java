@@ -251,6 +251,14 @@ public class AgentDealNewElem extends AbstractModel{
     private String [] ResourceIds;
 
     /**
+    * 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RefundMap")
+    @Expose
+    private RefundMap [] RefundMap;
+
+    /**
      * Get 订单自增 ID【请勿依赖该字段作为唯一标识】 
      * @return DealId 订单自增 ID【请勿依赖该字段作为唯一标识】
      */
@@ -814,6 +822,26 @@ public class AgentDealNewElem extends AbstractModel{
         this.ResourceIds = ResourceIds;
     }
 
+    /**
+     * Get 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RefundMap 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RefundMap [] getRefundMap() {
+        return this.RefundMap;
+    }
+
+    /**
+     * Set 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RefundMap 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRefundMap(RefundMap [] RefundMap) {
+        this.RefundMap = RefundMap;
+    }
+
     public AgentDealNewElem() {
     }
 
@@ -915,6 +943,12 @@ public class AgentDealNewElem extends AbstractModel{
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
         }
+        if (source.RefundMap != null) {
+            this.RefundMap = new RefundMap[source.RefundMap.length];
+            for (int i = 0; i < source.RefundMap.length; i++) {
+                this.RefundMap[i] = new RefundMap(source.RefundMap[i]);
+            }
+        }
     }
 
 
@@ -951,6 +985,7 @@ public class AgentDealNewElem extends AbstractModel{
         this.setParamSimple(map, prefix + "PaymentMethod", this.PaymentMethod);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamArrayObj(map, prefix + "RefundMap.", this.RefundMap);
 
     }
 }

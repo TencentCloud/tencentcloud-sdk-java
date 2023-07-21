@@ -247,52 +247,6 @@ DID添加标签
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-获取联盟bcos网络列表
-     * @param req GetConsortiumClusterListRequest
-     * @return GetConsortiumClusterListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetConsortiumClusterListResponse GetConsortiumClusterList(GetConsortiumClusterListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetConsortiumClusterListResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetConsortiumClusterListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetConsortiumClusterList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-获取联盟列表
-     * @param req GetConsortiumListRequest
-     * @return GetConsortiumListResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetConsortiumListResponse GetConsortiumList(GetConsortiumListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetConsortiumListResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetConsortiumListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetConsortiumList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口不再使用
 
 凭证模版详情
@@ -308,29 +262,6 @@ DID添加标签
                 Type type = new TypeToken<JsonResponseModel<GetCptInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetCptInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *下线已有内测接口，待上线正式版本的接口
-
-凭证颁发按机构排行
-     * @param req GetCredentialCptRankRequest
-     * @return GetCredentialCptRankResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetCredentialCptRankResponse GetCredentialCptRank(GetCredentialCptRankRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetCredentialCptRankResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetCredentialCptRankResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetCredentialCptRank");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

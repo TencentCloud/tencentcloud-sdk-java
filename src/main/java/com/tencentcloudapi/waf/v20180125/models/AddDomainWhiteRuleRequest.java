@@ -51,7 +51,7 @@ public class AddDomainWhiteRuleRequest extends AbstractModel{
     private String Function;
 
     /**
-    * 规则的开关
+    * 规则的开关，0表示规则关闭，1表示规则打开
     */
     @SerializedName("Status")
     @Expose
@@ -122,16 +122,16 @@ public class AddDomainWhiteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 规则的开关 
-     * @return Status 规则的开关
+     * Get 规则的开关，0表示规则关闭，1表示规则打开 
+     * @return Status 规则的开关，0表示规则关闭，1表示规则打开
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规则的开关
-     * @param Status 规则的开关
+     * Set 规则的开关，0表示规则关闭，1表示规则打开
+     * @param Status 规则的开关，0表示规则关闭，1表示规则打开
      */
     public void setStatus(Long Status) {
         this.Status = Status;

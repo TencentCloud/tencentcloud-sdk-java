@@ -30,7 +30,7 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+    * 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -44,49 +44,58 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+    * 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 续费标记：0-正常续费（默认）；1-自动续费。
+    * 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 私有网络ID。
+    * 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 已配置的私有网络中的子网ID。
+    * 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 新购实例的实例名称。
+    * 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+    * 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 安全组ID。
+    * 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -100,21 +109,25 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 实例需要绑定的Tag信息，默认为空。
+    * 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-    * 购买多可用区实例时填写。
+    * 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
     */
     @SerializedName("DBNodeSet")
     @Expose
     private DBNode [] DBNodeSet;
 
     /**
-    * 是否自动使用代金券。1（是），0（否），默认不使用。
+    * 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -149,6 +162,17 @@ public class CloneDBInstanceRequest extends AbstractModel{
     private String RecoveryTargetTime;
 
     /**
+    * 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+    */
+    @SerializedName("SyncMode")
+    @Expose
+    private String SyncMode;
+
+    /**
      * Get 克隆的源实例ID。 
      * @return DBInstanceId 克隆的源实例ID。
      */
@@ -165,16 +189,16 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Get 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。 
+     * @return SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
-     * @param SpecCode 售卖规格ID。该参数可以通过调用DescribeProductConfig的返回值中的SpecCode字段来获取。
+     * Set 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+     * @param SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -197,112 +221,148 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。 
-     * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * Get 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1 
+     * @return Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
-     * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * Set 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 续费标记：0-正常续费（默认）；1-自动续费。 
-     * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
+     * Get 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0 
+     * @return AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 续费标记：0-正常续费（默认）；1-自动续费。
-     * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费。
+     * Set 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+     * @param AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 私有网络ID。 
-     * @return VpcId 私有网络ID。
+     * Get 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。 
+     * @return VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID。
-     * @param VpcId 私有网络ID。
+     * Set 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @param VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 已配置的私有网络中的子网ID。 
-     * @return SubnetId 已配置的私有网络中的子网ID。
+     * Get 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。 
+     * @return SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 已配置的私有网络中的子网ID。
-     * @param SubnetId 已配置的私有网络中的子网ID。
+     * Set 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * @param SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 新购实例的实例名称。 
-     * @return Name 新购实例的实例名称。
+     * Get 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。 
+     * @return Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 新购实例的实例名称。
-     * @param Name 新购实例的实例名称。
+     * Set 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
+     * @param Name 新购的实例名称，仅支持长度小于60的中文/英文/数字/"_"/"-"，不指定实例名称则默认显示"未命名"。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。 
-     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Get 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID 
+     * @return InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
-     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
+     * Set 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
+     * @param InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月
+<li>POSTPAID_BY_HOUR：后付费，即按量计费
+默认值：PREPAID
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 安全组ID。 
-     * @return SecurityGroupIds 安全组ID。
+     * Get 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+ 
+     * @return SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组ID。
-     * @param SecurityGroupIds 安全组ID。
+     * Set 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+     * @param SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
@@ -325,48 +385,64 @@ public class CloneDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例需要绑定的Tag信息，默认为空。 
-     * @return TagList 实例需要绑定的Tag信息，默认为空。
+     * Get 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。 
+     * @return TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例需要绑定的Tag信息，默认为空。
-     * @param TagList 实例需要绑定的Tag信息，默认为空。
+     * Set 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * @param TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 购买多可用区实例时填写。 
-     * @return DBNodeSet 购买多可用区实例时填写。
+     * Get 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
+     * @return DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set 购买多可用区实例时填写。
-     * @param DBNodeSet 购买多可用区实例时填写。
+     * Set 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param DBNodeSet 实例节点部署信息，支持多可用区部署时需要指定每个节点的部署可用区信息。
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
     }
 
     /**
-     * Get 是否自动使用代金券。1（是），0（否），默认不使用。 
-     * @return AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * Get 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0 
+     * @return AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券。1（是），0（否），默认不使用。
-     * @param AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * Set 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+     * @param AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -434,6 +510,38 @@ public class CloneDBInstanceRequest extends AbstractModel{
      */
     public void setRecoveryTargetTime(String RecoveryTargetTime) {
         this.RecoveryTargetTime = RecoveryTargetTime;
+    }
+
+    /**
+     * Get 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async 
+     * @return SyncMode 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+     */
+    public String getSyncMode() {
+        return this.SyncMode;
+    }
+
+    /**
+     * Set 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+     * @param SyncMode 主从同步方式，支持： 
+<li>Semi-sync：半同步
+<li>Async：异步
+主实例默认值：Semi-sync
+只读实例默认值：Async
+     */
+    public void setSyncMode(String SyncMode) {
+        this.SyncMode = SyncMode;
     }
 
     public CloneDBInstanceRequest() {
@@ -507,6 +615,9 @@ public class CloneDBInstanceRequest extends AbstractModel{
         if (source.RecoveryTargetTime != null) {
             this.RecoveryTargetTime = new String(source.RecoveryTargetTime);
         }
+        if (source.SyncMode != null) {
+            this.SyncMode = new String(source.SyncMode);
+        }
     }
 
 
@@ -532,6 +643,7 @@ public class CloneDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
         this.setParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
+        this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
 
     }
 }

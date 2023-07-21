@@ -30,7 +30,7 @@ public class DescribeCustomWhiteRuleRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * 偏移
+    * 偏移量
     */
     @SerializedName("Offset")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeCustomWhiteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 偏移量 
+     * @return Offset 偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 偏移量
+     * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

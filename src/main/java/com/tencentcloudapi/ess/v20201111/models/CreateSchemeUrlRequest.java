@@ -96,6 +96,18 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private Agent Agent;
 
     /**
+    * 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+    */
+    @SerializedName("Hides")
+    @Expose
+    private Long [] Hides;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -267,6 +279,42 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         this.Agent = Agent;
     }
 
+    /**
+     * Get 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮 
+     * @return Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     */
+    public Long [] getHides() {
+        return this.Hides;
+    }
+
+    /**
+     * Set 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     * @param Hides 生成的签署链接在签署过程隐藏的按钮列表, 可以设置隐藏的按钮列表如下
+
+0:合同签署页面更多操作按钮
+1:合同签署页面更多操作的拒绝签署按钮
+2:合同签署页面更多操作的转他人处理按钮
+3:签署成功页的查看详情按钮
+     */
+    public void setHides(Long [] Hides) {
+        this.Hides = Hides;
+    }
+
     public CreateSchemeUrlRequest() {
     }
 
@@ -305,6 +353,12 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.Hides != null) {
+            this.Hides = new Long[source.Hides.length];
+            for (int i = 0; i < source.Hides.length; i++) {
+                this.Hides[i] = new Long(source.Hides[i]);
+            }
+        }
     }
 
 
@@ -322,6 +376,7 @@ APP：第三方APP或小程序跳转电子签小程序的path。
         this.setParamSimple(map, prefix + "PathType", this.PathType);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamArraySimple(map, prefix + "Hides.", this.Hides);
 
     }
 }

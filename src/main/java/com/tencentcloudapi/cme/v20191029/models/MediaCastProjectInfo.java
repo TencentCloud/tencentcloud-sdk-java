@@ -74,6 +74,13 @@ public class MediaCastProjectInfo extends AbstractModel{
     private String StopTime;
 
     /**
+    * 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+    */
+    @SerializedName("Duration")
+    @Expose
+    private Float Duration;
+
+    /**
      * Get 点播转直播项目状态，取值有：
 <li>Working ：运行中；</li>
 <li>Idle ：空闲。</li> 
@@ -193,6 +200,22 @@ public class MediaCastProjectInfo extends AbstractModel{
         this.StopTime = StopTime;
     }
 
+    /**
+     * Get 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。 
+     * @return Duration 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+     */
+    public Float getDuration() {
+        return this.Duration;
+    }
+
+    /**
+     * Set 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+     * @param Duration 推流时长，单位：秒。项目结束后，返回上次项目运行时的推流时长。如果项目是 Working 状态，返回的时长是0。
+     */
+    public void setDuration(Float Duration) {
+        this.Duration = Duration;
+    }
+
     public MediaCastProjectInfo() {
     }
 
@@ -228,6 +251,9 @@ public class MediaCastProjectInfo extends AbstractModel{
         if (source.StopTime != null) {
             this.StopTime = new String(source.StopTime);
         }
+        if (source.Duration != null) {
+            this.Duration = new Float(source.Duration);
+        }
     }
 
 
@@ -242,6 +268,7 @@ public class MediaCastProjectInfo extends AbstractModel{
         this.setParamObj(map, prefix + "PlaySetting.", this.PlaySetting);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "StopTime", this.StopTime);
+        this.setParamSimple(map, prefix + "Duration", this.Duration);
 
     }
 }

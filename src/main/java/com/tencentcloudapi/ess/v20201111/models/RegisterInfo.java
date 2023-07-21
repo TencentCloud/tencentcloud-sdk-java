@@ -37,6 +37,13 @@ public class RegisterInfo extends AbstractModel{
     private String Uscc;
 
     /**
+    * 社会统一信用代码
+    */
+    @SerializedName("UnifiedSocialCreditCode")
+    @Expose
+    private String UnifiedSocialCreditCode;
+
+    /**
      * Get 法人姓名 
      * @return LegalName 法人姓名
      */
@@ -55,7 +62,9 @@ public class RegisterInfo extends AbstractModel{
     /**
      * Get 社会统一信用代码 
      * @return Uscc 社会统一信用代码
+     * @deprecated
      */
+    @Deprecated
     public String getUscc() {
         return this.Uscc;
     }
@@ -63,9 +72,27 @@ public class RegisterInfo extends AbstractModel{
     /**
      * Set 社会统一信用代码
      * @param Uscc 社会统一信用代码
+     * @deprecated
      */
+    @Deprecated
     public void setUscc(String Uscc) {
         this.Uscc = Uscc;
+    }
+
+    /**
+     * Get 社会统一信用代码 
+     * @return UnifiedSocialCreditCode 社会统一信用代码
+     */
+    public String getUnifiedSocialCreditCode() {
+        return this.UnifiedSocialCreditCode;
+    }
+
+    /**
+     * Set 社会统一信用代码
+     * @param UnifiedSocialCreditCode 社会统一信用代码
+     */
+    public void setUnifiedSocialCreditCode(String UnifiedSocialCreditCode) {
+        this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;
     }
 
     public RegisterInfo() {
@@ -82,6 +109,9 @@ public class RegisterInfo extends AbstractModel{
         if (source.Uscc != null) {
             this.Uscc = new String(source.Uscc);
         }
+        if (source.UnifiedSocialCreditCode != null) {
+            this.UnifiedSocialCreditCode = new String(source.UnifiedSocialCreditCode);
+        }
     }
 
 
@@ -91,6 +121,7 @@ public class RegisterInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LegalName", this.LegalName);
         this.setParamSimple(map, prefix + "Uscc", this.Uscc);
+        this.setParamSimple(map, prefix + "UnifiedSocialCreditCode", this.UnifiedSocialCreditCode);
 
     }
 }
