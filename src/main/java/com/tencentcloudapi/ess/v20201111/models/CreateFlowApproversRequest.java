@@ -51,6 +51,15 @@ public class CreateFlowApproversRequest extends AbstractModel{
     private String Initiator;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作
+
+
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -114,6 +123,30 @@ public class CreateFlowApproversRequest extends AbstractModel{
         this.Initiator = Initiator;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作
+
+ 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作
+
+
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作
+
+
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作
+
+
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateFlowApproversRequest() {
     }
 
@@ -137,6 +170,9 @@ public class CreateFlowApproversRequest extends AbstractModel{
         if (source.Initiator != null) {
             this.Initiator = new String(source.Initiator);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -148,6 +184,7 @@ public class CreateFlowApproversRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "Initiator", this.Initiator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

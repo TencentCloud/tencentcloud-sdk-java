@@ -39,30 +39,6 @@ public class TdidClient extends AbstractClient{
     }
 
     /**
-     *下线已有内测接口，待上线正式版本的接口
-
-DID添加标签
-
-     * @param req AddLabelRequest
-     * @return AddLabelResponse
-     * @throws TencentCloudSDKException
-     */
-    public AddLabelResponse AddLabel(AddLabelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddLabelResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<AddLabelResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AddLabel");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *该接口不再使用
 
 检查区块链信息
@@ -193,29 +169,6 @@ DID添加标签
                 Type type = new TypeToken<JsonResponseModel<CreateTDidByPublicKeyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateTDidByPublicKey");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *该接口已废弃
-
-本机构DID详情
-     * @param req GetAgencyTDidRequest
-     * @return GetAgencyTDidResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetAgencyTDidResponse GetAgencyTDid(GetAgencyTDidRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAgencyTDidResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetAgencyTDidResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetAgencyTDid");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

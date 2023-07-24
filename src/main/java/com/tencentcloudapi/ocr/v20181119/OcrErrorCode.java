@@ -1,6 +1,6 @@
 package com.tencentcloudapi.ocr.v20181119;
 public enum OcrErrorCode {
-    // 帐号已欠费。
+    // 账号已欠费。
      FAILEDOPERATION_ARREARSERROR("FailedOperation.ArrearsError"),
      
     // 身份证CardSide类型错误

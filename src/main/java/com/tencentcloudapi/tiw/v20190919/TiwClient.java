@@ -612,6 +612,27 @@ public class TiwClient extends AbstractClient{
     }
 
     /**
+     *通过文档URL查询转码任务，返回最近的一次转码结果
+     * @param req DescribeTranscodeByUrlRequest
+     * @return DescribeTranscodeByUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTranscodeByUrlResponse DescribeTranscodeByUrl(DescribeTranscodeByUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTranscodeByUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeByUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTranscodeByUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *查询文档转码回调地址
      * @param req DescribeTranscodeCallbackRequest
      * @return DescribeTranscodeCallbackResponse

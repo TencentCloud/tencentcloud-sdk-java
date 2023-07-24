@@ -45,7 +45,7 @@ public class CarInvoiceInfo extends AbstractModel{
     private Rect Rect;
 
     /**
-    * 字段在原图中的中的四点坐标。
+    * 字段在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -106,10 +106,10 @@ public class CarInvoiceInfo extends AbstractModel{
     }
 
     /**
-     * Get 字段在原图中的中的四点坐标。
+     * Get 字段在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Polygon 字段在原图中的中的四点坐标。
+     * @return Polygon 字段在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -118,10 +118,10 @@ public class CarInvoiceInfo extends AbstractModel{
     }
 
     /**
-     * Set 字段在原图中的中的四点坐标。
+     * Set 字段在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Polygon 字段在原图中的中的四点坐标。
+     * @param Polygon 字段在原图中的四点坐标。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */

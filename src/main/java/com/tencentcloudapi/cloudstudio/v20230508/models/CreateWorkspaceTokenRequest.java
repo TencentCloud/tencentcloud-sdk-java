@@ -37,6 +37,13 @@ public class CreateWorkspaceTokenRequest extends AbstractModel{
     private Long TokenExpiredLimitSec;
 
     /**
+    * token 授权策略，可选值为 workspace-run-only, all。默认为 all
+    */
+    @SerializedName("Policies")
+    @Expose
+    private String [] Policies;
+
+    /**
      * Get 工作空间 SpaceKey 
      * @return SpaceKey 工作空间 SpaceKey
      */
@@ -68,6 +75,22 @@ public class CreateWorkspaceTokenRequest extends AbstractModel{
         this.TokenExpiredLimitSec = TokenExpiredLimitSec;
     }
 
+    /**
+     * Get token 授权策略，可选值为 workspace-run-only, all。默认为 all 
+     * @return Policies token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     */
+    public String [] getPolicies() {
+        return this.Policies;
+    }
+
+    /**
+     * Set token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     * @param Policies token 授权策略，可选值为 workspace-run-only, all。默认为 all
+     */
+    public void setPolicies(String [] Policies) {
+        this.Policies = Policies;
+    }
+
     public CreateWorkspaceTokenRequest() {
     }
 
@@ -82,6 +105,12 @@ public class CreateWorkspaceTokenRequest extends AbstractModel{
         if (source.TokenExpiredLimitSec != null) {
             this.TokenExpiredLimitSec = new Long(source.TokenExpiredLimitSec);
         }
+        if (source.Policies != null) {
+            this.Policies = new String[source.Policies.length];
+            for (int i = 0; i < source.Policies.length; i++) {
+                this.Policies[i] = new String(source.Policies[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class CreateWorkspaceTokenRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpaceKey", this.SpaceKey);
         this.setParamSimple(map, prefix + "TokenExpiredLimitSec", this.TokenExpiredLimitSec);
+        this.setParamArraySimple(map, prefix + "Policies.", this.Policies);
 
     }
 }

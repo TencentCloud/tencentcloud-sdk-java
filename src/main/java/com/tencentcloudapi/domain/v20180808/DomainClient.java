@@ -123,6 +123,27 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *创建赎回订单。
+     * @param req CreateDomainRedemptionRequest
+     * @return CreateDomainRedemptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDomainRedemptionResponse CreateDomainRedemption(CreateDomainRedemptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDomainRedemptionResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDomainRedemptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDomainRedemption");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *此接口用于创建有效的手机、邮箱
      * @param req CreatePhoneEmailRequest
      * @return CreatePhoneEmailResponse

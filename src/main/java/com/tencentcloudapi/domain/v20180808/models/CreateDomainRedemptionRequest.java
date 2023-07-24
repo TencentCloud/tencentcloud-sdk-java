@@ -13,23 +13,49 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.domain.v20180808.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RWInstanceInfo extends AbstractModel{
+public class CreateDomainRedemptionRequest extends AbstractModel{
 
-    public RWInstanceInfo() {
+    /**
+    * 域名 ID
+    */
+    @SerializedName("DomainId")
+    @Expose
+    private String DomainId;
+
+    /**
+     * Get 域名 ID 
+     * @return DomainId 域名 ID
+     */
+    public String getDomainId() {
+        return this.DomainId;
+    }
+
+    /**
+     * Set 域名 ID
+     * @param DomainId 域名 ID
+     */
+    public void setDomainId(String DomainId) {
+        this.DomainId = DomainId;
+    }
+
+    public CreateDomainRedemptionRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RWInstanceInfo(RWInstanceInfo source) {
+    public CreateDomainRedemptionRequest(CreateDomainRedemptionRequest source) {
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class RWInstanceInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
 
     }
 }

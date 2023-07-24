@@ -46,6 +46,20 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
     private String CustomUserId;
 
     /**
+    * 补充签署人姓名
+    */
+    @SerializedName("ApproverName")
+    @Expose
+    private String ApproverName;
+
+    /**
+    * 补充签署人手机号
+    */
+    @SerializedName("ApproverMobile")
+    @Expose
+    private String ApproverMobile;
+
+    /**
      * Get 对应模板中的参与方ID 
      * @return RecipientId 对应模板中的参与方ID
      */
@@ -101,6 +115,38 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
         this.CustomUserId = CustomUserId;
     }
 
+    /**
+     * Get 补充签署人姓名 
+     * @return ApproverName 补充签署人姓名
+     */
+    public String getApproverName() {
+        return this.ApproverName;
+    }
+
+    /**
+     * Set 补充签署人姓名
+     * @param ApproverName 补充签署人姓名
+     */
+    public void setApproverName(String ApproverName) {
+        this.ApproverName = ApproverName;
+    }
+
+    /**
+     * Get 补充签署人手机号 
+     * @return ApproverMobile 补充签署人手机号
+     */
+    public String getApproverMobile() {
+        return this.ApproverMobile;
+    }
+
+    /**
+     * Set 补充签署人手机号
+     * @param ApproverMobile 补充签署人手机号
+     */
+    public void setApproverMobile(String ApproverMobile) {
+        this.ApproverMobile = ApproverMobile;
+    }
+
     public FillApproverInfo() {
     }
 
@@ -118,6 +164,12 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
         if (source.CustomUserId != null) {
             this.CustomUserId = new String(source.CustomUserId);
         }
+        if (source.ApproverName != null) {
+            this.ApproverName = new String(source.ApproverName);
+        }
+        if (source.ApproverMobile != null) {
+            this.ApproverMobile = new String(source.ApproverMobile);
+        }
     }
 
 
@@ -128,6 +180,8 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
         this.setParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
+        this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
+        this.setParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
 
     }
 }

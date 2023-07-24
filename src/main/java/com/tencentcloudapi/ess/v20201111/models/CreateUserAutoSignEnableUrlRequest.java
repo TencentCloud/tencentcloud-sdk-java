@@ -73,6 +73,13 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private Long ExpiredTime;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 操作人信息,UserId必填 
      * @return Operator 操作人信息,UserId必填
      */
@@ -188,6 +195,22 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.ExpiredTime = ExpiredTime;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreateUserAutoSignEnableUrlRequest() {
     }
 
@@ -217,6 +240,9 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         if (source.ExpiredTime != null) {
             this.ExpiredTime = new Long(source.ExpiredTime);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -231,6 +257,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyAddress", this.NotifyAddress);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

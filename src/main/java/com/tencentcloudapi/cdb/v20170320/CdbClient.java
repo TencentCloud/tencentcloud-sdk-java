@@ -1112,29 +1112,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
-
-查询数据库代理（待下线，替换接口QueryCDBProxy）
-     * @param req DescribeCDBProxyRequest
-     * @return DescribeCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCDBProxyResponse DescribeCDBProxy(DescribeCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCDBProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *查询数据库代理详情信息
      * @param req DescribeCdbProxyInfoRequest
      * @return DescribeCdbProxyInfoResponse
@@ -1676,29 +1653,6 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
-
-获取数据库代理连接池相关规格配置
-     * @param req DescribeProxyConnectionPoolConfRequest
-     * @return DescribeProxyConnectionPoolConfResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConf(DescribeProxyConnectionPoolConfRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProxyConnectionPoolConf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2343,52 +2297,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
-
-请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
-     * @param req ModifyCDBProxyConnectionPoolRequest
-     * @return ModifyCDBProxyConnectionPoolResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(ModifyCDBProxyConnectionPoolRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDBProxyConnectionPool");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
-
-修改数据库代理VIP或端口
-     * @param req ModifyCDBProxyVipVPortRequest
-     * @return ModifyCDBProxyVipVPortResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(ModifyCDBProxyVipVPortRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDBProxyVipVPort");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *修改代理地址描述信息
      * @param req ModifyCdbProxyAddressDescRequest
      * @return ModifyCdbProxyAddressDescResponse
@@ -2838,29 +2746,6 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenWanServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenWanService");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
-
-查询代理详情
-     * @param req QueryCDBProxyRequest
-     * @return QueryCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryCDBProxyResponse QueryCDBProxy(QueryCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryCDBProxy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,6 +30,20 @@ public class DescribeThirdPartyAuthCodeRequest extends AbstractModel{
     private String AuthCode;
 
     /**
+    * 操作人信息
+    */
+    @SerializedName("Operator")
+    @Expose
+    private UserInfo Operator;
+
+    /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 电子签小程序跳转客户小程序时携带的授权查看码 
      * @return AuthCode 电子签小程序跳转客户小程序时携带的授权查看码
      */
@@ -45,6 +59,38 @@ public class DescribeThirdPartyAuthCodeRequest extends AbstractModel{
         this.AuthCode = AuthCode;
     }
 
+    /**
+     * Get 操作人信息 
+     * @return Operator 操作人信息
+     */
+    public UserInfo getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set 操作人信息
+     * @param Operator 操作人信息
+     */
+    public void setOperator(UserInfo Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DescribeThirdPartyAuthCodeRequest() {
     }
 
@@ -56,6 +102,12 @@ public class DescribeThirdPartyAuthCodeRequest extends AbstractModel{
         if (source.AuthCode != null) {
             this.AuthCode = new String(source.AuthCode);
         }
+        if (source.Operator != null) {
+            this.Operator = new UserInfo(source.Operator);
+        }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DescribeThirdPartyAuthCodeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuthCode", this.AuthCode);
+        this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

@@ -46,7 +46,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
     /**
     * 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
     */
     @SerializedName("ApplyType")
     @Expose
@@ -103,10 +103,10 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
     /**
      * Get 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。 
+<li>none：不托管EO；</li>不填，默认取值为none。 
      * @return ApplyType 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
      */
     public String getApplyType() {
         return this.ApplyType;
@@ -115,10 +115,10 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
     /**
      * Set 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
      * @param ApplyType 托管类型，取值有：
 <li>apply：托管EO；</li>
-<li>none：不托管EO；</li>不填，默认取值为apply。
+<li>none：不托管EO；</li>不填，默认取值为none。
      */
     public void setApplyType(String ApplyType) {
         this.ApplyType = ApplyType;

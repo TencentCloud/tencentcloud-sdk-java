@@ -44,6 +44,13 @@ public class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel{
     private String OpenId;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定(参数用法参考示例) 
      * @return Operator 用户信息，OpenId与UserId二选一必填一个，OpenId是第三方客户ID，userId是用户实名后的电子签生成的ID,当传入客户系统openId，传入的openId需与电子签员工userId绑定，且参数Channel必填，Channel值为INTEGRATE；当传入参数UserId，Channel无需指定(参数用法参考示例)
      */
@@ -91,6 +98,22 @@ public class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel{
         this.OpenId = OpenId;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public UnbindEmployeeUserIdWithClientOpenIdRequest() {
     }
 
@@ -108,6 +131,9 @@ public class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel{
         if (source.OpenId != null) {
             this.OpenId = new String(source.OpenId);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class UnbindEmployeeUserIdWithClientOpenIdRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

@@ -45,6 +45,13 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private UserThreeFactor UserInfo;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 操作人信息，UserId必填 
      * @return Operator 操作人信息，UserId必填
      */
@@ -96,6 +103,22 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.UserInfo = UserInfo;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public DescribeUserAutoSignStatusRequest() {
     }
 
@@ -113,6 +136,9 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         if (source.UserInfo != null) {
             this.UserInfo = new UserThreeFactor(source.UserInfo);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -123,6 +149,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "SceneKey", this.SceneKey);
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }
