@@ -63,7 +63,7 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
     private Encryption Encryption;
 
     /**
-    * 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+    * 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionVerifyData")
@@ -186,9 +186,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
     }
 
     /**
-     * Get 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Get 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionVerifyData getIntentionVerifyData() {
@@ -196,9 +196,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel{
     }
 
     /**
-     * Set 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Set 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyData 意愿核身相关信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionVerifyData(IntentionVerifyData IntentionVerifyData) {

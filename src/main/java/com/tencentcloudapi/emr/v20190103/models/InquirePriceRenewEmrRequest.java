@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquirePriceRenewEmrRequest extends AbstractModel{
 
     /**
-    * 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+    * 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -67,16 +67,16 @@ public class InquirePriceRenewEmrRequest extends AbstractModel{
     private String Currency;
 
     /**
-     * Get 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月 
-     * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+     * Get 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月 
+     * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
-     * @param TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费1一个月
+     * Set 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
+     * @param TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

@@ -53,7 +53,7 @@ CreateFlowsByTemplates 接口不使用此字段。
     private String ComponentName;
 
     /**
-    * 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
+    * 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockComponentValue")
@@ -145,9 +145,9 @@ CreateFlowsByTemplates 接口不使用此字段。
     }
 
     /**
-     * Get 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
+     * Get 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LockComponentValue 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
+     * @return LockComponentValue 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getLockComponentValue() {
@@ -155,9 +155,9 @@ CreateFlowsByTemplates 接口不使用此字段。
     }
 
     /**
-     * Set 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
+     * Set 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LockComponentValue 是否锁定模版控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
+     * @param LockComponentValue 是否锁定模板控件值，锁定后无法修改（用于嵌入式发起合同），true-锁定，false-不锁定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockComponentValue(Boolean LockComponentValue) {

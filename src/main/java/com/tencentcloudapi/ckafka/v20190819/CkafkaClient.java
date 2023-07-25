@@ -1469,6 +1469,27 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *按量实例缩容
+     * @param req InstanceScalingDownRequest
+     * @return InstanceScalingDownResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstanceScalingDownResponse InstanceScalingDown(InstanceScalingDownRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstanceScalingDownResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstanceScalingDownResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstanceScalingDown");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *修改AC策略，目前只支持预设规则的是否应用到新增topic这一项的修改
      * @param req ModifyAclRuleRequest
      * @return ModifyAclRuleResponse

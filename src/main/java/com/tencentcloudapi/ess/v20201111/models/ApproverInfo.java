@@ -138,7 +138,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     * 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
     */
     @SerializedName("ApproverVerifyTypes")
     @Expose
@@ -148,7 +148,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     * 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
     */
     @SerializedName("ApproverSignTypes")
     @Expose
@@ -433,11 +433,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * Get 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
-模板发起的时候,认证方式以模版配置为主 
+模板发起的时候,认证方式以模板配置为主 
      * @return ApproverVerifyTypes 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      */
     public Long [] getApproverVerifyTypes() {
         return this.ApproverVerifyTypes;
@@ -447,11 +447,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * Set 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      * @param ApproverVerifyTypes 签署人查看合同时认证方式, 
 1-实名查看 2-短信验证码查看(企业签署方不支持该方式)
 如果不传默认为1
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      */
     public void setApproverVerifyTypes(Long [] ApproverVerifyTypes) {
         this.ApproverVerifyTypes = ApproverVerifyTypes;
@@ -461,11 +461,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * Get 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模版配置为主 
+模板发起的时候,认证方式以模板配置为主 
      * @return ApproverSignTypes 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      */
     public Long [] getApproverSignTypes() {
         return this.ApproverSignTypes;
@@ -475,11 +475,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
      * Set 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      * @param ApproverSignTypes 签署人签署合同时的认证方式
 1-人脸认证 2-签署密码 3-运营商三要素(默认为1,2)
 合同签署认证方式的优先级 verifyChannel>approverSignTypes
-模板发起的时候,认证方式以模版配置为主
+模板发起的时候,认证方式以模板配置为主
      */
     public void setApproverSignTypes(Long [] ApproverSignTypes) {
         this.ApproverSignTypes = ApproverSignTypes;

@@ -25,7 +25,7 @@ public class TextToImageRequest extends AbstractModel{
     /**
     * 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
     */
     @SerializedName("Prompt")
     @Expose
@@ -34,7 +34,7 @@ public class TextToImageRequest extends AbstractModel{
     /**
     * 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -44,7 +44,6 @@ public class TextToImageRequest extends AbstractModel{
     * 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
     */
     @SerializedName("Styles")
     @Expose
@@ -77,12 +76,19 @@ public class TextToImageRequest extends AbstractModel{
     private LogoParam LogoParam;
 
     /**
+    * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+    */
+    @SerializedName("RspImgType")
+    @Expose
+    private String RspImgType;
+
+    /**
      * Get 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。 
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。 
      * @return Prompt 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
      */
     public String getPrompt() {
         return this.Prompt;
@@ -91,10 +97,10 @@ public class TextToImageRequest extends AbstractModel{
     /**
      * Set 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
      * @param Prompt 文本描述。
 算法将根据输入的文本智能生成与之相关的图像。建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。
-不能为空，推荐使用中文。最多可传512个 utf-8 字符。
+不能为空，推荐使用中文。最多可传256个 utf-8 字符。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -103,10 +109,10 @@ public class TextToImageRequest extends AbstractModel{
     /**
      * Get 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。 
+推荐使用中文。最多可传256个 utf-8 字符。 
      * @return NegativePrompt 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
@@ -115,10 +121,10 @@ public class TextToImageRequest extends AbstractModel{
     /**
      * Set 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      * @param NegativePrompt 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
@@ -127,12 +133,10 @@ public class TextToImageRequest extends AbstractModel{
     /**
      * Get 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。 
+推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。 
      * @return Styles 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      */
     public String [] getStyles() {
         return this.Styles;
@@ -142,11 +146,9 @@ public class TextToImageRequest extends AbstractModel{
      * Set 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      * @param Styles 绘画风格。
 请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      */
     public void setStyles(String [] Styles) {
         this.Styles = Styles;
@@ -220,6 +222,22 @@ public class TextToImageRequest extends AbstractModel{
         this.LogoParam = LogoParam;
     }
 
+    /**
+     * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 
+     * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     */
+    public String getRspImgType() {
+        return this.RspImgType;
+    }
+
+    /**
+     * Set 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @param RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     */
+    public void setRspImgType(String RspImgType) {
+        this.RspImgType = RspImgType;
+    }
+
     public TextToImageRequest() {
     }
 
@@ -249,6 +267,9 @@ public class TextToImageRequest extends AbstractModel{
         if (source.LogoParam != null) {
             this.LogoParam = new LogoParam(source.LogoParam);
         }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
     }
 
 
@@ -262,6 +283,7 @@ public class TextToImageRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ResultConfig.", this.ResultConfig);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
+        this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
 
     }
 }

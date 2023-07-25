@@ -30,7 +30,7 @@ public class SearchAttackLogResponse extends AbstractModel{
     private Long Count;
 
     /**
-    * 翻页游标，如果没有下一页了，这个参数为空""
+    * 接口升级，此字段无效，默认返回空字符串
     */
     @SerializedName("Context")
     @Expose
@@ -81,16 +81,16 @@ public class SearchAttackLogResponse extends AbstractModel{
     }
 
     /**
-     * Get 翻页游标，如果没有下一页了，这个参数为空"" 
-     * @return Context 翻页游标，如果没有下一页了，这个参数为空""
+     * Get 接口升级，此字段无效，默认返回空字符串 
+     * @return Context 接口升级，此字段无效，默认返回空字符串
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 翻页游标，如果没有下一页了，这个参数为空""
-     * @param Context 翻页游标，如果没有下一页了，这个参数为空""
+     * Set 接口升级，此字段无效，默认返回空字符串
+     * @param Context 接口升级，此字段无效，默认返回空字符串
      */
     public void setContext(String Context) {
         this.Context = Context;

@@ -37,7 +37,7 @@ public class DescribeHiveQueriesRequest extends AbstractModel{
     private Long StartTime;
 
     /**
-    * 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+    * 结束时间秒，EndTime-StartTime不得超过1天秒数86400
     */
     @SerializedName("EndTime")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeHiveQueriesRequest extends AbstractModel{
     }
 
     /**
-     * Get 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600 
-     * @return EndTime 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+     * Get 结束时间秒，EndTime-StartTime不得超过1天秒数86400 
+     * @return EndTime 结束时间秒，EndTime-StartTime不得超过1天秒数86400
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
-     * @param EndTime 结束时间秒，EndTime-StartTime不得超过31天秒数31*24*3600
+     * Set 结束时间秒，EndTime-StartTime不得超过1天秒数86400
+     * @param EndTime 结束时间秒，EndTime-StartTime不得超过1天秒数86400
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchAccessLogResponse extends AbstractModel{
 
     /**
-    * 加载后续内容的Context
+    * 新接口此字段失效，默认返回空字符串
     */
     @SerializedName("Context")
     @Expose
@@ -78,16 +78,16 @@ public class SearchAccessLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 加载后续内容的Context 
-     * @return Context 加载后续内容的Context
+     * Get 新接口此字段失效，默认返回空字符串 
+     * @return Context 新接口此字段失效，默认返回空字符串
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载后续内容的Context
-     * @param Context 加载后续内容的Context
+     * Set 新接口此字段失效，默认返回空字符串
+     * @param Context 新接口此字段失效，默认返回空字符串
      */
     public void setContext(String Context) {
         this.Context = Context;

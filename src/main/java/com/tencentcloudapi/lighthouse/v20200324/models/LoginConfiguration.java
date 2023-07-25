@@ -40,6 +40,13 @@ public class LoginConfiguration extends AbstractModel{
     private String Password;
 
     /**
+    * 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+    */
+    @SerializedName("KeyIds")
+    @Expose
+    private String [] KeyIds;
+
+    /**
      * Get <li>"YES"代表选择自动生成密码，这时不指定Password字段。</li>
 <li>"NO"代表选择自定义密码，这时要指定Password字段。</li> 
      * @return AutoGeneratePassword <li>"YES"代表选择自动生成密码，这时不指定Password字段。</li>
@@ -83,6 +90,22 @@ public class LoginConfiguration extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。 
+     * @return KeyIds 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+     */
+    public String [] getKeyIds() {
+        return this.KeyIds;
+    }
+
+    /**
+     * Set 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+     * @param KeyIds 密钥ID列表，最多同时指定5个密钥。关联密钥后，就可以通过对应的私钥来访问实例。密钥与密码不能同时指定，同时WINDOWS操作系统不支持指定密钥。密钥ID列表可以通过[DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540)接口获取。
+     */
+    public void setKeyIds(String [] KeyIds) {
+        this.KeyIds = KeyIds;
+    }
+
     public LoginConfiguration() {
     }
 
@@ -97,6 +120,12 @@ public class LoginConfiguration extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.KeyIds != null) {
+            this.KeyIds = new String[source.KeyIds.length];
+            for (int i = 0; i < source.KeyIds.length; i++) {
+                this.KeyIds[i] = new String(source.KeyIds[i]);
+            }
+        }
     }
 
 
@@ -106,6 +135,7 @@ public class LoginConfiguration extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoGeneratePassword", this.AutoGeneratePassword);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
 
     }
 }

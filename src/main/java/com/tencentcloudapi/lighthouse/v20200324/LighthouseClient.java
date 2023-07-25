@@ -705,6 +705,90 @@ public class LighthouseClient extends AbstractClient{
     }
 
     /**
+     *查询实例内的Docker活动列表。
+     * @param req DescribeDockerActivitiesRequest
+     * @return DescribeDockerActivitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDockerActivitiesResponse DescribeDockerActivities(DescribeDockerActivitiesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDockerActivitiesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDockerActivitiesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDockerActivities");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例内的Docker容器配置信息
+     * @param req DescribeDockerContainerConfigurationRequest
+     * @return DescribeDockerContainerConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDockerContainerConfigurationResponse DescribeDockerContainerConfiguration(DescribeDockerContainerConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDockerContainerConfigurationResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDockerContainerConfigurationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDockerContainerConfiguration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例内的Docker容器详情
+     * @param req DescribeDockerContainerDetailRequest
+     * @return DescribeDockerContainerDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDockerContainerDetailResponse DescribeDockerContainerDetail(DescribeDockerContainerDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDockerContainerDetailResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDockerContainerDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDockerContainerDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询实例内的容器列表。
+     * @param req DescribeDockerContainersRequest
+     * @return DescribeDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDockerContainersResponse DescribeDockerContainers(DescribeDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDockerContainers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
      * @param req DescribeFirewallRulesRequest
      * @return DescribeFirewallRulesResponse
@@ -1431,6 +1515,28 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *修改实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+请注意：本接口会重新创建并运行实例内的Docker容器。
+     * @param req ModifyDockerContainerRequest
+     * @return ModifyDockerContainerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDockerContainerResponse ModifyDockerContainer(ModifyDockerContainerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDockerContainerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDockerContainerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDockerContainer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
 
 * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
@@ -1635,6 +1741,48 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *删除实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询删除情况。
+     * @param req RemoveDockerContainersRequest
+     * @return RemoveDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveDockerContainersResponse RemoveDockerContainers(RemoveDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveDockerContainers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重命名实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重命名情况。
+     * @param req RenameDockerContainerRequest
+     * @return RenameDockerContainerResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenameDockerContainerResponse RenameDockerContainer(RenameDockerContainerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenameDockerContainerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenameDockerContainerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenameDockerContainer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(RenewDisks)用于续费一个或多个轻量应用服务器云硬盘。
 
 只有状态为 ATTACHED，UNATTACHED 或 SHUTDOWN 的数据盘才可以进行此操作。
@@ -1676,6 +1824,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<RenewInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RenewInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *重新创建并运行实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重建情况。
+     * @param req RerunDockerContainerRequest
+     * @return RerunDockerContainerResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunDockerContainerResponse RerunDockerContainer(RerunDockerContainerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RerunDockerContainerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RerunDockerContainerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RerunDockerContainer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1757,6 +1926,69 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *重启实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询重启情况。
+     * @param req RestartDockerContainersRequest
+     * @return RestartDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartDockerContainersResponse RestartDockerContainers(RestartDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartDockerContainers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用DescribeDockerActivities接口查询创建情况。
+     * @param req RunDockerContainersRequest
+     * @return RunDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunDockerContainersResponse RunDockerContainers(RunDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RunDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<RunDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RunDockerContainers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *启动实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询启动情况。
+     * @param req StartDockerContainersRequest
+     * @return StartDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartDockerContainersResponse StartDockerContainers(StartDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartDockerContainers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口（StartInstances）用于启动一个或多个实例。
 
 * 只有状态为 STOPPED 的实例才可以进行此操作。
@@ -1775,6 +2007,27 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<StartInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StartInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止实例内的Docker容器，之后可以通过返回的ActivityId调用DescribeDockerActivities接口查询停止情况。
+     * @param req StopDockerContainersRequest
+     * @return StopDockerContainersResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopDockerContainersResponse StopDockerContainers(StopDockerContainersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopDockerContainersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopDockerContainersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopDockerContainers");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

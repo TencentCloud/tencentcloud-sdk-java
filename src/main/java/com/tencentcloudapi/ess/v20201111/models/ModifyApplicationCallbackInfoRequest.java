@@ -44,6 +44,13 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
     private CallbackInfo CallbackInfo;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -91,6 +98,22 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
         this.CallbackInfo = CallbackInfo;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public ModifyApplicationCallbackInfoRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
         if (source.CallbackInfo != null) {
             this.CallbackInfo = new CallbackInfo(source.CallbackInfo);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyApplicationCallbackInfoRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "OperateType", this.OperateType);
         this.setParamObj(map, prefix + "CallbackInfo.", this.CallbackInfo);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

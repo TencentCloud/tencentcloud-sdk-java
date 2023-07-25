@@ -58,8 +58,7 @@ public class SearchAccessLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+    * 新版本此字段失效，填空字符串，翻页使用Page
     */
     @SerializedName("Context")
     @Expose
@@ -160,20 +159,16 @@ public class SearchAccessLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填 
-     * @return Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+     * Get 新版本此字段失效，填空字符串，翻页使用Page 
+     * @return Context 新版本此字段失效，填空字符串，翻页使用Page
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
-     * @param Context 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。
-新版本此字段填空填
+     * Set 新版本此字段失效，填空字符串，翻页使用Page
+     * @param Context 新版本此字段失效，填空字符串，翻页使用Page
      */
     public void setContext(String Context) {
         this.Context = Context;

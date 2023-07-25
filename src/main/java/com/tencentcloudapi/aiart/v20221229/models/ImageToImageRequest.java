@@ -44,8 +44,8 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
     * 文本描述。
-用于在输入图的基础上引导生成图效果，建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。推荐使用中文。最多支持512个 utf-8 字符。
-注意：如果不输入任何文本描述，可能导致较差的效果，建议根据期望的效果输入相应的文本描述。
+用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
+推荐使用中文。最多支持256个 utf-8 字符。
     */
     @SerializedName("Prompt")
     @Expose
@@ -54,7 +54,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     /**
     * 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -64,7 +64,6 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     * 绘画风格。
 请在  [智能图生图风格列表](https://cloud.tencent.com/document/product/1668/86250) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
     */
     @SerializedName("Styles")
     @Expose
@@ -98,11 +97,18 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
     * 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。
     */
     @SerializedName("Strength")
     @Expose
     private Float Strength;
+
+    /**
+    * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+    */
+    @SerializedName("RspImgType")
+    @Expose
+    private String RspImgType;
 
     /**
      * Get 输入图 Base64 数据。
@@ -162,11 +168,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * Get 文本描述。
-用于在输入图的基础上引导生成图效果，建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。推荐使用中文。最多支持512个 utf-8 字符。
-注意：如果不输入任何文本描述，可能导致较差的效果，建议根据期望的效果输入相应的文本描述。 
+用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
+推荐使用中文。最多支持256个 utf-8 字符。 
      * @return Prompt 文本描述。
-用于在输入图的基础上引导生成图效果，建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。推荐使用中文。最多支持512个 utf-8 字符。
-注意：如果不输入任何文本描述，可能导致较差的效果，建议根据期望的效果输入相应的文本描述。
+用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
+推荐使用中文。最多支持256个 utf-8 字符。
      */
     public String getPrompt() {
         return this.Prompt;
@@ -174,11 +180,11 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * Set 文本描述。
-用于在输入图的基础上引导生成图效果，建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。推荐使用中文。最多支持512个 utf-8 字符。
-注意：如果不输入任何文本描述，可能导致较差的效果，建议根据期望的效果输入相应的文本描述。
+用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
+推荐使用中文。最多支持256个 utf-8 字符。
      * @param Prompt 文本描述。
-用于在输入图的基础上引导生成图效果，建议详细描述画面主体、细节、场景等，文本描述越丰富，生成效果越精美。推荐使用中文。最多支持512个 utf-8 字符。
-注意：如果不输入任何文本描述，可能导致较差的效果，建议根据期望的效果输入相应的文本描述。
+用于在输入图的基础上引导生成图效果，增加生成结果中出现描述内容的可能。
+推荐使用中文。最多支持256个 utf-8 字符。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
@@ -187,10 +193,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     /**
      * Get 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。 
+推荐使用中文。最多可传256个 utf-8 字符。 
      * @return NegativePrompt 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
@@ -199,10 +205,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     /**
      * Set 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      * @param NegativePrompt 反向文本描述。
 用于一定程度上从反面引导模型生成的走向，减少生成结果中出现描述内容的可能，但不能完全杜绝。
-推荐使用中文。最多可传512个 utf-8 字符。
+推荐使用中文。最多可传256个 utf-8 字符。
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
@@ -211,12 +217,10 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
     /**
      * Get 绘画风格。
 请在  [智能图生图风格列表](https://cloud.tencent.com/document/product/1668/86250) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。 
+推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。 
      * @return Styles 绘画风格。
 请在  [智能图生图风格列表](https://cloud.tencent.com/document/product/1668/86250) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      */
     public String [] getStyles() {
         return this.Styles;
@@ -226,11 +230,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
      * Set 绘画风格。
 请在  [智能图生图风格列表](https://cloud.tencent.com/document/product/1668/86250) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      * @param Styles 绘画风格。
 请在  [智能图生图风格列表](https://cloud.tencent.com/document/product/1668/86250) 中选择期望的风格，传入风格编号。
 推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
-如果想要探索风格列表之外的风格，也可以尝试在 Prompt 中输入其他的风格描述。
      */
     public void setStyles(String [] Styles) {
         this.Styles = Styles;
@@ -306,9 +308,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Base64 为准。
 
     /**
      * Get 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。 
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。 
      * @return Strength 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。
      */
     public Float getStrength() {
         return this.Strength;
@@ -316,12 +318,28 @@ Strength 值越小，生成图和原图越接近。取值范围0~1，不传默�
 
     /**
      * Set 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。
      * @param Strength 生成自由度。
-Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.65。
+Strength 值越小，生成图和原图越接近。取值范围0~1，不传默认为0.75。
      */
     public void setStrength(Float Strength) {
         this.Strength = Strength;
+    }
+
+    /**
+     * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。 
+     * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     */
+    public String getRspImgType() {
+        return this.RspImgType;
+    }
+
+    /**
+     * Set 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     * @param RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
+     */
+    public void setRspImgType(String RspImgType) {
+        this.RspImgType = RspImgType;
     }
 
     public ImageToImageRequest() {
@@ -362,6 +380,9 @@ Strength 值越小，生成图和原图越接近。取值范围0~1，不传默�
         if (source.Strength != null) {
             this.Strength = new Float(source.Strength);
         }
+        if (source.RspImgType != null) {
+            this.RspImgType = new String(source.RspImgType);
+        }
     }
 
 
@@ -378,6 +399,7 @@ Strength 值越小，生成图和原图越接近。取值范围0~1，不传默�
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
         this.setParamSimple(map, prefix + "Strength", this.Strength);
+        this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
 
     }
 }

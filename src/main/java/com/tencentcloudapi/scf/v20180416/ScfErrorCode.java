@@ -873,6 +873,9 @@ public enum ScfErrorCode {
     // Trigger操作不支持。
      UNSUPPORTEDOPERATION_TRIGGER("UnsupportedOperation.Trigger"),
      
+    // 更新函数代码失败。
+     UNSUPPORTEDOPERATION_UPDATEFUNCTIONCODE("UnsupportedOperation.UpdateFunctionCode"),
+     
     // 指定的配置暂不支持，请修正后再试。
      UNSUPPORTEDOPERATION_UPDATEFUNCTIONEVENTINVOKECONFIG("UnsupportedOperation.UpdateFunctionEventInvokeConfig"),
      

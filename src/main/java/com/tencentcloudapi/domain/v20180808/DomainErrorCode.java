@@ -60,6 +60,9 @@ public enum DomainErrorCode {
     // 信息模板超过可用数量上限，建议删除已有模板后重试。
      FAILEDOPERATION_TEMPLATEMAXNUMFAILED("FailedOperation.TemplateMaxNumFailed"),
      
+    // 域名提交转入失败，请稍后重试。
+     FAILEDOPERATION_TRANSFERINDOMAINFAILED("FailedOperation.TransferInDomainFailed"),
+     
     // 上传图片操作失败。
      FAILEDOPERATION_UPLOADIMAGEFAILED("FailedOperation.UploadImageFailed"),
      

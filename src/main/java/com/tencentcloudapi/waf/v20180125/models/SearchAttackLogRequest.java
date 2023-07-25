@@ -44,7 +44,7 @@ public class SearchAttackLogRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+    * 接口升级，这个字段传空字符串,翻页使用Page字段
     */
     @SerializedName("Context")
     @Expose
@@ -127,16 +127,16 @@ public class SearchAttackLogRequest extends AbstractModel{
     }
 
     /**
-     * Get 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。 
-     * @return Context 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+     * Get 接口升级，这个字段传空字符串,翻页使用Page字段 
+     * @return Context 接口升级，这个字段传空字符串,翻页使用Page字段
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
-     * @param Context 查询的游标。第一次请求使用空字符串即可，后续请求使用上一次请求返回的最后一条记录的context的值即可。
+     * Set 接口升级，这个字段传空字符串,翻页使用Page字段
+     * @param Context 接口升级，这个字段传空字符串,翻页使用Page字段
      */
     public void setContext(String Context) {
         this.Context = Context;
