@@ -188,6 +188,13 @@ video 纯视频
     private Long IsGradingRequiredPostClass;
 
     /**
+    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private Long RoomType;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -595,6 +602,22 @@ video 纯视频
         this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
     }
 
+    /**
+     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展) 
+     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     */
+    public Long getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     */
+    public void setRoomType(Long RoomType) {
+        this.RoomType = RoomType;
+    }
+
     public CreateRoomRequest() {
     }
 
@@ -669,6 +692,9 @@ video 纯视频
         if (source.IsGradingRequiredPostClass != null) {
             this.IsGradingRequiredPostClass = new Long(source.IsGradingRequiredPostClass);
         }
+        if (source.RoomType != null) {
+            this.RoomType = new Long(source.RoomType);
+        }
     }
 
 
@@ -697,6 +723,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
 
     }
 }

@@ -879,6 +879,27 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *获取高防IP业务监控流量曲线
+     * @param req DescribeBizMonitorTrendRequest
+     * @return DescribeBizMonitorTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizMonitorTrendResponse DescribeBizMonitorTrend(DescribeBizMonitorTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizMonitorTrendResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizMonitorTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizMonitorTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取业务流量曲线
      * @param req DescribeBizTrendRequest
      * @return DescribeBizTrendResponse

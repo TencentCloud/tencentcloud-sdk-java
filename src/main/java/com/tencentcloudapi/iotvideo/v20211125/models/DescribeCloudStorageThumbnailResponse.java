@@ -30,6 +30,13 @@ public class DescribeCloudStorageThumbnailResponse extends AbstractModel{
     private String ThumbnailURL;
 
     /**
+    * 缩略图访问地址的过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class DescribeCloudStorageThumbnailResponse extends AbstractModel{
      */
     public void setThumbnailURL(String ThumbnailURL) {
         this.ThumbnailURL = ThumbnailURL;
+    }
+
+    /**
+     * Get 缩略图访问地址的过期时间 
+     * @return ExpireTime 缩略图访问地址的过期时间
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 缩略图访问地址的过期时间
+     * @param ExpireTime 缩略图访问地址的过期时间
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
     }
 
     /**
@@ -79,6 +102,9 @@ public class DescribeCloudStorageThumbnailResponse extends AbstractModel{
         if (source.ThumbnailURL != null) {
             this.ThumbnailURL = new String(source.ThumbnailURL);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class DescribeCloudStorageThumbnailResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ThumbnailURL", this.ThumbnailURL);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

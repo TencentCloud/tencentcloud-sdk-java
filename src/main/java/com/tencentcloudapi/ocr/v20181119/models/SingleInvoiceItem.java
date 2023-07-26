@@ -215,6 +215,14 @@ public class SingleInvoiceItem extends AbstractModel{
     private MedicalInvoice MedicalHospitalizedInvoice;
 
     /**
+    * 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VatSalesList")
+    @Expose
+    private VatInvoiceInfo VatSalesList;
+
+    /**
      * Get 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VatSpecialInvoice 增值税专用发票
@@ -694,6 +702,26 @@ public class SingleInvoiceItem extends AbstractModel{
         this.MedicalHospitalizedInvoice = MedicalHospitalizedInvoice;
     }
 
+    /**
+     * Get 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VatSalesList 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VatInvoiceInfo getVatSalesList() {
+        return this.VatSalesList;
+    }
+
+    /**
+     * Set 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VatSalesList 增值税销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVatSalesList(VatInvoiceInfo VatSalesList) {
+        this.VatSalesList = VatSalesList;
+    }
+
     public SingleInvoiceItem() {
     }
 
@@ -774,6 +802,9 @@ public class SingleInvoiceItem extends AbstractModel{
         if (source.MedicalHospitalizedInvoice != null) {
             this.MedicalHospitalizedInvoice = new MedicalInvoice(source.MedicalHospitalizedInvoice);
         }
+        if (source.VatSalesList != null) {
+            this.VatSalesList = new VatInvoiceInfo(source.VatSalesList);
+        }
     }
 
 
@@ -805,6 +836,7 @@ public class SingleInvoiceItem extends AbstractModel{
         this.setParamObj(map, prefix + "TrainTicket.", this.TrainTicket);
         this.setParamObj(map, prefix + "MedicalOutpatientInvoice.", this.MedicalOutpatientInvoice);
         this.setParamObj(map, prefix + "MedicalHospitalizedInvoice.", this.MedicalHospitalizedInvoice);
+        this.setParamObj(map, prefix + "VatSalesList.", this.VatSalesList);
 
     }
 }

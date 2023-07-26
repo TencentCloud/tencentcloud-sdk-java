@@ -66,6 +66,14 @@ public class RabbitMQClusterInfo extends AbstractModel{
     private VpcEndpointInfo [] Vpcs;
 
     /**
+    * 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
     * 虚拟主机数量
     */
     @SerializedName("VirtualHostNumber")
@@ -138,7 +146,6 @@ public class RabbitMQClusterInfo extends AbstractModel{
 
     /**
     * 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -242,6 +249,26 @@ public class RabbitMQClusterInfo extends AbstractModel{
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
+    }
+
+    /**
+     * Get 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneIds 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneIds 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
     }
 
     /**
@@ -409,10 +436,8 @@ public class RabbitMQClusterInfo extends AbstractModel{
     }
 
     /**
-     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败 
      * @return ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
@@ -420,9 +445,7 @@ public class RabbitMQClusterInfo extends AbstractModel{
 
     /**
      * Set 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
@@ -455,6 +478,12 @@ public class RabbitMQClusterInfo extends AbstractModel{
             this.Vpcs = new VpcEndpointInfo[source.Vpcs.length];
             for (int i = 0; i < source.Vpcs.length; i++) {
                 this.Vpcs[i] = new VpcEndpointInfo(source.Vpcs[i]);
+            }
+        }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
             }
         }
         if (source.VirtualHostNumber != null) {
@@ -503,6 +532,7 @@ public class RabbitMQClusterInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "VirtualHostNumber", this.VirtualHostNumber);
         this.setParamSimple(map, prefix + "QueueNumber", this.QueueNumber);
         this.setParamSimple(map, prefix + "MessagePublishRate", this.MessagePublishRate);

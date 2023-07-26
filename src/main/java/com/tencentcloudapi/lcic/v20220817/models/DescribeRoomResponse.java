@@ -174,6 +174,13 @@ video 纯视频
     private Long IsGradingRequiredPostClass;
 
     /**
+    * 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+    */
+    @SerializedName("RoomType")
+    @Expose
+    private Long RoomType;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -557,6 +564,22 @@ video 纯视频
     }
 
     /**
+     * Get 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展) 
+     * @return RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     */
+    public Long getRoomType() {
+        return this.RoomType;
+    }
+
+    /**
+     * Set 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     * @param RoomType 房间类型: 0 小班课（默认值）; 1 大班课; 2 1V1 (后续扩展)
+     */
+    public void setRoomType(Long RoomType) {
+        this.RoomType = RoomType;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -640,6 +663,9 @@ video 纯视频
         if (source.IsGradingRequiredPostClass != null) {
             this.IsGradingRequiredPostClass = new Long(source.IsGradingRequiredPostClass);
         }
+        if (source.RoomType != null) {
+            this.RoomType = new Long(source.RoomType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -669,6 +695,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "InteractionMode", this.InteractionMode);
         this.setParamSimple(map, prefix + "VideoOrientation", this.VideoOrientation);
         this.setParamSimple(map, prefix + "IsGradingRequiredPostClass", this.IsGradingRequiredPostClass);
+        this.setParamSimple(map, prefix + "RoomType", this.RoomType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -711,6 +711,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于删除ScheduledSql任务
+     * @param req DeleteScheduledSqlRequest
+     * @return DeleteScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduledSqlResponse DeleteScheduledSql(DeleteScheduledSqlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScheduledSqlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScheduledSqlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteScheduledSql");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除投递COS任务
      * @param req DeleteShipperRequest
      * @return DeleteShipperResponse
@@ -1152,6 +1173,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取ScheduledSql任务列表
+     * @param req DescribeScheduledSqlInfoRequest
+     * @return DescribeScheduledSqlInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(DescribeScheduledSqlInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScheduledSqlInfoResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScheduledSqlInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScheduledSqlInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *获取投递任务列表
      * @param req DescribeShipperTasksRequest
      * @return DescribeShipperTasksResponse
@@ -1481,6 +1523,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyMachineGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMachineGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *本接口用于修改ScheduledSql任务
+     * @param req ModifyScheduledSqlRequest
+     * @return ModifyScheduledSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduledSqlResponse ModifyScheduledSql(ModifyScheduledSqlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyScheduledSqlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyScheduledSqlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyScheduledSql");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

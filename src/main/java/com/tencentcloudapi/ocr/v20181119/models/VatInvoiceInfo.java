@@ -317,6 +317,34 @@ public class VatInvoiceInfo extends AbstractModel{
     private String FormName;
 
     /**
+    * 是否有区块链标记（0：没有，1：有）	
+    */
+    @SerializedName("BlockChainMark")
+    @Expose
+    private Long BlockChainMark;
+
+    /**
+    * 是否有收购标记（0：没有，1：有）	
+    */
+    @SerializedName("AcquisitionMark")
+    @Expose
+    private Long AcquisitionMark;
+
+    /**
+    * 小计金额
+    */
+    @SerializedName("SubTotal")
+    @Expose
+    private String SubTotal;
+
+    /**
+    * 小计税额
+    */
+    @SerializedName("SubTax")
+    @Expose
+    private String SubTax;
+
+    /**
      * Get 校验码 
      * @return CheckCode 校验码
      */
@@ -988,6 +1016,70 @@ public class VatInvoiceInfo extends AbstractModel{
         this.FormName = FormName;
     }
 
+    /**
+     * Get 是否有区块链标记（0：没有，1：有）	 
+     * @return BlockChainMark 是否有区块链标记（0：没有，1：有）	
+     */
+    public Long getBlockChainMark() {
+        return this.BlockChainMark;
+    }
+
+    /**
+     * Set 是否有区块链标记（0：没有，1：有）	
+     * @param BlockChainMark 是否有区块链标记（0：没有，1：有）	
+     */
+    public void setBlockChainMark(Long BlockChainMark) {
+        this.BlockChainMark = BlockChainMark;
+    }
+
+    /**
+     * Get 是否有收购标记（0：没有，1：有）	 
+     * @return AcquisitionMark 是否有收购标记（0：没有，1：有）	
+     */
+    public Long getAcquisitionMark() {
+        return this.AcquisitionMark;
+    }
+
+    /**
+     * Set 是否有收购标记（0：没有，1：有）	
+     * @param AcquisitionMark 是否有收购标记（0：没有，1：有）	
+     */
+    public void setAcquisitionMark(Long AcquisitionMark) {
+        this.AcquisitionMark = AcquisitionMark;
+    }
+
+    /**
+     * Get 小计金额 
+     * @return SubTotal 小计金额
+     */
+    public String getSubTotal() {
+        return this.SubTotal;
+    }
+
+    /**
+     * Set 小计金额
+     * @param SubTotal 小计金额
+     */
+    public void setSubTotal(String SubTotal) {
+        this.SubTotal = SubTotal;
+    }
+
+    /**
+     * Get 小计税额 
+     * @return SubTax 小计税额
+     */
+    public String getSubTax() {
+        return this.SubTax;
+    }
+
+    /**
+     * Set 小计税额
+     * @param SubTax 小计税额
+     */
+    public void setSubTax(String SubTax) {
+        this.SubTax = SubTax;
+    }
+
     public VatInvoiceInfo() {
     }
 
@@ -1125,6 +1217,18 @@ public class VatInvoiceInfo extends AbstractModel{
         if (source.FormName != null) {
             this.FormName = new String(source.FormName);
         }
+        if (source.BlockChainMark != null) {
+            this.BlockChainMark = new Long(source.BlockChainMark);
+        }
+        if (source.AcquisitionMark != null) {
+            this.AcquisitionMark = new Long(source.AcquisitionMark);
+        }
+        if (source.SubTotal != null) {
+            this.SubTotal = new String(source.SubTotal);
+        }
+        if (source.SubTax != null) {
+            this.SubTax = new String(source.SubTax);
+        }
     }
 
 
@@ -1174,6 +1278,10 @@ public class VatInvoiceInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ElectronicFullMark", this.ElectronicFullMark);
         this.setParamSimple(map, prefix + "ElectronicFullNumber", this.ElectronicFullNumber);
         this.setParamSimple(map, prefix + "FormName", this.FormName);
+        this.setParamSimple(map, prefix + "BlockChainMark", this.BlockChainMark);
+        this.setParamSimple(map, prefix + "AcquisitionMark", this.AcquisitionMark);
+        this.setParamSimple(map, prefix + "SubTotal", this.SubTotal);
+        this.setParamSimple(map, prefix + "SubTax", this.SubTax);
 
     }
 }

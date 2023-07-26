@@ -44,7 +44,14 @@ public class CreateSealRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+    * 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+    */
+    @SerializedName("GenerateSource")
+    @Expose
+    private String GenerateSource;
+
+    /**
+    * 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
     */
     @SerializedName("SealType")
     @Expose
@@ -91,22 +98,21 @@ public class CreateSealRequest extends AbstractModel{
     private String Color;
 
     /**
-    * 电子印章生成时的横向文字。
+    * 暂时不支持横向文字设置
     */
     @SerializedName("SealHorizontalText")
     @Expose
     private String SealHorizontalText;
 
     /**
-    * 电子印章下弦文字
+    * 暂时不支持下弦文字设置
     */
     @SerializedName("SealChordText")
     @Expose
     private String SealChordText;
 
     /**
-    * 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+    * 系统生成的印章只支持STAR
     */
     @SerializedName("SealCentralType")
     @Expose
@@ -119,15 +125,6 @@ public class CreateSealRequest extends AbstractModel{
     @SerializedName("FileToken")
     @Expose
     private String FileToken;
-
-    /**
-    * 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
-    */
-    @SerializedName("GenerateSource")
-    @Expose
-    private String GenerateSource;
 
     /**
      * Get 操作人信息 
@@ -178,16 +175,32 @@ SealGenerateSourceSystem 表示系统生成企业印章
     }
 
     /**
-     * Get 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章 
-     * @return SealType 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+     * Get 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image 
+     * @return GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     */
+    public String getGenerateSource() {
+        return this.GenerateSource;
+    }
+
+    /**
+     * Set 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     * @param GenerateSource 本接口支持上传图片印章及系统直接生成印章；如果要使用系统生成印章，此值传：SealGenerateSourceSystem；如果要使用图片上传请传字段 Image
+     */
+    public void setGenerateSource(String GenerateSource) {
+        this.GenerateSource = GenerateSource;
+    }
+
+    /**
+     * Get 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章 
+     * @return SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
      */
     public String getSealType() {
         return this.SealType;
     }
 
     /**
-     * Set 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
-     * @param SealType 电子印章类型，PERSONAL-个人私章,OFFICIAL-公章,SPECIAL_FINANCIAL-财务专用章,CONTRACT-合同专用章,LEGAL_REPRESENTATIVE-法定代表人章,SPECIAL_NATIONWIDE_INVOICE-发票专用章
+     * Set 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
+     * @param SealType 电子印章类型，OFFICIAL-公章,CONTRACT-合同专用章
      */
     public void setSealType(String SealType) {
         this.SealType = SealType;
@@ -294,52 +307,48 @@ SealGenerateSourceSystem 表示系统生成企业印章
     }
 
     /**
-     * Get 电子印章生成时的横向文字。 
-     * @return SealHorizontalText 电子印章生成时的横向文字。
+     * Get 暂时不支持横向文字设置 
+     * @return SealHorizontalText 暂时不支持横向文字设置
      */
     public String getSealHorizontalText() {
         return this.SealHorizontalText;
     }
 
     /**
-     * Set 电子印章生成时的横向文字。
-     * @param SealHorizontalText 电子印章生成时的横向文字。
+     * Set 暂时不支持横向文字设置
+     * @param SealHorizontalText 暂时不支持横向文字设置
      */
     public void setSealHorizontalText(String SealHorizontalText) {
         this.SealHorizontalText = SealHorizontalText;
     }
 
     /**
-     * Get 电子印章下弦文字 
-     * @return SealChordText 电子印章下弦文字
+     * Get 暂时不支持下弦文字设置 
+     * @return SealChordText 暂时不支持下弦文字设置
      */
     public String getSealChordText() {
         return this.SealChordText;
     }
 
     /**
-     * Set 电子印章下弦文字
-     * @param SealChordText 电子印章下弦文字
+     * Set 暂时不支持下弦文字设置
+     * @param SealChordText 暂时不支持下弦文字设置
      */
     public void setSealChordText(String SealChordText) {
         this.SealChordText = SealChordText;
     }
 
     /**
-     * Get 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR 
-     * @return SealCentralType 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+     * Get 系统生成的印章只支持STAR 
+     * @return SealCentralType 系统生成的印章只支持STAR
      */
     public String getSealCentralType() {
         return this.SealCentralType;
     }
 
     /**
-     * Set 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
-     * @param SealCentralType 电子印章中心图案类型,STAR-圆形有五角星,NONE-圆形无五角星
-系统生成的印章只支持STAR
+     * Set 系统生成的印章只支持STAR
+     * @param SealCentralType 系统生成的印章只支持STAR
      */
     public void setSealCentralType(String SealCentralType) {
         this.SealCentralType = SealCentralType;
@@ -365,30 +374,6 @@ SealGenerateSourceSystem 表示系统生成企业印章
         this.FileToken = FileToken;
     }
 
-    /**
-     * Get 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章 
-     * @return GenerateSource 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
-     */
-    public String getGenerateSource() {
-        return this.GenerateSource;
-    }
-
-    /**
-     * Set 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
-     * @param GenerateSource 印章生成来源方式
-取值：
-SealGenerateSourceSystem 表示系统生成企业印章
-     */
-    public void setGenerateSource(String GenerateSource) {
-        this.GenerateSource = GenerateSource;
-    }
-
     public CreateSealRequest() {
     }
 
@@ -405,6 +390,9 @@ SealGenerateSourceSystem 表示系统生成企业印章
         }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
+        }
+        if (source.GenerateSource != null) {
+            this.GenerateSource = new String(source.GenerateSource);
         }
         if (source.SealType != null) {
             this.SealType = new String(source.SealType);
@@ -436,9 +424,6 @@ SealGenerateSourceSystem 表示系统生成企业印章
         if (source.FileToken != null) {
             this.FileToken = new String(source.FileToken);
         }
-        if (source.GenerateSource != null) {
-            this.GenerateSource = new String(source.GenerateSource);
-        }
     }
 
 
@@ -449,6 +434,7 @@ SealGenerateSourceSystem 表示系统生成企业印章
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "SealName", this.SealName);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
         this.setParamSimple(map, prefix + "SealType", this.SealType);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Image", this.Image);
@@ -459,7 +445,6 @@ SealGenerateSourceSystem 表示系统生成企业印章
         this.setParamSimple(map, prefix + "SealChordText", this.SealChordText);
         this.setParamSimple(map, prefix + "SealCentralType", this.SealCentralType);
         this.setParamSimple(map, prefix + "FileToken", this.FileToken);
-        this.setParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
 
     }
 }

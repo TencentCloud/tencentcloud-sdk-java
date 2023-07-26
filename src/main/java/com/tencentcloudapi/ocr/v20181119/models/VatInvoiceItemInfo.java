@@ -107,6 +107,13 @@ public class VatInvoiceItemInfo extends AbstractModel{
     private String VehicleType;
 
     /**
+    * 序号
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
+
+    /**
      * Get 项目名称 
      * @return Name 项目名称
      */
@@ -298,6 +305,22 @@ public class VatInvoiceItemInfo extends AbstractModel{
         this.VehicleType = VehicleType;
     }
 
+    /**
+     * Get 序号 
+     * @return SerialNumber 序号
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set 序号
+     * @param SerialNumber 序号
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
+    }
+
     public VatInvoiceItemInfo() {
     }
 
@@ -342,6 +365,9 @@ public class VatInvoiceItemInfo extends AbstractModel{
         if (source.VehicleType != null) {
             this.VehicleType = new String(source.VehicleType);
         }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class VatInvoiceItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DateEnd", this.DateEnd);
         this.setParamSimple(map, prefix + "LicensePlate", this.LicensePlate);
         this.setParamSimple(map, prefix + "VehicleType", this.VehicleType);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
 
     }
 }

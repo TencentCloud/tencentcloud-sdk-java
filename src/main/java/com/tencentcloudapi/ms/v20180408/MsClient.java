@@ -39,6 +39,27 @@ public class MsClient extends AbstractClient{
     }
 
     /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制，取消渠道合作加固中的任务。
+     * @param req CancelEncryptTaskRequest
+     * @return CancelEncryptTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelEncryptTaskResponse CancelEncryptTask(CancelEncryptTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelEncryptTaskResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelEncryptTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelEncryptTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *将应用和资源进行绑定。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
      * @param req CreateBindInstanceRequest
      * @return CreateBindInstanceResponse
@@ -73,6 +94,50 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateCosSecKeyInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCosSecKeyInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于创建加固任务。
+     * @param req CreateEncryptInstanceRequest
+     * @return CreateEncryptInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEncryptInstanceResponse CreateEncryptInstance(CreateEncryptInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEncryptInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEncryptInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEncryptInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
+订单类型有：免费试用、按年收费、按次收费。
+应用加固支持的平台类型有：android安卓加固 、ios源码混淆 、sdk加固、applet小程序加固。
+     * @param req CreateOrderInstanceRequest
+     * @return CreateOrderInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrderInstanceResponse CreateOrderInstance(CreateOrderInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrderInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrderInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrderInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -178,6 +243,73 @@ public class MsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeApkDetectionResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeApkDetectionResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制，用于查询加固任务，入参中的条件过滤字段均为精准匹配。支持功能点：1. 多任务分页查询  2.根据任务Id唯一值查询单记录
+     * @param req DescribeEncryptInstancesRequest
+     * @return DescribeEncryptInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptInstancesResponse DescribeEncryptInstances(DescribeEncryptInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制。入参中的条件过滤字段均为精准匹配。
+     * @param req DescribeEncryptPlanRequest
+     * @return DescribeEncryptPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptPlanResponse DescribeEncryptPlan(DescribeEncryptPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptPlanResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口供渠道合作应用加固使用，接口调用有白名单用户限制。 接口返回的结果为：创建订单后，订单审批状态信息，以及与订单关联的资源状态等信息，入参中的条件过滤字段均为精准匹配。
+接口功能点：
+1.支持多订单分页查询；
+2.支持唯一订单号精准匹配查询；
+3.支持唯一资源号精准匹配查询；
+     * @param req DescribeOrderInstancesRequest
+     * @return DescribeOrderInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrderInstancesResponse DescribeOrderInstances(DescribeOrderInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOrderInstancesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOrderInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOrderInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

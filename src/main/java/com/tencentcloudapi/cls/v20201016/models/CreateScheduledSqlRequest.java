@@ -44,14 +44,14 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     private Long EnableFlag;
 
     /**
-    * 加工任务目的topic_id以及别名
+    * 定时SQL分析目标日志主题
     */
     @SerializedName("DstResource")
     @Expose
     private ScheduledSqlResouceInfo DstResource;
 
     /**
-    * ScheduledSQL语句
+    * 查询语句
     */
     @SerializedName("ScheduledSqlContent")
     @Expose
@@ -79,7 +79,7 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     private Long ProcessPeriod;
 
     /**
-    * 调度时间窗口
+    * 单次查询的时间窗口
     */
     @SerializedName("ProcessTimeWindow")
     @Expose
@@ -162,32 +162,32 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 加工任务目的topic_id以及别名 
-     * @return DstResource 加工任务目的topic_id以及别名
+     * Get 定时SQL分析目标日志主题 
+     * @return DstResource 定时SQL分析目标日志主题
      */
     public ScheduledSqlResouceInfo getDstResource() {
         return this.DstResource;
     }
 
     /**
-     * Set 加工任务目的topic_id以及别名
-     * @param DstResource 加工任务目的topic_id以及别名
+     * Set 定时SQL分析目标日志主题
+     * @param DstResource 定时SQL分析目标日志主题
      */
     public void setDstResource(ScheduledSqlResouceInfo DstResource) {
         this.DstResource = DstResource;
     }
 
     /**
-     * Get ScheduledSQL语句 
-     * @return ScheduledSqlContent ScheduledSQL语句
+     * Get 查询语句 
+     * @return ScheduledSqlContent 查询语句
      */
     public String getScheduledSqlContent() {
         return this.ScheduledSqlContent;
     }
 
     /**
-     * Set ScheduledSQL语句
-     * @param ScheduledSqlContent ScheduledSQL语句
+     * Set 查询语句
+     * @param ScheduledSqlContent 查询语句
      */
     public void setScheduledSqlContent(String ScheduledSqlContent) {
         this.ScheduledSqlContent = ScheduledSqlContent;
@@ -242,16 +242,16 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 调度时间窗口 
-     * @return ProcessTimeWindow 调度时间窗口
+     * Get 单次查询的时间窗口 
+     * @return ProcessTimeWindow 单次查询的时间窗口
      */
     public String getProcessTimeWindow() {
         return this.ProcessTimeWindow;
     }
 
     /**
-     * Set 调度时间窗口
-     * @param ProcessTimeWindow 调度时间窗口
+     * Set 单次查询的时间窗口
+     * @param ProcessTimeWindow 单次查询的时间窗口
      */
     public void setProcessTimeWindow(String ProcessTimeWindow) {
         this.ProcessTimeWindow = ProcessTimeWindow;

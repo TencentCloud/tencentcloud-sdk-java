@@ -24,6 +24,7 @@ public class HotWord extends AbstractModel{
 
     /**
     * 热词
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Word")
     @Expose
@@ -31,14 +32,17 @@ public class HotWord extends AbstractModel{
 
     /**
     * 权重
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get 热词 
+     * Get 热词
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Word 热词
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWord() {
         return this.Word;
@@ -46,15 +50,19 @@ public class HotWord extends AbstractModel{
 
     /**
      * Set 热词
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Word 热词
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWord(String Word) {
         this.Word = Word;
     }
 
     /**
-     * Get 权重 
+     * Get 权重
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -62,7 +70,9 @@ public class HotWord extends AbstractModel{
 
     /**
      * Set 权重
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 权重
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

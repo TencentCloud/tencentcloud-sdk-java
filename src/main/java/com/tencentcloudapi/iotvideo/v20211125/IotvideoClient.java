@@ -417,6 +417,27 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *删除云存事件
+     * @param req DeleteCloudStorageEventRequest
+     * @return DeleteCloudStorageEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudStorageEventResponse DeleteCloudStorageEvent(DeleteCloudStorageEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudStorageEventResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudStorageEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCloudStorageEvent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除设备
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -1081,6 +1102,27 @@ public class IotvideoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDeviceEventHistoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDeviceEventHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据设备信息拉取有效套餐列表
+     * @param req DescribeDevicePackagesRequest
+     * @return DescribeDevicePackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDevicePackagesResponse DescribeDevicePackages(DescribeDevicePackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDevicePackagesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDevicePackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDevicePackages");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

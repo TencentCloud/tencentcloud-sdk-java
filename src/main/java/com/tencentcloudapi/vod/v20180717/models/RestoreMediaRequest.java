@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class RestoreMediaRequest extends AbstractModel{
 
     /**
-    * 媒体文件唯一标识列表。
+    * 媒体文件唯一标识列表，最大长度：100。
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+    * 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
     */
     @SerializedName("RestoreDay")
     @Expose
@@ -57,32 +57,32 @@ public class RestoreMediaRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get 媒体文件唯一标识列表。 
-     * @return FileIds 媒体文件唯一标识列表。
+     * Get 媒体文件唯一标识列表，最大长度：100。 
+     * @return FileIds 媒体文件唯一标识列表，最大长度：100。
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set 媒体文件唯一标识列表。
-     * @param FileIds 媒体文件唯一标识列表。
+     * Set 媒体文件唯一标识列表，最大长度：100。
+     * @param FileIds 媒体文件唯一标识列表，最大长度：100。
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get 解冻出的临时媒体文件的可访问持续时长，单位为“天”。 
-     * @return RestoreDay 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+     * Get 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。 
+     * @return RestoreDay 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
     }
 
     /**
-     * Set 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
-     * @param RestoreDay 解冻出的临时媒体文件的可访问持续时长，单位为“天”。
+     * Set 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
+     * @param RestoreDay 解冻出的临时媒体文件的可访问持续时长，必须大于0，单位为“天”。
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;

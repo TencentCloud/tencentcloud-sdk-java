@@ -51,6 +51,13 @@ public class OtherInvoice extends AbstractModel{
     private OtherInvoiceList [] OtherInvoiceTableItems;
 
     /**
+    * 发票日期
+    */
+    @SerializedName("Date")
+    @Expose
+    private String Date;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -114,6 +121,22 @@ public class OtherInvoice extends AbstractModel{
         this.OtherInvoiceTableItems = OtherInvoiceTableItems;
     }
 
+    /**
+     * Get 发票日期 
+     * @return Date 发票日期
+     */
+    public String getDate() {
+        return this.Date;
+    }
+
+    /**
+     * Set 发票日期
+     * @param Date 发票日期
+     */
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
+
     public OtherInvoice() {
     }
 
@@ -140,6 +163,9 @@ public class OtherInvoice extends AbstractModel{
                 this.OtherInvoiceTableItems[i] = new OtherInvoiceList(source.OtherInvoiceTableItems[i]);
             }
         }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class OtherInvoice extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "OtherInvoiceListItems.", this.OtherInvoiceListItems);
         this.setParamArrayObj(map, prefix + "OtherInvoiceTableItems.", this.OtherInvoiceTableItems);
+        this.setParamSimple(map, prefix + "Date", this.Date);
 
     }
 }

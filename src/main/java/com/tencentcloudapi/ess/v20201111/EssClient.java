@@ -963,7 +963,9 @@ PDF资源Id 通过上传文件接口获取
     }
 
     /**
-     *通过子企业影子账号查询主企业员工账号
+     *集团企业统一使用主代子进行操作，无需根据子企业账号进行转化查询，该接口需要屏蔽下线
+
+通过子企业影子账号查询主企业员工账号
      * @param req DescribeIntegrationMainOrganizationUserRequest
      * @return DescribeIntegrationMainOrganizationUserResponse
      * @throws TencentCloudSDKException

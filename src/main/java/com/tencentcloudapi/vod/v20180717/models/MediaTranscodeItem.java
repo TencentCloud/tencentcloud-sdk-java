@@ -31,6 +31,7 @@ public class MediaTranscodeItem extends AbstractModel{
 
     /**
     * 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+<font color=red>注意：取值 0 表示原始文件。</font> 
     */
     @SerializedName("Definition")
     @Expose
@@ -134,8 +135,10 @@ public class MediaTranscodeItem extends AbstractModel{
     }
 
     /**
-     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。 
+     * Get 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+<font color=red>注意：取值 0 表示原始文件。</font>  
      * @return Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+<font color=red>注意：取值 0 表示原始文件。</font> 
      */
     public Long getDefinition() {
         return this.Definition;
@@ -143,7 +146,9 @@ public class MediaTranscodeItem extends AbstractModel{
 
     /**
      * Set 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+<font color=red>注意：取值 0 表示原始文件。</font> 
      * @param Definition 转码规格 ID，参见[转码参数模板](https://cloud.tencent.com/document/product/266/33476)。
+<font color=red>注意：取值 0 表示原始文件。</font> 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -116,14 +116,14 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     private String CallbackUrl;
 
     /**
-    * 使用PDF文件直接发起合同时，签署人指定的签署控件
+    * 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
     */
     @SerializedName("SignComponents")
     @Expose
     private Component [] SignComponents;
 
     /**
-    * 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+    * 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
@@ -427,28 +427,28 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     }
 
     /**
-     * Get 使用PDF文件直接发起合同时，签署人指定的签署控件 
-     * @return SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
+     * Get 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。 
+     * @return SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 使用PDF文件直接发起合同时，签署人指定的签署控件
-     * @param SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件
+     * Set 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+     * @param SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
     }
 
     /**
-     * Get 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * Get 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署） 
-     * @return ComponentLimitType 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * @return ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
@@ -459,12 +459,12 @@ ENTERPRISESERVER-企业静默签（文件发起时的企业静默签字）。
     }
 
     /**
-     * Set 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * Set 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
 	SYSTEM_ESIGN -- 系统签名（该类型可以在用户签署时根据用户姓名一键生成一个签名来进行签署）
-     * @param ComponentLimitType 	签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
+     * @param ComponentLimitType 签署方控件类型为 SIGN_SIGNATURE时，可以指定签署方签名方式
 	HANDWRITE – 手写签名
 	OCR_ESIGN -- AI智能识别手写签名
 	ESIGN -- 个人印章类型
