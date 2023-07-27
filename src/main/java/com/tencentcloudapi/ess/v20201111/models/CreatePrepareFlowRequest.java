@@ -80,6 +80,13 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     private String IntelligentStatus;
 
     /**
+    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+    */
+    @SerializedName("Agent")
+    @Expose
+    private Agent Agent;
+
+    /**
      * Get 调用方用户信息，userId 必填 
      * @return Operator 调用方用户信息，userId 必填
      */
@@ -211,6 +218,22 @@ public class CreatePrepareFlowRequest extends AbstractModel{
         this.IntelligentStatus = IntelligentStatus;
     }
 
+    /**
+     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	 
+     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+     */
+    public Agent getAgent() {
+        return this.Agent;
+    }
+
+    /**
+     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
+     */
+    public void setAgent(Agent Agent) {
+        this.Agent = Agent;
+    }
+
     public CreatePrepareFlowRequest() {
     }
 
@@ -246,6 +269,9 @@ public class CreatePrepareFlowRequest extends AbstractModel{
         if (source.IntelligentStatus != null) {
             this.IntelligentStatus = new String(source.IntelligentStatus);
         }
+        if (source.Agent != null) {
+            this.Agent = new Agent(source.Agent);
+        }
     }
 
 
@@ -261,6 +287,7 @@ public class CreatePrepareFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
+        this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }
 }

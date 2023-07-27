@@ -65,7 +65,7 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private Long VoiceType;
 
     /**
-    * 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+    * 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
     */
     @SerializedName("PrimaryLanguage")
     @Expose
@@ -196,16 +196,16 @@ public class CreateTtsTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 主语言类型：<li>1-中文（默认）</li><li>2-英文</li> 
-     * @return PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Get 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li> 
+     * @return PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
      */
     public Long getPrimaryLanguage() {
         return this.PrimaryLanguage;
     }
 
     /**
-     * Set 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
-     * @param PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li>
+     * Set 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
+     * @param PrimaryLanguage 主语言类型：<li>1-中文（默认）</li><li>2-英文</li><li>3-日文</li>
      */
     public void setPrimaryLanguage(Long PrimaryLanguage) {
         this.PrimaryLanguage = PrimaryLanguage;

@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ess.v20201111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GenerateApiDocumentResponse extends AbstractModel{
+public class CreateOrganizationBatchSignUrlResponse extends AbstractModel{
 
     /**
-    * api文档&sdk链接。
+    * 批量签署入口链接
     */
-    @SerializedName("Result")
+    @SerializedName("SignUrl")
     @Expose
-    private DocumentSDK Result;
+    private String SignUrl;
+
+    /**
+    * 链接过期时间戳
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private Long ExpiredTime;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class GenerateApiDocumentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get api文档&sdk链接。 
-     * @return Result api文档&sdk链接。
+     * Get 批量签署入口链接 
+     * @return SignUrl 批量签署入口链接
      */
-    public DocumentSDK getResult() {
-        return this.Result;
+    public String getSignUrl() {
+        return this.SignUrl;
     }
 
     /**
-     * Set api文档&sdk链接。
-     * @param Result api文档&sdk链接。
+     * Set 批量签署入口链接
+     * @param SignUrl 批量签署入口链接
      */
-    public void setResult(DocumentSDK Result) {
-        this.Result = Result;
+    public void setSignUrl(String SignUrl) {
+        this.SignUrl = SignUrl;
+    }
+
+    /**
+     * Get 链接过期时间戳 
+     * @return ExpiredTime 链接过期时间戳
+     */
+    public Long getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 链接过期时间戳
+     * @param ExpiredTime 链接过期时间戳
+     */
+    public void setExpiredTime(Long ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
     }
 
     /**
@@ -68,16 +91,19 @@ public class GenerateApiDocumentResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GenerateApiDocumentResponse() {
+    public CreateOrganizationBatchSignUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GenerateApiDocumentResponse(GenerateApiDocumentResponse source) {
-        if (source.Result != null) {
-            this.Result = new DocumentSDK(source.Result);
+    public CreateOrganizationBatchSignUrlResponse(CreateOrganizationBatchSignUrlResponse source) {
+        if (source.SignUrl != null) {
+            this.SignUrl = new String(source.SignUrl);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +115,8 @@ public class GenerateApiDocumentResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "SignUrl", this.SignUrl);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

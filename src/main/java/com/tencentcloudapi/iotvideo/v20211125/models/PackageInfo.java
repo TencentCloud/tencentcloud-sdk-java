@@ -52,6 +52,22 @@ public class PackageInfo extends AbstractModel{
     private Long CSExpiredTime;
 
     /**
+    * 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private Long CreatedAt;
+
+    /**
+    * 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdatedAt")
+    @Expose
+    private Long UpdatedAt;
+
+    /**
      * Get 云存开启状态，0为未开启，2为正在生效，1为已过期
 注：这里只返回状态为0的数据 
      * @return Status 云存开启状态，0为未开启，2为正在生效，1为已过期
@@ -119,6 +135,46 @@ public class PackageInfo extends AbstractModel{
         this.CSExpiredTime = CSExpiredTime;
     }
 
+    /**
+     * Get 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedAt 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedAt 云存套餐创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedAt(Long CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdatedAt 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUpdatedAt() {
+        return this.UpdatedAt;
+    }
+
+    /**
+     * Set 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatedAt 云存套餐更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdatedAt(Long UpdatedAt) {
+        this.UpdatedAt = UpdatedAt;
+    }
+
     public PackageInfo() {
     }
 
@@ -139,6 +195,12 @@ public class PackageInfo extends AbstractModel{
         if (source.CSExpiredTime != null) {
             this.CSExpiredTime = new Long(source.CSExpiredTime);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new Long(source.CreatedAt);
+        }
+        if (source.UpdatedAt != null) {
+            this.UpdatedAt = new Long(source.UpdatedAt);
+        }
     }
 
 
@@ -150,6 +212,8 @@ public class PackageInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CSType", this.CSType);
         this.setParamSimple(map, prefix + "CSShiftDuration", this.CSShiftDuration);
         this.setParamSimple(map, prefix + "CSExpiredTime", this.CSExpiredTime);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
 
     }
 }

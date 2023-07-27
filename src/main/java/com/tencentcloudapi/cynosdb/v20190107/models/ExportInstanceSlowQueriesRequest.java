@@ -86,6 +86,20 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
     private String FileType;
 
     /**
+    * 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 排序类型，可选值：asc,desc
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -229,6 +243,38 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         this.FileType = FileType;
     }
 
+    /**
+     * Get 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent 
+     * @return OrderBy 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+     * @param OrderBy 排序字段，可选值： QueryTime,LockTime,RowsExamined,RowsSent
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 排序类型，可选值：asc,desc 
+     * @return OrderByType 排序类型，可选值：asc,desc
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set 排序类型，可选值：asc,desc
+     * @param OrderByType 排序类型，可选值：asc,desc
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public ExportInstanceSlowQueriesRequest() {
     }
 
@@ -264,6 +310,12 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         if (source.FileType != null) {
             this.FileType = new String(source.FileType);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class ExportInstanceSlowQueriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Database", this.Database);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

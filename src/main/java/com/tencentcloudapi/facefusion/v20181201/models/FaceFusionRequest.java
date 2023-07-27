@@ -73,6 +73,13 @@ public class FaceFusionRequest extends AbstractModel{
     private String Url;
 
     /**
+    * 融合参数
+    */
+    @SerializedName("FuseParam")
+    @Expose
+    private FuseParam FuseParam;
+
+    /**
      * Get 活动 ID，请在人脸融合控制台查看。 
      * @return ProjectId 活动 ID，请在人脸融合控制台查看。
      */
@@ -188,6 +195,22 @@ public class FaceFusionRequest extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get 融合参数 
+     * @return FuseParam 融合参数
+     */
+    public FuseParam getFuseParam() {
+        return this.FuseParam;
+    }
+
+    /**
+     * Set 融合参数
+     * @param FuseParam 融合参数
+     */
+    public void setFuseParam(FuseParam FuseParam) {
+        this.FuseParam = FuseParam;
+    }
+
     public FaceFusionRequest() {
     }
 
@@ -217,6 +240,9 @@ public class FaceFusionRequest extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.FuseParam != null) {
+            this.FuseParam = new FuseParam(source.FuseParam);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class FaceFusionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PornDetect", this.PornDetect);
         this.setParamSimple(map, prefix + "CelebrityIdentify", this.CelebrityIdentify);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamObj(map, prefix + "FuseParam.", this.FuseParam);
 
     }
 }

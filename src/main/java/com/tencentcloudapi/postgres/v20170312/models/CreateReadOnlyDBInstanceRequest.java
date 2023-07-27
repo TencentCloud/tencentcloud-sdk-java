@@ -23,7 +23,22 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
 
     /**
-    * 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+    * 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 只读实例的主实例ID。
+    */
+    @SerializedName("MasterDBInstanceId")
+    @Expose
+    private String MasterDBInstanceId;
+
+    /**
+    * 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
     */
     @SerializedName("SpecCode")
     @Expose
@@ -37,56 +52,50 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * 一次性购买的实例数量。取值1-100
+    * 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+    * 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 只读实例的主实例ID
+    * 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
     */
-    @SerializedName("MasterDBInstanceId")
+    @SerializedName("VpcId")
     @Expose
-    private String MasterDBInstanceId;
+    private String VpcId;
 
     /**
-    * 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+    * 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
     */
-    @SerializedName("Zone")
+    @SerializedName("SubnetId")
     @Expose
-    private String Zone;
+    private String SubnetId;
 
     /**
-    * 项目ID。
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
-    * 【废弃】不再需要指定，内核版本号与主实例保持一致
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
-    * 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+    * 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 是否自动使用代金券。1（是），0（否），默认不使用。
+    * 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -100,25 +109,21 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * 续费标记：0-正常续费（默认）；1-自动续费；
+    * 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 私有网络ID。
+    * 项目ID。
     */
-    @SerializedName("VpcId")
+    @SerializedName("ProjectId")
     @Expose
-    private String VpcId;
-
-    /**
-    * 私有网络子网ID。
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
+    private Long ProjectId;
 
     /**
     * 优惠活动ID
@@ -128,20 +133,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * 实例名(后续支持)
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 是否需要支持Ipv6，1：是，0：否
-    */
-    @SerializedName("NeedSupportIpv6")
-    @Expose
-    private Long NeedSupportIpv6;
-
-    /**
     * 只读组ID。
     */
     @SerializedName("ReadOnlyGroupId")
@@ -149,30 +140,91 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-    * 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+    * 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
     */
     @SerializedName("TagList")
     @Expose
     private Tag TagList;
 
     /**
-    * 安全组id
+    * 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。 
-     * @return SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+    * 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+    */
+    @SerializedName("NeedSupportIpv6")
+    @Expose
+    private Long NeedSupportIpv6;
+
+    /**
+    * 实例名(后续支持)
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 【废弃】不再需要指定，内核版本号与主实例保持一致
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
+     * Get 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
+     * @return Zone 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param Zone 实例所属主可用区， 如：ap-guangzhou-3；
+可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 只读实例的主实例ID。 
+     * @return MasterDBInstanceId 只读实例的主实例ID。
+     */
+    public String getMasterDBInstanceId() {
+        return this.MasterDBInstanceId;
+    }
+
+    /**
+     * Set 只读实例的主实例ID。
+     * @param MasterDBInstanceId 只读实例的主实例ID。
+     */
+    public void setMasterDBInstanceId(String MasterDBInstanceId) {
+        this.MasterDBInstanceId = MasterDBInstanceId;
+    }
+
+    /**
+     * Get 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。 
+     * @return SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
-     * @param SpecCode 售卖规格ID。该参数可以通过调用DescribeClasses的返回值中的SpecCode字段来获取。
+     * Set 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
+     * @param SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
@@ -195,128 +247,128 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 一次性购买的实例数量。取值1-100 
-     * @return InstanceCount 一次性购买的实例数量。取值1-100
+     * Get 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。 
+     * @return InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 一次性购买的实例数量。取值1-100
-     * @param InstanceCount 一次性购买的实例数量。取值1-100
+     * Set 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
+     * @param InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。 
-     * @return Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * Get 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1 
+     * @return Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
-     * @param Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值，按量计费模式下该参数传1。
+     * Set 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
+     * @param Period 购买时长，单位：月。
+<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+<li>后付费：只支持1
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 只读实例的主实例ID 
-     * @return MasterDBInstanceId 只读实例的主实例ID
+     * Get 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。 
+     * @return VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
-    public String getMasterDBInstanceId() {
-        return this.MasterDBInstanceId;
+    public String getVpcId() {
+        return this.VpcId;
     }
 
     /**
-     * Set 只读实例的主实例ID
-     * @param MasterDBInstanceId 只读实例的主实例ID
+     * Set 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
+     * @param VpcId 私有网络ID，形如vpc-xxxxxxxx。有效的VpcId可通过登录控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372) ，从接口返回中的unVpcId字段获取。
      */
-    public void setMasterDBInstanceId(String MasterDBInstanceId) {
-        this.MasterDBInstanceId = MasterDBInstanceId;
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
-     * Get 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。 
-     * @return Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Get 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。 
+     * @return SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
-    public String getZone() {
-        return this.Zone;
+    public String getSubnetId() {
+        return this.SubnetId;
     }
 
     /**
-     * Set 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * Set 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
+     * @param SubnetId 私有网络子网ID，形如subnet-xxxxxxxx。有效的私有网络子网ID可通过登录控制台查询；也可以调用接口 [DescribeSubnets ](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的unSubnetId字段获取。
      */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 项目ID。 
-     * @return ProjectId 项目ID。
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目ID。
-     * @param ProjectId 项目ID。
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get 【废弃】不再需要指定，内核版本号与主实例保持一致 
-     * @return DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set 【废弃】不再需要指定，内核版本号与主实例保持一致
-     * @param DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-    }
-
-    /**
-     * Get 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。 
-     * @return InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * Get 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。 
+     * @return InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
-     * @param InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * Set 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
+     * @param InstanceChargeType 实例计费类型，目前支持：
+<li>PREPAID：预付费，即包年包月。
+<li>POSTPAID_BY_HOUR：后付费，即按量计费。
+默认值：PREPAID。如果主实例为后付费，只读实例必须也为后付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 是否自动使用代金券。1（是），0（否），默认不使用。 
-     * @return AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * Get 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0 
+     * @return AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 是否自动使用代金券。1（是），0（否），默认不使用。
-     * @param AutoVoucher 是否自动使用代金券。1（是），0（否），默认不使用。
+     * Set 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
+     * @param AutoVoucher 是否自动使用代金券：
+<li>0：否
+<li>1：是
+默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -339,51 +391,47 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 续费标记：0-正常续费（默认）；1-自动续费； 
-     * @return AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     * Get 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0 
+     * @return AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 续费标记：0-正常续费（默认）；1-自动续费；
-     * @param AutoRenewFlag 续费标记：0-正常续费（默认）；1-自动续费；
+     * Set 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
+     * @param AutoRenewFlag 续费标记：
+<li>0：手动续费
+<li>1：自动续费
+默认值：0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 私有网络ID。 
-     * @return VpcId 私有网络ID。
+     * Get 项目ID。 
+     * @return ProjectId 项目ID。
      */
-    public String getVpcId() {
-        return this.VpcId;
+    public Long getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set 私有网络ID。
-     * @param VpcId 私有网络ID。
+     * Set 项目ID。
+     * @param ProjectId 项目ID。
      */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
-     * Get 私有网络子网ID。 
-     * @return SubnetId 私有网络子网ID。
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set 私有网络子网ID。
-     * @param SubnetId 私有网络子网ID。
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     /**
@@ -403,38 +451,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例名(后续支持) 
-     * @return Name 实例名(后续支持)
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 实例名(后续支持)
-     * @param Name 实例名(后续支持)
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get 是否需要支持Ipv6，1：是，0：否 
-     * @return NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
-     */
-    public Long getNeedSupportIpv6() {
-        return this.NeedSupportIpv6;
-    }
-
-    /**
-     * Set 是否需要支持Ipv6，1：是，0：否
-     * @param NeedSupportIpv6 是否需要支持Ipv6，1：是，0：否
-     */
-    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
-        this.NeedSupportIpv6 = NeedSupportIpv6;
-    }
-
-    /**
      * Get 只读组ID。 
      * @return ReadOnlyGroupId 只读组ID。
      */
@@ -451,35 +467,99 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型） 
-     * @return TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+     * Get 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。 
+     * @return TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
-     * @param TagList 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
+     * Set 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
+     * @param TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 安全组id 
-     * @return SecurityGroupIds 安全组id
+     * Get 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+ 
+     * @return SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组id
-     * @param SecurityGroupIds 安全组id
+     * Set 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
+     * @param SecurityGroupIds 实例所属安全组，该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。若不指定该参数，则绑定默认安全组。
+
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0 
+     * @return NeedSupportIpv6 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+     */
+    public Long getNeedSupportIpv6() {
+        return this.NeedSupportIpv6;
+    }
+
+    /**
+     * Set 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+     * @param NeedSupportIpv6 是否需要支持Ipv6：
+<li>0：否
+<li>1：是
+默认值：0
+     */
+    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
+        this.NeedSupportIpv6 = NeedSupportIpv6;
+    }
+
+    /**
+     * Get 实例名(后续支持) 
+     * @return Name 实例名(后续支持)
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 实例名(后续支持)
+     * @param Name 实例名(后续支持)
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 【废弃】不再需要指定，内核版本号与主实例保持一致 
+     * @return DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * @param DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
     }
 
     public CreateReadOnlyDBInstanceRequest() {
@@ -490,6 +570,12 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateReadOnlyDBInstanceRequest(CreateReadOnlyDBInstanceRequest source) {
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.MasterDBInstanceId != null) {
+            this.MasterDBInstanceId = new String(source.MasterDBInstanceId);
+        }
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
@@ -502,17 +588,11 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
-        if (source.MasterDBInstanceId != null) {
-            this.MasterDBInstanceId = new String(source.MasterDBInstanceId);
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
-        }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -529,20 +609,11 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
         if (source.ActivityId != null) {
             this.ActivityId = new Long(source.ActivityId);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.NeedSupportIpv6 != null) {
-            this.NeedSupportIpv6 = new Long(source.NeedSupportIpv6);
         }
         if (source.ReadOnlyGroupId != null) {
             this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
@@ -556,6 +627,15 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.NeedSupportIpv6 != null) {
+            this.NeedSupportIpv6 = new Long(source.NeedSupportIpv6);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
+        }
     }
 
 
@@ -563,26 +643,26 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
         this.setParamObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
 
     }
 }

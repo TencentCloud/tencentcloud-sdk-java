@@ -479,6 +479,27 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *生成页面主题配置
+     * @param req ChannelCreateWebThemeConfigRequest
+     * @return ChannelCreateWebThemeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelCreateWebThemeConfigResponse ChannelCreateWebThemeConfig(ChannelCreateWebThemeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChannelCreateWebThemeConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChannelCreateWebThemeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChannelCreateWebThemeConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过此接口，删除员工绑定的角色，支持以电子签userId、客户系统userId两种方式调用。
      * @param req ChannelDeleteRoleUsersRequest
      * @return ChannelDeleteRoleUsersResponse

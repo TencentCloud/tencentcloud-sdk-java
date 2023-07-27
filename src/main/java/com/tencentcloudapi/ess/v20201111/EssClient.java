@@ -219,6 +219,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateEmbedWebUrl）用于创建嵌入web的链接 本接口支持创建：创建印章，创建模板，修改模板，预览模板，预览合同流程的web链接 进入web连接后与当前控制台操作保持一致
+     * @param req CreateEmbedWebUrlRequest
+     * @return CreateEmbedWebUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmbedWebUrlResponse CreateEmbedWebUrl(CreateEmbedWebUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEmbedWebUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEmbedWebUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEmbedWebUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *通过模板创建签署流程<br/>
 适用场景：在标准制式的合同场景中，可通过提前预制好模板文件，每次调用模板文件的id，补充合同内容信息及签署信息生成电子合同。<br/>
 注：该接口是通过模板生成合同流程的前置接口，先创建一个不包含签署文件的流程。<br/>
@@ -526,6 +547,28 @@ PDF资源Id 通过上传文件接口获取
     }
 
     /**
+     *通过此接口，创建企业批量签署链接，企业员工点击链接即可跳转控制台进行批量签署。
+如果没有UserId，Name和Mobile必填，对应的员工必须在企业下已经实名，且该员工为批量签署合同中的签署方。
+     * @param req CreateOrganizationBatchSignUrlRequest
+     * @return CreateOrganizationBatchSignUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationBatchSignUrlResponse CreateOrganizationBatchSignUrl(CreateOrganizationBatchSignUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOrganizationBatchSignUrlResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOrganizationBatchSignUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOrganizationBatchSignUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建快速发起流程
 适用场景：用户通过API 合同文件及签署信息，并可通过我们返回的URL在页面完成签署控件等信息的编辑与确认，快速发起合同.
 注：该接口文件的resourceId 是通过上传文件之后获取的。
@@ -677,6 +720,27 @@ PDF资源Id 通过上传文件接口获取
                 Type type = new TypeToken<JsonResponseModel<CreateUserAutoSignEnableUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUserAutoSignEnableUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *用来创建页面主题配置
+     * @param req CreateWebThemeConfigRequest
+     * @return CreateWebThemeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebThemeConfigResponse CreateWebThemeConfig(CreateWebThemeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWebThemeConfigResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWebThemeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateWebThemeConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

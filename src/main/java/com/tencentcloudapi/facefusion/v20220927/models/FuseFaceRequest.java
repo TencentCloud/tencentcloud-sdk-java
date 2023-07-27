@@ -86,6 +86,13 @@ public class FuseFaceRequest extends AbstractModel{
     private LogoParam LogoParam;
 
     /**
+    * 融合参数。
+    */
+    @SerializedName("FuseParam")
+    @Expose
+    private FuseParam FuseParam;
+
+    /**
      * Get 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。 
      * @return ProjectId 活动 ID，请在<a href="https://console.cloud.tencent.com/facefusion" target="_blank">人脸融合控制台</a>查看。
      */
@@ -241,6 +248,22 @@ public class FuseFaceRequest extends AbstractModel{
         this.LogoParam = LogoParam;
     }
 
+    /**
+     * Get 融合参数。 
+     * @return FuseParam 融合参数。
+     */
+    public FuseParam getFuseParam() {
+        return this.FuseParam;
+    }
+
+    /**
+     * Set 融合参数。
+     * @param FuseParam 融合参数。
+     */
+    public void setFuseParam(FuseParam FuseParam) {
+        this.FuseParam = FuseParam;
+    }
+
     public FuseFaceRequest() {
     }
 
@@ -276,6 +299,9 @@ public class FuseFaceRequest extends AbstractModel{
         if (source.LogoParam != null) {
             this.LogoParam = new LogoParam(source.LogoParam);
         }
+        if (source.FuseParam != null) {
+            this.FuseParam = new FuseParam(source.FuseParam);
+        }
     }
 
 
@@ -291,6 +317,7 @@ public class FuseFaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FuseFaceDegree", this.FuseFaceDegree);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
+        this.setParamObj(map, prefix + "FuseParam.", this.FuseParam);
 
     }
 }

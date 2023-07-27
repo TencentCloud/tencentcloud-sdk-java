@@ -71,6 +71,13 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     private String Config;
 
     /**
+    * 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+    */
+    @SerializedName("EnableRecognitionRectify")
+    @Expose
+    private Boolean EnableRecognitionRectify;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -214,6 +221,22 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.Config = Config;
     }
 
+    /**
+     * Get 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。 
+     * @return EnableRecognitionRectify 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+     */
+    public Boolean getEnableRecognitionRectify() {
+        return this.EnableRecognitionRectify;
+    }
+
+    /**
+     * Set 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+     * @param EnableRecognitionRectify 默认值为true，打开识别结果纠正开关。开关开启后，身份证号、出生日期、性别，三个字段会进行矫正补齐，统一结果输出；若关闭此开关，以上三个字段不会进行矫正补齐，保持原始识别结果输出，若原图出现篡改情况，这三个字段的识别结果可能会不统一。
+     */
+    public void setEnableRecognitionRectify(Boolean EnableRecognitionRectify) {
+        this.EnableRecognitionRectify = EnableRecognitionRectify;
+    }
+
     public IDCardOCRRequest() {
     }
 
@@ -234,6 +257,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.EnableRecognitionRectify != null) {
+            this.EnableRecognitionRectify = new Boolean(source.EnableRecognitionRectify);
+        }
     }
 
 
@@ -245,6 +271,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "CardSide", this.CardSide);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
 
     }
 }

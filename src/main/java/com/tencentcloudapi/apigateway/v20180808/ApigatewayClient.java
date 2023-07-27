@@ -1549,29 +1549,6 @@ API 网关可绑定自定义域名到服务，用于服务调用。此接口用�
     }
 
     /**
-     *接口已废弃
-
-本接口（GenerateApiDocument）用于自动生成 API 文档和 SDK，一个服务的一个环境生成一份文档和 SDK。
-     * @param req GenerateApiDocumentRequest
-     * @return GenerateApiDocumentResponse
-     * @throws TencentCloudSDKException
-     */
-    public GenerateApiDocumentResponse GenerateApiDocument(GenerateApiDocumentRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GenerateApiDocumentResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<GenerateApiDocumentResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GenerateApiDocument");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
      * @param req ImportOpenApiRequest
      * @return ImportOpenApiResponse
