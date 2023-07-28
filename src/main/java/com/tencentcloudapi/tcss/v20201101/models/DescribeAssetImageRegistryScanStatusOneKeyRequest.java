@@ -44,6 +44,13 @@ public class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractM
     private Long [] Id;
 
     /**
+    * 获取进度的任务ID
+    */
+    @SerializedName("TaskID")
+    @Expose
+    private Long TaskID;
+
+    /**
      * Get 需要获取进度的镜像列表 
      * @return Images 需要获取进度的镜像列表
      */
@@ -91,6 +98,22 @@ public class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractM
         this.Id = Id;
     }
 
+    /**
+     * Get 获取进度的任务ID 
+     * @return TaskID 获取进度的任务ID
+     */
+    public Long getTaskID() {
+        return this.TaskID;
+    }
+
+    /**
+     * Set 获取进度的任务ID
+     * @param TaskID 获取进度的任务ID
+     */
+    public void setTaskID(Long TaskID) {
+        this.TaskID = TaskID;
+    }
+
     public DescribeAssetImageRegistryScanStatusOneKeyRequest() {
     }
 
@@ -114,6 +137,9 @@ public class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractM
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.TaskID != null) {
+            this.TaskID = new Long(source.TaskID);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class DescribeAssetImageRegistryScanStatusOneKeyRequest extends AbstractM
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
 
     }
 }

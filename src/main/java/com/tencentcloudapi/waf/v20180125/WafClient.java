@@ -354,6 +354,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *本接口用于访问日志柱状趋势图
+     * @param req DescribeAccessHistogramRequest
+     * @return DescribeAccessHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessHistogramResponse DescribeAccessHistogram(DescribeAccessHistogramRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessHistogramResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessHistogramResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccessHistogram");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取访问日志索引配置信息
      * @param req DescribeAccessIndexRequest
      * @return DescribeAccessIndexResponse

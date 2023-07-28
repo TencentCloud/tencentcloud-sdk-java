@@ -130,6 +130,14 @@ public class LicenseDetail extends AbstractModel{
     private Tags [] Tags;
 
     /**
+    * 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FreezeNum")
+    @Expose
+    private Long FreezeNum;
+
+    /**
      * Get 授权ID 
      * @return LicenseId 授权ID
      */
@@ -377,6 +385,26 @@ public class LicenseDetail extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFreezeNum() {
+        return this.FreezeNum;
+    }
+
+    /**
+     * Set 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFreezeNum(Long FreezeNum) {
+        this.FreezeNum = FreezeNum;
+    }
+
     public LicenseDetail() {
     }
 
@@ -433,6 +461,9 @@ public class LicenseDetail extends AbstractModel{
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.FreezeNum != null) {
+            this.FreezeNum = new Long(source.FreezeNum);
+        }
     }
 
 
@@ -455,6 +486,7 @@ public class LicenseDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "FreezeNum", this.FreezeNum);
 
     }
 }

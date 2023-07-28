@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
+public class DescribeDashboardsResponse extends AbstractModel{
 
     /**
-    * 返回的任务ID
+    * 仪表盘的数量
     */
-    @SerializedName("TaskID")
+    @SerializedName("TotalCount")
     @Expose
-    private Long TaskID;
+    private Long TotalCount;
+
+    /**
+    * 仪表盘详细明细
+    */
+    @SerializedName("DashboardInfos")
+    @Expose
+    private DashboardInfo [] DashboardInfos;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的任务ID 
-     * @return TaskID 返回的任务ID
+     * Get 仪表盘的数量 
+     * @return TotalCount 仪表盘的数量
      */
-    public Long getTaskID() {
-        return this.TaskID;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 返回的任务ID
-     * @param TaskID 返回的任务ID
+     * Set 仪表盘的数量
+     * @param TotalCount 仪表盘的数量
      */
-    public void setTaskID(Long TaskID) {
-        this.TaskID = TaskID;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 仪表盘详细明细 
+     * @return DashboardInfos 仪表盘详细明细
+     */
+    public DashboardInfo [] getDashboardInfos() {
+        return this.DashboardInfos;
+    }
+
+    /**
+     * Set 仪表盘详细明细
+     * @param DashboardInfos 仪表盘详细明细
+     */
+    public void setDashboardInfos(DashboardInfo [] DashboardInfos) {
+        this.DashboardInfos = DashboardInfos;
     }
 
     /**
@@ -68,16 +91,22 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateAssetImageRegistryScanTaskResponse() {
+    public DescribeDashboardsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAssetImageRegistryScanTaskResponse(CreateAssetImageRegistryScanTaskResponse source) {
-        if (source.TaskID != null) {
-            this.TaskID = new Long(source.TaskID);
+    public DescribeDashboardsResponse(DescribeDashboardsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DashboardInfos != null) {
+            this.DashboardInfos = new DashboardInfo[source.DashboardInfos.length];
+            for (int i = 0; i < source.DashboardInfos.length; i++) {
+                this.DashboardInfos[i] = new DashboardInfo(source.DashboardInfos[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DashboardInfos.", this.DashboardInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

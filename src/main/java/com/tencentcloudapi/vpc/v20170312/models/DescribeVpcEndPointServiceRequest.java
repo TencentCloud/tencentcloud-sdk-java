@@ -55,6 +55,13 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
     private String [] EndPointServiceIds;
 
     /**
+    * <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+    */
+    @SerializedName("IsListAuthorizedEndPointService")
+    @Expose
+    private Boolean IsListAuthorizedEndPointService;
+
+    /**
      * Get 过滤条件。不支持同时传入参数 EndPointServiceIds and Filters。
 <li> service-id - String - （过滤条件）终端节点服务唯一ID。</li>
 <li>service-name - String - （过滤条件）终端节点实例名称。</li>
@@ -134,6 +141,22 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
         this.EndPointServiceIds = EndPointServiceIds;
     }
 
+    /**
+     * Get <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li> 
+     * @return IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+     */
+    public Boolean getIsListAuthorizedEndPointService() {
+        return this.IsListAuthorizedEndPointService;
+    }
+
+    /**
+     * Set <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+     * @param IsListAuthorizedEndPointService <li>不支持同时传入参数 Filters 。</li> <li>列出授权给当前账号的的终端节点服务信息。可以配合EndPointServiceIds参数进行过滤，那些终端节点服务授权了该账户。</li>
+     */
+    public void setIsListAuthorizedEndPointService(Boolean IsListAuthorizedEndPointService) {
+        this.IsListAuthorizedEndPointService = IsListAuthorizedEndPointService;
+    }
+
     public DescribeVpcEndPointServiceRequest() {
     }
 
@@ -160,6 +183,9 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
                 this.EndPointServiceIds[i] = new String(source.EndPointServiceIds[i]);
             }
         }
+        if (source.IsListAuthorizedEndPointService != null) {
+            this.IsListAuthorizedEndPointService = new Boolean(source.IsListAuthorizedEndPointService);
+        }
     }
 
 
@@ -171,6 +197,7 @@ public class DescribeVpcEndPointServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "EndPointServiceIds.", this.EndPointServiceIds);
+        this.setParamSimple(map, prefix + "IsListAuthorizedEndPointService", this.IsListAuthorizedEndPointService);
 
     }
 }

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractModel{
 
     /**
+    * 扫描任务id
+    */
+    @SerializedName("TaskID")
+    @Expose
+    private Long TaskID;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 扫描任务id 
+     * @return TaskID 扫描任务id
+     */
+    public Long getTaskID() {
+        return this.TaskID;
+    }
+
+    /**
+     * Set 扫描任务id
+     * @param TaskID 扫描任务id
+     */
+    public void setTaskID(Long TaskID) {
+        this.TaskID = TaskID;
+    }
 
     /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
@@ -53,6 +76,9 @@ public class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractMode
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAssetImageRegistryScanTaskOneKeyResponse(CreateAssetImageRegistryScanTaskOneKeyResponse source) {
+        if (source.TaskID != null) {
+            this.TaskID = new Long(source.TaskID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateAssetImageRegistryScanTaskOneKeyResponse extends AbstractMode
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

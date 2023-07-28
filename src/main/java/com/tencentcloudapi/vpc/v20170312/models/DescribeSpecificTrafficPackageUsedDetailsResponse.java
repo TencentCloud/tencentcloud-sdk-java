@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcss.v20201101.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
+public class DescribeSpecificTrafficPackageUsedDetailsResponse extends AbstractModel{
 
     /**
-    * 返回的任务ID
+    * 符合查询条件的共享流量包用量明细的总数
     */
-    @SerializedName("TaskID")
+    @SerializedName("TotalCount")
     @Expose
-    private Long TaskID;
+    private Long TotalCount;
+
+    /**
+    * 共享流量包用量明细列表
+    */
+    @SerializedName("UsedDetailSet")
+    @Expose
+    private UsedDetail [] UsedDetailSet;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -37,19 +44,35 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的任务ID 
-     * @return TaskID 返回的任务ID
+     * Get 符合查询条件的共享流量包用量明细的总数 
+     * @return TotalCount 符合查询条件的共享流量包用量明细的总数
      */
-    public Long getTaskID() {
-        return this.TaskID;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 返回的任务ID
-     * @param TaskID 返回的任务ID
+     * Set 符合查询条件的共享流量包用量明细的总数
+     * @param TotalCount 符合查询条件的共享流量包用量明细的总数
      */
-    public void setTaskID(Long TaskID) {
-        this.TaskID = TaskID;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 共享流量包用量明细列表 
+     * @return UsedDetailSet 共享流量包用量明细列表
+     */
+    public UsedDetail [] getUsedDetailSet() {
+        return this.UsedDetailSet;
+    }
+
+    /**
+     * Set 共享流量包用量明细列表
+     * @param UsedDetailSet 共享流量包用量明细列表
+     */
+    public void setUsedDetailSet(UsedDetail [] UsedDetailSet) {
+        this.UsedDetailSet = UsedDetailSet;
     }
 
     /**
@@ -68,16 +91,22 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateAssetImageRegistryScanTaskResponse() {
+    public DescribeSpecificTrafficPackageUsedDetailsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAssetImageRegistryScanTaskResponse(CreateAssetImageRegistryScanTaskResponse source) {
-        if (source.TaskID != null) {
-            this.TaskID = new Long(source.TaskID);
+    public DescribeSpecificTrafficPackageUsedDetailsResponse(DescribeSpecificTrafficPackageUsedDetailsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.UsedDetailSet != null) {
+            this.UsedDetailSet = new UsedDetail[source.UsedDetailSet.length];
+            for (int i = 0; i < source.UsedDetailSet.length; i++) {
+                this.UsedDetailSet[i] = new UsedDetail(source.UsedDetailSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class CreateAssetImageRegistryScanTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "UsedDetailSet.", this.UsedDetailSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

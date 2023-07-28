@@ -20,119 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScheduledSqlResouceInfo extends AbstractModel{
+public class DashboardTopicInfo extends AbstractModel{
 
     /**
-    * 目标主题id
+    * 主题id
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * 主题的的地域信息
+    * topic所在的地域
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 主题类型：0为日志主题，1为指标主题
-    */
-    @SerializedName("BizType")
-    @Expose
-    private Long BizType;
-
-    /**
-    * 指标名称
-    */
-    @SerializedName("MetricName")
-    @Expose
-    private String MetricName;
-
-    /**
-     * Get 目标主题id 
-     * @return TopicId 目标主题id
+     * Get 主题id 
+     * @return TopicId 主题id
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 目标主题id
-     * @param TopicId 目标主题id
+     * Set 主题id
+     * @param TopicId 主题id
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 主题的的地域信息 
-     * @return Region 主题的的地域信息
+     * Get topic所在的地域 
+     * @return Region topic所在的地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 主题的的地域信息
-     * @param Region 主题的的地域信息
+     * Set topic所在的地域
+     * @param Region topic所在的地域
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
-    /**
-     * Get 主题类型：0为日志主题，1为指标主题 
-     * @return BizType 主题类型：0为日志主题，1为指标主题
-     */
-    public Long getBizType() {
-        return this.BizType;
-    }
-
-    /**
-     * Set 主题类型：0为日志主题，1为指标主题
-     * @param BizType 主题类型：0为日志主题，1为指标主题
-     */
-    public void setBizType(Long BizType) {
-        this.BizType = BizType;
-    }
-
-    /**
-     * Get 指标名称 
-     * @return MetricName 指标名称
-     */
-    public String getMetricName() {
-        return this.MetricName;
-    }
-
-    /**
-     * Set 指标名称
-     * @param MetricName 指标名称
-     */
-    public void setMetricName(String MetricName) {
-        this.MetricName = MetricName;
-    }
-
-    public ScheduledSqlResouceInfo() {
+    public DashboardTopicInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScheduledSqlResouceInfo(ScheduledSqlResouceInfo source) {
+    public DashboardTopicInfo(DashboardTopicInfo source) {
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
         if (source.Region != null) {
             this.Region = new String(source.Region);
-        }
-        if (source.BizType != null) {
-            this.BizType = new Long(source.BizType);
-        }
-        if (source.MetricName != null) {
-            this.MetricName = new String(source.MetricName);
         }
     }
 
@@ -143,8 +91,6 @@ public class ScheduledSqlResouceInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "BizType", this.BizType);
-        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
 
     }
 }

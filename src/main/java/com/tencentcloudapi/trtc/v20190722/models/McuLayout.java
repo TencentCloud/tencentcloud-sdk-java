@@ -65,7 +65,7 @@ public class McuLayout extends AbstractModel{
     private Long ZOrder;
 
     /**
-    * 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+    * 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
     */
     @SerializedName("RenderMode")
     @Expose
@@ -98,6 +98,13 @@ public class McuLayout extends AbstractModel{
     @SerializedName("CustomCrop")
     @Expose
     private McuCustomCrop CustomCrop;
+
+    /**
+    * 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+    */
+    @SerializedName("BackgroundRenderMode")
+    @Expose
+    private Long BackgroundRenderMode;
 
     /**
      * Get 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。 
@@ -196,16 +203,16 @@ public class McuLayout extends AbstractModel{
     }
 
     /**
-     * Get 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。 
-     * @return RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * Get 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。 
+     * @return RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
-     * @param RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放，2为缩放并显示黑底。不填默认为0。
+     * Set 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
+     * @param RenderMode 子画面在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底。不填默认为0。
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;
@@ -287,6 +294,22 @@ public class McuLayout extends AbstractModel{
         this.CustomCrop = CustomCrop;
     }
 
+    /**
+     * Get 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。 
+     * @return BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     */
+    public Long getBackgroundRenderMode() {
+        return this.BackgroundRenderMode;
+    }
+
+    /**
+     * Set 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     * @param BackgroundRenderMode 子背景图在输出时的显示模式：0为裁剪，1为缩放并显示背景，2为缩放并显示黑底，3为变比例伸缩。不填默认为3。
+     */
+    public void setBackgroundRenderMode(Long BackgroundRenderMode) {
+        this.BackgroundRenderMode = BackgroundRenderMode;
+    }
+
     public McuLayout() {
     }
 
@@ -325,6 +348,9 @@ public class McuLayout extends AbstractModel{
         if (source.CustomCrop != null) {
             this.CustomCrop = new McuCustomCrop(source.CustomCrop);
         }
+        if (source.BackgroundRenderMode != null) {
+            this.BackgroundRenderMode = new Long(source.BackgroundRenderMode);
+        }
     }
 
 
@@ -342,6 +368,7 @@ public class McuLayout extends AbstractModel{
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         this.setParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
+        this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
 
     }
 }

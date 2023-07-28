@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ListAttachedGroupPoliciesResponse extends AbstractModel{
 
     /**
-    * 策略总数
+    * 策略总数。取值范围大于等于0。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -44,16 +44,16 @@ public class ListAttachedGroupPoliciesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 策略总数 
-     * @return TotalNum 策略总数
+     * Get 策略总数。取值范围大于等于0。 
+     * @return TotalNum 策略总数。取值范围大于等于0。
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 策略总数
-     * @param TotalNum 策略总数
+     * Set 策略总数。取值范围大于等于0。
+     * @param TotalNum 策略总数。取值范围大于等于0。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;

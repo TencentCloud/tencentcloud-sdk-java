@@ -942,6 +942,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取仪表盘
+     * @param req DescribeDashboardsRequest
+     * @return DescribeDashboardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDashboardsResponse DescribeDashboards(DescribeDashboardsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDashboardsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDashboardsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDashboards");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取数据加工任务列表基本信息
      * @param req DescribeDataTransformInfoRequest
      * @return DescribeDataTransformInfoResponse

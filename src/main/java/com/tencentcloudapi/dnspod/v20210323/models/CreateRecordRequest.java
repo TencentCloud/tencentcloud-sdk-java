@@ -100,6 +100,13 @@ public class CreateRecordRequest extends AbstractModel{
     private String Status;
 
     /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -275,6 +282,22 @@ public class CreateRecordRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public CreateRecordRequest() {
     }
 
@@ -316,6 +339,9 @@ public class CreateRecordRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class CreateRecordRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TTL", this.TTL);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

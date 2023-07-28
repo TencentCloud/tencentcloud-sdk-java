@@ -65,6 +65,13 @@ public class McuVideoParams extends AbstractModel{
     private McuWaterMarkParams [] WaterMarkList;
 
     /**
+    * 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+    */
+    @SerializedName("BackgroundRenderMode")
+    @Expose
+    private Long BackgroundRenderMode;
+
+    /**
      * Get 输出流视频编码参数。 
      * @return VideoEncode 输出流视频编码参数。
      */
@@ -172,6 +179,22 @@ public class McuVideoParams extends AbstractModel{
         this.WaterMarkList = WaterMarkList;
     }
 
+    /**
+     * Get 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。 
+     * @return BackgroundRenderMode 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+     */
+    public Long getBackgroundRenderMode() {
+        return this.BackgroundRenderMode;
+    }
+
+    /**
+     * Set 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+     * @param BackgroundRenderMode 背景图在输出时的显示模式：0为裁剪，1为缩放并显示黑底，2为变比例伸缩。后台默认为变比例伸缩。
+     */
+    public void setBackgroundRenderMode(Long BackgroundRenderMode) {
+        this.BackgroundRenderMode = BackgroundRenderMode;
+    }
+
     public McuVideoParams() {
     }
 
@@ -198,6 +221,9 @@ public class McuVideoParams extends AbstractModel{
                 this.WaterMarkList[i] = new McuWaterMarkParams(source.WaterMarkList[i]);
             }
         }
+        if (source.BackgroundRenderMode != null) {
+            this.BackgroundRenderMode = new Long(source.BackgroundRenderMode);
+        }
     }
 
 
@@ -210,6 +236,7 @@ public class McuVideoParams extends AbstractModel{
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         this.setParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+        this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
 
     }
 }

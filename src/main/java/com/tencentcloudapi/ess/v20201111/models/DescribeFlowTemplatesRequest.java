@@ -23,49 +23,57 @@ import java.util.HashMap;
 public class DescribeFlowTemplatesRequest extends AbstractModel{
 
     /**
-    * 调用方用户信息，userId 必填
+    * 调用方员工/经办人信息
+UserId 必填，在企业控制台组织架构中可以查到员工的UserId
+注：请保证对应
     */
     @SerializedName("Operator")
     @Expose
     private UserInfo Operator;
 
     /**
-    * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+    * 代理相关应用信息
+如集团主企业代子企业操作的场景中ProxyOrganizationId必填
     */
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
 
     /**
-    * 查询内容：0-模板列表及详情（默认），1-仅模板列表
+    * 查询内容类型
+0-模板列表及详情（默认）
+1-仅模板列表
     */
     @SerializedName("ContentType")
     @Expose
     private Long ContentType;
 
     /**
-    * 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+    * 搜索条件，本字段用于指定模板Id进行查询。
+Key：template-id
+Values：需要查询的模板Id列表
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 查询偏移位置，默认0
+    * 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 查询个数，默认20，最大200
+    * 指定每页多少条数据，如果不传默认为20，单页最大200。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * ApplicationId不为空，查询指定应用下的模板列表
+    * 用于查询指定应用号下单模板列表。
+ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
     */
     @SerializedName("ApplicationId")
@@ -95,105 +103,135 @@ ApplicationId为空，查询所有应用下的模板列表
     private Long GenerateSource;
 
     /**
-     * Get 调用方用户信息，userId 必填 
-     * @return Operator 调用方用户信息，userId 必填
+     * Get 调用方员工/经办人信息
+UserId 必填，在企业控制台组织架构中可以查到员工的UserId
+注：请保证对应 
+     * @return Operator 调用方员工/经办人信息
+UserId 必填，在企业控制台组织架构中可以查到员工的UserId
+注：请保证对应
      */
     public UserInfo getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 调用方用户信息，userId 必填
-     * @param Operator 调用方用户信息，userId 必填
+     * Set 调用方员工/经办人信息
+UserId 必填，在企业控制台组织架构中可以查到员工的UserId
+注：请保证对应
+     * @param Operator 调用方员工/经办人信息
+UserId 必填，在企业控制台组织架构中可以查到员工的UserId
+注：请保证对应
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
-     * @return Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Get 代理相关应用信息
+如集团主企业代子企业操作的场景中ProxyOrganizationId必填 
+     * @return Agent 代理相关应用信息
+如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public Agent getAgent() {
         return this.Agent;
     }
 
     /**
-     * Set 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
-     * @param Agent 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * Set 代理相关应用信息
+如集团主企业代子企业操作的场景中ProxyOrganizationId必填
+     * @param Agent 代理相关应用信息
+如集团主企业代子企业操作的场景中ProxyOrganizationId必填
      */
     public void setAgent(Agent Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 查询内容：0-模板列表及详情（默认），1-仅模板列表 
-     * @return ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * Get 查询内容类型
+0-模板列表及详情（默认）
+1-仅模板列表 
+     * @return ContentType 查询内容类型
+0-模板列表及详情（默认）
+1-仅模板列表
      */
     public Long getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 查询内容：0-模板列表及详情（默认），1-仅模板列表
-     * @param ContentType 查询内容：0-模板列表及详情（默认），1-仅模板列表
+     * Set 查询内容类型
+0-模板列表及详情（默认）
+1-仅模板列表
+     * @param ContentType 查询内容类型
+0-模板列表及详情（默认）
+1-仅模板列表
      */
     public void setContentType(Long ContentType) {
         this.ContentType = ContentType;
     }
 
     /**
-     * Get 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤 
-     * @return Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * Get 搜索条件，本字段用于指定模板Id进行查询。
+Key：template-id
+Values：需要查询的模板Id列表 
+     * @return Filters 搜索条件，本字段用于指定模板Id进行查询。
+Key：template-id
+Values：需要查询的模板Id列表
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
-     * @param Filters 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
+     * Set 搜索条件，本字段用于指定模板Id进行查询。
+Key：template-id
+Values：需要查询的模板Id列表
+     * @param Filters 搜索条件，本字段用于指定模板Id进行查询。
+Key：template-id
+Values：需要查询的模板Id列表
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 查询偏移位置，默认0 
-     * @return Offset 查询偏移位置，默认0
+     * Get 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。 
+     * @return Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 查询偏移位置，默认0
-     * @param Offset 查询偏移位置，默认0
+     * Set 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
+     * @param Offset 查询结果分页返回，此处指定第几页，如果不传默从第一页返回。页码从0开始，即首页为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 查询个数，默认20，最大200 
-     * @return Limit 查询个数，默认20，最大200
+     * Get 指定每页多少条数据，如果不传默认为20，单页最大200。 
+     * @return Limit 指定每页多少条数据，如果不传默认为20，单页最大200。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 查询个数，默认20，最大200
-     * @param Limit 查询个数，默认20，最大200
+     * Set 指定每页多少条数据，如果不传默认为20，单页最大200。
+     * @param Limit 指定每页多少条数据，如果不传默认为20，单页最大200。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get ApplicationId不为空，查询指定应用下的模板列表
+     * Get 用于查询指定应用号下单模板列表。
+ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表 
-     * @return ApplicationId ApplicationId不为空，查询指定应用下的模板列表
+     * @return ApplicationId 用于查询指定应用号下单模板列表。
+ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      */
     public String getApplicationId() {
@@ -201,9 +239,11 @@ ApplicationId为空，查询所有应用下的模板列表
     }
 
     /**
-     * Set ApplicationId不为空，查询指定应用下的模板列表
+     * Set 用于查询指定应用号下单模板列表。
+ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
-     * @param ApplicationId ApplicationId不为空，查询指定应用下的模板列表
+     * @param ApplicationId 用于查询指定应用号下单模板列表。
+ApplicationId不为空，查询指定应用下的模板列表
 ApplicationId为空，查询所有应用下的模板列表
      */
     public void setApplicationId(String ApplicationId) {

@@ -93,6 +93,13 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private Long Insecure;
 
     /**
+    * 联通性检测的配置
+    */
+    @SerializedName("ConnDetectConfig")
+    @Expose
+    private ConnDetectConfig [] ConnDetectConfig;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -252,6 +259,22 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.Insecure = Insecure;
     }
 
+    /**
+     * Get 联通性检测的配置 
+     * @return ConnDetectConfig 联通性检测的配置
+     */
+    public ConnDetectConfig [] getConnDetectConfig() {
+        return this.ConnDetectConfig;
+    }
+
+    /**
+     * Set 联通性检测的配置
+     * @param ConnDetectConfig 联通性检测的配置
+     */
+    public void setConnDetectConfig(ConnDetectConfig [] ConnDetectConfig) {
+        this.ConnDetectConfig = ConnDetectConfig;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -290,6 +313,12 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         if (source.Insecure != null) {
             this.Insecure = new Long(source.Insecure);
         }
+        if (source.ConnDetectConfig != null) {
+            this.ConnDetectConfig = new ConnDetectConfig[source.ConnDetectConfig.length];
+            for (int i = 0; i < source.ConnDetectConfig.length; i++) {
+                this.ConnDetectConfig[i] = new ConnDetectConfig(source.ConnDetectConfig[i]);
+            }
+        }
     }
 
 
@@ -307,6 +336,7 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
+        this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
 
     }
 }

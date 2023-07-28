@@ -3702,6 +3702,27 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (DescribeSpecificTrafficPackageUsedDetails) 用于查询指定 共享流量包 的用量明细。
+     * @param req DescribeSpecificTrafficPackageUsedDetailsRequest
+     * @return DescribeSpecificTrafficPackageUsedDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecificTrafficPackageUsedDetailsResponse DescribeSpecificTrafficPackageUsedDetails(DescribeSpecificTrafficPackageUsedDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSpecificTrafficPackageUsedDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSpecificTrafficPackageUsedDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口(DescribeSubnetResourceDashboard)用于查看Subnet资源信息。
      * @param req DescribeSubnetResourceDashboardRequest
      * @return DescribeSubnetResourceDashboardResponse

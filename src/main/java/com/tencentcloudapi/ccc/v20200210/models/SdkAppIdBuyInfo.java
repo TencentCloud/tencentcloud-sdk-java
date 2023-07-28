@@ -58,6 +58,14 @@ public class SdkAppIdBuyInfo extends AbstractModel{
     private PhoneNumBuyInfo [] PhoneNumBuyList;
 
     /**
+    * 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SipBuyNum")
+    @Expose
+    private Long SipBuyNum;
+
+    /**
      * Get 应用ID 
      * @return SdkAppId 应用ID
      */
@@ -137,6 +145,26 @@ public class SdkAppIdBuyInfo extends AbstractModel{
         this.PhoneNumBuyList = PhoneNumBuyList;
     }
 
+    /**
+     * Get 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SipBuyNum 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSipBuyNum() {
+        return this.SipBuyNum;
+    }
+
+    /**
+     * Set 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SipBuyNum 办公电话购买数（还在有效期内）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSipBuyNum(Long SipBuyNum) {
+        this.SipBuyNum = SipBuyNum;
+    }
+
     public SdkAppIdBuyInfo() {
     }
 
@@ -166,6 +194,9 @@ public class SdkAppIdBuyInfo extends AbstractModel{
                 this.PhoneNumBuyList[i] = new PhoneNumBuyInfo(source.PhoneNumBuyList[i]);
             }
         }
+        if (source.SipBuyNum != null) {
+            this.SipBuyNum = new Long(source.SipBuyNum);
+        }
     }
 
 
@@ -178,6 +209,7 @@ public class SdkAppIdBuyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StaffBuyNum", this.StaffBuyNum);
         this.setParamArrayObj(map, prefix + "StaffBuyList.", this.StaffBuyList);
         this.setParamArrayObj(map, prefix + "PhoneNumBuyList.", this.PhoneNumBuyList);
+        this.setParamSimple(map, prefix + "SipBuyNum", this.SipBuyNum);
 
     }
 }

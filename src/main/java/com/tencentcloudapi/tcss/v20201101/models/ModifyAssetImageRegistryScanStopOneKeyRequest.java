@@ -44,6 +44,13 @@ public class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
     private Long [] Id;
 
     /**
+    * 停止的任务ID
+    */
+    @SerializedName("TaskID")
+    @Expose
+    private Long TaskID;
+
+    /**
      * Get 是否扫描全部镜像 
      * @return All 是否扫描全部镜像
      */
@@ -91,6 +98,22 @@ public class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
         this.Id = Id;
     }
 
+    /**
+     * Get 停止的任务ID 
+     * @return TaskID 停止的任务ID
+     */
+    public Long getTaskID() {
+        return this.TaskID;
+    }
+
+    /**
+     * Set 停止的任务ID
+     * @param TaskID 停止的任务ID
+     */
+    public void setTaskID(Long TaskID) {
+        this.TaskID = TaskID;
+    }
+
     public ModifyAssetImageRegistryScanStopOneKeyRequest() {
     }
 
@@ -114,6 +137,9 @@ public class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
                 this.Id[i] = new Long(source.Id[i]);
             }
         }
+        if (source.TaskID != null) {
+            this.TaskID = new Long(source.TaskID);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class ModifyAssetImageRegistryScanStopOneKeyRequest extends AbstractModel
         this.setParamSimple(map, prefix + "All", this.All);
         this.setParamArrayObj(map, prefix + "Images.", this.Images);
         this.setParamArraySimple(map, prefix + "Id.", this.Id);
+        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
 
     }
 }

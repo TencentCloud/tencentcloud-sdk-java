@@ -71,7 +71,7 @@ public class FakeURLData extends AbstractModel{
     private Long Heat;
 
     /**
-    * 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
+    * 拦截处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockStatus")
@@ -79,7 +79,7 @@ public class FakeURLData extends AbstractModel{
     private Long BlockStatus;
 
     /**
-    * 协助处置状态说明
+    * 拦截处置状态说明
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockNote")
@@ -197,6 +197,14 @@ public class FakeURLData extends AbstractModel{
     @SerializedName("AccountStatus")
     @Expose
     private Long AccountStatus;
+
+    /**
+    * 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuditStatus")
+    @Expose
+    private Long AuditStatus;
 
     /**
      * Get 仿冒网址id
@@ -319,9 +327,9 @@ public class FakeURLData extends AbstractModel{
     }
 
     /**
-     * Get 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
+     * Get 拦截处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BlockStatus 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
+     * @return BlockStatus 拦截处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBlockStatus() {
@@ -329,9 +337,9 @@ public class FakeURLData extends AbstractModel{
     }
 
     /**
-     * Set 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
+     * Set 拦截处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockStatus 协助处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
+     * @param BlockStatus 拦截处置状态：0-未处置 1-处置中 2-处置成功 3-处置失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockStatus(Long BlockStatus) {
@@ -339,9 +347,9 @@ public class FakeURLData extends AbstractModel{
     }
 
     /**
-     * Get 协助处置状态说明
+     * Get 拦截处置状态说明
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BlockNote 协助处置状态说明
+     * @return BlockNote 拦截处置状态说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBlockNote() {
@@ -349,9 +357,9 @@ public class FakeURLData extends AbstractModel{
     }
 
     /**
-     * Set 协助处置状态说明
+     * Set 拦截处置状态说明
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BlockNote 协助处置状态说明
+     * @param BlockNote 拦截处置状态说明
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockNote(String BlockNote) {
@@ -638,6 +646,26 @@ public class FakeURLData extends AbstractModel{
         this.AccountStatus = AccountStatus;
     }
 
+    /**
+     * Get 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuditStatus 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAuditStatus() {
+        return this.AuditStatus;
+    }
+
+    /**
+     * Set 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuditStatus 审核状态：0-未审核 1-审核中 2-审核成功 3-审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuditStatus(Long AuditStatus) {
+        this.AuditStatus = AuditStatus;
+    }
+
     public FakeURLData() {
     }
 
@@ -712,6 +740,9 @@ public class FakeURLData extends AbstractModel{
         if (source.AccountStatus != null) {
             this.AccountStatus = new Long(source.AccountStatus);
         }
+        if (source.AuditStatus != null) {
+            this.AuditStatus = new Long(source.AuditStatus);
+        }
     }
 
 
@@ -741,6 +772,7 @@ public class FakeURLData extends AbstractModel{
         this.setParamSimple(map, prefix + "CertificationStatus", this.CertificationStatus);
         this.setParamSimple(map, prefix + "Snapshot", this.Snapshot);
         this.setParamSimple(map, prefix + "AccountStatus", this.AccountStatus);
+        this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
 
     }
 }

@@ -93,7 +93,7 @@ public class CreateTtsTaskRequest extends AbstractModel{
     private String CallbackUrl;
 
     /**
-    * 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+    * 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
     */
     @SerializedName("VoiceoverDialogueSplit")
     @Expose
@@ -260,16 +260,16 @@ public class CreateTtsTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false 
-     * @return VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+     * Get 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false 
+     * @return VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
      */
     public Boolean getVoiceoverDialogueSplit() {
         return this.VoiceoverDialogueSplit;
     }
 
     /**
-     * Set 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
-     * @param VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+     * Set 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
+     * @param VoiceoverDialogueSplit 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色10510000、100510000），默认 false
      */
     public void setVoiceoverDialogueSplit(Boolean VoiceoverDialogueSplit) {
         this.VoiceoverDialogueSplit = VoiceoverDialogueSplit;

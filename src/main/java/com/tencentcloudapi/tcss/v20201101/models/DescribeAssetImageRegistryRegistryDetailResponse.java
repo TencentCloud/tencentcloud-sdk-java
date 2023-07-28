@@ -66,7 +66,7 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     private String RegistryVersion;
 
     /**
-    * 网络类型，列表：public（公网）
+    * 网络类型，列表：public（公网）,private（私网）
     */
     @SerializedName("NetType")
     @Expose
@@ -95,6 +95,20 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     @SerializedName("Insecure")
     @Expose
     private Long Insecure;
+
+    /**
+    * 联通性检测结果详情
+    */
+    @SerializedName("ConnDetectDetail")
+    @Expose
+    private RegistryConnDetectResult [] ConnDetectDetail;
+
+    /**
+    * tcr情况下instance_id
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -204,16 +218,16 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 网络类型，列表：public（公网） 
-     * @return NetType 网络类型，列表：public（公网）
+     * Get 网络类型，列表：public（公网）,private（私网） 
+     * @return NetType 网络类型，列表：public（公网）,private（私网）
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set 网络类型，列表：public（公网）
-     * @param NetType 网络类型，列表：public（公网）
+     * Set 网络类型，列表：public（公网）,private（私网）
+     * @param NetType 网络类型，列表：public（公网）,private（私网）
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
@@ -280,6 +294,38 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
     }
 
     /**
+     * Get 联通性检测结果详情 
+     * @return ConnDetectDetail 联通性检测结果详情
+     */
+    public RegistryConnDetectResult [] getConnDetectDetail() {
+        return this.ConnDetectDetail;
+    }
+
+    /**
+     * Set 联通性检测结果详情
+     * @param ConnDetectDetail 联通性检测结果详情
+     */
+    public void setConnDetectDetail(RegistryConnDetectResult [] ConnDetectDetail) {
+        this.ConnDetectDetail = ConnDetectDetail;
+    }
+
+    /**
+     * Get tcr情况下instance_id 
+     * @return InstanceID tcr情况下instance_id
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set tcr情况下instance_id
+     * @param InstanceID tcr情况下instance_id
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -333,6 +379,15 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         if (source.Insecure != null) {
             this.Insecure = new Long(source.Insecure);
         }
+        if (source.ConnDetectDetail != null) {
+            this.ConnDetectDetail = new RegistryConnDetectResult[source.ConnDetectDetail.length];
+            for (int i = 0; i < source.ConnDetectDetail.length; i++) {
+                this.ConnDetectDetail[i] = new RegistryConnDetectResult(source.ConnDetectDetail[i]);
+            }
+        }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -353,6 +408,8 @@ public class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractMo
         this.setParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
+        this.setParamArrayObj(map, prefix + "ConnDetectDetail.", this.ConnDetectDetail);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

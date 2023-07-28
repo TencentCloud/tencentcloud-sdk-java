@@ -24,63 +24,63 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel{
 
     /**
     * 身份提供商URL。OpenID Connect身份提供商标识。
-对应企业IdP提供的Openid-configuration中"issuer"字段的值。
+对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
     */
     @SerializedName("IdentityUrl")
     @Expose
     private String IdentityUrl;
 
     /**
-    * 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
+    * RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
     */
     @SerializedName("IdentityKey")
     @Expose
     private String IdentityKey;
 
     /**
-    * 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
+    * 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
     */
     @SerializedName("ClientId")
     @Expose
     private String ClientId;
 
     /**
-    * 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
+    * 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
     */
     @SerializedName("AuthorizationEndpoint")
     @Expose
     private String AuthorizationEndpoint;
 
     /**
-    * 授权请求Response type，固定值id_token。
+    * 授权请求Response type，有code，id_token，固定值id_token。
     */
     @SerializedName("ResponseType")
     @Expose
     private String ResponseType;
 
     /**
-    * 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
+    * 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。
     */
     @SerializedName("ResponseMode")
     @Expose
     private String ResponseMode;
 
     /**
-    * 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+    * 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
     */
     @SerializedName("MappingFiled")
     @Expose
     private String MappingFiled;
 
     /**
-    * 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
+    * 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
     */
     @SerializedName("Scope")
     @Expose
     private String [] Scope;
 
     /**
-    * 描述
+    * 描述，长度为1~255个英文或中文字符，默认值为空。
     */
     @SerializedName("Description")
     @Expose
@@ -88,9 +88,9 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel{
 
     /**
      * Get 身份提供商URL。OpenID Connect身份提供商标识。
-对应企业IdP提供的Openid-configuration中"issuer"字段的值。 
+对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。 
      * @return IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
-对应企业IdP提供的Openid-configuration中"issuer"字段的值。
+对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      */
     public String getIdentityUrl() {
         return this.IdentityUrl;
@@ -98,137 +98,137 @@ public class UpdateUserOIDCConfigRequest extends AbstractModel{
 
     /**
      * Set 身份提供商URL。OpenID Connect身份提供商标识。
-对应企业IdP提供的Openid-configuration中"issuer"字段的值。
+对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      * @param IdentityUrl 身份提供商URL。OpenID Connect身份提供商标识。
-对应企业IdP提供的Openid-configuration中"issuer"字段的值。
+对应企业IdP提供的Openid-configuration中"issuer"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      */
     public void setIdentityUrl(String IdentityUrl) {
         this.IdentityUrl = IdentityUrl;
     }
 
     /**
-     * Get 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。 
-     * @return IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
+     * Get RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。 
+     * @return IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      */
     public String getIdentityKey() {
         return this.IdentityKey;
     }
 
     /**
-     * Set 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
-     * @param IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的帐号安全，建议您定期轮换签名公钥。
+     * Set RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
+     * @param IdentityKey RSA签名公钥，JWKS格式，需要进行base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      */
     public void setIdentityKey(String IdentityKey) {
         this.IdentityKey = IdentityKey;
     }
 
     /**
-     * Get 客户端ID，在OpenID Connect身份提供商注册的客户端ID。 
-     * @return ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
+     * Get 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。 
+     * @return ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
      */
     public String getClientId() {
         return this.ClientId;
     }
 
     /**
-     * Set 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
-     * @param ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID。
+     * Set 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
+     * @param ClientId 客户端ID，在OpenID Connect身份提供商注册的客户端ID，允许英文字母、数字、特殊字符.-_:/，不能以特殊字符.-_:/开头，单个客户端ID最大64个字符。
      */
     public void setClientId(String ClientId) {
         this.ClientId = ClientId;
     }
 
     /**
-     * Get 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。 
-     * @return AuthorizationEndpoint 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
+     * Get 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。 
+     * @return AuthorizationEndpoint 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      */
     public String getAuthorizationEndpoint() {
         return this.AuthorizationEndpoint;
     }
 
     /**
-     * Set 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
-     * @param AuthorizationEndpoint 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值。
+     * Set 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
+     * @param AuthorizationEndpoint 授权请求Endpoint，OpenID Connect身份提供商授权地址。对应企业IdP提供的Openid-configuration中"authorization_endpoint"字段的值，该URL必须以https开头，符合标准URL格式，不允许带有query参数（以?标识）、fragment片段（以#标识）和登录信息（以@标识）。
      */
     public void setAuthorizationEndpoint(String AuthorizationEndpoint) {
         this.AuthorizationEndpoint = AuthorizationEndpoint;
     }
 
     /**
-     * Get 授权请求Response type，固定值id_token。 
-     * @return ResponseType 授权请求Response type，固定值id_token。
+     * Get 授权请求Response type，有code，id_token，固定值id_token。 
+     * @return ResponseType 授权请求Response type，有code，id_token，固定值id_token。
      */
     public String getResponseType() {
         return this.ResponseType;
     }
 
     /**
-     * Set 授权请求Response type，固定值id_token。
-     * @param ResponseType 授权请求Response type，固定值id_token。
+     * Set 授权请求Response type，有code，id_token，固定值id_token。
+     * @param ResponseType 授权请求Response type，有code，id_token，固定值id_token。
      */
     public void setResponseType(String ResponseType) {
         this.ResponseType = ResponseType;
     }
 
     /**
-     * Get 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。 
-     * @return ResponseMode 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
+     * Get 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。 
+     * @return ResponseMode 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。
      */
     public String getResponseMode() {
         return this.ResponseMode;
     }
 
     /**
-     * Set 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
-     * @param ResponseMode 授权请求Response mode。授权请求返回模式，form_post和fragment两种可选模式，推荐选择form_post模式。
+     * Set 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。
+     * @param ResponseMode 授权请求Response mode。授权请求返回模式，有form_post和fragment两种可选模式，推荐选择form_post模式。
      */
     public void setResponseMode(String ResponseMode) {
         this.ResponseMode = ResponseMode;
     }
 
     /**
-     * Get 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段 
-     * @return MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+     * Get 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符 
+     * @return MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
      */
     public String getMappingFiled() {
         return this.MappingFiled;
     }
 
     /**
-     * Set 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
-     * @param MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
+     * Set 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
+     * @param MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段,仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-255个中文或英文字符
      */
     public void setMappingFiled(String MappingFiled) {
         this.MappingFiled = MappingFiled;
     }
 
     /**
-     * Get 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。 
-     * @return Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
+     * Get 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。 
+     * @return Scope 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
      */
     public String [] getScope() {
         return this.Scope;
     }
 
     /**
-     * Set 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
-     * @param Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
+     * Set 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
+     * @param Scope 授权请求Scope。有openid; email;profile三种。代表授权请求信息范围openid表示请求访问用户的身份信息，email表示请求访问用户的电子邮件地址，profile表示请求访问用户的基本信息。默认必选openid。
      */
     public void setScope(String [] Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get 描述，长度为1~255个英文或中文字符，默认值为空。 
+     * @return Description 描述，长度为1~255个英文或中文字符，默认值为空。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set 描述，长度为1~255个英文或中文字符，默认值为空。
+     * @param Description 描述，长度为1~255个英文或中文字符，默认值为空。
      */
     public void setDescription(String Description) {
         this.Description = Description;

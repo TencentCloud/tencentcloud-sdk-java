@@ -65,6 +65,13 @@ public class ModifyAssetImageRegistryScanStopRequest extends AbstractModel{
     private Boolean OnlyScanLatest;
 
     /**
+    * 停止的任务ID
+    */
+    @SerializedName("TaskID")
+    @Expose
+    private Long TaskID;
+
+    /**
      * Get 是否扫描全部镜像 
      * @return All 是否扫描全部镜像
      */
@@ -160,6 +167,22 @@ public class ModifyAssetImageRegistryScanStopRequest extends AbstractModel{
         this.OnlyScanLatest = OnlyScanLatest;
     }
 
+    /**
+     * Get 停止的任务ID 
+     * @return TaskID 停止的任务ID
+     */
+    public Long getTaskID() {
+        return this.TaskID;
+    }
+
+    /**
+     * Set 停止的任务ID
+     * @param TaskID 停止的任务ID
+     */
+    public void setTaskID(Long TaskID) {
+        this.TaskID = TaskID;
+    }
+
     public ModifyAssetImageRegistryScanStopRequest() {
     }
 
@@ -198,6 +221,9 @@ public class ModifyAssetImageRegistryScanStopRequest extends AbstractModel{
         if (source.OnlyScanLatest != null) {
             this.OnlyScanLatest = new Boolean(source.OnlyScanLatest);
         }
+        if (source.TaskID != null) {
+            this.TaskID = new Long(source.TaskID);
+        }
     }
 
 
@@ -211,6 +237,7 @@ public class ModifyAssetImageRegistryScanStopRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
         this.setParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
+        this.setParamSimple(map, prefix + "TaskID", this.TaskID);
 
     }
 }
