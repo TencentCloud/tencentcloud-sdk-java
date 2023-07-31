@@ -102,7 +102,7 @@ public class ScheduledSqlTaskInfo extends AbstractModel{
     private String ProcessStartTime;
 
     /**
-    * 调度类型，1:持续运行 2:指定调度结束时间
+    * 调度类型，1:持续运行 2:指定时间范围
     */
     @SerializedName("ProcessType")
     @Expose
@@ -336,16 +336,16 @@ public class ScheduledSqlTaskInfo extends AbstractModel{
     }
 
     /**
-     * Get 调度类型，1:持续运行 2:指定调度结束时间 
-     * @return ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * Get 调度类型，1:持续运行 2:指定时间范围 
+     * @return ProcessType 调度类型，1:持续运行 2:指定时间范围
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 调度类型，1:持续运行 2:指定调度结束时间
-     * @param ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * Set 调度类型，1:持续运行 2:指定时间范围
+     * @param ProcessType 调度类型，1:持续运行 2:指定时间范围
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;

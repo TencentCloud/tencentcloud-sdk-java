@@ -105,9 +105,6 @@ public enum OcrErrorCode {
     // 图片解码失败。
      INVALIDPARAMETER_ENGINEIMAGEDECODEFAILED("InvalidParameter.EngineImageDecodeFailed"),
      
-    // 无效的GTIN。
-     INVALIDPARAMETER_INVALIDGTINERROR("InvalidParameter.InvalidGTINError"),
-     
     // 任务创建失败，文件URL非法。
      INVALIDPARAMETERVALUE_FILEURLILLEGALERROR("InvalidParameterValue.FileUrlIllegalError"),
      

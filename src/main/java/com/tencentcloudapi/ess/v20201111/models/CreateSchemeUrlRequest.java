@@ -68,7 +68,7 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private String FlowId;
 
     /**
-    * 合同组ID
+    * 合同组ID 
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -82,7 +82,10 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     private Long PathType;
 
     /**
-    * 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+    * 是否自动回跳
+true：是，
+false：否。
+该参数只针对"APP" 类型的签署链接有效
     */
     @SerializedName("AutoJumpBack")
     @Expose
@@ -216,16 +219,16 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     }
 
     /**
-     * Get 合同组ID 
-     * @return FlowGroupId 合同组ID
+     * Get 合同组ID  
+     * @return FlowGroupId 合同组ID 
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID
-     * @param FlowGroupId 合同组ID
+     * Set 合同组ID 
+     * @param FlowGroupId 合同组ID 
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
@@ -248,16 +251,28 @@ APP：第三方APP或小程序跳转电子签小程序的path。
     }
 
     /**
-     * Get 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效 
-     * @return AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     * Get 是否自动回跳
+true：是，
+false：否。
+该参数只针对"APP" 类型的签署链接有效 
+     * @return AutoJumpBack 是否自动回跳
+true：是，
+false：否。
+该参数只针对"APP" 类型的签署链接有效
      */
     public Boolean getAutoJumpBack() {
         return this.AutoJumpBack;
     }
 
     /**
-     * Set 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
-     * @param AutoJumpBack 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+     * Set 是否自动回跳
+true：是，
+false：否。
+该参数只针对"APP" 类型的签署链接有效
+     * @param AutoJumpBack 是否自动回跳
+true：是，
+false：否。
+该参数只针对"APP" 类型的签署链接有效
      */
     public void setAutoJumpBack(Boolean AutoJumpBack) {
         this.AutoJumpBack = AutoJumpBack;

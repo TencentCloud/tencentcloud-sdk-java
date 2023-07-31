@@ -1284,31 +1284,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *库源服务调整，该接口在2023年6月1日将正式下线。
-
-本接口支持条形码备案信息查询，返回条形码查询结果的相关信息，包括产品名称、产品英文名称、品牌名称、规格型号、宽度、高度、深度、关键字、产品描述、厂家名称、厂家地址、企业社会信用代码13个字段信息。
-
-产品优势：直联中国物品编码中心，查询结果更加准确、可靠。
-     * @param req QueryBarCodeRequest
-     * @return QueryBarCodeResponse
-     * @throws TencentCloudSDKException
-     */
-    public QueryBarCodeResponse QueryBarCode(QueryBarCodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryBarCodeResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<QueryBarCodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "QueryBarCode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *本接口支持定额发票的发票号码、发票代码、金额(大小写)、发票消费类型、地区及是否有公司印章等关键字段的识别。
 
 默认接口请求频率限制：5次/秒。
@@ -2272,29 +2247,6 @@ public class OcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<VerifyBizLicenseResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "VerifyBizLicense");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *库源服务调整，该接口在2023年6月1日将正式下线。
-
-此接口基于企业四要素授权“姓名、证件号码、企业标识、企业全称”，验证企业信息是否一致。
-     * @param req VerifyEnterpriseFourFactorsRequest
-     * @return VerifyEnterpriseFourFactorsResponse
-     * @throws TencentCloudSDKException
-     */
-    public VerifyEnterpriseFourFactorsResponse VerifyEnterpriseFourFactors(VerifyEnterpriseFourFactorsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
-        String rspStr = "";
-        req.setSkipSign(false);
-        try {
-                Type type = new TypeToken<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "VerifyEnterpriseFourFactors");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

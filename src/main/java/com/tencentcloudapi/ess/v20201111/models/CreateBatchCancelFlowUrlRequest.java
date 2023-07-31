@@ -30,7 +30,8 @@ public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
     private UserInfo Operator;
 
     /**
-    * 需要执行撤回的签署流程id数组，最多100个
+    * 需要执行撤回的流程(合同)的编号列表，最多100个.
+列表中的流程(合同)编号不要重复.
     */
     @SerializedName("FlowIds")
     @Expose
@@ -61,16 +62,20 @@ public class CreateBatchCancelFlowUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要执行撤回的签署流程id数组，最多100个 
-     * @return FlowIds 需要执行撤回的签署流程id数组，最多100个
+     * Get 需要执行撤回的流程(合同)的编号列表，最多100个.
+列表中的流程(合同)编号不要重复. 
+     * @return FlowIds 需要执行撤回的流程(合同)的编号列表，最多100个.
+列表中的流程(合同)编号不要重复.
      */
     public String [] getFlowIds() {
         return this.FlowIds;
     }
 
     /**
-     * Set 需要执行撤回的签署流程id数组，最多100个
-     * @param FlowIds 需要执行撤回的签署流程id数组，最多100个
+     * Set 需要执行撤回的流程(合同)的编号列表，最多100个.
+列表中的流程(合同)编号不要重复.
+     * @param FlowIds 需要执行撤回的流程(合同)的编号列表，最多100个.
+列表中的流程(合同)编号不要重复.
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

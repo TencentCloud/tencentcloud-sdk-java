@@ -58,7 +58,7 @@ public class CreateAclRequest extends AbstractModel{
     private String ResourceName;
 
     /**
-    * 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
+    * 默认为*，表示任何host都可以访问。支持填写IP或网段，支持“;”分隔。
     */
     @SerializedName("Host")
     @Expose
@@ -159,16 +159,16 @@ public class CreateAclRequest extends AbstractModel{
     }
 
     /**
-     * Get 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持 
-     * @return Host 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
+     * Get 默认为*，表示任何host都可以访问。支持填写IP或网段，支持“;”分隔。 
+     * @return Host 默认为*，表示任何host都可以访问。支持填写IP或网段，支持“;”分隔。
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
-     * @param Host 默认为\*，表示任何host都可以访问，当前ckafka不支持host为\*，但是后面开源kafka的产品化会直接支持
+     * Set 默认为*，表示任何host都可以访问。支持填写IP或网段，支持“;”分隔。
+     * @param Host 默认为*，表示任何host都可以访问。支持填写IP或网段，支持“;”分隔。
      */
     public void setHost(String Host) {
         this.Host = Host;

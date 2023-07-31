@@ -13,28 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryBarCodeResponse extends AbstractModel{
+public class GetAttackHistogramResponse extends AbstractModel{
 
     /**
-    * 条码
+    * 统计详情
     */
-    @SerializedName("BarCode")
+    @SerializedName("Data")
     @Expose
-    private String BarCode;
+    private LogHistogramInfo [] Data;
 
     /**
-    * 条码信息数组
+    * 时间段大小
     */
-    @SerializedName("ProductDataRecords")
+    @SerializedName("Period")
     @Expose
-    private ProductDataRecord [] ProductDataRecords;
+    private Long Period;
+
+    /**
+    * 统计的条目数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,35 +51,51 @@ public class QueryBarCodeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 条码 
-     * @return BarCode 条码
+     * Get 统计详情 
+     * @return Data 统计详情
      */
-    public String getBarCode() {
-        return this.BarCode;
+    public LogHistogramInfo [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set 条码
-     * @param BarCode 条码
+     * Set 统计详情
+     * @param Data 统计详情
      */
-    public void setBarCode(String BarCode) {
-        this.BarCode = BarCode;
+    public void setData(LogHistogramInfo [] Data) {
+        this.Data = Data;
     }
 
     /**
-     * Get 条码信息数组 
-     * @return ProductDataRecords 条码信息数组
+     * Get 时间段大小 
+     * @return Period 时间段大小
      */
-    public ProductDataRecord [] getProductDataRecords() {
-        return this.ProductDataRecords;
+    public Long getPeriod() {
+        return this.Period;
     }
 
     /**
-     * Set 条码信息数组
-     * @param ProductDataRecords 条码信息数组
+     * Set 时间段大小
+     * @param Period 时间段大小
      */
-    public void setProductDataRecords(ProductDataRecord [] ProductDataRecords) {
-        this.ProductDataRecords = ProductDataRecords;
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
+    /**
+     * Get 统计的条目数 
+     * @return TotalCount 统计的条目数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 统计的条目数
+     * @param TotalCount 统计的条目数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -91,22 +114,25 @@ public class QueryBarCodeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public QueryBarCodeResponse() {
+    public GetAttackHistogramResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryBarCodeResponse(QueryBarCodeResponse source) {
-        if (source.BarCode != null) {
-            this.BarCode = new String(source.BarCode);
-        }
-        if (source.ProductDataRecords != null) {
-            this.ProductDataRecords = new ProductDataRecord[source.ProductDataRecords.length];
-            for (int i = 0; i < source.ProductDataRecords.length; i++) {
-                this.ProductDataRecords[i] = new ProductDataRecord(source.ProductDataRecords[i]);
+    public GetAttackHistogramResponse(GetAttackHistogramResponse source) {
+        if (source.Data != null) {
+            this.Data = new LogHistogramInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new LogHistogramInfo(source.Data[i]);
             }
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +144,9 @@ public class QueryBarCodeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BarCode", this.BarCode);
-        this.setParamArrayObj(map, prefix + "ProductDataRecords.", this.ProductDataRecords);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -45,21 +45,26 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private AutoSignConfig AutoSignConfig;
 
     /**
-    * 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+    * 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
     */
     @SerializedName("UrlType")
     @Expose
     private String UrlType;
 
     /**
-    * 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+    * 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
     */
     @SerializedName("NotifyType")
     @Expose
     private String NotifyType;
 
     /**
-    * 若上方填写为 SMS，则此处为手机号
+    * 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
     */
     @SerializedName("NotifyAddress")
     @Expose
@@ -132,48 +137,68 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     }
 
     /**
-     * Get 链接类型，空-默认小程序端链接，H5SIGN-h5端链接 
-     * @return UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * Get 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接 
+     * @return UrlType 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
      */
     public String getUrlType() {
         return this.UrlType;
     }
 
     /**
-     * Set 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
-     * @param UrlType 链接类型，空-默认小程序端链接，H5SIGN-h5端链接
+     * Set 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
+     * @param UrlType 链接类型，
+空-默认小程序端链接
+H5SIGN-h5端链接
      */
     public void setUrlType(String UrlType) {
         this.UrlType = UrlType;
     }
 
     /**
-     * Get 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。 
-     * @return NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+     * Get 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。 
+     * @return NotifyType 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
-     * @param NotifyType 通知类型，默认不填为不通知开通方，填写 SMS 为短信通知。
+     * Set 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
+     * @param NotifyType 通知类型
+
+默认不设置为不通知开通方，
+SMS 为短信通知 , 此种方式需要NotifyAddress填写手机号。
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
     }
 
     /**
-     * Get 若上方填写为 SMS，则此处为手机号 
-     * @return NotifyAddress 若上方填写为 SMS，则此处为手机号
+     * Get 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项 
+     * @return NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      */
     public String getNotifyAddress() {
         return this.NotifyAddress;
     }
 
     /**
-     * Set 若上方填写为 SMS，则此处为手机号
-     * @param NotifyAddress 若上方填写为 SMS，则此处为手机号
+     * Set 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
+     * @param NotifyAddress 如果通知类型NotifyType选择为SMS，则此处为手机号, 其他通知类型不需要设置此项
      */
     public void setNotifyAddress(String NotifyAddress) {
         this.NotifyAddress = NotifyAddress;

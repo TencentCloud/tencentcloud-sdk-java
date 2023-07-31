@@ -839,6 +839,27 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *生成攻击日志的产生时间柱状图
+     * @param req GetAttackHistogramRequest
+     * @return GetAttackHistogramResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAttackHistogramResponse GetAttackHistogram(GetAttackHistogramRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAttackHistogramResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAttackHistogramResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAttackHistogram");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于修改访问日志保存期限及大字段是否存储
      * @param req ModifyAccessPeriodRequest
      * @return ModifyAccessPeriodResponse

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBInstanceResponse extends AbstractModel{
 
     /**
-    * 短订单 ID。
+    * 计费子订单 ID。
     */
     @SerializedName("DealIds")
     @Expose
@@ -44,16 +44,16 @@ public class CreateDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 短订单 ID。 
-     * @return DealIds 短订单 ID。
+     * Get 计费子订单 ID。 
+     * @return DealIds 计费子订单 ID。
      */
     public String [] getDealIds() {
         return this.DealIds;
     }
 
     /**
-     * Set 短订单 ID。
-     * @param DealIds 短订单 ID。
+     * Set 计费子订单 ID。
+     * @param DealIds 计费子订单 ID。
      */
     public void setDealIds(String [] DealIds) {
         this.DealIds = DealIds;

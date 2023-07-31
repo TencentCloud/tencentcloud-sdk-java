@@ -44,13 +44,6 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     private BaseFlowInfo FlowInfo;
 
     /**
-    * 合同签署人信息
-    */
-    @SerializedName("FlowApproverList")
-    @Expose
-    private CommonFlowApprover [] FlowApproverList;
-
-    /**
     * 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
     */
     @SerializedName("Agent")
@@ -63,6 +56,13 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     @SerializedName("FlowOption")
     @Expose
     private CreateFlowOption FlowOption;
+
+    /**
+    * 合同签署人信息
+    */
+    @SerializedName("FlowApproverList")
+    @Expose
+    private CommonFlowApprover [] FlowApproverList;
 
     /**
     * 通过flowid快速获得之前成功通过页面发起的合同生成链接
@@ -141,22 +141,6 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同签署人信息 
-     * @return FlowApproverList 合同签署人信息
-     */
-    public CommonFlowApprover [] getFlowApproverList() {
-        return this.FlowApproverList;
-    }
-
-    /**
-     * Set 合同签署人信息
-     * @param FlowApproverList 合同签署人信息
-     */
-    public void setFlowApproverList(CommonFlowApprover [] FlowApproverList) {
-        this.FlowApproverList = FlowApproverList;
-    }
-
-    /**
      * Get 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填 
      * @return Agent 应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 必填
      */
@@ -186,6 +170,22 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
      */
     public void setFlowOption(CreateFlowOption FlowOption) {
         this.FlowOption = FlowOption;
+    }
+
+    /**
+     * Get 合同签署人信息 
+     * @return FlowApproverList 合同签署人信息
+     */
+    public CommonFlowApprover [] getFlowApproverList() {
+        return this.FlowApproverList;
+    }
+
+    /**
+     * Set 合同签署人信息
+     * @param FlowApproverList 合同签署人信息
+     */
+    public void setFlowApproverList(CommonFlowApprover [] FlowApproverList) {
+        this.FlowApproverList = FlowApproverList;
     }
 
     /**
@@ -281,17 +281,17 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
         if (source.FlowInfo != null) {
             this.FlowInfo = new BaseFlowInfo(source.FlowInfo);
         }
-        if (source.FlowApproverList != null) {
-            this.FlowApproverList = new CommonFlowApprover[source.FlowApproverList.length];
-            for (int i = 0; i < source.FlowApproverList.length; i++) {
-                this.FlowApproverList[i] = new CommonFlowApprover(source.FlowApproverList[i]);
-            }
-        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
         if (source.FlowOption != null) {
             this.FlowOption = new CreateFlowOption(source.FlowOption);
+        }
+        if (source.FlowApproverList != null) {
+            this.FlowApproverList = new CommonFlowApprover[source.FlowApproverList.length];
+            for (int i = 0; i < source.FlowApproverList.length; i++) {
+                this.FlowApproverList[i] = new CommonFlowApprover(source.FlowApproverList[i]);
+            }
         }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
@@ -315,9 +315,9 @@ public class ChannelCreatePrepareFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamObj(map, prefix + "FlowInfo.", this.FlowInfo);
-        this.setParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "FlowOption.", this.FlowOption);
+        this.setParamArrayObj(map, prefix + "FlowApproverList.", this.FlowApproverList);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamObj(map, prefix + "Organization.", this.Organization);

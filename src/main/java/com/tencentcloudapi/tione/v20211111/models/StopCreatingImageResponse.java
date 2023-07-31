@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryBarCodeRequest extends AbstractModel{
+public class StopCreatingImageResponse extends AbstractModel{
 
     /**
-    * 条形码
+    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
-    @SerializedName("BarCode")
+    @SerializedName("RequestId")
     @Expose
-    private String BarCode;
+    private String RequestId;
 
     /**
-     * Get 条形码 
-     * @return BarCode 条形码
+     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public String getBarCode() {
-        return this.BarCode;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set 条形码
-     * @param BarCode 条形码
+     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public void setBarCode(String BarCode) {
-        this.BarCode = BarCode;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public QueryBarCodeRequest() {
+    public StopCreatingImageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryBarCodeRequest(QueryBarCodeRequest source) {
-        if (source.BarCode != null) {
-            this.BarCode = new String(source.BarCode);
+    public StopCreatingImageResponse(StopCreatingImageResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class QueryBarCodeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BarCode", this.BarCode);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

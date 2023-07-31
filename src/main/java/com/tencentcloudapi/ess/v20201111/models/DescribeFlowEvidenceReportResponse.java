@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 报告 URL
+    * 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportUrl")
@@ -31,9 +31,11 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     private String ReportUrl;
 
     /**
-    * 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+    * 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
     */
     @SerializedName("Status")
     @Expose
@@ -47,9 +49,9 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 报告 URL
+     * Get 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportUrl 报告 URL
+     * @return ReportUrl 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportUrl() {
@@ -57,9 +59,9 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Set 报告 URL
+     * Set 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportUrl 报告 URL
+     * @param ReportUrl 出证报告PDF的下载 URL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportUrl(String ReportUrl) {
@@ -67,24 +69,32 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Get 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed 
-     * @return Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Get 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败 
+     * @return Status 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
-     * @param Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Set 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
+     * @param Status 出证任务执行的状态, 分布表示下面的含义
+
+EvidenceStatusExecuting  出证任务在执行中
+EvidenceStatusSuccess  出证任务执行成功
+EvidenceStatusFailed  出征任务执行失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

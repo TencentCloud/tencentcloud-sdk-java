@@ -45,10 +45,11 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
 
     /**
     * 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
     */
     @SerializedName("CancelMessageFormat")
     @Expose
@@ -111,15 +112,17 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
 
     /**
      * Get 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】 
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】 
      * @return CancelMessageFormat 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
      */
     public Long getCancelMessageFormat() {
         return this.CancelMessageFormat;
@@ -127,15 +130,17 @@ public class ChannelBatchCancelFlowsRequest extends AbstractModel{
 
     /**
      * Set 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
      * @param CancelMessageFormat 撤销理由自定义格式；选项：
-0 默认格式
-1 只保留身份信息：展示为【发起方】
-2 保留身份信息+企业名称：展示为【发起方xxx公司】
-3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
+
+- 0 默认格式
+- 1 只保留身份信息：展示为【发起方】
+- 2 保留身份信息+企业名称：展示为【发起方xxx公司】
+- 3 保留身份信息+企业名称+经办人名称：展示为【发起方xxxx公司-经办人姓名】
      */
     public void setCancelMessageFormat(Long CancelMessageFormat) {
         this.CancelMessageFormat = CancelMessageFormat;

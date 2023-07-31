@@ -123,6 +123,48 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *创建Notebook
+     * @param req CreateNotebookRequest
+     * @return CreateNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookResponse CreateNotebook(CreateNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNotebook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *保存镜像
+     * @param req CreateNotebookImageRequest
+     * @return CreateNotebookImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNotebookImageResponse CreateNotebookImage(CreateNotebookImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNotebookImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNotebookImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNotebookImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *保存优化模型
      * @param req CreateOptimizedModelRequest
      * @return CreateOptimizedModelResponse
@@ -283,6 +325,48 @@ public class TioneClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteModelServiceGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteModelServiceGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除Notebook
+     * @param req DeleteNotebookRequest
+     * @return DeleteNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNotebookResponse DeleteNotebook(DeleteNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNotebook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除notebook镜像保存记录
+     * @param req DeleteNotebookImageRecordRequest
+     * @return DeleteNotebookImageRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNotebookImageRecordResponse DeleteNotebookImageRecord(DeleteNotebookImageRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNotebookImageRecordResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNotebookImageRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNotebookImageRecord");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -837,6 +921,90 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *Notebook详情
+     * @param req DescribeNotebookRequest
+     * @return DescribeNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookResponse DescribeNotebook(DescribeNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询镜像kernel
+     * @param req DescribeNotebookImageKernelsRequest
+     * @return DescribeNotebookImageKernelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookImageKernelsResponse DescribeNotebookImageKernels(DescribeNotebookImageKernelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookImageKernelsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookImageKernelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookImageKernels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查看notebook镜像保存记录
+     * @param req DescribeNotebookImageRecordsRequest
+     * @return DescribeNotebookImageRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebookImageRecordsResponse DescribeNotebookImageRecords(DescribeNotebookImageRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebookImageRecordsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebookImageRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebookImageRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Notebook列表
+     * @param req DescribeNotebooksRequest
+     * @return DescribeNotebooksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNotebooksResponse DescribeNotebooks(DescribeNotebooksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNotebooksResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNotebooksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNotebooks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *训练框架列表
      * @param req DescribeTrainingFrameworksRequest
      * @return DescribeTrainingFrameworksResponse
@@ -1047,6 +1215,48 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *修改Notebook
+     * @param req ModifyNotebookRequest
+     * @return ModifyNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotebookResponse ModifyNotebook(ModifyNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNotebook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改Notebook标签
+     * @param req ModifyNotebookTagsRequest
+     * @return ModifyNotebookTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNotebookTagsResponse ModifyNotebookTags(ModifyNotebookTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNotebookTagsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNotebookTagsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNotebookTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *更新推理服务组流量分配
      * @param req ModifyServiceGroupWeightsRequest
      * @return ModifyServiceGroupWeightsResponse
@@ -1110,6 +1320,27 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *启动Notebook
+     * @param req StartNotebookRequest
+     * @return StartNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartNotebookResponse StartNotebook(StartNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartNotebook");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *启动模型训练任务
      * @param req StartTrainingTaskRequest
      * @return StartTrainingTaskResponse
@@ -1152,6 +1383,27 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *停止保存镜像
+     * @param req StopCreatingImageRequest
+     * @return StopCreatingImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCreatingImageResponse StopCreatingImage(StopCreatingImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopCreatingImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopCreatingImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopCreatingImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *停止模型加速任务
      * @param req StopModelAccelerateTaskRequest
      * @return StopModelAccelerateTaskResponse
@@ -1165,6 +1417,27 @@ public class TioneClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopModelAccelerateTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopModelAccelerateTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *停止Notebook
+     * @param req StopNotebookRequest
+     * @return StopNotebookResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopNotebookResponse StopNotebook(StopNotebookRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopNotebookResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopNotebookResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopNotebook");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

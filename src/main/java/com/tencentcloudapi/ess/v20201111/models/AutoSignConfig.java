@@ -30,35 +30,52 @@ public class AutoSignConfig extends AbstractModel{
     private UserThreeFactor UserInfo;
 
     /**
-    * 接受自动签开启的回调地址。需要保证post返回200
+    * 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
     */
     @SerializedName("CallbackUrl")
     @Expose
     private String CallbackUrl;
 
     /**
-    * 是否回调证书信息，默认false-不需要
+    * 是否回调证书信息
+false-不需要 (默认值)
+true-需要
     */
     @SerializedName("CertInfoCallback")
     @Expose
     private Boolean CertInfoCallback;
 
     /**
-    * 是否支持用户自定义签名印章，默认false-不需要
+    * 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
     */
     @SerializedName("UserDefineSeal")
     @Expose
     private Boolean UserDefineSeal;
 
     /**
-    * 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+    * 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
     */
     @SerializedName("SealImgCallback")
     @Expose
     private Boolean SealImgCallback;
 
     /**
-    * 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+    * 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
     */
     @SerializedName("VerifyChannels")
     @Expose
@@ -81,80 +98,148 @@ public class AutoSignConfig extends AbstractModel{
     }
 
     /**
-     * Get 接受自动签开启的回调地址。需要保证post返回200 
-     * @return CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
+     * Get 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败 
+     * @return CallbackUrl 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 接受自动签开启的回调地址。需要保证post返回200
-     * @param CallbackUrl 接受自动签开启的回调地址。需要保证post返回200
+     * Set 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+     * @param CallbackUrl 接受回调URL地址。支持http://或者https://协议
+
+Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
 
     /**
-     * Get 是否回调证书信息，默认false-不需要 
-     * @return CertInfoCallback 是否回调证书信息，默认false-不需要
+     * Get 是否回调证书信息
+false-不需要 (默认值)
+true-需要 
+     * @return CertInfoCallback 是否回调证书信息
+false-不需要 (默认值)
+true-需要
      */
     public Boolean getCertInfoCallback() {
         return this.CertInfoCallback;
     }
 
     /**
-     * Set 是否回调证书信息，默认false-不需要
-     * @param CertInfoCallback 是否回调证书信息，默认false-不需要
+     * Set 是否回调证书信息
+false-不需要 (默认值)
+true-需要
+     * @param CertInfoCallback 是否回调证书信息
+false-不需要 (默认值)
+true-需要
      */
     public void setCertInfoCallback(Boolean CertInfoCallback) {
         this.CertInfoCallback = CertInfoCallback;
     }
 
     /**
-     * Get 是否支持用户自定义签名印章，默认false-不需要 
-     * @return UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
+     * Get 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要 
+     * @return UserDefineSeal 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
      */
     public Boolean getUserDefineSeal() {
         return this.UserDefineSeal;
     }
 
     /**
-     * Set 是否支持用户自定义签名印章，默认false-不需要
-     * @param UserDefineSeal 是否支持用户自定义签名印章，默认false-不需要
+     * Set 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
+     * @param UserDefineSeal 是否支持用户自定义签名印章
+false-不需要(默认)
+true-需要
      */
     public void setUserDefineSeal(Boolean UserDefineSeal) {
         this.UserDefineSeal = UserDefineSeal;
     }
 
     /**
-     * Get 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要 
-     * @return SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+     * Get 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要( 
+     * @return SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
      */
     public Boolean getSealImgCallback() {
         return this.SealImgCallback;
     }
 
     /**
-     * Set 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
-     * @param SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64，默认false-不需要
+     * Set 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
+     * @param SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
+
+false-不需要(默认)
+true-需要(
      */
     public void setSealImgCallback(Boolean SealImgCallback) {
         this.SealImgCallback = SealImgCallback;
     }
 
     /**
-     * Get 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。 
-     * @return VerifyChannels 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * Get 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。 
+     * @return VerifyChannels 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
      */
     public String [] getVerifyChannels() {
         return this.VerifyChannels;
     }
 
     /**
-     * Set 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
-     * @param VerifyChannels 开通时候的验证方式，取值：WEIXINAPP（微信人脸识别），INSIGHT（慧眼人脸认别），TELECOM（运营商三要素验证）。如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * Set 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
+     * @param VerifyChannels 开通时候的验证方式, 分布为
+
+WEIXINAPP : 微信人脸识别
+INSIGHT : 慧眼人脸认别
+TELECOM : 运营商三要素验证
+
+如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。
+
+如果是 H5 开通链接，支持传 INSIGHT / TELECOM。默认值 WEIXINAPP / INSIGHT。
      */
     public void setVerifyChannels(String [] VerifyChannels) {
         this.VerifyChannels = VerifyChannels;

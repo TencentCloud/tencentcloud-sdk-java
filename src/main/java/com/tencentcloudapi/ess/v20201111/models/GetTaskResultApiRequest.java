@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetTaskResultApiRequest extends AbstractModel{
 
     /**
-    * 任务Id，通过CreateConvertTaskApi得到
+    * 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
     */
     @SerializedName("TaskId")
     @Expose
@@ -51,16 +51,16 @@ public class GetTaskResultApiRequest extends AbstractModel{
     private OrganizationInfo Organization;
 
     /**
-     * Get 任务Id，通过CreateConvertTaskApi得到 
-     * @return TaskId 任务Id，通过CreateConvertTaskApi得到
+     * Get 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id 
+     * @return TaskId 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务Id，通过CreateConvertTaskApi得到
-     * @param TaskId 任务Id，通过CreateConvertTaskApi得到
+     * Set 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
+     * @param TaskId 任务Id，通过接口CreateConvertTaskApi或CreateMergeFileTask得到的返回任务id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

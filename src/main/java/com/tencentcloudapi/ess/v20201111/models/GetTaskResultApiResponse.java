@@ -56,7 +56,7 @@ ProcessTimeout - 转换文件超时
     private String TaskMessage;
 
     /**
-    * 资源Id，也是FileId，用于文件发起使用
+    * 资源Id，也是FileId，用于文件发起时使用
     */
     @SerializedName("ResourceId")
     @Expose
@@ -166,16 +166,16 @@ ProcessTimeout - 转换文件超时
     }
 
     /**
-     * Get 资源Id，也是FileId，用于文件发起使用 
-     * @return ResourceId 资源Id，也是FileId，用于文件发起使用
+     * Get 资源Id，也是FileId，用于文件发起时使用 
+     * @return ResourceId 资源Id，也是FileId，用于文件发起时使用
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源Id，也是FileId，用于文件发起使用
-     * @param ResourceId 资源Id，也是FileId，用于文件发起使用
+     * Set 资源Id，也是FileId，用于文件发起时使用
+     * @param ResourceId 资源Id，也是FileId，用于文件发起时使用
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

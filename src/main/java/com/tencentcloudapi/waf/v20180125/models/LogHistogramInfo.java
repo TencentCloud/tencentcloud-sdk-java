@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Detail extends AbstractModel{
+public class LogHistogramInfo extends AbstractModel{
 
     /**
-    * 企业四要素核验结果状态码
+    * 日志条数
     */
-    @SerializedName("Result")
+    @SerializedName("Count")
     @Expose
-    private Long Result;
+    private Long Count;
 
     /**
-    * 企业四要素核验结果描述
+    * 时间戳
     */
-    @SerializedName("Desc")
+    @SerializedName("TimeStamp")
     @Expose
-    private String Desc;
+    private Long TimeStamp;
 
     /**
-     * Get 企业四要素核验结果状态码 
-     * @return Result 企业四要素核验结果状态码
+     * Get 日志条数 
+     * @return Count 日志条数
      */
-    public Long getResult() {
-        return this.Result;
+    public Long getCount() {
+        return this.Count;
     }
 
     /**
-     * Set 企业四要素核验结果状态码
-     * @param Result 企业四要素核验结果状态码
+     * Set 日志条数
+     * @param Count 日志条数
      */
-    public void setResult(Long Result) {
-        this.Result = Result;
+    public void setCount(Long Count) {
+        this.Count = Count;
     }
 
     /**
-     * Get 企业四要素核验结果描述 
-     * @return Desc 企业四要素核验结果描述
+     * Get 时间戳 
+     * @return TimeStamp 时间戳
      */
-    public String getDesc() {
-        return this.Desc;
+    public Long getTimeStamp() {
+        return this.TimeStamp;
     }
 
     /**
-     * Set 企业四要素核验结果描述
-     * @param Desc 企业四要素核验结果描述
+     * Set 时间戳
+     * @param TimeStamp 时间戳
      */
-    public void setDesc(String Desc) {
-        this.Desc = Desc;
+    public void setTimeStamp(Long TimeStamp) {
+        this.TimeStamp = TimeStamp;
     }
 
-    public Detail() {
+    public LogHistogramInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Detail(Detail source) {
-        if (source.Result != null) {
-            this.Result = new Long(source.Result);
+    public LogHistogramInfo(LogHistogramInfo source) {
+        if (source.Count != null) {
+            this.Count = new Long(source.Count);
         }
-        if (source.Desc != null) {
-            this.Desc = new String(source.Desc);
+        if (source.TimeStamp != null) {
+            this.TimeStamp = new Long(source.TimeStamp);
         }
     }
 
@@ -89,8 +89,8 @@ public class Detail extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
-        this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "TimeStamp", this.TimeStamp);
 
     }
 }

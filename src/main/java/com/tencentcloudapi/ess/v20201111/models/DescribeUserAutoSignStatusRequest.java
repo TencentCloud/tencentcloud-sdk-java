@@ -38,7 +38,7 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     private String SceneKey;
 
     /**
-    * 查询开启状态的用户信息
+    * 要查询开启状态的用户信息
     */
     @SerializedName("UserInfo")
     @Expose
@@ -88,16 +88,16 @@ E_PRESCRIPTION_AUTO_SIGN 电子处方
     }
 
     /**
-     * Get 查询开启状态的用户信息 
-     * @return UserInfo 查询开启状态的用户信息
+     * Get 要查询开启状态的用户信息 
+     * @return UserInfo 要查询开启状态的用户信息
      */
     public UserThreeFactor getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 查询开启状态的用户信息
-     * @param UserInfo 查询开启状态的用户信息
+     * Set 要查询开启状态的用户信息
+     * @param UserInfo 要查询开启状态的用户信息
      */
     public void setUserInfo(UserThreeFactor UserInfo) {
         this.UserInfo = UserInfo;

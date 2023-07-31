@@ -37,7 +37,7 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 任务启动状态.  1正常开启,  2关闭
+    * 任务启动状态.  1开启,  2关闭
     */
     @SerializedName("EnableFlag")
     @Expose
@@ -65,7 +65,7 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     private Long ProcessStartTime;
 
     /**
-    * 调度类型，1:持续运行 2:指定调度结束时间
+    * 调度类型，1:持续运行 2:指定时间范围
     */
     @SerializedName("ProcessType")
     @Expose
@@ -107,7 +107,7 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     private Long ProcessEndTime;
 
     /**
-    * 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+    * 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
     */
     @SerializedName("SyntaxRule")
     @Expose
@@ -146,16 +146,16 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务启动状态.  1正常开启,  2关闭 
-     * @return EnableFlag 任务启动状态.  1正常开启,  2关闭
+     * Get 任务启动状态.  1开启,  2关闭 
+     * @return EnableFlag 任务启动状态.  1开启,  2关闭
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set 任务启动状态.  1正常开启,  2关闭
-     * @param EnableFlag 任务启动状态.  1正常开启,  2关闭
+     * Set 任务启动状态.  1开启,  2关闭
+     * @param EnableFlag 任务启动状态.  1开启,  2关闭
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;
@@ -210,16 +210,16 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 调度类型，1:持续运行 2:指定调度结束时间 
-     * @return ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * Get 调度类型，1:持续运行 2:指定时间范围 
+     * @return ProcessType 调度类型，1:持续运行 2:指定时间范围
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set 调度类型，1:持续运行 2:指定调度结束时间
-     * @param ProcessType 调度类型，1:持续运行 2:指定调度结束时间
+     * Set 调度类型，1:持续运行 2:指定时间范围
+     * @param ProcessType 调度类型，1:持续运行 2:指定时间范围
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
@@ -306,16 +306,16 @@ public class CreateScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 语法规则。 默认值为0。0：Lucene语法，1：CQL语法   
-     * @return SyntaxRule 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * Get 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法   
+     * @return SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
      */
     public Long getSyntaxRule() {
         return this.SyntaxRule;
     }
 
     /**
-     * Set 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
-     * @param SyntaxRule 语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * Set 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
+     * @param SyntaxRule 查询语法规则。 默认值为0。0：Lucene语法，1：CQL语法  
      */
     public void setSyntaxRule(Long SyntaxRule) {
         this.SyntaxRule = SyntaxRule;

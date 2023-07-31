@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
 
     /**
-    * 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+    * 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
@@ -31,9 +32,11 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
     private String ReportId;
 
     /**
-    * 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+    * 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
     */
     @SerializedName("Status")
     @Expose
@@ -55,9 +58,11 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * Get 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReportId 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * @return ReportId 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
@@ -65,9 +70,11 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Set 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * Set 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReportId 出证报告 ID，用于查询出证报告接口DescribeChannelFlowEvidenceReport时用到
+     * @param ReportId 出证报告 ID，可用户DescribeChannelFlowEvidenceReport接口查询出证PDF的下载地址
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
@@ -75,24 +82,32 @@ public class CreateChannelFlowEvidenceReportResponse extends AbstractModel{
     }
 
     /**
-     * Get 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed 
-     * @return Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Get 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败 
+     * @return Status 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
-     * @param Status 执行中：EvidenceStatusExecuting
-成功：EvidenceStatusSuccess
-失败：EvidenceStatusFailed
+     * Set 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
+     * @param Status 出征任务的执行状态,状态列表如下
+
+- EvidenceStatusExecuting : 出征任务正在执行中
+- EvidenceStatusSuccess : 出征任务执行成功
+- EvidenceStatusFailed : 出征任务执行失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

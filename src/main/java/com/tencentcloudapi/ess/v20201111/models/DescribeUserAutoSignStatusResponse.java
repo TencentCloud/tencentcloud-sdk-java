@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
-    * 是否已开通自动签
+    * 查询用户是否已开通自动签
     */
     @SerializedName("IsOpen")
     @Expose
@@ -31,6 +31,8 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
     * 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
     */
     @SerializedName("LicenseFrom")
     @Expose
@@ -38,6 +40,7 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
     * 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
     */
     @SerializedName("LicenseTo")
     @Expose
@@ -51,24 +54,28 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 是否已开通自动签 
-     * @return IsOpen 是否已开通自动签
+     * Get 查询用户是否已开通自动签 
+     * @return IsOpen 查询用户是否已开通自动签
      */
     public Boolean getIsOpen() {
         return this.IsOpen;
     }
 
     /**
-     * Set 是否已开通自动签
-     * @param IsOpen 是否已开通自动签
+     * Set 查询用户是否已开通自动签
+     * @param IsOpen 查询用户是否已开通自动签
      */
     public void setIsOpen(Boolean IsOpen) {
         this.IsOpen = IsOpen;
     }
 
     /**
-     * Get 自动签许可生效时间。当且仅当已开通自动签时有值。 
+     * Get 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。 
      * @return LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public Long getLicenseFrom() {
         return this.LicenseFrom;
@@ -76,15 +83,21 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
      * Set 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      * @param LicenseFrom 自动签许可生效时间。当且仅当已开通自动签时有值。
+
+值为unix时间戳,单位为秒。
      */
     public void setLicenseFrom(Long LicenseFrom) {
         this.LicenseFrom = LicenseFrom;
     }
 
     /**
-     * Get 自动签许可到期时间。当且仅当已开通自动签时有值。 
+     * Get 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。 
      * @return LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
      */
     public Long getLicenseTo() {
         return this.LicenseTo;
@@ -92,7 +105,9 @@ public class DescribeUserAutoSignStatusResponse extends AbstractModel{
 
     /**
      * Set 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
      * @param LicenseTo 自动签许可到期时间。当且仅当已开通自动签时有值。
+值为unix时间戳,单位为秒。
      */
     public void setLicenseTo(Long LicenseTo) {
         this.LicenseTo = LicenseTo;

@@ -80,7 +80,9 @@ public class FlowBrief extends AbstractModel{
     private Long CreatedOn;
 
     /**
-    * 拒签或者取消的原因描述
+    * 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowMessage")
@@ -260,9 +262,13 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Get 拒签或者取消的原因描述
+     * Get 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowMessage 拒签或者取消的原因描述
+     * @return FlowMessage 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowMessage() {
@@ -270,9 +276,13 @@ public class FlowBrief extends AbstractModel{
     }
 
     /**
-     * Set 拒签或者取消的原因描述
+     * Set 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowMessage 拒签或者取消的原因描述
+     * @param FlowMessage 当合同被拒签或者取消后(当FlowStatus=3或者FlowStatus=6的时候)
+此字段展示拒签或者取消的原因描述
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowMessage(String FlowMessage) {

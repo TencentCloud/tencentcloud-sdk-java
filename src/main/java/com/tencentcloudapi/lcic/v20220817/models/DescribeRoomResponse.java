@@ -58,6 +58,13 @@ public class DescribeRoomResponse extends AbstractModel{
     private Long SdkAppId;
 
     /**
+    * 观看类型。互动观看 （默认）	
+    */
+    @SerializedName("AudienceType")
+    @Expose
+    private Long AudienceType;
+
+    /**
     * 分辨率。可以有如下取值：
 1 标清
 2 高清
@@ -265,6 +272,22 @@ video 纯视频
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 观看类型。互动观看 （默认）	 
+     * @return AudienceType 观看类型。互动观看 （默认）	
+     */
+    public Long getAudienceType() {
+        return this.AudienceType;
+    }
+
+    /**
+     * Set 观看类型。互动观看 （默认）	
+     * @param AudienceType 观看类型。互动观看 （默认）	
+     */
+    public void setAudienceType(Long AudienceType) {
+        this.AudienceType = AudienceType;
     }
 
     /**
@@ -618,6 +641,9 @@ video 纯视频
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
+        if (source.AudienceType != null) {
+            this.AudienceType = new Long(source.AudienceType);
+        }
         if (source.Resolution != null) {
             this.Resolution = new Long(source.Resolution);
         }
@@ -681,6 +707,7 @@ video 纯视频
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TeacherId", this.TeacherId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "AudienceType", this.AudienceType);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "MaxMicNumber", this.MaxMicNumber);
         this.setParamSimple(map, prefix + "AutoMic", this.AutoMic);

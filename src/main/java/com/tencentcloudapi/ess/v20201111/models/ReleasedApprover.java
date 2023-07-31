@@ -63,7 +63,7 @@ ENTERPRISESERVER-企业静默签
     private String ApproverSignComponentType;
 
     /**
-    * 签署方自定义控件别名，最大长度20个字符
+    * 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方, 依次类推.  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
     */
     @SerializedName("ApproverSignRole")
     @Expose
@@ -170,16 +170,16 @@ ENTERPRISESERVER-企业静默签
     }
 
     /**
-     * Get 签署方自定义控件别名，最大长度20个字符 
-     * @return ApproverSignRole 签署方自定义控件别名，最大长度20个字符
+     * Get 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方, 依次类推.  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符 
+     * @return ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方, 依次类推.  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
      */
     public String getApproverSignRole() {
         return this.ApproverSignRole;
     }
 
     /**
-     * Set 签署方自定义控件别名，最大长度20个字符
-     * @param ApproverSignRole 签署方自定义控件别名，最大长度20个字符
+     * Set 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方, 依次类推.  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
+     * @param ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的; 解除协议会将第一个参与人叫甲方, 第二个叫乙方,第三个叫丙方, 依次类推.  如果想改动参与人的角色名字, 可以设置此签署方自定义控件别名字段，最大20个字符
      */
     public void setApproverSignRole(String ApproverSignRole) {
         this.ApproverSignRole = ApproverSignRole;

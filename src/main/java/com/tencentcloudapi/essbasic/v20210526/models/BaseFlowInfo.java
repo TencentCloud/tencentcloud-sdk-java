@@ -31,6 +31,7 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 合同流程类型
+<br/>客户自定义，用于合同分类展示
     */
     @SerializedName("FlowType")
     @Expose
@@ -52,6 +53,7 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
     * 是否顺序签署(true:无序签,false:顺序签)
+<br/>默认false，有序签署合同
     */
     @SerializedName("Unordered")
     @Expose
@@ -72,7 +74,10 @@ public class BaseFlowInfo extends AbstractModel{
     private FormField [] FormFields;
 
     /**
-    * 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+    * 本企业(发起方企业)是否需要签署审批
+<br/>true：开启发起方签署审批
+<br/>false：不开启发起方签署审批
+<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
     */
     @SerializedName("NeedSignReview")
     @Expose
@@ -93,7 +98,10 @@ public class BaseFlowInfo extends AbstractModel{
     private CcInfo [] CcInfos;
 
     /**
-    * 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+    * 是否需要开启发起方发起前审核
+<br/>true：开启发起方发起前审核
+<br/>false：不开启发起方发起前审核
+<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
     */
     @SerializedName("NeedCreateReview")
     @Expose
@@ -116,8 +124,10 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 合同流程类型 
+     * Get 合同流程类型
+<br/>客户自定义，用于合同分类展示 
      * @return FlowType 合同流程类型
+<br/>客户自定义，用于合同分类展示
      */
     public String getFlowType() {
         return this.FlowType;
@@ -125,7 +135,9 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 合同流程类型
+<br/>客户自定义，用于合同分类展示
      * @param FlowType 合同流程类型
+<br/>客户自定义，用于合同分类展示
      */
     public void setFlowType(String FlowType) {
         this.FlowType = FlowType;
@@ -164,8 +176,10 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否顺序签署(true:无序签,false:顺序签) 
+     * Get 是否顺序签署(true:无序签,false:顺序签)
+<br/>默认false，有序签署合同 
      * @return Unordered 是否顺序签署(true:无序签,false:顺序签)
+<br/>默认false，有序签署合同
      */
     public Boolean getUnordered() {
         return this.Unordered;
@@ -173,7 +187,9 @@ public class BaseFlowInfo extends AbstractModel{
 
     /**
      * Set 是否顺序签署(true:无序签,false:顺序签)
+<br/>默认false，有序签署合同
      * @param Unordered 是否顺序签署(true:无序签,false:顺序签)
+<br/>默认false，有序签署合同
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
@@ -212,16 +228,28 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署 
-     * @return NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * Get 本企业(发起方企业)是否需要签署审批
+<br/>true：开启发起方签署审批
+<br/>false：不开启发起方签署审批
+<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署 
+     * @return NeedSignReview 本企业(发起方企业)是否需要签署审批
+<br/>true：开启发起方签署审批
+<br/>false：不开启发起方签署审批
+<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
      */
     public Boolean getNeedSignReview() {
         return this.NeedSignReview;
     }
 
     /**
-     * Set 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
-     * @param NeedSignReview 本企业(发起方企业)是否需要签署审批，true：开启本企业签署审批。使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * Set 本企业(发起方企业)是否需要签署审批
+<br/>true：开启发起方签署审批
+<br/>false：不开启发起方签署审批
+<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
+     * @param NeedSignReview 本企业(发起方企业)是否需要签署审批
+<br/>true：开启发起方签署审批
+<br/>false：不开启发起方签署审批
+<br/>开启后，使用ChannelCreateFlowSignReview接口提交审批结果，才能继续完成签署
      */
     public void setNeedSignReview(Boolean NeedSignReview) {
         this.NeedSignReview = NeedSignReview;
@@ -260,16 +288,28 @@ public class BaseFlowInfo extends AbstractModel{
     }
 
     /**
-     * Get 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同 
-     * @return NeedCreateReview 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * Get 是否需要开启发起方发起前审核
+<br/>true：开启发起方发起前审核
+<br/>false：不开启发起方发起前审核
+<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同 
+     * @return NeedCreateReview 是否需要开启发起方发起前审核
+<br/>true：开启发起方发起前审核
+<br/>false：不开启发起方发起前审核
+<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
      */
     public Boolean getNeedCreateReview() {
         return this.NeedCreateReview;
     }
 
     /**
-     * Set 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
-     * @param NeedCreateReview 是否需要发起前审核，当指定NeedCreateReview=true，则发起后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * Set 是否需要开启发起方发起前审核
+<br/>true：开启发起方发起前审核
+<br/>false：不开启发起方发起前审核
+<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
+     * @param NeedCreateReview 是否需要开启发起方发起前审核
+<br/>true：开启发起方发起前审核
+<br/>false：不开启发起方发起前审核
+<br/>当指定NeedCreateReview=true，则提交审核后，需要使用接口：ChannelCreateFlowSignReview，来完成发起前审核，审核通过后，可以继续查看，签署合同
      */
     public void setNeedCreateReview(Boolean NeedCreateReview) {
         this.NeedCreateReview = NeedCreateReview;

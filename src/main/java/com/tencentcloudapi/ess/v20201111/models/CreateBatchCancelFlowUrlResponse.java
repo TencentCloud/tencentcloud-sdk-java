@@ -31,6 +31,7 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel{
 
     /**
     * 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
     */
     @SerializedName("FailMessages")
     @Expose
@@ -38,6 +39,8 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel{
 
     /**
     * 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
     */
     @SerializedName("UrlExpireOn")
     @Expose
@@ -67,8 +70,10 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel{
     }
 
     /**
-     * Get 签署流程撤回失败信息 
+     * Get 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错 
      * @return FailMessages 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
      */
     public String [] getFailMessages() {
         return this.FailMessages;
@@ -76,15 +81,21 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel{
 
     /**
      * Set 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
      * @param FailMessages 签署流程撤回失败信息
+数组里边的错误原因与传进来的FlowIds一一对应,如果是空字符串则标识没有出错
      */
     public void setFailMessages(String [] FailMessages) {
         this.FailMessages = FailMessages;
     }
 
     /**
-     * Get 签署连接过期时间字符串：年月日-时分秒 
+     * Get 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59 
      * @return UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
      */
     public String getUrlExpireOn() {
         return this.UrlExpireOn;
@@ -92,7 +103,11 @@ public class CreateBatchCancelFlowUrlResponse extends AbstractModel{
 
     /**
      * Set 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
      * @param UrlExpireOn 签署连接过期时间字符串：年月日-时分秒
+
+例如:2023-07-28 17:25:59
      */
     public void setUrlExpireOn(String UrlExpireOn) {
         this.UrlExpireOn = UrlExpireOn;

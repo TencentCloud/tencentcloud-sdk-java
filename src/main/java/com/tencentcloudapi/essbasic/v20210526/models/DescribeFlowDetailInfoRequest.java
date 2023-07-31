@@ -31,7 +31,7 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
 
     /**
     * 合同(流程)编号数组，最多支持100个。
-（备注：该参数和合同组编号必须二选一）
+（备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参）
     */
     @SerializedName("FlowIds")
     @Expose
@@ -69,9 +69,9 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
 
     /**
      * Get 合同(流程)编号数组，最多支持100个。
-（备注：该参数和合同组编号必须二选一） 
+（备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参） 
      * @return FlowIds 合同(流程)编号数组，最多支持100个。
-（备注：该参数和合同组编号必须二选一）
+（备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参）
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -79,9 +79,9 @@ public class DescribeFlowDetailInfoRequest extends AbstractModel{
 
     /**
      * Set 合同(流程)编号数组，最多支持100个。
-（备注：该参数和合同组编号必须二选一）
+（备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参）
      * @param FlowIds 合同(流程)编号数组，最多支持100个。
-（备注：该参数和合同组编号必须二选一）
+（备注：该参数和合同组编号必须二选一, 如果填写FlowGroupId则忽略此FlowIds的入参）
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;

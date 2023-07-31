@@ -51,7 +51,7 @@ public class CreateUserAutoSignEnableUrlResponse extends AbstractModel{
     private String Path;
 
     /**
-    * base64格式跳转二维码
+    * base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
     */
     @SerializedName("QrCode")
     @Expose
@@ -136,16 +136,16 @@ public class CreateUserAutoSignEnableUrlResponse extends AbstractModel{
     }
 
     /**
-     * Get base64格式跳转二维码 
-     * @return QrCode base64格式跳转二维码
+     * Get base64格式跳转二维码,可以通过微信扫描后跳转到业务界面 
+     * @return QrCode base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
      */
     public String getQrCode() {
         return this.QrCode;
     }
 
     /**
-     * Set base64格式跳转二维码
-     * @param QrCode base64格式跳转二维码
+     * Set base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
+     * @param QrCode base64格式跳转二维码,可以通过微信扫描后跳转到业务界面
      */
     public void setQrCode(String QrCode) {
         this.QrCode = QrCode;

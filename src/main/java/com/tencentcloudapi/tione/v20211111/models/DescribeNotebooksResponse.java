@@ -13,30 +13,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.tione.v20211111.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
+public class DescribeNotebooksResponse extends AbstractModel{
 
     /**
-    * 核验一致性（1:一致，2:不一致，3:查询无记录）
-    */
-    @SerializedName("State")
-    @Expose
-    private Long State;
-
-    /**
-    * 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+    * 详情
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Detail")
+    @SerializedName("NotebookSet")
     @Expose
-    private Detail Detail;
+    private NotebookSetItem [] NotebookSet;
+
+    /**
+    * 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -46,43 +46,43 @@ public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 核验一致性（1:一致，2:不一致，3:查询无记录） 
-     * @return State 核验一致性（1:一致，2:不一致，3:查询无记录）
-     */
-    public Long getState() {
-        return this.State;
-    }
-
-    /**
-     * Set 核验一致性（1:一致，2:不一致，3:查询无记录）
-     * @param State 核验一致性（1:一致，2:不一致，3:查询无记录）
-     */
-    public void setState(Long State) {
-        this.State = State;
-    }
-
-    /**
-     * Get 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * Get 详情
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Detail 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * @return NotebookSet 详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Detail getDetail() {
-        return this.Detail;
+    public NotebookSetItem [] getNotebookSet() {
+        return this.NotebookSet;
     }
 
     /**
-     * Set 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * Set 详情
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Detail 核验结果明细，7：企业法人/负责人，6：企业股东，5：企
-业管理人员，-21：企业名称与企业标识不符，-22：姓名不一致，-23：证件号码不一致，-24：企业名称不一致，-25：企业标识不一致
+     * @param NotebookSet 详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setDetail(Detail Detail) {
-        this.Detail = Detail;
+    public void setNotebookSet(NotebookSetItem [] NotebookSet) {
+        this.NotebookSet = NotebookSet;
+    }
+
+    /**
+     * Get 总条数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总条数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -101,19 +101,22 @@ public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VerifyEnterpriseFourFactorsResponse() {
+    public DescribeNotebooksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyEnterpriseFourFactorsResponse(VerifyEnterpriseFourFactorsResponse source) {
-        if (source.State != null) {
-            this.State = new Long(source.State);
+    public DescribeNotebooksResponse(DescribeNotebooksResponse source) {
+        if (source.NotebookSet != null) {
+            this.NotebookSet = new NotebookSetItem[source.NotebookSet.length];
+            for (int i = 0; i < source.NotebookSet.length; i++) {
+                this.NotebookSet[i] = new NotebookSetItem(source.NotebookSet[i]);
+            }
         }
-        if (source.Detail != null) {
-            this.Detail = new Detail(source.Detail);
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -125,8 +128,8 @@ public class VerifyEnterpriseFourFactorsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "State", this.State);
-        this.setParamObj(map, prefix + "Detail.", this.Detail);
+        this.setParamArrayObj(map, prefix + "NotebookSet.", this.NotebookSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

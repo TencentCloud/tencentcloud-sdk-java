@@ -37,7 +37,7 @@ public class ModifyScheduledSqlRequest extends AbstractModel{
     private String SrcTopicId;
 
     /**
-    * 任务启动状态.   1正常开启,  2关闭
+    * 任务启动状态.   1开启,  2关闭
     */
     @SerializedName("EnableFlag")
     @Expose
@@ -132,16 +132,16 @@ public class ModifyScheduledSqlRequest extends AbstractModel{
     }
 
     /**
-     * Get 任务启动状态.   1正常开启,  2关闭 
-     * @return EnableFlag 任务启动状态.   1正常开启,  2关闭
+     * Get 任务启动状态.   1开启,  2关闭 
+     * @return EnableFlag 任务启动状态.   1开启,  2关闭
      */
     public Long getEnableFlag() {
         return this.EnableFlag;
     }
 
     /**
-     * Set 任务启动状态.   1正常开启,  2关闭
-     * @param EnableFlag 任务启动状态.   1正常开启,  2关闭
+     * Set 任务启动状态.   1开启,  2关闭
+     * @param EnableFlag 任务启动状态.   1开启,  2关闭
      */
     public void setEnableFlag(Long EnableFlag) {
         this.EnableFlag = EnableFlag;

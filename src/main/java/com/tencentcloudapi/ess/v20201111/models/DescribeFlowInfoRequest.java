@@ -31,6 +31,8 @@ public class DescribeFlowInfoRequest extends AbstractModel{
 
     /**
     * 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
     */
     @SerializedName("FlowIds")
     @Expose
@@ -44,7 +46,9 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     private Agent Agent;
 
     /**
-    * 合同组ID
+    * 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
     */
     @SerializedName("FlowGroupId")
     @Expose
@@ -67,8 +71,12 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 需要查询的流程ID列表，限制最大100个 
+     * Get 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数 
      * @return FlowIds 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -76,7 +84,11 @@ public class DescribeFlowInfoRequest extends AbstractModel{
 
     /**
      * Set 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
      * @param FlowIds 需要查询的流程ID列表，限制最大100个
+
+如果查询合同组的信息,不要传此参数
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -99,16 +111,24 @@ public class DescribeFlowInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get 合同组ID 
-     * @return FlowGroupId 合同组ID
+     * Get 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+ 
+     * @return FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
      */
     public String getFlowGroupId() {
         return this.FlowGroupId;
     }
 
     /**
-     * Set 合同组ID
-     * @param FlowGroupId 合同组ID
+     * Set 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
+     * @param FlowGroupId 合同组ID, 如果传此参数会忽略FlowIds入参
+ 所以如传此参数不要传FlowIds参数
+
      */
     public void setFlowGroupId(String FlowGroupId) {
         this.FlowGroupId = FlowGroupId;
