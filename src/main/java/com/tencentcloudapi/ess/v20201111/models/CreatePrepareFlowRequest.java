@@ -44,7 +44,9 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     private String FlowName;
 
     /**
-    * 是否顺序签署(true:无序签,false:顺序签)
+    * 是否顺序签署
+true:无序签
+false:顺序签
     */
     @SerializedName("Unordered")
     @Expose
@@ -52,14 +54,16 @@ public class CreatePrepareFlowRequest extends AbstractModel{
 
     /**
     * 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
+值为unix时间戳,精确到秒
+不传默认为当前时间一年后
     */
     @SerializedName("Deadline")
     @Expose
     private Long Deadline;
 
     /**
-    * 用户自定义合同类型
+    * 用户自定义合同类型Id
+该id为电子签企业内的合同类型id
     */
     @SerializedName("UserFlowTypeId")
     @Expose
@@ -73,11 +77,84 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     private FlowCreateApprover [] Approvers;
 
     /**
-    * 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+    * 打开智能添加填写区
+(默认开启，打开:"OPEN"
+ 关闭："CLOSE"
     */
     @SerializedName("IntelligentStatus")
     @Expose
     private String IntelligentStatus;
+
+    /**
+    * 资源类型，
+1：文件，
+2：模板
+不传默认为1：文件
+目前仅支持文件
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private Long ResourceType;
+
+    /**
+    * 发起方填写控件
+该类型控件由发起方完成填写
+    */
+    @SerializedName("Components")
+    @Expose
+    private Component Components;
+
+    /**
+    * 发起合同个性化参数
+用于满足创建及页面操作过程中的个性化要求
+具体定制化内容详见数据接口说明
+    */
+    @SerializedName("FlowOption")
+    @Expose
+    private CreateFlowOption FlowOption;
+
+    /**
+    * 是否开启发起方签署审核
+true:开启发起方签署审核
+false:不开启发起方签署审核
+默认false:不开启发起方签署审核
+    */
+    @SerializedName("NeedSignReview")
+    @Expose
+    private Boolean NeedSignReview;
+
+    /**
+    * 开启发起方发起合同审核
+true:开启发起方发起合同审核
+false:不开启发起方发起合同审核
+默认false:不开启发起方发起合同审核
+    */
+    @SerializedName("NeedCreateReview")
+    @Expose
+    private Boolean NeedCreateReview;
+
+    /**
+    * 用户自定义参数
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
+    * 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
+    * 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+    */
+    @SerializedName("FlowType")
+    @Expose
+    private String FlowType;
 
     /**
     * 代理相关应用信息，如集团主企业代子企业操作的场景中ProxyOrganizationId必填	
@@ -135,16 +212,24 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否顺序签署(true:无序签,false:顺序签) 
-     * @return Unordered 是否顺序签署(true:无序签,false:顺序签)
+     * Get 是否顺序签署
+true:无序签
+false:顺序签 
+     * @return Unordered 是否顺序签署
+true:无序签
+false:顺序签
      */
     public Boolean getUnordered() {
         return this.Unordered;
     }
 
     /**
-     * Set 是否顺序签署(true:无序签,false:顺序签)
-     * @param Unordered 是否顺序签署(true:无序签,false:顺序签)
+     * Set 是否顺序签署
+true:无序签
+false:顺序签
+     * @param Unordered 是否顺序签署
+true:无序签
+false:顺序签
      */
     public void setUnordered(Boolean Unordered) {
         this.Unordered = Unordered;
@@ -152,9 +237,11 @@ public class CreatePrepareFlowRequest extends AbstractModel{
 
     /**
      * Get 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后 
+值为unix时间戳,精确到秒
+不传默认为当前时间一年后 
      * @return Deadline 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
+值为unix时间戳,精确到秒
+不传默认为当前时间一年后
      */
     public Long getDeadline() {
         return this.Deadline;
@@ -162,25 +249,31 @@ public class CreatePrepareFlowRequest extends AbstractModel{
 
     /**
      * Set 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
+值为unix时间戳,精确到秒
+不传默认为当前时间一年后
      * @param Deadline 签署流程的签署截止时间。
-值为unix时间戳,精确到秒,不传默认为当前时间一年后
+值为unix时间戳,精确到秒
+不传默认为当前时间一年后
      */
     public void setDeadline(Long Deadline) {
         this.Deadline = Deadline;
     }
 
     /**
-     * Get 用户自定义合同类型 
-     * @return UserFlowTypeId 用户自定义合同类型
+     * Get 用户自定义合同类型Id
+该id为电子签企业内的合同类型id 
+     * @return UserFlowTypeId 用户自定义合同类型Id
+该id为电子签企业内的合同类型id
      */
     public String getUserFlowTypeId() {
         return this.UserFlowTypeId;
     }
 
     /**
-     * Set 用户自定义合同类型
-     * @param UserFlowTypeId 用户自定义合同类型
+     * Set 用户自定义合同类型Id
+该id为电子签企业内的合同类型id
+     * @param UserFlowTypeId 用户自定义合同类型Id
+该id为电子签企业内的合同类型id
      */
     public void setUserFlowTypeId(String UserFlowTypeId) {
         this.UserFlowTypeId = UserFlowTypeId;
@@ -203,19 +296,215 @@ public class CreatePrepareFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE") 
-     * @return IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * Get 打开智能添加填写区
+(默认开启，打开:"OPEN"
+ 关闭："CLOSE" 
+     * @return IntelligentStatus 打开智能添加填写区
+(默认开启，打开:"OPEN"
+ 关闭："CLOSE"
      */
     public String getIntelligentStatus() {
         return this.IntelligentStatus;
     }
 
     /**
-     * Set 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
-     * @param IntelligentStatus 打开智能添加填写区(默认开启，打开:"OPEN" 关闭："CLOSE")
+     * Set 打开智能添加填写区
+(默认开启，打开:"OPEN"
+ 关闭："CLOSE"
+     * @param IntelligentStatus 打开智能添加填写区
+(默认开启，打开:"OPEN"
+ 关闭："CLOSE"
      */
     public void setIntelligentStatus(String IntelligentStatus) {
         this.IntelligentStatus = IntelligentStatus;
+    }
+
+    /**
+     * Get 资源类型，
+1：文件，
+2：模板
+不传默认为1：文件
+目前仅支持文件 
+     * @return ResourceType 资源类型，
+1：文件，
+2：模板
+不传默认为1：文件
+目前仅支持文件
+     */
+    public Long getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 资源类型，
+1：文件，
+2：模板
+不传默认为1：文件
+目前仅支持文件
+     * @param ResourceType 资源类型，
+1：文件，
+2：模板
+不传默认为1：文件
+目前仅支持文件
+     */
+    public void setResourceType(Long ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get 发起方填写控件
+该类型控件由发起方完成填写 
+     * @return Components 发起方填写控件
+该类型控件由发起方完成填写
+     */
+    public Component getComponents() {
+        return this.Components;
+    }
+
+    /**
+     * Set 发起方填写控件
+该类型控件由发起方完成填写
+     * @param Components 发起方填写控件
+该类型控件由发起方完成填写
+     */
+    public void setComponents(Component Components) {
+        this.Components = Components;
+    }
+
+    /**
+     * Get 发起合同个性化参数
+用于满足创建及页面操作过程中的个性化要求
+具体定制化内容详见数据接口说明 
+     * @return FlowOption 发起合同个性化参数
+用于满足创建及页面操作过程中的个性化要求
+具体定制化内容详见数据接口说明
+     */
+    public CreateFlowOption getFlowOption() {
+        return this.FlowOption;
+    }
+
+    /**
+     * Set 发起合同个性化参数
+用于满足创建及页面操作过程中的个性化要求
+具体定制化内容详见数据接口说明
+     * @param FlowOption 发起合同个性化参数
+用于满足创建及页面操作过程中的个性化要求
+具体定制化内容详见数据接口说明
+     */
+    public void setFlowOption(CreateFlowOption FlowOption) {
+        this.FlowOption = FlowOption;
+    }
+
+    /**
+     * Get 是否开启发起方签署审核
+true:开启发起方签署审核
+false:不开启发起方签署审核
+默认false:不开启发起方签署审核 
+     * @return NeedSignReview 是否开启发起方签署审核
+true:开启发起方签署审核
+false:不开启发起方签署审核
+默认false:不开启发起方签署审核
+     */
+    public Boolean getNeedSignReview() {
+        return this.NeedSignReview;
+    }
+
+    /**
+     * Set 是否开启发起方签署审核
+true:开启发起方签署审核
+false:不开启发起方签署审核
+默认false:不开启发起方签署审核
+     * @param NeedSignReview 是否开启发起方签署审核
+true:开启发起方签署审核
+false:不开启发起方签署审核
+默认false:不开启发起方签署审核
+     */
+    public void setNeedSignReview(Boolean NeedSignReview) {
+        this.NeedSignReview = NeedSignReview;
+    }
+
+    /**
+     * Get 开启发起方发起合同审核
+true:开启发起方发起合同审核
+false:不开启发起方发起合同审核
+默认false:不开启发起方发起合同审核 
+     * @return NeedCreateReview 开启发起方发起合同审核
+true:开启发起方发起合同审核
+false:不开启发起方发起合同审核
+默认false:不开启发起方发起合同审核
+     */
+    public Boolean getNeedCreateReview() {
+        return this.NeedCreateReview;
+    }
+
+    /**
+     * Set 开启发起方发起合同审核
+true:开启发起方发起合同审核
+false:不开启发起方发起合同审核
+默认false:不开启发起方发起合同审核
+     * @param NeedCreateReview 开启发起方发起合同审核
+true:开启发起方发起合同审核
+false:不开启发起方发起合同审核
+默认false:不开启发起方发起合同审核
+     */
+    public void setNeedCreateReview(Boolean NeedCreateReview) {
+        this.NeedCreateReview = NeedCreateReview;
+    }
+
+    /**
+     * Get 用户自定义参数 
+     * @return UserData 用户自定义参数
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set 用户自定义参数
+     * @param UserData 用户自定义参数
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
+    /**
+     * Get 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接 
+     * @return FlowId 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+     * @param FlowId 合同id,用于通过已web页面发起的合同id快速生成一个web发起合同链接
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看 
+     * @return FlowType 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+     */
+    public String getFlowType() {
+        return this.FlowType;
+    }
+
+    /**
+     * Set 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+     * @param FlowType 合同类型名称
+该字段用于客户自定义合同类型
+建议使用时指定合同类型，便于之后合同分类以及查看
+     */
+    public void setFlowType(String FlowType) {
+        this.FlowType = FlowType;
     }
 
     /**
@@ -269,6 +558,30 @@ public class CreatePrepareFlowRequest extends AbstractModel{
         if (source.IntelligentStatus != null) {
             this.IntelligentStatus = new String(source.IntelligentStatus);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
+        if (source.Components != null) {
+            this.Components = new Component(source.Components);
+        }
+        if (source.FlowOption != null) {
+            this.FlowOption = new CreateFlowOption(source.FlowOption);
+        }
+        if (source.NeedSignReview != null) {
+            this.NeedSignReview = new Boolean(source.NeedSignReview);
+        }
+        if (source.NeedCreateReview != null) {
+            this.NeedCreateReview = new Boolean(source.NeedCreateReview);
+        }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+        if (source.FlowType != null) {
+            this.FlowType = new String(source.FlowType);
+        }
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
@@ -287,6 +600,14 @@ public class CreatePrepareFlowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserFlowTypeId", this.UserFlowTypeId);
         this.setParamArrayObj(map, prefix + "Approvers.", this.Approvers);
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamObj(map, prefix + "Components.", this.Components);
+        this.setParamObj(map, prefix + "FlowOption.", this.FlowOption);
+        this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+        this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
 
     }

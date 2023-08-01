@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateOrderInstanceRequest extends AbstractModel{
 
     /**
-    * 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+    * 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
@@ -38,7 +38,7 @@ public class CreateOrderInstanceRequest extends AbstractModel{
 
     /**
     * 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
     */
     @SerializedName("AppPkgNameList")
@@ -46,16 +46,16 @@ public class CreateOrderInstanceRequest extends AbstractModel{
     private String AppPkgNameList;
 
     /**
-     * Get 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固 
-     * @return PlatformType 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+     * Get 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固 
+     * @return PlatformType 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
-     * @param PlatformType 平台类型枚举值：1-android安卓加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+     * Set 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
+     * @param PlatformType 平台类型枚举值：1-android加固  ；2-ios源码混淆 ； 3-sdk加固 ； 4-applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
@@ -79,10 +79,10 @@ public class CreateOrderInstanceRequest extends AbstractModel{
 
     /**
      * Get 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
  
      * @return AppPkgNameList 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
      */
     public String getAppPkgNameList() {
@@ -91,10 +91,10 @@ public class CreateOrderInstanceRequest extends AbstractModel{
 
     /**
      * Set 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
      * @param AppPkgNameList 代表应用包名列表，值为单个包名（例如：“a.b.xxx”）或多个包名用逗号隔开(例如：“a.b.xxx,b.c.xxx”)。
-当安卓按年收费加固或安卓免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
+当android按年收费加固或android免费试用加固时，该字段要求非空，即PlatformType=1 并且 OrderType=2时，AppPkgNameList必传值。
 
      */
     public void setAppPkgNameList(String AppPkgNameList) {

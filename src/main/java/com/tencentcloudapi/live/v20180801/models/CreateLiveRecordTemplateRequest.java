@@ -89,6 +89,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
 
     /**
     * 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
     */
     @SerializedName("RemoveWatermark")
     @Expose
@@ -254,8 +255,10 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否去除水印，类型为慢直播时此参数无效。 
+     * Get 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。 
      * @return RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      */
     public Boolean getRemoveWatermark() {
         return this.RemoveWatermark;
@@ -263,7 +266,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
 
     /**
      * Set 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      * @param RemoveWatermark 是否去除水印，类型为慢直播时此参数无效。
+如果为false，则录制水印流或转码流；如果为true，则录制原始流。
      */
     public void setRemoveWatermark(Boolean RemoveWatermark) {
         this.RemoveWatermark = RemoveWatermark;

@@ -44,6 +44,16 @@ public class GetDevicesRequest extends AbstractModel{
     private String Keyword;
 
     /**
+    * DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private Long DeviceType;
+
+    /**
      * Get 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备 
      * @return PageSize 每页显示记录数，PageSize、PageNumber值均为-1 时，按照1页无限制条数匹配所有设备
      */
@@ -91,6 +101,34 @@ public class GetDevicesRequest extends AbstractModel{
         this.Keyword = Keyword;
     }
 
+    /**
+     * Get DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备 
+     * @return DeviceType DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+     */
+    public Long getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+     * @param DeviceType DeviceType
+不传：返回所有设备；
+1:自有设备；
+2:三方设备
+     */
+    public void setDeviceType(Long DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
     public GetDevicesRequest() {
     }
 
@@ -108,6 +146,9 @@ public class GetDevicesRequest extends AbstractModel{
         if (source.Keyword != null) {
             this.Keyword = new String(source.Keyword);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new Long(source.DeviceType);
+        }
     }
 
 
@@ -118,6 +159,7 @@ public class GetDevicesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

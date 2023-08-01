@@ -38,7 +38,7 @@ public class TextToVoiceRequest extends AbstractModel{
     private String SessionId;
 
     /**
-    * 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+    * 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
     */
     @SerializedName("Volume")
     @Expose
@@ -161,16 +161,16 @@ public class TextToVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。 
-     * @return Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * Get 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。 
+     * @return Volume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-     * @param Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * Set 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
+     * @param Volume 音量大小，范围[0，10]，对应音量大小。默认为0，代表正常音量，值越大音量越高。
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;

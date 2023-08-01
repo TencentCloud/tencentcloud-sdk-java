@@ -51,7 +51,7 @@ public class CreateListenerRequest extends AbstractModel{
     private String [] ListenerNames;
 
     /**
-    * 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+    * 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -73,7 +73,7 @@ public class CreateListenerRequest extends AbstractModel{
 
     /**
     * 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("Scheduler")
     @Expose
@@ -214,16 +214,16 @@ public class CreateListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。 
-     * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
+     * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
-     * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -263,9 +263,9 @@ public class CreateListenerRequest extends AbstractModel{
 
     /**
      * Get 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。 
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
      * @return Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public String getScheduler() {
         return this.Scheduler;
@@ -273,9 +273,9 @@ public class CreateListenerRequest extends AbstractModel{
 
     /**
      * Set 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      * @param Scheduler 监听器转发的方式。可选值：WRR、LEAST_CONN
-分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL监听器。
+分别表示按权重轮询、最小连接数， 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

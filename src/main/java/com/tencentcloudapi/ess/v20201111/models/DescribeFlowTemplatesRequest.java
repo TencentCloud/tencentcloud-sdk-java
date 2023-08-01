@@ -25,7 +25,7 @@ public class DescribeFlowTemplatesRequest extends AbstractModel{
     /**
     * 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
     */
     @SerializedName("Operator")
     @Expose
@@ -105,10 +105,10 @@ ApplicationId为空，查询所有应用下的模板列表
     /**
      * Get 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应 
+注：请保证员工有相关的角色权限 
      * @return Operator 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
      */
     public UserInfo getOperator() {
         return this.Operator;
@@ -117,10 +117,10 @@ UserId 必填，在企业控制台组织架构中可以查到员工的UserId
     /**
      * Set 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
      * @param Operator 调用方员工/经办人信息
 UserId 必填，在企业控制台组织架构中可以查到员工的UserId
-注：请保证对应
+注：请保证员工有相关的角色权限
      */
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;

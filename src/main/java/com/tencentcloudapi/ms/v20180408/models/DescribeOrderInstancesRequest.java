@@ -51,7 +51,7 @@ public class DescribeOrderInstancesRequest extends AbstractModel{
     private String OrderDirection;
 
     /**
-    * （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
@@ -93,7 +93,7 @@ public class DescribeOrderInstancesRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+    * （条件过滤字段）包名，查询android加固订单时使用
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -164,16 +164,16 @@ public class DescribeOrderInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformType （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformType （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformType （条件过滤字段）平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformType （条件过滤字段）平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
@@ -260,16 +260,16 @@ public class DescribeOrderInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get （条件过滤字段）安卓包名，查询android安卓加固订单时使用 
-     * @return AppPkgName （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+     * Get （条件过滤字段）包名，查询android加固订单时使用 
+     * @return AppPkgName （条件过滤字段）包名，查询android加固订单时使用
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * Set （条件过滤字段）安卓包名，查询android安卓加固订单时使用
-     * @param AppPkgName （条件过滤字段）安卓包名，查询android安卓加固订单时使用
+     * Set （条件过滤字段）包名，查询android加固订单时使用
+     * @param AppPkgName （条件过滤字段）包名，查询android加固订单时使用
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;

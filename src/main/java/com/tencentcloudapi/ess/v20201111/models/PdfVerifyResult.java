@@ -65,14 +65,14 @@ public class PdfVerifyResult extends AbstractModel{
     private String CertSn;
 
     /**
-    * 证书起始时间戳，单位秒
+    * 证书起始时间戳，单位毫秒
     */
     @SerializedName("CertNotBefore")
     @Expose
     private Long CertNotBefore;
 
     /**
-    * 证书过期时间戳，单位秒
+    * 证书过期时间戳，单位毫秒
     */
     @SerializedName("CertNotAfter")
     @Expose
@@ -210,32 +210,32 @@ public class PdfVerifyResult extends AbstractModel{
     }
 
     /**
-     * Get 证书起始时间戳，单位秒 
-     * @return CertNotBefore 证书起始时间戳，单位秒
+     * Get 证书起始时间戳，单位毫秒 
+     * @return CertNotBefore 证书起始时间戳，单位毫秒
      */
     public Long getCertNotBefore() {
         return this.CertNotBefore;
     }
 
     /**
-     * Set 证书起始时间戳，单位秒
-     * @param CertNotBefore 证书起始时间戳，单位秒
+     * Set 证书起始时间戳，单位毫秒
+     * @param CertNotBefore 证书起始时间戳，单位毫秒
      */
     public void setCertNotBefore(Long CertNotBefore) {
         this.CertNotBefore = CertNotBefore;
     }
 
     /**
-     * Get 证书过期时间戳，单位秒 
-     * @return CertNotAfter 证书过期时间戳，单位秒
+     * Get 证书过期时间戳，单位毫秒 
+     * @return CertNotAfter 证书过期时间戳，单位毫秒
      */
     public Long getCertNotAfter() {
         return this.CertNotAfter;
     }
 
     /**
-     * Set 证书过期时间戳，单位秒
-     * @param CertNotAfter 证书过期时间戳，单位秒
+     * Set 证书过期时间戳，单位毫秒
+     * @param CertNotAfter 证书过期时间戳，单位毫秒
      */
     public void setCertNotAfter(Long CertNotAfter) {
         this.CertNotAfter = CertNotAfter;

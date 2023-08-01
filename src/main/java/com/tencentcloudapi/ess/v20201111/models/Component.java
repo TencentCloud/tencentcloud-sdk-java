@@ -50,7 +50,8 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     private String ComponentType;
 
     /**
-    * 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+    * 控件所属文件的序号（取值为：0-N）。
+目前单文件的情况下，值是0
     */
     @SerializedName("FileIndex")
     @Expose
@@ -92,28 +93,30 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     private Float ComponentPosY;
 
     /**
-    * 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+    * 控件唯一ID。
+或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
     */
     @SerializedName("ComponentId")
     @Expose
     private String ComponentId;
 
     /**
-    * 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+    * 控件名。
+或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * 是否必选，默认为false
+    * 是否必选，默认为false-非必选
     */
     @SerializedName("ComponentRequired")
     @Expose
     private Boolean ComponentRequired;
 
     /**
-    * 控件关联的签署人ID
+    * 控件关联的参与方ID，对应Recipient结构体中的RecipientId
     */
     @SerializedName("ComponentRecipientId")
     @Expose
@@ -155,7 +158,7 @@ ComponentType为SIGN_SEAL类型时，支持以下参数：
     private String ComponentExtra;
 
     /**
-    * 是否是表单域类型，默认不false-不是
+    * 是否是表单域类型，默认false-不是
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFormType")
@@ -261,7 +264,7 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Long ComponentDateFontSize;
 
     /**
-    * 第三方应用集成平台模板控件 id 标识
+    * 第三方应用集成平台模板控件 ID 标识
     */
     @SerializedName("ChannelComponentId")
     @Expose
@@ -284,14 +287,17 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private Float OffsetY;
 
     /**
-    * 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+    * 第三方应用集成中子客企业控件来源。
+0-平台指定；
+1-用户自定义
     */
     @SerializedName("ChannelComponentSource")
     @Expose
     private Long ChannelComponentSource;
 
     /**
-    * 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+    * 指定关键字排序规则，Positive-正序，Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
     */
     @SerializedName("KeywordOrder")
@@ -299,25 +305,52 @@ KEYWORD 关键字，使用ComponentId指定关键字
     private String KeywordOrder;
 
     /**
-    * 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+    * 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
     */
     @SerializedName("KeywordPage")
     @Expose
     private Long KeywordPage;
 
     /**
-    * 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+    * 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
     */
     @SerializedName("RelativeLocation")
     @Expose
     private String RelativeLocation;
 
     /**
-    * 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+    * 关键字索引。
+如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
     */
     @SerializedName("KeywordIndexes")
     @Expose
     private Long [] KeywordIndexes;
+
+    /**
+    * 是否锁定控件值不允许编辑（嵌入式发起使用）
+<br/>默认false：不锁定控件值，允许在页面编辑控件值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LockComponentValue")
+    @Expose
+    private Boolean LockComponentValue;
+
+    /**
+    * 是否禁止移动和删除控件
+<br/>默认false，不禁止移动和删除控件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ForbidMoveAndDelete")
+    @Expose
+    private Boolean ForbidMoveAndDelete;
 
     /**
      * Get 如果是Component填写控件类型，则可选的字段为：
@@ -416,16 +449,20 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Get 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0 
-     * @return FileIndex 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+     * Get 控件所属文件的序号（取值为：0-N）。
+目前单文件的情况下，值是0 
+     * @return FileIndex 控件所属文件的序号（取值为：0-N）。
+目前单文件的情况下，值是0
      */
     public Long getFileIndex() {
         return this.FileIndex;
     }
 
     /**
-     * Set 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
-     * @param FileIndex 控件所属文件的序号（取值为：0-N）。目前单文件的情况下，值是0
+     * Set 控件所属文件的序号（取值为：0-N）。
+目前单文件的情况下，值是0
+     * @param FileIndex 控件所属文件的序号（取值为：0-N）。
+目前单文件的情况下，值是0
      */
     public void setFileIndex(Long FileIndex) {
         this.FileIndex = FileIndex;
@@ -512,64 +549,72 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Get 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字 
-     * @return ComponentId 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+     * Get 控件唯一ID。
+或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字 
+     * @return ComponentId 控件唯一ID。
+或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
      */
     public String getComponentId() {
         return this.ComponentId;
     }
 
     /**
-     * Set 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
-     * @param ComponentId 查询时返回控件唯一Id。使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+     * Set 控件唯一ID。
+或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
+     * @param ComponentId 控件唯一ID。
+或使用文件发起合同时用于GenerateMode==KEYWORD 指定关键字
      */
     public void setComponentId(String ComponentId) {
         this.ComponentId = ComponentId;
     }
 
     /**
-     * Get 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称 
-     * @return ComponentName 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+     * Get 控件名。
+或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称 
+     * @return ComponentName 控件名。
+或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
-     * @param ComponentName 查询时返回控件名。使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+     * Set 控件名。
+或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
+     * @param ComponentName 控件名。
+或使用文件发起合同时用于GenerateMode==FIELD 指定表单域名称
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 是否必选，默认为false 
-     * @return ComponentRequired 是否必选，默认为false
+     * Get 是否必选，默认为false-非必选 
+     * @return ComponentRequired 是否必选，默认为false-非必选
      */
     public Boolean getComponentRequired() {
         return this.ComponentRequired;
     }
 
     /**
-     * Set 是否必选，默认为false
-     * @param ComponentRequired 是否必选，默认为false
+     * Set 是否必选，默认为false-非必选
+     * @param ComponentRequired 是否必选，默认为false-非必选
      */
     public void setComponentRequired(Boolean ComponentRequired) {
         this.ComponentRequired = ComponentRequired;
     }
 
     /**
-     * Get 控件关联的签署人ID 
-     * @return ComponentRecipientId 控件关联的签署人ID
+     * Get 控件关联的参与方ID，对应Recipient结构体中的RecipientId 
+     * @return ComponentRecipientId 控件关联的参与方ID，对应Recipient结构体中的RecipientId
      */
     public String getComponentRecipientId() {
         return this.ComponentRecipientId;
     }
 
     /**
-     * Set 控件关联的签署人ID
-     * @param ComponentRecipientId 控件关联的签署人ID
+     * Set 控件关联的参与方ID，对应Recipient结构体中的RecipientId
+     * @param ComponentRecipientId 控件关联的参与方ID，对应Recipient结构体中的RecipientId
      */
     public void setComponentRecipientId(String ComponentRecipientId) {
         this.ComponentRecipientId = ComponentRecipientId;
@@ -704,9 +749,9 @@ ComponentType为SIGN_SEAL类型时，支持以下参数：
     }
 
     /**
-     * Get 是否是表单域类型，默认不false-不是
+     * Get 是否是表单域类型，默认false-不是
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsFormType 是否是表单域类型，默认不false-不是
+     * @return IsFormType 是否是表单域类型，默认false-不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsFormType() {
@@ -714,9 +759,9 @@ ComponentType为SIGN_SEAL类型时，支持以下参数：
     }
 
     /**
-     * Set 是否是表单域类型，默认不false-不是
+     * Set 是否是表单域类型，默认false-不是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsFormType 是否是表单域类型，默认不false-不是
+     * @param IsFormType 是否是表单域类型，默认false-不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFormType(Boolean IsFormType) {
@@ -1080,16 +1125,16 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 第三方应用集成平台模板控件 id 标识 
-     * @return ChannelComponentId 第三方应用集成平台模板控件 id 标识
+     * Get 第三方应用集成平台模板控件 ID 标识 
+     * @return ChannelComponentId 第三方应用集成平台模板控件 ID 标识
      */
     public String getChannelComponentId() {
         return this.ChannelComponentId;
     }
 
     /**
-     * Set 第三方应用集成平台模板控件 id 标识
-     * @param ChannelComponentId 第三方应用集成平台模板控件 id 标识
+     * Set 第三方应用集成平台模板控件 ID 标识
+     * @param ChannelComponentId 第三方应用集成平台模板控件 ID 标识
      */
     public void setChannelComponentId(String ChannelComponentId) {
         this.ChannelComponentId = ChannelComponentId;
@@ -1136,25 +1181,35 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义 
-     * @return ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+     * Get 第三方应用集成中子客企业控件来源。
+0-平台指定；
+1-用户自定义 
+     * @return ChannelComponentSource 第三方应用集成中子客企业控件来源。
+0-平台指定；
+1-用户自定义
      */
     public Long getChannelComponentSource() {
         return this.ChannelComponentSource;
     }
 
     /**
-     * Set 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
-     * @param ChannelComponentSource 第三方应用集成中子客企业控件来源。0-平台指定；1-用户自定义
+     * Set 第三方应用集成中子客企业控件来源。
+0-平台指定；
+1-用户自定义
+     * @param ChannelComponentSource 第三方应用集成中子客企业控件来源。
+0-平台指定；
+1-用户自定义
      */
     public void setChannelComponentSource(Long ChannelComponentSource) {
         this.ChannelComponentSource = ChannelComponentSource;
     }
 
     /**
-     * Get 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * Get 指定关键字排序规则，Positive-正序，Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。 
-     * @return KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @return KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      */
     public String getKeywordOrder() {
@@ -1162,9 +1217,11 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Set 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * Set 指定关键字排序规则，Positive-正序，Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
-     * @param KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @param KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      */
     public void setKeywordOrder(String KeywordOrder) {
@@ -1172,51 +1229,135 @@ KEYWORD 关键字，使用ComponentId指定关键字
     }
 
     /**
-     * Get 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来 
-     * @return KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * Get 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来 
+     * @return KeywordPage 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public Long getKeywordPage() {
         return this.KeywordPage;
     }
 
     /**
-     * Set 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
-     * @param KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * Set 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * @param KeywordPage 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public void setKeywordPage(Long KeywordPage) {
         this.KeywordPage = KeywordPage;
     }
 
     /**
-     * Get 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方 
-     * @return RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * Get 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方 
+     * @return RelativeLocation 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public String getRelativeLocation() {
         return this.RelativeLocation;
     }
 
     /**
-     * Set 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
-     * @param RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * Set 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * @param RelativeLocation 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public void setRelativeLocation(String RelativeLocation) {
         this.RelativeLocation = RelativeLocation;
     }
 
     /**
-     * Get 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。 
-     * @return KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * Get 关键字索引。
+如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。 
+     * @return KeywordIndexes 关键字索引。
+如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public Long [] getKeywordIndexes() {
         return this.KeywordIndexes;
     }
 
     /**
-     * Set 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
-     * @param KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * Set 关键字索引。
+如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * @param KeywordIndexes 关键字索引。
+如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例：[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public void setKeywordIndexes(Long [] KeywordIndexes) {
         this.KeywordIndexes = KeywordIndexes;
+    }
+
+    /**
+     * Get 是否锁定控件值不允许编辑（嵌入式发起使用）
+<br/>默认false：不锁定控件值，允许在页面编辑控件值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LockComponentValue 是否锁定控件值不允许编辑（嵌入式发起使用）
+<br/>默认false：不锁定控件值，允许在页面编辑控件值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getLockComponentValue() {
+        return this.LockComponentValue;
+    }
+
+    /**
+     * Set 是否锁定控件值不允许编辑（嵌入式发起使用）
+<br/>默认false：不锁定控件值，允许在页面编辑控件值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LockComponentValue 是否锁定控件值不允许编辑（嵌入式发起使用）
+<br/>默认false：不锁定控件值，允许在页面编辑控件值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLockComponentValue(Boolean LockComponentValue) {
+        this.LockComponentValue = LockComponentValue;
+    }
+
+    /**
+     * Get 是否禁止移动和删除控件
+<br/>默认false，不禁止移动和删除控件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ForbidMoveAndDelete 是否禁止移动和删除控件
+<br/>默认false，不禁止移动和删除控件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getForbidMoveAndDelete() {
+        return this.ForbidMoveAndDelete;
+    }
+
+    /**
+     * Set 是否禁止移动和删除控件
+<br/>默认false，不禁止移动和删除控件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ForbidMoveAndDelete 是否禁止移动和删除控件
+<br/>默认false，不禁止移动和删除控件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setForbidMoveAndDelete(Boolean ForbidMoveAndDelete) {
+        this.ForbidMoveAndDelete = ForbidMoveAndDelete;
     }
 
     public Component() {
@@ -1302,6 +1443,12 @@ KEYWORD 关键字，使用ComponentId指定关键字
                 this.KeywordIndexes[i] = new Long(source.KeywordIndexes[i]);
             }
         }
+        if (source.LockComponentValue != null) {
+            this.LockComponentValue = new Boolean(source.LockComponentValue);
+        }
+        if (source.ForbidMoveAndDelete != null) {
+            this.ForbidMoveAndDelete = new Boolean(source.ForbidMoveAndDelete);
+        }
     }
 
 
@@ -1333,6 +1480,8 @@ KEYWORD 关键字，使用ComponentId指定关键字
         this.setParamSimple(map, prefix + "KeywordPage", this.KeywordPage);
         this.setParamSimple(map, prefix + "RelativeLocation", this.RelativeLocation);
         this.setParamArraySimple(map, prefix + "KeywordIndexes.", this.KeywordIndexes);
+        this.setParamSimple(map, prefix + "LockComponentValue", this.LockComponentValue);
+        this.setParamSimple(map, prefix + "ForbidMoveAndDelete", this.ForbidMoveAndDelete);
 
     }
 }

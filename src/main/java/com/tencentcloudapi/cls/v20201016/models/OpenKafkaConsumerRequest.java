@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OpenKafkaConsumerRequest extends AbstractModel{
 
     /**
-    * CLS控制台创建的TopicId
+    * 日志主题ID
     */
     @SerializedName("FromTopicId")
     @Expose
@@ -44,16 +44,16 @@ public class OpenKafkaConsumerRequest extends AbstractModel{
     private KafkaConsumerContent ConsumerContent;
 
     /**
-     * Get CLS控制台创建的TopicId 
-     * @return FromTopicId CLS控制台创建的TopicId
+     * Get 日志主题ID 
+     * @return FromTopicId 日志主题ID
      */
     public String getFromTopicId() {
         return this.FromTopicId;
     }
 
     /**
-     * Set CLS控制台创建的TopicId
-     * @param FromTopicId CLS控制台创建的TopicId
+     * Set 日志主题ID
+     * @param FromTopicId 日志主题ID
      */
     public void setFromTopicId(String FromTopicId) {
         this.FromTopicId = FromTopicId;

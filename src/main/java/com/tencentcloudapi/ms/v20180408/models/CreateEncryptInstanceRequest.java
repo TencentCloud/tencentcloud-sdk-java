@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateEncryptInstanceRequest extends AbstractModel{
 
     /**
-    * 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
@@ -51,14 +51,14 @@ public class CreateEncryptInstanceRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 渠道合作安卓加固App信息 
+    * 渠道合作android加固App信息 
     */
     @SerializedName("AndroidAppInfo")
     @Expose
     private AndroidAppInfo AndroidAppInfo;
 
     /**
-    * 渠道合作安卓加固策略信息
+    * 渠道合作android加固策略信息
     */
     @SerializedName("AndroidPlan")
     @Expose
@@ -72,16 +72,16 @@ public class CreateEncryptInstanceRequest extends AbstractModel{
     private AppletInfo AppletInfo;
 
     /**
-     * Get 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
@@ -136,32 +136,32 @@ public class CreateEncryptInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get 渠道合作安卓加固App信息  
-     * @return AndroidAppInfo 渠道合作安卓加固App信息 
+     * Get 渠道合作android加固App信息  
+     * @return AndroidAppInfo 渠道合作android加固App信息 
      */
     public AndroidAppInfo getAndroidAppInfo() {
         return this.AndroidAppInfo;
     }
 
     /**
-     * Set 渠道合作安卓加固App信息 
-     * @param AndroidAppInfo 渠道合作安卓加固App信息 
+     * Set 渠道合作android加固App信息 
+     * @param AndroidAppInfo 渠道合作android加固App信息 
      */
     public void setAndroidAppInfo(AndroidAppInfo AndroidAppInfo) {
         this.AndroidAppInfo = AndroidAppInfo;
     }
 
     /**
-     * Get 渠道合作安卓加固策略信息 
-     * @return AndroidPlan 渠道合作安卓加固策略信息
+     * Get 渠道合作android加固策略信息 
+     * @return AndroidPlan 渠道合作android加固策略信息
      */
     public AndroidPlan getAndroidPlan() {
         return this.AndroidPlan;
     }
 
     /**
-     * Set 渠道合作安卓加固策略信息
-     * @param AndroidPlan 渠道合作安卓加固策略信息
+     * Set 渠道合作android加固策略信息
+     * @param AndroidPlan 渠道合作android加固策略信息
      */
     public void setAndroidPlan(AndroidPlan AndroidPlan) {
         this.AndroidPlan = AndroidPlan;

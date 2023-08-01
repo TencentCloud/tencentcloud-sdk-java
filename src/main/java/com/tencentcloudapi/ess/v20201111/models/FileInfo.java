@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FileInfo extends AbstractModel{
 
     /**
-    * 文件Id
+    * 文件ID
     */
     @SerializedName("FileId")
     @Expose
@@ -44,23 +44,23 @@ public class FileInfo extends AbstractModel{
     private Long FileSize;
 
     /**
-    * 文件上传时间，10位时间戳（精确到秒）
+    * 文件上传时间，格式为Unix标准时间戳（秒）
     */
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
 
     /**
-     * Get 文件Id 
-     * @return FileId 文件Id
+     * Get 文件ID 
+     * @return FileId 文件ID
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set 文件Id
-     * @param FileId 文件Id
+     * Set 文件ID
+     * @param FileId 文件ID
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -99,16 +99,16 @@ public class FileInfo extends AbstractModel{
     }
 
     /**
-     * Get 文件上传时间，10位时间戳（精确到秒） 
-     * @return CreatedOn 文件上传时间，10位时间戳（精确到秒）
+     * Get 文件上传时间，格式为Unix标准时间戳（秒） 
+     * @return CreatedOn 文件上传时间，格式为Unix标准时间戳（秒）
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 文件上传时间，10位时间戳（精确到秒）
-     * @param CreatedOn 文件上传时间，10位时间戳（精确到秒）
+     * Set 文件上传时间，格式为Unix标准时间戳（秒）
+     * @param CreatedOn 文件上传时间，格式为Unix标准时间戳（秒）
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;

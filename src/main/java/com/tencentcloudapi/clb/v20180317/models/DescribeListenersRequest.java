@@ -37,7 +37,7 @@ public class DescribeListenersRequest extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-    * 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+    * 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
     */
     @SerializedName("Protocol")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。 
-     * @return Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+     * Get 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。 
+     * @return Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
-     * @param Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
+     * Set 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
+     * @param Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

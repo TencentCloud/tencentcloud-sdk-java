@@ -67,6 +67,13 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+    */
+    @SerializedName("AccountRegular")
+    @Expose
+    private String AccountRegular;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -170,6 +177,22 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则) 
+     * @return AccountRegular 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+     */
+    public String getAccountRegular() {
+        return this.AccountRegular;
+    }
+
+    /**
+     * Set 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+     * @param AccountRegular 模糊匹配关键字(同时匹配AccountName和AccountHost，返回并集结果，支持正则)
+     */
+    public void setAccountRegular(String AccountRegular) {
+        this.AccountRegular = AccountRegular;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -202,6 +225,9 @@ public class DescribeAccountsRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.AccountRegular != null) {
+            this.AccountRegular = new String(source.AccountRegular);
+        }
     }
 
 
@@ -215,6 +241,7 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "AccountRegular", this.AccountRegular);
 
     }
 }

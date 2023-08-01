@@ -142,6 +142,17 @@ public class CreateConfigExtraRequest extends AbstractModel{
     private String [] GroupIds;
 
     /**
+    * 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+    */
+    @SerializedName("AdvancedConfig")
+    @Expose
+    private String AdvancedConfig;
+
+    /**
      * Get 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾 
      * @return Name 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
      */
@@ -413,6 +424,38 @@ public class CreateConfigExtraRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true} 
+     * @return AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+     */
+    public String getAdvancedConfig() {
+        return this.AdvancedConfig;
+    }
+
+    /**
+     * Set 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+     * @param AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
+- ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
+- ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
+- ClsAgentParseFailMerge(合并解析失败日志)，取值范围: true或false
+样例：{"ClsAgentFileTimeout":0,"ClsAgentMaxDepth":10,"ClsAgentParseFailMerge":true}
+     */
+    public void setAdvancedConfig(String AdvancedConfig) {
+        this.AdvancedConfig = AdvancedConfig;
+    }
+
     public CreateConfigExtraRequest() {
     }
 
@@ -478,6 +521,9 @@ public class CreateConfigExtraRequest extends AbstractModel{
                 this.GroupIds[i] = new String(source.GroupIds[i]);
             }
         }
+        if (source.AdvancedConfig != null) {
+            this.AdvancedConfig = new String(source.AdvancedConfig);
+        }
     }
 
 
@@ -502,6 +548,7 @@ public class CreateConfigExtraRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "AdvancedConfig", this.AdvancedConfig);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String VpnGatewayName;
 
     /**
-    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+    * 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -65,28 +65,28 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+    * VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * CDC实例ID
+    * CDC实例ID。
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+    * SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
     */
     @SerializedName("MaxConnection")
     @Expose
@@ -125,16 +125,16 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps 
-     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+     * Get 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。 
+     * @return InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
-     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100；单位：Mbps
+     * Set 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
+     * @param InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
@@ -189,64 +189,64 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN 
-     * @return Type VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+     * Get VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。 
+     * @return Type VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
-     * @param Type VPN网关类型。值“CCN”云联网类型VPN网关，值SSL为SSL-VPN
+     * Set VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。
+     * @param Type VPN网关类型，默认为IPSEC。值“IPSEC”为VPC型IPSEC VPN网关，值“SSL”为VPC型SSL VPN网关，值“CCN”为云联网型IPSEC VPN网关，值“SSL_CCN”为云联网型SSL VPN网关。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}] 
-     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
-     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get CDC实例ID 
-     * @return CdcId CDC实例ID
+     * Get CDC实例ID。 
+     * @return CdcId CDC实例ID。
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC实例ID
-     * @param CdcId CDC实例ID
+     * Set CDC实例ID。
+     * @param CdcId CDC实例ID。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。 
-     * @return MaxConnection SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     * Get SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。 
+     * @return MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
     }
 
     /**
-     * Set SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
-     * @param MaxConnection SSL-VPN 最大CLIENT 连接数。可选 [5, 10, 20, 50, 100]。仅SSL-VPN 需要选这个参数。
+     * Set SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
+     * @param MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;

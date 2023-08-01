@@ -86,6 +86,14 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private MediaInputInfo [] AddonAudioStream;
 
     /**
+    * 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。 
      * @return Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      */
@@ -241,6 +249,26 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.AddonAudioStream = AddonAudioStream;
     }
 
+    /**
+     * Get 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StdExtInfo 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StdExtInfo 转码扩展字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -276,6 +304,9 @@ public class OverrideTranscodeParameter extends AbstractModel{
                 this.AddonAudioStream[i] = new MediaInputInfo(source.AddonAudioStream[i]);
             }
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -291,6 +322,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
         this.setParamArrayObj(map, prefix + "AddonAudioStream.", this.AddonAudioStream);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

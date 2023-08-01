@@ -564,6 +564,9 @@ public enum ScfErrorCode {
     // Type传入错误。
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
+    // VPC不正确。
+     INVALIDPARAMETERVALUE_VPC("InvalidParameterValue.Vpc"),
+     
     // 开启cfs配置的同时必须开启vpc。
      INVALIDPARAMETERVALUE_VPCNOTSETWHENOPENCFS("InvalidParameterValue.VpcNotSetWhenOpenCfs"),
      
@@ -806,6 +809,9 @@ public enum ScfErrorCode {
      
     // Namespace不可用。
      RESOURCEUNAVAILABLE_NAMESPACE("ResourceUnavailable.Namespace"),
+     
+    // 服务已冻结。
+     RESOURCEUNAVAILABLE_SERVICESUSPENDED("ResourceUnavailable.ServiceSuspended"),
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),

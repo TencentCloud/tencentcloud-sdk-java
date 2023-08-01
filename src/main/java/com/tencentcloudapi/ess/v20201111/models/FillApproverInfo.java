@@ -32,6 +32,7 @@ public class FillApproverInfo extends AbstractModel{
     /**
     * 签署人来源
 WEWORKAPP: 企业微信
+<br/>仅【企微或签】时指定WEWORKAPP
     */
     @SerializedName("ApproverSource")
     @Expose
@@ -39,7 +40,7 @@ WEWORKAPP: 企业微信
 
     /**
     * 企业自定义账号ID
-WEWORKAPP场景下指企业自有应用获取企微明文的userid
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
     */
     @SerializedName("CustomUserId")
     @Expose
@@ -77,9 +78,11 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
 
     /**
      * Get 签署人来源
-WEWORKAPP: 企业微信 
+WEWORKAPP: 企业微信
+<br/>仅【企微或签】时指定WEWORKAPP 
      * @return ApproverSource 签署人来源
 WEWORKAPP: 企业微信
+<br/>仅【企微或签】时指定WEWORKAPP
      */
     public String getApproverSource() {
         return this.ApproverSource;
@@ -88,8 +91,10 @@ WEWORKAPP: 企业微信
     /**
      * Set 签署人来源
 WEWORKAPP: 企业微信
+<br/>仅【企微或签】时指定WEWORKAPP
      * @param ApproverSource 签署人来源
 WEWORKAPP: 企业微信
+<br/>仅【企微或签】时指定WEWORKAPP
      */
     public void setApproverSource(String ApproverSource) {
         this.ApproverSource = ApproverSource;
@@ -97,9 +102,9 @@ WEWORKAPP: 企业微信
 
     /**
      * Get 企业自定义账号ID
-WEWORKAPP场景下指企业自有应用获取企微明文的userid 
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid 
      * @return CustomUserId 企业自定义账号ID
-WEWORKAPP场景下指企业自有应用获取企微明文的userid
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
      */
     public String getCustomUserId() {
         return this.CustomUserId;
@@ -107,9 +112,9 @@ WEWORKAPP场景下指企业自有应用获取企微明文的userid
 
     /**
      * Set 企业自定义账号ID
-WEWORKAPP场景下指企业自有应用获取企微明文的userid
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
      * @param CustomUserId 企业自定义账号ID
-WEWORKAPP场景下指企业自有应用获取企微明文的userid
+<br/>当ApproverSource为WEWORKAPP的企微或签场景下，必须指企业自有应用获取企微明文的userid
      */
     public void setCustomUserId(String CustomUserId) {
         this.CustomUserId = CustomUserId;

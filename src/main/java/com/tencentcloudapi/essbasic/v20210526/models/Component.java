@@ -29,8 +29,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -68,21 +67,22 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     private String ComponentType;
 
     /**
-    * 控件简称，不能超过30个字符
+    * 控件简称，不超过30个字符
     */
     @SerializedName("ComponentName")
     @Expose
     private String ComponentName;
 
     /**
-    * 定义控件是否为必填项，默认为false
+    * 控件是否为必填项，
+默认为false-非必填
     */
     @SerializedName("ComponentRequired")
     @Expose
     private Boolean ComponentRequired;
 
     /**
-    * 控件关联的签署方id
+    * 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
     */
     @SerializedName("ComponentRecipientId")
     @Expose
@@ -276,14 +276,14 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private Long ComponentDateFontSize;
 
     /**
-    * 控件所属文档的Id, 模块相关接口为空值
+    * 控件所属文档的Id, 模板相关接口为空值
     */
     @SerializedName("DocumentId")
     @Expose
     private String DocumentId;
 
     /**
-    * 控件描述，不能超过30个字符
+    * 控件描述，不超过30个字符
     */
     @SerializedName("ComponentDescription")
     @Expose
@@ -312,7 +312,10 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private String ChannelComponentId;
 
     /**
-    * 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+    * 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
     */
     @SerializedName("KeywordOrder")
@@ -320,21 +323,29 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     private String KeywordOrder;
 
     /**
-    * 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+    * 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
     */
     @SerializedName("KeywordPage")
     @Expose
     private Long KeywordPage;
 
     /**
-    * 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+    * 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
     */
     @SerializedName("RelativeLocation")
     @Expose
     private String RelativeLocation;
 
     /**
-    * 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+    * 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
     */
     @SerializedName("KeywordIndexes")
     @Expose
@@ -355,8 +366,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -367,8 +377,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -385,8 +394,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -397,8 +405,7 @@ CreateFlowByTemplates发起合同时优先以ComponentId（不为空）填充；
 
 注：
 当GenerateMode=KEYWORD时，通过"^"来决定是否使用关键字整词匹配能力。
-例：
-当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
+例：当GenerateMode=KEYWORD时，如果传入关键字"^甲方签署^"，则会在PDF文件中有且仅有"甲方签署"关键字的地方进行对应操作。
 如传入的关键字为"甲方签署"，则PDF文件中每个出现关键字的位置都会执行相应操作。
 
 创建控件时，此值为空
@@ -505,48 +512,52 @@ SIGN_LEGAL_PERSON_SEAL - 企业法定代表人控件。
     }
 
     /**
-     * Get 控件简称，不能超过30个字符 
-     * @return ComponentName 控件简称，不能超过30个字符
+     * Get 控件简称，不超过30个字符 
+     * @return ComponentName 控件简称，不超过30个字符
      */
     public String getComponentName() {
         return this.ComponentName;
     }
 
     /**
-     * Set 控件简称，不能超过30个字符
-     * @param ComponentName 控件简称，不能超过30个字符
+     * Set 控件简称，不超过30个字符
+     * @param ComponentName 控件简称，不超过30个字符
      */
     public void setComponentName(String ComponentName) {
         this.ComponentName = ComponentName;
     }
 
     /**
-     * Get 定义控件是否为必填项，默认为false 
-     * @return ComponentRequired 定义控件是否为必填项，默认为false
+     * Get 控件是否为必填项，
+默认为false-非必填 
+     * @return ComponentRequired 控件是否为必填项，
+默认为false-非必填
      */
     public Boolean getComponentRequired() {
         return this.ComponentRequired;
     }
 
     /**
-     * Set 定义控件是否为必填项，默认为false
-     * @param ComponentRequired 定义控件是否为必填项，默认为false
+     * Set 控件是否为必填项，
+默认为false-非必填
+     * @param ComponentRequired 控件是否为必填项，
+默认为false-非必填
      */
     public void setComponentRequired(Boolean ComponentRequired) {
         this.ComponentRequired = ComponentRequired;
     }
 
     /**
-     * Get 控件关联的签署方id 
-     * @return ComponentRecipientId 控件关联的签署方id
+     * Get 控件关联的参与方ID，对应Recipient结构体中的RecipientId	 
+     * @return ComponentRecipientId 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
      */
     public String getComponentRecipientId() {
         return this.ComponentRecipientId;
     }
 
     /**
-     * Set 控件关联的签署方id
-     * @param ComponentRecipientId 控件关联的签署方id
+     * Set 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
+     * @param ComponentRecipientId 控件关联的参与方ID，对应Recipient结构体中的RecipientId	
      */
     public void setComponentRecipientId(String ComponentRecipientId) {
         this.ComponentRecipientId = ComponentRecipientId;
@@ -1181,32 +1192,32 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
-     * Get 控件所属文档的Id, 模块相关接口为空值 
-     * @return DocumentId 控件所属文档的Id, 模块相关接口为空值
+     * Get 控件所属文档的Id, 模板相关接口为空值 
+     * @return DocumentId 控件所属文档的Id, 模板相关接口为空值
      */
     public String getDocumentId() {
         return this.DocumentId;
     }
 
     /**
-     * Set 控件所属文档的Id, 模块相关接口为空值
-     * @param DocumentId 控件所属文档的Id, 模块相关接口为空值
+     * Set 控件所属文档的Id, 模板相关接口为空值
+     * @param DocumentId 控件所属文档的Id, 模板相关接口为空值
      */
     public void setDocumentId(String DocumentId) {
         this.DocumentId = DocumentId;
     }
 
     /**
-     * Get 控件描述，不能超过30个字符 
-     * @return ComponentDescription 控件描述，不能超过30个字符
+     * Get 控件描述，不超过30个字符 
+     * @return ComponentDescription 控件描述，不超过30个字符
      */
     public String getComponentDescription() {
         return this.ComponentDescription;
     }
 
     /**
-     * Set 控件描述，不能超过30个字符
-     * @param ComponentDescription 控件描述，不能超过30个字符
+     * Set 控件描述，不超过30个字符
+     * @param ComponentDescription 控件描述，不超过30个字符
      */
     public void setComponentDescription(String ComponentDescription) {
         this.ComponentDescription = ComponentDescription;
@@ -1265,9 +1276,15 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
-     * Get 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * Get 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。 
-     * @return KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @return KeywordOrder 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      */
     public String getKeywordOrder() {
@@ -1275,9 +1292,15 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
-     * Set 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * Set 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
-     * @param KeywordOrder 指定关键字排序规则，Positive-正序，Reverse-倒序。传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
+     * @param KeywordOrder 指定关键字排序规则，
+Positive-正序，
+Reverse-倒序。
+传入Positive时会根据关键字在PDF文件内的顺序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的第一个关键字。
 传入Reverse时会根据关键字在PDF文件内的反序进行排列。在指定KeywordIndexes时，0代表在PDF内查找内容时，查找到的最后一个关键字。
      */
     public void setKeywordOrder(String KeywordOrder) {
@@ -1285,48 +1308,80 @@ SIGN_PAGING_SEAL - 可以指定印章ID
     }
 
     /**
-     * Get 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来 
-     * @return KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * Get 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来 
+     * @return KeywordPage 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public Long getKeywordPage() {
         return this.KeywordPage;
     }
 
     /**
-     * Set 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
-     * @param KeywordPage 指定关键字页码，可选参数，指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * Set 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
+     * @param KeywordPage 指定关键字页码。
+指定页码后，将只在指定的页码内查找关键字，非该页码的关键字将不会查询出来
      */
     public void setKeywordPage(Long KeywordPage) {
         this.KeywordPage = KeywordPage;
     }
 
     /**
-     * Get 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方 
-     * @return RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * Get 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方 
+     * @return RelativeLocation 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public String getRelativeLocation() {
         return this.RelativeLocation;
     }
 
     /**
-     * Set 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
-     * @param RelativeLocation 关键字位置模式，Middle-居中，Below-正下方，Right-正右方，LowerRight-右上角，UpperRight-右下角。示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * Set 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
+     * @param RelativeLocation 关键字位置模式，
+Middle-居中，
+Below-正下方，
+Right-正右方，
+LowerRight-右上角，
+UpperRight-右下角。
+示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public void setRelativeLocation(String RelativeLocation) {
         this.RelativeLocation = RelativeLocation;
     }
 
     /**
-     * Get 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。 
-     * @return KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * Get 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。 
+     * @return KeywordIndexes 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public Long [] getKeywordIndexes() {
         return this.KeywordIndexes;
     }
 
     /**
-     * Set 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
-     * @param KeywordIndexes 关键字索引，可选参数，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * Set 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
+     * @param KeywordIndexes 关键字索引，如果一个关键字在PDF文件中存在多个，可以通过关键字索引指定使用第几个关键字作为最后的结果，可指定多个索引。
+示例[0,2]，说明使用PDF文件内第1个和第3个关键字位置。
      */
     public void setKeywordIndexes(Long [] KeywordIndexes) {
         this.KeywordIndexes = KeywordIndexes;

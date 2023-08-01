@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TemplateInfo extends AbstractModel{
 
     /**
-    * 模板ID
+    * 模板ID，模板的唯一标识
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 模板名字
+    * 模板名
     */
     @SerializedName("TemplateName")
     @Expose
@@ -51,7 +51,7 @@ public class TemplateInfo extends AbstractModel{
     private String [] DocumentResourceIds;
 
     /**
-    * 返回的文件信息结构
+    * 生成模板的文件基础信息
     */
     @SerializedName("FileInfos")
     @Expose
@@ -66,63 +66,67 @@ public class TemplateInfo extends AbstractModel{
 
     /**
     * 签署顺序
+无序 -1
+有序为序列数字 0,1,2
     */
     @SerializedName("SignOrder")
     @Expose
     private Long [] SignOrder;
 
     /**
-    * 签署参与者的信息
+    * 模板中的签署参与方列表
     */
     @SerializedName("Recipients")
     @Expose
     private Recipient [] Recipients;
 
     /**
-    * 模板信息结构
+    * 模板的填充控件列表
     */
     @SerializedName("Components")
     @Expose
     private Component [] Components;
 
     /**
-    * 签署区模板信息结构
+    * 模板中的签署控件列表
     */
     @SerializedName("SignComponents")
     @Expose
     private Component [] SignComponents;
 
     /**
-    * 模板状态(-1:不可用；0:草稿态；1:正式态)
+    * 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 模板的创建人UserId
+    * 模板的创建者信息，电子签系统用户ID
     */
     @SerializedName("Creator")
     @Expose
     private String Creator;
 
     /**
-    * 模板创建的时间戳，单位秒
+    * 模板创建的时间戳，格式为Unix标准时间戳（秒）
     */
     @SerializedName("CreatedOn")
     @Expose
     private Long CreatedOn;
 
     /**
-    * 发起人角色信息
+    * 发起方参与信息Promoter
     */
     @SerializedName("Promoter")
     @Expose
     private Recipient Promoter;
 
     /**
-    * 模板类型
-取值：
+    * 模板类型：
 1  静默签,
 3  普通模板
     */
@@ -131,14 +135,16 @@ public class TemplateInfo extends AbstractModel{
     private Long TemplateType;
 
     /**
-    * 模板可用状态，取值：1启用（默认），2停用
+    * 模板可用状态：
+1 启用（默认）
+2 停用
     */
     @SerializedName("Available")
     @Expose
     private Long Available;
 
     /**
-    * 创建模板的机构id
+    * 创建模板的企业ID，电子签的机构ID
     */
     @SerializedName("OrganizationId")
     @Expose
@@ -161,7 +167,9 @@ public class TemplateInfo extends AbstractModel{
     private String TemplateVersion;
 
     /**
-    * 模板是否已发布。true-已发布；false-未发布
+    * 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Published")
@@ -185,32 +193,32 @@ public class TemplateInfo extends AbstractModel{
     private SealInfo [] Seals;
 
     /**
-     * Get 模板ID 
-     * @return TemplateId 模板ID
+     * Get 模板ID，模板的唯一标识 
+     * @return TemplateId 模板ID，模板的唯一标识
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID
-     * @param TemplateId 模板ID
+     * Set 模板ID，模板的唯一标识
+     * @param TemplateId 模板ID，模板的唯一标识
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名字 
-     * @return TemplateName 模板名字
+     * Get 模板名 
+     * @return TemplateName 模板名
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set 模板名字
-     * @param TemplateName 模板名字
+     * Set 模板名
+     * @param TemplateName 模板名
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -249,16 +257,16 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 返回的文件信息结构 
-     * @return FileInfos 返回的文件信息结构
+     * Get 生成模板的文件基础信息 
+     * @return FileInfos 生成模板的文件基础信息
      */
     public FileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 返回的文件信息结构
-     * @param FileInfos 返回的文件信息结构
+     * Set 生成模板的文件基础信息
+     * @param FileInfos 生成模板的文件基础信息
      */
     public void setFileInfos(FileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
@@ -281,8 +289,12 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 签署顺序 
+     * Get 签署顺序
+无序 -1
+有序为序列数字 0,1,2 
      * @return SignOrder 签署顺序
+无序 -1
+有序为序列数字 0,1,2
      */
     public Long [] getSignOrder() {
         return this.SignOrder;
@@ -290,131 +302,145 @@ public class TemplateInfo extends AbstractModel{
 
     /**
      * Set 签署顺序
+无序 -1
+有序为序列数字 0,1,2
      * @param SignOrder 签署顺序
+无序 -1
+有序为序列数字 0,1,2
      */
     public void setSignOrder(Long [] SignOrder) {
         this.SignOrder = SignOrder;
     }
 
     /**
-     * Get 签署参与者的信息 
-     * @return Recipients 签署参与者的信息
+     * Get 模板中的签署参与方列表 
+     * @return Recipients 模板中的签署参与方列表
      */
     public Recipient [] getRecipients() {
         return this.Recipients;
     }
 
     /**
-     * Set 签署参与者的信息
-     * @param Recipients 签署参与者的信息
+     * Set 模板中的签署参与方列表
+     * @param Recipients 模板中的签署参与方列表
      */
     public void setRecipients(Recipient [] Recipients) {
         this.Recipients = Recipients;
     }
 
     /**
-     * Get 模板信息结构 
-     * @return Components 模板信息结构
+     * Get 模板的填充控件列表 
+     * @return Components 模板的填充控件列表
      */
     public Component [] getComponents() {
         return this.Components;
     }
 
     /**
-     * Set 模板信息结构
-     * @param Components 模板信息结构
+     * Set 模板的填充控件列表
+     * @param Components 模板的填充控件列表
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 签署区模板信息结构 
-     * @return SignComponents 签署区模板信息结构
+     * Get 模板中的签署控件列表 
+     * @return SignComponents 模板中的签署控件列表
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
     }
 
     /**
-     * Set 签署区模板信息结构
-     * @param SignComponents 签署区模板信息结构
+     * Set 模板中的签署控件列表
+     * @param SignComponents 模板中的签署控件列表
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
     }
 
     /**
-     * Get 模板状态(-1:不可用；0:草稿态；1:正式态) 
-     * @return Status 模板状态(-1:不可用；0:草稿态；1:正式态)
+     * Get 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用 
+     * @return Status 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 模板状态(-1:不可用；0:草稿态；1:正式态)
-     * @param Status 模板状态(-1:不可用；0:草稿态；1:正式态)
+     * Set 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
+     * @param Status 模板状态
+-1:不可用
+0:草稿态
+1:正式态，可以正常使用
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 模板的创建人UserId 
-     * @return Creator 模板的创建人UserId
+     * Get 模板的创建者信息，电子签系统用户ID 
+     * @return Creator 模板的创建者信息，电子签系统用户ID
      */
     public String getCreator() {
         return this.Creator;
     }
 
     /**
-     * Set 模板的创建人UserId
-     * @param Creator 模板的创建人UserId
+     * Set 模板的创建者信息，电子签系统用户ID
+     * @param Creator 模板的创建者信息，电子签系统用户ID
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 模板创建的时间戳，单位秒 
-     * @return CreatedOn 模板创建的时间戳，单位秒
+     * Get 模板创建的时间戳，格式为Unix标准时间戳（秒） 
+     * @return CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
      */
     public Long getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set 模板创建的时间戳，单位秒
-     * @param CreatedOn 模板创建的时间戳，单位秒
+     * Set 模板创建的时间戳，格式为Unix标准时间戳（秒）
+     * @param CreatedOn 模板创建的时间戳，格式为Unix标准时间戳（秒）
      */
     public void setCreatedOn(Long CreatedOn) {
         this.CreatedOn = CreatedOn;
     }
 
     /**
-     * Get 发起人角色信息 
-     * @return Promoter 发起人角色信息
+     * Get 发起方参与信息Promoter 
+     * @return Promoter 发起方参与信息Promoter
      */
     public Recipient getPromoter() {
         return this.Promoter;
     }
 
     /**
-     * Set 发起人角色信息
-     * @param Promoter 发起人角色信息
+     * Set 发起方参与信息Promoter
+     * @param Promoter 发起方参与信息Promoter
      */
     public void setPromoter(Recipient Promoter) {
         this.Promoter = Promoter;
     }
 
     /**
-     * Get 模板类型
-取值：
+     * Get 模板类型：
 1  静默签,
 3  普通模板 
-     * @return TemplateType 模板类型
-取值：
+     * @return TemplateType 模板类型：
 1  静默签,
 3  普通模板
      */
@@ -423,12 +449,10 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 模板类型
-取值：
+     * Set 模板类型：
 1  静默签,
 3  普通模板
-     * @param TemplateType 模板类型
-取值：
+     * @param TemplateType 模板类型：
 1  静默签,
 3  普通模板
      */
@@ -437,32 +461,40 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板可用状态，取值：1启用（默认），2停用 
-     * @return Available 模板可用状态，取值：1启用（默认），2停用
+     * Get 模板可用状态：
+1 启用（默认）
+2 停用 
+     * @return Available 模板可用状态：
+1 启用（默认）
+2 停用
      */
     public Long getAvailable() {
         return this.Available;
     }
 
     /**
-     * Set 模板可用状态，取值：1启用（默认），2停用
-     * @param Available 模板可用状态，取值：1启用（默认），2停用
+     * Set 模板可用状态：
+1 启用（默认）
+2 停用
+     * @param Available 模板可用状态：
+1 启用（默认）
+2 停用
      */
     public void setAvailable(Long Available) {
         this.Available = Available;
     }
 
     /**
-     * Get 创建模板的机构id 
-     * @return OrganizationId 创建模板的机构id
+     * Get 创建模板的企业ID，电子签的机构ID 
+     * @return OrganizationId 创建模板的企业ID，电子签的机构ID
      */
     public String getOrganizationId() {
         return this.OrganizationId;
     }
 
     /**
-     * Set 创建模板的机构id
-     * @param OrganizationId 创建模板的机构id
+     * Set 创建模板的企业ID，电子签的机构ID
+     * @param OrganizationId 创建模板的企业ID，电子签的机构ID
      */
     public void setOrganizationId(String OrganizationId) {
         this.OrganizationId = OrganizationId;
@@ -509,9 +541,13 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get 模板是否已发布。true-已发布；false-未发布
+     * Get 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Published 模板是否已发布。true-已发布；false-未发布
+     * @return Published 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublished() {
@@ -519,9 +555,13 @@ public class TemplateInfo extends AbstractModel{
     }
 
     /**
-     * Set 模板是否已发布。true-已发布；false-未发布
+     * Set 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Published 模板是否已发布。true-已发布；false-未发布
+     * @param Published 模板是否已发布：
+true-已发布
+false-未发布
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublished(Boolean Published) {

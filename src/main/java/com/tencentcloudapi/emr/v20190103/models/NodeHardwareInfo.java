@@ -424,6 +424,14 @@ public class NodeHardwareInfo extends AbstractModel{
     private Long TradeVersion;
 
     /**
+    * 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServicesStatus")
+    @Expose
+    private String ServicesStatus;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1427,6 +1435,26 @@ public class NodeHardwareInfo extends AbstractModel{
         this.TradeVersion = TradeVersion;
     }
 
+    /**
+     * Get 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServicesStatus() {
+        return this.ServicesStatus;
+    }
+
+    /**
+     * Set 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServicesStatus 各组件状态，Zookeeper:STARTED,ResourceManager:STARTED，STARTED已启动，STOPED已停止
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServicesStatus(String ServicesStatus) {
+        this.ServicesStatus = ServicesStatus;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1591,6 +1619,9 @@ public class NodeHardwareInfo extends AbstractModel{
         if (source.TradeVersion != null) {
             this.TradeVersion = new Long(source.TradeVersion);
         }
+        if (source.ServicesStatus != null) {
+            this.ServicesStatus = new String(source.ServicesStatus);
+        }
     }
 
 
@@ -1648,6 +1679,7 @@ public class NodeHardwareInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
+        this.setParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
 
     }
 }

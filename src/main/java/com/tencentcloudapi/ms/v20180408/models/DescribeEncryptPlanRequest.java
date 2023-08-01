@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeEncryptPlanRequest extends AbstractModel{
 
     /**
-    * 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
@@ -51,30 +51,30 @@ public class DescribeEncryptPlanRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * （条件过滤字段）安卓加固查询时，根据包名查询
+    * （条件过滤字段）加固查询时，根据包名查询
     */
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
 
     /**
-    * （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+    * （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-     * Get 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformType 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformType 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
@@ -129,32 +129,32 @@ public class DescribeEncryptPlanRequest extends AbstractModel{
     }
 
     /**
-     * Get （条件过滤字段）安卓加固查询时，根据包名查询 
-     * @return AppPkgName （条件过滤字段）安卓加固查询时，根据包名查询
+     * Get （条件过滤字段）加固查询时，根据包名查询 
+     * @return AppPkgName （条件过滤字段）加固查询时，根据包名查询
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * Set （条件过滤字段）安卓加固查询时，根据包名查询
-     * @param AppPkgName （条件过滤字段）安卓加固查询时，根据包名查询
+     * Set （条件过滤字段）加固查询时，根据包名查询
+     * @param AppPkgName （条件过滤字段）加固查询时，根据包名查询
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;
     }
 
     /**
-     * Get （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab” 
-     * @return AppType （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+     * Get （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab” 
+     * @return AppType （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
-     * @param AppType （条件过滤字段）安卓加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+     * Set （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
+     * @param AppType （条件过滤字段）加固查询时，根据应用格式查询，枚举值：“apk”、“aab”
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;

@@ -44,14 +44,14 @@ public class VpnGateway extends AbstractModel{
     private String VpnGatewayName;
 
     /**
-    * 网关实例类型：'IPSEC', 'SSL','CCN'。
+    * 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+    * 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
     */
     @SerializedName("State")
     @Expose
@@ -72,7 +72,7 @@ public class VpnGateway extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+    * 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -114,42 +114,42 @@ public class VpnGateway extends AbstractModel{
     private String NewPurchasePlan;
 
     /**
-    * 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+    * 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
     */
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
 
     /**
-    * 可用区，如：ap-guangzhou-2
+    * 可用区，如：ap-guangzhou-2。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 网关带宽配额信息
+    * 网关带宽配额信息。
     */
     @SerializedName("VpnGatewayQuotaSet")
     @Expose
     private VpnGatewayQuota [] VpnGatewayQuotaSet;
 
     /**
-    * 网关实例版本信息
+    * 网关实例版本信息。
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Type值为CCN时，该值表示云联网实例ID
+    * Type值为CCN时，该值表示云联网实例ID。
     */
     @SerializedName("NetworkInstanceId")
     @Expose
     private String NetworkInstanceId;
 
     /**
-    * CDC 实例ID
+    * CDC 实例ID。
     */
     @SerializedName("CdcId")
     @Expose
@@ -211,32 +211,32 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
-     * Get 网关实例类型：'IPSEC', 'SSL','CCN'。 
-     * @return Type 网关实例类型：'IPSEC', 'SSL','CCN'。
+     * Get 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。 
+     * @return Type 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 网关实例类型：'IPSEC', 'SSL','CCN'。
-     * @param Type 网关实例类型：'IPSEC', 'SSL','CCN'。
+     * Set 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
+     * @param Type 网关实例类型：'IPSEC', 'SSL','CCN','SSL_CCN'。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。 
-     * @return State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Get 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。 
+     * @return State 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
-     * @param State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Set 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
+     * @param State 网关实例状态， 'PENDING'：生产中，'PENDING_ERROR'：生产失败，'DELETING'：删除中，'DELETING_ERROR'：删除失败，'AVAILABLE'：运行中。
      */
     public void setState(String State) {
         this.State = State;
@@ -275,16 +275,16 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
-     * Get 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费， 
-     * @return InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Get 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。 
+     * @return InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
-     * @param InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Set 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
+     * @param InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按量计费，PREPAID：包年包月预付费。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -371,96 +371,96 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
-     * Get 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。 
-     * @return RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Get 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。 
+     * @return RestrictState 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public String getRestrictState() {
         return this.RestrictState;
     }
 
     /**
-     * Set 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
-     * @param RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Set 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * @param RestrictState 网关计费状态，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
     }
 
     /**
-     * Get 可用区，如：ap-guangzhou-2 
-     * @return Zone 可用区，如：ap-guangzhou-2
+     * Get 可用区，如：ap-guangzhou-2。 
+     * @return Zone 可用区，如：ap-guangzhou-2。
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区，如：ap-guangzhou-2
-     * @param Zone 可用区，如：ap-guangzhou-2
+     * Set 可用区，如：ap-guangzhou-2。
+     * @param Zone 可用区，如：ap-guangzhou-2。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 网关带宽配额信息 
-     * @return VpnGatewayQuotaSet 网关带宽配额信息
+     * Get 网关带宽配额信息。 
+     * @return VpnGatewayQuotaSet 网关带宽配额信息。
      */
     public VpnGatewayQuota [] getVpnGatewayQuotaSet() {
         return this.VpnGatewayQuotaSet;
     }
 
     /**
-     * Set 网关带宽配额信息
-     * @param VpnGatewayQuotaSet 网关带宽配额信息
+     * Set 网关带宽配额信息。
+     * @param VpnGatewayQuotaSet 网关带宽配额信息。
      */
     public void setVpnGatewayQuotaSet(VpnGatewayQuota [] VpnGatewayQuotaSet) {
         this.VpnGatewayQuotaSet = VpnGatewayQuotaSet;
     }
 
     /**
-     * Get 网关实例版本信息 
-     * @return Version 网关实例版本信息
+     * Get 网关实例版本信息。 
+     * @return Version 网关实例版本信息。
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 网关实例版本信息
-     * @param Version 网关实例版本信息
+     * Set 网关实例版本信息。
+     * @param Version 网关实例版本信息。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Type值为CCN时，该值表示云联网实例ID 
-     * @return NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
+     * Get Type值为CCN时，该值表示云联网实例ID。 
+     * @return NetworkInstanceId Type值为CCN时，该值表示云联网实例ID。
      */
     public String getNetworkInstanceId() {
         return this.NetworkInstanceId;
     }
 
     /**
-     * Set Type值为CCN时，该值表示云联网实例ID
-     * @param NetworkInstanceId Type值为CCN时，该值表示云联网实例ID
+     * Set Type值为CCN时，该值表示云联网实例ID。
+     * @param NetworkInstanceId Type值为CCN时，该值表示云联网实例ID。
      */
     public void setNetworkInstanceId(String NetworkInstanceId) {
         this.NetworkInstanceId = NetworkInstanceId;
     }
 
     /**
-     * Get CDC 实例ID 
-     * @return CdcId CDC 实例ID
+     * Get CDC 实例ID。 
+     * @return CdcId CDC 实例ID。
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC 实例ID
-     * @param CdcId CDC 实例ID
+     * Set CDC 实例ID。
+     * @param CdcId CDC 实例ID。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

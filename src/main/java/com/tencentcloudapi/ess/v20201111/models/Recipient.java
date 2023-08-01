@@ -23,14 +23,18 @@ import java.util.HashMap;
 public class Recipient extends AbstractModel{
 
     /**
-    * 签署参与者ID
+    * 签署参与者ID，唯一标识
     */
     @SerializedName("RecipientId")
     @Expose
     private String RecipientId;
 
     /**
-    * 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+    * 参与者类型。
+默认为空。
+ENTERPRISE-企业；
+INDIVIDUAL-个人；
+PROMOTER-发起方
     */
     @SerializedName("RecipientType")
     @Expose
@@ -51,28 +55,31 @@ public class Recipient extends AbstractModel{
     private String RoleName;
 
     /**
-    * 是否需要验证，默认为false
+    * 是否需要验证，
+默认为false-不需要验证
     */
     @SerializedName("RequireValidation")
     @Expose
     private Boolean RequireValidation;
 
     /**
-    * 是否需要签署，默认为true
+    * 是否需要签署，
+默认为true-需要签署
     */
     @SerializedName("RequireSign")
     @Expose
     private Boolean RequireSign;
 
     /**
-    * 添加序列，0～N
+    * 此参与方添加的顺序，从0～N
     */
     @SerializedName("RoutingOrder")
     @Expose
     private Long RoutingOrder;
 
     /**
-    * 是否需要发送，默认为true
+    * 是否需要发送，
+默认为true-需要发送
     */
     @SerializedName("RequireDelivery")
     @Expose
@@ -93,53 +100,72 @@ public class Recipient extends AbstractModel{
     private String Mobile;
 
     /**
-    * 关联的用户ID
+    * 关联的用户ID，电子签系统的用户ID
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+    * 发送方式，默认为EMAIL。
+EMAIL-邮件；
+MOBILE-手机短信；
+WECHAT-微信通知
     */
     @SerializedName("DeliveryMethod")
     @Expose
     private String DeliveryMethod;
 
     /**
-    * 附属信息
+    * 参与方的一些附属信息，json格式
     */
     @SerializedName("RecipientExtra")
     @Expose
     private String RecipientExtra;
 
     /**
-     * Get 签署参与者ID 
-     * @return RecipientId 签署参与者ID
+     * Get 签署参与者ID，唯一标识 
+     * @return RecipientId 签署参与者ID，唯一标识
      */
     public String getRecipientId() {
         return this.RecipientId;
     }
 
     /**
-     * Set 签署参与者ID
-     * @param RecipientId 签署参与者ID
+     * Set 签署参与者ID，唯一标识
+     * @param RecipientId 签署参与者ID，唯一标识
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
     }
 
     /**
-     * Get 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方 
-     * @return RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+     * Get 参与者类型。
+默认为空。
+ENTERPRISE-企业；
+INDIVIDUAL-个人；
+PROMOTER-发起方 
+     * @return RecipientType 参与者类型。
+默认为空。
+ENTERPRISE-企业；
+INDIVIDUAL-个人；
+PROMOTER-发起方
      */
     public String getRecipientType() {
         return this.RecipientType;
     }
 
     /**
-     * Set 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
-     * @param RecipientType 参与者类型。默认为空。ENTERPRISE-企业；INDIVIDUAL-个人；PROMOTER-发起方
+     * Set 参与者类型。
+默认为空。
+ENTERPRISE-企业；
+INDIVIDUAL-个人；
+PROMOTER-发起方
+     * @param RecipientType 参与者类型。
+默认为空。
+ENTERPRISE-企业；
+INDIVIDUAL-个人；
+PROMOTER-发起方
      */
     public void setRecipientType(String RecipientType) {
         this.RecipientType = RecipientType;
@@ -178,64 +204,76 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 是否需要验证，默认为false 
-     * @return RequireValidation 是否需要验证，默认为false
+     * Get 是否需要验证，
+默认为false-不需要验证 
+     * @return RequireValidation 是否需要验证，
+默认为false-不需要验证
      */
     public Boolean getRequireValidation() {
         return this.RequireValidation;
     }
 
     /**
-     * Set 是否需要验证，默认为false
-     * @param RequireValidation 是否需要验证，默认为false
+     * Set 是否需要验证，
+默认为false-不需要验证
+     * @param RequireValidation 是否需要验证，
+默认为false-不需要验证
      */
     public void setRequireValidation(Boolean RequireValidation) {
         this.RequireValidation = RequireValidation;
     }
 
     /**
-     * Get 是否需要签署，默认为true 
-     * @return RequireSign 是否需要签署，默认为true
+     * Get 是否需要签署，
+默认为true-需要签署 
+     * @return RequireSign 是否需要签署，
+默认为true-需要签署
      */
     public Boolean getRequireSign() {
         return this.RequireSign;
     }
 
     /**
-     * Set 是否需要签署，默认为true
-     * @param RequireSign 是否需要签署，默认为true
+     * Set 是否需要签署，
+默认为true-需要签署
+     * @param RequireSign 是否需要签署，
+默认为true-需要签署
      */
     public void setRequireSign(Boolean RequireSign) {
         this.RequireSign = RequireSign;
     }
 
     /**
-     * Get 添加序列，0～N 
-     * @return RoutingOrder 添加序列，0～N
+     * Get 此参与方添加的顺序，从0～N 
+     * @return RoutingOrder 此参与方添加的顺序，从0～N
      */
     public Long getRoutingOrder() {
         return this.RoutingOrder;
     }
 
     /**
-     * Set 添加序列，0～N
-     * @param RoutingOrder 添加序列，0～N
+     * Set 此参与方添加的顺序，从0～N
+     * @param RoutingOrder 此参与方添加的顺序，从0～N
      */
     public void setRoutingOrder(Long RoutingOrder) {
         this.RoutingOrder = RoutingOrder;
     }
 
     /**
-     * Get 是否需要发送，默认为true 
-     * @return RequireDelivery 是否需要发送，默认为true
+     * Get 是否需要发送，
+默认为true-需要发送 
+     * @return RequireDelivery 是否需要发送，
+默认为true-需要发送
      */
     public Boolean getRequireDelivery() {
         return this.RequireDelivery;
     }
 
     /**
-     * Set 是否需要发送，默认为true
-     * @param RequireDelivery 是否需要发送，默认为true
+     * Set 是否需要发送，
+默认为true-需要发送
+     * @param RequireDelivery 是否需要发送，
+默认为true-需要发送
      */
     public void setRequireDelivery(Boolean RequireDelivery) {
         this.RequireDelivery = RequireDelivery;
@@ -274,48 +312,60 @@ public class Recipient extends AbstractModel{
     }
 
     /**
-     * Get 关联的用户ID 
-     * @return UserId 关联的用户ID
+     * Get 关联的用户ID，电子签系统的用户ID 
+     * @return UserId 关联的用户ID，电子签系统的用户ID
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 关联的用户ID
-     * @param UserId 关联的用户ID
+     * Set 关联的用户ID，电子签系统的用户ID
+     * @param UserId 关联的用户ID，电子签系统的用户ID
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知 
-     * @return DeliveryMethod 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+     * Get 发送方式，默认为EMAIL。
+EMAIL-邮件；
+MOBILE-手机短信；
+WECHAT-微信通知 
+     * @return DeliveryMethod 发送方式，默认为EMAIL。
+EMAIL-邮件；
+MOBILE-手机短信；
+WECHAT-微信通知
      */
     public String getDeliveryMethod() {
         return this.DeliveryMethod;
     }
 
     /**
-     * Set 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
-     * @param DeliveryMethod 发送方式。默认为EMAIL。EMAIL-邮件；MOBILE-手机短信；WECHAT-微信通知
+     * Set 发送方式，默认为EMAIL。
+EMAIL-邮件；
+MOBILE-手机短信；
+WECHAT-微信通知
+     * @param DeliveryMethod 发送方式，默认为EMAIL。
+EMAIL-邮件；
+MOBILE-手机短信；
+WECHAT-微信通知
      */
     public void setDeliveryMethod(String DeliveryMethod) {
         this.DeliveryMethod = DeliveryMethod;
     }
 
     /**
-     * Get 附属信息 
-     * @return RecipientExtra 附属信息
+     * Get 参与方的一些附属信息，json格式 
+     * @return RecipientExtra 参与方的一些附属信息，json格式
      */
     public String getRecipientExtra() {
         return this.RecipientExtra;
     }
 
     /**
-     * Set 附属信息
-     * @param RecipientExtra 附属信息
+     * Set 参与方的一些附属信息，json格式
+     * @param RecipientExtra 参与方的一些附属信息，json格式
      */
     public void setRecipientExtra(String RecipientExtra) {
         this.RecipientExtra = RecipientExtra;

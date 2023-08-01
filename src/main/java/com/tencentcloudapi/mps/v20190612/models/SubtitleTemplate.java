@@ -24,6 +24,7 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
     * 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -31,6 +32,7 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
     * 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamIndex")
     @Expose
@@ -43,6 +45,7 @@ public class SubtitleTemplate extends AbstractModel{
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontType")
     @Expose
@@ -50,6 +53,7 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
     * 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontSize")
     @Expose
@@ -57,6 +61,7 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
     * 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontColor")
     @Expose
@@ -67,14 +72,17 @@ public class SubtitleTemplate extends AbstractModel{
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FontAlpha")
     @Expose
     private Float FontAlpha;
 
     /**
-     * Get 要压制到视频中的字幕文件地址。 
+     * Get 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Path 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -82,15 +90,19 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
      * Set 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 要压制到视频中的字幕文件地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。 
+     * Get 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStreamIndex() {
         return this.StreamIndex;
@@ -98,7 +110,9 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
      * Set 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamIndex 指定要压制到视频中的字幕轨道，如果有指定Path，则Path 优先级更高。Path 和 StreamIndex 至少指定一个。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamIndex(Long StreamIndex) {
         this.StreamIndex = StreamIndex;
@@ -110,13 +124,15 @@ public class SubtitleTemplate extends AbstractModel{
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
-默认hei.ttf 
+默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontType 字体类型，
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontType() {
         return this.FontType;
@@ -129,20 +145,24 @@ public class SubtitleTemplate extends AbstractModel{
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FontType 字体类型，
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
 <li>simkai.ttf：楷体</li>
 <li>arial.ttf：仅支持英文</li>
 默认hei.ttf
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontType(String FontType) {
         this.FontType = FontType;
     }
 
     /**
-     * Get 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。 
+     * Get 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontSize() {
         return this.FontSize;
@@ -150,15 +170,19 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
      * Set 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FontSize 字体大小，格式：Npx，N 为数值，不指定则以字幕文件中为准。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontSize(String FontSize) {
         this.FontSize = FontSize;
     }
 
     /**
-     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色） 
+     * Get 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFontColor() {
         return this.FontColor;
@@ -166,7 +190,9 @@ public class SubtitleTemplate extends AbstractModel{
 
     /**
      * Set 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FontColor 字体颜色，格式：0xRRGGBB，默认值：0xFFFFFF（白色）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontColor(String FontColor) {
         this.FontColor = FontColor;
@@ -176,11 +202,13 @@ public class SubtitleTemplate extends AbstractModel{
      * Get 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
-默认值：1。 
+默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getFontAlpha() {
         return this.FontAlpha;
@@ -191,10 +219,12 @@ public class SubtitleTemplate extends AbstractModel{
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FontAlpha 文字透明度，取值范围：(0, 1]
 <li>0：完全透明</li>
 <li>1：完全不透明</li>
 默认值：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFontAlpha(Float FontAlpha) {
         this.FontAlpha = FontAlpha;

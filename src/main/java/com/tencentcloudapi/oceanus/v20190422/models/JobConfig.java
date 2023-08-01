@@ -188,6 +188,30 @@ public class JobConfig extends AbstractModel{
     private String LogLevel;
 
     /**
+    * 类日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClazzLevels")
+    @Expose
+    private ClazzLevel [] ClazzLevels;
+
+    /**
+    * 是否开启专家模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpertModeOn")
+    @Expose
+    private Boolean ExpertModeOn;
+
+    /**
+    * 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpertModeConfiguration")
+    @Expose
+    private ExpertModeConfiguration ExpertModeConfiguration;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -595,6 +619,66 @@ public class JobConfig extends AbstractModel{
         this.LogLevel = LogLevel;
     }
 
+    /**
+     * Get 类日志级别
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClazzLevels 类日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClazzLevel [] getClazzLevels() {
+        return this.ClazzLevels;
+    }
+
+    /**
+     * Set 类日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClazzLevels 类日志级别
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClazzLevels(ClazzLevel [] ClazzLevels) {
+        this.ClazzLevels = ClazzLevels;
+    }
+
+    /**
+     * Get 是否开启专家模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpertModeOn 是否开启专家模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getExpertModeOn() {
+        return this.ExpertModeOn;
+    }
+
+    /**
+     * Set 是否开启专家模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpertModeOn 是否开启专家模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpertModeOn(Boolean ExpertModeOn) {
+        this.ExpertModeOn = ExpertModeOn;
+    }
+
+    /**
+     * Get 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpertModeConfiguration 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExpertModeConfiguration getExpertModeConfiguration() {
+        return this.ExpertModeConfiguration;
+    }
+
+    /**
+     * Set 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpertModeConfiguration 专家模式的配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpertModeConfiguration(ExpertModeConfiguration ExpertModeConfiguration) {
+        this.ExpertModeConfiguration = ExpertModeConfiguration;
+    }
+
     public JobConfig() {
     }
 
@@ -672,6 +756,18 @@ public class JobConfig extends AbstractModel{
         if (source.LogLevel != null) {
             this.LogLevel = new String(source.LogLevel);
         }
+        if (source.ClazzLevels != null) {
+            this.ClazzLevels = new ClazzLevel[source.ClazzLevels.length];
+            for (int i = 0; i < source.ClazzLevels.length; i++) {
+                this.ClazzLevels[i] = new ClazzLevel(source.ClazzLevels[i]);
+            }
+        }
+        if (source.ExpertModeOn != null) {
+            this.ExpertModeOn = new Boolean(source.ExpertModeOn);
+        }
+        if (source.ExpertModeConfiguration != null) {
+            this.ExpertModeConfiguration = new ExpertModeConfiguration(source.ExpertModeConfiguration);
+        }
     }
 
 
@@ -700,6 +796,9 @@ public class JobConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
         this.setParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
+        this.setParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
+        this.setParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
+        this.setParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
 
     }
 }

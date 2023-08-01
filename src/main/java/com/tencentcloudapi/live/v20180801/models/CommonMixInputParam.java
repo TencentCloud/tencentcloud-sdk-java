@@ -46,6 +46,13 @@ public class CommonMixInputParam extends AbstractModel{
     private CommonMixCropParams CropParams;
 
     /**
+    * 抠图参数。
+    */
+    @SerializedName("PortraitSegmentParams")
+    @Expose
+    private MixPortraitSegmentParams PortraitSegmentParams;
+
+    /**
      * Get 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
 当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
 当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。 
@@ -101,6 +108,22 @@ public class CommonMixInputParam extends AbstractModel{
         this.CropParams = CropParams;
     }
 
+    /**
+     * Get 抠图参数。 
+     * @return PortraitSegmentParams 抠图参数。
+     */
+    public MixPortraitSegmentParams getPortraitSegmentParams() {
+        return this.PortraitSegmentParams;
+    }
+
+    /**
+     * Set 抠图参数。
+     * @param PortraitSegmentParams 抠图参数。
+     */
+    public void setPortraitSegmentParams(MixPortraitSegmentParams PortraitSegmentParams) {
+        this.PortraitSegmentParams = PortraitSegmentParams;
+    }
+
     public CommonMixInputParam() {
     }
 
@@ -118,6 +141,9 @@ public class CommonMixInputParam extends AbstractModel{
         if (source.CropParams != null) {
             this.CropParams = new CommonMixCropParams(source.CropParams);
         }
+        if (source.PortraitSegmentParams != null) {
+            this.PortraitSegmentParams = new MixPortraitSegmentParams(source.PortraitSegmentParams);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class CommonMixInputParam extends AbstractModel{
         this.setParamSimple(map, prefix + "InputStreamName", this.InputStreamName);
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
         this.setParamObj(map, prefix + "CropParams.", this.CropParams);
+        this.setParamObj(map, prefix + "PortraitSegmentParams.", this.PortraitSegmentParams);
 
     }
 }

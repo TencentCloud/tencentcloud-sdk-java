@@ -30,6 +30,9 @@ public enum FacefusionErrorCode {
     // 人脸框不合法。
      FAILEDOPERATION_FACERECTINVALID("FailedOperation.FaceRectInvalid"),
      
+    // 人脸配准失败。
+     FAILEDOPERATION_FACESHAPEFAILED("FailedOperation.FaceShapeFailed"),
+     
     // 人脸配准点不合法。
      FAILEDOPERATION_FACESHAPEINVALID("FailedOperation.FaceShapeInvalid"),
      

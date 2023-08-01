@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OpenKafkaConsumerResponse extends AbstractModel{
 
     /**
-    * 待消费TopicId
+    * KafkaConsumer 消费时使用的Topic参数
     */
     @SerializedName("TopicID")
     @Expose
@@ -37,16 +37,16 @@ public class OpenKafkaConsumerResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 待消费TopicId 
-     * @return TopicID 待消费TopicId
+     * Get KafkaConsumer 消费时使用的Topic参数 
+     * @return TopicID KafkaConsumer 消费时使用的Topic参数
      */
     public String getTopicID() {
         return this.TopicID;
     }
 
     /**
-     * Set 待消费TopicId
-     * @param TopicID 待消费TopicId
+     * Set KafkaConsumer 消费时使用的Topic参数
+     * @param TopicID KafkaConsumer 消费时使用的Topic参数
      */
     public void setTopicID(String TopicID) {
         this.TopicID = TopicID;

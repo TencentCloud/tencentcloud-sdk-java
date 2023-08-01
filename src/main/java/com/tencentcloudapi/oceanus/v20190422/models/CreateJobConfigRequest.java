@@ -156,6 +156,27 @@ public class CreateJobConfigRequest extends AbstractModel{
     private Long AutoRecover;
 
     /**
+    * 类日志级别
+    */
+    @SerializedName("ClazzLevels")
+    @Expose
+    private ClazzLevel [] ClazzLevels;
+
+    /**
+    * 是否打开专家模式
+    */
+    @SerializedName("ExpertModeOn")
+    @Expose
+    private Boolean ExpertModeOn;
+
+    /**
+    * 专家模式的配置
+    */
+    @SerializedName("ExpertModeConfiguration")
+    @Expose
+    private ExpertModeConfiguration ExpertModeConfiguration;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -459,6 +480,54 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.AutoRecover = AutoRecover;
     }
 
+    /**
+     * Get 类日志级别 
+     * @return ClazzLevels 类日志级别
+     */
+    public ClazzLevel [] getClazzLevels() {
+        return this.ClazzLevels;
+    }
+
+    /**
+     * Set 类日志级别
+     * @param ClazzLevels 类日志级别
+     */
+    public void setClazzLevels(ClazzLevel [] ClazzLevels) {
+        this.ClazzLevels = ClazzLevels;
+    }
+
+    /**
+     * Get 是否打开专家模式 
+     * @return ExpertModeOn 是否打开专家模式
+     */
+    public Boolean getExpertModeOn() {
+        return this.ExpertModeOn;
+    }
+
+    /**
+     * Set 是否打开专家模式
+     * @param ExpertModeOn 是否打开专家模式
+     */
+    public void setExpertModeOn(Boolean ExpertModeOn) {
+        this.ExpertModeOn = ExpertModeOn;
+    }
+
+    /**
+     * Get 专家模式的配置 
+     * @return ExpertModeConfiguration 专家模式的配置
+     */
+    public ExpertModeConfiguration getExpertModeConfiguration() {
+        return this.ExpertModeConfiguration;
+    }
+
+    /**
+     * Set 专家模式的配置
+     * @param ExpertModeConfiguration 专家模式的配置
+     */
+    public void setExpertModeConfiguration(ExpertModeConfiguration ExpertModeConfiguration) {
+        this.ExpertModeConfiguration = ExpertModeConfiguration;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -530,6 +599,18 @@ public class CreateJobConfigRequest extends AbstractModel{
         if (source.AutoRecover != null) {
             this.AutoRecover = new Long(source.AutoRecover);
         }
+        if (source.ClazzLevels != null) {
+            this.ClazzLevels = new ClazzLevel[source.ClazzLevels.length];
+            for (int i = 0; i < source.ClazzLevels.length; i++) {
+                this.ClazzLevels[i] = new ClazzLevel(source.ClazzLevels[i]);
+            }
+        }
+        if (source.ExpertModeOn != null) {
+            this.ExpertModeOn = new Boolean(source.ExpertModeOn);
+        }
+        if (source.ExpertModeConfiguration != null) {
+            this.ExpertModeConfiguration = new ExpertModeConfiguration(source.ExpertModeConfiguration);
+        }
     }
 
 
@@ -556,6 +637,9 @@ public class CreateJobConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamSimple(map, prefix + "LogLevel", this.LogLevel);
         this.setParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
+        this.setParamArrayObj(map, prefix + "ClazzLevels.", this.ClazzLevels);
+        this.setParamSimple(map, prefix + "ExpertModeOn", this.ExpertModeOn);
+        this.setParamObj(map, prefix + "ExpertModeConfiguration.", this.ExpertModeConfiguration);
 
     }
 }

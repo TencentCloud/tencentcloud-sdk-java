@@ -480,6 +480,9 @@ public enum LighthouseErrorCode {
     // 密钥对 ID 不存在。
      RESOURCENOTFOUND_KEYIDNOTFOUND("ResourceNotFound.KeyIdNotFound"),
      
+    // 密钥对不存在。
+     RESOURCENOTFOUND_KEYPAIRNOTFOUND("ResourceNotFound.KeyPairNotFound"),
+     
     // 自定义镜像不存在。
      RESOURCENOTFOUND_PRIVATEBLUEPRINTNOTFOUND("ResourceNotFound.PrivateBlueprintNotFound"),
      

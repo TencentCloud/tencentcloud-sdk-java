@@ -34,7 +34,10 @@ public class FlowCreateApprover extends AbstractModel{
     private Long ApproverType;
 
     /**
-    * 如果签署方为企业，需要填入企业全称
+    * 签署人企业名称
+<br/>当approverType=1 或 approverType=3时，必须指定
+
+
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -42,6 +45,7 @@ public class FlowCreateApprover extends AbstractModel{
 
     /**
     * 签署方经办人姓名
+<br/>在未指定签署人电子签UserId情况下，为必填参数
     */
     @SerializedName("ApproverName")
     @Expose
@@ -49,6 +53,8 @@ public class FlowCreateApprover extends AbstractModel{
 
     /**
     * 签署方经办人手机号码
+<br/>在未指定签署人电子签UserId情况下，为必填参数
+
     */
     @SerializedName("ApproverMobile")
     @Expose
@@ -72,6 +78,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
     * 签署方经办人在模板中的参与方ID
+<br/>模版发起合同时，该参数为必填项
+<br/>文件发起合同是，该参数无序传值
+
     */
     @SerializedName("RecipientId")
     @Expose
@@ -85,7 +94,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String [] VerifyChannel;
 
     /**
-    * 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
+    * 是否发送短信
+<br/>sms--短信通知
+<br/>none--不通知
+<br/>默认为sms
+<br/>发起方=签署方时不发送短信
     */
     @SerializedName("NotifyType")
     @Expose
@@ -106,7 +119,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Long PreReadTime;
 
     /**
-    * 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
+    * 签署方经办人的电子签用户ID
+<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+
     */
     @SerializedName("UserId")
     @Expose
@@ -120,14 +135,18 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private Boolean Required;
 
     /**
-    * 签署人用户来源,企微侧用户请传入：WEWORKAPP
+    * 签署人用户来源
+<br/>企微侧用户请传入：WEWORKAPP
     */
     @SerializedName("ApproverSource")
     @Expose
     private String ApproverSource;
 
     /**
-    * 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+    * 企业签署方或签标识，客户自定义，64位长度
+<br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
+<br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
+<br/>如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
     */
     @SerializedName("CustomApproverTag")
     @Expose
@@ -164,7 +183,10 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     private String SignId;
 
     /**
-    * 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+    * 当前签署方进行签署操作是否需要企业内部审批
+<br>true 则为需要
+<br/>false,无序企业内部审批（默认）
+<br/>为个人签署方时则由发起方企业审核。
     */
     @SerializedName("ApproverNeedSignReview")
     @Expose
@@ -172,6 +194,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
     * 签署人签署控件
+<br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
     */
     @SerializedName("SignComponents")
     @Expose
@@ -179,6 +202,7 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
     * 签署人填写控件
+<br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
     */
     @SerializedName("Components")
     @Expose
@@ -242,24 +266,38 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 如果签署方为企业，需要填入企业全称 
-     * @return OrganizationName 如果签署方为企业，需要填入企业全称
+     * Get 签署人企业名称
+<br/>当approverType=1 或 approverType=3时，必须指定
+
+ 
+     * @return OrganizationName 签署人企业名称
+<br/>当approverType=1 或 approverType=3时，必须指定
+
+
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set 如果签署方为企业，需要填入企业全称
-     * @param OrganizationName 如果签署方为企业，需要填入企业全称
+     * Set 签署人企业名称
+<br/>当approverType=1 或 approverType=3时，必须指定
+
+
+     * @param OrganizationName 签署人企业名称
+<br/>当approverType=1 或 approverType=3时，必须指定
+
+
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get 签署方经办人姓名 
+     * Get 签署方经办人姓名
+<br/>在未指定签署人电子签UserId情况下，为必填参数 
      * @return ApproverName 签署方经办人姓名
+<br/>在未指定签署人电子签UserId情况下，为必填参数
      */
     public String getApproverName() {
         return this.ApproverName;
@@ -267,15 +305,21 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 签署方经办人姓名
+<br/>在未指定签署人电子签UserId情况下，为必填参数
      * @param ApproverName 签署方经办人姓名
+<br/>在未指定签署人电子签UserId情况下，为必填参数
      */
     public void setApproverName(String ApproverName) {
         this.ApproverName = ApproverName;
     }
 
     /**
-     * Get 签署方经办人手机号码 
+     * Get 签署方经办人手机号码
+<br/>在未指定签署人电子签UserId情况下，为必填参数
+ 
      * @return ApproverMobile 签署方经办人手机号码
+<br/>在未指定签署人电子签UserId情况下，为必填参数
+
      */
     public String getApproverMobile() {
         return this.ApproverMobile;
@@ -283,7 +327,11 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 签署方经办人手机号码
+<br/>在未指定签署人电子签UserId情况下，为必填参数
+
      * @param ApproverMobile 签署方经办人手机号码
+<br/>在未指定签署人电子签UserId情况下，为必填参数
+
      */
     public void setApproverMobile(String ApproverMobile) {
         this.ApproverMobile = ApproverMobile;
@@ -330,8 +378,14 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人在模板中的参与方ID 
+     * Get 签署方经办人在模板中的参与方ID
+<br/>模版发起合同时，该参数为必填项
+<br/>文件发起合同是，该参数无序传值
+ 
      * @return RecipientId 签署方经办人在模板中的参与方ID
+<br/>模版发起合同时，该参数为必填项
+<br/>文件发起合同是，该参数无序传值
+
      */
     public String getRecipientId() {
         return this.RecipientId;
@@ -339,7 +393,13 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 签署方经办人在模板中的参与方ID
+<br/>模版发起合同时，该参数为必填项
+<br/>文件发起合同是，该参数无序传值
+
      * @param RecipientId 签署方经办人在模板中的参与方ID
+<br/>模版发起合同时，该参数为必填项
+<br/>文件发起合同是，该参数无序传值
+
      */
     public void setRecipientId(String RecipientId) {
         this.RecipientId = RecipientId;
@@ -362,16 +422,32 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信 
-     * @return NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
+     * Get 是否发送短信
+<br/>sms--短信通知
+<br/>none--不通知
+<br/>默认为sms
+<br/>发起方=签署方时不发送短信 
+     * @return NotifyType 是否发送短信
+<br/>sms--短信通知
+<br/>none--不通知
+<br/>默认为sms
+<br/>发起方=签署方时不发送短信
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
-     * @param NotifyType 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
+     * Set 是否发送短信
+<br/>sms--短信通知
+<br/>none--不通知
+<br/>默认为sms
+<br/>发起方=签署方时不发送短信
+     * @param NotifyType 是否发送短信
+<br/>sms--短信通知
+<br/>none--不通知
+<br/>默认为sms
+<br/>发起方=签署方时不发送短信
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -410,16 +486,24 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。 
-     * @return UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
+     * Get 签署方经办人的电子签用户ID
+<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+ 
+     * @return UserId 签署方经办人的电子签用户ID
+<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
-     * @param UserId 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。
+     * Set 签署方经办人的电子签用户ID
+<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+
+     * @param UserId 签署方经办人的电子签用户ID
+<br/>当未指定签署人姓名+手机号的情况下，该字段毕传
+
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
@@ -442,32 +526,48 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 签署人用户来源,企微侧用户请传入：WEWORKAPP 
-     * @return ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * Get 签署人用户来源
+<br/>企微侧用户请传入：WEWORKAPP 
+     * @return ApproverSource 签署人用户来源
+<br/>企微侧用户请传入：WEWORKAPP
      */
     public String getApproverSource() {
         return this.ApproverSource;
     }
 
     /**
-     * Set 签署人用户来源,企微侧用户请传入：WEWORKAPP
-     * @param ApproverSource 签署人用户来源,企微侧用户请传入：WEWORKAPP
+     * Set 签署人用户来源
+<br/>企微侧用户请传入：WEWORKAPP
+     * @param ApproverSource 签署人用户来源
+<br/>企微侧用户请传入：WEWORKAPP
      */
     public void setApproverSource(String ApproverSource) {
         this.ApproverSource = ApproverSource;
     }
 
     /**
-     * Get 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP 
-     * @return CustomApproverTag 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+     * Get 企业签署方或签标识，客户自定义，64位长度
+<br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
+<br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
+<br/>如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP 
+     * @return CustomApproverTag 企业签署方或签标识，客户自定义，64位长度
+<br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
+<br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
+<br/>如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public String getCustomApproverTag() {
         return this.CustomApproverTag;
     }
 
     /**
-     * Set 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
-     * @param CustomApproverTag 企业签署方或签标识，客户自定义，64位长度。用于发起含有或签签署人的合同。或签参与人必须有此字段。合同内不同或签参与人CustomApproverTag需要保证唯一。如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+     * Set 企业签署方或签标识，客户自定义，64位长度
+<br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
+<br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
+<br/>如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
+     * @param CustomApproverTag 企业签署方或签标识，客户自定义，64位长度
+<br>用于发起含有或签签署人的合同。或签参与人必须有此字段。
+<br/>合同内不同或签参与人CustomApproverTag需要保证唯一。
+<br/>如果或签签署人为本方企微参与人，ApproverSource参数需要指定WEWORKAPP
      */
     public void setCustomApproverTag(String CustomApproverTag) {
         this.CustomApproverTag = CustomApproverTag;
@@ -550,24 +650,38 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
     }
 
     /**
-     * Get 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。 
-     * @return ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+     * Get 当前签署方进行签署操作是否需要企业内部审批
+<br>true 则为需要
+<br/>false,无序企业内部审批（默认）
+<br/>为个人签署方时则由发起方企业审核。 
+     * @return ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批
+<br>true 则为需要
+<br/>false,无序企业内部审批（默认）
+<br/>为个人签署方时则由发起方企业审核。
      */
     public Boolean getApproverNeedSignReview() {
         return this.ApproverNeedSignReview;
     }
 
     /**
-     * Set 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
-     * @param ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批，true 则为需要。为个人签署方时则由发起方企业审核。
+     * Set 当前签署方进行签署操作是否需要企业内部审批
+<br>true 则为需要
+<br/>false,无序企业内部审批（默认）
+<br/>为个人签署方时则由发起方企业审核。
+     * @param ApproverNeedSignReview 当前签署方进行签署操作是否需要企业内部审批
+<br>true 则为需要
+<br/>false,无序企业内部审批（默认）
+<br/>为个人签署方时则由发起方企业审核。
      */
     public void setApproverNeedSignReview(Boolean ApproverNeedSignReview) {
         this.ApproverNeedSignReview = ApproverNeedSignReview;
     }
 
     /**
-     * Get 签署人签署控件 
+     * Get 签署人签署控件
+<br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置 
      * @return SignComponents 签署人签署控件
+<br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
@@ -575,15 +689,19 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 签署人签署控件
+<br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
      * @param SignComponents 签署人签署控件
+<br/>文件发起时，可通过该参数为签署人指定签署控件类型以及位置
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
     }
 
     /**
-     * Get 签署人填写控件 
+     * Get 签署人填写控件
+<br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置 
      * @return Components 签署人填写控件
+<br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
      */
     public Component [] getComponents() {
         return this.Components;
@@ -591,7 +709,9 @@ HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
 
     /**
      * Set 签署人填写控件
+<br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
      * @param Components 签署人填写控件
+<br/>文件发起时，可通过该参数为签署人指定填写控件类型以及位置
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;

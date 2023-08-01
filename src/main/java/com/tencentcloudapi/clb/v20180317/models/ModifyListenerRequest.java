@@ -51,14 +51,14 @@ public class ModifyListenerRequest extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+    * 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
     */
     @SerializedName("HealthCheck")
     @Expose
     private HealthCheck HealthCheck;
 
     /**
-    * 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+    * 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
     */
     @SerializedName("Certificate")
     @Expose
@@ -200,32 +200,32 @@ public class ModifyListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。 
-     * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * Get 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。 
+     * @return HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
-     * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
+     * Set 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
+     * @param HealthCheck 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。 
-     * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+     * Get 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。 
+     * @return Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
-     * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器；此参数和MultiCertInfo不能同时传入。
+     * Set 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
+     * @param Certificate 证书相关信息，此参数仅适用于HTTPS/TCP_SSL/QUIC监听器；此参数和MultiCertInfo不能同时传入。
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;

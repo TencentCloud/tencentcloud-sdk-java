@@ -51,7 +51,7 @@ public class DescribeEncryptInstancesRequest extends AbstractModel{
     private String OrderDirection;
 
     /**
-    * (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
@@ -93,14 +93,14 @@ public class DescribeEncryptInstancesRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
+    * (条件过滤字段) 应用类型：android-apk; android-aab;
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * （条件过滤字段）安卓应用的包名
+    * （条件过滤字段）应用的包名
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -184,16 +184,16 @@ public class DescribeEncryptInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformType (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformType (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformType (条件过滤字段) 平台类型  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformType (条件过滤字段) 平台类型  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
@@ -280,32 +280,32 @@ public class DescribeEncryptInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab; 
-     * @return AppType (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
+     * Get (条件过滤字段) 应用类型：android-apk; android-aab; 
+     * @return AppType (条件过滤字段) 应用类型：android-apk; android-aab;
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
-     * @param AppType (条件过滤字段) 安卓应用类型：安卓-apk; 安卓-aab;
+     * Set (条件过滤字段) 应用类型：android-apk; android-aab;
+     * @param AppType (条件过滤字段) 应用类型：android-apk; android-aab;
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get （条件过滤字段）安卓应用的包名 
-     * @return AppPkgName （条件过滤字段）安卓应用的包名
+     * Get （条件过滤字段）应用的包名 
+     * @return AppPkgName （条件过滤字段）应用的包名
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * Set （条件过滤字段）安卓应用的包名
-     * @param AppPkgName （条件过滤字段）安卓应用的包名
+     * Set （条件过滤字段）应用的包名
+     * @param AppPkgName （条件过滤字段）应用的包名
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;

@@ -1026,6 +1026,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *获取Kafka协议消费信息
+     * @param req DescribeKafkaConsumerRequest
+     * @return DescribeKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaConsumerResponse DescribeKafkaConsumer(DescribeKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKafkaConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于获取Kafka数据订阅任务
      * @param req DescribeKafkaRechargesRequest
      * @return DescribeKafkaRechargesResponse
@@ -1481,6 +1502,27 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyIndexResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改Kafka协议消费信息
+     * @param req ModifyKafkaConsumerRequest
+     * @return ModifyKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyKafkaConsumerResponse ModifyKafkaConsumer(ModifyKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyKafkaConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

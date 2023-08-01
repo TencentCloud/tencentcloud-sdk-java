@@ -52,7 +52,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String LoadBalancerName;
 
     /**
-    * 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+    * 腾讯云为负载均衡实例分配的域名。
     */
     @SerializedName("Domain")
     @Expose
@@ -235,16 +235,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。 
-     * @return Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * Get 腾讯云为负载均衡实例分配的域名。 
+     * @return Domain 腾讯云为负载均衡实例分配的域名。
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
-     * @param Domain 腾讯云为负载均衡实例分配的域名，本参数仅对传统型公网负载均衡才有意义。
+     * Set 腾讯云为负载均衡实例分配的域名。
+     * @param Domain 腾讯云为负载均衡实例分配的域名。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

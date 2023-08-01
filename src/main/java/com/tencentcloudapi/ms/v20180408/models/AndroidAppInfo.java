@@ -55,7 +55,7 @@ d40cc11e4bddd643ecdf29cde729a12b
 
     /**
     * app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -76,8 +76,8 @@ d40cc11e4bddd643ecdf29cde729a12b
     private String AppVersion;
 
     /**
-    * 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+    * Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
     */
     @SerializedName("AppType")
     @Expose
@@ -161,9 +161,9 @@ d40cc11e4bddd643ecdf29cde729a12b
 
     /**
      * Get app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。 
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。 
      * @return AppPkgName app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
      */
     public String getAppPkgName() {
         return this.AppPkgName;
@@ -171,9 +171,9 @@ d40cc11e4bddd643ecdf29cde729a12b
 
     /**
      * Set app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
      * @param AppPkgName app的包名，本次操作的包名。
-当安卓是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
+当Android是按年收费、免费试用加固时，在线加固和输出工具要求该字段必输，且与AndroidPlan.AppPkgName值相等。
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;
@@ -212,20 +212,20 @@ d40cc11e4bddd643ecdf29cde729a12b
     }
 
     /**
-     * Get 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。 
-     * @return AppType 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * Get Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。 
+     * @return AppType Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
-     * @param AppType 安卓app的文件类型，本次加固操作的应用类型 。
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * Set Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @param AppType Android app的文件类型，本次加固操作的应用类型 。
+Android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;

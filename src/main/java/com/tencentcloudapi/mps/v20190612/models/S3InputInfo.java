@@ -24,6 +24,7 @@ public class S3InputInfo extends AbstractModel{
 
     /**
     * S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3Bucket")
     @Expose
@@ -34,6 +35,7 @@ public class S3InputInfo extends AbstractModel{
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3Region")
     @Expose
@@ -41,6 +43,7 @@ eu-west-3
 
     /**
     * S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3Object")
     @Expose
@@ -48,6 +51,7 @@ eu-west-3
 
     /**
     * AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretId")
     @Expose
@@ -55,14 +59,17 @@ eu-west-3
 
     /**
     * AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("S3SecretKey")
     @Expose
     private String S3SecretKey;
 
     /**
-     * Get S3 bucket。 
+     * Get S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3Bucket() {
         return this.S3Bucket;
@@ -70,7 +77,9 @@ eu-west-3
 
     /**
      * Set S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3Bucket S3 bucket。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3Bucket(String S3Bucket) {
         this.S3Bucket = S3Bucket;
@@ -80,11 +89,13 @@ eu-west-3
      * Get S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
- 
+
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3Region S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3Region() {
         return this.S3Region;
@@ -95,18 +106,22 @@ eu-west-3
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3Region S3 bucket 对应的区域，目前支持：  
 us-east-1  
 eu-west-3
 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3Region(String S3Region) {
         this.S3Region = S3Region;
     }
 
     /**
-     * Get S3 bucket 中的媒体资源路径。 
+     * Get S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3Object S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3Object() {
         return this.S3Object;
@@ -114,15 +129,19 @@ eu-west-3
 
     /**
      * Set S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3Object S3 bucket 中的媒体资源路径。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3Object(String S3Object) {
         this.S3Object = S3Object;
     }
 
     /**
-     * Get AWS 内网访问 媒体资源的秘钥id。 
+     * Get AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretId AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretId() {
         return this.S3SecretId;
@@ -130,15 +149,19 @@ eu-west-3
 
     /**
      * Set AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretId AWS 内网访问 媒体资源的秘钥id。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretId(String S3SecretId) {
         this.S3SecretId = S3SecretId;
     }
 
     /**
-     * Get AWS 内网访问 媒体资源的秘钥key。 
+     * Get AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return S3SecretKey AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getS3SecretKey() {
         return this.S3SecretKey;
@@ -146,7 +169,9 @@ eu-west-3
 
     /**
      * Set AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param S3SecretKey AWS 内网访问 媒体资源的秘钥key。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setS3SecretKey(String S3SecretKey) {
         this.S3SecretKey = S3SecretKey;

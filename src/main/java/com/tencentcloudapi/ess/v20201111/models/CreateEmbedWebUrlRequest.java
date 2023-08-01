@@ -35,7 +35,8 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
     */
     @SerializedName("EmbedType")
     @Expose
@@ -64,6 +65,13 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
     private ReviewerInfo Reviewer;
 
     /**
+    * 个性化参数
+    */
+    @SerializedName("Option")
+    @Expose
+    private EmbedUrlOption Option;
+
+    /**
      * Get 操作者信息 
      * @return Operator 操作者信息
      */
@@ -85,13 +93,15 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
- 
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情 
      * @return EmbedType WEB嵌入资源类型。
 <br/>CREATE_SEAL: 创建印章
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
      */
     public String getEmbedType() {
         return this.EmbedType;
@@ -103,13 +113,15 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
      * @param EmbedType WEB嵌入资源类型。
 <br/>CREATE_SEAL: 创建印章
 <br/>PREVIEW_SEAL_LIST：预览印章列表
 <br/>PREVIEW_SEAL_DETAIL：预览印章详情
 <br/>EXTEND_SERVICE：拓展服务
-
+<br/>PREVIEW_FLOW：预览合同
+<br/>PREVIEW_FLOW_DETAIL：查看合同详情
      */
     public void setEmbedType(String EmbedType) {
         this.EmbedType = EmbedType;
@@ -167,6 +179,22 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
         this.Reviewer = Reviewer;
     }
 
+    /**
+     * Get 个性化参数 
+     * @return Option 个性化参数
+     */
+    public EmbedUrlOption getOption() {
+        return this.Option;
+    }
+
+    /**
+     * Set 个性化参数
+     * @param Option 个性化参数
+     */
+    public void setOption(EmbedUrlOption Option) {
+        this.Option = Option;
+    }
+
     public CreateEmbedWebUrlRequest() {
     }
 
@@ -190,6 +218,9 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
         if (source.Reviewer != null) {
             this.Reviewer = new ReviewerInfo(source.Reviewer);
         }
+        if (source.Option != null) {
+            this.Option = new EmbedUrlOption(source.Option);
+        }
     }
 
 
@@ -202,6 +233,7 @@ public class CreateEmbedWebUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "Reviewer.", this.Reviewer);
+        this.setParamObj(map, prefix + "Option.", this.Option);
 
     }
 }

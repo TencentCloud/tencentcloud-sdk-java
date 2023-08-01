@@ -43,6 +43,8 @@ public class BankCard2EVerificationResponse extends AbstractModel{
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
     */
     @SerializedName("Result")
     @Expose
@@ -82,7 +84,9 @@ public class BankCard2EVerificationResponse extends AbstractModel{
 不计费结果码：
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
-  '-16': '验证中心服务繁忙' 
+  '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+ 
      * @return Result 认证结果码
 计费结果码：
   '0': '认证通过'
@@ -103,6 +107,8 @@ public class BankCard2EVerificationResponse extends AbstractModel{
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
      */
     public String getResult() {
         return this.Result;
@@ -129,6 +135,8 @@ public class BankCard2EVerificationResponse extends AbstractModel{
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
      * @param Result 认证结果码
 计费结果码：
   '0': '认证通过'
@@ -149,6 +157,8 @@ public class BankCard2EVerificationResponse extends AbstractModel{
   '-2': '姓名校验不通过'
   '-3': '银行卡号码有误'
   '-16': '验证中心服务繁忙'
+  '-17': '验证次数超限，请次日重试'
+
      */
     public void setResult(String Result) {
         this.Result = Result;

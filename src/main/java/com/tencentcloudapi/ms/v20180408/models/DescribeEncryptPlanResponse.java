@@ -30,7 +30,7 @@ public class DescribeEncryptPlanResponse extends AbstractModel{
     private Long PlatformType;
 
     /**
-    * 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformTypeDesc")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeEncryptPlanResponse extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 上次安卓加固策略
+    * 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidPlan")
@@ -127,16 +127,16 @@ public class DescribeEncryptPlanResponse extends AbstractModel{
     }
 
     /**
-     * Get 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformTypeDesc 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformTypeDesc 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public String getPlatformTypeDesc() {
         return this.PlatformTypeDesc;
     }
 
     /**
-     * Set 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformTypeDesc 平台类型描述 1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformTypeDesc 平台类型描述 1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformTypeDesc(String PlatformTypeDesc) {
         this.PlatformTypeDesc = PlatformTypeDesc;
@@ -223,9 +223,9 @@ public class DescribeEncryptPlanResponse extends AbstractModel{
     }
 
     /**
-     * Get 上次安卓加固策略
+     * Get 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AndroidPlan 上次安卓加固策略
+     * @return AndroidPlan 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidPlan getAndroidPlan() {
@@ -233,9 +233,9 @@ public class DescribeEncryptPlanResponse extends AbstractModel{
     }
 
     /**
-     * Set 上次安卓加固策略
+     * Set 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AndroidPlan 上次安卓加固策略
+     * @param AndroidPlan 上次加固策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidPlan(AndroidPlan AndroidPlan) {
