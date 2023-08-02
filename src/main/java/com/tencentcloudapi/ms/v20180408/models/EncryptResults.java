@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class EncryptResults extends AbstractModel{
 
     /**
-    * 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+    * 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
     */
     @SerializedName("PlatformType")
     @Expose
     private Long PlatformType;
 
     /**
-    * 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+    * 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
     */
     @SerializedName("PlatformDesc")
     @Expose
@@ -79,7 +79,7 @@ public class EncryptResults extends AbstractModel{
     private String OrderId;
 
     /**
-    * 对应PlatformType平台类型值   1-android安卓加固结果
+    * 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidResult")
@@ -111,32 +111,32 @@ public class EncryptResults extends AbstractModel{
     private AppletResult AppletResult;
 
     /**
-     * Get 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固 
-     * @return PlatformType 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * Get 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固 
+     * @return PlatformType 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public Long getPlatformType() {
         return this.PlatformType;
     }
 
     /**
-     * Set 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
-     * @param PlatformType 平台类型枚举值  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * Set 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @param PlatformType 平台类型枚举值  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public void setPlatformType(Long PlatformType) {
         this.PlatformType = PlatformType;
     }
 
     /**
-     * Get 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固 
-     * @return PlatformDesc 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * Get 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固 
+     * @return PlatformDesc 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public String getPlatformDesc() {
         return this.PlatformDesc;
     }
 
     /**
-     * Set 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
-     * @param PlatformDesc 平台类型描述  1-android安卓加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * Set 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
+     * @param PlatformDesc 平台类型描述  1-android加固   2-ios源码混淆  3-sdk加固  4-applet小程序加固
      */
     public void setPlatformDesc(String PlatformDesc) {
         this.PlatformDesc = PlatformDesc;
@@ -239,9 +239,9 @@ public class EncryptResults extends AbstractModel{
     }
 
     /**
-     * Get 对应PlatformType平台类型值   1-android安卓加固结果
+     * Get 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AndroidResult 对应PlatformType平台类型值   1-android安卓加固结果
+     * @return AndroidResult 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidResult getAndroidResult() {
@@ -249,9 +249,9 @@ public class EncryptResults extends AbstractModel{
     }
 
     /**
-     * Set 对应PlatformType平台类型值   1-android安卓加固结果
+     * Set 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AndroidResult 对应PlatformType平台类型值   1-android安卓加固结果
+     * @param AndroidResult 对应PlatformType平台类型值   1-android加固结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidResult(AndroidResult AndroidResult) {

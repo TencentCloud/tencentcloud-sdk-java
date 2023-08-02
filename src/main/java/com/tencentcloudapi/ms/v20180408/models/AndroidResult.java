@@ -51,7 +51,7 @@ public class AndroidResult extends AbstractModel{
     private Long OpUin;
 
     /**
-    * 应用类型：安卓-apk; 安卓-aab;
+    * 应用类型：android-apk; android-aab;
     */
     @SerializedName("AppType")
     @Expose
@@ -135,105 +135,105 @@ public class AndroidResult extends AbstractModel{
     private Long CostTime;
 
     /**
-    * 在线加固-安卓应用原包下载链接
+    * 在线加固-android应用原包下载链接
     */
     @SerializedName("AppUrl")
     @Expose
     private String AppUrl;
 
     /**
-    * 在线加固-安卓应用文件MD5算法值
+    * 在线加固-android应用文件MD5算法值
     */
     @SerializedName("AppMd5")
     @Expose
     private String AppMd5;
 
     /**
-    * 在线加固-安卓应用应用名称
+    * 在线加固-android应用应用名称
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 在线加固-安卓应用版本；
+    * 在线加固-android应用版本；
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * 在线加固-安卓应用大小
+    * 在线加固-android应用大小
     */
     @SerializedName("AppSize")
     @Expose
     private Long AppSize;
 
     /**
-    * 在线加固-安卓加固-腾讯云应用加固工具版本
+    * 在线加固-android加固-腾讯云应用加固工具版本
     */
     @SerializedName("OnlineToolVersion")
     @Expose
     private String OnlineToolVersion;
 
     /**
-    * 在线加固-安卓加固，加固成功后文件md5算法值
+    * 在线加固-android加固，加固成功后文件md5算法值
     */
     @SerializedName("EncryptAppMd5")
     @Expose
     private String EncryptAppMd5;
 
     /**
-    * 在线加固-安卓加固，加固成功后应用大小
+    * 在线加固-android加固，加固成功后应用大小
     */
     @SerializedName("EncryptAppSize")
     @Expose
     private Long EncryptAppSize;
 
     /**
-    * 在线加固-安卓加固，加固包下载链接。
+    * 在线加固-android加固，加固包下载链接。
     */
     @SerializedName("EncryptPkgUrl")
     @Expose
     private String EncryptPkgUrl;
 
     /**
-    * 输出工具-安卓加固-腾讯云输出工具版本
+    * 输出工具-android加固-腾讯云输出工具版本
     */
     @SerializedName("OutputToolVersion")
     @Expose
     private String OutputToolVersion;
 
     /**
-    * 输出工具-安卓加固-工具大小
+    * 输出工具-android加固-工具大小
     */
     @SerializedName("OutputToolSize")
     @Expose
     private Long OutputToolSize;
 
     /**
-    * 输出工具-安卓加固-工具输出时间
+    * 输出工具-android加固-工具输出时间
     */
     @SerializedName("ToolOutputTime")
     @Expose
     private String ToolOutputTime;
 
     /**
-    * 输出工具-安卓加固-工具到期时间
+    * 输出工具-android加固-工具到期时间
     */
     @SerializedName("ToolExpireTime")
     @Expose
     private String ToolExpireTime;
 
     /**
-    * 输出工具-安卓加固-输出工具下载链接
+    * 输出工具-android加固-输出工具下载链接
     */
     @SerializedName("OutputToolUrl")
     @Expose
     private String OutputToolUrl;
 
     /**
-    * 本次安卓加固策略信息
+    * 本次android加固策略信息
     */
     @SerializedName("AndroidPlan")
     @Expose
@@ -304,16 +304,16 @@ public class AndroidResult extends AbstractModel{
     }
 
     /**
-     * Get 应用类型：安卓-apk; 安卓-aab; 
-     * @return AppType 应用类型：安卓-apk; 安卓-aab;
+     * Get 应用类型：android-apk; android-aab; 
+     * @return AppType 应用类型：android-apk; android-aab;
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 应用类型：安卓-apk; 安卓-aab;
-     * @param AppType 应用类型：安卓-apk; 安卓-aab;
+     * Set 应用类型：android-apk; android-aab;
+     * @param AppType 应用类型：android-apk; android-aab;
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
@@ -496,240 +496,240 @@ public class AndroidResult extends AbstractModel{
     }
 
     /**
-     * Get 在线加固-安卓应用原包下载链接 
-     * @return AppUrl 在线加固-安卓应用原包下载链接
+     * Get 在线加固-android应用原包下载链接 
+     * @return AppUrl 在线加固-android应用原包下载链接
      */
     public String getAppUrl() {
         return this.AppUrl;
     }
 
     /**
-     * Set 在线加固-安卓应用原包下载链接
-     * @param AppUrl 在线加固-安卓应用原包下载链接
+     * Set 在线加固-android应用原包下载链接
+     * @param AppUrl 在线加固-android应用原包下载链接
      */
     public void setAppUrl(String AppUrl) {
         this.AppUrl = AppUrl;
     }
 
     /**
-     * Get 在线加固-安卓应用文件MD5算法值 
-     * @return AppMd5 在线加固-安卓应用文件MD5算法值
+     * Get 在线加固-android应用文件MD5算法值 
+     * @return AppMd5 在线加固-android应用文件MD5算法值
      */
     public String getAppMd5() {
         return this.AppMd5;
     }
 
     /**
-     * Set 在线加固-安卓应用文件MD5算法值
-     * @param AppMd5 在线加固-安卓应用文件MD5算法值
+     * Set 在线加固-android应用文件MD5算法值
+     * @param AppMd5 在线加固-android应用文件MD5算法值
      */
     public void setAppMd5(String AppMd5) {
         this.AppMd5 = AppMd5;
     }
 
     /**
-     * Get 在线加固-安卓应用应用名称 
-     * @return AppName 在线加固-安卓应用应用名称
+     * Get 在线加固-android应用应用名称 
+     * @return AppName 在线加固-android应用应用名称
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 在线加固-安卓应用应用名称
-     * @param AppName 在线加固-安卓应用应用名称
+     * Set 在线加固-android应用应用名称
+     * @param AppName 在线加固-android应用应用名称
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 在线加固-安卓应用版本； 
-     * @return AppVersion 在线加固-安卓应用版本；
+     * Get 在线加固-android应用版本； 
+     * @return AppVersion 在线加固-android应用版本；
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set 在线加固-安卓应用版本；
-     * @param AppVersion 在线加固-安卓应用版本；
+     * Set 在线加固-android应用版本；
+     * @param AppVersion 在线加固-android应用版本；
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get 在线加固-安卓应用大小 
-     * @return AppSize 在线加固-安卓应用大小
+     * Get 在线加固-android应用大小 
+     * @return AppSize 在线加固-android应用大小
      */
     public Long getAppSize() {
         return this.AppSize;
     }
 
     /**
-     * Set 在线加固-安卓应用大小
-     * @param AppSize 在线加固-安卓应用大小
+     * Set 在线加固-android应用大小
+     * @param AppSize 在线加固-android应用大小
      */
     public void setAppSize(Long AppSize) {
         this.AppSize = AppSize;
     }
 
     /**
-     * Get 在线加固-安卓加固-腾讯云应用加固工具版本 
-     * @return OnlineToolVersion 在线加固-安卓加固-腾讯云应用加固工具版本
+     * Get 在线加固-android加固-腾讯云应用加固工具版本 
+     * @return OnlineToolVersion 在线加固-android加固-腾讯云应用加固工具版本
      */
     public String getOnlineToolVersion() {
         return this.OnlineToolVersion;
     }
 
     /**
-     * Set 在线加固-安卓加固-腾讯云应用加固工具版本
-     * @param OnlineToolVersion 在线加固-安卓加固-腾讯云应用加固工具版本
+     * Set 在线加固-android加固-腾讯云应用加固工具版本
+     * @param OnlineToolVersion 在线加固-android加固-腾讯云应用加固工具版本
      */
     public void setOnlineToolVersion(String OnlineToolVersion) {
         this.OnlineToolVersion = OnlineToolVersion;
     }
 
     /**
-     * Get 在线加固-安卓加固，加固成功后文件md5算法值 
-     * @return EncryptAppMd5 在线加固-安卓加固，加固成功后文件md5算法值
+     * Get 在线加固-android加固，加固成功后文件md5算法值 
+     * @return EncryptAppMd5 在线加固-android加固，加固成功后文件md5算法值
      */
     public String getEncryptAppMd5() {
         return this.EncryptAppMd5;
     }
 
     /**
-     * Set 在线加固-安卓加固，加固成功后文件md5算法值
-     * @param EncryptAppMd5 在线加固-安卓加固，加固成功后文件md5算法值
+     * Set 在线加固-android加固，加固成功后文件md5算法值
+     * @param EncryptAppMd5 在线加固-android加固，加固成功后文件md5算法值
      */
     public void setEncryptAppMd5(String EncryptAppMd5) {
         this.EncryptAppMd5 = EncryptAppMd5;
     }
 
     /**
-     * Get 在线加固-安卓加固，加固成功后应用大小 
-     * @return EncryptAppSize 在线加固-安卓加固，加固成功后应用大小
+     * Get 在线加固-android加固，加固成功后应用大小 
+     * @return EncryptAppSize 在线加固-android加固，加固成功后应用大小
      */
     public Long getEncryptAppSize() {
         return this.EncryptAppSize;
     }
 
     /**
-     * Set 在线加固-安卓加固，加固成功后应用大小
-     * @param EncryptAppSize 在线加固-安卓加固，加固成功后应用大小
+     * Set 在线加固-android加固，加固成功后应用大小
+     * @param EncryptAppSize 在线加固-android加固，加固成功后应用大小
      */
     public void setEncryptAppSize(Long EncryptAppSize) {
         this.EncryptAppSize = EncryptAppSize;
     }
 
     /**
-     * Get 在线加固-安卓加固，加固包下载链接。 
-     * @return EncryptPkgUrl 在线加固-安卓加固，加固包下载链接。
+     * Get 在线加固-android加固，加固包下载链接。 
+     * @return EncryptPkgUrl 在线加固-android加固，加固包下载链接。
      */
     public String getEncryptPkgUrl() {
         return this.EncryptPkgUrl;
     }
 
     /**
-     * Set 在线加固-安卓加固，加固包下载链接。
-     * @param EncryptPkgUrl 在线加固-安卓加固，加固包下载链接。
+     * Set 在线加固-android加固，加固包下载链接。
+     * @param EncryptPkgUrl 在线加固-android加固，加固包下载链接。
      */
     public void setEncryptPkgUrl(String EncryptPkgUrl) {
         this.EncryptPkgUrl = EncryptPkgUrl;
     }
 
     /**
-     * Get 输出工具-安卓加固-腾讯云输出工具版本 
-     * @return OutputToolVersion 输出工具-安卓加固-腾讯云输出工具版本
+     * Get 输出工具-android加固-腾讯云输出工具版本 
+     * @return OutputToolVersion 输出工具-android加固-腾讯云输出工具版本
      */
     public String getOutputToolVersion() {
         return this.OutputToolVersion;
     }
 
     /**
-     * Set 输出工具-安卓加固-腾讯云输出工具版本
-     * @param OutputToolVersion 输出工具-安卓加固-腾讯云输出工具版本
+     * Set 输出工具-android加固-腾讯云输出工具版本
+     * @param OutputToolVersion 输出工具-android加固-腾讯云输出工具版本
      */
     public void setOutputToolVersion(String OutputToolVersion) {
         this.OutputToolVersion = OutputToolVersion;
     }
 
     /**
-     * Get 输出工具-安卓加固-工具大小 
-     * @return OutputToolSize 输出工具-安卓加固-工具大小
+     * Get 输出工具-android加固-工具大小 
+     * @return OutputToolSize 输出工具-android加固-工具大小
      */
     public Long getOutputToolSize() {
         return this.OutputToolSize;
     }
 
     /**
-     * Set 输出工具-安卓加固-工具大小
-     * @param OutputToolSize 输出工具-安卓加固-工具大小
+     * Set 输出工具-android加固-工具大小
+     * @param OutputToolSize 输出工具-android加固-工具大小
      */
     public void setOutputToolSize(Long OutputToolSize) {
         this.OutputToolSize = OutputToolSize;
     }
 
     /**
-     * Get 输出工具-安卓加固-工具输出时间 
-     * @return ToolOutputTime 输出工具-安卓加固-工具输出时间
+     * Get 输出工具-android加固-工具输出时间 
+     * @return ToolOutputTime 输出工具-android加固-工具输出时间
      */
     public String getToolOutputTime() {
         return this.ToolOutputTime;
     }
 
     /**
-     * Set 输出工具-安卓加固-工具输出时间
-     * @param ToolOutputTime 输出工具-安卓加固-工具输出时间
+     * Set 输出工具-android加固-工具输出时间
+     * @param ToolOutputTime 输出工具-android加固-工具输出时间
      */
     public void setToolOutputTime(String ToolOutputTime) {
         this.ToolOutputTime = ToolOutputTime;
     }
 
     /**
-     * Get 输出工具-安卓加固-工具到期时间 
-     * @return ToolExpireTime 输出工具-安卓加固-工具到期时间
+     * Get 输出工具-android加固-工具到期时间 
+     * @return ToolExpireTime 输出工具-android加固-工具到期时间
      */
     public String getToolExpireTime() {
         return this.ToolExpireTime;
     }
 
     /**
-     * Set 输出工具-安卓加固-工具到期时间
-     * @param ToolExpireTime 输出工具-安卓加固-工具到期时间
+     * Set 输出工具-android加固-工具到期时间
+     * @param ToolExpireTime 输出工具-android加固-工具到期时间
      */
     public void setToolExpireTime(String ToolExpireTime) {
         this.ToolExpireTime = ToolExpireTime;
     }
 
     /**
-     * Get 输出工具-安卓加固-输出工具下载链接 
-     * @return OutputToolUrl 输出工具-安卓加固-输出工具下载链接
+     * Get 输出工具-android加固-输出工具下载链接 
+     * @return OutputToolUrl 输出工具-android加固-输出工具下载链接
      */
     public String getOutputToolUrl() {
         return this.OutputToolUrl;
     }
 
     /**
-     * Set 输出工具-安卓加固-输出工具下载链接
-     * @param OutputToolUrl 输出工具-安卓加固-输出工具下载链接
+     * Set 输出工具-android加固-输出工具下载链接
+     * @param OutputToolUrl 输出工具-android加固-输出工具下载链接
      */
     public void setOutputToolUrl(String OutputToolUrl) {
         this.OutputToolUrl = OutputToolUrl;
     }
 
     /**
-     * Get 本次安卓加固策略信息 
-     * @return AndroidPlan 本次安卓加固策略信息
+     * Get 本次android加固策略信息 
+     * @return AndroidPlan 本次android加固策略信息
      */
     public AndroidPlan getAndroidPlan() {
         return this.AndroidPlan;
     }
 
     /**
-     * Set 本次安卓加固策略信息
-     * @param AndroidPlan 本次安卓加固策略信息
+     * Set 本次android加固策略信息
+     * @param AndroidPlan 本次android加固策略信息
      */
     public void setAndroidPlan(AndroidPlan AndroidPlan) {
         this.AndroidPlan = AndroidPlan;

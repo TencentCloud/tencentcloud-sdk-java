@@ -3,6 +3,9 @@ public enum ClsErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 请求未授权。
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      

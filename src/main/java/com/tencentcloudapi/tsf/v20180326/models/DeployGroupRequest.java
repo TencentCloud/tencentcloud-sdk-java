@@ -156,6 +156,13 @@ public class DeployGroupRequest extends AbstractModel{
     private WarmupSetting WarmupSetting;
 
     /**
+    * 开启分批健康检查
+    */
+    @SerializedName("EnableBatchHealthCheck")
+    @Expose
+    private Boolean EnableBatchHealthCheck;
+
+    /**
      * Get 部署组ID 
      * @return GroupId 部署组ID
      */
@@ -459,6 +466,22 @@ public class DeployGroupRequest extends AbstractModel{
         this.WarmupSetting = WarmupSetting;
     }
 
+    /**
+     * Get 开启分批健康检查 
+     * @return EnableBatchHealthCheck 开启分批健康检查
+     */
+    public Boolean getEnableBatchHealthCheck() {
+        return this.EnableBatchHealthCheck;
+    }
+
+    /**
+     * Set 开启分批健康检查
+     * @param EnableBatchHealthCheck 开启分批健康检查
+     */
+    public void setEnableBatchHealthCheck(Boolean EnableBatchHealthCheck) {
+        this.EnableBatchHealthCheck = EnableBatchHealthCheck;
+    }
+
     public DeployGroupRequest() {
     }
 
@@ -530,6 +553,9 @@ public class DeployGroupRequest extends AbstractModel{
         if (source.WarmupSetting != null) {
             this.WarmupSetting = new WarmupSetting(source.WarmupSetting);
         }
+        if (source.EnableBatchHealthCheck != null) {
+            this.EnableBatchHealthCheck = new Boolean(source.EnableBatchHealthCheck);
+        }
     }
 
 
@@ -556,6 +582,7 @@ public class DeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
         this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
+        this.setParamSimple(map, prefix + "EnableBatchHealthCheck", this.EnableBatchHealthCheck);
 
     }
 }

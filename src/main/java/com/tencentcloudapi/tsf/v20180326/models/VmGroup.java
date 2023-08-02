@@ -327,6 +327,14 @@ public class VmGroup extends AbstractModel{
     private GatewayConfig GatewayConfig;
 
     /**
+    * 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableBatchHealthCheck")
+    @Expose
+    private Boolean EnableBatchHealthCheck;
+
+    /**
      * Get 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组ID
@@ -1086,6 +1094,26 @@ public class VmGroup extends AbstractModel{
         this.GatewayConfig = GatewayConfig;
     }
 
+    /**
+     * Get 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableBatchHealthCheck 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableBatchHealthCheck() {
+        return this.EnableBatchHealthCheck;
+    }
+
+    /**
+     * Set 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableBatchHealthCheck 批次是否开启健康检查
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableBatchHealthCheck(Boolean EnableBatchHealthCheck) {
+        this.EnableBatchHealthCheck = EnableBatchHealthCheck;
+    }
+
     public VmGroup() {
     }
 
@@ -1214,6 +1242,9 @@ public class VmGroup extends AbstractModel{
         if (source.GatewayConfig != null) {
             this.GatewayConfig = new GatewayConfig(source.GatewayConfig);
         }
+        if (source.EnableBatchHealthCheck != null) {
+            this.EnableBatchHealthCheck = new Boolean(source.EnableBatchHealthCheck);
+        }
     }
 
 
@@ -1259,6 +1290,7 @@ public class VmGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
         this.setParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         this.setParamObj(map, prefix + "GatewayConfig.", this.GatewayConfig);
+        this.setParamSimple(map, prefix + "EnableBatchHealthCheck", this.EnableBatchHealthCheck);
 
     }
 }

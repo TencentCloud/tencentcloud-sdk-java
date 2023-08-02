@@ -571,6 +571,27 @@ PDF资源Id 通过上传文件接口获取
     }
 
     /**
+     *本接口（CreatePersonAuthCertificateImage）用于创建个人用户证书证明图片
+     * @param req CreatePersonAuthCertificateImageRequest
+     * @return CreatePersonAuthCertificateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(CreatePersonAuthCertificateImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePersonAuthCertificateImageResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePersonAuthCertificateImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePersonAuthCertificateImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建快速发起流程
 <br/>适用场景：用户通过API 合同文件及签署信息，并可通过我们返回的URL在页面完成签署控件等信息的编辑与确认，快速发起合同.
 <br/>注：该接口文件的resourceId 是通过上传文件之后获取的。

@@ -130,6 +130,14 @@ public class Device extends AbstractModel{
     private Department Department;
 
     /**
+    * 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpPortSet")
+    @Expose
+    private String [] IpPortSet;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -377,6 +385,26 @@ public class Device extends AbstractModel{
         this.Department = Department;
     }
 
+    /**
+     * Get 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpPortSet 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpPortSet() {
+        return this.IpPortSet;
+    }
+
+    /**
+     * Set 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpPortSet 数据库资产的多节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpPortSet(String [] IpPortSet) {
+        this.IpPortSet = IpPortSet;
+    }
+
     public Device() {
     }
 
@@ -433,6 +461,12 @@ public class Device extends AbstractModel{
         if (source.Department != null) {
             this.Department = new Department(source.Department);
         }
+        if (source.IpPortSet != null) {
+            this.IpPortSet = new String[source.IpPortSet.length];
+            for (int i = 0; i < source.IpPortSet.length; i++) {
+                this.IpPortSet[i] = new String(source.IpPortSet[i]);
+            }
+        }
     }
 
 
@@ -455,6 +489,7 @@ public class Device extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamObj(map, prefix + "Resource.", this.Resource);
         this.setParamObj(map, prefix + "Department.", this.Department);
+        this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
 
     }
 }

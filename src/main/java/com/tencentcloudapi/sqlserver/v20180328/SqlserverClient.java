@@ -984,6 +984,27 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceByOrders）用于根据订单号查询资源ID
+     * @param req DescribeInstanceByOrdersRequest
+     * @return DescribeInstanceByOrdersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceByOrdersResponse DescribeInstanceByOrders(DescribeInstanceByOrdersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceByOrdersResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceByOrdersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceByOrders");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse

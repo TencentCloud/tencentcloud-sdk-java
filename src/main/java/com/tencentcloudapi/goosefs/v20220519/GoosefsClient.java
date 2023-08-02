@@ -39,6 +39,90 @@ public class GoosefsClient extends AbstractClient{
     }
 
     /**
+     *为客户端节点添加跨vpc或子网访问能力
+     * @param req AddCrossVpcSubnetSupportForClientNodeRequest
+     * @return AddCrossVpcSubnetSupportForClientNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCrossVpcSubnetSupportForClientNodeResponse AddCrossVpcSubnetSupportForClientNode(AddCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCrossVpcSubnetSupportForClientNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddCrossVpcSubnetSupportForClientNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为文件系统关联Bucket
+     * @param req AttachFileSystemBucketRequest
+     * @return AttachFileSystemBucketResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachFileSystemBucketResponse AttachFileSystemBucket(AttachFileSystemBucketRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachFileSystemBucketResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachFileSystemBucketResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachFileSystemBucket");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量添加客户端节点
+     * @param req BatchAddClientNodesRequest
+     * @return BatchAddClientNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchAddClientNodesResponse BatchAddClientNodes(BatchAddClientNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchAddClientNodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchAddClientNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchAddClientNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *批量删除客户端节点
+     * @param req BatchDeleteClientNodesRequest
+     * @return BatchDeleteClientNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteClientNodesResponse BatchDeleteClientNodes(BatchDeleteClientNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteClientNodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteClientNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteClientNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
      * @param req CreateDataRepositoryTaskRequest
      * @return CreateDataRepositoryTaskResponse
@@ -52,6 +136,90 @@ public class GoosefsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDataRepositoryTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDataRepositoryTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *创建文件系统
+     * @param req CreateFileSystemRequest
+     * @return CreateFileSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFileSystemResponse CreateFileSystem(CreateFileSystemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateFileSystemResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateFileSystemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateFileSystem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *为客户端节点删除跨vpc子网访问能力
+     * @param req DeleteCrossVpcSubnetSupportForClientNodeRequest
+     * @return DeleteCrossVpcSubnetSupportForClientNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCrossVpcSubnetSupportForClientNodeResponse DeleteCrossVpcSubnetSupportForClientNode(DeleteCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCrossVpcSubnetSupportForClientNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCrossVpcSubnetSupportForClientNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *删除文件系统
+     * @param req DeleteFileSystemRequest
+     * @return DeleteFileSystemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFileSystemResponse DeleteFileSystem(DeleteFileSystemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteFileSystemResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteFileSystemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteFileSystem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出集群中所有的客户端节点
+     * @param req DescribeClientNodesRequest
+     * @return DescribeClientNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClientNodesResponse DescribeClientNodes(DescribeClientNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClientNodesResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClientNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClientNodes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -136,6 +304,153 @@ public class GoosefsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDataRepositoryTaskStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDataRepositoryTaskStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *罗列文件系统关联的Bucket映射
+     * @param req DescribeFileSystemBucketsRequest
+     * @return DescribeFileSystemBucketsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileSystemBucketsResponse DescribeFileSystemBuckets(DescribeFileSystemBucketsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileSystemBucketsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemBucketsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileSystemBuckets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *列出所有的文件系统
+     * @param req DescribeFileSystemsRequest
+     * @return DescribeFileSystemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileSystemsResponse DescribeFileSystems(DescribeFileSystemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileSystemsResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileSystemsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileSystems");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *解绑文件系统与Bucket的映射
+     * @param req DetachFileSystemBucketRequest
+     * @return DetachFileSystemBucketResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachFileSystemBucketResponse DetachFileSystemBucket(DetachFileSystemBucketRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachFileSystemBucketResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachFileSystemBucketResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachFileSystemBucket");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *扩展文件系统容量
+     * @param req ExpandCapacityRequest
+     * @return ExpandCapacityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExpandCapacityResponse ExpandCapacity(ExpandCapacityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExpandCapacityResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExpandCapacityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExpandCapacity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改数据流动带宽
+     * @param req ModifyDataRepositoryBandwidthRequest
+     * @return ModifyDataRepositoryBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataRepositoryBandwidthResponse ModifyDataRepositoryBandwidth(ModifyDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDataRepositoryBandwidthResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDataRepositoryBandwidthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDataRepositoryBandwidth");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询客户端节点跨vpc子网访问能力
+     * @param req QueryCrossVpcSubnetSupportForClientNodeRequest
+     * @return QueryCrossVpcSubnetSupportForClientNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCrossVpcSubnetSupportForClientNodeResponse QueryCrossVpcSubnetSupportForClientNode(QueryCrossVpcSubnetSupportForClientNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCrossVpcSubnetSupportForClientNodeResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCrossVpcSubnetSupportForClientNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCrossVpcSubnetSupportForClientNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询数据流动带宽
+     * @param req QueryDataRepositoryBandwidthRequest
+     * @return QueryDataRepositoryBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryDataRepositoryBandwidthResponse QueryDataRepositoryBandwidth(QueryDataRepositoryBandwidthRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryDataRepositoryBandwidthResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryDataRepositoryBandwidthResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryDataRepositoryBandwidth");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

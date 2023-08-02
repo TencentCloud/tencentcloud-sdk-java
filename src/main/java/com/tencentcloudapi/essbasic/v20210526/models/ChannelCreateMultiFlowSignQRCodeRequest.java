@@ -45,7 +45,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private String FlowName;
 
     /**
-    * 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+    * 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
     */
     @SerializedName("MaxFlowNum")
     @Expose
@@ -66,7 +68,8 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private Long QrEffectiveDay;
 
     /**
-    * 限制二维码用户条件
+    * 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
     */
     @SerializedName("Restrictions")
     @Expose
@@ -148,16 +151,24 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。 
-     * @return MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * Get 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。 
+     * @return MaxFlowNum 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
      */
     public Long getMaxFlowNum() {
         return this.MaxFlowNum;
     }
 
     /**
-     * Set 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
-     * @param MaxFlowNum 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
+     * Set 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
+     * @param MaxFlowNum 最大可发起签署流程份数
+<br/>默认5份
+<br/>备注：发起签署流程数量超过此上限后，二维码自动失效。
      */
     public void setMaxFlowNum(Long MaxFlowNum) {
         this.MaxFlowNum = MaxFlowNum;
@@ -196,16 +207,20 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制二维码用户条件 
-     * @return Restrictions 限制二维码用户条件
+     * Get 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署 
+     * @return Restrictions 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
      */
     public ApproverRestriction [] getRestrictions() {
         return this.Restrictions;
     }
 
     /**
-     * Set 限制二维码用户条件
-     * @param Restrictions 限制二维码用户条件
+     * Set 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
+     * @param Restrictions 指定的签署二维码签署人
+<br/>指定后，只允许知道的人操作和签署
      */
     public void setRestrictions(ApproverRestriction [] Restrictions) {
         this.Restrictions = Restrictions;

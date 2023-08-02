@@ -58,6 +58,13 @@ public class ExternalDevice extends AbstractModel{
     private String DepartmentId;
 
     /**
+    * 资产多节点：字段ip和端口
+    */
+    @SerializedName("IpPortSet")
+    @Expose
+    private String [] IpPortSet;
+
+    /**
      * Get 操作系统名称，只能是Linux、Windows或MySQL 
      * @return OsName 操作系统名称，只能是Linux、Windows或MySQL
      */
@@ -137,6 +144,22 @@ public class ExternalDevice extends AbstractModel{
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 资产多节点：字段ip和端口 
+     * @return IpPortSet 资产多节点：字段ip和端口
+     */
+    public String [] getIpPortSet() {
+        return this.IpPortSet;
+    }
+
+    /**
+     * Set 资产多节点：字段ip和端口
+     * @param IpPortSet 资产多节点：字段ip和端口
+     */
+    public void setIpPortSet(String [] IpPortSet) {
+        this.IpPortSet = IpPortSet;
+    }
+
     public ExternalDevice() {
     }
 
@@ -160,6 +183,12 @@ public class ExternalDevice extends AbstractModel{
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.IpPortSet != null) {
+            this.IpPortSet = new String[source.IpPortSet.length];
+            for (int i = 0; i < source.IpPortSet.length; i++) {
+                this.IpPortSet[i] = new String(source.IpPortSet[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class ExternalDevice extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
 
     }
 }

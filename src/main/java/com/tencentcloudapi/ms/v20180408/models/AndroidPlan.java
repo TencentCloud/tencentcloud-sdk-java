@@ -31,15 +31,15 @@ public class AndroidPlan extends AbstractModel{
 
     /**
     * 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
     */
     @SerializedName("AppPkgName")
     @Expose
     private String AppPkgName;
 
     /**
-    * 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+    * android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
     */
     @SerializedName("AppType")
@@ -47,7 +47,7 @@ public class AndroidPlan extends AbstractModel{
     private String AppType;
 
     /**
-    * 安卓加固必输字段。
+    * android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -182,9 +182,9 @@ aab加固方案二
 
     /**
      * Get 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。 
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。 
      * @return AppPkgName 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
      */
     public String getAppPkgName() {
         return this.AppPkgName;
@@ -192,20 +192,20 @@ aab加固方案二
 
     /**
      * Set 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
      * @param AppPkgName 本次操作的包名。
-当收费模式是安卓按年收费和安卓免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
+当收费模式是android按年收费和android免费试用的在线加固和输出工具加固时，要求该字段必输，且与AndroidAppInfo.AppPkgName值相等。
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;
     }
 
     /**
-     * Get 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * Get android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
  
-     * @return AppType 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @return AppType android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
      */
     public String getAppType() {
@@ -213,11 +213,11 @@ aab加固方案二
     }
 
     /**
-     * Set 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * Set android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
-     * @param AppType 安卓app的文件类型，本次加固操作的应用类型 。 
-安卓在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
+     * @param AppType android app的文件类型，本次加固操作的应用类型 。 
+android在线加固和输出工具加固必输，其值需等于“apk”或“aab”，且与AndroidAppInfo.AppType值相等。
 
      */
     public void setAppType(String AppType) {
@@ -225,7 +225,7 @@ aab加固方案二
     }
 
     /**
-     * Get 安卓加固必输字段。
+     * Get android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -337,7 +337,7 @@ aab加固方案二
         "antimonitor": 1
     }
 }’ 
-     * @return EncryptParam 安卓加固必输字段。
+     * @return EncryptParam android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -455,7 +455,7 @@ aab加固方案二
     }
 
     /**
-     * Set 安卓加固必输字段。
+     * Set android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;
@@ -567,7 +567,7 @@ aab加固方案二
         "antimonitor": 1
     }
 }’
-     * @param EncryptParam 安卓加固必输字段。
+     * @param EncryptParam android加固必输字段。
 加固策略，json格式字符串。
 字段说明（0-关闭，1-开启）：
         "enable"=1 #DEX整体加固;

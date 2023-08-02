@@ -1068,6 +1068,27 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *本接口用于获取kafka用户信息
+     * @param req DescribeKafkaUserRequest
+     * @return DescribeKafkaUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKafkaUserResponse DescribeKafkaUser(DescribeKafkaUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKafkaUserResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKafkaUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeKafkaUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *本接口用于搜索日志上下文附近的内容
      * @param req DescribeLogContextRequest
      * @return DescribeLogContextResponse

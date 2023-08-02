@@ -153,6 +153,14 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     private Long BrokerType;
 
     /**
+    * 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubscriptionCount")
+    @Expose
+    private Long SubscriptionCount;
+
+    /**
      * Get 主题的 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicId 主题的 ID。
@@ -480,6 +488,26 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.BrokerType = BrokerType;
     }
 
+    /**
+     * Get 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionCount 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubscriptionCount() {
+        return this.SubscriptionCount;
+    }
+
+    /**
+     * Set 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionCount 订阅数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionCount(Long SubscriptionCount) {
+        this.SubscriptionCount = SubscriptionCount;
+    }
+
     public CmqTopic() {
     }
 
@@ -539,6 +567,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         if (source.BrokerType != null) {
             this.BrokerType = new Long(source.BrokerType);
         }
+        if (source.SubscriptionCount != null) {
+            this.SubscriptionCount = new Long(source.SubscriptionCount);
+        }
     }
 
 
@@ -562,6 +593,7 @@ FilterType = 2表示用户使用 BindingKey 过滤。
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BrokerType", this.BrokerType);
+        this.setParamSimple(map, prefix + "SubscriptionCount", this.SubscriptionCount);
 
     }
 }

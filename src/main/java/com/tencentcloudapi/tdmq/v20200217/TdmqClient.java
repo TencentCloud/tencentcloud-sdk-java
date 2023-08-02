@@ -732,6 +732,27 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除RocketMQ专享实例
+     * @param req DeleteRocketMQVipInstanceRequest
+     * @return DeleteRocketMQVipInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQVipInstanceResponse DeleteRocketMQVipInstance(DeleteRocketMQVipInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRocketMQVipInstanceResponse> rsp = null;
+        String rspStr = "";
+        req.setSkipSign(false);
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRocketMQVipInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRocketMQVipInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *删除角色，支持批量。
      * @param req DeleteRolesRequest
      * @return DeleteRolesResponse

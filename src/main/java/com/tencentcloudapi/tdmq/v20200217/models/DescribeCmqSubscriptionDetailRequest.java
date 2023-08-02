@@ -51,6 +51,21 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel{
     private String SubscriptionName;
 
     /**
+    * 队列名称，订阅绑定的endpoint
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * 查询类型。取值：（1）topic；（2）queue。
+默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private String QueryType;
+
+    /**
      * Get 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。 
      * @return TopicName 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
      */
@@ -114,6 +129,42 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel{
         this.SubscriptionName = SubscriptionName;
     }
 
+    /**
+     * Get 队列名称，订阅绑定的endpoint 
+     * @return QueueName 队列名称，订阅绑定的endpoint
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 队列名称，订阅绑定的endpoint
+     * @param QueueName 队列名称，订阅绑定的endpoint
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get 查询类型。取值：（1）topic；（2）queue。
+默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。 
+     * @return QueryType 查询类型。取值：（1）topic；（2）queue。
+默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。
+     */
+    public String getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set 查询类型。取值：（1）topic；（2）queue。
+默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。
+     * @param QueryType 查询类型。取值：（1）topic；（2）queue。
+默认值是topic。如果 queryType 是 topic，则查询主题下的订阅列表；如果 queryType 是 queue，则查询队列绑定的订阅列表。
+     */
+    public void setQueryType(String QueryType) {
+        this.QueryType = QueryType;
+    }
+
     public DescribeCmqSubscriptionDetailRequest() {
     }
 
@@ -134,6 +185,12 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel{
         if (source.SubscriptionName != null) {
             this.SubscriptionName = new String(source.SubscriptionName);
         }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
     }
 
 
@@ -145,6 +202,8 @@ public class DescribeCmqSubscriptionDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
 
     }
 }

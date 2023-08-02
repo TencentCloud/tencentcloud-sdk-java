@@ -38,6 +38,7 @@ public class CreateFlowRequest extends AbstractModel{
 
     /**
     * 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
     */
     @SerializedName("Approvers")
     @Expose
@@ -182,8 +183,10 @@ false：有序签
     }
 
     /**
-     * Get 签署流程参与者信息，最大限制50方 
+     * Get 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。 
      * @return Approvers 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      */
     public FlowCreateApprover [] getApprovers() {
         return this.Approvers;
@@ -191,7 +194,9 @@ false：有序签
 
     /**
      * Set 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      * @param Approvers 签署流程参与者信息，最大限制50方
+注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      */
     public void setApprovers(FlowCreateApprover [] Approvers) {
         this.Approvers = Approvers;

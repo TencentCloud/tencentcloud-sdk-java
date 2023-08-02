@@ -37,7 +37,7 @@ public class Orders extends AbstractModel{
     private Long PlatformType;
 
     /**
-    * 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+    * 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
     */
     @SerializedName("PlatformTypeDesc")
     @Expose
@@ -58,7 +58,7 @@ public class Orders extends AbstractModel{
     private String OrderTypeDesc;
 
     /**
-    * 安卓包年收费加固的包名
+    * android包年收费加固的包名
     */
     @SerializedName("AppPkgName")
     @Expose
@@ -196,16 +196,16 @@ public class Orders extends AbstractModel{
     }
 
     /**
-     * Get 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
-     * @return PlatformTypeDesc 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Get 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固 
+     * @return PlatformTypeDesc 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public String getPlatformTypeDesc() {
         return this.PlatformTypeDesc;
     }
 
     /**
-     * Set 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
-     * @param PlatformTypeDesc 平台类型描述：  1.android安卓加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * Set 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
+     * @param PlatformTypeDesc 平台类型描述：  1.android加固   2.ios源码混淆  3.sdk加固  4.applet小程序加固
      */
     public void setPlatformTypeDesc(String PlatformTypeDesc) {
         this.PlatformTypeDesc = PlatformTypeDesc;
@@ -244,16 +244,16 @@ public class Orders extends AbstractModel{
     }
 
     /**
-     * Get 安卓包年收费加固的包名 
-     * @return AppPkgName 安卓包年收费加固的包名
+     * Get android包年收费加固的包名 
+     * @return AppPkgName android包年收费加固的包名
      */
     public String getAppPkgName() {
         return this.AppPkgName;
     }
 
     /**
-     * Set 安卓包年收费加固的包名
-     * @param AppPkgName 安卓包年收费加固的包名
+     * Set android包年收费加固的包名
+     * @param AppPkgName android包年收费加固的包名
      */
     public void setAppPkgName(String AppPkgName) {
         this.AppPkgName = AppPkgName;

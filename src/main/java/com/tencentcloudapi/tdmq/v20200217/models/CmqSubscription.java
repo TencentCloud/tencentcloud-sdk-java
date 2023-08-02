@@ -123,6 +123,14 @@ filterType = 2表示用户使用 bindingKey 过滤。
     private String NotifyContentFormat;
 
     /**
+    * 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
@@ -378,6 +386,26 @@ filterType = 2表示用户使用 bindingKey 过滤。
         this.NotifyContentFormat = NotifyContentFormat;
     }
 
+    /**
+     * Get 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicName 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicName 订阅所属的主题名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public CmqSubscription() {
     }
 
@@ -428,6 +456,9 @@ filterType = 2表示用户使用 bindingKey 过滤。
         if (source.NotifyContentFormat != null) {
             this.NotifyContentFormat = new String(source.NotifyContentFormat);
         }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -447,6 +478,7 @@ filterType = 2表示用户使用 bindingKey 过滤。
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
         this.setParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

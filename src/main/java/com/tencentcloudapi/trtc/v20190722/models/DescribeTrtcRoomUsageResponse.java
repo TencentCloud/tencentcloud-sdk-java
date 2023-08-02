@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTrtcRoomUsageResponse extends AbstractModel{
 
     /**
-    * 房间维度用量数据，csv文件格式。
+    * 房间维度用量数据，csv文件格式，单位：秒。
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeTrtcRoomUsageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 房间维度用量数据，csv文件格式。 
-     * @return Data 房间维度用量数据，csv文件格式。
+     * Get 房间维度用量数据，csv文件格式，单位：秒。 
+     * @return Data 房间维度用量数据，csv文件格式，单位：秒。
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 房间维度用量数据，csv文件格式。
-     * @param Data 房间维度用量数据，csv文件格式。
+     * Set 房间维度用量数据，csv文件格式，单位：秒。
+     * @param Data 房间维度用量数据，csv文件格式，单位：秒。
      */
     public void setData(String Data) {
         this.Data = Data;

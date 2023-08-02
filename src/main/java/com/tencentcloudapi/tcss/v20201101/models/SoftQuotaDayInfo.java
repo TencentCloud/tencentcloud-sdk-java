@@ -30,7 +30,7 @@ public class SoftQuotaDayInfo extends AbstractModel{
     private String PayTime;
 
     /**
-    * 计费核数
+    * 计费核数(已废弃)
     */
     @SerializedName("CoresCnt")
     @Expose
@@ -53,16 +53,16 @@ public class SoftQuotaDayInfo extends AbstractModel{
     }
 
     /**
-     * Get 计费核数 
-     * @return CoresCnt 计费核数
+     * Get 计费核数(已废弃) 
+     * @return CoresCnt 计费核数(已废弃)
      */
     public Long getCoresCnt() {
         return this.CoresCnt;
     }
 
     /**
-     * Set 计费核数
-     * @param CoresCnt 计费核数
+     * Set 计费核数(已废弃)
+     * @param CoresCnt 计费核数(已废弃)
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;

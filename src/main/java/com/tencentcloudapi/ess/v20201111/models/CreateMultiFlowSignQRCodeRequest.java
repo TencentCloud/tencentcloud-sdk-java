@@ -45,14 +45,16 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
     * 最大可发起签署流程份数，默认5份 
-发起流程数量超过此上限后二维码自动失效
+<br/>发起流程数量超过此上限后二维码自动失效
     */
     @SerializedName("MaxFlowNum")
     @Expose
     private Long MaxFlowNum;
 
     /**
-    * 签署流程有效天数 默认7天 最高设置不超过30天
+    * 签署流程有效天数 
+<br/>默认7天 
+<br/>最高设置不超过30天
     */
     @SerializedName("FlowEffectiveDay")
     @Expose
@@ -66,14 +68,16 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     private Long QrEffectiveDay;
 
     /**
-    * 限制二维码用户条件
+    * 指定的签署人信息
+<br/>指定后，则只允许指定的签署人扫码签署
     */
     @SerializedName("Restrictions")
     @Expose
     private ApproverRestriction [] Restrictions;
 
     /**
-    * 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+    * 用户自定义字段
+<br/>回调的时候会进行透传，长度需要小于20480
     */
     @SerializedName("UserData")
     @Expose
@@ -81,8 +85,7 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
     * 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
+<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -152,9 +155,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
      * Get 最大可发起签署流程份数，默认5份 
-发起流程数量超过此上限后二维码自动失效 
+<br/>发起流程数量超过此上限后二维码自动失效 
      * @return MaxFlowNum 最大可发起签署流程份数，默认5份 
-发起流程数量超过此上限后二维码自动失效
+<br/>发起流程数量超过此上限后二维码自动失效
      */
     public Long getMaxFlowNum() {
         return this.MaxFlowNum;
@@ -162,25 +165,33 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
      * Set 最大可发起签署流程份数，默认5份 
-发起流程数量超过此上限后二维码自动失效
+<br/>发起流程数量超过此上限后二维码自动失效
      * @param MaxFlowNum 最大可发起签署流程份数，默认5份 
-发起流程数量超过此上限后二维码自动失效
+<br/>发起流程数量超过此上限后二维码自动失效
      */
     public void setMaxFlowNum(Long MaxFlowNum) {
         this.MaxFlowNum = MaxFlowNum;
     }
 
     /**
-     * Get 签署流程有效天数 默认7天 最高设置不超过30天 
-     * @return FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
+     * Get 签署流程有效天数 
+<br/>默认7天 
+<br/>最高设置不超过30天 
+     * @return FlowEffectiveDay 签署流程有效天数 
+<br/>默认7天 
+<br/>最高设置不超过30天
      */
     public Long getFlowEffectiveDay() {
         return this.FlowEffectiveDay;
     }
 
     /**
-     * Set 签署流程有效天数 默认7天 最高设置不超过30天
-     * @param FlowEffectiveDay 签署流程有效天数 默认7天 最高设置不超过30天
+     * Set 签署流程有效天数 
+<br/>默认7天 
+<br/>最高设置不超过30天
+     * @param FlowEffectiveDay 签署流程有效天数 
+<br/>默认7天 
+<br/>最高设置不超过30天
      */
     public void setFlowEffectiveDay(Long FlowEffectiveDay) {
         this.FlowEffectiveDay = FlowEffectiveDay;
@@ -203,32 +214,40 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get 限制二维码用户条件 
-     * @return Restrictions 限制二维码用户条件
+     * Get 指定的签署人信息
+<br/>指定后，则只允许指定的签署人扫码签署 
+     * @return Restrictions 指定的签署人信息
+<br/>指定后，则只允许指定的签署人扫码签署
      */
     public ApproverRestriction [] getRestrictions() {
         return this.Restrictions;
     }
 
     /**
-     * Set 限制二维码用户条件
-     * @param Restrictions 限制二维码用户条件
+     * Set 指定的签署人信息
+<br/>指定后，则只允许指定的签署人扫码签署
+     * @param Restrictions 指定的签署人信息
+<br/>指定后，则只允许指定的签署人扫码签署
      */
     public void setRestrictions(ApproverRestriction [] Restrictions) {
         this.Restrictions = Restrictions;
     }
 
     /**
-     * Get 用户自定义字段，回调的时候会进行透传，长度需要小于20480 
-     * @return UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     * Get 用户自定义字段
+<br/>回调的时候会进行透传，长度需要小于20480 
+     * @return UserData 用户自定义字段
+<br/>回调的时候会进行透传，长度需要小于20480
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 用户自定义字段，回调的时候会进行透传，长度需要小于20480
-     * @param UserData 用户自定义字段，回调的时候会进行透传，长度需要小于20480
+     * Set 用户自定义字段
+<br/>回调的时候会进行透传，长度需要小于20480
+     * @param UserData 用户自定义字段
+<br/>回调的时候会进行透传，长度需要小于20480
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
@@ -236,11 +255,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
      * Get 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败 
+<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败 
      * @return CallbackUrl 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
+<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
@@ -248,11 +265,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel{
 
     /**
      * Set 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
+<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
      * @param CallbackUrl 回调地址,最大长度1000字符串
-回调时机：
-用户通过签署二维码发起签署流程时，企业额度不足导致失败
+<br/>回调时机：用户通过签署二维码发起签署流程时，企业额度不足导致失败
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
