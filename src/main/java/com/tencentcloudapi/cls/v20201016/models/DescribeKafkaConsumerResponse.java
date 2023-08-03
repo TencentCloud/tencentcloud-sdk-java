@@ -44,6 +44,13 @@ public class DescribeKafkaConsumerResponse extends AbstractModel{
     private Long Compression;
 
     /**
+    * kafka协议消费数据格式
+    */
+    @SerializedName("ConsumerContent")
+    @Expose
+    private KafkaConsumerContent ConsumerContent;
+
+    /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class DescribeKafkaConsumerResponse extends AbstractModel{
     }
 
     /**
+     * Get kafka协议消费数据格式 
+     * @return ConsumerContent kafka协议消费数据格式
+     */
+    public KafkaConsumerContent getConsumerContent() {
+        return this.ConsumerContent;
+    }
+
+    /**
+     * Set kafka协议消费数据格式
+     * @param ConsumerContent kafka协议消费数据格式
+     */
+    public void setConsumerContent(KafkaConsumerContent ConsumerContent) {
+        this.ConsumerContent = ConsumerContent;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -131,6 +154,9 @@ public class DescribeKafkaConsumerResponse extends AbstractModel{
         if (source.Compression != null) {
             this.Compression = new Long(source.Compression);
         }
+        if (source.ConsumerContent != null) {
+            this.ConsumerContent = new KafkaConsumerContent(source.ConsumerContent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class DescribeKafkaConsumerResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TopicID", this.TopicID);
         this.setParamSimple(map, prefix + "Compression", this.Compression);
+        this.setParamObj(map, prefix + "ConsumerContent.", this.ConsumerContent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

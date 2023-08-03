@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CheckCnameStatusRequest extends AbstractModel{
 
     /**
-    * 站点ID。
+    * 站点 ID。
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 记录名称列表。
+    * 加速域名列表。
     */
     @SerializedName("RecordNames")
     @Expose
     private String [] RecordNames;
 
     /**
-     * Get 站点ID。 
-     * @return ZoneId 站点ID。
+     * Get 站点 ID。 
+     * @return ZoneId 站点 ID。
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 站点ID。
-     * @param ZoneId 站点ID。
+     * Set 站点 ID。
+     * @param ZoneId 站点 ID。
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 记录名称列表。 
-     * @return RecordNames 记录名称列表。
+     * Get 加速域名列表。 
+     * @return RecordNames 加速域名列表。
      */
     public String [] getRecordNames() {
         return this.RecordNames;
     }
 
     /**
-     * Set 记录名称列表。
-     * @param RecordNames 记录名称列表。
+     * Set 加速域名列表。
+     * @param RecordNames 加速域名列表。
      */
     public void setRecordNames(String [] RecordNames) {
         this.RecordNames = RecordNames;

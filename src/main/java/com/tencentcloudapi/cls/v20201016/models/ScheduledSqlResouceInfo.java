@@ -30,7 +30,7 @@ public class ScheduledSqlResouceInfo extends AbstractModel{
     private String TopicId;
 
     /**
-    * 主题的的地域信息
+    * 主题的地域信息
     */
     @SerializedName("Region")
     @Expose
@@ -67,16 +67,16 @@ public class ScheduledSqlResouceInfo extends AbstractModel{
     }
 
     /**
-     * Get 主题的的地域信息 
-     * @return Region 主题的的地域信息
+     * Get 主题的地域信息 
+     * @return Region 主题的地域信息
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 主题的的地域信息
-     * @param Region 主题的的地域信息
+     * Set 主题的地域信息
+     * @param Region 主题的地域信息
      */
     public void setRegion(String Region) {
         this.Region = Region;

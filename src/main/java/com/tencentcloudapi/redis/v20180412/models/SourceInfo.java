@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SourceInfo extends AbstractModel{
 
     /**
-    * 来源IP
+    * 来源 IP 地址。
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 连接数
+    * 客户端连接数量。
     */
     @SerializedName("Conn")
     @Expose
@@ -44,32 +44,32 @@ public class SourceInfo extends AbstractModel{
     private Long Cmd;
 
     /**
-     * Get 来源IP 
-     * @return Ip 来源IP
+     * Get 来源 IP 地址。 
+     * @return Ip 来源 IP 地址。
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 来源IP
-     * @param Ip 来源IP
+     * Set 来源 IP 地址。
+     * @param Ip 来源 IP 地址。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 连接数 
-     * @return Conn 连接数
+     * Get 客户端连接数量。 
+     * @return Conn 客户端连接数量。
      */
     public Long getConn() {
         return this.Conn;
     }
 
     /**
-     * Set 连接数
-     * @param Conn 连接数
+     * Set 客户端连接数量。
+     * @param Conn 客户端连接数量。
      */
     public void setConn(Long Conn) {
         this.Conn = Conn;

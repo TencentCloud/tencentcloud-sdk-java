@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBoundIPRequest extends AbstractModel{
 
     /**
-    * 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
+    * DDoS防护子产品代号（bgp表示独享包；bgp-multip表示共享包）
     */
     @SerializedName("Business")
     @Expose
@@ -65,16 +65,16 @@ public class CreateBoundIPRequest extends AbstractModel{
     private String FilterRegion;
 
     /**
-     * Get 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包） 
-     * @return Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
+     * Get DDoS防护子产品代号（bgp表示独享包；bgp-multip表示共享包） 
+     * @return Business DDoS防护子产品代号（bgp表示独享包；bgp-multip表示共享包）
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
-     * @param Business 大禹子产品代号（bgp表示独享包；bgp-multip表示共享包）
+     * Set DDoS防护子产品代号（bgp表示独享包；bgp-multip表示共享包）
+     * @param Business DDoS防护子产品代号（bgp表示独享包；bgp-multip表示共享包）
      */
     public void setBusiness(String Business) {
         this.Business = Business;

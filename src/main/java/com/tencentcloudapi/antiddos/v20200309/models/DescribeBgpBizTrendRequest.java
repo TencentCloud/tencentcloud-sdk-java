@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBgpBizTrendRequest extends AbstractModel{
 
     /**
-    * 大禹子产品代号（bgp-multip表示高防包）
+    * DDoS防护子产品代号（bgp-multip表示高防包）
     */
     @SerializedName("Business")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeBgpBizTrendRequest extends AbstractModel{
     private Long Flag;
 
     /**
-     * Get 大禹子产品代号（bgp-multip表示高防包） 
-     * @return Business 大禹子产品代号（bgp-multip表示高防包）
+     * Get DDoS防护子产品代号（bgp-multip表示高防包） 
+     * @return Business DDoS防护子产品代号（bgp-multip表示高防包）
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 大禹子产品代号（bgp-multip表示高防包）
-     * @param Business 大禹子产品代号（bgp-multip表示高防包）
+     * Set DDoS防护子产品代号（bgp-multip表示高防包）
+     * @param Business DDoS防护子产品代号（bgp-multip表示高防包）
      */
     public void setBusiness(String Business) {
         this.Business = Business;

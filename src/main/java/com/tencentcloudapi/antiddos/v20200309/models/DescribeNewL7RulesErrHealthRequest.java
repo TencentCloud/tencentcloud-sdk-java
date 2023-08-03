@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNewL7RulesErrHealthRequest extends AbstractModel{
 
     /**
-    * 大禹子产品代号(bgpip表示高防IP)
+    * DDoS防护子产品代号(bgpip表示高防IP)
     */
     @SerializedName("Business")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeNewL7RulesErrHealthRequest extends AbstractModel{
     private String [] RuleIdList;
 
     /**
-     * Get 大禹子产品代号(bgpip表示高防IP) 
-     * @return Business 大禹子产品代号(bgpip表示高防IP)
+     * Get DDoS防护子产品代号(bgpip表示高防IP) 
+     * @return Business DDoS防护子产品代号(bgpip表示高防IP)
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set 大禹子产品代号(bgpip表示高防IP)
-     * @param Business 大禹子产品代号(bgpip表示高防IP)
+     * Set DDoS防护子产品代号(bgpip表示高防IP)
+     * @param Business DDoS防护子产品代号(bgpip表示高防IP)
      */
     public void setBusiness(String Business) {
         this.Business = Business;

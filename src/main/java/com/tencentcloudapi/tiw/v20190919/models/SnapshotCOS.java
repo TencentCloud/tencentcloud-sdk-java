@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SnapshotCOS extends AbstractModel{
 
     /**
-    * cos所在腾讯云帐号uin
+    * cos所在腾讯云账号uin
     */
     @SerializedName("Uin")
     @Expose
@@ -58,16 +58,16 @@ public class SnapshotCOS extends AbstractModel{
     private String Domain;
 
     /**
-     * Get cos所在腾讯云帐号uin 
-     * @return Uin cos所在腾讯云帐号uin
+     * Get cos所在腾讯云账号uin 
+     * @return Uin cos所在腾讯云账号uin
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set cos所在腾讯云帐号uin
-     * @param Uin cos所在腾讯云帐号uin
+     * Set cos所在腾讯云账号uin
+     * @param Uin cos所在腾讯云账号uin
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

@@ -129,7 +129,7 @@ public enum TiwErrorCode {
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // 当前未完成的任务不能此状态下执行指定操作，例如对正在录制的任务执行恢复录制等。
+    // 当前未完成的任务不能在此状态下执行指定操作，例如对正在录制的任务执行恢复录制等。
      UNSUPPORTEDOPERATION_INVALIDTASKSTATUS("UnsupportedOperation.InvalidTaskStatus"),
      
     // 任务结束，不能执行指定操作。

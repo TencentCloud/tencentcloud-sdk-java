@@ -32,7 +32,7 @@ public class AutoSignConfig extends AbstractModel{
     /**
     * 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -60,7 +60,7 @@ true-需要
     * 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
     */
     @SerializedName("SealImgCallback")
     @Expose
@@ -100,10 +100,10 @@ TELECOM : 运营商三要素验证
     /**
      * Get 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败 
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败 
      * @return CallbackUrl 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public String getCallbackUrl() {
         return this.CallbackUrl;
@@ -112,10 +112,10 @@ Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其
     /**
      * Set 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      * @param CallbackUrl 接受回调URL地址。支持http://或者https://协议
 
-Post数据到此地址后后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
+Post数据到此地址后返回httpcode200表示接受回调成功, 返回其他httpcode表示接受回调失败
      */
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
@@ -173,11 +173,11 @@ true-需要
      * Get 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要( 
+true-需要 
      * @return SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
      */
     public Boolean getSealImgCallback() {
         return this.SealImgCallback;
@@ -187,11 +187,11 @@ true-需要(
      * Set 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
      * @param SealImgCallback 是否需要回调的时候返回印章(签名) 图片的 base64
 
 false-不需要(默认)
-true-需要(
+true-需要
      */
     public void setSealImgCallback(Boolean SealImgCallback) {
         this.SealImgCallback = SealImgCallback;

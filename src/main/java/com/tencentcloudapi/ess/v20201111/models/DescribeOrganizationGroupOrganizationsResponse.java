@@ -39,7 +39,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     private Long JoinedTotal;
 
     /**
-    * 已加入的企业数量
+    * 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivedTotal")
@@ -61,6 +61,14 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     @SerializedName("List")
     @Expose
     private GroupOrganization [] List;
+
+    /**
+    * 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActivatedTotal")
+    @Expose
+    private Long ActivatedTotal;
 
     /**
     * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -110,21 +118,25 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
-     * Get 已加入的企业数量
+     * Get 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ActivedTotal 已加入的企业数量
+     * @return ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getActivedTotal() {
         return this.ActivedTotal;
     }
 
     /**
-     * Set 已加入的企业数量
+     * Set 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ActivedTotal 已加入的企业数量
+     * @param ActivedTotal 已加入的企业数量(废弃,请使用ActivatedTotal)
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setActivedTotal(Long ActivedTotal) {
         this.ActivedTotal = ActivedTotal;
     }
@@ -170,6 +182,26 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
     }
 
     /**
+     * Get 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActivatedTotal 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getActivatedTotal() {
+        return this.ActivatedTotal;
+    }
+
+    /**
+     * Set 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActivatedTotal 已加入的企业数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActivatedTotal(Long ActivatedTotal) {
+        this.ActivatedTotal = ActivatedTotal;
+    }
+
+    /**
      * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
@@ -211,6 +243,9 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
                 this.List[i] = new GroupOrganization(source.List[i]);
             }
         }
+        if (source.ActivatedTotal != null) {
+            this.ActivatedTotal = new Long(source.ActivatedTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +261,7 @@ public class DescribeOrganizationGroupOrganizationsResponse extends AbstractMode
         this.setParamSimple(map, prefix + "ActivedTotal", this.ActivedTotal);
         this.setParamSimple(map, prefix + "ExportUrl", this.ExportUrl);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "ActivatedTotal", this.ActivatedTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

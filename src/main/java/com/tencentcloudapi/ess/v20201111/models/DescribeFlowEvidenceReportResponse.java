@@ -35,7 +35,7 @@ public class DescribeFlowEvidenceReportResponse extends AbstractModel{
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
     */
     @SerializedName("Status")
     @Expose
@@ -73,12 +73,12 @@ EvidenceStatusFailed  出征任务执行失败
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败 
+EvidenceStatusFailed  出证任务执行失败 
      * @return Status 出证任务执行的状态, 分布表示下面的含义
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
      */
     public String getStatus() {
         return this.Status;
@@ -89,12 +89,12 @@ EvidenceStatusFailed  出征任务执行失败
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
      * @param Status 出证任务执行的状态, 分布表示下面的含义
 
 EvidenceStatusExecuting  出证任务在执行中
 EvidenceStatusSuccess  出证任务执行成功
-EvidenceStatusFailed  出征任务执行失败
+EvidenceStatusFailed  出证任务执行失败
      */
     public void setStatus(String Status) {
         this.Status = Status;

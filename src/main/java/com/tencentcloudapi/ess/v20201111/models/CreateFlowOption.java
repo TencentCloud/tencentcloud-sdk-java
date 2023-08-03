@@ -31,10 +31,10 @@ public class CreateFlowOption extends AbstractModel{
     private Boolean CanEditFlow;
 
     /**
-    * 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+    * 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
     */
     @SerializedName("CanEditFormField")
     @Expose
@@ -131,28 +131,28 @@ public class CreateFlowOption extends AbstractModel{
     }
 
     /**
-     * Get 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息 
-     * @return CanEditFormField 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+     * Get 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息 
+     * @return CanEditFormField 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
      */
     public Boolean getCanEditFormField() {
         return this.CanEditFormField;
     }
 
     /**
-     * Set 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
-     * @param CanEditFormField 是否允许编辑模版控件
-<br/>true:允许编辑模版控件信息
-<br/>false:不允许编辑模版控件信息
-<br/>默认false:不允许编辑模版控件信息
+     * Set 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
+     * @param CanEditFormField 是否允许编辑模板控件
+<br/>true:允许编辑模板控件信息
+<br/>false:不允许编辑模板控件信息
+<br/>默认false:不允许编辑模板控件信息
      */
     public void setCanEditFormField(Boolean CanEditFormField) {
         this.CanEditFormField = CanEditFormField;
